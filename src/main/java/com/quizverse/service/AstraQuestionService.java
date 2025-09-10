@@ -28,6 +28,7 @@ public class AstraQuestionService {
     public AstraQuestionService(@Value("${astra.db.url}") String dbUrl,
                                 @Value("${astra.db.keyspace}") String keyspace,
                                 @Value("${astra.db.token}") String token) {
+        System.out.println("dburl : "+dbUrl+" token : "+token);
         this.client = new DataAPIClient(new DataAPIClientOptions());
         DatabaseOptions options = new DatabaseOptions().keyspace(keyspace).token(token);
         this.database = client.getDatabase(
