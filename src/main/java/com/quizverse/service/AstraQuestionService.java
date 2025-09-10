@@ -26,9 +26,8 @@ public class AstraQuestionService {
     private final Collection<Document> collection;
 
     public AstraQuestionService(@Value("${astra.db.url}") String dbUrl,
-                                @Value("${astra.db.keyspace}") String keyspace,
-                                @Value("${astra.db.token}") String token) {
-        System.out.println("dburl : "+dbUrl+" token : "+token);
+            @Value("${astra.db.keyspace}") String keyspace,
+            @Value("${astra.db.token}") String token) {
         this.client = new DataAPIClient(new DataAPIClientOptions());
         DatabaseOptions options = new DatabaseOptions().keyspace(keyspace).token(token);
         this.database = client.getDatabase(
@@ -41,7 +40,7 @@ public class AstraQuestionService {
         if (this.collection == null) {
             throw new IllegalStateException("Collection 'question' does not exist in the Astra Database.");
         }
-        }
+    }
 
     public List<Document> getAllQuestions() {
         return collection.find((Filter) null).toList();
@@ -49,27 +48,42 @@ public class AstraQuestionService {
 
     public Document getRandomQuestion() {
         List<Document> allQuestions = getAllQuestions();
-        if (allQuestions.isEmpty()) return null;
+        if (allQuestions.isEmpty())
+            return null;
         int index = (int) (Math.random() * allQuestions.size());
         return allQuestions.get(index);
     }
 
     public List<Document> getRandomFiveQuestions(String question_type) {
-    CollectionFindCursor<Document, Document> cursor = collection.find(Filters.eq("question_type", "python"));
+        System.out.println(question_type+ " question type");
+        CollectionFindCursor<Document, Document> cursor = collection.find(Filters.eq("quiz_no", "1"));
 
-    List<Document> allQuestions = new ArrayList<>();
-    cursor.forEach(allQuestions::add);
+        List<Document> allQuestions = new ArrayList<>();
+        cursor.forEach(allQuestions::add);
 
-    Collections.shuffle(allQuestions);
-    return allQuestions.size() <= 5 ? allQuestions : allQuestions.subList(0, 5);
-}
+        Collections.shuffle(allQuestions);
+        return allQuestions;
+    }
 
-public List<Document>  getQuestionById(String questionId) {
+    public List<Document> getQuestionsByTypeAndQuiz(String questionType, String quizNo) {
+        System.out.println(questionType+ " " + quizNo);
+        CollectionFindCursor<Document, Document> cursor = collection.find(
+                Filters.and(
+                        Filters.eq("question_type", questionType),
+                        Filters.eq("quiz_no", quizNo)));
+
+        List<Document> result = new ArrayList<>();
+        cursor.forEach(result::add);
+        // System.out.println("result : "+ result);
+        return result;
+    }
+
+    public List<Document> getQuestionById(String questionId) {
         try {
-            CollectionFindCursor<Document, Document>  document = collection.find(Filters.eq("_id", questionId));
+            CollectionFindCursor<Document, Document> document = collection.find(Filters.eq("_id", questionId));
             List<Document> allQuestions = new ArrayList<>();
             document.forEach(allQuestions::add);
-            System.out.println("document : "+ allQuestions);
+            System.out.println("document : " + allQuestions);
             return allQuestions;
         } catch (Exception e) {
             e.printStackTrace();

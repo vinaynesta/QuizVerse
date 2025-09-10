@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Quiz Home</title>
-    <link rel="stylesheet" href="/css/styles.css"/>
+    <title>QuizVerse - Welcome</title>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 
 <body>
-    <h1>Welcome to Quiz Portal</h1>
-    <div id="subject-list" class="subject-list">
-        <!-- Subjects will be populated here by JS -->
-    </div>
+    <h1>Welcome to QuizVerse</h1>
 
-    <div id="loading-spinner" style="display: none;">Loading...</div>
+    <div class="quiz-container">
+        <p style="text-align:center; font-size:1.2rem; color:#ffffff; margin-bottom:30px;">
+            Choose a subject to test your knowledge across multiple domains.
+        </p>
+
+        <div id="subject-list" class="subject-list">
+            <!-- Subjects will be populated by JS -->
+        </div>
+
+        <div id="loading-spinner" class="loading-spinner" style="display: none;">Loading subjects...</div>
+    </div>
 
     <script type="module" src="/js/home.js"></script>
 </body>

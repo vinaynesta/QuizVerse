@@ -20,6 +20,7 @@ import java.util.Optional;
 public class QuizController {
 
     private final AstraQuestionService questionService;
+    private List<Document> questions;
 
     public QuizController(AstraQuestionService questionService) {
         this.questionService = questionService;
@@ -28,44 +29,28 @@ public class QuizController {
     @PostMapping("/api/quiz/questions")
     public List<Document> getRandomQuestions(@RequestBody Map<String, String> payload) {
         String questionType = payload.get("questionType");
-        List<Document> questions= questionService.getRandomFiveQuestions(questionType);
-        System.out.println(questions);
+        String quizNo = payload.get("quizNo");
+        questions = questionService.getQuestionsByTypeAndQuiz(questionType, quizNo);
+        System.out.println("questions : "+ questions);
         return questions;
     }
 
     @PostMapping("/api/quiz/verify")
     public ResponseEntity<Map<String, Object>> verifyAnswer(@RequestBody Map<String, String> payload) {
+        String currentQuestionNo = payload.get("currentQuestionNo");
         String questionId = payload.get("questionId");
         String selectedAnswer = payload.get("selectedAnswer");
-        System.out.println("payload : "+ payload);
+        System.out.println("payload : " + payload);
 
-        List<Document> question = questionService.getQuestionById(questionId);
-        if (question.size()==0) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(Map.of("error", "Question not found"));
-        }
+        Document question = questions.get(Integer.parseInt(currentQuestionNo));
 
-        boolean isCorrect = selectedAnswer.equals(question.get(0).getString("correct_answer"));
+        boolean isCorrect = selectedAnswer.equals(question.getString("correct_answer"));
 
         Map<String, Object> response = new HashMap<>();
         response.put("correct", isCorrect);
-        response.put("correctAnswer", question.get(0).getString("correct_answer"));
+        response.put("correctAnswer", question.getString("correct_answer"));
+        response.put("explanation", question.get("explanation"));
 
         return ResponseEntity.ok(response);
     }
-
-    // @PostMapping("/api/quiz/addHistory")
-    // public ResponseEntity<Map<String, String>> addHistory(@RequestBody Map<String, String> payload) {
-    //     String questionId = payload.get("questionId");
-    //     String selectedAnswer = payload.get("selectedAnswer");
-
-    //     boolean saved = historyService.saveUserHistory(questionId, selectedAnswer);
-
-    //     if (saved) {
-    //         return ResponseEntity.ok(Map.of("status", "History saved successfully"));
-    //     } else {
-    //         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-    //                 .body(Map.of("error", "Failed to save history"));
-    //     }
-    // }
 }
