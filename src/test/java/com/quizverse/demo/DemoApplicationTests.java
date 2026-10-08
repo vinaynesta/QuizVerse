@@ -1,6 +1,6 @@
-package com.quizmailer.demo;
+package com.quizverse.demo;
 
-import com.quizmailer.demo.config.TestJpaConfig;
+import com.quizverse.demo.config.TestJpaConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

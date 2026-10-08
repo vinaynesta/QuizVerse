@@ -1,4 +1,4 @@
-// package com.quizmailer.service;
+// package com.quizverse.service;
 
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.mail.javamail.JavaMailSender;

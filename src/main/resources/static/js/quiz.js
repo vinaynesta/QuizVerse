@@ -214,6 +214,7 @@ function showFinalResult() {
 async function showHistory() {
   const container = document.getElementById("question-container");
 
+  // NOTE: the /api/quiz/history endpoint does not exist yet; this is unused.
   const response = await fetch("/api/quiz/history");
   const history = await response.json(); // assuming this is an array or string
 

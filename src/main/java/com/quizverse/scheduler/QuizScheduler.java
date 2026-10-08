@@ -1,4 +1,4 @@
-// package com.quizmailer.scheduler;
+// package com.quizverse.scheduler;
 
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.scheduling.annotation.Scheduled;
@@ -6,9 +6,9 @@
 // import org.slf4j.Logger;
 // import org.slf4j.LoggerFactory;
 
-// import com.quizmailer.model.Question;
-// import com.quizmailer.repository.QuestionRepository;
-// import com.quizmailer.service.EmailService;
+// import com.quizverse.model.Question;
+// import com.quizverse.repository.QuestionRepository;
+// import com.quizverse.service.EmailService;
 // import java.util.List;
 
 // @Component

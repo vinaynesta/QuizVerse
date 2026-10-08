@@ -1,4 +1,4 @@
-package com.quizmailer.model;
+package com.quizverse.model;
 
 public class Question {
     private String questionText;

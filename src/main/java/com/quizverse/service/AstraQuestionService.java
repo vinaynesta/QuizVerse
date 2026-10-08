@@ -1,4 +1,4 @@
-package com.quizmailer.service;
+package com.quizverse.service;
 
 import com.datastax.astra.client.DataAPIClient;
 import com.datastax.astra.client.collections.Collection;
