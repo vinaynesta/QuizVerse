@@ -6,7 +6,8 @@ QuizVerse is a web-based multiple-choice quiz app. Pick a subject, answer a set 
 
 - **Multiple subjects:** Java, Python, C, DBMS, ML, General Knowledge, English, Aptitude and Reasoning.
 - **Multiple quizzes per subject:** each subject has numbered quizzes, and "New Quiz" loads the next one.
-- **Instant feedback:** after each answer you see whether it was correct, the right answer and a short explanation.
+- **Instant feedback:** after each answer you see whether it was correct,
+ the right answer and a short explanation.
 - **Score summary:** a final screen shows your score and percentage.
 
 ## How it works
