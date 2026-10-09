@@ -1,0 +1,3096 @@
+[
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some lamps are not hills. Some hills are doors. No doors is pens.\nConclusions:\nI. No hills is pens.\nII. Some hills are lamps.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Chetan, Deepa, Gautam, Jaya, Manoj, Usha sit in a straight row facing north. Chetan sits immediately to the left of Usha. Exactly one person sits between Deepa and Jaya. Deepa sits somewhere between Chetan and Gautam. Gautam sits somewhere between Deepa and Jaya. Manoj and Chetan are not neighbours. Manoj sits somewhere between Usha and Jaya. Usha and Deepa are not neighbours.\nWho sits at the extreme right end?",
+  "options": [
+   "Usha",
+   "Jaya",
+   "Deepa",
+   "Gautam"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Chetan, Usha, Manoj, Deepa, Gautam, Jaya."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Chetan, Eshan, Gautam, Lata, Omkar sit in a straight row facing north. Chetan sits at one of the extreme ends. Chetan and Gautam are not neighbours. Amit sits immediately to the left of Chetan. Exactly one person sits between Gautam and Amit. Lata and Chetan are not neighbours. Eshan sits somewhere between Omkar and Chetan. Lata and Omkar are not neighbours. Gautam sits somewhere to the left of Lata.\nWho sits at the extreme left end?",
+  "options": [
+   "Eshan",
+   "Omkar",
+   "Amit",
+   "Lata"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Omkar, Eshan, Gautam, Lata, Amit, Chetan."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: S ≥ R > U = X > T ≤ W\nConclusions:\nI. S > U\nII. R ≥ W",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 3 km, then turns right and walks 11 km, then turns right and walks 7 km, then turns left and walks 12 km, then turns left and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North",
+   "North-West",
+   "South-West",
+   "North-East"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: -1 east, 23 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: R ≥ B > Q ≥ W = D > N\nConclusions:\nI. N < W\nII. Q < D",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Bhavna, Eshan, Gautam, Priya, Tarun sit in a straight row facing north. Tarun sits somewhere between Gautam and Eshan. Bhavna sits at one of the extreme ends. Exactly one person sits between Tarun and Eshan. Gautam and Tarun are not neighbours. Gautam sits somewhere between Bhavna and Tarun. Exactly one person sits between Amit and Bhavna. Exactly one person sits between Amit and Priya. Priya sits somewhere to the left of Eshan.\nWho sits second from the left end?",
+  "options": [
+   "Priya",
+   "Bhavna",
+   "Gautam",
+   "Eshan"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Bhavna, Gautam, Amit, Tarun, Priya, Eshan."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Eshan, Jaya, Neha, Omkar, Varun, Zoya sit in a straight row facing north. Eshan and Jaya are not neighbours. Amit sits somewhere to the left of Zoya. Varun sits somewhere between Jaya and Amit. Eshan sits somewhere to the left of Amit. Amit sits immediately to the left of Neha. Zoya and Eshan are not neighbours. Omkar and Jaya are not neighbours. Neha and Zoya are not neighbours. Eshan sits somewhere between Jaya and Zoya.\nWho sits exactly in the middle?",
+  "options": [
+   "Varun",
+   "Omkar",
+   "Eshan",
+   "Amit"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Jaya, Varun, Eshan, Amit, Neha, Omkar, Zoya."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 21, 20, 41, 44, 69, ?, 105",
+  "options": [
+   "76",
+   "87",
+   "73",
+   "78"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, CLERK is written as DJHNP. How will FUND be written in that code?",
+  "options": [
+   "EWKH",
+   "HTRA",
+   "GSQZ",
+   "DNUF"
+  ],
+  "answer": 2,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: G ≤ W = J ≥ Q ≤ K > F\nConclusions:\nI. W < K\nII. J ≥ W",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards East and covers 10 km, then turns left and walks 6 km, then turns left and walks 7 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "South",
+   "North-East",
+   "North-West"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: 3 east, 9 north."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Farah, Imran, Lata, Manoj, Priya, Varun, Wasim sit in a straight row facing north. Varun sits immediately to the left of Priya. Wasim sits somewhere between Imran and Lata. Exactly one person sits between Priya and Wasim. Exactly one person sits between Wasim and Imran. Wasim and Farah are not neighbours. Lata sits at the extreme right end. Priya and Imran are not neighbours. Varun sits somewhere between Manoj and Lata. Wasim sits somewhere between Manoj and Farah. Priya sits somewhere between Varun and Lata.\nWho sits exactly in the middle?",
+  "options": [
+   "Varun",
+   "Imran",
+   "Priya",
+   "Manoj"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Imran, Manoj, Wasim, Varun, Priya, Farah, Lata."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: D ≥ T < J > M > U > P\nConclusions:\nI. P ≥ M\nII. D = U",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some pens are stones. Some stones are lamps. Some lamps are clocks.\nConclusions:\nI. Some stones are not pens.\nII. Some pens are lamps.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, PRICE is written as QPLYJ. How will TABLE be written in that code?",
+  "options": [
+   "SCYPZ",
+   "UYEHJ",
+   "VZFIK",
+   "ELBAT"
+  ],
+  "answer": 1,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are not clocks. All clocks are pens. All pens are trees.\nConclusions:\nI. All trees are clocks.\nII. Some pens are clocks.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No birds is clocks. No clocks is doors. No doors is cups.\nConclusions:\nI. Some doors are birds.\nII. Some doors are cups.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 8, 5, 20, ?, 40, 45, 68",
+  "options": [
+   "19",
+   "16",
+   "11",
+   "21"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Deepa, Gautam, Jaya, Kiran, Priya, Varun sit in a straight row facing north. Gautam sits somewhere between Kiran and Varun. Kiran sits somewhere between Priya and Varun. Varun sits somewhere between Priya and Deepa. Kiran sits somewhere between Jaya and Gautam. Priya and Kiran are not neighbours. Gautam sits somewhere to the left of Deepa. Kiran sits somewhere to the left of Varun.\nWho sits at the extreme left end?",
+  "options": [
+   "Jaya",
+   "Kiran",
+   "Deepa",
+   "Priya"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Priya, Jaya, Kiran, Gautam, Varun, Deepa."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: X ≥ B = D < F ≥ Q > W\nConclusions:\nI. W ≤ X\nII. F > B",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 6 km, then turns left and walks 10 km, then turns left and walks 4 km, then turns right and walks 8 km, then turns right and walks 5 km, then turns right and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "West",
+   "South-East",
+   "East"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: 10 east, -7 north."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some coins are not bags. No bags is tables. All tables are flowers.\nConclusions:\nI. No tables is flowers.\nII. Some tables are not flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Gautam, Hema, Kiran, Lata, Neha sit in a straight row facing north. Hema sits somewhere between Neha and Gautam. Lata sits somewhere between Amit and Kiran. Neha and Hema are not neighbours. Amit sits at one of the extreme ends. Lata sits somewhere between Amit and Hema. Exactly one person sits between Hema and Kiran. Amit sits somewhere to the left of Gautam.\nWho sits at the extreme right end?",
+  "options": [
+   "Amit",
+   "Kiran",
+   "Neha",
+   "Lata"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Amit, Neha, Lata, Hema, Gautam, Kiran."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Eshan, Kiran, Lata, Omkar, Usha, Varun sit in a straight row facing north. Kiran sits somewhere between Omkar and Usha. Exactly one person sits between Kiran and Lata. Omkar and Lata are not neighbours. Usha sits somewhere to the left of Lata. Eshan and Usha are not neighbours. Lata sits immediately to the left of Varun. Kiran sits somewhere to the left of Eshan. Omkar sits somewhere to the left of Varun.\nWho sits immediately to the right of Usha?",
+  "options": [
+   "Omkar",
+   "Eshan",
+   "Lata",
+   "Varun"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Omkar, Kiran, Usha, Lata, Varun, Eshan."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Bhavna, Eshan, Manoj, Priya, Rahul, Tarun, Varun sit in a straight row facing north. Exactly one person sits between Rahul and Eshan. Exactly one person sits between Bhavna and Tarun. Varun sits somewhere between Tarun and Bhavna. Bhavna sits somewhere between Eshan and Priya. Manoj sits somewhere to the left of Priya. Manoj and Bhavna are not neighbours. Varun sits somewhere between Manoj and Bhavna. Tarun sits somewhere to the left of Bhavna. Exactly one person sits between Priya and Varun. Manoj sits somewhere to the left of Eshan.\nWho sits at the extreme left end?",
+  "options": [
+   "Bhavna",
+   "Eshan",
+   "Rahul",
+   "Tarun"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Rahul, Manoj, Eshan, Tarun, Varun, Bhavna, Priya."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Bhavna, Gautam, Hema, Manoj, Neha, Priya sit in a straight row facing north. Gautam sits somewhere between Bhavna and Neha. Priya and Gautam are not neighbours. Priya sits somewhere to the left of Gautam. Gautam sits somewhere between Priya and Neha. Manoj sits immediately to the left of Gautam. Manoj sits somewhere to the left of Hema. Hema sits immediately to the left of Neha. Manoj sits somewhere between Priya and Hema. Priya and Manoj are not neighbours.\nWho sits second from the left end?",
+  "options": [
+   "Bhavna",
+   "Neha",
+   "Priya",
+   "Gautam"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Priya, Bhavna, Manoj, Gautam, Hema, Neha."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: G = J ≤ H ≥ M ≤ R ≥ U\nConclusions:\nI. H ≤ U\nII. H > J",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, MONEY is written as NMQAD. How will LOAN be written in that code?",
+  "options": [
+   "KQXR",
+   "NNEK",
+   "NAOL",
+   "MMDJ"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 20, 21, 40, 45, 68, ?, 104",
+  "options": [
+   "75",
+   "96",
+   "62",
+   "77"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, PLAN is written as QJDJ. How will RATE be written in that code?",
+  "options": [
+   "QCQI",
+   "TZXB",
+   "SYWA",
+   "ETAR"
+  ],
+  "answer": 2,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Manoj, Neha, Tarun, Usha, Wasim, Zoya sit in a straight row facing north. Exactly one person sits between Manoj and Tarun. Wasim sits immediately to the left of Manoj. Manoj sits somewhere between Zoya and Tarun. Wasim sits somewhere between Neha and Tarun. Neha and Tarun are not neighbours. Amit sits at the extreme left end. Zoya and Wasim are not neighbours. Exactly one person sits between Usha and Wasim. Amit sits somewhere to the left of Wasim. Neha sits somewhere between Amit and Usha.\nWho sits exactly in the middle?",
+  "options": [
+   "Tarun",
+   "Neha",
+   "Zoya",
+   "Wasim"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Amit, Zoya, Neha, Wasim, Manoj, Usha, Tarun."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No stones is books. No books is shirts. All shirts are keys.\nConclusions:\nI. No stones is shirts.\nII. No stones is keys.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Deepa, Eshan, Farah, Omkar, Usha, Zoya sit in a straight row facing north. Eshan and Farah are not neighbours. Usha sits somewhere between Omkar and Deepa. Omkar sits immediately to the left of Usha. Omkar sits at one of the extreme ends. Eshan sits somewhere between Omkar and Farah. Zoya and Omkar are not neighbours. Zoya sits somewhere to the left of Deepa. Deepa sits somewhere between Eshan and Farah. Exactly one person sits between Eshan and Farah.\nWho sits immediately to the right of Deepa?",
+  "options": [
+   "Deepa",
+   "Omkar",
+   "Farah",
+   "Usha"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Omkar, Usha, Zoya, Eshan, Deepa, Farah."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: Z ≤ F > J = N > L ≥ G\nConclusions:\nI. N ≥ Z\nII. G < F",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 8 km, then turns left and walks 6 km, then turns left and walks 2 km, then turns left and walks 12 km, then turns left and walks 12 km, then turns left and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-West",
+   "South-West",
+   "West",
+   "North"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: -4 east, -18 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: V = E > J ≥ A < K = W\nConclusions:\nI. E = V\nII. J ≥ A",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are not cups. Some cups are bags. No bags is birds.\nConclusions:\nI. No cups is flowers.\nII. All cups are birds.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, BANK is written as CYQG. How will GOLD be written in that code?",
+  "options": [
+   "FQIH",
+   "INPA",
+   "DLOG",
+   "HMOZ"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 3 km, then turns right and walks 10 km, then turns right and walks 8 km, then turns left and walks 5 km, then turns left and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "East",
+   "North-West",
+   "South-East"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: 3 east, 15 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 12, 6, 19, 18, 26, ?, 33, 162",
+  "options": [
+   "54",
+   "64",
+   "53",
+   "40"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 6, 3, 8, 6, ?, 12, 12, 24",
+  "options": [
+   "5",
+   "11",
+   "10",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Farah, Manoj, Omkar, Tarun, Usha, Varun sit in a straight row facing north. Tarun sits somewhere between Farah and Varun. Farah sits somewhere between Usha and Manoj. Usha sits at the extreme left end. Manoj sits somewhere between Farah and Varun. Omkar sits somewhere between Usha and Manoj. Varun and Omkar are not neighbours. Exactly one person sits between Omkar and Farah.\nWho sits second from the left end?",
+  "options": [
+   "Manoj",
+   "Tarun",
+   "Omkar",
+   "Farah"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Usha, Farah, Tarun, Omkar, Manoj, Varun."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 7, 4, 9, 8, 11, ?, 13, 32",
+  "options": [
+   "20",
+   "16",
+   "11",
+   "17"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, NOTE is written as OMWA. How will COIN be written in that code?",
+  "options": [
+   "DMLJ",
+   "BQFR",
+   "ENMK",
+   "NIOC"
+  ],
+  "answer": 0,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: P ≥ W < T > A < H > R\nConclusions:\nI. A ≤ P\nII. R < A",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, SHARE is written as TFDNJ. How will GOLD be written in that code?",
+  "options": [
+   "HMOZ",
+   "FQIH",
+   "INPA",
+   "DLOG"
+  ],
+  "answer": 0,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 16, 68, 276, ?, 4436, 17748",
+  "options": [
+   "942",
+   "997",
+   "1103",
+   "1108"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Chetan, Hema, Imran, Sneha, Tarun, Varun sit in a straight row facing north. Imran and Sneha are not neighbours. Imran and Tarun are not neighbours. Tarun sits somewhere between Hema and Varun. Chetan sits somewhere between Imran and Varun. Chetan sits somewhere to the left of Hema. Exactly one person sits between Sneha and Tarun. Exactly one person sits between Chetan and Tarun. Hema sits somewhere between Chetan and Varun.\nWho sits at the extreme right end?",
+  "options": [
+   "Imran",
+   "Sneha",
+   "Hema",
+   "Tarun"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Imran, Chetan, Hema, Tarun, Varun, Sneha."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: D > F > Q ≥ T = S ≥ Y\nConclusions:\nI. S = F\nII. Q ≤ D",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some tables are not books. Some books are not roads. All roads are shirts.\nConclusions:\nI. No shirts is roads.\nII. Some tables are not roads.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, COIN is written as DMLJ. How will CODE be written in that code?",
+  "options": [
+   "BQAI",
+   "ENHB",
+   "EDOC",
+   "DMGA"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: W < L = F ≤ P < G ≥ S\nConclusions:\nI. S ≤ L\nII. L = P",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Eshan, Gautam, Hema, Imran, Tarun, Usha, Varun sit in a straight row facing north. Gautam sits immediately to the left of Varun. Tarun sits somewhere to the left of Usha. Eshan sits somewhere to the left of Hema. Usha sits immediately to the left of Eshan. Eshan sits somewhere between Tarun and Hema. Hema and Usha are not neighbours. Varun sits somewhere between Imran and Usha. Usha sits somewhere between Imran and Hema. Usha sits somewhere to the left of Eshan. Tarun sits somewhere between Imran and Gautam.\nWho sits at the extreme left end?",
+  "options": [
+   "Eshan",
+   "Gautam",
+   "Imran",
+   "Tarun"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Imran, Tarun, Gautam, Varun, Usha, Eshan, Hema."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Farah, Gautam, Kiran, Omkar, Usha, Zoya sit in a straight row facing north. Gautam sits somewhere between Kiran and Farah. Zoya sits somewhere to the left of Omkar. Kiran sits at one of the extreme ends. Farah sits somewhere between Kiran and Zoya. Kiran and Gautam are not neighbours. Zoya sits somewhere between Farah and Omkar. Kiran and Farah are not neighbours.\nWho sits at the extreme left end?",
+  "options": [
+   "Farah",
+   "Kiran",
+   "Gautam",
+   "Usha"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Kiran, Usha, Gautam, Farah, Zoya, Omkar."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Hema, Jaya, Omkar, Rahul, Usha, Wasim sit in a straight row facing north. Hema sits somewhere between Omkar and Usha. Wasim sits immediately to the left of Rahul. Jaya sits somewhere between Hema and Wasim. Usha and Rahul are not neighbours. Exactly one person sits between Rahul and Jaya. Exactly one person sits between Wasim and Usha.\nWho sits at the extreme left end?",
+  "options": [
+   "Rahul",
+   "Hema",
+   "Jaya",
+   "Omkar"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Omkar, Hema, Usha, Jaya, Wasim, Rahul."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All stones are pens. Some pens are not flowers. No flowers is rivers.\nConclusions:\nI. Some flowers are not rivers.\nII. Some rivers are not flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: K ≤ S ≥ L > N ≤ R < P\nConclusions:\nI. S > N\nII. L < K",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 216, 343, 512, 729, ?, 1331, 1728",
+  "options": [
+   "1000",
+   "900",
+   "1005",
+   "1001"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Eshan, Farah, Manoj, Rahul, Usha, Yash sit in a straight row facing north. Usha sits somewhere between Eshan and Chetan. Yash sits somewhere to the left of Eshan. Exactly one person sits between Chetan and Manoj. Eshan sits somewhere between Farah and Chetan. Rahul sits somewhere between Yash and Eshan. Rahul sits immediately to the left of Farah. Exactly one person sits between Farah and Yash. Rahul sits somewhere between Yash and Usha.\nWho sits exactly in the middle?",
+  "options": [
+   "Eshan",
+   "Rahul",
+   "Yash",
+   "Manoj"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Yash, Rahul, Farah, Eshan, Manoj, Usha, Chetan."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Bhavna, Hema, Imran, Lata, Sneha, Zoya sit in a straight row facing north. Lata sits somewhere between Hema and Sneha. Lata sits immediately to the left of Sneha. Hema sits at the extreme left end. Bhavna sits somewhere to the left of Zoya. Bhavna sits somewhere between Amit and Sneha. Zoya and Amit are not neighbours. Sneha and Zoya are not neighbours. Zoya sits somewhere between Hema and Sneha. Exactly one person sits between Lata and Bhavna. Imran sits somewhere between Amit and Sneha.\nWho sits exactly in the middle?",
+  "options": [
+   "Hema",
+   "Bhavna",
+   "Amit",
+   "Zoya"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Hema, Amit, Imran, Bhavna, Zoya, Lata, Sneha."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, FUND is written as GSQZ. How will CODE be written in that code?",
+  "options": [
+   "BQAI",
+   "ENHB",
+   "DMGA",
+   "EDOC"
+  ],
+  "answer": 2,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 13, 32, 69, 130, ?, 348, 517",
+  "options": [
+   "243",
+   "221",
+   "254",
+   "188"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, STOCK is written as TRRYP. How will NOTE be written in that code?",
+  "options": [
+   "MQQI",
+   "OMWA",
+   "PNXB",
+   "ETON"
+  ],
+  "answer": 1,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No boxes is stones. Some stones are not trees. All trees are roads.\nConclusions:\nI. All stones are boxes.\nII. No trees is stones.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are clocks. No clocks is cups. Some cups are not tables.\nConclusions:\nI. No tables is clocks.\nII. All tables are flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards North and covers 8 km, then turns left and walks 7 km, then turns left and walks 8 km, then turns left and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "West",
+   "North",
+   "South-West"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: -4 east, 0 north."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No clocks is books. No books is rivers. No rivers is pens.\nConclusions:\nI. Some pens are rivers.\nII. Some books are rivers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some boxes are birds. Some birds are coins. No coins is rivers.\nConclusions:\nI. All rivers are boxes.\nII. All birds are boxes.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, SCORE is written as TARNJ. How will STOCK be written in that code?",
+  "options": [
+   "TRRYP",
+   "RVLGF",
+   "USSZQ",
+   "KCOTS"
+  ],
+  "answer": 0,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are keys. Some keys are not doors. All doors are trees.\nConclusions:\nI. Some doors are not trees.\nII. All keys are flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: U ≥ K ≥ J ≥ N < M = L\nConclusions:\nI. J ≥ L\nII. N ≤ J",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some rivers are trees. All trees are books. No books is birds.\nConclusions:\nI. Some rivers are not trees.\nII. Some birds are not books.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some cups are not shirts. All shirts are boxes. No boxes is lamps.\nConclusions:\nI. No boxes is shirts.\nII. All shirts are lamps.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Farah, Imran, Manoj, Varun, Zoya sit in a straight row facing north. Amit and Farah are not neighbours. Amit sits somewhere to the left of Imran. Exactly one person sits between Farah and Manoj. Imran sits somewhere between Manoj and Farah. Varun sits somewhere between Amit and Farah. Exactly one person sits between Varun and Manoj. Zoya sits somewhere between Varun and Farah.\nWho sits at the extreme right end?",
+  "options": [
+   "Farah",
+   "Amit",
+   "Zoya",
+   "Imran"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Amit, Varun, Zoya, Manoj, Imran, Farah."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Bhavna, Chetan, Kiran, Omkar, Rahul sit in a straight row facing north. Omkar sits somewhere between Amit and Kiran. Bhavna sits somewhere to the left of Omkar. Bhavna sits somewhere between Amit and Chetan. Amit sits somewhere to the left of Omkar. Rahul sits somewhere between Amit and Bhavna. Kiran sits somewhere between Omkar and Chetan.\nWho sits at the extreme left end?",
+  "options": [
+   "Amit",
+   "Omkar",
+   "Chetan",
+   "Kiran"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Amit, Rahul, Bhavna, Omkar, Kiran, Chetan."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: T ≥ P ≥ C < Z < Y ≥ V\nConclusions:\nI. V ≥ P\nII. Y ≥ V",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Bhavna, Deepa, Farah, Jaya, Omkar sit in a straight row facing north. Bhavna sits somewhere to the left of Amit. Exactly one person sits between Omkar and Farah. Omkar sits somewhere to the left of Jaya. Deepa sits somewhere between Amit and Farah. Omkar and Jaya are not neighbours. Jaya and Deepa are not neighbours. Exactly one person sits between Bhavna and Omkar.\nWho sits at the extreme left end?",
+  "options": [
+   "Bhavna",
+   "Omkar",
+   "Farah",
+   "Amit"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Bhavna, Amit, Omkar, Deepa, Farah, Jaya."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some coins are pens. No pens is books. All books are roads.\nConclusions:\nI. All coins are books.\nII. No coins is pens.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, LOAN is written as MMDJ. How will PLAN be written in that code?",
+  "options": [
+   "ONXR",
+   "RKEK",
+   "QJDJ",
+   "NALP"
+  ],
+  "answer": 2,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No hills is pens. Some pens are not keys. Some keys are not chairs.\nConclusions:\nI. Some keys are not pens.\nII. Some hills are chairs.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Deepa, Hema, Jaya, Kiran, Omkar, Wasim sit in a straight row facing north. Exactly one person sits between Deepa and Kiran. Hema sits immediately to the left of Kiran. Jaya sits somewhere between Hema and Deepa. Hema sits somewhere between Omkar and Kiran. Omkar sits immediately to the left of Wasim. Wasim and Kiran are not neighbours.\nWho sits second from the left end?",
+  "options": [
+   "Omkar",
+   "Deepa",
+   "Kiran",
+   "Wasim"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Omkar, Wasim, Hema, Kiran, Jaya, Deepa."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 2, 13, 57, 233, ?, 3753, 15017",
+  "options": [
+   "1124",
+   "947",
+   "1078",
+   "937"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are hills. No hills is boxes. All boxes are lamps.\nConclusions:\nI. Some boxes are not flowers.\nII. Some boxes are flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards North and covers 5 km, then turns right and walks 12 km, then turns right and walks 8 km, then turns right and walks 9 km, then turns left and walks 7 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "West",
+   "North-East",
+   "South-East",
+   "South"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: 3 east, -10 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 5, 8, 17, 24, 37, ?, 65",
+  "options": [
+   "45",
+   "36",
+   "48",
+   "41"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Gautam, Hema, Neha, Varun, Yash, Zoya sit in a straight row facing north. Zoya sits immediately to the left of Varun. Varun sits somewhere between Zoya and Yash. Gautam sits somewhere between Neha and Yash. Chetan sits somewhere to the left of Gautam. Exactly one person sits between Gautam and Varun. Hema sits somewhere between Neha and Chetan. Exactly one person sits between Neha and Chetan. Hema and Gautam are not neighbours. Neha sits immediately to the left of Hema.\nWho sits exactly in the middle?",
+  "options": [
+   "Chetan",
+   "Hema",
+   "Gautam",
+   "Neha"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Neha, Hema, Chetan, Gautam, Zoya, Varun, Yash."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: A = L ≥ J ≥ V ≥ Q ≥ F\nConclusions:\nI. A ≥ J\nII. J > A",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards North and covers 2 km, then turns left and walks 6 km, then turns right and walks 7 km, then turns left and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-West",
+   "South-East",
+   "North",
+   "South-West"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: -14 east, 9 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 8, 5, 11, 10, 14, ?, 17, 40",
+  "options": [
+   "20",
+   "21",
+   "23",
+   "25"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, TABLE is written as UYEHJ. How will NOTE be written in that code?",
+  "options": [
+   "OMWA",
+   "MQQI",
+   "PNXB",
+   "ETON"
+  ],
+  "answer": 0,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some bags are not coins. All coins are books. Some books are cups.\nConclusions:\nI. No bags is cups.\nII. Some coins are books.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: Y = X < R < Q ≥ A ≤ G\nConclusions:\nI. Y < R\nII. R < A",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 12 km, then turns left and walks 11 km, then turns left and walks 4 km, then turns left and walks 4 km, then turns left and walks 9 km, then turns right and walks 9 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-West",
+   "North-East",
+   "South-West",
+   "West"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: -17 east, 2 north."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, MONEY is written as NMQAD. How will PRICE be written in that code?",
+  "options": [
+   "OTFGZ",
+   "RQMZK",
+   "QPLYJ",
+   "ECIRP"
+  ],
+  "answer": 2,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Gautam, Jaya, Lata, Manoj, Priya, Tarun sit in a straight row facing north. Priya and Lata are not neighbours. Jaya sits somewhere between Manoj and Tarun. Amit sits somewhere between Gautam and Jaya. Manoj and Amit are not neighbours. Manoj sits immediately to the left of Priya. Lata sits somewhere to the left of Jaya. Exactly one person sits between Lata and Tarun. Exactly one person sits between Manoj and Gautam. Manoj sits somewhere to the left of Lata.\nWho sits second from the left end?",
+  "options": [
+   "Manoj",
+   "Gautam",
+   "Lata",
+   "Priya"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Manoj, Priya, Gautam, Amit, Lata, Jaya, Tarun."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 40, 45, 68, ?, 104, 117, 148",
+  "options": [
+   "75",
+   "77",
+   "82",
+   "89"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, PLAN is written as QJDJ. How will NOTE be written in that code?",
+  "options": [
+   "MQQI",
+   "OMWA",
+   "PNXB",
+   "ETON"
+  ],
+  "answer": 1,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, TABLE is written as UYEHJ. How will CLERK be written in that code?",
+  "options": [
+   "BNBVF",
+   "EKIOQ",
+   "KRELC",
+   "DJHNP"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: X ≥ Z = T ≤ S < N = Q\nConclusions:\nI. S ≤ N\nII. Z ≥ S",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards East and covers 7 km, then turns right and walks 2 km, then turns left and walks 6 km, then turns left and walks 11 km, then turns right and walks 12 km, then turns right and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "North-West",
+   "South-West",
+   "South-East"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: 25 east, 1 north."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some bags are boxes. Some boxes are keys. No keys is doors.\nConclusions:\nI. Some doors are not keys.\nII. Some doors are keys.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: P = V = N ≥ H ≤ C ≤ R\nConclusions:\nI. H ≤ V\nII. N = V",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Bhavna, Eshan, Sneha, Varun, Wasim, Yash sit in a straight row facing north. Exactly one person sits between Eshan and Sneha. Varun sits somewhere to the left of Sneha. Sneha sits immediately to the left of Bhavna. Yash and Sneha are not neighbours. Wasim sits immediately to the left of Sneha. Eshan and Varun are not neighbours. Varun sits somewhere to the left of Eshan. Bhavna sits at one of the extreme ends.\nWho sits at the extreme right end?",
+  "options": [
+   "Varun",
+   "Sneha",
+   "Eshan",
+   "Bhavna"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Varun, Yash, Eshan, Wasim, Sneha, Bhavna."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Chetan, Omkar, Priya, Wasim, Zoya sit in a straight row facing north. Zoya and Priya are not neighbours. Exactly one person sits between Zoya and Wasim. Amit and Wasim are not neighbours. Exactly one person sits between Chetan and Omkar. Zoya sits somewhere between Chetan and Amit. Zoya sits somewhere between Omkar and Priya. Wasim sits somewhere between Chetan and Priya. Wasim sits somewhere to the left of Omkar. Wasim sits somewhere between Chetan and Amit.\nWho sits second from the left end?",
+  "options": [
+   "Wasim",
+   "Omkar",
+   "Zoya",
+   "Chetan"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Chetan, Wasim, Omkar, Zoya, Amit, Priya."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: L ≤ S ≥ D = U ≤ X < T\nConclusions:\nI. S = T\nII. L > D",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards North and covers 9 km, then turns right and walks 8 km, then turns left and walks 9 km, then turns left and walks 7 km, then turns right and walks 5 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South",
+   "North",
+   "West",
+   "North-East"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: 6 east, 23 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: K < N ≤ G ≥ A ≤ T > V\nConclusions:\nI. A ≥ N\nII. N = T",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Bhavna, Farah, Gautam, Neha, Priya, Usha sit in a straight row facing north. Gautam sits somewhere to the left of Usha. Neha sits somewhere between Bhavna and Gautam. Priya sits immediately to the left of Neha. Exactly one person sits between Usha and Gautam. Exactly one person sits between Neha and Bhavna. Exactly one person sits between Neha and Farah.\nWho sits at the extreme left end?",
+  "options": [
+   "Neha",
+   "Usha",
+   "Farah",
+   "Bhavna"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Bhavna, Priya, Neha, Gautam, Farah, Usha."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Deepa, Farah, Gautam, Imran, Kiran, Manoj, Usha sit in a straight row facing north. Imran sits somewhere to the left of Gautam. Exactly one person sits between Farah and Gautam. Kiran sits somewhere between Imran and Farah. Exactly one person sits between Imran and Farah. Usha sits somewhere between Farah and Manoj. Imran and Manoj are not neighbours. Deepa sits somewhere between Farah and Gautam. Imran and Deepa are not neighbours. Deepa sits somewhere between Imran and Manoj.\nWho sits at the extreme right end?",
+  "options": [
+   "Manoj",
+   "Imran",
+   "Deepa",
+   "Usha"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Imran, Kiran, Farah, Deepa, Gautam, Usha, Manoj."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 14, 7, 21, 14, ?, 28, 35, 56",
+  "options": [
+   "28",
+   "18",
+   "21",
+   "26"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 5, 7, 13, ?, 21, 63, 29, 189",
+  "options": [
+   "10",
+   "19",
+   "17",
+   "21"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 9 km, then turns left and walks 6 km, then turns right and walks 11 km, then turns right and walks 11 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-West",
+   "West",
+   "South-East",
+   "North-West"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: -20 east, 5 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: R ≤ W > L > Y ≥ H < P\nConclusions:\nI. P > L\nII. W ≥ R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are clocks. No clocks is cups. Some cups are lamps.\nConclusions:\nI. Some lamps are clocks.\nII. Some lamps are not clocks.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some cups are not roads. Some roads are lamps. No lamps is pens.\nConclusions:\nI. Some roads are not cups.\nII. Some roads are pens.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, TABLE is written as UYEHJ. How will LOAN be written in that code?",
+  "options": [
+   "KQXR",
+   "NNEK",
+   "MMDJ",
+   "NAOL"
+  ],
+  "answer": 2,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Farah, Hema, Kiran, Manoj, Neha, Sneha, Yash sit in a straight row facing north. Manoj sits somewhere between Hema and Farah. Kiran sits somewhere between Hema and Manoj. Sneha sits somewhere to the left of Farah. Exactly one person sits between Sneha and Yash. Neha sits immediately to the left of Hema. Manoj sits somewhere between Kiran and Farah. Kiran sits somewhere between Yash and Farah. Farah and Kiran are not neighbours. Sneha sits somewhere between Yash and Manoj.\nWho sits second from the left end?",
+  "options": [
+   "Yash",
+   "Hema",
+   "Sneha",
+   "Neha"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Neha, Hema, Yash, Kiran, Sneha, Manoj, Farah."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some hills are doors. All doors are pens. Some pens are not trees.\nConclusions:\nI. All trees are pens.\nII. All hills are trees.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Eshan, Hema, Imran, Manoj, Rahul, Wasim sit in a straight row facing north. Imran sits immediately to the left of Hema. Manoj sits somewhere between Eshan and Chetan. Hema sits somewhere between Imran and Manoj. Imran and Rahul are not neighbours. Manoj sits somewhere to the left of Wasim. Chetan sits somewhere to the left of Rahul. Eshan sits somewhere between Hema and Manoj. Exactly one person sits between Wasim and Eshan.\nWho sits second from the left end?",
+  "options": [
+   "Eshan",
+   "Hema",
+   "Wasim",
+   "Chetan"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Imran, Hema, Eshan, Manoj, Wasim, Chetan, Rahul."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All flowers are chairs. Some chairs are doors. All doors are cups.\nConclusions:\nI. No flowers is chairs.\nII. Some doors are chairs.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No cups is coins. All coins are bags. All bags are lamps.\nConclusions:\nI. Some lamps are not cups.\nII. Some bags are not coins.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, CODE is written as DMGA. How will COIN be written in that code?",
+  "options": [
+   "BQFR",
+   "ENMK",
+   "NIOC",
+   "DMLJ"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 5, 25, 105, 425, ?, 6825, 27305",
+  "options": [
+   "1790",
+   "1449",
+   "1705",
+   "1695"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: R > N > Q > S = A ≥ C\nConclusions:\nI. C ≤ A\nII. S < Q",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Deepa, Hema, Omkar, Varun, Wasim, Zoya sit in a straight row facing north. Zoya and Wasim are not neighbours. Omkar and Deepa are not neighbours. Exactly one person sits between Hema and Deepa. Exactly one person sits between Hema and Varun. Varun sits somewhere to the left of Hema. Varun and Hema are not neighbours. Omkar sits somewhere to the left of Deepa. Wasim and Deepa are not neighbours. Omkar sits immediately to the left of Varun.\nWho sits at the extreme left end?",
+  "options": [
+   "Wasim",
+   "Omkar",
+   "Deepa",
+   "Varun"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Omkar, Varun, Wasim, Hema, Zoya, Deepa."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some hills are not doors. Some doors are tables. No tables is shirts.\nConclusions:\nI. All shirts are doors.\nII. Some doors are tables.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Eshan, Lata, Rahul, Sneha, Usha, Zoya sit in a straight row facing north. Eshan sits somewhere to the left of Sneha. Rahul sits somewhere to the left of Sneha. Rahul sits somewhere between Usha and Sneha. Lata sits somewhere between Eshan and Sneha. Eshan sits somewhere to the left of Usha. Exactly one person sits between Zoya and Sneha. Sneha and Rahul are not neighbours.\nWho sits immediately to the right of Usha?",
+  "options": [
+   "Lata",
+   "Rahul",
+   "Sneha",
+   "Usha"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Eshan, Usha, Rahul, Zoya, Lata, Sneha."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Farah, Kiran, Neha, Priya, Rahul, Usha, Wasim sit in a straight row facing north. Exactly one person sits between Usha and Wasim. Rahul sits somewhere between Neha and Wasim. Neha sits somewhere between Priya and Rahul. Farah sits somewhere between Neha and Usha. Usha sits somewhere between Neha and Wasim. Neha sits somewhere to the left of Wasim. Priya sits somewhere to the left of Kiran. Exactly one person sits between Neha and Kiran. Priya sits somewhere to the left of Usha. Farah and Rahul are not neighbours.\nWho sits exactly in the middle?",
+  "options": [
+   "Usha",
+   "Farah",
+   "Neha",
+   "Kiran"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Priya, Neha, Farah, Kiran, Usha, Rahul, Wasim."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Gautam, Hema, Jaya, Neha, Tarun, Varun sit in a straight row facing north. Exactly one person sits between Jaya and Varun. Gautam sits somewhere to the left of Neha. Neha and Gautam are not neighbours. Varun sits somewhere between Gautam and Neha. Tarun sits somewhere to the left of Jaya. Exactly one person sits between Gautam and Neha. Gautam and Tarun are not neighbours. Varun sits somewhere to the left of Jaya. Jaya and Tarun are not neighbours. Varun sits somewhere to the left of Neha.\nWho sits at the extreme left end?",
+  "options": [
+   "Varun",
+   "Gautam",
+   "Tarun",
+   "Neha"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Tarun, Hema, Gautam, Varun, Neha, Jaya."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No rivers is shirts. Some shirts are not clocks. No clocks is bags.\nConclusions:\nI. All rivers are clocks.\nII. Some bags are shirts.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 4, 5, 12, ?, 20, 45, 28, 135",
+  "options": [
+   "15",
+   "5",
+   "25",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Farah, Jaya, Lata, Neha, Omkar, Yash sit in a straight row facing north. Farah sits somewhere between Jaya and Omkar. Omkar sits somewhere between Farah and Neha. Yash sits somewhere between Jaya and Omkar. Lata sits somewhere between Jaya and Farah. Yash and Farah are not neighbours. Neha and Lata are not neighbours. Yash and Omkar are not neighbours. Farah sits somewhere to the left of Neha.\nWho sits at the extreme right end?",
+  "options": [
+   "Yash",
+   "Lata",
+   "Neha",
+   "Farah"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Jaya, Yash, Lata, Farah, Omkar, Neha."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Bhavna, Eshan, Farah, Omkar, Sneha, Wasim, Yash sit in a straight row facing north. Farah sits at one of the extreme ends. Exactly one person sits between Omkar and Wasim. Sneha sits somewhere between Bhavna and Wasim. Farah sits immediately to the left of Eshan. Yash and Eshan are not neighbours. Sneha sits somewhere between Eshan and Yash. Sneha and Omkar are not neighbours. Bhavna sits somewhere between Farah and Omkar. Farah and Wasim are not neighbours.\nWho sits second from the left end?",
+  "options": [
+   "Eshan",
+   "Omkar",
+   "Sneha",
+   "Yash"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Farah, Eshan, Bhavna, Sneha, Wasim, Yash, Omkar."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 9 km, then turns right and walks 9 km, then turns right and walks 11 km, then turns left and walks 11 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-West",
+   "South-East",
+   "North-West",
+   "West"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: -20 east, 2 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: E = F = B ≤ S ≤ L = G\nConclusions:\nI. S ≤ L\nII. F ≥ E",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 5, 25, 105, 425, 1705, ?, 27305",
+  "options": [
+   "6826",
+   "6827",
+   "6825",
+   "7508"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, DEBT is written as ECEP. How will CODE be written in that code?",
+  "options": [
+   "BQAI",
+   "DMGA",
+   "ENHB",
+   "EDOC"
+  ],
+  "answer": 1,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 5 km, then turns right and walks 9 km, then turns left and walks 2 km, then turns left and walks 5 km, then turns left and walks 4 km. How far and in which direction is the person from the starting point?",
+  "options": [
+   "5 km North-West",
+   "6 km North-West",
+   "5 km East",
+   "7 km North-West"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: -3 east, 4 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 10, 3, 12, 6, ?, 12, 16, 24",
+  "options": [
+   "14",
+   "10",
+   "15",
+   "21"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No trees is clocks. All clocks are doors. Some doors are hills.\nConclusions:\nI. All trees are hills.\nII. Some doors are trees.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, COIN is written as DMLJ. How will DEBT be written in that code?",
+  "options": [
+   "CGYX",
+   "ECEP",
+   "FDFQ",
+   "TBED"
+  ],
+  "answer": 1,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 10 km, then turns left and walks 7 km, then turns left and walks 12 km, then turns left and walks 3 km, then turns left and walks 5 km, then turns left and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-West",
+   "West",
+   "North-East",
+   "South-East"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: 12 east, -3 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 18, 78, 318, ?, 5118, 20478",
+  "options": [
+   "1280",
+   "1278",
+   "958",
+   "1598"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some bags are pens. No pens is hills. Some hills are not lamps.\nConclusions:\nI. Some lamps are not pens.\nII. No hills is lamps.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 8 km, then turns right and walks 12 km, then turns right and walks 8 km, then turns left and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "West",
+   "East",
+   "North-West",
+   "North"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: 0 east, 20 north."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No tables is cups. No cups is coins. Some coins are shirts.\nConclusions:\nI. All shirts are coins.\nII. Some shirts are tables.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Imran, Neha, Omkar, Priya, Rahul, Tarun, Usha sit in a straight row facing north. Imran and Usha are not neighbours. Omkar sits somewhere between Rahul and Tarun. Tarun and Omkar are not neighbours. Exactly one person sits between Usha and Tarun. Imran sits immediately to the left of Rahul. Neha and Omkar are not neighbours. Exactly one person sits between Priya and Imran. Exactly one person sits between Usha and Priya. Usha sits somewhere between Imran and Tarun.\nWho sits second from the left end?",
+  "options": [
+   "Imran",
+   "Priya",
+   "Rahul",
+   "Tarun"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Imran, Rahul, Priya, Omkar, Usha, Neha, Tarun."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Deepa, Farah, Gautam, Priya, Sneha, Wasim sit in a straight row facing north. Deepa sits somewhere between Wasim and Chetan. Priya sits somewhere between Gautam and Deepa. Gautam sits somewhere between Sneha and Deepa. Exactly one person sits between Farah and Priya. Gautam sits somewhere to the left of Chetan. Wasim sits somewhere to the left of Farah. Deepa sits somewhere between Wasim and Farah. Exactly one person sits between Sneha and Wasim.\nWho sits at the extreme right end?",
+  "options": [
+   "Farah",
+   "Deepa",
+   "Chetan",
+   "Sneha"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Sneha, Gautam, Wasim, Priya, Deepa, Farah, Chetan."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards East and covers 10 km, then turns left and walks 9 km, then turns left and walks 10 km, then turns left and walks 10 km, then turns left and walks 11 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North-West",
+   "South-East",
+   "North-East"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: 11 east, -1 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 37, 48, 65, 80, ?, 120, 145",
+  "options": [
+   "50",
+   "106",
+   "81",
+   "101"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: X < Y = T = Q = B = G\nConclusions:\nI. X < Q\nII. T ≥ Q",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No cups is books. All books are rivers. No rivers is bags.\nConclusions:\nI. All books are cups.\nII. Some books are not bags.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 70, 131, 222, 349, ?, 735, 1006",
+  "options": [
+   "648",
+   "520",
+   "508",
+   "518"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some stones are cups. Some cups are flowers. Some flowers are not shirts.\nConclusions:\nI. Some cups are not stones.\nII. No shirts is flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, PLAN is written as QJDJ. How will CODE be written in that code?",
+  "options": [
+   "BQAI",
+   "ENHB",
+   "EDOC",
+   "DMGA"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Chetan, Imran, Neha, Varun, Yash sit in a straight row facing north. Yash sits at the extreme right end. Varun sits somewhere between Amit and Chetan. Amit sits somewhere to the left of Yash. Amit sits somewhere to the left of Imran. Varun sits somewhere between Imran and Yash. Neha sits at one of the extreme ends.\nWho sits second from the left end?",
+  "options": [
+   "Chetan",
+   "Amit",
+   "Yash",
+   "Imran"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Neha, Amit, Imran, Varun, Chetan, Yash."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, SCORE is written as TARNJ. How will CODE be written in that code?",
+  "options": [
+   "BQAI",
+   "ENHB",
+   "EDOC",
+   "DMGA"
+  ],
+  "answer": 3,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some doors are not lamps. Some lamps are tables. All tables are clocks.\nConclusions:\nI. No tables is clocks.\nII. Some lamps are not doors.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 51, 62, 83, 98, ?, 142, 171",
+  "options": [
+   "133",
+   "123",
+   "98",
+   "141"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: M = G < V = Q ≥ F ≤ S\nConclusions:\nI. M < V\nII. F > M",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Eshan, Gautam, Hema, Jaya, Manoj, Sneha, Usha sit in a straight row facing north. Jaya sits immediately to the left of Gautam. Gautam sits somewhere between Hema and Sneha. Manoj sits somewhere between Hema and Sneha. Gautam sits somewhere to the left of Usha. Manoj sits somewhere to the left of Eshan. Eshan sits immediately to the left of Sneha. Usha sits somewhere between Manoj and Sneha. Gautam and Usha are not neighbours. Manoj sits somewhere between Jaya and Sneha.\nWho sits second from the left end?",
+  "options": [
+   "Eshan",
+   "Jaya",
+   "Sneha",
+   "Gautam"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Hema, Jaya, Gautam, Manoj, Usha, Eshan, Sneha."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Deepa, Farah, Manoj, Omkar, Rahul, Yash sit in a straight row facing north. Rahul sits somewhere to the left of Yash. Deepa sits somewhere to the left of Yash. Omkar sits somewhere to the left of Rahul. Omkar sits immediately to the left of Deepa. Omkar sits somewhere to the left of Manoj. Manoj sits somewhere between Omkar and Yash. Yash sits somewhere between Omkar and Farah. Exactly one person sits between Rahul and Omkar.\nWho sits immediately to the right of Omkar?",
+  "options": [
+   "Deepa",
+   "Rahul",
+   "Manoj",
+   "Omkar"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Omkar, Deepa, Rahul, Manoj, Yash, Farah."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All lamps are tables. All tables are bags. All bags are flowers.\nConclusions:\nI. No tables is bags.\nII. All flowers are bags.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some flowers are not boxes. All boxes are doors. Some doors are not roads.\nConclusions:\nI. Some doors are not roads.\nII. Some roads are not flowers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 6 km, then turns right and walks 7 km, then turns left and walks 5 km, then turns left and walks 5 km, then turns left and walks 12 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "South",
+   "North-East",
+   "North"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: 1 east, 2 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: K ≤ U = R = W ≥ H > T\nConclusions:\nI. H > T\nII. R > T",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Deepa, Gautam, Hema, Manoj, Rahul, Sneha, Varun sit in a straight row facing north. Deepa sits at the extreme left end. Hema sits somewhere between Rahul and Gautam. Exactly one person sits between Sneha and Deepa. Manoj sits somewhere between Hema and Gautam. Rahul sits immediately to the left of Hema. Manoj and Deepa are not neighbours. Deepa sits somewhere to the left of Rahul.\nWho sits second from the left end?",
+  "options": [
+   "Deepa",
+   "Gautam",
+   "Varun",
+   "Sneha"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Deepa, Varun, Sneha, Rahul, Hema, Manoj, Gautam."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 12 km, then turns right and walks 7 km, then turns left and walks 6 km, then turns right and walks 9 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North",
+   "South",
+   "South-West",
+   "North-East"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: -16 east, -18 north."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some keys are books. No books is lamps. Some lamps are pens.\nConclusions:\nI. No lamps is books.\nII. Some pens are not books.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards East and covers 10 km, then turns right and walks 12 km, then turns left and walks 12 km, then turns left and walks 12 km, then turns right and walks 7 km, then turns left and walks 6 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-West",
+   "North-East",
+   "East",
+   "North-West"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: 29 east, 6 north."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 6 km, then turns left and walks 2 km, then turns right and walks 4 km, then turns left and walks 6 km, then turns right and walks 2 km, then turns right and walks 6 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "West",
+   "South-East",
+   "East",
+   "South-West"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: 2 east, -12 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 26, 63, 124, 215, ?, 511, 728",
+  "options": [
+   "376",
+   "352",
+   "342",
+   "325"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some hills are lamps. No lamps is keys. Some keys are not shirts.\nConclusions:\nI. No lamps is keys.\nII. Some hills are not lamps.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 2 km, then turns left and walks 12 km, then turns right and walks 7 km, then turns right and walks 5 km, then turns left and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South",
+   "North",
+   "East",
+   "South-West"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: -14 east, -7 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 6, 10, 19, 33, 52, ?, 105",
+  "options": [
+   "73",
+   "76",
+   "79",
+   "80"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards South and covers 6 km, then turns left and walks 12 km, then turns right and walks 2 km, then turns right and walks 12 km, then turns left and walks 12 km, then turns left and walks 9 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-East",
+   "North-East",
+   "North-West",
+   "East"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: 9 east, -20 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 67, 78, 103, ?, 147, 166, 199",
+  "options": [
+   "124",
+   "106",
+   "88",
+   "118"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Farah, Kiran, Lata, Omkar, Priya, Wasim sit in a straight row facing north. Lata sits at the extreme right end. Priya sits somewhere between Farah and Lata. Kiran and Omkar are not neighbours. Priya and Lata are not neighbours. Wasim and Priya are not neighbours. Omkar sits somewhere between Wasim and Farah. Kiran and Farah are not neighbours. Wasim sits somewhere to the left of Farah.\nWho sits at the extreme left end?",
+  "options": [
+   "Lata",
+   "Farah",
+   "Omkar",
+   "Wasim"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Wasim, Omkar, Farah, Priya, Kiran, Lata."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: S > D ≤ E ≤ R ≥ H < A\nConclusions:\nI. R ≥ H\nII. H ≥ S",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: B = L ≤ J ≤ N > Q ≥ X\nConclusions:\nI. J < X\nII. Q > L",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Gautam, Imran, Jaya, Tarun, Wasim, Zoya sit in a straight row facing north. Jaya sits somewhere between Zoya and Imran. Jaya sits immediately to the left of Gautam. Wasim sits somewhere between Zoya and Jaya. Exactly one person sits between Tarun and Wasim. Wasim sits somewhere between Tarun and Imran. Wasim sits somewhere to the left of Imran.\nWho sits second from the left end?",
+  "options": [
+   "Zoya",
+   "Imran",
+   "Jaya",
+   "Tarun"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Tarun, Zoya, Wasim, Jaya, Gautam, Imran."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Hema, Imran, Jaya, Priya, Rahul, Usha, Varun sit in a straight row facing north. Imran sits somewhere between Jaya and Hema. Varun sits somewhere between Priya and Imran. Exactly one person sits between Priya and Varun. Varun sits somewhere to the left of Hema. Priya sits somewhere between Jaya and Imran. Rahul sits somewhere between Imran and Hema. Imran sits immediately to the left of Rahul. Hema and Usha are not neighbours.\nWho sits at the extreme left end?",
+  "options": [
+   "Hema",
+   "Varun",
+   "Jaya",
+   "Imran"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Jaya, Priya, Usha, Varun, Imran, Rahul, Hema."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All shirts are hills. All hills are doors. No doors is books.\nConclusions:\nI. Some books are not shirts.\nII. Some doors are not shirts.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 51, 62, 83, 98, 123, ?, 171",
+  "options": [
+   "141",
+   "143",
+   "142",
+   "137"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: D ≤ Y = L ≤ V > G < K\nConclusions:\nI. K ≤ L\nII. Y ≥ D",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: L < M ≤ X = S ≥ N > D\nConclusions:\nI. N ≤ S\nII. S > D",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some lamps are bags. All bags are trees. All trees are chairs.\nConclusions:\nI. No chairs is lamps.\nII. Some bags are chairs.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 10 km, then turns left and walks 8 km, then turns right and walks 6 km, then turns left and walks 6 km, then turns right and walks 2 km, then turns right and walks 4 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South",
+   "North-East",
+   "North-West",
+   "South-West"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: -18 east, -10 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: A ≥ Q < B > C > X ≤ F\nConclusions:\nI. F = Q\nII. B ≥ Q",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No bags is trees. Some trees are not rivers. All rivers are birds.\nConclusions:\nI. Some birds are not bags.\nII. No trees is rivers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Bhavna, Neha, Omkar, Varun, Wasim, Yash, Zoya sit in a straight row facing north. Neha and Omkar are not neighbours. Yash sits somewhere between Bhavna and Zoya. Yash sits somewhere to the left of Wasim. Neha sits somewhere between Wasim and Varun. Zoya sits somewhere between Omkar and Neha. Omkar sits somewhere to the left of Neha. Exactly one person sits between Varun and Zoya. Wasim and Bhavna are not neighbours. Neha sits somewhere between Yash and Varun. Omkar sits somewhere between Bhavna and Yash.\nWho sits second from the left end?",
+  "options": [
+   "Omkar",
+   "Zoya",
+   "Yash",
+   "Varun"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Bhavna, Omkar, Yash, Wasim, Zoya, Neha, Varun."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Gautam, Hema, Kiran, Manoj, Priya, Rahul, Wasim sit in a straight row facing north. Wasim and Priya are not neighbours. Manoj and Priya are not neighbours. Gautam sits somewhere between Wasim and Rahul. Exactly one person sits between Gautam and Kiran. Exactly one person sits between Gautam and Manoj. Rahul sits somewhere between Wasim and Priya. Hema and Kiran are not neighbours. Priya sits somewhere to the left of Hema. Manoj sits at the extreme left end.\nWho sits exactly in the middle?",
+  "options": [
+   "Manoj",
+   "Rahul",
+   "Priya",
+   "Gautam"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Manoj, Wasim, Gautam, Rahul, Kiran, Priya, Hema."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Eshan, Hema, Imran, Priya, Wasim, Yash sit in a straight row facing north. Priya sits immediately to the left of Imran. Priya and Yash are not neighbours. Exactly one person sits between Priya and Chetan. Wasim sits at one of the extreme ends. Yash and Imran are not neighbours. Chetan and Imran are not neighbours. Exactly one person sits between Priya and Wasim. Eshan and Chetan are not neighbours. Chetan sits somewhere to the left of Priya.\nWho sits at the extreme right end?",
+  "options": [
+   "Wasim",
+   "Chetan",
+   "Eshan",
+   "Priya"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Eshan, Yash, Chetan, Hema, Priya, Imran, Wasim."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All tables are chairs. No chairs is birds. Some birds are boxes.\nConclusions:\nI. Some chairs are birds.\nII. Some boxes are tables.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All birds are chairs. No chairs is stones. Some stones are shirts.\nConclusions:\nI. Some shirts are not stones.\nII. No birds is chairs.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Chetan, Deepa, Farah, Priya, Usha, Wasim sit in a straight row facing north. Priya and Farah are not neighbours. Chetan sits somewhere between Farah and Wasim. Wasim sits somewhere between Chetan and Usha. Exactly one person sits between Usha and Deepa. Chetan sits immediately to the left of Wasim. Priya and Usha are not neighbours. Wasim sits somewhere between Chetan and Amit. Usha sits somewhere between Chetan and Amit. Exactly one person sits between Amit and Priya.\nWho sits second from the left end?",
+  "options": [
+   "Farah",
+   "Usha",
+   "Wasim",
+   "Chetan"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Farah, Chetan, Wasim, Usha, Amit, Deepa, Priya."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All rivers are flowers. Some flowers are not books. All books are trees.\nConclusions:\nI. Some trees are books.\nII. No flowers is trees.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All hills are lamps. No lamps is clocks. No clocks is coins.\nConclusions:\nI. Some clocks are coins.\nII. All lamps are hills.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 14, 11, 30, ?, 54, 59, 86",
+  "options": [
+   "46",
+   "31",
+   "21",
+   "30"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Deepa, Farah, Imran, Lata, Priya, Wasim sit in a straight row facing north. Lata sits somewhere between Imran and Priya. Lata and Farah are not neighbours. Chetan sits somewhere to the left of Wasim. Lata and Chetan are not neighbours. Exactly one person sits between Imran and Deepa. Priya sits somewhere between Deepa and Wasim. Farah sits somewhere to the left of Wasim. Lata sits somewhere between Farah and Wasim. Chetan sits somewhere to the left of Farah. Exactly one person sits between Chetan and Imran.\nWho sits immediately to the right of Priya?",
+  "options": [
+   "Farah",
+   "Wasim",
+   "Deepa",
+   "Chetan"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Chetan, Farah, Imran, Lata, Deepa, Priya, Wasim."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Bhavna, Deepa, Imran, Jaya, Manoj, Rahul sit in a straight row facing north. Exactly one person sits between Bhavna and Imran. Jaya sits immediately to the left of Imran. Rahul and Jaya are not neighbours. Deepa sits somewhere between Rahul and Bhavna. Bhavna sits at one of the extreme ends. Imran sits somewhere between Jaya and Bhavna. Imran sits somewhere between Manoj and Bhavna.\nWho sits immediately to the right of Jaya?",
+  "options": [
+   "Rahul",
+   "Imran",
+   "Bhavna",
+   "Deepa"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Rahul, Manoj, Jaya, Imran, Deepa, Bhavna."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Deepa, Kiran, Manoj, Sneha, Tarun, Yash sit in a straight row facing north. Exactly one person sits between Deepa and Sneha. Sneha sits somewhere to the left of Deepa. Yash sits somewhere between Manoj and Sneha. Manoj sits somewhere between Kiran and Tarun. Kiran sits somewhere to the left of Manoj. Yash sits somewhere between Kiran and Sneha. Manoj sits somewhere between Kiran and Sneha. Yash sits somewhere to the left of Tarun.\nWho sits immediately to the right of Kiran?",
+  "options": [
+   "Manoj",
+   "Tarun",
+   "Sneha",
+   "Yash"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Kiran, Manoj, Yash, Sneha, Tarun, Deepa."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 15, 7, 20, 21, 25, ?, 30, 189",
+  "options": [
+   "66",
+   "60",
+   "63",
+   "65"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: Y > B ≥ G = S ≤ R < Z\nConclusions:\nI. S ≥ R\nII. S = R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 69, 76, 105, 116, ?, 164, 201",
+  "options": [
+   "149",
+   "146",
+   "171",
+   "151"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Chetan, Lata, Manoj, Sneha, Tarun, Zoya sit in a straight row facing north. Exactly one person sits between Tarun and Chetan. Tarun sits somewhere to the left of Manoj. Exactly one person sits between Sneha and Amit. Tarun sits immediately to the left of Lata. Exactly one person sits between Chetan and Manoj. Sneha sits somewhere between Chetan and Manoj. Manoj sits somewhere between Chetan and Amit. Amit sits at one of the extreme ends.\nWho sits at the extreme right end?",
+  "options": [
+   "Tarun",
+   "Chetan",
+   "Sneha",
+   "Amit"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Zoya, Tarun, Lata, Chetan, Sneha, Manoj, Amit."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 5, 21, 69, 213, 645, ?, 5829",
+  "options": [
+   "1941",
+   "1844",
+   "2232",
+   "1940"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Farah, Hema, Imran, Kiran, Manoj, Tarun sit in a straight row facing north. Imran and Manoj are not neighbours. Manoj sits immediately to the left of Hema. Exactly one person sits between Hema and Farah. Exactly one person sits between Manoj and Kiran. Manoj sits somewhere to the left of Tarun. Farah sits somewhere between Kiran and Manoj. Manoj sits somewhere between Farah and Hema. Farah sits somewhere between Imran and Manoj.\nWho sits at the extreme left end?",
+  "options": [
+   "Tarun",
+   "Manoj",
+   "Kiran",
+   "Imran"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Imran, Kiran, Farah, Manoj, Hema, Tarun."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 6, 16, 36, ?, 156, 316, 636",
+  "options": [
+   "86",
+   "76",
+   "95",
+   "80"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: A > Q > N > R > C = U\nConclusions:\nI. R < A\nII. U < R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 4,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: All flowers are coins. Some coins are trees. Some trees are books.\nConclusions:\nI. Some books are flowers.\nII. All books are coins.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Amit, Chetan, Farah, Hema, Imran, Usha, Wasim sit in a straight row facing north. Wasim and Chetan are not neighbours. Wasim sits somewhere between Chetan and Amit. Hema and Amit are not neighbours. Wasim and Hema are not neighbours. Chetan sits somewhere to the left of Hema. Imran and Wasim are not neighbours. Usha sits at one of the extreme ends. Amit sits somewhere between Chetan and Hema. Usha and Farah are not neighbours. Wasim sits somewhere between Usha and Hema.\nWho sits at the extreme right end?",
+  "options": [
+   "Wasim",
+   "Hema",
+   "Imran",
+   "Farah"
+  ],
+  "answer": 1,
+  "explanation": "Order from left to right: Usha, Chetan, Farah, Wasim, Amit, Imran, Hema."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, MONEY is written as NMQAD. How will STOCK be written in that code?",
+  "options": [
+   "TRRYP",
+   "RVLGF",
+   "USSZQ",
+   "KCOTS"
+  ],
+  "answer": 0,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: S > J = V > K = Z < R\nConclusions:\nI. S < J\nII. R > K",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: P ≤ N < F = U ≤ H < L\nConclusions:\nI. L ≤ N\nII. N ≥ P",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No tables is keys. All keys are birds. Some birds are not shirts.\nConclusions:\nI. No birds is shirts.\nII. Some keys are not shirts.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards East and covers 9 km, then turns right and walks 9 km, then turns left and walks 11 km, then turns right and walks 10 km, then turns right and walks 10 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "East",
+   "South",
+   "South-East"
+  ],
+  "answer": 3,
+  "explanation": "Net displacement: 10 east, -14 north."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 25, 62, 123, ?, 341, 510, 727",
+  "options": [
+   "214",
+   "204",
+   "171",
+   "219"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Bhavna, Eshan, Hema, Kiran, Tarun, Varun sit in a straight row facing north. Exactly one person sits between Hema and Tarun. Varun sits somewhere to the left of Eshan. Eshan sits somewhere to the left of Hema. Exactly one person sits between Varun and Eshan. Eshan sits somewhere between Varun and Kiran. Bhavna and Kiran are not neighbours. Hema sits at the extreme right end. Bhavna sits somewhere between Varun and Kiran.\nWho sits immediately to the right of Bhavna?",
+  "options": [
+   "Bhavna",
+   "Hema",
+   "Tarun",
+   "Eshan"
+  ],
+  "answer": 3,
+  "explanation": "Order from left to right: Varun, Bhavna, Eshan, Tarun, Kiran, Hema."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Bhavna, Deepa, Gautam, Priya, Tarun, Varun sit in a straight row facing north. Priya sits somewhere between Bhavna and Tarun. Priya sits immediately to the left of Tarun. Varun sits somewhere between Deepa and Tarun. Bhavna sits somewhere between Varun and Tarun. Gautam sits at one of the extreme ends. Varun sits somewhere between Gautam and Tarun.\nWho sits at the extreme right end?",
+  "options": [
+   "Tarun",
+   "Varun",
+   "Deepa",
+   "Priya"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Gautam, Deepa, Varun, Bhavna, Priya, Tarun."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 4 km, then turns left and walks 9 km, then turns right and walks 9 km, then turns left and walks 4 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-West",
+   "North",
+   "North-West",
+   "North-East"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: -16 east, -13 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: F ≤ D = U ≤ G > Y > T\nConclusions:\nI. G ≥ F\nII. U ≤ F",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: R ≤ S ≤ L < B > H < G\nConclusions:\nI. B = S\nII. G ≥ R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 9, 12, 20, 33, 51, ?, 102",
+  "options": [
+   "111",
+   "67",
+   "74",
+   "85"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: U > Y > R ≤ S > N ≤ J\nConclusions:\nI. S = J\nII. Y < R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: E ≤ V < M ≤ J < Y > L\nConclusions:\nI. L < V\nII. V > E",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: S > X < M ≥ P ≤ R < T\nConclusions:\nI. M < T\nII. S = R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: V > M = J ≥ Y ≤ C > Q\nConclusions:\nI. J ≥ C\nII. M ≤ Q",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Bhavna, Imran, Manoj, Omkar, Rahul, Sneha, Zoya sit in a straight row facing north. Rahul sits at one of the extreme ends. Sneha and Bhavna are not neighbours. Sneha sits somewhere between Omkar and Bhavna. Rahul sits somewhere to the left of Bhavna. Manoj sits somewhere between Rahul and Bhavna. Omkar sits somewhere to the left of Imran. Exactly one person sits between Bhavna and Zoya. Exactly one person sits between Zoya and Omkar. Zoya sits somewhere between Manoj and Imran. Sneha sits immediately to the left of Zoya.\nWho sits at the extreme right end?",
+  "options": [
+   "Imran",
+   "Omkar",
+   "Bhavna",
+   "Manoj"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Rahul, Manoj, Omkar, Sneha, Zoya, Imran, Bhavna."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, GOLD is written as HMOZ. How will LOAN be written in that code?",
+  "options": [
+   "KQXR",
+   "MMDJ",
+   "NNEK",
+   "NAOL"
+  ],
+  "answer": 1,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 68, 77, 104, ?, 148, 165, 200",
+  "options": [
+   "122",
+   "123",
+   "111",
+   "117"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards North and covers 12 km, then turns right and walks 3 km, then turns right and walks 12 km, then turns right and walks 8 km, then turns left and walks 4 km, then turns right and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "West",
+   "South-West",
+   "North-East",
+   "North-West"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: -7 east, -4 north."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "6 friends Amit, Deepa, Farah, Gautam, Omkar, Yash sit in a straight row facing north. Deepa sits immediately to the left of Amit. Gautam sits somewhere between Omkar and Farah. Exactly one person sits between Farah and Omkar. Yash sits somewhere to the left of Amit. Yash sits somewhere to the left of Gautam. Amit sits somewhere between Yash and Gautam. Gautam sits immediately to the left of Farah.\nWho sits immediately to the right of Omkar?",
+  "options": [
+   "Deepa",
+   "Yash",
+   "Gautam",
+   "Amit"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Yash, Deepa, Amit, Omkar, Gautam, Farah."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 4 km, then turns right and walks 4 km, then turns right and walks 4 km, then turns right and walks 10 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-West",
+   "South",
+   "South-West",
+   "East"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: 0 east, -6 north."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: E < W ≥ Q ≤ S < H < T\nConclusions:\nI. S ≤ T\nII. S < W",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 0,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 13, 53, 213, 853, ?, 13653",
+  "options": [
+   "2560",
+   "3413",
+   "3423",
+   "3410"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: No bags is chairs. All chairs are shirts. No shirts is clocks.\nConclusions:\nI. All chairs are bags.\nII. Some chairs are not shirts.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards North and covers 6 km, then turns right and walks 4 km, then turns right and walks 4 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "South-East",
+   "North-West",
+   "North-East"
+  ],
+  "answer": 2,
+  "explanation": "Net displacement: -1 east, 2 north."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Bhavna, Gautam, Kiran, Rahul, Sneha, Tarun, Varun sit in a straight row facing north. Exactly one person sits between Bhavna and Gautam. Exactly one person sits between Gautam and Sneha. Exactly one person sits between Kiran and Rahul. Sneha sits somewhere between Gautam and Tarun. Rahul sits somewhere between Gautam and Kiran. Sneha sits immediately to the left of Kiran. Gautam sits somewhere between Varun and Rahul. Bhavna sits somewhere to the left of Varun.\nWho sits at the extreme right end?",
+  "options": [
+   "Tarun",
+   "Gautam",
+   "Kiran",
+   "Sneha"
+  ],
+  "answer": 0,
+  "explanation": "Order from left to right: Bhavna, Varun, Gautam, Rahul, Sneha, Kiran, Tarun."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: F ≤ R ≤ D > N ≥ Q ≥ C\nConclusions:\nI. F > D\nII. N ≥ C",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "seating-arrangement",
+  "question": "7 friends Chetan, Deepa, Hema, Imran, Neha, Rahul, Usha sit in a straight row facing north. Exactly one person sits between Rahul and Deepa. Imran and Hema are not neighbours. Imran sits somewhere between Rahul and Hema. Neha and Chetan are not neighbours. Imran sits somewhere between Deepa and Usha. Neha sits somewhere between Deepa and Imran. Deepa sits somewhere to the left of Imran. Hema sits somewhere between Rahul and Chetan. Usha sits somewhere between Rahul and Hema.\nWho sits immediately to the right of Rahul?",
+  "options": [
+   "Rahul",
+   "Neha",
+   "Imran",
+   "Hema"
+  ],
+  "answer": 2,
+  "explanation": "Order from left to right: Deepa, Neha, Rahul, Imran, Usha, Hema, Chetan."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 219, 346, 515, 732, 1003, ?, 1731",
+  "options": [
+   "1335",
+   "1334",
+   "1331",
+   "1336"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some hills are rivers. All rivers are lamps. Some lamps are not boxes.\nConclusions:\nI. No hills is lamps.\nII. Some hills are lamps.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 1,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "syllogism",
+  "question": "Statements: Some stones are keys. Some keys are books. Some books are bags.\nConclusions:\nI. All books are stones.\nII. All bags are stones.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 37, 48, 65, ?, 101, 120, 145",
+  "options": [
+   "84",
+   "77",
+   "80",
+   "92"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "inequality",
+  "question": "Statements: L = Z ≤ S ≤ A > W = F\nConclusions:\nI. Z = W\nII. A = L",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ],
+  "answer": 3,
+  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+ },
+ {
+  "topic": "coding-decoding",
+  "question": "In a certain code, NOTE is written as OMWA. How will BANK be written in that code?",
+  "options": [
+   "CYQG",
+   "ACKO",
+   "DZRH",
+   "KNAB"
+  ],
+  "answer": 0,
+  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 6 km, then turns right and walks 7 km, then turns right and walks 8 km, then turns left and walks 11 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North-East",
+   "South-East",
+   "North"
+  ],
+  "answer": 1,
+  "explanation": "Net displacement: 2 east, 18 north."
+ },
+ {
+  "topic": "direction-sense",
+  "question": "A person starts walking towards West and covers 3 km, then turns right and walks 12 km, then turns right and walks 11 km, then turns left and walks 9 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "North-West",
+   "North",
+   "South"
+  ],
+  "answer": 0,
+  "explanation": "Net displacement: 11 east, 21 north."
+ }
+]

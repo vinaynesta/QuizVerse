@@ -1,45 +1,19 @@
-const subjects = [
-  "Java",
-  "Python",
-  "C",
-  "DBMS",
-  "ML",
-  "General Knowledge",
-  "English",
-  "Aptitude",
-  "Reasoning",
-];
-
-function renderSubjects() {
+function renderExams(index) {
   const container = document.getElementById("subject-list");
-  container.innerHTML = subjects
+  container.innerHTML = index.exams
     .map(
-      (subject) => `
+      (exam) => `
         <div class="subject-card">
-            <h3>${subject}</h3>
-            <button class="start-quiz-button" data-subject="${subject.toLowerCase()}">Start Quiz</button>
+            <h3>${exam.name}</h3>
+            <p class="card-desc">${exam.description}</p>
+            <a class="start-quiz-button" href="exam.html?exam=${encodeURIComponent(exam.id)}">Open</a>
         </div>
     `
     )
     .join("");
-
-  document.querySelectorAll(".start-quiz-button").forEach((button) => {
-    button.addEventListener("click", () =>
-      startQuizForSubject(button.dataset.subject)
-    );
-  });
 }
 
-async function startQuizForSubject(subject) {
-  document.getElementById("loading-spinner").style.display = "block";
-
-  try {
-    // Redirect to quiz page with subject as query param
-    window.location.href = `/quiz.html?subject=${encodeURIComponent(subject)}`;
-  } catch (error) {
-    console.error("Error starting quiz:", error);
-  }
-}
-
-// Initialize
-renderSubjects();
+fetch("data/index.json")
+  .then((response) => response.json())
+  .then(renderExams)
+  .catch((error) => console.error("Error loading exams:", error));

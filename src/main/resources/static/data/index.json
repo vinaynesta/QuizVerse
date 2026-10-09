@@ -1,0 +1,1977 @@
+{
+  "negativeMarking": 0.25,
+  "exams": [
+    {
+      "id": "ibps-clerk",
+      "name": "IBPS Clerk",
+      "description": "Customer Service Associate. Prelims 100 questions in 60 minutes; Mains 160 questions in 125 minutes.",
+      "stages": [
+        {
+          "id": "prelims",
+          "name": "Prelims",
+          "sections": [
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 30,
+              "marks": 30,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-clerk/prelims/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-clerk/prelims/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-clerk/prelims/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-clerk/prelims/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-clerk/prelims/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-clerk/prelims/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-clerk/prelims/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-clerk/prelims/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-clerk/prelims/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-clerk/prelims/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-clerk/prelims/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-clerk/prelims/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-clerk/prelims/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-clerk/prelims/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-clerk/prelims/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "numerical-ability",
+              "name": "Numerical Ability",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-clerk/prelims/numerical-ability/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-clerk/prelims/numerical-ability/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-clerk/prelims/numerical-ability/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-clerk/prelims/numerical-ability/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-clerk/prelims/numerical-ability/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-clerk/prelims/numerical-ability/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-clerk/prelims/numerical-ability/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-clerk/prelims/numerical-ability/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-clerk/prelims/numerical-ability/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-clerk/prelims/numerical-ability/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-clerk/prelims/numerical-ability/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-clerk/prelims/numerical-ability/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-clerk/prelims/numerical-ability/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-clerk/prelims/numerical-ability/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-clerk/prelims/numerical-ability/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-clerk/prelims/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-clerk/prelims/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-clerk/prelims/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-clerk/prelims/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-clerk/prelims/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-clerk/prelims/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-clerk/prelims/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-clerk/prelims/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-clerk/prelims/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-clerk/prelims/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-clerk/prelims/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-clerk/prelims/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-clerk/prelims/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-clerk/prelims/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-clerk/prelims/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": []
+        },
+        {
+          "id": "mains",
+          "name": "Mains",
+          "sections": [
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 40,
+              "marks": 60,
+              "minutes": 35,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-clerk/mains/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-clerk/mains/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-clerk/mains/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-clerk/mains/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-clerk/mains/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-clerk/mains/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-clerk/mains/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-clerk/mains/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-clerk/mains/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-clerk/mains/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-clerk/mains/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-clerk/mains/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-clerk/mains/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-clerk/mains/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-clerk/mains/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 35,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-clerk/mains/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-clerk/mains/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-clerk/mains/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-clerk/mains/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-clerk/mains/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-clerk/mains/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-clerk/mains/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-clerk/mains/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-clerk/mains/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-clerk/mains/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-clerk/mains/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-clerk/mains/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-clerk/mains/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-clerk/mains/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-clerk/mains/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "quantitative-aptitude",
+              "name": "Quantitative Aptitude",
+              "questions": 40,
+              "marks": 50,
+              "minutes": 35,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-clerk/mains/quantitative-aptitude/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": [
+            {
+              "id": "general-financial-awareness",
+              "name": "General/Financial Awareness",
+              "questions": 40,
+              "marks": 50,
+              "minutes": 20,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sbi-clerk",
+      "name": "SBI Clerk",
+      "description": "Junior Associate. Prelims 100 questions in 60 minutes; Mains 190 questions in 160 minutes.",
+      "stages": [
+        {
+          "id": "prelims",
+          "name": "Prelims",
+          "sections": [
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 30,
+              "marks": 30,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-clerk/prelims/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-clerk/prelims/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-clerk/prelims/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-clerk/prelims/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-clerk/prelims/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-clerk/prelims/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-clerk/prelims/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-clerk/prelims/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-clerk/prelims/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-clerk/prelims/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-clerk/prelims/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-clerk/prelims/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-clerk/prelims/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-clerk/prelims/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-clerk/prelims/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "quantitative-aptitude",
+              "name": "Quantitative Aptitude",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-clerk/prelims/quantitative-aptitude/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-clerk/prelims/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-clerk/prelims/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-clerk/prelims/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-clerk/prelims/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-clerk/prelims/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-clerk/prelims/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-clerk/prelims/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-clerk/prelims/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-clerk/prelims/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-clerk/prelims/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-clerk/prelims/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-clerk/prelims/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-clerk/prelims/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-clerk/prelims/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-clerk/prelims/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": []
+        },
+        {
+          "id": "mains",
+          "name": "Mains",
+          "sections": [
+            {
+              "id": "english",
+              "name": "General English",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 35,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-clerk/mains/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-clerk/mains/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-clerk/mains/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-clerk/mains/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-clerk/mains/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-clerk/mains/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-clerk/mains/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-clerk/mains/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-clerk/mains/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-clerk/mains/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-clerk/mains/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-clerk/mains/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-clerk/mains/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-clerk/mains/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-clerk/mains/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "quantitative-aptitude",
+              "name": "Quantitative Aptitude",
+              "questions": 50,
+              "marks": 50,
+              "minutes": 45,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-clerk/mains/quantitative-aptitude/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 50,
+              "marks": 60,
+              "minutes": 45,
+              "note": "The real section is Reasoning Ability & Computer Aptitude; these quizzes cover the reasoning part only.",
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-clerk/mains/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-clerk/mains/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-clerk/mains/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-clerk/mains/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-clerk/mains/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-clerk/mains/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-clerk/mains/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-clerk/mains/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-clerk/mains/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-clerk/mains/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-clerk/mains/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-clerk/mains/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-clerk/mains/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-clerk/mains/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-clerk/mains/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": [
+            {
+              "id": "general-financial-awareness",
+              "name": "General/Financial Awareness",
+              "questions": 50,
+              "marks": 50,
+              "minutes": 35,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rrb-clerk",
+      "name": "IBPS RRB Clerk",
+      "description": "Office Assistant (Multipurpose). Prelims 80 questions in 45 minutes; Mains 200 questions in 120 minutes.",
+      "stages": [
+        {
+          "id": "prelims",
+          "name": "Prelims",
+          "sections": [
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 25,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rrb-clerk/prelims/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rrb-clerk/prelims/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rrb-clerk/prelims/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rrb-clerk/prelims/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rrb-clerk/prelims/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rrb-clerk/prelims/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rrb-clerk/prelims/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rrb-clerk/prelims/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rrb-clerk/prelims/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rrb-clerk/prelims/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rrb-clerk/prelims/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rrb-clerk/prelims/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rrb-clerk/prelims/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rrb-clerk/prelims/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rrb-clerk/prelims/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "numerical-ability",
+              "name": "Numerical Ability",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rrb-clerk/prelims/numerical-ability/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rrb-clerk/prelims/numerical-ability/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rrb-clerk/prelims/numerical-ability/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rrb-clerk/prelims/numerical-ability/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rrb-clerk/prelims/numerical-ability/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rrb-clerk/prelims/numerical-ability/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rrb-clerk/prelims/numerical-ability/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rrb-clerk/prelims/numerical-ability/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rrb-clerk/prelims/numerical-ability/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rrb-clerk/prelims/numerical-ability/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rrb-clerk/prelims/numerical-ability/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rrb-clerk/prelims/numerical-ability/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rrb-clerk/prelims/numerical-ability/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rrb-clerk/prelims/numerical-ability/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rrb-clerk/prelims/numerical-ability/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": []
+        },
+        {
+          "id": "mains",
+          "name": "Mains",
+          "sections": [
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 40,
+              "marks": 50,
+              "minutes": 30,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rrb-clerk/mains/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rrb-clerk/mains/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rrb-clerk/mains/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rrb-clerk/mains/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rrb-clerk/mains/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rrb-clerk/mains/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rrb-clerk/mains/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rrb-clerk/mains/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rrb-clerk/mains/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rrb-clerk/mains/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rrb-clerk/mains/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rrb-clerk/mains/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rrb-clerk/mains/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rrb-clerk/mains/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rrb-clerk/mains/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 30,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rrb-clerk/mains/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rrb-clerk/mains/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rrb-clerk/mains/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rrb-clerk/mains/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rrb-clerk/mains/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rrb-clerk/mains/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rrb-clerk/mains/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rrb-clerk/mains/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rrb-clerk/mains/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rrb-clerk/mains/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rrb-clerk/mains/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rrb-clerk/mains/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rrb-clerk/mains/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rrb-clerk/mains/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rrb-clerk/mains/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "numerical-ability",
+              "name": "Numerical Ability",
+              "questions": 40,
+              "marks": 50,
+              "minutes": 30,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rrb-clerk/mains/numerical-ability/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rrb-clerk/mains/numerical-ability/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rrb-clerk/mains/numerical-ability/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rrb-clerk/mains/numerical-ability/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rrb-clerk/mains/numerical-ability/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rrb-clerk/mains/numerical-ability/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rrb-clerk/mains/numerical-ability/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rrb-clerk/mains/numerical-ability/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rrb-clerk/mains/numerical-ability/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rrb-clerk/mains/numerical-ability/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rrb-clerk/mains/numerical-ability/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rrb-clerk/mains/numerical-ability/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rrb-clerk/mains/numerical-ability/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rrb-clerk/mains/numerical-ability/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rrb-clerk/mains/numerical-ability/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": [
+            {
+              "id": "computer-knowledge",
+              "name": "Computer Knowledge",
+              "questions": 40,
+              "marks": 20,
+              "minutes": 15,
+              "note": null
+            },
+            {
+              "id": "general-awareness",
+              "name": "General Awareness",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 15,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java Practice",
+      "description": "Untimed Java practice quizzes.",
+      "stages": [
+        {
+          "id": "practice",
+          "name": "Practice",
+          "unavailable": [],
+          "sections": [
+            {
+              "id": "java",
+              "name": "Java",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy",
+                      "title": "Easy Questions",
+                      "file": "java/easy.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium",
+                      "title": "Medium Questions",
+                      "file": "java/medium.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard",
+                      "title": "Hard Questions",
+                      "file": "java/hard.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "very-hard",
+                  "name": "Very Hard",
+                  "quizzes": [
+                    {
+                      "id": "very-hard",
+                      "title": "Very Hard Questions",
+                      "file": "java/very-hard.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "advanced-java-8-features",
+                  "name": "Advanced Java 8+ Features",
+                  "quizzes": [
+                    {
+                      "id": "advanced-java-8-features",
+                      "title": "Advanced Java 8+ Features",
+                      "file": "java/advanced-java-8-features.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "spring-framework",
+                  "name": "Spring Framework",
+                  "quizzes": [
+                    {
+                      "id": "spring-framework",
+                      "title": "Spring Framework Questions",
+                      "file": "java/spring-framework.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "design-patterns",
+                  "name": "Design Patterns",
+                  "quizzes": [
+                    {
+                      "id": "design-patterns",
+                      "title": "Design Patterns",
+                      "file": "java/design-patterns.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "concurrency-and-multithreading",
+                  "name": "Concurrency and Multithreading",
+                  "quizzes": [
+                    {
+                      "id": "concurrency-and-multithreading",
+                      "title": "Concurrency and Multithreading",
+                      "file": "java/concurrency-and-multithreading.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "java-memory-management",
+                  "name": "Java Memory Management",
+                  "quizzes": [
+                    {
+                      "id": "java-memory-management",
+                      "title": "Java Memory Management",
+                      "file": "java/java-memory-management.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

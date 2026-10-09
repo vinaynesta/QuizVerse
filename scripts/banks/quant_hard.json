@@ -1,0 +1,3002 @@
+[
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 12 days, B and C in 15 days, and A and C in 20 days. In how many days can A alone do it?",
+  "options": [
+   "29",
+   "30",
+   "34",
+   "28"
+  ],
+  "answer": 1,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 13 days and B in 39 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "24",
+   "16",
+   "19",
+   "20"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 5(1/13+1/39); B needs remaining × 39 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 40 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "13",
+   "8",
+   "5",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "Milk left = 40(1 − 20/40)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 33 hours to go 165 km upstream and 15 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "8",
+   "7",
+   "18",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "Upstream 5, downstream 11; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 11?",
+  "options": [
+   "1/6",
+   "1/36",
+   "1/18",
+   "2/9"
+  ],
+  "answer": 2,
+  "explanation": "2 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/21",
+   "1/2",
+   "5/21",
+   "2/7"
+  ],
+  "answer": 2,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 7×6"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word LEADER be arranged?",
+  "options": [
+   "270",
+   "350",
+   "450",
+   "360"
+  ],
+  "answer": 3,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 17x + 72 = 0\nII. y² − 7y + 10 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "Roots of I: -8, -9; roots of II: 2, 5"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 2, 5, 11, 23, ?, 95, 191",
+  "options": [
+   "57",
+   "47",
+   "38",
+   "45"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 290 m and 280 m long run at 60 km/h and 96 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "47",
+   "63",
+   "57",
+   "59"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 36 km/h; distance = 570 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 35 years. When a new person joins, the average rises to 36. How old is the new person?",
+  "options": [
+   "41",
+   "46",
+   "49",
+   "44"
+  ],
+  "answer": 3,
+  "explanation": "9×36 − 8×35 = 44"
+ },
+ {
+  "topic": "percentage",
+  "question": "A's salary is 50% more than B's. B's salary is what percent less than A's?",
+  "options": [
+   "33.33%",
+   "23.33%",
+   "34.33%",
+   "50%"
+  ],
+  "answer": 0,
+  "explanation": "100x/(100+x) with x = 50"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹60000 for 2 years at 5% per annum?",
+  "options": [
+   "₹155",
+   "₹150",
+   "₹153",
+   "₹152"
+  ],
+  "answer": 1,
+  "explanation": "Difference = P(R/100)² = ₹150"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 12 days, B and C in 20 days, and A and C in 15 days. In how many days can A alone do it?",
+  "options": [
+   "16",
+   "25",
+   "20",
+   "22"
+  ],
+  "answer": 2,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 24 days and B in 15 days. They work together for 8 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "1",
+   "3",
+   "5",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 8(1/24+1/15); B needs remaining × 15 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 50 litres of pure milk. 30 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "8",
+   "3",
+   "6",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "Milk left = 50(1 − 30/50)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 15 hours to go 240 km upstream and 8 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "25",
+   "23",
+   "29",
+   "28"
+  ],
+  "answer": 1,
+  "explanation": "Upstream 16, downstream 30; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 8?",
+  "options": [
+   "5/36",
+   "1/18",
+   "2/9",
+   "1/4"
+  ],
+  "answer": 0,
+  "explanation": "5 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/3",
+   "6/13",
+   "9/13",
+   "12/13"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word LETTER be arranged?",
+  "options": [
+   "180",
+   "225",
+   "171",
+   "175"
+  ],
+  "answer": 0,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 1 = 0\nII. y² − 3y − 4 = 0",
+  "options": [
+   "No relation can be established",
+   "x = y",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: -1, 1; roots of II: -1, 4"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 14, 33, 70, ?, 222, 349, 518",
+  "options": [
+   "129",
+   "196",
+   "131",
+   "138"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 360 m and 260 m long run at 84 km/h and 96 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "167",
+   "140",
+   "189",
+   "186"
+  ],
+  "answer": 3,
+  "explanation": "Relative speed = 12 km/h; distance = 620 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 7 people is 35 years. When a new person joins, the average rises to 38. How old is the new person?",
+  "options": [
+   "59",
+   "47",
+   "49",
+   "62"
+  ],
+  "answer": 0,
+  "explanation": "8×38 − 7×35 = 59"
+ },
+ {
+  "topic": "percentage",
+  "question": "A's salary is 150% more than B's. B's salary is what percent less than A's?",
+  "options": [
+   "72%",
+   "60%",
+   "50%",
+   "48%"
+  ],
+  "answer": 1,
+  "explanation": "100x/(100+x) with x = 150"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹20000 for 2 years at 8% per annum?",
+  "options": [
+   "₹134",
+   "₹102",
+   "₹128",
+   "₹122"
+  ],
+  "answer": 2,
+  "explanation": "Difference = P(R/100)² = ₹128"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 15 days, B and C in 20 days, and A and C in 12 days. In how many days can A alone do it?",
+  "options": [
+   "23",
+   "10",
+   "21",
+   "20"
+  ],
+  "answer": 3,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 17 days and B in 34 days. They work together for 2 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "28",
+   "35",
+   "42",
+   "18"
+  ],
+  "answer": 0,
+  "explanation": "Remaining = 1 − 2(1/17+1/34); B needs remaining × 34 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 80 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "47",
+   "45",
+   "54",
+   "56"
+  ],
+  "answer": 1,
+  "explanation": "Milk left = 80(1 − 20/80)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 4 hours to go 48 km upstream and 2 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "1",
+   "4",
+   "6",
+   "9"
+  ],
+  "answer": 2,
+  "explanation": "Stream = (downstream − upstream)/2 = 6"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 5?",
+  "options": [
+   "11/36",
+   "1/4",
+   "5/18",
+   "1/9"
+  ],
+  "answer": 3,
+  "explanation": "4 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 6 red, 5 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "15/32",
+   "1/10",
+   "10/17",
+   "7/24"
+  ],
+  "answer": 3,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 16×15"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x + 5 = 0\nII. y² + 2y − 24 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "Roots of I: -1, -5; roots of II: 4, -6"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 12, 8, 21, 24, 30, ?, 39, 216",
+  "options": [
+   "36",
+   "71",
+   "90",
+   "72"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 170 m and 320 m long run at 54 km/h and 48 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "294",
+   "289",
+   "304",
+   "291"
+  ],
+  "answer": 0,
+  "explanation": "Relative speed = 6 km/h; distance = 490 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 9 people is 31 years. When a new person joins, the average rises to 33. How old is the new person?",
+  "options": [
+   "61",
+   "51",
+   "38",
+   "43"
+  ],
+  "answer": 1,
+  "explanation": "10×33 − 9×31 = 51"
+ },
+ {
+  "topic": "percentage",
+  "question": "A's salary is 300% more than B's. B's salary is what percent less than A's?",
+  "options": [
+   "90%",
+   "70%",
+   "75%",
+   "71%"
+  ],
+  "answer": 2,
+  "explanation": "100x/(100+x) with x = 300"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹27500 for 2 years at 10% per annum?",
+  "options": [
+   "₹248",
+   "₹277",
+   "₹412",
+   "₹275"
+  ],
+  "answer": 3,
+  "explanation": "Difference = P(R/100)² = ₹275"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 12 days and B in 34 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "1",
+   "11",
+   "12",
+   "10"
+  ],
+  "answer": 1,
+  "explanation": "Remaining = 1 − 6(1/12+1/34); B needs remaining × 34 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 200 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "202",
+   "157",
+   "162",
+   "161"
+  ],
+  "answer": 2,
+  "explanation": "Milk left = 200(1 − 20/200)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 45 hours to go 45 km upstream and 3 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "13",
+   "7",
+   "11",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "Upstream 1, downstream 15; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 4?",
+  "options": [
+   "5/36",
+   "1/12",
+   "7/36",
+   "11/36"
+  ],
+  "answer": 1,
+  "explanation": "3 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 6 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/22",
+   "1/6",
+   "19/55",
+   "2/11"
+  ],
+  "answer": 2,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word BANANA be arranged?",
+  "options": [
+   "72",
+   "54",
+   "60",
+   "61"
+  ],
+  "answer": 2,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 3x − 18 = 0\nII. y² + 6y − 27 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 2,
+  "explanation": "Roots of I: -6, 3; roots of II: 3, -9"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 216, 343, 512, 729, ?, 1331, 1728",
+  "options": [
+   "1000",
+   "999",
+   "1002",
+   "750"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 250 m and 170 m long run at 96 km/h and 42 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "38",
+   "28",
+   "18",
+   "24"
+  ],
+  "answer": 1,
+  "explanation": "Relative speed = 54 km/h; distance = 420 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 4 people is 35 years. When a new person joins, the average rises to 36. How old is the new person?",
+  "options": [
+   "20",
+   "37",
+   "40",
+   "36"
+  ],
+  "answer": 2,
+  "explanation": "5×36 − 4×35 = 40"
+ },
+ {
+  "topic": "percentage",
+  "question": "A's salary is 25% more than B's. B's salary is what percent less than A's?",
+  "options": [
+   "25%",
+   "15%",
+   "16%",
+   "20%"
+  ],
+  "answer": 3,
+  "explanation": "100x/(100+x) with x = 25"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹35000 for 2 years at 8% per annum?",
+  "options": [
+   "₹224",
+   "₹112",
+   "₹269",
+   "₹202"
+  ],
+  "answer": 0,
+  "explanation": "Difference = P(R/100)² = ₹224"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 20 days, B and C in 12 days, and A and C in 10 days. In how many days can A alone do it?",
+  "options": [
+   "35",
+   "30",
+   "45",
+   "15"
+  ],
+  "answer": 1,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 18 days and B in 36 days. They work together for 2 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "29",
+   "20",
+   "30",
+   "28"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 2(1/18+1/36); B needs remaining × 36 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 100 litres of pure milk. 30 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "54",
+   "59",
+   "51",
+   "49"
+  ],
+  "answer": 3,
+  "explanation": "Milk left = 100(1 − 30/100)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 12 hours to go 144 km upstream and 9 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "2",
+   "4",
+   "12",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "Stream = (downstream − upstream)/2 = 2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 3?",
+  "options": [
+   "1/18",
+   "2/9",
+   "5/36",
+   "7/36"
+  ],
+  "answer": 0,
+  "explanation": "2 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 3 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/24",
+   "1/4",
+   "4/9",
+   "5/8"
+  ],
+  "answer": 1,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 8×7"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 5 is chosen from 6 men and 3 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "139",
+   "129",
+   "124",
+   "126"
+  ],
+  "answer": 3,
+  "explanation": "Total C(9,5) minus all-women C(3,5)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x + 6 = 0\nII. y² + y − 72 = 0",
+  "options": [
+   "x ≥ y",
+   "x = y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "Roots of I: 3, 2; roots of II: -9, 8"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 123, 214, 341, 510, 727, ?, 1329",
+  "options": [
+   "798",
+   "998",
+   "898",
+   "1198"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 110 m and 190 m long run at 36 km/h and 66 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "41",
+   "43",
+   "36",
+   "32"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 30 km/h; distance = 300 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 4 people is 29 years. When a new person joins, the average rises to 30. How old is the new person?",
+  "options": [
+   "36",
+   "44",
+   "32",
+   "34"
+  ],
+  "answer": 3,
+  "explanation": "5×30 − 4×29 = 34"
+ },
+ {
+  "topic": "percentage",
+  "question": "A's salary is 100% more than B's. B's salary is what percent less than A's?",
+  "options": [
+   "50%",
+   "55%",
+   "51%",
+   "58%"
+  ],
+  "answer": 0,
+  "explanation": "100x/(100+x) with x = 100"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹55000 for 2 years at 12% per annum?",
+  "options": [
+   "₹871",
+   "₹792",
+   "₹713",
+   "₹990"
+  ],
+  "answer": 1,
+  "explanation": "Difference = P(R/100)² = ₹792"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 27 days and B in 36 days. They work together for 3 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "39",
+   "25",
+   "32",
+   "29"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 3(1/27+1/36); B needs remaining × 36 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 100 litres of pure milk. 10 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "81",
+   "79",
+   "80",
+   "85"
+  ],
+  "answer": 0,
+  "explanation": "Milk left = 100(1 − 10/100)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 14 hours to go 84 km upstream and 6 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "7",
+   "4",
+   "6",
+   "14"
+  ],
+  "answer": 1,
+  "explanation": "Stream = (downstream − upstream)/2 = 4"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 6?",
+  "options": [
+   "5/36",
+   "1/4",
+   "2/9",
+   "1/18"
+  ],
+  "answer": 0,
+  "explanation": "5 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 4 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "31/105",
+   "2/15",
+   "17/30",
+   "7/15"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 15×14"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 4 is chosen from 5 men and 5 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "205",
+   "154",
+   "206",
+   "174"
+  ],
+  "answer": 0,
+  "explanation": "Total C(10,4) minus all-women C(5,4)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 3 = 0\nII. y² + 2y − 35 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "Roots of I: -3, 1; roots of II: -7, 5"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 5, 6, ?, 9, 20, 12, 40",
+  "options": [
+   "8",
+   "12",
+   "10",
+   "15"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 110 m and 350 m long run at 48 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "37",
+   "39",
+   "34",
+   "46"
+  ],
+  "answer": 3,
+  "explanation": "Relative speed = 36 km/h; distance = 460 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 26 years. When a new person joins, the average rises to 28. How old is the new person?",
+  "options": [
+   "44",
+   "34",
+   "54",
+   "66"
+  ],
+  "answer": 0,
+  "explanation": "9×28 − 8×26 = 44"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 20 days, B and C in 10 days, and A and C in 12 days. In how many days can A alone do it?",
+  "options": [
+   "90",
+   "75",
+   "58",
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 19 days and B in 38 days. They work together for 3 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "29",
+   "32",
+   "39",
+   "19"
+  ],
+  "answer": 0,
+  "explanation": "Remaining = 1 − 3(1/19+1/38); B needs remaining × 38 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 60 litres of pure milk. 30 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "19",
+   "15",
+   "13",
+   "18"
+  ],
+  "answer": 1,
+  "explanation": "Milk left = 60(1 − 30/60)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 75 hours to go 1275 km upstream and 51 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "14",
+   "2",
+   "4",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "Stream = (downstream − upstream)/2 = 4"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 4 red, 5 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/22",
+   "19/66",
+   "5/24",
+   "3/8"
+  ],
+  "answer": 1,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 3 is chosen from 5 men and 3 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "53",
+   "55",
+   "58",
+   "44"
+  ],
+  "answer": 1,
+  "explanation": "Total C(8,3) minus all-women C(3,3)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 21 = 0\nII. y² − 14y + 45 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "x ≤ y",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "Roots of I: -3, -7; roots of II: 9, 5"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 8, 18, 38, ?, 158, 318",
+  "options": [
+   "70",
+   "81",
+   "86",
+   "78"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 150 m and 330 m long run at 60 km/h and 36 km/h in opposite directions on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "18",
+   "27",
+   "16",
+   "13"
+  ],
+  "answer": 0,
+  "explanation": "Relative speed = 96 km/h; distance = 480 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 7 people is 29 years. When a new person joins, the average rises to 31. How old is the new person?",
+  "options": [
+   "52",
+   "45",
+   "54",
+   "68"
+  ],
+  "answer": 1,
+  "explanation": "8×31 − 7×29 = 45"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹45000 for 2 years at 20% per annum?",
+  "options": [
+   "₹1710",
+   "₹1790",
+   "₹1795",
+   "₹1800"
+  ],
+  "answer": 3,
+  "explanation": "Difference = P(R/100)² = ₹1800"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 12 days, B and C in 10 days, and A and C in 20 days. In how many days can A alone do it?",
+  "options": [
+   "60",
+   "58",
+   "59",
+   "65"
+  ],
+  "answer": 0,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 30 days and B in 24 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "16",
+   "15",
+   "10",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Remaining = 1 − 5(1/30+1/24); B needs remaining × 24 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 50 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "28",
+   "14",
+   "18",
+   "17"
+  ],
+  "answer": 2,
+  "explanation": "Milk left = 50(1 − 20/50)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 9 hours to go 72 km upstream and 4 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "20",
+   "16",
+   "14",
+   "13"
+  ],
+  "answer": 3,
+  "explanation": "Upstream 8, downstream 18; still water = (up+down)/2"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 3 is chosen from 7 men and 5 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "231",
+   "262",
+   "210",
+   "215"
+  ],
+  "answer": 2,
+  "explanation": "Total C(12,3) minus all-women C(5,3)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 16 = 0\nII. y² + 15y + 54 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x ≤ y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "Roots of I: 8, 2; roots of II: -6, -9"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 15, 22, 33, 48, ?, 90, 117",
+  "options": [
+   "67",
+   "72",
+   "60",
+   "84"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 330 m and 330 m long run at 48 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "376",
+   "396",
+   "386",
+   "391"
+  ],
+  "answer": 1,
+  "explanation": "Relative speed = 6 km/h; distance = 660 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 7 people is 28 years. When a new person joins, the average rises to 31. How old is the new person?",
+  "options": [
+   "44",
+   "55",
+   "52",
+   "49"
+  ],
+  "answer": 2,
+  "explanation": "8×31 − 7×28 = 52"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 12 days and B in 38 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "12",
+   "14",
+   "13",
+   "15"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 6(1/12+1/38); B needs remaining × 38 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 13 hours to go 65 km upstream and 5 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "4",
+   "14",
+   "7",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "Stream = (downstream − upstream)/2 = 4"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 6 red, 4 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "29/30",
+   "1/15",
+   "31/105",
+   "11/16"
+  ],
+  "answer": 2,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 15×14"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word APPLE be arranged?",
+  "options": [
+   "72",
+   "90",
+   "75",
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 15 = 0\nII. y² + 13y + 40 = 0",
+  "options": [
+   "x < y",
+   "x ≥ y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "Roots of I: 3, -5; roots of II: -5, -8"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 6, 30, 126, 510, 2046, ?, 32766",
+  "options": [
+   "6962",
+   "8190",
+   "8200",
+   "8187"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 190 m and 110 m long run at 72 km/h and 78 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "189",
+   "198",
+   "180",
+   "270"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 6 km/h; distance = 300 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 6 people is 30 years. When a new person joins, the average rises to 33. How old is the new person?",
+  "options": [
+   "41",
+   "61",
+   "46",
+   "51"
+  ],
+  "answer": 3,
+  "explanation": "7×33 − 6×30 = 51"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 28 days and B in 14 days. They work together for 8 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "1",
+   "12",
+   "4",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 8(1/28+1/14); B needs remaining × 14 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 15 hours to go 180 km upstream and 9 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "17",
+   "16",
+   "11",
+   "24"
+  ],
+  "answer": 1,
+  "explanation": "Upstream 12, downstream 20; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 6 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "23/36",
+   "1/24",
+   "4/9",
+   "1/3"
+  ],
+  "answer": 3,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 5 is chosen from 8 men and 5 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "1286",
+   "1285",
+   "1284",
+   "1291"
+  ],
+  "answer": 0,
+  "explanation": "Total C(13,5) minus all-women C(5,5)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4x − 32 = 0\nII. y² − 10y + 21 = 0",
+  "options": [
+   "No relation can be established",
+   "x = y",
+   "x ≤ y",
+   "x < y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: 8, -4; roots of II: 3, 7"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 4, 20, 84, 340, ?, 5460, 21844",
+  "options": [
+   "1366",
+   "1296",
+   "1364",
+   "682"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 390 m and 170 m long run at 90 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "84",
+   "53",
+   "50",
+   "56"
+  ],
+  "answer": 3,
+  "explanation": "Relative speed = 36 km/h; distance = 560 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 9 people is 23 years. When a new person joins, the average rises to 24. How old is the new person?",
+  "options": [
+   "33",
+   "30",
+   "28",
+   "38"
+  ],
+  "answer": 0,
+  "explanation": "10×24 − 9×23 = 33"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 12% per annum?",
+  "options": [
+   "₹540",
+   "₹612",
+   "₹720",
+   "₹1080"
+  ],
+  "answer": 2,
+  "explanation": "Difference = P(R/100)² = ₹720"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 21 days and B in 35 days. They work together for 3 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "27",
+   "34",
+   "37",
+   "26"
+  ],
+  "answer": 0,
+  "explanation": "Remaining = 1 − 3(1/21+1/35); B needs remaining × 35 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 27 hours to go 108 km upstream and 6 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "10",
+   "16",
+   "11",
+   "21"
+  ],
+  "answer": 2,
+  "explanation": "Upstream 4, downstream 18; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 7?",
+  "options": [
+   "2/9",
+   "1/18",
+   "1/6",
+   "5/36"
+  ],
+  "answer": 2,
+  "explanation": "6 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 2 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "17/28",
+   "1/3",
+   "1/9"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 8×7"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word SUCCESS be arranged?",
+  "options": [
+   "423",
+   "420",
+   "421",
+   "378"
+  ],
+  "answer": 1,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 13x + 40 = 0\nII. y² − 5y − 24 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "x > y",
+   "x ≥ y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: -5, -8; roots of II: -3, 8"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 11, 4, 16, 12, 21, ?, 26, 108",
+  "options": [
+   "33",
+   "45",
+   "32",
+   "36"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 170 m and 180 m long run at 48 km/h and 42 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "210",
+   "209",
+   "189",
+   "220"
+  ],
+  "answer": 0,
+  "explanation": "Relative speed = 6 km/h; distance = 350 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 4 people is 36 years. When a new person joins, the average rises to 38. How old is the new person?",
+  "options": [
+   "43",
+   "46",
+   "39",
+   "23"
+  ],
+  "answer": 1,
+  "explanation": "5×38 − 4×36 = 46"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹30000 for 2 years at 10% per annum?",
+  "options": [
+   "₹345",
+   "₹225",
+   "₹270",
+   "₹300"
+  ],
+  "answer": 3,
+  "explanation": "Difference = P(R/100)² = ₹300"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 20 days, B and C in 15 days, and A and C in 12 days. In how many days can A alone do it?",
+  "options": [
+   "30",
+   "32",
+   "24",
+   "22"
+  ],
+  "answer": 0,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 16 days and B in 32 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "21",
+   "20",
+   "15",
+   "16"
+  ],
+  "answer": 1,
+  "explanation": "Remaining = 1 − 4(1/16+1/32); B needs remaining × 32 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 21 hours to go 210 km upstream and 15 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "5",
+   "4",
+   "12",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Stream = (downstream − upstream)/2 = 2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 6 red, 3 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/13",
+   "3/13",
+   "17/39",
+   "25/26"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word MISSISSIPPI be arranged?",
+  "options": [
+   "34660",
+   "31185",
+   "34650",
+   "43312"
+  ],
+  "answer": 2,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4x − 21 = 0\nII. y² − 9y + 14 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≤ y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "Roots of I: 7, -3; roots of II: 2, 7"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 9, 7, 16, 21, 23, ?, 30, 189",
+  "options": [
+   "63",
+   "58",
+   "94",
+   "68"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 200 m and 370 m long run at 96 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "154",
+   "171",
+   "181",
+   "173"
+  ],
+  "answer": 1,
+  "explanation": "Relative speed = 12 km/h; distance = 570 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 7 people is 21 years. When a new person joins, the average rises to 24. How old is the new person?",
+  "options": [
+   "36",
+   "47",
+   "45",
+   "46"
+  ],
+  "answer": 2,
+  "explanation": "8×24 − 7×21 = 45"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹40000 for 2 years at 20% per annum?",
+  "options": [
+   "₹1600",
+   "₹800",
+   "₹1360",
+   "₹1602"
+  ],
+  "answer": 0,
+  "explanation": "Difference = P(R/100)² = ₹1600"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 15 days and B in 30 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "20",
+   "12",
+   "15",
+   "22"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 5(1/15+1/30); B needs remaining × 30 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 29 hours to go 493 km upstream and 17 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "6",
+   "7",
+   "1",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "Stream = (downstream − upstream)/2 = 6"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 3 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "4/15",
+   "1/2",
+   "3/4"
+  ],
+  "answer": 1,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 6×5"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 5 is chosen from 7 men and 6 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "1473",
+   "640",
+   "1283",
+   "1281"
+  ],
+  "answer": 3,
+  "explanation": "Total C(13,5) minus all-women C(6,5)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 14 = 0\nII. y² + 3y − 54 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x > y",
+   "x < y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: -2, -7; roots of II: -9, 6"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 13, 53, 213, ?, 3413, 13653",
+  "options": [
+   "851",
+   "853",
+   "682",
+   "863"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 170 m and 380 m long run at 42 km/h and 60 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "113",
+   "100",
+   "110",
+   "105"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 18 km/h; distance = 550 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 4 people is 40 years. When a new person joins, the average rises to 43. How old is the new person?",
+  "options": [
+   "50",
+   "45",
+   "56",
+   "55"
+  ],
+  "answer": 3,
+  "explanation": "5×43 − 4×40 = 55"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹60000 for 2 years at 10% per annum?",
+  "options": [
+   "₹660",
+   "₹600",
+   "₹750",
+   "₹900"
+  ],
+  "answer": 1,
+  "explanation": "Difference = P(R/100)² = ₹600"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 16 days and B in 24 days. They work together for 2 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "17",
+   "23",
+   "18",
+   "19"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 2(1/16+1/24); B needs remaining × 24 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 100 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "64",
+   "48",
+   "96",
+   "65"
+  ],
+  "answer": 0,
+  "explanation": "Milk left = 100(1 − 20/100)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 24 hours to go 144 km upstream and 9 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "3",
+   "5",
+   "10",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Stream = (downstream − upstream)/2 = 5"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 5 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/22",
+   "8/13",
+   "19/66",
+   "2/13"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 5 is chosen from 7 men and 5 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "791",
+   "593",
+   "949",
+   "788"
+  ],
+  "answer": 0,
+  "explanation": "Total C(12,5) minus all-women C(5,5)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9x + 20 = 0\nII. y² + 10y + 24 = 0",
+  "options": [
+   "x ≤ y",
+   "x = y",
+   "x ≥ y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "Roots of I: 4, 5; roots of II: -4, -6"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 15, 20, 26, ?, 41, 50, 60",
+  "options": [
+   "35",
+   "28",
+   "33",
+   "50"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 130 m and 260 m long run at 48 km/h and 66 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "39",
+   "77",
+   "81",
+   "78"
+  ],
+  "answer": 3,
+  "explanation": "Relative speed = 18 km/h; distance = 390 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 9 people is 26 years. When a new person joins, the average rises to 28. How old is the new person?",
+  "options": [
+   "46",
+   "49",
+   "39",
+   "37"
+  ],
+  "answer": 0,
+  "explanation": "10×28 − 9×26 = 46"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 20 days, B and C in 12 days, and A and C in 15 days. In how many days can A alone do it?",
+  "options": [
+   "59",
+   "70",
+   "58",
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 13 days and B in 26 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "14",
+   "4",
+   "24",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "Remaining = 1 − 4(1/13+1/26); B needs remaining × 26 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 38 hours to go 342 km upstream and 18 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "7",
+   "11",
+   "14",
+   "19"
+  ],
+  "answer": 2,
+  "explanation": "Upstream 9, downstream 19; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 9?",
+  "options": [
+   "1/6",
+   "5/36",
+   "7/36",
+   "1/9"
+  ],
+  "answer": 3,
+  "explanation": "4 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 4 red, 6 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/39",
+   "2/13",
+   "4/13",
+   "1/13"
+  ],
+  "answer": 2,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word ARRANGE be arranged?",
+  "options": [
+   "1323",
+   "1260",
+   "1197",
+   "1262"
+  ],
+  "answer": 1,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x − 7 = 0\nII. y² + y − 20 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 2,
+  "explanation": "Roots of I: -1, 7; roots of II: 4, -5"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 29, 66, 127, ?, 345, 514, 731",
+  "options": [
+   "174",
+   "229",
+   "207",
+   "218"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 170 m and 360 m long run at 96 km/h and 60 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "53",
+   "52",
+   "51",
+   "43"
+  ],
+  "answer": 0,
+  "explanation": "Relative speed = 36 km/h; distance = 530 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 31 years. When a new person joins, the average rises to 32. How old is the new person?",
+  "options": [
+   "42",
+   "40",
+   "36",
+   "50"
+  ],
+  "answer": 1,
+  "explanation": "9×32 − 8×31 = 40"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 8% per annum?",
+  "options": [
+   "₹42",
+   "₹38",
+   "₹33",
+   "₹32"
+  ],
+  "answer": 3,
+  "explanation": "Difference = P(R/100)² = ₹32"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 20 days and B in 24 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "15",
+   "13",
+   "8",
+   "10"
+  ],
+  "answer": 1,
+  "explanation": "Remaining = 1 − 5(1/20+1/24); B needs remaining × 24 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 87 hours to go 1479 km upstream and 51 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "18",
+   "22",
+   "28",
+   "23"
+  ],
+  "answer": 3,
+  "explanation": "Upstream 17, downstream 29; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "Two fair dice are thrown. What is the probability that the sum is 10?",
+  "options": [
+   "1/9",
+   "1/36",
+   "1/12",
+   "11/36"
+  ],
+  "answer": 2,
+  "explanation": "3 favourable outcomes out of 36"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 3 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "19/28",
+   "9/28",
+   "4/13",
+   "24/91"
+  ],
+  "answer": 2,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 14×13"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 4 is chosen from 8 men and 6 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "1232",
+   "988",
+   "986",
+   "989"
+  ],
+  "answer": 2,
+  "explanation": "Total C(14,4) minus all-women C(6,4)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 7x + 6 = 0\nII. y² − 11y + 30 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: -1, -6; roots of II: 5, 6"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 5, 17, 53, ?, 485, 1457, 4373",
+  "options": [
+   "161",
+   "129",
+   "121",
+   "153"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 210 m and 250 m long run at 78 km/h and 66 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "172",
+   "138",
+   "104",
+   "133"
+  ],
+  "answer": 1,
+  "explanation": "Relative speed = 12 km/h; distance = 460 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 28 years. When a new person joins, the average rises to 29. How old is the new person?",
+  "options": [
+   "44",
+   "31",
+   "37",
+   "42"
+  ],
+  "answer": 2,
+  "explanation": "9×29 − 8×28 = 37"
+ },
+ {
+  "topic": "percentage",
+  "question": "A's salary is 400% more than B's. B's salary is what percent less than A's?",
+  "options": [
+   "75%",
+   "120%",
+   "64%",
+   "80%"
+  ],
+  "answer": 3,
+  "explanation": "100x/(100+x) with x = 400"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 24 days and B in 40 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "19",
+   "30",
+   "24",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 6(1/24+1/40); B needs remaining × 40 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 24 hours to go 336 km upstream and 14 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "5",
+   "6",
+   "15",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "Stream = (downstream − upstream)/2 = 5"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 3 red, 5 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/2",
+   "14/33",
+   "10/11",
+   "16/55"
+  ],
+  "answer": 3,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 15 = 0\nII. y² + 3y + 2 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "Roots of I: 3, -5; roots of II: -1, -2"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 15, 6, 21, 12, 27, 24, ?, 48",
+  "options": [
+   "50",
+   "33",
+   "16",
+   "38"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 280 m and 210 m long run at 42 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "110",
+   "146",
+   "147",
+   "137"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 12 km/h; distance = 490 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 25 years. When a new person joins, the average rises to 26. How old is the new person?",
+  "options": [
+   "17",
+   "26",
+   "36",
+   "34"
+  ],
+  "answer": 3,
+  "explanation": "9×26 − 8×25 = 34"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹12500 for 2 years at 20% per annum?",
+  "options": [
+   "₹425",
+   "₹500",
+   "₹750",
+   "₹505"
+  ],
+  "answer": 1,
+  "explanation": "Difference = P(R/100)² = ₹500"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 10 days and B in 34 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "7",
+   "11",
+   "17",
+   "12"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 5(1/10+1/34); B needs remaining × 34 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 11 hours to go 55 km upstream and 5 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "5",
+   "8",
+   "12",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "Upstream 5, downstream 11; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 5 red, 6 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "10/13",
+   "1/3",
+   "4/39",
+   "4/13"
+  ],
+  "answer": 1,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 4 is chosen from 6 men and 5 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "325",
+   "374",
+   "244",
+   "488"
+  ],
+  "answer": 0,
+  "explanation": "Total C(11,4) minus all-women C(5,4)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 7 = 0\nII. y² − y − 2 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x ≥ y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: 1, -7; roots of II: 2, -1"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 3, 9, 21, 45, ?, 189, 381",
+  "options": [
+   "94",
+   "96",
+   "93",
+   "46"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 270 m and 220 m long run at 72 km/h and 90 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "113",
+   "99",
+   "96",
+   "98"
+  ],
+  "answer": 3,
+  "explanation": "Relative speed = 18 km/h; distance = 490 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 27 years. When a new person joins, the average rises to 28. How old is the new person?",
+  "options": [
+   "36",
+   "54",
+   "40",
+   "45"
+  ],
+  "answer": 0,
+  "explanation": "9×28 − 8×27 = 36"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹25000 for 2 years at 20% per annum?",
+  "options": [
+   "₹1250",
+   "₹500",
+   "₹1000",
+   "₹950"
+  ],
+  "answer": 2,
+  "explanation": "Difference = P(R/100)² = ₹1000"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 20 days and B in 40 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "28",
+   "35",
+   "27",
+   "18"
+  ],
+  "answer": 0,
+  "explanation": "Remaining = 1 − 4(1/20+1/40); B needs remaining × 40 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 10 hours to go 180 km upstream and 6 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "27",
+   "36",
+   "24",
+   "14"
+  ],
+  "answer": 2,
+  "explanation": "Upstream 18, downstream 30; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 3 red, 3 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/9",
+   "10/27",
+   "4/5",
+   "1/4"
+  ],
+  "answer": 3,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 9×8"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 5 is chosen from 5 men and 3 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "53",
+   "56",
+   "67",
+   "50"
+  ],
+  "answer": 1,
+  "explanation": "Total C(8,5) minus all-women C(3,5)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x − 36 = 0\nII. y² + 2y − 15 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x < y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "Roots of I: 4, -9; roots of II: 3, -5"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 21, 20, 41, 44, 69, ?, 105",
+  "options": [
+   "68",
+   "38",
+   "91",
+   "76"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 240 m and 180 m long run at 78 km/h and 36 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "36",
+   "26",
+   "29",
+   "27"
+  ],
+  "answer": 0,
+  "explanation": "Relative speed = 42 km/h; distance = 420 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 5 people is 22 years. When a new person joins, the average rises to 25. How old is the new person?",
+  "options": [
+   "20",
+   "40",
+   "42",
+   "37"
+  ],
+  "answer": 1,
+  "explanation": "6×25 − 5×22 = 40"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹27500 for 2 years at 12% per annum?",
+  "options": [
+   "₹198",
+   "₹416",
+   "₹297",
+   "₹396"
+  ],
+  "answer": 3,
+  "explanation": "Difference = P(R/100)² = ₹396"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 20 days and B in 30 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "21",
+   "20",
+   "17",
+   "22"
+  ],
+  "answer": 1,
+  "explanation": "Remaining = 1 − 4(1/20+1/30); B needs remaining × 30 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 30 hours to go 180 km upstream and 9 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "12",
+   "5",
+   "8",
+   "7"
+  ],
+  "answer": 3,
+  "explanation": "Stream = (downstream − upstream)/2 = 7"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 5 is chosen from 7 men and 3 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "378",
+   "126",
+   "252",
+   "277"
+  ],
+  "answer": 2,
+  "explanation": "Total C(10,5) minus all-women C(3,5)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 48 = 0\nII. y² − 11y + 18 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "Roots of I: -8, 6; roots of II: 2, 9"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 40, 45, 68, 77, ?, 117, 148",
+  "options": [
+   "104",
+   "88",
+   "106",
+   "103"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 110 m and 300 m long run at 54 km/h and 66 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "113",
+   "123",
+   "184",
+   "135"
+  ],
+  "answer": 1,
+  "explanation": "Relative speed = 12 km/h; distance = 410 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 7 people is 36 years. When a new person joins, the average rises to 37. How old is the new person?",
+  "options": [
+   "46",
+   "34",
+   "44",
+   "42"
+  ],
+  "answer": 2,
+  "explanation": "8×37 − 7×36 = 44"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹15000 for 2 years at 12% per annum?",
+  "options": [
+   "₹216",
+   "₹217",
+   "₹213",
+   "₹214"
+  ],
+  "answer": 0,
+  "explanation": "Difference = P(R/100)² = ₹216"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 20 days and B in 40 days. They work together for 7 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "28",
+   "15",
+   "19",
+   "16"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 7(1/20+1/40); B needs remaining × 40 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 30 hours to go 30 km upstream and 2 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "7",
+   "9",
+   "17",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "Stream = (downstream − upstream)/2 = 7"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 5 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/55",
+   "17/55",
+   "8/11",
+   "2/3"
+  ],
+  "answer": 1,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 1 = 0\nII. y² + 10y + 16 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "Roots of I: 1, -1; roots of II: -2, -8"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 10, 17, 28, ?, 62, 85, 112",
+  "options": [
+   "52",
+   "43",
+   "64",
+   "34"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 200 m and 240 m long run at 66 km/h and 48 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "79",
+   "93",
+   "88",
+   "89"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 18 km/h; distance = 440 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 6 people is 29 years. When a new person joins, the average rises to 31. How old is the new person?",
+  "options": [
+   "53",
+   "22",
+   "37",
+   "43"
+  ],
+  "answer": 3,
+  "explanation": "7×31 − 6×29 = 43"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹42500 for 2 years at 8% per annum?",
+  "options": [
+   "₹408",
+   "₹272",
+   "₹340",
+   "₹258"
+  ],
+  "answer": 1,
+  "explanation": "Difference = P(R/100)² = ₹272"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 12 days, B and C in 20 days, and A and C in 10 days. In how many days can A alone do it?",
+  "options": [
+   "11",
+   "20",
+   "15",
+   "8"
+  ],
+  "answer": 2,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 24 days and B in 36 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "28",
+   "22",
+   "13",
+   "26"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 4(1/24+1/36); B needs remaining × 36 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 10 hours to go 90 km upstream and 6 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "9",
+   "12",
+   "7",
+   "10"
+  ],
+  "answer": 1,
+  "explanation": "Upstream 9, downstream 15; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 4 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "21/55",
+   "17/55",
+   "1/4",
+   "6/11"
+  ],
+  "answer": 1,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "A committee of 3 is chosen from 8 men and 4 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "216",
+   "211",
+   "184",
+   "205"
+  ],
+  "answer": 0,
+  "explanation": "Total C(12,3) minus all-women C(4,3)"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x + 4 = 0\nII. y² − 4y − 5 = 0",
+  "options": [
+   "x ≤ y",
+   "x = y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: -4, -1; roots of II: -1, 5"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 11, 4, 14, ?, 17, 16, 20, 32",
+  "options": [
+   "11",
+   "9",
+   "8",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 230 m and 360 m long run at 72 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "124",
+   "130",
+   "59",
+   "118"
+  ],
+  "answer": 3,
+  "explanation": "Relative speed = 18 km/h; distance = 590 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 6 people is 21 years. When a new person joins, the average rises to 22. How old is the new person?",
+  "options": [
+   "28",
+   "14",
+   "31",
+   "23"
+  ],
+  "answer": 0,
+  "explanation": "7×22 − 6×21 = 28"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹25000 for 2 years at 10% per annum?",
+  "options": [
+   "₹240",
+   "₹212",
+   "₹250",
+   "₹375"
+  ],
+  "answer": 2,
+  "explanation": "Difference = P(R/100)² = ₹250"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 20 days and B in 28 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "16",
+   "20",
+   "14",
+   "26"
+  ],
+  "answer": 0,
+  "explanation": "Remaining = 1 − 5(1/20+1/28); B needs remaining × 28 days"
+ },
+ {
+  "topic": "mixture",
+  "question": "A vessel holds 50 litres of pure milk. 10 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "options": [
+   "24",
+   "32",
+   "34",
+   "48"
+  ],
+  "answer": 1,
+  "explanation": "Milk left = 50(1 − 10/50)²"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 33 hours to go 594 km upstream and 27 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "7",
+   "3",
+   "2",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "Stream = (downstream − upstream)/2 = 2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 2 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/5",
+   "1/15",
+   "2/5",
+   "9/10"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 5×4"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word PEPPER be arranged?",
+  "options": [
+   "57",
+   "60",
+   "63",
+   "58"
+  ],
+  "answer": 1,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 3 = 0\nII. y² + 6y + 5 = 0",
+  "options": [
+   "x ≥ y",
+   "x > y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: -1, 3; roots of II: -5, -1"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 6, 9, 11, ?, 16, 81, 21, 243",
+  "options": [
+   "20",
+   "32",
+   "26",
+   "27"
+  ],
+  "answer": 3,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 340 m and 380 m long run at 78 km/h and 90 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "216",
+   "213",
+   "214",
+   "206"
+  ],
+  "answer": 0,
+  "explanation": "Relative speed = 12 km/h; distance = 720 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 9 people is 29 years. When a new person joins, the average rises to 30. How old is the new person?",
+  "options": [
+   "41",
+   "39",
+   "33",
+   "34"
+  ],
+  "answer": 1,
+  "explanation": "10×30 − 9×29 = 39"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 12% per annum?",
+  "options": [
+   "₹69",
+   "₹58",
+   "₹82",
+   "₹72"
+  ],
+  "answer": 3,
+  "explanation": "Difference = P(R/100)² = ₹72"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 15 days, B and C in 12 days, and A and C in 20 days. In how many days can A alone do it?",
+  "options": [
+   "60",
+   "75",
+   "57",
+   "30"
+  ],
+  "answer": 0,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 33 days and B in 22 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "6",
+   "12",
+   "2",
+   "9"
+  ],
+  "answer": 1,
+  "explanation": "Remaining = 1 − 6(1/33+1/22); B needs remaining × 22 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 6 hours to go 30 km upstream and 2 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "9",
+   "12",
+   "13",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "Upstream 5, downstream 15; still water = (up+down)/2"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 8 = 0\nII. y² − 15y + 56 = 0",
+  "options": [
+   "x ≥ y",
+   "x ≤ y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "Roots of I: -1, -8; roots of II: 8, 7"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 6, 24, 78, 240, ?, 2184, 6558",
+  "options": [
+   "726",
+   "727",
+   "544",
+   "581"
+  ],
+  "answer": 0,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 250 m and 380 m long run at 84 km/h and 66 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "125",
+   "126",
+   "128",
+   "116"
+  ],
+  "answer": 1,
+  "explanation": "Relative speed = 18 km/h; distance = 630 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 5 people is 35 years. When a new person joins, the average rises to 36. How old is the new person?",
+  "options": [
+   "38",
+   "51",
+   "41",
+   "37"
+  ],
+  "answer": 2,
+  "explanation": "6×36 − 5×35 = 41"
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 14 days and B in 35 days. They work together for 8 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "6",
+   "17",
+   "7",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "Remaining = 1 − 8(1/14+1/35); B needs remaining × 35 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 26 hours to go 364 km upstream and 14 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "20",
+   "16",
+   "19",
+   "30"
+  ],
+  "answer": 0,
+  "explanation": "Upstream 14, downstream 26; still water = (up+down)/2"
+ },
+ {
+  "topic": "probability",
+  "question": "A bag has 2 red, 4 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "5/8",
+   "1/2",
+   "7/8"
+  ],
+  "answer": 0,
+  "explanation": "Favourable ways / total ways = Σ c(c−1) / 8×7"
+ },
+ {
+  "topic": "permutation-combination",
+  "question": "In how many distinct ways can the letters of the word STATISTICS be arranged?",
+  "options": [
+   "47880",
+   "75600",
+   "52920",
+   "50400"
+  ],
+  "answer": 3,
+  "explanation": "n! divided by the factorial of each repeated letter count"
+ },
+ {
+  "topic": "quadratic-equations",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 7 = 0\nII. y² + 7y − 18 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≥ y",
+   "x < y",
+   "x > y"
+  ],
+  "answer": 0,
+  "explanation": "Roots of I: 1, -7; roots of II: 2, -9"
+ },
+ {
+  "topic": "number-series",
+  "question": "Find the missing number: 4, 17, 69, 277, 1109, ?, 17749",
+  "options": [
+   "6656",
+   "4437",
+   "4439",
+   "4438"
+  ],
+  "answer": 1,
+  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+ },
+ {
+  "topic": "trains",
+  "question": "Two trains 250 m and 310 m long run at 48 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "370",
+   "319",
+   "336",
+   "302"
+  ],
+  "answer": 2,
+  "explanation": "Relative speed = 6 km/h; distance = 560 m"
+ },
+ {
+  "topic": "average",
+  "question": "The average age of 8 people is 40 years. When a new person joins, the average rises to 41. How old is the new person?",
+  "options": [
+   "47",
+   "56",
+   "48",
+   "49"
+  ],
+  "answer": 3,
+  "explanation": "9×41 − 8×40 = 49"
+ },
+ {
+  "topic": "compound-interest",
+  "question": "What is the difference between the compound interest and simple interest on ₹17500 for 2 years at 8% per annum?",
+  "options": [
+   "₹106",
+   "₹112",
+   "₹56",
+   "₹107"
+  ],
+  "answer": 1,
+  "explanation": "Difference = P(R/100)² = ₹112"
+ },
+ {
+  "topic": "time-work",
+  "question": "A and B together can do a job in 10 days, B and C in 20 days, and A and C in 12 days. In how many days can A alone do it?",
+  "options": [
+   "14",
+   "16",
+   "15",
+   "10"
+  ],
+  "answer": 2,
+  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+ },
+ {
+  "topic": "time-work",
+  "question": "A can complete a work in 22 days and B in 33 days. They work together for 8 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "10",
+   "12",
+   "15",
+   "13"
+  ],
+  "answer": 3,
+  "explanation": "Remaining = 1 − 8(1/22+1/33); B needs remaining × 33 days"
+ },
+ {
+  "topic": "boats-streams",
+  "question": "A boat takes 8 hours to go 48 km upstream and 3 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "13",
+   "11",
+   "14",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "Upstream 6, downstream 16; still water = (up+down)/2"
+ }
+]

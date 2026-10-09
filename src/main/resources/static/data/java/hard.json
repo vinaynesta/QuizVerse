@@ -1,0 +1,290 @@
+[
+  {
+    "id": "java-hard-1",
+    "question": "Explain the Diamond Problem in Java:",
+    "options": [
+      "Multiple inheritance issue in interfaces",
+      "Memory leak in collections",
+      "Thread deadlock situation",
+      "Stack overflow in recursion"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-2",
+    "question": "What is the difference between Callable and Runnable?",
+    "options": [
+      "Callable returns value and throws exception",
+      "They are the same",
+      "Runnable is newer",
+      "Callable is deprecated"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-3",
+    "question": "What is a reentrant lock in Java?",
+    "options": [
+      "Lock that can be acquired multiple times by same thread",
+      "One-time lock",
+      "System lock",
+      "Database lock"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-4",
+    "question": "What is the purpose of weak references in Java?",
+    "options": [
+      "Memory management optimization",
+      "Performance improvement",
+      "Exception handling",
+      "Thread safety"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-5",
+    "question": "Explain the concept of memory leaks in Java:",
+    "options": [
+      "Objects that are no longer used but not garbage collected",
+      "System running out of memory",
+      "CPU usage too high",
+      "Disk space full"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-6",
+    "question": "What is the difference between fail-fast and fail-safe iterators?",
+    "options": [
+      "Fail-fast throws exception on modification during iteration",
+      "No difference",
+      "Fail-safe is newer",
+      "Fail-fast is deprecated"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-7",
+    "question": "What is the purpose of the Phaser class in Java?",
+    "options": [
+      "Synchronization barrier for dynamic number of threads",
+      "Database connection",
+      "File handling",
+      "Exception management"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-8",
+    "question": "Explain the difference between shallow copy and deep copy:",
+    "options": [
+      "Deep copy creates new objects for nested references",
+      "They are the same",
+      "Shallow copy is newer",
+      "Deep copy is deprecated"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-9",
+    "question": "What is the purpose of the sun.misc.Unsafe class?",
+    "options": [
+      "Low-level system operations",
+      "GUI development",
+      "Database operations",
+      "Web services"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-10",
+    "question": "What is the difference between G1 and CMS garbage collectors?",
+    "options": [
+      "G1 is region-based, CMS is concurrent mark sweep",
+      "They are the same",
+      "G1 is older",
+      "CMS is newer"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-11",
+    "question": "What is the purpose of the transient keyword?",
+    "options": [
+      "Exclude variable from serialization",
+      "Make variable final",
+      "Make variable static",
+      "Include in hashCode"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-12",
+    "question": "What is the use of the super keyword?",
+    "options": [
+      "Access parent class methods or constructor",
+      "Access child class",
+      "Make variable super",
+      "None of these"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-13",
+    "question": "Can an interface have static methods in Java 8?",
+    "options": [
+      "Yes",
+      "No",
+      "Only private static",
+      "Only abstract"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-14",
+    "question": "What is the output of null + \"test\" in Java?",
+    "options": [
+      "nulltest",
+      "test",
+      "null",
+      "Error"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-15",
+    "question": "What is the role of default methods in interfaces?",
+    "options": [
+      "Provide implementation in interface",
+      "Abstract method only",
+      "Final method only",
+      "Static only"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-16",
+    "question": "What happens if a class has two interfaces with same default method?",
+    "options": [
+      "Compiler error unless overridden",
+      "Only one is used",
+      "Runtime error",
+      "Ignored"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-17",
+    "question": "What is a functional interface?",
+    "options": [
+      "Interface with one abstract method",
+      "Any interface",
+      "Interface with static method",
+      "Deprecated interface"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-18",
+    "question": "What is the use of @FunctionalInterface annotation?",
+    "options": [
+      "Ensure interface has one abstract method",
+      "Make it abstract",
+      "Provide default method",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-19",
+    "question": "Can enums have constructors?",
+    "options": [
+      "Yes",
+      "No",
+      "Only default",
+      "Only static"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-20",
+    "question": "What is the result of dividing by zero in Java (int)?",
+    "options": [
+      "ArithmeticException",
+      "0",
+      "Infinity",
+      "NaN"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-21",
+    "question": "What is the purpose of the wait() method in Java?",
+    "options": [
+      "Thread communication",
+      "Memory management",
+      "Exception handling",
+      "Performance improvement"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-22",
+    "question": "What is the difference between a volatile and a non-volatile variable?",
+    "options": [
+      "Volatile is thread-safe, non-volatile is not",
+      "Volatile is faster, non-volatile is slower",
+      "Volatile is deprecated, non-volatile is not",
+      "Volatile is not thread-safe, non-volatile is thread-safe"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-23",
+    "question": "What is the purpose of the finalize() method?",
+    "options": [
+      "Garbage collection",
+      "Memory management",
+      "Exception handling",
+      "Thread safety"
+    ],
+    "answer": 0,
+    "explanation": ""
+  },
+  {
+    "id": "java-hard-24",
+    "question": "What is the difference between a checked and unchecked exception?",
+    "options": [
+      "Checked throwable, unchecked RuntimeException",
+      "Checked RuntimeException, unchecked throwable",
+      "Checked is newer, unchecked is older",
+      "Checked is deprecated, unchecked is not"
+    ],
+    "answer": 0,
+    "explanation": ""
+  }
+]
