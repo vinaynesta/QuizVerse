@@ -1,17 +1,26 @@
 #!/usr/bin/env python3
 """Convert the legacy SQL question dump into the static JSON question bank.
 
-Usage: python3 scripts/build_questions.py <input.sql> <output-data-dir>
+Usage: python3 -I scripts/build_questions.py scripts/legacy/java_questions.sql <output-data-dir>
 
 Each "-- Section" comment in the SQL becomes one quiz file under
 <output-data-dir>/<subject>/, and <subject>/quizzes.json lists them (scripts/build_exams.py builds the site index).
 """
+import hashlib
 import json
 import re
 import sys
 from pathlib import Path
 
 SUBJECT = "java"
+# The numbered difficulty sections share one topic; the named ones are their own topic.
+CORE_SECTIONS = {"easy", "medium", "hard", "very-hard"}
+
+
+def question_id(subject, question, options):
+    """Stable id from the content. Keep in sync with question_id in scripts/build_exams.py."""
+    key = "\x1f".join([subject, question, *sorted(options)])
+    return "q" + hashlib.sha1(key.encode()).hexdigest()[:11]
 
 
 def parse_row(line):
@@ -59,13 +68,18 @@ def main(src, out_dir):
         if not section["rows"]:
             continue
         quiz_id = slugify(section["title"].replace("Questions", ""))
+        topic = "core-java" if quiz_id in CORE_SECTIONS else quiz_id
+        level = quiz_id if quiz_id in CORE_SECTIONS else "mixed"
         questions = []
-        for n, row in enumerate(section["rows"], 1):
+        for row in section["rows"]:
             text, a, b, c, d, answer = row
             options = [a, b, c, d]
             assert answer in options, (section["title"], text)
             questions.append({
-                "id": f"{SUBJECT}-{quiz_id}-{n}",
+                "id": question_id(SUBJECT, text, options),
+                "subject": SUBJECT,
+                "topic": topic,
+                "level": level,
                 "question": text,
                 "options": options,
                 "answer": options.index(answer),

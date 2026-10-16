@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QuizVerse - My scores</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav id="account-bar" class="account-bar"></nav>
+    <h1 id="history-title">My scores</h1>
+    <div class="quiz-container">
+        <div id="history-summary" class="stat-tiles"></div>
+
+        <div class="practice-links">
+            <a class="practice-link" href="quiz.html?practice=revise"><b>Revise mistakes</b><span id="mistake-count">Questions you got wrong or skipped</span></a>
+            <a class="practice-link" href="quiz.html?practice=bookmarks"><b>Bookmarks</b><span id="bookmark-count">Questions you saved</span></a>
+            <a class="practice-link" href="practice.html"><b>Custom quiz</b><span>Pick topics, level and length</span></a>
+        </div>
+
+        <section id="trend-card" class="history-card chart-card" hidden>
+            <div class="card-head">
+                <h2>Score trend</h2>
+                <label class="filter">Section
+                    <select id="trend-filter"></select>
+                </label>
+            </div>
+            <p class="card-sub">Score as % of maximum marks, each finished quiz in order.</p>
+            <div id="trend-chart" class="trend-chart"></div>
+        </section>
+
+        <section id="topics-card" class="history-card chart-card" hidden>
+            <div class="card-head">
+                <h2>Topics</h2>
+                <label class="filter">Sort by
+                    <select id="topic-sort">
+                        <option value="weak">Weakest first</option>
+                        <option value="slow">Slowest first</option>
+                        <option value="most">Most practised</option>
+                    </select>
+                </label>
+            </div>
+            <p class="card-sub">Accuracy is correct ÷ answered (skips don't count). Topics with fewer than <span id="min-answers"></span> answers are greyed out, because a few answers say little.</p>
+            <div id="weak-topics" class="weak-topics"></div>
+            <div class="table-wrap">
+                <table class="topic-table">
+                    <thead><tr><th>Topic</th><th class="num">Answered</th><th>Accuracy</th><th class="num">Avg time</th><th class="num">Skipped</th><th></th></tr></thead>
+                    <tbody id="topic-rows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <h2 class="list-title">All quizzes</h2>
+        <div id="history-list" class="history-card"><p class="history-empty">Loading...</p></div>
+    </div>
+    <script type="module" src="js/account.js"></script>
+    <script type="module" src="js/history.js"></script>
+</body>
+</html>

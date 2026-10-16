@@ -1,0 +1,478 @@
+{
+ "subjects": [
+  {
+   "id": "english",
+   "name": "English Language",
+   "topics": [
+    {
+     "id": "antonyms",
+     "name": "Antonyms",
+     "file": "topics/english/antonyms.json",
+     "levels": {
+      "easy": 30
+     }
+    },
+    {
+     "id": "articles-prepositions",
+     "name": "Articles & Prepositions",
+     "file": "topics/english/articles-prepositions.json",
+     "levels": {
+      "easy": 40
+     }
+    },
+    {
+     "id": "confused-words",
+     "name": "Confused Words",
+     "file": "topics/english/confused-words.json",
+     "levels": {
+      "medium": 15
+     }
+    },
+    {
+     "id": "double-blank",
+     "name": "Double Fill in the Blank",
+     "file": "topics/english/double-blank.json",
+     "levels": {
+      "hard": 35
+     }
+    },
+    {
+     "id": "error-spotting",
+     "name": "Error Spotting",
+     "file": "topics/english/error-spotting.json",
+     "levels": {
+      "easy": 15,
+      "medium": 50,
+      "hard": 40
+     }
+    },
+    {
+     "id": "fill-blank",
+     "name": "Fill in the Blank",
+     "file": "topics/english/fill-blank.json",
+     "levels": {
+      "medium": 40
+     }
+    },
+    {
+     "id": "idioms",
+     "name": "Idioms",
+     "file": "topics/english/idioms.json",
+     "levels": {
+      "easy": 15,
+      "medium": 25,
+      "hard": 25
+     }
+    },
+    {
+     "id": "one-word",
+     "name": "One-Word Substitution",
+     "file": "topics/english/one-word.json",
+     "levels": {
+      "easy": 20
+     }
+    },
+    {
+     "id": "para-jumble",
+     "name": "Para Jumble",
+     "file": "topics/english/para-jumble.json",
+     "levels": {
+      "medium": 15,
+      "hard": 25
+     }
+    },
+    {
+     "id": "sentence-improvement",
+     "name": "Sentence Improvement",
+     "file": "topics/english/sentence-improvement.json",
+     "levels": {
+      "medium": 30,
+      "hard": 30
+     }
+    },
+    {
+     "id": "spelling",
+     "name": "Spelling",
+     "file": "topics/english/spelling.json",
+     "levels": {
+      "easy": 20
+     }
+    },
+    {
+     "id": "synonyms",
+     "name": "Synonyms",
+     "file": "topics/english/synonyms.json",
+     "levels": {
+      "easy": 30
+     }
+    },
+    {
+     "id": "synonyms-antonyms",
+     "name": "Synonyms & Antonyms",
+     "file": "topics/english/synonyms-antonyms.json",
+     "levels": {
+      "medium": 25
+     }
+    },
+    {
+     "id": "tense-agreement",
+     "name": "Tense & Agreement",
+     "file": "topics/english/tense-agreement.json",
+     "levels": {
+      "easy": 30
+     }
+    },
+    {
+     "id": "vocabulary",
+     "name": "Vocabulary",
+     "file": "topics/english/vocabulary.json",
+     "levels": {
+      "hard": 25
+     }
+    },
+    {
+     "id": "word-usage",
+     "name": "Word Usage",
+     "file": "topics/english/word-usage.json",
+     "levels": {
+      "hard": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "quant",
+   "name": "Quantitative Aptitude",
+   "topics": [
+    {
+     "id": "ages",
+     "name": "Ages",
+     "file": "topics/quant/ages.json",
+     "levels": {
+      "medium": 25
+     }
+    },
+    {
+     "id": "average",
+     "name": "Average",
+     "file": "topics/quant/average.json",
+     "levels": {
+      "easy": 14,
+      "medium": 25,
+      "hard": 25
+     }
+    },
+    {
+     "id": "boats-streams",
+     "name": "Boats & Streams",
+     "file": "topics/quant/boats-streams.json",
+     "levels": {
+      "medium": 25,
+      "hard": 26
+     }
+    },
+    {
+     "id": "compound-interest",
+     "name": "Compound Interest",
+     "file": "topics/quant/compound-interest.json",
+     "levels": {
+      "medium": 16,
+      "hard": 19
+     }
+    },
+    {
+     "id": "discount",
+     "name": "Discount",
+     "file": "topics/quant/discount.json",
+     "levels": {
+      "easy": 18
+     }
+    },
+    {
+     "id": "lcm-hcf",
+     "name": "LCM & HCF",
+     "file": "topics/quant/lcm-hcf.json",
+     "levels": {
+      "easy": 25,
+      "medium": 25
+     }
+    },
+    {
+     "id": "mixture",
+     "name": "Mixtures & Alligation",
+     "file": "topics/quant/mixture.json",
+     "levels": {
+      "medium": 9,
+      "hard": 10
+     }
+    },
+    {
+     "id": "number-series",
+     "name": "Number Series",
+     "file": "topics/quant/number-series.json",
+     "levels": {
+      "easy": 24,
+      "hard": 25
+     }
+    },
+    {
+     "id": "partnership",
+     "name": "Partnership",
+     "file": "topics/quant/partnership.json",
+     "levels": {
+      "medium": 11
+     }
+    },
+    {
+     "id": "percentage",
+     "name": "Percentage",
+     "file": "topics/quant/percentage.json",
+     "levels": {
+      "easy": 23,
+      "medium": 40,
+      "hard": 6
+     }
+    },
+    {
+     "id": "permutation-combination",
+     "name": "Permutation & Combination",
+     "file": "topics/quant/permutation-combination.json",
+     "levels": {
+      "hard": 21
+     }
+    },
+    {
+     "id": "pipes-cisterns",
+     "name": "Pipes & Cisterns",
+     "file": "topics/quant/pipes-cisterns.json",
+     "levels": {
+      "medium": 20
+     }
+    },
+    {
+     "id": "probability",
+     "name": "Probability",
+     "file": "topics/quant/probability.json",
+     "levels": {
+      "hard": 31
+     }
+    },
+    {
+     "id": "profit-loss",
+     "name": "Profit & Loss",
+     "file": "topics/quant/profit-loss.json",
+     "levels": {
+      "easy": 22,
+      "medium": 14
+     }
+    },
+    {
+     "id": "quadratic-equations",
+     "name": "Quadratic Equations",
+     "file": "topics/quant/quadratic-equations.json",
+     "levels": {
+      "hard": 25
+     }
+    },
+    {
+     "id": "ratio",
+     "name": "Ratio",
+     "file": "topics/quant/ratio.json",
+     "levels": {
+      "easy": 25
+     }
+    },
+    {
+     "id": "simple-interest",
+     "name": "Simple Interest",
+     "file": "topics/quant/simple-interest.json",
+     "levels": {
+      "easy": 26,
+      "medium": 16
+     }
+    },
+    {
+     "id": "simplification",
+     "name": "Simplification",
+     "file": "topics/quant/simplification.json",
+     "levels": {
+      "easy": 20
+     }
+    },
+    {
+     "id": "speed-time-distance",
+     "name": "Speed, Time & Distance",
+     "file": "topics/quant/speed-time-distance.json",
+     "levels": {
+      "easy": 25
+     }
+    },
+    {
+     "id": "roots",
+     "name": "Squares & Roots",
+     "file": "topics/quant/roots.json",
+     "levels": {
+      "easy": 19
+     }
+    },
+    {
+     "id": "time-work",
+     "name": "Time & Work",
+     "file": "topics/quant/time-work.json",
+     "levels": {
+      "easy": 9,
+      "hard": 37
+     }
+    },
+    {
+     "id": "trains",
+     "name": "Trains",
+     "file": "topics/quant/trains.json",
+     "levels": {
+      "medium": 24,
+      "hard": 25
+     }
+    }
+   ]
+  },
+  {
+   "id": "reasoning",
+   "name": "Reasoning Ability",
+   "topics": [
+    {
+     "id": "alphabet",
+     "name": "Alphabet",
+     "file": "topics/reasoning/alphabet.json",
+     "levels": {
+      "easy": 38
+     }
+    },
+    {
+     "id": "coding-decoding",
+     "name": "Coding Decoding",
+     "file": "topics/reasoning/coding-decoding.json",
+     "levels": {
+      "easy": 37,
+      "medium": 31,
+      "hard": 25
+     }
+    },
+    {
+     "id": "direction-sense",
+     "name": "Direction Sense",
+     "file": "topics/reasoning/direction-sense.json",
+     "levels": {
+      "easy": 38,
+      "medium": 31,
+      "hard": 31
+     }
+    },
+    {
+     "id": "inequality",
+     "name": "Inequality",
+     "file": "topics/reasoning/inequality.json",
+     "levels": {
+      "easy": 31,
+      "medium": 38,
+      "hard": 44
+     }
+    },
+    {
+     "id": "number-series",
+     "name": "Number Series",
+     "file": "topics/reasoning/number-series.json",
+     "levels": {
+      "easy": 43,
+      "medium": 31,
+      "hard": 38
+     }
+    },
+    {
+     "id": "ranking",
+     "name": "Ranking",
+     "file": "topics/reasoning/ranking.json",
+     "levels": {
+      "easy": 31,
+      "medium": 25
+     }
+    },
+    {
+     "id": "seating-arrangement",
+     "name": "Seating Arrangement",
+     "file": "topics/reasoning/seating-arrangement.json",
+     "levels": {
+      "medium": 50,
+      "hard": 62
+     }
+    },
+    {
+     "id": "syllogism",
+     "name": "Syllogism",
+     "file": "topics/reasoning/syllogism.json",
+     "levels": {
+      "easy": 31,
+      "medium": 44,
+      "hard": 50
+     }
+    }
+   ]
+  },
+  {
+   "id": "java",
+   "name": "Java",
+   "topics": [
+    {
+     "id": "concurrency-and-multithreading",
+     "name": "Concurrency And Multithreading",
+     "file": "topics/java/concurrency-and-multithreading.json",
+     "levels": {
+      "mixed": 5
+     }
+    },
+    {
+     "id": "core-java",
+     "name": "Core Java",
+     "file": "topics/java/core-java.json",
+     "levels": {
+      "easy": 25,
+      "medium": 24,
+      "hard": 24,
+      "very-hard": 14
+     }
+    },
+    {
+     "id": "design-patterns",
+     "name": "Design Patterns",
+     "file": "topics/java/design-patterns.json",
+     "levels": {
+      "mixed": 20
+     }
+    },
+    {
+     "id": "advanced-java-8-features",
+     "name": "Java 8+ Features",
+     "file": "topics/java/advanced-java-8-features.json",
+     "levels": {
+      "mixed": 10
+     }
+    },
+    {
+     "id": "java-memory-management",
+     "name": "Java Memory Management",
+     "file": "topics/java/java-memory-management.json",
+     "levels": {
+      "mixed": 5
+     }
+    },
+    {
+     "id": "spring-framework",
+     "name": "Spring Framework",
+     "file": "topics/java/spring-framework.json",
+     "levels": {
+      "mixed": 15
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QuizVerse - Custom quiz</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav id="account-bar" class="account-bar"></nav>
+    <h1>Build a custom quiz</h1>
+    <form id="builder" class="quiz-container builder" novalidate>
+        <section class="history-card builder-card">
+            <div class="card-head">
+                <h2>1. Topics</h2>
+                <span id="topic-picked" class="card-sub"></span>
+            </div>
+            <div id="topic-groups"><p class="history-empty">Loading topics...</p></div>
+        </section>
+
+        <section class="history-card builder-card builder-options">
+            <h2>2. Options</h2>
+            <label>Difficulty
+                <select name="level" id="level">
+                    <option value="any">Any</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </label>
+            <label>Questions
+                <select name="count" id="count">
+                    <option>10</option><option selected>20</option><option>30</option><option>40</option><option>50</option>
+                </select>
+            </label>
+            <label>Time limit
+                <select name="minutes" id="minutes">
+                    <option value="0">Untimed, instant feedback</option>
+                    <option value="10">10 minutes</option>
+                    <option value="15">15 minutes</option>
+                    <option value="20">20 minutes</option>
+                    <option value="30">30 minutes</option>
+                    <option value="45">45 minutes</option>
+                    <option value="60">60 minutes</option>
+                </select>
+            </label>
+            <p id="available" class="available" aria-live="polite"></p>
+            <button type="submit" class="start-quiz-button" id="build-button" disabled>Start quiz</button>
+        </section>
+    </form>
+    <script type="module" src="js/account.js"></script>
+    <script type="module" src="js/practice.js"></script>
+</body>
+</html>

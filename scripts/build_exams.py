@@ -12,6 +12,7 @@ level never share questions. Sections we have no bank for (General Awareness,
 Computer, Hindi) are listed as "unavailable" so the app can show them as coming soon.
 The Java practice quizzes in <data-dir>/java are indexed untimed.
 """
+import hashlib
 import json
 import random
 import shutil
@@ -80,6 +81,13 @@ EXAMS = [
 ]
 
 
+def question_id(subject, q):
+    """Stable id from the content, so it survives rebuilds (option order doesn't matter).
+    Keep in sync with scripts/build_questions.py."""
+    key = "\x1f".join([subject, q["question"], *sorted(q["options"])])
+    return "q" + hashlib.sha1(key.encode()).hexdigest()[:11]
+
+
 def load_bank(name, level, banks_dir, english_dir):
     path = (Path(english_dir) / f"{level}.json") if name == "english" else Path(banks_dir) / f"{name}_{level}.json"
     return json.loads(path.read_text())
@@ -139,9 +147,9 @@ def main(banks_dir, english_dir, data_dir):
                     for n in range(1, QUIZZES_PER_LEVEL + 1):
                         chunk = bank[(n - 1) * s["questions"]: n * s["questions"]]
                         rel = f"{key}-{n}.json"
-                        qs = [{"id": f"{exam['id']}-{stage['id']}-{s['id']}-{level}-{n}-{i}", "topic": q["topic"],
-                               "question": q["question"], "options": q["options"], "answer": q["answer"],
-                               "explanation": q.get("explanation", "")} for i, q in enumerate(chunk, 1)]
+                        qs = [{"id": question_id(s["bank"], q), "subject": s["bank"], "topic": q["topic"],
+                               "level": level, "question": q["question"], "options": q["options"],
+                               "answer": q["answer"], "explanation": q.get("explanation", "")} for q in chunk]
                         (out / rel).parent.mkdir(parents=True, exist_ok=True)
                         (out / rel).write_text(json.dumps(qs, indent=1, ensure_ascii=False) + "\n")
                         quizzes.append({"id": f"{level}-{n}", "title": f"{level_name} Quiz {n}", "file": rel})
@@ -160,7 +168,22 @@ def main(banks_dir, english_dir, data_dir):
                        for q in java_quizzes]}]}],
     })
     (out / "index.json").write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")
+    check_ids(out, index)
     print(f"built {len(EXAMS)} exams + java into {out}")
+
+
+def check_ids(out, index):
+    """The same id must always mean the same question, or saved answers would point at the wrong one."""
+    seen = {}
+    for exam in index["exams"]:
+        for stage in exam["stages"]:
+            for section in stage["sections"]:
+                for level in section["levels"]:
+                    for quiz in level["quizzes"]:
+                        for q in json.loads((out / quiz["file"]).read_text()):
+                            key = (q["subject"], q["question"], tuple(sorted(q["options"])))
+                            if seen.setdefault(q["id"], key) != key:
+                                sys.exit(f"id clash: {q['id']} in {quiz['file']}")
 
 
 if __name__ == "__main__":
