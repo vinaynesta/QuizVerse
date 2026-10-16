@@ -1,4 +1,8 @@
+import { bestScores, currentUser } from "./api.js";
+
 const examId = new URLSearchParams(window.location.search).get("exam");
+// "exam/stage/section/level/quizIndex" -> { bestScore, maxMarks, attempts }, for logged-in users.
+let best = new Map();
 
 function renderExam(index) {
   const exam = index.exams.find((e) => e.id === examId);
@@ -41,10 +45,16 @@ function renderSection(exam, stage, section) {
         <span class="level-name">${level.name}</span>
         ${level.quizzes
           .map(
-            (quiz, i) =>
-              `<a class="quiz-link" href="quiz.html?exam=${encodeURIComponent(exam.id)}&stage=${encodeURIComponent(stage.id)}&section=${encodeURIComponent(section.id)}&level=${encodeURIComponent(level.id)}&quiz=${i}">${
+            (quiz, i) => {
+              const done = best.get(`${exam.id}/${stage.id}/${section.id}/${level.id}/${i}`);
+              const pct = done && done.maxMarks > 0 ? Math.max(0, Math.round((done.bestScore / done.maxMarks) * 100)) : 0;
+              const title = done
+                ? `${quiz.title}: best ${pct}% over ${done.attempts} attempt${done.attempts > 1 ? "s" : ""}`
+                : quiz.title;
+              return `<a class="quiz-link${done ? " done" : ""}" title="${title}" href="quiz.html?exam=${encodeURIComponent(exam.id)}&stage=${encodeURIComponent(stage.id)}&section=${encodeURIComponent(section.id)}&level=${encodeURIComponent(level.id)}&quiz=${i}">${
                 level.quizzes.length > 1 ? i + 1 : "Start"
-              }</a>`
+              }${done ? `<span class="quiz-best">✓ ${pct}%</span>` : ""}</a>`;
+            }
           )
           .join("")}
       </div>`
@@ -54,7 +64,15 @@ function renderSection(exam, stage, section) {
   return `<div class="section-card${longNames}"><h3>${section.name}</h3><p class="section-meta">${meta}</p>${note}${levels}</div>`;
 }
 
-fetch("data/index.json")
-  .then((response) => response.json())
-  .then(renderExam)
+async function loadBest() {
+  if (!(await currentUser())) return;
+  try {
+    best = new Map((await bestScores()).map((b) => [b.key, b]));
+  } catch (error) {
+    console.error("Could not load your best scores:", error);
+  }
+}
+
+Promise.all([fetch("data/index.json").then((response) => response.json()), loadBest()])
+  .then(([index]) => renderExam(index))
   .catch((error) => console.error("Error loading exam:", error));

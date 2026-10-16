@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QuizVerse - Question reports</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav id="account-bar" class="account-bar"></nav>
+    <h1>Question reports</h1>
+    <div class="quiz-container">
+        <p class="card-sub on-dark">Open reports, newest first. Fix the question in the bank under <code>scripts/</code>, rebuild the data, then mark the report resolved.</p>
+        <div id="report-list" class="report-list"><p class="history-empty history-card">Loading...</p></div>
+    </div>
+    <script type="module" src="js/account.js"></script>
+    <script type="module" src="js/reports.js"></script>
+</body>
+</html>

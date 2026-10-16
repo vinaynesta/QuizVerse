@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QuizVerse - Log in</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav id="account-bar" class="account-bar"></nav>
+    <h1>Log in</h1>
+    <form id="login-form" class="auth-card" novalidate>
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+        <label>Username or email
+            <input name="login" autocomplete="username" required autofocus/>
+        </label>
+        <label>Password
+            <input name="password" type="password" autocomplete="current-password" required/>
+        </label>
+        <button type="submit" class="start-quiz-button">Log in</button>
+        <p class="auth-switch">New here? <a id="switch-link" href="register.html">Create an account</a></p>
+    </form>
+    <script type="module" src="js/account.js"></script>
+    <script type="module" src="js/auth.js"></script>
+</body>
+</html>

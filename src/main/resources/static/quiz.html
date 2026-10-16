@@ -8,28 +8,69 @@
     <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
-    <div class="quiz-container panel">
-        <div id="loading-spinner" style="display:none;">Loading...</div>
+    <nav id="account-bar" class="account-bar"></nav>
+    <div class="quiz-layout">
+        <div class="quiz-container panel">
+            <div id="loading-spinner" style="display:none;">Loading...</div>
 
-        <div id="start-screen">
-            <h1 id="start-title">Quiz</h1>
-            <p id="start-info"></p>
-            <button id="start-button">Start Quiz</button>
+            <div id="start-screen">
+                <h1 id="start-title">Quiz</h1>
+                <p id="start-info"></p>
+                <button id="start-button">Start Quiz</button>
+            </div>
+
+            <div id="quiz-screen" style="display:none;">
+                <div id="quiz-header">
+                    <span id="quiz-label"></span>
+                    <span class="header-right">
+                        <button type="button" id="palette-toggle" class="palette-toggle" aria-controls="palette">Questions</button>
+                        <span id="timer"></span>
+                    </span>
+                </div>
+                <div id="question-container"></div>
+                <div id="result-container" class="result" style="display:none;"></div>
+                <div id="explanation-container" class="explanation" style="display:none;"></div>
+                <div class="nav-row">
+                    <button id="prev-button">Previous</button>
+                    <button id="mark-button">Mark for Review &amp; Next</button>
+                    <button id="next-button">Next Question</button>
+                </div>
+                <button id="finish-button">Finish Quiz</button>
+                <button id="new-quiz-button">Next Quiz</button>
+                <button id="back-link-button">Back to quizzes</button>
+                <p class="shortcut-hint">Keys: 1–4 answer &middot; N next &middot; P previous &middot; M mark &middot; B bookmark &middot; S submit</p>
+            </div>
         </div>
 
-        <div id="quiz-screen" style="display:none;">
-            <div id="quiz-header"><span id="quiz-label"></span><span id="timer"></span></div>
-            <div id="question-container"></div>
-            <div id="result-container" class="result" style="display:none;"></div>
-            <div id="explanation-container" class="explanation" style="display:none;"></div>
-            <button id="next-button">Next Question</button>
-            <button id="finish-button">Finish Quiz</button>
-            <button id="new-quiz-button">Next Quiz</button>
-            <button id="back-link-button">Back to quizzes</button>
-            <!-- <button id="history-button">History</button> -->
-        </div>
+        <aside id="palette" class="palette" style="display:none;" aria-label="Question palette">
+            <h2>Questions</h2>
+            <div id="palette-grid" class="palette-grid"></div>
+            <div id="palette-legend" class="palette-legend"></div>
+        </aside>
     </div>
 
+    <dialog id="report-dialog" class="report-dialog">
+        <form id="report-form">
+            <h2>Report this question</h2>
+            <fieldset>
+                <legend>What's wrong?</legend>
+                <label><input type="radio" name="reason" value="wrong-answer" required/> The marked answer is wrong</label>
+                <label><input type="radio" name="reason" value="typo"/> Typo or formatting</label>
+                <label><input type="radio" name="reason" value="unclear"/> Question is unclear</label>
+                <label><input type="radio" name="reason" value="other"/> Something else</label>
+            </fieldset>
+            <label class="report-note">Details (optional)
+                <textarea name="note" maxlength="500" rows="3"></textarea>
+            </label>
+            <p id="report-status" class="form-error-text" role="alert"></p>
+            <div class="dialog-actions">
+                <button type="submit" value="cancel" formnovalidate class="btn-secondary">Cancel</button>
+                <button type="submit" value="send" id="report-send" class="btn-primary">Send report</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script type="module" src="js/account.js"></script>
     <script type="module" src="js/quiz.js"></script>
 </body>
 </html>
