@@ -3,7 +3,9 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-src/main/resources/application*.properties
+# application*.properties are tracked and must only reference env vars (${...}).
+# Put personal overrides or real credentials in application-local.properties, which is never committed.
+src/main/resources/application-local.properties
 .env
 
 ### STS ###
@@ -33,3 +35,18 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### macOS ###
+.DS_Store
+
+### Local data and secrets ###
+# H2 database (accounts and password hashes) created by ./mvnw spring-boot:run
+/data/
+*.mv.db
+*.trace.db
+.env.*
+*.pem
+*.key
+*.p12
+*.jks
+*.log

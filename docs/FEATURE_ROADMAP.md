@@ -2,7 +2,7 @@
 
 A list of features that could be built next, with an estimate, dependencies and risks for each. It reflects the code as of October 2026, after the accounts and quiz-history work.
 
-**Status (11 Oct 2026):** phases 0, 1 and 2 are built: F1, F2, #2, #3, #5, #6, #7, #8, #9, #11, #12, #13, #31, #33, #34, #35, #36. Several facts in the next table describe the code before that work.
+**Status (17 Oct 2026):** phases 0, 1 and 2 are built: F1, F2, #2, #3, #5, #6, #7, #8, #9, #11, #12, #13, #31, #33, #34, #35, #36. From phase 3, #27 (profile page) is built. Several facts in the next table describe the code before that work.
 
 ## How to read the estimates
 

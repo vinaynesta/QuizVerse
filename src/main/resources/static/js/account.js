@@ -1,5 +1,5 @@
 // Fills the account bar at the top of every page: "Log in / Sign up" or the user's name with
-// links to their history and a logout button.
+// (linking to their profile), links to their history and a logout button.
 import { currentPageLink, currentUser, logout } from "./api.js";
 
 function escapeHtml(text) {
@@ -16,7 +16,7 @@ async function renderAccountBar() {
   bar.innerHTML = user
     ? `<a class="brand" href="index.html">QuizVerse</a>
        <span class="account-links">
-         <a href="history.html" class="account-name" title="My scores">${escapeHtml(user.displayName)}</a>
+         <a href="profile.html" class="account-name" title="Your profile">${escapeHtml(user.displayName)}</a>
          <a href="history.html">My scores</a>
          <a href="practice.html">Practice</a>
          ${user.admin ? '<a href="reports.html">Reports</a>' : ""}

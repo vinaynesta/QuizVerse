@@ -51,7 +51,11 @@ export const register = (form) => api("/api/auth/register", { method: "POST", bo
 export const login = (loginName, password) =>
   api("/api/auth/login", { method: "POST", body: { login: loginName, password } });
 export const logout = () => api("/api/auth/logout", { method: "POST" });
-export const saveAttempt = (attempt) => api("/api/attempts", { method: "POST", body: attempt });
+export const updateProfile = (profile) => api("/api/me", { method: "PUT", body: profile });
+export const changePassword = (currentPassword, newPassword) =>
+  api("/api/me/password", { method: "POST", body: { currentPassword, newPassword } });
+export const deleteAccount = (password) => api("/api/me", { method: "DELETE", body: { password } });
+export const saveAttempt =(attempt) => api("/api/attempts", { method: "POST", body: attempt });
 export const listAttempts = () => api("/api/attempts");
 export const bestScores = () => api("/api/attempts/best");
 export const topicStats = () => api("/api/me/topics");

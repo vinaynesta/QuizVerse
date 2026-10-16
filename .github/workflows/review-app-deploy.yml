@@ -1,26 +1,25 @@
+# Manual deploy of any branch, e.g. to try a feature on Railway before merging.
+# Uses the same RAILWAY_TOKEN secret as CI; pick the target service when running it.
+
 name: Deploy Review App
 
 on:
   workflow_dispatch:
+    inputs:
+      service:
+        description: Railway service to deploy to (defaults to the RAILWAY_SERVICE variable)
+        required: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Set up Java
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'temurin'
-        java-version: '21'
-
+    - uses: actions/checkout@v4
     - name: Install Railway CLI
-      run: curl -sSL https://railway.app/install.sh | sh
-
+      run: npm install -g @railway/cli
     - name: Deploy to Railway
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        RAILWAY_PROJECT: your-railway-project-id
-      run: railway up --detach
+        SERVICE: ${{ inputs.service || vars.RAILWAY_SERVICE }}
+      run: railway up --ci --service "$SERVICE"

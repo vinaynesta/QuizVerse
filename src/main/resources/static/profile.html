@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QuizVerse - Profile</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <nav id="account-bar" class="account-bar"></nav>
+    <h1>Your profile</h1>
+    <div class="profile-stack">
+        <form id="profile-form" class="auth-card" novalidate>
+            <h2>Details</h2>
+            <p class="form-error" role="alert" hidden></p>
+            <p class="form-success" role="status" hidden></p>
+            <label>Username
+                <input id="profile-username" disabled/>
+                <small>Usernames can't be changed.</small>
+            </label>
+            <label>Name
+                <input name="displayName" autocomplete="name" maxlength="60" required/>
+            </label>
+            <label>Email
+                <input name="email" type="email" autocomplete="email" maxlength="254" required/>
+            </label>
+            <button type="submit" class="start-quiz-button">Save changes</button>
+        </form>
+
+        <form id="password-form" class="auth-card" novalidate>
+            <h2>Change password</h2>
+            <p class="form-error" role="alert" hidden></p>
+            <p class="form-success" role="status" hidden></p>
+            <label>Current password
+                <input name="currentPassword" type="password" autocomplete="current-password" required/>
+            </label>
+            <label>New password
+                <input name="newPassword" type="password" autocomplete="new-password" minlength="8" maxlength="72" required/>
+                <small>At least 8 characters. You'll be logged out on your other devices.</small>
+            </label>
+            <button type="submit" class="start-quiz-button">Change password</button>
+        </form>
+
+        <form id="delete-form" class="auth-card danger-card" novalidate>
+            <h2>Delete account</h2>
+            <p class="card-sub">This permanently deletes your account, quiz history, bookmarks and reports. It can't be undone.</p>
+            <p class="form-error" role="alert" hidden></p>
+            <label>Password
+                <input name="password" type="password" autocomplete="current-password" required/>
+            </label>
+            <button type="submit" class="btn danger-button">Delete my account</button>
+        </form>
+    </div>
+    <script type="module" src="js/account.js"></script>
+    <script type="module" src="js/profile.js"></script>
+</body>
+</html>
