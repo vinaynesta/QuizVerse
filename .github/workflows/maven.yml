@@ -1,10 +1,5 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# Builds and tests every push and pull request, checks the committed question data matches the
+# generator scripts, and deploys main to Railway once the build passes.
 
 name: Java CI with Maven
 
@@ -16,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -27,11 +21,36 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
 
-    # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    # - name: Submit Dependency Snapshot
-    #   uses: advanced-security/maven-dependency-submission-action@v1
-    #   with:
-    #     github-token: ${{ secrets.MY_PERSONAL_ACCESS_TOKEN }}
+    # Same order as the README. Fails if someone edited the generated JSON by hand or forgot to commit it.
+    - name: Check question data is up to date
+      run: |
+        python3 -I scripts/gen_banks.py scripts/banks
+        python3 -I scripts/build_questions.py scripts/legacy/java_questions.sql src/main/resources/static/data
+        python3 -I scripts/build_exams.py scripts/banks scripts/english_bank src/main/resources/static/data
+        python3 -I scripts/build_topics.py src/main/resources/static/data
+        python3 -I scripts/build_backgrounds.py src/main/resources/static
+        git add -A --intent-to-add
+        git diff --stat --exit-code || { echo "::error::Generated data differs from the scripts. Run the build scripts and commit the output."; exit 1; }
+
+    - name: Build and test
+      run: ./mvnw -B package
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    concurrency: production
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install Railway CLI
+      run: npm install -g @railway/cli
+    - name: Deploy to Railway
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      run: railway up --ci --service "${{ vars.RAILWAY_SERVICE }}"

@@ -23,6 +23,16 @@ public final class AuthDtos {
     /** {@code login} is a username or an email address. */
     public record LoginRequest(@NotBlank String login, @NotBlank String password) {}
 
+    public record UpdateProfileRequest(
+            @NotBlank @Size(max = 60) String displayName,
+            @NotBlank @Email @Size(max = 254) String email) {}
+
+    public record ChangePasswordRequest(
+            @NotBlank String currentPassword,
+            @NotBlank @Size(min = 8, max = 72, message = "must be 8-72 characters") String newPassword) {}
+
+    public record DeleteAccountRequest(@NotBlank String password) {}
+
     public record UserResponse(Long id, String username, String email, String displayName, Instant createdAt,
                                boolean admin) {
         public static UserResponse of(User u, boolean admin) {

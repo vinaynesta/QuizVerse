@@ -6,6 +6,7 @@ import com.quizverse.dto.AuthDtos.UserResponse;
 import com.quizverse.model.User;
 import com.quizverse.repository.UserRepository;
 import com.quizverse.security.AppUserDetailsService;
+import com.quizverse.security.SessionTracker;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -40,14 +41,17 @@ public class AuthController {
     private final AuthenticationManager authManager;
     private final SecurityContextRepository contextRepository;
     private final AppUserDetailsService userDetails;
+    private final SessionTracker sessions;
 
     public AuthController(UserRepository users, PasswordEncoder encoder, AuthenticationManager authManager,
-                          SecurityContextRepository contextRepository, AppUserDetailsService userDetails) {
+                          SecurityContextRepository contextRepository, AppUserDetailsService userDetails,
+                          SessionTracker sessions) {
         this.users = users;
         this.encoder = encoder;
         this.authManager = authManager;
         this.contextRepository = contextRepository;
         this.userDetails = userDetails;
+        this.sessions = sessions;
     }
 
     @PostMapping("/auth/register")
@@ -115,6 +119,7 @@ public class AuthController {
         context.setAuthentication(auth);
         SecurityContextHolder.setContext(context);
         contextRepository.saveContext(context, request, response);
+        sessions.register(auth.getName(), request.getSession());
         return auth;
     }
 

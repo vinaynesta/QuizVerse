@@ -271,6 +271,16 @@ a:focus-visible, button:focus-visible, .option:focus-visible {
 .auth-card .start-quiz-button { margin-top: 4px; }
 .auth-card .start-quiz-button:disabled { opacity: 0.6; cursor: wait; transform: none; }
 .form-error { padding: 10px 14px; border-radius: 10px; background: #fee2e2; color: #991b1b; font-weight: 600; font-size: 0.92rem; }
+.form-success { padding: 10px 14px; border-radius: 10px; background: #dcfce7; color: #166534; font-weight: 600; font-size: 0.92rem; }
+.auth-card h2 { font-size: 1.15rem; color: var(--text); }
+.auth-card input:disabled { background: var(--surface-soft); color: var(--text-muted); }
+
+/* ---------- Profile ---------- */
+.profile-stack { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 20px; }
+.danger-card { border-top: 4px solid var(--hard); }
+.danger-button { background: var(--hard); color: #fff; padding: 12px 28px; }
+.danger-button:hover { background: #b91c1c; }
+.danger-button:disabled { opacity: 0.6; cursor: wait; }
 .auth-switch { text-align: center; color: var(--text-muted); font-size: 0.92rem; }
 .auth-switch a, .history-empty a, .save-status a { color: var(--primary-dark); font-weight: 700; }
 

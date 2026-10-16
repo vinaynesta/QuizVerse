@@ -197,6 +197,91 @@ class DemoApplicationTests {
 		mvc.perform(get("/api/admin/reports").session(admin)).andExpect(jsonPath("$", hasSize(0)));
 	}
 
+	private MockHttpSession login(String login, String password) throws Exception {
+		MockHttpSession session = new MockHttpSession();
+		mvc.perform(post("/api/auth/login").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"login\":\"%s\",\"password\":\"%s\"}".formatted(login, password)))
+				.andExpect(status().isOk());
+		return session;
+	}
+
+	@Test
+	void profileEditsNameAndEmail() throws Exception {
+		MockHttpSession session = register("arjun", "arjun@example.com");
+		register("taken", "taken@example.com");
+		mvc.perform(put("/api/me").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"displayName\":\" Arjun K \",\"email\":\"Arjun.K@Example.com\"}"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.displayName").value("Arjun K"))
+				.andExpect(jsonPath("$.email").value("arjun.k@example.com"))
+				.andExpect(jsonPath("$.username").value("arjun"));
+		// Keeping your own email is fine; taking someone else's is not.
+		mvc.perform(put("/api/me").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"displayName\":\"Arjun\",\"email\":\"arjun.k@example.com\"}"))
+				.andExpect(status().isOk());
+		mvc.perform(put("/api/me").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"displayName\":\"Arjun\",\"email\":\"taken@example.com\"}"))
+				.andExpect(status().isConflict());
+		mvc.perform(put("/api/me").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"displayName\":\"\",\"email\":\"nope\"}"))
+				.andExpect(status().isBadRequest());
+		mvc.perform(put("/api/me").with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"displayName\":\"X\",\"email\":\"x@example.com\"}"))
+				.andExpect(status().isUnauthorized());
+	}
+
+	@Test
+	void changingPasswordLogsOutOtherSessions() throws Exception {
+		MockHttpSession laptop = register("divya", "divya@example.com");
+		MockHttpSession phone = login("divya", "secret123");
+
+		mvc.perform(post("/api/me/password").session(laptop).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"currentPassword\":\"wrong-pass\",\"newPassword\":\"newsecret1\"}"))
+				.andExpect(status().isBadRequest());
+		mvc.perform(post("/api/me/password").session(laptop).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"currentPassword\":\"secret123\",\"newPassword\":\"short\"}"))
+				.andExpect(status().isBadRequest());
+		mvc.perform(post("/api/me/password").session(laptop).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"currentPassword\":\"secret123\",\"newPassword\":\"newsecret1\"}"))
+				.andExpect(status().isNoContent());
+
+		mvc.perform(get("/api/me").session(laptop)).andExpect(status().isOk());
+		org.junit.jupiter.api.Assertions.assertTrue(phone.isInvalid());
+		mvc.perform(post("/api/auth/login").with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"login\":\"divya\",\"password\":\"secret123\"}"))
+				.andExpect(status().isUnauthorized());
+		login("divya", "newsecret1");
+	}
+
+	@Test
+	void deletingAccountRemovesUserAndData() throws Exception {
+		MockHttpSession session = register("gopal", "gopal@example.com");
+		MockHttpSession other = login("gopal@example.com", "secret123");
+		saveAttempt(session, attemptWithAnswers(1.75, """
+				[{"questionId":"qaaaaaaaaaaa","subject":"reasoning","topic":"syllogism","chosen":1,"correct":true,"seconds":20}]"""));
+		mvc.perform(put("/api/me/bookmarks/qaaaaaaaaaaa").session(session).with(csrf())).andExpect(status().isCreated());
+		mvc.perform(post("/api/reports").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"questionId\":\"qaaaaaaaaaaa\",\"reason\":\"typo\"}"))
+				.andExpect(status().isCreated());
+
+		mvc.perform(delete("/api/me").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"password\":\"wrong-pass\"}"))
+				.andExpect(status().isBadRequest());
+		mvc.perform(delete("/api/me").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"password\":\"secret123\"}"))
+				.andExpect(status().isNoContent());
+
+		org.junit.jupiter.api.Assertions.assertTrue(session.isInvalid());
+		org.junit.jupiter.api.Assertions.assertTrue(other.isInvalid());
+		mvc.perform(post("/api/auth/login").with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"login\":\"gopal\",\"password\":\"secret123\"}"))
+				.andExpect(status().isUnauthorized());
+		// The username and email are free again, and the new account starts empty.
+		MockHttpSession fresh = register("gopal", "gopal@example.com");
+		mvc.perform(get("/api/attempts").session(fresh)).andExpect(jsonPath("$", hasSize(0)));
+		mvc.perform(get("/api/me/bookmarks").session(fresh)).andExpect(jsonPath("$", hasSize(0)));
+	}
+
 	@Test
 	void logoutEndsTheSession() throws Exception {
 		MockHttpSession session = register("lata", "lata@example.com");

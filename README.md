@@ -9,7 +9,7 @@ QuizVerse is a web-based multiple-choice quiz app. Pick a subject, answer a set 
 - **Instant feedback:** after each answer you see whether it was correct,
  the right answer and a short explanation.
 - **Score summary:** a final screen shows your score and percentage.
-- **Accounts:** sign up and log in to keep a history of every quiz you finish, with your past scores on the "My scores" page.
+- **Accounts:** sign up and log in to keep a history of every quiz you finish, with your past scores on the "My scores" page. The profile page (click your name) edits your name and email, changes your password and deletes your account.
 - **Real exam screen:** question palette (answered / not answered / not visited / marked), mark for review, previous/next, keyboard shortcuts (1–4 answer, N next, P previous, M mark, B bookmark, S submit). The timer counts down to a fixed end time and a running quiz survives a page refresh.
 - **Progress:** best score per quiz on the exam page, score trend chart, accuracy and average time per topic, and your five weakest topics.
 - **Practice:** revise questions you got wrong or skipped, bookmark questions, build custom quizzes by topic/difficulty/length/time, and report broken questions.
@@ -32,6 +32,9 @@ The Spring Boot app has a small JSON API backed by a database (`app_user` and `q
 | `POST /api/auth/login` | Log in with username or email |
 | `POST /api/auth/logout` | Log out |
 | `GET /api/me` | The logged-in user, or 401 |
+| `PUT /api/me` | Change name and email (page `profile.html`) |
+| `POST /api/me/password` | Change password (needs the current one); logs out the user's other sessions |
+| `DELETE /api/me` | Delete the account and all its data (needs the password) |
 | `GET /api/attempts` | The user's finished quizzes, newest first |
 | `POST /api/attempts` | Save a finished quiz, with the answer to each question |
 | `GET /api/attempts/best` | Best score per quiz (exam page badges) |

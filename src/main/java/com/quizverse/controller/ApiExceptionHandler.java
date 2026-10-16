@@ -43,6 +43,8 @@ public class ApiExceptionHandler {
             case "username" -> "Username";
             case "email" -> "Email";
             case "password" -> "Password";
+            case "currentPassword" -> "Current password";
+            case "newPassword" -> "New password";
             default -> field;
         };
     }
