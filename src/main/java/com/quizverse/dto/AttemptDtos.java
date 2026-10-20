@@ -19,9 +19,13 @@ public final class AttemptDtos {
     private static final String ID = "[a-z0-9-]{1,64}";
     public static final String QUESTION_ID = "q[0-9a-f]{11}";
 
-    /** {@code kind} defaults to "exam"; practice sets send "revise", "bookmarks" or "custom". */
+    /**
+     * {@code kind} defaults to "exam"; practice sets send "revise", "bookmarks", "custom" or "daily".
+     * The daily quiz puts its IST date (yyyy-mm-dd) in {@code sectionId}. A full mock test ("mock") covers
+     * every section of a stage: {@code sectionId} is "mock" and {@code quizIndex} the mock number.
+     */
     public record AttemptRequest(
-            @Pattern(regexp = "exam|revise|bookmarks|custom") String kind,
+            @Pattern(regexp = "exam|revise|bookmarks|custom|daily|mock") String kind,
             @NotBlank @Pattern(regexp = ID) String examId,
             @NotBlank @Pattern(regexp = ID) String stageId,
             @NotBlank @Pattern(regexp = ID) String sectionId,
@@ -46,7 +50,7 @@ public final class AttemptDtos {
             boolean correct,
             @Min(0) @Max(36000) int seconds) {}
 
-    /** Best result per quiz, keyed "exam/stage/section/level/quizIndex", for the badges on exam.html. */
+    /** Best result per quiz, keyed "exam/stage/section/level/quizIndex" (section "mock" for mocks), for exam.html. */
     public record BestScore(String key, double bestScore, double maxMarks, long attempts) {}
 
     public record AttemptResponse(Long id, String kind, String examId, String stageId, String sectionId, String levelId,

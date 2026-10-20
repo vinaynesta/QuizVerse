@@ -1,5 +1,5 @@
 // Question lookups for practice sets: find saved questions (bookmarks, mistakes) by id,
-// and load topic pools for the custom quiz builder. Files come from scripts/build_topics.py.
+// pick the daily quiz, and load topic pools for the custom quiz builder. Files come from scripts/build_topics.py.
 
 const cache = new Map();
 
@@ -28,11 +28,42 @@ export async function questionsById(ids) {
   return ids.map((id) => byId.get(id)).filter(Boolean);
 }
 
-/** Fisher-Yates on a copy. */
-export function shuffled(list) {
+/** Today's date in India (yyyy-mm-dd), the day the daily quiz and streaks go by. */
+export function istToday() {
+  return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" });
+}
+
+// Small seeded generator (mulberry32), so everyone gets the same daily quiz for a date.
+function seededRandom(seedText) {
+  let a = [...seedText].reduce((h, c) => Math.imul(h ^ c.charCodeAt(0), 16777619), 2166136261) >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+const DAILY_MIX = { quant: 4, reasoning: 3, english: 3 };
+
+/** The same 10 exam questions for everyone on a given date: 4 quant, 3 reasoning, 3 English. */
+export async function dailyQuestions(date) {
+  const where = await fetchJson("data/question-topics.json");
+  const random = seededRandom(`quizverse-daily-${date}`);
+  const ids = [];
+  for (const [subject, n] of Object.entries(DAILY_MIX)) {
+    const pool = Object.keys(where).filter((id) => where[id].startsWith(`${subject}/`)).sort();
+    ids.push(...shuffled(pool, random).slice(0, n));
+  }
+  return questionsById(ids);
+}
+
+/** Fisher-Yates on a copy. Pass a seeded random() for a repeatable order. */
+export function shuffled(list, random = Math.random) {
   const out = list.slice();
   for (let i = out.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(random() * (i + 1));
     [out[i], out[j]] = [out[j], out[i]];
   }
   return out;

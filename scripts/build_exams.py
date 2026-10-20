@@ -115,6 +115,29 @@ def balance_answers(bank, rng):
             q["answer"] = target
 
 
+# Last published prelims cutoffs, General category, for the reference line on mock results. They vary by
+# state, so each gives the range and a few large states. From coaching sites that copy the scorecard figures
+# (no official consolidated notice exists); check the official result for your state and category.
+# Only add figures with a source. Researched 17 Oct 2026.
+CUTOFFS = {
+    ("ibps-clerk", "prelims"): {
+        "cycle": "2025", "outOf": 100, "low": 45.25, "lowState": "Gujarat", "high": 86.5, "highState": "Chandigarh",
+        "states": {"Uttar Pradesh": 69.75, "Bihar": 61.25, "Maharashtra": 46, "Karnataka": 46},
+        "sources": ["https://www.adda247.com/jobs/ibps-clerk-cut-off/", "https://www.careerpower.in/ibps-clerk-cut-off.html"],
+    },
+    ("sbi-clerk", "prelims"): {
+        "cycle": "2025-26", "outOf": 100, "low": 52, "lowState": "Tamil Nadu", "high": 81.75, "highState": "Jammu & Kashmir",
+        "states": {"Uttar Pradesh": 79.5, "West Bengal": 81.5, "Maharashtra": 65.5},
+        "sources": ["https://www.adda247.com/jobs/sbi-clerk-cut-off/", "https://www.mahendras.org/blogs/sbi-clerk-previous-year-cut-off"],
+    },
+    ("rrb-clerk", "prelims"): {
+        "cycle": "2025", "outOf": 80, "low": 48.5, "lowState": "Mizoram", "high": 77.5, "highState": "Punjab",
+        "states": {"Uttar Pradesh": 71.75, "Maharashtra": 73.5, "Tamil Nadu": 62.5, "Karnataka": 58.25},
+        "sources": ["https://www.practicemock.com/rrb-clerk-cut-offs/", "https://www.careerpower.in/ibps-rrb-clerk-cut-off.html"],
+    },
+}
+
+
 def meta(s):
     return {"id": s["id"], "name": s["name"], "questions": s["questions"], "marks": s["marks"],
             "minutes": s["minutes"], "note": s["note"]}
@@ -131,6 +154,12 @@ def main(banks_dir, english_dir, data_dir):
         for stage in exam["stages"]:
             st = {"id": stage["id"], "name": stage["name"], "sections": [],
                   "unavailable": [meta(u) for u in stage["unavailable"]]}
+            cutoff = CUTOFFS.get((exam["id"], stage["id"]))
+            if cutoff:
+                total = sum(x["marks"] for x in stage["sections"])
+                if cutoff["outOf"] != total:
+                    sys.exit(f"{exam['id']}/{stage['id']}: cutoff is out of {cutoff['outOf']} but the stage has {total} marks")
+                st["cutoff"] = cutoff
             for s in stage["sections"]:
                 s_entry = meta(s)
                 s_entry["levels"] = []

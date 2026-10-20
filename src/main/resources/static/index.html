@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>QuizVerse - Welcome</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/theme.js"></script>
+    <link rel="manifest" href="manifest.webmanifest"/>
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+    <meta name="theme-color" content="#312e81"/>
 </head>
 
 <body>
@@ -14,6 +19,12 @@
 
     <div class="quiz-container">
         <p class="home-tagline">Practise bank exam papers section by section, with the real question counts, marks and timers.</p>
+
+        <a id="daily-card" class="daily-card" href="quiz.html?practice=daily">
+            <span class="daily-badge">Daily quiz</span>
+            <b>10 mixed questions, 10 minutes</b>
+            <span id="daily-status">The same questions for everyone today. A new set every day.</span>
+        </a>
 
         <div id="subject-list" class="subject-list">
             <!-- Subjects will be populated by JS -->

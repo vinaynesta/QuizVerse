@@ -12,6 +12,11 @@ QuizVerse is a web-based multiple-choice quiz app. Pick a subject, answer a set 
 - **Accounts:** sign up and log in to keep a history of every quiz you finish, with your past scores on the "My scores" page. The profile page (click your name) edits your name and email, changes your password and deletes your account.
 - **Real exam screen:** question palette (answered / not answered / not visited / marked), mark for review, previous/next, keyboard shortcuts (1–4 answer, N next, P previous, M mark, B bookmark, S submit). The timer counts down to a fixed end time and a running quiz survives a page refresh.
 - **Progress:** best score per quiz on the exam page, score trend chart, accuracy and average time per topic, and your five weakest topics.
+- **Full mock tests:** sit a whole Prelims or Mains paper from the exam page (Easy, Medium or Hard, 5 of each). Each section has its own timer and locks when its time is up or you submit it, as in IBPS exams. The result shows a score for each section and overall, and a refresh resumes the test.
+- **Cutoffs:** Prelims mock results show the last published General-category cutoff range across states, a few large states, and where your score falls. The figures (in `scripts/build_exams.py`, with sources) come from coaching-site tables, so they're marked approximate.
+- **Installable app and offline practice:** add QuizVerse to your phone's home screen from the browser. Pages and every quiz you've opened once work without internet; results finished offline are kept on the device and saved to your account when you're back online.
+- **Daily quiz and streaks:** the same 10 mixed questions (4 quant, 3 reasoning, 3 English, 10 minutes) for everyone each day, picked in the browser from the date. "My scores" shows your day streak, best streak and progress towards a daily goal you choose. Days follow India time (IST).
+- **Share and dark mode:** "Share result" on the score screen makes an image of your score for WhatsApp and other apps (or downloads it on desktop). Every page has a light/dark toggle; without a choice it follows the device setting.
 - **Practice:** revise questions you got wrong or skipped, bookmark questions, build custom quizzes by topic/difficulty/length/time, and report broken questions.
 
 ## How it works
@@ -39,6 +44,8 @@ The Spring Boot app has a small JSON API backed by a database (`app_user` and `q
 | `POST /api/attempts` | Save a finished quiz, with the answer to each question |
 | `GET /api/attempts/best` | Best score per quiz (exam page badges) |
 | `GET /api/me/topics` | Accuracy and average time per topic |
+| `GET /api/me/streak` | Day streak, quizzes finished today, daily goal, and whether today's daily quiz is done |
+| `PUT /api/me/goal` | Set the daily goal (1-10 quizzes) |
 | `GET /api/me/mistakes` | Questions whose latest answer was wrong or skipped |
 | `GET /api/me/bookmarks`, `PUT`/`DELETE /api/me/bookmarks/{questionId}` | Bookmarks |
 | `POST /api/reports` | Report a question |
@@ -88,6 +95,10 @@ python3 -I scripts/build_topics.py src/main/resources/static/data  # topic pools
 ```
 
 CI rebuilds the data and fails if the committed files differ, so always commit the regenerated output. Changing a question's text or options changes its id; any bookmarks or history on the old id stop finding it (history totals are kept).
+
+Prelims cutoffs live in `CUTOFFS` in `scripts/build_exams.py`, each with its source URLs. Update them after each result (only with a source), rebuild, and commit `index.json`.
+
+The service worker (`static/sw.js`) caches pages, scripts and quiz data for offline use. It fetches pages, CSS and JS from the network first, so deploys show up straight away; bump its `VERSION` only to force-clear old caches. It never caches `/api/` responses.
 
 Quiz pages show a random background from `static/images/` (every image except `feels like we just met yesterday.jpeg`, which is the home and exam page backdrop). After adding or removing images, run:
 

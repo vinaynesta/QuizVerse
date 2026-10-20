@@ -5,11 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>QuizVerse - My scores</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/theme.js"></script>
+    <link rel="manifest" href="manifest.webmanifest"/>
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+    <meta name="theme-color" content="#312e81"/>
 </head>
 <body>
     <nav id="account-bar" class="account-bar"></nav>
     <h1 id="history-title">My scores</h1>
     <div class="quiz-container">
+        <section id="streak-card" class="history-card chart-card streak-card" hidden>
+            <div class="streak-main">
+                <span class="streak-flame" aria-hidden="true">🔥</span>
+                <div><b id="streak-current"></b><span id="streak-best" class="card-sub"></span></div>
+            </div>
+            <div class="streak-goal">
+                <div class="card-head">
+                    <span id="goal-text"></span>
+                    <label class="filter">Daily goal
+                        <select id="goal-select"></select>
+                    </label>
+                </div>
+                <div class="goal-bar"><span id="goal-fill"></span></div>
+                <a id="daily-link" class="daily-link" href="quiz.html?practice=daily"></a>
+            </div>
+        </section>
+
         <div id="history-summary" class="stat-tiles"></div>
 
         <div class="practice-links">

@@ -283,6 +283,58 @@ class DemoApplicationTests {
 	}
 
 	@Test
+	void streakDailyGoalAndDailyQuiz() throws Exception {
+		MockHttpSession session = register("farah", "farah@example.com");
+		String today = java.time.LocalDate.now(java.time.ZoneId.of("Asia/Kolkata")).toString();
+		mvc.perform(get("/api/me/streak").session(session))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.current").value(0))
+				.andExpect(jsonPath("$.goal").value(2))
+				.andExpect(jsonPath("$.dailyDone").value(false))
+				.andExpect(jsonPath("$.date").value(today));
+
+		saveAttempt(session, """
+				{"kind":"daily","examId":"daily","stageId":"practice","sectionId":"%s","levelId":"practice",
+				 "quizIndex":0,"quizTitle":"Daily quiz","score":7,"maxMarks":10,"correct":7,"wrong":2,"skipped":1,
+				 "timed":true,"timeUsedSeconds":420,"answers":[]}""".formatted(today));
+		mvc.perform(get("/api/me/streak").session(session))
+				.andExpect(jsonPath("$.current").value(1))
+				.andExpect(jsonPath("$.today").value(1))
+				.andExpect(jsonPath("$.dailyDone").value(true));
+		// The daily quiz is practice, so it stays out of the exam badges.
+		mvc.perform(get("/api/attempts/best").session(session)).andExpect(jsonPath("$", hasSize(0)));
+
+		mvc.perform(put("/api/me/goal").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"goal\":4}"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.goal").value(4));
+		mvc.perform(put("/api/me/goal").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"goal\":0}"))
+				.andExpect(status().isBadRequest());
+		mvc.perform(get("/api/me/streak")).andExpect(status().isUnauthorized());
+	}
+
+	@Test
+	void mockTestsGetTheirOwnBestScores() throws Exception {
+		MockHttpSession session = register("isha", "isha@example.com");
+		String mock = """
+				{"kind":"mock","examId":"ibps-clerk","stageId":"prelims","sectionId":"mock","levelId":"easy","quizIndex":2,
+				 "quizTitle":"IBPS Clerk - Prelims - Full mock - Easy 3","score":%s,"maxMarks":100,"correct":70,"wrong":20,
+				 "skipped":10,"timed":true,"timeUsedSeconds":3400,"answers":[]}""";
+		saveAttempt(session, mock.formatted(65));
+		saveAttempt(session, mock.formatted(72.5));
+		mvc.perform(get("/api/attempts/best").session(session))
+				.andExpect(jsonPath("$", hasSize(1)))
+				.andExpect(jsonPath("$[0].key").value("ibps-clerk/prelims/mock/easy/2"))
+				.andExpect(jsonPath("$[0].attempts").value(2))
+				.andExpect(jsonPath("$[0].bestScore", closeTo(72.5, 0.001)));
+		mvc.perform(get("/api/attempts").session(session)).andExpect(jsonPath("$[0].kind").value("mock"));
+		mvc.perform(post("/api/attempts").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content(mock.formatted(1).replace("\"mock\",\"examId\"", "\"contest\",\"examId\"")))
+				.andExpect(status().isBadRequest());
+	}
+
+	@Test
 	void logoutEndsTheSession() throws Exception {
 		MockHttpSession session = register("lata", "lata@example.com");
 		mvc.perform(post("/api/auth/logout").session(session).with(csrf())).andExpect(status().isNoContent());

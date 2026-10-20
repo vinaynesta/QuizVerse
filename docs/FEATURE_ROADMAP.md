@@ -2,7 +2,7 @@
 
 A list of features that could be built next, with an estimate, dependencies and risks for each. It reflects the code as of October 2026, after the accounts and quiz-history work.
 
-**Status (17 Oct 2026):** phases 0, 1 and 2 are built: F1, F2, #2, #3, #5, #6, #7, #8, #9, #11, #12, #13, #31, #33, #34, #35, #36. From phase 3, #27 (profile page) is built. Several facts in the next table describe the code before that work.
+**Status (17 Oct 2026):** phases 0, 1 and 2 are built: F1, F2, #2, #3, #5, #6, #7, #8, #9, #11, #12, #13, #31, #33, #34, #35, #36. From phase 3, #27 (profile page), #10 (streaks and daily goals), #14 (daily quiz), #23 (share result card) and #30 (dark mode) are built. #25 (forgot password) is the only phase 3 item left; it needs an email provider first. Phase 4 is built: #1 (full mock tests), #4 (section cutoffs, as a state range for Prelims) and #29 (installable app with offline practice). Several facts in the next table describe the code before that work.
 
 ## How to read the estimates
 
