@@ -1,4 +1,5 @@
-import { currentUser, listAttempts, listBookmarks, mistakes, topicStats } from "./api.js";
+import { currentUser, listAttempts, listBookmarks, mistakes, saveAttempt, setDailyGoal, streak, topicStats } from "./api.js";
+import { flushOfflineAttempts } from "./pending.js";
 import { loadTopics, topicName } from "./questions.js";
 
 const $ = (id) => document.getElementById(id);
@@ -15,6 +16,9 @@ const num = (x) => Number(x.toFixed(2));
 const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "s"}`;
 
 function quizLink(a) {
+  if (a.kind === "mock") {
+    return `quiz.html?${new URLSearchParams({ exam: a.examId, stage: a.stageId, level: a.levelId, mock: a.quizIndex })}`;
+  }
   if (a.kind && a.kind !== "exam") return a.kind === "custom" ? "practice.html" : `quiz.html?practice=${a.kind}`;
   const q = new URLSearchParams({
     exam: a.examId, stage: a.stageId, section: a.sectionId, level: a.levelId, quiz: a.quizIndex,
@@ -40,15 +44,50 @@ function renderSummary(attempts) {
     .join("");
 }
 
+// ---------- Streak and daily goal ----------
+
+function renderStreak(s) {
+  $("streak-card").hidden = false;
+  $("streak-current").textContent = s.current ? `${plural(s.current, "day")} streak` : "No streak yet";
+  $("streak-best").textContent = s.current === 0
+    ? "Finish a quiz today to start one."
+    : s.today > 0 ? `Best: ${plural(s.best, "day")}` : `Best: ${plural(s.best, "day")}. Finish a quiz today to keep it going.`;
+  $("goal-text").textContent = s.today >= s.goal
+    ? `Goal reached: ${s.today} of ${s.goal} today`
+    : `${s.today} of ${s.goal} ${s.goal === 1 ? "quiz" : "quizzes"} today`;
+  $("goal-fill").style.width = `${Math.min(100, (s.today / s.goal) * 100)}%`;
+  $("goal-select").value = String(s.goal);
+  $("daily-link").textContent = s.dailyDone ? "Today's daily quiz: done ✓" : "Take today's daily quiz →";
+  $("daily-link").classList.toggle("done", s.dailyDone);
+}
+
+async function setupStreak() {
+  const select = $("goal-select");
+  select.innerHTML = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => `<option value="${n}">${n}</option>`).join("");
+  select.addEventListener("change", async () => {
+    select.disabled = true;
+    try {
+      renderStreak(await setDailyGoal(Number(select.value)));
+    } catch (error) {
+      window.alert(error.message);
+    } finally {
+      select.disabled = false;
+    }
+  });
+  renderStreak(await streak());
+}
+
 // ---------- Score trend (inline SVG, one series, hover tooltip) ----------
 
 let trendAttempts = [];
 
 function sectionKey(a) {
+  if (a.kind === "mock") return `${a.examId}/${a.stageId}/mock`;
   return a.kind && a.kind !== "exam" ? "practice" : `${a.examId}/${a.stageId}/${a.sectionId}`;
 }
 
 function sectionLabel(a) {
+  if (a.kind === "mock") return a.quizTitle.replace(/ - [^-]+$/, "");
   if (a.kind && a.kind !== "exam") return "Practice sets";
   // Titles are "Exam - Stage - Section - Level Quiz n"; drop the quiz part.
   return a.quizTitle.split(" - ").slice(0, -1).join(" - ") || a.quizTitle;
@@ -234,6 +273,9 @@ async function init() {
     return;
   }
   $("history-title").textContent = `${user.displayName}'s scores`;
+  // Results finished offline go up first, so they're in the list below.
+  if (!user.offline) await flushOfflineAttempts(user.username, saveAttempt).catch(() => 0);
+  setupStreak().catch((error) => console.error("Could not load streak:", error));
   mistakes()
     .then((list) => { $("mistake-count").textContent = list.length ? `${plural(list.length, "question")} to revise` : "Nothing to revise yet"; })
     .catch(() => {});
