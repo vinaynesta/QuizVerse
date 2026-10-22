@@ -60,8 +60,8 @@ Login uses a session cookie (30 days). Passwords are stored as BCrypt hashes. Re
 | Frontend | Plain HTML, CSS and vanilla JavaScript |
 | Question store | Static JSON files in `src/main/resources/static/data/` |
 | Server | Spring Boot 3 (Java 21, Maven): serves the static files and the account API (Spring Security, Spring Data JPA) |
-| Database | H2 file database locally (`./data/`), PostgreSQL in production |
-| Hosting | Railway, built from the `Dockerfile` (any Docker host works with the variables under Configuration). CI (`.github/workflows/maven.yml`) builds, tests and deploys `main`; it needs the `RAILWAY_TOKEN` secret and `RAILWAY_SERVICE` variable. |
+| Database | H2 file database locally (`./data/`), PostgreSQL in production (Aiven) |
+| Hosting | Railway, built from the `Dockerfile` and deployed by Railway from `main` on GitHub (any Docker host works with the variables under Configuration). CI (`.github/workflows/maven.yml`) builds and tests every push and pull request. |
 
 ## Exams
 
@@ -118,6 +118,8 @@ Requirements: JDK 21.
 
 Then open http://localhost:8080. Accounts are stored in an H2 database file under `./data/` (git-ignored); delete that folder to start fresh. Run the tests with `./mvnw test`.
 
+While the app uses H2, every page shows a small "Test mode" strip above the account bar, because H2 data is only meant to be temporary. On Railway (detected by its `RAILWAY_ENVIRONMENT_NAME` variable) the app refuses to start with H2 at all, since every deploy wipes the container's disk: set the prod profile and the `PG*` variables (see Configuration).
+
 The database schema is managed by Flyway (`src/main/resources/db/migration`). To change it, add a new `V<n>__description.sql` file; never edit a migration that has already run.
 
 ## Configuration
@@ -129,6 +131,30 @@ The database schema is managed by Flyway (`src/main/resources/db/migration`). To
 | `SPRING_PROFILES_ACTIVE` | Set to `prod` in production to use PostgreSQL and Secure cookies. |
 | `PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD` | PostgreSQL connection (prod profile). Use Railway's Postgres plugin (reference its variables from the app service, e.g. `${{Postgres.PGHOST}}`) or the values from an external host such as Neon or Supabase. |
 | `PGSSLMODE` | SSL mode for PostgreSQL. Defaults to `require`, which hosted databases need; set `disable` only for a server without SSL. |
+
+## Deployment
+
+Railway builds the `Dockerfile` and deploys every push to `main`; the GitHub workflow only builds and tests. `.github/workflows/review-app-deploy.yml` is a manual deploy of any branch and needs a Railway **project** token in the `RAILWAY_TOKEN` secret and the service name in the `RAILWAY_SERVICE` variable.
+
+On the Railway app service, set `SPRING_PROFILES_ACTIVE=prod` and the `PG*` variables for the PostgreSQL database (currently a free Aiven service; Aiven's ports aren't 5432, so copy `PGPORT` too). Flyway creates or updates the tables on start.
+
+### Backups
+
+Aiven's free plan lists backups as included but doesn't say how long they're kept or offer point-in-time recovery, and it powers off a service that has no activity for a while (it emails first; power it back on in the console). Free and Developer plans are capped at 20 connections. So keep your own copies with `pg_dump`, which needs the PostgreSQL client tools (`brew install libpq`, then use `$(brew --prefix libpq)/bin/pg_dump`, or `brew install postgresql@17`). Use a client version at least as new as the server's:
+
+```bash
+# The Service URI is on the service's Overview page in the Aiven console. Keep it out of shell history and the repo.
+read -rs AIVEN_URI    # paste postgres://avnadmin:...@...aivencloud.com:PORT/defaultdb?sslmode=require
+pg_dump "$AIVEN_URI" --format=custom --no-owner --file "quizverse-$(date +%F).dump"
+```
+
+Store the dump outside the repo (`*.dump` is git-ignored as well). To restore into an empty database, for example a new Aiven service:
+
+```bash
+pg_restore --dbname "$NEW_URI" --no-owner --clean --if-exists quizverse-2026-10-23.dump
+```
+
+`flyway_schema_history` is in the dump, so the app starts against a restored database without re-running migrations. Take a dump before any migration you add and every week or so; it's small (accounts, attempts and answers).
 
 ## License
 
