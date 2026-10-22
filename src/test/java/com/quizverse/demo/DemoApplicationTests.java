@@ -49,6 +49,13 @@ class DemoApplicationTests {
 	}
 
 	@Test
+	void statusReportsTemporaryStorageOnH2() throws Exception {
+		mvc.perform(get("/api/status"))
+				.andExpect(status().isOk())
+				.andExpect(jsonPath("$.temporaryStorage").value(true));
+	}
+
+	@Test
 	void historyNeedsLogin() throws Exception {
 		mvc.perform(get("/api/me")).andExpect(status().isUnauthorized());
 		mvc.perform(get("/api/attempts")).andExpect(status().isUnauthorized());

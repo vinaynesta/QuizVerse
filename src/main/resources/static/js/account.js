@@ -1,6 +1,6 @@
 // Fills the account bar at the top of every page: "Log in / Sign up" or the user's name with
 // (linking to their profile), links to their history and a logout button.
-import { currentPageLink, currentUser, logout, saveAttempt } from "./api.js";
+import { currentPageLink, currentUser, logout, saveAttempt, serverStatus } from "./api.js";
 import { flushOfflineAttempts } from "./pending.js";
 
 function escapeHtml(text) {
@@ -68,6 +68,15 @@ async function renderAccountBar() {
   }
 }
 
+/** Test mode: the server keeps accounts in a local H2 file (not production), so say so above the bar. */
+async function renderTestModeStrip() {
+  const bar = document.getElementById("account-bar");
+  const status = await serverStatus();
+  if (!bar || !status || !status.temporaryStorage) return;
+  bar.insertAdjacentHTML("beforebegin",
+    '<p class="test-mode-strip" role="note">Test mode: accounts and scores are stored temporarily and may be deleted.</p>');
+}
+
 /** Results finished offline are uploaded on the next online page load, or when the connection returns. */
 async function uploadOfflineResults(username) {
   const saved = await flushOfflineAttempts(username, saveAttempt);
@@ -87,3 +96,4 @@ if ("serviceWorker" in navigator) {
 }
 
 renderAccountBar();
+renderTestModeStrip();

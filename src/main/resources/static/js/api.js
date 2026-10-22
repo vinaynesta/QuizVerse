@@ -89,6 +89,9 @@ export function currentUser() {
   return mePromise;
 }
 
+/** {temporaryStorage} from the server, or null when it can't be reached (offline). */
+export const serverStatus = () => api("/api/status").catch(() => null);
+
 export const register = (form) => api("/api/auth/register", { method: "POST", body: form });
 export const login = (loginName, password) =>
   api("/api/auth/login", { method: "POST", body: { login: loginName, password } });

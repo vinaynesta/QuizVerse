@@ -2,7 +2,7 @@
 
 A list of features that could be built next, with an estimate, dependencies and risks for each. It reflects the code as of October 2026, after the accounts and quiz-history work.
 
-**Status (17 Oct 2026):** phases 0, 1 and 2 are built: F1, F2, #2, #3, #5, #6, #7, #8, #9, #11, #12, #13, #31, #33, #34, #35, #36. From phase 3, #27 (profile page), #10 (streaks and daily goals), #14 (daily quiz), #23 (share result card) and #30 (dark mode) are built. #25 (forgot password) is the only phase 3 item left; it needs an email provider first. Phase 4 is built: #1 (full mock tests), #4 (section cutoffs, as a state range for Prelims) and #29 (installable app with offline practice). Several facts in the next table describe the code before that work.
+**Status (23 Oct 2026):** the app is deployed on Railway (`main`, from the `Dockerfile`) with PostgreSQL on Aiven. **Earlier status (17 Oct 2026):** phases 0, 1 and 2 are built: F1, F2, #2, #3, #5, #6, #7, #8, #9, #11, #12, #13, #31, #33, #34, #35, #36. From phase 3, #27 (profile page), #10 (streaks and daily goals), #14 (daily quiz), #23 (share result card) and #30 (dark mode) are built. #25 (forgot password) is the only phase 3 item left; it needs an email provider first. Phase 4 is built: #1 (full mock tests), #4 (section cutoffs, as a state range for Prelims) and #29 (installable app with offline practice). The next table describes the code as it is now.
 
 ## How to read the estimates
 
@@ -13,19 +13,21 @@ A list of features that could be built next, with an estimate, dependencies and 
 
 ## What the current code means for these features
 
-These facts about the code drive many of the estimates below.
+These facts about the code (as of 23 Oct 2026, live on Railway with PostgreSQL on Aiven) drive the estimates for the remaining features.
 
 | Fact | Why it matters |
 |---|---|
-| Question IDs depend on position, e.g. `ibps-clerk-prelims-reasoning-easy-1-1`. Re-running `build_exams.py` gives the same question a different ID. | Any feature that remembers a specific question (bookmarks, wrong answers, topic stats, reports) needs IDs that don't change. That's foundation item **F1**. |
-| Saved attempts only store totals (score, correct, wrong, skipped), not which option was picked for each question. | Topic analysis, retrying wrong answers and time per question all need answers stored per question. That's foundation item **F2**. |
-| Answers are in public JSON and scoring happens in the browser. | Any feature where scores are compared between users (leaderboards, contests, challenges) needs scoring moved to the server (#21). |
-| The 600 English questions are hand-written, 200 per level. The largest section needs 200 per level (40 questions × 5 quizzes), so the English bank is fully used. | Separate question pools per exam and more exams need more hand-written English questions, not just a config change. |
-| Quant and Reasoning come from 46 generator functions in `scripts/gen_banks.py`, with 250 questions per level. | Cheap to scale: more questions, better solutions and Hindi templates are code changes. The risk is near-identical repeats. |
-| 45 distinct topics are tagged on exam questions. The Java questions have no `topic` field. | Topic analysis works for the exams straight away. Java would need tagging first. |
-| `quiz.js` keeps quiz state in memory only. | Refreshing the page in the middle of a 45-minute section loses everything (fixed in #5). |
-| Hibernate creates tables with `ddl-auto=update`, with no migration scripts. | Fine until there are real users. Before that, add Flyway (#36). |
-| The mail starter is set up but points at Mailtrap's sandbox, which doesn't deliver real email. | Password reset and reminders need a real email provider, which takes setup time and can involve DNS records. |
+| Answers are in public JSON and scoring happens in the browser. The server only caps the score at the maximum marks and forces skipped answers to count as wrong. | Anything where users compare scores (leaderboards #21, contests #22, fair challenges #24) needs scoring moved to the server first. |
+| Question IDs are content hashes (`q` + 11 hex characters), stable across rebuilds. Editing a question's text or options gives it a new ID. | Bookmarks, mistakes, topic stats and reports keep working after a rebuild, but a typo fix detaches history from the old ID. An editor (#32) or step-by-step solutions (#15) that change the text must keep IDs in mind. |
+| Each answer is stored in `attempt_answer` (question, topic, chosen option, correct, seconds). | Per-topic and per-question analytics, spaced repetition and server-side re-scoring for #21 can build on existing data. |
+| About 10,000 quiz slots are built from about 2,250 unique questions: 600 hand-written English (fully used), 250 per level of generated Quant and Reasoning from the generators in `scripts/gen_banks.py`. | The same questions repeat across exams (#20). More exams (#17) and separate pools need more hand-written English; Quant and Reasoning scale with code. |
+| Every question is a single stand-alone MCQ: there's no shared passage, table or puzzle set-up. | Data interpretation, puzzles and reading comprehension (#19) need a schema change and `quiz.js` support, and they block the PO exams (#17). |
+| `quiz.js` (about 1,000 lines) runs exam quizzes, full mocks and all practice sets on one page. | New quiz modes (contests, challenges, grouped questions) mean changing this one large file; plan a refactor alongside #19 or #21. |
+| The schema is managed by Flyway (V1–V4) with Hibernate `validate`. | Every schema change is a new `V<n>__*.sql` migration that must run on both H2 (local, tests) and PostgreSQL. |
+| Sessions are in server memory, and `SessionTracker` (password change logs out other devices) only sees this one server. | Stay on one Railway instance. Scaling out, or zero-downtime deploys that keep two instances, needs shared sessions (Spring Session JDBC) first. A redeploy logs everyone out. |
+| There's no email: the old Mailtrap configuration was removed. | Forgot password (#25) and reminders (#28) need a real provider (Resend, Brevo or SES) with a verified sender domain. |
+| Production database is Aiven's free PostgreSQL: 1 GB storage, 20 connections, powered off after a period with no activity, backup retention not stated. | Fine for now; keep `pg_dump` copies (README, Backups). Live contests (#22) and leaderboards would need a paid plan and connection pooling. |
+| Without the prod profile the app uses H2; on Railway it refuses to start, locally pages show a "Test mode" strip. | A missing variable can't silently lose production data. |
 
 ---
 
