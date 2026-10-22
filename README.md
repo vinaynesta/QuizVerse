@@ -61,7 +61,7 @@ Login uses a session cookie (30 days). Passwords are stored as BCrypt hashes. Re
 | Question store | Static JSON files in `src/main/resources/static/data/` |
 | Server | Spring Boot 3 (Java 21, Maven): serves the static files and the account API (Spring Security, Spring Data JPA) |
 | Database | H2 file database locally (`./data/`), PostgreSQL in production |
-| Hosting | Railway. CI (`.github/workflows/maven.yml`) builds, tests and deploys `main`; it needs the `RAILWAY_TOKEN` secret and `RAILWAY_SERVICE` variable. |
+| Hosting | Railway, built from the `Dockerfile` (any Docker host works with the variables under Configuration). CI (`.github/workflows/maven.yml`) builds, tests and deploys `main`; it needs the `RAILWAY_TOKEN` secret and `RAILWAY_SERVICE` variable. |
 
 ## Exams
 
@@ -127,7 +127,8 @@ The database schema is managed by Flyway (`src/main/resources/db/migration`). To
 | `PORT` | HTTP port. Defaults to 8080 and is set automatically on Railway. |
 | `QUIZVERSE_ADMIN_USERNAMES` | Comma-separated usernames that can review question reports. |
 | `SPRING_PROFILES_ACTIVE` | Set to `prod` in production to use PostgreSQL and Secure cookies. |
-| `PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD` | PostgreSQL connection (prod profile). Railway's Postgres plugin provides these. |
+| `PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD` | PostgreSQL connection (prod profile). Use Railway's Postgres plugin (reference its variables from the app service, e.g. `${{Postgres.PGHOST}}`) or the values from an external host such as Neon or Supabase. |
+| `PGSSLMODE` | SSL mode for PostgreSQL. Defaults to `require`, which hosted databases need; set `disable` only for a server without SSL. |
 
 ## License
 
