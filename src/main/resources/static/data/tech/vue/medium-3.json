@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qb036e5b8f26",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "Which hooks fire when a component cached by KeepAlive is shown again or hidden?",
+  "options": [
+   "onActivated and onDeactivated",
+   "onShow and onHide",
+   "onResume and onPause",
+   "onEnter and onLeave"
+  ],
+  "answer": 0,
+  "explanation": "KeepAlive caches instances and calls onActivated and onDeactivated instead of mount and unmount."
+ },
+ {
+  "id": "q1cb19fbeff5",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "A child needs a different value for a prop it received. What is the recommended approach?",
+  "options": [
+   "Assign the new value directly to the prop",
+   "Change it through the parent instance",
+   "Emit an event so the parent updates the value",
+   "Call a set() method on the props object"
+  ],
+  "answer": 2,
+  "explanation": "Props are readonly in the child; the parent owns the data and should update it in response to an event."
+ },
+ {
+  "id": "q009c0d69cdc",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "Which watch option makes the callback run once right away?",
+  "options": [
+   "{ eager: true }",
+   "{ now: true }",
+   "{ initial: true }",
+   "{ immediate: true }"
+  ],
+  "answer": 3,
+  "explanation": "immediate: true runs the callback immediately with the current value as well as on later changes."
+ },
+ {
+  "id": "qefb29838641",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does v-bind:[attrName]=\"url\" do?",
+  "options": [
+   "Binds an attribute whose name comes from the value of attrName",
+   "Binds an attribute literally named attrName",
+   "Binds every attribute listed in an array",
+   "Binds url only if attrName is true"
+  ],
+  "answer": 0,
+  "explanation": "Square brackets create a dynamic argument that is evaluated as a JavaScript expression."
+ },
+ {
+  "id": "q888d7b77bfa",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "A child renders <slot :item=\"item\">. How does the parent read item?",
+  "options": [
+   "Read this.$slots.item in the parent",
+   "Use v-slot=\"{ item }\" on the child or a template",
+   "Declare item with defineProps in the parent",
+   "Inject it with inject('item')"
+  ],
+  "answer": 1,
+  "explanation": "Scoped slots pass props to the slot content, which the parent receives through v-slot."
+ },
+ {
+  "id": "qf1d1cc41d68",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "Which of these is valid inside a mustache interpolation?",
+  "options": [
+   "if (ok) { return 'YES' }",
+   "let label = 'YES'",
+   "ok ? 'YES' : 'NO'",
+   "for (const x of list) x"
+  ],
+  "answer": 2,
+  "explanation": "Template bindings accept a single JavaScript expression, not statements or declarations."
+ },
+ {
+  "id": "q5b9d1354064",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "Where should composables generally be called?",
+  "options": [
+   "Inside a setTimeout callback",
+   "Synchronously in setup() or script setup",
+   "Only inside an onMounted callback",
+   "Directly in template expressions"
+  ],
+  "answer": 1,
+  "explanation": "Composables rely on the active component instance, which is only available during synchronous setup."
+ },
+ {
+  "id": "q8a25ffa8bdf",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "How do you code-split a route component with Vue Router?",
+  "options": [
+   "component: () => import('./views/About.vue')",
+   "component: require('./views/About.vue')",
+   "component: lazy('./views/About.vue')",
+   "component: 'views/About.vue'"
+  ],
+  "answer": 0,
+  "explanation": "A function returning a dynamic import lets the bundler create a separate chunk loaded on demand."
+ },
+ {
+  "id": "qba92aab4547",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "Which helper lets you destructure state from a Pinia store without losing reactivity?",
+  "options": [
+   "markRaw()",
+   "toRaw()",
+   "storeToRefs()",
+   "readonly()"
+  ],
+  "answer": 2,
+  "explanation": "storeToRefs() creates refs for state and getters so destructured values stay reactive."
+ },
+ {
+  "id": "qbc58d6b52c7",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "By default, v-model on a custom component in Vue 3 uses which prop and event?",
+  "options": [
+   "value prop and input event",
+   "modelValue prop and update:modelValue event",
+   "v-value prop and sync event",
+   "model prop and change event"
+  ],
+  "answer": 1,
+  "explanation": "Vue 3 changed the default from value/input to modelValue/update:modelValue."
+ }
+]

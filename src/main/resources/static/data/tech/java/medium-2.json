@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qb1684d6de66",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "How do you get the number of elements in an int array named a?",
+  "options": [
+   "a.length",
+   "a.length()",
+   "a.size()",
+   "a.count()"
+  ],
+  "answer": 0,
+  "explanation": "Arrays expose a final field named length; length() is a String method and size() is for collections."
+ },
+ {
+  "id": "q4b17a4cd95b",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "What does the permits clause on a sealed class do?",
+  "options": [
+   "Lists the only classes allowed to directly extend it",
+   "Lists the interfaces the class implements",
+   "Grants reflective access to private members",
+   "Marks the class as Serializable"
+  ],
+  "answer": 0,
+  "explanation": "A sealed class restricts its direct subclasses to those named in permits, each of which must be final, sealed or non-sealed."
+ },
+ {
+  "id": "qfb1ddcdd619",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "After String s = \"Java\"; s.toUpperCase(); what does System.out.println(s) print?",
+  "options": [
+   "JAVA",
+   "java",
+   "Nothing, it fails to compile",
+   "Java"
+  ],
+  "answer": 3,
+  "explanation": "toUpperCase returns a new String; since the result is discarded, s still refers to \"Java\"."
+ },
+ {
+  "id": "qb6d1d21683d",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "In if (obj instanceof String s), what is s?",
+  "options": [
+   "A new String created by calling obj.toString()",
+   "A raw Object reference that still needs a cast",
+   "A compile error in Java 16 and later",
+   "A pattern variable typed String, bound when the test succeeds"
+  ],
+  "answer": 3,
+  "explanation": "Pattern matching for instanceof (Java 16) tests the type and binds a typed variable in one step."
+ },
+ {
+  "id": "q36dba8b901b",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "What does String.join(\"-\", \"a\", \"b\", \"c\") return?",
+  "options": [
+   "\"a-b-c\"",
+   "\"-a-b-c\"",
+   "\"abc-\"",
+   "\"a-b-c-\""
+  ],
+  "answer": 0,
+  "explanation": "String.join places the delimiter only between elements."
+ },
+ {
+  "id": "q1a61743fe65",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "What happens when you call list.add(x) on an ArrayList inside a for-each loop over that same list?",
+  "options": [
+   "The new element is visited later in the loop",
+   "A ConcurrentModificationException is thrown",
+   "The add is silently ignored",
+   "It fails to compile"
+  ],
+  "answer": 1,
+  "explanation": "ArrayList iterators are fail-fast; a structural change outside the iterator makes the next next() call throw."
+ },
+ {
+  "id": "q89d586e3c2d",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Class A has void f() {} and subclass B declares private void f() {}. What happens?",
+  "options": [
+   "It compiles and B.f() hides A.f()",
+   "It compiles but throws IllegalAccessError at runtime",
+   "Compile error: an override cannot reduce visibility",
+   "It compiles with only a warning"
+  ],
+  "answer": 2,
+  "explanation": "An overriding method cannot have weaker access than the method it overrides."
+ },
+ {
+  "id": "q8ffe13d9b4a",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "When does an object become eligible for garbage collection?",
+  "options": [
+   "When it is no longer reachable from any GC root",
+   "As soon as the method that created it returns",
+   "Only after its finalize() method has been called",
+   "Only when every field is set to null"
+  ],
+  "answer": 0,
+  "explanation": "The collector traces from roots such as thread stacks and static fields; unreachable objects can be reclaimed."
+ },
+ {
+  "id": "q8f967804fa0",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Stream.of(1, 2, 3, 4).filter(n -> n % 2 == 0).map(n -> n * n).toList() return?",
+  "options": [
+   "[1, 9]",
+   "[4, 16]",
+   "[2, 4]",
+   "[4, 8]"
+  ],
+  "answer": 1,
+  "explanation": "filter keeps 2 and 4, and map squares them to 4 and 16."
+ },
+ {
+  "id": "q3b43ab566e4",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What happens if a thread calls obj.wait() without holding obj's monitor?",
+  "options": [
+   "The call is ignored",
+   "It waits normally until notify() is called",
+   "InterruptedException is thrown",
+   "IllegalMonitorStateException is thrown"
+  ],
+  "answer": 3,
+  "explanation": "wait, notify and notifyAll must be called from code synchronized on that same object."
+ }
+]

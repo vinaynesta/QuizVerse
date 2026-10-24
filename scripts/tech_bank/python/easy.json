@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "basics-types",
+    "question": "What does type(3 / 2) return?",
+    "options": [
+      "<class 'int'>",
+      "<class 'float'>",
+      "<class 'decimal.Decimal'>",
+      "<class 'fractions.Fraction'>"
+    ],
+    "answer": 1,
+    "explanation": "The / operator always performs true division and returns a float, even for two ints."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What is the result of 7 // 2?",
+    "options": [
+      "3.5",
+      "4",
+      "2",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "// is floor division, so 7 // 2 rounds 3.5 down to the int 3."
+  },
+  {
+    "topic": "basics-types",
+    "question": "Which of these built-in types is immutable?",
+    "options": [
+      "list",
+      "dict",
+      "tuple",
+      "set"
+    ],
+    "answer": 2,
+    "explanation": "Tuples cannot be changed after creation, while list, dict and set are mutable containers."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What does bool(\"\") evaluate to?",
+    "options": [
+      "False",
+      "True",
+      "None",
+      "It raises TypeError"
+    ],
+    "answer": 0,
+    "explanation": "Empty sequences, including the empty string, are falsy."
+  },
+  {
+    "topic": "data-structures",
+    "question": "What does len({1, 1, 2}) return?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "It raises TypeError"
+    ],
+    "answer": 1,
+    "explanation": "A set stores only unique elements, so the duplicate 1 is kept once."
+  },
+  {
+    "topic": "data-structures",
+    "question": "Which list method adds a single item to the end of a list?",
+    "options": [
+      "append()",
+      "extend()",
+      "insert()",
+      "add()"
+    ],
+    "answer": 0,
+    "explanation": "append() adds one object at the end; extend() adds each item of an iterable and lists have no add()."
+  },
+  {
+    "topic": "data-structures",
+    "question": "Which expression creates an empty set?",
+    "options": [
+      "{}",
+      "[]",
+      "set()",
+      "()"
+    ],
+    "answer": 2,
+    "explanation": "{} creates an empty dict, so an empty set must be written as set()."
+  },
+  {
+    "topic": "data-structures",
+    "question": "What does d.get('x', 0) return if key 'x' is missing from dict d?",
+    "options": [
+      "None",
+      "It raises KeyError",
+      "False",
+      "0"
+    ],
+    "answer": 3,
+    "explanation": "dict.get returns the supplied default when the key is absent instead of raising KeyError."
+  },
+  {
+    "topic": "functions",
+    "question": "Which keyword starts a named function definition?",
+    "options": [
+      "def",
+      "func",
+      "function",
+      "fn"
+    ],
+    "answer": 0,
+    "explanation": "Named functions are defined with the def keyword."
+  },
+  {
+    "topic": "functions",
+    "question": "What does a function return if it has no return statement?",
+    "options": [
+      "None",
+      "0",
+      "False",
+      "An empty tuple"
+    ],
+    "answer": 0,
+    "explanation": "A function that finishes without a return statement implicitly returns None."
+  },
+  {
+    "topic": "functions",
+    "question": "Inside def f(*args), what type is args?",
+    "options": [
+      "list",
+      "tuple",
+      "dict",
+      "set"
+    ],
+    "answer": 1,
+    "explanation": "Extra positional arguments collected by *args are packed into a tuple."
+  },
+  {
+    "topic": "functions",
+    "question": "What is a lambda in Python?",
+    "options": [
+      "An anonymous function limited to a single expression",
+      "A named function that can contain statements",
+      "A built-in for looping over iterables",
+      "A decorator that caches results"
+    ],
+    "answer": 0,
+    "explanation": "lambda creates a small unnamed function whose body is one expression."
+  },
+  {
+    "topic": "oop",
+    "question": "What is the conventional name of the first parameter of an instance method?",
+    "options": [
+      "this",
+      "cls",
+      "me",
+      "self"
+    ],
+    "answer": 3,
+    "explanation": "By convention the instance is passed as the first parameter named self; cls is used for class methods."
+  },
+  {
+    "topic": "oop",
+    "question": "Which special method initializes a newly created instance?",
+    "options": [
+      "__create__",
+      "__start__",
+      "__init__",
+      "__setup__"
+    ],
+    "answer": 2,
+    "explanation": "__init__ is called after the object is created to set up its initial state."
+  },
+  {
+    "topic": "oop",
+    "question": "Which built-in checks whether an object is an instance of a class or its subclasses?",
+    "options": [
+      "isinstance()",
+      "issubclass()",
+      "type()",
+      "hasattr()"
+    ],
+    "answer": 0,
+    "explanation": "isinstance(obj, cls) returns True for instances of cls or any subclass of it."
+  },
+  {
+    "topic": "oop",
+    "question": "Which special method defines the informal string returned by str(obj)?",
+    "options": [
+      "__repr__",
+      "__format__",
+      "__str__",
+      "__string__"
+    ],
+    "answer": 2,
+    "explanation": "str() calls __str__; __repr__ is the developer-facing representation used as a fallback."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "What does [x * 2 for x in range(3)] evaluate to?",
+    "options": [
+      "[2, 4, 6]",
+      "[0, 1, 2]",
+      "[0, 2, 4, 6]",
+      "[0, 2, 4]"
+    ],
+    "answer": 3,
+    "explanation": "range(3) yields 0, 1, 2 and each is doubled."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "Which keyword turns a function into a generator function?",
+    "options": [
+      "return",
+      "async",
+      "yield",
+      "generate"
+    ],
+    "answer": 2,
+    "explanation": "Any function containing yield returns a generator object when called."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "What kind of object does (x for x in range(3)) create?",
+    "options": [
+      "A tuple",
+      "A generator object",
+      "A list",
+      "A range object"
+    ],
+    "answer": 1,
+    "explanation": "Parentheses around a comprehension create a lazy generator expression, not a tuple."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "What does {x: x ** 2 for x in range(3)} evaluate to?",
+    "options": [
+      "{0: 0, 1: 2, 2: 4}",
+      "{1: 1, 2: 4, 3: 9}",
+      "{0: 0, 1: 1, 2: 4}",
+      "[0, 1, 4]"
+    ],
+    "answer": 2,
+    "explanation": "A dict comprehension maps each key x to x squared."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which keyword is used to raise an exception?",
+    "options": [
+      "raise",
+      "throw",
+      "except",
+      "error"
+    ],
+    "answer": 0,
+    "explanation": "Python uses raise to signal an exception; throw is not a keyword."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which clause of a try statement always runs, whether or not an exception occurred?",
+    "options": [
+      "else",
+      "except",
+      "always",
+      "finally"
+    ],
+    "answer": 3,
+    "explanation": "The finally block runs on every exit path, making it suitable for cleanup."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What exception does int(\"abc\") raise?",
+    "options": [
+      "TypeError",
+      "ValueError",
+      "SyntaxError",
+      "ArithmeticError"
+    ],
+    "answer": 1,
+    "explanation": "The argument is the right type (str) but has an invalid value for conversion, so ValueError is raised."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What exception is raised by d[key] when the key is missing from dict d?",
+    "options": [
+      "IndexError",
+      "KeyError",
+      "AttributeError",
+      "ValueError"
+    ],
+    "answer": 1,
+    "explanation": "Subscripting a dict with an absent key raises KeyError."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "Which statement imports only the sqrt function from the math module?",
+    "options": [
+      "import sqrt from math",
+      "import math.sqrt",
+      "using math.sqrt",
+      "from math import sqrt"
+    ],
+    "answer": 3,
+    "explanation": "from module import name binds just that name in the current namespace."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "What is the value of __name__ in a file that is run directly as a script?",
+    "options": [
+      "'__main__'",
+      "The file name without .py",
+      "'__script__'",
+      "None"
+    ],
+    "answer": 0,
+    "explanation": "The module executed as the program's entry point gets __name__ set to '__main__'."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "Which file traditionally marks a directory as a regular package?",
+    "options": [
+      "__main__.py",
+      "setup.py",
+      "package.py",
+      "__init__.py"
+    ],
+    "answer": 3,
+    "explanation": "A regular package is a directory with an __init__.py, which runs when the package is imported."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "What is the standard tool for installing packages from PyPI?",
+    "options": [
+      "npm",
+      "pip",
+      "gem",
+      "maven"
+    ],
+    "answer": 1,
+    "explanation": "pip is Python's standard package installer for the Python Package Index."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "Which symbol is used to apply a decorator above a function definition?",
+    "options": [
+      "#",
+      "$",
+      "@",
+      "&"
+    ],
+    "answer": 2,
+    "explanation": "Writing @decorator on the line before def applies the decorator to that function."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "Which statement is used to work with a context manager?",
+    "options": [
+      "with",
+      "using",
+      "within",
+      "let"
+    ],
+    "answer": 0,
+    "explanation": "The with statement calls the context manager's enter and exit methods around a block."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "Which two methods make a class usable as a context manager?",
+    "options": [
+      "__open__ and __close__",
+      "__start__ and __stop__",
+      "__enter__ and __exit__",
+      "__init__ and __del__"
+    ],
+    "answer": 2,
+    "explanation": "The with statement calls __enter__ on entry and __exit__ when the block finishes."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "What is a decorator, fundamentally?",
+    "options": [
+      "A special comment that documents a function",
+      "A keyword that makes a function private",
+      "A type hint that validates arguments",
+      "A callable that takes a function and returns a replacement"
+    ],
+    "answer": 3,
+    "explanation": "@d above def f is shorthand for f = d(f), so a decorator is just a callable that wraps or replaces f."
+  },
+  {
+    "topic": "standard-library",
+    "question": "Which standard module encodes and decodes JSON?",
+    "options": [
+      "pickle",
+      "json",
+      "marshal",
+      "csv"
+    ],
+    "answer": 1,
+    "explanation": "The json module provides dumps/loads for JSON text."
+  },
+  {
+    "topic": "standard-library",
+    "question": "Which function picks one random element from a non-empty sequence?",
+    "options": [
+      "random.pick",
+      "random.select",
+      "random.choice",
+      "random.item"
+    ],
+    "answer": 2,
+    "explanation": "random.choice(seq) returns a single randomly chosen element."
+  },
+  {
+    "topic": "standard-library",
+    "question": "Which module provides object-oriented filesystem paths such as Path?",
+    "options": [
+      "pathlib",
+      "os.file",
+      "shutil",
+      "glob"
+    ],
+    "answer": 0,
+    "explanation": "pathlib.Path represents filesystem paths with methods for common operations."
+  },
+  {
+    "topic": "standard-library",
+    "question": "What does collections.Counter(\"aab\")[\"a\"] return?",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "0"
+    ],
+    "answer": 2,
+    "explanation": "Counter counts each element of the iterable, and 'a' appears twice."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "How do you define a coroutine function?",
+    "options": [
+      "await def",
+      "co def",
+      "def async",
+      "async def"
+    ],
+    "answer": 3,
+    "explanation": "Functions defined with async def return coroutine objects when called."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "Which keyword suspends a coroutine until an awaitable completes?",
+    "options": [
+      "wait",
+      "await",
+      "pause",
+      "defer"
+    ],
+    "answer": 1,
+    "explanation": "await yields control to the event loop until the awaited object produces its result."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "Which function runs a top-level coroutine in a new event loop?",
+    "options": [
+      "asyncio.start()",
+      "asyncio.run()",
+      "asyncio.execute()",
+      "asyncio.loop()"
+    ],
+    "answer": 1,
+    "explanation": "asyncio.run creates an event loop, runs the coroutine to completion and closes the loop."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "Which standard module provides the Thread class?",
+    "options": [
+      "threads",
+      "asyncio",
+      "subprocess",
+      "threading"
+    ],
+    "answer": 3,
+    "explanation": "threading.Thread is the standard high-level API for OS threads."
+  }
+]

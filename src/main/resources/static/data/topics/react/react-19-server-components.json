@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q9c336bd14dd",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "easy",
+  "question": "Which directive at the top of a file marks its exports as Client Components?",
+  "options": [
+   "'client only'",
+   "'use server'",
+   "'use strict'",
+   "'use client'"
+  ],
+  "answer": 3,
+  "explanation": "'use client' marks the boundary where modules are bundled and run in the browser as Client Components."
+ },
+ {
+  "id": "qa8b97003f6e",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "easy",
+  "question": "Which React 19 API reads the value of a promise or a context during render?",
+  "options": [
+   "use",
+   "usePromise",
+   "useResource",
+   "useAsync"
+  ],
+  "answer": 0,
+  "explanation": "use(resource) reads a promise (suspending until it resolves) or a context, and unlike hooks it can be called conditionally."
+ },
+ {
+  "id": "qa9d556b6887",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "easy",
+  "question": "What does the 'use server' directive mark?",
+  "options": [
+   "Components that only render on the server",
+   "Files that are excluded from every bundle",
+   "Server Functions that run on the server and can be called from client code",
+   "Routes that require server-side rendering"
+  ],
+  "answer": 2,
+  "explanation": "'use server' marks Server Functions; it is not used to mark Server Components, which are the default in RSC frameworks."
+ },
+ {
+  "id": "qc42c84cd60f",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "easy",
+  "question": "Which of these can a Server Component do that a Client Component cannot?",
+  "options": [
+   "Hold state with useState",
+   "Attach an onClick handler",
+   "Be an async function that awaits data directly while rendering",
+   "Run code in useEffect"
+  ],
+  "answer": 2,
+  "explanation": "Server Components can be async and await data during render; they cannot use state, effects, or event handlers."
+ },
+ {
+  "id": "q8efb0bd01dc",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "What does useFormStatus provide, and where must it be called?",
+  "options": [
+   "Pending status of the parent form; called in a component rendered inside that form",
+   "Validation errors; called in the form's parent",
+   "Field values; called anywhere in the app",
+   "Submit history; called in a Server Component"
+  ],
+  "answer": 0,
+  "explanation": "useFormStatus reads the status of the enclosing form, so it must be used in a child component of the form."
+ },
+ {
+  "id": "q9cdea5879c6",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "What does useActionState return?",
+  "options": [
+   "Only a pending boolean",
+   "A form element",
+   "The current state, a wrapped action function, and an isPending flag",
+   "The result of the last fetch call"
+  ],
+  "answer": 2,
+  "explanation": "useActionState(action, initialState) returns [state, formAction, isPending] for managing results of form actions."
+ },
+ {
+  "id": "qc89951828f5",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "In React 19, what can you pass to the action prop of a form element?",
+  "options": [
+   "Only a URL string",
+   "Only a Server Component",
+   "A CSS selector",
+   "A function, which React calls with the FormData on submit"
+  ],
+  "answer": 3,
+  "explanation": "React 19 forms accept a function action (client or server), and React resets uncontrolled fields after it succeeds."
+ },
+ {
+  "id": "qea17d5708bf",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "Can a Server Component import and render a Client Component?",
+  "options": [
+   "Yes, and it can pass serializable props to it",
+   "Only if both are in the same file",
+   "No, never",
+   "Only through a context provider"
+  ],
+  "answer": 0,
+  "explanation": "Server Components can render Client Components, passing props that must be serializable, such as plain data or JSX."
+ },
+ {
+  "id": "q03530f01928",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "What does useOptimistic help you do?",
+  "options": [
+   "Show a temporary optimistic state while an async action is in progress",
+   "Retry failed fetches automatically",
+   "Preload images",
+   "Skip validation on forms"
+  ],
+  "answer": 0,
+  "explanation": "useOptimistic lets the UI reflect the expected result immediately, reverting to real state when the action finishes."
+ },
+ {
+  "id": "qa24d61a5980",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Unlike hooks, what is allowed with the React 19 use API?",
+  "options": [
+   "Calling it in class components",
+   "Calling it in event handlers after render",
+   "Calling it outside any component",
+   "Calling it inside conditionals and loops"
+  ],
+  "answer": 3,
+  "explanation": "use can be called conditionally, though it must still be called during render of a component or hook."
+ },
+ {
+  "id": "qc4dc9eb4b1e",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Which props cannot be passed from a Server Component to a Client Component?",
+  "options": [
+   "Strings and numbers",
+   "Plain objects and arrays",
+   "Regular functions such as event handlers, unless they are Server Functions",
+   "JSX elements"
+  ],
+  "answer": 2,
+  "explanation": "Props must be serializable; ordinary functions cannot cross the boundary, but Server Functions marked with 'use server' can."
+ },
+ {
+  "id": "qe16f5c5ac7f",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Where does the code of a Server Component run, and is it included in the client JavaScript bundle?",
+  "options": [
+   "On the server or at build time; its code is not sent to the client",
+   "In a web worker; it is bundled",
+   "In both places equally; it is bundled",
+   "In the browser; it is bundled"
+  ],
+  "answer": 0,
+  "explanation": "Server Components render ahead of time on the server, so their code and dependencies stay out of the client bundle."
+ }
+]

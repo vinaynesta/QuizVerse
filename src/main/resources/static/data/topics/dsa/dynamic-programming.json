@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5b418cbcf51",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "Dynamic programming applies to problems with overlapping subproblems and which other property?",
+  "options": [
+   "Already sorted input",
+   "No recursion",
+   "Optimal substructure",
+   "Constant-size input"
+  ],
+  "answer": 2,
+  "explanation": "Optimal substructure means an optimal solution can be built from optimal solutions to subproblems."
+ },
+ {
+  "id": "qa930cff1e6a",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "What is memoization?",
+  "options": [
+   "Storing every variable in a global array",
+   "Converting recursion into a loop automatically",
+   "Caching the results of function calls to avoid recomputing them",
+   "Freeing memory after each recursive call"
+  ],
+  "answer": 2,
+  "explanation": "Memoization stores the answer for each input so repeated subproblems are solved only once."
+ },
+ {
+  "id": "qd53c854dd58",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "What is the bottom-up approach to dynamic programming, which fills a table from the smallest subproblems, commonly called?",
+  "options": [
+   "Tabulation",
+   "Backtracking",
+   "Memoization",
+   "Branch and bound"
+  ],
+  "answer": 0,
+  "explanation": "Tabulation iteratively fills a table starting from base cases, unlike top-down memoization."
+ },
+ {
+  "id": "q0771fac37b2",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "If you can climb 1 or 2 steps at a time, how many distinct ways are there to climb 5 stairs?",
+  "options": [
+   "5",
+   "13",
+   "8",
+   "10"
+  ],
+  "answer": 2,
+  "explanation": "Ways follow ways(n) = ways(n-1) + ways(n-2): 1, 2, 3, 5, 8."
+ },
+ {
+  "id": "q289b51841e1",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "What is the time complexity of the standard DP for the longest common subsequence of strings of lengths m and n?",
+  "options": [
+   "O(m + n)",
+   "O(m * n)",
+   "O(2^(m+n))",
+   "O(max(m, n) log n)"
+  ],
+  "answer": 1,
+  "explanation": "The DP fills an (m+1) by (n+1) table with constant work per cell."
+ },
+ {
+  "id": "qa3d1ece1246",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "What is the time complexity of the standard 0/1 knapsack DP with n items and capacity W?",
+  "options": [
+   "O(n * W)",
+   "O(2^n)",
+   "O(n log n)",
+   "O(n + W)"
+  ],
+  "answer": 0,
+  "explanation": "The table has one cell per item and capacity value, each filled in O(1)."
+ },
+ {
+  "id": "qd37f67a5e45",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "What is the time complexity of the naive recursive Fibonacci function fib(n) = fib(n-1) + fib(n-2)?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "Exponential, O(2^n)"
+  ],
+  "answer": 3,
+  "explanation": "The same subproblems are recomputed repeatedly, creating an exponential call tree."
+ },
+ {
+  "id": "q0e2e993c076",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "With coin denominations {1, 3, 4}, what is the minimum number of coins needed to make 6?",
+  "options": [
+   "3",
+   "2",
+   "1",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "3 + 3 uses two coins; greedy 4 + 1 + 1 uses three, which is why DP is needed."
+ },
+ {
+  "id": "qfe99f702520",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "What is the best known time complexity for computing the length of the longest increasing subsequence of n numbers?",
+  "options": [
+   "O(n^2)",
+   "O(n)",
+   "O(n log n)",
+   "O(2^n)"
+  ],
+  "answer": 2,
+  "explanation": "Maintaining the smallest tail for each length and binary searching it gives O(n log n)."
+ },
+ {
+  "id": "qffd3cfa2b01",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "What is the Levenshtein edit distance between 'kitten' and 'sitting'?",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "Substitute k with s, substitute e with i, and insert g at the end."
+ }
+]

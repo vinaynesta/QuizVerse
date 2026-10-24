@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q90181ba5292",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "Given const state = reactive({ count: ref(0) }), what does state.count return?",
+  "options": [
+   "The ref object, so state.count.value is needed",
+   "The number 0, since nested refs in objects are unwrapped",
+   "A readonly copy of the ref",
+   "undefined until the ref is read once"
+  ],
+  "answer": 1,
+  "explanation": "A ref accessed as a property of a reactive object is automatically unwrapped."
+ },
+ {
+  "id": "qd1596239765",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "What does toValue() do in a composable?",
+  "options": [
+   "Converts a reactive object into refs",
+   "Removes reactivity from a proxy",
+   "Creates a writable computed from a getter",
+   "Normalizes a ref, getter or plain value to a value"
+  ],
+  "answer": 3,
+  "explanation": "toValue() unwraps refs, calls getters and returns plain values unchanged, letting composables accept any of them."
+ },
+ {
+  "id": "q6706be4babf",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "What does onErrorCaptured do?",
+  "options": [
+   "Catches errors in the component's own template only",
+   "Captures errors thrown by descendant components",
+   "Logs all network errors in the app",
+   "Retries a failed render automatically"
+  ],
+  "answer": 1,
+  "explanation": "onErrorCaptured receives errors from descendants and can return false to stop propagation."
+ },
+ {
+  "id": "q20ea13a30ed",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "In a Pinia setup store, what must happen to every state property?",
+  "options": [
+   "It must be returned from the setup function",
+   "It must be declared with reactive()",
+   "It must be wrapped with markRaw()",
+   "It must be registered with defineState()"
+  ],
+  "answer": 0,
+  "explanation": "Unreturned state is private and breaks devtools, SSR and plugins, so all state must be returned."
+ },
+ {
+  "id": "qf6999cbf019",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "How does a child using defineModel read a custom v-model.capitalize modifier?",
+  "options": [
+   "const [model, modifiers] = defineModel(), then modifiers.capitalize",
+   "Inject it with inject('modifiers')",
+   "Check this.$attrs.capitalize in setup",
+   "Read props.capitalize from defineProps"
+  ],
+  "answer": 0,
+  "explanation": "Destructuring defineModel() yields the model ref and a modifiers object containing the used modifiers."
+ },
+ {
+  "id": "q56815f50256",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "A composable returns a reactive() object. How can callers destructure it without losing reactivity?",
+  "options": [
+   "Return Object.assign({}, state)",
+   "Return readonly(state) instead",
+   "Return toRefs(state) from the composable",
+   "Return JSON.parse(JSON.stringify(state))"
+  ],
+  "answer": 2,
+  "explanation": "toRefs() converts each property into a ref linked to the source, so destructured values stay reactive."
+ },
+ {
+  "id": "q50c6a041b2d",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "After const { count } = reactive({ count: 0 }), what happens when you run count++?",
+  "options": [
+   "Only the local variable changes; the reactive state does not",
+   "Vue throws because count is readonly",
+   "The reactive state updates and triggers renders",
+   "The value updates but the DOM does not"
+  ],
+  "answer": 0,
+  "explanation": "Destructuring copies a primitive out of the proxy, so the local variable is disconnected from reactivity."
+ },
+ {
+  "id": "q6cac400dead",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "For v-color:bg.bold=\"'red'\", what is binding.arg in the directive hook?",
+  "options": [
+   "'bold'",
+   "'bg'",
+   "'red'",
+   "'color'"
+  ],
+  "answer": 1,
+  "explanation": "The argument follows the colon, the modifiers follow dots, and binding.value holds the evaluated expression."
+ },
+ {
+  "id": "q98d164ea650",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "Why might you await nextTick() after changing reactive state?",
+  "options": [
+   "State changes are not reactive until then",
+   "DOM updates are batched and applied asynchronously",
+   "nextTick reloads the component's template",
+   "Watchers cannot run without nextTick"
+  ],
+  "answer": 1,
+  "explanation": "Vue buffers updates until the next tick, so nextTick() waits until the DOM reflects the change."
+ },
+ {
+  "id": "qf124043322b",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "Why does the Vite dev server start quickly even in large projects?",
+  "options": [
+   "It caches the production build and reuses it",
+   "It bundles the whole app with Webpack in memory",
+   "It skips compiling single-file components",
+   "It serves native ES modules on demand and pre-bundles deps"
+  ],
+  "answer": 3,
+  "explanation": "Vite transforms source files on request and uses esbuild to pre-bundle dependencies."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q7d31950f86e",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why are attention scores divided by the square root of the key dimension?",
+  "options": [
+   "To keep large dot products from pushing softmax into regions with tiny gradients",
+   "To reduce the memory needed to store keys",
+   "To make attention causal for decoder models",
+   "To ensure the attention weights sum to exactly one"
+  ],
+  "answer": 0,
+  "explanation": "Dot products grow with dimension; scaling keeps their variance stable so softmax does not saturate."
+ },
+ {
+  "id": "qce974406854",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "hard",
+  "question": "What is the naive assumption in naive Bayes classifiers?",
+  "options": [
+   "All classes have equal prior probability",
+   "Every feature follows a uniform distribution",
+   "The decision boundary is always a circle",
+   "Features are conditionally independent given the class"
+  ],
+  "answer": 3,
+  "explanation": "Assuming conditional independence lets the likelihood factor into a product of per-feature terms."
+ },
+ {
+  "id": "q9b043675fa7",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why do transformers need positional encodings?",
+  "options": [
+   "Self-attention is permutation-invariant, so token order must be injected explicitly",
+   "To reduce the vocabulary size of the tokenizer",
+   "To stop the model from attending to padding",
+   "To make attention weights sum to one"
+  ],
+  "answer": 0,
+  "explanation": "Without position information, attention treats the input as an unordered set of tokens."
+ },
+ {
+  "id": "q795d11eb9be",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "What does the silhouette score measure for a clustering result?",
+  "options": [
+   "The fraction of points matching ground-truth labels",
+   "The variance explained by the first principal component",
+   "How close each point is to its own cluster compared with the nearest other cluster",
+   "The number of iterations until centroids converge"
+  ],
+  "answer": 2,
+  "explanation": "Silhouette ranges from -1 to 1, with high values meaning points are cohesive within clusters and well separated from others."
+ },
+ {
+  "id": "qa531950471b",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is indirect prompt injection?",
+  "options": [
+   "Instructions hidden in retrieved content or tool outputs that the model may follow",
+   "Injecting gradients to speed up fine-tuning",
+   "A user typing a jailbreak directly into the chat",
+   "Passing prompts through a translation layer first"
+  ],
+  "answer": 0,
+  "explanation": "Agents and RAG systems ingest untrusted text, and instructions embedded there can redirect the model without the user's knowledge."
+ },
+ {
+  "id": "q87936e82aed",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is reward hacking, also called specification gaming?",
+  "options": [
+   "An agent exploiting flaws in its objective to score highly without doing the intended task",
+   "A model refusing to optimize its reward",
+   "Training with too high a discount factor",
+   "An attacker stealing a trained reward model"
+  ],
+  "answer": 0,
+  "explanation": "When the reward is an imperfect proxy, optimization pressure finds loopholes that satisfy the metric but not the intent."
+ },
+ {
+  "id": "q4467dd13d5e",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "What is top-p (nucleus) sampling?",
+  "options": [
+   "Rejecting whole outputs whose probability falls below p",
+   "Always choosing the single most likely token",
+   "Sampling uniformly from a fixed count of p tokens",
+   "Sampling from the smallest set of tokens whose cumulative probability exceeds p"
+  ],
+  "answer": 3,
+  "explanation": "Nucleus sampling adapts the candidate set size to the model's confidence at each step."
+ },
+ {
+  "id": "qd0856584eef",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "What distinguishes the Adam optimizer?",
+  "options": [
+   "It adapts per-parameter step sizes using running estimates of the gradient's first and second moments",
+   "It uses a single global learning rate with no momentum",
+   "It computes exact second derivatives via the full Hessian",
+   "It updates only the weights of the final layer"
+  ],
+  "answer": 0,
+  "explanation": "Adam combines momentum with RMS-style scaling so each parameter gets an individually adapted update."
+ },
+ {
+  "id": "q6168b7bba85",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "hard",
+  "question": "Compared with bagging, which mainly reduces variance, what does boosting primarily reduce?",
+  "options": [
+   "Only variance, by averaging independent models",
+   "Training time, by using fewer models",
+   "Bias, by sequentially focusing on previous errors",
+   "Feature count, by discarding weak features"
+  ],
+  "answer": 2,
+  "explanation": "Boosting combines weak, high-bias learners sequentially so the ensemble fits patterns each alone would miss."
+ },
+ {
+  "id": "q360a7cc4f68",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "For a heavily imbalanced dataset where the positive class matters most, which curve is usually more informative?",
+  "options": [
+   "The ROC curve, since a large negative class makes it more sensitive",
+   "The precision-recall curve, since ROC can look optimistic when negatives dominate",
+   "The calibration curve, since it measures ranking quality",
+   "The learning curve, since it plots loss against epochs"
+  ],
+  "answer": 1,
+  "explanation": "False positive rate barely moves when negatives are abundant, while precision directly exposes the cost of false positives."
+ }
+]

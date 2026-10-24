@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0d8c198c226",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "Why are B-trees and B+ trees preferred for database and file-system indexes?",
+  "options": [
+   "Their high fanout keeps the tree shallow, minimizing disk page reads",
+   "They use less total memory than arrays",
+   "They require no rebalancing",
+   "They guarantee O(1) lookups"
+  ],
+  "answer": 0,
+  "explanation": "Each node fills a disk page with many keys, so lookups touch only a few pages."
+ },
+ {
+  "id": "qbc79ea3fdcf",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "How can the minimum number of meeting rooms for n intervals be computed efficiently?",
+  "options": [
+   "Try all room assignments by backtracking",
+   "Sort by duration and assign greedily in O(n)",
+   "Sort by start time and track end times with a min-heap, in O(n log n)",
+   "Build a graph and run BFS in O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "The heap's size after processing all intervals equals the maximum number of simultaneous meetings."
+ },
+ {
+  "id": "q194006b5472",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "How do you maintain the running median of a stream with O(log n) insertion and O(1) median queries?",
+  "options": [
+   "Keep a sorted array and binary search",
+   "Use a single min-heap and peek",
+   "Use a max-heap for the lower half and a min-heap for the upper half",
+   "Use a hash map of value counts"
+  ],
+  "answer": 2,
+  "explanation": "Balancing the two heaps keeps the median at one or both of their tops."
+ },
+ {
+  "id": "qe9df7f84291",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "How does a min-stack typically support push, pop, and getMin all in O(1)?",
+  "options": [
+   "It sorts the stack after every push",
+   "It keeps an auxiliary record of the current minimum at each stack depth",
+   "It scans the entire stack on each getMin",
+   "It stores elements in a binary heap"
+  ],
+  "answer": 1,
+  "explanation": "Pairing each level with its minimum lets getMin read the top and pop restore the previous minimum."
+ },
+ {
+  "id": "q1b2f26ea7df",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "What is the time complexity of the Knuth-Morris-Pratt algorithm for a text of length n and pattern of length m?",
+  "options": [
+   "O(m^2 + n)",
+   "O(n * m)",
+   "O(n log m)",
+   "O(n + m)"
+  ],
+  "answer": 3,
+  "explanation": "The prefix function is built in O(m) and the text is scanned without ever moving backward."
+ },
+ {
+  "id": "qb7da33358ec",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "After Floyd's algorithm finds the meeting point inside a cycle, how do you locate the node where the cycle begins?",
+  "options": [
+   "Advance the fast pointer three steps at a time",
+   "Reset one pointer to the head and advance both one step at a time until they meet",
+   "Reverse the list from the meeting point",
+   "Count the cycle length and return the head"
+  ],
+  "answer": 1,
+  "explanation": "The distance from the head to the cycle start equals the distance from the meeting point to the start, modulo cycle length."
+ },
+ {
+  "id": "q0e2e993c076",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "With coin denominations {1, 3, 4}, what is the minimum number of coins needed to make 6?",
+  "options": [
+   "3",
+   "2",
+   "1",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "3 + 3 uses two coins; greedy 4 + 1 + 1 uses three, which is why DP is needed."
+ },
+ {
+  "id": "q4050398a396",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "During a DFS of a directed graph, what indicates a cycle?",
+  "options": [
+   "An edge to any previously visited vertex",
+   "An edge to a vertex that is still on the current recursion stack",
+   "A vertex with in-degree zero",
+   "A vertex with more than two neighbors"
+  ],
+  "answer": 1,
+  "explanation": "A back edge to an in-progress (gray) vertex closes a directed cycle; edges to finished vertices do not."
+ },
+ {
+  "id": "qa563f3e15a7",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "What is the time complexity of searching for an arbitrary value in a binary heap?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(1)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "The heap property orders only parent and child, so siblings and subtrees must be scanned."
+ },
+ {
+  "id": "qda5370fa9ba",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "What is the overall time complexity of Kruskal's algorithm using union-find with path compression and union by rank?",
+  "options": [
+   "O(V^2)",
+   "O(E * V)",
+   "O(E log E)",
+   "O(V + E)"
+  ],
+  "answer": 2,
+  "explanation": "Sorting the edges dominates, since union-find operations are nearly constant amortized."
+ }
+]

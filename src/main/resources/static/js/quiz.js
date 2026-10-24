@@ -1,14 +1,17 @@
 import {
-  addBookmark, currentUser, listBookmarks, mistakes, removeBookmark, reportQuestion, saveAttempt, streak,
+  addBookmark, createChallenge, currentUser, listBookmarks, mistakes, removeBookmark, reportQuestion, saveAttempt,
+  streak,
 } from "./api.js";
 import { storeOfflineAttempt, storePendingAttempt } from "./pending.js";
 import { shareResult } from "./share.js";
-import { dailyQuestions, istToday, loadTopicPool, questionsById, shuffled } from "./questions.js";
+import { dailyQuestions, istToday, loadTopicPool, questionsById, shuffled, techDailyQuestions } from "./questions.js";
 
 // Two kinds of quiz share this page:
 //  - exam quizzes from index.json: quiz.html?exam=..&stage=..&section=..&level=..&quiz=N
 //  - full mock tests: quiz.html?exam=..&stage=..&level=..&mock=N (quiz N of every section of the stage, in a row)
-//  - practice sets: quiz.html?practice=revise | bookmarks | custom | daily (custom also has topics, level, count, minutes)
+//  - practice sets: quiz.html?practice=revise | bookmarks | custom | daily | tech-daily
+//    (custom also has topics, level, count, minutes)
+// Exam quizzes and mocks opened from a friend's challenge link also carry &challenge=CODE.
 const params = new URLSearchParams(window.location.search);
 const practiceKind = params.get("practice");
 const examId = params.get("exam");
@@ -16,6 +19,7 @@ const stageId = params.get("stage");
 const sectionId = params.get("section");
 const levelId = params.get("level");
 let quizIdx = Number(params.get("quiz") || 0);
+let challengeCode = /^[A-Z0-9]{1,10}$/.test(params.get("challenge") || "") ? params.get("challenge") : null;
 
 let index = null;
 let exam = null;
@@ -83,9 +87,10 @@ async function loadBackgrounds() {
 
 // The daily quiz's date is fixed when the page loads, so a quiz started before midnight is saved for that day.
 const dailyDate = istToday();
+const isDaily = practiceKind === "daily" || practiceKind === "tech-daily";
 const quizKey = () =>
   mock ? `mock:${examId}/${stageId}/${levelId}/${mockIdx}`
-    : practiceKind === "daily" ? `practice:daily:${dailyDate}`
+    : isDaily ? `practice:${practiceKind}:${dailyDate}`
     : practice ? `practice:${practiceKind}:${params.toString()}` : `${examId}/${stageId}/${sectionId}/${levelId}/${quizIdx}`;
 const PROGRESS_KEY = "quizverse.inProgress";
 
@@ -183,6 +188,7 @@ const PRACTICE_MAX = 50;
 async function loadPractice() {
   if (practiceKind === "custom") return loadCustom();
   if (practiceKind === "daily") return loadDaily();
+  if (practiceKind === "tech-daily") return loadTechDaily();
   if (practiceKind !== "revise" && practiceKind !== "bookmarks") {
     showStartError("Quiz not found");
     return null;
@@ -265,6 +271,23 @@ async function loadDaily() {
     minutes: DAILY_MINUTES,
     questions: qs,
     description: `Today's ${qs.length} questions (quant, reasoning and English), the same for everyone.`,
+  };
+}
+
+const TECH_DAILY_MINUTES = 5;
+
+async function loadTechDaily() {
+  const qs = await techDailyQuestions(dailyDate);
+  if (qs.length === 0) {
+    showStartError("Daily tech challenge unavailable", '<a href="index.html">Pick a subject</a> instead.');
+    return null;
+  }
+  const day = new Date(`${dailyDate}T00:00:00`).toLocaleDateString("en-IN", { day: "numeric", month: "long" });
+  return {
+    title: `Daily tech challenge - ${day}`,
+    minutes: TECH_DAILY_MINUTES,
+    questions: qs,
+    description: `Today's ${qs.length} tech questions (DSA, languages, frameworks and AI), the same for everyone.`,
   };
 }
 
@@ -814,7 +837,12 @@ function finish() {
         <div class="stat"><b>${avgSecs}s</b><span>Avg per answer</span></div>
       </div>${cutoffHtml}${breakdown}
       <p id="save-status" class="save-status"></p>
-      <button type="button" id="share-button" class="share-button">Share result</button>
+      ${challengeCode ? `<p class="challenge-note"><a href="challenge.html?code=${challengeCode}">See how you did against your friend</a></p>` : ""}
+      <div class="result-actions">
+        <button type="button" id="share-button" class="share-button">Share result</button>
+        ${!practice && !challengeCode ? '<button type="button" id="challenge-button" class="share-button" hidden>Challenge a friend</button>' : ""}
+      </div>
+      <p id="challenge-status" class="save-status"></p>
       <details class="review"><summary>Review answers</summary>${review}</details>
     </div>`;
   const shareData = {
@@ -837,13 +865,13 @@ function finish() {
   const nextQuiz = !practice && !mock && level.quizzes[quizIdx + 1];
   $("new-quiz-button").style.display = nextQuiz ? "block" : "none";
   $("back-link-button").textContent = practice
-    ? ({ custom: "Build another quiz", daily: "Home" }[practiceKind] || "My scores") : "Back to quizzes";
+    ? ({ custom: "Build another quiz", daily: "Home", "tech-daily": "Home" }[practiceKind] || "My scores") : "Back to quizzes";
   $("back-link-button").style.display = "block";
   recordAttempt({
     kind: mock ? "mock" : practice ? practiceKind : "exam",
     examId: practice ? practiceKind : examId,
     stageId: practice ? "practice" : stageId,
-    sectionId: mock ? "mock" : practiceKind === "daily" ? dailyDate : practice ? "practice" : sectionId,
+    sectionId: mock ? "mock" : isDaily ? dailyDate : practice ? "practice" : sectionId,
     levelId: practice ? "practice" : levelId,
     quizIndex: mock ? mockIdx : practice ? 0 : quizIdx,
     quizTitle: quizTitle(),
@@ -853,7 +881,39 @@ function finish() {
       questionId: q.id, subject: q.subject, topic: q.topic,
       chosen: answers[i], correct: answers[i] === q.answer, seconds: Math.min(seconds[i], 36000),
     })),
+    challengeCode: practice ? null : challengeCode,
   });
+}
+
+/** Turns the saved attempt into a challenge link and hands it to the share sheet (or copies it). */
+async function onChallenge(attemptId, title) {
+  const button = $("challenge-button");
+  const status = $("challenge-status");
+  button.disabled = true;
+  try {
+    const challenge = await createChallenge(attemptId);
+    const link = new URL(`challenge.html?code=${challenge.code}`, window.location.href).href;
+    const text = `I scored ${challenge.creator.score}/${challenge.creator.maxMarks} on ${title} on QuizVerse. Can you beat me?`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: "QuizVerse challenge", text, url: link });
+        status.textContent = "Challenge sent. Scores show up on the challenge page.";
+        return;
+      } catch (error) {
+        if (error.name === "AbortError") return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(`${text} ${link}`);
+      status.innerHTML = `Link copied: <a href="${link}">${link}</a>`;
+    } catch {
+      status.innerHTML = `Send this link to a friend: <a href="${link}">${link}</a>`;
+    }
+  } catch (error) {
+    status.textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
 }
 
 /**
@@ -916,8 +976,14 @@ async function recordAttempt(attempt) {
   if (me) {
     try {
       if (me.offline) throw Object.assign(new Error("offline"), { status: undefined });
-      await saveAttempt(attempt);
+      const saved = await saveAttempt(attempt);
       status.innerHTML = 'Saved to <a href="history.html">your scores</a>.';
+      // Exam quizzes and mocks saved to the account can be turned into a challenge.
+      const button = $("challenge-button");
+      if (button && (saved.kind === "exam" || saved.kind === "mock")) {
+        button.hidden = false;
+        button.addEventListener("click", () => onChallenge(saved.id, attempt.quizTitle));
+      }
     } catch (error) {
       if (error.status === undefined && storeOfflineAttempt(me.username, attempt)) {
         status.textContent = "You're offline. This result is kept on this device and saved when you're back online.";
@@ -937,6 +1003,9 @@ function goNextQuiz() {
   quizIdx += 1;
   const url = new URL(window.location.href);
   url.searchParams.set("quiz", quizIdx);
+  // The challenge was for the previous quiz only.
+  url.searchParams.delete("challenge");
+  challengeCode = null;
   window.history.replaceState(null, "", url);
   pickBackground();
   renderStart();
@@ -974,7 +1043,7 @@ $("palette-toggle").addEventListener("click", () => document.body.classList.togg
 $("report-form").addEventListener("submit", submitReport);
 $("back-link-button").addEventListener("click", () => {
   window.location.href = practice
-    ? ({ custom: "practice.html", daily: "index.html" }[practiceKind] || "history.html")
+    ? ({ custom: "practice.html", daily: "index.html", "tech-daily": "index.html" }[practiceKind] || "history.html")
     : `exam.html?exam=${encodeURIComponent(examId)}`;
 });
 

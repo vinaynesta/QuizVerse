@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9274621ea40",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "What is a key limitation of PCA?",
+  "options": [
+   "It captures only linear structure and is sensitive to feature scaling",
+   "It always increases the number of features",
+   "It cannot be applied to numeric data",
+   "It requires labeled data to compute components"
+  ],
+  "answer": 0,
+  "explanation": "PCA finds linear directions of maximum variance, so non-linear manifolds are missed and large-scale features dominate unless standardized."
+ },
+ {
+  "id": "qdf2eb4697a1",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Training and validation errors are both high and close together. What is the likely issue and remedy?",
+  "options": [
+   "High variance; add regularization or more data",
+   "Data leakage; remove features correlated with the target",
+   "High bias; use a more expressive model or better features",
+   "No issue; the model is ready to deploy"
+  ],
+  "answer": 2,
+  "explanation": "A small gap with high error means the model underfits, so it needs more capacity or more informative features."
+ },
+ {
+  "id": "q4cb1f76b57a",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "How does the compute and memory cost of standard self-attention scale with sequence length n?",
+  "options": [
+   "Quadratically in n",
+   "Logarithmically in n",
+   "Linearly in n",
+   "It stays constant in n"
+  ],
+  "answer": 0,
+  "explanation": "Every token attends to every other token, producing an n by n attention matrix."
+ },
+ {
+  "id": "q608035790a3",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What key property does weight sharing in convolutional layers provide?",
+  "options": [
+   "Recurrent memory across image regions",
+   "Rotation invariance with no data augmentation needed",
+   "An unlimited receptive field in a single layer",
+   "Translation equivariance with far fewer parameters than dense layers"
+  ],
+  "answer": 3,
+  "explanation": "Applying the same filter at every location detects a pattern wherever it appears while drastically cutting parameter count."
+ },
+ {
+  "id": "q8ddd9eed234",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "Why can greedy decoding produce repetitive text?",
+  "options": [
+   "Greedy decoding samples randomly from the whole vocabulary",
+   "Greedy decoding disables the attention mechanism",
+   "Greedy decoding ignores the prompt after the first token",
+   "Always choosing the most likely token can get stuck in high-probability loops"
+  ],
+  "answer": 3,
+  "explanation": "Deterministic argmax choices can reinforce a repeated phrase, which sampling or repetition penalties help break."
+ },
+ {
+  "id": "qa6a8ac6e838",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Collecting more training data is most likely to help a model with which problem?",
+  "options": [
+   "High bias from an overly simple model",
+   "Features unrelated to the target",
+   "A bug in the evaluation metric",
+   "High variance"
+  ],
+  "answer": 3,
+  "explanation": "More data constrains a flexible model and reduces overfitting, but cannot fix an underpowered model or useless features."
+ },
+ {
+  "id": "q00f7006c9d3",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What trade-off do approximate nearest neighbor indexes such as HNSW make?",
+  "options": [
+   "They return exact results at the cost of a linear scan",
+   "They lower memory use by discarding the embeddings",
+   "They gain precision by storing documents as plain text",
+   "They give up a little recall for much faster search over large collections"
+  ],
+  "answer": 3,
+  "explanation": "ANN indexes avoid comparing against every vector, accepting occasional missed neighbors in exchange for speed."
+ },
+ {
+  "id": "q3403afaabcc",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What does a membership inference attack try to determine?",
+  "options": [
+   "A model's architecture from its pricing page",
+   "Whether a specific record was part of a model's training data",
+   "Which users are allowed to access a model",
+   "Which cluster a test point belongs to"
+  ],
+  "answer": 1,
+  "explanation": "Models often behave differently on training examples, such as being more confident, which can reveal sensitive membership."
+ },
+ {
+  "id": "q6e501e5c567",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "What does it mean for a classifier to be well calibrated?",
+  "options": [
+   "It achieves the highest possible ROC AUC",
+   "Its predicted probabilities match observed frequencies, e.g. 70% predictions are right about 70% of the time",
+   "It has equal precision and recall",
+   "It predicts each class equally often"
+  ],
+  "answer": 1,
+  "explanation": "Calibration concerns whether probabilities can be trusted as probabilities, which is separate from ranking quality."
+ },
+ {
+  "id": "q49a105428e9",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What is the main trade-off when choosing chunk size for RAG?",
+  "options": [
+   "Small chunks always improve answers with no downside",
+   "Small chunks are precise but lose context; large chunks keep context but dilute relevance",
+   "Large chunks always improve recall and lower cost",
+   "Chunk size has no effect when using a vector database"
+  ],
+  "answer": 1,
+  "explanation": "Chunk size balances embedding specificity against having enough surrounding context to answer the question."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5a08933e63f",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which key format does Spring Boot recommend for properties in .properties and .yml files?",
+  "options": [
+   "camelCase, e.g. app.maxRetryCount",
+   "Dotted lowercase without separators, e.g. app.maxretrycount",
+   "Upper snake case, e.g. APP_MAX_RETRY_COUNT",
+   "Lowercase kebab-case, e.g. app.max-retry-count"
+  ],
+  "answer": 3,
+  "explanation": "Kebab-case is the canonical form; upper snake case is intended for environment variables."
+ },
+ {
+  "id": "qf5a4b34c55a",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which environment variable overrides spring.datasource.url?",
+  "options": [
+   "SPRING_DATASOURCE_URL",
+   "SPRING-DATASOURCE-URL",
+   "spring.datasource.url",
+   "DATASOURCE_URL_SPRING"
+  ],
+  "answer": 0,
+  "explanation": "Relaxed binding maps environment variables by replacing dots with underscores, removing dashes and upper-casing."
+ },
+ {
+  "id": "q1f260ce470f",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "How do you handle exceptions globally for all REST controllers?",
+  "options": [
+   "A @RestControllerAdvice class with @ExceptionHandler methods",
+   "A try-catch block in the main method",
+   "Overriding DispatcherServlet.doDispatch",
+   "An @ExceptionHandler on the main application class"
+  ],
+  "answer": 0,
+  "explanation": "@RestControllerAdvice applies @ExceptionHandler methods across controllers and writes their results as response bodies."
+ },
+ {
+  "id": "q73e102748c8",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "What must a Spring Boot app do to be deployed as a WAR to an external Tomcat?",
+  "options": [
+   "Remove the main method and add web.xml only",
+   "Extend SpringBootServletInitializer and use war packaging with the Tomcat starter set to provided",
+   "Use the spring-boot:build-image goal",
+   "Annotate the main class with @WebServlet"
+  ],
+  "answer": 1,
+  "explanation": "SpringBootServletInitializer bootstraps the application when the servlet container starts the WAR."
+ },
+ {
+  "id": "qfd037d4c983",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which fluent synchronous HTTP client was introduced in Spring Framework 6.1 as a modern alternative to RestTemplate?",
+  "options": [
+   "WebClient",
+   "RestClient",
+   "AsyncRestTemplate",
+   "HttpInvoker"
+  ],
+  "answer": 1,
+  "explanation": "RestClient offers a fluent API over the same infrastructure as RestTemplate; WebClient is the reactive client."
+ },
+ {
+  "id": "q08a57482208",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Which annotation enables @PreAuthorize support in Spring Security 6?",
+  "options": [
+   "@EnableGlobalMethodSecurity(prePostEnabled = false)",
+   "@EnableWebSecurity(method = true)",
+   "@EnableMethodSecurity",
+   "@EnableAuthorization"
+  ],
+  "answer": 2,
+  "explanation": "@EnableMethodSecurity replaces the deprecated @EnableGlobalMethodSecurity and enables pre/post annotations by default."
+ },
+ {
+  "id": "q15540d27685",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "What is Spring Boot's default for spring.jpa.open-in-view?",
+  "options": [
+   "true, and Boot logs a warning when it is not set explicitly",
+   "false, so lazy loading fails in views by default",
+   "It is undefined until a profile sets it",
+   "true only when the prod profile is active"
+  ],
+  "answer": 0,
+  "explanation": "Open Session in View is enabled by default, and Boot warns because it keeps a database connection open during view rendering."
+ },
+ {
+  "id": "qbd7f6f7e7f4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "Two beans of type PaymentClient exist; one is marked @Primary and the injection point uses @Qualifier(\"backupClient\"). Which bean is injected?",
+  "options": [
+   "The @Primary bean",
+   "Whichever bean was registered first",
+   "Neither; startup fails with NoUniqueBeanDefinitionException",
+   "The bean named backupClient"
+  ],
+  "answer": 3,
+  "explanation": "An explicit @Qualifier at the injection point takes precedence over @Primary."
+ },
+ {
+  "id": "q7c802f05571",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "Which class supports programmatic transaction demarcation with a callback?",
+  "options": [
+   "TransactionalEventListener",
+   "TransactionSynchronizationManager",
+   "TransactionTemplate",
+   "PlatformTransactionProxy"
+  ],
+  "answer": 2,
+  "explanation": "TransactionTemplate.execute runs a callback inside a transaction using the configured PlatformTransactionManager."
+ },
+ {
+  "id": "q1188fe7a4d9",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "In Spring Boot 3, where are auto-configuration classes registered in a library jar?",
+  "options": [
+   "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+   "META-INF/spring.factories under the EnableAutoConfiguration key",
+   "META-INF/MANIFEST.MF under Auto-Config",
+   "src/main/resources/application.properties"
+  ],
+  "answer": 0,
+  "explanation": "Boot 3 removed support for registering auto-configurations in spring.factories; the AutoConfiguration.imports file is used instead."
+ }
+]

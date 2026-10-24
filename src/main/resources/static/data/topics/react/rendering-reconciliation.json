@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q5d8cee165a2",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "What is the virtual DOM, roughly speaking?",
+  "options": [
+   "An in-memory tree describing the UI that React compares to decide what to update",
+   "A browser API that replaces the real DOM",
+   "A background thread that paints the page",
+   "A CSS engine that computes layout"
+  ],
+  "answer": 0,
+  "explanation": "React builds a lightweight tree of elements, diffs it with the previous one, and applies only the needed changes to the real DOM."
+ },
+ {
+  "id": "qa3720f2f3bf",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Which is usually a poor choice of key when list items can be reordered or inserted?",
+  "options": [
+   "A database id",
+   "The array index",
+   "A unique slug",
+   "A UUID generated when the item was created"
+  ],
+  "answer": 1,
+  "explanation": "Index keys change when items move, so React can mismatch state and DOM to the wrong items."
+ },
+ {
+  "id": "qac05e13d0bb",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Why does React need a key prop on items rendered from a list?",
+  "options": [
+   "To identify which items were added, removed, or moved between renders",
+   "To apply styles to each list item",
+   "To sort the list automatically",
+   "To make each item keyboard-focusable"
+  ],
+  "answer": 0,
+  "explanation": "Keys give each item a stable identity so React can match items across renders and preserve the right state."
+ },
+ {
+  "id": "qbf8fde0b7ab",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Which of these causes a function component to re-render?",
+  "options": [
+   "Only a deep change in its props",
+   "A change in its state, a parent re-render, or a change in a context it reads",
+   "Only a change to one of its refs",
+   "Only a full page reload"
+  ],
+  "answer": 1,
+  "explanation": "State updates, parent re-renders, and context changes all cause a component to render again."
+ },
+ {
+  "id": "q8c0e8a06fea",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "Why must a component function be pure during rendering?",
+  "options": [
+   "Pure functions run on the GPU",
+   "React may call it more than once or discard its output, so side effects during render cause bugs",
+   "Pure components skip reconciliation",
+   "It is required for TypeScript support"
+  ],
+  "answer": 1,
+  "explanation": "React relies on render being free of side effects so it can re-run, interrupt, or skip renders safely."
+ },
+ {
+  "id": "qe0f3de45f6b",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "A component renders either <input /> or <textarea /> at the same position depending on a flag. What happens to the old element's state when the flag flips?",
+  "options": [
+   "It is destroyed because the element type changed",
+   "It is preserved and moved to the new element",
+   "It is copied into a ref",
+   "It is kept until the next page reload"
+  ],
+  "answer": 0,
+  "explanation": "When the element type at a position changes, React unmounts the old subtree and mounts a new one."
+ },
+ {
+  "id": "qe1ebe1af35b",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "A parent conditionally renders <Form key={userId} />. What happens when userId changes?",
+  "options": [
+   "Form keeps its state and just re-renders",
+   "Form is unmounted and a fresh instance with reset state is mounted",
+   "React throws a duplicate key warning",
+   "Only Form's effects re-run"
+  ],
+  "answer": 1,
+  "explanation": "Changing the key tells React it is a different component instance, which is a common way to reset state."
+ },
+ {
+  "id": "qecad870695a",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "What does React do during the commit phase?",
+  "options": [
+   "Calls component functions to compute JSX",
+   "Diffs the old and new element trees",
+   "Downloads lazy component code",
+   "Applies the computed changes to the DOM and then runs effects"
+  ],
+  "answer": 3,
+  "explanation": "Rendering computes what should change; committing applies those changes to the DOM, after which effects run."
+ },
+ {
+  "id": "q3eebec6e037",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "A component calls setValue(5) when value is already 5. What does React do?",
+  "options": [
+   "Bails out of re-rendering children and effects, since Object.is says nothing changed",
+   "Throws a warning about redundant updates",
+   "Resets the component's other state",
+   "Always re-renders the whole tree"
+  ],
+  "answer": 0,
+  "explanation": "React skips updates with an identical value, though it may still call the component once before bailing out."
+ },
+ {
+  "id": "q6dda12f757a",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "Why does using Math.random() as a key on each render hurt a list?",
+  "options": [
+   "Every item gets a new identity each render, so all items remount and lose state and focus",
+   "Keys must be strings",
+   "React sorts items by key",
+   "Random keys cause duplicate key errors every time"
+  ],
+  "answer": 0,
+  "explanation": "Keys must be stable; changing them on every render forces React to destroy and recreate every element."
+ },
+ {
+  "id": "q9502d1332d1",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "Since React 18 with createRoot, what happens when two setState calls occur inside a setTimeout callback?",
+  "options": [
+   "They cause two separate renders",
+   "Only the first is applied",
+   "They are automatically batched into a single render",
+   "They throw an error outside event handlers"
+  ],
+  "answer": 2,
+  "explanation": "Automatic batching in React 18+ groups updates in timeouts, promises, and native handlers, not just React events."
+ },
+ {
+  "id": "qddd08158b21",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "What does flushSync do?",
+  "options": [
+   "Clears all pending state updates",
+   "Forces the updates inside its callback to be applied to the DOM synchronously",
+   "Batches updates across components",
+   "Synchronizes server and client state"
+  ],
+  "answer": 1,
+  "explanation": "flushSync opts out of batching so the DOM is updated before it returns, for example to scroll to a newly added item."
+ }
+]

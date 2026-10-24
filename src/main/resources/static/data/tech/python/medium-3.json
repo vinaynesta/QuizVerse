@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q109d6ba65d0",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "Given def f(a, b=2): return a + b, what does f(1, b=5) return?",
+  "options": [
+   "3",
+   "7",
+   "6",
+   "It raises TypeError"
+  ],
+  "answer": 2,
+  "explanation": "The keyword argument overrides the default, so 1 + 5 = 6."
+ },
+ {
+  "id": "q85b179a9c01",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "How many times does a module's top-level code run if it is imported twice in one process?",
+  "options": [
+   "Once; later imports reuse the cached module in sys.modules",
+   "Never; only functions are executed",
+   "Twice, once per import statement",
+   "Once per function that uses the module"
+  ],
+  "answer": 0,
+  "explanation": "Imported modules are cached in sys.modules, so a repeat import just binds the existing object."
+ },
+ {
+  "id": "qc3e1a2ffecf",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does list(zip([1, 2, 3], 'ab')) return?",
+  "options": [
+   "[(1, 'a'), (2, 'b'), (3, None)]",
+   "It raises ValueError",
+   "[(1, 'a'), (2, 'b')]",
+   "[(1, 2, 3), ('a', 'b')]"
+  ],
+  "answer": 2,
+  "explanation": "zip stops at the shortest iterable by default, so the 3 is dropped."
+ },
+ {
+  "id": "qa43e5650fa0",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "medium",
+  "question": "What does await asyncio.gather(a(), b()) do?",
+  "options": [
+   "Runs both concurrently and returns their results in argument order",
+   "Runs a() to completion, then starts b()",
+   "Returns whichever result finishes first",
+   "Runs them in separate OS processes"
+  ],
+  "answer": 0,
+  "explanation": "gather schedules the awaitables concurrently and returns a list of results matching the input order."
+ },
+ {
+  "id": "qc748d0b3d2f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "In def f(a, *, b), how must b be supplied?",
+  "options": [
+   "As a keyword argument only",
+   "Either positionally or by keyword",
+   "It cannot be supplied by the caller",
+   "As a positional argument only"
+  ],
+  "answer": 0,
+  "explanation": "Parameters after a bare * are keyword-only."
+ },
+ {
+  "id": "q6e0d0f5d847",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "With @a stacked above @b above def f, which assignment is equivalent?",
+  "options": [
+   "f = b(a(f))",
+   "f = b(f); a(f)",
+   "f = a(f); b(f)",
+   "f = a(b(f))"
+  ],
+  "answer": 3,
+  "explanation": "Decorators apply bottom-up: the one closest to def wraps first."
+ },
+ {
+  "id": "q429fc02e1d9",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does sorted({'b': 1, 'a': 2}) return?",
+  "options": [
+   "[1, 2]",
+   "['a', 'b']",
+   "[('a', 2), ('b', 1)]",
+   "{'a': 2, 'b': 1}"
+  ],
+  "answer": 1,
+  "explanation": "Iterating a dict yields its keys, and sorted always returns a list."
+ },
+ {
+  "id": "qa0b80b467f6",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "medium",
+  "question": "Why prefer multiprocessing over threading for CPU-bound pure-Python work in CPython?",
+  "options": [
+   "Processes share memory more cheaply than threads",
+   "Separate processes each have their own GIL, so they run in parallel",
+   "multiprocessing compiles the code to machine code",
+   "Threads cannot be created on most platforms"
+  ],
+  "answer": 1,
+  "explanation": "The GIL limits threads to one running Python bytecode at a time, while each process has its own interpreter."
+ },
+ {
+  "id": "qa707d72df56",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "What does a method decorated with @classmethod receive as its first argument?",
+  "options": [
+   "The instance",
+   "The class itself",
+   "Nothing extra",
+   "The defining module"
+  ],
+  "answer": 1,
+  "explanation": "A classmethod is bound to the class, conventionally received as cls."
+ },
+ {
+  "id": "q4c277691007",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "When does the else block of a try statement run?",
+  "options": [
+   "Only when an exception was caught",
+   "Always, right after finally",
+   "Only when the try block raised no exception",
+   "Only when there is no finally block"
+  ],
+  "answer": 2,
+  "explanation": "try/else runs after the try body completes without raising, before finally."
+ }
+]

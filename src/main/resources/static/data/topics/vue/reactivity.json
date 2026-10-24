@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q043cc81ce1f",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "Do you need to write .value when using a top-level ref in a template?",
+  "options": [
+   "Yes, .value is always required in templates",
+   "Only when the ref is used inside v-for",
+   "No, top-level refs are automatically unwrapped in templates",
+   "Only when the component uses the Options API"
+  ],
+  "answer": 2,
+  "explanation": "Vue automatically unwraps top-level refs in templates, so you write {{ count }} rather than {{ count.value }}."
+ },
+ {
+  "id": "q3b5362adb18",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "Which function is typically used to make a primitive value like a number reactive?",
+  "options": [
+   "markRaw()",
+   "toRaw()",
+   "ref()",
+   "shallowReadonly()"
+  ],
+  "answer": 2,
+  "explanation": "ref() wraps any value, including primitives, in a reactive object with a .value property."
+ },
+ {
+  "id": "q3e787940371",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "What kinds of values does reactive() accept?",
+  "options": [
+   "Only primitive values like strings and numbers",
+   "Objects, arrays and collections like Map and Set",
+   "Only functions that return values",
+   "Only DOM elements and template refs"
+  ],
+  "answer": 1,
+  "explanation": "reactive() works by creating a Proxy, so it only works with object types, not primitives."
+ },
+ {
+  "id": "qb31595d0c94",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "Inside script setup, how do you read the current value of const count = ref(0)?",
+  "options": [
+   "count.get()",
+   "count.value",
+   "count()",
+   "count.current"
+  ],
+  "answer": 1,
+  "explanation": "Refs expose their inner value through the .value property in JavaScript."
+ },
+ {
+  "id": "q6bee3e9aeb5",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does shallowRef() track?",
+  "options": [
+   "Every nested property change in the value",
+   "Only changes made inside template expressions",
+   "Only assignments to .value, not changes inside the value",
+   "Nothing until triggerRef() is called once"
+  ],
+  "answer": 2,
+  "explanation": "shallowRef does not make its inner value deeply reactive; only replacing .value triggers updates."
+ },
+ {
+  "id": "q733a25381b3",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "Why does assigning a brand-new object to a variable that held a reactive() proxy break reactivity?",
+  "options": [
+   "reactive() proxies are frozen after creation",
+   "Vue only tracks objects created at import time",
+   "Existing bindings still point to the original proxy",
+   "The new object is automatically made readonly"
+  ],
+  "answer": 2,
+  "explanation": "Reactivity is tied to the proxy, so replacing the variable disconnects anything already tracking the old proxy."
+ },
+ {
+  "id": "q776e77fcc1d",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does readonly(state) return?",
+  "options": [
+   "A deep clone of state that cannot be changed",
+   "A readonly proxy of the original, warning on mutation in dev",
+   "A frozen copy created with Object.freeze",
+   "A ref whose .value can be read only once"
+  ],
+  "answer": 1,
+  "explanation": "readonly() returns a proxy that reflects the original's changes but blocks writes through it."
+ },
+ {
+  "id": "qacefe6db577",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "Given const obj = reactive({ nested: { n: 1 } }), is mutating obj.nested.n reactive?",
+  "options": [
+   "No, only top-level properties are tracked",
+   "Only if nested is wrapped with ref()",
+   "Only arrays are converted deeply",
+   "Yes, reactive() makes nested objects reactive deeply"
+  ],
+  "answer": 3,
+  "explanation": "reactive() is deep by default, wrapping nested objects in proxies when they are accessed."
+ },
+ {
+  "id": "q50c6a041b2d",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "After const { count } = reactive({ count: 0 }), what happens when you run count++?",
+  "options": [
+   "Only the local variable changes; the reactive state does not",
+   "Vue throws because count is readonly",
+   "The reactive state updates and triggers renders",
+   "The value updates but the DOM does not"
+  ],
+  "answer": 0,
+  "explanation": "Destructuring copies a primitive out of the proxy, so the local variable is disconnected from reactivity."
+ },
+ {
+  "id": "q90181ba5292",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "Given const state = reactive({ count: ref(0) }), what does state.count return?",
+  "options": [
+   "The ref object, so state.count.value is needed",
+   "The number 0, since nested refs in objects are unwrapped",
+   "A readonly copy of the ref",
+   "undefined until the ref is read once"
+  ],
+  "answer": 1,
+  "explanation": "A ref accessed as a property of a reactive object is automatically unwrapped."
+ },
+ {
+  "id": "q93299449aaf",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "Given const list = reactive([ref(1)]), what is list[0]?",
+  "options": [
+   "The number 1, since it is unwrapped",
+   "undefined, since refs cannot be in arrays",
+   "A readonly proxy of the number 1",
+   "A ref, so list[0].value is needed"
+  ],
+  "answer": 3,
+  "explanation": "Refs are not unwrapped when accessed as elements of reactive arrays or native collections."
+ },
+ {
+  "id": "qff6986f4c8b",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "For a plain object raw, which statement about reactive(raw) is true?",
+  "options": [
+   "reactive(raw) !== raw, but reactive(raw) === reactive(raw)",
+   "Each reactive(raw) call returns a new proxy",
+   "reactive(raw) returns a deep clone of raw",
+   "reactive(raw) === raw because it mutates raw"
+  ],
+  "answer": 0,
+  "explanation": "reactive() returns a proxy distinct from the original and caches it, so repeated calls return the same proxy."
+ }
+]

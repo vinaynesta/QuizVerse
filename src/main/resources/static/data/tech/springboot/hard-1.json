@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q63be98a20bd",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "In Spring Boot 3, which project replaces Spring Cloud Sleuth for distributed tracing?",
+  "options": [
+   "Micrometer Tracing",
+   "OpenCensus Spring",
+   "Spring Cloud Zipkin Starter",
+   "Actuator Trace Endpoint"
+  ],
+  "answer": 0,
+  "explanation": "Sleuth's core moved into Micrometer Tracing, built on the Micrometer Observation API."
+ },
+ {
+  "id": "qb583c23914b",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "An outer REQUIRED method catches a RuntimeException thrown by an inner REQUIRED method in another bean. What happens at commit?",
+  "options": [
+   "The outer transaction commits normally",
+   "Only the inner method's changes are rolled back",
+   "UnexpectedRollbackException, since the shared transaction was marked rollback-only",
+   "The inner method is retried automatically"
+  ],
+  "answer": 2,
+  "explanation": "Both methods share one physical transaction, and the inner interceptor marked it rollback-only."
+ },
+ {
+  "id": "qff2715f189f",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "Why does spring-boot-devtools not affect an app started with java -jar from a packaged jar?",
+  "options": [
+   "Devtools turns itself off when the app runs as a fully packaged application",
+   "Maven deletes devtools during packaging",
+   "Devtools needs the prod profile",
+   "java -jar ignores every optional dependency"
+  ],
+  "answer": 0,
+  "explanation": "Devtools treats a packaged launch as production and disables itself; repackage also excludes it by default."
+ },
+ {
+  "id": "qec6d0938275",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "What happens if spring.profiles.active is set inside application-dev.properties?",
+  "options": [
+   "dev activates the listed profiles recursively",
+   "Startup fails, because it is not allowed in profile-specific documents",
+   "It replaces the profiles from the command line",
+   "The value is silently ignored"
+  ],
+  "answer": 1,
+  "explanation": "Since Boot 2.4, using spring.profiles.active in a profile-specific document raises an InvalidConfigDataPropertyException."
+ },
+ {
+  "id": "qc6ca79e9262",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "How does a servlet Filter differ from a Spring MVC HandlerInterceptor?",
+  "options": [
+   "A Filter runs only after the response is committed",
+   "A Filter runs in the servlet container before DispatcherServlet, while an interceptor runs around the chosen handler",
+   "An interceptor can modify requests before any Filter runs",
+   "They are identical, just registered differently"
+  ],
+  "answer": 1,
+  "explanation": "Interceptors have access to the resolved handler method; filters work at the raw servlet level."
+ },
+ {
+  "id": "q85d6795f451",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "What is the default of management.endpoint.health.show-details?",
+  "options": [
+   "always",
+   "when-authorized",
+   "never",
+   "on-error"
+  ],
+  "answer": 2,
+  "explanation": "By default only the aggregate status is shown, without component details."
+ },
+ {
+  "id": "q0fe4f2b1770",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "In Spring Framework 6, does a request to /users/ match a handler mapped to /users by default?",
+  "options": [
+   "No, trailing slash matching is disabled by default",
+   "Only for GET requests",
+   "Only when the handler uses @RestController",
+   "Yes, trailing slashes are always ignored"
+  ],
+  "answer": 0,
+  "explanation": "Spring 6 deprecated trailing slash matching and turned it off by default."
+ },
+ {
+  "id": "q7aeecd1c20e",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "What does spring.threads.virtual.enabled=true do for a Spring MVC app on Java 21?",
+  "options": [
+   "The embedded server handles requests on virtual threads",
+   "It switches the app to reactive WebFlux",
+   "It enables a fixed pool of 200 platform threads",
+   "It makes all controller methods asynchronous futures"
+  ],
+  "answer": 0,
+  "explanation": "Since Boot 3.2 this property configures Tomcat or Jetty and task executors to use virtual threads."
+ },
+ {
+  "id": "qb6d296726e4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "In @Configuration(proxyBeanMethods = false), what happens when beanA() calls beanB() directly?",
+  "options": [
+   "The container's singleton beanB is returned via CGLIB",
+   "Startup fails because inter-bean calls are forbidden",
+   "A new instance is created by a plain Java call, not the container's singleton",
+   "beanB becomes prototype-scoped automatically"
+  ],
+  "answer": 2,
+  "explanation": "Without CGLIB proxying, @Bean methods are ordinary methods, so inter-bean calls bypass the container."
+ },
+ {
+  "id": "qae0958c264f",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "Which JPA association is fetched EAGER by default?",
+  "options": [
+   "@OneToMany",
+   "@ElementCollection",
+   "@ManyToMany",
+   "@ManyToOne"
+  ],
+  "answer": 3,
+  "explanation": "To-one associations default to EAGER, while to-many associations default to LAZY."
+ }
+]

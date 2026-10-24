@@ -89,9 +89,19 @@ export function currentUser() {
   return mePromise;
 }
 
-/** {temporaryStorage} from the server, or null when it can't be reached (offline). */
-export const serverStatus = () => api("/api/status").catch(() => null);
+let statusPromise = null;
 
+/** {temporaryStorage, googleClientId} from the server, or null when it can't be reached (offline). */
+export function serverStatus() {
+  if (!statusPromise) statusPromise = api("/api/status").catch(() => null);
+  return statusPromise;
+}
+
+export const googleSignIn = (credential) => api("/api/auth/google", { method: "POST", body: { credential } });
+export const linkGoogle = (credential) => api("/api/me/google", { method: "POST", body: { credential } });
+export const unlinkGoogle = () => api("/api/me/google", { method: "DELETE" });
+export const createChallenge = (attemptId) => api(`/api/challenges/from-attempt/${attemptId}`, { method: "POST" });
+export const getChallenge = (code) => api(`/api/challenges/${encodeURIComponent(code)}`);
 export const register = (form) => api("/api/auth/register", { method: "POST", body: form });
 export const login = (loginName, password) =>
   api("/api/auth/login", { method: "POST", body: { login: loginName, password } });
@@ -99,8 +109,8 @@ export const logout = () => api("/api/auth/logout", { method: "POST" }).finally(
 export const updateProfile = (profile) => api("/api/me", { method: "PUT", body: profile });
 export const changePassword = (currentPassword, newPassword) =>
   api("/api/me/password", { method: "POST", body: { currentPassword, newPassword } });
-export const deleteAccount = (password) =>
-  api("/api/me", { method: "DELETE", body: { password } }).then((r) => { forgetUser(); return r; });
+export const deleteAccount = (password, confirmUsername) =>
+  api("/api/me", { method: "DELETE", body: { password, confirmUsername } }).then((r) => { forgetUser(); return r; });
 export const saveAttempt =(attempt) => api("/api/attempts", { method: "POST", body: attempt });
 export const listAttempts = () => api("/api/attempts");
 export const bestScores = () => api("/api/attempts/best");

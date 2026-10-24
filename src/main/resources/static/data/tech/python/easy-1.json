@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe4fe5ec1b19",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What is a lambda in Python?",
+  "options": [
+   "A decorator that caches results",
+   "A named function that can contain statements",
+   "A built-in for looping over iterables",
+   "An anonymous function limited to a single expression"
+  ],
+  "answer": 3,
+  "explanation": "lambda creates a small unnamed function whose body is one expression."
+ },
+ {
+  "id": "q3cf6d9534a7",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "What exception does int(\"abc\") raise?",
+  "options": [
+   "TypeError",
+   "ValueError",
+   "SyntaxError",
+   "ArithmeticError"
+  ],
+  "answer": 1,
+  "explanation": "The argument is the right type (str) but has an invalid value for conversion, so ValueError is raised."
+ },
+ {
+  "id": "qe3feb7f18d4",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "Which statement is used to work with a context manager?",
+  "options": [
+   "with",
+   "using",
+   "within",
+   "let"
+  ],
+  "answer": 0,
+  "explanation": "The with statement calls the context manager's enter and exit methods around a block."
+ },
+ {
+  "id": "q2107def7717",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does a function return if it has no return statement?",
+  "options": [
+   "False",
+   "0",
+   "None",
+   "An empty tuple"
+  ],
+  "answer": 2,
+  "explanation": "A function that finishes without a return statement implicitly returns None."
+ },
+ {
+  "id": "q153553bcaf4",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does [x * 2 for x in range(3)] evaluate to?",
+  "options": [
+   "[2, 4, 6]",
+   "[0, 2, 4]",
+   "[0, 2, 4, 6]",
+   "[0, 1, 2]"
+  ],
+  "answer": 1,
+  "explanation": "range(3) yields 0, 1, 2 and each is doubled."
+ },
+ {
+  "id": "q0b256e65931",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "Which statement imports only the sqrt function from the math module?",
+  "options": [
+   "import sqrt from math",
+   "import math.sqrt",
+   "using math.sqrt",
+   "from math import sqrt"
+  ],
+  "answer": 3,
+  "explanation": "from module import name binds just that name in the current namespace."
+ },
+ {
+  "id": "q7328b1a891c",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does type(3 / 2) return?",
+  "options": [
+   "<class 'int'>",
+   "<class 'fractions.Fraction'>",
+   "<class 'decimal.Decimal'>",
+   "<class 'float'>"
+  ],
+  "answer": 3,
+  "explanation": "The / operator always performs true division and returns a float, even for two ints."
+ },
+ {
+  "id": "q261bd4ccc76",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "What is the conventional name of the first parameter of an instance method?",
+  "options": [
+   "self",
+   "cls",
+   "me",
+   "this"
+  ],
+  "answer": 0,
+  "explanation": "By convention the instance is passed as the first parameter named self; cls is used for class methods."
+ },
+ {
+  "id": "q2846cd336d5",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "easy",
+  "question": "How do you define a coroutine function?",
+  "options": [
+   "await def",
+   "async def",
+   "def async",
+   "co def"
+  ],
+  "answer": 1,
+  "explanation": "Functions defined with async def return coroutine objects when called."
+ },
+ {
+  "id": "q92ceb04bb1e",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "Which two methods make a class usable as a context manager?",
+  "options": [
+   "__open__ and __close__",
+   "__start__ and __stop__",
+   "__enter__ and __exit__",
+   "__init__ and __del__"
+  ],
+  "answer": 2,
+  "explanation": "The with statement calls __enter__ on entry and __exit__ when the block finishes."
+ }
+]

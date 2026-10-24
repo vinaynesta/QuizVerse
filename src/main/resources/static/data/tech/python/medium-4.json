@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qb6a148e68dd",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does \"abc\"[::-1] return?",
+  "options": [
+   "'cba'",
+   "'c'",
+   "'a'",
+   "'abc'"
+  ],
+  "answer": 0,
+  "explanation": "A slice with step -1 walks the string backwards, reversing it."
+ },
+ {
+  "id": "q0749499e196",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What is the result of -7 // 2?",
+  "options": [
+   "-3",
+   "-4",
+   "-3.5",
+   "-4.0"
+  ],
+  "answer": 1,
+  "explanation": "Floor division rounds toward negative infinity, so -3.5 becomes -4."
+ },
+ {
+  "id": "q99d312acbd4",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 0.1 + 0.2 == 0.3 evaluate to?",
+  "options": [
+   "False",
+   "None",
+   "True",
+   "It raises ValueError"
+  ],
+  "answer": 0,
+  "explanation": "Binary floating point cannot represent these values exactly, so the sum is 0.30000000000000004."
+ },
+ {
+  "id": "qf784ea4769c",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "medium",
+  "question": "Which call (3.9+) runs a blocking function in a worker thread from async code?",
+  "options": [
+   "asyncio.run_blocking()",
+   "asyncio.thread()",
+   "asyncio.to_thread()",
+   "asyncio.spawn()"
+  ],
+  "answer": 2,
+  "explanation": "asyncio.to_thread runs the function in a thread and returns a coroutine you can await."
+ },
+ {
+  "id": "q8b809ffe914",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does sum(x for x in range(5) if x % 2) return?",
+  "options": [
+   "9",
+   "6",
+   "10",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Only the odd values 1 and 3 pass the filter, and 1 + 3 = 4."
+ },
+ {
+  "id": "q13eb384816b",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "With g = (x for x in range(3)), what does list(g) return the second time it is called?",
+  "options": [
+   "[0, 1, 2]",
+   "None",
+   "[]",
+   "It raises StopIteration"
+  ],
+  "answer": 2,
+  "explanation": "A generator is exhausted after one full pass, so a second list() gets no items."
+ },
+ {
+  "id": "q0bbc5c42b7f",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "What must a generator decorated with @contextlib.contextmanager do?",
+  "options": [
+   "Yield exactly once",
+   "Return the managed value",
+   "Yield at least twice",
+   "Raise StopIteration explicitly"
+  ],
+  "answer": 0,
+  "explanation": "The code before the single yield is the setup, the yielded value is bound by as, and the code after is teardown."
+ },
+ {
+  "id": "q0f1a0fbae1a",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "What does raise NewError() from exc set on the new exception?",
+  "options": [
+   "Its args to exc.args",
+   "Its __traceback__ to None",
+   "Its __cause__ attribute to exc",
+   "Its __notes__ to exc"
+  ],
+  "answer": 2,
+  "explanation": "raise ... from sets __cause__, producing explicit exception chaining in the traceback."
+ },
+ {
+  "id": "q5d8df63563d",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which special method customizes the result of a == b for your objects?",
+  "options": [
+   "__cmp__",
+   "__equals__",
+   "__same__",
+   "__eq__"
+  ],
+  "answer": 3,
+  "explanation": "== calls __eq__; __cmp__ was removed in Python 3."
+ },
+ {
+  "id": "q608b40945b7",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "Why is a bare except: clause generally discouraged?",
+  "options": [
+   "It is a syntax error in Python 3",
+   "It also catches SystemExit and KeyboardInterrupt",
+   "It only catches built-in exceptions",
+   "It silently re-raises every exception"
+  ],
+  "answer": 1,
+  "explanation": "A bare except catches BaseException, swallowing exits and Ctrl+C along with real errors."
+ }
+]

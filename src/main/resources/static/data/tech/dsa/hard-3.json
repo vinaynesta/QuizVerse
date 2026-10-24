@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5c2da092ddd",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the time complexity of counting sort for n integers in the range 0 to k?",
+  "options": [
+   "O(n log n)",
+   "O(n * k)",
+   "O(k log n)",
+   "O(n + k)"
+  ],
+  "answer": 3,
+  "explanation": "It counts occurrences in an array of size k + 1, then accumulates and places elements."
+ },
+ {
+  "id": "qe95708c7780",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "What is the time complexity of merging k sorted lists containing N total elements using a min-heap?",
+  "options": [
+   "O(N log N)",
+   "O(N log k)",
+   "O(N * k)",
+   "O(k log N)"
+  ],
+  "answer": 1,
+  "explanation": "The heap holds at most k elements, and each of the N elements is pushed and popped once."
+ },
+ {
+  "id": "q78acf4d10e2",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "What is the time complexity of finding the longest substring without repeating characters using a sliding window and a hash map?",
+  "options": [
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)",
+   "O(n^3)"
+  ],
+  "answer": 0,
+  "explanation": "Each character enters and leaves the window at most once."
+ },
+ {
+  "id": "qe3c3c5d5643",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the lower bound on the worst-case number of comparisons for any comparison-based sort of n elements?",
+  "options": [
+   "Omega(n)",
+   "Omega(log n)",
+   "Omega(n^2)",
+   "Omega(n log n)"
+  ],
+  "answer": 3,
+  "explanation": "A decision tree must distinguish n! orderings, requiring height at least log2(n!), which is Theta(n log n)."
+ },
+ {
+  "id": "q5dc33e0215a",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the worst-case lookup time in a hash table using separate chaining with linked lists if all keys collide?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(log n)",
+   "O(n log n)"
+  ],
+  "answer": 0,
+  "explanation": "All entries land in one chain, which must be scanned linearly."
+ },
+ {
+  "id": "q875bc0985b6",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "What is the time complexity of Bellman-Ford, and what extra capability does it have over Dijkstra?",
+  "options": [
+   "O(V * E), and it detects negative cycles reachable from the source",
+   "O(E log V), and it finds all-pairs paths",
+   "O(V^3), and it finds minimum spanning trees",
+   "O(V + E), and it handles undirected graphs"
+  ],
+  "answer": 0,
+  "explanation": "It relaxes all edges V - 1 times, and any further improvement indicates a negative cycle."
+ },
+ {
+  "id": "q0eb6b95fa59",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "Which technique rotates an array right by k positions in O(n) time and O(1) extra space?",
+  "options": [
+   "Rotate by one position k times",
+   "Copy elements into a new array at shifted indexes",
+   "Reverse the whole array, then reverse the first k and the remaining n - k elements",
+   "Sort the array and then shift the pivot"
+  ],
+  "answer": 2,
+  "explanation": "Three in-place reversals achieve the rotation in linear time without extra storage."
+ },
+ {
+  "id": "qd3b11c608d5",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "By the Master Theorem, what does T(n) = 2T(n/2) + O(n) solve to?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)"
+  ],
+  "answer": 3,
+  "explanation": "Work per level is O(n) over log n levels, as in merge sort."
+ },
+ {
+  "id": "q460a01748f1",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "What is the time complexity of computing the next greater element for every item of an array using a monotonic stack?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "Each element is pushed once and popped at most once."
+ },
+ {
+  "id": "qfe99f702520",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "What is the best known time complexity for computing the length of the longest increasing subsequence of n numbers?",
+  "options": [
+   "O(n^2)",
+   "O(n)",
+   "O(n log n)",
+   "O(2^n)"
+  ],
+  "answer": 2,
+  "explanation": "Maintaining the smallest tail for each length and binary searching it gives O(n log n)."
+ }
+]

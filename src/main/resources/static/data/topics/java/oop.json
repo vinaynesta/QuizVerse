@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q133c4bb283f",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Can a Java class directly extend more than one class?",
+  "options": [
+   "No, a class can extend only one class",
+   "Yes, if all parent classes are abstract",
+   "Yes, by listing classes separated by commas",
+   "Yes, if the classes share a package"
+  ],
+  "answer": 0,
+  "explanation": "Java supports single inheritance of classes; multiple types are combined through interfaces."
+ },
+ {
+  "id": "q69bf9a411e8",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword prevents a class from being subclassed?",
+  "options": [
+   "static",
+   "final",
+   "private",
+   "const"
+  ],
+  "answer": 1,
+  "explanation": "A class declared final cannot be extended; const is reserved but unused in Java."
+ },
+ {
+  "id": "qbe00ab90c19",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which access modifier makes a member visible only inside its own class?",
+  "options": [
+   "protected",
+   "public",
+   "No modifier (package-private)",
+   "private"
+  ],
+  "answer": 3,
+  "explanation": "private restricts access to the declaring class; package-private and protected are wider."
+ },
+ {
+  "id": "qd3dcdda747c",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "What is an abstract class?",
+  "options": [
+   "A class that contains only static methods",
+   "A class that is not allowed to have constructors",
+   "A class that cannot be instantiated and may declare abstract methods",
+   "A class that is implicitly final"
+  ],
+  "answer": 2,
+  "explanation": "Abstract classes cannot be instantiated directly; they can have constructors, state and abstract methods for subclasses to implement."
+ },
+ {
+  "id": "q1031e18865f",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Given A a = new B(); where B overrides instance method m(), which version does a.m() run?",
+  "options": [
+   "B's m(), chosen at runtime",
+   "Both, A's first then B's",
+   "Neither, it is a compile error",
+   "A's m(), chosen by the reference type"
+  ],
+  "answer": 0,
+  "explanation": "Instance method calls use dynamic dispatch based on the actual object type."
+ },
+ {
+  "id": "q6f799c57b85",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which statement about fields declared in an interface is true?",
+  "options": [
+   "They are implicitly private instance fields",
+   "They are implicitly public, static and final",
+   "Each implementing class gets its own copy",
+   "Implementing classes can reassign them"
+  ],
+  "answer": 1,
+  "explanation": "Interface fields are constants: implicitly public static final and must be initialized."
+ },
+ {
+  "id": "q89d586e3c2d",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Class A has void f() {} and subclass B declares private void f() {}. What happens?",
+  "options": [
+   "It compiles and B.f() hides A.f()",
+   "It compiles but throws IllegalAccessError at runtime",
+   "Compile error: an override cannot reduce visibility",
+   "It compiles with only a warning"
+  ],
+  "answer": 2,
+  "explanation": "An overriding method cannot have weaker access than the method it overrides."
+ },
+ {
+  "id": "qf5c4be7363f",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "A subclass declares a static method with the same signature as a static method in its superclass. What is this called?",
+  "options": [
+   "Method overriding",
+   "Method overloading",
+   "Variable shadowing",
+   "Method hiding"
+  ],
+  "answer": 3,
+  "explanation": "Static methods are not overridden; the subclass version hides the parent one and the call is resolved by the reference type."
+ },
+ {
+  "id": "q044e2752a70",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A class overrides default method m() from interface I. How can it call I's version?",
+  "options": [
+   "super.m()",
+   "I.super.m()",
+   "this.I.m()",
+   "I.m()"
+  ],
+  "answer": 1,
+  "explanation": "The InterfaceName.super.method() syntax invokes a specific superinterface's default method."
+ },
+ {
+  "id": "q295c3c0bc55",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A superclass constructor calls an overridden method that reads a subclass field initialized as int x = 5. What value does the override see?",
+  "options": [
+   "5, because field initializers run first",
+   "It does not compile",
+   "It throws IllegalStateException",
+   "0, because subclass field initializers have not run yet"
+  ],
+  "answer": 3,
+  "explanation": "The superclass constructor runs before the subclass's field initializers, so the override sees the default value."
+ },
+ {
+  "id": "q8c420e865b1",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A superclass has private void m() and its subclass declares void m() with the same signature. What is the subclass method?",
+  "options": [
+   "A hiding of the superclass method",
+   "An override of the superclass method",
+   "A compile error due to duplicate methods",
+   "A new, unrelated method, not an override"
+  ],
+  "answer": 3,
+  "explanation": "Private methods are not inherited, so they cannot be overridden; @Override on it would fail to compile."
+ },
+ {
+  "id": "qb82abcb1a13",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "Can an overriding method declare a return type that is a subtype of the overridden method's return type?",
+  "options": [
+   "No, the return type must match exactly",
+   "Yes, covariant return types are allowed for reference types",
+   "Only when the return type is primitive",
+   "Only for methods declared in interfaces"
+  ],
+  "answer": 1,
+  "explanation": "Since Java 5 an override may narrow a reference return type, e.g. clone() returning the class's own type."
+ }
+]

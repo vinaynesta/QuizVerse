@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "arrays-strings",
+    "question": "What is the time complexity of the Knuth-Morris-Pratt algorithm for a text of length n and pattern of length m?",
+    "options": [
+      "O(n + m)",
+      "O(n * m)",
+      "O(n log m)",
+      "O(m^2 + n)"
+    ],
+    "answer": 0,
+    "explanation": "The prefix function is built in O(m) and the text is scanned without ever moving backward."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What is the time complexity of finding the longest substring without repeating characters using a sliding window and a hash map?",
+    "options": [
+      "O(n^2)",
+      "O(n)",
+      "O(n log n)",
+      "O(n^3)"
+    ],
+    "answer": 1,
+    "explanation": "Each character enters and leaves the window at most once."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "Which technique rotates an array right by k positions in O(n) time and O(1) extra space?",
+    "options": [
+      "Rotate by one position k times",
+      "Copy elements into a new array at shifted indexes",
+      "Reverse the whole array, then reverse the first k and the remaining n - k elements",
+      "Sort the array and then shift the pivot"
+    ],
+    "answer": 2,
+    "explanation": "Three in-place reversals achieve the rotation in linear time without extra storage."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "After Floyd's algorithm finds the meeting point inside a cycle, how do you locate the node where the cycle begins?",
+    "options": [
+      "Advance the fast pointer three steps at a time",
+      "Count the cycle length and return the head",
+      "Reverse the list from the meeting point",
+      "Reset one pointer to the head and advance both one step at a time until they meet"
+    ],
+    "answer": 3,
+    "explanation": "The distance from the head to the cycle start equals the distance from the meeting point to the start, modulo cycle length."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "Which combination of data structures gives an LRU cache O(1) get and put?",
+    "options": [
+      "A hash map plus a doubly linked list",
+      "A min-heap plus an array",
+      "A balanced BST plus a stack",
+      "Two queues"
+    ],
+    "answer": 0,
+    "explanation": "The map finds nodes in O(1) and the list moves or evicts them in O(1)."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "Why does an LRU cache use a doubly linked list rather than a singly linked one?",
+    "options": [
+      "It uses less memory per node",
+      "Removing a node given a direct reference is O(1) because its predecessor is known",
+      "It allows binary search over the nodes",
+      "It keeps the nodes sorted by key"
+    ],
+    "answer": 1,
+    "explanation": "In a singly linked list, unlinking a node requires finding its predecessor, which takes O(n)."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "What is the time complexity of computing the next greater element for every item of an array using a monotonic stack?",
+    "options": [
+      "O(n log n)",
+      "O(n^2)",
+      "O(n)",
+      "O(log n)"
+    ],
+    "answer": 2,
+    "explanation": "Each element is pushed once and popped at most once."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "What is the time complexity of computing the maximum of every window of size k in an array of n elements using a monotonic deque?",
+    "options": [
+      "O(n log k)",
+      "O(n * k)",
+      "O(k log n)",
+      "O(n)"
+    ],
+    "answer": 3,
+    "explanation": "Each index is added to and removed from the deque at most once."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "How does a min-stack typically support push, pop, and getMin all in O(1)?",
+    "options": [
+      "It keeps an auxiliary record of the current minimum at each stack depth",
+      "It sorts the stack after every push",
+      "It scans the entire stack on each getMin",
+      "It stores elements in a binary heap"
+    ],
+    "answer": 0,
+    "explanation": "Pairing each level with its minimum lets getMin read the top and pop restore the previous minimum."
+  },
+  {
+    "topic": "hashing",
+    "question": "What is the worst-case lookup time in a hash table using separate chaining with linked lists if all keys collide?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": 1,
+    "explanation": "All entries land in one chain, which must be scanned linearly."
+  },
+  {
+    "topic": "hashing",
+    "question": "Since Java 8, what does HashMap do when a single bucket accumulates many colliding entries and the table is large enough?",
+    "options": [
+      "Throws a ConcurrentModificationException",
+      "Discards the oldest entry in the bucket",
+      "Converts that bucket into a balanced red-black tree",
+      "Switches the whole map to linear probing"
+    ],
+    "answer": 2,
+    "explanation": "Treeifying a heavily loaded bucket limits worst-case lookups in it to O(log n)."
+  },
+  {
+    "topic": "hashing",
+    "question": "What is the worst-case time of Rabin-Karp string matching for text length n and pattern length m?",
+    "options": [
+      "O(n + m)",
+      "O(n log m)",
+      "O(m log n)",
+      "O(n * m)"
+    ],
+    "answer": 3,
+    "explanation": "Many spurious hash matches can force a full character comparison at nearly every position."
+  },
+  {
+    "topic": "trees",
+    "question": "Compared with a red-black tree, what is characteristic of an AVL tree?",
+    "options": [
+      "It is more strictly balanced, giving faster lookups but possibly more rotations on updates",
+      "It is less balanced but never needs rotations",
+      "It allows duplicate keys while red-black trees do not",
+      "It guarantees O(1) insertion"
+    ],
+    "answer": 0,
+    "explanation": "AVL height stays near 1.44 log n versus about 2 log n for red-black trees, at the cost of more rebalancing."
+  },
+  {
+    "topic": "trees",
+    "question": "Why is checking only node.left.val < node.val < node.right.val insufficient to validate a BST?",
+    "options": [
+      "It fails on trees with a single node",
+      "A node deep in a subtree can violate the bound set by a higher ancestor",
+      "It cannot handle negative values",
+      "It only works for complete binary trees"
+    ],
+    "answer": 1,
+    "explanation": "Every node must lie within a min/max range inherited from all its ancestors, not just its parent."
+  },
+  {
+    "topic": "trees",
+    "question": "Why are B-trees and B+ trees preferred for database and file-system indexes?",
+    "options": [
+      "They require no rebalancing",
+      "They use less total memory than arrays",
+      "Their high fanout keeps the tree shallow, minimizing disk page reads",
+      "They guarantee O(1) lookups"
+    ],
+    "answer": 2,
+    "explanation": "Each node fills a disk page with many keys, so lookups touch only a few pages."
+  },
+  {
+    "topic": "heaps",
+    "question": "How do you maintain the running median of a stream with O(log n) insertion and O(1) median queries?",
+    "options": [
+      "Keep a sorted array and binary search",
+      "Use a single min-heap and peek",
+      "Use a hash map of value counts",
+      "Use a max-heap for the lower half and a min-heap for the upper half"
+    ],
+    "answer": 3,
+    "explanation": "Balancing the two heaps keeps the median at one or both of their tops."
+  },
+  {
+    "topic": "heaps",
+    "question": "What is the time complexity of searching for an arbitrary value in a binary heap?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "answer": 0,
+    "explanation": "The heap property orders only parent and child, so siblings and subtrees must be scanned."
+  },
+  {
+    "topic": "heaps",
+    "question": "What is the time complexity of merging k sorted lists containing N total elements using a min-heap?",
+    "options": [
+      "O(N log N)",
+      "O(N log k)",
+      "O(N * k)",
+      "O(k log N)"
+    ],
+    "answer": 1,
+    "explanation": "The heap holds at most k elements, and each of the N elements is pushed and popped once."
+  },
+  {
+    "topic": "heaps",
+    "question": "Which statement about heapsort is true?",
+    "options": [
+      "It is stable and runs in O(n) time",
+      "Its worst case is O(n^2) like quicksort",
+      "It runs in O(n log n) worst case and is in-place but not stable",
+      "It requires O(n) auxiliary space"
+    ],
+    "answer": 2,
+    "explanation": "Heapsort sorts within the array with guaranteed O(n log n) time, but swaps can reorder equal keys."
+  },
+  {
+    "topic": "graphs",
+    "question": "What is the time complexity of Bellman-Ford, and what extra capability does it have over Dijkstra?",
+    "options": [
+      "O(V + E), and it handles undirected graphs",
+      "O(E log V), and it finds all-pairs paths",
+      "O(V^3), and it finds minimum spanning trees",
+      "O(V * E), and it detects negative cycles reachable from the source"
+    ],
+    "answer": 3,
+    "explanation": "It relaxes all edges V - 1 times, and any further improvement indicates a negative cycle."
+  },
+  {
+    "topic": "graphs",
+    "question": "What is the time complexity of Dijkstra's algorithm using a binary heap priority queue?",
+    "options": [
+      "O((V + E) log V)",
+      "O(V + E)",
+      "O(V^2 log E)",
+      "O(V * E)"
+    ],
+    "answer": 0,
+    "explanation": "Each vertex extraction and each edge relaxation costs O(log V) heap work."
+  },
+  {
+    "topic": "graphs",
+    "question": "During a DFS of a directed graph, what indicates a cycle?",
+    "options": [
+      "An edge to any previously visited vertex",
+      "An edge to a vertex that is still on the current recursion stack",
+      "A vertex with in-degree zero",
+      "A vertex with more than two neighbors"
+    ],
+    "answer": 1,
+    "explanation": "A back edge to an in-progress (gray) vertex closes a directed cycle; edges to finished vertices do not."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the lower bound on the worst-case number of comparisons for any comparison-based sort of n elements?",
+    "options": [
+      "Omega(n)",
+      "Omega(log n)",
+      "Omega(n log n)",
+      "Omega(n^2)"
+    ],
+    "answer": 2,
+    "explanation": "A decision tree must distinguish n! orderings, requiring height at least log2(n!), which is Theta(n log n)."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the time complexity of counting sort for n integers in the range 0 to k?",
+    "options": [
+      "O(n log n)",
+      "O(n * k)",
+      "O(k log n)",
+      "O(n + k)"
+    ],
+    "answer": 3,
+    "explanation": "It counts occurrences in an array of size k + 1, then accumulates and places elements."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the best time complexity for finding a target in a rotated sorted array of distinct elements?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(sqrt n)"
+    ],
+    "answer": 0,
+    "explanation": "A modified binary search can always tell which half is sorted and discard the other."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "What is the Levenshtein edit distance between 'kitten' and 'sitting'?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "explanation": "Substitute k with s, substitute e with i, and insert g at the end."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "What is the best known time complexity for computing the length of the longest increasing subsequence of n numbers?",
+    "options": [
+      "O(n^2)",
+      "O(n)",
+      "O(n log n)",
+      "O(2^n)"
+    ],
+    "answer": 2,
+    "explanation": "Maintaining the smallest tail for each length and binary searching it gives O(n log n)."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "With coin denominations {1, 3, 4}, what is the minimum number of coins needed to make 6?",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "3 + 3 uses two coins; greedy 4 + 1 + 1 uses three, which is why DP is needed."
+  },
+  {
+    "topic": "complexity",
+    "question": "By the Master Theorem, what does T(n) = 2T(n/2) + O(n) solve to?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "answer": 0,
+    "explanation": "Work per level is O(n) over log n levels, as in merge sort."
+  },
+  {
+    "topic": "complexity",
+    "question": "What does the recurrence T(n) = T(n/2) + O(1) solve to?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": 1,
+    "explanation": "The problem halves each step with constant work, as in binary search."
+  },
+  {
+    "topic": "complexity",
+    "question": "What does the recurrence T(n) = 2T(n/2) + O(1) solve to?",
+    "options": [
+      "O(log n)",
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "answer": 2,
+    "explanation": "The recursion tree has about 2n nodes, each doing constant work."
+  },
+  {
+    "topic": "complexity",
+    "question": "Why is the O(n * W) 0/1 knapsack DP called pseudo-polynomial?",
+    "options": [
+      "It runs in polynomial time only on average",
+      "It uses polynomial space but exponential time",
+      "It is polynomial only when n is less than W",
+      "Its runtime is polynomial in the value W but exponential in the number of bits needed to encode W"
+    ],
+    "answer": 3,
+    "explanation": "Input size counts the bits of W, so doubling the bit length can square W's magnitude."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "How many distinct solutions does the classic 8-queens problem have on an 8x8 board?",
+    "options": [
+      "92",
+      "12",
+      "64",
+      "40"
+    ],
+    "answer": 0,
+    "explanation": "There are 92 solutions in total, or 12 when rotations and reflections are treated as the same."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "How many structurally distinct binary search trees can be built from 3 distinct keys?",
+    "options": [
+      "3",
+      "5",
+      "6",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "The count is the 3rd Catalan number, C(3) = 5."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "What is the time complexity of generating and outputting all permutations of n distinct elements by backtracking?",
+    "options": [
+      "O(2^n)",
+      "O(n^2)",
+      "O(n * n!)",
+      "O(n!) / n"
+    ],
+    "answer": 2,
+    "explanation": "There are n! permutations, and copying out each one costs O(n)."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "In an efficient N-Queens backtracking solution, how are conflicts usually checked in O(1) per placement?",
+    "options": [
+      "By rescanning the entire board after each placement",
+      "By sorting the queens by row after each step",
+      "By precomputing all N! permutations first",
+      "By tracking occupied columns and both diagonal directions in sets or boolean arrays"
+    ],
+    "answer": 3,
+    "explanation": "Columns, row - col, and row + col identify attacking lines, so a lookup tells whether a square is safe."
+  },
+  {
+    "topic": "greedy",
+    "question": "For which coin system does the greedy strategy of always taking the largest coin give the minimum number of coins for every amount?",
+    "options": [
+      "{1, 5, 10, 25}",
+      "{1, 3, 4}",
+      "{1, 7, 10}",
+      "{1, 6, 9}"
+    ],
+    "answer": 0,
+    "explanation": "US-style denominations are canonical; for example {1, 7, 10} fails on 14 (greedy uses 5 coins, optimal is 7 + 7)."
+  },
+  {
+    "topic": "greedy",
+    "question": "Why does the greedy value-to-weight strategy fail for 0/1 knapsack even though it works for fractional knapsack?",
+    "options": [
+      "0/1 knapsack has negative weights",
+      "Items cannot be split, so taking the best-ratio item may waste capacity a better combination would use",
+      "Greedy cannot sort items by ratio",
+      "Fractional knapsack is NP-hard"
+    ],
+    "answer": 1,
+    "explanation": "Without fractions, leftover capacity can make a locally best choice globally suboptimal."
+  },
+  {
+    "topic": "greedy",
+    "question": "How can the minimum number of meeting rooms for n intervals be computed efficiently?",
+    "options": [
+      "Try all room assignments by backtracking",
+      "Sort by duration and assign greedily in O(n)",
+      "Sort by start time and track end times with a min-heap, in O(n log n)",
+      "Build a graph and run BFS in O(n^2)"
+    ],
+    "answer": 2,
+    "explanation": "The heap's size after processing all intervals equals the maximum number of simultaneous meetings."
+  },
+  {
+    "topic": "greedy",
+    "question": "What is the overall time complexity of Kruskal's algorithm using union-find with path compression and union by rank?",
+    "options": [
+      "O(V^2)",
+      "O(E * V)",
+      "O(V + E)",
+      "O(E log E)"
+    ],
+    "answer": 3,
+    "explanation": "Sorting the edges dominates, since union-find operations are nearly constant amortized."
+  }
+]

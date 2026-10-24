@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q4a5253e5146",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "Which mechanism is at the core of the transformer architecture?",
+  "options": [
+   "A recurrent hidden state",
+   "Convolutional pooling",
+   "Decision tree splitting",
+   "Self-attention"
+  ],
+  "answer": 3,
+  "explanation": "Transformers rely on self-attention to let every token draw information from every other token."
+ },
+ {
+  "id": "q8221be72f80",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What is tokenization in NLP?",
+  "options": [
+   "Encrypting text before sending it to a model",
+   "Splitting text into smaller units such as words or subwords",
+   "Removing all punctuation and numbers from text",
+   "Translating text into a different language"
+  ],
+  "answer": 1,
+  "explanation": "Tokenization converts raw text into discrete units that a model can map to IDs and embeddings."
+ },
+ {
+  "id": "qae57597a086",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What is a word embedding?",
+  "options": [
+   "A list of all words sorted alphabetically",
+   "A dense vector representation that captures word meaning",
+   "A rule that maps words to their part of speech",
+   "A one-character code assigned to each word"
+  ],
+  "answer": 1,
+  "explanation": "Embeddings place words in a vector space where semantically similar words lie close together."
+ },
+ {
+  "id": "qf5132a2ec89",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "In text preprocessing, what are stop words?",
+  "options": [
+   "Special tokens that mark the end of a generated sequence",
+   "Offensive words removed by content filters",
+   "Rare words that appear only once in a corpus",
+   "Very common words like the and is that are often filtered out"
+  ],
+  "answer": 3,
+  "explanation": "Stop words carry little topical meaning, so classic NLP pipelines often remove them."
+ },
+ {
+  "id": "q26eae95e5d0",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What is an advantage of subword tokenization such as byte-pair encoding?",
+  "options": [
+   "It guarantees every word maps to exactly one token",
+   "It handles rare and unseen words by breaking them into known pieces",
+   "It removes the need for an embedding layer",
+   "It makes sequences longer to improve accuracy"
+  ],
+  "answer": 1,
+  "explanation": "Subword vocabularies keep size manageable while still representing any word as a sequence of known units."
+ },
+ {
+  "id": "q5ab83927aae",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What is the benefit of multi-head attention?",
+  "options": [
+   "It reduces the number of tokens in the input sequence",
+   "It allows training without any positional information",
+   "It replaces the feed-forward layers in each block",
+   "It lets the model attend to different kinds of relationships in parallel subspaces"
+  ],
+  "answer": 3,
+  "explanation": "Each head has its own projections, so different heads can specialize in different patterns such as syntax or coreference."
+ },
+ {
+  "id": "q91d3e6f1f90",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What attention masking does a decoder-only language model use during training?",
+  "options": [
+   "Causal masking, so each token attends only to earlier tokens",
+   "Bidirectional attention over the full sequence",
+   "Random masking of tokens that must be reconstructed",
+   "No attention, only feed-forward layers"
+  ],
+  "answer": 0,
+  "explanation": "Causal masks stop tokens from seeing the future, matching the left-to-right next-token prediction objective."
+ },
+ {
+  "id": "qcf425e7d54b",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What does self-attention compute for each token?",
+  "options": [
+   "A weighted combination of all tokens' representations based on relevance",
+   "The probability that the token is a stop word",
+   "A fixed embedding independent of surrounding words",
+   "A hidden state passed strictly from left to right"
+  ],
+  "answer": 0,
+  "explanation": "Each token's query is compared to every key, and the resulting weights mix the value vectors into a context-aware representation."
+ },
+ {
+  "id": "q2a50d24c730",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why is a BERT-style masked language model not directly suited to free-form text generation?",
+  "options": [
+   "It has no embedding layer for output tokens",
+   "It can only process sentences of five words",
+   "It is trained with bidirectional context to fill masked tokens, not to predict text left to right",
+   "It uses recurrent layers that cannot generate text"
+  ],
+  "answer": 2,
+  "explanation": "Generation requires predicting the next token from past context only, which a bidirectional masked objective does not train."
+ },
+ {
+  "id": "q4cb1f76b57a",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "How does the compute and memory cost of standard self-attention scale with sequence length n?",
+  "options": [
+   "Quadratically in n",
+   "Logarithmically in n",
+   "Linearly in n",
+   "It stays constant in n"
+  ],
+  "answer": 0,
+  "explanation": "Every token attends to every other token, producing an n by n attention matrix."
+ },
+ {
+  "id": "q7d31950f86e",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why are attention scores divided by the square root of the key dimension?",
+  "options": [
+   "To keep large dot products from pushing softmax into regions with tiny gradients",
+   "To reduce the memory needed to store keys",
+   "To make attention causal for decoder models",
+   "To ensure the attention weights sum to exactly one"
+  ],
+  "answer": 0,
+  "explanation": "Dot products grow with dimension; scaling keeps their variance stable so softmax does not saturate."
+ },
+ {
+  "id": "q9b043675fa7",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why do transformers need positional encodings?",
+  "options": [
+   "Self-attention is permutation-invariant, so token order must be injected explicitly",
+   "To reduce the vocabulary size of the tokenizer",
+   "To stop the model from attending to padding",
+   "To make attention weights sum to one"
+  ],
+  "answer": 0,
+  "explanation": "Without position information, attention treats the input as an unordered set of tokens."
+ }
+]

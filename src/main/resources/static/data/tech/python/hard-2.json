@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qd5a80800911",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "What is the main effect of defining __slots__ in a class?",
+  "options": [
+   "Instances get no per-instance __dict__, saving memory and restricting attributes",
+   "The class can no longer be subclassed",
+   "All attributes become read-only",
+   "Methods become faster because they are compiled"
+  ],
+  "answer": 0,
+  "explanation": "__slots__ reserves fixed attribute storage instead of a dict, so undeclared attributes cannot be added."
+ },
+ {
+  "id": "q3c7436d6c16",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What does heapq.heappop(h) return from a list h maintained as a heap?",
+  "options": [
+   "The smallest item",
+   "The largest item",
+   "The most recently pushed item",
+   "The item at index -1"
+  ],
+  "answer": 0,
+  "explanation": "heapq implements a min-heap, so the smallest element is always at h[0] and popped first."
+ },
+ {
+  "id": "q0c83cc34367",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After grid = [[0] * 2] * 2; grid[0][0] = 1, what is grid?",
+  "options": [
+   "[[1, 0], [1, 0]]",
+   "[[1, 0], [0, 0]]",
+   "[[1, 1], [0, 0]]",
+   "[[1, 1], [1, 1]]"
+  ],
+  "answer": 0,
+  "explanation": "Multiplying the outer list copies references, so both rows are the same inner list."
+ },
+ {
+  "id": "qdfcb30080ba",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "Given x = 1 and def f(): print(x); x = 2, what happens when f() is called?",
+  "options": [
+   "It prints 1",
+   "It prints 2",
+   "UnboundLocalError is raised",
+   "It prints None"
+  ],
+  "answer": 2,
+  "explanation": "The assignment makes x local to the whole function, so reading it before assignment fails."
+ },
+ {
+  "id": "qaddbfc5c46f",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does ([] == [], [] is []) evaluate to?",
+  "options": [
+   "(True, True)",
+   "(True, False)",
+   "(False, False)",
+   "(False, True)"
+  ],
+  "answer": 1,
+  "explanation": "== compares contents, but each [] literal creates a distinct object, so is is False."
+ },
+ {
+  "id": "qa5e4bbdcdd0",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "Which error typically appears when two modules use from a import X style imports of each other at top level?",
+  "options": [
+   "SyntaxError at the second import",
+   "RecursionError from infinite importing",
+   "ImportError about a partially initialized module",
+   "ModuleNotFoundError for the first module"
+  ],
+  "answer": 2,
+  "explanation": "The second module sees the first one only half-executed in sys.modules, so the name does not exist yet."
+ },
+ {
+  "id": "qb327c59948d",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What does functools.partial(int, base=2)('101') return?",
+  "options": [
+   "5",
+   "101",
+   "3",
+   "'101'"
+  ],
+  "answer": 0,
+  "explanation": "partial pre-binds base=2, so the call is int('101', base=2), which is 5."
+ },
+ {
+  "id": "qe3aa8405e7a",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "When does a decorator applied to a module-level function run?",
+  "options": [
+   "Every time the decorated function is called",
+   "Only the first time the function is called",
+   "When the program exits",
+   "Once, when the def statement executes at import time"
+  ],
+  "answer": 3,
+  "explanation": "Decoration happens as part of executing the def, so module-level decorators run during import."
+ },
+ {
+  "id": "qce4cbee4426",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "hard",
+  "question": "What does asyncio.create_task(coro()) do?",
+  "options": [
+   "Runs the coroutine to completion before returning",
+   "Starts the coroutine in a new OS thread",
+   "Creates a new event loop for the coroutine",
+   "Schedules the coroutine on the running loop and returns a Task"
+  ],
+  "answer": 3,
+  "explanation": "create_task wraps the coroutine in a Task that the loop runs concurrently while the caller continues."
+ },
+ {
+  "id": "q7fecb6236f1",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "hard",
+  "question": "Why is counter += 1 on a shared variable not thread-safe in CPython even with the GIL?",
+  "options": [
+   "It takes several bytecodes, so a thread switch can happen between the read and the write",
+   "Integers are copied per thread",
+   "The GIL is released for every integer operation",
+   "+= is executed outside the interpreter"
+  ],
+  "answer": 0,
+  "explanation": "The load, add and store steps are separate, so two threads can read the same old value and lose an update."
+ }
+]

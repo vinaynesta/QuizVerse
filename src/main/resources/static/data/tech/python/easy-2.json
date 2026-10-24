@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa4bd4ff7d63",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which clause of a try statement always runs, whether or not an exception occurred?",
+  "options": [
+   "else",
+   "except",
+   "always",
+   "finally"
+  ],
+  "answer": 3,
+  "explanation": "The finally block runs on every exit path, making it suitable for cleanup."
+ },
+ {
+  "id": "q1188bca131f",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does {x: x ** 2 for x in range(3)} evaluate to?",
+  "options": [
+   "{0: 0, 1: 2, 2: 4}",
+   "{1: 1, 2: 4, 3: 9}",
+   "[0, 1, 4]",
+   "{0: 0, 1: 1, 2: 4}"
+  ],
+  "answer": 3,
+  "explanation": "A dict comprehension maps each key x to x squared."
+ },
+ {
+  "id": "qb3d88390d62",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which built-in checks whether an object is an instance of a class or its subclasses?",
+  "options": [
+   "issubclass()",
+   "isinstance()",
+   "type()",
+   "hasattr()"
+  ],
+  "answer": 1,
+  "explanation": "isinstance(obj, cls) returns True for instances of cls or any subclass of it."
+ },
+ {
+  "id": "qd3845ecc712",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which standard module encodes and decodes JSON?",
+  "options": [
+   "pickle",
+   "marshal",
+   "json",
+   "csv"
+  ],
+  "answer": 2,
+  "explanation": "The json module provides dumps/loads for JSON text."
+ },
+ {
+  "id": "q1da608c3616",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "Which of these built-in types is immutable?",
+  "options": [
+   "list",
+   "dict",
+   "tuple",
+   "set"
+  ],
+  "answer": 2,
+  "explanation": "Tuples cannot be changed after creation, while list, dict and set are mutable containers."
+ },
+ {
+  "id": "qcbc4163f3ce",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "Which keyword turns a function into a generator function?",
+  "options": [
+   "return",
+   "async",
+   "yield",
+   "generate"
+  ],
+  "answer": 2,
+  "explanation": "Any function containing yield returns a generator object when called."
+ },
+ {
+  "id": "q0ee3ad0b2e3",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Inside def f(*args), what type is args?",
+  "options": [
+   "tuple",
+   "list",
+   "dict",
+   "set"
+  ],
+  "answer": 0,
+  "explanation": "Extra positional arguments collected by *args are packed into a tuple."
+ },
+ {
+  "id": "qdeade7ac9be",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does d.get('x', 0) return if key 'x' is missing from dict d?",
+  "options": [
+   "0",
+   "It raises KeyError",
+   "False",
+   "None"
+  ],
+  "answer": 0,
+  "explanation": "dict.get returns the supplied default when the key is absent instead of raising KeyError."
+ },
+ {
+  "id": "qbf6487a1c42",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "What exception is raised by d[key] when the key is missing from dict d?",
+  "options": [
+   "IndexError",
+   "KeyError",
+   "AttributeError",
+   "ValueError"
+  ],
+  "answer": 1,
+  "explanation": "Subscripting a dict with an absent key raises KeyError."
+ },
+ {
+  "id": "qb5f5b4b84a6",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "Which symbol is used to apply a decorator above a function definition?",
+  "options": [
+   "@",
+   "$",
+   "#",
+   "&"
+  ],
+  "answer": 0,
+  "explanation": "Writing @decorator on the line before def applies the decorator to that function."
+ }
+]

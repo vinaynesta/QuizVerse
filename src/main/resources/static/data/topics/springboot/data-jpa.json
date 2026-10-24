@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q257cb470878",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which Spring Data interface do you typically extend to get CRUD, paging and JPA-specific methods like flush()?",
+  "options": [
+   "JpaRepository",
+   "CrudRepository",
+   "Repository",
+   "EntityManagerRepository"
+  ],
+  "answer": 0,
+  "explanation": "JpaRepository extends the list-based CRUD and paging/sorting repositories and adds JPA-specific operations such as flush and saveAndFlush."
+ },
+ {
+  "id": "q32540517d60",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which annotation marks the primary key field of a JPA entity?",
+  "options": [
+   "@Key",
+   "@Id",
+   "@PrimaryKey",
+   "@Column(primary = true)"
+  ],
+  "answer": 1,
+  "explanation": "jakarta.persistence.Id designates the entity's identifier property."
+ },
+ {
+  "id": "q4727f8b9708",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "A repository method named findByEmailAndActive is an example of what?",
+  "options": [
+   "A derived query generated from the method name",
+   "A named native query",
+   "A JPA Criteria API query",
+   "A Querydsl predicate"
+  ],
+  "answer": 0,
+  "explanation": "Spring Data parses the method name into a query using the email and active properties."
+ },
+ {
+  "id": "qce89b5bbabe",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "In Spring Boot 3, which package do @Entity and @Table come from?",
+  "options": [
+   "javax.persistence",
+   "org.hibernate.annotations",
+   "org.springframework.data.jpa",
+   "jakarta.persistence"
+  ],
+  "answer": 3,
+  "explanation": "Spring Boot 3 moved to Jakarta EE 9+, so JPA annotations live in the jakarta.persistence namespace."
+ },
+ {
+  "id": "q005a8772bbf",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "Which annotation must accompany a @Query that performs an UPDATE or DELETE in Spring Data JPA?",
+  "options": [
+   "@Transactional(readOnly = true)",
+   "@Modifying",
+   "@Lock",
+   "@Commit"
+  ],
+  "answer": 1,
+  "explanation": "@Modifying tells Spring Data to execute the query as an update via executeUpdate instead of expecting a result set."
+ },
+ {
+  "id": "q15540d27685",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "What is Spring Boot's default for spring.jpa.open-in-view?",
+  "options": [
+   "true, and Boot logs a warning when it is not set explicitly",
+   "false, so lazy loading fails in views by default",
+   "It is undefined until a profile sets it",
+   "true only when the prod profile is active"
+  ],
+  "answer": 0,
+  "explanation": "Open Session in View is enabled by default, and Boot warns because it keeps a database connection open during view rendering."
+ },
+ {
+  "id": "q874d15dd0ab",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "What does nativeQuery = true on a Spring Data @Query annotation mean?",
+  "options": [
+   "The query runs outside any transaction",
+   "The query is compiled at startup into a stored procedure",
+   "The query string is plain SQL instead of JPQL",
+   "The results are returned as raw JDBC ResultSet objects"
+  ],
+  "answer": 2,
+  "explanation": "With nativeQuery = true the string is sent to the database as SQL rather than parsed as JPQL."
+ },
+ {
+  "id": "qdaca8ffb9d9",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "Which is a standard way to avoid the N+1 select problem when loading orders with their items?",
+  "options": [
+   "Switch the association to FetchType.EAGER everywhere",
+   "Call findAll() twice to warm the cache",
+   "Add @Transactional(readOnly = true) to the repository",
+   "Use a JOIN FETCH query or an @EntityGraph"
+  ],
+  "answer": 3,
+  "explanation": "Fetch joins and entity graphs load the association in the same query instead of one query per parent."
+ },
+ {
+  "id": "q214c3d1794a",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "What does Spring Boot use for spring.jpa.hibernate.ddl-auto by default with an embedded database and no schema migration tool?",
+  "options": [
+   "create-drop",
+   "update",
+   "validate",
+   "none"
+  ],
+  "answer": 0,
+  "explanation": "Boot defaults to create-drop for embedded databases when no Flyway or Liquibase is detected, otherwise none."
+ },
+ {
+  "id": "q86f1de8a5ac",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "What happens when SimpleJpaRepository.save() is called with a detached entity that has an existing id?",
+  "options": [
+   "It calls persist and attaches the passed object",
+   "It calls EntityManager.merge and returns a managed copy, leaving the passed object detached",
+   "It updates the row but returns null",
+   "It throws EntityExistsException"
+  ],
+  "answer": 1,
+  "explanation": "For non-new entities save() delegates to merge, so you should use the returned instance."
+ },
+ {
+  "id": "q8b2378041cd",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "With spring.jpa.open-in-view=false, what typically causes a LazyInitializationException?",
+  "options": [
+   "Accessing a lazy association after the persistence context has closed, e.g. in the controller",
+   "Using @Id with a UUID type",
+   "Calling save() inside a transaction",
+   "Defining two repositories for the same entity"
+  ],
+  "answer": 0,
+  "explanation": "Lazy proxies need an open persistence context; outside the transaction they cannot load data."
+ },
+ {
+  "id": "qae0958c264f",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "Which JPA association is fetched EAGER by default?",
+  "options": [
+   "@OneToMany",
+   "@ElementCollection",
+   "@ManyToMany",
+   "@ManyToOne"
+  ],
+  "answer": 3,
+  "explanation": "To-one associations default to EAGER, while to-many associations default to LAZY."
+ }
+]

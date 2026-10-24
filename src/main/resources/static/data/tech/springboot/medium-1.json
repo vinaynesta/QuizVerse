@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qdf9704c7e17",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "How do you make a @Transactional method roll back on a checked IOException?",
+  "options": [
+   "Set noRollbackFor = RuntimeException.class",
+   "Set rollbackFor = IOException.class (or Exception.class)",
+   "Set readOnly = false",
+   "Declare the exception with throws only"
+  ],
+  "answer": 1,
+  "explanation": "rollbackFor extends the default rule so specified checked exceptions also trigger rollback."
+ },
+ {
+  "id": "q874d15dd0ab",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "What does nativeQuery = true on a Spring Data @Query annotation mean?",
+  "options": [
+   "The query runs outside any transaction",
+   "The query is compiled at startup into a stored procedure",
+   "The query string is plain SQL instead of JPQL",
+   "The results are returned as raw JDBC ResultSet objects"
+  ],
+  "answer": 2,
+  "explanation": "With nativeQuery = true the string is sent to the database as SQL rather than parsed as JPQL."
+ },
+ {
+  "id": "qcf795562ca0",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "In Spring Security 6, which DSL configures URL authorization rules?",
+  "options": [
+   "authorizeRequests().antMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+   "authorizeRequests().mvcMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+   "authorizeHttpRequests(auth -> auth.requestMatchers(\"/admin/**\").hasRole(\"ADMIN\"))",
+   "authorizeUrls().paths(\"/admin/**\").hasRole(\"ADMIN\")"
+  ],
+  "answer": 2,
+  "explanation": "antMatchers and mvcMatchers were removed in Spring Security 6; requestMatchers inside authorizeHttpRequests is the replacement."
+ },
+ {
+  "id": "q83e0087da72",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "What does @ConditionalOnMissingBean on an auto-configured @Bean method achieve?",
+  "options": [
+   "The default bean backs off if the application already defines a bean of that type",
+   "The bean is created lazily on first injection",
+   "The bean is created only if no other configuration class exists",
+   "The bean replaces any user-defined bean of that type"
+  ],
+  "answer": 0,
+  "explanation": "This is how auto-configuration lets user-defined beans override Boot's defaults."
+ },
+ {
+  "id": "qdaca8ffb9d9",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "Which is a standard way to avoid the N+1 select problem when loading orders with their items?",
+  "options": [
+   "Switch the association to FetchType.EAGER everywhere",
+   "Call findAll() twice to warm the cache",
+   "Add @Transactional(readOnly = true) to the repository",
+   "Use a JOIN FETCH query or an @EntityGraph"
+  ],
+  "answer": 3,
+  "explanation": "Fetch joins and entity graphs load the association in the same query instead of one query per parent."
+ },
+ {
+  "id": "q2112c29efd4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "How can a bean receive every bean that implements a NotificationSender interface?",
+  "options": [
+   "Inject a single NotificationSender with @Primary",
+   "Inject the ApplicationContext and call getBean(NotificationSender.class)",
+   "Annotate the interface with @Bean",
+   "Inject a List<NotificationSender>"
+  ],
+  "answer": 3,
+  "explanation": "Spring injects all matching beans into a collection-typed injection point, ordered by @Order or Ordered when present."
+ },
+ {
+  "id": "qbcab9b2165d",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "In Spring Boot 3, what is required to bind @ConfigurationProperties to a Java record with one constructor?",
+  "options": [
+   "Nothing extra; constructor binding is used implicitly",
+   "@ConstructorBinding on the record type",
+   "Setter methods for each component",
+   "@Value on every record component"
+  ],
+  "answer": 0,
+  "explanation": "Boot 3 infers constructor binding for a single constructor; @ConstructorBinding is only needed to choose among several."
+ },
+ {
+  "id": "q2120202222d",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What is @DynamicPropertySource typically used for in integration tests?",
+  "options": [
+   "Reloading application.properties between tests",
+   "Registering properties computed at runtime, such as a Testcontainers JDBC URL",
+   "Marking a test as dependent on an external profile",
+   "Generating random test data"
+  ],
+  "answer": 1,
+  "explanation": "The static method adds property suppliers to the Environment before the context starts."
+ },
+ {
+  "id": "qf4d96bb8c16",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "Which health group paths does Spring Boot provide for Kubernetes probes?",
+  "options": [
+   "/actuator/k8s/health",
+   "/actuator/live and /actuator/ready",
+   "/actuator/probe/up and /actuator/probe/down",
+   "/actuator/health/liveness and /actuator/health/readiness"
+  ],
+  "answer": 3,
+  "explanation": "Liveness and readiness groups are enabled automatically on Kubernetes and can be turned on elsewhere via management.endpoint.health.probes.enabled."
+ },
+ {
+  "id": "q005a8772bbf",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "Which annotation must accompany a @Query that performs an UPDATE or DELETE in Spring Data JPA?",
+  "options": [
+   "@Transactional(readOnly = true)",
+   "@Modifying",
+   "@Lock",
+   "@Commit"
+  ],
+  "answer": 1,
+  "explanation": "@Modifying tells Spring Data to execute the query as an update via executeUpdate instead of expecting a result set."
+ }
+]

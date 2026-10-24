@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "template-syntax",
+    "question": "When using <template v-for> to render multiple elements per item in Vue 3, where should key go?",
+    "options": [
+      "On each child element inside the template",
+      "On the template v-for tag itself",
+      "On the parent element around the loop",
+      "Nowhere, since keys are forbidden here"
+    ],
+    "answer": 1,
+    "explanation": "In Vue 3 the key belongs on the template tag rather than on its children."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "In script setup, const obj = { id: ref(1) }. What does {{ obj.id + 1 }} render?",
+    "options": [
+      "2",
+      "11",
+      "[object Object]1",
+      "NaN"
+    ],
+    "answer": 2,
+    "explanation": "Only top-level refs are unwrapped in templates, so obj.id is still a ref object inside the expression."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What is the difference between @click=\"handle\" and @click=\"handle()\"?",
+    "options": [
+      "They are identical and both receive the event",
+      "The first runs once; the second runs every click",
+      "The first passes the native event; the second calls it with no args",
+      "The first is invalid outside the Options API"
+    ],
+    "answer": 2,
+    "explanation": "A method name is called with the event, while an inline call uses only the arguments you write."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "A child root element has class=\"btn\" and the parent renders it with class=\"large\". What is the result?",
+    "options": [
+      "The root element has only large",
+      "The root element has only btn",
+      "Vue warns and drops the parent class",
+      "The root element has both btn and large"
+    ],
+    "answer": 3,
+    "explanation": "class and style fall through and are merged with the classes already on the child's root."
+  },
+  {
+    "topic": "reactivity",
+    "question": "After const { count } = reactive({ count: 0 }), what happens when you run count++?",
+    "options": [
+      "The reactive state updates and triggers renders",
+      "Vue throws because count is readonly",
+      "Only the local variable changes; the reactive state does not",
+      "The value updates but the DOM does not"
+    ],
+    "answer": 2,
+    "explanation": "Destructuring copies a primitive out of the proxy, so the local variable is disconnected from reactivity."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Given const state = reactive({ count: ref(0) }), what does state.count return?",
+    "options": [
+      "The ref object, so state.count.value is needed",
+      "undefined until the ref is read once",
+      "A readonly copy of the ref",
+      "The number 0, since nested refs in objects are unwrapped"
+    ],
+    "answer": 3,
+    "explanation": "A ref accessed as a property of a reactive object is automatically unwrapped."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Given const list = reactive([ref(1)]), what is list[0]?",
+    "options": [
+      "The number 1, since it is unwrapped",
+      "undefined, since refs cannot be in arrays",
+      "A readonly proxy of the number 1",
+      "A ref, so list[0].value is needed"
+    ],
+    "answer": 3,
+    "explanation": "Refs are not unwrapped when accessed as elements of reactive arrays or native collections."
+  },
+  {
+    "topic": "reactivity",
+    "question": "For a plain object raw, which statement about reactive(raw) is true?",
+    "options": [
+      "reactive(raw) === raw because it mutates raw",
+      "Each reactive(raw) call returns a new proxy",
+      "reactive(raw) returns a deep clone of raw",
+      "reactive(raw) !== raw, but reactive(raw) === reactive(raw)"
+    ],
+    "answer": 3,
+    "explanation": "reactive() returns a proxy distinct from the original and caches it, so repeated calls return the same proxy."
+  },
+  {
+    "topic": "composition-api",
+    "question": "A composable returns a reactive() object. How can callers destructure it without losing reactivity?",
+    "options": [
+      "Return Object.assign({}, state)",
+      "Return toRefs(state) from the composable",
+      "Return readonly(state) instead",
+      "Return JSON.parse(JSON.stringify(state))"
+    ],
+    "answer": 1,
+    "explanation": "toRefs() converts each property into a ref linked to the source, so destructured values stay reactive."
+  },
+  {
+    "topic": "composition-api",
+    "question": "In Vue 3.5+ with const { foo } = defineProps(['foo']), how do you watch foo?",
+    "options": [
+      "watch(foo, cb)",
+      "watch(() => foo, cb)",
+      "watch('foo', cb)",
+      "watch(foo.value, cb)"
+    ],
+    "answer": 1,
+    "explanation": "A destructured prop compiles to props.foo, so passing it directly would pass a value; a getter is required."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What does toValue() do in a composable?",
+    "options": [
+      "Converts a reactive object into refs",
+      "Removes reactivity from a proxy",
+      "Normalizes a ref, getter or plain value to a value",
+      "Creates a writable computed from a getter"
+    ],
+    "answer": 2,
+    "explanation": "toValue() unwraps refs, calls getters and returns plain values unchanged, letting composables accept any of them."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What happens when script setup contains a top-level await?",
+    "options": [
+      "The await is ignored at compile time",
+      "The component becomes async and must be inside Suspense",
+      "The component renders twice automatically",
+      "Vue throws because setup must be sync"
+    ],
+    "answer": 1,
+    "explanation": "Top-level await makes setup async, so an ancestor Suspense is needed to handle the pending state."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "A child mutates props.user.name where user is an object prop. What happens?",
+    "options": [
+      "Vue throws a readonly error",
+      "The mutation is ignored silently",
+      "It works but is an anti-pattern; Vue does not warn",
+      "The parent's object is cloned first"
+    ],
+    "answer": 2,
+    "explanation": "Props are shallowly readonly, so nested mutations succeed but make data flow hard to reason about."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "With a prop declared as disabled: Boolean, what is its value for <MyBtn disabled />?",
+    "options": [
+      "true",
+      "''",
+      "'disabled'",
+      "undefined"
+    ],
+    "answer": 0,
+    "explanation": "Boolean props are cast to true when the attribute is present without a value."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "How does a child receive v-model:title from its parent using defineModel?",
+    "options": [
+      "const title = defineModel({ model: 'title' })",
+      "const title = defineProps('title')",
+      "const title = useModel('v-title')",
+      "const title = defineModel('title')"
+    ],
+    "answer": 3,
+    "explanation": "Passing a name to defineModel() binds it to the title prop and update:title event."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "How do you apply fallthrough attributes to an inner element instead of the root?",
+    "options": [
+      "Set inheritAttrs: true and use v-slot",
+      "Set inheritAttrs: false and bind v-bind=\"$attrs\"",
+      "Use defineProps with an attrs option",
+      "Use provide('attrs') in the child"
+    ],
+    "answer": 1,
+    "explanation": "Disabling inheritAttrs stops automatic root binding, and $attrs can then be spread on any element."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "How do watch and watchEffect differ in tracking and timing?",
+    "options": [
+      "watch is lazy with explicit sources; watchEffect runs now and auto-tracks",
+      "watch runs now; watchEffect waits for a change",
+      "Both are lazy but watchEffect is deep",
+      "watchEffect needs explicit sources; watch tracks all"
+    ],
+    "answer": 0,
+    "explanation": "watch only fires on changes to its declared source, while watchEffect runs immediately and tracks whatever it reads."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "In an async watchEffect callback, which dependencies are tracked?",
+    "options": [
+      "All reads, including after every await",
+      "Only reads made after the last await",
+      "None, since async effects are not tracked",
+      "Only those read before the first await"
+    ],
+    "answer": 3,
+    "explanation": "Tracking happens during synchronous execution, so reads after an await are not recorded."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "By default, when do watcher callbacks run relative to the owner component's DOM update?",
+    "options": [
+      "Before it, so use flush: 'post' to see the updated DOM",
+      "After it, so the DOM is always updated",
+      "Synchronously, at the moment of the change",
+      "After the next browser paint frame"
+    ],
+    "answer": 0,
+    "explanation": "The default flush is 'pre', so callbacks see the DOM before update unless flush: 'post' is set."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "With watch(state, cb) where state is reactive, what are newValue and oldValue after state.count++?",
+    "options": [
+      "Two objects with different count values",
+      "The same object, since it was mutated in place",
+      "undefined and the current object",
+      "A diff object listing changed keys"
+    ],
+    "answer": 1,
+    "explanation": "Watching a reactive object is implicitly deep, and mutation keeps the same object for both arguments."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Why might you await nextTick() after changing reactive state?",
+    "options": [
+      "DOM updates are batched and applied asynchronously",
+      "State changes are not reactive until then",
+      "nextTick reloads the component's template",
+      "Watchers cannot run without nextTick"
+    ],
+    "answer": 0,
+    "explanation": "Vue buffers updates until the next tick, so nextTick() waits until the DOM reflects the change."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "In a plain setup() function, what happens if onMounted is called after an await?",
+    "options": [
+      "It is not tied to the component, since hooks must register synchronously",
+      "It runs immediately instead of waiting to mount",
+      "It runs twice, once per await",
+      "It is moved to the start of setup at compile time"
+    ],
+    "answer": 0,
+    "explanation": "Outside script setup, the current instance is lost after await; only script setup restores it."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "What does onErrorCaptured do?",
+    "options": [
+      "Catches errors in the component's own template only",
+      "Captures errors thrown by descendant components",
+      "Logs all network errors in the app",
+      "Retries a failed render automatically"
+    ],
+    "answer": 1,
+    "explanation": "onErrorCaptured receives errors from descendants and can return false to stop propagation."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which hook is not called during server-side rendering?",
+    "options": [
+      "onMounted",
+      "setup",
+      "onServerPrefetch",
+      "onErrorCaptured"
+    ],
+    "answer": 0,
+    "explanation": "onMounted and onUpdated are not called on the server, since there is no DOM to mount to."
+  },
+  {
+    "topic": "directives",
+    "question": "For v-color:bg.bold=\"'red'\", what is binding.arg in the directive hook?",
+    "options": [
+      "'bold'",
+      "'bg'",
+      "'red'",
+      "'color'"
+    ],
+    "answer": 1,
+    "explanation": "The argument follows the colon, the modifiers follow dots, and binding.value holds the evaluated expression."
+  },
+  {
+    "topic": "directives",
+    "question": "How does a child using defineModel read a custom v-model.capitalize modifier?",
+    "options": [
+      "Read props.capitalize from defineProps",
+      "Inject it with inject('modifiers')",
+      "Check this.$attrs.capitalize in setup",
+      "const [model, modifiers] = defineModel(), then modifiers.capitalize"
+    ],
+    "answer": 3,
+    "explanation": "Destructuring defineModel() yields the model ref and a modifiers object containing the used modifiers."
+  },
+  {
+    "topic": "directives",
+    "question": "What values does v-for=\"n in 3\" produce?",
+    "options": [
+      "0, 1, 2",
+      "0, 1, 2, 3",
+      "1, 2, 3",
+      "3 only"
+    ],
+    "answer": 2,
+    "explanation": "A v-for over an integer starts at 1 and repeats up to that number."
+  },
+  {
+    "topic": "directives",
+    "question": "What happens if you put v-show on a template element?",
+    "options": [
+      "It hides all child elements correctly",
+      "It behaves exactly like v-if",
+      "It does not work, since v-show is not supported on template",
+      "It renders the template tag in the DOM"
+    ],
+    "answer": 2,
+    "explanation": "v-show toggles display on a real element, so it cannot be used with template."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "How can a provider prevent injecting components from mutating provided state?",
+    "options": [
+      "Provide the state with markRaw()",
+      "Call inject() with a frozen option",
+      "Provide a deep clone on each render",
+      "Provide readonly(state) along with an update function"
+    ],
+    "answer": 3,
+    "explanation": "Wrapping with readonly() blocks writes, while exposing a function keeps mutations inside the provider."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "Why use a Symbol typed as InjectionKey<T> for provide and inject?",
+    "options": [
+      "It makes the injected value reactive",
+      "It avoids key collisions and types the injected value",
+      "It is required for inject() to work",
+      "It lets the value cross app instances"
+    ],
+    "answer": 1,
+    "explanation": "Symbol keys are unique, and InjectionKey carries the type so inject() returns T or undefined."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "How can a component render a wrapper only when the parent passed a footer slot?",
+    "options": [
+      "Use v-if=\"$slots.footer\" on the wrapper",
+      "Use v-if=\"props.footer\" on the wrapper",
+      "Use v-show=\"slot.footer\" on the slot",
+      "Use inject('footer') to check for it"
+    ],
+    "answer": 0,
+    "explanation": "$slots in the template, or useSlots() in script, exposes which slots the parent provided."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "Which state can slot content access directly?",
+    "options": [
+      "Only the child's internal state",
+      "Both components' full state automatically",
+      "The parent's scope, plus props the child passes via scoped slots",
+      "Only global properties and injected values"
+    ],
+    "answer": 2,
+    "explanation": "Slot content is compiled in the parent's scope, so child data must be passed explicitly through slot props."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Navigating from /users/1 to /users/2 with the same component does not rerun onMounted. Why?",
+    "options": [
+      "The instance is reused, so watch params or use onBeforeRouteUpdate",
+      "The router caches the old page as HTML",
+      "Params changes are not detected by the router",
+      "onMounted only runs for the first route"
+    ],
+    "answer": 0,
+    "explanation": "Vue Router reuses the component when only params change, so lifecycle hooks are not called again."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "In a Pinia setup store, what must happen to every state property?",
+    "options": [
+      "It must be returned from the setup function",
+      "It must be declared with reactive()",
+      "It must be wrapped with markRaw()",
+      "It must be registered with defineState()"
+    ],
+    "answer": 0,
+    "explanation": "Unreturned state is private and breaks devtools, SSR and plugins, so all state must be returned."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Is store.$reset() available on a Pinia setup store by default?",
+    "options": [
+      "Yes, it is available on every store",
+      "Only after calling storeToRefs()",
+      "No, you must implement your own reset in setup stores",
+      "Only when the store uses persistence"
+    ],
+    "answer": 2,
+    "explanation": "$reset() is built into option stores, but setup stores need a custom reset action."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "What happens when a router.beforeEach guard returns false?",
+    "options": [
+      "The guard is skipped and navigation continues",
+      "The router redirects to the home route",
+      "The app reloads the current page",
+      "The current navigation is cancelled"
+    ],
+    "answer": 3,
+    "explanation": "Returning false from a navigation guard aborts the navigation."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Why does the Vite dev server start quickly even in large projects?",
+    "options": [
+      "It serves native ES modules on demand and pre-bundles deps",
+      "It bundles the whole app with Webpack in memory",
+      "It skips compiling single-file components",
+      "It caches the production build and reuses it"
+    ],
+    "answer": 0,
+    "explanation": "Vite transforms source files on request and uses esbuild to pre-bundle dependencies."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Why are Vue 3 global APIs like nextTick imported as named exports?",
+    "options": [
+      "So they run faster in development mode",
+      "So they can be patched at runtime",
+      "So unused features can be tree-shaken from the bundle",
+      "So TypeScript can infer prop types"
+    ],
+    "answer": 2,
+    "explanation": "Named ES module exports let bundlers drop APIs the app never imports."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "How does the Vue 3 template compiler help runtime diffing?",
+    "options": [
+      "It converts templates to Web Components",
+      "It emits patch flags and hoists static content",
+      "It removes the virtual DOM entirely by default",
+      "It precomputes all renders at build time"
+    ],
+    "answer": 1,
+    "explanation": "Compile-time hints let the renderer skip static nodes and only check the dynamic parts."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "With const list = shallowRef([]), what happens after list.value.push(item)?",
+    "options": [
+      "The view updates as with a normal ref",
+      "Vue throws because the array is readonly",
+      "The item is pushed and deep tracking starts",
+      "No update is triggered; replace .value or call triggerRef"
+    ],
+    "answer": 3,
+    "explanation": "shallowRef only tracks .value assignment, so in-place mutation needs a new array or triggerRef(list)."
+  }
+]

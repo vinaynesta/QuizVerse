@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0d6b5fad880",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "What happens when you assign a new value to ref.current?",
+  "options": [
+   "The component re-renders immediately",
+   "Only the parent component re-renders",
+   "Nothing re-renders; the value is simply stored",
+   "The component unmounts and mounts again"
+  ],
+  "answer": 2,
+  "explanation": "Refs are an escape hatch for values that do not affect rendering, so changing ref.current does not trigger a re-render."
+ },
+ {
+  "id": "q171e7c7168e",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "By convention, what must the name of a custom hook start with?",
+  "options": [
+   "use",
+   "handle",
+   "get",
+   "with"
+  ],
+  "answer": 0,
+  "explanation": "Custom hooks start with use so React tooling and linters can recognize them and enforce the Rules of Hooks."
+ },
+ {
+  "id": "q2e0af244287",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "Which of these is one of the Rules of Hooks?",
+  "options": [
+   "Call hooks only inside class components",
+   "Call hooks only inside loops",
+   "Call hooks only inside event handlers",
+   "Call hooks only at the top level of a component or custom hook"
+  ],
+  "answer": 3,
+  "explanation": "Hooks must be called in the same order every render, so they belong at the top level, not inside conditions, loops, or handlers."
+ },
+ {
+  "id": "q90aa3fa82ee",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "What does useRef return?",
+  "options": [
+   "A state value and setter pair",
+   "A memoized callback function",
+   "The value of the nearest context provider",
+   "A mutable object whose current property persists across renders"
+  ],
+  "answer": 3,
+  "explanation": "useRef returns an object like { current: initialValue } that stays the same object for the component's lifetime."
+ },
+ {
+  "id": "q02dda87ae3f",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "Why is calling useState inside an if statement not allowed?",
+  "options": [
+   "It would make the state global",
+   "if statements are not allowed in components",
+   "useState only works inside loops",
+   "React identifies hooks by call order, which must be the same every render"
+  ],
+  "answer": 3,
+  "explanation": "React matches each hook call to its stored state by position, so conditional calls would shift that order."
+ },
+ {
+  "id": "qb313a4c9d4b",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "What does useId generate?",
+  "options": [
+   "A random key for list items",
+   "A unique database id",
+   "A hash of the component's props",
+   "A stable unique id consistent between server and client, useful for accessibility attributes"
+  ],
+  "answer": 3,
+  "explanation": "useId produces ids that match during hydration, for use in htmlFor or aria attributes, and is not meant for list keys."
+ },
+ {
+  "id": "qd0edb85842c",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "In React 19, how does a function component receive a ref passed as <MyInput ref={r} />?",
+  "options": [
+   "Only through useImperativeHandle",
+   "As a regular prop named ref",
+   "Through useContext",
+   "It cannot receive a ref at all"
+  ],
+  "answer": 1,
+  "explanation": "React 19 lets function components read ref as a prop, so forwardRef is no longer needed for new code."
+ },
+ {
+  "id": "qd5060b9f0cd",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "Two components call the same custom hook useCounter(). What is true about their state?",
+  "options": [
+   "They share a single counter",
+   "Only the first component gets state",
+   "Each component gets its own independent state",
+   "The state is stored in context automatically"
+  ],
+  "answer": 2,
+  "explanation": "Custom hooks share stateful logic, not state; each call creates separate state for its component."
+ },
+ {
+  "id": "q11813ac38d7",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "Why does storing the latest callback in a ref and reading ref.current inside a long-lived effect avoid stale closures?",
+  "options": [
+   "Refs force the effect to re-run",
+   "React re-binds functions stored in refs",
+   "Refs deep-copy the function",
+   "The ref object is stable, and reading current at call time gets the latest assigned value"
+  ],
+  "answer": 3,
+  "explanation": "The effect closes over the stable ref object, not a specific value, so it sees whatever was last written to current."
+ },
+ {
+  "id": "q34514a130d9",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "Which hook is designed for subscribing to an external mutable store in a way that is safe with concurrent rendering?",
+  "options": [
+   "useEffect with useState",
+   "useLayoutEffect",
+   "useImperativeHandle",
+   "useSyncExternalStore"
+  ],
+  "answer": 3,
+  "explanation": "useSyncExternalStore avoids tearing, where different parts of the UI show different store values in one render."
+ },
+ {
+  "id": "qd32458b5ab0",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "An effect with [] sets up setInterval(() => setCount(count + 1), 1000). Why does count stop at 1?",
+  "options": [
+   "setInterval only fires once inside effects",
+   "The callback closes over the initial count of 0, so it keeps setting 1",
+   "React batches all interval updates into one",
+   "Strict Mode cancels the interval after one tick"
+  ],
+  "answer": 1,
+  "explanation": "This is a stale closure; using setCount(c => c + 1) or adding count to dependencies fixes it."
+ },
+ {
+  "id": "qf73bbe1bc42",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "What is the purpose of useEffectEvent in React?",
+  "options": [
+   "To run an effect only on unmount",
+   "To subscribe to DOM events globally",
+   "To read the latest props and state from an effect without making them dependencies",
+   "To convert an effect into a server action"
+  ],
+  "answer": 2,
+  "explanation": "An Effect Event always sees fresh values but is not reactive, so logic like logging the current theme need not re-trigger the effect."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q14ce7002608",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What does the % operator compute for integers?",
+  "options": [
+   "The remainder of a division",
+   "The integer quotient",
+   "The power of the left operand",
+   "A percentage of the left operand"
+  ],
+  "answer": 0,
+  "explanation": "% is the remainder operator, e.g. 7 % 3 is 1."
+ },
+ {
+  "id": "q4470a7b4ba9",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What is the value of 7 / 2 when both operands are int?",
+  "options": [
+   "3.0",
+   "3.5",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Integer division truncates toward zero, so 7 / 2 is 3."
+ },
+ {
+  "id": "q536b4d79717",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What is the default value of an int instance field that is never assigned?",
+  "options": [
+   "null",
+   "It causes a compile error",
+   "-1",
+   "0"
+  ],
+  "answer": 3,
+  "explanation": "Instance and static fields get default values; for int that is 0. Only local variables must be assigned before use."
+ },
+ {
+  "id": "qcc744f361eb",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "Which loop always executes its body at least once?",
+  "options": [
+   "while",
+   "do-while",
+   "for",
+   "enhanced for"
+  ],
+  "answer": 1,
+  "explanation": "A do-while loop checks its condition after the body, so the body runs at least once."
+ },
+ {
+  "id": "q012399169e6",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "After int x = 5; x += 3.7; what is the value of x?",
+  "options": [
+   "8",
+   "8.7",
+   "9",
+   "It does not compile"
+  ],
+  "answer": 0,
+  "explanation": "Compound assignment includes an implicit cast, so x = (int)(5 + 3.7), which truncates to 8."
+ },
+ {
+  "id": "q8f52b3d4f78",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "What does System.out.println(1 + 2 + \"3\") print?",
+  "options": [
+   "123",
+   "6",
+   "15",
+   "33"
+  ],
+  "answer": 3,
+  "explanation": "Evaluation is left to right: 1 + 2 is 3, then 3 + \"3\" is string concatenation giving 33."
+ },
+ {
+  "id": "qb1684d6de66",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "How do you get the number of elements in an int array named a?",
+  "options": [
+   "a.length",
+   "a.length()",
+   "a.size()",
+   "a.count()"
+  ],
+  "answer": 0,
+  "explanation": "Arrays expose a final field named length; length() is a String method and size() is for collections."
+ },
+ {
+  "id": "qe63e1ef9238",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "What does the expression 5 >> 1 evaluate to?",
+  "options": [
+   "2",
+   "2.5",
+   "1",
+   "10"
+  ],
+  "answer": 0,
+  "explanation": "Right-shifting 101 in binary by one bit gives 10, which is 2."
+ },
+ {
+  "id": "q37c98e7a92f",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What happens with byte b = 10; b = b + 1;?",
+  "options": [
+   "b becomes 11",
+   "Compile error: possible lossy conversion from int to byte",
+   "It compiles but overflows at runtime",
+   "It compiles with an unchecked warning"
+  ],
+  "answer": 1,
+  "explanation": "b + 1 is promoted to int and needs an explicit cast; b += 1 or b++ would compile because they cast implicitly."
+ },
+ {
+  "id": "q54925065f0f",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does System.out.println(0.1 + 0.2 == 0.3) print?",
+  "options": [
+   "false",
+   "0.3",
+   "It does not compile",
+   "true"
+  ],
+  "answer": 0,
+  "explanation": "0.1 and 0.2 cannot be represented exactly in binary floating point, and their sum is 0.30000000000000004."
+ },
+ {
+  "id": "q8db7d716f9d",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "With default JVM settings, what does Integer a = 128, b = 128; System.out.println(a == b); print?",
+  "options": [
+   "false",
+   "It does not compile",
+   "true",
+   "It throws NullPointerException"
+  ],
+  "answer": 0,
+  "explanation": "Autoboxing uses Integer.valueOf, which caches only -128 to 127 by default, so 128 produces two distinct objects."
+ },
+ {
+  "id": "qc4b096aa5ee",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does Math.abs(Integer.MIN_VALUE) return?",
+  "options": [
+   "It throws ArithmeticException",
+   "Integer.MAX_VALUE",
+   "2147483648 as a long",
+   "Integer.MIN_VALUE, still negative"
+  ],
+  "answer": 3,
+  "explanation": "The positive value does not fit in an int, so the negation overflows back to MIN_VALUE; Math.absExact would throw instead."
+ }
+]

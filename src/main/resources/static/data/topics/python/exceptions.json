@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q3cf6d9534a7",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "What exception does int(\"abc\") raise?",
+  "options": [
+   "TypeError",
+   "ValueError",
+   "SyntaxError",
+   "ArithmeticError"
+  ],
+  "answer": 1,
+  "explanation": "The argument is the right type (str) but has an invalid value for conversion, so ValueError is raised."
+ },
+ {
+  "id": "qa4bd4ff7d63",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which clause of a try statement always runs, whether or not an exception occurred?",
+  "options": [
+   "else",
+   "except",
+   "always",
+   "finally"
+  ],
+  "answer": 3,
+  "explanation": "The finally block runs on every exit path, making it suitable for cleanup."
+ },
+ {
+  "id": "qbf6487a1c42",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "What exception is raised by d[key] when the key is missing from dict d?",
+  "options": [
+   "IndexError",
+   "KeyError",
+   "AttributeError",
+   "ValueError"
+  ],
+  "answer": 1,
+  "explanation": "Subscripting a dict with an absent key raises KeyError."
+ },
+ {
+  "id": "qc5931ff35bb",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which keyword is used to raise an exception?",
+  "options": [
+   "throw",
+   "raise",
+   "except",
+   "error"
+  ],
+  "answer": 1,
+  "explanation": "Python uses raise to signal an exception; throw is not a keyword."
+ },
+ {
+  "id": "q0f1a0fbae1a",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "What does raise NewError() from exc set on the new exception?",
+  "options": [
+   "Its args to exc.args",
+   "Its __traceback__ to None",
+   "Its __cause__ attribute to exc",
+   "Its __notes__ to exc"
+  ],
+  "answer": 2,
+  "explanation": "raise ... from sets __cause__, producing explicit exception chaining in the traceback."
+ },
+ {
+  "id": "q4c277691007",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "When does the else block of a try statement run?",
+  "options": [
+   "Only when an exception was caught",
+   "Always, right after finally",
+   "Only when the try block raised no exception",
+   "Only when there is no finally block"
+  ],
+  "answer": 2,
+  "explanation": "try/else runs after the try body completes without raising, before finally."
+ },
+ {
+  "id": "q594fa267c4b",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "Which clause catches both ValueError and TypeError?",
+  "options": [
+   "except [ValueError, TypeError]:",
+   "except ValueError, TypeError:",
+   "except ValueError or TypeError:",
+   "except (ValueError, TypeError):"
+  ],
+  "answer": 3,
+  "explanation": "Multiple exception types are caught by listing them in a tuple."
+ },
+ {
+  "id": "q608b40945b7",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "Why is a bare except: clause generally discouraged?",
+  "options": [
+   "It is a syntax error in Python 3",
+   "It also catches SystemExit and KeyboardInterrupt",
+   "It only catches built-in exceptions",
+   "It silently re-raises every exception"
+  ],
+  "answer": 1,
+  "explanation": "A bare except catches BaseException, swallowing exits and Ctrl+C along with real errors."
+ },
+ {
+  "id": "q1ada044792d",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Given def f(): try: return 1 finally: return 2, what does f() return?",
+  "options": [
+   "None",
+   "1",
+   "2",
+   "(1, 2)"
+  ],
+  "answer": 2,
+  "explanation": "finally runs before the function actually returns, and its own return overrides the pending one."
+ },
+ {
+  "id": "q2fb32c6eb5d",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What are ExceptionGroup and except* (Python 3.11+) designed for?",
+  "options": [
+   "Catching exceptions in a specific order of priority",
+   "Converting exceptions into warnings",
+   "Raising and handling several unrelated exceptions together",
+   "Retrying a block until it stops raising"
+  ],
+  "answer": 2,
+  "explanation": "An ExceptionGroup bundles multiple exceptions, and except* handles the matching subgroups, e.g. from concurrent tasks."
+ },
+ {
+  "id": "q9f2ea587500",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Which of these exceptions does NOT inherit from Exception?",
+  "options": [
+   "ValueError",
+   "KeyboardInterrupt",
+   "StopIteration",
+   "OSError"
+  ],
+  "answer": 1,
+  "explanation": "KeyboardInterrupt derives directly from BaseException so that except Exception does not swallow Ctrl+C."
+ },
+ {
+  "id": "qa70d2ba7cb9",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What happens to the name e bound by except ValueError as e once the except block ends?",
+  "options": [
+   "It keeps referring to the exception",
+   "It is set to None",
+   "It is deleted",
+   "It is rebound to the traceback"
+  ],
+  "answer": 2,
+  "explanation": "Python implicitly deletes e at the end of the handler to avoid a reference cycle through the traceback."
+ }
+]

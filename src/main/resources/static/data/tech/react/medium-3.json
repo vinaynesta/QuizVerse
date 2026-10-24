@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qecad870695a",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "What does React do during the commit phase?",
+  "options": [
+   "Calls component functions to compute JSX",
+   "Diffs the old and new element trees",
+   "Downloads lazy component code",
+   "Applies the computed changes to the DOM and then runs effects"
+  ],
+  "answer": 3,
+  "explanation": "Rendering computes what should change; committing applies those changes to the DOM, after which effects run."
+ },
+ {
+  "id": "qd0edb85842c",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "In React 19, how does a function component receive a ref passed as <MyInput ref={r} />?",
+  "options": [
+   "Only through useImperativeHandle",
+   "As a regular prop named ref",
+   "Through useContext",
+   "It cannot receive a ref at all"
+  ],
+  "answer": 1,
+  "explanation": "React 19 lets function components read ref as a prop, so forwardRef is no longer needed for new code."
+ },
+ {
+  "id": "q9f1b7650043",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "When should you use useLayoutEffect instead of useEffect?",
+  "options": [
+   "For all data fetching",
+   "When an effect needs to run on the server",
+   "When an effect has no dependencies",
+   "When you must measure the DOM and update before the browser paints to avoid flicker"
+  ],
+  "answer": 3,
+  "explanation": "useLayoutEffect runs synchronously after DOM mutations but before paint, which suits layout measurement."
+ },
+ {
+  "id": "q69945c72d9a",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "In React 19, how can you provide a context value named ThemeContext?",
+  "options": [
+   "<ThemeContext value={theme}>...</ThemeContext>",
+   "<Provider context={ThemeContext} value={theme}>",
+   "ThemeContext.set(theme)",
+   "useContext(ThemeContext, theme)"
+  ],
+  "answer": 0,
+  "explanation": "React 19 lets you render the context itself as a provider; ThemeContext.Provider still works but is the older form."
+ },
+ {
+  "id": "qcf6d87db766",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is the benefit of writing useState(() => createInitialRows()) instead of useState(createInitialRows())?",
+  "options": [
+   "createInitialRows runs only on the first render instead of every render",
+   "It lets the state be shared across components",
+   "It makes the state read-only",
+   "It makes the setter asynchronous"
+  ],
+  "answer": 0,
+  "explanation": "Passing an initializer function lets React call it only once, avoiding the expensive call on every re-render."
+ },
+ {
+  "id": "qa11907bda7f",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "What does e.stopPropagation() do in a React event handler?",
+  "options": [
+   "Cancels the browser's default action",
+   "Removes the event listener",
+   "Prevents the component from re-rendering",
+   "Stops the event from bubbling to ancestor handlers"
+  ],
+  "answer": 3,
+  "explanation": "stopPropagation prevents parent elements' handlers from receiving the event; preventDefault is the separate default-action control."
+ },
+ {
+  "id": "q02dda87ae3f",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "Why is calling useState inside an if statement not allowed?",
+  "options": [
+   "It would make the state global",
+   "if statements are not allowed in components",
+   "useState only works inside loops",
+   "React identifies hooks by call order, which must be the same every render"
+  ],
+  "answer": 3,
+  "explanation": "React matches each hook call to its stored state by position, so conditional calls would shift that order."
+ },
+ {
+  "id": "q08aa045bfe8",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "Inside a list, how do you pass an item id to a click handler?",
+  "options": [
+   "onClick={handleDelete(item.id)}",
+   "onClick={handleDelete} id={item.id} only",
+   "onClick={() => handleDelete(item.id)}",
+   "onClick='handleDelete(item.id)'"
+  ],
+  "answer": 2,
+  "explanation": "Wrapping the call in an arrow function defers it until the click instead of calling it during render."
+ },
+ {
+  "id": "qcc7cf44227b",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "Which values in JSX children render nothing at all?",
+  "options": [
+   "0, empty string, and NaN",
+   "true, false, null, and undefined",
+   "Empty arrays and empty objects",
+   "Only undefined"
+  ],
+  "answer": 1,
+  "explanation": "Booleans, null, and undefined are ignored as children, while numbers like 0 are rendered."
+ },
+ {
+  "id": "q8efb0bd01dc",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "What does useFormStatus provide, and where must it be called?",
+  "options": [
+   "Pending status of the parent form; called in a component rendered inside that form",
+   "Validation errors; called in the form's parent",
+   "Field values; called anywhere in the app",
+   "Submit history; called in a Server Component"
+  ],
+  "answer": 0,
+  "explanation": "useFormStatus reads the status of the enclosing form, so it must be used in a child component of the form."
+ }
+]

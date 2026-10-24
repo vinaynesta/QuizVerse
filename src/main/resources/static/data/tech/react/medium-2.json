@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8c0e8a06fea",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "Why must a component function be pure during rendering?",
+  "options": [
+   "Pure functions run on the GPU",
+   "React may call it more than once or discard its output, so side effects during render cause bugs",
+   "Pure components skip reconciliation",
+   "It is required for TypeScript support"
+  ],
+  "answer": 1,
+  "explanation": "React relies on render being free of side effects so it can re-run, interrupt, or skip renders safely."
+ },
+ {
+  "id": "qea17d5708bf",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "Can a Server Component import and render a Client Component?",
+  "options": [
+   "Yes, and it can pass serializable props to it",
+   "Only if both are in the same file",
+   "No, never",
+   "Only through a context provider"
+  ],
+  "answer": 0,
+  "explanation": "Server Components can render Client Components, passing props that must be serializable, such as plain data or JSX."
+ },
+ {
+  "id": "qc936d291716",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "An effect calls setInterval but returns no cleanup. What happens when its dependency changes repeatedly?",
+  "options": [
+   "React clears old intervals automatically",
+   "Multiple intervals pile up and keep running",
+   "The effect stops running",
+   "React throws an error"
+  ],
+  "answer": 1,
+  "explanation": "Without cleanup that calls clearInterval, each effect run adds another interval that is never removed."
+ },
+ {
+  "id": "qcdd8670a5a4",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "Why is setCount(c => c + 1) safer than setCount(count + 1) when called several times in one handler?",
+  "options": [
+   "It updates state synchronously",
+   "It skips the re-render",
+   "Each updater receives the latest queued state rather than the stale render value",
+   "It works without a dependency array"
+  ],
+  "answer": 2,
+  "explanation": "Updater functions are applied in order to the pending state, so three calls add three instead of one."
+ },
+ {
+  "id": "qe1ebe1af35b",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "A parent conditionally renders <Form key={userId} />. What happens when userId changes?",
+  "options": [
+   "Form keeps its state and just re-renders",
+   "Form is unmounted and a fresh instance with reset state is mounted",
+   "React throws a duplicate key warning",
+   "Only Form's effects re-run"
+  ],
+  "answer": 1,
+  "explanation": "Changing the key tells React it is a different component instance, which is a common way to reset state."
+ },
+ {
+  "id": "q911ee72a49b",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "What happens if you set value={name} on an input but provide no onChange handler?",
+  "options": [
+   "The value is ignored",
+   "React automatically updates name",
+   "The input becomes uncontrolled",
+   "The input becomes effectively read-only and React warns"
+  ],
+  "answer": 3,
+  "explanation": "A controlled input without onChange cannot change, so React warns and suggests onChange or readOnly."
+ },
+ {
+  "id": "qd5060b9f0cd",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "Two components call the same custom hook useCounter(). What is true about their state?",
+  "options": [
+   "They share a single counter",
+   "Only the first component gets state",
+   "Each component gets its own independent state",
+   "The state is stored in context automatically"
+  ],
+  "answer": 2,
+  "explanation": "Custom hooks share stateful logic, not state; each call creates separate state for its component."
+ },
+ {
+  "id": "q0909add00ed",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "What should a reducer function passed to useReducer do?",
+  "options": [
+   "Mutate the state object and return nothing",
+   "Return a new state computed purely from the current state and the action",
+   "Fetch data and dispatch new actions",
+   "Call setState for each changed field"
+  ],
+  "answer": 1,
+  "explanation": "Reducers must be pure: given state and action, they return the next state without side effects or mutation."
+ },
+ {
+  "id": "qebb7576486f",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "How does React decide whether to re-run an effect with dependencies [a, b]?",
+  "options": [
+   "Deep equality comparison of a and b",
+   "Object.is comparison of each dependency with its previous value",
+   "It always re-runs after every render",
+   "JSON.stringify comparison of a and b"
+  ],
+  "answer": 1,
+  "explanation": "React compares each dependency with Object.is, so new objects or functions created during render count as changes."
+ },
+ {
+  "id": "qcb09472baa4",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What is the main job of React Compiler?",
+  "options": [
+   "Automatically memoizing components and values at build time",
+   "Server-rendering all components",
+   "Converting JSX to WebAssembly",
+   "Replacing the virtual DOM"
+  ],
+  "answer": 0,
+  "explanation": "React Compiler analyzes components and inserts memoization so you rarely need manual memo, useMemo, or useCallback."
+ }
+]

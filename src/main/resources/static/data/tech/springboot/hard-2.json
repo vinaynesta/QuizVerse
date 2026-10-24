@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q975057c8f46",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "A @SpringBootTest(webEnvironment = RANDOM_PORT) test is @Transactional and calls the API via TestRestTemplate. Why are the inserted rows not rolled back?",
+  "options": [
+   "The server handles the request in a different thread and transaction",
+   "TestRestTemplate commits the test transaction",
+   "Rollback only works with JUnit 4",
+   "RANDOM_PORT disables all transactions"
+  ],
+  "answer": 0,
+  "explanation": "Test-managed rollback applies to the test thread's transaction, not to transactions in server threads."
+ },
+ {
+  "id": "q82fec8e4116",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "In Spring Boot 3, how does /actuator/env show property values by default?",
+  "options": [
+   "Values are shown in plain text",
+   "All values are masked",
+   "Only passwords are masked",
+   "Values are hidden only in the prod profile"
+  ],
+  "answer": 1,
+  "explanation": "Boot 3 changed show-values to never by default, so values are masked unless configured otherwise."
+ },
+ {
+  "id": "q68d411900f5",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "How does Propagation.NESTED differ from REQUIRES_NEW?",
+  "options": [
+   "NESTED creates a new database connection, REQUIRES_NEW does not",
+   "NESTED uses a savepoint in the same physical transaction, REQUIRES_NEW starts a separate one",
+   "NESTED ignores rollback, REQUIRES_NEW does not",
+   "They are identical aliases"
+  ],
+  "answer": 1,
+  "explanation": "Rolling back a nested scope returns to the savepoint, but an outer rollback also undoes the nested work."
+ },
+ {
+  "id": "qcfca0cc66f8",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "Which Spring Boot utility is designed for testing an auto-configuration's conditions without starting the full application?",
+  "options": [
+   "SpringApplicationBuilder",
+   "ApplicationContextRunner",
+   "MockMvcBuilders",
+   "AnnotationConfigWebApplicationContext"
+  ],
+  "answer": 1,
+  "explanation": "ApplicationContextRunner lets you add configurations and properties and assert on the resulting context quickly."
+ },
+ {
+  "id": "q9c7ae08f441",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "Why can an @Async method lose the authenticated user from SecurityContextHolder?",
+  "options": [
+   "@Async clears the HTTP session",
+   "Security contexts expire after one second",
+   "The default strategy is ThreadLocal, so the new thread has no context unless it is propagated",
+   "Async methods run as an anonymous system user by design"
+  ],
+  "answer": 2,
+  "explanation": "Use DelegatingSecurityContextExecutor or a propagating strategy to carry the context to other threads."
+ },
+ {
+  "id": "q71e51c328ee",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "A singleton bean receives a prototype bean through its constructor. What does it get each time it uses that field?",
+  "options": [
+   "The same prototype instance, created once at injection time",
+   "A proxy that creates a new instance per call by default",
+   "null after the first use",
+   "A fresh prototype instance on every method call"
+  ],
+  "answer": 0,
+  "explanation": "Injection happens once; use ObjectProvider, @Lookup or a scoped proxy to get a new prototype each time."
+ },
+ {
+  "id": "q2ff3330df20",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "Why is @ConditionalOnMissingBean reliable in auto-configurations but risky in ordinary user @Configuration classes?",
+  "options": [
+   "It is evaluated against beans registered so far, and auto-configurations are processed after user configuration",
+   "User configuration classes ignore all conditions",
+   "It is evaluated lazily at first injection only in auto-configurations",
+   "Auto-configurations are processed in a separate child context"
+  ],
+  "answer": 0,
+  "explanation": "Condition evaluation depends on registration order; auto-configurations run after user beans are defined, so they see them."
+ },
+ {
+  "id": "q03dea002a76",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "Why can't you switch @Profile-based beans at runtime in a Spring Boot GraalVM native image?",
+  "options": [
+   "Native images cannot read environment variables",
+   "Profiles are only supported in WAR deployments",
+   "GraalVM strips all annotations",
+   "AOT processing fixes the bean definitions at build time"
+  ],
+  "answer": 3,
+  "explanation": "Native images assume a closed world, so profiles and conditions are evaluated during the AOT build."
+ },
+ {
+  "id": "qe27c33a0585",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "dev is active. Which wins: application-dev.properties packaged in the jar, or application.properties in ./config next to the jar?",
+  "options": [
+   "The packaged application-dev.properties",
+   "Whichever file was modified most recently",
+   "The external ./config/application.properties",
+   "Neither; Boot fails because of the conflict"
+  ],
+  "answer": 2,
+  "explanation": "Boot ranks files outside the jar above packaged ones, including packaged profile-specific files."
+ },
+ {
+  "id": "q3c49653474e",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "With Spring Boot's auto-configured ObjectMapper, what happens when a JSON request body contains an unknown property?",
+  "options": [
+   "The request is rejected with 415",
+   "Deserialization fails with UnrecognizedPropertyException",
+   "The property is ignored and deserialization succeeds",
+   "The unknown property is stored in a map automatically"
+  ],
+  "answer": 2,
+  "explanation": "Boot's Jackson configuration disables DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES."
+ }
+]

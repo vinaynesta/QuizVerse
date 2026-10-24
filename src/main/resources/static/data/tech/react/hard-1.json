@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q817fe0769e1",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "A handler calls setCount(count + 1) and then console.log(count) on the next line. What is logged when count was 3?",
+  "options": [
+   "4",
+   "3",
+   "A promise",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "State is a snapshot for the current render; the new value is only available on the next render."
+ },
+ {
+  "id": "qce74f4b7eab",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "Why can passing JSX as children to a stateful wrapper avoid re-rendering that JSX when the wrapper's state changes?",
+  "options": [
+   "React never re-renders children props",
+   "The children elements were created by the parent, so their reference is unchanged when only the wrapper re-renders",
+   "children are always memoized by the compiler",
+   "JSX passed as children is static HTML"
+  ],
+  "answer": 1,
+  "explanation": "When only the wrapper updates, props.children is the same element object, so React can skip that subtree."
+ },
+ {
+  "id": "q66131836d12",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A reducer does state.items.push(action.item); return state. Why does the UI not update?",
+  "options": [
+   "Reducers cannot handle arrays",
+   "The same state reference is returned, so React sees no change and bails out",
+   "push is asynchronous",
+   "dispatch was not awaited"
+  ],
+  "answer": 1,
+  "explanation": "React compares the returned state with Object.is; mutating and returning the same object looks like no change."
+ },
+ {
+  "id": "qd32458b5ab0",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "An effect with [] sets up setInterval(() => setCount(count + 1), 1000). Why does count stop at 1?",
+  "options": [
+   "setInterval only fires once inside effects",
+   "The callback closes over the initial count of 0, so it keeps setting 1",
+   "React batches all interval updates into one",
+   "Strict Mode cancels the interval after one tick"
+  ],
+  "answer": 1,
+  "explanation": "This is a stale closure; using setCount(c => c + 1) or adding count to dependencies fixes it."
+ },
+ {
+  "id": "q2019b28d2aa",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "With count = 0, a handler runs setCount(count + 1) three times in a row. What is count after the re-render?",
+  "options": [
+   "3",
+   "0",
+   "1",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "Each call uses the same render-time value 0, so all three set it to 1."
+ },
+ {
+  "id": "q50dd938a039",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "A component does return items.map(i => <Row {...i} />) without keys, and Row has internal state. What goes wrong when an item is inserted at the top?",
+  "options": [
+   "Nothing; React infers keys from props",
+   "React falls back to index identity, so state shifts to the wrong rows",
+   "React throws and stops rendering",
+   "Every Row keeps its state correctly but renders twice"
+  ],
+  "answer": 1,
+  "explanation": "Missing keys behave like index keys, so inserting at the top makes each Row's state follow its position rather than its item."
+ },
+ {
+  "id": "q3eebec6e037",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "A component calls setValue(5) when value is already 5. What does React do?",
+  "options": [
+   "Bails out of re-rendering children and effects, since Object.is says nothing changed",
+   "Throws a warning about redundant updates",
+   "Resets the component's other state",
+   "Always re-renders the whole tree"
+  ],
+  "answer": 0,
+  "explanation": "React skips updates with an identical value, though it may still call the component once before bailing out."
+ },
+ {
+  "id": "q9502d1332d1",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "Since React 18 with createRoot, what happens when two setState calls occur inside a setTimeout callback?",
+  "options": [
+   "They cause two separate renders",
+   "Only the first is applied",
+   "They are automatically batched into a single render",
+   "They throw an error outside event handlers"
+  ],
+  "answer": 2,
+  "explanation": "Automatic batching in React 18+ groups updates in timeouts, promises, and native handlers, not just React events."
+ },
+ {
+  "id": "q03530f01928",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "What does useOptimistic help you do?",
+  "options": [
+   "Show a temporary optimistic state while an async action is in progress",
+   "Retry failed fetches automatically",
+   "Preload images",
+   "Skip validation on forms"
+  ],
+  "answer": 0,
+  "explanation": "useOptimistic lets the UI reflect the expected result immediately, reverting to real state when the action finishes."
+ },
+ {
+  "id": "q5611ed490d6",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "When typing filters a huge list, why can wrapping setFilteredList in startTransition keep the input responsive?",
+  "options": [
+   "React can interrupt the transition render to process new keystrokes first",
+   "It runs the filter on another thread",
+   "It skips rendering the list",
+   "It debounces input by 300ms"
+  ],
+  "answer": 0,
+  "explanation": "Transition renders are interruptible, so urgent input updates are not blocked by the expensive list render."
+ }
+]

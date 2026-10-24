@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1a6a2e38aaf",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "What does list.stream().filter(p) return?",
+  "options": [
+   "A List of matching elements",
+   "A new Stream with only the elements matching p",
+   "A boolean telling if any element matches",
+   "The original list with non-matching elements removed"
+  ],
+  "answer": 1,
+  "explanation": "filter is an intermediate operation returning a new Stream; it never modifies the source."
+ },
+ {
+  "id": "qad521d88b14",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which functional interface takes no argument and returns a value?",
+  "options": [
+   "Consumer<T>",
+   "Predicate<T>",
+   "Function<T, R>",
+   "Supplier<T>"
+  ],
+  "answer": 3,
+  "explanation": "Supplier.get() takes nothing and returns a T; Consumer takes a value and returns nothing."
+ },
+ {
+  "id": "qb61d4c1706d",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which of these stream operations is terminal?",
+  "options": [
+   "filter",
+   "map",
+   "collect",
+   "sorted"
+  ],
+  "answer": 2,
+  "explanation": "collect produces a result and ends the pipeline; filter, map and sorted are intermediate operations."
+ },
+ {
+  "id": "qfd3d971332c",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which is a valid lambda for a Function<Integer, Integer>?",
+  "options": [
+   "lambda x: x * 2",
+   "x => x * 2",
+   "x -> x * 2",
+   "fn(x) { x * 2 }"
+  ],
+  "answer": 2,
+  "explanation": "Java lambdas use the arrow token ->, with parameters on the left and the body on the right."
+ },
+ {
+  "id": "q59f9afdbaa0",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What must be true of a local variable referenced inside a lambda body?",
+  "options": [
+   "It must be declared static",
+   "It must be declared volatile",
+   "It must be final or effectively final",
+   "It must be a primitive type"
+  ],
+  "answer": 2,
+  "explanation": "Lambdas capture local variables by value, so the language requires those variables not to be reassigned."
+ },
+ {
+  "id": "q65c7e976130",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does the statement Stream.of(1, 2, 3).peek(System.out::println); print on its own?",
+  "options": [
+   "1, 2 and 3 on separate lines",
+   "Nothing",
+   "Only 1",
+   "It throws IllegalStateException"
+  ],
+  "answer": 1,
+  "explanation": "Intermediate operations are lazy; without a terminal operation the pipeline never runs."
+ },
+ {
+  "id": "q6d5877e43ba",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Stream.of(\"a\", \"bb\", \"cc\").collect(Collectors.groupingBy(String::length)) produce?",
+  "options": [
+   "[[a], [bb, cc]]",
+   "{a=1, bb=2, cc=2}",
+   "{1=1, 2=2}",
+   "{1=[a], 2=[bb, cc]}"
+  ],
+  "answer": 3,
+  "explanation": "groupingBy builds a Map from the classifier result to a List of the elements with that key."
+ },
+ {
+  "id": "q8f967804fa0",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Stream.of(1, 2, 3, 4).filter(n -> n % 2 == 0).map(n -> n * n).toList() return?",
+  "options": [
+   "[1, 9]",
+   "[4, 16]",
+   "[2, 4]",
+   "[4, 8]"
+  ],
+  "answer": 1,
+  "explanation": "filter keeps 2 and 4, and map squares them to 4 and 16."
+ },
+ {
+  "id": "q091267c4462",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What happens when Collectors.toMap without a merge function encounters a duplicate key?",
+  "options": [
+   "It keeps the last value",
+   "It throws IllegalStateException",
+   "It keeps the first value",
+   "It stores the values in a List"
+  ],
+  "answer": 1,
+  "explanation": "The two-argument toMap rejects duplicate keys; pass a merge function to resolve collisions."
+ },
+ {
+  "id": "q59745711845",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What does Optional.of(null) do?",
+  "options": [
+   "Returns Optional.empty()",
+   "Fails to compile",
+   "Returns an Optional holding null",
+   "Throws NullPointerException"
+  ],
+  "answer": 3,
+  "explanation": "Optional.of requires a non-null value; Optional.ofNullable returns empty for null."
+ },
+ {
+  "id": "q803211c661b",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What happens if you call a terminal operation on a stream that already had a terminal operation?",
+  "options": [
+   "The stream restarts from its first element",
+   "IllegalStateException is thrown",
+   "The cached previous result is returned",
+   "An empty result is returned"
+  ],
+  "answer": 1,
+  "explanation": "A stream can be consumed only once; create a new stream from the source to traverse again."
+ },
+ {
+  "id": "qbf4c6cbde95",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "How many numbers does Stream.of(1, 2, 3, 4, 5).filter(n -> { System.out.print(n); return n > 2; }).findFirst() print?",
+  "options": [
+   "3",
+   "5",
+   "1",
+   "0"
+  ],
+  "answer": 0,
+  "explanation": "Streams process elements one at a time and findFirst short-circuits, so the filter runs only for 1, 2 and 3."
+ }
+]

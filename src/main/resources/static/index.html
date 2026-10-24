@@ -18,13 +18,29 @@
     <h1>Welcome to QuizVerse</h1>
 
     <div class="quiz-container">
-        <p class="home-tagline">Practise bank exam papers section by section, with the real question counts, marks and timers.</p>
+        <p class="home-tagline">Practise bank exam papers section by section, with the real question counts, marks and timers, or sharpen your tech interview skills.</p>
 
         <a id="daily-card" class="daily-card" href="quiz.html?practice=daily">
             <span class="daily-badge">Daily quiz</span>
             <b>10 mixed questions, 10 minutes</b>
             <span id="daily-status">The same questions for everyone today. A new set every day.</span>
         </a>
+
+        <div class="daily-row">
+            <a id="tech-daily-card" class="daily-card tech" href="quiz.html?practice=tech-daily">
+                <span class="daily-badge">Daily tech challenge</span>
+                <b>5 tech questions, 5 minutes</b>
+                <span id="tech-daily-status">DSA, Java, Python, Spring Boot, React, Vue and AI. New every day.</span>
+            </a>
+
+            <section id="qotd" class="daily-card qotd" hidden>
+                <span class="daily-badge">Question of the day</span>
+                <b id="qotd-subject"></b>
+                <p id="qotd-question" class="qotd-question"></p>
+                <div id="qotd-options" class="qotd-options"></div>
+                <p id="qotd-result" class="qotd-result" hidden></p>
+            </section>
+        </div>
 
         <div id="subject-list" class="subject-list">
             <!-- Subjects will be populated by JS -->

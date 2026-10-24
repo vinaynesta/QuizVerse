@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf4913051212",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "Which statement about heapsort is true?",
+  "options": [
+   "It is stable and runs in O(n) time",
+   "Its worst case is O(n^2) like quicksort",
+   "It runs in O(n log n) worst case and is in-place but not stable",
+   "It requires O(n) auxiliary space"
+  ],
+  "answer": 2,
+  "explanation": "Heapsort sorts within the array with guaranteed O(n log n) time, but swaps can reorder equal keys."
+ },
+ {
+  "id": "q184f78562c8",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "Why does the greedy value-to-weight strategy fail for 0/1 knapsack even though it works for fractional knapsack?",
+  "options": [
+   "0/1 knapsack has negative weights",
+   "Fractional knapsack is NP-hard",
+   "Greedy cannot sort items by ratio",
+   "Items cannot be split, so taking the best-ratio item may waste capacity a better combination would use"
+  ],
+  "answer": 3,
+  "explanation": "Without fractions, leftover capacity can make a locally best choice globally suboptimal."
+ },
+ {
+  "id": "q21df0c67c54",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "Compared with a red-black tree, what is characteristic of an AVL tree?",
+  "options": [
+   "It allows duplicate keys while red-black trees do not",
+   "It is less balanced but never needs rotations",
+   "It is more strictly balanced, giving faster lookups but possibly more rotations on updates",
+   "It guarantees O(1) insertion"
+  ],
+  "answer": 2,
+  "explanation": "AVL height stays near 1.44 log n versus about 2 log n for red-black trees, at the cost of more rebalancing."
+ },
+ {
+  "id": "qbdf9e309880",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "What is the time complexity of generating and outputting all permutations of n distinct elements by backtracking?",
+  "options": [
+   "O(n * n!)",
+   "O(n^2)",
+   "O(2^n)",
+   "O(n!) / n"
+  ],
+  "answer": 0,
+  "explanation": "There are n! permutations, and copying out each one costs O(n)."
+ },
+ {
+  "id": "qdee3663f87b",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "What is the time complexity of computing the maximum of every window of size k in an array of n elements using a monotonic deque?",
+  "options": [
+   "O(n log k)",
+   "O(n)",
+   "O(k log n)",
+   "O(n * k)"
+  ],
+  "answer": 1,
+  "explanation": "Each index is added to and removed from the deque at most once."
+ },
+ {
+  "id": "q5abeb6e8f58",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "For which coin system does the greedy strategy of always taking the largest coin give the minimum number of coins for every amount?",
+  "options": [
+   "{1, 5, 10, 25}",
+   "{1, 3, 4}",
+   "{1, 7, 10}",
+   "{1, 6, 9}"
+  ],
+  "answer": 0,
+  "explanation": "US-style denominations are canonical; for example {1, 7, 10} fails on 14 (greedy uses 5 coins, optimal is 7 + 7)."
+ },
+ {
+  "id": "q55ab8808e15",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "Why is the O(n * W) 0/1 knapsack DP called pseudo-polynomial?",
+  "options": [
+   "Its runtime is polynomial in the value W but exponential in the number of bits needed to encode W",
+   "It uses polynomial space but exponential time",
+   "It is polynomial only when n is less than W",
+   "It runs in polynomial time only on average"
+  ],
+  "answer": 0,
+  "explanation": "Input size counts the bits of W, so doubling the bit length can square W's magnitude."
+ },
+ {
+  "id": "qd0e2356e60f",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "In an efficient N-Queens backtracking solution, how are conflicts usually checked in O(1) per placement?",
+  "options": [
+   "By rescanning the entire board after each placement",
+   "By sorting the queens by row after each step",
+   "By tracking occupied columns and both diagonal directions in sets or boolean arrays",
+   "By precomputing all N! permutations first"
+  ],
+  "answer": 2,
+  "explanation": "Columns, row - col, and row + col identify attacking lines, so a lookup tells whether a square is safe."
+ },
+ {
+  "id": "qffd3cfa2b01",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "What is the Levenshtein edit distance between 'kitten' and 'sitting'?",
+  "options": [
+   "3",
+   "2",
+   "4",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "Substitute k with s, substitute e with i, and insert g at the end."
+ },
+ {
+  "id": "qdf627cfb83e",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "Why does an LRU cache use a doubly linked list rather than a singly linked one?",
+  "options": [
+   "It uses less memory per node",
+   "Removing a node given a direct reference is O(1) because its predecessor is known",
+   "It allows binary search over the nodes",
+   "It keeps the nodes sorted by key"
+  ],
+  "answer": 1,
+  "explanation": "In a singly linked list, unlinking a node requires finding its predecessor, which takes O(n)."
+ }
+]

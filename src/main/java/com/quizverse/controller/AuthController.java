@@ -6,7 +6,7 @@ import com.quizverse.dto.AuthDtos.UserResponse;
 import com.quizverse.model.User;
 import com.quizverse.repository.UserRepository;
 import com.quizverse.security.AppUserDetailsService;
-import com.quizverse.security.SessionTracker;
+import com.quizverse.security.SessionSignIn;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -17,10 +17,8 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -39,19 +37,16 @@ public class AuthController {
     private final UserRepository users;
     private final PasswordEncoder encoder;
     private final AuthenticationManager authManager;
-    private final SecurityContextRepository contextRepository;
     private final AppUserDetailsService userDetails;
-    private final SessionTracker sessions;
+    private final SessionSignIn sessionSignIn;
 
     public AuthController(UserRepository users, PasswordEncoder encoder, AuthenticationManager authManager,
-                          SecurityContextRepository contextRepository, AppUserDetailsService userDetails,
-                          SessionTracker sessions) {
+                          AppUserDetailsService userDetails, SessionSignIn sessionSignIn) {
         this.users = users;
         this.encoder = encoder;
         this.authManager = authManager;
-        this.contextRepository = contextRepository;
         this.userDetails = userDetails;
-        this.sessions = sessions;
+        this.sessionSignIn = sessionSignIn;
     }
 
     @PostMapping("/auth/register")
@@ -113,13 +108,7 @@ public class AuthController {
                                   HttpServletResponse response) {
         Authentication auth = authManager.authenticate(
                 UsernamePasswordAuthenticationToken.unauthenticated(login, password));
-        // New session id on login, so a session id planted before login is useless afterwards.
-        if (request.getSession(false) != null) request.changeSessionId();
-        SecurityContext context = SecurityContextHolder.createEmptyContext();
-        context.setAuthentication(auth);
-        SecurityContextHolder.setContext(context);
-        contextRepository.saveContext(context, request, response);
-        sessions.register(auth.getName(), request.getSession());
+        sessionSignIn.signIn(auth, request, response);
         return auth;
     }
 

@@ -298,6 +298,7 @@ class DemoApplicationTests {
 				.andExpect(jsonPath("$.current").value(0))
 				.andExpect(jsonPath("$.goal").value(2))
 				.andExpect(jsonPath("$.dailyDone").value(false))
+				.andExpect(jsonPath("$.techDailyDone").value(false))
 				.andExpect(jsonPath("$.date").value(today));
 
 		saveAttempt(session, """
@@ -307,8 +308,18 @@ class DemoApplicationTests {
 		mvc.perform(get("/api/me/streak").session(session))
 				.andExpect(jsonPath("$.current").value(1))
 				.andExpect(jsonPath("$.today").value(1))
-				.andExpect(jsonPath("$.dailyDone").value(true));
-		// The daily quiz is practice, so it stays out of the exam badges.
+				.andExpect(jsonPath("$.dailyDone").value(true))
+				.andExpect(jsonPath("$.techDailyDone").value(false));
+
+		saveAttempt(session, """
+				{"kind":"tech-daily","examId":"tech-daily","stageId":"practice","sectionId":"%s","levelId":"practice",
+				 "quizIndex":0,"quizTitle":"Daily tech challenge","score":4,"maxMarks":5,"correct":4,"wrong":1,
+				 "skipped":0,"timed":true,"timeUsedSeconds":200,"answers":[]}""".formatted(today));
+		mvc.perform(get("/api/me/streak").session(session))
+				.andExpect(jsonPath("$.current").value(1))
+				.andExpect(jsonPath("$.today").value(2))
+				.andExpect(jsonPath("$.techDailyDone").value(true));
+		// The daily quizzes are practice, so they stay out of the exam badges.
 		mvc.perform(get("/api/attempts/best").session(session)).andExpect(jsonPath("$", hasSize(0)));
 
 		mvc.perform(put("/api/me/goal").session(session).with(csrf()).contentType(MediaType.APPLICATION_JSON)

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q473cc65f6e9",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "How can one application.properties file contain settings that apply only to the prod profile?",
+  "options": [
+   "Wrap them in a [prod] section header",
+   "Prefix keys with prod. inside the file",
+   "Separate documents with #--- and set spring.config.activate.on-profile=prod",
+   "Use spring.profiles=prod above the keys"
+  ],
+  "answer": 2,
+  "explanation": "Multi-document properties files use #--- separators, and on-profile activates a document conditionally."
+ },
+ {
+  "id": "qc939fdd03de",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "A bean has @ConditionalOnProperty(name = \"feature.cache.enabled\", havingValue = \"true\") with matchIfMissing left at its default. The property is absent. What happens?",
+  "options": [
+   "The bean is created lazily on first use",
+   "The bean is created because missing properties default to true",
+   "Startup fails with a missing property error",
+   "The condition does not match and the bean is not created"
+  ],
+  "answer": 3,
+  "explanation": "matchIfMissing defaults to false, so an absent property means the condition fails."
+ },
+ {
+  "id": "q8b2378041cd",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "With spring.jpa.open-in-view=false, what typically causes a LazyInitializationException?",
+  "options": [
+   "Accessing a lazy association after the persistence context has closed, e.g. in the controller",
+   "Using @Id with a UUID type",
+   "Calling save() inside a transaction",
+   "Defining two repositories for the same entity"
+  ],
+  "answer": 0,
+  "explanation": "Lazy proxies need an open persistence context; outside the transaction they cannot load data."
+ },
+ {
+  "id": "qb24484e8333",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "What does @AutoConfiguration(after = DataSourceAutoConfiguration.class) control?",
+  "options": [
+   "That it is only applied when DataSourceAutoConfiguration is excluded",
+   "That its beans are created after the application has started",
+   "That DataSourceAutoConfiguration is disabled",
+   "That this auto-configuration is processed after DataSourceAutoConfiguration"
+  ],
+  "answer": 3,
+  "explanation": "Ordering ensures conditions like @ConditionalOnBean(DataSource.class) can see beans from the referenced auto-configuration."
+ },
+ {
+  "id": "qdb9ccb40caf",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "A public method calls a @PreAuthorize(\"hasRole('ADMIN')\") method on this in the same bean. What happens?",
+  "options": [
+   "The check runs as usual",
+   "The check runs twice",
+   "Startup fails due to self-invocation",
+   "No authorization check occurs because the call bypasses the proxy"
+  ],
+  "answer": 3,
+  "explanation": "Method security uses proxies, and internal calls never pass through them."
+ },
+ {
+  "id": "q9a984a387a2",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "In what order are these initialization callbacks invoked for a bean?",
+  "options": [
+   "Custom init method, then @PostConstruct, then afterPropertiesSet()",
+   "afterPropertiesSet(), then @PostConstruct, then the custom init method",
+   "@PostConstruct, then afterPropertiesSet(), then the custom init method",
+   "@PostConstruct, then the custom init method, then afterPropertiesSet()"
+  ],
+  "answer": 2,
+  "explanation": "Annotation callbacks run first, then InitializingBean, then the init method declared on the bean definition."
+ },
+ {
+  "id": "q394b64ed94e",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "Why is a @PreDestroy method on a prototype-scoped bean never called by the container?",
+  "options": [
+   "The container does not manage prototype beans after handing them out",
+   "Prototype beans are destroyed only on JVM exit",
+   "@PreDestroy is supported only on @Configuration classes",
+   "Prototype beans are always wrapped in proxies that swallow callbacks"
+  ],
+  "answer": 0,
+  "explanation": "Spring configures and returns prototypes but does not track them, so the client is responsible for cleanup."
+ },
+ {
+  "id": "qbd1e39e4b9e",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "In Spring Security 6, a custom login endpoint sets SecurityContextHolder but the user is unauthenticated on the next request. Why?",
+  "options": [
+   "Custom endpoints must return a JWT",
+   "The session cookie name changed to JSESSION",
+   "SecurityContextHolder is read-only in Spring Security 6",
+   "The context must be saved explicitly with a SecurityContextRepository"
+  ],
+  "answer": 3,
+  "explanation": "Spring Security 6 uses SecurityContextHolderFilter, which no longer saves the context automatically."
+ },
+ {
+  "id": "q214c3d1794a",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "What does Spring Boot use for spring.jpa.hibernate.ddl-auto by default with an embedded database and no schema migration tool?",
+  "options": [
+   "create-drop",
+   "update",
+   "validate",
+   "none"
+  ],
+  "answer": 0,
+  "explanation": "Boot defaults to create-drop for embedded databases when no Flyway or Liquibase is detected, otherwise none."
+ },
+ {
+  "id": "q86f1de8a5ac",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "What happens when SimpleJpaRepository.save() is called with a detached entity that has an existing id?",
+  "options": [
+   "It calls persist and attaches the passed object",
+   "It calls EntityManager.merge and returns a managed copy, leaving the passed object detached",
+   "It updates the row but returns null",
+   "It throws EntityExistsException"
+  ],
+  "answer": 1,
+  "explanation": "For non-new entities save() delegates to merge, so you should use the returned instance."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0ee3ad0b2e3",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Inside def f(*args), what type is args?",
+  "options": [
+   "tuple",
+   "list",
+   "dict",
+   "set"
+  ],
+  "answer": 0,
+  "explanation": "Extra positional arguments collected by *args are packed into a tuple."
+ },
+ {
+  "id": "q2107def7717",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does a function return if it has no return statement?",
+  "options": [
+   "False",
+   "0",
+   "None",
+   "An empty tuple"
+  ],
+  "answer": 2,
+  "explanation": "A function that finishes without a return statement implicitly returns None."
+ },
+ {
+  "id": "q9b79208c3ee",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which keyword starts a named function definition?",
+  "options": [
+   "def",
+   "func",
+   "function",
+   "fn"
+  ],
+  "answer": 0,
+  "explanation": "Named functions are defined with the def keyword."
+ },
+ {
+  "id": "qe4fe5ec1b19",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What is a lambda in Python?",
+  "options": [
+   "A decorator that caches results",
+   "A named function that can contain statements",
+   "A built-in for looping over iterables",
+   "An anonymous function limited to a single expression"
+  ],
+  "answer": 3,
+  "explanation": "lambda creates a small unnamed function whose body is one expression."
+ },
+ {
+  "id": "q04bf7a48763",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "In def f(a, /, b), what does the / mean?",
+  "options": [
+   "Parameters before it are positional-only",
+   "Parameter a is optional",
+   "Parameters after it are keyword-only",
+   "f performs a division on its arguments"
+  ],
+  "answer": 0,
+  "explanation": "Since Python 3.8, parameters listed before / cannot be passed by keyword."
+ },
+ {
+  "id": "q109d6ba65d0",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "Given def f(a, b=2): return a + b, what does f(1, b=5) return?",
+  "options": [
+   "3",
+   "7",
+   "6",
+   "It raises TypeError"
+  ],
+  "answer": 2,
+  "explanation": "The keyword argument overrides the default, so 1 + 5 = 6."
+ },
+ {
+  "id": "q745401e61f1",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "What does (lambda x, y=3: x * y)(2) return?",
+  "options": [
+   "5",
+   "2",
+   "It raises TypeError",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "y falls back to its default 3, so the result is 2 * 3."
+ },
+ {
+  "id": "qc748d0b3d2f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "In def f(a, *, b), how must b be supplied?",
+  "options": [
+   "As a keyword argument only",
+   "Either positionally or by keyword",
+   "It cannot be supplied by the caller",
+   "As a positional argument only"
+  ],
+  "answer": 0,
+  "explanation": "Parameters after a bare * are keyword-only."
+ },
+ {
+  "id": "q0997376879c",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "With fs = [lambda: i for i in range(3)], what is [f() for f in fs]?",
+  "options": [
+   "[0, 1, 2]",
+   "[2, 2, 2]",
+   "[0, 0, 0]",
+   "[1, 2, 3]"
+  ],
+  "answer": 1,
+  "explanation": "Closures look up i when called (late binding), and by then the loop variable is 2."
+ },
+ {
+  "id": "q3b08c849d33",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "What does a nonlocal x declaration inside a nested function do?",
+  "options": [
+   "Lets assignments rebind x in the module scope",
+   "Lets assignments rebind x in the nearest enclosing function scope",
+   "Makes x read-only inside the function",
+   "Creates a fresh local variable x"
+  ],
+  "answer": 1,
+  "explanation": "nonlocal targets the closest enclosing function's variable, unlike global which targets module scope."
+ },
+ {
+  "id": "qdfcb30080ba",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "Given x = 1 and def f(): print(x); x = 2, what happens when f() is called?",
+  "options": [
+   "It prints 1",
+   "It prints 2",
+   "UnboundLocalError is raised",
+   "It prints None"
+  ],
+  "answer": 2,
+  "explanation": "The assignment makes x local to the whole function, so reading it before assignment fails."
+ },
+ {
+  "id": "qfbf48369d9f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "Given def f(x, acc=[]): acc.append(x); return acc, what does the second call f(2) return after f(1)?",
+  "options": [
+   "[2]",
+   "[1, 2]",
+   "[1]",
+   "[[1], 2]"
+  ],
+  "answer": 1,
+  "explanation": "Default values are evaluated once at definition time, so the same list is reused across calls."
+ }
+]

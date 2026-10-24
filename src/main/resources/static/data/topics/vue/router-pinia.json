@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q34de9fe8f1d",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which function defines a Pinia store?",
+  "options": [
+   "defineStore()",
+   "newStore()",
+   "registerStore()",
+   "createStore()"
+  ],
+  "answer": 0,
+  "explanation": "Pinia stores are defined with defineStore(), which returns a useXxxStore function."
+ },
+ {
+  "id": "q96f3c99c202",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which state management library is officially recommended for new Vue 3 apps?",
+  "options": [
+   "Vuex",
+   "Redux",
+   "MobX",
+   "Pinia"
+  ],
+  "answer": 3,
+  "explanation": "Pinia is the official recommended store for Vue 3; Vuex is in maintenance mode."
+ },
+ {
+  "id": "qd31559b8d9c",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which Vue Router component renders the component matched by the current route?",
+  "options": [
+   "<RouterView>",
+   "<RouterLink>",
+   "<RouteOutlet>",
+   "<PageView>"
+  ],
+  "answer": 0,
+  "explanation": "RouterView is the outlet that displays the matched route component."
+ },
+ {
+  "id": "qef0bdb510d8",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "In script setup, which function gives access to the current route's params and query?",
+  "options": [
+   "useRouter()",
+   "useRoute()",
+   "currentRoute()",
+   "getRoute()"
+  ],
+  "answer": 1,
+  "explanation": "useRoute() returns the current route location; useRouter() returns the router instance used for navigation."
+ },
+ {
+  "id": "q18ad40465c9",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "In a Pinia options store, what are getters equivalent to?",
+  "options": [
+   "Watchers on store state",
+   "Computed properties for the store",
+   "Mutations that change state",
+   "Lifecycle hooks of the store"
+  ],
+  "answer": 1,
+  "explanation": "Getters derive values from state and are cached like computed properties."
+ },
+ {
+  "id": "qba92aab4547",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "Which helper lets you destructure state from a Pinia store without losing reactivity?",
+  "options": [
+   "markRaw()",
+   "toRaw()",
+   "storeToRefs()",
+   "readonly()"
+  ],
+  "answer": 2,
+  "explanation": "storeToRefs() creates refs for state and getters so destructured values stay reactive."
+ },
+ {
+  "id": "qcff7f25dae7",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "How do you navigate to /about programmatically with Vue Router?",
+  "options": [
+   "router.push('/about')",
+   "route.navigate('/about')",
+   "router.go('/about')",
+   "router.link('/about')"
+  ],
+  "answer": 0,
+  "explanation": "router.push() adds a new history entry and navigates to the given location."
+ },
+ {
+  "id": "qea80afa7e01",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "For the route path /users/:id, how do you read id?",
+  "options": [
+   "route.query.id",
+   "route.hash.id",
+   "route.params.id",
+   "route.meta.id"
+  ],
+  "answer": 2,
+  "explanation": "Dynamic segments in the path are exposed on route.params."
+ },
+ {
+  "id": "q11193d7f2f8",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "Is store.$reset() available on a Pinia setup store by default?",
+  "options": [
+   "Yes, it is available on every store",
+   "Only after calling storeToRefs()",
+   "Only when the store uses persistence",
+   "No, you must implement your own reset in setup stores"
+  ],
+  "answer": 3,
+  "explanation": "$reset() is built into option stores, but setup stores need a custom reset action."
+ },
+ {
+  "id": "q20ea13a30ed",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "In a Pinia setup store, what must happen to every state property?",
+  "options": [
+   "It must be returned from the setup function",
+   "It must be declared with reactive()",
+   "It must be wrapped with markRaw()",
+   "It must be registered with defineState()"
+  ],
+  "answer": 0,
+  "explanation": "Unreturned state is private and breaks devtools, SSR and plugins, so all state must be returned."
+ },
+ {
+  "id": "q7fdef425084",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "Navigating from /users/1 to /users/2 with the same component does not rerun onMounted. Why?",
+  "options": [
+   "The instance is reused, so watch params or use onBeforeRouteUpdate",
+   "The router caches the old page as HTML",
+   "Params changes are not detected by the router",
+   "onMounted only runs for the first route"
+  ],
+  "answer": 0,
+  "explanation": "Vue Router reuses the component when only params change, so lifecycle hooks are not called again."
+ },
+ {
+  "id": "q818ba3577c4",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "What happens when a router.beforeEach guard returns false?",
+  "options": [
+   "The guard is skipped and navigation continues",
+   "The router redirects to the home route",
+   "The current navigation is cancelled",
+   "The app reloads the current page"
+  ],
+  "answer": 2,
+  "explanation": "Returning false from a navigation guard aborts the navigation."
+ }
+]

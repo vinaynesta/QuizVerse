@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1959f0e3bc9",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Are String objects mutable in Java?",
+  "options": [
+   "No, a String's value never changes after creation",
+   "Yes, methods like toUpperCase change it in place",
+   "Only strings created with new are mutable",
+   "Only strings that are not interned are mutable"
+  ],
+  "answer": 0,
+  "explanation": "String is immutable; methods such as toUpperCase return a new String."
+ },
+ {
+  "id": "q4add7f28f07",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"  hi  \".strip() return?",
+  "options": [
+   "\"  hi\"",
+   "\"hi\"",
+   "\"  hi  \"",
+   "\"hi  \""
+  ],
+  "answer": 1,
+  "explanation": "strip() (Java 11) removes leading and trailing whitespace; stripLeading and stripTrailing remove only one side."
+ },
+ {
+  "id": "qec40617d9d0",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"Java\".charAt(1) return?",
+  "options": [
+   "'a'",
+   "'J'",
+   "'v'",
+   "It throws StringIndexOutOfBoundsException"
+  ],
+  "answer": 0,
+  "explanation": "String indexes start at 0, so index 1 is the second character, 'a'."
+ },
+ {
+  "id": "qefcc6dcf54b",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Which class is preferred for building a string in a loop in single-threaded code?",
+  "options": [
+   "StringBuffer",
+   "String",
+   "StringBuilder",
+   "CharSequence"
+  ],
+  "answer": 2,
+  "explanation": "StringBuilder is mutable and unsynchronized, so it avoids creating many intermediate String objects."
+ },
+ {
+  "id": "q0646a4e6d85",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "What sign does \"abc\".compareTo(\"abd\") return?",
+  "options": [
+   "A negative number",
+   "Zero",
+   "A positive number",
+   "It throws ClassCastException"
+  ],
+  "answer": 0,
+  "explanation": "compareTo compares lexicographically; 'c' is less than 'd', so the result is negative."
+ },
+ {
+  "id": "q36dba8b901b",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "What does String.join(\"-\", \"a\", \"b\", \"c\") return?",
+  "options": [
+   "\"a-b-c\"",
+   "\"-a-b-c\"",
+   "\"abc-\"",
+   "\"a-b-c-\""
+  ],
+  "answer": 0,
+  "explanation": "String.join places the delimiter only between elements."
+ },
+ {
+  "id": "qf3d33b67bc3",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "What does \"hello\".substring(1, 3) return?",
+  "options": [
+   "\"el\"",
+   "\"ell\"",
+   "\"he\"",
+   "\"hel\""
+  ],
+  "answer": 0,
+  "explanation": "substring's end index is exclusive, so it returns characters at indexes 1 and 2."
+ },
+ {
+  "id": "qfb1ddcdd619",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "After String s = \"Java\"; s.toUpperCase(); what does System.out.println(s) print?",
+  "options": [
+   "JAVA",
+   "java",
+   "Nothing, it fails to compile",
+   "Java"
+  ],
+  "answer": 3,
+  "explanation": "toUpperCase returns a new String; since the result is discarded, s still refers to \"Java\"."
+ },
+ {
+  "id": "q0f76b891aa1",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "How does String store its characters internally since Java 9?",
+  "options": [
+   "A char[] holding UTF-16 code units",
+   "An int[] of Unicode code points",
+   "A byte[] plus a coder flag for LATIN1 or UTF16",
+   "A linked list of character chunks"
+  ],
+  "answer": 2,
+  "explanation": "Compact strings (JEP 254) store Latin-1 text one byte per character, cutting memory use."
+ },
+ {
+  "id": "q3bbc669fec0",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "Given final String a = \"a\"; what does (a + \"b\") == \"ab\" evaluate to?",
+  "options": [
+   "true",
+   "It does not compile",
+   "It depends on the garbage collector",
+   "false"
+  ],
+  "answer": 0,
+  "explanation": "a is a constant variable, so a + \"b\" is a compile-time constant that is interned like the literal \"ab\"."
+ },
+ {
+  "id": "q9393ff61c96",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "What does \"a,b,,\".split(\",\").length return?",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "split(regex) removes trailing empty strings; use split(\",\", -1) to keep them."
+ },
+ {
+  "id": "qdfb59aa52c9",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "What does new String(\"hi\").intern() == \"hi\" evaluate to?",
+  "options": [
+   "false",
+   "true",
+   "It does not compile",
+   "It throws IllegalStateException"
+  ],
+  "answer": 1,
+  "explanation": "intern() returns the canonical pooled instance, which is the same object as the literal \"hi\"."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q5379fd7e883",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which interface represents a mapping from keys to values?",
+  "options": [
+   "List",
+   "Set",
+   "Map",
+   "Queue"
+  ],
+  "answer": 2,
+  "explanation": "Map stores key-value pairs; it does not extend Collection."
+ },
+ {
+  "id": "qe76d8298f5b",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which of these collections does not allow duplicate elements?",
+  "options": [
+   "HashSet",
+   "ArrayList",
+   "LinkedList",
+   "ArrayDeque"
+  ],
+  "answer": 0,
+  "explanation": "Set implementations such as HashSet reject duplicates as defined by equals and hashCode."
+ },
+ {
+  "id": "qe97a972aeda",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "What does List.of(1, 2).add(3) do?",
+  "options": [
+   "Throws UnsupportedOperationException",
+   "Returns false without adding",
+   "Adds 3 and returns true",
+   "Fails to compile"
+  ],
+  "answer": 0,
+  "explanation": "List.of returns an unmodifiable list, so mutating methods throw UnsupportedOperationException at runtime."
+ },
+ {
+  "id": "qf5d61773bb6",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which Map implementation keeps its keys in sorted order?",
+  "options": [
+   "TreeMap",
+   "LinkedHashMap",
+   "IdentityHashMap",
+   "HashMap"
+  ],
+  "answer": 0,
+  "explanation": "TreeMap is a red-black tree sorted by natural ordering or a Comparator; LinkedHashMap keeps insertion order."
+ },
+ {
+  "id": "q1a61743fe65",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "What happens when you call list.add(x) on an ArrayList inside a for-each loop over that same list?",
+  "options": [
+   "The new element is visited later in the loop",
+   "A ConcurrentModificationException is thrown",
+   "The add is silently ignored",
+   "It fails to compile"
+  ],
+  "answer": 1,
+  "explanation": "ArrayList iterators are fail-fast; a structural change outside the iterator makes the next next() call throw."
+ },
+ {
+  "id": "q36e8d479bdc",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "What is the default iteration order of a LinkedHashMap?",
+  "options": [
+   "Sorted by key",
+   "Unspecified, like HashMap",
+   "Insertion order",
+   "Most recently accessed first"
+  ],
+  "answer": 2,
+  "explanation": "LinkedHashMap keeps a linked list of entries in insertion order unless constructed with accessOrder set to true."
+ },
+ {
+  "id": "q6ac960f7c4a",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "If you override equals in a class used as a HashMap key, what else must you override consistently?",
+  "options": [
+   "hashCode",
+   "compareTo",
+   "toString",
+   "clone"
+  ],
+  "answer": 0,
+  "explanation": "Equal objects must have equal hash codes, or HashMap may fail to find keys that are equal."
+ },
+ {
+  "id": "q9e9a81b5540",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "Which is true of the List returned by Arrays.asList(array)?",
+  "options": [
+   "It is fully immutable, so set() throws",
+   "It is an independent copy of the array",
+   "It is fixed-size and writes through to the backing array",
+   "It grows automatically when add() is called"
+  ],
+  "answer": 2,
+  "explanation": "Arrays.asList wraps the array: set() works and changes the array, but add and remove throw UnsupportedOperationException."
+ },
+ {
+  "id": "q142c98d0b2e",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "How does a TreeSet decide that two elements are duplicates?",
+  "options": [
+   "compareTo or the Comparator returns 0",
+   "equals returns true",
+   "hashCode values are equal",
+   "They are the same object reference"
+  ],
+  "answer": 0,
+  "explanation": "TreeSet relies only on ordering, so a Comparator inconsistent with equals can make distinct objects look like duplicates."
+ },
+ {
+  "id": "q77cd416588e",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "With List<Integer> list = new ArrayList<>(List.of(1, 2, 3)); what is list after list.remove(1)?",
+  "options": [
+   "[2, 3]",
+   "[1, 2]",
+   "[1, 3]",
+   "[1, 2, 3]"
+  ],
+  "answer": 2,
+  "explanation": "remove(int index) is chosen over remove(Object) for an int argument, so the element at index 1 is removed."
+ },
+ {
+  "id": "qa0e624e7510",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "Which statement about null in HashMap and Hashtable is correct?",
+  "options": [
+   "Both allow null keys and null values",
+   "Neither allows null values, but both allow a null key",
+   "HashMap allows one null key and null values; Hashtable allows neither",
+   "Hashtable allows null keys; HashMap does not"
+  ],
+  "answer": 2,
+  "explanation": "Hashtable throws NullPointerException for null keys or values, whereas HashMap special-cases a null key."
+ },
+ {
+  "id": "qbab68ee74f7",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "Since Java 8, what does HashMap do when many keys collide in one bucket?",
+  "options": [
+   "Switches to a different hash function for that bucket",
+   "Throws an IllegalStateException",
+   "Converts that bucket's list into a red-black tree past a threshold",
+   "Evicts the oldest entry in the bucket"
+  ],
+  "answer": 2,
+  "explanation": "Treeification (threshold 8, once the table has at least 64 buckets) bounds worst-case lookup at O(log n)."
+ }
+]

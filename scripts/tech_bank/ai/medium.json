@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "ml-basics",
+    "question": "A model scores 99% accuracy on training data but 70% on validation data. What is the most likely problem?",
+    "options": [
+      "The model is underfitting the training data",
+      "The validation set is too large",
+      "The model is overfitting the training data",
+      "The learning rate is too low"
+    ],
+    "answer": 2,
+    "explanation": "A large gap between training and validation performance is the classic sign of overfitting."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "What is the purpose of a validation set that is separate from the test set?",
+    "options": [
+      "Providing extra data to train the final weights",
+      "Tuning hyperparameters without biasing the final test estimate",
+      "Replacing the need for a training set",
+      "Measuring inference latency in production"
+    ],
+    "answer": 1,
+    "explanation": "Choosing hyperparameters on the test set would leak information; a validation set keeps the test set as an untouched final check."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Fitting a feature scaler on the full dataset before the train/test split is an example of what?",
+    "options": [
+      "Data leakage",
+      "Underfitting",
+      "Class imbalance",
+      "Covariate shift"
+    ],
+    "answer": 0,
+    "explanation": "Test-set statistics influence the training preprocessing, so evaluation scores become optimistically biased."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Why should features be scaled before using k-NN or gradient-descent-based models?",
+    "options": [
+      "Scaling increases the number of training samples",
+      "Scaling converts categorical features into numeric ones",
+      "Scaling guarantees that the model will not overfit",
+      "Features on larger scales would otherwise dominate distances and slow convergence"
+    ],
+    "answer": 3,
+    "explanation": "Distance calculations and gradient steps are sensitive to feature magnitudes, so unscaled features distort both."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "How does a random forest reduce variance compared with a single decision tree?",
+    "options": [
+      "By growing one very deep tree with no pruning",
+      "By training trees sequentially to fix earlier errors",
+      "By averaging many trees trained on bootstrap samples with random feature subsets",
+      "By using the same single feature for every split"
+    ],
+    "answer": 2,
+    "explanation": "Bagging plus random feature selection decorrelates trees, so averaging them lowers variance."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "How does gradient boosting build its ensemble?",
+    "options": [
+      "All models are trained independently in parallel and averaged",
+      "Each new model fits the residual errors of the current ensemble",
+      "A single model is trained and then pruned repeatedly",
+      "Models vote and the minority prediction is chosen"
+    ],
+    "answer": 1,
+    "explanation": "Boosting adds weak learners sequentially, each correcting what the ensemble so far gets wrong."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What does a support vector machine try to find?",
+    "options": [
+      "The decision boundary that maximizes the margin between classes",
+      "The boundary that passes through the most training points",
+      "The cluster centers that minimize within-cluster distance",
+      "The tree split that maximizes information gain"
+    ],
+    "answer": 0,
+    "explanation": "SVMs choose the separating hyperplane with the largest distance to the nearest points of each class."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "Which regularization tends to produce sparse models by setting some weights exactly to zero?",
+    "options": [
+      "L2 (ridge) regularization",
+      "Dropout",
+      "Batch normalization",
+      "L1 (lasso) regularization"
+    ],
+    "answer": 3,
+    "explanation": "The L1 penalty's corners at zero push many coefficients to exactly zero, performing feature selection."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What is the elbow method used for in k-means?",
+    "options": [
+      "Choosing initial centroids by picking the farthest points",
+      "Choosing the distance metric by testing several options",
+      "Choosing k where adding more clusters stops reducing within-cluster variance much",
+      "Choosing which features to drop before clustering"
+    ],
+    "answer": 2,
+    "explanation": "Plotting within-cluster variance against k often shows a bend where extra clusters give diminishing returns."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "Which clustering algorithm can find arbitrarily shaped clusters and label sparse points as noise?",
+    "options": [
+      "k-means",
+      "DBSCAN",
+      "Principal component analysis",
+      "Gaussian mixture model"
+    ],
+    "answer": 1,
+    "explanation": "DBSCAN grows clusters from dense regions and marks points in low-density areas as noise."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What is t-SNE primarily used for?",
+    "options": [
+      "Visualizing high-dimensional data in two or three dimensions",
+      "Training a classifier on labeled images",
+      "Computing exact distances for nearest-neighbor search",
+      "Imputing missing values in tabular data"
+    ],
+    "answer": 0,
+    "explanation": "t-SNE is a non-linear embedding method that preserves local neighborhoods, making it popular for visualization."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "Why is k-means often run several times with different initializations?",
+    "options": [
+      "Each run uses a different number of labeled examples",
+      "The algorithm must compute PCA in an earlier run",
+      "Multiple runs are required to turn it into a classifier",
+      "Results depend on the starting centroids and can converge to poor local optima"
+    ],
+    "answer": 3,
+    "explanation": "k-means only finds a local minimum, so keeping the best of several random starts gives more reliable clusters."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "In a dataset where 1% of transactions are fraud, why is accuracy a poor metric?",
+    "options": [
+      "Accuracy cannot be computed for binary problems",
+      "Accuracy always penalizes false negatives too heavily",
+      "A model predicting not fraud for everything scores 99% accuracy",
+      "Accuracy requires probability outputs rather than labels"
+    ],
+    "answer": 2,
+    "explanation": "With heavy class imbalance, a trivial majority-class predictor looks excellent on accuracy while catching no fraud."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "For cancer screening, where missing a real case is very costly, which metric should be prioritized?",
+    "options": [
+      "Precision",
+      "Recall",
+      "Specificity",
+      "Accuracy"
+    ],
+    "answer": 1,
+    "explanation": "Recall measures the share of actual positives detected, so maximizing it minimizes missed cases."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What is the F1 score?",
+    "options": [
+      "The harmonic mean of precision and recall",
+      "The arithmetic mean of precision and recall",
+      "The product of accuracy and recall",
+      "The area under the ROC curve"
+    ],
+    "answer": 0,
+    "explanation": "F1 uses the harmonic mean, so it is high only when both precision and recall are high."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What does a ROC AUC of 0.5 indicate?",
+    "options": [
+      "The model detects exactly half of the positives",
+      "The model is perfectly calibrated",
+      "The model always predicts the positive class",
+      "The model ranks positives no better than random guessing"
+    ],
+    "answer": 3,
+    "explanation": "AUC is the probability a random positive is scored above a random negative; 0.5 means chance-level ranking."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does dropout do during training?",
+    "options": [
+      "Permanently removes the least important neurons after training",
+      "Lowers the learning rate when the loss plateaus",
+      "Randomly zeroes a fraction of activations to reduce co-adaptation and overfitting",
+      "Drops training examples that have a high loss"
+    ],
+    "answer": 2,
+    "explanation": "By randomly disabling units, dropout forces the network to learn redundant, more robust features."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What typically happens when the learning rate is set too high?",
+    "options": [
+      "Training converges slowly but stably",
+      "The loss oscillates or diverges instead of decreasing steadily",
+      "The model stops using its activation functions",
+      "The network automatically adds more layers"
+    ],
+    "answer": 1,
+    "explanation": "Overly large steps overshoot minima, causing unstable or exploding loss."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What is a key benefit of mini-batch gradient descent over full-batch gradient descent?",
+    "options": [
+      "More frequent, cheaper updates per pass over the data",
+      "Exact gradients of the full loss at every step",
+      "Guaranteed convergence to the global minimum",
+      "No need to choose a learning rate"
+    ],
+    "answer": 0,
+    "explanation": "Mini-batches give many noisy but inexpensive updates per epoch, which usually speeds training and fits in memory."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What is early stopping?",
+    "options": [
+      "Stopping training after the first epoch to save compute",
+      "Stopping inference once the model is confident",
+      "Halting when training loss reaches exactly zero",
+      "Halting training when validation performance stops improving"
+    ],
+    "answer": 3,
+    "explanation": "Early stopping acts as regularization by keeping the weights from before the model starts to overfit."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "How do residual (skip) connections help deep networks?",
+    "options": [
+      "They reduce parameters by sharing weights across all layers",
+      "They convert a CNN into a recurrent network",
+      "They let gradients flow through identity paths, making very deep networks trainable",
+      "They remove the need for activation functions"
+    ],
+    "answer": 2,
+    "explanation": "Adding the input of a block to its output gives gradients a direct path backward, easing optimization of deep stacks."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What problem were LSTM gates designed to address?",
+    "options": [
+      "Processing images faster than convolutional networks",
+      "Learning long-range dependencies that plain RNNs struggle with",
+      "Eliminating the need for training data",
+      "Making the network purely feed-forward"
+    ],
+    "answer": 1,
+    "explanation": "LSTM gates control a cell state that preserves information and gradients over many time steps."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What is transfer learning?",
+    "options": [
+      "Reusing a model pre-trained on a large dataset and fine-tuning it on a related task",
+      "Moving a trained model from GPU memory to CPU memory",
+      "Training two models on the same data and swapping weights",
+      "Converting a classification model into a regression model"
+    ],
+    "answer": 0,
+    "explanation": "Pre-trained representations give a strong starting point, so the new task needs less data and compute."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What two components make up a generative adversarial network?",
+    "options": [
+      "An encoder and a decoder trained only to reconstruct input",
+      "Two classifiers voting on every label",
+      "A retriever and a generator over a document store",
+      "A generator producing samples and a discriminator telling real from generated"
+    ],
+    "answer": 3,
+    "explanation": "The generator and discriminator are trained against each other until generated samples become hard to distinguish."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What does self-attention compute for each token?",
+    "options": [
+      "A fixed embedding independent of surrounding words",
+      "The probability that the token is a stop word",
+      "A weighted combination of all tokens' representations based on relevance",
+      "A hidden state passed strictly from left to right"
+    ],
+    "answer": 2,
+    "explanation": "Each token's query is compared to every key, and the resulting weights mix the value vectors into a context-aware representation."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What is an advantage of subword tokenization such as byte-pair encoding?",
+    "options": [
+      "It guarantees every word maps to exactly one token",
+      "It handles rare and unseen words by breaking them into known pieces",
+      "It removes the need for an embedding layer",
+      "It makes sequences longer to improve accuracy"
+    ],
+    "answer": 1,
+    "explanation": "Subword vocabularies keep size manageable while still representing any word as a sequence of known units."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What attention masking does a decoder-only language model use during training?",
+    "options": [
+      "Causal masking, so each token attends only to earlier tokens",
+      "Bidirectional attention over the full sequence",
+      "Random masking of tokens that must be reconstructed",
+      "No attention, only feed-forward layers"
+    ],
+    "answer": 0,
+    "explanation": "Causal masks stop tokens from seeing the future, matching the left-to-right next-token prediction objective."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What is the benefit of multi-head attention?",
+    "options": [
+      "It reduces the number of tokens in the input sequence",
+      "It allows training without any positional information",
+      "It replaces the feed-forward layers in each block",
+      "It lets the model attend to different kinds of relationships in parallel subspaces"
+    ],
+    "answer": 3,
+    "explanation": "Each head has its own projections, so different heads can specialize in different patterns such as syntax or coreference."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is the effect of lowering the sampling temperature of an LLM?",
+    "options": [
+      "Outputs become more random and creative",
+      "The model's context window becomes larger",
+      "Outputs become more deterministic and focused on high-probability tokens",
+      "Responses are generated faster on the same hardware"
+    ],
+    "answer": 2,
+    "explanation": "Lower temperature sharpens the probability distribution, so likely tokens dominate sampling."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is chain-of-thought prompting?",
+    "options": [
+      "Linking several models so each answers one word",
+      "Asking the model to reason step by step before giving an answer",
+      "Feeding the model's output back as training data",
+      "Restricting the model to answer in a single token"
+    ],
+    "answer": 1,
+    "explanation": "Eliciting intermediate reasoning steps often improves performance on multi-step problems."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is a system prompt typically used for?",
+    "options": [
+      "Setting persistent instructions, role and constraints for a conversation",
+      "Storing the model's weights for faster loading",
+      "Defining the tokenizer's vocabulary",
+      "Logging errors returned by the API"
+    ],
+    "answer": 0,
+    "explanation": "The system prompt frames the model's behavior across all user turns in a conversation."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "When is fine-tuning usually preferable to prompting alone?",
+    "options": [
+      "When the model must know facts that change every day",
+      "When you only have three examples of the task",
+      "When you want to need no training data at all",
+      "When you need consistent behavior or style across many requests that prompting cannot reliably achieve"
+    ],
+    "answer": 3,
+    "explanation": "Fine-tuning bakes in task behavior from many examples, whereas fast-changing facts are better served by retrieval."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "Why are documents split into chunks before embedding in a RAG system?",
+    "options": [
+      "Chunking encrypts documents for safe storage",
+      "Embedding models only accept single words",
+      "Focused chunks improve retrieval precision and fit within the context window",
+      "Chunking removes the need for a vector index"
+    ],
+    "answer": 2,
+    "explanation": "Smaller passages yield embeddings that match specific queries better and leave room for several results in the prompt."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What does cosine similarity measure in semantic search?",
+    "options": [
+      "The number of exact keywords two texts share",
+      "The angle-based similarity between two embedding vectors",
+      "The edit distance between two strings",
+      "The difference in length between two documents"
+    ],
+    "answer": 1,
+    "explanation": "Cosine similarity compares vector directions, so texts with similar meaning score high even with different wording."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What does tool or function calling allow an LLM to do?",
+    "options": [
+      "Emit structured requests that the application executes, such as API calls",
+      "Modify its own weights at runtime",
+      "Bypass the context window limit entirely",
+      "Run without receiving any prompt"
+    ],
+    "answer": 0,
+    "explanation": "The model outputs a structured call, the host code runs it, and the result is fed back to the model."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is hybrid search in a RAG pipeline?",
+    "options": [
+      "Combining two LLMs to generate one answer",
+      "Running retrieval on both CPU and GPU",
+      "Mixing training data from multiple languages",
+      "Combining keyword-based and embedding-based retrieval"
+    ],
+    "answer": 3,
+    "explanation": "Lexical search catches exact terms like IDs while dense retrieval captures meaning, so combining them improves recall."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is prompt injection?",
+    "options": [
+      "Injecting extra training data to improve accuracy",
+      "Adding examples to a prompt for few-shot learning",
+      "Malicious instructions in input that hijack a model's intended behavior",
+      "Inserting padding tokens to fill a batch"
+    ],
+    "answer": 2,
+    "explanation": "Because LLMs mix instructions and data in one text stream, crafted input can override the developer's instructions."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is differential privacy?",
+    "options": [
+      "Encrypting the model weights at rest",
+      "Adding calibrated noise so individual records cannot be inferred from outputs",
+      "Removing names from a dataset before training",
+      "Training a separate model for each user"
+    ],
+    "answer": 1,
+    "explanation": "Differential privacy gives a mathematical bound on how much any single record can affect the result, unlike simple anonymization."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "Why might removing a protected attribute such as race from the inputs fail to prevent discrimination?",
+    "options": [
+      "Other features can act as proxies for the protected attribute",
+      "Models always reconstruct deleted columns from file metadata",
+      "Removing features greatly increases training time",
+      "Protected attributes are required for gradient descent"
+    ],
+    "answer": 0,
+    "explanation": "Correlated features like zip code can encode the same information, so the model can still discriminate indirectly."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is a model card?",
+    "options": [
+      "A hardware accelerator for running inference",
+      "A license key for accessing a model API",
+      "A dataset of labeled images for evaluation",
+      "Documentation of a model's intended use, performance and limitations"
+    ],
+    "answer": 3,
+    "explanation": "Model cards promote transparency by reporting evaluation results, intended uses and known limitations."
+  }
+]

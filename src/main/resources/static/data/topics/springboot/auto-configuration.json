@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q3f65154cbcc",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "Which starter brings in Spring MVC with an embedded Tomcat server?",
+  "options": [
+   "spring-boot-starter-webflux",
+   "spring-boot-starter-servlet",
+   "spring-boot-starter-tomcat-mvc",
+   "spring-boot-starter-web"
+  ],
+  "answer": 3,
+  "explanation": "spring-boot-starter-web includes Spring MVC and spring-boot-starter-tomcat; webflux uses Reactor Netty by default."
+ },
+ {
+  "id": "q507fe98fedc",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "What is a Spring Boot starter such as spring-boot-starter-data-jpa?",
+  "options": [
+   "A dependency descriptor that pulls in a curated set of libraries for a feature",
+   "A Maven plugin that generates the main application class",
+   "A Java agent that instruments beans at runtime",
+   "A CLI command that scaffolds a new project"
+  ],
+  "answer": 0,
+  "explanation": "Starters are convenience dependencies that aggregate compatible libraries so you do not manage them individually."
+ },
+ {
+  "id": "q674345613eb",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "Which simple setting makes Spring Boot print the condition evaluation report showing which auto-configurations matched?",
+  "options": [
+   "spring.autoconfigure.report=true",
+   "logging.autoconfig=on",
+   "debug=true",
+   "spring.main.report-conditions=true"
+  ],
+  "answer": 2,
+  "explanation": "Starting the app with debug=true (or --debug) logs the conditions report listing positive and negative auto-configuration matches."
+ },
+ {
+  "id": "q6c36e9a3ed8",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "How can you disable one specific auto-configuration class such as DataSourceAutoConfiguration?",
+  "options": [
+   "@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)",
+   "@ComponentScan(basePackages = \"!DataSourceAutoConfiguration\")",
+   "@Conditional(false) on the main class",
+   "@DisableAutoConfiguration(DataSourceAutoConfiguration.class)"
+  ],
+  "answer": 0,
+  "explanation": "The exclude attribute of @SpringBootApplication (or @EnableAutoConfiguration) prevents that auto-configuration from being applied."
+ },
+ {
+  "id": "q1188fe7a4d9",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "In Spring Boot 3, where are auto-configuration classes registered in a library jar?",
+  "options": [
+   "META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports",
+   "META-INF/spring.factories under the EnableAutoConfiguration key",
+   "META-INF/MANIFEST.MF under Auto-Config",
+   "src/main/resources/application.properties"
+  ],
+  "answer": 0,
+  "explanation": "Boot 3 removed support for registering auto-configurations in spring.factories; the AutoConfiguration.imports file is used instead."
+ },
+ {
+  "id": "q4be6049cb01",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "Which annotation, introduced in Spring Boot 2.7, marks a class as an auto-configuration?",
+  "options": [
+   "@EnableAutoConfiguration",
+   "@AutoConfiguration",
+   "@SpringBootConfiguration",
+   "@ConfigurationImport"
+  ],
+  "answer": 1,
+  "explanation": "@AutoConfiguration is a specialized @Configuration with proxyBeanMethods=false and before/after ordering attributes."
+ },
+ {
+  "id": "q7cfaed48669",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "When does an auto-configuration annotated with @ConditionalOnClass(DataSource.class) apply?",
+  "options": [
+   "Only when a DataSource bean is already defined",
+   "Only when spring.datasource.url is set",
+   "Only when the class is annotated with @Entity",
+   "Only when DataSource is present on the classpath"
+  ],
+  "answer": 3,
+  "explanation": "@ConditionalOnClass checks classpath presence, which is how starters trigger configuration just by being added."
+ },
+ {
+  "id": "q83e0087da72",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "What does @ConditionalOnMissingBean on an auto-configured @Bean method achieve?",
+  "options": [
+   "The default bean backs off if the application already defines a bean of that type",
+   "The bean is created lazily on first injection",
+   "The bean is created only if no other configuration class exists",
+   "The bean replaces any user-defined bean of that type"
+  ],
+  "answer": 0,
+  "explanation": "This is how auto-configuration lets user-defined beans override Boot's defaults."
+ },
+ {
+  "id": "q2ff3330df20",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "Why is @ConditionalOnMissingBean reliable in auto-configurations but risky in ordinary user @Configuration classes?",
+  "options": [
+   "It is evaluated against beans registered so far, and auto-configurations are processed after user configuration",
+   "User configuration classes ignore all conditions",
+   "It is evaluated lazily at first injection only in auto-configurations",
+   "Auto-configurations are processed in a separate child context"
+  ],
+  "answer": 0,
+  "explanation": "Condition evaluation depends on registration order; auto-configurations run after user beans are defined, so they see them."
+ },
+ {
+  "id": "qb24484e8333",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "What does @AutoConfiguration(after = DataSourceAutoConfiguration.class) control?",
+  "options": [
+   "That it is only applied when DataSourceAutoConfiguration is excluded",
+   "That its beans are created after the application has started",
+   "That DataSourceAutoConfiguration is disabled",
+   "That this auto-configuration is processed after DataSourceAutoConfiguration"
+  ],
+  "answer": 3,
+  "explanation": "Ordering ensures conditions like @ConditionalOnBean(DataSource.class) can see beans from the referenced auto-configuration."
+ },
+ {
+  "id": "qc939fdd03de",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "A bean has @ConditionalOnProperty(name = \"feature.cache.enabled\", havingValue = \"true\") with matchIfMissing left at its default. The property is absent. What happens?",
+  "options": [
+   "The bean is created lazily on first use",
+   "The bean is created because missing properties default to true",
+   "Startup fails with a missing property error",
+   "The condition does not match and the bean is not created"
+  ],
+  "answer": 3,
+  "explanation": "matchIfMissing defaults to false, so an absent property means the condition fails."
+ },
+ {
+  "id": "qcfca0cc66f8",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "Which Spring Boot utility is designed for testing an auto-configuration's conditions without starting the full application?",
+  "options": [
+   "SpringApplicationBuilder",
+   "ApplicationContextRunner",
+   "MockMvcBuilders",
+   "AnnotationConfigWebApplicationContext"
+  ],
+  "answer": 1,
+  "explanation": "ApplicationContextRunner lets you add configurations and properties and assert on the resulting context quickly."
+ }
+]

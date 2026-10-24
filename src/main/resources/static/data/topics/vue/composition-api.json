@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q500453547ea",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "What is a composable in Vue?",
+  "options": [
+   "A function that encapsulates reusable stateful logic using the Composition API",
+   "A scoped CSS module shared by components",
+   "A component that has no template",
+   "A plugin that registers global components"
+  ],
+  "answer": 0,
+  "explanation": "Composables are plain functions that use reactive APIs and lifecycle hooks to share stateful logic."
+ },
+ {
+  "id": "q57b62883142",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "In a component that does not use script setup, where is Composition API code written?",
+  "options": [
+   "Inside the data() option",
+   "Inside an init() method",
+   "Inside the created() hook",
+   "Inside the setup() option"
+  ],
+  "answer": 3,
+  "explanation": "setup() is the entry point for the Composition API in components without script setup."
+ },
+ {
+  "id": "qbfbd6e9bd66",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "What is script setup in a Vue single-file component?",
+  "options": [
+   "A runtime plugin that loads scripts lazily",
+   "A directive that marks server-only code",
+   "A block used to configure the Vite build",
+   "Compile-time sugar for using the Composition API in SFCs"
+  ],
+  "answer": 3,
+  "explanation": "script setup is processed at compile time and lets top-level bindings be used directly in the template."
+ },
+ {
+  "id": "qdf5ab09d149",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "What naming convention do Vue composables conventionally follow?",
+  "options": [
+   "Prefix the name with use, like useMouse",
+   "Suffix the name with Composable",
+   "Prefix the name with a dollar sign",
+   "Write the name in all capital letters"
+  ],
+  "answer": 0,
+  "explanation": "By convention composable functions are named in camelCase starting with use."
+ },
+ {
+  "id": "q5b9d1354064",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "Where should composables generally be called?",
+  "options": [
+   "Inside a setTimeout callback",
+   "Synchronously in setup() or script setup",
+   "Only inside an onMounted callback",
+   "Directly in template expressions"
+  ],
+  "answer": 1,
+  "explanation": "Composables rely on the active component instance, which is only available during synchronous setup."
+ },
+ {
+  "id": "q65f1a0a2adf",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "Before Vue 3.5, how do you access <input ref=\"el\"> in script setup?",
+  "options": [
+   "Call document.getElementById('el') in setup",
+   "Use this.$refs.el inside script setup",
+   "Import el from the template automatically",
+   "Declare const el = ref(null) with a matching name"
+  ],
+  "answer": 3,
+  "explanation": "A ref declared with the same name as the ref attribute is populated after the component mounts."
+ },
+ {
+  "id": "q9b9c822827e",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "How does a script setup component let its parent call a method through a template ref?",
+  "options": [
+   "Expose it with defineExpose()",
+   "Return it from the script setup block",
+   "Register it with app.config.globalProperties",
+   "Export it with export default"
+  ],
+  "answer": 0,
+  "explanation": "script setup components are closed by default, so only bindings passed to defineExpose() are visible via template refs."
+ },
+ {
+  "id": "qbeaaea38edd",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "What does defineModel() return in a child component?",
+  "options": [
+   "The raw modelValue prop as a constant",
+   "A ref synced with the parent's v-model",
+   "A reactive copy that never reaches the parent",
+   "An emit function for update events"
+  ],
+  "answer": 1,
+  "explanation": "defineModel() declares the modelValue prop and update event and returns a ref that emits on assignment."
+ },
+ {
+  "id": "q3ecc1ae534b",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "What happens when script setup contains a top-level await?",
+  "options": [
+   "The await is ignored at compile time",
+   "Vue throws because setup must be sync",
+   "The component renders twice automatically",
+   "The component becomes async and must be inside Suspense"
+  ],
+  "answer": 3,
+  "explanation": "Top-level await makes setup async, so an ancestor Suspense is needed to handle the pending state."
+ },
+ {
+  "id": "q56815f50256",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "A composable returns a reactive() object. How can callers destructure it without losing reactivity?",
+  "options": [
+   "Return Object.assign({}, state)",
+   "Return readonly(state) instead",
+   "Return toRefs(state) from the composable",
+   "Return JSON.parse(JSON.stringify(state))"
+  ],
+  "answer": 2,
+  "explanation": "toRefs() converts each property into a ref linked to the source, so destructured values stay reactive."
+ },
+ {
+  "id": "qc08a271d2d0",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "In Vue 3.5+ with const { foo } = defineProps(['foo']), how do you watch foo?",
+  "options": [
+   "watch(() => foo, cb)",
+   "watch(foo, cb)",
+   "watch('foo', cb)",
+   "watch(foo.value, cb)"
+  ],
+  "answer": 0,
+  "explanation": "A destructured prop compiles to props.foo, so passing it directly would pass a value; a getter is required."
+ },
+ {
+  "id": "qd1596239765",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "What does toValue() do in a composable?",
+  "options": [
+   "Converts a reactive object into refs",
+   "Removes reactivity from a proxy",
+   "Creates a writable computed from a getter",
+   "Normalizes a ref, getter or plain value to a value"
+  ],
+  "answer": 3,
+  "explanation": "toValue() unwraps refs, calls getters and returns plain values unchanged, letting composables accept any of them."
+ }
+]

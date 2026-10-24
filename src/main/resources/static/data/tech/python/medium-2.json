@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6ec12b541a1",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does next(iter([])) do?",
+  "options": [
+   "Raises IndexError",
+   "Raises StopIteration",
+   "Returns None",
+   "Raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "next() on an exhausted iterator with no default raises StopIteration."
+ },
+ {
+  "id": "q91c2ddaafa8",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does round(2.5) return?",
+  "options": [
+   "2",
+   "3",
+   "2.0",
+   "3.0"
+  ],
+  "answer": 0,
+  "explanation": "round() uses banker's rounding (round half to even) and returns an int when no ndigits is given."
+ },
+ {
+  "id": "q8dc478d6140",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "After a = [1, 2, 3]; b = a; b.append(4), what is len(a)?",
+  "options": [
+   "3",
+   "4",
+   "1",
+   "It raises NameError"
+  ],
+  "answer": 1,
+  "explanation": "b = a binds a second name to the same list object, so appending through b changes a too."
+ },
+ {
+  "id": "q39023bd91ca",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does [(x, y) for x in range(2) for y in range(2) if x != y] return?",
+  "options": [
+   "[(0, 0), (1, 1)]",
+   "[(1, 0), (0, 1)]",
+   "[(0, 1)]",
+   "[(0, 1), (1, 0)]"
+  ],
+  "answer": 3,
+  "explanation": "The for clauses nest left to right, and the filter keeps only pairs with different values."
+ },
+ {
+  "id": "q36034f1e2f0",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "Which methods does @dataclass generate by default?",
+  "options": [
+   "__init__, __hash__ and __lt__",
+   "__slots__ and __init__",
+   "__init__, __repr__ and __eq__",
+   "Only __init__"
+  ],
+  "answer": 2,
+  "explanation": "With default options dataclass adds __init__, __repr__ and __eq__; ordering methods need order=True."
+ },
+ {
+  "id": "q04bf7a48763",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "In def f(a, /, b), what does the / mean?",
+  "options": [
+   "Parameters before it are positional-only",
+   "Parameter a is optional",
+   "Parameters after it are keyword-only",
+   "f performs a division on its arguments"
+  ],
+  "answer": 0,
+  "explanation": "Since Python 3.8, parameters listed before / cannot be passed by keyword."
+ },
+ {
+  "id": "q7456e9a00bb",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "Inside a package module, what does from . import utils do?",
+  "options": [
+   "Imports utils from the current working directory",
+   "Imports every module in the package",
+   "Imports utils from the same package using a relative import",
+   "Imports utils from the standard library"
+  ],
+  "answer": 2,
+  "explanation": "A leading dot refers to the current package in a relative import."
+ },
+ {
+  "id": "q005b69c5957",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "medium",
+  "question": "What does calling an async def function without awaiting it return?",
+  "options": [
+   "The function's return value",
+   "None",
+   "A Task that is already running",
+   "A coroutine object"
+  ],
+  "answer": 3,
+  "explanation": "Calling a coroutine function only creates a coroutine object; nothing runs until it is awaited or scheduled."
+ },
+ {
+  "id": "q404230d0254",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does collections.defaultdict(list)['k'] return for a key that is not yet present?",
+  "options": [
+   "'k'",
+   "None",
+   "It raises KeyError",
+   "[]"
+  ],
+  "answer": 3,
+  "explanation": "defaultdict calls its factory (list) to create and store a value for a missing key."
+ },
+ {
+  "id": "q089ff639edd",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "What does the @property decorator let you do?",
+  "options": [
+   "Access a method's result like an attribute, without calling it",
+   "Make an attribute truly private",
+   "Share an attribute between all instances",
+   "Declare a method abstract"
+  ],
+  "answer": 0,
+  "explanation": "property turns a getter method into a managed attribute accessed as obj.name."
+ }
+]

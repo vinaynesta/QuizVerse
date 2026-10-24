@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q4b313cfce1d",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "What is the minimum Java version required by Spring Boot 3?",
+  "options": [
+   "Java 11",
+   "Java 8",
+   "Java 17",
+   "Java 21"
+  ],
+  "answer": 2,
+  "explanation": "Spring Boot 3 and Spring Framework 6 require Java 17 as a baseline."
+ },
+ {
+  "id": "q7a46bb99bd5",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which Maven goal builds an OCI container image using Cloud Native Buildpacks?",
+  "options": [
+   "spring-boot:docker",
+   "spring-boot:build-image",
+   "spring-boot:oci",
+   "spring-boot:package-image"
+  ],
+  "answer": 1,
+  "explanation": "build-image uses Buildpacks to create an OCI image without a Dockerfile."
+ },
+ {
+  "id": "qc23ab623139",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which Maven command runs a Spring Boot application from source?",
+  "options": [
+   "mvn spring-boot:run",
+   "mvn boot:start",
+   "mvn exec:spring",
+   "mvn spring:launch"
+  ],
+  "answer": 0,
+  "explanation": "The spring-boot:run goal compiles and starts the application in place."
+ },
+ {
+  "id": "qdaf40b1ede7",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "What does the spring-boot-maven-plugin repackage goal produce?",
+  "options": [
+   "A Docker image",
+   "A WAR file for external application servers only",
+   "A thin jar without dependencies",
+   "An executable jar that nests all dependency jars"
+  ],
+  "answer": 3,
+  "explanation": "repackage rewrites the jar into an executable fat jar runnable with java -jar."
+ },
+ {
+  "id": "q154fd363a42",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "Why do Spring Boot layered jars help when building Docker images?",
+  "options": [
+   "They compress the jar to half its size",
+   "They remove the need for a JVM in the image",
+   "Dependencies and application classes go in separate layers, so unchanged layers are cached",
+   "They encrypt application classes inside the image"
+  ],
+  "answer": 2,
+  "explanation": "Rarely changing dependencies end up in lower layers, so rebuilding after a code change only replaces the application layer."
+ },
+ {
+  "id": "q73e102748c8",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "What must a Spring Boot app do to be deployed as a WAR to an external Tomcat?",
+  "options": [
+   "Remove the main method and add web.xml only",
+   "Extend SpringBootServletInitializer and use war packaging with the Tomcat starter set to provided",
+   "Use the spring-boot:build-image goal",
+   "Annotate the main class with @WebServlet"
+  ],
+  "answer": 1,
+  "explanation": "SpringBootServletInitializer bootstraps the application when the servlet container starts the WAR."
+ },
+ {
+  "id": "qd0b70fbad8e",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "Which Spring Boot 3 capability uses AOT processing to compile an app into a standalone native executable?",
+  "options": [
+   "Spring Boot DevTools",
+   "GraalVM native image support",
+   "The Spring Boot CLI",
+   "Layered jar extraction"
+  ],
+  "answer": 1,
+  "explanation": "Boot 3 performs ahead-of-time processing so GraalVM can build a native executable with fast startup."
+ },
+ {
+  "id": "qe214098d79f",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "Which property configures graceful shutdown of the embedded web server?",
+  "options": [
+   "spring.shutdown.mode=soft",
+   "server.graceful=true",
+   "management.shutdown.enabled=true",
+   "server.shutdown=graceful"
+  ],
+  "answer": 3,
+  "explanation": "With graceful shutdown the server stops accepting requests and waits for active ones, bounded by spring.lifecycle.timeout-per-shutdown-phase."
+ },
+ {
+  "id": "q03dea002a76",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "Why can't you switch @Profile-based beans at runtime in a Spring Boot GraalVM native image?",
+  "options": [
+   "Native images cannot read environment variables",
+   "Profiles are only supported in WAR deployments",
+   "GraalVM strips all annotations",
+   "AOT processing fixes the bean definitions at build time"
+  ],
+  "answer": 3,
+  "explanation": "Native images assume a closed world, so profiles and conditions are evaluated during the AOT build."
+ },
+ {
+  "id": "q1670be90652",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "In an executable Spring Boot jar, what does the manifest's Main-Class point to?",
+  "options": [
+   "Your @SpringBootApplication class directly",
+   "org.apache.catalina.startup.Bootstrap",
+   "Spring Boot's JarLauncher, with Start-Class naming your application class",
+   "java.lang.ClassLoader"
+  ],
+  "answer": 2,
+  "explanation": "The launcher sets up a class loader for the nested jars and then invokes Start-Class."
+ },
+ {
+  "id": "qcc5e93d7158",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "With spring-boot-starter-parent, how do you usually override the managed version of Jackson?",
+  "options": [
+   "Edit the starter jar's MANIFEST.MF",
+   "Set the jackson-bom.version property in the pom",
+   "Add @JacksonVersion to the main class",
+   "Delete the dependencyManagement section"
+  ],
+  "answer": 1,
+  "explanation": "The parent manages versions through properties, so redefining one changes the version used."
+ },
+ {
+  "id": "qff2715f189f",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "Why does spring-boot-devtools not affect an app started with java -jar from a packaged jar?",
+  "options": [
+   "Devtools turns itself off when the app runs as a fully packaged application",
+   "Maven deletes devtools during packaging",
+   "Devtools needs the prod profile",
+   "java -jar ignores every optional dependency"
+  ],
+  "answer": 0,
+  "explanation": "Devtools treats a packaged launch as production and disables itself; repackage also excludes it by default."
+ }
+]

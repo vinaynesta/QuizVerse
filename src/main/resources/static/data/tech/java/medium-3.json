@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q444f485a694",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "What does unbounded recursion typically lead to?",
+  "options": [
+   "OutOfMemoryError: Java heap space",
+   "StackOverflowError",
+   "IllegalStateException",
+   "NullPointerException"
+  ],
+  "answer": 1,
+  "explanation": "Each call pushes a new frame; once the thread stack is full the JVM throws StackOverflowError."
+ },
+ {
+  "id": "q1031e18865f",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Given A a = new B(); where B overrides instance method m(), which version does a.m() run?",
+  "options": [
+   "B's m(), chosen at runtime",
+   "Both, A's first then B's",
+   "Neither, it is a compile error",
+   "A's m(), chosen by the reference type"
+  ],
+  "answer": 0,
+  "explanation": "Instance method calls use dynamic dispatch based on the actual object type."
+ },
+ {
+  "id": "q4d1cd278e73",
+  "subject": "java",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Following PECS, which wildcard fits a parameter you only read T values from?",
+  "options": [
+   "? super T",
+   "?",
+   "? extends T",
+   "T[]"
+  ],
+  "answer": 2,
+  "explanation": "Producer Extends, Consumer Super: a source you read from should be declared with ? extends T."
+ },
+ {
+  "id": "q6a8303e6e9f",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "What does switch (2) { case 1 -> \"one\"; case 2 -> \"two\"; default -> \"many\"; } evaluate to?",
+  "options": [
+   "\"one\"",
+   "\"two\"",
+   "\"many\"",
+   "\"twomany\""
+  ],
+  "answer": 1,
+  "explanation": "Arrow-form switch expressions do not fall through, so only the matching case's value is produced."
+ },
+ {
+  "id": "q6f799c57b85",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which statement about fields declared in an interface is true?",
+  "options": [
+   "They are implicitly private instance fields",
+   "They are implicitly public, static and final",
+   "Each implementing class gets its own copy",
+   "Implementing classes can reassign them"
+  ],
+  "answer": 1,
+  "explanation": "Interface fields are constants: implicitly public static final and must be initialized."
+ },
+ {
+  "id": "q6d5877e43ba",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Stream.of(\"a\", \"bb\", \"cc\").collect(Collectors.groupingBy(String::length)) produce?",
+  "options": [
+   "[[a], [bb, cc]]",
+   "{a=1, bb=2, cc=2}",
+   "{1=1, 2=2}",
+   "{1=[a], 2=[bb, cc]}"
+  ],
+  "answer": 3,
+  "explanation": "groupingBy builds a Map from the classifier result to a List of the elements with that key."
+ },
+ {
+  "id": "q01169b84d72",
+  "subject": "java",
+  "topic": "generics",
+  "level": "medium",
+  "question": "What does the bound in <T extends Comparable<T>> require?",
+  "options": [
+   "T must be a final class",
+   "T must be a subclass of a class named Comparable",
+   "T may be any type at all",
+   "T must be comparable to other instances of T"
+  ],
+  "answer": 3,
+  "explanation": "extends in a type bound covers interfaces too, so T must implement Comparable<T>."
+ },
+ {
+  "id": "qaa5bba429bd",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "A resource used in try-with-resources must implement which interface?",
+  "options": [
+   "Serializable",
+   "Runnable",
+   "AutoCloseable",
+   "Flushable"
+  ],
+  "answer": 2,
+  "explanation": "Any AutoCloseable (including its subinterface Closeable) can be declared in try-with-resources."
+ },
+ {
+  "id": "qa65a80db53f",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "Can the component fields of a record be reassigned after construction?",
+  "options": [
+   "Yes, records generate setters",
+   "Yes, but only from the same package",
+   "Only if the record is declared mutable",
+   "No, they are private and final"
+  ],
+  "answer": 3,
+  "explanation": "Record components are backed by private final fields, making records shallowly immutable."
+ },
+ {
+  "id": "q9e69788b59c",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "What does calling System.gc() guarantee?",
+  "options": [
+   "That the heap shrinks to -Xms",
+   "An immediate full garbage collection",
+   "That all unreachable objects are freed",
+   "Nothing, it is only a hint to the JVM"
+  ],
+  "answer": 3,
+  "explanation": "System.gc() only suggests a collection; the JVM may ignore it, for example with -XX:+DisableExplicitGC."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0ec1edb67d8",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "What problem does React Context mainly solve?",
+  "options": [
+   "Passing data deep through the tree without prop drilling",
+   "Making every render faster",
+   "Fetching data from a server",
+   "Mapping URLs to components"
+  ],
+  "answer": 0,
+  "explanation": "Context lets any descendant read a value from a provider without passing it through every intermediate component."
+ },
+ {
+  "id": "q5c03488475e",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "Which hook reads the current value of a context?",
+  "options": [
+   "useProvider",
+   "useContext",
+   "useReducer",
+   "useStore"
+  ],
+  "answer": 1,
+  "explanation": "useContext(SomeContext) returns the value from the nearest matching provider above the component."
+ },
+ {
+  "id": "q9b3492b7780",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "Which function creates a new context object?",
+  "options": [
+   "makeContext",
+   "useContext",
+   "createContext",
+   "React.provide"
+  ],
+  "answer": 2,
+  "explanation": "createContext(defaultValue) creates a context that components can provide and read."
+ },
+ {
+  "id": "qa8f222e843c",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "What are the first two arguments to useReducer?",
+  "options": [
+   "A reducer function and an initial state",
+   "An action and a dispatch function",
+   "A selector and a store",
+   "A context and a default value"
+  ],
+  "answer": 0,
+  "explanation": "useReducer(reducer, initialState) returns the current state and a dispatch function for sending actions."
+ },
+ {
+  "id": "q0909add00ed",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "What should a reducer function passed to useReducer do?",
+  "options": [
+   "Mutate the state object and return nothing",
+   "Return a new state computed purely from the current state and the action",
+   "Fetch data and dispatch new actions",
+   "Call setState for each changed field"
+  ],
+  "answer": 1,
+  "explanation": "Reducers must be pure: given state and action, they return the next state without side effects or mutation."
+ },
+ {
+  "id": "q5505de79402",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "A component calls useContext(ThemeContext) but there is no ThemeContext.Provider above it. What value does it get?",
+  "options": [
+   "undefined, always",
+   "The value from the most recently mounted provider anywhere",
+   "An error is thrown",
+   "The default value passed to createContext"
+  ],
+  "answer": 3,
+  "explanation": "Without a matching provider above, useContext returns the default value given to createContext."
+ },
+ {
+  "id": "q69945c72d9a",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "In React 19, how can you provide a context value named ThemeContext?",
+  "options": [
+   "<ThemeContext value={theme}>...</ThemeContext>",
+   "<Provider context={ThemeContext} value={theme}>",
+   "ThemeContext.set(theme)",
+   "useContext(ThemeContext, theme)"
+  ],
+  "answer": 0,
+  "explanation": "React 19 lets you render the context itself as a provider; ThemeContext.Provider still works but is the older form."
+ },
+ {
+  "id": "qfef757a57e4",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "A provider passes value={{ user, setUser }} created inline. What is the performance downside?",
+  "options": [
+   "The context cannot be read by children",
+   "A new object is created each render, so every consumer re-renders whenever the provider re-renders",
+   "React deep-compares the object on each render",
+   "setUser becomes stale"
+  ],
+  "answer": 1,
+  "explanation": "Context compares values by reference; memoizing the object with useMemo avoids needless consumer re-renders."
+ },
+ {
+  "id": "q02f3b0e0460",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A large context holds both rarely changing settings and a fast-changing cursor position. What is a common fix for excess re-renders?",
+  "options": [
+   "Use a single global variable",
+   "Move all values into refs",
+   "Wrap every consumer in memo",
+   "Split it into separate contexts so consumers subscribe only to what they need"
+  ],
+  "answer": 3,
+  "explanation": "Splitting contexts means components reading only settings do not re-render when the cursor moves."
+ },
+ {
+  "id": "q3baad5490ee",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "Why is dispatch from useReducer convenient to pass down through context?",
+  "options": [
+   "It deep-clones state",
+   "It works outside of React",
+   "Its identity is stable across renders, so it does not cause consumer re-renders by itself",
+   "It automatically memoizes children"
+  ],
+  "answer": 2,
+  "explanation": "React guarantees dispatch is stable, so a context holding only dispatch rarely changes."
+ },
+ {
+  "id": "q66131836d12",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A reducer does state.items.push(action.item); return state. Why does the UI not update?",
+  "options": [
+   "Reducers cannot handle arrays",
+   "The same state reference is returned, so React sees no change and bails out",
+   "push is asynchronous",
+   "dispatch was not awaited"
+  ],
+  "answer": 1,
+  "explanation": "React compares the returned state with Object.is; mutating and returning the same object looks like no change."
+ },
+ {
+  "id": "qf7fc0026220",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A context value changes. Which components re-render, even if wrapped in memo?",
+  "options": [
+   "Every component that reads that context",
+   "All components in the app",
+   "Only the provider",
+   "Only direct children of the provider"
+  ],
+  "answer": 0,
+  "explanation": "Context consumers re-render on value change regardless of memo, because memo only checks props."
+ }
+]

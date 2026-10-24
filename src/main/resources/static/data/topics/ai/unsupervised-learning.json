@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1632537b439",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What distinguishes unsupervised learning from supervised learning?",
+  "options": [
+   "It learns only from rewards and penalties",
+   "It requires every example to have a correct label",
+   "It finds structure in data without labeled targets",
+   "It can only be applied to image data"
+  ],
+  "answer": 2,
+  "explanation": "Unsupervised methods such as clustering discover patterns using inputs alone, with no target labels."
+ },
+ {
+  "id": "q53b1c2a0a92",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What does anomaly detection aim to do?",
+  "options": [
+   "Assign every point to one of several balanced clusters",
+   "Generate new synthetic samples from random noise",
+   "Identify data points that differ markedly from the majority",
+   "Convert categorical features into numeric vectors"
+  ],
+  "answer": 2,
+  "explanation": "Anomaly detection flags rare or unusual observations, such as fraudulent transactions or faulty sensor readings."
+ },
+ {
+  "id": "q95defcd1e6f",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What is principal component analysis (PCA) commonly used for?",
+  "options": [
+   "Increasing the number of training labels automatically",
+   "Reducing the number of dimensions while preserving most of the variance",
+   "Classifying text into predefined categories",
+   "Tuning the learning rate of gradient descent"
+  ],
+  "answer": 1,
+  "explanation": "PCA projects data onto orthogonal directions of maximum variance, allowing fewer dimensions to retain most information."
+ },
+ {
+  "id": "qe67b83d656e",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What is the goal of the k-means algorithm?",
+  "options": [
+   "Predict a continuous target from k input features",
+   "Partition data into k clusters by minimizing distance to cluster centroids",
+   "Train k separate models and average their predictions",
+   "Select the k most important features for a classifier"
+  ],
+  "answer": 1,
+  "explanation": "k-means iteratively assigns points to the nearest centroid and recomputes centroids to minimize within-cluster squared distance."
+ },
+ {
+  "id": "q3abde2465ec",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "What is t-SNE primarily used for?",
+  "options": [
+   "Visualizing high-dimensional data in two or three dimensions",
+   "Training a classifier on labeled images",
+   "Computing exact distances for nearest-neighbor search",
+   "Imputing missing values in tabular data"
+  ],
+  "answer": 0,
+  "explanation": "t-SNE is a non-linear embedding method that preserves local neighborhoods, making it popular for visualization."
+ },
+ {
+  "id": "q76511589acb",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "Which clustering algorithm can find arbitrarily shaped clusters and label sparse points as noise?",
+  "options": [
+   "k-means",
+   "Principal component analysis",
+   "DBSCAN",
+   "Gaussian mixture model"
+  ],
+  "answer": 2,
+  "explanation": "DBSCAN grows clusters from dense regions and marks points in low-density areas as noise."
+ },
+ {
+  "id": "qdcdaa1aaeb7",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "Why is k-means often run several times with different initializations?",
+  "options": [
+   "Each run uses a different number of labeled examples",
+   "Results depend on the starting centroids and can converge to poor local optima",
+   "Multiple runs are required to turn it into a classifier",
+   "The algorithm must compute PCA in an earlier run"
+  ],
+  "answer": 1,
+  "explanation": "k-means only finds a local minimum, so keeping the best of several random starts gives more reliable clusters."
+ },
+ {
+  "id": "qf3df743e838",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "What is the elbow method used for in k-means?",
+  "options": [
+   "Choosing initial centroids by picking the farthest points",
+   "Choosing k where adding more clusters stops reducing within-cluster variance much",
+   "Choosing the distance metric by testing several options",
+   "Choosing which features to drop before clustering"
+  ],
+  "answer": 1,
+  "explanation": "Plotting within-cluster variance against k often shows a bend where extra clusters give diminishing returns."
+ },
+ {
+  "id": "q3251e34a1fb",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "How does the curse of dimensionality affect distance-based clustering?",
+  "options": [
+   "Distances between all points shrink to exactly zero",
+   "Distances between points become less discriminative as dimensions grow",
+   "Clustering becomes faster as dimensions are added",
+   "Centroids can no longer be computed at all"
+  ],
+  "answer": 1,
+  "explanation": "In high dimensions nearest and farthest neighbors end up at similar distances, weakening distance-based grouping."
+ },
+ {
+  "id": "q795d11eb9be",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "What does the silhouette score measure for a clustering result?",
+  "options": [
+   "The fraction of points matching ground-truth labels",
+   "The variance explained by the first principal component",
+   "How close each point is to its own cluster compared with the nearest other cluster",
+   "The number of iterations until centroids converge"
+  ],
+  "answer": 2,
+  "explanation": "Silhouette ranges from -1 to 1, with high values meaning points are cohesive within clusters and well separated from others."
+ },
+ {
+  "id": "q9274621ea40",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "What is a key limitation of PCA?",
+  "options": [
+   "It captures only linear structure and is sensitive to feature scaling",
+   "It always increases the number of features",
+   "It cannot be applied to numeric data",
+   "It requires labeled data to compute components"
+  ],
+  "answer": 0,
+  "explanation": "PCA finds linear directions of maximum variance, so non-linear manifolds are missed and large-scale features dominate unless standardized."
+ },
+ {
+  "id": "q94c3fe1439a",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "How does a Gaussian mixture model differ from k-means?",
+  "options": [
+   "It requires labels while k-means does not",
+   "It can only ever produce two clusters",
+   "It gives soft probabilistic assignments and can model elliptical clusters",
+   "It uses decision trees to split the data"
+  ],
+  "answer": 2,
+  "explanation": "GMMs fit full covariance Gaussians via expectation-maximization, generalizing k-means' hard, spherical assignments."
+ }
+]

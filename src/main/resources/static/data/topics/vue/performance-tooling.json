@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q2b792fecc49",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which browser extension lets you inspect the component tree and state of a Vue app?",
+  "options": [
+   "Vue Inspector",
+   "Vue DevTools",
+   "Vue Lens",
+   "Vue Profiler Pro"
+  ],
+  "answer": 1,
+  "explanation": "Vue DevTools shows components, props, state, Pinia stores and routing information."
+ },
+ {
+  "id": "q6117bf8c89d",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which command scaffolds a new Vue project with the official tool?",
+  "options": [
+   "npm create vue@latest",
+   "vue new my-app",
+   "npx vue-init my-app",
+   "npm install vue-starter"
+  ],
+  "answer": 0,
+  "explanation": "npm create vue@latest runs create-vue, the official project scaffolding tool."
+ },
+ {
+  "id": "q70ce2b93753",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "What build tool does the official create-vue scaffolding use?",
+  "options": [
+   "Webpack",
+   "Vite",
+   "Gulp",
+   "Grunt"
+  ],
+  "answer": 1,
+  "explanation": "create-vue scaffolds projects powered by Vite, which is the recommended tooling."
+ },
+ {
+  "id": "q726888f924a",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which function defines a component that is loaded lazily only when needed?",
+  "options": [
+   "defineLazy()",
+   "lazyComponent()",
+   "defineAsyncComponent()",
+   "loadComponent()"
+  ],
+  "answer": 2,
+  "explanation": "defineAsyncComponent() accepts a loader returning a Promise, enabling code splitting."
+ },
+ {
+  "id": "q8a25ffa8bdf",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "How do you code-split a route component with Vue Router?",
+  "options": [
+   "component: () => import('./views/About.vue')",
+   "component: require('./views/About.vue')",
+   "component: lazy('./views/About.vue')",
+   "component: 'views/About.vue'"
+  ],
+  "answer": 0,
+  "explanation": "A function returning a dynamic import lets the bundler create a separate chunk loaded on demand."
+ },
+ {
+  "id": "q9263f7e33ca",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "How can you reduce overhead when storing a large immutable dataset in state?",
+  "options": [
+   "Wrap it in reactive() twice",
+   "Store it in a computed with a setter",
+   "Use shallowRef() or markRaw() to skip deep reactivity",
+   "Convert it to a string with JSON.stringify"
+  ],
+  "answer": 2,
+  "explanation": "Avoiding deep proxies for large data that does not change saves memory and tracking cost."
+ },
+ {
+  "id": "qea47050d916",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "What is v-memo used for?",
+  "options": [
+   "Caching API responses for a component",
+   "Skipping updates to a subtree unless listed values change",
+   "Memoizing computed properties globally",
+   "Persisting state to localStorage"
+  ],
+  "answer": 1,
+  "explanation": "v-memo takes an array of dependencies and skips re-rendering the subtree when none have changed."
+ },
+ {
+  "id": "qf199ab49ea3",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "How does a style block with the scoped attribute limit CSS to its component?",
+  "options": [
+   "It adds unique data attributes to elements and selectors",
+   "It inlines all styles as style attributes",
+   "It renames every class to a random hash",
+   "It wraps the component in a shadow DOM"
+  ],
+  "answer": 0,
+  "explanation": "Scoped CSS uses PostCSS to add a data-v attribute to elements and rewrite selectors to match it."
+ },
+ {
+  "id": "q692f870b596",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "Why are Vue 3 global APIs like nextTick imported as named exports?",
+  "options": [
+   "So unused features can be tree-shaken from the bundle",
+   "So they can be patched at runtime",
+   "So they run faster in development mode",
+   "So TypeScript can infer prop types"
+  ],
+  "answer": 0,
+  "explanation": "Named ES module exports let bundlers drop APIs the app never imports."
+ },
+ {
+  "id": "q8f81e34a235",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "With const list = shallowRef([]), what happens after list.value.push(item)?",
+  "options": [
+   "The view updates as with a normal ref",
+   "Vue throws because the array is readonly",
+   "The item is pushed and deep tracking starts",
+   "No update is triggered; replace .value or call triggerRef"
+  ],
+  "answer": 3,
+  "explanation": "shallowRef only tracks .value assignment, so in-place mutation needs a new array or triggerRef(list)."
+ },
+ {
+  "id": "qbd12b28f5bc",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "How does the Vue 3 template compiler help runtime diffing?",
+  "options": [
+   "It converts templates to Web Components",
+   "It emits patch flags and hoists static content",
+   "It removes the virtual DOM entirely by default",
+   "It precomputes all renders at build time"
+  ],
+  "answer": 1,
+  "explanation": "Compile-time hints let the renderer skip static nodes and only check the dynamic parts."
+ },
+ {
+  "id": "qf124043322b",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "Why does the Vite dev server start quickly even in large projects?",
+  "options": [
+   "It caches the production build and reuses it",
+   "It bundles the whole app with Webpack in memory",
+   "It skips compiling single-file components",
+   "It serves native ES modules on demand and pre-bundles deps"
+  ],
+  "answer": 3,
+  "explanation": "Vite transforms source files on request and uses esbuild to pre-bundle dependencies."
+ }
+]

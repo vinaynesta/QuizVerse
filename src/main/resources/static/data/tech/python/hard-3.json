@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2fb32c6eb5d",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What are ExceptionGroup and except* (Python 3.11+) designed for?",
+  "options": [
+   "Catching exceptions in a specific order of priority",
+   "Converting exceptions into warnings",
+   "Raising and handling several unrelated exceptions together",
+   "Retrying a block until it stops raising"
+  ],
+  "answer": 2,
+  "explanation": "An ExceptionGroup bundles multiple exceptions, and except* handles the matching subgroups, e.g. from concurrent tasks."
+ },
+ {
+  "id": "q800d26ab464",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "What happens to the value in a generator's return 5 statement?",
+  "options": [
+   "It is yielded as the final item",
+   "It is stored in the value attribute of the StopIteration that ends iteration",
+   "It is discarded silently",
+   "It raises a SyntaxError in generators"
+  ],
+  "answer": 1,
+  "explanation": "A generator's return value is carried by StopIteration.value and is the result of a yield from expression."
+ },
+ {
+  "id": "qc6850911488",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "In class A whose __init__ sets self.__x = 1, under what name is the attribute stored on the instance?",
+  "options": [
+   "_x",
+   "__x",
+   "_A__x",
+   "A__x"
+  ],
+  "answer": 2,
+  "explanation": "Names with two leading underscores are mangled to _ClassName__name to avoid clashes in subclasses."
+ },
+ {
+  "id": "qa70d2ba7cb9",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What happens to the name e bound by except ValueError as e once the except block ends?",
+  "options": [
+   "It keeps referring to the exception",
+   "It is set to None",
+   "It is deleted",
+   "It is rebound to the traceback"
+  ],
+  "answer": 2,
+  "explanation": "Python implicitly deletes e at the end of the handler to avoid a reference cycle through the traceback."
+ },
+ {
+  "id": "q1c51fb5c5b7",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What does copy.copy produce when given a list of lists?",
+  "options": [
+   "A new outer list that shares the same inner lists",
+   "The same list object",
+   "Fully independent copies of every inner list",
+   "A tuple of the inner lists"
+  ],
+  "answer": 0,
+  "explanation": "copy.copy is shallow; use copy.deepcopy to also copy the nested lists."
+ },
+ {
+  "id": "q3bc574d827c",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After t = (1, [2]) and then t[1] += [3] inside try/except TypeError, what is t?",
+  "options": [
+   "(1, [2, 3])",
+   "(1, [2], [3])",
+   "(1, [3])",
+   "(1, [2])"
+  ],
+  "answer": 0,
+  "explanation": "The list is extended in place first, then the item assignment to the tuple raises TypeError, so the mutation sticks."
+ },
+ {
+  "id": "qa22587c1aeb",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "Why can a file named random.py next to your script break import random?",
+  "options": [
+   "Python forbids file names matching stdlib modules",
+   "The script's directory is first on sys.path, so it shadows the standard module",
+   "The .py file is compiled over the stdlib module",
+   "pip uninstalls the standard module on conflict"
+  ],
+  "answer": 1,
+  "explanation": "sys.path[0] is the script's directory, so the local random.py is found before the standard library."
+ },
+ {
+  "id": "q9f2ea587500",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Which of these exceptions does NOT inherit from Exception?",
+  "options": [
+   "ValueError",
+   "KeyboardInterrupt",
+   "StopIteration",
+   "OSError"
+  ],
+  "answer": 1,
+  "explanation": "KeyboardInterrupt derives directly from BaseException so that except Exception does not swallow Ctrl+C."
+ },
+ {
+  "id": "q7aeda4688cd",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "hard",
+  "question": "Why don't threads speed up CPU-bound pure-Python code in standard CPython 3.12?",
+  "options": [
+   "The GIL allows only one thread to execute Python bytecode at a time",
+   "Python threads are green threads run by the interpreter",
+   "The OS limits each process to one thread",
+   "Threads must be awaited inside an event loop"
+  ],
+  "answer": 0,
+  "explanation": "CPython's global interpreter lock serializes bytecode execution, so threads mainly help I/O-bound work."
+ },
+ {
+  "id": "q266a452faac",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "What does importlib.reload(mod) do?",
+  "options": [
+   "Re-executes the module's code inside the existing module object",
+   "Creates a new module object and updates every reference to it",
+   "Deletes the module from sys.modules",
+   "Recompiles only the module's changed functions"
+  ],
+  "answer": 0,
+  "explanation": "reload reruns the source in the same module object; objects imported elsewhere with from-import keep the old bindings."
+ }
+]

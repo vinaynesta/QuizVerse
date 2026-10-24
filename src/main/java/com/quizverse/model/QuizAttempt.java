@@ -46,6 +46,11 @@ public class QuizAttempt {
     @Column(nullable = false)
     private Instant completedAt = Instant.now();
 
+    /** Set when this attempt was taken through a friend's challenge link. */
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "challenge_id")
+    private Challenge challenge;
+
     public Long getId() { return id; }
     public User getUser() { return user; }
     public String getKind() { return kind; }
@@ -63,6 +68,7 @@ public class QuizAttempt {
     public boolean isTimed() { return timed; }
     public int getTimeUsedSeconds() { return timeUsedSeconds; }
     public Instant getCompletedAt() { return completedAt; }
+    public Challenge getChallenge() { return challenge; }
 
     public void setUser(User user) { this.user = user; }
     public void setKind(String kind) { this.kind = kind; }
@@ -79,4 +85,5 @@ public class QuizAttempt {
     public void setSkipped(int skipped) { this.skipped = skipped; }
     public void setTimed(boolean timed) { this.timed = timed; }
     public void setTimeUsedSeconds(int timeUsedSeconds) { this.timeUsedSeconds = timeUsedSeconds; }
+    public void setChallenge(Challenge challenge) { this.challenge = challenge; }
 }

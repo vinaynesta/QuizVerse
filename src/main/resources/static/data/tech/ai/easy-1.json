@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q24606c3e683",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is a large language model fundamentally trained to do?",
+  "options": [
+   "Translate code into machine instructions",
+   "Look up answers in a fixed database of facts",
+   "Classify documents into a fixed set of topics",
+   "Predict the next token given the preceding text"
+  ],
+  "answer": 3,
+  "explanation": "LLMs are pre-trained on large text corpora with a next-token prediction objective."
+ },
+ {
+  "id": "q6099fe51c9b",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "What is machine learning?",
+  "options": [
+   "Storing large datasets in a relational database for fast lookup",
+   "Writing explicit if-then rules for every possible input case",
+   "Building systems that learn patterns from data rather than following only hand-coded rules",
+   "Compiling source code into optimized machine instructions"
+  ],
+  "answer": 2,
+  "explanation": "Machine learning fits models to data so behavior is learned from examples instead of being fully hand-programmed."
+ },
+ {
+  "id": "qf7f88b53979",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What does human-in-the-loop mean for AI systems?",
+  "options": [
+   "Humans manually compute every model prediction",
+   "Humans review or intervene in AI decisions, especially high-stakes ones",
+   "A model is trained only on images of people",
+   "A loop retrains the model every second"
+  ],
+  "answer": 1,
+  "explanation": "Keeping humans in the loop adds oversight so errors in consequential decisions can be caught and corrected."
+ },
+ {
+  "id": "q7c817b859a4",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "Convolutional neural networks are particularly well suited to which kind of data?",
+  "options": [
+   "Tabular data with unrelated columns",
+   "Grid-like data such as images",
+   "Key-value records in a database",
+   "Unordered lists of numbers to sort"
+  ],
+  "answer": 1,
+  "explanation": "Convolutions exploit local spatial structure, which is why CNNs excel on images."
+ },
+ {
+  "id": "qb0e5fafd747",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is a vector database typically used for in AI applications?",
+  "options": [
+   "Storing model weights for distributed training",
+   "Running SQL joins across relational tables",
+   "Caching rendered web pages",
+   "Storing embeddings and quickly finding the most similar ones"
+  ],
+  "answer": 3,
+  "explanation": "Vector databases index embeddings for fast similarity search, which powers semantic retrieval."
+ },
+ {
+  "id": "q8221be72f80",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What is tokenization in NLP?",
+  "options": [
+   "Encrypting text before sending it to a model",
+   "Splitting text into smaller units such as words or subwords",
+   "Removing all punctuation and numbers from text",
+   "Translating text into a different language"
+  ],
+  "answer": 1,
+  "explanation": "Tokenization converts raw text into discrete units that a model can map to IDs and embeddings."
+ },
+ {
+  "id": "qae57597a086",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What is a word embedding?",
+  "options": [
+   "A list of all words sorted alphabetically",
+   "A dense vector representation that captures word meaning",
+   "A rule that maps words to their part of speech",
+   "A one-character code assigned to each word"
+  ],
+  "answer": 1,
+  "explanation": "Embeddings place words in a vector space where semantically similar words lie close together."
+ },
+ {
+  "id": "q4a5253e5146",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "Which mechanism is at the core of the transformer architecture?",
+  "options": [
+   "A recurrent hidden state",
+   "Convolutional pooling",
+   "Decision tree splitting",
+   "Self-attention"
+  ],
+  "answer": 3,
+  "explanation": "Transformers rely on self-attention to let every token draw information from every other token."
+ },
+ {
+  "id": "q5bacf87fe80",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What is algorithmic bias?",
+  "options": [
+   "Systematically unfair outcomes for certain groups produced by a model",
+   "Random noise added to model weights during training",
+   "The constant offset term in a linear model",
+   "A model's preference for shorter outputs"
+  ],
+  "answer": 0,
+  "explanation": "Algorithmic bias refers to models producing skewed or discriminatory results, often inherited from data or design choices."
+ },
+ {
+  "id": "q988f285c218",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What does backpropagation do?",
+  "options": [
+   "Randomly initializes weights before training begins",
+   "Selects the best architecture from a set of candidates",
+   "Normalizes input features to zero mean and unit variance",
+   "Computes gradients of the loss with respect to each weight using the chain rule"
+  ],
+  "answer": 3,
+  "explanation": "Backpropagation propagates error derivatives backward through the layers so an optimizer can update the weights."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q5c978d80d98",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "Which PasswordEncoder is a common, recommended choice for hashing stored passwords?",
+  "options": [
+   "NoOpPasswordEncoder",
+   "Base64PasswordEncoder",
+   "BCryptPasswordEncoder",
+   "PlainTextPasswordEncoder"
+  ],
+  "answer": 2,
+  "explanation": "BCrypt is an adaptive, salted hashing function; NoOpPasswordEncoder stores plain text and is only for tests."
+ },
+ {
+  "id": "q717af0283ec",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "How do you configure HTTP security rules in Spring Security 6?",
+  "options": [
+   "Extend WebSecurityConfigurerAdapter and override configure",
+   "Declare a SecurityFilterChain bean that builds the HttpSecurity configuration",
+   "Override a method in SpringBootServletInitializer",
+   "Implement WebMvcConfigurer and add security interceptors"
+  ],
+  "answer": 1,
+  "explanation": "WebSecurityConfigurerAdapter was removed in Spring Security 6; a SecurityFilterChain @Bean is the supported approach."
+ },
+ {
+  "id": "qdcd94c9ae2c",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "Which interface does Spring Security use to load user details by username?",
+  "options": [
+   "UserDetailsService",
+   "UserRepository",
+   "AuthenticationProvider",
+   "PrincipalResolver"
+  ],
+  "answer": 0,
+  "explanation": "UserDetailsService.loadUserByUsername returns a UserDetails used by DaoAuthenticationProvider."
+ },
+ {
+  "id": "qfb8fed3575b",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "What happens when you add spring-boot-starter-security without any custom configuration?",
+  "options": [
+   "All endpoints require authentication and a default user with a generated password is created",
+   "Only POST endpoints are secured while GET requests stay open",
+   "Nothing changes until @EnableWebSecurity is added",
+   "The application fails to start until a UserDetailsService is defined"
+  ],
+  "answer": 0,
+  "explanation": "Boot's security auto-configuration secures every endpoint and logs a generated password for the user named user."
+ },
+ {
+  "id": "q08a57482208",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Which annotation enables @PreAuthorize support in Spring Security 6?",
+  "options": [
+   "@EnableGlobalMethodSecurity(prePostEnabled = false)",
+   "@EnableWebSecurity(method = true)",
+   "@EnableMethodSecurity",
+   "@EnableAuthorization"
+  ],
+  "answer": 2,
+  "explanation": "@EnableMethodSecurity replaces the deprecated @EnableGlobalMethodSecurity and enables pre/post annotations by default."
+ },
+ {
+  "id": "q247914999cd",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Why is CSRF protection often disabled for stateless REST APIs that use bearer tokens in the Authorization header?",
+  "options": [
+   "Spring Security cannot combine CSRF with JSON bodies",
+   "Bearer tokens are encrypted with the CSRF token",
+   "CSRF only applies to GET requests",
+   "Browsers do not attach such headers automatically, so cross-site forged requests cannot carry the token"
+  ],
+  "answer": 3,
+  "explanation": "CSRF exploits credentials that browsers send automatically, such as cookies; a manually added header is not sent cross-site."
+ },
+ {
+  "id": "q8bee7f8cd9e",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Which authority does hasRole(\"ADMIN\") check for?",
+  "options": [
+   "ADMIN",
+   "AUTHORITY_ADMIN",
+   "ROLE_ADMIN",
+   "SCOPE_ADMIN"
+  ],
+  "answer": 2,
+  "explanation": "hasRole adds the ROLE_ prefix automatically, whereas hasAuthority compares the exact string."
+ },
+ {
+  "id": "qcf795562ca0",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "In Spring Security 6, which DSL configures URL authorization rules?",
+  "options": [
+   "authorizeRequests().antMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+   "authorizeRequests().mvcMatchers(\"/admin/**\").hasRole(\"ADMIN\")",
+   "authorizeHttpRequests(auth -> auth.requestMatchers(\"/admin/**\").hasRole(\"ADMIN\"))",
+   "authorizeUrls().paths(\"/admin/**\").hasRole(\"ADMIN\")"
+  ],
+  "answer": 2,
+  "explanation": "antMatchers and mvcMatchers were removed in Spring Security 6; requestMatchers inside authorizeHttpRequests is the replacement."
+ },
+ {
+  "id": "q9c7ae08f441",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "Why can an @Async method lose the authenticated user from SecurityContextHolder?",
+  "options": [
+   "@Async clears the HTTP session",
+   "Security contexts expire after one second",
+   "The default strategy is ThreadLocal, so the new thread has no context unless it is propagated",
+   "Async methods run as an anonymous system user by design"
+  ],
+  "answer": 2,
+  "explanation": "Use DelegatingSecurityContextExecutor or a propagating strategy to carry the context to other threads."
+ },
+ {
+  "id": "qbd1e39e4b9e",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "In Spring Security 6, a custom login endpoint sets SecurityContextHolder but the user is unauthenticated on the next request. Why?",
+  "options": [
+   "Custom endpoints must return a JWT",
+   "The session cookie name changed to JSESSION",
+   "SecurityContextHolder is read-only in Spring Security 6",
+   "The context must be saved explicitly with a SecurityContextRepository"
+  ],
+  "answer": 3,
+  "explanation": "Spring Security 6 uses SecurityContextHolderFilter, which no longer saves the context automatically."
+ },
+ {
+  "id": "qbe85694f310",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "An app defines two SecurityFilterChain beans. How does Spring Security pick which one handles a request?",
+  "options": [
+   "Both chains run in sequence for every request",
+   "The chain declared last in the class always wins",
+   "The first chain, by @Order, whose securityMatcher matches the request",
+   "It merges the chains into one"
+  ],
+  "answer": 2,
+  "explanation": "FilterChainProxy uses the first matching chain, so specific matchers need higher precedence than catch-all chains."
+ },
+ {
+  "id": "qdb9ccb40caf",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "A public method calls a @PreAuthorize(\"hasRole('ADMIN')\") method on this in the same bean. What happens?",
+  "options": [
+   "The check runs as usual",
+   "The check runs twice",
+   "Startup fails due to self-invocation",
+   "No authorization check occurs because the call bypasses the proxy"
+  ],
+  "answer": 3,
+  "explanation": "Method security uses proxies, and internal calls never pass through them."
+ }
+]

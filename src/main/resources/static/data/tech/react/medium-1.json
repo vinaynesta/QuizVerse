@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q211c651d98d",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "Fetching in a parent effect, then rendering a child that fetches in its own effect, creates what problem?",
+  "options": [
+   "A network waterfall where the requests run one after another",
+   "Duplicate keys",
+   "A memory leak",
+   "An infinite render loop"
+  ],
+  "answer": 0,
+  "explanation": "The child cannot start fetching until the parent finishes and renders it, serializing the requests."
+ },
+ {
+  "id": "qcc2298ecac9",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What does startTransition (or useTransition) let you do?",
+  "options": [
+   "Animate CSS transitions between routes",
+   "Run state updates on a web worker",
+   "Mark a state update as non-urgent so urgent updates like typing stay responsive",
+   "Batch updates across separate page loads"
+  ],
+  "answer": 2,
+  "explanation": "Transition updates can be interrupted by more urgent updates, keeping input responsive during expensive renders."
+ },
+ {
+  "id": "q28eb998fd91",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "Which React Router hook reads and updates the URL query string?",
+  "options": [
+   "useSearchParams",
+   "useParams",
+   "useQuery",
+   "useRouteData"
+  ],
+  "answer": 0,
+  "explanation": "useSearchParams returns a URLSearchParams object and a setter, similar to useState for the query string."
+ },
+ {
+  "id": "qf27dd2dbaa1",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "A memo-wrapped child receives onSelect={() => select(id)} from its parent. Why does it still re-render on every parent render?",
+  "options": [
+   "memo only works with class components",
+   "Arrow functions disable memo",
+   "A new function is created each render, so the prop is never equal",
+   "memo ignores function props"
+  ],
+  "answer": 2,
+  "explanation": "memo compares props shallowly; wrapping the callback in useCallback keeps the same reference between renders."
+ },
+ {
+  "id": "q37eceab17b3",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "Why are libraries like TanStack Query often preferred over hand-written fetch-in-useEffect code?",
+  "options": [
+   "They make fetch synchronous",
+   "They remove the need for a server",
+   "They handle caching, deduplication, refetching, and race conditions for you",
+   "They are required for React Router"
+  ],
+  "answer": 2,
+  "explanation": "Data libraries solve caching and request lifecycle problems that are easy to get wrong in raw effects."
+ },
+ {
+  "id": "qc89951828f5",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "In React 19, what can you pass to the action prop of a form element?",
+  "options": [
+   "Only a URL string",
+   "Only a Server Component",
+   "A CSS selector",
+   "A function, which React calls with the FormData on submit"
+  ],
+  "answer": 3,
+  "explanation": "React 19 forms accept a function action (client or server), and React resets uncontrolled fields after it succeeds."
+ },
+ {
+  "id": "qe0f3de45f6b",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "A component renders either <input /> or <textarea /> at the same position depending on a flag. What happens to the old element's state when the flag flips?",
+  "options": [
+   "It is destroyed because the element type changed",
+   "It is preserved and moved to the new element",
+   "It is copied into a ref",
+   "It is kept until the next page reload"
+  ],
+  "answer": 0,
+  "explanation": "When the element type at a position changes, React unmounts the old subtree and mounts a new one."
+ },
+ {
+  "id": "qe1eb0a89a61",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "What does {count && <Badge />} render when count is 0?",
+  "options": [
+   "The number 0",
+   "Nothing at all",
+   "An empty Badge",
+   "The string 'false'"
+  ],
+  "answer": 0,
+  "explanation": "0 && x evaluates to 0, and React renders numbers, so a literal 0 appears; use count > 0 && ... instead."
+ },
+ {
+  "id": "q5505de79402",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "A component calls useContext(ThemeContext) but there is no ThemeContext.Provider above it. What value does it get?",
+  "options": [
+   "undefined, always",
+   "The value from the most recently mounted provider anywhere",
+   "An error is thrown",
+   "The default value passed to createContext"
+  ],
+  "answer": 3,
+  "explanation": "Without a matching provider above, useContext returns the default value given to createContext."
+ },
+ {
+  "id": "q4cc1a7db5a0",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "Two sibling components need to share and edit the same value. What is the standard React approach?",
+  "options": [
+   "Store the value in a global variable",
+   "Use refs to read each other's DOM",
+   "Lift the state up to their closest common parent and pass it down as props",
+   "Duplicate the state in both siblings and sync it in effects"
+  ],
+  "answer": 2,
+  "explanation": "Lifting state up gives a single source of truth that both siblings receive via props, along with a setter."
+ }
+]

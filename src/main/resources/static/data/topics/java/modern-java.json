@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q709ade56774",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "What does a record declaration generate automatically?",
+  "options": [
+   "Setters for every component",
+   "A nested builder class",
+   "Only getter methods prefixed with get",
+   "A canonical constructor, accessors, equals, hashCode and toString"
+  ],
+  "answer": 3,
+  "explanation": "Records generate a canonical constructor, accessor methods named after components, and value-based equals, hashCode and toString."
+ },
+ {
+  "id": "q7989eae71ba",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "Which of these Java releases is a long-term support (LTS) release?",
+  "options": [
+   "Java 19",
+   "Java 21",
+   "Java 22",
+   "Java 20"
+  ],
+  "answer": 1,
+  "explanation": "Java 21 (September 2023) is an LTS release, following Java 17."
+ },
+ {
+  "id": "qaa42af168c8",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "What is the feature that allows multi-line string literals delimited by three double quotes?",
+  "options": [
+   "Raw string literals",
+   "Heredocs",
+   "Text blocks",
+   "String templates"
+  ],
+  "answer": 2,
+  "explanation": "Text blocks became a standard feature in Java 15 and use triple double-quote delimiters."
+ },
+ {
+  "id": "qd6f7d162f11",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "Which keyword lets the compiler infer the type of a local variable (Java 10)?",
+  "options": [
+   "val",
+   "auto",
+   "let",
+   "var"
+  ],
+  "answer": 3,
+  "explanation": "var enables local variable type inference; the variable is still statically typed."
+ },
+ {
+  "id": "q4b17a4cd95b",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "What does the permits clause on a sealed class do?",
+  "options": [
+   "Lists the only classes allowed to directly extend it",
+   "Lists the interfaces the class implements",
+   "Grants reflective access to private members",
+   "Marks the class as Serializable"
+  ],
+  "answer": 0,
+  "explanation": "A sealed class restricts its direct subclasses to those named in permits, each of which must be final, sealed or non-sealed."
+ },
+ {
+  "id": "q6a8303e6e9f",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "What does switch (2) { case 1 -> \"one\"; case 2 -> \"two\"; default -> \"many\"; } evaluate to?",
+  "options": [
+   "\"one\"",
+   "\"two\"",
+   "\"many\"",
+   "\"twomany\""
+  ],
+  "answer": 1,
+  "explanation": "Arrow-form switch expressions do not fall through, so only the matching case's value is produced."
+ },
+ {
+  "id": "qa65a80db53f",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "Can the component fields of a record be reassigned after construction?",
+  "options": [
+   "Yes, records generate setters",
+   "Yes, but only from the same package",
+   "Only if the record is declared mutable",
+   "No, they are private and final"
+  ],
+  "answer": 3,
+  "explanation": "Record components are backed by private final fields, making records shallowly immutable."
+ },
+ {
+  "id": "qb6d1d21683d",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "In if (obj instanceof String s), what is s?",
+  "options": [
+   "A new String created by calling obj.toString()",
+   "A raw Object reference that still needs a cast",
+   "A compile error in Java 16 and later",
+   "A pattern variable typed String, bound when the test succeeds"
+  ],
+  "answer": 3,
+  "explanation": "Pattern matching for instanceof (Java 16) tests the type and binds a typed variable in one step."
+ },
+ {
+  "id": "q1ed13b13857",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "In Java 21, when can a switch over a sealed interface omit the default case?",
+  "options": [
+   "Never, a default case is always required",
+   "Always, because switch never needs default",
+   "When its cases cover every permitted subtype",
+   "Only when every case uses yield"
+  ],
+  "answer": 2,
+  "explanation": "The compiler checks exhaustiveness against the sealed hierarchy, so covering all permitted subtypes is enough."
+ },
+ {
+  "id": "q33446cfc80e",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "What does obj instanceof Point(var x, var y) do in Java 21, where Point is a record?",
+  "options": [
+   "Constructs a new Point from x and y",
+   "Compares obj with Point(0, 0)",
+   "Tests that obj is a Point and binds its components to x and y",
+   "Fails to compile because records cannot be patterns"
+  ],
+  "answer": 2,
+  "explanation": "Record patterns (Java 21) deconstruct a record into its components while testing its type."
+ },
+ {
+  "id": "q4f074fe4e13",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "In Java 21, what happens when a switch has no case null and its selector is null?",
+  "options": [
+   "It fails to compile",
+   "It runs the default branch",
+   "It evaluates to null",
+   "It throws NullPointerException"
+  ],
+  "answer": 3,
+  "explanation": "Without an explicit case null, switch keeps its traditional behavior and throws NullPointerException."
+ },
+ {
+  "id": "q780d8391f89",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "Can a record extend another class?",
+  "options": [
+   "Yes, any non-final class",
+   "Only an abstract class",
+   "No, records implicitly extend java.lang.Record",
+   "Only another record"
+  ],
+  "answer": 2,
+  "explanation": "Records already extend java.lang.Record and are implicitly final, though they may implement interfaces."
+ }
+]

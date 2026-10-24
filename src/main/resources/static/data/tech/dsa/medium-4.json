@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q25c9ecd8815",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "What is the height of a balanced binary search tree containing n nodes?",
+  "options": [
+   "O(log n)",
+   "O(1)",
+   "O(n)",
+   "O(sqrt n)"
+  ],
+  "answer": 0,
+  "explanation": "Balancing keeps both subtrees similar in size, so the height grows logarithmically."
+ },
+ {
+  "id": "q3a4b7d48dc2",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "When a queue is implemented with two stacks, what is the amortized cost per operation?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(log n)",
+   "O(n^2)"
+  ],
+  "answer": 1,
+  "explanation": "Each element is moved from the input stack to the output stack at most once."
+ },
+ {
+  "id": "qecf8184d1fe",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "How can you find the middle node of a singly linked list in a single pass?",
+  "options": [
+   "Move a slow pointer one step and a fast pointer two steps until fast reaches the end",
+   "Store all nodes in a hash set and pick a random one",
+   "Reverse the list and read the head",
+   "Start pointers at both ends and move them toward each other"
+  ],
+  "answer": 0,
+  "explanation": "When the fast pointer reaches the end, the slow pointer has covered half the distance."
+ },
+ {
+  "id": "q9107ad2f20a",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "A binary tree has root 1, left child 2, right child 3, and node 2 has a left child 4. What is its preorder traversal?",
+  "options": [
+   "4 2 1 3",
+   "4 2 3 1",
+   "1 2 3 4",
+   "1 2 4 3"
+  ],
+  "answer": 3,
+  "explanation": "Preorder visits root, then left subtree, then right subtree."
+ },
+ {
+  "id": "q3454cdd82fc",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "What does Floyd's tortoise-and-hare algorithm detect in a linked list?",
+  "options": [
+   "Whether the list is sorted",
+   "Whether the list contains a cycle",
+   "The k-th node from the end",
+   "The number of duplicate values"
+  ],
+  "answer": 1,
+  "explanation": "A fast pointer moving two steps will meet a slow pointer moving one step only if there is a cycle."
+ },
+ {
+  "id": "q965d8c7a35d",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "What is the time complexity of finding a pair that sums to a target in a sorted array using the two-pointer technique?",
+  "options": [
+   "O(n^2)",
+   "O(n log n)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 2,
+  "explanation": "Each step moves one of the two pointers inward, so at most n steps are needed."
+ },
+ {
+  "id": "q6d428e7c12f",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "On which kind of graph can a topological sort be performed?",
+  "options": [
+   "Any undirected graph",
+   "A directed graph with cycles",
+   "A complete graph",
+   "A directed acyclic graph"
+  ],
+  "answer": 3,
+  "explanation": "A topological order exists only when there are no directed cycles."
+ },
+ {
+  "id": "qcbd297bae8d",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "medium",
+  "question": "How much call-stack space does a recursive function use if it sums an array of n elements with one recursive call per element?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "The recursion depth is n, and each active call holds a stack frame."
+ },
+ {
+  "id": "q56717be6036",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of extract-min on a binary min-heap with n elements?",
+  "options": [
+   "O(n log n)",
+   "O(1)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "After removing the root, the last element is sifted down through the heap's height."
+ },
+ {
+  "id": "q8bbaf669e09",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "In the activity selection problem, which greedy choice yields a maximum set of non-overlapping activities?",
+  "options": [
+   "Pick the activity that finishes earliest",
+   "Pick the activity that starts earliest",
+   "Pick the shortest activity",
+   "Pick the activity with the fewest conflicts"
+  ],
+  "answer": 0,
+  "explanation": "Choosing the earliest finish leaves the most room for remaining activities, and this is provably optimal."
+ }
+]

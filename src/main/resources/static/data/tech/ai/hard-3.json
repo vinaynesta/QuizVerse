@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf3337bd1016",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "Why can a classifier generally not be calibrated and also have equal false positive and false negative rates across groups?",
+  "options": [
+   "Fairness metrics can only be computed on training data",
+   "When base rates differ between groups, these criteria conflict mathematically",
+   "Calibration requires removing all protected attributes",
+   "Equal error rates always imply equal accuracy"
+  ],
+  "answer": 1,
+  "explanation": "Impossibility results show that, except for a perfect predictor, unequal base rates force a trade-off between these fairness criteria."
+ },
+ {
+  "id": "q82be29405ec",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "Raising a classifier's decision threshold typically has what effect?",
+  "options": [
+   "Recall rises and precision falls",
+   "Precision rises and recall falls",
+   "Both precision and recall rise",
+   "ROC AUC changes significantly"
+  ],
+  "answer": 1,
+  "explanation": "A higher threshold makes fewer, more confident positive predictions, trading missed positives for fewer false alarms."
+ },
+ {
+  "id": "q8bb73f2aaed",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "In the bias-variance trade-off, what typically happens as model complexity increases?",
+  "options": [
+   "Bias decreases and variance increases",
+   "Bias increases and variance decreases",
+   "Both bias and variance decrease indefinitely",
+   "Both bias and variance increase"
+  ],
+  "answer": 0,
+  "explanation": "More flexible models fit the training data more closely, lowering bias but becoming more sensitive to the particular sample."
+ },
+ {
+  "id": "qca4cc3dd5db",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "How does RMSE differ from MAE as a regression metric?",
+  "options": [
+   "RMSE penalizes large errors more heavily because errors are squared",
+   "RMSE and MAE always rank models identically",
+   "MAE penalizes large errors more heavily because it uses absolute values",
+   "RMSE is unaffected by outliers"
+  ],
+  "answer": 0,
+  "explanation": "Squaring magnifies big errors, so RMSE is more sensitive to outliers than MAE."
+ },
+ {
+  "id": "q43398e6dbf5",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Why is shuffled k-fold cross-validation inappropriate for time-series forecasting?",
+  "options": [
+   "Time series always have too few samples for k folds",
+   "Shuffling changes the values of the target variable",
+   "k-fold requires categorical targets",
+   "Random splits let the model train on future data, leaking information"
+  ],
+  "answer": 3,
+  "explanation": "Forecasting must respect temporal order, so walk-forward or time-based splits are used instead."
+ },
+ {
+  "id": "q2613d564c33",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "What is the purpose of reinforcement learning from human feedback (RLHF)?",
+  "options": [
+   "Aligning outputs with human preferences using a reward model trained on human rankings",
+   "Compressing the model by removing redundant layers",
+   "Extending the context window via positional interpolation",
+   "Teaching the model new facts by retrieving web pages"
+  ],
+  "answer": 0,
+  "explanation": "Humans compare responses, a reward model learns those preferences, and the LLM is optimized against it."
+ },
+ {
+  "id": "q59f85dc6f18",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "Why do long multi-step agent workflows often become less reliable as the number of steps grows?",
+  "options": [
+   "Each tool call permanently reduces the model's accuracy",
+   "Small per-step error rates compound across many dependent steps",
+   "Agents lose access to the context window after one step",
+   "Longer workflows always switch to a smaller model"
+  ],
+  "answer": 1,
+  "explanation": "If each step succeeds with probability p, a chain of n dependent steps succeeds with roughly p to the power n."
+ },
+ {
+  "id": "q84090d64b55",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What is a major training advantage of transformers over RNNs?",
+  "options": [
+   "They need no training data",
+   "All sequence positions can be processed in parallel during training",
+   "Their attention layers have no learned parameters",
+   "Their attention cost scales linearly with sequence length"
+  ],
+  "answer": 1,
+  "explanation": "RNNs must step through time sequentially, while transformers compute attention over all positions at once."
+ },
+ {
+  "id": "q53f6592a656",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What is mode collapse in generative adversarial networks?",
+  "options": [
+   "The generator copies training images pixel for pixel",
+   "The discriminator is removed partway through training",
+   "The generator produces only a limited variety of outputs",
+   "The latent space grows without bound"
+  ],
+  "answer": 2,
+  "explanation": "The generator finds a few outputs that fool the discriminator and stops covering the full data distribution."
+ },
+ {
+  "id": "q2a50d24c730",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why is a BERT-style masked language model not directly suited to free-form text generation?",
+  "options": [
+   "It has no embedding layer for output tokens",
+   "It can only process sentences of five words",
+   "It is trained with bidirectional context to fill masked tokens, not to predict text left to right",
+   "It uses recurrent layers that cannot generate text"
+  ],
+  "answer": 2,
+  "explanation": "Generation requires predicting the next token from past context only, which a bidirectional masked objective does not train."
+ }
+]

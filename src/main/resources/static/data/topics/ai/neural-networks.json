@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q5132e3f88e1",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What does the ReLU activation function output?",
+  "options": [
+   "A value squashed between 0 and 1",
+   "A value squashed between -1 and 1",
+   "The input if it is positive, otherwise zero",
+   "The input multiplied by a learned constant everywhere"
+  ],
+  "answer": 2,
+  "explanation": "ReLU is defined as max(0, x), passing positive values unchanged and zeroing negatives."
+ },
+ {
+  "id": "q73a3a6be67f",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "In neural network training, what is an epoch?",
+  "options": [
+   "A single weight update computed from one mini-batch",
+   "One full pass through the entire training dataset",
+   "The number of layers in a neural network",
+   "The time it takes to run inference on one example"
+  ],
+  "answer": 1,
+  "explanation": "An epoch is complete when every training example has been used once; it usually contains many mini-batch updates."
+ },
+ {
+  "id": "q988f285c218",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What does backpropagation do?",
+  "options": [
+   "Randomly initializes weights before training begins",
+   "Selects the best architecture from a set of candidates",
+   "Normalizes input features to zero mean and unit variance",
+   "Computes gradients of the loss with respect to each weight using the chain rule"
+  ],
+  "answer": 3,
+  "explanation": "Backpropagation propagates error derivatives backward through the layers so an optimizer can update the weights."
+ },
+ {
+  "id": "qcefe4c6bf9a",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What does an activation function add to a neural network?",
+  "options": [
+   "Non-linearity so the network can model complex relationships",
+   "Regularization that prevents all overfitting",
+   "A way to store training data inside the network",
+   "A fixed learning rate schedule for training"
+  ],
+  "answer": 0,
+  "explanation": "Without non-linear activations, stacked layers collapse into a single linear transformation."
+ },
+ {
+  "id": "q294a7c79548",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What does dropout do during training?",
+  "options": [
+   "Permanently removes the least important neurons after training",
+   "Randomly zeroes a fraction of activations to reduce co-adaptation and overfitting",
+   "Lowers the learning rate when the loss plateaus",
+   "Drops training examples that have a high loss"
+  ],
+  "answer": 1,
+  "explanation": "By randomly disabling units, dropout forces the network to learn redundant, more robust features."
+ },
+ {
+  "id": "q6f577126f6a",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What is a key benefit of mini-batch gradient descent over full-batch gradient descent?",
+  "options": [
+   "No need to choose a learning rate",
+   "Exact gradients of the full loss at every step",
+   "Guaranteed convergence to the global minimum",
+   "More frequent, cheaper updates per pass over the data"
+  ],
+  "answer": 3,
+  "explanation": "Mini-batches give many noisy but inexpensive updates per epoch, which usually speeds training and fits in memory."
+ },
+ {
+  "id": "qdfb4914057b",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What typically happens when the learning rate is set too high?",
+  "options": [
+   "Training converges slowly but stably",
+   "The model stops using its activation functions",
+   "The loss oscillates or diverges instead of decreasing steadily",
+   "The network automatically adds more layers"
+  ],
+  "answer": 2,
+  "explanation": "Overly large steps overshoot minima, causing unstable or exploding loss."
+ },
+ {
+  "id": "qebec77bc8fa",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What is early stopping?",
+  "options": [
+   "Stopping training after the first epoch to save compute",
+   "Stopping inference once the model is confident",
+   "Halting when training loss reaches exactly zero",
+   "Halting training when validation performance stops improving"
+  ],
+  "answer": 3,
+  "explanation": "Early stopping acts as regularization by keeping the weights from before the model starts to overfit."
+ },
+ {
+  "id": "q06c343cb0d6",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "Why should all weights in a network not be initialized to zero?",
+  "options": [
+   "Zero weights make the loss become infinite",
+   "Gradient descent cannot compute derivatives at zero",
+   "Neurons in a layer get identical gradients and never differentiate",
+   "The network would immediately overfit"
+  ],
+  "answer": 2,
+  "explanation": "Symmetric initialization means every unit computes the same function, so random initialization is needed to break symmetry."
+ },
+ {
+  "id": "q3b9ddfa7a69",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "What does batch normalization do?",
+  "options": [
+   "Normalizes the input dataset once before training",
+   "Normalizes layer activations using batch statistics, stabilizing and speeding up training",
+   "Divides the learning rate by the batch size",
+   "Removes outliers from each mini-batch"
+  ],
+  "answer": 1,
+  "explanation": "Normalizing intermediate activations with learned scale and shift allows higher learning rates and smoother optimization."
+ },
+ {
+  "id": "q7caeb6adc8f",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "What primarily causes vanishing gradients in deep networks?",
+  "options": [
+   "Using ReLU activations in every layer",
+   "Using too large a batch size during training",
+   "Having too many training examples",
+   "Repeated multiplication of small derivatives, such as from saturating sigmoids, across many layers"
+  ],
+  "answer": 3,
+  "explanation": "The chain rule multiplies per-layer derivatives, so values below one shrink gradients exponentially with depth."
+ },
+ {
+  "id": "qd0856584eef",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "What distinguishes the Adam optimizer?",
+  "options": [
+   "It adapts per-parameter step sizes using running estimates of the gradient's first and second moments",
+   "It uses a single global learning rate with no momentum",
+   "It computes exact second derivatives via the full Hessian",
+   "It updates only the weights of the final layer"
+  ],
+  "answer": 0,
+  "explanation": "Adam combines momentum with RMS-style scaling so each parameter gets an individually adapted update."
+ }
+]

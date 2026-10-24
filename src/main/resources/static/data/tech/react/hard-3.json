@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf7fc0026220",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A context value changes. Which components re-render, even if wrapped in memo?",
+  "options": [
+   "Every component that reads that context",
+   "All components in the app",
+   "Only the provider",
+   "Only direct children of the provider"
+  ],
+  "answer": 0,
+  "explanation": "Context consumers re-render on value change regardless of memo, because memo only checks props."
+ },
+ {
+  "id": "qf973a484a8d",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "A component does useState(props.initialColor) and the parent later passes a different initialColor. What happens to the state?",
+  "options": [
+   "It updates to the new prop automatically",
+   "It becomes undefined",
+   "React throws a warning and resets",
+   "It keeps the original value, since the initial value is used only on the first render"
+  ],
+  "answer": 3,
+  "explanation": "useState ignores its argument after mount; to reset, change the key or read the prop directly."
+ },
+ {
+  "id": "q34514a130d9",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "Which hook is designed for subscribing to an external mutable store in a way that is safe with concurrent rendering?",
+  "options": [
+   "useEffect with useState",
+   "useLayoutEffect",
+   "useImperativeHandle",
+   "useSyncExternalStore"
+  ],
+  "answer": 3,
+  "explanation": "useSyncExternalStore avoids tearing, where different parts of the UI show different store values in one render."
+ },
+ {
+  "id": "q11813ac38d7",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "Why does storing the latest callback in a ref and reading ref.current inside a long-lived effect avoid stale closures?",
+  "options": [
+   "Refs force the effect to re-run",
+   "React re-binds functions stored in refs",
+   "Refs deep-copy the function",
+   "The ref object is stable, and reading current at call time gets the latest assigned value"
+  ],
+  "answer": 3,
+  "explanation": "The effect closes over the stable ref object, not a specific value, so it sees whatever was last written to current."
+ },
+ {
+  "id": "q9ba62d5c7fe",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "In React Router data mode, what is the main advantage of a route loader over fetching in useEffect?",
+  "options": [
+   "Loaders run only on the client",
+   "Loaders replace the need for routes",
+   "Loaders cache data forever",
+   "Data loading can start in parallel with navigation, before the component renders"
+  ],
+  "answer": 3,
+  "explanation": "Loaders begin fetching when navigation starts, avoiding render-then-fetch waterfalls."
+ },
+ {
+  "id": "q5144a130be8",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "How does onChange on a text input in React differ from the native DOM change event?",
+  "options": [
+   "They are identical",
+   "React's fires only on blur",
+   "React's onChange fires on every keystroke, like the native input event",
+   "React's fires only on submit"
+  ],
+  "answer": 2,
+  "explanation": "React maps onChange to input-level updates so controlled inputs can sync state on every edit."
+ },
+ {
+  "id": "qe3540ef011a",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "An effect has no dependency array and calls setData(fetchResultCopy) unconditionally with a new object. What happens?",
+  "options": [
+   "It runs once",
+   "React ignores state set inside effects",
+   "An infinite loop of renders and effect runs",
+   "It runs only when data changes"
+  ],
+  "answer": 2,
+  "explanation": "Every render runs the effect, which sets a new object, which triggers another render, and so on."
+ },
+ {
+  "id": "q17808c080ba",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "Typing quickly fires fetches for 'a', 'ab', 'abc', and the 'a' response arrives last. Without cleanup, what bug results?",
+  "options": [
+   "The requests are merged",
+   "React cancels the old requests automatically",
+   "The component unmounts",
+   "Results for 'a' overwrite the newer 'abc' results"
+  ],
+  "answer": 3,
+  "explanation": "This race condition is solved by ignoring stale responses or aborting them in the effect cleanup."
+ },
+ {
+  "id": "qa24d61a5980",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Unlike hooks, what is allowed with the React 19 use API?",
+  "options": [
+   "Calling it in class components",
+   "Calling it in event handlers after render",
+   "Calling it outside any component",
+   "Calling it inside conditionals and loops"
+  ],
+  "answer": 3,
+  "explanation": "use can be called conditionally, though it must still be called during render of a component or hook."
+ },
+ {
+  "id": "q9250f46d2b3",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Which statement about elements created by JSX is correct?",
+  "options": [
+   "They are live DOM nodes",
+   "They are mutable so you can update them later",
+   "They are instances of the component class",
+   "They are plain immutable objects describing what to render"
+  ],
+  "answer": 3,
+  "explanation": "React elements are lightweight descriptions; to change the UI you render new elements instead of mutating old ones."
+ }
+]

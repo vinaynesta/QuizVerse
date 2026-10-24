@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q6af4063692d",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive renders an element once and skips all future updates?",
+  "options": [
+   "v-static",
+   "v-freeze",
+   "v-cloak",
+   "v-once"
+  ],
+  "answer": 3,
+  "explanation": "v-once renders the element and its children a single time and treats them as static afterwards."
+ },
+ {
+  "id": "q9b45130d801",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive renders a list of items?",
+  "options": [
+   "v-repeat",
+   "v-each",
+   "v-loop",
+   "v-for"
+  ],
+  "answer": 3,
+  "explanation": "v-for renders an element or block once for each item in a source."
+ },
+ {
+  "id": "qdb146f73b83",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive creates two-way binding on a form input?",
+  "options": [
+   "v-bind",
+   "v-model",
+   "v-sync",
+   "v-link"
+  ],
+  "answer": 1,
+  "explanation": "v-model binds a value to an input and updates it when the user types."
+ },
+ {
+  "id": "qe4c96c1502f",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "How does v-show differ from v-if?",
+  "options": [
+   "v-show removes the element from the DOM entirely",
+   "v-show toggles CSS display and keeps the element in the DOM",
+   "v-show only works on component tags",
+   "v-show evaluates its condition only once"
+  ],
+  "answer": 1,
+  "explanation": "v-show always renders the element and toggles display, while v-if conditionally creates and destroys it."
+ },
+ {
+  "id": "q6b67aac6c56",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "What does the .lazy modifier do on v-model?",
+  "options": [
+   "Syncs on change events instead of input events",
+   "Delays the sync by a fixed timeout",
+   "Syncs only when the form is submitted",
+   "Loads the input value asynchronously"
+  ],
+  "answer": 0,
+  "explanation": "v-model.lazy updates the bound value after the change event rather than on every keystroke."
+ },
+ {
+  "id": "qa469f63f2d7",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "In Vue 3, what happens when v-if and v-for are on the same element?",
+  "options": [
+   "v-if runs first, so it cannot access the v-for variable",
+   "v-for runs first and filters the items",
+   "Vue picks one at random and warns",
+   "Both are ignored and the element is removed"
+  ],
+  "answer": 0,
+  "explanation": "In Vue 3 v-if has higher priority than v-for, so using them together is discouraged."
+ },
+ {
+  "id": "qe250afcde5f",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "Why should you provide a key when using v-for?",
+  "options": [
+   "So the list renders on the server only",
+   "So items are sorted alphabetically",
+   "So Vue can track each node's identity when reordering",
+   "So the loop variable becomes reactive"
+  ],
+  "answer": 2,
+  "explanation": "Unique keys let Vue reuse and move existing elements correctly instead of patching in place."
+ },
+ {
+  "id": "qf16cce2280b",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "In script setup, how is a local custom directive registered?",
+  "options": [
+   "Pass it to defineDirectives()",
+   "Name a variable vFocus and use it as v-focus",
+   "Add it to the components option",
+   "Declare it with export directive"
+  ],
+  "answer": 1,
+  "explanation": "Any camelCase variable starting with v in script setup can be used as a custom directive."
+ },
+ {
+  "id": "q39eb8d3d378",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "What values does v-for=\"n in 3\" produce?",
+  "options": [
+   "0, 1, 2",
+   "0, 1, 2, 3",
+   "3 only",
+   "1, 2, 3"
+  ],
+  "answer": 3,
+  "explanation": "A v-for over an integer starts at 1 and repeats up to that number."
+ },
+ {
+  "id": "q6cac400dead",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "For v-color:bg.bold=\"'red'\", what is binding.arg in the directive hook?",
+  "options": [
+   "'bold'",
+   "'bg'",
+   "'red'",
+   "'color'"
+  ],
+  "answer": 1,
+  "explanation": "The argument follows the colon, the modifiers follow dots, and binding.value holds the evaluated expression."
+ },
+ {
+  "id": "qd5e41394f06",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "What happens if you put v-show on a template element?",
+  "options": [
+   "It hides all child elements correctly",
+   "It does not work, since v-show is not supported on template",
+   "It behaves exactly like v-if",
+   "It renders the template tag in the DOM"
+  ],
+  "answer": 1,
+  "explanation": "v-show toggles display on a real element, so it cannot be used with template."
+ },
+ {
+  "id": "qf6999cbf019",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "How does a child using defineModel read a custom v-model.capitalize modifier?",
+  "options": [
+   "const [model, modifiers] = defineModel(), then modifiers.capitalize",
+   "Inject it with inject('modifiers')",
+   "Check this.$attrs.capitalize in setup",
+   "Read props.capitalize from defineProps"
+  ],
+  "answer": 0,
+  "explanation": "Destructuring defineModel() yields the model ref and a modifiers object containing the used modifiers."
+ }
+]

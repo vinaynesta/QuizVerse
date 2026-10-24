@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q12a287edca3",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "Which attribute name is used to set CSS classes on an element in JSX?",
+  "options": [
+   "class",
+   "className",
+   "cssClass",
+   "styleName"
+  ],
+  "answer": 1,
+  "explanation": "JSX uses className because class is a reserved word in JavaScript and className matches the DOM property."
+ },
+ {
+  "id": "q361ebd48546",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "How do you embed a JavaScript expression inside JSX markup?",
+  "options": [
+   "Wrap it in square brackets",
+   "Prefix it with an @ sign",
+   "Wrap it in curly braces",
+   "Wrap it in angle brackets"
+  ],
+  "answer": 2,
+  "explanation": "Curly braces open a window from JSX back into JavaScript, so any expression inside them is evaluated."
+ },
+ {
+  "id": "q637d589dc8a",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "What does a Fragment, written as <>...</>, let you do?",
+  "options": [
+   "Lazy-load a component on demand",
+   "Group several elements without adding an extra DOM node",
+   "Render children into a different DOM node",
+   "Catch rendering errors in child components"
+  ],
+  "answer": 1,
+  "explanation": "Fragments let a component return multiple sibling elements without wrapping them in an extra element like a div."
+ },
+ {
+  "id": "qf5f48de8715",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "What must a React component's name start with for JSX to treat it as a component rather than an HTML tag?",
+  "options": [
+   "An uppercase letter",
+   "A lowercase letter",
+   "An underscore",
+   "A dollar sign"
+  ],
+  "answer": 0,
+  "explanation": "JSX treats lowercase tags as built-in DOM elements and capitalized names as components, so components must start with an uppercase letter."
+ },
+ {
+  "id": "q376842e0d3f",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "Why is defining a component function inside another component's body a problem?",
+  "options": [
+   "It is a syntax error in JSX",
+   "It prevents the use of props",
+   "A new component type is created each render, so its subtree remounts and loses state",
+   "It makes the component render on the server only"
+  ],
+  "answer": 2,
+  "explanation": "React sees a different component type on every render, so it tears down and recreates the inner subtree each time."
+ },
+ {
+  "id": "qcc7cf44227b",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "Which values in JSX children render nothing at all?",
+  "options": [
+   "0, empty string, and NaN",
+   "true, false, null, and undefined",
+   "Empty arrays and empty objects",
+   "Only undefined"
+  ],
+  "answer": 1,
+  "explanation": "Booleans, null, and undefined are ignored as children, while numbers like 0 are rendered."
+ },
+ {
+  "id": "qe1eb0a89a61",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "What does {count && <Badge />} render when count is 0?",
+  "options": [
+   "The number 0",
+   "Nothing at all",
+   "An empty Badge",
+   "The string 'false'"
+  ],
+  "answer": 0,
+  "explanation": "0 && x evaluates to 0, and React renders numbers, so a literal 0 appears; use count > 0 && ... instead."
+ },
+ {
+  "id": "qf19a7ea94d4",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "How do you write an inline style that sets a font size of 16px in JSX?",
+  "options": [
+   "style=\"font-size: 16px\"",
+   "style={font-size: '16px'}",
+   "css={{ fontSize: 16 }}",
+   "style={{ fontSize: '16px' }}"
+  ],
+  "answer": 3,
+  "explanation": "The style prop takes an object with camelCase property names, hence the double braces."
+ },
+ {
+  "id": "q50dd938a039",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "A component does return items.map(i => <Row {...i} />) without keys, and Row has internal state. What goes wrong when an item is inserted at the top?",
+  "options": [
+   "Nothing; React infers keys from props",
+   "React falls back to index identity, so state shifts to the wrong rows",
+   "React throws and stops rendering",
+   "Every Row keeps its state correctly but renders twice"
+  ],
+  "answer": 1,
+  "explanation": "Missing keys behave like index keys, so inserting at the top makes each Row's state follow its position rather than its item."
+ },
+ {
+  "id": "q9250f46d2b3",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Which statement about elements created by JSX is correct?",
+  "options": [
+   "They are live DOM nodes",
+   "They are mutable so you can update them later",
+   "They are instances of the component class",
+   "They are plain immutable objects describing what to render"
+  ],
+  "answer": 3,
+  "explanation": "React elements are lightweight descriptions; to change the UI you render new elements instead of mutating old ones."
+ },
+ {
+  "id": "q97c31187495",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Why should you not call a component as a plain function, like {Profile()}, instead of rendering <Profile />?",
+  "options": [
+   "It always throws a TypeError",
+   "Its hooks become part of the caller's hook list, so React cannot track it as its own component",
+   "It disables JSX escaping",
+   "It forces a full remount on every render"
+  ],
+  "answer": 1,
+  "explanation": "Calling it directly inlines its hooks into the parent, breaking hook order if used conditionally and losing separate identity and state."
+ },
+ {
+  "id": "qe3c362df622",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "What does JSX like <Greeting name=\"Ada\" /> compile to with the modern automatic JSX runtime?",
+  "options": [
+   "A DOM node created by document.createElement",
+   "A direct call Greeting({ name: 'Ada' })",
+   "A call like jsx(Greeting, { name: 'Ada' }) imported from react/jsx-runtime",
+   "A string of HTML"
+  ],
+  "answer": 2,
+  "explanation": "The automatic runtime emits jsx() calls that create element objects; React decides later when to call the component."
+ }
+]

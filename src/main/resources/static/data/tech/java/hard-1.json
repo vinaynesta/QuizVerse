@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbab68ee74f7",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "Since Java 8, what does HashMap do when many keys collide in one bucket?",
+  "options": [
+   "Switches to a different hash function for that bucket",
+   "Throws an IllegalStateException",
+   "Converts that bucket's list into a red-black tree past a threshold",
+   "Evicts the oldest entry in the bucket"
+  ],
+  "answer": 2,
+  "explanation": "Treeification (threshold 8, once the table has at least 64 buckets) bounds worst-case lookup at O(log n)."
+ },
+ {
+  "id": "q6237978e389",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Does a finally block run when the try block calls System.exit(0)?",
+  "options": [
+   "No, the JVM begins shutdown and the finally block is skipped",
+   "Yes, finally always runs before the JVM exits",
+   "Only if an exception was also thrown",
+   "Yes, but only after shutdown hooks finish"
+  ],
+  "answer": 0,
+  "explanation": "System.exit does not return normally, so control never reaches finally; only shutdown hooks run."
+ },
+ {
+  "id": "qc73455eea82",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Does catch (Exception e) catch a StackOverflowError?",
+  "options": [
+   "No, StackOverflowError is an Error, not an Exception",
+   "Only when thrown on the main thread",
+   "Only if the JVM runs with -Xss set",
+   "Yes, all throwables extend Exception"
+  ],
+  "answer": 0,
+  "explanation": "Error and Exception are sibling subclasses of Throwable, so catching Exception does not catch Errors."
+ },
+ {
+  "id": "q9393ff61c96",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "What does \"a,b,,\".split(\",\").length return?",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "split(regex) removes trailing empty strings; use split(\",\", -1) to keep them."
+ },
+ {
+  "id": "q27d5c280e04",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "Why is new List<String>[10] a compile error?",
+  "options": [
+   "Generic types can only be used in fields",
+   "Arrays cannot hold interface types",
+   "Arrays check element types at runtime, but erasure removes the type argument",
+   "List is abstract and cannot be instantiated"
+  ],
+  "answer": 2,
+  "explanation": "Reified arrays plus erased generics would make array store checks unsound, so generic array creation is forbidden."
+ },
+ {
+  "id": "q77cd416588e",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "With List<Integer> list = new ArrayList<>(List.of(1, 2, 3)); what is list after list.remove(1)?",
+  "options": [
+   "[2, 3]",
+   "[1, 2]",
+   "[1, 3]",
+   "[1, 2, 3]"
+  ],
+  "answer": 2,
+  "explanation": "remove(int index) is chosen over remove(Object) for an int argument, so the element at index 1 is removed."
+ },
+ {
+  "id": "q09a80479180",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "Which garbage collector does JDK 21 use by default on server-class machines?",
+  "options": [
+   "Parallel",
+   "CMS",
+   "G1",
+   "ZGC"
+  ],
+  "answer": 2,
+  "explanation": "G1 has been the default since JDK 9; CMS was removed in JDK 14 and ZGC must be selected explicitly."
+ },
+ {
+  "id": "q0f76b891aa1",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "How does String store its characters internally since Java 9?",
+  "options": [
+   "A char[] holding UTF-16 code units",
+   "An int[] of Unicode code points",
+   "A byte[] plus a coder flag for LATIN1 or UTF16",
+   "A linked list of character chunks"
+  ],
+  "answer": 2,
+  "explanation": "Compact strings (JEP 254) store Latin-1 text one byte per character, cutting memory use."
+ },
+ {
+  "id": "q54925065f0f",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does System.out.println(0.1 + 0.2 == 0.3) print?",
+  "options": [
+   "false",
+   "0.3",
+   "It does not compile",
+   "true"
+  ],
+  "answer": 0,
+  "explanation": "0.1 and 0.2 cannot be represented exactly in binary floating point, and their sum is 0.30000000000000004."
+ },
+ {
+  "id": "qb961d045de8",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "Why can't a generic class Box<T> call new T()?",
+  "options": [
+   "T is always treated as an abstract type",
+   "Type erasure means T is unknown at runtime",
+   "Generic classes cannot declare constructors",
+   "It works only if T extends Object"
+  ],
+  "answer": 1,
+  "explanation": "After erasure the JVM does not know T; a common workaround is passing a Supplier<T> or Class<T>."
+ }
+]

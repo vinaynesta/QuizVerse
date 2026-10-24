@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "core-di",
+    "question": "Which injection style does the Spring team recommend for mandatory dependencies?",
+    "options": [
+      "Constructor injection",
+      "Field injection",
+      "Setter injection",
+      "Lookup method injection"
+    ],
+    "answer": 0,
+    "explanation": "Constructor injection makes dependencies explicit, allows final fields, and guarantees the object is fully initialized."
+  },
+  {
+    "topic": "core-di",
+    "question": "Since Spring 4.3, when can @Autowired be omitted on a constructor?",
+    "options": [
+      "When the class is declared final",
+      "When the class declares exactly one constructor",
+      "When the bean has prototype scope",
+      "When the constructor is private"
+    ],
+    "answer": 1,
+    "explanation": "If a bean class has a single constructor, Spring uses it for injection automatically without @Autowired."
+  },
+  {
+    "topic": "core-di",
+    "question": "What is the default scope of a Spring bean?",
+    "options": [
+      "prototype",
+      "request",
+      "singleton",
+      "session"
+    ],
+    "answer": 2,
+    "explanation": "Unless specified otherwise, the container creates one shared instance per bean definition, which is singleton scope."
+  },
+  {
+    "topic": "core-di",
+    "question": "Which annotation selects a specific bean by name at an injection point when several beans share a type?",
+    "options": [
+      "@Profile",
+      "@Lazy",
+      "@Order",
+      "@Qualifier"
+    ],
+    "answer": 3,
+    "explanation": "@Qualifier narrows autowiring candidates to the bean with the matching qualifier or name."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "What is a Spring Boot starter such as spring-boot-starter-data-jpa?",
+    "options": [
+      "A dependency descriptor that pulls in a curated set of libraries for a feature",
+      "A Maven plugin that generates the main application class",
+      "A Java agent that instruments beans at runtime",
+      "A CLI command that scaffolds a new project"
+    ],
+    "answer": 0,
+    "explanation": "Starters are convenience dependencies that aggregate compatible libraries so you do not manage them individually."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "How can you disable one specific auto-configuration class such as DataSourceAutoConfiguration?",
+    "options": [
+      "@ComponentScan(basePackages = \"!DataSourceAutoConfiguration\")",
+      "@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)",
+      "@Conditional(false) on the main class",
+      "@DisableAutoConfiguration(DataSourceAutoConfiguration.class)"
+    ],
+    "answer": 1,
+    "explanation": "The exclude attribute of @SpringBootApplication (or @EnableAutoConfiguration) prevents that auto-configuration from being applied."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "Which simple setting makes Spring Boot print the condition evaluation report showing which auto-configurations matched?",
+    "options": [
+      "spring.autoconfigure.report=true",
+      "logging.autoconfig=on",
+      "debug=true",
+      "spring.main.report-conditions=true"
+    ],
+    "answer": 2,
+    "explanation": "Starting the app with debug=true (or --debug) logs the conditions report listing positive and negative auto-configuration matches."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "Which starter brings in Spring MVC with an embedded Tomcat server?",
+    "options": [
+      "spring-boot-starter-webflux",
+      "spring-boot-starter-servlet",
+      "spring-boot-starter-tomcat-mvc",
+      "spring-boot-starter-web"
+    ],
+    "answer": 3,
+    "explanation": "spring-boot-starter-web includes Spring MVC and spring-boot-starter-tomcat; webflux uses Reactor Netty by default."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which two annotations does @RestController combine?",
+    "options": [
+      "@Controller and @ResponseBody",
+      "@Component and @RequestMapping",
+      "@Controller and @RequestBody",
+      "@Service and @ResponseBody"
+    ],
+    "answer": 0,
+    "explanation": "@RestController is a @Controller whose handler return values are written directly to the response body."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation binds the {id} segment of a mapping like /users/{id} to a method parameter?",
+    "options": [
+      "@RequestParam",
+      "@PathVariable",
+      "@RequestBody",
+      "@RequestAttribute"
+    ],
+    "answer": 1,
+    "explanation": "@PathVariable extracts values from URI template variables, while @RequestParam reads query or form parameters."
+  },
+  {
+    "topic": "web-rest",
+    "question": "What is the default port of the embedded web server in a Spring Boot application?",
+    "options": [
+      "8000",
+      "8443",
+      "8080",
+      "80"
+    ],
+    "answer": 2,
+    "explanation": "Spring Boot's embedded server listens on 8080 unless server.port is set."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which type lets a controller method set the status code, headers and body of the response explicitly?",
+    "options": [
+      "HttpServletRequest",
+      "ModelAndView",
+      "RequestEntity",
+      "ResponseEntity"
+    ],
+    "answer": 3,
+    "explanation": "ResponseEntity represents the full HTTP response, including status, headers and body."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which Spring Data interface do you typically extend to get CRUD, paging and JPA-specific methods like flush()?",
+    "options": [
+      "JpaRepository",
+      "CrudRepository",
+      "Repository",
+      "EntityManagerRepository"
+    ],
+    "answer": 0,
+    "explanation": "JpaRepository extends the list-based CRUD and paging/sorting repositories and adds JPA-specific operations such as flush and saveAndFlush."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "A repository method named findByEmailAndActive is an example of what?",
+    "options": [
+      "A named native query",
+      "A derived query generated from the method name",
+      "A JPA Criteria API query",
+      "A Querydsl predicate"
+    ],
+    "answer": 1,
+    "explanation": "Spring Data parses the method name into a query using the email and active properties."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which annotation marks the primary key field of a JPA entity?",
+    "options": [
+      "@Key",
+      "@PrimaryKey",
+      "@Id",
+      "@Column(primary = true)"
+    ],
+    "answer": 2,
+    "explanation": "jakarta.persistence.Id designates the entity's identifier property."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "In Spring Boot 3, which package do @Entity and @Table come from?",
+    "options": [
+      "javax.persistence",
+      "org.hibernate.annotations",
+      "org.springframework.data.jpa",
+      "jakarta.persistence"
+    ],
+    "answer": 3,
+    "explanation": "Spring Boot 3 moved to Jakarta EE 9+, so JPA annotations live in the jakarta.persistence namespace."
+  },
+  {
+    "topic": "security",
+    "question": "What happens when you add spring-boot-starter-security without any custom configuration?",
+    "options": [
+      "All endpoints require authentication and a default user with a generated password is created",
+      "Only POST endpoints are secured while GET requests stay open",
+      "Nothing changes until @EnableWebSecurity is added",
+      "The application fails to start until a UserDetailsService is defined"
+    ],
+    "answer": 0,
+    "explanation": "Boot's security auto-configuration secures every endpoint and logs a generated password for the user named user."
+  },
+  {
+    "topic": "security",
+    "question": "How do you configure HTTP security rules in Spring Security 6?",
+    "options": [
+      "Extend WebSecurityConfigurerAdapter and override configure",
+      "Declare a SecurityFilterChain bean that builds the HttpSecurity configuration",
+      "Override a method in SpringBootServletInitializer",
+      "Implement WebMvcConfigurer and add security interceptors"
+    ],
+    "answer": 1,
+    "explanation": "WebSecurityConfigurerAdapter was removed in Spring Security 6; a SecurityFilterChain @Bean is the supported approach."
+  },
+  {
+    "topic": "security",
+    "question": "Which interface does Spring Security use to load user details by username?",
+    "options": [
+      "AuthenticationProvider",
+      "UserRepository",
+      "UserDetailsService",
+      "PrincipalResolver"
+    ],
+    "answer": 2,
+    "explanation": "UserDetailsService.loadUserByUsername returns a UserDetails used by DaoAuthenticationProvider."
+  },
+  {
+    "topic": "security",
+    "question": "Which PasswordEncoder is a common, recommended choice for hashing stored passwords?",
+    "options": [
+      "NoOpPasswordEncoder",
+      "Base64PasswordEncoder",
+      "PlainTextPasswordEncoder",
+      "BCryptPasswordEncoder"
+    ],
+    "answer": 3,
+    "explanation": "BCrypt is an adaptive, salted hashing function; NoOpPasswordEncoder stores plain text and is only for tests."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which property activates the dev profile?",
+    "options": [
+      "spring.profiles.active=dev",
+      "spring.profile=dev",
+      "spring.config.profile=dev",
+      "spring.environment.active=dev"
+    ],
+    "answer": 0,
+    "explanation": "spring.profiles.active lists the profiles to activate, from properties, command line or SPRING_PROFILES_ACTIVE."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "What is the conventional name of a properties file holding settings only for the prod profile?",
+    "options": [
+      "prod.application.properties",
+      "application-prod.properties",
+      "application.prod.properties",
+      "application_prod.config"
+    ],
+    "answer": 1,
+    "explanation": "Spring Boot loads application-{profile}.properties for each active profile on top of application.properties."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which annotation registers a bean only when a given profile is active?",
+    "options": [
+      "@Environment",
+      "@ActiveProfile",
+      "@Profile",
+      "@ConditionalOnEnv"
+    ],
+    "answer": 2,
+    "explanation": "@Profile(\"dev\") on a @Component or @Bean method registers it only when the dev profile is active."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which source overrides a value set in the application.properties packaged inside the jar?",
+    "options": [
+      "A default set via SpringApplication.setDefaultProperties",
+      "A @PropertySource file on a @Configuration class",
+      "An application.properties file inside a dependency jar",
+      "A command-line argument such as --server.port=9090"
+    ],
+    "answer": 3,
+    "explanation": "Command-line arguments sit near the top of Boot's property precedence order, above packaged config files and defaults."
+  },
+  {
+    "topic": "testing",
+    "question": "Which annotation creates a test slice containing only Spring MVC components?",
+    "options": [
+      "@WebMvcTest",
+      "@DataJpaTest",
+      "@JsonTest",
+      "@RestClientTest"
+    ],
+    "answer": 0,
+    "explanation": "@WebMvcTest auto-configures MockMvc and loads controllers, advice, filters and converters but not services or repositories."
+  },
+  {
+    "topic": "testing",
+    "question": "Which test annotation configures JPA repositories with an embedded database and rolls back each test by default?",
+    "options": [
+      "@WebMvcTest",
+      "@DataJpaTest",
+      "@JdbcTest",
+      "@SpringBootTest"
+    ],
+    "answer": 1,
+    "explanation": "@DataJpaTest loads only JPA components, replaces the DataSource with an embedded one, and makes each test transactional."
+  },
+  {
+    "topic": "testing",
+    "question": "Which testing framework does spring-boot-starter-test use by default in Spring Boot 3?",
+    "options": [
+      "JUnit 4",
+      "TestNG",
+      "JUnit 5 (Jupiter)",
+      "Spock"
+    ],
+    "answer": 2,
+    "explanation": "spring-boot-starter-test ships JUnit Jupiter; the JUnit 4 vintage engine is not included."
+  },
+  {
+    "topic": "testing",
+    "question": "Which class performs requests against Spring MVC controllers without starting a real HTTP server?",
+    "options": [
+      "TestRestTemplate",
+      "RestTemplate",
+      "HttpClient",
+      "MockMvc"
+    ],
+    "answer": 3,
+    "explanation": "MockMvc drives the DispatcherServlet with mock requests, while TestRestTemplate needs a running server."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "Which dependency adds production-ready endpoints such as /actuator/health?",
+    "options": [
+      "spring-boot-starter-actuator",
+      "spring-boot-starter-monitor",
+      "spring-boot-starter-management",
+      "spring-boot-starter-metrics"
+    ],
+    "answer": 0,
+    "explanation": "The actuator starter provides health, metrics, info and other operational endpoints."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "What is the default base path for Actuator web endpoints?",
+    "options": [
+      "/manage",
+      "/actuator",
+      "/admin",
+      "/status"
+    ],
+    "answer": 1,
+    "explanation": "Actuator endpoints are mapped under /actuator unless management.endpoints.web.base-path is changed."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "Which Actuator endpoint is exposed over HTTP by default in Spring Boot 3?",
+    "options": [
+      "health and info",
+      "All endpoints",
+      "Only health",
+      "None of them"
+    ],
+    "answer": 2,
+    "explanation": "Since Boot 2.5 only the health endpoint is exposed over the web by default; others must be included explicitly."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "Which library does Spring Boot Actuator use as its metrics facade?",
+    "options": [
+      "Dropwizard Metrics",
+      "OpenTSDB",
+      "Logback",
+      "Micrometer"
+    ],
+    "answer": 3,
+    "explanation": "Actuator records metrics through Micrometer, which can publish to Prometheus, Datadog and other backends."
+  },
+  {
+    "topic": "transactions",
+    "question": "Which annotation declares that a method should run inside a transaction?",
+    "options": [
+      "@Transactional",
+      "@Atomic",
+      "@Commit",
+      "@TxBoundary"
+    ],
+    "answer": 0,
+    "explanation": "@Transactional tells Spring's transaction interceptor to start, commit or roll back a transaction around the method."
+  },
+  {
+    "topic": "transactions",
+    "question": "By default, which exceptions cause a @Transactional method to roll back?",
+    "options": [
+      "Checked exceptions only",
+      "Unchecked exceptions (RuntimeException and Error)",
+      "Any Throwable, including checked exceptions",
+      "No exceptions unless rollbackFor is set"
+    ],
+    "answer": 1,
+    "explanation": "Spring's default rollback rule mirrors EJB: runtime exceptions and errors roll back, checked exceptions commit."
+  },
+  {
+    "topic": "transactions",
+    "question": "What is the default propagation of @Transactional?",
+    "options": [
+      "REQUIRES_NEW",
+      "SUPPORTS",
+      "REQUIRED",
+      "MANDATORY"
+    ],
+    "answer": 2,
+    "explanation": "REQUIRED joins an existing transaction or creates a new one if none exists."
+  },
+  {
+    "topic": "transactions",
+    "question": "What does @Transactional(readOnly = true) do?",
+    "options": [
+      "Blocks any SQL UPDATE by throwing an exception in Spring",
+      "Runs the method without any transaction at all",
+      "Forces the SERIALIZABLE isolation level",
+      "Hints that the transaction only reads, allowing optimizations such as skipping dirty checking"
+    ],
+    "answer": 3,
+    "explanation": "readOnly is an optimization hint passed to the transaction manager, JPA provider and driver; Hibernate, for example, skips flushing."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "What does the spring-boot-maven-plugin repackage goal produce?",
+    "options": [
+      "An executable jar that nests all dependency jars",
+      "A WAR file for external application servers only",
+      "A thin jar without dependencies",
+      "A Docker image"
+    ],
+    "answer": 0,
+    "explanation": "repackage rewrites the jar into an executable fat jar runnable with java -jar."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "Which Maven command runs a Spring Boot application from source?",
+    "options": [
+      "mvn boot:start",
+      "mvn spring-boot:run",
+      "mvn exec:spring",
+      "mvn spring:launch"
+    ],
+    "answer": 1,
+    "explanation": "The spring-boot:run goal compiles and starts the application in place."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "What is the minimum Java version required by Spring Boot 3?",
+    "options": [
+      "Java 11",
+      "Java 8",
+      "Java 17",
+      "Java 21"
+    ],
+    "answer": 2,
+    "explanation": "Spring Boot 3 and Spring Framework 6 require Java 17 as a baseline."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "Which Maven goal builds an OCI container image using Cloud Native Buildpacks?",
+    "options": [
+      "spring-boot:docker",
+      "spring-boot:package-image",
+      "spring-boot:oci",
+      "spring-boot:build-image"
+    ],
+    "answer": 3,
+    "explanation": "build-image uses Buildpacks to create an OCI image without a Dockerfile."
+  }
+]

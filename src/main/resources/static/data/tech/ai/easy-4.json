@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q95defcd1e6f",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What is principal component analysis (PCA) commonly used for?",
+  "options": [
+   "Increasing the number of training labels automatically",
+   "Reducing the number of dimensions while preserving most of the variance",
+   "Classifying text into predefined categories",
+   "Tuning the learning rate of gradient descent"
+  ],
+  "answer": 1,
+  "explanation": "PCA projects data onto orthogonal directions of maximum variance, allowing fewer dimensions to retain most information."
+ },
+ {
+  "id": "q2f794ad9a0c",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "Which of these tasks is a regression problem?",
+  "options": [
+   "Predicting the selling price of a house",
+   "Classifying an email as spam or not spam",
+   "Grouping customers into segments without labels",
+   "Detecting whether an image contains a cat"
+  ],
+  "answer": 0,
+  "explanation": "Regression predicts a continuous numeric value, such as a price."
+ },
+ {
+  "id": "q149250206b8",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is an AI agent in the context of LLM applications?",
+  "options": [
+   "A system that uses a model to plan and take actions, often by calling tools",
+   "A static model that only classifies images",
+   "A database index that speeds up queries",
+   "A human reviewer who labels training data"
+  ],
+  "answer": 0,
+  "explanation": "Agents loop between model reasoning and actions such as tool calls, observing results to work toward a goal."
+ },
+ {
+  "id": "qfef15014422",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What does explainability mean in AI?",
+  "options": [
+   "Making a model run faster on cheaper hardware",
+   "Making a model's training data publicly available",
+   "Making a model's decisions understandable to humans",
+   "Making a model generate longer responses"
+  ],
+  "answer": 2,
+  "explanation": "Explainability helps people understand why a model produced an output, supporting trust and accountability."
+ },
+ {
+  "id": "qcd5c0c4824c",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "How is recall calculated?",
+  "options": [
+   "True positives divided by all predicted positives",
+   "False positives divided by all actual negatives",
+   "True positives divided by all actual positives",
+   "True negatives divided by all predicted negatives"
+  ],
+  "answer": 2,
+  "explanation": "Recall answers: of all real positives, how many did the model find."
+ },
+ {
+  "id": "q53b1c2a0a92",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What does anomaly detection aim to do?",
+  "options": [
+   "Assign every point to one of several balanced clusters",
+   "Generate new synthetic samples from random noise",
+   "Identify data points that differ markedly from the majority",
+   "Convert categorical features into numeric vectors"
+  ],
+  "answer": 2,
+  "explanation": "Anomaly detection flags rare or unusual observations, such as fraudulent transactions or faulty sensor readings."
+ },
+ {
+  "id": "qbab70caaa43",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "What does accuracy measure for a classifier?",
+  "options": [
+   "The fraction of all predictions that are correct",
+   "The fraction of predicted positives that are truly positive",
+   "The fraction of actual positives that are detected",
+   "The average squared difference between predictions and targets"
+  ],
+  "answer": 0,
+  "explanation": "Accuracy is the number of correct predictions divided by the total number of predictions."
+ },
+ {
+  "id": "qd1625171333",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What are recurrent neural networks designed to process?",
+  "options": [
+   "Static images, by sliding filters across pixels",
+   "Unordered sets where order never matters",
+   "Sequential data, by carrying a hidden state across time steps",
+   "Tabular data, by building decision trees"
+  ],
+  "answer": 2,
+  "explanation": "RNNs update a hidden state at each step so earlier inputs can influence later outputs."
+ },
+ {
+  "id": "qcf013c24c81",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is the main purpose of retrieval-augmented generation?",
+  "options": [
+   "Grounding model responses in relevant documents retrieved at query time",
+   "Compressing a model so it runs on mobile devices",
+   "Removing the need for any prompt",
+   "Speeding up training by skipping backpropagation"
+  ],
+  "answer": 0,
+  "explanation": "RAG fetches relevant external content and adds it to the prompt so answers rely on up-to-date or private sources."
+ },
+ {
+  "id": "q6ae0f35f094",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "How can training data introduce bias into a model?",
+  "options": [
+   "Larger datasets always eliminate every source of bias",
+   "The data may underrepresent groups or reflect historical prejudice",
+   "Bias comes only from the choice of optimizer",
+   "Data has no effect once the model is trained"
+  ],
+  "answer": 1,
+  "explanation": "Models learn patterns present in their data, including skewed representation and past discriminatory decisions."
+ }
+]

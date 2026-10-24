@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q353be7304a0",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "How much space does an adjacency matrix use for a graph with V vertices?",
+  "options": [
+   "O(V)",
+   "O(V + E)",
+   "O(V^2)",
+   "O(E)"
+  ],
+  "answer": 2,
+  "explanation": "The matrix has one cell for every ordered pair of vertices regardless of edge count."
+ },
+ {
+  "id": "q38d422344f8",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "What is a connected, undirected graph with no cycles called?",
+  "options": [
+   "A complete graph",
+   "A cycle graph",
+   "A tree",
+   "A wheel graph"
+  ],
+  "answer": 2,
+  "explanation": "A tree is exactly a connected acyclic undirected graph, with V - 1 edges."
+ },
+ {
+  "id": "q5c1b7eb54c5",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "Which data structure does breadth-first search (BFS) use to track vertices to visit?",
+  "options": [
+   "A stack",
+   "A queue",
+   "A max-heap",
+   "A binary search tree"
+  ],
+  "answer": 1,
+  "explanation": "BFS processes vertices in FIFO order, exploring all neighbors at one distance before going deeper."
+ },
+ {
+  "id": "q5ced031ad29",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "Under what condition can Dijkstra's algorithm produce incorrect shortest paths?",
+  "options": [
+   "When the graph is directed",
+   "When the graph is disconnected",
+   "When the graph has cycles",
+   "When the graph has negative edge weights"
+  ],
+  "answer": 3,
+  "explanation": "Dijkstra finalizes a vertex assuming later edges cannot reduce its distance, which negative weights violate."
+ },
+ {
+  "id": "q6d428e7c12f",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "On which kind of graph can a topological sort be performed?",
+  "options": [
+   "Any undirected graph",
+   "A directed graph with cycles",
+   "A complete graph",
+   "A directed acyclic graph"
+  ],
+  "answer": 3,
+  "explanation": "A topological order exists only when there are no directed cycles."
+ },
+ {
+  "id": "q8edcf089260",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "What is the time complexity of BFS or DFS on a graph stored as an adjacency list?",
+  "options": [
+   "O(V^2)",
+   "O(V * E)",
+   "O(V + E)",
+   "O(E log V)"
+  ],
+  "answer": 2,
+  "explanation": "Each vertex is visited once and each edge is examined a constant number of times."
+ },
+ {
+  "id": "qc79e30b5904",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "Which algorithm finds shortest paths by edge count in an unweighted graph most efficiently?",
+  "options": [
+   "Floyd-Warshall algorithm",
+   "Depth-first search",
+   "Prim's algorithm",
+   "Breadth-first search"
+  ],
+  "answer": 3,
+  "explanation": "BFS explores vertices in order of distance, giving shortest paths in O(V + E)."
+ },
+ {
+  "id": "q4050398a396",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "During a DFS of a directed graph, what indicates a cycle?",
+  "options": [
+   "An edge to any previously visited vertex",
+   "An edge to a vertex that is still on the current recursion stack",
+   "A vertex with in-degree zero",
+   "A vertex with more than two neighbors"
+  ],
+  "answer": 1,
+  "explanation": "A back edge to an in-progress (gray) vertex closes a directed cycle; edges to finished vertices do not."
+ },
+ {
+  "id": "q875bc0985b6",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "What is the time complexity of Bellman-Ford, and what extra capability does it have over Dijkstra?",
+  "options": [
+   "O(V * E), and it detects negative cycles reachable from the source",
+   "O(E log V), and it finds all-pairs paths",
+   "O(V^3), and it finds minimum spanning trees",
+   "O(V + E), and it handles undirected graphs"
+  ],
+  "answer": 0,
+  "explanation": "It relaxes all edges V - 1 times, and any further improvement indicates a negative cycle."
+ },
+ {
+  "id": "qbe7bb8e7938",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "What is the time complexity of Dijkstra's algorithm using a binary heap priority queue?",
+  "options": [
+   "O(V * E)",
+   "O(V + E)",
+   "O(V^2 log E)",
+   "O((V + E) log V)"
+  ],
+  "answer": 3,
+  "explanation": "Each vertex extraction and each edge relaxation costs O(log V) heap work."
+ }
+]

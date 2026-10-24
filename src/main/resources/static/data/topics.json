@@ -418,9 +418,155 @@
    ]
   },
   {
+   "id": "dsa",
+   "name": "Data Structures & Algorithms",
+   "topics": [
+    {
+     "id": "arrays-strings",
+     "name": "Arrays & Strings",
+     "file": "topics/dsa/arrays-strings.json",
+     "levels": {
+      "easy": 4,
+      "medium": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "complexity",
+     "name": "Complexity",
+     "file": "topics/dsa/complexity.json",
+     "levels": {
+      "easy": 4,
+      "medium": 2,
+      "hard": 4
+     }
+    },
+    {
+     "id": "dynamic-programming",
+     "name": "Dynamic Programming",
+     "file": "topics/dsa/dynamic-programming.json",
+     "levels": {
+      "easy": 3,
+      "medium": 4,
+      "hard": 3
+     }
+    },
+    {
+     "id": "graphs",
+     "name": "Graphs",
+     "file": "topics/dsa/graphs.json",
+     "levels": {
+      "easy": 3,
+      "medium": 4,
+      "hard": 3
+     }
+    },
+    {
+     "id": "greedy",
+     "name": "Greedy",
+     "file": "topics/dsa/greedy.json",
+     "levels": {
+      "easy": 2,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "hashing",
+     "name": "Hashing",
+     "file": "topics/dsa/hashing.json",
+     "levels": {
+      "easy": 3,
+      "medium": 4,
+      "hard": 3
+     }
+    },
+    {
+     "id": "heaps",
+     "name": "Heaps",
+     "file": "topics/dsa/heaps.json",
+     "levels": {
+      "easy": 3,
+      "medium": 3,
+      "hard": 4
+     }
+    },
+    {
+     "id": "linked-lists",
+     "name": "Linked Lists",
+     "file": "topics/dsa/linked-lists.json",
+     "levels": {
+      "easy": 3,
+      "medium": 4,
+      "hard": 3
+     }
+    },
+    {
+     "id": "recursion-backtracking",
+     "name": "Recursion & Backtracking",
+     "file": "topics/dsa/recursion-backtracking.json",
+     "levels": {
+      "easy": 3,
+      "medium": 3,
+      "hard": 4
+     }
+    },
+    {
+     "id": "sorting-searching",
+     "name": "Sorting & Searching",
+     "file": "topics/dsa/sorting-searching.json",
+     "levels": {
+      "easy": 4,
+      "medium": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "stacks-queues",
+     "name": "Stacks & Queues",
+     "file": "topics/dsa/stacks-queues.json",
+     "levels": {
+      "easy": 4,
+      "medium": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "trees",
+     "name": "Trees",
+     "file": "topics/dsa/trees.json",
+     "levels": {
+      "easy": 4,
+      "medium": 3,
+      "hard": 3
+     }
+    }
+   ]
+  },
+  {
    "id": "java",
    "name": "Java",
    "topics": [
+    {
+     "id": "collections",
+     "name": "Collections",
+     "file": "topics/java/collections.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "concurrency",
+     "name": "Concurrency",
+     "file": "topics/java/concurrency.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
     {
      "id": "concurrency-and-multithreading",
      "name": "Concurrency And Multithreading",
@@ -441,11 +587,51 @@
      }
     },
     {
+     "id": "core-syntax",
+     "name": "Core Syntax",
+     "file": "topics/java/core-syntax.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
      "id": "design-patterns",
      "name": "Design Patterns",
      "file": "topics/java/design-patterns.json",
      "levels": {
       "mixed": 20
+     }
+    },
+    {
+     "id": "exceptions",
+     "name": "Exceptions",
+     "file": "topics/java/exceptions.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "generics",
+     "name": "Generics",
+     "file": "topics/java/generics.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "jvm-memory",
+     "name": "JVM & Memory",
+     "file": "topics/java/jvm-memory.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
      }
     },
     {
@@ -465,11 +651,581 @@
      }
     },
     {
+     "id": "modern-java",
+     "name": "Modern Java",
+     "file": "topics/java/modern-java.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "oop",
+     "name": "OOP",
+     "file": "topics/java/oop.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
      "id": "spring-framework",
      "name": "Spring Framework",
      "file": "topics/java/spring-framework.json",
      "levels": {
       "mixed": 15
+     }
+    },
+    {
+     "id": "streams-lambdas",
+     "name": "Streams & Lambdas",
+     "file": "topics/java/streams-lambdas.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "strings",
+     "name": "Strings",
+     "file": "topics/java/strings.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "python",
+   "name": "Python",
+   "topics": [
+    {
+     "id": "async-concurrency",
+     "name": "Async & Concurrency",
+     "file": "topics/python/async-concurrency.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "basics-types",
+     "name": "Basics & Types",
+     "file": "topics/python/basics-types.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "comprehensions-generators",
+     "name": "Comprehensions & Generators",
+     "file": "topics/python/comprehensions-generators.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "data-structures",
+     "name": "Data Structures",
+     "file": "topics/python/data-structures.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "decorators-context-managers",
+     "name": "Decorators & Context Managers",
+     "file": "topics/python/decorators-context-managers.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "exceptions",
+     "name": "Exceptions",
+     "file": "topics/python/exceptions.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "functions",
+     "name": "Functions",
+     "file": "topics/python/functions.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "modules-packages",
+     "name": "Modules & Packages",
+     "file": "topics/python/modules-packages.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "oop",
+     "name": "OOP",
+     "file": "topics/python/oop.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "standard-library",
+     "name": "Standard Library",
+     "file": "topics/python/standard-library.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "springboot",
+   "name": "Spring Boot",
+   "topics": [
+    {
+     "id": "actuator-observability",
+     "name": "Actuator & Observability",
+     "file": "topics/springboot/actuator-observability.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "auto-configuration",
+     "name": "Auto Configuration",
+     "file": "topics/springboot/auto-configuration.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "deployment-build",
+     "name": "Build & Deployment",
+     "file": "topics/springboot/deployment-build.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "configuration-profiles",
+     "name": "Configuration & Profiles",
+     "file": "topics/springboot/configuration-profiles.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "core-di",
+     "name": "Core & Dependency Injection",
+     "file": "topics/springboot/core-di.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "data-jpa",
+     "name": "Data JPA",
+     "file": "topics/springboot/data-jpa.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "security",
+     "name": "Security",
+     "file": "topics/springboot/security.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "testing",
+     "name": "Testing",
+     "file": "topics/springboot/testing.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "transactions",
+     "name": "Transactions",
+     "file": "topics/springboot/transactions.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "web-rest",
+     "name": "Web & REST",
+     "file": "topics/springboot/web-rest.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "react",
+   "name": "React",
+   "topics": [
+    {
+     "id": "context-state-management",
+     "name": "Context & State Management",
+     "file": "topics/react/context-state-management.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "effects",
+     "name": "Effects",
+     "file": "topics/react/effects.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "forms-events",
+     "name": "Forms & Events",
+     "file": "topics/react/forms-events.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "hooks",
+     "name": "Hooks",
+     "file": "topics/react/hooks.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "jsx-components",
+     "name": "JSX & Components",
+     "file": "topics/react/jsx-components.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "performance",
+     "name": "Performance",
+     "file": "topics/react/performance.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "props-state",
+     "name": "Props & State",
+     "file": "topics/react/props-state.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "react-19-server-components",
+     "name": "React 19 & Server Components",
+     "file": "topics/react/react-19-server-components.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "rendering-reconciliation",
+     "name": "Rendering & Reconciliation",
+     "file": "topics/react/rendering-reconciliation.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "routing-data-fetching",
+     "name": "Routing & Data Fetching",
+     "file": "topics/react/routing-data-fetching.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "vue",
+   "name": "Vue.js",
+   "topics": [
+    {
+     "id": "components-props-events",
+     "name": "Components, Props & Events",
+     "file": "topics/vue/components-props-events.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "composition-api",
+     "name": "Composition API",
+     "file": "topics/vue/composition-api.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "computed-watchers",
+     "name": "Computed & Watchers",
+     "file": "topics/vue/computed-watchers.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "directives",
+     "name": "Directives",
+     "file": "topics/vue/directives.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "lifecycle",
+     "name": "Lifecycle",
+     "file": "topics/vue/lifecycle.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "performance-tooling",
+     "name": "Performance & Tooling",
+     "file": "topics/vue/performance-tooling.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "reactivity",
+     "name": "Reactivity",
+     "file": "topics/vue/reactivity.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "router-pinia",
+     "name": "Router & Pinia",
+     "file": "topics/vue/router-pinia.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "slots-provide-inject",
+     "name": "Slots, Provide & Inject",
+     "file": "topics/vue/slots-provide-inject.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "template-syntax",
+     "name": "Template Syntax",
+     "file": "topics/vue/template-syntax.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "name": "Artificial Intelligence",
+   "topics": [
+    {
+     "id": "ai-ethics-safety",
+     "name": "AI Ethics & Safety",
+     "file": "topics/ai/ai-ethics-safety.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "deep-learning-architectures",
+     "name": "Deep Learning Architectures",
+     "file": "topics/ai/deep-learning-architectures.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "evaluation-metrics",
+     "name": "Evaluation Metrics",
+     "file": "topics/ai/evaluation-metrics.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "llms-prompting",
+     "name": "LLMs & Prompting",
+     "file": "topics/ai/llms-prompting.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "ml-basics",
+     "name": "ML Basics",
+     "file": "topics/ai/ml-basics.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "nlp-transformers",
+     "name": "NLP & Transformers",
+     "file": "topics/ai/nlp-transformers.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "neural-networks",
+     "name": "Neural Networks",
+     "file": "topics/ai/neural-networks.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "rag-agents",
+     "name": "RAG & Agents",
+     "file": "topics/ai/rag-agents.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "supervised-learning",
+     "name": "Supervised Learning",
+     "file": "topics/ai/supervised-learning.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "unsupervised-learning",
+     "name": "Unsupervised Learning",
+     "file": "topics/ai/unsupervised-learning.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
      }
     }
    ]

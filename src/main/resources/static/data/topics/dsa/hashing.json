@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4be6313bdf2",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What is the average-case time complexity of a lookup in a well-designed hash table?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n log n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "A good hash function spreads keys evenly, so each bucket holds few entries on average."
+ },
+ {
+  "id": "qe336da29468",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "How is the load factor of a hash table defined?",
+  "options": [
+   "Number of buckets divided by number of stored entries",
+   "Number of stored entries multiplied by number of buckets",
+   "Number of stored entries divided by number of buckets",
+   "Length of the longest bucket chain"
+  ],
+  "answer": 2,
+  "explanation": "Load factor n/m measures how full the table is and triggers resizing when it grows too high."
+ },
+ {
+  "id": "qe8958b74b08",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What is it called when two different keys hash to the same bucket?",
+  "options": [
+   "A probe",
+   "An overflow",
+   "A rehash",
+   "A collision"
+  ],
+  "answer": 3,
+  "explanation": "A collision occurs when distinct keys map to the same slot and must be resolved."
+ },
+ {
+  "id": "q93160223947",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "Which problem is linear probing especially prone to?",
+  "options": [
+   "Primary clustering",
+   "Stack overflow",
+   "Pointer chasing in chains",
+   "Secondary clustering"
+  ],
+  "answer": 0,
+  "explanation": "Occupied slots form long contiguous runs, making future probes longer."
+ },
+ {
+  "id": "qc1f739d6efb",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "What is the expected time to check whether an array of n elements has a duplicate using a hash set?",
+  "options": [
+   "O(n^2)",
+   "O(n log n)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 2,
+  "explanation": "Each element is inserted and checked in expected O(1) time."
+ },
+ {
+  "id": "qec0e0c414ee",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "How does separate chaining resolve hash collisions?",
+  "options": [
+   "Each bucket stores a list or other structure of all entries that hash to it",
+   "It rejects the second key",
+   "It probes for the next empty slot in the array",
+   "It doubles the table on every collision"
+  ],
+  "answer": 0,
+  "explanation": "Chaining keeps colliding entries together in a per-bucket collection."
+ },
+ {
+  "id": "qf92bf62ee3d",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "In Java, if you override equals() in a class used as a HashMap key, which method must you also override?",
+  "options": [
+   "toString()",
+   "hashCode()",
+   "compareTo()",
+   "clone()"
+  ],
+  "answer": 1,
+  "explanation": "Equal objects must have equal hash codes, or HashMap will look in the wrong bucket."
+ },
+ {
+  "id": "q5dc33e0215a",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the worst-case lookup time in a hash table using separate chaining with linked lists if all keys collide?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(log n)",
+   "O(n log n)"
+  ],
+  "answer": 0,
+  "explanation": "All entries land in one chain, which must be scanned linearly."
+ },
+ {
+  "id": "q6e5ccb60def",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the worst-case time of Rabin-Karp string matching for text length n and pattern length m?",
+  "options": [
+   "O(n + m)",
+   "O(n * m)",
+   "O(m log n)",
+   "O(n log m)"
+  ],
+  "answer": 1,
+  "explanation": "Many spurious hash matches can force a full character comparison at nearly every position."
+ },
+ {
+  "id": "qa8e04e26d5e",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "Since Java 8, what does HashMap do when a single bucket accumulates many colliding entries and the table is large enough?",
+  "options": [
+   "Converts that bucket into a balanced red-black tree",
+   "Discards the oldest entry in the bucket",
+   "Throws a ConcurrentModificationException",
+   "Switches the whole map to linear probing"
+  ],
+  "answer": 0,
+  "explanation": "Treeifying a heavily loaded bucket limits worst-case lookups in it to O(log n)."
+ }
+]

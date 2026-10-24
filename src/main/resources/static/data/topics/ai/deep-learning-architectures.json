@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q4250c91b724",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What is an autoencoder trained to do?",
+  "options": [
+   "Predict a class label from a labeled dataset",
+   "Maximize reward from an environment",
+   "Translate sentences between two languages",
+   "Reconstruct its input through a compressed latent representation"
+  ],
+  "answer": 3,
+  "explanation": "An autoencoder's encoder compresses the input and its decoder reconstructs it, learning a useful compact representation."
+ },
+ {
+  "id": "q7c817b859a4",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "Convolutional neural networks are particularly well suited to which kind of data?",
+  "options": [
+   "Tabular data with unrelated columns",
+   "Grid-like data such as images",
+   "Key-value records in a database",
+   "Unordered lists of numbers to sort"
+  ],
+  "answer": 1,
+  "explanation": "Convolutions exploit local spatial structure, which is why CNNs excel on images."
+ },
+ {
+  "id": "qd1625171333",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What are recurrent neural networks designed to process?",
+  "options": [
+   "Static images, by sliding filters across pixels",
+   "Unordered sets where order never matters",
+   "Sequential data, by carrying a hidden state across time steps",
+   "Tabular data, by building decision trees"
+  ],
+  "answer": 2,
+  "explanation": "RNNs update a hidden state at each step so earlier inputs can influence later outputs."
+ },
+ {
+  "id": "qd9eb0ddcfda",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What does a pooling layer do in a CNN?",
+  "options": [
+   "Adds new channels by duplicating the input",
+   "Downsamples feature maps to reduce their spatial size",
+   "Computes the final class probabilities",
+   "Converts images into text tokens"
+  ],
+  "answer": 1,
+  "explanation": "Pooling, such as max pooling, summarizes local regions, reducing computation and adding some translation robustness."
+ },
+ {
+  "id": "q3e515b70999",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "How do residual (skip) connections help deep networks?",
+  "options": [
+   "They reduce parameters by sharing weights across all layers",
+   "They convert a CNN into a recurrent network",
+   "They let gradients flow through identity paths, making very deep networks trainable",
+   "They remove the need for activation functions"
+  ],
+  "answer": 2,
+  "explanation": "Adding the input of a block to its output gives gradients a direct path backward, easing optimization of deep stacks."
+ },
+ {
+  "id": "q670ca190e4b",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What problem were LSTM gates designed to address?",
+  "options": [
+   "Processing images faster than convolutional networks",
+   "Making the network purely feed-forward",
+   "Eliminating the need for training data",
+   "Learning long-range dependencies that plain RNNs struggle with"
+  ],
+  "answer": 3,
+  "explanation": "LSTM gates control a cell state that preserves information and gradients over many time steps."
+ },
+ {
+  "id": "q752e6a6f955",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What is transfer learning?",
+  "options": [
+   "Training two models on the same data and swapping weights",
+   "Moving a trained model from GPU memory to CPU memory",
+   "Reusing a model pre-trained on a large dataset and fine-tuning it on a related task",
+   "Converting a classification model into a regression model"
+  ],
+  "answer": 2,
+  "explanation": "Pre-trained representations give a strong starting point, so the new task needs less data and compute."
+ },
+ {
+  "id": "q7c869ed39d2",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What two components make up a generative adversarial network?",
+  "options": [
+   "An encoder and a decoder trained only to reconstruct input",
+   "Two classifiers voting on every label",
+   "A generator producing samples and a discriminator telling real from generated",
+   "A retriever and a generator over a document store"
+  ],
+  "answer": 2,
+  "explanation": "The generator and discriminator are trained against each other until generated samples become hard to distinguish."
+ },
+ {
+  "id": "q53f6592a656",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What is mode collapse in generative adversarial networks?",
+  "options": [
+   "The generator copies training images pixel for pixel",
+   "The discriminator is removed partway through training",
+   "The generator produces only a limited variety of outputs",
+   "The latent space grows without bound"
+  ],
+  "answer": 2,
+  "explanation": "The generator finds a few outputs that fool the discriminator and stops covering the full data distribution."
+ },
+ {
+  "id": "q608035790a3",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What key property does weight sharing in convolutional layers provide?",
+  "options": [
+   "Recurrent memory across image regions",
+   "Rotation invariance with no data augmentation needed",
+   "An unlimited receptive field in a single layer",
+   "Translation equivariance with far fewer parameters than dense layers"
+  ],
+  "answer": 3,
+  "explanation": "Applying the same filter at every location detects a pattern wherever it appears while drastically cutting parameter count."
+ },
+ {
+  "id": "q84090d64b55",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What is a major training advantage of transformers over RNNs?",
+  "options": [
+   "They need no training data",
+   "All sequence positions can be processed in parallel during training",
+   "Their attention layers have no learned parameters",
+   "Their attention cost scales linearly with sequence length"
+  ],
+  "answer": 1,
+  "explanation": "RNNs must step through time sequentially, while transformers compute attention over all positions at once."
+ },
+ {
+  "id": "qb6391958fa5",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "How does a variational autoencoder differ from a plain autoencoder?",
+  "options": [
+   "It learns a probabilistic latent distribution regularized toward a prior, enabling sampling",
+   "It uses labeled data to supervise the latent space",
+   "It removes the decoder and keeps only the encoder",
+   "It is trained against an adversarial discriminator"
+  ],
+  "answer": 0,
+  "explanation": "The KL term keeps the latent space smooth and close to a prior, so new samples can be generated by decoding random draws."
+ }
+]

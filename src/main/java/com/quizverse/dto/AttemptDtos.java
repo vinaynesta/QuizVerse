@@ -20,12 +20,13 @@ public final class AttemptDtos {
     public static final String QUESTION_ID = "q[0-9a-f]{11}";
 
     /**
-     * {@code kind} defaults to "exam"; practice sets send "revise", "bookmarks", "custom" or "daily".
-     * The daily quiz puts its IST date (yyyy-mm-dd) in {@code sectionId}. A full mock test ("mock") covers
+     * {@code kind} defaults to "exam"; practice sets send "revise", "bookmarks", "custom", "daily" or "tech-daily".
+     * The daily quiz and the daily tech challenge put their IST date (yyyy-mm-dd) in {@code sectionId}. A full mock test ("mock") covers
      * every section of a stage: {@code sectionId} is "mock" and {@code quizIndex} the mock number.
+     * {@code challengeCode} is set when the quiz was opened from a friend's challenge link.
      */
     public record AttemptRequest(
-            @Pattern(regexp = "exam|revise|bookmarks|custom|daily|mock") String kind,
+            @Pattern(regexp = "exam|revise|bookmarks|custom|daily|tech-daily|mock") String kind,
             @NotBlank @Pattern(regexp = ID) String examId,
             @NotBlank @Pattern(regexp = ID) String stageId,
             @NotBlank @Pattern(regexp = ID) String sectionId,
@@ -39,7 +40,8 @@ public final class AttemptDtos {
             @Min(0) @Max(500) int skipped,
             boolean timed,
             @Min(0) @Max(36000) int timeUsedSeconds,
-            @Size(max = 500) List<@Valid AnswerRequest> answers) {}
+            @Size(max = 500) List<@Valid AnswerRequest> answers,
+            @Pattern(regexp = "[A-Z0-9]{1,10}") String challengeCode) {}
 
     /** One question of the attempt. {@code chosen} is null when skipped. */
     public record AnswerRequest(

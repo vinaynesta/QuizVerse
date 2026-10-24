@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q27c0c6a3def",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "With @contextmanager def cm(): print('in'); yield; print('out') and no try/finally, is 'out' printed if the with block raises?",
+  "options": [
+   "Yes; code after yield always runs",
+   "Yes, but only after the traceback is shown",
+   "No, and 'in' is not printed either",
+   "No; the exception is thrown in at the yield and skips the rest"
+  ],
+  "answer": 3,
+  "explanation": "The exception is re-raised inside the generator at yield, so cleanup must be in a finally block to run."
+ },
+ {
+  "id": "qe74c348d49b",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "What is a namespace package (PEP 420)?",
+  "options": [
+   "A module that only contains constants",
+   "A package that defines __all__",
+   "A package installed into site-packages",
+   "A package without __init__.py whose portions may span several directories"
+  ],
+  "answer": 3,
+  "explanation": "Namespace packages have no __init__.py and can be assembled from multiple sys.path entries."
+ },
+ {
+  "id": "qd8e680865a7",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "With class B(A), class C(A) and class D(B, C), what is [k.__name__ for k in D.__mro__]?",
+  "options": [
+   "['D', 'B', 'A', 'C', 'object']",
+   "['D', 'C', 'B', 'A', 'object']",
+   "['D', 'B', 'C', 'A', 'object']",
+   "['D', 'A', 'B', 'C', 'object']"
+  ],
+  "answer": 2,
+  "explanation": "C3 linearization keeps local order (B before C) and places the shared base A after both."
+ },
+ {
+  "id": "q15b9c4cfc4c",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What happens when you call hash((1, [2]))?",
+  "options": [
+   "It returns None",
+   "It returns an int",
+   "It raises ValueError",
+   "It raises TypeError"
+  ],
+  "answer": 3,
+  "explanation": "A tuple is hashable only if all its elements are; the inner list is unhashable."
+ },
+ {
+  "id": "q070d77ff084",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What must be true of the input for itertools.groupby to put all equal keys into one group?",
+  "options": [
+   "Nothing; groupby always merges equal keys",
+   "It must be a list, not an iterator",
+   "It must contain hashable items only",
+   "It must already be sorted by the same key"
+  ],
+  "answer": 3,
+  "explanation": "groupby only groups consecutive items with equal keys, so unsorted input yields repeated groups."
+ },
+ {
+  "id": "q9697085bbdb",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "hard",
+  "question": "What happens if a coroutine calls time.sleep(1) while running on an asyncio event loop?",
+  "options": [
+   "It suspends only that coroutine, like asyncio.sleep",
+   "It raises RuntimeError inside the loop",
+   "It blocks the entire event loop for one second",
+   "It is automatically moved to a worker thread"
+  ],
+  "answer": 2,
+  "explanation": "time.sleep is a blocking call, so no other task can run until it returns; use await asyncio.sleep instead."
+ },
+ {
+  "id": "q3b08c849d33",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "What does a nonlocal x declaration inside a nested function do?",
+  "options": [
+   "Lets assignments rebind x in the module scope",
+   "Lets assignments rebind x in the nearest enclosing function scope",
+   "Makes x read-only inside the function",
+   "Creates a fresh local variable x"
+  ],
+  "answer": 1,
+  "explanation": "nonlocal targets the closest enclosing function's variable, unlike global which targets module scope."
+ },
+ {
+  "id": "qd8b8fdb0974",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "What does {1: 'a', True: 'b', 1.0: 'c'} evaluate to?",
+  "options": [
+   "{1: 'a', True: 'b', 1.0: 'c'}",
+   "{True: 'c'}",
+   "{1: 'a'}",
+   "{1: 'c'}"
+  ],
+  "answer": 3,
+  "explanation": "1, True and 1.0 are equal with equal hashes, so they are one key; the first key object is kept and the last value wins."
+ },
+ {
+  "id": "q1ead0f989db",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "After x = 'outer'; [x for x in range(3)], what is the value of x?",
+  "options": [
+   "2",
+   "0",
+   "'outer'",
+   "It raises NameError"
+  ],
+  "answer": 2,
+  "explanation": "In Python 3 a comprehension has its own scope, so its loop variable does not leak."
+ },
+ {
+  "id": "qffe3df8713c",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "Given def g(): x = yield 1; yield x * 2, after gen = g(); next(gen), what does gen.send(5) return?",
+  "options": [
+   "2",
+   "10",
+   "None",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "send(5) resumes the paused yield, which evaluates to 5, then the generator yields 5 * 2."
+ }
+]

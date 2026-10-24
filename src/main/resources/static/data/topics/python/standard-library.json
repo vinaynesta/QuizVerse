@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q138bb736085",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which function picks one random element from a non-empty sequence?",
+  "options": [
+   "random.pick",
+   "random.select",
+   "random.choice",
+   "random.item"
+  ],
+  "answer": 2,
+  "explanation": "random.choice(seq) returns a single randomly chosen element."
+ },
+ {
+  "id": "q612a2d11934",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "What does collections.Counter(\"aab\")[\"a\"] return?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "0"
+  ],
+  "answer": 1,
+  "explanation": "Counter counts each element of the iterable, and 'a' appears twice."
+ },
+ {
+  "id": "qb83dbb7fc35",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which module provides object-oriented filesystem paths such as Path?",
+  "options": [
+   "os.file",
+   "pathlib",
+   "shutil",
+   "glob"
+  ],
+  "answer": 1,
+  "explanation": "pathlib.Path represents filesystem paths with methods for common operations."
+ },
+ {
+  "id": "qd3845ecc712",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which standard module encodes and decodes JSON?",
+  "options": [
+   "pickle",
+   "marshal",
+   "json",
+   "csv"
+  ],
+  "answer": 2,
+  "explanation": "The json module provides dumps/loads for JSON text."
+ },
+ {
+  "id": "q36034f1e2f0",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "Which methods does @dataclass generate by default?",
+  "options": [
+   "__init__, __hash__ and __lt__",
+   "__slots__ and __init__",
+   "__init__, __repr__ and __eq__",
+   "Only __init__"
+  ],
+  "answer": 2,
+  "explanation": "With default options dataclass adds __init__, __repr__ and __eq__; ordering methods need order=True."
+ },
+ {
+  "id": "q404230d0254",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does collections.defaultdict(list)['k'] return for a key that is not yet present?",
+  "options": [
+   "'k'",
+   "None",
+   "It raises KeyError",
+   "[]"
+  ],
+  "answer": 3,
+  "explanation": "defaultdict calls its factory (list) to create and store a value for a missing key."
+ },
+ {
+  "id": "qbb148dfc41f",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does list(itertools.chain([1, 2], [3])) return?",
+  "options": [
+   "[1, 2, 3]",
+   "[1, 2]",
+   "[(1, 3), (2,)]",
+   "[[1, 2], [3]]"
+  ],
+  "answer": 0,
+  "explanation": "chain yields every item of the first iterable, then every item of the next."
+ },
+ {
+  "id": "qdf751b9e385",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does the functools.lru_cache decorator do?",
+  "options": [
+   "Limits how often a function may be called",
+   "Memoizes function results keyed by the call arguments",
+   "Logs each call to a rotating file",
+   "Stores results on disk between runs"
+  ],
+  "answer": 1,
+  "explanation": "lru_cache stores results for argument combinations and evicts least recently used entries when full."
+ },
+ {
+  "id": "q070d77ff084",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What must be true of the input for itertools.groupby to put all equal keys into one group?",
+  "options": [
+   "Nothing; groupby always merges equal keys",
+   "It must be a list, not an iterator",
+   "It must contain hashable items only",
+   "It must already be sorted by the same key"
+  ],
+  "answer": 3,
+  "explanation": "groupby only groups consecutive items with equal keys, so unsorted input yields repeated groups."
+ },
+ {
+  "id": "q1c51fb5c5b7",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What does copy.copy produce when given a list of lists?",
+  "options": [
+   "A new outer list that shares the same inner lists",
+   "The same list object",
+   "Fully independent copies of every inner list",
+   "A tuple of the inner lists"
+  ],
+  "answer": 0,
+  "explanation": "copy.copy is shallow; use copy.deepcopy to also copy the nested lists."
+ },
+ {
+  "id": "q3c7436d6c16",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What does heapq.heappop(h) return from a list h maintained as a heap?",
+  "options": [
+   "The smallest item",
+   "The largest item",
+   "The most recently pushed item",
+   "The item at index -1"
+  ],
+  "answer": 0,
+  "explanation": "heapq implements a min-heap, so the smallest element is always at h[0] and popped first."
+ },
+ {
+  "id": "qb327c59948d",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "hard",
+  "question": "What does functools.partial(int, base=2)('101') return?",
+  "options": [
+   "5",
+   "101",
+   "3",
+   "'101'"
+  ],
+  "answer": 0,
+  "explanation": "partial pre-binds base=2, so the call is int('101', base=2), which is 5."
+ }
+]

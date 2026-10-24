@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q612a2d11934",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "What does collections.Counter(\"aab\")[\"a\"] return?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "0"
+  ],
+  "answer": 1,
+  "explanation": "Counter counts each element of the iterable, and 'a' appears twice."
+ },
+ {
+  "id": "q59cd10ead78",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "Which file traditionally marks a directory as a regular package?",
+  "options": [
+   "__main__.py",
+   "setup.py",
+   "__init__.py",
+   "package.py"
+  ],
+  "answer": 2,
+  "explanation": "A regular package is a directory with an __init__.py, which runs when the package is imported."
+ },
+ {
+  "id": "qe829387301b",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "What is the standard tool for installing packages from PyPI?",
+  "options": [
+   "npm",
+   "gem",
+   "pip",
+   "maven"
+  ],
+  "answer": 2,
+  "explanation": "pip is Python's standard package installer for the Python Package Index."
+ },
+ {
+  "id": "qc70c90a59d7",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "What is the value of __name__ in a file that is run directly as a script?",
+  "options": [
+   "None",
+   "The file name without .py",
+   "'__script__'",
+   "'__main__'"
+  ],
+  "answer": 3,
+  "explanation": "The module executed as the program's entry point gets __name__ set to '__main__'."
+ },
+ {
+  "id": "q9b79208c3ee",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which keyword starts a named function definition?",
+  "options": [
+   "def",
+   "func",
+   "function",
+   "fn"
+  ],
+  "answer": 0,
+  "explanation": "Named functions are defined with the def keyword."
+ },
+ {
+  "id": "q29993431e72",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "easy",
+  "question": "Which function runs a top-level coroutine in a new event loop?",
+  "options": [
+   "asyncio.run()",
+   "asyncio.start()",
+   "asyncio.execute()",
+   "asyncio.loop()"
+  ],
+  "answer": 0,
+  "explanation": "asyncio.run creates an event loop, runs the coroutine to completion and closes the loop."
+ },
+ {
+  "id": "qb47ab102e7e",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "easy",
+  "question": "Which standard module provides the Thread class?",
+  "options": [
+   "threads",
+   "asyncio",
+   "subprocess",
+   "threading"
+  ],
+  "answer": 3,
+  "explanation": "threading.Thread is the standard high-level API for OS threads."
+ },
+ {
+  "id": "q3a3aca7eab6",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What kind of object does (x for x in range(3)) create?",
+  "options": [
+   "A tuple",
+   "A list",
+   "A generator object",
+   "A range object"
+  ],
+  "answer": 2,
+  "explanation": "Parentheses around a comprehension create a lazy generator expression, not a tuple."
+ },
+ {
+  "id": "qb83dbb7fc35",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which module provides object-oriented filesystem paths such as Path?",
+  "options": [
+   "os.file",
+   "pathlib",
+   "shutil",
+   "glob"
+  ],
+  "answer": 1,
+  "explanation": "pathlib.Path represents filesystem paths with methods for common operations."
+ },
+ {
+  "id": "q60a385b2fbe",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which special method initializes a newly created instance?",
+  "options": [
+   "__init__",
+   "__start__",
+   "__create__",
+   "__setup__"
+  ],
+  "answer": 0,
+  "explanation": "__init__ is called after the object is created to set up its initial state."
+ }
+]

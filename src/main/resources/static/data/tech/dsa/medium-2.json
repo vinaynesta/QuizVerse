@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2df83b8c07f",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "medium",
+  "question": "How many subsets does a set of n distinct elements have?",
+  "options": [
+   "n!",
+   "n^2",
+   "2^n",
+   "2n"
+  ],
+  "answer": 2,
+  "explanation": "Each element is either included or excluded independently."
+ },
+ {
+  "id": "q704f65deafc",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "At each step, which edge does Prim's algorithm add to the growing minimum spanning tree?",
+  "options": [
+   "The globally smallest unused edge anywhere in the graph",
+   "The minimum-weight edge connecting the tree to a vertex not yet in it",
+   "Any edge that does not create a cycle",
+   "The edge leading to the vertex with the highest degree"
+  ],
+  "answer": 1,
+  "explanation": "Prim grows a single tree by always taking the cheapest edge crossing the tree's boundary."
+ },
+ {
+  "id": "q2b89b706358",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "What does Huffman coding produce?",
+  "options": [
+   "A hash function with no collisions",
+   "An optimal prefix-free binary code built greedily from symbol frequencies",
+   "A balanced binary search tree of symbols",
+   "A sorted list of symbols by frequency"
+  ],
+  "answer": 1,
+  "explanation": "Huffman repeatedly merges the two least frequent nodes to build an optimal prefix code."
+ },
+ {
+  "id": "qec0e0c414ee",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "How does separate chaining resolve hash collisions?",
+  "options": [
+   "Each bucket stores a list or other structure of all entries that hash to it",
+   "It rejects the second key",
+   "It probes for the next empty slot in the array",
+   "It doubles the table on every collision"
+  ],
+  "answer": 0,
+  "explanation": "Chaining keeps colliding entries together in a per-bucket collection."
+ },
+ {
+  "id": "qc79e30b5904",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "Which algorithm finds shortest paths by edge count in an unweighted graph most efficiently?",
+  "options": [
+   "Floyd-Warshall algorithm",
+   "Depth-first search",
+   "Prim's algorithm",
+   "Breadth-first search"
+  ],
+  "answer": 3,
+  "explanation": "BFS explores vertices in order of distance, giving shortest paths in O(V + E)."
+ },
+ {
+  "id": "q92e95120f9c",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "Which greedy rule gives an optimal solution to the fractional knapsack problem?",
+  "options": [
+   "Take the heaviest items first",
+   "Take the most valuable items first",
+   "Take the lightest items first",
+   "Take items in order of highest value-to-weight ratio"
+  ],
+  "answer": 3,
+  "explanation": "Since items can be split, filling with the best value per unit weight is optimal."
+ },
+ {
+  "id": "qc72684f2d22",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "Which of these sorting algorithms is stable in its standard array implementation?",
+  "options": [
+   "Heap sort",
+   "Quick sort",
+   "Merge sort",
+   "Selection sort"
+  ],
+  "answer": 2,
+  "explanation": "Merge sort preserves the relative order of equal elements by taking from the left half on ties."
+ },
+ {
+  "id": "q130df03f16d",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "Which data structure is typically used to check whether a string of brackets is balanced?",
+  "options": [
+   "A stack",
+   "A min-heap",
+   "A hash set",
+   "A queue"
+  ],
+  "answer": 0,
+  "explanation": "Push opening brackets and pop to match each closing bracket; the stack must be empty at the end."
+ },
+ {
+  "id": "q271c3999d47",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "Given only a pointer to a non-tail node in a singly linked list (no head), how can you delete it?",
+  "options": [
+   "Traverse backward to find its predecessor",
+   "Set the node reference to null",
+   "Swap it with the head node",
+   "Copy the next node's value into it and unlink the next node"
+  ],
+  "answer": 3,
+  "explanation": "Without access to the predecessor, you overwrite the node with its successor and remove the successor."
+ },
+ {
+  "id": "q289b51841e1",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "What is the time complexity of the standard DP for the longest common subsequence of strings of lengths m and n?",
+  "options": [
+   "O(m + n)",
+   "O(m * n)",
+   "O(2^(m+n))",
+   "O(max(m, n) log n)"
+  ],
+  "answer": 1,
+  "explanation": "The DP fills an (m+1) by (n+1) table with constant work per cell."
+ }
+]

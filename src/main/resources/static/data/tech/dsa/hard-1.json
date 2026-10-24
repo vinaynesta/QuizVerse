@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q681fce41ea1",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "How many distinct solutions does the classic 8-queens problem have on an 8x8 board?",
+  "options": [
+   "64",
+   "12",
+   "92",
+   "40"
+  ],
+  "answer": 2,
+  "explanation": "There are 92 solutions in total, or 12 when rotations and reflections are treated as the same."
+ },
+ {
+  "id": "qa8e04e26d5e",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "Since Java 8, what does HashMap do when a single bucket accumulates many colliding entries and the table is large enough?",
+  "options": [
+   "Converts that bucket into a balanced red-black tree",
+   "Discards the oldest entry in the bucket",
+   "Throws a ConcurrentModificationException",
+   "Switches the whole map to linear probing"
+  ],
+  "answer": 0,
+  "explanation": "Treeifying a heavily loaded bucket limits worst-case lookups in it to O(log n)."
+ },
+ {
+  "id": "qd761c69d5f1",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "Which combination of data structures gives an LRU cache O(1) get and put?",
+  "options": [
+   "A hash map plus a doubly linked list",
+   "A min-heap plus an array",
+   "A balanced BST plus a stack",
+   "Two queues"
+  ],
+  "answer": 0,
+  "explanation": "The map finds nodes in O(1) and the list moves or evicts them in O(1)."
+ },
+ {
+  "id": "q9b8a61395d4",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "What does the recurrence T(n) = 2T(n/2) + O(1) solve to?",
+  "options": [
+   "O(log n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(n)"
+  ],
+  "answer": 3,
+  "explanation": "The recursion tree has about 2n nodes, each doing constant work."
+ },
+ {
+  "id": "qff8f6cf889d",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "Why is checking only node.left.val < node.val < node.right.val insufficient to validate a BST?",
+  "options": [
+   "It fails on trees with a single node",
+   "It only works for complete binary trees",
+   "It cannot handle negative values",
+   "A node deep in a subtree can violate the bound set by a higher ancestor"
+  ],
+  "answer": 3,
+  "explanation": "Every node must lie within a min/max range inherited from all its ancestors, not just its parent."
+ },
+ {
+  "id": "qf040554ac47",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "What does the recurrence T(n) = T(n/2) + O(1) solve to?",
+  "options": [
+   "O(1)",
+   "O(n log n)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "The problem halves each step with constant work, as in binary search."
+ },
+ {
+  "id": "qbe7bb8e7938",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "What is the time complexity of Dijkstra's algorithm using a binary heap priority queue?",
+  "options": [
+   "O(V * E)",
+   "O(V + E)",
+   "O(V^2 log E)",
+   "O((V + E) log V)"
+  ],
+  "answer": 3,
+  "explanation": "Each vertex extraction and each edge relaxation costs O(log V) heap work."
+ },
+ {
+  "id": "qae7c7dc6c5b",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "How many structurally distinct binary search trees can be built from 3 distinct keys?",
+  "options": [
+   "3",
+   "9",
+   "6",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "The count is the 3rd Catalan number, C(3) = 5."
+ },
+ {
+  "id": "q7b0be6a222b",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the best time complexity for finding a target in a rotated sorted array of distinct elements?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(log n)",
+   "O(sqrt n)"
+  ],
+  "answer": 2,
+  "explanation": "A modified binary search can always tell which half is sorted and discard the other."
+ },
+ {
+  "id": "q6e5ccb60def",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the worst-case time of Rabin-Karp string matching for text length n and pattern length m?",
+  "options": [
+   "O(n + m)",
+   "O(n * m)",
+   "O(m log n)",
+   "O(n log m)"
+  ],
+  "answer": 1,
+  "explanation": "Many spurious hash matches can force a full character comparison at nearly every position."
+ }
+]

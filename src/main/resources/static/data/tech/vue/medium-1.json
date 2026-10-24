@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q733a25381b3",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "Why does assigning a brand-new object to a variable that held a reactive() proxy break reactivity?",
+  "options": [
+   "reactive() proxies are frozen after creation",
+   "Vue only tracks objects created at import time",
+   "Existing bindings still point to the original proxy",
+   "The new object is automatically made readonly"
+  ],
+  "answer": 2,
+  "explanation": "Reactivity is tied to the proxy, so replacing the variable disconnects anything already tracking the old proxy."
+ },
+ {
+  "id": "qf16cce2280b",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "In script setup, how is a local custom directive registered?",
+  "options": [
+   "Pass it to defineDirectives()",
+   "Name a variable vFocus and use it as v-focus",
+   "Add it to the components option",
+   "Declare it with export directive"
+  ],
+  "answer": 1,
+  "explanation": "Any camelCase variable starting with v in script setup can be used as a custom directive."
+ },
+ {
+  "id": "qacefe6db577",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "Given const obj = reactive({ nested: { n: 1 } }), is mutating obj.nested.n reactive?",
+  "options": [
+   "No, only top-level properties are tracked",
+   "Only if nested is wrapped with ref()",
+   "Only arrays are converted deeply",
+   "Yes, reactive() makes nested objects reactive deeply"
+  ],
+  "answer": 3,
+  "explanation": "reactive() is deep by default, wrapping nested objects in proxies when they are accessed."
+ },
+ {
+  "id": "q65f1a0a2adf",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "Before Vue 3.5, how do you access <input ref=\"el\"> in script setup?",
+  "options": [
+   "Call document.getElementById('el') in setup",
+   "Use this.$refs.el inside script setup",
+   "Import el from the template automatically",
+   "Declare const el = ref(null) with a matching name"
+  ],
+  "answer": 3,
+  "explanation": "A ref declared with the same name as the ref attribute is populated after the component mounts."
+ },
+ {
+  "id": "qf969a366e63",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "Why is accessing a template ref directly in the setup body unreliable?",
+  "options": [
+   "The component has not mounted yet, so the ref is null",
+   "setup runs after the component unmounts",
+   "Template refs are only available on the server",
+   "Refs are only filled when using Options API"
+  ],
+  "answer": 0,
+  "explanation": "Template refs are assigned during mounting, so they should be accessed in onMounted or later."
+ },
+ {
+  "id": "q76fecf85435",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does @submit.prevent=\"onSubmit\" do?",
+  "options": [
+   "Prevents onSubmit from ever running",
+   "Stops event propagation but not the default",
+   "Calls event.preventDefault() and then runs onSubmit",
+   "Runs onSubmit only the first time"
+  ],
+  "answer": 2,
+  "explanation": "The .prevent modifier calls preventDefault() on the event before the handler runs."
+ },
+ {
+  "id": "qa0a31d43ffe",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "What should a computed getter avoid?",
+  "options": [
+   "Side effects like mutating state or making requests",
+   "Reading props passed to the component",
+   "Returning arrays or objects",
+   "Reading other computed properties"
+  ],
+  "answer": 0,
+  "explanation": "Computed getters should be pure derivations; side effects belong in watchers."
+ },
+ {
+  "id": "q9b9c822827e",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "How does a script setup component let its parent call a method through a template ref?",
+  "options": [
+   "Expose it with defineExpose()",
+   "Return it from the script setup block",
+   "Register it with app.config.globalProperties",
+   "Export it with export default"
+  ],
+  "answer": 0,
+  "explanation": "script setup components are closed by default, so only bindings passed to defineExpose() are visible via template refs."
+ },
+ {
+  "id": "qf199ab49ea3",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "How does a style block with the scoped attribute limit CSS to its component?",
+  "options": [
+   "It adds unique data attributes to elements and selectors",
+   "It inlines all styles as style attributes",
+   "It renames every class to a random hash",
+   "It wraps the component in a shadow DOM"
+  ],
+  "answer": 0,
+  "explanation": "Scoped CSS uses PostCSS to add a data-v attribute to elements and rewrite selectors to match it."
+ },
+ {
+  "id": "qd87276eedd9",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "How do you watch a single property of const state = reactive({ count: 0 })?",
+  "options": [
+   "watch(state.count, cb)",
+   "watch(() => state.count, cb)",
+   "watch('state.count', cb)",
+   "watch(state.count.value, cb)"
+  ],
+  "answer": 1,
+  "explanation": "state.count is a plain number, so a getter function is needed to make it a watchable source."
+ }
+]

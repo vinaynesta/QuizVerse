@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qec40617d9d0",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"Java\".charAt(1) return?",
+  "options": [
+   "'a'",
+   "'J'",
+   "'v'",
+   "It throws StringIndexOutOfBoundsException"
+  ],
+  "answer": 0,
+  "explanation": "String indexes start at 0, so index 1 is the second character, 'a'."
+ },
+ {
+  "id": "qa17773ff26d",
+  "subject": "java",
+  "topic": "generics",
+  "level": "easy",
+  "question": "In the declaration class Box<T>, what is T called?",
+  "options": [
+   "A type parameter",
+   "A raw type",
+   "A wildcard",
+   "A type bound"
+  ],
+  "answer": 0,
+  "explanation": "T is a type parameter; the concrete type supplied at use, like Box<String>, is the type argument."
+ },
+ {
+  "id": "q69bf9a411e8",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword prevents a class from being subclassed?",
+  "options": [
+   "static",
+   "final",
+   "private",
+   "const"
+  ],
+  "answer": 1,
+  "explanation": "A class declared final cannot be extended; const is reserved but unused in Java."
+ },
+ {
+  "id": "qf64516d6404",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which Thread method begins executing run() on a new thread?",
+  "options": [
+   "start()",
+   "run()",
+   "execute()",
+   "begin()"
+  ],
+  "answer": 0,
+  "explanation": "start() creates the new thread of execution, which then calls run(); calling run() directly uses the current thread."
+ },
+ {
+  "id": "q4470a7b4ba9",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What is the value of 7 / 2 when both operands are int?",
+  "options": [
+   "3.0",
+   "3.5",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Integer division truncates toward zero, so 7 / 2 is 3."
+ },
+ {
+  "id": "q4add7f28f07",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"  hi  \".strip() return?",
+  "options": [
+   "\"  hi\"",
+   "\"hi\"",
+   "\"  hi  \"",
+   "\"hi  \""
+  ],
+  "answer": 1,
+  "explanation": "strip() (Java 11) removes leading and trailing whitespace; stripLeading and stripTrailing remove only one side."
+ },
+ {
+  "id": "qcc744f361eb",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "Which loop always executes its body at least once?",
+  "options": [
+   "while",
+   "do-while",
+   "for",
+   "enhanced for"
+  ],
+  "answer": 1,
+  "explanation": "A do-while loop checks its condition after the body, so the body runs at least once."
+ },
+ {
+  "id": "q133c4bb283f",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Can a Java class directly extend more than one class?",
+  "options": [
+   "No, a class can extend only one class",
+   "Yes, if all parent classes are abstract",
+   "Yes, by listing classes separated by commas",
+   "Yes, if the classes share a package"
+  ],
+  "answer": 0,
+  "explanation": "Java supports single inheritance of classes; multiple types are combined through interfaces."
+ },
+ {
+  "id": "qe071598f27b",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Where are objects created with new allocated?",
+  "options": [
+   "On the calling thread's stack",
+   "On the heap",
+   "In Metaspace",
+   "In CPU registers"
+  ],
+  "answer": 1,
+  "explanation": "Objects live on the garbage-collected heap; the JIT may optimize some allocations, but conceptually they are heap objects."
+ },
+ {
+  "id": "q1959f0e3bc9",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Are String objects mutable in Java?",
+  "options": [
+   "No, a String's value never changes after creation",
+   "Yes, methods like toUpperCase change it in place",
+   "Only strings created with new are mutable",
+   "Only strings that are not interned are mutable"
+  ],
+  "answer": 0,
+  "explanation": "String is immutable; methods such as toUpperCase return a new String."
+ }
+]

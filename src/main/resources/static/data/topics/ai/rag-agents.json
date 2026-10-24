@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q149250206b8",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is an AI agent in the context of LLM applications?",
+  "options": [
+   "A system that uses a model to plan and take actions, often by calling tools",
+   "A static model that only classifies images",
+   "A database index that speeds up queries",
+   "A human reviewer who labels training data"
+  ],
+  "answer": 0,
+  "explanation": "Agents loop between model reasoning and actions such as tool calls, observing results to work toward a goal."
+ },
+ {
+  "id": "q1f69fd3bb99",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What does RAG stand for in applied AI?",
+  "options": [
+   "Reinforced Agent Gradient",
+   "Recursive Attention Graph",
+   "Retrieval-Augmented Generation",
+   "Random Access Generation"
+  ],
+  "answer": 2,
+  "explanation": "RAG combines a retrieval step with text generation by a language model."
+ },
+ {
+  "id": "qb0e5fafd747",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is a vector database typically used for in AI applications?",
+  "options": [
+   "Storing model weights for distributed training",
+   "Running SQL joins across relational tables",
+   "Caching rendered web pages",
+   "Storing embeddings and quickly finding the most similar ones"
+  ],
+  "answer": 3,
+  "explanation": "Vector databases index embeddings for fast similarity search, which powers semantic retrieval."
+ },
+ {
+  "id": "qcf013c24c81",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is the main purpose of retrieval-augmented generation?",
+  "options": [
+   "Grounding model responses in relevant documents retrieved at query time",
+   "Compressing a model so it runs on mobile devices",
+   "Removing the need for any prompt",
+   "Speeding up training by skipping backpropagation"
+  ],
+  "answer": 0,
+  "explanation": "RAG fetches relevant external content and adds it to the prompt so answers rely on up-to-date or private sources."
+ },
+ {
+  "id": "q48919eae4a9",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What does tool or function calling allow an LLM to do?",
+  "options": [
+   "Modify its own weights at runtime",
+   "Emit structured requests that the application executes, such as API calls",
+   "Bypass the context window limit entirely",
+   "Run without receiving any prompt"
+  ],
+  "answer": 1,
+  "explanation": "The model outputs a structured call, the host code runs it, and the result is fed back to the model."
+ },
+ {
+  "id": "q89d0bb37fff",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "Why are documents split into chunks before embedding in a RAG system?",
+  "options": [
+   "Chunking encrypts documents for safe storage",
+   "Embedding models only accept single words",
+   "Focused chunks improve retrieval precision and fit within the context window",
+   "Chunking removes the need for a vector index"
+  ],
+  "answer": 2,
+  "explanation": "Smaller passages yield embeddings that match specific queries better and leave room for several results in the prompt."
+ },
+ {
+  "id": "qe5e396ab907",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What is hybrid search in a RAG pipeline?",
+  "options": [
+   "Combining keyword-based and embedding-based retrieval",
+   "Running retrieval on both CPU and GPU",
+   "Mixing training data from multiple languages",
+   "Combining two LLMs to generate one answer"
+  ],
+  "answer": 0,
+  "explanation": "Lexical search catches exact terms like IDs while dense retrieval captures meaning, so combining them improves recall."
+ },
+ {
+  "id": "qfd7db419878",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What does cosine similarity measure in semantic search?",
+  "options": [
+   "The number of exact keywords two texts share",
+   "The difference in length between two documents",
+   "The edit distance between two strings",
+   "The angle-based similarity between two embedding vectors"
+  ],
+  "answer": 3,
+  "explanation": "Cosine similarity compares vector directions, so texts with similar meaning score high even with different wording."
+ },
+ {
+  "id": "q00f7006c9d3",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What trade-off do approximate nearest neighbor indexes such as HNSW make?",
+  "options": [
+   "They return exact results at the cost of a linear scan",
+   "They lower memory use by discarding the embeddings",
+   "They gain precision by storing documents as plain text",
+   "They give up a little recall for much faster search over large collections"
+  ],
+  "answer": 3,
+  "explanation": "ANN indexes avoid comparing against every vector, accepting occasional missed neighbors in exchange for speed."
+ },
+ {
+  "id": "q3aac5da6d3d",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "Why add a cross-encoder re-ranker after first-stage vector retrieval?",
+  "options": [
+   "It generates embeddings for the whole corpus at index time",
+   "It compresses documents into shorter summaries",
+   "It jointly scores query-document pairs to reorder candidates more accurately, at higher cost",
+   "It splits documents into overlapping chunks"
+  ],
+  "answer": 2,
+  "explanation": "Bi-encoder retrieval is fast but coarse; a cross-encoder reads query and passage together, so it is applied only to a short candidate list."
+ },
+ {
+  "id": "q49a105428e9",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What is the main trade-off when choosing chunk size for RAG?",
+  "options": [
+   "Small chunks always improve answers with no downside",
+   "Small chunks are precise but lose context; large chunks keep context but dilute relevance",
+   "Large chunks always improve recall and lower cost",
+   "Chunk size has no effect when using a vector database"
+  ],
+  "answer": 1,
+  "explanation": "Chunk size balances embedding specificity against having enough surrounding context to answer the question."
+ },
+ {
+  "id": "q59f85dc6f18",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "Why do long multi-step agent workflows often become less reliable as the number of steps grows?",
+  "options": [
+   "Each tool call permanently reduces the model's accuracy",
+   "Small per-step error rates compound across many dependent steps",
+   "Agents lose access to the context window after one step",
+   "Longer workflows always switch to a smaller model"
+  ],
+  "answer": 1,
+  "explanation": "If each step succeeds with probability p, a chain of n dependent steps succeeds with roughly p to the power n."
+ }
+]

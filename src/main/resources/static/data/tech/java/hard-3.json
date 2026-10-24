@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q59745711845",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What does Optional.of(null) do?",
+  "options": [
+   "Returns Optional.empty()",
+   "Fails to compile",
+   "Returns an Optional holding null",
+   "Throws NullPointerException"
+  ],
+  "answer": 3,
+  "explanation": "Optional.of requires a non-null value; Optional.ofNullable returns empty for null."
+ },
+ {
+  "id": "qb82abcb1a13",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "Can an overriding method declare a return type that is a subtype of the overridden method's return type?",
+  "options": [
+   "No, the return type must match exactly",
+   "Yes, covariant return types are allowed for reference types",
+   "Only when the return type is primitive",
+   "Only for methods declared in interfaces"
+  ],
+  "answer": 1,
+  "explanation": "Since Java 5 an override may narrow a reference return type, e.g. clone() returning the class's own type."
+ },
+ {
+  "id": "q142c98d0b2e",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "How does a TreeSet decide that two elements are duplicates?",
+  "options": [
+   "compareTo or the Comparator returns 0",
+   "equals returns true",
+   "hashCode values are equal",
+   "They are the same object reference"
+  ],
+  "answer": 0,
+  "explanation": "TreeSet relies only on ordering, so a Comparator inconsistent with equals can make distinct objects look like duplicates."
+ },
+ {
+  "id": "qd99eb0bff93",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "Can a class declare both void f(List<String> l) and void f(List<Integer> l)?",
+  "options": [
+   "No, both methods have the same erasure",
+   "Only if both methods are static",
+   "Only if annotated with @SafeVarargs",
+   "Yes, they are ordinary overloads"
+  ],
+  "answer": 0,
+  "explanation": "Both erase to f(List), producing a name clash at compile time."
+ },
+ {
+  "id": "q091267c4462",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What happens when Collectors.toMap without a merge function encounters a duplicate key?",
+  "options": [
+   "It keeps the last value",
+   "It throws IllegalStateException",
+   "It keeps the first value",
+   "It stores the values in a List"
+  ],
+  "answer": 1,
+  "explanation": "The two-argument toMap rejects duplicate keys; pass a merge function to resolve collisions."
+ },
+ {
+  "id": "q37c98e7a92f",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What happens with byte b = 10; b = b + 1;?",
+  "options": [
+   "b becomes 11",
+   "Compile error: possible lossy conversion from int to byte",
+   "It compiles but overflows at runtime",
+   "It compiles with an unchecked warning"
+  ],
+  "answer": 1,
+  "explanation": "b + 1 is promoted to int and needs an explicit cast; b += 1 or b++ would compile because they cast implicitly."
+ },
+ {
+  "id": "q044e2752a70",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A class overrides default method m() from interface I. How can it call I's version?",
+  "options": [
+   "super.m()",
+   "I.super.m()",
+   "this.I.m()",
+   "I.m()"
+  ],
+  "answer": 1,
+  "explanation": "The InterfaceName.super.method() syntax invokes a specific superinterface's default method."
+ },
+ {
+  "id": "q295c3c0bc55",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A superclass constructor calls an overridden method that reads a subclass field initialized as int x = 5. What value does the override see?",
+  "options": [
+   "5, because field initializers run first",
+   "It does not compile",
+   "It throws IllegalStateException",
+   "0, because subclass field initializers have not run yet"
+  ],
+  "answer": 3,
+  "explanation": "The superclass constructor runs before the subclass's field initializers, so the override sees the default value."
+ },
+ {
+  "id": "qd2824044351",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "The try block throws exception A and the finally block then throws exception B. What propagates?",
+  "options": [
+   "A, and B is suppressed",
+   "A, with B as its cause",
+   "B, and A is lost",
+   "Both are wrapped in a new exception"
+  ],
+  "answer": 2,
+  "explanation": "An exception from finally replaces the pending one; only try-with-resources records suppressed exceptions."
+ },
+ {
+  "id": "qc4b096aa5ee",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does Math.abs(Integer.MIN_VALUE) return?",
+  "options": [
+   "It throws ArithmeticException",
+   "Integer.MAX_VALUE",
+   "2147483648 as a long",
+   "Integer.MIN_VALUE, still negative"
+  ],
+  "answer": 3,
+  "explanation": "The positive value does not fit in an int, so the negation overflows back to MIN_VALUE; Math.absExact would throw instead."
+ }
+]

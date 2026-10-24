@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q92ceb04bb1e",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "Which two methods make a class usable as a context manager?",
+  "options": [
+   "__open__ and __close__",
+   "__start__ and __stop__",
+   "__enter__ and __exit__",
+   "__init__ and __del__"
+  ],
+  "answer": 2,
+  "explanation": "The with statement calls __enter__ on entry and __exit__ when the block finishes."
+ },
+ {
+  "id": "qb5f5b4b84a6",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "Which symbol is used to apply a decorator above a function definition?",
+  "options": [
+   "@",
+   "$",
+   "#",
+   "&"
+  ],
+  "answer": 0,
+  "explanation": "Writing @decorator on the line before def applies the decorator to that function."
+ },
+ {
+  "id": "qc332399e48d",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "What is a decorator, fundamentally?",
+  "options": [
+   "A special comment that documents a function",
+   "A callable that takes a function and returns a replacement",
+   "A type hint that validates arguments",
+   "A keyword that makes a function private"
+  ],
+  "answer": 1,
+  "explanation": "@d above def f is shorthand for f = d(f), so a decorator is just a callable that wraps or replaces f."
+ },
+ {
+  "id": "qe3feb7f18d4",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "Which statement is used to work with a context manager?",
+  "options": [
+   "with",
+   "using",
+   "within",
+   "let"
+  ],
+  "answer": 0,
+  "explanation": "The with statement calls the context manager's enter and exit methods around a block."
+ },
+ {
+  "id": "q0bbc5c42b7f",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "What must a generator decorated with @contextlib.contextmanager do?",
+  "options": [
+   "Yield exactly once",
+   "Return the managed value",
+   "Yield at least twice",
+   "Raise StopIteration explicitly"
+  ],
+  "answer": 0,
+  "explanation": "The code before the single yield is the setup, the yielded value is bound by as, and the code after is teardown."
+ },
+ {
+  "id": "q26f214ca19b",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "What does functools.wraps do when used in a decorator?",
+  "options": [
+   "Caches the wrapped function's results",
+   "Makes the wrapper run in a separate thread",
+   "Prevents the decorator from being stacked",
+   "Copies metadata such as __name__ and __doc__ onto the wrapper"
+  ],
+  "answer": 3,
+  "explanation": "wraps updates the wrapper to look like the wrapped function and sets __wrapped__."
+ },
+ {
+  "id": "q6e0d0f5d847",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "With @a stacked above @b above def f, which assignment is equivalent?",
+  "options": [
+   "f = b(a(f))",
+   "f = b(f); a(f)",
+   "f = a(f); b(f)",
+   "f = a(b(f))"
+  ],
+  "answer": 3,
+  "explanation": "Decorators apply bottom-up: the one closest to def wraps first."
+ },
+ {
+  "id": "qc3ef3ce5fdf",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "If __exit__ returns True, what happens to an exception raised in the with block?",
+  "options": [
+   "It is re-raised",
+   "It is converted into a warning",
+   "It is logged and then re-raised",
+   "It is suppressed"
+  ],
+  "answer": 3,
+  "explanation": "A truthy return value from __exit__ tells Python to swallow the exception."
+ },
+ {
+  "id": "q0a0b55723e5",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "How many nested callables does a decorator with arguments such as @repeat(3) typically involve, counting repeat itself?",
+  "options": [
+   "One: repeat itself",
+   "Four: repeat, a factory, a decorator and a wrapper",
+   "Two: repeat and the wrapper",
+   "Three: repeat returns a decorator, which returns a wrapper"
+  ],
+  "answer": 3,
+  "explanation": "repeat(3) must return the actual decorator, which takes the function and returns the wrapper."
+ },
+ {
+  "id": "q2312faa23e6",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "What arguments does __exit__ receive when the with block finished without an exception?",
+  "options": [
+   "Nothing; it is called with no arguments",
+   "The value returned by __enter__",
+   "False, False and False",
+   "None for the exception type, value and traceback"
+  ],
+  "answer": 3,
+  "explanation": "__exit__(exc_type, exc_value, traceback) always receives three arguments, all None on a clean exit."
+ },
+ {
+  "id": "q27c0c6a3def",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "With @contextmanager def cm(): print('in'); yield; print('out') and no try/finally, is 'out' printed if the with block raises?",
+  "options": [
+   "Yes; code after yield always runs",
+   "Yes, but only after the traceback is shown",
+   "No, and 'in' is not printed either",
+   "No; the exception is thrown in at the yield and skips the rest"
+  ],
+  "answer": 3,
+  "explanation": "The exception is re-raised inside the generator at yield, so cleanup must be in a finally block to run."
+ },
+ {
+  "id": "qe3aa8405e7a",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "When does a decorator applied to a module-level function run?",
+  "options": [
+   "Every time the decorated function is called",
+   "Only the first time the function is called",
+   "When the program exits",
+   "Once, when the def statement executes at import time"
+  ],
+  "answer": 3,
+  "explanation": "Decoration happens as part of executing the def, so module-level decorators run during import."
+ }
+]

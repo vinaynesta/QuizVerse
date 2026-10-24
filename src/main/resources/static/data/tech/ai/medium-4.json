@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qebec77bc8fa",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What is early stopping?",
+  "options": [
+   "Stopping training after the first epoch to save compute",
+   "Stopping inference once the model is confident",
+   "Halting when training loss reaches exactly zero",
+   "Halting training when validation performance stops improving"
+  ],
+  "answer": 3,
+  "explanation": "Early stopping acts as regularization by keeping the weights from before the model starts to overfit."
+ },
+ {
+  "id": "qf40b3bab2cd",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "What is the purpose of a validation set that is separate from the test set?",
+  "options": [
+   "Providing extra data to train the final weights",
+   "Replacing the need for a training set",
+   "Tuning hyperparameters without biasing the final test estimate",
+   "Measuring inference latency in production"
+  ],
+  "answer": 2,
+  "explanation": "Choosing hyperparameters on the test set would leak information; a validation set keeps the test set as an untouched final check."
+ },
+ {
+  "id": "q670ca190e4b",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What problem were LSTM gates designed to address?",
+  "options": [
+   "Processing images faster than convolutional networks",
+   "Making the network purely feed-forward",
+   "Eliminating the need for training data",
+   "Learning long-range dependencies that plain RNNs struggle with"
+  ],
+  "answer": 3,
+  "explanation": "LSTM gates control a cell state that preserves information and gradients over many time steps."
+ },
+ {
+  "id": "q5ef329e2944",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "A model scores 99% accuracy on training data but 70% on validation data. What is the most likely problem?",
+  "options": [
+   "The model is underfitting the training data",
+   "The validation set is too large",
+   "The learning rate is too low",
+   "The model is overfitting the training data"
+  ],
+  "answer": 3,
+  "explanation": "A large gap between training and validation performance is the classic sign of overfitting."
+ },
+ {
+  "id": "q0a3bad3c8c7",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is a model card?",
+  "options": [
+   "Documentation of a model's intended use, performance and limitations",
+   "A license key for accessing a model API",
+   "A dataset of labeled images for evaluation",
+   "A hardware accelerator for running inference"
+  ],
+  "answer": 0,
+  "explanation": "Model cards promote transparency by reporting evaluation results, intended uses and known limitations."
+ },
+ {
+  "id": "qf3df743e838",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "What is the elbow method used for in k-means?",
+  "options": [
+   "Choosing initial centroids by picking the farthest points",
+   "Choosing k where adding more clusters stops reducing within-cluster variance much",
+   "Choosing the distance metric by testing several options",
+   "Choosing which features to drop before clustering"
+  ],
+  "answer": 1,
+  "explanation": "Plotting within-cluster variance against k often shows a bend where extra clusters give diminishing returns."
+ },
+ {
+  "id": "q2fffcc402bd",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "Why should features be scaled before using k-NN or gradient-descent-based models?",
+  "options": [
+   "Scaling increases the number of training samples",
+   "Scaling converts categorical features into numeric ones",
+   "Features on larger scales would otherwise dominate distances and slow convergence",
+   "Scaling guarantees that the model will not overfit"
+  ],
+  "answer": 2,
+  "explanation": "Distance calculations and gradient steps are sensitive to feature magnitudes, so unscaled features distort both."
+ },
+ {
+  "id": "qcf425e7d54b",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What does self-attention compute for each token?",
+  "options": [
+   "A weighted combination of all tokens' representations based on relevance",
+   "The probability that the token is a stop word",
+   "A fixed embedding independent of surrounding words",
+   "A hidden state passed strictly from left to right"
+  ],
+  "answer": 0,
+  "explanation": "Each token's query is compared to every key, and the resulting weights mix the value vectors into a context-aware representation."
+ },
+ {
+  "id": "qefa3fb0e670",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "Why might removing a protected attribute such as race from the inputs fail to prevent discrimination?",
+  "options": [
+   "Other features can act as proxies for the protected attribute",
+   "Models always reconstruct deleted columns from file metadata",
+   "Removing features greatly increases training time",
+   "Protected attributes are required for gradient descent"
+  ],
+  "answer": 0,
+  "explanation": "Correlated features like zip code can encode the same information, so the model can still discriminate indirectly."
+ },
+ {
+  "id": "qe5e396ab907",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What is hybrid search in a RAG pipeline?",
+  "options": [
+   "Combining keyword-based and embedding-based retrieval",
+   "Running retrieval on both CPU and GPU",
+   "Mixing training data from multiple languages",
+   "Combining two LLMs to generate one answer"
+  ],
+  "answer": 0,
+  "explanation": "Lexical search catches exact terms like IDs while dense retrieval captures meaning, so combining them improves recall."
+ }
+]

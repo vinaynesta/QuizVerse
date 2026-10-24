@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q34519afcf03",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "How does gradient boosting build its ensemble?",
+  "options": [
+   "Each new model fits the residual errors of the current ensemble",
+   "All models are trained independently in parallel and averaged",
+   "A single model is trained and then pruned repeatedly",
+   "Models vote and the minority prediction is chosen"
+  ],
+  "answer": 0,
+  "explanation": "Boosting adds weak learners sequentially, each correcting what the ensemble so far gets wrong."
+ },
+ {
+  "id": "q5ab83927aae",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What is the benefit of multi-head attention?",
+  "options": [
+   "It reduces the number of tokens in the input sequence",
+   "It allows training without any positional information",
+   "It replaces the feed-forward layers in each block",
+   "It lets the model attend to different kinds of relationships in parallel subspaces"
+  ],
+  "answer": 3,
+  "explanation": "Each head has its own projections, so different heads can specialize in different patterns such as syntax or coreference."
+ },
+ {
+  "id": "q3e515b70999",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "How do residual (skip) connections help deep networks?",
+  "options": [
+   "They reduce parameters by sharing weights across all layers",
+   "They convert a CNN into a recurrent network",
+   "They let gradients flow through identity paths, making very deep networks trainable",
+   "They remove the need for activation functions"
+  ],
+  "answer": 2,
+  "explanation": "Adding the input of a block to its output gives gradients a direct path backward, easing optimization of deep stacks."
+ },
+ {
+  "id": "qd57548cf1a3",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "Which regularization tends to produce sparse models by setting some weights exactly to zero?",
+  "options": [
+   "L2 (ridge) regularization",
+   "L1 (lasso) regularization",
+   "Batch normalization",
+   "Dropout"
+  ],
+  "answer": 1,
+  "explanation": "The L1 penalty's corners at zero push many coefficients to exactly zero, performing feature selection."
+ },
+ {
+  "id": "q752e6a6f955",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What is transfer learning?",
+  "options": [
+   "Training two models on the same data and swapping weights",
+   "Moving a trained model from GPU memory to CPU memory",
+   "Reusing a model pre-trained on a large dataset and fine-tuning it on a related task",
+   "Converting a classification model into a regression model"
+  ],
+  "answer": 2,
+  "explanation": "Pre-trained representations give a strong starting point, so the new task needs less data and compute."
+ },
+ {
+  "id": "q7c869ed39d2",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What two components make up a generative adversarial network?",
+  "options": [
+   "An encoder and a decoder trained only to reconstruct input",
+   "Two classifiers voting on every label",
+   "A generator producing samples and a discriminator telling real from generated",
+   "A retriever and a generator over a document store"
+  ],
+  "answer": 2,
+  "explanation": "The generator and discriminator are trained against each other until generated samples become hard to distinguish."
+ },
+ {
+  "id": "qb85065a64a4",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is the effect of lowering the sampling temperature of an LLM?",
+  "options": [
+   "Outputs become more deterministic and focused on high-probability tokens",
+   "The model's context window becomes larger",
+   "Outputs become more random and creative",
+   "Responses are generated faster on the same hardware"
+  ],
+  "answer": 0,
+  "explanation": "Lower temperature sharpens the probability distribution, so likely tokens dominate sampling."
+ },
+ {
+  "id": "q1371a9de332",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is prompt injection?",
+  "options": [
+   "Injecting extra training data to improve accuracy",
+   "Malicious instructions in input that hijack a model's intended behavior",
+   "Adding examples to a prompt for few-shot learning",
+   "Inserting padding tokens to fill a batch"
+  ],
+  "answer": 1,
+  "explanation": "Because LLMs mix instructions and data in one text stream, crafted input can override the developer's instructions."
+ },
+ {
+  "id": "q294a7c79548",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What does dropout do during training?",
+  "options": [
+   "Permanently removes the least important neurons after training",
+   "Randomly zeroes a fraction of activations to reduce co-adaptation and overfitting",
+   "Lowers the learning rate when the loss plateaus",
+   "Drops training examples that have a high loss"
+  ],
+  "answer": 1,
+  "explanation": "By randomly disabling units, dropout forces the network to learn redundant, more robust features."
+ },
+ {
+  "id": "qdcdaa1aaeb7",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "Why is k-means often run several times with different initializations?",
+  "options": [
+   "Each run uses a different number of labeled examples",
+   "Results depend on the starting centroids and can converge to poor local optima",
+   "Multiple runs are required to turn it into a classifier",
+   "The algorithm must compute PCA in an earlier run"
+  ],
+  "answer": 1,
+  "explanation": "k-means only finds a local minimum, so keeping the best of several random starts gives more reliable clusters."
+ }
+]

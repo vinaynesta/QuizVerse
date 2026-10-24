@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q709ade56774",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "What does a record declaration generate automatically?",
+  "options": [
+   "Setters for every component",
+   "A nested builder class",
+   "Only getter methods prefixed with get",
+   "A canonical constructor, accessors, equals, hashCode and toString"
+  ],
+  "answer": 3,
+  "explanation": "Records generate a canonical constructor, accessor methods named after components, and value-based equals, hashCode and toString."
+ },
+ {
+  "id": "q1a1acd4afda",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "What does Thread.sleep(1000) do?",
+  "options": [
+   "Pauses every thread in the JVM for one second",
+   "Pauses the current thread for about one second",
+   "Pauses the current thread for 1000 seconds",
+   "Releases all locks and ends the thread"
+  ],
+  "answer": 1,
+  "explanation": "sleep takes milliseconds and pauses only the calling thread; it does not release monitors it holds."
+ },
+ {
+  "id": "qe97a972aeda",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "What does List.of(1, 2).add(3) do?",
+  "options": [
+   "Throws UnsupportedOperationException",
+   "Returns false without adding",
+   "Adds 3 and returns true",
+   "Fails to compile"
+  ],
+  "answer": 0,
+  "explanation": "List.of returns an unmodifiable list, so mutating methods throw UnsupportedOperationException at runtime."
+ },
+ {
+  "id": "qba48bb21d8b",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "What does the JVM execute?",
+  "options": [
+   "Java source code from .java files",
+   "Native machine code produced by javac",
+   "Bytecode from .class files",
+   "Assembly code from .asm files"
+  ],
+  "answer": 2,
+  "explanation": "javac compiles source to platform-neutral bytecode, which the JVM interprets and JIT-compiles."
+ },
+ {
+  "id": "q89cf87294c9",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Is NullPointerException checked or unchecked?",
+  "options": [
+   "Checked, so it must be declared with throws",
+   "Checked, because it extends IOException",
+   "Neither, because it is an Error",
+   "Unchecked, because it extends RuntimeException"
+  ],
+  "answer": 3,
+  "explanation": "RuntimeException and its subclasses are unchecked, so the compiler does not force handling."
+ },
+ {
+  "id": "q288be527e35",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which package contains ExecutorService and ConcurrentHashMap?",
+  "options": [
+   "java.lang.thread",
+   "java.util.threads",
+   "java.concurrent",
+   "java.util.concurrent"
+  ],
+  "answer": 3,
+  "explanation": "The java.util.concurrent package provides executors, concurrent collections and synchronizers."
+ },
+ {
+  "id": "qd6f7d162f11",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "Which keyword lets the compiler infer the type of a local variable (Java 10)?",
+  "options": [
+   "val",
+   "auto",
+   "let",
+   "var"
+  ],
+  "answer": 3,
+  "explanation": "var enables local variable type inference; the variable is still statically typed."
+ },
+ {
+  "id": "q76b36033a23",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Which JDK tool compiles .java files into .class files?",
+  "options": [
+   "java",
+   "jar",
+   "javac",
+   "javadoc"
+  ],
+  "answer": 2,
+  "explanation": "javac is the compiler; java launches the JVM and jar packages class files."
+ },
+ {
+  "id": "qb61d4c1706d",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which of these stream operations is terminal?",
+  "options": [
+   "filter",
+   "map",
+   "collect",
+   "sorted"
+  ],
+  "answer": 2,
+  "explanation": "collect produces a result and ends the pipeline; filter, map and sorted are intermediate operations."
+ },
+ {
+  "id": "qe76d8298f5b",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which of these collections does not allow duplicate elements?",
+  "options": [
+   "HashSet",
+   "ArrayList",
+   "LinkedList",
+   "ArrayDeque"
+  ],
+  "answer": 0,
+  "explanation": "Set implementations such as HashSet reject duplicates as defined by equals and hashCode."
+ }
+]

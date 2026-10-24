@@ -27,17 +27,22 @@ public final class AuthDtos {
             @NotBlank @Size(max = 60) String displayName,
             @NotBlank @Email @Size(max = 254) String email) {}
 
+    /** {@code currentPassword} is required only when the account already has one (not Google-only). */
     public record ChangePasswordRequest(
-            @NotBlank String currentPassword,
+            String currentPassword,
             @NotBlank @Size(min = 8, max = 72, message = "must be 8-72 characters") String newPassword) {}
 
-    public record DeleteAccountRequest(@NotBlank String password) {}
+    /** The password, or for a Google-only account without one, the username typed out as confirmation. */
+    public record DeleteAccountRequest(String password, String confirmUsername) {}
+
+    /** The ID token from the "Sign in with Google" button. */
+    public record GoogleSignInRequest(@NotBlank @Size(max = 4096) String credential) {}
 
     public record UserResponse(Long id, String username, String email, String displayName, Instant createdAt,
-                               boolean admin) {
+                               boolean admin, boolean hasPassword, boolean googleLinked) {
         public static UserResponse of(User u, boolean admin) {
             return new UserResponse(u.getId(), u.getUsername(), u.getEmail(), u.getDisplayName(), u.getCreatedAt(),
-                    admin);
+                    admin, u.hasPassword(), u.getGoogleSubject() != null);
         }
     }
 }

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa9fe8f40d8b",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "How does a random forest reduce variance compared with a single decision tree?",
+  "options": [
+   "By averaging many trees trained on bootstrap samples with random feature subsets",
+   "By training trees sequentially to fix earlier errors",
+   "By growing one very deep tree with no pruning",
+   "By using the same single feature for every split"
+  ],
+  "answer": 0,
+  "explanation": "Bagging plus random feature selection decorrelates trees, so averaging them lowers variance."
+ },
+ {
+  "id": "q2cdb365a797",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What does a ROC AUC of 0.5 indicate?",
+  "options": [
+   "The model detects exactly half of the positives",
+   "The model ranks positives no better than random guessing",
+   "The model always predicts the positive class",
+   "The model is perfectly calibrated"
+  ],
+  "answer": 1,
+  "explanation": "AUC is the probability a random positive is scored above a random negative; 0.5 means chance-level ranking."
+ },
+ {
+  "id": "q91d3e6f1f90",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What attention masking does a decoder-only language model use during training?",
+  "options": [
+   "Causal masking, so each token attends only to earlier tokens",
+   "Bidirectional attention over the full sequence",
+   "Random masking of tokens that must be reconstructed",
+   "No attention, only feed-forward layers"
+  ],
+  "answer": 0,
+  "explanation": "Causal masks stop tokens from seeing the future, matching the left-to-right next-token prediction objective."
+ },
+ {
+  "id": "q89d0bb37fff",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "Why are documents split into chunks before embedding in a RAG system?",
+  "options": [
+   "Chunking encrypts documents for safe storage",
+   "Embedding models only accept single words",
+   "Focused chunks improve retrieval precision and fit within the context window",
+   "Chunking removes the need for a vector index"
+  ],
+  "answer": 2,
+  "explanation": "Smaller passages yield embeddings that match specific queries better and leave room for several results in the prompt."
+ },
+ {
+  "id": "qb13fb7385a0",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "What does a support vector machine try to find?",
+  "options": [
+   "The tree split that maximizes information gain",
+   "The boundary that passes through the most training points",
+   "The cluster centers that minimize within-cluster distance",
+   "The decision boundary that maximizes the margin between classes"
+  ],
+  "answer": 3,
+  "explanation": "SVMs choose the separating hyperplane with the largest distance to the nearest points of each class."
+ },
+ {
+  "id": "qd243fe68fac",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "Fitting a feature scaler on the full dataset before the train/test split is an example of what?",
+  "options": [
+   "Covariate shift",
+   "Underfitting",
+   "Class imbalance",
+   "Data leakage"
+  ],
+  "answer": 3,
+  "explanation": "Test-set statistics influence the training preprocessing, so evaluation scores become optimistically biased."
+ },
+ {
+  "id": "qfd7db419878",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What does cosine similarity measure in semantic search?",
+  "options": [
+   "The number of exact keywords two texts share",
+   "The difference in length between two documents",
+   "The edit distance between two strings",
+   "The angle-based similarity between two embedding vectors"
+  ],
+  "answer": 3,
+  "explanation": "Cosine similarity compares vector directions, so texts with similar meaning score high even with different wording."
+ },
+ {
+  "id": "q48919eae4a9",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What does tool or function calling allow an LLM to do?",
+  "options": [
+   "Modify its own weights at runtime",
+   "Emit structured requests that the application executes, such as API calls",
+   "Bypass the context window limit entirely",
+   "Run without receiving any prompt"
+  ],
+  "answer": 1,
+  "explanation": "The model outputs a structured call, the host code runs it, and the result is fed back to the model."
+ },
+ {
+  "id": "q1ae9e561d41",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "When is fine-tuning usually preferable to prompting alone?",
+  "options": [
+   "When the model must know facts that change every day",
+   "When you only have three examples of the task",
+   "When you want to need no training data at all",
+   "When you need consistent behavior or style across many requests that prompting cannot reliably achieve"
+  ],
+  "answer": 3,
+  "explanation": "Fine-tuning bakes in task behavior from many examples, whereas fast-changing facts are better served by retrieval."
+ },
+ {
+  "id": "q10bdd97c275",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "For cancer screening, where missing a real case is very costly, which metric should be prioritized?",
+  "options": [
+   "Precision",
+   "Specificity",
+   "Recall",
+   "Accuracy"
+  ],
+  "answer": 2,
+  "explanation": "Recall measures the share of actual positives detected, so maximizing it minimizes missed cases."
+ }
+]

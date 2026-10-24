@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q6fd140bd0eb",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Which JVM option sets the maximum heap size?",
+  "options": [
+   "-Xms",
+   "-Xmx",
+   "-Xss",
+   "-XX:MaxMetaspaceSize"
+  ],
+  "answer": 1,
+  "explanation": "-Xmx sets the maximum heap, -Xms the initial heap, and -Xss the thread stack size."
+ },
+ {
+  "id": "q76b36033a23",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Which JDK tool compiles .java files into .class files?",
+  "options": [
+   "java",
+   "jar",
+   "javac",
+   "javadoc"
+  ],
+  "answer": 2,
+  "explanation": "javac is the compiler; java launches the JVM and jar packages class files."
+ },
+ {
+  "id": "qba48bb21d8b",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "What does the JVM execute?",
+  "options": [
+   "Java source code from .java files",
+   "Native machine code produced by javac",
+   "Bytecode from .class files",
+   "Assembly code from .asm files"
+  ],
+  "answer": 2,
+  "explanation": "javac compiles source to platform-neutral bytecode, which the JVM interprets and JIT-compiles."
+ },
+ {
+  "id": "qe071598f27b",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Where are objects created with new allocated?",
+  "options": [
+   "On the calling thread's stack",
+   "On the heap",
+   "In Metaspace",
+   "In CPU registers"
+  ],
+  "answer": 1,
+  "explanation": "Objects live on the garbage-collected heap; the JIT may optimize some allocations, but conceptually they are heap objects."
+ },
+ {
+  "id": "q444f485a694",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "What does unbounded recursion typically lead to?",
+  "options": [
+   "OutOfMemoryError: Java heap space",
+   "StackOverflowError",
+   "IllegalStateException",
+   "NullPointerException"
+  ],
+  "answer": 1,
+  "explanation": "Each call pushes a new frame; once the thread stack is full the JVM throws StackOverflowError."
+ },
+ {
+  "id": "q8ffe13d9b4a",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "When does an object become eligible for garbage collection?",
+  "options": [
+   "When it is no longer reachable from any GC root",
+   "As soon as the method that created it returns",
+   "Only after its finalize() method has been called",
+   "Only when every field is set to null"
+  ],
+  "answer": 0,
+  "explanation": "The collector traces from roots such as thread stacks and static fields; unreachable objects can be reclaimed."
+ },
+ {
+  "id": "q9e69788b59c",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "What does calling System.gc() guarantee?",
+  "options": [
+   "That the heap shrinks to -Xms",
+   "An immediate full garbage collection",
+   "That all unreachable objects are freed",
+   "Nothing, it is only a hint to the JVM"
+  ],
+  "answer": 3,
+  "explanation": "System.gc() only suggests a collection; the JVM may ignore it, for example with -XX:+DisableExplicitGC."
+ },
+ {
+  "id": "qe5ec31178d3",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "Where is a local variable of primitive type declared inside a method stored?",
+  "options": [
+   "On the shared heap",
+   "In the method's frame on the thread stack",
+   "In Metaspace",
+   "In the string pool"
+  ],
+  "answer": 1,
+  "explanation": "Local variables live in the stack frame of the invoking thread, which is popped when the method returns."
+ },
+ {
+  "id": "q09a80479180",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "Which garbage collector does JDK 21 use by default on server-class machines?",
+  "options": [
+   "Parallel",
+   "CMS",
+   "G1",
+   "ZGC"
+  ],
+  "answer": 2,
+  "explanation": "G1 has been the default since JDK 9; CMS was removed in JDK 14 and ZGC must be selected explicitly."
+ },
+ {
+  "id": "q1d0b3457ecb",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "Can the JVM collect two objects that reference only each other?",
+  "options": [
+   "Yes, if neither is reachable from a GC root",
+   "No, the cycle keeps their reference counts above zero",
+   "Only if System.gc() is called explicitly",
+   "Only if the references are WeakReferences"
+  ],
+  "answer": 0,
+  "explanation": "HotSpot collectors trace reachability rather than counting references, so unreachable cycles are reclaimed."
+ },
+ {
+  "id": "q3c6608c934c",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "When does a class's static initializer run?",
+  "options": [
+   "When the JVM starts, for every class on the classpath",
+   "On first active use, such as instantiation or a static method call",
+   "When the source file is compiled",
+   "Every time a new instance is created"
+  ],
+  "answer": 1,
+  "explanation": "Class initialization is lazy and happens once, triggered by the first active use of the class."
+ },
+ {
+  "id": "qe8ee47d7ad7",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "Which observation motivates generational garbage collection?",
+  "options": [
+   "Large objects tend to live forever",
+   "Most objects die young",
+   "Objects referenced by static fields are never collected",
+   "Stack memory is faster than heap memory"
+  ],
+  "answer": 1,
+  "explanation": "Because most objects die soon after allocation, collecting a small young generation frequently is cheap and effective."
+ }
+]

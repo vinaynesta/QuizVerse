@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8edcf089260",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "What is the time complexity of BFS or DFS on a graph stored as an adjacency list?",
+  "options": [
+   "O(V^2)",
+   "O(V * E)",
+   "O(V + E)",
+   "O(E log V)"
+  ],
+  "answer": 2,
+  "explanation": "Each vertex is visited once and each edge is examined a constant number of times."
+ },
+ {
+  "id": "q9d0b5b89f43",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of building a binary heap from n unsorted elements using bottom-up heapify?",
+  "options": [
+   "O(n log n)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "Most nodes are near the bottom and sift down only a short distance, summing to linear time."
+ },
+ {
+  "id": "qd37f67a5e45",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "What is the time complexity of the naive recursive Fibonacci function fib(n) = fib(n-1) + fib(n-2)?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "Exponential, O(2^n)"
+  ],
+  "answer": 3,
+  "explanation": "The same subproblems are recomputed repeatedly, creating an exponential call tree."
+ },
+ {
+  "id": "q02ea5995d28",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "What are the time and extra space costs of reversing a singly linked list iteratively?",
+  "options": [
+   "O(n log n) time and O(1) space",
+   "O(n) time and O(n) space",
+   "O(n^2) time and O(1) space",
+   "O(n) time and O(1) space"
+  ],
+  "answer": 3,
+  "explanation": "One pass re-points each next reference using just a few pointer variables."
+ },
+ {
+  "id": "qf92bf62ee3d",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "In Java, if you override equals() in a class used as a HashMap key, which method must you also override?",
+  "options": [
+   "toString()",
+   "hashCode()",
+   "compareTo()",
+   "clone()"
+  ],
+  "answer": 1,
+  "explanation": "Equal objects must have equal hash codes, or HashMap will look in the wrong bucket."
+ },
+ {
+  "id": "q93160223947",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "Which problem is linear probing especially prone to?",
+  "options": [
+   "Primary clustering",
+   "Stack overflow",
+   "Pointer chasing in chains",
+   "Secondary clustering"
+  ],
+  "answer": 0,
+  "explanation": "Occupied slots form long contiguous runs, making future probes longer."
+ },
+ {
+  "id": "q5e11fe4d816",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "What are the worst-case time and auxiliary space of standard merge sort on an array?",
+  "options": [
+   "O(n log n) time and O(1) space",
+   "O(n log n) time and O(n) space",
+   "O(n^2) time and O(n) space",
+   "O(n) time and O(log n) space"
+  ],
+  "answer": 1,
+  "explanation": "Merge sort always splits in half and needs a temporary buffer for merging."
+ },
+ {
+  "id": "q5ced031ad29",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "Under what condition can Dijkstra's algorithm produce incorrect shortest paths?",
+  "options": [
+   "When the graph is directed",
+   "When the graph is disconnected",
+   "When the graph has cycles",
+   "When the graph has negative edge weights"
+  ],
+  "answer": 3,
+  "explanation": "Dijkstra finalizes a vertex assuming later edges cannot reduce its distance, which negative weights violate."
+ },
+ {
+  "id": "q45a0dedd33e",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "In Java, what is the total time of building a string by doing s = s + c in a loop n times?",
+  "options": [
+   "O(n)",
+   "O(log n)",
+   "O(n^2)",
+   "O(n log n)"
+  ],
+  "answer": 2,
+  "explanation": "Strings are immutable, so each concatenation copies the whole string; StringBuilder avoids this."
+ },
+ {
+  "id": "qa3d1ece1246",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "What is the time complexity of the standard 0/1 knapsack DP with n items and capacity W?",
+  "options": [
+   "O(n * W)",
+   "O(2^n)",
+   "O(n log n)",
+   "O(n + W)"
+  ],
+  "answer": 0,
+  "explanation": "The table has one cell per item and capacity value, each filled in O(1)."
+ }
+]

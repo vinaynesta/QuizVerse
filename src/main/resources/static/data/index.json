@@ -2025,6 +2025,636 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tech",
+      "name": "Tech Interview Prep",
+      "description": "DSA, Java, Python, Spring Boot, React, Vue and AI. Untimed practice with an explanation after every answer.",
+      "stages": [
+        {
+          "id": "practice",
+          "name": "Practice",
+          "unavailable": [],
+          "sections": [
+            {
+              "id": "dsa",
+              "name": "Data Structures & Algorithms",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/dsa/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/dsa/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/dsa/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/dsa/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/dsa/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/dsa/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/dsa/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/dsa/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/dsa/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/dsa/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/dsa/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/dsa/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "java",
+              "name": "Java",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/java/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/java/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/java/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/java/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/java/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/java/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/java/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/java/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/java/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/java/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/java/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/java/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "python",
+              "name": "Python",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/python/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/python/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/python/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/python/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/python/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/python/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/python/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/python/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/python/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/python/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/python/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/python/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "springboot",
+              "name": "Spring Boot",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/springboot/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/springboot/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/springboot/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/springboot/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/springboot/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/springboot/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/springboot/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/springboot/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/springboot/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/springboot/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/springboot/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/springboot/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "react",
+              "name": "React",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/react/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/react/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/react/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/react/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/react/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/react/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/react/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/react/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/react/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/react/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/react/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/react/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vue",
+              "name": "Vue.js",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/vue/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/vue/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/vue/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/vue/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/vue/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/vue/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/vue/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/vue/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/vue/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/vue/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/vue/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/vue/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ai",
+              "name": "Artificial Intelligence",
+              "questions": null,
+              "marks": null,
+              "minutes": null,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "tech/ai/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "tech/ai/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "tech/ai/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "tech/ai/easy-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "tech/ai/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "tech/ai/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "tech/ai/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "tech/ai/medium-4.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "tech/ai/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "tech/ai/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "tech/ai/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "tech/ai/hard-4.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

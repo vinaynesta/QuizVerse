@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1670be90652",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "In an executable Spring Boot jar, what does the manifest's Main-Class point to?",
+  "options": [
+   "Your @SpringBootApplication class directly",
+   "org.apache.catalina.startup.Bootstrap",
+   "Spring Boot's JarLauncher, with Start-Class naming your application class",
+   "java.lang.ClassLoader"
+  ],
+  "answer": 2,
+  "explanation": "The launcher sets up a class loader for the nested jars and then invokes Start-Class."
+ },
+ {
+  "id": "qa00bd02e063",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "Why does @WebMvcTest(UserController.class) fail with NoSuchBeanDefinitionException for UserService?",
+  "options": [
+   "UserService must be annotated with @RestController",
+   "The slice does not load @Service beans, so the dependency must be mocked",
+   "MockMvc requires services to be static",
+   "@WebMvcTest forbids constructor injection"
+  ],
+  "answer": 1,
+  "explanation": "Provide UserService with @MockitoBean (or @MockBean in older versions) so the controller can be created."
+ },
+ {
+  "id": "q83300d7b9ff",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "What does spring.profiles.group.prod=proddb,prodmq do?",
+  "options": [
+   "It creates a prod profile only when proddb and prodmq are both active",
+   "It merges the three profiles' files into one file at build time",
+   "It disables proddb and prodmq when prod is active",
+   "Activating prod also activates proddb and prodmq"
+  ],
+  "answer": 3,
+  "explanation": "Profile groups let one logical profile expand into several more specific profiles."
+ },
+ {
+  "id": "qcc5e93d7158",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "With spring-boot-starter-parent, how do you usually override the managed version of Jackson?",
+  "options": [
+   "Edit the starter jar's MANIFEST.MF",
+   "Set the jackson-bom.version property in the pom",
+   "Add @JacksonVersion to the main class",
+   "Delete the dependencyManagement section"
+  ],
+  "answer": 1,
+  "explanation": "The parent manages versions through properties, so redefining one changes the version used."
+ },
+ {
+  "id": "q5c762339f84",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "What is the default phase of a @TransactionalEventListener?",
+  "options": [
+   "BEFORE_COMMIT",
+   "AFTER_COMMIT",
+   "AFTER_ROLLBACK",
+   "AFTER_COMPLETION"
+  ],
+  "answer": 1,
+  "explanation": "The listener runs only after the publishing transaction commits successfully, unless another phase is set."
+ },
+ {
+  "id": "q4566d7f147a",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "What effect does setting management.server.port=9091 have?",
+  "options": [
+   "All endpoints are disabled except health",
+   "The app moves to port 9091 and actuator stays on 8080",
+   "Actuator endpoints are served on a separate port from the application",
+   "Metrics are pushed to a server on port 9091"
+  ],
+  "answer": 2,
+  "explanation": "A separate management port lets you keep operational endpoints off the public network."
+ },
+ {
+  "id": "q96f411bee80",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "Why can adding different @MockitoBean declarations across test classes slow a test suite?",
+  "options": [
+   "Mockito must recompile classes for each mock",
+   "Mocks disable parallel test execution",
+   "Mocks force a full Maven rebuild",
+   "Each unique mock set changes the context cache key, forcing new contexts"
+  ],
+  "answer": 3,
+  "explanation": "Spring's test context cache reuses a context only when configuration, including bean overrides, is identical."
+ },
+ {
+  "id": "q868fee32639",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "A public method in OrderService calls this.placeOrder(), which is @Transactional. No transaction is active beforehand. What happens?",
+  "options": [
+   "A new transaction starts as normal",
+   "placeOrder runs without a transaction because the call bypasses the proxy",
+   "Startup fails because of self-invocation",
+   "Spring starts a nested transaction"
+  ],
+  "answer": 1,
+  "explanation": "Self-invocation goes straight to the target object; use a separate bean, self-injection or AspectJ mode."
+ },
+ {
+  "id": "qe092b3c3ade",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "How do you make @DataJpaTest use the real database configured in your properties instead of an embedded one?",
+  "options": [
+   "Use @SpringBootTest alongside it",
+   "Add @Transactional(propagation = NEVER)",
+   "Set spring.jpa.show-sql=true",
+   "Add @AutoConfigureTestDatabase(replace = Replace.NONE)"
+  ],
+  "answer": 3,
+  "explanation": "By default @DataJpaTest replaces any DataSource with an embedded one; Replace.NONE keeps yours."
+ },
+ {
+  "id": "qbe85694f310",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "An app defines two SecurityFilterChain beans. How does Spring Security pick which one handles a request?",
+  "options": [
+   "Both chains run in sequence for every request",
+   "The chain declared last in the class always wins",
+   "The first chain, by @Order, whose securityMatcher matches the request",
+   "It merges the chains into one"
+  ],
+  "answer": 2,
+  "explanation": "FilterChainProxy uses the first matching chain, so specific matchers need higher precedence than catch-all chains."
+ }
+]

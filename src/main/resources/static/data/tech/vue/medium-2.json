@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q59ee9cd2c9c",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "How do you keep a provided value reactive for injecting components?",
+  "options": [
+   "Call provide() again inside onUpdated",
+   "Wrap inject() in a computed in every child",
+   "Mark the value with markRaw() first",
+   "Provide a ref or reactive object, not a plain value"
+  ],
+  "answer": 3,
+  "explanation": "Providing a ref or reactive object keeps the connection so injectors see updates."
+ },
+ {
+  "id": "qea47050d916",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "What is v-memo used for?",
+  "options": [
+   "Caching API responses for a component",
+   "Skipping updates to a subtree unless listed values change",
+   "Memoizing computed properties globally",
+   "Persisting state to localStorage"
+  ],
+  "answer": 1,
+  "explanation": "v-memo takes an array of dependencies and skips re-rendering the subtree when none have changed."
+ },
+ {
+  "id": "qf3ee3aefa94",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does <div :class=\"{ active: isActive }\"> render?",
+  "options": [
+   "The class attribute is the literal object text",
+   "The active class is always added",
+   "It fails to compile because objects are not allowed",
+   "The active class is added only when isActive is truthy"
+  ],
+  "answer": 3,
+  "explanation": "Object syntax for :class toggles each class key based on the truthiness of its value."
+ },
+ {
+  "id": "qa469f63f2d7",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "In Vue 3, what happens when v-if and v-for are on the same element?",
+  "options": [
+   "v-if runs first, so it cannot access the v-for variable",
+   "v-for runs first and filters the items",
+   "Vue picks one at random and warns",
+   "Both are ignored and the element is removed"
+  ],
+  "answer": 0,
+  "explanation": "In Vue 3 v-if has higher priority than v-for, so using them together is discouraged."
+ },
+ {
+  "id": "q6b67aac6c56",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "What does the .lazy modifier do on v-model?",
+  "options": [
+   "Syncs on change events instead of input events",
+   "Delays the sync by a fixed timeout",
+   "Syncs only when the form is submitted",
+   "Loads the input value asynchronously"
+  ],
+  "answer": 0,
+  "explanation": "v-model.lazy updates the bound value after the change event rather than on every keystroke."
+ },
+ {
+  "id": "q776e77fcc1d",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does readonly(state) return?",
+  "options": [
+   "A deep clone of state that cannot be changed",
+   "A readonly proxy of the original, warning on mutation in dev",
+   "A frozen copy created with Object.freeze",
+   "A ref whose .value can be read only once"
+  ],
+  "answer": 1,
+  "explanation": "readonly() returns a proxy that reflects the original's changes but blocks writes through it."
+ },
+ {
+  "id": "qbeaaea38edd",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "What does defineModel() return in a child component?",
+  "options": [
+   "The raw modelValue prop as a constant",
+   "A ref synced with the parent's v-model",
+   "A reactive copy that never reaches the parent",
+   "An emit function for update events"
+  ],
+  "answer": 1,
+  "explanation": "defineModel() declares the modelValue prop and update event and returns a ref that emits on assignment."
+ },
+ {
+  "id": "q62ead43b5bc",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "What does inject('theme', 'light') return when no ancestor provides theme?",
+  "options": [
+   "undefined",
+   "null",
+   "'light'",
+   "It throws an error"
+  ],
+  "answer": 2,
+  "explanation": "The second argument to inject() is the default used when no matching provider exists."
+ },
+ {
+  "id": "q18ad40465c9",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "In a Pinia options store, what are getters equivalent to?",
+  "options": [
+   "Watchers on store state",
+   "Computed properties for the store",
+   "Mutations that change state",
+   "Lifecycle hooks of the store"
+  ],
+  "answer": 1,
+  "explanation": "Getters derive values from state and are cached like computed properties."
+ },
+ {
+  "id": "qe250afcde5f",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "Why should you provide a key when using v-for?",
+  "options": [
+   "So the list renders on the server only",
+   "So items are sorted alphabetically",
+   "So Vue can track each node's identity when reordering",
+   "So the loop variable becomes reactive"
+  ],
+  "answer": 2,
+  "explanation": "Unique keys let Vue reuse and move existing elements correctly instead of patching in place."
+ }
+]

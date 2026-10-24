@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5b88c9bbbf0",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What is the worst-case time complexity of binary search on n elements?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Each comparison halves the remaining search range."
+ },
+ {
+  "id": "qdb8ba1209f3",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What must be true of an array before you can apply binary search to it?",
+  "options": [
+   "It must be sorted",
+   "It must contain only unique elements",
+   "It must have an even length",
+   "It must be stored as a linked list"
+  ],
+  "answer": 0,
+  "explanation": "Binary search discards half the range by comparing with the middle, which only works on sorted data."
+ },
+ {
+  "id": "qe24a6eb58e6",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "Which sorting algorithm repeatedly swaps adjacent elements that are out of order?",
+  "options": [
+   "Merge sort",
+   "Bubble sort",
+   "Heap sort",
+   "Quick sort"
+  ],
+  "answer": 1,
+  "explanation": "Bubble sort makes passes comparing neighbors and swapping them, bubbling large values to the end."
+ },
+ {
+  "id": "qea90ee55531",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What is the worst-case time complexity of linear search on n elements?",
+  "options": [
+   "O(1)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "In the worst case every element is checked once."
+ },
+ {
+  "id": "q5e11fe4d816",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "What are the worst-case time and auxiliary space of standard merge sort on an array?",
+  "options": [
+   "O(n log n) time and O(1) space",
+   "O(n log n) time and O(n) space",
+   "O(n^2) time and O(n) space",
+   "O(n) time and O(log n) space"
+  ],
+  "answer": 1,
+  "explanation": "Merge sort always splits in half and needs a temporary buffer for merging."
+ },
+ {
+  "id": "q5e2aa1dd114",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "What is the worst-case time complexity of quicksort?",
+  "options": [
+   "O(n log n)",
+   "O(n^2)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "If the pivot is always the smallest or largest element, partitions are maximally unbalanced."
+ },
+ {
+  "id": "qc72684f2d22",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "Which of these sorting algorithms is stable in its standard array implementation?",
+  "options": [
+   "Heap sort",
+   "Quick sort",
+   "Merge sort",
+   "Selection sort"
+  ],
+  "answer": 2,
+  "explanation": "Merge sort preserves the relative order of equal elements by taking from the left half on ties."
+ },
+ {
+  "id": "q5c2da092ddd",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the time complexity of counting sort for n integers in the range 0 to k?",
+  "options": [
+   "O(n log n)",
+   "O(n * k)",
+   "O(k log n)",
+   "O(n + k)"
+  ],
+  "answer": 3,
+  "explanation": "It counts occurrences in an array of size k + 1, then accumulates and places elements."
+ },
+ {
+  "id": "q7b0be6a222b",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the best time complexity for finding a target in a rotated sorted array of distinct elements?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(log n)",
+   "O(sqrt n)"
+  ],
+  "answer": 2,
+  "explanation": "A modified binary search can always tell which half is sorted and discard the other."
+ },
+ {
+  "id": "qe3c3c5d5643",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the lower bound on the worst-case number of comparisons for any comparison-based sort of n elements?",
+  "options": [
+   "Omega(n)",
+   "Omega(log n)",
+   "Omega(n^2)",
+   "Omega(n log n)"
+  ],
+  "answer": 3,
+  "explanation": "A decision tree must distinguish n! orderings, requiring height at least log2(n!), which is Theta(n log n)."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q70ce2b93753",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "What build tool does the official create-vue scaffolding use?",
+  "options": [
+   "Webpack",
+   "Vite",
+   "Gulp",
+   "Grunt"
+  ],
+  "answer": 1,
+  "explanation": "create-vue scaffolds projects powered by Vite, which is the recommended tooling."
+ },
+ {
+  "id": "q7158aeb5f5a",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "Which API runs its effect immediately and tracks reactive dependencies automatically?",
+  "options": [
+   "watch()",
+   "watchEffect()",
+   "nextTick()",
+   "onMounted()"
+  ],
+  "answer": 1,
+  "explanation": "watchEffect() runs the function eagerly and re-runs it whenever any reactive state it read changes."
+ },
+ {
+  "id": "qe318b4949a4",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which hook is called after a reactive state change has caused the component's DOM to re-render?",
+  "options": [
+   "onUpdated",
+   "onRendered",
+   "onRefreshed",
+   "onChanged"
+  ],
+  "answer": 0,
+  "explanation": "onUpdated runs after the component has updated its DOM tree due to a reactive state change."
+ },
+ {
+  "id": "q726888f924a",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which function defines a component that is loaded lazily only when needed?",
+  "options": [
+   "defineLazy()",
+   "lazyComponent()",
+   "defineAsyncComponent()",
+   "loadComponent()"
+  ],
+  "answer": 2,
+  "explanation": "defineAsyncComponent() accepts a loader returning a Promise, enabling code splitting."
+ },
+ {
+  "id": "q9ddb7cca33c",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "What replaces the beforeCreate and created hooks in the Composition API?",
+  "options": [
+   "The onCreated and onBeforeCreate hooks",
+   "The onMounted hook with an immediate flag",
+   "The onInit hook imported from vue",
+   "The setup code itself, which runs at that point"
+  ],
+  "answer": 3,
+  "explanation": "There are no onCreated hooks; code in setup() or script setup already runs at that stage."
+ },
+ {
+  "id": "q500453547ea",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "What is a composable in Vue?",
+  "options": [
+   "A function that encapsulates reusable stateful logic using the Composition API",
+   "A scoped CSS module shared by components",
+   "A component that has no template",
+   "A plugin that registers global components"
+  ],
+  "answer": 0,
+  "explanation": "Composables are plain functions that use reactive APIs and lifecycle hooks to share stateful logic."
+ },
+ {
+  "id": "qe4591ab4303",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "In which direction do props flow between components?",
+  "options": [
+   "Two-way between parent and child by default",
+   "Upward, from child to parent only",
+   "One-way, from parent down to child",
+   "Sideways between sibling components"
+  ],
+  "answer": 2,
+  "explanation": "Props form a one-way data flow; children communicate upward by emitting events."
+ },
+ {
+  "id": "q6dd35ce718d",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which hook runs after the component has been mounted to the DOM?",
+  "options": [
+   "onMounted",
+   "onReady",
+   "onInit",
+   "onCreated"
+  ],
+  "answer": 0,
+  "explanation": "onMounted is called after the component's DOM tree has been created and inserted."
+ },
+ {
+  "id": "q57b62883142",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "In a component that does not use script setup, where is Composition API code written?",
+  "options": [
+   "Inside the data() option",
+   "Inside an init() method",
+   "Inside the created() hook",
+   "Inside the setup() option"
+  ],
+  "answer": 3,
+  "explanation": "setup() is the entry point for the Composition API in components without script setup."
+ },
+ {
+  "id": "q909848130aa",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What is fallback content for a slot?",
+  "options": [
+   "Content inside the slot tags shown when the parent provides none",
+   "Content shown while an async component loads",
+   "Content rendered only during server-side rendering",
+   "Content shown when the component throws an error"
+  ],
+  "answer": 0,
+  "explanation": "Anything placed between a child's slot tags renders only if the parent passes no content for that slot."
+ }
+]

@@ -2,6 +2,7 @@ package com.quizverse.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.ProviderManager;
@@ -36,6 +37,8 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 .requestMatchers("/api/me/**", "/api/attempts/**", "/api/reports/**").authenticated()
+                // Anyone can view a challenge link; creating one needs an account.
+                .requestMatchers(HttpMethod.POST, "/api/challenges/**").authenticated()
                 .anyRequest().permitAll())
             .csrf(csrf -> csrf
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())

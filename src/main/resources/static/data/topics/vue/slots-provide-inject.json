@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q02ef8f24ebc",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "Which element marks where parent-provided content goes in a child template?",
+  "options": [
+   "<content>",
+   "<yield>",
+   "<outlet>",
+   "<slot>"
+  ],
+  "answer": 3,
+  "explanation": "The slot element is the outlet where the parent's slot content is rendered."
+ },
+ {
+  "id": "q8255e13def4",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What problem do provide and inject mainly solve?",
+  "options": [
+   "Sharing CSS variables between components",
+   "Lazy loading components from the server",
+   "Passing data deep into the tree without prop drilling",
+   "Validating prop types at runtime"
+  ],
+  "answer": 2,
+  "explanation": "An ancestor provides a value and any descendant can inject it, avoiding passing props through every level."
+ },
+ {
+  "id": "q909848130aa",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What is fallback content for a slot?",
+  "options": [
+   "Content inside the slot tags shown when the parent provides none",
+   "Content shown while an async component loads",
+   "Content rendered only during server-side rendering",
+   "Content shown when the component throws an error"
+  ],
+  "answer": 0,
+  "explanation": "Anything placed between a child's slot tags renders only if the parent passes no content for that slot."
+ },
+ {
+  "id": "qd38d6755430",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What is the shorthand for v-slot?",
+  "options": [
+   "@",
+   ":",
+   "$",
+   "#"
+  ],
+  "answer": 3,
+  "explanation": "v-slot:header can be written as #header."
+ },
+ {
+  "id": "q59ee9cd2c9c",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "How do you keep a provided value reactive for injecting components?",
+  "options": [
+   "Call provide() again inside onUpdated",
+   "Wrap inject() in a computed in every child",
+   "Mark the value with markRaw() first",
+   "Provide a ref or reactive object, not a plain value"
+  ],
+  "answer": 3,
+  "explanation": "Providing a ref or reactive object keeps the connection so injectors see updates."
+ },
+ {
+  "id": "q62ead43b5bc",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "What does inject('theme', 'light') return when no ancestor provides theme?",
+  "options": [
+   "undefined",
+   "null",
+   "'light'",
+   "It throws an error"
+  ],
+  "answer": 2,
+  "explanation": "The second argument to inject() is the default used when no matching provider exists."
+ },
+ {
+  "id": "q87ee00e0635",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "Which slot does <template #header> fill in the child?",
+  "options": [
+   "The first slot in the child template",
+   "A new slot appended after the default",
+   "The default slot with header styling",
+   "The slot with name=\"header\""
+  ],
+  "answer": 3,
+  "explanation": "#header is shorthand for v-slot:header, targeting the slot named header."
+ },
+ {
+  "id": "q888d7b77bfa",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "A child renders <slot :item=\"item\">. How does the parent read item?",
+  "options": [
+   "Read this.$slots.item in the parent",
+   "Use v-slot=\"{ item }\" on the child or a template",
+   "Declare item with defineProps in the parent",
+   "Inject it with inject('item')"
+  ],
+  "answer": 1,
+  "explanation": "Scoped slots pass props to the slot content, which the parent receives through v-slot."
+ },
+ {
+  "id": "q25408b3fbe3",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "How can a provider prevent injecting components from mutating provided state?",
+  "options": [
+   "Provide the state with markRaw()",
+   "Call inject() with a frozen option",
+   "Provide readonly(state) along with an update function",
+   "Provide a deep clone on each render"
+  ],
+  "answer": 2,
+  "explanation": "Wrapping with readonly() blocks writes, while exposing a function keeps mutations inside the provider."
+ },
+ {
+  "id": "qbae2dd16233",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "Which state can slot content access directly?",
+  "options": [
+   "Only the child's internal state",
+   "Both components' full state automatically",
+   "The parent's scope, plus props the child passes via scoped slots",
+   "Only global properties and injected values"
+  ],
+  "answer": 2,
+  "explanation": "Slot content is compiled in the parent's scope, so child data must be passed explicitly through slot props."
+ },
+ {
+  "id": "qd5f9b472b63",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "How can a component render a wrapper only when the parent passed a footer slot?",
+  "options": [
+   "Use v-show=\"slot.footer\" on the slot",
+   "Use v-if=\"props.footer\" on the wrapper",
+   "Use v-if=\"$slots.footer\" on the wrapper",
+   "Use inject('footer') to check for it"
+  ],
+  "answer": 2,
+  "explanation": "$slots in the template, or useSlots() in script, exposes which slots the parent provided."
+ },
+ {
+  "id": "qe87b1cdf6b6",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "Why use a Symbol typed as InjectionKey<T> for provide and inject?",
+  "options": [
+   "It makes the injected value reactive",
+   "It is required for inject() to work",
+   "It avoids key collisions and types the injected value",
+   "It lets the value cross app instances"
+  ],
+  "answer": 2,
+  "explanation": "Symbol keys are unique, and InjectionKey carries the type so inject() returns T or undefined."
+ }
+]

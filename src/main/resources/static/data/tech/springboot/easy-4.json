@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc2cfd2fe5bf",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which library does Spring Boot Actuator use as its metrics facade?",
+  "options": [
+   "Dropwizard Metrics",
+   "Micrometer",
+   "Logback",
+   "OpenTSDB"
+  ],
+  "answer": 1,
+  "explanation": "Actuator records metrics through Micrometer, which can publish to Prometheus, Datadog and other backends."
+ },
+ {
+  "id": "q7a46bb99bd5",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which Maven goal builds an OCI container image using Cloud Native Buildpacks?",
+  "options": [
+   "spring-boot:docker",
+   "spring-boot:build-image",
+   "spring-boot:oci",
+   "spring-boot:package-image"
+  ],
+  "answer": 1,
+  "explanation": "build-image uses Buildpacks to create an OCI image without a Dockerfile."
+ },
+ {
+  "id": "q507fe98fedc",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "What is a Spring Boot starter such as spring-boot-starter-data-jpa?",
+  "options": [
+   "A dependency descriptor that pulls in a curated set of libraries for a feature",
+   "A Maven plugin that generates the main application class",
+   "A Java agent that instruments beans at runtime",
+   "A CLI command that scaffolds a new project"
+  ],
+  "answer": 0,
+  "explanation": "Starters are convenience dependencies that aggregate compatible libraries so you do not manage them individually."
+ },
+ {
+  "id": "qc23ab623139",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which Maven command runs a Spring Boot application from source?",
+  "options": [
+   "mvn spring-boot:run",
+   "mvn boot:start",
+   "mvn exec:spring",
+   "mvn spring:launch"
+  ],
+  "answer": 0,
+  "explanation": "The spring-boot:run goal compiles and starts the application in place."
+ },
+ {
+  "id": "qbe93f10925a",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which injection style does the Spring team recommend for mandatory dependencies?",
+  "options": [
+   "Setter injection",
+   "Field injection",
+   "Constructor injection",
+   "Lookup method injection"
+  ],
+  "answer": 2,
+  "explanation": "Constructor injection makes dependencies explicit, allows final fields, and guarantees the object is fully initialized."
+ },
+ {
+  "id": "qcc0ccb74f23",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which test annotation configures JPA repositories with an embedded database and rolls back each test by default?",
+  "options": [
+   "@WebMvcTest",
+   "@JdbcTest",
+   "@DataJpaTest",
+   "@SpringBootTest"
+  ],
+  "answer": 2,
+  "explanation": "@DataJpaTest loads only JPA components, replaces the DataSource with an embedded one, and makes each test transactional."
+ },
+ {
+  "id": "q7725c2e69c2",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation binds the {id} segment of a mapping like /users/{id} to a method parameter?",
+  "options": [
+   "@RequestParam",
+   "@RequestAttribute",
+   "@RequestBody",
+   "@PathVariable"
+  ],
+  "answer": 3,
+  "explanation": "@PathVariable extracts values from URI template variables, while @RequestParam reads query or form parameters."
+ },
+ {
+  "id": "qd5101da11b1",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "What is the conventional name of a properties file holding settings only for the prod profile?",
+  "options": [
+   "prod.application.properties",
+   "application.prod.properties",
+   "application-prod.properties",
+   "application_prod.config"
+  ],
+  "answer": 2,
+  "explanation": "Spring Boot loads application-{profile}.properties for each active profile on top of application.properties."
+ },
+ {
+  "id": "q4727f8b9708",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "A repository method named findByEmailAndActive is an example of what?",
+  "options": [
+   "A derived query generated from the method name",
+   "A named native query",
+   "A JPA Criteria API query",
+   "A Querydsl predicate"
+  ],
+  "answer": 0,
+  "explanation": "Spring Data parses the method name into a query using the email and active properties."
+ },
+ {
+  "id": "q0e2af6575d4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which annotation selects a specific bean by name at an injection point when several beans share a type?",
+  "options": [
+   "@Profile",
+   "@Qualifier",
+   "@Order",
+   "@Lazy"
+  ],
+  "answer": 1,
+  "explanation": "@Qualifier narrows autowiring candidates to the bean with the matching qualifier or name."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q251c786d341",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "In React 17 and later, where does React attach its event listeners?",
+  "options": [
+   "On the root container element",
+   "On each individual DOM element",
+   "On the window object",
+   "On document"
+  ],
+  "answer": 0,
+  "explanation": "Since React 17 events are delegated at the root container, which helps when multiple React versions coexist on a page."
+ },
+ {
+  "id": "qe3c362df622",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "What does JSX like <Greeting name=\"Ada\" /> compile to with the modern automatic JSX runtime?",
+  "options": [
+   "A DOM node created by document.createElement",
+   "A direct call Greeting({ name: 'Ada' })",
+   "A call like jsx(Greeting, { name: 'Ada' }) imported from react/jsx-runtime",
+   "A string of HTML"
+  ],
+  "answer": 2,
+  "explanation": "The automatic runtime emits jsx() calls that create element objects; React decides later when to call the component."
+ },
+ {
+  "id": "qddd08158b21",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "What does flushSync do?",
+  "options": [
+   "Clears all pending state updates",
+   "Forces the updates inside its callback to be applied to the DOM synchronously",
+   "Batches updates across components",
+   "Synchronizes server and client state"
+  ],
+  "answer": 1,
+  "explanation": "flushSync opts out of batching so the DOM is updated before it returns, for example to scroll to a newly added item."
+ },
+ {
+  "id": "q9e216bbca65",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "An effect depends on an options object created inline during render, like const options = { roomId }. What is the problem?",
+  "options": [
+   "React deep-compares it, which is slow",
+   "Objects cannot be dependencies",
+   "The effect never re-runs",
+   "options is a new object each render, so the effect re-runs after every render"
+  ],
+  "answer": 3,
+  "explanation": "Object.is sees a new reference each time; create the object inside the effect or depend on roomId directly."
+ },
+ {
+  "id": "q224117ea087",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "With count = 0, a handler runs setCount(count + 5) and then setCount(c => c + 1). What is the final count?",
+  "options": [
+   "1",
+   "5",
+   "6",
+   "0"
+  ],
+  "answer": 2,
+  "explanation": "The first queues a replacement with 5, then the updater runs on that pending value, producing 6."
+ },
+ {
+  "id": "q19ac7576cd2",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "useMemo(() => compute(list), [list]) still recomputes every render. What is the likely cause?",
+  "options": [
+   "useMemo only caches primitives",
+   "compute is too slow to cache",
+   "useMemo is disabled in production",
+   "list is a new array created each render, so the dependency always changes"
+  ],
+  "answer": 3,
+  "explanation": "Memoization depends on stable inputs; if the parent recreates list every render, the cache never hits."
+ },
+ {
+  "id": "q286ee2c7b51",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "Silencing the exhaustive-deps lint rule to keep an effect from re-running usually leads to what bug?",
+  "options": [
+   "Hydration mismatch",
+   "The effect reads stale props or state that never update inside it",
+   "Duplicate keys",
+   "Memory being freed too early"
+  ],
+  "answer": 1,
+  "explanation": "Omitted dependencies mean the effect keeps values from the render it was created in; restructure the code instead of suppressing the rule."
+ },
+ {
+  "id": "q233093e2099",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "An input switches from value={undefined} to value=\"text\". What does React warn about?",
+  "options": [
+   "A component changing an uncontrolled input to be controlled",
+   "A missing key",
+   "A hydration mismatch",
+   "An invalid DOM nesting"
+  ],
+  "answer": 0,
+  "explanation": "value undefined means uncontrolled; initialize with an empty string to keep the input controlled throughout."
+ },
+ {
+  "id": "q6dda12f757a",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "Why does using Math.random() as a key on each render hurt a list?",
+  "options": [
+   "Every item gets a new identity each render, so all items remount and lose state and focus",
+   "Keys must be strings",
+   "React sorts items by key",
+   "Random keys cause duplicate key errors every time"
+  ],
+  "answer": 0,
+  "explanation": "Keys must be stable; changing them on every render forces React to destroy and recreate every element."
+ },
+ {
+  "id": "qe16f5c5ac7f",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Where does the code of a Server Component run, and is it included in the client JavaScript bundle?",
+  "options": [
+   "On the server or at build time; its code is not sent to the client",
+   "In a web worker; it is bundled",
+   "In both places equally; it is bundled",
+   "In the browser; it is bundled"
+  ],
+  "answer": 0,
+  "explanation": "Server Components render ahead of time on the server, so their code and dependencies stay out of the client bundle."
+ }
+]

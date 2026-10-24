@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q3bae49863ef",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "Which annotation declares that a method should run inside a transaction?",
+  "options": [
+   "@Commit",
+   "@Atomic",
+   "@Transactional",
+   "@TxBoundary"
+  ],
+  "answer": 2,
+  "explanation": "@Transactional tells Spring's transaction interceptor to start, commit or roll back a transaction around the method."
+ },
+ {
+  "id": "q420c0084898",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What is the default propagation of @Transactional?",
+  "options": [
+   "REQUIRES_NEW",
+   "SUPPORTS",
+   "REQUIRED",
+   "MANDATORY"
+  ],
+  "answer": 2,
+  "explanation": "REQUIRED joins an existing transaction or creates a new one if none exists."
+ },
+ {
+  "id": "q515dcd1837e",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What does @Transactional(readOnly = true) do?",
+  "options": [
+   "Blocks any SQL UPDATE by throwing an exception in Spring",
+   "Hints that the transaction only reads, allowing optimizations such as skipping dirty checking",
+   "Forces the SERIALIZABLE isolation level",
+   "Runs the method without any transaction at all"
+  ],
+  "answer": 1,
+  "explanation": "readOnly is an optimization hint passed to the transaction manager, JPA provider and driver; Hibernate, for example, skips flushing."
+ },
+ {
+  "id": "qd385c1a3bac",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "By default, which exceptions cause a @Transactional method to roll back?",
+  "options": [
+   "Checked exceptions only",
+   "Unchecked exceptions (RuntimeException and Error)",
+   "Any Throwable, including checked exceptions",
+   "No exceptions unless rollbackFor is set"
+  ],
+  "answer": 1,
+  "explanation": "Spring's default rollback rule mirrors EJB: runtime exceptions and errors roll back, checked exceptions commit."
+ },
+ {
+  "id": "q23318aa7a53",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "What does Propagation.REQUIRES_NEW do when a transaction is already active?",
+  "options": [
+   "Suspends the current transaction and starts an independent new one",
+   "Throws an exception",
+   "Runs without any transaction",
+   "Joins the current transaction"
+  ],
+  "answer": 0,
+  "explanation": "The new transaction commits or rolls back independently, after which the outer one resumes."
+ },
+ {
+  "id": "q2cbf03a38b1",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "With default proxy-based Spring AOP, what happens to @Transactional on a private method?",
+  "options": [
+   "A transaction is started via reflection",
+   "Startup fails with a BeanCreationException",
+   "The method becomes public at runtime",
+   "It is ignored and no transaction is started"
+  ],
+  "answer": 3,
+  "explanation": "Proxies cannot intercept private methods, so the annotation has no effect."
+ },
+ {
+  "id": "q7c802f05571",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "Which class supports programmatic transaction demarcation with a callback?",
+  "options": [
+   "TransactionalEventListener",
+   "TransactionSynchronizationManager",
+   "TransactionTemplate",
+   "PlatformTransactionProxy"
+  ],
+  "answer": 2,
+  "explanation": "TransactionTemplate.execute runs a callback inside a transaction using the configured PlatformTransactionManager."
+ },
+ {
+  "id": "qdf9704c7e17",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "How do you make a @Transactional method roll back on a checked IOException?",
+  "options": [
+   "Set noRollbackFor = RuntimeException.class",
+   "Set rollbackFor = IOException.class (or Exception.class)",
+   "Set readOnly = false",
+   "Declare the exception with throws only"
+  ],
+  "answer": 1,
+  "explanation": "rollbackFor extends the default rule so specified checked exceptions also trigger rollback."
+ },
+ {
+  "id": "q5c762339f84",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "What is the default phase of a @TransactionalEventListener?",
+  "options": [
+   "BEFORE_COMMIT",
+   "AFTER_COMMIT",
+   "AFTER_ROLLBACK",
+   "AFTER_COMPLETION"
+  ],
+  "answer": 1,
+  "explanation": "The listener runs only after the publishing transaction commits successfully, unless another phase is set."
+ },
+ {
+  "id": "q68d411900f5",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "How does Propagation.NESTED differ from REQUIRES_NEW?",
+  "options": [
+   "NESTED creates a new database connection, REQUIRES_NEW does not",
+   "NESTED uses a savepoint in the same physical transaction, REQUIRES_NEW starts a separate one",
+   "NESTED ignores rollback, REQUIRES_NEW does not",
+   "They are identical aliases"
+  ],
+  "answer": 1,
+  "explanation": "Rolling back a nested scope returns to the savepoint, but an outer rollback also undoes the nested work."
+ },
+ {
+  "id": "q868fee32639",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "A public method in OrderService calls this.placeOrder(), which is @Transactional. No transaction is active beforehand. What happens?",
+  "options": [
+   "A new transaction starts as normal",
+   "placeOrder runs without a transaction because the call bypasses the proxy",
+   "Startup fails because of self-invocation",
+   "Spring starts a nested transaction"
+  ],
+  "answer": 1,
+  "explanation": "Self-invocation goes straight to the target object; use a separate bean, self-injection or AspectJ mode."
+ },
+ {
+  "id": "qb583c23914b",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "An outer REQUIRED method catches a RuntimeException thrown by an inner REQUIRED method in another bean. What happens at commit?",
+  "options": [
+   "The outer transaction commits normally",
+   "Only the inner method's changes are rolled back",
+   "UnexpectedRollbackException, since the shared transaction was marked rollback-only",
+   "The inner method is retried automatically"
+  ],
+  "answer": 2,
+  "explanation": "Both methods share one physical transaction, and the inner interceptor marked it rollback-only."
+ }
+]

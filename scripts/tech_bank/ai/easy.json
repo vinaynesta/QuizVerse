@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "ml-basics",
+    "question": "What is machine learning?",
+    "options": [
+      "Building systems that learn patterns from data rather than following only hand-coded rules",
+      "Writing explicit if-then rules for every possible input case",
+      "Storing large datasets in a relational database for fast lookup",
+      "Compiling source code into optimized machine instructions"
+    ],
+    "answer": 0,
+    "explanation": "Machine learning fits models to data so behavior is learned from examples instead of being fully hand-programmed."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "In machine learning, what is a feature?",
+    "options": [
+      "The target value the model is trained to predict",
+      "A hyperparameter that controls the learning rate",
+      "The error measured on the held-out test set",
+      "An input variable the model uses to make a prediction"
+    ],
+    "answer": 3,
+    "explanation": "Features are the measurable input attributes fed to a model; the target is what it predicts."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Why is data split into training and test sets?",
+    "options": [
+      "To make training run faster on smaller batches",
+      "To double the amount of data available for training",
+      "To estimate how well the model generalizes to unseen data",
+      "To remove outliers before fitting the model"
+    ],
+    "answer": 2,
+    "explanation": "A held-out test set gives an unbiased estimate of performance on data the model never saw during training."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "What is overfitting?",
+    "options": [
+      "A model too simple to capture the underlying pattern in the data",
+      "A model learning noise in the training data so it performs poorly on new data",
+      "A model that trains for too few epochs to converge",
+      "A dataset with more features than the model can store"
+    ],
+    "answer": 1,
+    "explanation": "An overfit model memorizes training-specific noise, so its training performance does not carry over to new data."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "Which of these tasks is a regression problem?",
+    "options": [
+      "Predicting the selling price of a house",
+      "Classifying an email as spam or not spam",
+      "Grouping customers into segments without labels",
+      "Detecting whether an image contains a cat"
+    ],
+    "answer": 0,
+    "explanation": "Regression predicts a continuous numeric value, such as a price."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What does supervised learning require?",
+    "options": [
+      "A reward signal from interacting with an environment",
+      "Only unlabeled data with no target values",
+      "A pre-trained model to copy outputs from",
+      "Training examples paired with known target labels"
+    ],
+    "answer": 3,
+    "explanation": "Supervised learning learns a mapping from inputs to outputs using labeled examples."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "Logistic regression is mainly used for which kind of task?",
+    "options": [
+      "Predicting continuous values with unbounded output",
+      "Reducing the dimensionality of high-dimensional data",
+      "Binary classification by modeling class probability",
+      "Clustering points into k groups"
+    ],
+    "answer": 2,
+    "explanation": "Logistic regression applies a sigmoid to a linear score to output the probability of the positive class."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "How does k-nearest neighbors classify a new point?",
+    "options": [
+      "By fitting a straight line through all training points",
+      "By the majority label among the k closest training points",
+      "By splitting the feature space with a single threshold",
+      "By averaging the weights of a trained neural network"
+    ],
+    "answer": 1,
+    "explanation": "k-NN is instance-based: it looks up the k nearest labeled examples and takes a vote."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What distinguishes unsupervised learning from supervised learning?",
+    "options": [
+      "It finds structure in data without labeled targets",
+      "It requires every example to have a correct label",
+      "It learns only from rewards and penalties",
+      "It can only be applied to image data"
+    ],
+    "answer": 0,
+    "explanation": "Unsupervised methods such as clustering discover patterns using inputs alone, with no target labels."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What is the goal of the k-means algorithm?",
+    "options": [
+      "Predict a continuous target from k input features",
+      "Select the k most important features for a classifier",
+      "Train k separate models and average their predictions",
+      "Partition data into k clusters by minimizing distance to cluster centroids"
+    ],
+    "answer": 3,
+    "explanation": "k-means iteratively assigns points to the nearest centroid and recomputes centroids to minimize within-cluster squared distance."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What is principal component analysis (PCA) commonly used for?",
+    "options": [
+      "Increasing the number of training labels automatically",
+      "Classifying text into predefined categories",
+      "Reducing the number of dimensions while preserving most of the variance",
+      "Tuning the learning rate of gradient descent"
+    ],
+    "answer": 2,
+    "explanation": "PCA projects data onto orthogonal directions of maximum variance, allowing fewer dimensions to retain most information."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What does anomaly detection aim to do?",
+    "options": [
+      "Assign every point to one of several balanced clusters",
+      "Identify data points that differ markedly from the majority",
+      "Generate new synthetic samples from random noise",
+      "Convert categorical features into numeric vectors"
+    ],
+    "answer": 1,
+    "explanation": "Anomaly detection flags rare or unusual observations, such as fraudulent transactions or faulty sensor readings."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What does accuracy measure for a classifier?",
+    "options": [
+      "The fraction of all predictions that are correct",
+      "The fraction of predicted positives that are truly positive",
+      "The fraction of actual positives that are detected",
+      "The average squared difference between predictions and targets"
+    ],
+    "answer": 0,
+    "explanation": "Accuracy is the number of correct predictions divided by the total number of predictions."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "How is precision calculated?",
+    "options": [
+      "True positives divided by all actual positives",
+      "True negatives divided by all actual negatives",
+      "Correct predictions divided by total predictions",
+      "True positives divided by all predicted positives"
+    ],
+    "answer": 3,
+    "explanation": "Precision answers: of everything predicted positive, how much was actually positive."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "How is recall calculated?",
+    "options": [
+      "True positives divided by all predicted positives",
+      "False positives divided by all actual negatives",
+      "True positives divided by all actual positives",
+      "True negatives divided by all predicted negatives"
+    ],
+    "answer": 2,
+    "explanation": "Recall answers: of all real positives, how many did the model find."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What does a confusion matrix show?",
+    "options": [
+      "The correlation between every pair of input features",
+      "Counts of predicted classes versus actual classes",
+      "The loss value at each training epoch",
+      "The gradients of each layer during backpropagation"
+    ],
+    "answer": 1,
+    "explanation": "A confusion matrix tabulates true and false positives and negatives, from which many metrics are derived."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does an activation function add to a neural network?",
+    "options": [
+      "Non-linearity so the network can model complex relationships",
+      "Regularization that prevents all overfitting",
+      "A way to store training data inside the network",
+      "A fixed learning rate schedule for training"
+    ],
+    "answer": 0,
+    "explanation": "Without non-linear activations, stacked layers collapse into a single linear transformation."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does backpropagation do?",
+    "options": [
+      "Randomly initializes weights before training begins",
+      "Selects the best architecture from a set of candidates",
+      "Normalizes input features to zero mean and unit variance",
+      "Computes gradients of the loss with respect to each weight using the chain rule"
+    ],
+    "answer": 3,
+    "explanation": "Backpropagation propagates error derivatives backward through the layers so an optimizer can update the weights."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "In neural network training, what is an epoch?",
+    "options": [
+      "A single weight update computed from one mini-batch",
+      "The number of layers in a neural network",
+      "One full pass through the entire training dataset",
+      "The time it takes to run inference on one example"
+    ],
+    "answer": 2,
+    "explanation": "An epoch is complete when every training example has been used once; it usually contains many mini-batch updates."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does the ReLU activation function output?",
+    "options": [
+      "A value squashed between 0 and 1",
+      "The input if it is positive, otherwise zero",
+      "A value squashed between -1 and 1",
+      "The input multiplied by a learned constant everywhere"
+    ],
+    "answer": 1,
+    "explanation": "ReLU is defined as max(0, x), passing positive values unchanged and zeroing negatives."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "Convolutional neural networks are particularly well suited to which kind of data?",
+    "options": [
+      "Grid-like data such as images",
+      "Tabular data with unrelated columns",
+      "Key-value records in a database",
+      "Unordered lists of numbers to sort"
+    ],
+    "answer": 0,
+    "explanation": "Convolutions exploit local spatial structure, which is why CNNs excel on images."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What does a pooling layer do in a CNN?",
+    "options": [
+      "Adds new channels by duplicating the input",
+      "Converts images into text tokens",
+      "Computes the final class probabilities",
+      "Downsamples feature maps to reduce their spatial size"
+    ],
+    "answer": 3,
+    "explanation": "Pooling, such as max pooling, summarizes local regions, reducing computation and adding some translation robustness."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What are recurrent neural networks designed to process?",
+    "options": [
+      "Static images, by sliding filters across pixels",
+      "Unordered sets where order never matters",
+      "Sequential data, by carrying a hidden state across time steps",
+      "Tabular data, by building decision trees"
+    ],
+    "answer": 2,
+    "explanation": "RNNs update a hidden state at each step so earlier inputs can influence later outputs."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What is an autoencoder trained to do?",
+    "options": [
+      "Predict a class label from a labeled dataset",
+      "Reconstruct its input through a compressed latent representation",
+      "Translate sentences between two languages",
+      "Maximize reward from an environment"
+    ],
+    "answer": 1,
+    "explanation": "An autoencoder's encoder compresses the input and its decoder reconstructs it, learning a useful compact representation."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What is tokenization in NLP?",
+    "options": [
+      "Splitting text into smaller units such as words or subwords",
+      "Encrypting text before sending it to a model",
+      "Removing all punctuation and numbers from text",
+      "Translating text into a different language"
+    ],
+    "answer": 0,
+    "explanation": "Tokenization converts raw text into discrete units that a model can map to IDs and embeddings."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What is a word embedding?",
+    "options": [
+      "A list of all words sorted alphabetically",
+      "A one-character code assigned to each word",
+      "A rule that maps words to their part of speech",
+      "A dense vector representation that captures word meaning"
+    ],
+    "answer": 3,
+    "explanation": "Embeddings place words in a vector space where semantically similar words lie close together."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "Which mechanism is at the core of the transformer architecture?",
+    "options": [
+      "A recurrent hidden state",
+      "Convolutional pooling",
+      "Self-attention",
+      "Decision tree splitting"
+    ],
+    "answer": 2,
+    "explanation": "Transformers rely on self-attention to let every token draw information from every other token."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "In text preprocessing, what are stop words?",
+    "options": [
+      "Special tokens that mark the end of a generated sequence",
+      "Very common words like the and is that are often filtered out",
+      "Rare words that appear only once in a corpus",
+      "Offensive words removed by content filters"
+    ],
+    "answer": 1,
+    "explanation": "Stop words carry little topical meaning, so classic NLP pipelines often remove them."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is a large language model fundamentally trained to do?",
+    "options": [
+      "Predict the next token given the preceding text",
+      "Look up answers in a fixed database of facts",
+      "Classify documents into a fixed set of topics",
+      "Translate code into machine instructions"
+    ],
+    "answer": 0,
+    "explanation": "LLMs are pre-trained on large text corpora with a next-token prediction objective."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is few-shot prompting?",
+    "options": [
+      "Fine-tuning the model on a small labeled dataset",
+      "Limiting the response to a few words",
+      "Sending the same prompt several times and averaging",
+      "Including a few worked examples in the prompt to guide the output"
+    ],
+    "answer": 3,
+    "explanation": "Few-shot prompting shows the model example input-output pairs in context without changing its weights."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is an LLM's context window?",
+    "options": [
+      "The number of users who can query the model simultaneously",
+      "The time limit for generating a single response",
+      "The maximum number of tokens the model can consider at once",
+      "The set of documents used during pre-training"
+    ],
+    "answer": 2,
+    "explanation": "The context window bounds how much prompt plus generated text the model can attend to in one call."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What does hallucination mean for an LLM?",
+    "options": [
+      "Refusing to answer a harmless question",
+      "Generating fluent but false or unsupported content",
+      "Producing output too slowly for real-time use",
+      "Repeating the user's prompt back verbatim"
+    ],
+    "answer": 1,
+    "explanation": "LLMs can produce confident, plausible-sounding text that is not grounded in fact."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What does RAG stand for in applied AI?",
+    "options": [
+      "Retrieval-Augmented Generation",
+      "Recursive Attention Graph",
+      "Reinforced Agent Gradient",
+      "Random Access Generation"
+    ],
+    "answer": 0,
+    "explanation": "RAG combines a retrieval step with text generation by a language model."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is the main purpose of retrieval-augmented generation?",
+    "options": [
+      "Speeding up training by skipping backpropagation",
+      "Compressing a model so it runs on mobile devices",
+      "Removing the need for any prompt",
+      "Grounding model responses in relevant documents retrieved at query time"
+    ],
+    "answer": 3,
+    "explanation": "RAG fetches relevant external content and adds it to the prompt so answers rely on up-to-date or private sources."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is a vector database typically used for in AI applications?",
+    "options": [
+      "Storing model weights for distributed training",
+      "Running SQL joins across relational tables",
+      "Storing embeddings and quickly finding the most similar ones",
+      "Caching rendered web pages"
+    ],
+    "answer": 2,
+    "explanation": "Vector databases index embeddings for fast similarity search, which powers semantic retrieval."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is an AI agent in the context of LLM applications?",
+    "options": [
+      "A static model that only classifies images",
+      "A system that uses a model to plan and take actions, often by calling tools",
+      "A database index that speeds up queries",
+      "A human reviewer who labels training data"
+    ],
+    "answer": 1,
+    "explanation": "Agents loop between model reasoning and actions such as tool calls, observing results to work toward a goal."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is algorithmic bias?",
+    "options": [
+      "Systematically unfair outcomes for certain groups produced by a model",
+      "Random noise added to model weights during training",
+      "The constant offset term in a linear model",
+      "A model's preference for shorter outputs"
+    ],
+    "answer": 0,
+    "explanation": "Algorithmic bias refers to models producing skewed or discriminatory results, often inherited from data or design choices."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What does explainability mean in AI?",
+    "options": [
+      "Making a model run faster on cheaper hardware",
+      "Making a model's training data publicly available",
+      "Making a model generate longer responses",
+      "Making a model's decisions understandable to humans"
+    ],
+    "answer": 3,
+    "explanation": "Explainability helps people understand why a model produced an output, supporting trust and accountability."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "How can training data introduce bias into a model?",
+    "options": [
+      "Larger datasets always eliminate every source of bias",
+      "Bias comes only from the choice of optimizer",
+      "The data may underrepresent groups or reflect historical prejudice",
+      "Data has no effect once the model is trained"
+    ],
+    "answer": 2,
+    "explanation": "Models learn patterns present in their data, including skewed representation and past discriminatory decisions."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What does human-in-the-loop mean for AI systems?",
+    "options": [
+      "Humans manually compute every model prediction",
+      "Humans review or intervene in AI decisions, especially high-stakes ones",
+      "A model is trained only on images of people",
+      "A loop retrains the model every second"
+    ],
+    "answer": 1,
+    "explanation": "Keeping humans in the loop adds oversight so errors in consequential decisions can be caught and corrected."
+  }
+]

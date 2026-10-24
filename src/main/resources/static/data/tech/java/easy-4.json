@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5379fd7e883",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which interface represents a mapping from keys to values?",
+  "options": [
+   "List",
+   "Set",
+   "Map",
+   "Queue"
+  ],
+  "answer": 2,
+  "explanation": "Map stores key-value pairs; it does not extend Collection."
+ },
+ {
+  "id": "q31f316ff967",
+  "subject": "java",
+  "topic": "generics",
+  "level": "easy",
+  "question": "Why can't you declare a List<int>?",
+  "options": [
+   "List<int> is allowed only inside methods",
+   "int is reserved for array declarations only",
+   "Lists may only hold String values",
+   "Type arguments must be reference types, so use List<Integer>"
+  ],
+  "answer": 3,
+  "explanation": "Generics work with reference types; primitives are boxed into wrapper types like Integer."
+ },
+ {
+  "id": "qfd3d971332c",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which is a valid lambda for a Function<Integer, Integer>?",
+  "options": [
+   "lambda x: x * 2",
+   "x => x * 2",
+   "x -> x * 2",
+   "fn(x) { x * 2 }"
+  ],
+  "answer": 2,
+  "explanation": "Java lambdas use the arrow token ->, with parameters on the left and the body on the right."
+ },
+ {
+  "id": "q536b4d79717",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What is the default value of an int instance field that is never assigned?",
+  "options": [
+   "null",
+   "It causes a compile error",
+   "-1",
+   "0"
+  ],
+  "answer": 3,
+  "explanation": "Instance and static fields get default values; for int that is 0. Only local variables must be assigned before use."
+ },
+ {
+  "id": "qf5d61773bb6",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which Map implementation keeps its keys in sorted order?",
+  "options": [
+   "TreeMap",
+   "LinkedHashMap",
+   "IdentityHashMap",
+   "HashMap"
+  ],
+  "answer": 0,
+  "explanation": "TreeMap is a red-black tree sorted by natural ordering or a Comparator; LinkedHashMap keeps insertion order."
+ },
+ {
+  "id": "qd0d0bb6679d",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which functional interface does the Thread constructor accept as the task to run?",
+  "options": [
+   "Callable",
+   "Executor",
+   "Supplier",
+   "Runnable"
+  ],
+  "answer": 3,
+  "explanation": "new Thread(Runnable) runs the Runnable's run() method; Callable is used with ExecutorService."
+ },
+ {
+  "id": "q1a6a2e38aaf",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "What does list.stream().filter(p) return?",
+  "options": [
+   "A List of matching elements",
+   "A new Stream with only the elements matching p",
+   "A boolean telling if any element matches",
+   "The original list with non-matching elements removed"
+  ],
+  "answer": 1,
+  "explanation": "filter is an intermediate operation returning a new Stream; it never modifies the source."
+ },
+ {
+  "id": "qc2157f0052f",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which class is the common superclass of all exceptions and errors?",
+  "options": [
+   "Exception",
+   "Throwable",
+   "Error",
+   "RuntimeException"
+  ],
+  "answer": 1,
+  "explanation": "Both Exception and Error extend Throwable, and only Throwable subtypes can be thrown."
+ },
+ {
+  "id": "qbe00ab90c19",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which access modifier makes a member visible only inside its own class?",
+  "options": [
+   "protected",
+   "public",
+   "No modifier (package-private)",
+   "private"
+  ],
+  "answer": 3,
+  "explanation": "private restricts access to the declaring class; package-private and protected are wider."
+ },
+ {
+  "id": "qd3dcdda747c",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "What is an abstract class?",
+  "options": [
+   "A class that contains only static methods",
+   "A class that is not allowed to have constructors",
+   "A class that cannot be instantiated and may declare abstract methods",
+   "A class that is implicitly final"
+  ],
+  "answer": 2,
+  "explanation": "Abstract classes cannot be instantiated directly; they can have constructors, state and abstract methods for subclasses to implement."
+ }
+]

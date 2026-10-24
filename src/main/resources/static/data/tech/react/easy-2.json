@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa8f222e843c",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "What are the first two arguments to useReducer?",
+  "options": [
+   "A reducer function and an initial state",
+   "An action and a dispatch function",
+   "A selector and a store",
+   "A context and a default value"
+  ],
+  "answer": 0,
+  "explanation": "useReducer(reducer, initialState) returns the current state and a dispatch function for sending actions."
+ },
+ {
+  "id": "q637d589dc8a",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "What does a Fragment, written as <>...</>, let you do?",
+  "options": [
+   "Lazy-load a component on demand",
+   "Group several elements without adding an extra DOM node",
+   "Render children into a different DOM node",
+   "Catch rendering errors in child components"
+  ],
+  "answer": 1,
+  "explanation": "Fragments let a component return multiple sibling elements without wrapping them in an extra element like a div."
+ },
+ {
+  "id": "qd1271eae190",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "If you omit the dependency array from useEffect entirely, when does the effect run?",
+  "options": [
+   "Only once on mount",
+   "Never",
+   "Only on unmount",
+   "After every render"
+  ],
+  "answer": 3,
+  "explanation": "Without a dependency array React has nothing to compare, so the effect runs after every commit."
+ },
+ {
+  "id": "qbf8fde0b7ab",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Which of these causes a function component to re-render?",
+  "options": [
+   "Only a deep change in its props",
+   "A change in its state, a parent re-render, or a change in a context it reads",
+   "Only a change to one of its refs",
+   "Only a full page reload"
+  ],
+  "answer": 1,
+  "explanation": "State updates, parent re-renders, and context changes all cause a component to render again."
+ },
+ {
+  "id": "qa3720f2f3bf",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Which is usually a poor choice of key when list items can be reordered or inserted?",
+  "options": [
+   "A database id",
+   "The array index",
+   "A unique slug",
+   "A UUID generated when the item was created"
+  ],
+  "answer": 1,
+  "explanation": "Index keys change when items move, so React can mismatch state and DOM to the wrong items."
+ },
+ {
+  "id": "q3bb8cd8580d",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router, which component creates a client-side navigation link without a full page reload?",
+  "options": [
+   "Route",
+   "Link",
+   "Outlet",
+   "Routes"
+  ],
+  "answer": 1,
+  "explanation": "Link renders an anchor that updates the URL and renders the new route on the client without reloading the page."
+ },
+ {
+  "id": "q1330d120f1e",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "When fetching data inside useEffect, why set an ignore flag or abort the request in the cleanup function?",
+  "options": [
+   "To make the request travel faster",
+   "To avoid applying a stale response after the dependencies change or the component unmounts",
+   "To retry the request if it fails",
+   "To cache the response automatically"
+  ],
+  "answer": 1,
+  "explanation": "Cleanup ensures an outdated response does not overwrite newer state or update an unmounted component."
+ },
+ {
+  "id": "qb02712263b3",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "Ignoring Strict Mode, when does an effect with an empty dependency array run?",
+  "options": [
+   "After every render",
+   "Once after the component first mounts",
+   "Only right before the component unmounts",
+   "Never, because it has no dependencies"
+  ],
+  "answer": 1,
+  "explanation": "With [] there are no dependencies to change, so the effect runs only after the initial mount (and cleans up on unmount)."
+ },
+ {
+  "id": "q361ebd48546",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "How do you embed a JavaScript expression inside JSX markup?",
+  "options": [
+   "Wrap it in square brackets",
+   "Prefix it with an @ sign",
+   "Wrap it in curly braces",
+   "Wrap it in angle brackets"
+  ],
+  "answer": 2,
+  "explanation": "Curly braces open a window from JSX back into JavaScript, so any expression inside them is evaluated."
+ },
+ {
+  "id": "q5c03488475e",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "Which hook reads the current value of a context?",
+  "options": [
+   "useProvider",
+   "useContext",
+   "useReducer",
+   "useStore"
+  ],
+  "answer": 1,
+  "explanation": "useContext(SomeContext) returns the value from the nearest matching provider above the component."
+ }
+]

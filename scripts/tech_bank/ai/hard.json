@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "ml-basics",
+    "question": "In the bias-variance trade-off, what typically happens as model complexity increases?",
+    "options": [
+      "Bias decreases and variance increases",
+      "Bias increases and variance decreases",
+      "Both bias and variance decrease indefinitely",
+      "Both bias and variance increase"
+    ],
+    "answer": 0,
+    "explanation": "More flexible models fit the training data more closely, lowering bias but becoming more sensitive to the particular sample."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Training and validation errors are both high and close together. What is the likely issue and remedy?",
+    "options": [
+      "High variance; add regularization or more data",
+      "Data leakage; remove features correlated with the target",
+      "No issue; the model is ready to deploy",
+      "High bias; use a more expressive model or better features"
+    ],
+    "answer": 3,
+    "explanation": "A small gap with high error means the model underfits, so it needs more capacity or more informative features."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Why is shuffled k-fold cross-validation inappropriate for time-series forecasting?",
+    "options": [
+      "Time series always have too few samples for k folds",
+      "Shuffling changes the values of the target variable",
+      "Random splits let the model train on future data, leaking information",
+      "k-fold requires categorical targets"
+    ],
+    "answer": 2,
+    "explanation": "Forecasting must respect temporal order, so walk-forward or time-based splits are used instead."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Collecting more training data is most likely to help a model with which problem?",
+    "options": [
+      "High bias from an overly simple model",
+      "High variance",
+      "A bug in the evaluation metric",
+      "Features unrelated to the target"
+    ],
+    "answer": 1,
+    "explanation": "More data constrains a flexible model and reduces overfitting, but cannot fix an underpowered model or useless features."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "Why does logistic regression use cross-entropy loss rather than mean squared error?",
+    "options": [
+      "With a sigmoid, cross-entropy gives a convex loss with well-behaved gradients",
+      "MSE cannot be computed for values between 0 and 1",
+      "Cross-entropy needs no labels during training",
+      "MSE always produces negative loss values"
+    ],
+    "answer": 0,
+    "explanation": "MSE with a sigmoid is non-convex and its gradients vanish when predictions saturate, while log loss avoids both problems."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What does the kernel trick allow a support vector machine to do?",
+    "options": [
+      "Discard all non-support vectors before training starts",
+      "Replace the margin objective with squared error",
+      "Convert the SVM into a decision tree ensemble",
+      "Compute inner products in a high-dimensional feature space without explicitly mapping the data"
+    ],
+    "answer": 3,
+    "explanation": "Kernels evaluate similarity as if data were mapped to a richer space, enabling non-linear boundaries at manageable cost."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What is the naive assumption in naive Bayes classifiers?",
+    "options": [
+      "All classes have equal prior probability",
+      "Every feature follows a uniform distribution",
+      "Features are conditionally independent given the class",
+      "The decision boundary is always a circle"
+    ],
+    "answer": 2,
+    "explanation": "Assuming conditional independence lets the likelihood factor into a product of per-feature terms."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "Compared with bagging, which mainly reduces variance, what does boosting primarily reduce?",
+    "options": [
+      "Only variance, by averaging independent models",
+      "Bias, by sequentially focusing on previous errors",
+      "Training time, by using fewer models",
+      "Feature count, by discarding weak features"
+    ],
+    "answer": 1,
+    "explanation": "Boosting combines weak, high-bias learners sequentially so the ensemble fits patterns each alone would miss."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "How does the curse of dimensionality affect distance-based clustering?",
+    "options": [
+      "Distances between points become less discriminative as dimensions grow",
+      "Distances between all points shrink to exactly zero",
+      "Clustering becomes faster as dimensions are added",
+      "Centroids can no longer be computed at all"
+    ],
+    "answer": 0,
+    "explanation": "In high dimensions nearest and farthest neighbors end up at similar distances, weakening distance-based grouping."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What is a key limitation of PCA?",
+    "options": [
+      "It requires labeled data to compute components",
+      "It always increases the number of features",
+      "It cannot be applied to numeric data",
+      "It captures only linear structure and is sensitive to feature scaling"
+    ],
+    "answer": 3,
+    "explanation": "PCA finds linear directions of maximum variance, so non-linear manifolds are missed and large-scale features dominate unless standardized."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "How does a Gaussian mixture model differ from k-means?",
+    "options": [
+      "It requires labels while k-means does not",
+      "It can only ever produce two clusters",
+      "It gives soft probabilistic assignments and can model elliptical clusters",
+      "It uses decision trees to split the data"
+    ],
+    "answer": 2,
+    "explanation": "GMMs fit full covariance Gaussians via expectation-maximization, generalizing k-means' hard, spherical assignments."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What does the silhouette score measure for a clustering result?",
+    "options": [
+      "The fraction of points matching ground-truth labels",
+      "How close each point is to its own cluster compared with the nearest other cluster",
+      "The variance explained by the first principal component",
+      "The number of iterations until centroids converge"
+    ],
+    "answer": 1,
+    "explanation": "Silhouette ranges from -1 to 1, with high values meaning points are cohesive within clusters and well separated from others."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What does it mean for a classifier to be well calibrated?",
+    "options": [
+      "Its predicted probabilities match observed frequencies, e.g. 70% predictions are right about 70% of the time",
+      "It achieves the highest possible ROC AUC",
+      "It has equal precision and recall",
+      "It predicts each class equally often"
+    ],
+    "answer": 0,
+    "explanation": "Calibration concerns whether probabilities can be trusted as probabilities, which is separate from ranking quality."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "For a heavily imbalanced dataset where the positive class matters most, which curve is usually more informative?",
+    "options": [
+      "The ROC curve, since a large negative class makes it more sensitive",
+      "The learning curve, since it plots loss against epochs",
+      "The calibration curve, since it measures ranking quality",
+      "The precision-recall curve, since ROC can look optimistic when negatives dominate"
+    ],
+    "answer": 3,
+    "explanation": "False positive rate barely moves when negatives are abundant, while precision directly exposes the cost of false positives."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "How does RMSE differ from MAE as a regression metric?",
+    "options": [
+      "MAE penalizes large errors more heavily because it uses absolute values",
+      "RMSE and MAE always rank models identically",
+      "RMSE penalizes large errors more heavily because errors are squared",
+      "RMSE is unaffected by outliers"
+    ],
+    "answer": 2,
+    "explanation": "Squaring magnifies big errors, so RMSE is more sensitive to outliers than MAE."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "Raising a classifier's decision threshold typically has what effect?",
+    "options": [
+      "Recall rises and precision falls",
+      "Precision rises and recall falls",
+      "Both precision and recall rise",
+      "ROC AUC changes significantly"
+    ],
+    "answer": 1,
+    "explanation": "A higher threshold makes fewer, more confident positive predictions, trading missed positives for fewer false alarms."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What primarily causes vanishing gradients in deep networks?",
+    "options": [
+      "Repeated multiplication of small derivatives, such as from saturating sigmoids, across many layers",
+      "Using too large a batch size during training",
+      "Having too many training examples",
+      "Using ReLU activations in every layer"
+    ],
+    "answer": 0,
+    "explanation": "The chain rule multiplies per-layer derivatives, so values below one shrink gradients exponentially with depth."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "Why should all weights in a network not be initialized to zero?",
+    "options": [
+      "Zero weights make the loss become infinite",
+      "Gradient descent cannot compute derivatives at zero",
+      "The network would immediately overfit",
+      "Neurons in a layer get identical gradients and never differentiate"
+    ],
+    "answer": 3,
+    "explanation": "Symmetric initialization means every unit computes the same function, so random initialization is needed to break symmetry."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does batch normalization do?",
+    "options": [
+      "Normalizes the input dataset once before training",
+      "Divides the learning rate by the batch size",
+      "Normalizes layer activations using batch statistics, stabilizing and speeding up training",
+      "Removes outliers from each mini-batch"
+    ],
+    "answer": 2,
+    "explanation": "Normalizing intermediate activations with learned scale and shift allows higher learning rates and smoother optimization."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What distinguishes the Adam optimizer?",
+    "options": [
+      "It uses a single global learning rate with no momentum",
+      "It adapts per-parameter step sizes using running estimates of the gradient's first and second moments",
+      "It computes exact second derivatives via the full Hessian",
+      "It updates only the weights of the final layer"
+    ],
+    "answer": 1,
+    "explanation": "Adam combines momentum with RMS-style scaling so each parameter gets an individually adapted update."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What key property does weight sharing in convolutional layers provide?",
+    "options": [
+      "Translation equivariance with far fewer parameters than dense layers",
+      "Rotation invariance with no data augmentation needed",
+      "An unlimited receptive field in a single layer",
+      "Recurrent memory across image regions"
+    ],
+    "answer": 0,
+    "explanation": "Applying the same filter at every location detects a pattern wherever it appears while drastically cutting parameter count."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What is a major training advantage of transformers over RNNs?",
+    "options": [
+      "They need no training data",
+      "Their attention cost scales linearly with sequence length",
+      "Their attention layers have no learned parameters",
+      "All sequence positions can be processed in parallel during training"
+    ],
+    "answer": 3,
+    "explanation": "RNNs must step through time sequentially, while transformers compute attention over all positions at once."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "How does a variational autoencoder differ from a plain autoencoder?",
+    "options": [
+      "It removes the decoder and keeps only the encoder",
+      "It uses labeled data to supervise the latent space",
+      "It learns a probabilistic latent distribution regularized toward a prior, enabling sampling",
+      "It is trained against an adversarial discriminator"
+    ],
+    "answer": 2,
+    "explanation": "The KL term keeps the latent space smooth and close to a prior, so new samples can be generated by decoding random draws."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What is mode collapse in generative adversarial networks?",
+    "options": [
+      "The generator copies training images pixel for pixel",
+      "The generator produces only a limited variety of outputs",
+      "The discriminator is removed partway through training",
+      "The latent space grows without bound"
+    ],
+    "answer": 1,
+    "explanation": "The generator finds a few outputs that fool the discriminator and stops covering the full data distribution."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "Why do transformers need positional encodings?",
+    "options": [
+      "Self-attention is permutation-invariant, so token order must be injected explicitly",
+      "To reduce the vocabulary size of the tokenizer",
+      "To stop the model from attending to padding",
+      "To make attention weights sum to one"
+    ],
+    "answer": 0,
+    "explanation": "Without position information, attention treats the input as an unordered set of tokens."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "Why are attention scores divided by the square root of the key dimension?",
+    "options": [
+      "To ensure the attention weights sum to exactly one",
+      "To reduce the memory needed to store keys",
+      "To make attention causal for decoder models",
+      "To keep large dot products from pushing softmax into regions with tiny gradients"
+    ],
+    "answer": 3,
+    "explanation": "Dot products grow with dimension; scaling keeps their variance stable so softmax does not saturate."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "How does the compute and memory cost of standard self-attention scale with sequence length n?",
+    "options": [
+      "Linearly in n",
+      "Logarithmically in n",
+      "Quadratically in n",
+      "It stays constant in n"
+    ],
+    "answer": 2,
+    "explanation": "Every token attends to every other token, producing an n by n attention matrix."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "Why is a BERT-style masked language model not directly suited to free-form text generation?",
+    "options": [
+      "It has no embedding layer for output tokens",
+      "It is trained with bidirectional context to fill masked tokens, not to predict text left to right",
+      "It can only process sentences of five words",
+      "It uses recurrent layers that cannot generate text"
+    ],
+    "answer": 1,
+    "explanation": "Generation requires predicting the next token from past context only, which a bidirectional masked objective does not train."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is top-p (nucleus) sampling?",
+    "options": [
+      "Sampling from the smallest set of tokens whose cumulative probability exceeds p",
+      "Always choosing the single most likely token",
+      "Sampling uniformly from a fixed count of p tokens",
+      "Rejecting whole outputs whose probability falls below p"
+    ],
+    "answer": 0,
+    "explanation": "Nucleus sampling adapts the candidate set size to the model's confidence at each step."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is the purpose of reinforcement learning from human feedback (RLHF)?",
+    "options": [
+      "Teaching the model new facts by retrieving web pages",
+      "Compressing the model by removing redundant layers",
+      "Extending the context window via positional interpolation",
+      "Aligning outputs with human preferences using a reward model trained on human rankings"
+    ],
+    "answer": 3,
+    "explanation": "Humans compare responses, a reward model learns those preferences, and the LLM is optimized against it."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "Why do LLMs often struggle to count the letters in a word?",
+    "options": [
+      "They never see the alphabet during training",
+      "Counting needs a larger context window than any model has",
+      "They operate on subword tokens rather than individual characters",
+      "Temperature randomizes the letters in each word"
+    ],
+    "answer": 2,
+    "explanation": "A word may be a single token, so its character-level makeup is not directly visible to the model."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "Why can greedy decoding produce repetitive text?",
+    "options": [
+      "Greedy decoding samples randomly from the whole vocabulary",
+      "Always choosing the most likely token can get stuck in high-probability loops",
+      "Greedy decoding ignores the prompt after the first token",
+      "Greedy decoding disables the attention mechanism"
+    ],
+    "answer": 1,
+    "explanation": "Deterministic argmax choices can reinforce a repeated phrase, which sampling or repetition penalties help break."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is the main trade-off when choosing chunk size for RAG?",
+    "options": [
+      "Small chunks are precise but lose context; large chunks keep context but dilute relevance",
+      "Small chunks always improve answers with no downside",
+      "Large chunks always improve recall and lower cost",
+      "Chunk size has no effect when using a vector database"
+    ],
+    "answer": 0,
+    "explanation": "Chunk size balances embedding specificity against having enough surrounding context to answer the question."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "Why add a cross-encoder re-ranker after first-stage vector retrieval?",
+    "options": [
+      "It generates embeddings for the whole corpus at index time",
+      "It compresses documents into shorter summaries",
+      "It splits documents into overlapping chunks",
+      "It jointly scores query-document pairs to reorder candidates more accurately, at higher cost"
+    ],
+    "answer": 3,
+    "explanation": "Bi-encoder retrieval is fast but coarse; a cross-encoder reads query and passage together, so it is applied only to a short candidate list."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What trade-off do approximate nearest neighbor indexes such as HNSW make?",
+    "options": [
+      "They return exact results at the cost of a linear scan",
+      "They lower memory use by discarding the embeddings",
+      "They give up a little recall for much faster search over large collections",
+      "They gain precision by storing documents as plain text"
+    ],
+    "answer": 2,
+    "explanation": "ANN indexes avoid comparing against every vector, accepting occasional missed neighbors in exchange for speed."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "Why do long multi-step agent workflows often become less reliable as the number of steps grows?",
+    "options": [
+      "Each tool call permanently reduces the model's accuracy",
+      "Small per-step error rates compound across many dependent steps",
+      "Agents lose access to the context window after one step",
+      "Longer workflows always switch to a smaller model"
+    ],
+    "answer": 1,
+    "explanation": "If each step succeeds with probability p, a chain of n dependent steps succeeds with roughly p to the power n."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "Why can a classifier generally not be calibrated and also have equal false positive and false negative rates across groups?",
+    "options": [
+      "When base rates differ between groups, these criteria conflict mathematically",
+      "Fairness metrics can only be computed on training data",
+      "Calibration requires removing all protected attributes",
+      "Equal error rates always imply equal accuracy"
+    ],
+    "answer": 0,
+    "explanation": "Impossibility results show that, except for a perfect predictor, unequal base rates force a trade-off between these fairness criteria."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is reward hacking, also called specification gaming?",
+    "options": [
+      "An attacker stealing a trained reward model",
+      "A model refusing to optimize its reward",
+      "Training with too high a discount factor",
+      "An agent exploiting flaws in its objective to score highly without doing the intended task"
+    ],
+    "answer": 3,
+    "explanation": "When the reward is an imperfect proxy, optimization pressure finds loopholes that satisfy the metric but not the intent."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is indirect prompt injection?",
+    "options": [
+      "A user typing a jailbreak directly into the chat",
+      "Injecting gradients to speed up fine-tuning",
+      "Instructions hidden in retrieved content or tool outputs that the model may follow",
+      "Passing prompts through a translation layer first"
+    ],
+    "answer": 2,
+    "explanation": "Agents and RAG systems ingest untrusted text, and instructions embedded there can redirect the model without the user's knowledge."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What does a membership inference attack try to determine?",
+    "options": [
+      "A model's architecture from its pricing page",
+      "Whether a specific record was part of a model's training data",
+      "Which users are allowed to access a model",
+      "Which cluster a test point belongs to"
+    ],
+    "answer": 1,
+    "explanation": "Models often behave differently on training examples, such as being more confident, which can reveal sensitive membership."
+  }
+]

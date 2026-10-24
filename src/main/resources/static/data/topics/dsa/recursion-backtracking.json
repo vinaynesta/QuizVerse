@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q13f515e2d40",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What best describes backtracking?",
+  "options": [
+   "Building a solution incrementally and abandoning partial candidates that cannot succeed",
+   "Sorting the input and scanning it once",
+   "Always taking the locally best choice without revisiting it",
+   "Splitting the input in half and merging results"
+  ],
+  "answer": 0,
+  "explanation": "Backtracking explores choices recursively and undoes them when a partial solution becomes invalid."
+ },
+ {
+  "id": "q95caa8a2474",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What typically happens when a recursive function recurses too deeply, for example because it has no base case?",
+  "options": [
+   "Deadlock",
+   "Integer overflow",
+   "Heap fragmentation",
+   "Stack overflow"
+  ],
+  "answer": 3,
+  "explanation": "Each call adds a stack frame, and unbounded recursion exhausts the call stack."
+ },
+ {
+  "id": "qfce14a20eb8",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What is the condition that stops a recursive function from calling itself called?",
+  "options": [
+   "The base case",
+   "The pivot",
+   "The invariant",
+   "The recursive case"
+  ],
+  "answer": 0,
+  "explanation": "The base case returns a result directly without further recursion."
+ },
+ {
+  "id": "q0bfe14f0a05",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "medium",
+  "question": "How many permutations are there of n distinct elements?",
+  "options": [
+   "n!",
+   "n^2",
+   "2^n",
+   "n(n-1)/2"
+  ],
+  "answer": 0,
+  "explanation": "There are n choices for the first position, n-1 for the second, and so on."
+ },
+ {
+  "id": "q2df83b8c07f",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "medium",
+  "question": "How many subsets does a set of n distinct elements have?",
+  "options": [
+   "n!",
+   "n^2",
+   "2^n",
+   "2n"
+  ],
+  "answer": 2,
+  "explanation": "Each element is either included or excluded independently."
+ },
+ {
+  "id": "qcbd297bae8d",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "medium",
+  "question": "How much call-stack space does a recursive function use if it sums an array of n elements with one recursive call per element?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "The recursion depth is n, and each active call holds a stack frame."
+ },
+ {
+  "id": "q681fce41ea1",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "How many distinct solutions does the classic 8-queens problem have on an 8x8 board?",
+  "options": [
+   "64",
+   "12",
+   "92",
+   "40"
+  ],
+  "answer": 2,
+  "explanation": "There are 92 solutions in total, or 12 when rotations and reflections are treated as the same."
+ },
+ {
+  "id": "qae7c7dc6c5b",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "How many structurally distinct binary search trees can be built from 3 distinct keys?",
+  "options": [
+   "3",
+   "9",
+   "6",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "The count is the 3rd Catalan number, C(3) = 5."
+ },
+ {
+  "id": "qbdf9e309880",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "What is the time complexity of generating and outputting all permutations of n distinct elements by backtracking?",
+  "options": [
+   "O(n * n!)",
+   "O(n^2)",
+   "O(2^n)",
+   "O(n!) / n"
+  ],
+  "answer": 0,
+  "explanation": "There are n! permutations, and copying out each one costs O(n)."
+ },
+ {
+  "id": "qd0e2356e60f",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "In an efficient N-Queens backtracking solution, how are conflicts usually checked in O(1) per placement?",
+  "options": [
+   "By rescanning the entire board after each placement",
+   "By sorting the queens by row after each step",
+   "By tracking occupied columns and both diagonal directions in sets or boolean arrays",
+   "By precomputing all N! permutations first"
+  ],
+  "answer": 2,
+  "explanation": "Columns, row - col, and row + col identify attacking lines, so a lookup tells whether a square is safe."
+ }
+]

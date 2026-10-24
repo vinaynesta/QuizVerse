@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4bb5e20496b",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "In a 0-indexed array representation of a binary heap, where are the children of index i?",
+  "options": [
+   "2i + 1 and 2i + 2",
+   "2i and 2i + 1",
+   "i + 1 and i + 2",
+   "i / 2 and i / 2 + 1"
+  ],
+  "answer": 0,
+  "explanation": "With zero-based indexing the left child is at 2i + 1 and the right child at 2i + 2."
+ },
+ {
+  "id": "q51a90760d4a",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "Which abstract data type is most commonly implemented with a binary heap?",
+  "options": [
+   "Priority queue",
+   "Stack",
+   "Doubly linked list",
+   "Hash map"
+  ],
+  "answer": 0,
+  "explanation": "Heaps give O(log n) insert and extract-min/max, which is exactly what a priority queue needs."
+ },
+ {
+  "id": "q770e659af50",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "Which element is stored at the root of a max-heap?",
+  "options": [
+   "The smallest element",
+   "The median element",
+   "The largest element",
+   "The most recently inserted element"
+  ],
+  "answer": 2,
+  "explanation": "The max-heap property makes every parent at least as large as its children, so the root is the maximum."
+ },
+ {
+  "id": "q56717be6036",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of extract-min on a binary min-heap with n elements?",
+  "options": [
+   "O(n log n)",
+   "O(1)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "After removing the root, the last element is sifted down through the heap's height."
+ },
+ {
+  "id": "q9d0b5b89f43",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of building a binary heap from n unsorted elements using bottom-up heapify?",
+  "options": [
+   "O(n log n)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "Most nodes are near the bottom and sift down only a short distance, summing to linear time."
+ },
+ {
+  "id": "qc0f95778aa0",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of finding the k largest of n elements using a min-heap of size k?",
+  "options": [
+   "O(n log k)",
+   "O(k log n)",
+   "O(n k)",
+   "O(n log n)"
+  ],
+  "answer": 0,
+  "explanation": "Each of the n elements may cause one O(log k) heap operation."
+ },
+ {
+  "id": "q194006b5472",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "How do you maintain the running median of a stream with O(log n) insertion and O(1) median queries?",
+  "options": [
+   "Keep a sorted array and binary search",
+   "Use a single min-heap and peek",
+   "Use a max-heap for the lower half and a min-heap for the upper half",
+   "Use a hash map of value counts"
+  ],
+  "answer": 2,
+  "explanation": "Balancing the two heaps keeps the median at one or both of their tops."
+ },
+ {
+  "id": "qa563f3e15a7",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "What is the time complexity of searching for an arbitrary value in a binary heap?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(1)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "The heap property orders only parent and child, so siblings and subtrees must be scanned."
+ },
+ {
+  "id": "qe95708c7780",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "What is the time complexity of merging k sorted lists containing N total elements using a min-heap?",
+  "options": [
+   "O(N log N)",
+   "O(N log k)",
+   "O(N * k)",
+   "O(k log N)"
+  ],
+  "answer": 1,
+  "explanation": "The heap holds at most k elements, and each of the N elements is pushed and popped once."
+ },
+ {
+  "id": "qf4913051212",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "Which statement about heapsort is true?",
+  "options": [
+   "It is stable and runs in O(n) time",
+   "Its worst case is O(n^2) like quicksort",
+   "It runs in O(n log n) worst case and is in-place but not stable",
+   "It requires O(n) auxiliary space"
+  ],
+  "answer": 2,
+  "explanation": "Heapsort sorts within the array with guaranteed O(n log n) time, but swaps can reorder equal keys."
+ }
+]

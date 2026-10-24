@@ -1,5 +1,6 @@
 // Question lookups for practice sets: find saved questions (bookmarks, mistakes) by id,
-// pick the daily quiz, and load topic pools for the custom quiz builder. Files come from scripts/build_topics.py.
+// pick the daily quiz, the daily tech challenge and the question of the day, and load topic pools for the
+// custom quiz builder. Files come from scripts/build_topics.py.
 
 const cache = new Map();
 
@@ -46,17 +47,47 @@ function seededRandom(seedText) {
 }
 
 const DAILY_MIX = { quant: 4, reasoning: 3, english: 3 };
+const TECH_SUBJECTS = ["dsa", "java", "python", "springboot", "react", "vue", "ai"];
+const TECH_DAILY_COUNT = 5;
+
+/** Sorted ids of every question in the given subject's topic pools. */
+async function subjectIds(subject) {
+  const where = await fetchJson("data/question-topics.json");
+  return Object.keys(where).filter((id) => where[id].startsWith(`${subject}/`)).sort();
+}
 
 /** The same 10 exam questions for everyone on a given date: 4 quant, 3 reasoning, 3 English. */
 export async function dailyQuestions(date) {
-  const where = await fetchJson("data/question-topics.json");
   const random = seededRandom(`quizverse-daily-${date}`);
   const ids = [];
   for (const [subject, n] of Object.entries(DAILY_MIX)) {
-    const pool = Object.keys(where).filter((id) => where[id].startsWith(`${subject}/`)).sort();
-    ids.push(...shuffled(pool, random).slice(0, n));
+    ids.push(...shuffled(await subjectIds(subject), random).slice(0, n));
   }
   return questionsById(ids);
+}
+
+/** Ids of the daily tech challenge: one question from each of 5 tech subjects, picked by the date. */
+async function techDailyIds(date) {
+  const random = seededRandom(`quizverse-tech-daily-${date}`);
+  const ids = [];
+  for (const subject of shuffled(TECH_SUBJECTS, random).slice(0, TECH_DAILY_COUNT)) {
+    ids.push(shuffled(await subjectIds(subject), random)[0]);
+  }
+  return ids.filter(Boolean);
+}
+
+/** The daily tech challenge: the same 5 tech questions for everyone on a given date. */
+export async function techDailyQuestions(date) {
+  return questionsById(await techDailyIds(date));
+}
+
+/** The question of the day on the home page: one tech question, never one from today's tech challenge. */
+export async function questionOfTheDay(date) {
+  const random = seededRandom(`quizverse-qotd-${date}`);
+  const taken = new Set(await techDailyIds(date));
+  const subject = TECH_SUBJECTS[Math.floor(random() * TECH_SUBJECTS.length)];
+  const id = shuffled(await subjectIds(subject), random).find((x) => !taken.has(x));
+  return id ? (await questionsById([id]))[0] || null : null;
 }
 
 /** Fisher-Yates on a copy. Pass a seeded random() for a repeatable order. */

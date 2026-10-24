@@ -1,6 +1,7 @@
-// Login and sign-up forms. After success: save any quiz result finished while logged out,
-// then go to ?next= (or the history page).
-import { login, register, safeNext, saveAttempt } from "./api.js";
+// Login and sign-up forms, plus "Continue with Google" on both. After success: save any quiz result finished
+// while logged out, then go to ?next= (or the history page).
+import { googleSignIn, login, register, safeNext, saveAttempt } from "./api.js";
+import { renderGoogleButton } from "./google.js";
 import { takePendingAttempt } from "./pending.js";
 
 const next = safeNext(new URLSearchParams(window.location.search).get("next"), "history.html");
@@ -34,6 +35,21 @@ form.addEventListener("submit", async (event) => {
     button.disabled = false;
     return;
   }
+  await afterSignIn();
+});
+
+renderGoogleButton(document.getElementById("google-signin"), async (credential) => {
+  errorBox.hidden = true;
+  try {
+    await googleSignIn(credential);
+  } catch (error) {
+    showError(error.message);
+    return;
+  }
+  await afterSignIn();
+}, { text: form.id === "login-form" ? "signin_with" : "signup_with" });
+
+async function afterSignIn() {
   const pending = takePendingAttempt();
   if (pending) {
     try {
@@ -43,4 +59,4 @@ form.addEventListener("submit", async (event) => {
     }
   }
   window.location.href = next;
-});
+}

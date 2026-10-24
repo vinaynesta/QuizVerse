@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qd5e41394f06",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "What happens if you put v-show on a template element?",
+  "options": [
+   "It hides all child elements correctly",
+   "It does not work, since v-show is not supported on template",
+   "It behaves exactly like v-if",
+   "It renders the template tag in the DOM"
+  ],
+  "answer": 1,
+  "explanation": "v-show toggles display on a real element, so it cannot be used with template."
+ },
+ {
+  "id": "q8c1fc695866",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "A child root element has class=\"btn\" and the parent renders it with class=\"large\". What is the result?",
+  "options": [
+   "The root element has only large",
+   "The root element has both btn and large",
+   "Vue warns and drops the parent class",
+   "The root element has only btn"
+  ],
+  "answer": 1,
+  "explanation": "class and style fall through and are merged with the classes already on the child's root."
+ },
+ {
+  "id": "qc08a271d2d0",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "In Vue 3.5+ with const { foo } = defineProps(['foo']), how do you watch foo?",
+  "options": [
+   "watch(() => foo, cb)",
+   "watch(foo, cb)",
+   "watch('foo', cb)",
+   "watch(foo.value, cb)"
+  ],
+  "answer": 0,
+  "explanation": "A destructured prop compiles to props.foo, so passing it directly would pass a value; a getter is required."
+ },
+ {
+  "id": "q2bd5dcf1879",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "When using <template v-for> to render multiple elements per item in Vue 3, where should key go?",
+  "options": [
+   "On each child element inside the template",
+   "On the template v-for tag itself",
+   "On the parent element around the loop",
+   "Nowhere, since keys are forbidden here"
+  ],
+  "answer": 1,
+  "explanation": "In Vue 3 the key belongs on the template tag rather than on its children."
+ },
+ {
+  "id": "q39eb8d3d378",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "What values does v-for=\"n in 3\" produce?",
+  "options": [
+   "0, 1, 2",
+   "0, 1, 2, 3",
+   "3 only",
+   "1, 2, 3"
+  ],
+  "answer": 3,
+  "explanation": "A v-for over an integer starts at 1 and repeats up to that number."
+ },
+ {
+  "id": "qb72b11e8d81",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "In a plain setup() function, what happens if onMounted is called after an await?",
+  "options": [
+   "It is not tied to the component, since hooks must register synchronously",
+   "It runs immediately instead of waiting to mount",
+   "It runs twice, once per await",
+   "It is moved to the start of setup at compile time"
+  ],
+  "answer": 0,
+  "explanation": "Outside script setup, the current instance is lost after await; only script setup restores it."
+ },
+ {
+  "id": "q11193d7f2f8",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "Is store.$reset() available on a Pinia setup store by default?",
+  "options": [
+   "Yes, it is available on every store",
+   "Only after calling storeToRefs()",
+   "Only when the store uses persistence",
+   "No, you must implement your own reset in setup stores"
+  ],
+  "answer": 3,
+  "explanation": "$reset() is built into option stores, but setup stores need a custom reset action."
+ },
+ {
+  "id": "q35d195ff16a",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "With a prop declared as disabled: Boolean, what is its value for <MyBtn disabled />?",
+  "options": [
+   "true",
+   "''",
+   "'disabled'",
+   "undefined"
+  ],
+  "answer": 0,
+  "explanation": "Boolean props are cast to true when the attribute is present without a value."
+ },
+ {
+  "id": "q8f81e34a235",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "With const list = shallowRef([]), what happens after list.value.push(item)?",
+  "options": [
+   "The view updates as with a normal ref",
+   "Vue throws because the array is readonly",
+   "The item is pushed and deep tracking starts",
+   "No update is triggered; replace .value or call triggerRef"
+  ],
+  "answer": 3,
+  "explanation": "shallowRef only tracks .value assignment, so in-place mutation needs a new array or triggerRef(list)."
+ },
+ {
+  "id": "qf2877ea7c29",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "A child mutates props.user.name where user is an object prop. What happens?",
+  "options": [
+   "Vue throws a readonly error",
+   "The mutation is ignored silently",
+   "It works but is an anti-pattern; Vue does not warn",
+   "The parent's object is cloned first"
+  ],
+  "answer": 2,
+  "explanation": "Props are shallowly readonly, so nested mutations succeed but make data flow hard to reason about."
+ }
+]

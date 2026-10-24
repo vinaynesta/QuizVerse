@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0aace7628c3",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What does useCallback return?",
+  "options": [
+   "The result of calling the function",
+   "A ref object pointing to the function",
+   "A promise that resolves to the function",
+   "A memoized function that keeps the same identity while its dependencies are unchanged"
+  ],
+  "answer": 3,
+  "explanation": "useCallback caches the function itself, which helps when passing callbacks to memoized children."
+ },
+ {
+  "id": "q540a8c5a8da",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What does wrapping a component in memo do?",
+  "options": [
+   "Loads its code lazily",
+   "Caches its network requests",
+   "Stores its state in localStorage",
+   "Skips re-rendering it when its props are unchanged"
+  ],
+  "answer": 3,
+  "explanation": "memo makes React skip re-rendering the component when its props are shallowly equal to the previous ones."
+ },
+ {
+  "id": "q7cba70bf16c",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is useMemo used for?",
+  "options": [
+   "Caching a function definition between renders",
+   "Caching the result of a calculation between renders",
+   "Storing a mutable value that does not trigger renders",
+   "Running side effects after render"
+  ],
+  "answer": 1,
+  "explanation": "useMemo re-runs its calculation only when its dependencies change and otherwise returns the cached result."
+ },
+ {
+  "id": "qadb405f155f",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is React.lazy used for?",
+  "options": [
+   "Delaying state updates until the browser is idle",
+   "Debouncing rapid user events",
+   "Running hooks lazily on demand",
+   "Code-splitting by loading a component's code only when it first renders"
+  ],
+  "answer": 3,
+  "explanation": "lazy takes a function that dynamically imports a component, so its code is fetched only when needed, usually inside Suspense."
+ },
+ {
+  "id": "q9a6c59a1897",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What does useDeferredValue return?",
+  "options": [
+   "A promise for the value",
+   "The value from the previous page load",
+   "A version of the value that may lag behind during urgent updates",
+   "A ref to the value"
+  ],
+  "answer": 2,
+  "explanation": "useDeferredValue lets React render with the old value first and update the deferred one in the background."
+ },
+ {
+  "id": "qcb09472baa4",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What is the main job of React Compiler?",
+  "options": [
+   "Automatically memoizing components and values at build time",
+   "Server-rendering all components",
+   "Converting JSX to WebAssembly",
+   "Replacing the virtual DOM"
+  ],
+  "answer": 0,
+  "explanation": "React Compiler analyzes components and inserts memoization so you rarely need manual memo, useMemo, or useCallback."
+ },
+ {
+  "id": "qcc2298ecac9",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What does startTransition (or useTransition) let you do?",
+  "options": [
+   "Animate CSS transitions between routes",
+   "Run state updates on a web worker",
+   "Mark a state update as non-urgent so urgent updates like typing stay responsive",
+   "Batch updates across separate page loads"
+  ],
+  "answer": 2,
+  "explanation": "Transition updates can be interrupted by more urgent updates, keeping input responsive during expensive renders."
+ },
+ {
+  "id": "qf27dd2dbaa1",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "A memo-wrapped child receives onSelect={() => select(id)} from its parent. Why does it still re-render on every parent render?",
+  "options": [
+   "memo only works with class components",
+   "Arrow functions disable memo",
+   "A new function is created each render, so the prop is never equal",
+   "memo ignores function props"
+  ],
+  "answer": 2,
+  "explanation": "memo compares props shallowly; wrapping the callback in useCallback keeps the same reference between renders."
+ },
+ {
+  "id": "q19ac7576cd2",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "useMemo(() => compute(list), [list]) still recomputes every render. What is the likely cause?",
+  "options": [
+   "useMemo only caches primitives",
+   "compute is too slow to cache",
+   "useMemo is disabled in production",
+   "list is a new array created each render, so the dependency always changes"
+  ],
+  "answer": 3,
+  "explanation": "Memoization depends on stable inputs; if the parent recreates list every render, the cache never hits."
+ },
+ {
+  "id": "q5611ed490d6",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "When typing filters a huge list, why can wrapping setFilteredList in startTransition keep the input responsive?",
+  "options": [
+   "React can interrupt the transition render to process new keystrokes first",
+   "It runs the filter on another thread",
+   "It skips rendering the list",
+   "It debounces input by 300ms"
+  ],
+  "answer": 0,
+  "explanation": "Transition renders are interruptible, so urgent input updates are not blocked by the expensive list render."
+ },
+ {
+  "id": "qce74f4b7eab",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "Why can passing JSX as children to a stateful wrapper avoid re-rendering that JSX when the wrapper's state changes?",
+  "options": [
+   "React never re-renders children props",
+   "The children elements were created by the parent, so their reference is unchanged when only the wrapper re-renders",
+   "children are always memoized by the compiler",
+   "JSX passed as children is static HTML"
+  ],
+  "answer": 1,
+  "explanation": "When only the wrapper updates, props.children is the same element object, so React can skip that subtree."
+ },
+ {
+  "id": "qfafe7c422ba",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "A parent re-renders and passes no props to a child that is not wrapped in memo. Does the child re-render?",
+  "options": [
+   "Yes, children re-render by default when their parent re-renders",
+   "Only if it uses state",
+   "No, because its props did not change",
+   "Only in Strict Mode"
+  ],
+  "answer": 0,
+  "explanation": "React re-renders the subtree by default; memo is the opt-in to skip renders when props are equal."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q379eb7f374b",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "What should the function you return from an effect do?",
+  "options": [
+   "Return the next state value",
+   "Provide default props for the component",
+   "Force the component to re-render",
+   "Clean up what the effect set up, such as timers or subscriptions"
+  ],
+  "answer": 3,
+  "explanation": "The returned cleanup function runs before the effect re-runs and on unmount, undoing whatever the effect started."
+ },
+ {
+  "id": "q5cbc4ccc270",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "What is useEffect primarily meant for?",
+  "options": [
+   "Declaring local component state",
+   "Synchronizing a component with an external system",
+   "Memoizing expensive calculations",
+   "Defining application routes"
+  ],
+  "answer": 1,
+  "explanation": "Effects let a component stay in sync with things outside React, such as network connections, timers, or browser APIs."
+ },
+ {
+  "id": "qb02712263b3",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "Ignoring Strict Mode, when does an effect with an empty dependency array run?",
+  "options": [
+   "After every render",
+   "Once after the component first mounts",
+   "Only right before the component unmounts",
+   "Never, because it has no dependencies"
+  ],
+  "answer": 1,
+  "explanation": "With [] there are no dependencies to change, so the effect runs only after the initial mount (and cleans up on unmount)."
+ },
+ {
+  "id": "qd1271eae190",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "If you omit the dependency array from useEffect entirely, when does the effect run?",
+  "options": [
+   "Only once on mount",
+   "Never",
+   "Only on unmount",
+   "After every render"
+  ],
+  "answer": 3,
+  "explanation": "Without a dependency array React has nothing to compare, so the effect runs after every commit."
+ },
+ {
+  "id": "q1f1be39701c",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "A component computes fullName from firstName and lastName state using an effect and a separate state variable. What do the React docs recommend instead?",
+  "options": [
+   "Use useLayoutEffect instead",
+   "Compute fullName directly during render",
+   "Store fullName in a ref",
+   "Move the effect into the parent"
+  ],
+  "answer": 1,
+  "explanation": "Values derivable from existing props or state should be calculated during render, avoiding an extra state and re-render."
+ },
+ {
+  "id": "q9f1b7650043",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "When should you use useLayoutEffect instead of useEffect?",
+  "options": [
+   "For all data fetching",
+   "When an effect needs to run on the server",
+   "When an effect has no dependencies",
+   "When you must measure the DOM and update before the browser paints to avoid flicker"
+  ],
+  "answer": 3,
+  "explanation": "useLayoutEffect runs synchronously after DOM mutations but before paint, which suits layout measurement."
+ },
+ {
+  "id": "qc936d291716",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "An effect calls setInterval but returns no cleanup. What happens when its dependency changes repeatedly?",
+  "options": [
+   "React clears old intervals automatically",
+   "Multiple intervals pile up and keep running",
+   "The effect stops running",
+   "React throws an error"
+  ],
+  "answer": 1,
+  "explanation": "Without cleanup that calls clearInterval, each effect run adds another interval that is never removed."
+ },
+ {
+  "id": "qebb7576486f",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "How does React decide whether to re-run an effect with dependencies [a, b]?",
+  "options": [
+   "Deep equality comparison of a and b",
+   "Object.is comparison of each dependency with its previous value",
+   "It always re-runs after every render",
+   "JSON.stringify comparison of a and b"
+  ],
+  "answer": 1,
+  "explanation": "React compares each dependency with Object.is, so new objects or functions created during render count as changes."
+ },
+ {
+  "id": "q286ee2c7b51",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "Silencing the exhaustive-deps lint rule to keep an effect from re-running usually leads to what bug?",
+  "options": [
+   "Hydration mismatch",
+   "The effect reads stale props or state that never update inside it",
+   "Duplicate keys",
+   "Memory being freed too early"
+  ],
+  "answer": 1,
+  "explanation": "Omitted dependencies mean the effect keeps values from the render it was created in; restructure the code instead of suppressing the rule."
+ },
+ {
+  "id": "q461ae125d38",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "In development with Strict Mode, why does an effect with [] appear to run twice on mount?",
+  "options": [
+   "Because of a bug in React DOM",
+   "Because the dependency array is empty",
+   "React mounts, simulates an unmount by running cleanup, then runs the effect again to expose missing cleanup",
+   "Because the component rendered on both server and client"
+  ],
+  "answer": 2,
+  "explanation": "Strict Mode runs an extra setup and cleanup cycle in development only, so a correct cleanup makes the double run harmless."
+ },
+ {
+  "id": "q9e216bbca65",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "An effect depends on an options object created inline during render, like const options = { roomId }. What is the problem?",
+  "options": [
+   "React deep-compares it, which is slow",
+   "Objects cannot be dependencies",
+   "The effect never re-runs",
+   "options is a new object each render, so the effect re-runs after every render"
+  ],
+  "answer": 3,
+  "explanation": "Object.is sees a new reference each time; create the object inside the effect or depend on roomId directly."
+ },
+ {
+  "id": "qe3540ef011a",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "An effect has no dependency array and calls setData(fetchResultCopy) unconditionally with a new object. What happens?",
+  "options": [
+   "It runs once",
+   "React ignores state set inside effects",
+   "An infinite loop of renders and effect runs",
+   "It runs only when data changes"
+  ],
+  "answer": 2,
+  "explanation": "Every render runs the effect, which sets a new object, which triggers another render, and so on."
+ }
+]

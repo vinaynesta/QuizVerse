@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q92511473f76",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is the correct way to add an item to an array held in state?",
+  "options": [
+   "items.push(newItem); setItems(items)",
+   "setItems([...items, newItem])",
+   "items[items.length] = newItem",
+   "setItems(items.concat).push(newItem)"
+  ],
+  "answer": 1,
+  "explanation": "State must be treated as immutable; creating a new array lets React detect the change by reference."
+ },
+ {
+  "id": "q376842e0d3f",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "Why is defining a component function inside another component's body a problem?",
+  "options": [
+   "It is a syntax error in JSX",
+   "It prevents the use of props",
+   "A new component type is created each render, so its subtree remounts and loses state",
+   "It makes the component render on the server only"
+  ],
+  "answer": 2,
+  "explanation": "React sees a different component type on every render, so it tears down and recreates the inner subtree each time."
+ },
+ {
+  "id": "q9cdea5879c6",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "medium",
+  "question": "What does useActionState return?",
+  "options": [
+   "Only a pending boolean",
+   "A form element",
+   "The current state, a wrapped action function, and an isPending flag",
+   "The result of the last fetch call"
+  ],
+  "answer": 2,
+  "explanation": "useActionState(action, initialState) returns [state, formAction, isPending] for managing results of form actions."
+ },
+ {
+  "id": "qb313a4c9d4b",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "What does useId generate?",
+  "options": [
+   "A random key for list items",
+   "A unique database id",
+   "A hash of the component's props",
+   "A stable unique id consistent between server and client, useful for accessibility attributes"
+  ],
+  "answer": 3,
+  "explanation": "useId produces ids that match during hydration, for use in htmlFor or aria attributes, and is not meant for list keys."
+ },
+ {
+  "id": "qfef757a57e4",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "A provider passes value={{ user, setUser }} created inline. What is the performance downside?",
+  "options": [
+   "The context cannot be read by children",
+   "A new object is created each render, so every consumer re-renders whenever the provider re-renders",
+   "React deep-compares the object on each render",
+   "setUser becomes stale"
+  ],
+  "answer": 1,
+  "explanation": "Context compares values by reference; memoizing the object with useMemo avoids needless consumer re-renders."
+ },
+ {
+  "id": "q386b9022d39",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "In React Router v6+, what does the Outlet component render?",
+  "options": [
+   "A link to the parent route",
+   "The current URL as text",
+   "The 404 page",
+   "The matched child route's element inside a parent layout"
+  ],
+  "answer": 3,
+  "explanation": "Nested routes render inside the parent's Outlet, which enables shared layouts."
+ },
+ {
+  "id": "q9a6c59a1897",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What does useDeferredValue return?",
+  "options": [
+   "A promise for the value",
+   "The value from the previous page load",
+   "A version of the value that may lag behind during urgent updates",
+   "A ref to the value"
+  ],
+  "answer": 2,
+  "explanation": "useDeferredValue lets React render with the old value first and update the deferred one in the background."
+ },
+ {
+  "id": "qf19a7ea94d4",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "How do you write an inline style that sets a font size of 16px in JSX?",
+  "options": [
+   "style=\"font-size: 16px\"",
+   "style={font-size: '16px'}",
+   "css={{ fontSize: 16 }}",
+   "style={{ fontSize: '16px' }}"
+  ],
+  "answer": 3,
+  "explanation": "The style prop takes an object with camelCase property names, hence the double braces."
+ },
+ {
+  "id": "q576c4f9a4d8",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "In an uncontrolled input, how do you provide an initial value without making it controlled?",
+  "options": [
+   "defaultValue",
+   "value",
+   "initialValue",
+   "placeholder"
+  ],
+  "answer": 0,
+  "explanation": "defaultValue sets the starting value while letting the DOM manage subsequent edits."
+ },
+ {
+  "id": "q1f1be39701c",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "A component computes fullName from firstName and lastName state using an effect and a separate state variable. What do the React docs recommend instead?",
+  "options": [
+   "Use useLayoutEffect instead",
+   "Compute fullName directly during render",
+   "Store fullName in a ref",
+   "Move the effect into the parent"
+  ],
+  "answer": 1,
+  "explanation": "Values derivable from existing props or state should be calculated during render, avoiding an extra state and re-render."
+ }
+]

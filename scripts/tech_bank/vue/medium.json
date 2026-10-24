@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "template-syntax",
+    "question": "What does <div :class=\"{ active: isActive }\"> render?",
+    "options": [
+      "The class attribute is the literal object text",
+      "The active class is always added",
+      "The active class is added only when isActive is truthy",
+      "It fails to compile because objects are not allowed"
+    ],
+    "answer": 2,
+    "explanation": "Object syntax for :class toggles each class key based on the truthiness of its value."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What does v-bind:[attrName]=\"url\" do?",
+    "options": [
+      "Binds an attribute whose name comes from the value of attrName",
+      "Binds an attribute literally named attrName",
+      "Binds every attribute listed in an array",
+      "Binds url only if attrName is true"
+    ],
+    "answer": 0,
+    "explanation": "Square brackets create a dynamic argument that is evaluated as a JavaScript expression."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "Which of these is valid inside a mustache interpolation?",
+    "options": [
+      "if (ok) { return 'YES' }",
+      "let label = 'YES'",
+      "for (const x of list) x",
+      "ok ? 'YES' : 'NO'"
+    ],
+    "answer": 3,
+    "explanation": "Template bindings accept a single JavaScript expression, not statements or declarations."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What does @submit.prevent=\"onSubmit\" do?",
+    "options": [
+      "Prevents onSubmit from ever running",
+      "Stops event propagation but not the default",
+      "Runs onSubmit only the first time",
+      "Calls event.preventDefault() and then runs onSubmit"
+    ],
+    "answer": 3,
+    "explanation": "The .prevent modifier calls preventDefault() on the event before the handler runs."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Why does assigning a brand-new object to a variable that held a reactive() proxy break reactivity?",
+    "options": [
+      "reactive() proxies are frozen after creation",
+      "Vue only tracks objects created at import time",
+      "Existing bindings still point to the original proxy",
+      "The new object is automatically made readonly"
+    ],
+    "answer": 2,
+    "explanation": "Reactivity is tied to the proxy, so replacing the variable disconnects anything already tracking the old proxy."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Given const obj = reactive({ nested: { n: 1 } }), is mutating obj.nested.n reactive?",
+    "options": [
+      "No, only top-level properties are tracked",
+      "Only if nested is wrapped with ref()",
+      "Only arrays are converted deeply",
+      "Yes, reactive() makes nested objects reactive deeply"
+    ],
+    "answer": 3,
+    "explanation": "reactive() is deep by default, wrapping nested objects in proxies when they are accessed."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What does shallowRef() track?",
+    "options": [
+      "Every nested property change in the value",
+      "Only assignments to .value, not changes inside the value",
+      "Only changes made inside template expressions",
+      "Nothing until triggerRef() is called once"
+    ],
+    "answer": 1,
+    "explanation": "shallowRef does not make its inner value deeply reactive; only replacing .value triggers updates."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What does readonly(state) return?",
+    "options": [
+      "A deep clone of state that cannot be changed",
+      "A readonly proxy of the original, warning on mutation in dev",
+      "A frozen copy created with Object.freeze",
+      "A ref whose .value can be read only once"
+    ],
+    "answer": 1,
+    "explanation": "readonly() returns a proxy that reflects the original's changes but blocks writes through it."
+  },
+  {
+    "topic": "composition-api",
+    "question": "How does a script setup component let its parent call a method through a template ref?",
+    "options": [
+      "Export it with export default",
+      "Return it from the script setup block",
+      "Register it with app.config.globalProperties",
+      "Expose it with defineExpose()"
+    ],
+    "answer": 3,
+    "explanation": "script setup components are closed by default, so only bindings passed to defineExpose() are visible via template refs."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What does defineModel() return in a child component?",
+    "options": [
+      "The raw modelValue prop as a constant",
+      "An emit function for update events",
+      "A reactive copy that never reaches the parent",
+      "A ref synced with the parent's v-model"
+    ],
+    "answer": 3,
+    "explanation": "defineModel() declares the modelValue prop and update event and returns a ref that emits on assignment."
+  },
+  {
+    "topic": "composition-api",
+    "question": "Before Vue 3.5, how do you access <input ref=\"el\"> in script setup?",
+    "options": [
+      "Call document.getElementById('el') in setup",
+      "Use this.$refs.el inside script setup",
+      "Declare const el = ref(null) with a matching name",
+      "Import el from the template automatically"
+    ],
+    "answer": 2,
+    "explanation": "A ref declared with the same name as the ref attribute is populated after the component mounts."
+  },
+  {
+    "topic": "composition-api",
+    "question": "Where should composables generally be called?",
+    "options": [
+      "Inside a setTimeout callback",
+      "Synchronously in setup() or script setup",
+      "Only inside an onMounted callback",
+      "Directly in template expressions"
+    ],
+    "answer": 1,
+    "explanation": "Composables rely on the active component instance, which is only available during synchronous setup."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "A child needs a different value for a prop it received. What is the recommended approach?",
+    "options": [
+      "Assign the new value directly to the prop",
+      "Change it through the parent instance",
+      "Emit an event so the parent updates the value",
+      "Call a set() method on the props object"
+    ],
+    "answer": 2,
+    "explanation": "Props are readonly in the child; the parent owns the data and should update it in response to an event."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "With defineProps({ size: { type: Number, default: 10 } }), what is props.size when the parent omits it?",
+    "options": [
+      "10",
+      "undefined",
+      "null",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "When a prop is absent, its declared default value is used."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "By default, v-model on a custom component in Vue 3 uses which prop and event?",
+    "options": [
+      "value prop and input event",
+      "model prop and change event",
+      "v-value prop and sync event",
+      "modelValue prop and update:modelValue event"
+    ],
+    "answer": 3,
+    "explanation": "Vue 3 changed the default from value/input to modelValue/update:modelValue."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "What happens to attributes passed to a component that are not declared as props or emits?",
+    "options": [
+      "They are silently discarded",
+      "They cause a runtime error",
+      "They fall through to the component's root element",
+      "They are added to every child element"
+    ],
+    "answer": 2,
+    "explanation": "Undeclared attributes such as class, style and listeners are applied to a single root element by default."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "How do you watch a single property of const state = reactive({ count: 0 })?",
+    "options": [
+      "watch(() => state.count, cb)",
+      "watch(state.count, cb)",
+      "watch('state.count', cb)",
+      "watch(state.count.value, cb)"
+    ],
+    "answer": 0,
+    "explanation": "state.count is a plain number, so a getter function is needed to make it a watchable source."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "Which watch option makes the callback run once right away?",
+    "options": [
+      "{ eager: true }",
+      "{ immediate: true }",
+      "{ initial: true }",
+      "{ now: true }"
+    ],
+    "answer": 1,
+    "explanation": "immediate: true runs the callback immediately with the current value as well as on later changes."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "How do you create a writable computed property?",
+    "options": [
+      "Pass an object with get and set functions",
+      "Pass a second argument of true",
+      "Call computed().writable()",
+      "Wrap the getter in reactive()"
+    ],
+    "answer": 0,
+    "explanation": "computed({ get, set }) produces a computed ref whose setter runs on assignment."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "What should a computed getter avoid?",
+    "options": [
+      "Side effects like mutating state or making requests",
+      "Reading props passed to the component",
+      "Returning arrays or objects",
+      "Reading other computed properties"
+    ],
+    "answer": 0,
+    "explanation": "Computed getters should be pure derivations; side effects belong in watchers."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Why is accessing a template ref directly in the setup body unreliable?",
+    "options": [
+      "Template refs are only available on the server",
+      "setup runs after the component unmounts",
+      "The component has not mounted yet, so the ref is null",
+      "Refs are only filled when using Options API"
+    ],
+    "answer": 2,
+    "explanation": "Template refs are assigned during mounting, so they should be accessed in onMounted or later."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "What is onBeforeUnmount typically used for?",
+    "options": [
+      "Fetching initial data before the first render",
+      "Cleaning up listeners or timers while the instance still works",
+      "Declaring props before the component is created",
+      "Preventing the component from being unmounted"
+    ],
+    "answer": 1,
+    "explanation": "onBeforeUnmount runs while the component is still fully functional, a good place to tear down resources."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "When a parent and its child mount, whose onMounted hook runs first?",
+    "options": [
+      "The parent's onMounted runs before the child's",
+      "They run in parallel in random order",
+      "Only the parent's hook runs on first mount",
+      "The child's onMounted runs before the parent's"
+    ],
+    "answer": 3,
+    "explanation": "A parent is considered mounted only after all of its synchronous children have mounted."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which hooks fire when a component cached by KeepAlive is shown again or hidden?",
+    "options": [
+      "onShow and onHide",
+      "onActivated and onDeactivated",
+      "onResume and onPause",
+      "onEnter and onLeave"
+    ],
+    "answer": 1,
+    "explanation": "KeepAlive caches instances and calls onActivated and onDeactivated instead of mount and unmount."
+  },
+  {
+    "topic": "directives",
+    "question": "Why should you provide a key when using v-for?",
+    "options": [
+      "So Vue can track each node's identity when reordering",
+      "So items are sorted alphabetically",
+      "So the list renders on the server only",
+      "So the loop variable becomes reactive"
+    ],
+    "answer": 0,
+    "explanation": "Unique keys let Vue reuse and move existing elements correctly instead of patching in place."
+  },
+  {
+    "topic": "directives",
+    "question": "In Vue 3, what happens when v-if and v-for are on the same element?",
+    "options": [
+      "v-if runs first, so it cannot access the v-for variable",
+      "v-for runs first and filters the items",
+      "Vue picks one at random and warns",
+      "Both are ignored and the element is removed"
+    ],
+    "answer": 0,
+    "explanation": "In Vue 3 v-if has higher priority than v-for, so using them together is discouraged."
+  },
+  {
+    "topic": "directives",
+    "question": "What does the .lazy modifier do on v-model?",
+    "options": [
+      "Syncs on change events instead of input events",
+      "Delays the sync by a fixed timeout",
+      "Syncs only when the form is submitted",
+      "Loads the input value asynchronously"
+    ],
+    "answer": 0,
+    "explanation": "v-model.lazy updates the bound value after the change event rather than on every keystroke."
+  },
+  {
+    "topic": "directives",
+    "question": "In script setup, how is a local custom directive registered?",
+    "options": [
+      "Name a variable vFocus and use it as v-focus",
+      "Pass it to defineDirectives()",
+      "Add it to the components option",
+      "Declare it with export directive"
+    ],
+    "answer": 0,
+    "explanation": "Any camelCase variable starting with v in script setup can be used as a custom directive."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "A child renders <slot :item=\"item\">. How does the parent read item?",
+    "options": [
+      "Read this.$slots.item in the parent",
+      "Use v-slot=\"{ item }\" on the child or a template",
+      "Declare item with defineProps in the parent",
+      "Inject it with inject('item')"
+    ],
+    "answer": 1,
+    "explanation": "Scoped slots pass props to the slot content, which the parent receives through v-slot."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "Which slot does <template #header> fill in the child?",
+    "options": [
+      "The first slot in the child template",
+      "The slot with name=\"header\"",
+      "The default slot with header styling",
+      "A new slot appended after the default"
+    ],
+    "answer": 1,
+    "explanation": "#header is shorthand for v-slot:header, targeting the slot named header."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "What does inject('theme', 'light') return when no ancestor provides theme?",
+    "options": [
+      "undefined",
+      "null",
+      "'light'",
+      "It throws an error"
+    ],
+    "answer": 2,
+    "explanation": "The second argument to inject() is the default used when no matching provider exists."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "How do you keep a provided value reactive for injecting components?",
+    "options": [
+      "Call provide() again inside onUpdated",
+      "Wrap inject() in a computed in every child",
+      "Provide a ref or reactive object, not a plain value",
+      "Mark the value with markRaw() first"
+    ],
+    "answer": 2,
+    "explanation": "Providing a ref or reactive object keeps the connection so injectors see updates."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "For the route path /users/:id, how do you read id?",
+    "options": [
+      "route.query.id",
+      "route.params.id",
+      "route.hash.id",
+      "route.meta.id"
+    ],
+    "answer": 1,
+    "explanation": "Dynamic segments in the path are exposed on route.params."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Which helper lets you destructure state from a Pinia store without losing reactivity?",
+    "options": [
+      "storeToRefs()",
+      "toRaw()",
+      "markRaw()",
+      "readonly()"
+    ],
+    "answer": 0,
+    "explanation": "storeToRefs() creates refs for state and getters so destructured values stay reactive."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "In a Pinia options store, what are getters equivalent to?",
+    "options": [
+      "Watchers on store state",
+      "Lifecycle hooks of the store",
+      "Mutations that change state",
+      "Computed properties for the store"
+    ],
+    "answer": 3,
+    "explanation": "Getters derive values from state and are cached like computed properties."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "How do you navigate to /about programmatically with Vue Router?",
+    "options": [
+      "router.go('/about')",
+      "route.navigate('/about')",
+      "router.push('/about')",
+      "router.link('/about')"
+    ],
+    "answer": 2,
+    "explanation": "router.push() adds a new history entry and navigates to the given location."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "What is v-memo used for?",
+    "options": [
+      "Caching API responses for a component",
+      "Persisting state to localStorage",
+      "Memoizing computed properties globally",
+      "Skipping updates to a subtree unless listed values change"
+    ],
+    "answer": 3,
+    "explanation": "v-memo takes an array of dependencies and skips re-rendering the subtree when none have changed."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "How can you reduce overhead when storing a large immutable dataset in state?",
+    "options": [
+      "Wrap it in reactive() twice",
+      "Store it in a computed with a setter",
+      "Use shallowRef() or markRaw() to skip deep reactivity",
+      "Convert it to a string with JSON.stringify"
+    ],
+    "answer": 2,
+    "explanation": "Avoiding deep proxies for large data that does not change saves memory and tracking cost."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "How do you code-split a route component with Vue Router?",
+    "options": [
+      "component: require('./views/About.vue')",
+      "component: () => import('./views/About.vue')",
+      "component: lazy('./views/About.vue')",
+      "component: 'views/About.vue'"
+    ],
+    "answer": 1,
+    "explanation": "A function returning a dynamic import lets the bundler create a separate chunk loaded on demand."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "How does a style block with the scoped attribute limit CSS to its component?",
+    "options": [
+      "It wraps the component in a shadow DOM",
+      "It inlines all styles as style attributes",
+      "It renames every class to a random hash",
+      "It adds unique data attributes to elements and selectors"
+    ],
+    "answer": 3,
+    "explanation": "Scoped CSS uses PostCSS to add a data-v attribute to elements and rewrite selectors to match it."
+  }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf73ef6de0ab",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "Which hook is not called during server-side rendering?",
+  "options": [
+   "onServerPrefetch",
+   "setup",
+   "onMounted",
+   "onErrorCaptured"
+  ],
+  "answer": 2,
+  "explanation": "onMounted and onUpdated are not called on the server, since there is no DOM to mount to."
+ },
+ {
+  "id": "qbae2dd16233",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "Which state can slot content access directly?",
+  "options": [
+   "Only the child's internal state",
+   "Both components' full state automatically",
+   "The parent's scope, plus props the child passes via scoped slots",
+   "Only global properties and injected values"
+  ],
+  "answer": 2,
+  "explanation": "Slot content is compiled in the parent's scope, so child data must be passed explicitly through slot props."
+ },
+ {
+  "id": "q10e32417da4",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "What is the difference between @click=\"handle\" and @click=\"handle()\"?",
+  "options": [
+   "The first passes the native event; the second calls it with no args",
+   "The first runs once; the second runs every click",
+   "They are identical and both receive the event",
+   "The first is invalid outside the Options API"
+  ],
+  "answer": 0,
+  "explanation": "A method name is called with the event, while an inline call uses only the arguments you write."
+ },
+ {
+  "id": "q3ae92a7b1ad",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "In script setup, const obj = { id: ref(1) }. What does {{ obj.id + 1 }} render?",
+  "options": [
+   "2",
+   "[object Object]1",
+   "11",
+   "NaN"
+  ],
+  "answer": 1,
+  "explanation": "Only top-level refs are unwrapped in templates, so obj.id is still a ref object inside the expression."
+ },
+ {
+  "id": "qb6f72793ff9",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "How do watch and watchEffect differ in tracking and timing?",
+  "options": [
+   "watch is lazy with explicit sources; watchEffect runs now and auto-tracks",
+   "watch runs now; watchEffect waits for a change",
+   "Both are lazy but watchEffect is deep",
+   "watchEffect needs explicit sources; watch tracks all"
+  ],
+  "answer": 0,
+  "explanation": "watch only fires on changes to its declared source, while watchEffect runs immediately and tracks whatever it reads."
+ },
+ {
+  "id": "qe87b1cdf6b6",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "Why use a Symbol typed as InjectionKey<T> for provide and inject?",
+  "options": [
+   "It makes the injected value reactive",
+   "It is required for inject() to work",
+   "It avoids key collisions and types the injected value",
+   "It lets the value cross app instances"
+  ],
+  "answer": 2,
+  "explanation": "Symbol keys are unique, and InjectionKey carries the type so inject() returns T or undefined."
+ },
+ {
+  "id": "q7fdef425084",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "Navigating from /users/1 to /users/2 with the same component does not rerun onMounted. Why?",
+  "options": [
+   "The instance is reused, so watch params or use onBeforeRouteUpdate",
+   "The router caches the old page as HTML",
+   "Params changes are not detected by the router",
+   "onMounted only runs for the first route"
+  ],
+  "answer": 0,
+  "explanation": "Vue Router reuses the component when only params change, so lifecycle hooks are not called again."
+ },
+ {
+  "id": "q3ecc1ae534b",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "What happens when script setup contains a top-level await?",
+  "options": [
+   "The await is ignored at compile time",
+   "Vue throws because setup must be sync",
+   "The component renders twice automatically",
+   "The component becomes async and must be inside Suspense"
+  ],
+  "answer": 3,
+  "explanation": "Top-level await makes setup async, so an ancestor Suspense is needed to handle the pending state."
+ },
+ {
+  "id": "q50db8623b9c",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "How do you apply fallthrough attributes to an inner element instead of the root?",
+  "options": [
+   "Set inheritAttrs: true and use v-slot",
+   "Use provide('attrs') in the child",
+   "Use defineProps with an attrs option",
+   "Set inheritAttrs: false and bind v-bind=\"$attrs\""
+  ],
+  "answer": 3,
+  "explanation": "Disabling inheritAttrs stops automatic root binding, and $attrs can then be spread on any element."
+ },
+ {
+  "id": "qbd12b28f5bc",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "How does the Vue 3 template compiler help runtime diffing?",
+  "options": [
+   "It converts templates to Web Components",
+   "It emits patch flags and hoists static content",
+   "It removes the virtual DOM entirely by default",
+   "It precomputes all renders at build time"
+  ],
+  "answer": 1,
+  "explanation": "Compile-time hints let the renderer skip static nodes and only check the dynamic parts."
+ }
+]

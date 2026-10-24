@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1604d067d91",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "What happens when you call the setter function returned by useState?",
+  "options": [
+   "The variable changes immediately within the current render",
+   "The whole browser page reloads",
+   "The matching prop in the parent component is updated",
+   "React queues a re-render with the new state value"
+  ],
+  "answer": 3,
+  "explanation": "Setting state schedules a re-render; the new value is visible on the next render, not in the current one."
+ },
+ {
+  "id": "q4851ba0125b",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Which hook adds local state to a function component?",
+  "options": [
+   "useRef",
+   "useMemo",
+   "useState",
+   "useId"
+  ],
+  "answer": 2,
+  "explanation": "useState returns a state value and a setter, and calling the setter triggers a re-render."
+ },
+ {
+  "id": "qb1098f5804c",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Which special prop holds the content nested between a component's opening and closing tags?",
+  "options": [
+   "content",
+   "inner",
+   "children",
+   "body"
+  ],
+  "answer": 2,
+  "explanation": "Anything placed between <Card> and </Card> is passed to Card as props.children."
+ },
+ {
+  "id": "qef6db5f414d",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Which description best fits props in React?",
+  "options": [
+   "Global values shared by every component",
+   "Mutable variables owned by the component",
+   "Read-only inputs passed from a parent component",
+   "Private data stored on the DOM node"
+  ],
+  "answer": 2,
+  "explanation": "Props are passed down by the parent and should be treated as read-only by the receiving component."
+ },
+ {
+  "id": "q4cc1a7db5a0",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "Two sibling components need to share and edit the same value. What is the standard React approach?",
+  "options": [
+   "Store the value in a global variable",
+   "Use refs to read each other's DOM",
+   "Lift the state up to their closest common parent and pass it down as props",
+   "Duplicate the state in both siblings and sync it in effects"
+  ],
+  "answer": 2,
+  "explanation": "Lifting state up gives a single source of truth that both siblings receive via props, along with a setter."
+ },
+ {
+  "id": "q92511473f76",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is the correct way to add an item to an array held in state?",
+  "options": [
+   "items.push(newItem); setItems(items)",
+   "setItems([...items, newItem])",
+   "items[items.length] = newItem",
+   "setItems(items.concat).push(newItem)"
+  ],
+  "answer": 1,
+  "explanation": "State must be treated as immutable; creating a new array lets React detect the change by reference."
+ },
+ {
+  "id": "qcdd8670a5a4",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "Why is setCount(c => c + 1) safer than setCount(count + 1) when called several times in one handler?",
+  "options": [
+   "It updates state synchronously",
+   "It skips the re-render",
+   "Each updater receives the latest queued state rather than the stale render value",
+   "It works without a dependency array"
+  ],
+  "answer": 2,
+  "explanation": "Updater functions are applied in order to the pending state, so three calls add three instead of one."
+ },
+ {
+  "id": "qcf6d87db766",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is the benefit of writing useState(() => createInitialRows()) instead of useState(createInitialRows())?",
+  "options": [
+   "createInitialRows runs only on the first render instead of every render",
+   "It lets the state be shared across components",
+   "It makes the state read-only",
+   "It makes the setter asynchronous"
+  ],
+  "answer": 0,
+  "explanation": "Passing an initializer function lets React call it only once, avoiding the expensive call on every re-render."
+ },
+ {
+  "id": "q2019b28d2aa",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "With count = 0, a handler runs setCount(count + 1) three times in a row. What is count after the re-render?",
+  "options": [
+   "3",
+   "0",
+   "1",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "Each call uses the same render-time value 0, so all three set it to 1."
+ },
+ {
+  "id": "q224117ea087",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "With count = 0, a handler runs setCount(count + 5) and then setCount(c => c + 1). What is the final count?",
+  "options": [
+   "1",
+   "5",
+   "6",
+   "0"
+  ],
+  "answer": 2,
+  "explanation": "The first queues a replacement with 5, then the updater runs on that pending value, producing 6."
+ },
+ {
+  "id": "q817fe0769e1",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "A handler calls setCount(count + 1) and then console.log(count) on the next line. What is logged when count was 3?",
+  "options": [
+   "4",
+   "3",
+   "A promise",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "State is a snapshot for the current render; the new value is only available on the next render."
+ },
+ {
+  "id": "qf973a484a8d",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "A component does useState(props.initialColor) and the parent later passes a different initialColor. What happens to the state?",
+  "options": [
+   "It updates to the new prop automatically",
+   "It becomes undefined",
+   "React throws a warning and resets",
+   "It keeps the original value, since the initial value is used only on the first render"
+  ],
+  "answer": 3,
+  "explanation": "useState ignores its argument after mount; to reset, change the key or read the prop directly."
+ }
+]

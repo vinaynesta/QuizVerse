@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2ea9a98bfc2",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What is the time complexity of accessing an array element by its index?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(1)",
+   "O(n log n)"
+  ],
+  "answer": 2,
+  "explanation": "Arrays store elements contiguously, so the address of any index is computed directly."
+ },
+ {
+  "id": "q6c34baae77b",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What is a palindrome string?",
+  "options": [
+   "A string that contains every vowel",
+   "A string with no repeated characters",
+   "A string whose characters are sorted alphabetically",
+   "A string that reads the same forwards and backwards"
+  ],
+  "answer": 3,
+  "explanation": "A palindrome such as 'racecar' is identical when reversed."
+ },
+ {
+  "id": "qaf0168c0a60",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What is the time complexity of inserting an element at the beginning of an array of n elements?",
+  "options": [
+   "O(1)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "Every existing element must shift one position to make room at index 0."
+ },
+ {
+  "id": "qd17a22e0c16",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "In most programming languages such as Java, C, and Python, what is the index of the first element of an array?",
+  "options": [
+   "0",
+   "1",
+   "-1",
+   "It depends on the array size"
+  ],
+  "answer": 0,
+  "explanation": "These languages use zero-based indexing, so the first element is at index 0."
+ },
+ {
+  "id": "q45a0dedd33e",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "In Java, what is the total time of building a string by doing s = s + c in a loop n times?",
+  "options": [
+   "O(n)",
+   "O(log n)",
+   "O(n^2)",
+   "O(n log n)"
+  ],
+  "answer": 2,
+  "explanation": "Strings are immutable, so each concatenation copies the whole string; StringBuilder avoids this."
+ },
+ {
+  "id": "q965d8c7a35d",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "What is the time complexity of finding a pair that sums to a target in a sorted array using the two-pointer technique?",
+  "options": [
+   "O(n^2)",
+   "O(n log n)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 2,
+  "explanation": "Each step moves one of the two pointers inward, so at most n steps are needed."
+ },
+ {
+  "id": "q99e24e60262",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "Which problem does Kadane's algorithm solve in O(n) time?",
+  "options": [
+   "Longest common subsequence",
+   "Single-source shortest path",
+   "Maximum subarray sum",
+   "Exact string matching"
+  ],
+  "answer": 2,
+  "explanation": "Kadane's tracks the best sum ending at each index to find the maximum contiguous subarray sum."
+ },
+ {
+  "id": "q0eb6b95fa59",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "Which technique rotates an array right by k positions in O(n) time and O(1) extra space?",
+  "options": [
+   "Rotate by one position k times",
+   "Copy elements into a new array at shifted indexes",
+   "Reverse the whole array, then reverse the first k and the remaining n - k elements",
+   "Sort the array and then shift the pivot"
+  ],
+  "answer": 2,
+  "explanation": "Three in-place reversals achieve the rotation in linear time without extra storage."
+ },
+ {
+  "id": "q1b2f26ea7df",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "What is the time complexity of the Knuth-Morris-Pratt algorithm for a text of length n and pattern of length m?",
+  "options": [
+   "O(m^2 + n)",
+   "O(n * m)",
+   "O(n log m)",
+   "O(n + m)"
+  ],
+  "answer": 3,
+  "explanation": "The prefix function is built in O(m) and the text is scanned without ever moving backward."
+ },
+ {
+  "id": "q78acf4d10e2",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "What is the time complexity of finding the longest substring without repeating characters using a sliding window and a hash map?",
+  "options": [
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)",
+   "O(n^3)"
+  ],
+  "answer": 0,
+  "explanation": "Each character enters and leaves the window at most once."
+ }
+]

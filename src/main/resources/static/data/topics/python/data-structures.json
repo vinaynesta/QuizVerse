@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q248845e199c",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does len({1, 1, 2}) return?",
+  "options": [
+   "3",
+   "It raises TypeError",
+   "1",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "A set stores only unique elements, so the duplicate 1 is kept once."
+ },
+ {
+  "id": "qa5d25adf4d1",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "Which list method adds a single item to the end of a list?",
+  "options": [
+   "append()",
+   "extend()",
+   "insert()",
+   "add()"
+  ],
+  "answer": 0,
+  "explanation": "append() adds one object at the end; extend() adds each item of an iterable and lists have no add()."
+ },
+ {
+  "id": "qdeade7ac9be",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does d.get('x', 0) return if key 'x' is missing from dict d?",
+  "options": [
+   "0",
+   "It raises KeyError",
+   "False",
+   "None"
+  ],
+  "answer": 0,
+  "explanation": "dict.get returns the supplied default when the key is absent instead of raising KeyError."
+ },
+ {
+  "id": "qe6f777cd65c",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "Which expression creates an empty set?",
+  "options": [
+   "set()",
+   "[]",
+   "{}",
+   "()"
+  ],
+  "answer": 0,
+  "explanation": "{} creates an empty dict, so an empty set must be written as set()."
+ },
+ {
+  "id": "q429fc02e1d9",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does sorted({'b': 1, 'a': 2}) return?",
+  "options": [
+   "[1, 2]",
+   "['a', 'b']",
+   "[('a', 2), ('b', 1)]",
+   "{'a': 2, 'b': 1}"
+  ],
+  "answer": 1,
+  "explanation": "Iterating a dict yields its keys, and sorted always returns a list."
+ },
+ {
+  "id": "q8dc478d6140",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "After a = [1, 2, 3]; b = a; b.append(4), what is len(a)?",
+  "options": [
+   "3",
+   "4",
+   "1",
+   "It raises NameError"
+  ],
+  "answer": 1,
+  "explanation": "b = a binds a second name to the same list object, so appending through b changes a too."
+ },
+ {
+  "id": "qc3e1a2ffecf",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does list(zip([1, 2, 3], 'ab')) return?",
+  "options": [
+   "[(1, 'a'), (2, 'b'), (3, None)]",
+   "It raises ValueError",
+   "[(1, 'a'), (2, 'b')]",
+   "[(1, 2, 3), ('a', 'b')]"
+  ],
+  "answer": 2,
+  "explanation": "zip stops at the shortest iterable by default, so the 3 is dropped."
+ },
+ {
+  "id": "qdeb0672d4bc",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does {1, 2, 3} & {2, 3, 4} evaluate to?",
+  "options": [
+   "{1, 2, 3, 4}",
+   "{2, 3}",
+   "{1, 4}",
+   "{1}"
+  ],
+  "answer": 1,
+  "explanation": "& on sets is intersection, keeping elements present in both."
+ },
+ {
+  "id": "q0c83cc34367",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After grid = [[0] * 2] * 2; grid[0][0] = 1, what is grid?",
+  "options": [
+   "[[1, 0], [1, 0]]",
+   "[[1, 0], [0, 0]]",
+   "[[1, 1], [0, 0]]",
+   "[[1, 1], [1, 1]]"
+  ],
+  "answer": 0,
+  "explanation": "Multiplying the outer list copies references, so both rows are the same inner list."
+ },
+ {
+  "id": "q1df75f6ad23",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "What happens if you add keys to a dict while iterating over it with a for loop?",
+  "options": [
+   "The loop silently skips the new keys",
+   "RuntimeError is raised",
+   "The new keys are iterated as well",
+   "Nothing; the loop iterates a copy"
+  ],
+  "answer": 1,
+  "explanation": "Changing a dict's size during iteration raises RuntimeError: dictionary changed size during iteration."
+ },
+ {
+  "id": "q3bc574d827c",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After t = (1, [2]) and then t[1] += [3] inside try/except TypeError, what is t?",
+  "options": [
+   "(1, [2, 3])",
+   "(1, [2], [3])",
+   "(1, [3])",
+   "(1, [2])"
+  ],
+  "answer": 0,
+  "explanation": "The list is extended in place first, then the item assignment to the tuple raises TypeError, so the mutation sticks."
+ },
+ {
+  "id": "qd8b8fdb0974",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "What does {1: 'a', True: 'b', 1.0: 'c'} evaluate to?",
+  "options": [
+   "{1: 'a', True: 'b', 1.0: 'c'}",
+   "{True: 'c'}",
+   "{1: 'a'}",
+   "{1: 'c'}"
+  ],
+  "answer": 3,
+  "explanation": "1, True and 1.0 are equal with equal hashes, so they are one key; the first key object is kept and the last value wins."
+ }
+]

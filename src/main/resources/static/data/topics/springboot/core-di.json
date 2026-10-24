@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0e2af6575d4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which annotation selects a specific bean by name at an injection point when several beans share a type?",
+  "options": [
+   "@Profile",
+   "@Qualifier",
+   "@Order",
+   "@Lazy"
+  ],
+  "answer": 1,
+  "explanation": "@Qualifier narrows autowiring candidates to the bean with the matching qualifier or name."
+ },
+ {
+  "id": "q199c5eb6bdd",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Since Spring 4.3, when can @Autowired be omitted on a constructor?",
+  "options": [
+   "When the class is declared final",
+   "When the constructor is private",
+   "When the bean has prototype scope",
+   "When the class declares exactly one constructor"
+  ],
+  "answer": 3,
+  "explanation": "If a bean class has a single constructor, Spring uses it for injection automatically without @Autowired."
+ },
+ {
+  "id": "q8a1bf0e8dcf",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "What is the default scope of a Spring bean?",
+  "options": [
+   "prototype",
+   "request",
+   "session",
+   "singleton"
+  ],
+  "answer": 3,
+  "explanation": "Unless specified otherwise, the container creates one shared instance per bean definition, which is singleton scope."
+ },
+ {
+  "id": "qbe93f10925a",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which injection style does the Spring team recommend for mandatory dependencies?",
+  "options": [
+   "Setter injection",
+   "Field injection",
+   "Constructor injection",
+   "Lookup method injection"
+  ],
+  "answer": 2,
+  "explanation": "Constructor injection makes dependencies explicit, allows final fields, and guarantees the object is fully initialized."
+ },
+ {
+  "id": "q2112c29efd4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "How can a bean receive every bean that implements a NotificationSender interface?",
+  "options": [
+   "Inject a single NotificationSender with @Primary",
+   "Inject the ApplicationContext and call getBean(NotificationSender.class)",
+   "Annotate the interface with @Bean",
+   "Inject a List<NotificationSender>"
+  ],
+  "answer": 3,
+  "explanation": "Spring injects all matching beans into a collection-typed injection point, ordered by @Order or Ordered when present."
+ },
+ {
+  "id": "qa3de1aca290",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "What does placing @Lazy on a constructor parameter do?",
+  "options": [
+   "Injects a proxy that resolves the real bean on first use",
+   "Makes the bean prototype-scoped",
+   "Skips injection if the bean is missing",
+   "Delays the whole application startup until first request"
+  ],
+  "answer": 0,
+  "explanation": "@Lazy at an injection point injects a lazy-resolution proxy, which also helps break circular dependencies."
+ },
+ {
+  "id": "qbd7f6f7e7f4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "Two beans of type PaymentClient exist; one is marked @Primary and the injection point uses @Qualifier(\"backupClient\"). Which bean is injected?",
+  "options": [
+   "The @Primary bean",
+   "Whichever bean was registered first",
+   "Neither; startup fails with NoUniqueBeanDefinitionException",
+   "The bean named backupClient"
+  ],
+  "answer": 3,
+  "explanation": "An explicit @Qualifier at the injection point takes precedence over @Primary."
+ },
+ {
+  "id": "qe85ff11dd33",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "What is ObjectProvider<T> useful for at an injection point?",
+  "options": [
+   "Lazily or optionally obtaining a bean, e.g. with getIfAvailable()",
+   "Registering new bean definitions at runtime",
+   "Converting a bean into a different type",
+   "Forcing a singleton to become a prototype"
+  ],
+  "answer": 0,
+  "explanation": "ObjectProvider allows deferred, optional or unique-if-available retrieval without failing at startup."
+ },
+ {
+  "id": "q394b64ed94e",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "Why is a @PreDestroy method on a prototype-scoped bean never called by the container?",
+  "options": [
+   "The container does not manage prototype beans after handing them out",
+   "Prototype beans are destroyed only on JVM exit",
+   "@PreDestroy is supported only on @Configuration classes",
+   "Prototype beans are always wrapped in proxies that swallow callbacks"
+  ],
+  "answer": 0,
+  "explanation": "Spring configures and returns prototypes but does not track them, so the client is responsible for cleanup."
+ },
+ {
+  "id": "q71e51c328ee",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "A singleton bean receives a prototype bean through its constructor. What does it get each time it uses that field?",
+  "options": [
+   "The same prototype instance, created once at injection time",
+   "A proxy that creates a new instance per call by default",
+   "null after the first use",
+   "A fresh prototype instance on every method call"
+  ],
+  "answer": 0,
+  "explanation": "Injection happens once; use ObjectProvider, @Lookup or a scoped proxy to get a new prototype each time."
+ },
+ {
+  "id": "q9a984a387a2",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "In what order are these initialization callbacks invoked for a bean?",
+  "options": [
+   "Custom init method, then @PostConstruct, then afterPropertiesSet()",
+   "afterPropertiesSet(), then @PostConstruct, then the custom init method",
+   "@PostConstruct, then afterPropertiesSet(), then the custom init method",
+   "@PostConstruct, then the custom init method, then afterPropertiesSet()"
+  ],
+  "answer": 2,
+  "explanation": "Annotation callbacks run first, then InitializingBean, then the init method declared on the bean definition."
+ },
+ {
+  "id": "qb6d296726e4",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "In @Configuration(proxyBeanMethods = false), what happens when beanA() calls beanB() directly?",
+  "options": [
+   "The container's singleton beanB is returned via CGLIB",
+   "Startup fails because inter-bean calls are forbidden",
+   "A new instance is created by a plain Java call, not the container's singleton",
+   "beanB becomes prototype-scoped automatically"
+  ],
+  "answer": 2,
+  "explanation": "Without CGLIB proxying, @Bean methods are ordinary methods, so inter-bean calls bypass the container."
+ }
+]

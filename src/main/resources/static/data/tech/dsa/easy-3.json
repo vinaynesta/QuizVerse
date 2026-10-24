@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q44e02f8e3a2",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "Which of these functions grows fastest as n becomes large?",
+  "options": [
+   "n^2",
+   "n^3",
+   "n log n",
+   "2^n"
+  ],
+  "answer": 3,
+  "explanation": "Exponential functions eventually outgrow any polynomial."
+ },
+ {
+  "id": "q2ea9a98bfc2",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What is the time complexity of accessing an array element by its index?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(1)",
+   "O(n log n)"
+  ],
+  "answer": 2,
+  "explanation": "Arrays store elements contiguously, so the address of any index is computed directly."
+ },
+ {
+  "id": "q770e659af50",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "Which element is stored at the root of a max-heap?",
+  "options": [
+   "The smallest element",
+   "The median element",
+   "The largest element",
+   "The most recently inserted element"
+  ],
+  "answer": 2,
+  "explanation": "The max-heap property makes every parent at least as large as its children, so the root is the maximum."
+ },
+ {
+  "id": "q38d422344f8",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "What is a connected, undirected graph with no cycles called?",
+  "options": [
+   "A complete graph",
+   "A cycle graph",
+   "A tree",
+   "A wheel graph"
+  ],
+  "answer": 2,
+  "explanation": "A tree is exactly a connected acyclic undirected graph, with V - 1 edges."
+ },
+ {
+  "id": "q13f515e2d40",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What best describes backtracking?",
+  "options": [
+   "Building a solution incrementally and abandoning partial candidates that cannot succeed",
+   "Sorting the input and scanning it once",
+   "Always taking the locally best choice without revisiting it",
+   "Splitting the input in half and merging results"
+  ],
+  "answer": 0,
+  "explanation": "Backtracking explores choices recursively and undoes them when a partial solution becomes invalid."
+ },
+ {
+  "id": "qe8958b74b08",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What is it called when two different keys hash to the same bucket?",
+  "options": [
+   "A probe",
+   "An overflow",
+   "A rehash",
+   "A collision"
+  ],
+  "answer": 3,
+  "explanation": "A collision occurs when distinct keys map to the same slot and must be resolved."
+ },
+ {
+  "id": "qb422a607f50",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "What does Big-O notation describe?",
+  "options": [
+   "The exact running time in seconds",
+   "Only the best-case running time",
+   "The average memory used by the CPU",
+   "An asymptotic upper bound on growth rate"
+  ],
+  "answer": 3,
+  "explanation": "Big-O bounds how fast a function can grow as the input size increases."
+ },
+ {
+  "id": "qe336da29468",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "How is the load factor of a hash table defined?",
+  "options": [
+   "Number of buckets divided by number of stored entries",
+   "Number of stored entries multiplied by number of buckets",
+   "Number of stored entries divided by number of buckets",
+   "Length of the longest bucket chain"
+  ],
+  "answer": 2,
+  "explanation": "Load factor n/m measures how full the table is and triggers resizing when it grows too high."
+ },
+ {
+  "id": "qd17a22e0c16",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "In most programming languages such as Java, C, and Python, what is the index of the first element of an array?",
+  "options": [
+   "0",
+   "1",
+   "-1",
+   "It depends on the array size"
+  ],
+  "answer": 0,
+  "explanation": "These languages use zero-based indexing, so the first element is at index 0."
+ },
+ {
+  "id": "q51a90760d4a",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "Which abstract data type is most commonly implemented with a binary heap?",
+  "options": [
+   "Priority queue",
+   "Stack",
+   "Doubly linked list",
+   "Hash map"
+  ],
+  "answer": 0,
+  "explanation": "Heaps give O(log n) insert and extract-min/max, which is exactly what a priority queue needs."
+ }
+]

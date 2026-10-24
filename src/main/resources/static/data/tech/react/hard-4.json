@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q02f3b0e0460",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A large context holds both rarely changing settings and a fast-changing cursor position. What is a common fix for excess re-renders?",
+  "options": [
+   "Use a single global variable",
+   "Move all values into refs",
+   "Wrap every consumer in memo",
+   "Split it into separate contexts so consumers subscribe only to what they need"
+  ],
+  "answer": 3,
+  "explanation": "Splitting contexts means components reading only settings do not re-render when the cursor moves."
+ },
+ {
+  "id": "q461ae125d38",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "In development with Strict Mode, why does an effect with [] appear to run twice on mount?",
+  "options": [
+   "Because of a bug in React DOM",
+   "Because the dependency array is empty",
+   "React mounts, simulates an unmount by running cleanup, then runs the effect again to expose missing cleanup",
+   "Because the component rendered on both server and client"
+  ],
+  "answer": 2,
+  "explanation": "Strict Mode runs an extra setup and cleanup cycle in development only, so a correct cleanup makes the double run harmless."
+ },
+ {
+  "id": "qfafe7c422ba",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "A parent re-renders and passes no props to a child that is not wrapped in memo. Does the child re-render?",
+  "options": [
+   "Yes, children re-render by default when their parent re-renders",
+   "Only if it uses state",
+   "No, because its props did not change",
+   "Only in Strict Mode"
+  ],
+  "answer": 0,
+  "explanation": "React re-renders the subtree by default; memo is the opt-in to skip renders when props are equal."
+ },
+ {
+  "id": "q97c31187495",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Why should you not call a component as a plain function, like {Profile()}, instead of rendering <Profile />?",
+  "options": [
+   "It always throws a TypeError",
+   "Its hooks become part of the caller's hook list, so React cannot track it as its own component",
+   "It disables JSX escaping",
+   "It forces a full remount on every render"
+  ],
+  "answer": 1,
+  "explanation": "Calling it directly inlines its hooks into the parent, breaking hook order if used conditionally and losing separate identity and state."
+ },
+ {
+  "id": "q3baad5490ee",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "Why is dispatch from useReducer convenient to pass down through context?",
+  "options": [
+   "It deep-clones state",
+   "It works outside of React",
+   "Its identity is stable across renders, so it does not cause consumer re-renders by itself",
+   "It automatically memoizes children"
+  ],
+  "answer": 2,
+  "explanation": "React guarantees dispatch is stable, so a context holding only dispatch rarely changes."
+ },
+ {
+  "id": "qc4dc9eb4b1e",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Which props cannot be passed from a Server Component to a Client Component?",
+  "options": [
+   "Strings and numbers",
+   "Plain objects and arrays",
+   "Regular functions such as event handlers, unless they are Server Functions",
+   "JSX elements"
+  ],
+  "answer": 2,
+  "explanation": "Props must be serializable; ordinary functions cannot cross the boundary, but Server Functions marked with 'use server' can."
+ },
+ {
+  "id": "q7f0433ef24c",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "In React 19, after a form's function action completes successfully, what happens to uncontrolled fields of that form?",
+  "options": [
+   "React automatically resets the form",
+   "They keep their values",
+   "They become controlled",
+   "They are disabled"
+  ],
+  "answer": 0,
+  "explanation": "React 19 resets uncontrolled fields after a successful action, and requestFormReset can do it manually."
+ },
+ {
+  "id": "qf73bbe1bc42",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "What is the purpose of useEffectEvent in React?",
+  "options": [
+   "To run an effect only on unmount",
+   "To subscribe to DOM events globally",
+   "To read the latest props and state from an effect without making them dependencies",
+   "To convert an effect into a server action"
+  ],
+  "answer": 2,
+  "explanation": "An Effect Event always sees fresh values but is not reactive, so logic like logging the current theme need not re-trigger the effect."
+ },
+ {
+  "id": "qe5b4c6513e9",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "How does Suspense show a fallback while data loads with the use API?",
+  "options": [
+   "The component returns null until data is ready",
+   "The component suspends by reading a pending promise, and the nearest Suspense boundary shows its fallback",
+   "Suspense polls the network",
+   "Suspense wraps fetch globally"
+  ],
+  "answer": 1,
+  "explanation": "Reading an unresolved promise with use suspends rendering, and React displays the closest boundary's fallback."
+ },
+ {
+  "id": "qa1d31740480",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "Why should a promise passed to use() not be created fresh inside a Client Component's render?",
+  "options": [
+   "Promises cannot be passed to hooks",
+   "A new promise every render means it never settles from React's view, causing repeated suspending",
+   "It makes the component a Server Component",
+   "use only accepts strings"
+  ],
+  "answer": 1,
+  "explanation": "Promises should be cached or created outside render, such as in a Server Component or a data library."
+ }
+]

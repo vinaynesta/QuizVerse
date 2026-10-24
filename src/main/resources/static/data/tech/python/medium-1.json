@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q79f49acc096",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "What does __all__ in a module control?",
+  "options": [
+   "Which names are private to the module",
+   "The order in which the module executes",
+   "The names imported by from module import *",
+   "Which other modules may import it"
+  ],
+  "answer": 2,
+  "explanation": "__all__ lists the public names that a star-import brings in."
+ },
+ {
+  "id": "qdeb0672d4bc",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does {1, 2, 3} & {2, 3, 4} evaluate to?",
+  "options": [
+   "{1, 2, 3, 4}",
+   "{2, 3}",
+   "{1, 4}",
+   "{1}"
+  ],
+  "answer": 1,
+  "explanation": "& on sets is intersection, keeping elements present in both."
+ },
+ {
+  "id": "q524b2baec93",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Given class A: pass and class B(A): pass, what does issubclass(B, object) return?",
+  "options": [
+   "False",
+   "True",
+   "It raises TypeError",
+   "None"
+  ],
+  "answer": 1,
+  "explanation": "Every Python 3 class implicitly inherits from object."
+ },
+ {
+  "id": "q745401e61f1",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "What does (lambda x, y=3: x * y)(2) return?",
+  "options": [
+   "5",
+   "2",
+   "It raises TypeError",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "y falls back to its default 3, so the result is 2 * 3."
+ },
+ {
+  "id": "q26f214ca19b",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "What does functools.wraps do when used in a decorator?",
+  "options": [
+   "Caches the wrapped function's results",
+   "Makes the wrapper run in a separate thread",
+   "Prevents the decorator from being stacked",
+   "Copies metadata such as __name__ and __doc__ onto the wrapper"
+  ],
+  "answer": 3,
+  "explanation": "wraps updates the wrapper to look like the wrapped function and sets __wrapped__."
+ },
+ {
+  "id": "q594fa267c4b",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "Which clause catches both ValueError and TypeError?",
+  "options": [
+   "except [ValueError, TypeError]:",
+   "except ValueError, TypeError:",
+   "except ValueError or TypeError:",
+   "except (ValueError, TypeError):"
+  ],
+  "answer": 3,
+  "explanation": "Multiple exception types are caught by listing them in a tuple."
+ },
+ {
+  "id": "q4ccf5cd8e91",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "What does python -m pkg do when pkg is a package?",
+  "options": [
+   "Installs pkg from PyPI",
+   "Runs only pkg/__init__.py",
+   "Runs pkg/__main__.py as the main module",
+   "Lists the modules in pkg"
+  ],
+  "answer": 2,
+  "explanation": "For a package, -m imports it and executes its __main__ submodule as __main__."
+ },
+ {
+  "id": "qc3ef3ce5fdf",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "If __exit__ returns True, what happens to an exception raised in the with block?",
+  "options": [
+   "It is re-raised",
+   "It is converted into a warning",
+   "It is logged and then re-raised",
+   "It is suppressed"
+  ],
+  "answer": 3,
+  "explanation": "A truthy return value from __exit__ tells Python to swallow the exception."
+ },
+ {
+  "id": "qbb148dfc41f",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does list(itertools.chain([1, 2], [3])) return?",
+  "options": [
+   "[1, 2, 3]",
+   "[1, 2]",
+   "[(1, 3), (2,)]",
+   "[[1, 2], [3]]"
+  ],
+  "answer": 0,
+  "explanation": "chain yields every item of the first iterable, then every item of the next."
+ },
+ {
+  "id": "qdf751b9e385",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does the functools.lru_cache decorator do?",
+  "options": [
+   "Limits how often a function may be called",
+   "Memoizes function results keyed by the call arguments",
+   "Logs each call to a rotating file",
+   "Stores results on disk between runs"
+  ],
+  "answer": 1,
+  "explanation": "lru_cache stores results for argument combinations and evicts least recently used entries when full."
+ }
+]

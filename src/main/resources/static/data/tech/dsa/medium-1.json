@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4b40e40d6e7",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "What does the postfix expression 3 4 + 2 * evaluate to?",
+  "options": [
+   "11",
+   "14",
+   "10",
+   "24"
+  ],
+  "answer": 1,
+  "explanation": "Using a stack: 3 + 4 = 7, then 7 * 2 = 14."
+ },
+ {
+  "id": "q5e2aa1dd114",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "What is the worst-case time complexity of quicksort?",
+  "options": [
+   "O(n log n)",
+   "O(n^2)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "If the pivot is always the smallest or largest element, partitions are maximally unbalanced."
+ },
+ {
+  "id": "q0771fac37b2",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "If you can climb 1 or 2 steps at a time, how many distinct ways are there to climb 5 stairs?",
+  "options": [
+   "5",
+   "13",
+   "8",
+   "10"
+  ],
+  "answer": 2,
+  "explanation": "Ways follow ways(n) = ways(n-1) + ways(n-2): 1, 2, 3, 5, 8."
+ },
+ {
+  "id": "qff660eb16a3",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "What is the worst-case search time in a plain BST built by inserting keys in sorted order?",
+  "options": [
+   "O(log n)",
+   "O(1)",
+   "O(n log n)",
+   "O(n)"
+  ],
+  "answer": 3,
+  "explanation": "Sorted insertions create a degenerate tree that behaves like a linked list."
+ },
+ {
+  "id": "q99e24e60262",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "Which problem does Kadane's algorithm solve in O(n) time?",
+  "options": [
+   "Longest common subsequence",
+   "Single-source shortest path",
+   "Maximum subarray sum",
+   "Exact string matching"
+  ],
+  "answer": 2,
+  "explanation": "Kadane's tracks the best sum ending at each index to find the maximum contiguous subarray sum."
+ },
+ {
+  "id": "qc0f95778aa0",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of finding the k largest of n elements using a min-heap of size k?",
+  "options": [
+   "O(n log k)",
+   "O(k log n)",
+   "O(n k)",
+   "O(n log n)"
+  ],
+  "answer": 0,
+  "explanation": "Each of the n elements may cause one O(log k) heap operation."
+ },
+ {
+  "id": "q4fd5830fd74",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "medium",
+  "question": "What is the time complexity of the loop for (int i = 1; i < n; i *= 2)?",
+  "options": [
+   "O(log n)",
+   "O(n log n)",
+   "O(sqrt n)",
+   "O(n)"
+  ],
+  "answer": 0,
+  "explanation": "i doubles each iteration, so it reaches n after about log2 n steps."
+ },
+ {
+  "id": "qc1f739d6efb",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "What is the expected time to check whether an array of n elements has a duplicate using a hash set?",
+  "options": [
+   "O(n^2)",
+   "O(n log n)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 2,
+  "explanation": "Each element is inserted and checked in expected O(1) time."
+ },
+ {
+  "id": "q0bfe14f0a05",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "medium",
+  "question": "How many permutations are there of n distinct elements?",
+  "options": [
+   "n!",
+   "n^2",
+   "2^n",
+   "n(n-1)/2"
+  ],
+  "answer": 0,
+  "explanation": "There are n choices for the first position, n-1 for the second, and so on."
+ },
+ {
+  "id": "q99a9a52b2b2",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "medium",
+  "question": "What is the amortized time to append to a dynamic array that doubles its capacity when full?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(log n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Occasional O(n) copies are spread across many cheap appends, averaging to constant time."
+ }
+]

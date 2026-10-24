@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0b256e65931",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "Which statement imports only the sqrt function from the math module?",
+  "options": [
+   "import sqrt from math",
+   "import math.sqrt",
+   "using math.sqrt",
+   "from math import sqrt"
+  ],
+  "answer": 3,
+  "explanation": "from module import name binds just that name in the current namespace."
+ },
+ {
+  "id": "q59cd10ead78",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "Which file traditionally marks a directory as a regular package?",
+  "options": [
+   "__main__.py",
+   "setup.py",
+   "__init__.py",
+   "package.py"
+  ],
+  "answer": 2,
+  "explanation": "A regular package is a directory with an __init__.py, which runs when the package is imported."
+ },
+ {
+  "id": "qc70c90a59d7",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "What is the value of __name__ in a file that is run directly as a script?",
+  "options": [
+   "None",
+   "The file name without .py",
+   "'__script__'",
+   "'__main__'"
+  ],
+  "answer": 3,
+  "explanation": "The module executed as the program's entry point gets __name__ set to '__main__'."
+ },
+ {
+  "id": "qe829387301b",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "What is the standard tool for installing packages from PyPI?",
+  "options": [
+   "npm",
+   "gem",
+   "pip",
+   "maven"
+  ],
+  "answer": 2,
+  "explanation": "pip is Python's standard package installer for the Python Package Index."
+ },
+ {
+  "id": "q4ccf5cd8e91",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "What does python -m pkg do when pkg is a package?",
+  "options": [
+   "Installs pkg from PyPI",
+   "Runs only pkg/__init__.py",
+   "Runs pkg/__main__.py as the main module",
+   "Lists the modules in pkg"
+  ],
+  "answer": 2,
+  "explanation": "For a package, -m imports it and executes its __main__ submodule as __main__."
+ },
+ {
+  "id": "q7456e9a00bb",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "Inside a package module, what does from . import utils do?",
+  "options": [
+   "Imports utils from the current working directory",
+   "Imports every module in the package",
+   "Imports utils from the same package using a relative import",
+   "Imports utils from the standard library"
+  ],
+  "answer": 2,
+  "explanation": "A leading dot refers to the current package in a relative import."
+ },
+ {
+  "id": "q79f49acc096",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "What does __all__ in a module control?",
+  "options": [
+   "Which names are private to the module",
+   "The order in which the module executes",
+   "The names imported by from module import *",
+   "Which other modules may import it"
+  ],
+  "answer": 2,
+  "explanation": "__all__ lists the public names that a star-import brings in."
+ },
+ {
+  "id": "q85b179a9c01",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "How many times does a module's top-level code run if it is imported twice in one process?",
+  "options": [
+   "Once; later imports reuse the cached module in sys.modules",
+   "Never; only functions are executed",
+   "Twice, once per import statement",
+   "Once per function that uses the module"
+  ],
+  "answer": 0,
+  "explanation": "Imported modules are cached in sys.modules, so a repeat import just binds the existing object."
+ },
+ {
+  "id": "q266a452faac",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "What does importlib.reload(mod) do?",
+  "options": [
+   "Re-executes the module's code inside the existing module object",
+   "Creates a new module object and updates every reference to it",
+   "Deletes the module from sys.modules",
+   "Recompiles only the module's changed functions"
+  ],
+  "answer": 0,
+  "explanation": "reload reruns the source in the same module object; objects imported elsewhere with from-import keep the old bindings."
+ },
+ {
+  "id": "qa22587c1aeb",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "Why can a file named random.py next to your script break import random?",
+  "options": [
+   "Python forbids file names matching stdlib modules",
+   "The script's directory is first on sys.path, so it shadows the standard module",
+   "The .py file is compiled over the stdlib module",
+   "pip uninstalls the standard module on conflict"
+  ],
+  "answer": 1,
+  "explanation": "sys.path[0] is the script's directory, so the local random.py is found before the standard library."
+ },
+ {
+  "id": "qa5e4bbdcdd0",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "Which error typically appears when two modules use from a import X style imports of each other at top level?",
+  "options": [
+   "SyntaxError at the second import",
+   "RecursionError from infinite importing",
+   "ImportError about a partially initialized module",
+   "ModuleNotFoundError for the first module"
+  ],
+  "answer": 2,
+  "explanation": "The second module sees the first one only half-executed in sys.modules, so the name does not exist yet."
+ },
+ {
+  "id": "qe74c348d49b",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "What is a namespace package (PEP 420)?",
+  "options": [
+   "A module that only contains constants",
+   "A package that defines __all__",
+   "A package installed into site-packages",
+   "A package without __init__.py whose portions may span several directories"
+  ],
+  "answer": 3,
+  "explanation": "Namespace packages have no __init__.py and can be assembled from multiple sys.path entries."
+ }
+]

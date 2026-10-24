@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "arrays-strings",
+    "question": "What is the time complexity of accessing an array element by its index?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "answer": 0,
+    "explanation": "Arrays store elements contiguously, so the address of any index is computed directly."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "In most programming languages such as Java, C, and Python, what is the index of the first element of an array?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "It depends on the array size"
+    ],
+    "answer": 1,
+    "explanation": "These languages use zero-based indexing, so the first element is at index 0."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What is a palindrome string?",
+    "options": [
+      "A string that contains every vowel",
+      "A string with no repeated characters",
+      "A string that reads the same forwards and backwards",
+      "A string whose characters are sorted alphabetically"
+    ],
+    "answer": 2,
+    "explanation": "A palindrome such as 'racecar' is identical when reversed."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What is the time complexity of inserting an element at the beginning of an array of n elements?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n^2)",
+      "O(n)"
+    ],
+    "answer": 3,
+    "explanation": "Every existing element must shift one position to make room at index 0."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "What does each node of a singly linked list store?",
+    "options": [
+      "Data and a reference to the next node",
+      "Data and references to the next and previous nodes",
+      "Only data with no references",
+      "Data and its integer index in the list"
+    ],
+    "answer": 0,
+    "explanation": "A singly linked list node holds its value plus one pointer to the following node."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "What is the worst-case time to access the k-th element of a singly linked list of n nodes?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    "answer": 1,
+    "explanation": "There is no random access, so you must follow next pointers from the head."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "In a circular singly linked list, what does the last node point to?",
+    "options": [
+      "null",
+      "Itself",
+      "The first node",
+      "The middle node"
+    ],
+    "answer": 2,
+    "explanation": "The tail links back to the head, forming a cycle."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "Which ordering principle does a stack follow?",
+    "options": [
+      "FIFO (first in, first out)",
+      "Priority order",
+      "Random order",
+      "LIFO (last in, first out)"
+    ],
+    "answer": 3,
+    "explanation": "The most recently pushed element is the first one popped."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "Which ordering principle does a queue follow?",
+    "options": [
+      "FIFO (first in, first out)",
+      "LIFO (last in, first out)",
+      "Sorted order",
+      "Highest priority first"
+    ],
+    "answer": 0,
+    "explanation": "Elements leave a queue in the same order they arrived."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "Which operation adds an element to the top of a stack?",
+    "options": [
+      "enqueue",
+      "push",
+      "poll",
+      "peek"
+    ],
+    "answer": 1,
+    "explanation": "push places a new element on top; peek only reads it."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "What does a deque (double-ended queue) allow?",
+    "options": [
+      "Insertion and removal only at the front",
+      "Insertion and removal only at the rear",
+      "Insertion and removal at both ends",
+      "Insertion and removal only in the middle"
+    ],
+    "answer": 2,
+    "explanation": "A deque supports adding and removing elements at both the front and the back."
+  },
+  {
+    "topic": "hashing",
+    "question": "What is the average-case time complexity of a lookup in a well-designed hash table?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "answer": 3,
+    "explanation": "A good hash function spreads keys evenly, so each bucket holds few entries on average."
+  },
+  {
+    "topic": "hashing",
+    "question": "What is it called when two different keys hash to the same bucket?",
+    "options": [
+      "A collision",
+      "An overflow",
+      "A rehash",
+      "A probe"
+    ],
+    "answer": 0,
+    "explanation": "A collision occurs when distinct keys map to the same slot and must be resolved."
+  },
+  {
+    "topic": "hashing",
+    "question": "How is the load factor of a hash table defined?",
+    "options": [
+      "Number of buckets divided by number of stored entries",
+      "Number of stored entries divided by number of buckets",
+      "Number of stored entries multiplied by number of buckets",
+      "Length of the longest bucket chain"
+    ],
+    "answer": 1,
+    "explanation": "Load factor n/m measures how full the table is and triggers resizing when it grows too high."
+  },
+  {
+    "topic": "trees",
+    "question": "What is a tree node with no children called?",
+    "options": [
+      "The root",
+      "An internal node",
+      "A leaf",
+      "A sibling"
+    ],
+    "answer": 2,
+    "explanation": "Leaves are the terminal nodes of a tree with no children."
+  },
+  {
+    "topic": "trees",
+    "question": "In a binary search tree, what does the left subtree of a node contain?",
+    "options": [
+      "Keys greater than the node's key",
+      "Only keys equal to the node's key",
+      "Keys in any order",
+      "Keys less than the node's key"
+    ],
+    "answer": 3,
+    "explanation": "The BST property places smaller keys on the left and larger keys on the right."
+  },
+  {
+    "topic": "trees",
+    "question": "In what order does an inorder traversal visit the nodes of a binary tree?",
+    "options": [
+      "Left subtree, root, right subtree",
+      "Root, left subtree, right subtree",
+      "Left subtree, right subtree, root",
+      "Level by level from the top"
+    ],
+    "answer": 0,
+    "explanation": "Inorder is left-root-right, which yields sorted order for a BST."
+  },
+  {
+    "topic": "trees",
+    "question": "What is the maximum number of children a node can have in a binary tree?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "Unlimited"
+    ],
+    "answer": 1,
+    "explanation": "By definition each binary tree node has at most a left and a right child."
+  },
+  {
+    "topic": "heaps",
+    "question": "Which element is stored at the root of a max-heap?",
+    "options": [
+      "The smallest element",
+      "The median element",
+      "The largest element",
+      "The most recently inserted element"
+    ],
+    "answer": 2,
+    "explanation": "The max-heap property makes every parent at least as large as its children, so the root is the maximum."
+  },
+  {
+    "topic": "heaps",
+    "question": "Which abstract data type is most commonly implemented with a binary heap?",
+    "options": [
+      "Hash map",
+      "Stack",
+      "Doubly linked list",
+      "Priority queue"
+    ],
+    "answer": 3,
+    "explanation": "Heaps give O(log n) insert and extract-min/max, which is exactly what a priority queue needs."
+  },
+  {
+    "topic": "heaps",
+    "question": "In a 0-indexed array representation of a binary heap, where are the children of index i?",
+    "options": [
+      "2i + 1 and 2i + 2",
+      "2i and 2i + 1",
+      "i + 1 and i + 2",
+      "i / 2 and i / 2 + 1"
+    ],
+    "answer": 0,
+    "explanation": "With zero-based indexing the left child is at 2i + 1 and the right child at 2i + 2."
+  },
+  {
+    "topic": "graphs",
+    "question": "Which data structure does breadth-first search (BFS) use to track vertices to visit?",
+    "options": [
+      "A stack",
+      "A queue",
+      "A max-heap",
+      "A binary search tree"
+    ],
+    "answer": 1,
+    "explanation": "BFS processes vertices in FIFO order, exploring all neighbors at one distance before going deeper."
+  },
+  {
+    "topic": "graphs",
+    "question": "What is a connected, undirected graph with no cycles called?",
+    "options": [
+      "A complete graph",
+      "A cycle graph",
+      "A tree",
+      "A wheel graph"
+    ],
+    "answer": 2,
+    "explanation": "A tree is exactly a connected acyclic undirected graph, with V - 1 edges."
+  },
+  {
+    "topic": "graphs",
+    "question": "How much space does an adjacency matrix use for a graph with V vertices?",
+    "options": [
+      "O(V)",
+      "O(V + E)",
+      "O(E)",
+      "O(V^2)"
+    ],
+    "answer": 3,
+    "explanation": "The matrix has one cell for every ordered pair of vertices regardless of edge count."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What must be true of an array before you can apply binary search to it?",
+    "options": [
+      "It must be sorted",
+      "It must contain only unique elements",
+      "It must have an even length",
+      "It must be stored as a linked list"
+    ],
+    "answer": 0,
+    "explanation": "Binary search discards half the range by comparing with the middle, which only works on sorted data."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the worst-case time complexity of binary search on n elements?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer": 1,
+    "explanation": "Each comparison halves the remaining search range."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "Which sorting algorithm repeatedly swaps adjacent elements that are out of order?",
+    "options": [
+      "Merge sort",
+      "Heap sort",
+      "Bubble sort",
+      "Quick sort"
+    ],
+    "answer": 2,
+    "explanation": "Bubble sort makes passes comparing neighbors and swapping them, bubbling large values to the end."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the worst-case time complexity of linear search on n elements?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n^2)",
+      "O(n)"
+    ],
+    "answer": 3,
+    "explanation": "In the worst case every element is checked once."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "Dynamic programming applies to problems with overlapping subproblems and which other property?",
+    "options": [
+      "Optimal substructure",
+      "No recursion",
+      "Already sorted input",
+      "Constant-size input"
+    ],
+    "answer": 0,
+    "explanation": "Optimal substructure means an optimal solution can be built from optimal solutions to subproblems."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "What is memoization?",
+    "options": [
+      "Storing every variable in a global array",
+      "Caching the results of function calls to avoid recomputing them",
+      "Converting recursion into a loop automatically",
+      "Freeing memory after each recursive call"
+    ],
+    "answer": 1,
+    "explanation": "Memoization stores the answer for each input so repeated subproblems are solved only once."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "What is the bottom-up approach to dynamic programming, which fills a table from the smallest subproblems, commonly called?",
+    "options": [
+      "Memoization",
+      "Backtracking",
+      "Tabulation",
+      "Branch and bound"
+    ],
+    "answer": 2,
+    "explanation": "Tabulation iteratively fills a table starting from base cases, unlike top-down memoization."
+  },
+  {
+    "topic": "complexity",
+    "question": "What does Big-O notation describe?",
+    "options": [
+      "The exact running time in seconds",
+      "Only the best-case running time",
+      "The average memory used by the CPU",
+      "An asymptotic upper bound on growth rate"
+    ],
+    "answer": 3,
+    "explanation": "Big-O bounds how fast a function can grow as the input size increases."
+  },
+  {
+    "topic": "complexity",
+    "question": "Which of these functions grows fastest as n becomes large?",
+    "options": [
+      "2^n",
+      "n^3",
+      "n log n",
+      "n^2"
+    ],
+    "answer": 0,
+    "explanation": "Exponential functions eventually outgrow any polynomial."
+  },
+  {
+    "topic": "complexity",
+    "question": "What is the time complexity of two nested loops that each run from 1 to n?",
+    "options": [
+      "O(n)",
+      "O(n^2)",
+      "O(2n)",
+      "O(n log n)"
+    ],
+    "answer": 1,
+    "explanation": "The inner loop runs n times for each of the n outer iterations."
+  },
+  {
+    "topic": "complexity",
+    "question": "What does O(1) time complexity mean?",
+    "options": [
+      "The algorithm runs in exactly one second",
+      "The algorithm processes one element at a time",
+      "The running time does not grow with input size",
+      "The running time doubles with each input"
+    ],
+    "answer": 2,
+    "explanation": "Constant time means the work is bounded by a fixed amount regardless of n."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "What is the condition that stops a recursive function from calling itself called?",
+    "options": [
+      "The recursive case",
+      "The pivot",
+      "The invariant",
+      "The base case"
+    ],
+    "answer": 3,
+    "explanation": "The base case returns a result directly without further recursion."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "What typically happens when a recursive function recurses too deeply, for example because it has no base case?",
+    "options": [
+      "Stack overflow",
+      "Integer overflow",
+      "Heap fragmentation",
+      "Deadlock"
+    ],
+    "answer": 0,
+    "explanation": "Each call adds a stack frame, and unbounded recursion exhausts the call stack."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "What best describes backtracking?",
+    "options": [
+      "Sorting the input and scanning it once",
+      "Building a solution incrementally and abandoning partial candidates that cannot succeed",
+      "Always taking the locally best choice without revisiting it",
+      "Splitting the input in half and merging results"
+    ],
+    "answer": 1,
+    "explanation": "Backtracking explores choices recursively and undoes them when a partial solution becomes invalid."
+  },
+  {
+    "topic": "greedy",
+    "question": "What defines a greedy algorithm?",
+    "options": [
+      "It tries every possible combination",
+      "It stores solutions to all subproblems in a table",
+      "It makes the locally optimal choice at each step",
+      "It always works backward from the goal"
+    ],
+    "answer": 2,
+    "explanation": "Greedy algorithms commit to the best immediate option, hoping it leads to a global optimum."
+  },
+  {
+    "topic": "greedy",
+    "question": "Which of these is a greedy algorithm for finding a minimum spanning tree?",
+    "options": [
+      "Floyd-Warshall algorithm",
+      "Bellman-Ford algorithm",
+      "Knuth-Morris-Pratt algorithm",
+      "Kruskal's algorithm"
+    ],
+    "answer": 3,
+    "explanation": "Kruskal's repeatedly adds the cheapest edge that does not create a cycle."
+  }
+]

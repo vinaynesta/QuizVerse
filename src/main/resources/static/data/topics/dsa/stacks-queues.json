@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0b84aab657f",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which ordering principle does a stack follow?",
+  "options": [
+   "LIFO (last in, first out)",
+   "Priority order",
+   "Random order",
+   "FIFO (first in, first out)"
+  ],
+  "answer": 0,
+  "explanation": "The most recently pushed element is the first one popped."
+ },
+ {
+  "id": "q195467f010d",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which operation adds an element to the top of a stack?",
+  "options": [
+   "enqueue",
+   "poll",
+   "push",
+   "peek"
+  ],
+  "answer": 2,
+  "explanation": "push places a new element on top; peek only reads it."
+ },
+ {
+  "id": "q1b811a63ab5",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "What does a deque (double-ended queue) allow?",
+  "options": [
+   "Insertion and removal only at the front",
+   "Insertion and removal at both ends",
+   "Insertion and removal only at the rear",
+   "Insertion and removal only in the middle"
+  ],
+  "answer": 1,
+  "explanation": "A deque supports adding and removing elements at both the front and the back."
+ },
+ {
+  "id": "qe80a792ed45",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which ordering principle does a queue follow?",
+  "options": [
+   "LIFO (last in, first out)",
+   "FIFO (first in, first out)",
+   "Sorted order",
+   "Highest priority first"
+  ],
+  "answer": 1,
+  "explanation": "Elements leave a queue in the same order they arrived."
+ },
+ {
+  "id": "q130df03f16d",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "Which data structure is typically used to check whether a string of brackets is balanced?",
+  "options": [
+   "A stack",
+   "A min-heap",
+   "A hash set",
+   "A queue"
+  ],
+  "answer": 0,
+  "explanation": "Push opening brackets and pop to match each closing bracket; the stack must be empty at the end."
+ },
+ {
+  "id": "q3a4b7d48dc2",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "When a queue is implemented with two stacks, what is the amortized cost per operation?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(log n)",
+   "O(n^2)"
+  ],
+  "answer": 1,
+  "explanation": "Each element is moved from the input stack to the output stack at most once."
+ },
+ {
+  "id": "q4b40e40d6e7",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "What does the postfix expression 3 4 + 2 * evaluate to?",
+  "options": [
+   "11",
+   "14",
+   "10",
+   "24"
+  ],
+  "answer": 1,
+  "explanation": "Using a stack: 3 + 4 = 7, then 7 * 2 = 14."
+ },
+ {
+  "id": "q460a01748f1",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "What is the time complexity of computing the next greater element for every item of an array using a monotonic stack?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "Each element is pushed once and popped at most once."
+ },
+ {
+  "id": "qdee3663f87b",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "What is the time complexity of computing the maximum of every window of size k in an array of n elements using a monotonic deque?",
+  "options": [
+   "O(n log k)",
+   "O(n)",
+   "O(k log n)",
+   "O(n * k)"
+  ],
+  "answer": 1,
+  "explanation": "Each index is added to and removed from the deque at most once."
+ },
+ {
+  "id": "qe9df7f84291",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "How does a min-stack typically support push, pop, and getMin all in O(1)?",
+  "options": [
+   "It sorts the stack after every push",
+   "It keeps an auxiliary record of the current minimum at each stack depth",
+   "It scans the entire stack on each getMin",
+   "It stores elements in a binary heap"
+  ],
+  "answer": 1,
+  "explanation": "Pairing each level with its minimum lets getMin read the top and pop restore the previous minimum."
+ }
+]

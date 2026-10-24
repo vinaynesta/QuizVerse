@@ -42,7 +42,8 @@ public class AppUserDetailsService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("No such user"));
         return org.springframework.security.core.userdetails.User
                 .withUsername(user.getUsername())
-                .password(user.getPasswordHash())
+                // Google-only accounts have no password; an empty hash never matches, so password login fails.
+                .password(user.hasPassword() ? user.getPasswordHash() : "")
                 .roles(isAdmin(user.getUsername()) ? new String[] {"USER", "ADMIN"} : new String[] {"USER"})
                 .build();
     }

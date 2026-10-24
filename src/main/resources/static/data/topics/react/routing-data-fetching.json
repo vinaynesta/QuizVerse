@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1330d120f1e",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "When fetching data inside useEffect, why set an ignore flag or abort the request in the cleanup function?",
+  "options": [
+   "To make the request travel faster",
+   "To avoid applying a stale response after the dependencies change or the component unmounts",
+   "To retry the request if it fails",
+   "To cache the response automatically"
+  ],
+  "answer": 1,
+  "explanation": "Cleanup ensures an outdated response does not overwrite newer state or update an unmounted component."
+ },
+ {
+  "id": "q39e209a1373",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router v6 and later, which hook returns a function for navigating programmatically?",
+  "options": [
+   "useNavigate",
+   "useLocation",
+   "useParams",
+   "useMatch"
+  ],
+  "answer": 0,
+  "explanation": "useNavigate returns a navigate function you can call, for example navigate('/home'), after an action completes."
+ },
+ {
+  "id": "q3bb8cd8580d",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router, which component creates a client-side navigation link without a full page reload?",
+  "options": [
+   "Route",
+   "Link",
+   "Outlet",
+   "Routes"
+  ],
+  "answer": 1,
+  "explanation": "Link renders an anchor that updates the URL and renders the new route on the client without reloading the page."
+ },
+ {
+  "id": "q531f79a78af",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router, what does useParams return?",
+  "options": [
+   "The dynamic segments of the matched route, such as :id",
+   "The props of the current component",
+   "The parsed query string of the URL",
+   "The browser's history stack"
+  ],
+  "answer": 0,
+  "explanation": "For a route like /users/:id, useParams returns an object such as { id: '42' }."
+ },
+ {
+  "id": "q211c651d98d",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "Fetching in a parent effect, then rendering a child that fetches in its own effect, creates what problem?",
+  "options": [
+   "A network waterfall where the requests run one after another",
+   "Duplicate keys",
+   "A memory leak",
+   "An infinite render loop"
+  ],
+  "answer": 0,
+  "explanation": "The child cannot start fetching until the parent finishes and renders it, serializing the requests."
+ },
+ {
+  "id": "q28eb998fd91",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "Which React Router hook reads and updates the URL query string?",
+  "options": [
+   "useSearchParams",
+   "useParams",
+   "useQuery",
+   "useRouteData"
+  ],
+  "answer": 0,
+  "explanation": "useSearchParams returns a URLSearchParams object and a setter, similar to useState for the query string."
+ },
+ {
+  "id": "q37eceab17b3",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "Why are libraries like TanStack Query often preferred over hand-written fetch-in-useEffect code?",
+  "options": [
+   "They make fetch synchronous",
+   "They remove the need for a server",
+   "They handle caching, deduplication, refetching, and race conditions for you",
+   "They are required for React Router"
+  ],
+  "answer": 2,
+  "explanation": "Data libraries solve caching and request lifecycle problems that are easy to get wrong in raw effects."
+ },
+ {
+  "id": "q386b9022d39",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "In React Router v6+, what does the Outlet component render?",
+  "options": [
+   "A link to the parent route",
+   "The current URL as text",
+   "The 404 page",
+   "The matched child route's element inside a parent layout"
+  ],
+  "answer": 3,
+  "explanation": "Nested routes render inside the parent's Outlet, which enables shared layouts."
+ },
+ {
+  "id": "q17808c080ba",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "Typing quickly fires fetches for 'a', 'ab', 'abc', and the 'a' response arrives last. Without cleanup, what bug results?",
+  "options": [
+   "The requests are merged",
+   "React cancels the old requests automatically",
+   "The component unmounts",
+   "Results for 'a' overwrite the newer 'abc' results"
+  ],
+  "answer": 3,
+  "explanation": "This race condition is solved by ignoring stale responses or aborting them in the effect cleanup."
+ },
+ {
+  "id": "q9ba62d5c7fe",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "In React Router data mode, what is the main advantage of a route loader over fetching in useEffect?",
+  "options": [
+   "Loaders run only on the client",
+   "Loaders replace the need for routes",
+   "Loaders cache data forever",
+   "Data loading can start in parallel with navigation, before the component renders"
+  ],
+  "answer": 3,
+  "explanation": "Loaders begin fetching when navigation starts, avoiding render-then-fetch waterfalls."
+ },
+ {
+  "id": "qa1d31740480",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "Why should a promise passed to use() not be created fresh inside a Client Component's render?",
+  "options": [
+   "Promises cannot be passed to hooks",
+   "A new promise every render means it never settles from React's view, causing repeated suspending",
+   "It makes the component a Server Component",
+   "use only accepts strings"
+  ],
+  "answer": 1,
+  "explanation": "Promises should be cached or created outside render, such as in a Server Component or a data library."
+ },
+ {
+  "id": "qe5b4c6513e9",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "How does Suspense show a fallback while data loads with the use API?",
+  "options": [
+   "The component returns null until data is ready",
+   "The component suspends by reading a pending promise, and the nearest Suspense boundary shows its fallback",
+   "Suspense polls the network",
+   "Suspense wraps fetch globally"
+  ],
+  "answer": 1,
+  "explanation": "Reading an unresolved promise with use suspends rendering, and React displays the closest boundary's fallback."
+ }
+]

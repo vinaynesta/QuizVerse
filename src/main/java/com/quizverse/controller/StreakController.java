@@ -18,7 +18,7 @@ import java.security.Principal;
 import java.time.Clock;
 import java.time.LocalDate;
 
-/** Day streak, today's progress towards the daily goal, and whether today's daily quiz is done. */
+/** Day streak, today's progress towards the daily goal, and whether today's daily quiz and tech challenge are done. */
 @RestController
 @RequestMapping("/api/me")
 public class StreakController {
@@ -34,7 +34,8 @@ public class StreakController {
     }
 
     /** {@code date} is today in IST (yyyy-mm-dd), the same date the daily quiz is picked by. */
-    public record StreakResponse(int current, int best, int today, int goal, boolean dailyDone, String date) {}
+    public record StreakResponse(int current, int best, int today, int goal, boolean dailyDone, boolean techDailyDone,
+                                 String date) {}
 
     public record GoalRequest(@Min(1) @Max(10) int goal) {}
 
@@ -55,6 +56,8 @@ public class StreakController {
         LocalDate today = LocalDate.now(clock.withZone(Streaks.ZONE));
         Streaks.Summary s = Streaks.of(attempts.completionTimes(user.getId()), today);
         boolean dailyDone = attempts.existsByUserIdAndKindAndSectionId(user.getId(), "daily", today.toString());
-        return new StreakResponse(s.current(), s.best(), s.today(), user.getDailyGoal(), dailyDone, today.toString());
+        boolean techDailyDone = attempts.existsByUserIdAndKindAndSectionId(user.getId(), "tech-daily", today.toString());
+        return new StreakResponse(s.current(), s.best(), s.today(), user.getDailyGoal(), dailyDone, techDailyDone,
+                today.toString());
     }
 }

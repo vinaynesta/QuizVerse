@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Group every question by subject and topic, for revision, bookmarks and the custom quiz builder.
 
-Usage: python3 -I scripts/build_topics.py <data-dir>     (run after build_exams.py)
+Usage: python3 -I scripts/build_topics.py <data-dir>     (run after build_exams.py and build_tech.py)
 
 Reads <data-dir>/index.json and the quiz files it lists. Writes
 <data-dir>/topics/<subject>/<topic>.json (each question once, with its level) and
@@ -15,7 +15,9 @@ from collections import defaultdict
 from pathlib import Path
 
 SUBJECTS = {"english": "English Language", "quant": "Quantitative Aptitude",
-            "reasoning": "Reasoning Ability", "java": "Java"}
+            "reasoning": "Reasoning Ability", "dsa": "Data Structures & Algorithms", "java": "Java",
+            "python": "Python", "springboot": "Spring Boot", "react": "React", "vue": "Vue.js",
+            "ai": "Artificial Intelligence"}
 LEVEL_ORDER = ["easy", "medium", "hard", "very-hard", "mixed"]
 NAMES = {
     "lcm-hcf": "LCM & HCF", "speed-time-distance": "Speed, Time & Distance", "time-work": "Time & Work",
@@ -25,6 +27,24 @@ NAMES = {
     "fill-blank": "Fill in the Blank", "double-blank": "Double Fill in the Blank",
     "one-word": "One-Word Substitution", "mixture": "Mixtures & Alligation", "roots": "Squares & Roots",
     "core-java": "Core Java", "advanced-java-8-features": "Java 8+ Features",
+    "arrays-strings": "Arrays & Strings", "stacks-queues": "Stacks & Queues",
+    "sorting-searching": "Sorting & Searching", "recursion-backtracking": "Recursion & Backtracking",
+    "oop": "OOP", "jvm-memory": "JVM & Memory", "streams-lambdas": "Streams & Lambdas",
+    "basics-types": "Basics & Types", "comprehensions-generators": "Comprehensions & Generators",
+    "modules-packages": "Modules & Packages", "decorators-context-managers": "Decorators & Context Managers",
+    "async-concurrency": "Async & Concurrency", "core-di": "Core & Dependency Injection",
+    "web-rest": "Web & REST", "data-jpa": "Data JPA", "configuration-profiles": "Configuration & Profiles",
+    "actuator-observability": "Actuator & Observability", "deployment-build": "Build & Deployment",
+    "jsx-components": "JSX & Components", "props-state": "Props & State",
+    "rendering-reconciliation": "Rendering & Reconciliation", "context-state-management": "Context & State Management",
+    "forms-events": "Forms & Events", "routing-data-fetching": "Routing & Data Fetching",
+    "react-19-server-components": "React 19 & Server Components", "composition-api": "Composition API",
+    "components-props-events": "Components, Props & Events", "computed-watchers": "Computed & Watchers",
+    "slots-provide-inject": "Slots, Provide & Inject", "router-pinia": "Router & Pinia",
+    "performance-tooling": "Performance & Tooling", "ml-basics": "ML Basics",
+    "evaluation-metrics": "Evaluation Metrics", "deep-learning-architectures": "Deep Learning Architectures",
+    "nlp-transformers": "NLP & Transformers", "llms-prompting": "LLMs & Prompting", "rag-agents": "RAG & Agents",
+    "ai-ethics-safety": "AI Ethics & Safety",
 }
 
 

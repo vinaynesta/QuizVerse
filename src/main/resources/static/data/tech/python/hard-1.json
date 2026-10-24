@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q478df593356",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "Given def g(): yield from range(2); yield 9, what does list(g()) return?",
+  "options": [
+   "[range(0, 2), 9]",
+   "[0, 1, 2, 9]",
+   "[0, 1, 9]",
+   "[9]"
+  ],
+  "answer": 2,
+  "explanation": "yield from delegates to the inner iterable, yielding each of its items before continuing."
+ },
+ {
+  "id": "q0a0b55723e5",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "How many nested callables does a decorator with arguments such as @repeat(3) typically involve, counting repeat itself?",
+  "options": [
+   "One: repeat itself",
+   "Four: repeat, a factory, a decorator and a wrapper",
+   "Two: repeat and the wrapper",
+   "Three: repeat returns a decorator, which returns a wrapper"
+  ],
+  "answer": 3,
+  "explanation": "repeat(3) must return the actual decorator, which takes the function and returns the wrapper."
+ },
+ {
+  "id": "q1ada044792d",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Given def f(): try: return 1 finally: return 2, what does f() return?",
+  "options": [
+   "None",
+   "1",
+   "2",
+   "(1, 2)"
+  ],
+  "answer": 2,
+  "explanation": "finally runs before the function actually returns, and its own return overrides the pending one."
+ },
+ {
+  "id": "q0997376879c",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "With fs = [lambda: i for i in range(3)], what is [f() for f in fs]?",
+  "options": [
+   "[0, 1, 2]",
+   "[2, 2, 2]",
+   "[0, 0, 0]",
+   "[1, 2, 3]"
+  ],
+  "answer": 1,
+  "explanation": "Closures look up i when called (late binding), and by then the loop variable is 2."
+ },
+ {
+  "id": "q1cae93a5e4a",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does float('nan') == float('nan') evaluate to?",
+  "options": [
+   "True",
+   "False",
+   "None",
+   "It raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "By IEEE 754 rules NaN is not equal to anything, including itself."
+ },
+ {
+  "id": "qe89c8e8e85b",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "What happens to hashing when a class defines __eq__ but not __hash__?",
+  "options": [
+   "Hashing keeps using the default id-based hash",
+   "Python raises TypeError when the class is created",
+   "A hash is derived automatically from __eq__",
+   "Its instances become unhashable because __hash__ is set to None"
+  ],
+  "answer": 3,
+  "explanation": "Overriding __eq__ alone implicitly sets __hash__ = None so equal objects cannot hash differently."
+ },
+ {
+  "id": "q7963d8ac5fb",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does True + True evaluate to?",
+  "options": [
+   "2",
+   "True",
+   "1",
+   "It raises TypeError"
+  ],
+  "answer": 0,
+  "explanation": "bool is a subclass of int with True equal to 1, so the sum is the int 2."
+ },
+ {
+  "id": "qfbf48369d9f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "Given def f(x, acc=[]): acc.append(x); return acc, what does the second call f(2) return after f(1)?",
+  "options": [
+   "[2]",
+   "[1, 2]",
+   "[1]",
+   "[[1], 2]"
+  ],
+  "answer": 1,
+  "explanation": "Default values are evaluated once at definition time, so the same list is reused across calls."
+ },
+ {
+  "id": "q1df75f6ad23",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "What happens if you add keys to a dict while iterating over it with a for loop?",
+  "options": [
+   "The loop silently skips the new keys",
+   "RuntimeError is raised",
+   "The new keys are iterated as well",
+   "Nothing; the loop iterates a copy"
+  ],
+  "answer": 1,
+  "explanation": "Changing a dict's size during iteration raises RuntimeError: dictionary changed size during iteration."
+ },
+ {
+  "id": "q2312faa23e6",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "What arguments does __exit__ receive when the with block finished without an exception?",
+  "options": [
+   "Nothing; it is called with no arguments",
+   "The value returned by __enter__",
+   "False, False and False",
+   "None for the exception type, value and traceback"
+  ],
+  "answer": 3,
+  "explanation": "__exit__(exc_type, exc_value, traceback) always receives three arguments, all None on a clean exit."
+ }
+]

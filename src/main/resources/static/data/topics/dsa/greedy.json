@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5955a14af7a",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "easy",
+  "question": "What defines a greedy algorithm?",
+  "options": [
+   "It tries every possible combination",
+   "It stores solutions to all subproblems in a table",
+   "It always works backward from the goal",
+   "It makes the locally optimal choice at each step"
+  ],
+  "answer": 3,
+  "explanation": "Greedy algorithms commit to the best immediate option, hoping it leads to a global optimum."
+ },
+ {
+  "id": "q72dcaa509ec",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "easy",
+  "question": "Which of these is a greedy algorithm for finding a minimum spanning tree?",
+  "options": [
+   "Floyd-Warshall algorithm",
+   "Bellman-Ford algorithm",
+   "Knuth-Morris-Pratt algorithm",
+   "Kruskal's algorithm"
+  ],
+  "answer": 3,
+  "explanation": "Kruskal's repeatedly adds the cheapest edge that does not create a cycle."
+ },
+ {
+  "id": "q2b89b706358",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "What does Huffman coding produce?",
+  "options": [
+   "A hash function with no collisions",
+   "An optimal prefix-free binary code built greedily from symbol frequencies",
+   "A balanced binary search tree of symbols",
+   "A sorted list of symbols by frequency"
+  ],
+  "answer": 1,
+  "explanation": "Huffman repeatedly merges the two least frequent nodes to build an optimal prefix code."
+ },
+ {
+  "id": "q704f65deafc",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "At each step, which edge does Prim's algorithm add to the growing minimum spanning tree?",
+  "options": [
+   "The globally smallest unused edge anywhere in the graph",
+   "The minimum-weight edge connecting the tree to a vertex not yet in it",
+   "Any edge that does not create a cycle",
+   "The edge leading to the vertex with the highest degree"
+  ],
+  "answer": 1,
+  "explanation": "Prim grows a single tree by always taking the cheapest edge crossing the tree's boundary."
+ },
+ {
+  "id": "q8bbaf669e09",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "In the activity selection problem, which greedy choice yields a maximum set of non-overlapping activities?",
+  "options": [
+   "Pick the activity that finishes earliest",
+   "Pick the activity that starts earliest",
+   "Pick the shortest activity",
+   "Pick the activity with the fewest conflicts"
+  ],
+  "answer": 0,
+  "explanation": "Choosing the earliest finish leaves the most room for remaining activities, and this is provably optimal."
+ },
+ {
+  "id": "q92e95120f9c",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "Which greedy rule gives an optimal solution to the fractional knapsack problem?",
+  "options": [
+   "Take the heaviest items first",
+   "Take the most valuable items first",
+   "Take the lightest items first",
+   "Take items in order of highest value-to-weight ratio"
+  ],
+  "answer": 3,
+  "explanation": "Since items can be split, filling with the best value per unit weight is optimal."
+ },
+ {
+  "id": "q184f78562c8",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "Why does the greedy value-to-weight strategy fail for 0/1 knapsack even though it works for fractional knapsack?",
+  "options": [
+   "0/1 knapsack has negative weights",
+   "Fractional knapsack is NP-hard",
+   "Greedy cannot sort items by ratio",
+   "Items cannot be split, so taking the best-ratio item may waste capacity a better combination would use"
+  ],
+  "answer": 3,
+  "explanation": "Without fractions, leftover capacity can make a locally best choice globally suboptimal."
+ },
+ {
+  "id": "q5abeb6e8f58",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "For which coin system does the greedy strategy of always taking the largest coin give the minimum number of coins for every amount?",
+  "options": [
+   "{1, 5, 10, 25}",
+   "{1, 3, 4}",
+   "{1, 7, 10}",
+   "{1, 6, 9}"
+  ],
+  "answer": 0,
+  "explanation": "US-style denominations are canonical; for example {1, 7, 10} fails on 14 (greedy uses 5 coins, optimal is 7 + 7)."
+ },
+ {
+  "id": "qbc79ea3fdcf",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "How can the minimum number of meeting rooms for n intervals be computed efficiently?",
+  "options": [
+   "Try all room assignments by backtracking",
+   "Sort by duration and assign greedily in O(n)",
+   "Sort by start time and track end times with a min-heap, in O(n log n)",
+   "Build a graph and run BFS in O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "The heap's size after processing all intervals equals the maximum number of simultaneous meetings."
+ },
+ {
+  "id": "qda5370fa9ba",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "hard",
+  "question": "What is the overall time complexity of Kruskal's algorithm using union-find with path compression and union by rank?",
+  "options": [
+   "O(V^2)",
+   "O(E * V)",
+   "O(E log E)",
+   "O(V + E)"
+  ],
+  "answer": 2,
+  "explanation": "Sorting the edges dominates, since union-find operations are nearly constant amortized."
+ }
+]

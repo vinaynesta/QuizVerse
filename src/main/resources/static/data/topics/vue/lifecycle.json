@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q26f393e15bf",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which Composition API hook runs after a component has been unmounted?",
+  "options": [
+   "onDestroyed",
+   "onRemoved",
+   "onUnmounted",
+   "onDisposed"
+  ],
+  "answer": 2,
+  "explanation": "onUnmounted is the Vue 3 hook for teardown after unmount; destroyed was the Vue 2 name."
+ },
+ {
+  "id": "q6dd35ce718d",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which hook runs after the component has been mounted to the DOM?",
+  "options": [
+   "onMounted",
+   "onReady",
+   "onInit",
+   "onCreated"
+  ],
+  "answer": 0,
+  "explanation": "onMounted is called after the component's DOM tree has been created and inserted."
+ },
+ {
+  "id": "q9ddb7cca33c",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "What replaces the beforeCreate and created hooks in the Composition API?",
+  "options": [
+   "The onCreated and onBeforeCreate hooks",
+   "The onMounted hook with an immediate flag",
+   "The onInit hook imported from vue",
+   "The setup code itself, which runs at that point"
+  ],
+  "answer": 3,
+  "explanation": "There are no onCreated hooks; code in setup() or script setup already runs at that stage."
+ },
+ {
+  "id": "qe318b4949a4",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which hook is called after a reactive state change has caused the component's DOM to re-render?",
+  "options": [
+   "onUpdated",
+   "onRendered",
+   "onRefreshed",
+   "onChanged"
+  ],
+  "answer": 0,
+  "explanation": "onUpdated runs after the component has updated its DOM tree due to a reactive state change."
+ },
+ {
+  "id": "q76a3fec5985",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "When a parent and its child mount, whose onMounted hook runs first?",
+  "options": [
+   "The parent's onMounted runs before the child's",
+   "They run in parallel in random order",
+   "Only the parent's hook runs on first mount",
+   "The child's onMounted runs before the parent's"
+  ],
+  "answer": 3,
+  "explanation": "A parent is considered mounted only after all of its synchronous children have mounted."
+ },
+ {
+  "id": "qb036e5b8f26",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "Which hooks fire when a component cached by KeepAlive is shown again or hidden?",
+  "options": [
+   "onActivated and onDeactivated",
+   "onShow and onHide",
+   "onResume and onPause",
+   "onEnter and onLeave"
+  ],
+  "answer": 0,
+  "explanation": "KeepAlive caches instances and calls onActivated and onDeactivated instead of mount and unmount."
+ },
+ {
+  "id": "qe0293700854",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "What is onBeforeUnmount typically used for?",
+  "options": [
+   "Fetching initial data before the first render",
+   "Preventing the component from being unmounted",
+   "Declaring props before the component is created",
+   "Cleaning up listeners or timers while the instance still works"
+  ],
+  "answer": 3,
+  "explanation": "onBeforeUnmount runs while the component is still fully functional, a good place to tear down resources."
+ },
+ {
+  "id": "qf969a366e63",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "Why is accessing a template ref directly in the setup body unreliable?",
+  "options": [
+   "The component has not mounted yet, so the ref is null",
+   "setup runs after the component unmounts",
+   "Template refs are only available on the server",
+   "Refs are only filled when using Options API"
+  ],
+  "answer": 0,
+  "explanation": "Template refs are assigned during mounting, so they should be accessed in onMounted or later."
+ },
+ {
+  "id": "q6706be4babf",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "What does onErrorCaptured do?",
+  "options": [
+   "Catches errors in the component's own template only",
+   "Captures errors thrown by descendant components",
+   "Logs all network errors in the app",
+   "Retries a failed render automatically"
+  ],
+  "answer": 1,
+  "explanation": "onErrorCaptured receives errors from descendants and can return false to stop propagation."
+ },
+ {
+  "id": "q98d164ea650",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "Why might you await nextTick() after changing reactive state?",
+  "options": [
+   "State changes are not reactive until then",
+   "DOM updates are batched and applied asynchronously",
+   "nextTick reloads the component's template",
+   "Watchers cannot run without nextTick"
+  ],
+  "answer": 1,
+  "explanation": "Vue buffers updates until the next tick, so nextTick() waits until the DOM reflects the change."
+ },
+ {
+  "id": "qb72b11e8d81",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "In a plain setup() function, what happens if onMounted is called after an await?",
+  "options": [
+   "It is not tied to the component, since hooks must register synchronously",
+   "It runs immediately instead of waiting to mount",
+   "It runs twice, once per await",
+   "It is moved to the start of setup at compile time"
+  ],
+  "answer": 0,
+  "explanation": "Outside script setup, the current instance is lost after await; only script setup restores it."
+ },
+ {
+  "id": "qf73ef6de0ab",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "Which hook is not called during server-side rendering?",
+  "options": [
+   "onServerPrefetch",
+   "setup",
+   "onMounted",
+   "onErrorCaptured"
+  ],
+  "answer": 2,
+  "explanation": "onMounted and onUpdated are not called on the server, since there is no DOM to mount to."
+ }
+]

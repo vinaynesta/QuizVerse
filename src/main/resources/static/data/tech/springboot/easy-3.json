@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q145891803b6",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "What is the default port of the embedded web server in a Spring Boot application?",
+  "options": [
+   "8080",
+   "8443",
+   "8000",
+   "80"
+  ],
+  "answer": 0,
+  "explanation": "Spring Boot's embedded server listens on 8080 unless server.port is set."
+ },
+ {
+  "id": "q898537fa305",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which class performs requests against Spring MVC controllers without starting a real HTTP server?",
+  "options": [
+   "TestRestTemplate",
+   "MockMvc",
+   "HttpClient",
+   "RestTemplate"
+  ],
+  "answer": 1,
+  "explanation": "MockMvc drives the DispatcherServlet with mock requests, while TestRestTemplate needs a running server."
+ },
+ {
+  "id": "q674345613eb",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "Which simple setting makes Spring Boot print the condition evaluation report showing which auto-configurations matched?",
+  "options": [
+   "spring.autoconfigure.report=true",
+   "logging.autoconfig=on",
+   "debug=true",
+   "spring.main.report-conditions=true"
+  ],
+  "answer": 2,
+  "explanation": "Starting the app with debug=true (or --debug) logs the conditions report listing positive and negative auto-configuration matches."
+ },
+ {
+  "id": "q7282309f514",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which two annotations does @RestController combine?",
+  "options": [
+   "@Controller and @ResponseBody",
+   "@Component and @RequestMapping",
+   "@Controller and @RequestBody",
+   "@Service and @ResponseBody"
+  ],
+  "answer": 0,
+  "explanation": "@RestController is a @Controller whose handler return values are written directly to the response body."
+ },
+ {
+  "id": "q721d208eb81",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which testing framework does spring-boot-starter-test use by default in Spring Boot 3?",
+  "options": [
+   "JUnit 5 (Jupiter)",
+   "TestNG",
+   "JUnit 4",
+   "Spock"
+  ],
+  "answer": 0,
+  "explanation": "spring-boot-starter-test ships JUnit Jupiter; the JUnit 4 vintage engine is not included."
+ },
+ {
+  "id": "qcd670778742",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which Actuator endpoint is exposed over HTTP by default in Spring Boot 3?",
+  "options": [
+   "health and info",
+   "All endpoints",
+   "Only health",
+   "None of them"
+  ],
+  "answer": 2,
+  "explanation": "Since Boot 2.5 only the health endpoint is exposed over the web by default; others must be included explicitly."
+ },
+ {
+  "id": "q6f91cab1ebe",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which type lets a controller method set the status code, headers and body of the response explicitly?",
+  "options": [
+   "HttpServletRequest",
+   "ModelAndView",
+   "RequestEntity",
+   "ResponseEntity"
+  ],
+  "answer": 3,
+  "explanation": "ResponseEntity represents the full HTTP response, including status, headers and body."
+ },
+ {
+  "id": "q4cf42e3cda9",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which annotation registers a bean only when a given profile is active?",
+  "options": [
+   "@Environment",
+   "@ActiveProfile",
+   "@Profile",
+   "@ConditionalOnEnv"
+  ],
+  "answer": 2,
+  "explanation": "@Profile(\"dev\") on a @Component or @Bean method registers it only when the dev profile is active."
+ },
+ {
+  "id": "q257cb470878",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which Spring Data interface do you typically extend to get CRUD, paging and JPA-specific methods like flush()?",
+  "options": [
+   "JpaRepository",
+   "CrudRepository",
+   "Repository",
+   "EntityManagerRepository"
+  ],
+  "answer": 0,
+  "explanation": "JpaRepository extends the list-based CRUD and paging/sorting repositories and adds JPA-specific operations such as flush and saveAndFlush."
+ },
+ {
+  "id": "q38765072aec",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "What is the default base path for Actuator web endpoints?",
+  "options": [
+   "/manage",
+   "/status",
+   "/admin",
+   "/actuator"
+  ],
+  "answer": 3,
+  "explanation": "Actuator endpoints are mapped under /actuator unless management.endpoints.web.base-path is changed."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q17aa48456ba",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What is the result of 7 // 2?",
+  "options": [
+   "3.5",
+   "3",
+   "2",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "// is floor division, so 7 // 2 rounds 3.5 down to the int 3."
+ },
+ {
+  "id": "q1da608c3616",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "Which of these built-in types is immutable?",
+  "options": [
+   "list",
+   "dict",
+   "tuple",
+   "set"
+  ],
+  "answer": 2,
+  "explanation": "Tuples cannot be changed after creation, while list, dict and set are mutable containers."
+ },
+ {
+  "id": "q5e5846f044d",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does bool(\"\") evaluate to?",
+  "options": [
+   "It raises TypeError",
+   "True",
+   "None",
+   "False"
+  ],
+  "answer": 3,
+  "explanation": "Empty sequences, including the empty string, are falsy."
+ },
+ {
+  "id": "q7328b1a891c",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does type(3 / 2) return?",
+  "options": [
+   "<class 'int'>",
+   "<class 'fractions.Fraction'>",
+   "<class 'decimal.Decimal'>",
+   "<class 'float'>"
+  ],
+  "answer": 3,
+  "explanation": "The / operator always performs true division and returns a float, even for two ints."
+ },
+ {
+  "id": "q0749499e196",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What is the result of -7 // 2?",
+  "options": [
+   "-3",
+   "-4",
+   "-3.5",
+   "-4.0"
+  ],
+  "answer": 1,
+  "explanation": "Floor division rounds toward negative infinity, so -3.5 becomes -4."
+ },
+ {
+  "id": "q91c2ddaafa8",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does round(2.5) return?",
+  "options": [
+   "2",
+   "3",
+   "2.0",
+   "3.0"
+  ],
+  "answer": 0,
+  "explanation": "round() uses banker's rounding (round half to even) and returns an int when no ndigits is given."
+ },
+ {
+  "id": "q99d312acbd4",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 0.1 + 0.2 == 0.3 evaluate to?",
+  "options": [
+   "False",
+   "None",
+   "True",
+   "It raises ValueError"
+  ],
+  "answer": 0,
+  "explanation": "Binary floating point cannot represent these values exactly, so the sum is 0.30000000000000004."
+ },
+ {
+  "id": "qb6a148e68dd",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does \"abc\"[::-1] return?",
+  "options": [
+   "'cba'",
+   "'c'",
+   "'a'",
+   "'abc'"
+  ],
+  "answer": 0,
+  "explanation": "A slice with step -1 walks the string backwards, reversing it."
+ },
+ {
+  "id": "q15b9c4cfc4c",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What happens when you call hash((1, [2]))?",
+  "options": [
+   "It returns None",
+   "It returns an int",
+   "It raises ValueError",
+   "It raises TypeError"
+  ],
+  "answer": 3,
+  "explanation": "A tuple is hashable only if all its elements are; the inner list is unhashable."
+ },
+ {
+  "id": "q1cae93a5e4a",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does float('nan') == float('nan') evaluate to?",
+  "options": [
+   "True",
+   "False",
+   "None",
+   "It raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "By IEEE 754 rules NaN is not equal to anything, including itself."
+ },
+ {
+  "id": "q7963d8ac5fb",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does True + True evaluate to?",
+  "options": [
+   "2",
+   "True",
+   "1",
+   "It raises TypeError"
+  ],
+  "answer": 0,
+  "explanation": "bool is a subclass of int with True equal to 1, so the sum is the int 2."
+ },
+ {
+  "id": "qaddbfc5c46f",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does ([] == [], [] is []) evaluate to?",
+  "options": [
+   "(True, True)",
+   "(True, False)",
+   "(False, False)",
+   "(False, True)"
+  ],
+  "answer": 1,
+  "explanation": "== compares contents, but each [] literal creates a distinct object, so is is False."
+ }
+]

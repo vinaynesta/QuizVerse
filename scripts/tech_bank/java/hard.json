@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "oop",
+    "question": "A superclass constructor calls an overridden method that reads a subclass field initialized as int x = 5. What value does the override see?",
+    "options": [
+      "5, because field initializers run first",
+      "It does not compile",
+      "0, because subclass field initializers have not run yet",
+      "It throws IllegalStateException"
+    ],
+    "answer": 2,
+    "explanation": "The superclass constructor runs before the subclass's field initializers, so the override sees the default value."
+  },
+  {
+    "topic": "oop",
+    "question": "A class overrides default method m() from interface I. How can it call I's version?",
+    "options": [
+      "super.m()",
+      "I.m()",
+      "this.I.m()",
+      "I.super.m()"
+    ],
+    "answer": 3,
+    "explanation": "The InterfaceName.super.method() syntax invokes a specific superinterface's default method."
+  },
+  {
+    "topic": "oop",
+    "question": "A superclass has private void m() and its subclass declares void m() with the same signature. What is the subclass method?",
+    "options": [
+      "A new, unrelated method, not an override",
+      "An override of the superclass method",
+      "A compile error due to duplicate methods",
+      "A hiding of the superclass method"
+    ],
+    "answer": 0,
+    "explanation": "Private methods are not inherited, so they cannot be overridden; @Override on it would fail to compile."
+  },
+  {
+    "topic": "oop",
+    "question": "Can an overriding method declare a return type that is a subtype of the overridden method's return type?",
+    "options": [
+      "No, the return type must match exactly",
+      "Yes, covariant return types are allowed for reference types",
+      "Only when the return type is primitive",
+      "Only for methods declared in interfaces"
+    ],
+    "answer": 1,
+    "explanation": "Since Java 5 an override may narrow a reference return type, e.g. clone() returning the class's own type."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "With default JVM settings, what does Integer a = 128, b = 128; System.out.println(a == b); print?",
+    "options": [
+      "true",
+      "It does not compile",
+      "false",
+      "It throws NullPointerException"
+    ],
+    "answer": 2,
+    "explanation": "Autoboxing uses Integer.valueOf, which caches only -128 to 127 by default, so 128 produces two distinct objects."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does System.out.println(0.1 + 0.2 == 0.3) print?",
+    "options": [
+      "true",
+      "0.3",
+      "It does not compile",
+      "false"
+    ],
+    "answer": 3,
+    "explanation": "0.1 and 0.2 cannot be represented exactly in binary floating point, and their sum is 0.30000000000000004."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does Math.abs(Integer.MIN_VALUE) return?",
+    "options": [
+      "Integer.MIN_VALUE, still negative",
+      "Integer.MAX_VALUE",
+      "2147483648 as a long",
+      "It throws ArithmeticException"
+    ],
+    "answer": 0,
+    "explanation": "The positive value does not fit in an int, so the negation overflows back to MIN_VALUE; Math.absExact would throw instead."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What happens with byte b = 10; b = b + 1;?",
+    "options": [
+      "b becomes 11",
+      "Compile error: possible lossy conversion from int to byte",
+      "It compiles but overflows at runtime",
+      "It compiles with an unchecked warning"
+    ],
+    "answer": 1,
+    "explanation": "b + 1 is promoted to int and needs an explicit cast; b += 1 or b++ would compile because they cast implicitly."
+  },
+  {
+    "topic": "collections",
+    "question": "Which statement about null in HashMap and Hashtable is correct?",
+    "options": [
+      "Both allow null keys and null values",
+      "Neither allows null values, but both allow a null key",
+      "HashMap allows one null key and null values; Hashtable allows neither",
+      "Hashtable allows null keys; HashMap does not"
+    ],
+    "answer": 2,
+    "explanation": "Hashtable throws NullPointerException for null keys or values, whereas HashMap special-cases a null key."
+  },
+  {
+    "topic": "collections",
+    "question": "Since Java 8, what does HashMap do when many keys collide in one bucket?",
+    "options": [
+      "Switches to a different hash function for that bucket",
+      "Throws an IllegalStateException",
+      "Evicts the oldest entry in the bucket",
+      "Converts that bucket's list into a red-black tree past a threshold"
+    ],
+    "answer": 3,
+    "explanation": "Treeification (threshold 8, once the table has at least 64 buckets) bounds worst-case lookup at O(log n)."
+  },
+  {
+    "topic": "collections",
+    "question": "How does a TreeSet decide that two elements are duplicates?",
+    "options": [
+      "compareTo or the Comparator returns 0",
+      "equals returns true",
+      "hashCode values are equal",
+      "They are the same object reference"
+    ],
+    "answer": 0,
+    "explanation": "TreeSet relies only on ordering, so a Comparator inconsistent with equals can make distinct objects look like duplicates."
+  },
+  {
+    "topic": "collections",
+    "question": "With List<Integer> list = new ArrayList<>(List.of(1, 2, 3)); what is list after list.remove(1)?",
+    "options": [
+      "[2, 3]",
+      "[1, 3]",
+      "[1, 2]",
+      "[1, 2, 3]"
+    ],
+    "answer": 1,
+    "explanation": "remove(int index) is chosen over remove(Object) for an int argument, so the element at index 1 is removed."
+  },
+  {
+    "topic": "exceptions",
+    "question": "The try block throws exception A and the finally block then throws exception B. What propagates?",
+    "options": [
+      "A, and B is suppressed",
+      "A, with B as its cause",
+      "B, and A is lost",
+      "Both are wrapped in a new exception"
+    ],
+    "answer": 2,
+    "explanation": "An exception from finally replaces the pending one; only try-with-resources records suppressed exceptions."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Does catch (Exception e) catch a StackOverflowError?",
+    "options": [
+      "Yes, all throwables extend Exception",
+      "Only when thrown on the main thread",
+      "Only if the JVM runs with -Xss set",
+      "No, StackOverflowError is an Error, not an Exception"
+    ],
+    "answer": 3,
+    "explanation": "Error and Exception are sibling subclasses of Throwable, so catching Exception does not catch Errors."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Does a finally block run when the try block calls System.exit(0)?",
+    "options": [
+      "No, the JVM begins shutdown and the finally block is skipped",
+      "Yes, finally always runs before the JVM exits",
+      "Only if an exception was also thrown",
+      "Yes, but only after shutdown hooks finish"
+    ],
+    "answer": 0,
+    "explanation": "System.exit does not return normally, so control never reaches finally; only shutdown hooks run."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which checked exceptions may an overriding method declare?",
+    "options": [
+      "Any checked exceptions it needs",
+      "The same, narrower, or fewer checked exceptions than the overridden method",
+      "Only broader checked exceptions than the overridden method",
+      "Exactly the same checked exceptions"
+    ],
+    "answer": 1,
+    "explanation": "Callers using the supertype must be able to handle everything the override throws, so new or broader checked exceptions are not allowed."
+  },
+  {
+    "topic": "generics",
+    "question": "Why can't a generic class Box<T> call new T()?",
+    "options": [
+      "T is always treated as an abstract type",
+      "Generic classes cannot declare constructors",
+      "Type erasure means T is unknown at runtime",
+      "It works only if T extends Object"
+    ],
+    "answer": 2,
+    "explanation": "After erasure the JVM does not know T; a common workaround is passing a Supplier<T> or Class<T>."
+  },
+  {
+    "topic": "generics",
+    "question": "Can a class declare both void f(List<String> l) and void f(List<Integer> l)?",
+    "options": [
+      "Yes, they are ordinary overloads",
+      "Only if both methods are static",
+      "Only if annotated with @SafeVarargs",
+      "No, both methods have the same erasure"
+    ],
+    "answer": 3,
+    "explanation": "Both erase to f(List), producing a name clash at compile time."
+  },
+  {
+    "topic": "generics",
+    "question": "Why is new List<String>[10] a compile error?",
+    "options": [
+      "Arrays check element types at runtime, but erasure removes the type argument",
+      "Arrays cannot hold interface types",
+      "Generic types can only be used in fields",
+      "List is abstract and cannot be instantiated"
+    ],
+    "answer": 0,
+    "explanation": "Reified arrays plus erased generics would make array store checks unsound, so generic array creation is forbidden."
+  },
+  {
+    "topic": "generics",
+    "question": "What happens with Integer[] ints = new Integer[1]; Object[] objs = ints; objs[0] = \"s\";?",
+    "options": [
+      "A compile error on the assignment",
+      "ArrayStoreException at runtime",
+      "The String is stored successfully",
+      "ClassCastException at runtime"
+    ],
+    "answer": 1,
+    "explanation": "Arrays are covariant, so the code compiles, but the runtime array type check rejects the String."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What happens when Collectors.toMap without a merge function encounters a duplicate key?",
+    "options": [
+      "It keeps the last value",
+      "It keeps the first value",
+      "It throws IllegalStateException",
+      "It stores the values in a List"
+    ],
+    "answer": 2,
+    "explanation": "The two-argument toMap rejects duplicate keys; pass a merge function to resolve collisions."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What happens if you call a terminal operation on a stream that already had a terminal operation?",
+    "options": [
+      "The stream restarts from its first element",
+      "An empty result is returned",
+      "The cached previous result is returned",
+      "IllegalStateException is thrown"
+    ],
+    "answer": 3,
+    "explanation": "A stream can be consumed only once; create a new stream from the source to traverse again."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "How many numbers does Stream.of(1, 2, 3, 4, 5).filter(n -> { System.out.print(n); return n > 2; }).findFirst() print?",
+    "options": [
+      "3",
+      "5",
+      "1",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "Streams process elements one at a time and findFirst short-circuits, so the filter runs only for 1, 2 and 3."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does Optional.of(null) do?",
+    "options": [
+      "Returns Optional.empty()",
+      "Throws NullPointerException",
+      "Returns an Optional holding null",
+      "Fails to compile"
+    ],
+    "answer": 1,
+    "explanation": "Optional.of requires a non-null value; Optional.ofNullable returns empty for null."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Which guarantee does the volatile keyword NOT provide?",
+    "options": [
+      "Visibility of writes to other threads",
+      "A happens-before edge from a write to later reads",
+      "Atomicity of compound actions such as count++",
+      "Prevention of reordering around the volatile access"
+    ],
+    "answer": 2,
+    "explanation": "volatile ensures visibility and ordering, but a read-modify-write still needs synchronization or an atomic class."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Two threads both need locks A and B. What is the standard way to prevent deadlock?",
+    "options": [
+      "Call Thread.yield() between acquisitions",
+      "Declare the lock fields volatile",
+      "Give one thread a higher priority",
+      "Always acquire the locks in the same global order"
+    ],
+    "answer": 3,
+    "explanation": "Consistent lock ordering removes the circular wait that deadlock requires."
+  },
+  {
+    "topic": "concurrency",
+    "question": "In Java 21, what typically happens when a virtual thread blocks on I/O?",
+    "options": [
+      "It unmounts from its carrier thread, which can run other virtual threads",
+      "It permanently blocks its OS thread",
+      "It throws an UnsupportedOperationException",
+      "It is converted into a platform thread"
+    ],
+    "answer": 0,
+    "explanation": "Virtual threads are scheduled on a small pool of carrier threads and release them while blocked (except when pinned)."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What happens if start() is called twice on the same Thread object?",
+    "options": [
+      "The thread's run() executes a second time",
+      "The second call throws IllegalThreadStateException",
+      "The second call is silently ignored",
+      "The thread restarts from the beginning"
+    ],
+    "answer": 1,
+    "explanation": "A thread can be started only once; to run the task again create a new Thread or use an executor."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Which garbage collector does JDK 21 use by default on server-class machines?",
+    "options": [
+      "Parallel",
+      "CMS",
+      "G1",
+      "ZGC"
+    ],
+    "answer": 2,
+    "explanation": "G1 has been the default since JDK 9; CMS was removed in JDK 14 and ZGC must be selected explicitly."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Which observation motivates generational garbage collection?",
+    "options": [
+      "Large objects tend to live forever",
+      "Stack memory is faster than heap memory",
+      "Objects referenced by static fields are never collected",
+      "Most objects die young"
+    ],
+    "answer": 3,
+    "explanation": "Because most objects die soon after allocation, collecting a small young generation frequently is cheap and effective."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "When does a class's static initializer run?",
+    "options": [
+      "On first active use, such as instantiation or a static method call",
+      "When the JVM starts, for every class on the classpath",
+      "When the source file is compiled",
+      "Every time a new instance is created"
+    ],
+    "answer": 0,
+    "explanation": "Class initialization is lazy and happens once, triggered by the first active use of the class."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Can the JVM collect two objects that reference only each other?",
+    "options": [
+      "No, the cycle keeps their reference counts above zero",
+      "Yes, if neither is reachable from a GC root",
+      "Only if System.gc() is called explicitly",
+      "Only if the references are WeakReferences"
+    ],
+    "answer": 1,
+    "explanation": "HotSpot collectors trace reachability rather than counting references, so unreachable cycles are reclaimed."
+  },
+  {
+    "topic": "strings",
+    "question": "What does new String(\"hi\").intern() == \"hi\" evaluate to?",
+    "options": [
+      "false",
+      "It does not compile",
+      "true",
+      "It throws IllegalStateException"
+    ],
+    "answer": 2,
+    "explanation": "intern() returns the canonical pooled instance, which is the same object as the literal \"hi\"."
+  },
+  {
+    "topic": "strings",
+    "question": "Given final String a = \"a\"; what does (a + \"b\") == \"ab\" evaluate to?",
+    "options": [
+      "false",
+      "It does not compile",
+      "It depends on the garbage collector",
+      "true"
+    ],
+    "answer": 3,
+    "explanation": "a is a constant variable, so a + \"b\" is a compile-time constant that is interned like the literal \"ab\"."
+  },
+  {
+    "topic": "strings",
+    "question": "What does \"a,b,,\".split(\",\").length return?",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "split(regex) removes trailing empty strings; use split(\",\", -1) to keep them."
+  },
+  {
+    "topic": "strings",
+    "question": "How does String store its characters internally since Java 9?",
+    "options": [
+      "A char[] holding UTF-16 code units",
+      "A byte[] plus a coder flag for LATIN1 or UTF16",
+      "An int[] of Unicode code points",
+      "A linked list of character chunks"
+    ],
+    "answer": 1,
+    "explanation": "Compact strings (JEP 254) store Latin-1 text one byte per character, cutting memory use."
+  },
+  {
+    "topic": "modern-java",
+    "question": "In Java 21, when can a switch over a sealed interface omit the default case?",
+    "options": [
+      "Never, a default case is always required",
+      "Always, because switch never needs default",
+      "When its cases cover every permitted subtype",
+      "Only when every case uses yield"
+    ],
+    "answer": 2,
+    "explanation": "The compiler checks exhaustiveness against the sealed hierarchy, so covering all permitted subtypes is enough."
+  },
+  {
+    "topic": "modern-java",
+    "question": "What does obj instanceof Point(var x, var y) do in Java 21, where Point is a record?",
+    "options": [
+      "Constructs a new Point from x and y",
+      "Compares obj with Point(0, 0)",
+      "Fails to compile because records cannot be patterns",
+      "Tests that obj is a Point and binds its components to x and y"
+    ],
+    "answer": 3,
+    "explanation": "Record patterns (Java 21) deconstruct a record into its components while testing its type."
+  },
+  {
+    "topic": "modern-java",
+    "question": "In Java 21, what happens when a switch has no case null and its selector is null?",
+    "options": [
+      "It throws NullPointerException",
+      "It runs the default branch",
+      "It evaluates to null",
+      "It fails to compile"
+    ],
+    "answer": 0,
+    "explanation": "Without an explicit case null, switch keeps its traditional behavior and throws NullPointerException."
+  },
+  {
+    "topic": "modern-java",
+    "question": "Can a record extend another class?",
+    "options": [
+      "Yes, any non-final class",
+      "No, records implicitly extend java.lang.Record",
+      "Only an abstract class",
+      "Only another record"
+    ],
+    "answer": 1,
+    "explanation": "Records already extend java.lang.Record and are implicitly final, though they may implement interfaces."
+  }
+]

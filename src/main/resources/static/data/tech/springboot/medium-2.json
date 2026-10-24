@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q154fd363a42",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "Why do Spring Boot layered jars help when building Docker images?",
+  "options": [
+   "They compress the jar to half its size",
+   "They remove the need for a JVM in the image",
+   "Dependencies and application classes go in separate layers, so unchanged layers are cached",
+   "They encrypt application classes inside the image"
+  ],
+  "answer": 2,
+  "explanation": "Rarely changing dependencies end up in lower layers, so rebuilding after a code change only replaces the application layer."
+ },
+ {
+  "id": "q247914999cd",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Why is CSRF protection often disabled for stateless REST APIs that use bearer tokens in the Authorization header?",
+  "options": [
+   "Spring Security cannot combine CSRF with JSON bodies",
+   "Bearer tokens are encrypted with the CSRF token",
+   "CSRF only applies to GET requests",
+   "Browsers do not attach such headers automatically, so cross-site forged requests cannot carry the token"
+  ],
+  "answer": 3,
+  "explanation": "CSRF exploits credentials that browsers send automatically, such as cookies; a manually added header is not sent cross-site."
+ },
+ {
+  "id": "qcd04fee8681",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What does @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT) do?",
+  "options": [
+   "Uses a mock servlet environment with no server",
+   "Starts the server on port 8080 every time",
+   "Starts the real embedded server on a random free port",
+   "Disables the web layer entirely"
+  ],
+  "answer": 2,
+  "explanation": "RANDOM_PORT starts a real server; the chosen port can be injected with @LocalServerPort."
+ },
+ {
+  "id": "q67de11454b5",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "Which property exposes the health, info and metrics endpoints over HTTP?",
+  "options": [
+   "management.endpoints.enabled=health,info,metrics",
+   "actuator.expose=health,info,metrics",
+   "management.endpoints.web.exposure.include=health,info,metrics",
+   "spring.actuator.web.include=health,info,metrics"
+  ],
+  "answer": 2,
+  "explanation": "management.endpoints.web.exposure.include lists the endpoints to expose over the web."
+ },
+ {
+  "id": "qe04ea9c5236",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "A @Valid @RequestBody fails Bean Validation in a Spring MVC controller. What happens by default?",
+  "options": [
+   "MethodArgumentNotValidException is thrown, resulting in a 400 response",
+   "A ConstraintViolationException produces a 500 response",
+   "The request is retried without validation",
+   "The invalid fields are silently set to null"
+  ],
+  "answer": 0,
+  "explanation": "Spring MVC raises MethodArgumentNotValidException, which default exception handling maps to 400 Bad Request."
+ },
+ {
+  "id": "q23318aa7a53",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "What does Propagation.REQUIRES_NEW do when a transaction is already active?",
+  "options": [
+   "Suspends the current transaction and starts an independent new one",
+   "Throws an exception",
+   "Runs without any transaction",
+   "Joins the current transaction"
+  ],
+  "answer": 0,
+  "explanation": "The new transaction commits or rolls back independently, after which the outer one resumes."
+ },
+ {
+  "id": "q2cbf03a38b1",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "With default proxy-based Spring AOP, what happens to @Transactional on a private method?",
+  "options": [
+   "A transaction is started via reflection",
+   "Startup fails with a BeanCreationException",
+   "The method becomes public at runtime",
+   "It is ignored and no transaction is started"
+  ],
+  "answer": 3,
+  "explanation": "Proxies cannot intercept private methods, so the annotation has no effect."
+ },
+ {
+  "id": "qe214098d79f",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "Which property configures graceful shutdown of the embedded web server?",
+  "options": [
+   "spring.shutdown.mode=soft",
+   "server.graceful=true",
+   "management.shutdown.enabled=true",
+   "server.shutdown=graceful"
+  ],
+  "answer": 3,
+  "explanation": "With graceful shutdown the server stops accepting requests and waits for active ones, bounded by spring.lifecycle.timeout-per-shutdown-phase."
+ },
+ {
+  "id": "qe9e8fe83f32",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "How do you add a custom check to /actuator/health?",
+  "options": [
+   "Add a @GetMapping(\"/actuator/health\") controller",
+   "Register a bean implementing HealthIndicator",
+   "Extend HealthEndpoint and override invoke()",
+   "Set management.health.custom=true"
+  ],
+  "answer": 1,
+  "explanation": "Each HealthIndicator bean contributes a component that is aggregated into the overall health status."
+ },
+ {
+  "id": "q4be6049cb01",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "Which annotation, introduced in Spring Boot 2.7, marks a class as an auto-configuration?",
+  "options": [
+   "@EnableAutoConfiguration",
+   "@AutoConfiguration",
+   "@SpringBootConfiguration",
+   "@ConfigurationImport"
+  ],
+  "answer": 1,
+  "explanation": "@AutoConfiguration is a specialized @Configuration with proxyBeanMethods=false and before/after ordering attributes."
+ }
+]

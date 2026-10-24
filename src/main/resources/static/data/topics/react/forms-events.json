@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q251382f007c",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "How are event handler props named in JSX?",
+  "options": [
+   "Lowercase, like onclick",
+   "kebab-case, like on-click",
+   "camelCase, like onClick",
+   "snake_case, like on_click"
+  ],
+  "answer": 2,
+  "explanation": "React uses camelCase event props such as onClick, onChange, and onSubmit."
+ },
+ {
+  "id": "q6a082e1aa95",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "Which is the correct way to attach a click handler named handleClick?",
+  "options": [
+   "onClick={handleClick()}",
+   "onClick='handleClick()'",
+   "onClick={handleClick}",
+   "onclick={handleClick}"
+  ],
+  "answer": 2,
+  "explanation": "You pass the function itself; writing handleClick() would call it during render instead of on click."
+ },
+ {
+  "id": "qd9b03ec4ae1",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "What does calling e.preventDefault() in a form's onSubmit handler do?",
+  "options": [
+   "It clears all the form fields",
+   "It validates every input",
+   "It stops React from re-rendering",
+   "It stops the browser's default full-page form submission"
+  ],
+  "answer": 3,
+  "explanation": "preventDefault cancels the browser's default action, which for a form is navigating to submit it."
+ },
+ {
+  "id": "qdc499216ba7",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "What is a controlled input in React?",
+  "options": [
+   "An input whose value comes from React state and is updated through onChange",
+   "An input whose value is read from the DOM through a ref",
+   "An input that has the disabled attribute",
+   "An input that can only be submitted once"
+  ],
+  "answer": 0,
+  "explanation": "In a controlled input React state is the single source of truth, and onChange updates that state on each edit."
+ },
+ {
+  "id": "q08aa045bfe8",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "Inside a list, how do you pass an item id to a click handler?",
+  "options": [
+   "onClick={handleDelete(item.id)}",
+   "onClick={handleDelete} id={item.id} only",
+   "onClick={() => handleDelete(item.id)}",
+   "onClick='handleDelete(item.id)'"
+  ],
+  "answer": 2,
+  "explanation": "Wrapping the call in an arrow function defers it until the click instead of calling it during render."
+ },
+ {
+  "id": "q576c4f9a4d8",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "In an uncontrolled input, how do you provide an initial value without making it controlled?",
+  "options": [
+   "defaultValue",
+   "value",
+   "initialValue",
+   "placeholder"
+  ],
+  "answer": 0,
+  "explanation": "defaultValue sets the starting value while letting the DOM manage subsequent edits."
+ },
+ {
+  "id": "q911ee72a49b",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "What happens if you set value={name} on an input but provide no onChange handler?",
+  "options": [
+   "The value is ignored",
+   "React automatically updates name",
+   "The input becomes uncontrolled",
+   "The input becomes effectively read-only and React warns"
+  ],
+  "answer": 3,
+  "explanation": "A controlled input without onChange cannot change, so React warns and suggests onChange or readOnly."
+ },
+ {
+  "id": "qa11907bda7f",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "What does e.stopPropagation() do in a React event handler?",
+  "options": [
+   "Cancels the browser's default action",
+   "Removes the event listener",
+   "Prevents the component from re-rendering",
+   "Stops the event from bubbling to ancestor handlers"
+  ],
+  "answer": 3,
+  "explanation": "stopPropagation prevents parent elements' handlers from receiving the event; preventDefault is the separate default-action control."
+ },
+ {
+  "id": "q233093e2099",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "An input switches from value={undefined} to value=\"text\". What does React warn about?",
+  "options": [
+   "A component changing an uncontrolled input to be controlled",
+   "A missing key",
+   "A hydration mismatch",
+   "An invalid DOM nesting"
+  ],
+  "answer": 0,
+  "explanation": "value undefined means uncontrolled; initialize with an empty string to keep the input controlled throughout."
+ },
+ {
+  "id": "q251c786d341",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "In React 17 and later, where does React attach its event listeners?",
+  "options": [
+   "On the root container element",
+   "On each individual DOM element",
+   "On the window object",
+   "On document"
+  ],
+  "answer": 0,
+  "explanation": "Since React 17 events are delegated at the root container, which helps when multiple React versions coexist on a page."
+ },
+ {
+  "id": "q5144a130be8",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "How does onChange on a text input in React differ from the native DOM change event?",
+  "options": [
+   "They are identical",
+   "React's fires only on blur",
+   "React's onChange fires on every keystroke, like the native input event",
+   "React's fires only on submit"
+  ],
+  "answer": 2,
+  "explanation": "React maps onChange to input-level updates so controlled inputs can sync state on every edit."
+ },
+ {
+  "id": "q7f0433ef24c",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "In React 19, after a form's function action completes successfully, what happens to uncontrolled fields of that form?",
+  "options": [
+   "React automatically resets the form",
+   "They keep their values",
+   "They become controlled",
+   "They are disabled"
+  ],
+  "answer": 0,
+  "explanation": "React 19 resets uncontrolled fields after a successful action, and requestFormReset can do it manually."
+ }
+]

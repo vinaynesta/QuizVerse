@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q145891803b6",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "What is the default port of the embedded web server in a Spring Boot application?",
+  "options": [
+   "8080",
+   "8443",
+   "8000",
+   "80"
+  ],
+  "answer": 0,
+  "explanation": "Spring Boot's embedded server listens on 8080 unless server.port is set."
+ },
+ {
+  "id": "q6f91cab1ebe",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which type lets a controller method set the status code, headers and body of the response explicitly?",
+  "options": [
+   "HttpServletRequest",
+   "ModelAndView",
+   "RequestEntity",
+   "ResponseEntity"
+  ],
+  "answer": 3,
+  "explanation": "ResponseEntity represents the full HTTP response, including status, headers and body."
+ },
+ {
+  "id": "q7282309f514",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which two annotations does @RestController combine?",
+  "options": [
+   "@Controller and @ResponseBody",
+   "@Component and @RequestMapping",
+   "@Controller and @RequestBody",
+   "@Service and @ResponseBody"
+  ],
+  "answer": 0,
+  "explanation": "@RestController is a @Controller whose handler return values are written directly to the response body."
+ },
+ {
+  "id": "q7725c2e69c2",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation binds the {id} segment of a mapping like /users/{id} to a method parameter?",
+  "options": [
+   "@RequestParam",
+   "@RequestAttribute",
+   "@RequestBody",
+   "@PathVariable"
+  ],
+  "answer": 3,
+  "explanation": "@PathVariable extracts values from URI template variables, while @RequestParam reads query or form parameters."
+ },
+ {
+  "id": "q12bf0a87bf5",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which Spring Framework 6 class represents an RFC 7807 problem details error response?",
+  "options": [
+   "ErrorAttributes",
+   "ApiErrorResponse",
+   "ResponseStatusBody",
+   "ProblemDetail"
+  ],
+  "answer": 3,
+  "explanation": "ProblemDetail models the standard type, title, status, detail and instance fields of a problem details response."
+ },
+ {
+  "id": "q1f260ce470f",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "How do you handle exceptions globally for all REST controllers?",
+  "options": [
+   "A @RestControllerAdvice class with @ExceptionHandler methods",
+   "A try-catch block in the main method",
+   "Overriding DispatcherServlet.doDispatch",
+   "An @ExceptionHandler on the main application class"
+  ],
+  "answer": 0,
+  "explanation": "@RestControllerAdvice applies @ExceptionHandler methods across controllers and writes their results as response bodies."
+ },
+ {
+  "id": "qe04ea9c5236",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "A @Valid @RequestBody fails Bean Validation in a Spring MVC controller. What happens by default?",
+  "options": [
+   "MethodArgumentNotValidException is thrown, resulting in a 400 response",
+   "A ConstraintViolationException produces a 500 response",
+   "The request is retried without validation",
+   "The invalid fields are silently set to null"
+  ],
+  "answer": 0,
+  "explanation": "Spring MVC raises MethodArgumentNotValidException, which default exception handling maps to 400 Bad Request."
+ },
+ {
+  "id": "qfd037d4c983",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which fluent synchronous HTTP client was introduced in Spring Framework 6.1 as a modern alternative to RestTemplate?",
+  "options": [
+   "WebClient",
+   "RestClient",
+   "AsyncRestTemplate",
+   "HttpInvoker"
+  ],
+  "answer": 1,
+  "explanation": "RestClient offers a fluent API over the same infrastructure as RestTemplate; WebClient is the reactive client."
+ },
+ {
+  "id": "q0fe4f2b1770",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "In Spring Framework 6, does a request to /users/ match a handler mapped to /users by default?",
+  "options": [
+   "No, trailing slash matching is disabled by default",
+   "Only for GET requests",
+   "Only when the handler uses @RestController",
+   "Yes, trailing slashes are always ignored"
+  ],
+  "answer": 0,
+  "explanation": "Spring 6 deprecated trailing slash matching and turned it off by default."
+ },
+ {
+  "id": "q3c49653474e",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "With Spring Boot's auto-configured ObjectMapper, what happens when a JSON request body contains an unknown property?",
+  "options": [
+   "The request is rejected with 415",
+   "Deserialization fails with UnrecognizedPropertyException",
+   "The property is ignored and deserialization succeeds",
+   "The unknown property is stored in a map automatically"
+  ],
+  "answer": 2,
+  "explanation": "Boot's Jackson configuration disables DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES."
+ },
+ {
+  "id": "q7aeecd1c20e",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "What does spring.threads.virtual.enabled=true do for a Spring MVC app on Java 21?",
+  "options": [
+   "The embedded server handles requests on virtual threads",
+   "It switches the app to reactive WebFlux",
+   "It enables a fixed pool of 200 platform threads",
+   "It makes all controller methods asynchronous futures"
+  ],
+  "answer": 0,
+  "explanation": "Since Boot 3.2 this property configures Tomcat or Jetty and task executors to use virtual threads."
+ },
+ {
+  "id": "qc6ca79e9262",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "How does a servlet Filter differ from a Spring MVC HandlerInterceptor?",
+  "options": [
+   "A Filter runs only after the response is committed",
+   "A Filter runs in the servlet container before DispatcherServlet, while an interceptor runs around the chosen handler",
+   "An interceptor can modify requests before any Filter runs",
+   "They are identical, just registered differently"
+  ],
+  "answer": 1,
+  "explanation": "Interceptors have access to the resolved handler method; filters work at the raw servlet level."
+ }
+]

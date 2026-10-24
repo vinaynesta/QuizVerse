@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q4cf42e3cda9",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which annotation registers a bean only when a given profile is active?",
+  "options": [
+   "@Environment",
+   "@ActiveProfile",
+   "@Profile",
+   "@ConditionalOnEnv"
+  ],
+  "answer": 2,
+  "explanation": "@Profile(\"dev\") on a @Component or @Bean method registers it only when the dev profile is active."
+ },
+ {
+  "id": "q4fee28be68f",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which property activates the dev profile?",
+  "options": [
+   "spring.profile=dev",
+   "spring.profiles.active=dev",
+   "spring.config.profile=dev",
+   "spring.environment.active=dev"
+  ],
+  "answer": 1,
+  "explanation": "spring.profiles.active lists the profiles to activate, from properties, command line or SPRING_PROFILES_ACTIVE."
+ },
+ {
+  "id": "q4ff3229c86d",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which source overrides a value set in the application.properties packaged inside the jar?",
+  "options": [
+   "A default set via SpringApplication.setDefaultProperties",
+   "A @PropertySource file on a @Configuration class",
+   "An application.properties file inside a dependency jar",
+   "A command-line argument such as --server.port=9090"
+  ],
+  "answer": 3,
+  "explanation": "Command-line arguments sit near the top of Boot's property precedence order, above packaged config files and defaults."
+ },
+ {
+  "id": "qd5101da11b1",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "What is the conventional name of a properties file holding settings only for the prod profile?",
+  "options": [
+   "prod.application.properties",
+   "application.prod.properties",
+   "application-prod.properties",
+   "application_prod.config"
+  ],
+  "answer": 2,
+  "explanation": "Spring Boot loads application-{profile}.properties for each active profile on top of application.properties."
+ },
+ {
+  "id": "q3081014c562",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "What is spring.config.import used for?",
+  "options": [
+   "Importing Java @Configuration classes by name",
+   "Importing additional configuration sources, such as optional:file:./secrets.properties",
+   "Copying properties into the generated jar",
+   "Adding Maven dependencies at runtime"
+  ],
+  "answer": 1,
+  "explanation": "spring.config.import pulls extra config data, and the optional: prefix avoids failure if the source is absent."
+ },
+ {
+  "id": "q5a08933e63f",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which key format does Spring Boot recommend for properties in .properties and .yml files?",
+  "options": [
+   "camelCase, e.g. app.maxRetryCount",
+   "Dotted lowercase without separators, e.g. app.maxretrycount",
+   "Upper snake case, e.g. APP_MAX_RETRY_COUNT",
+   "Lowercase kebab-case, e.g. app.max-retry-count"
+  ],
+  "answer": 3,
+  "explanation": "Kebab-case is the canonical form; upper snake case is intended for environment variables."
+ },
+ {
+  "id": "qbcab9b2165d",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "In Spring Boot 3, what is required to bind @ConfigurationProperties to a Java record with one constructor?",
+  "options": [
+   "Nothing extra; constructor binding is used implicitly",
+   "@ConstructorBinding on the record type",
+   "Setter methods for each component",
+   "@Value on every record component"
+  ],
+  "answer": 0,
+  "explanation": "Boot 3 infers constructor binding for a single constructor; @ConstructorBinding is only needed to choose among several."
+ },
+ {
+  "id": "qf5a4b34c55a",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which environment variable overrides spring.datasource.url?",
+  "options": [
+   "SPRING_DATASOURCE_URL",
+   "SPRING-DATASOURCE-URL",
+   "spring.datasource.url",
+   "DATASOURCE_URL_SPRING"
+  ],
+  "answer": 0,
+  "explanation": "Relaxed binding maps environment variables by replacing dots with underscores, removing dashes and upper-casing."
+ },
+ {
+  "id": "q473cc65f6e9",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "How can one application.properties file contain settings that apply only to the prod profile?",
+  "options": [
+   "Wrap them in a [prod] section header",
+   "Prefix keys with prod. inside the file",
+   "Separate documents with #--- and set spring.config.activate.on-profile=prod",
+   "Use spring.profiles=prod above the keys"
+  ],
+  "answer": 2,
+  "explanation": "Multi-document properties files use #--- separators, and on-profile activates a document conditionally."
+ },
+ {
+  "id": "q83300d7b9ff",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "What does spring.profiles.group.prod=proddb,prodmq do?",
+  "options": [
+   "It creates a prod profile only when proddb and prodmq are both active",
+   "It merges the three profiles' files into one file at build time",
+   "It disables proddb and prodmq when prod is active",
+   "Activating prod also activates proddb and prodmq"
+  ],
+  "answer": 3,
+  "explanation": "Profile groups let one logical profile expand into several more specific profiles."
+ },
+ {
+  "id": "qe27c33a0585",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "dev is active. Which wins: application-dev.properties packaged in the jar, or application.properties in ./config next to the jar?",
+  "options": [
+   "The packaged application-dev.properties",
+   "Whichever file was modified most recently",
+   "The external ./config/application.properties",
+   "Neither; Boot fails because of the conflict"
+  ],
+  "answer": 2,
+  "explanation": "Boot ranks files outside the jar above packaged ones, including packaged profile-specific files."
+ },
+ {
+  "id": "qec6d0938275",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "What happens if spring.profiles.active is set inside application-dev.properties?",
+  "options": [
+   "dev activates the listed profiles recursively",
+   "Startup fails, because it is not allowed in profile-specific documents",
+   "It replaces the profiles from the command line",
+   "The value is silently ignored"
+  ],
+  "answer": 1,
+  "explanation": "Since Boot 2.4, using spring.profiles.active in a profile-specific document raises an InvalidConfigDataPropertyException."
+ }
+]

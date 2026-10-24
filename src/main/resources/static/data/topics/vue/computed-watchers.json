@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q7158aeb5f5a",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "Which API runs its effect immediately and tracks reactive dependencies automatically?",
+  "options": [
+   "watch()",
+   "watchEffect()",
+   "nextTick()",
+   "onMounted()"
+  ],
+  "answer": 1,
+  "explanation": "watchEffect() runs the function eagerly and re-runs it whenever any reactive state it read changes."
+ },
+ {
+  "id": "q860a4e68436",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "What does computed() return when given a getter function?",
+  "options": [
+   "A plain JavaScript value",
+   "A deeply reactive object",
+   "A Promise that resolves to the value",
+   "A readonly ref"
+  ],
+  "answer": 3,
+  "explanation": "A getter-only computed returns a readonly computed ref whose value is accessed via .value."
+ },
+ {
+  "id": "qa68fee1016a",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "Which function runs a side-effect callback when a specific reactive source changes?",
+  "options": [
+   "watch()",
+   "computed()",
+   "toRef()",
+   "defineExpose()"
+  ],
+  "answer": 0,
+  "explanation": "watch() observes an explicit source and calls the callback with new and old values when it changes."
+ },
+ {
+  "id": "qb15a77bb8e6",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "How are computed properties cached?",
+  "options": [
+   "They re-run on every component render",
+   "They are computed once and never updated",
+   "They re-evaluate only when their reactive dependencies change",
+   "They are cached until the page is reloaded"
+  ],
+  "answer": 2,
+  "explanation": "Computed values are cached based on their reactive dependencies, unlike methods which run on each call."
+ },
+ {
+  "id": "q009c0d69cdc",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "Which watch option makes the callback run once right away?",
+  "options": [
+   "{ eager: true }",
+   "{ now: true }",
+   "{ initial: true }",
+   "{ immediate: true }"
+  ],
+  "answer": 3,
+  "explanation": "immediate: true runs the callback immediately with the current value as well as on later changes."
+ },
+ {
+  "id": "q7efaf0bff1a",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "How do you create a writable computed property?",
+  "options": [
+   "Pass an object with get and set functions",
+   "Pass a second argument of true",
+   "Call computed().writable()",
+   "Wrap the getter in reactive()"
+  ],
+  "answer": 0,
+  "explanation": "computed({ get, set }) produces a computed ref whose setter runs on assignment."
+ },
+ {
+  "id": "qa0a31d43ffe",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "What should a computed getter avoid?",
+  "options": [
+   "Side effects like mutating state or making requests",
+   "Reading props passed to the component",
+   "Returning arrays or objects",
+   "Reading other computed properties"
+  ],
+  "answer": 0,
+  "explanation": "Computed getters should be pure derivations; side effects belong in watchers."
+ },
+ {
+  "id": "qd87276eedd9",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "How do you watch a single property of const state = reactive({ count: 0 })?",
+  "options": [
+   "watch(state.count, cb)",
+   "watch(() => state.count, cb)",
+   "watch('state.count', cb)",
+   "watch(state.count.value, cb)"
+  ],
+  "answer": 1,
+  "explanation": "state.count is a plain number, so a getter function is needed to make it a watchable source."
+ },
+ {
+  "id": "q10d0ceb9756",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "By default, when do watcher callbacks run relative to the owner component's DOM update?",
+  "options": [
+   "After it, so the DOM is always updated",
+   "Before it, so use flush: 'post' to see the updated DOM",
+   "Synchronously, at the moment of the change",
+   "After the next browser paint frame"
+  ],
+  "answer": 1,
+  "explanation": "The default flush is 'pre', so callbacks see the DOM before update unless flush: 'post' is set."
+ },
+ {
+  "id": "q2ca19564a95",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "In an async watchEffect callback, which dependencies are tracked?",
+  "options": [
+   "All reads, including after every await",
+   "Only reads made after the last await",
+   "Only those read before the first await",
+   "None, since async effects are not tracked"
+  ],
+  "answer": 2,
+  "explanation": "Tracking happens during synchronous execution, so reads after an await are not recorded."
+ },
+ {
+  "id": "q6355305652d",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "With watch(state, cb) where state is reactive, what are newValue and oldValue after state.count++?",
+  "options": [
+   "Two objects with different count values",
+   "undefined and the current object",
+   "The same object, since it was mutated in place",
+   "A diff object listing changed keys"
+  ],
+  "answer": 2,
+  "explanation": "Watching a reactive object is implicitly deep, and mutation keeps the same object for both arguments."
+ },
+ {
+  "id": "qb6f72793ff9",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "How do watch and watchEffect differ in tracking and timing?",
+  "options": [
+   "watch is lazy with explicit sources; watchEffect runs now and auto-tracks",
+   "watch runs now; watchEffect waits for a change",
+   "Both are lazy but watchEffect is deep",
+   "watchEffect needs explicit sources; watch tracks all"
+  ],
+  "answer": 0,
+  "explanation": "watch only fires on changes to its declared source, while watchEffect runs immediately and tracks whatever it reads."
+ }
+]

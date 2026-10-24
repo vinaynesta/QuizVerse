@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qdfb59aa52c9",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "What does new String(\"hi\").intern() == \"hi\" evaluate to?",
+  "options": [
+   "false",
+   "true",
+   "It does not compile",
+   "It throws IllegalStateException"
+  ],
+  "answer": 1,
+  "explanation": "intern() returns the canonical pooled instance, which is the same object as the literal \"hi\"."
+ },
+ {
+  "id": "q3c6608c934c",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "When does a class's static initializer run?",
+  "options": [
+   "When the JVM starts, for every class on the classpath",
+   "On first active use, such as instantiation or a static method call",
+   "When the source file is compiled",
+   "Every time a new instance is created"
+  ],
+  "answer": 1,
+  "explanation": "Class initialization is lazy and happens once, triggered by the first active use of the class."
+ },
+ {
+  "id": "q50357ef8cb6",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Which checked exceptions may an overriding method declare?",
+  "options": [
+   "Any checked exceptions it needs",
+   "Exactly the same checked exceptions",
+   "Only broader checked exceptions than the overridden method",
+   "The same, narrower, or fewer checked exceptions than the overridden method"
+  ],
+  "answer": 3,
+  "explanation": "Callers using the supertype must be able to handle everything the override throws, so new or broader checked exceptions are not allowed."
+ },
+ {
+  "id": "q8c420e865b1",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A superclass has private void m() and its subclass declares void m() with the same signature. What is the subclass method?",
+  "options": [
+   "A hiding of the superclass method",
+   "An override of the superclass method",
+   "A compile error due to duplicate methods",
+   "A new, unrelated method, not an override"
+  ],
+  "answer": 3,
+  "explanation": "Private methods are not inherited, so they cannot be overridden; @Override on it would fail to compile."
+ },
+ {
+  "id": "q8db7d716f9d",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "With default JVM settings, what does Integer a = 128, b = 128; System.out.println(a == b); print?",
+  "options": [
+   "false",
+   "It does not compile",
+   "true",
+   "It throws NullPointerException"
+  ],
+  "answer": 0,
+  "explanation": "Autoboxing uses Integer.valueOf, which caches only -128 to 127 by default, so 128 produces two distinct objects."
+ },
+ {
+  "id": "q780d8391f89",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "Can a record extend another class?",
+  "options": [
+   "Yes, any non-final class",
+   "Only an abstract class",
+   "No, records implicitly extend java.lang.Record",
+   "Only another record"
+  ],
+  "answer": 2,
+  "explanation": "Records already extend java.lang.Record and are implicitly final, though they may implement interfaces."
+ },
+ {
+  "id": "q33446cfc80e",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "What does obj instanceof Point(var x, var y) do in Java 21, where Point is a record?",
+  "options": [
+   "Constructs a new Point from x and y",
+   "Compares obj with Point(0, 0)",
+   "Tests that obj is a Point and binds its components to x and y",
+   "Fails to compile because records cannot be patterns"
+  ],
+  "answer": 2,
+  "explanation": "Record patterns (Java 21) deconstruct a record into its components while testing its type."
+ },
+ {
+  "id": "qbf4c6cbde95",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "How many numbers does Stream.of(1, 2, 3, 4, 5).filter(n -> { System.out.print(n); return n > 2; }).findFirst() print?",
+  "options": [
+   "3",
+   "5",
+   "1",
+   "0"
+  ],
+  "answer": 0,
+  "explanation": "Streams process elements one at a time and findFirst short-circuits, so the filter runs only for 1, 2 and 3."
+ },
+ {
+  "id": "qa0e624e7510",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "Which statement about null in HashMap and Hashtable is correct?",
+  "options": [
+   "Both allow null keys and null values",
+   "Neither allows null values, but both allow a null key",
+   "HashMap allows one null key and null values; Hashtable allows neither",
+   "Hashtable allows null keys; HashMap does not"
+  ],
+  "answer": 2,
+  "explanation": "Hashtable throws NullPointerException for null keys or values, whereas HashMap special-cases a null key."
+ },
+ {
+  "id": "q803211c661b",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What happens if you call a terminal operation on a stream that already had a terminal operation?",
+  "options": [
+   "The stream restarts from its first element",
+   "IllegalStateException is thrown",
+   "The cached previous result is returned",
+   "An empty result is returned"
+  ],
+  "answer": 1,
+  "explanation": "A stream can be consumed only once; create a new stream from the source to traverse again."
+ }
+]

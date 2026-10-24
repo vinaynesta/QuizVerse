@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa68fee1016a",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "Which function runs a side-effect callback when a specific reactive source changes?",
+  "options": [
+   "watch()",
+   "computed()",
+   "toRef()",
+   "defineExpose()"
+  ],
+  "answer": 0,
+  "explanation": "watch() observes an explicit source and calls the callback with new and old values when it changes."
+ },
+ {
+  "id": "q860a4e68436",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "What does computed() return when given a getter function?",
+  "options": [
+   "A plain JavaScript value",
+   "A deeply reactive object",
+   "A Promise that resolves to the value",
+   "A readonly ref"
+  ],
+  "answer": 3,
+  "explanation": "A getter-only computed returns a readonly computed ref whose value is accessed via .value."
+ },
+ {
+  "id": "q8255e13def4",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What problem do provide and inject mainly solve?",
+  "options": [
+   "Sharing CSS variables between components",
+   "Lazy loading components from the server",
+   "Passing data deep into the tree without prop drilling",
+   "Validating prop types at runtime"
+  ],
+  "answer": 2,
+  "explanation": "An ancestor provides a value and any descendant can inject it, avoiding passing props through every level."
+ },
+ {
+  "id": "qe722b1180b6",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What does the v-html directive do?",
+  "options": [
+   "Escapes the value and renders it as plain text",
+   "Loads markup from an external HTML file",
+   "Sets the element's innerHTML to the bound value",
+   "Validates HTML markup at compile time"
+  ],
+  "answer": 2,
+  "explanation": "v-html renders raw HTML via innerHTML, so it should never be used with untrusted content."
+ },
+ {
+  "id": "q26f393e15bf",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which Composition API hook runs after a component has been unmounted?",
+  "options": [
+   "onDestroyed",
+   "onRemoved",
+   "onUnmounted",
+   "onDisposed"
+  ],
+  "answer": 2,
+  "explanation": "onUnmounted is the Vue 3 hook for teardown after unmount; destroyed was the Vue 2 name."
+ },
+ {
+  "id": "qd38d6755430",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What is the shorthand for v-slot?",
+  "options": [
+   "@",
+   ":",
+   "$",
+   "#"
+  ],
+  "answer": 3,
+  "explanation": "v-slot:header can be written as #header."
+ },
+ {
+  "id": "q1bcf8e065fa",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "What file extension is used for Vue single-file components?",
+  "options": [
+   ".vjs",
+   ".sfc",
+   ".vue",
+   ".view"
+  ],
+  "answer": 2,
+  "explanation": "Single-file components combine template, script and style in a .vue file."
+ },
+ {
+  "id": "q3e787940371",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "What kinds of values does reactive() accept?",
+  "options": [
+   "Only primitive values like strings and numbers",
+   "Objects, arrays and collections like Map and Set",
+   "Only functions that return values",
+   "Only DOM elements and template refs"
+  ],
+  "answer": 1,
+  "explanation": "reactive() works by creating a Proxy, so it only works with object types, not primitives."
+ },
+ {
+  "id": "qd00f06b12b4",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What is the shorthand for v-on:click?",
+  "options": [
+   ":click",
+   "#click",
+   "$click",
+   "@click"
+  ],
+  "answer": 3,
+  "explanation": "The @ symbol is the shorthand for v-on event listeners."
+ },
+ {
+  "id": "qb15a77bb8e6",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "How are computed properties cached?",
+  "options": [
+   "They re-run on every component render",
+   "They are computed once and never updated",
+   "They re-evaluate only when their reactive dependencies change",
+   "They are cached until the page is reloaded"
+  ],
+  "answer": 2,
+  "explanation": "Computed values are cached based on their reactive dependencies, unlike methods which run on each call."
+ }
+]

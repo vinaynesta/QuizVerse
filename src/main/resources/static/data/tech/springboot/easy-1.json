@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q420c0084898",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What is the default propagation of @Transactional?",
+  "options": [
+   "REQUIRES_NEW",
+   "SUPPORTS",
+   "REQUIRED",
+   "MANDATORY"
+  ],
+  "answer": 2,
+  "explanation": "REQUIRED joins an existing transaction or creates a new one if none exists."
+ },
+ {
+  "id": "q5c978d80d98",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "Which PasswordEncoder is a common, recommended choice for hashing stored passwords?",
+  "options": [
+   "NoOpPasswordEncoder",
+   "Base64PasswordEncoder",
+   "BCryptPasswordEncoder",
+   "PlainTextPasswordEncoder"
+  ],
+  "answer": 2,
+  "explanation": "BCrypt is an adaptive, salted hashing function; NoOpPasswordEncoder stores plain text and is only for tests."
+ },
+ {
+  "id": "q8a1bf0e8dcf",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "What is the default scope of a Spring bean?",
+  "options": [
+   "prototype",
+   "request",
+   "session",
+   "singleton"
+  ],
+  "answer": 3,
+  "explanation": "Unless specified otherwise, the container creates one shared instance per bean definition, which is singleton scope."
+ },
+ {
+  "id": "qce89b5bbabe",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "In Spring Boot 3, which package do @Entity and @Table come from?",
+  "options": [
+   "javax.persistence",
+   "org.hibernate.annotations",
+   "org.springframework.data.jpa",
+   "jakarta.persistence"
+  ],
+  "answer": 3,
+  "explanation": "Spring Boot 3 moved to Jakarta EE 9+, so JPA annotations live in the jakarta.persistence namespace."
+ },
+ {
+  "id": "qc946b8c39c1",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which annotation creates a test slice containing only Spring MVC components?",
+  "options": [
+   "@DataJpaTest",
+   "@WebMvcTest",
+   "@JsonTest",
+   "@RestClientTest"
+  ],
+  "answer": 1,
+  "explanation": "@WebMvcTest auto-configures MockMvc and loads controllers, advice, filters and converters but not services or repositories."
+ },
+ {
+  "id": "q4fee28be68f",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which property activates the dev profile?",
+  "options": [
+   "spring.profile=dev",
+   "spring.profiles.active=dev",
+   "spring.config.profile=dev",
+   "spring.environment.active=dev"
+  ],
+  "answer": 1,
+  "explanation": "spring.profiles.active lists the profiles to activate, from properties, command line or SPRING_PROFILES_ACTIVE."
+ },
+ {
+  "id": "q3c4e5f8406f",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which dependency adds production-ready endpoints such as /actuator/health?",
+  "options": [
+   "spring-boot-starter-management",
+   "spring-boot-starter-monitor",
+   "spring-boot-starter-actuator",
+   "spring-boot-starter-metrics"
+  ],
+  "answer": 2,
+  "explanation": "The actuator starter provides health, metrics, info and other operational endpoints."
+ },
+ {
+  "id": "q3bae49863ef",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "Which annotation declares that a method should run inside a transaction?",
+  "options": [
+   "@Commit",
+   "@Atomic",
+   "@Transactional",
+   "@TxBoundary"
+  ],
+  "answer": 2,
+  "explanation": "@Transactional tells Spring's transaction interceptor to start, commit or roll back a transaction around the method."
+ },
+ {
+  "id": "q6c36e9a3ed8",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "How can you disable one specific auto-configuration class such as DataSourceAutoConfiguration?",
+  "options": [
+   "@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)",
+   "@ComponentScan(basePackages = \"!DataSourceAutoConfiguration\")",
+   "@Conditional(false) on the main class",
+   "@DisableAutoConfiguration(DataSourceAutoConfiguration.class)"
+  ],
+  "answer": 0,
+  "explanation": "The exclude attribute of @SpringBootApplication (or @EnableAutoConfiguration) prevents that auto-configuration from being applied."
+ },
+ {
+  "id": "q515dcd1837e",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What does @Transactional(readOnly = true) do?",
+  "options": [
+   "Blocks any SQL UPDATE by throwing an exception in Spring",
+   "Hints that the transaction only reads, allowing optimizations such as skipping dirty checking",
+   "Forces the SERIALIZABLE isolation level",
+   "Runs the method without any transaction at all"
+  ],
+  "answer": 1,
+  "explanation": "readOnly is an optimization hint passed to the transaction manager, JPA provider and driver; Hibernate, for example, skips flushing."
+ }
+]

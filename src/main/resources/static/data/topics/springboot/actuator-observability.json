@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q38765072aec",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "What is the default base path for Actuator web endpoints?",
+  "options": [
+   "/manage",
+   "/status",
+   "/admin",
+   "/actuator"
+  ],
+  "answer": 3,
+  "explanation": "Actuator endpoints are mapped under /actuator unless management.endpoints.web.base-path is changed."
+ },
+ {
+  "id": "q3c4e5f8406f",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which dependency adds production-ready endpoints such as /actuator/health?",
+  "options": [
+   "spring-boot-starter-management",
+   "spring-boot-starter-monitor",
+   "spring-boot-starter-actuator",
+   "spring-boot-starter-metrics"
+  ],
+  "answer": 2,
+  "explanation": "The actuator starter provides health, metrics, info and other operational endpoints."
+ },
+ {
+  "id": "qc2cfd2fe5bf",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which library does Spring Boot Actuator use as its metrics facade?",
+  "options": [
+   "Dropwizard Metrics",
+   "Micrometer",
+   "Logback",
+   "OpenTSDB"
+  ],
+  "answer": 1,
+  "explanation": "Actuator records metrics through Micrometer, which can publish to Prometheus, Datadog and other backends."
+ },
+ {
+  "id": "qcd670778742",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which Actuator endpoint is exposed over HTTP by default in Spring Boot 3?",
+  "options": [
+   "health and info",
+   "All endpoints",
+   "Only health",
+   "None of them"
+  ],
+  "answer": 2,
+  "explanation": "Since Boot 2.5 only the health endpoint is exposed over the web by default; others must be included explicitly."
+ },
+ {
+  "id": "q67de11454b5",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "Which property exposes the health, info and metrics endpoints over HTTP?",
+  "options": [
+   "management.endpoints.enabled=health,info,metrics",
+   "actuator.expose=health,info,metrics",
+   "management.endpoints.web.exposure.include=health,info,metrics",
+   "spring.actuator.web.include=health,info,metrics"
+  ],
+  "answer": 2,
+  "explanation": "management.endpoints.web.exposure.include lists the endpoints to expose over the web."
+ },
+ {
+  "id": "qe9e8fe83f32",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "How do you add a custom check to /actuator/health?",
+  "options": [
+   "Add a @GetMapping(\"/actuator/health\") controller",
+   "Register a bean implementing HealthIndicator",
+   "Extend HealthEndpoint and override invoke()",
+   "Set management.health.custom=true"
+  ],
+  "answer": 1,
+  "explanation": "Each HealthIndicator bean contributes a component that is aggregated into the overall health status."
+ },
+ {
+  "id": "qecd68837776",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "What is needed for Actuator to serve a /actuator/prometheus scrape endpoint?",
+  "options": [
+   "Only setting management.prometheus=true",
+   "A Prometheus server embedded in the jar",
+   "The micrometer-registry-prometheus dependency plus exposing the endpoint",
+   "Spring Cloud Sleuth on the classpath"
+  ],
+  "answer": 2,
+  "explanation": "Boot auto-configures the Prometheus registry and endpoint when the Micrometer Prometheus registry is present."
+ },
+ {
+  "id": "qf4d96bb8c16",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "Which health group paths does Spring Boot provide for Kubernetes probes?",
+  "options": [
+   "/actuator/k8s/health",
+   "/actuator/live and /actuator/ready",
+   "/actuator/probe/up and /actuator/probe/down",
+   "/actuator/health/liveness and /actuator/health/readiness"
+  ],
+  "answer": 3,
+  "explanation": "Liveness and readiness groups are enabled automatically on Kubernetes and can be turned on elsewhere via management.endpoint.health.probes.enabled."
+ },
+ {
+  "id": "q4566d7f147a",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "What effect does setting management.server.port=9091 have?",
+  "options": [
+   "All endpoints are disabled except health",
+   "The app moves to port 9091 and actuator stays on 8080",
+   "Actuator endpoints are served on a separate port from the application",
+   "Metrics are pushed to a server on port 9091"
+  ],
+  "answer": 2,
+  "explanation": "A separate management port lets you keep operational endpoints off the public network."
+ },
+ {
+  "id": "q63be98a20bd",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "In Spring Boot 3, which project replaces Spring Cloud Sleuth for distributed tracing?",
+  "options": [
+   "Micrometer Tracing",
+   "OpenCensus Spring",
+   "Spring Cloud Zipkin Starter",
+   "Actuator Trace Endpoint"
+  ],
+  "answer": 0,
+  "explanation": "Sleuth's core moved into Micrometer Tracing, built on the Micrometer Observation API."
+ },
+ {
+  "id": "q82fec8e4116",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "In Spring Boot 3, how does /actuator/env show property values by default?",
+  "options": [
+   "Values are shown in plain text",
+   "All values are masked",
+   "Only passwords are masked",
+   "Values are hidden only in the prod profile"
+  ],
+  "answer": 1,
+  "explanation": "Boot 3 changed show-values to never by default, so values are masked unless configured otherwise."
+ },
+ {
+  "id": "q85d6795f451",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "What is the default of management.endpoint.health.show-details?",
+  "options": [
+   "always",
+   "when-authorized",
+   "never",
+   "on-error"
+  ],
+  "answer": 2,
+  "explanation": "By default only the aggregate status is shown, without component details."
+ }
+]

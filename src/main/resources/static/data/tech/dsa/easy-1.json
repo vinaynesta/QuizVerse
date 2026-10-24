@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9b2b81e8702",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "What is a tree node with no children called?",
+  "options": [
+   "The root",
+   "An internal node",
+   "A sibling",
+   "A leaf"
+  ],
+  "answer": 3,
+  "explanation": "Leaves are the terminal nodes of a tree with no children."
+ },
+ {
+  "id": "q6c34baae77b",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What is a palindrome string?",
+  "options": [
+   "A string that contains every vowel",
+   "A string with no repeated characters",
+   "A string whose characters are sorted alphabetically",
+   "A string that reads the same forwards and backwards"
+  ],
+  "answer": 3,
+  "explanation": "A palindrome such as 'racecar' is identical when reversed."
+ },
+ {
+  "id": "q5b418cbcf51",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "Dynamic programming applies to problems with overlapping subproblems and which other property?",
+  "options": [
+   "Already sorted input",
+   "No recursion",
+   "Optimal substructure",
+   "Constant-size input"
+  ],
+  "answer": 2,
+  "explanation": "Optimal substructure means an optimal solution can be built from optimal solutions to subproblems."
+ },
+ {
+  "id": "q353be7304a0",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "How much space does an adjacency matrix use for a graph with V vertices?",
+  "options": [
+   "O(V)",
+   "O(V + E)",
+   "O(V^2)",
+   "O(E)"
+  ],
+  "answer": 2,
+  "explanation": "The matrix has one cell for every ordered pair of vertices regardless of edge count."
+ },
+ {
+  "id": "qfdb7db2c95c",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "What does each node of a singly linked list store?",
+  "options": [
+   "Data and a reference to the next node",
+   "Data and references to the next and previous nodes",
+   "Only data with no references",
+   "Data and its integer index in the list"
+  ],
+  "answer": 0,
+  "explanation": "A singly linked list node holds its value plus one pointer to the following node."
+ },
+ {
+  "id": "q5c1b7eb54c5",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "Which data structure does breadth-first search (BFS) use to track vertices to visit?",
+  "options": [
+   "A stack",
+   "A queue",
+   "A max-heap",
+   "A binary search tree"
+  ],
+  "answer": 1,
+  "explanation": "BFS processes vertices in FIFO order, exploring all neighbors at one distance before going deeper."
+ },
+ {
+  "id": "qa930cff1e6a",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "What is memoization?",
+  "options": [
+   "Storing every variable in a global array",
+   "Converting recursion into a loop automatically",
+   "Caching the results of function calls to avoid recomputing them",
+   "Freeing memory after each recursive call"
+  ],
+  "answer": 2,
+  "explanation": "Memoization stores the answer for each input so repeated subproblems are solved only once."
+ },
+ {
+  "id": "qdb8ba1209f3",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What must be true of an array before you can apply binary search to it?",
+  "options": [
+   "It must be sorted",
+   "It must contain only unique elements",
+   "It must have an even length",
+   "It must be stored as a linked list"
+  ],
+  "answer": 0,
+  "explanation": "Binary search discards half the range by comparing with the middle, which only works on sorted data."
+ },
+ {
+  "id": "q32dd17aa446",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "What does O(1) time complexity mean?",
+  "options": [
+   "The algorithm runs in exactly one second",
+   "The algorithm processes one element at a time",
+   "The running time doubles with each input",
+   "The running time does not grow with input size"
+  ],
+  "answer": 3,
+  "explanation": "Constant time means the work is bounded by a fixed amount regardless of n."
+ },
+ {
+  "id": "q95caa8a2474",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What typically happens when a recursive function recurses too deeply, for example because it has no base case?",
+  "options": [
+   "Deadlock",
+   "Integer overflow",
+   "Heap fragmentation",
+   "Stack overflow"
+  ],
+  "answer": 3,
+  "explanation": "Each call adds a stack frame, and unbounded recursion exhausts the call stack."
+ }
+]

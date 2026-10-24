@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc332399e48d",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "What is a decorator, fundamentally?",
+  "options": [
+   "A special comment that documents a function",
+   "A callable that takes a function and returns a replacement",
+   "A type hint that validates arguments",
+   "A keyword that makes a function private"
+  ],
+  "answer": 1,
+  "explanation": "@d above def f is shorthand for f = d(f), so a decorator is just a callable that wraps or replaces f."
+ },
+ {
+  "id": "q138bb736085",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which function picks one random element from a non-empty sequence?",
+  "options": [
+   "random.pick",
+   "random.select",
+   "random.choice",
+   "random.item"
+  ],
+  "answer": 2,
+  "explanation": "random.choice(seq) returns a single randomly chosen element."
+ },
+ {
+  "id": "q17aa48456ba",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What is the result of 7 // 2?",
+  "options": [
+   "3.5",
+   "3",
+   "2",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "// is floor division, so 7 // 2 rounds 3.5 down to the int 3."
+ },
+ {
+  "id": "qe6f777cd65c",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "Which expression creates an empty set?",
+  "options": [
+   "set()",
+   "[]",
+   "{}",
+   "()"
+  ],
+  "answer": 0,
+  "explanation": "{} creates an empty dict, so an empty set must be written as set()."
+ },
+ {
+  "id": "q4e18878f88d",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "easy",
+  "question": "Which keyword suspends a coroutine until an awaitable completes?",
+  "options": [
+   "wait",
+   "pause",
+   "await",
+   "defer"
+  ],
+  "answer": 2,
+  "explanation": "await yields control to the event loop until the awaited object produces its result."
+ },
+ {
+  "id": "q3f1c8692c77",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which special method defines the informal string returned by str(obj)?",
+  "options": [
+   "__repr__",
+   "__format__",
+   "__string__",
+   "__str__"
+  ],
+  "answer": 3,
+  "explanation": "str() calls __str__; __repr__ is the developer-facing representation used as a fallback."
+ },
+ {
+  "id": "qa5d25adf4d1",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "Which list method adds a single item to the end of a list?",
+  "options": [
+   "append()",
+   "extend()",
+   "insert()",
+   "add()"
+  ],
+  "answer": 0,
+  "explanation": "append() adds one object at the end; extend() adds each item of an iterable and lists have no add()."
+ },
+ {
+  "id": "q5e5846f044d",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does bool(\"\") evaluate to?",
+  "options": [
+   "It raises TypeError",
+   "True",
+   "None",
+   "False"
+  ],
+  "answer": 3,
+  "explanation": "Empty sequences, including the empty string, are falsy."
+ },
+ {
+  "id": "qc5931ff35bb",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which keyword is used to raise an exception?",
+  "options": [
+   "throw",
+   "raise",
+   "except",
+   "error"
+  ],
+  "answer": 1,
+  "explanation": "Python uses raise to signal an exception; throw is not a keyword."
+ },
+ {
+  "id": "q248845e199c",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does len({1, 1, 2}) return?",
+  "options": [
+   "3",
+   "It raises TypeError",
+   "1",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "A set stores only unique elements, so the duplicate 1 is kept once."
+ }
+]

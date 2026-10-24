@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "oop",
+    "question": "Which keyword prevents a class from being subclassed?",
+    "options": [
+      "final",
+      "static",
+      "private",
+      "const"
+    ],
+    "answer": 0,
+    "explanation": "A class declared final cannot be extended; const is reserved but unused in Java."
+  },
+  {
+    "topic": "oop",
+    "question": "Which access modifier makes a member visible only inside its own class?",
+    "options": [
+      "protected",
+      "private",
+      "No modifier (package-private)",
+      "public"
+    ],
+    "answer": 1,
+    "explanation": "private restricts access to the declaring class; package-private and protected are wider."
+  },
+  {
+    "topic": "oop",
+    "question": "Can a Java class directly extend more than one class?",
+    "options": [
+      "Yes, by listing classes separated by commas",
+      "Yes, if all parent classes are abstract",
+      "No, a class can extend only one class",
+      "Yes, if the classes share a package"
+    ],
+    "answer": 2,
+    "explanation": "Java supports single inheritance of classes; multiple types are combined through interfaces."
+  },
+  {
+    "topic": "oop",
+    "question": "What is an abstract class?",
+    "options": [
+      "A class that contains only static methods",
+      "A class that is not allowed to have constructors",
+      "A class that is implicitly final",
+      "A class that cannot be instantiated and may declare abstract methods"
+    ],
+    "answer": 3,
+    "explanation": "Abstract classes cannot be instantiated directly; they can have constructors, state and abstract methods for subclasses to implement."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What is the value of 7 / 2 when both operands are int?",
+    "options": [
+      "3",
+      "3.5",
+      "4",
+      "3.0"
+    ],
+    "answer": 0,
+    "explanation": "Integer division truncates toward zero, so 7 / 2 is 3."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What is the default value of an int instance field that is never assigned?",
+    "options": [
+      "null",
+      "0",
+      "-1",
+      "It causes a compile error"
+    ],
+    "answer": 1,
+    "explanation": "Instance and static fields get default values; for int that is 0. Only local variables must be assigned before use."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "Which loop always executes its body at least once?",
+    "options": [
+      "while",
+      "for",
+      "do-while",
+      "enhanced for"
+    ],
+    "answer": 2,
+    "explanation": "A do-while loop checks its condition after the body, so the body runs at least once."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does the % operator compute for integers?",
+    "options": [
+      "A percentage of the left operand",
+      "The integer quotient",
+      "The power of the left operand",
+      "The remainder of a division"
+    ],
+    "answer": 3,
+    "explanation": "% is the remainder operator, e.g. 7 % 3 is 1."
+  },
+  {
+    "topic": "collections",
+    "question": "Which of these collections does not allow duplicate elements?",
+    "options": [
+      "HashSet",
+      "ArrayList",
+      "LinkedList",
+      "ArrayDeque"
+    ],
+    "answer": 0,
+    "explanation": "Set implementations such as HashSet reject duplicates as defined by equals and hashCode."
+  },
+  {
+    "topic": "collections",
+    "question": "Which interface represents a mapping from keys to values?",
+    "options": [
+      "List",
+      "Map",
+      "Set",
+      "Queue"
+    ],
+    "answer": 1,
+    "explanation": "Map stores key-value pairs; it does not extend Collection."
+  },
+  {
+    "topic": "collections",
+    "question": "What does List.of(1, 2).add(3) do?",
+    "options": [
+      "Adds 3 and returns true",
+      "Returns false without adding",
+      "Throws UnsupportedOperationException",
+      "Fails to compile"
+    ],
+    "answer": 2,
+    "explanation": "List.of returns an unmodifiable list, so mutating methods throw UnsupportedOperationException at runtime."
+  },
+  {
+    "topic": "collections",
+    "question": "Which Map implementation keeps its keys in sorted order?",
+    "options": [
+      "HashMap",
+      "LinkedHashMap",
+      "IdentityHashMap",
+      "TreeMap"
+    ],
+    "answer": 3,
+    "explanation": "TreeMap is a red-black tree sorted by natural ordering or a Comparator; LinkedHashMap keeps insertion order."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which keyword in a method signature declares that the method may throw a checked exception?",
+    "options": [
+      "throws",
+      "throw",
+      "catch",
+      "raise"
+    ],
+    "answer": 0,
+    "explanation": "throws appears in the method declaration; throw is the statement that actually throws an exception."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which exception is thrown when you access an array with an invalid index?",
+    "options": [
+      "IndexOutOfRangeException",
+      "ArrayIndexOutOfBoundsException",
+      "ArrayStoreException",
+      "IllegalArgumentException"
+    ],
+    "answer": 1,
+    "explanation": "Accessing index -1 or length or beyond throws ArrayIndexOutOfBoundsException."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which class is the common superclass of all exceptions and errors?",
+    "options": [
+      "Exception",
+      "Error",
+      "Throwable",
+      "RuntimeException"
+    ],
+    "answer": 2,
+    "explanation": "Both Exception and Error extend Throwable, and only Throwable subtypes can be thrown."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Is NullPointerException checked or unchecked?",
+    "options": [
+      "Checked, so it must be declared with throws",
+      "Checked, because it extends IOException",
+      "Neither, because it is an Error",
+      "Unchecked, because it extends RuntimeException"
+    ],
+    "answer": 3,
+    "explanation": "RuntimeException and its subclasses are unchecked, so the compiler does not force handling."
+  },
+  {
+    "topic": "generics",
+    "question": "Why can't you declare a List<int>?",
+    "options": [
+      "Type arguments must be reference types, so use List<Integer>",
+      "int is reserved for array declarations only",
+      "Lists may only hold String values",
+      "List<int> is allowed only inside methods"
+    ],
+    "answer": 0,
+    "explanation": "Generics work with reference types; primitives are boxed into wrapper types like Integer."
+  },
+  {
+    "topic": "generics",
+    "question": "What does the diamond operator in new ArrayList<>() do?",
+    "options": [
+      "Creates a raw, untyped ArrayList",
+      "Lets the compiler infer the type arguments",
+      "Makes the list thread-safe",
+      "Creates an array of lists"
+    ],
+    "answer": 1,
+    "explanation": "Since Java 7 the diamond infers type arguments from the target type, avoiding repetition."
+  },
+  {
+    "topic": "generics",
+    "question": "In the declaration class Box<T>, what is T called?",
+    "options": [
+      "A wildcard",
+      "A raw type",
+      "A type parameter",
+      "A type bound"
+    ],
+    "answer": 2,
+    "explanation": "T is a type parameter; the concrete type supplied at use, like Box<String>, is the type argument."
+  },
+  {
+    "topic": "generics",
+    "question": "What is the main benefit of using generics?",
+    "options": [
+      "Faster execution through specialized bytecode",
+      "Support for multiple class inheritance",
+      "Lower memory use for collections",
+      "Compile-time type checking that removes explicit casts"
+    ],
+    "answer": 3,
+    "explanation": "Generics catch type errors at compile time; due to erasure they do not change runtime performance."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "Which is a valid lambda for a Function<Integer, Integer>?",
+    "options": [
+      "x -> x * 2",
+      "x => x * 2",
+      "lambda x: x * 2",
+      "fn(x) { x * 2 }"
+    ],
+    "answer": 0,
+    "explanation": "Java lambdas use the arrow token ->, with parameters on the left and the body on the right."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "Which of these stream operations is terminal?",
+    "options": [
+      "filter",
+      "collect",
+      "map",
+      "sorted"
+    ],
+    "answer": 1,
+    "explanation": "collect produces a result and ends the pipeline; filter, map and sorted are intermediate operations."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does list.stream().filter(p) return?",
+    "options": [
+      "A List of matching elements",
+      "A boolean telling if any element matches",
+      "A new Stream with only the elements matching p",
+      "The original list with non-matching elements removed"
+    ],
+    "answer": 2,
+    "explanation": "filter is an intermediate operation returning a new Stream; it never modifies the source."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "Which functional interface takes no argument and returns a value?",
+    "options": [
+      "Consumer<T>",
+      "Predicate<T>",
+      "Function<T, R>",
+      "Supplier<T>"
+    ],
+    "answer": 3,
+    "explanation": "Supplier.get() takes nothing and returns a T; Consumer takes a value and returns nothing."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Which Thread method begins executing run() on a new thread?",
+    "options": [
+      "start()",
+      "run()",
+      "execute()",
+      "begin()"
+    ],
+    "answer": 0,
+    "explanation": "start() creates the new thread of execution, which then calls run(); calling run() directly uses the current thread."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Which functional interface does the Thread constructor accept as the task to run?",
+    "options": [
+      "Callable",
+      "Runnable",
+      "Supplier",
+      "Executor"
+    ],
+    "answer": 1,
+    "explanation": "new Thread(Runnable) runs the Runnable's run() method; Callable is used with ExecutorService."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What does Thread.sleep(1000) do?",
+    "options": [
+      "Pauses every thread in the JVM for one second",
+      "Pauses the current thread for 1000 seconds",
+      "Pauses the current thread for about one second",
+      "Releases all locks and ends the thread"
+    ],
+    "answer": 2,
+    "explanation": "sleep takes milliseconds and pauses only the calling thread; it does not release monitors it holds."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Which package contains ExecutorService and ConcurrentHashMap?",
+    "options": [
+      "java.lang.thread",
+      "java.util.threads",
+      "java.concurrent",
+      "java.util.concurrent"
+    ],
+    "answer": 3,
+    "explanation": "The java.util.concurrent package provides executors, concurrent collections and synchronizers."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Where are objects created with new allocated?",
+    "options": [
+      "On the heap",
+      "On the calling thread's stack",
+      "In Metaspace",
+      "In CPU registers"
+    ],
+    "answer": 0,
+    "explanation": "Objects live on the garbage-collected heap; the JIT may optimize some allocations, but conceptually they are heap objects."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "What does the JVM execute?",
+    "options": [
+      "Java source code from .java files",
+      "Bytecode from .class files",
+      "Native machine code produced by javac",
+      "Assembly code from .asm files"
+    ],
+    "answer": 1,
+    "explanation": "javac compiles source to platform-neutral bytecode, which the JVM interprets and JIT-compiles."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Which JVM option sets the maximum heap size?",
+    "options": [
+      "-Xms",
+      "-Xss",
+      "-Xmx",
+      "-XX:MaxMetaspaceSize"
+    ],
+    "answer": 2,
+    "explanation": "-Xmx sets the maximum heap, -Xms the initial heap, and -Xss the thread stack size."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Which JDK tool compiles .java files into .class files?",
+    "options": [
+      "java",
+      "jar",
+      "javadoc",
+      "javac"
+    ],
+    "answer": 3,
+    "explanation": "javac is the compiler; java launches the JVM and jar packages class files."
+  },
+  {
+    "topic": "strings",
+    "question": "Are String objects mutable in Java?",
+    "options": [
+      "No, a String's value never changes after creation",
+      "Yes, methods like toUpperCase change it in place",
+      "Only strings created with new are mutable",
+      "Only strings that are not interned are mutable"
+    ],
+    "answer": 0,
+    "explanation": "String is immutable; methods such as toUpperCase return a new String."
+  },
+  {
+    "topic": "strings",
+    "question": "What does \"Java\".charAt(1) return?",
+    "options": [
+      "'J'",
+      "'a'",
+      "'v'",
+      "It throws StringIndexOutOfBoundsException"
+    ],
+    "answer": 1,
+    "explanation": "String indexes start at 0, so index 1 is the second character, 'a'."
+  },
+  {
+    "topic": "strings",
+    "question": "Which class is preferred for building a string in a loop in single-threaded code?",
+    "options": [
+      "StringBuffer",
+      "String",
+      "StringBuilder",
+      "CharSequence"
+    ],
+    "answer": 2,
+    "explanation": "StringBuilder is mutable and unsynchronized, so it avoids creating many intermediate String objects."
+  },
+  {
+    "topic": "strings",
+    "question": "What does \"  hi  \".strip() return?",
+    "options": [
+      "\"  hi\"",
+      "\"hi  \"",
+      "\"  hi  \"",
+      "\"hi\""
+    ],
+    "answer": 3,
+    "explanation": "strip() (Java 11) removes leading and trailing whitespace; stripLeading and stripTrailing remove only one side."
+  },
+  {
+    "topic": "modern-java",
+    "question": "Which keyword lets the compiler infer the type of a local variable (Java 10)?",
+    "options": [
+      "var",
+      "auto",
+      "let",
+      "val"
+    ],
+    "answer": 0,
+    "explanation": "var enables local variable type inference; the variable is still statically typed."
+  },
+  {
+    "topic": "modern-java",
+    "question": "What does a record declaration generate automatically?",
+    "options": [
+      "Setters for every component",
+      "A canonical constructor, accessors, equals, hashCode and toString",
+      "Only getter methods prefixed with get",
+      "A nested builder class"
+    ],
+    "answer": 1,
+    "explanation": "Records generate a canonical constructor, accessor methods named after components, and value-based equals, hashCode and toString."
+  },
+  {
+    "topic": "modern-java",
+    "question": "What is the feature that allows multi-line string literals delimited by three double quotes?",
+    "options": [
+      "Raw string literals",
+      "Heredocs",
+      "Text blocks",
+      "String templates"
+    ],
+    "answer": 2,
+    "explanation": "Text blocks became a standard feature in Java 15 and use triple double-quote delimiters."
+  },
+  {
+    "topic": "modern-java",
+    "question": "Which of these Java releases is a long-term support (LTS) release?",
+    "options": [
+      "Java 19",
+      "Java 20",
+      "Java 22",
+      "Java 21"
+    ],
+    "answer": 3,
+    "explanation": "Java 21 (September 2023) is an LTS release, following Java 17."
+  }
+]

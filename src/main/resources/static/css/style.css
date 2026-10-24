@@ -336,6 +336,26 @@ a:focus-visible, button:focus-visible, .option:focus-visible {
 .account-links .account-name:hover { background: none; text-decoration: underline; }
 
 /* ---------- Login / sign-up ---------- */
+.google-signin { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.google-button-slot { min-height: 44px; display: flex; justify-content: center; }
+.auth-divider { display: flex; align-items: center; gap: 10px; width: 100%; color: var(--text-muted); font-size: 0.85rem; }
+.auth-divider::before, .auth-divider::after { content: ""; flex: 1; border-top: 1px solid var(--border); }
+#google-connect .google-button-slot { justify-content: flex-start; margin-top: 8px; }
+
+/* Shared buttons (report dialog, challenge page, profile). */
+.btn-primary, .btn-secondary { font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 10px; border: none; cursor: pointer; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-primary:disabled { opacity: 0.6; cursor: wait; }
+.btn-secondary { background: var(--surface-soft); color: var(--text); }
+
+/* ---------- Challenge a friend ---------- */
+.challenge-intro { color: var(--text); line-height: 1.5; }
+.challenge-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
+.challenge-take { display: inline-block; width: auto; text-decoration: none; text-align: center; }
+.challenge-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; color: var(--primary-text); background: var(--primary-soft); vertical-align: middle; }
+.topic-table tr.challenge-you td { background: var(--primary-soft); }
+.challenge-fine { margin-top: 12px; font-size: 0.8rem; }
 .auth-card {
     width: 100%;
     max-width: 420px;
@@ -393,6 +413,31 @@ a:focus-visible, button:focus-visible, .option:focus-visible {
 .goal-bar span { display: block; height: 100%; width: 0; background: var(--easy); transition: width 0.3s; }
 .daily-link { color: var(--primary-text); font-weight: 700; text-decoration: none; font-size: 0.92rem; }
 .daily-link.done { color: var(--easy); }
+
+/* Daily tech challenge and question of the day (home page) */
+.daily-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; max-width: 900px; margin: -10px auto 26px; }
+.daily-row .daily-card { max-width: none; margin: 0; }
+.daily-card.tech { border-color: var(--primary); }
+.daily-card.tech .daily-badge, .qotd .daily-badge { background: var(--primary); color: #fff; }
+.daily-card.tech.done { border-color: var(--easy); }
+.qotd { text-align: left; border-color: var(--border-strong); }
+.qotd[hidden] { display: none; }
+.qotd .daily-badge { align-self: flex-start; }
+.qotd-question { margin: 2px 0 6px; color: var(--text); font-weight: 600; overflow-wrap: anywhere; }
+.qotd-options { display: flex; flex-direction: column; gap: 6px; }
+.qotd-option {
+    padding: 8px 12px; border-radius: 10px; border: 2px solid var(--border); background: var(--surface);
+    color: var(--text); font: inherit; font-size: 0.92rem; text-align: left; cursor: pointer; overflow-wrap: anywhere;
+}
+.qotd-option:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-soft); }
+.qotd-option:disabled { cursor: default; }
+.qotd-option.correct { border-color: var(--easy); background: var(--good-soft); }
+.qotd-option.incorrect { border-color: var(--hard); background: var(--bad-soft); }
+.daily-card .qotd-result { margin: 4px 0 0; color: var(--text); font-size: 0.9rem; }
+.qotd-result[hidden] { display: none; }
+@media (max-width: 720px) {
+    .daily-row { grid-template-columns: 1fr; }
+}
 
 /* ---------- Profile ---------- */
 .profile-stack { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 20px; }

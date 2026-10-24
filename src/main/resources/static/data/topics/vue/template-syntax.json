@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q411e6ddab80",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which syntax interpolates a value as text in a Vue template?",
+  "options": [
+   "${ message }",
+   "[[ message ]]",
+   "{{ message }}",
+   "<%= message %>"
+  ],
+  "answer": 2,
+  "explanation": "Vue uses double-curly mustache syntax for text interpolation, which is escaped as plain text."
+ },
+ {
+  "id": "qc1a3988bb2e",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What is the shorthand for v-bind:href?",
+  "options": [
+   "@href",
+   ":href",
+   "#href",
+   ".href"
+  ],
+  "answer": 1,
+  "explanation": "A leading colon is the shorthand for v-bind."
+ },
+ {
+  "id": "qd00f06b12b4",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What is the shorthand for v-on:click?",
+  "options": [
+   ":click",
+   "#click",
+   "$click",
+   "@click"
+  ],
+  "answer": 3,
+  "explanation": "The @ symbol is the shorthand for v-on event listeners."
+ },
+ {
+  "id": "qe722b1180b6",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What does the v-html directive do?",
+  "options": [
+   "Escapes the value and renders it as plain text",
+   "Loads markup from an external HTML file",
+   "Sets the element's innerHTML to the bound value",
+   "Validates HTML markup at compile time"
+  ],
+  "answer": 2,
+  "explanation": "v-html renders raw HTML via innerHTML, so it should never be used with untrusted content."
+ },
+ {
+  "id": "q76fecf85435",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does @submit.prevent=\"onSubmit\" do?",
+  "options": [
+   "Prevents onSubmit from ever running",
+   "Stops event propagation but not the default",
+   "Calls event.preventDefault() and then runs onSubmit",
+   "Runs onSubmit only the first time"
+  ],
+  "answer": 2,
+  "explanation": "The .prevent modifier calls preventDefault() on the event before the handler runs."
+ },
+ {
+  "id": "qefb29838641",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does v-bind:[attrName]=\"url\" do?",
+  "options": [
+   "Binds an attribute whose name comes from the value of attrName",
+   "Binds an attribute literally named attrName",
+   "Binds every attribute listed in an array",
+   "Binds url only if attrName is true"
+  ],
+  "answer": 0,
+  "explanation": "Square brackets create a dynamic argument that is evaluated as a JavaScript expression."
+ },
+ {
+  "id": "qf1d1cc41d68",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "Which of these is valid inside a mustache interpolation?",
+  "options": [
+   "if (ok) { return 'YES' }",
+   "let label = 'YES'",
+   "ok ? 'YES' : 'NO'",
+   "for (const x of list) x"
+  ],
+  "answer": 2,
+  "explanation": "Template bindings accept a single JavaScript expression, not statements or declarations."
+ },
+ {
+  "id": "qf3ee3aefa94",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does <div :class=\"{ active: isActive }\"> render?",
+  "options": [
+   "The class attribute is the literal object text",
+   "The active class is always added",
+   "It fails to compile because objects are not allowed",
+   "The active class is added only when isActive is truthy"
+  ],
+  "answer": 3,
+  "explanation": "Object syntax for :class toggles each class key based on the truthiness of its value."
+ },
+ {
+  "id": "q10e32417da4",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "What is the difference between @click=\"handle\" and @click=\"handle()\"?",
+  "options": [
+   "The first passes the native event; the second calls it with no args",
+   "The first runs once; the second runs every click",
+   "They are identical and both receive the event",
+   "The first is invalid outside the Options API"
+  ],
+  "answer": 0,
+  "explanation": "A method name is called with the event, while an inline call uses only the arguments you write."
+ },
+ {
+  "id": "q2bd5dcf1879",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "When using <template v-for> to render multiple elements per item in Vue 3, where should key go?",
+  "options": [
+   "On each child element inside the template",
+   "On the template v-for tag itself",
+   "On the parent element around the loop",
+   "Nowhere, since keys are forbidden here"
+  ],
+  "answer": 1,
+  "explanation": "In Vue 3 the key belongs on the template tag rather than on its children."
+ },
+ {
+  "id": "q3ae92a7b1ad",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "In script setup, const obj = { id: ref(1) }. What does {{ obj.id + 1 }} render?",
+  "options": [
+   "2",
+   "[object Object]1",
+   "11",
+   "NaN"
+  ],
+  "answer": 1,
+  "explanation": "Only top-level refs are unwrapped in templates, so obj.id is still a ref object inside the expression."
+ },
+ {
+  "id": "q8c1fc695866",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "A child root element has class=\"btn\" and the parent renders it with class=\"large\". What is the result?",
+  "options": [
+   "The root element has only large",
+   "The root element has both btn and large",
+   "Vue warns and drops the parent class",
+   "The root element has only btn"
+  ],
+  "answer": 1,
+  "explanation": "class and style fall through and are merged with the classes already on the child's root."
+ }
+]

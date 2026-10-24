@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1188bca131f",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does {x: x ** 2 for x in range(3)} evaluate to?",
+  "options": [
+   "{0: 0, 1: 2, 2: 4}",
+   "{1: 1, 2: 4, 3: 9}",
+   "[0, 1, 4]",
+   "{0: 0, 1: 1, 2: 4}"
+  ],
+  "answer": 3,
+  "explanation": "A dict comprehension maps each key x to x squared."
+ },
+ {
+  "id": "q153553bcaf4",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does [x * 2 for x in range(3)] evaluate to?",
+  "options": [
+   "[2, 4, 6]",
+   "[0, 2, 4]",
+   "[0, 2, 4, 6]",
+   "[0, 1, 2]"
+  ],
+  "answer": 1,
+  "explanation": "range(3) yields 0, 1, 2 and each is doubled."
+ },
+ {
+  "id": "q3a3aca7eab6",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What kind of object does (x for x in range(3)) create?",
+  "options": [
+   "A tuple",
+   "A list",
+   "A generator object",
+   "A range object"
+  ],
+  "answer": 2,
+  "explanation": "Parentheses around a comprehension create a lazy generator expression, not a tuple."
+ },
+ {
+  "id": "qcbc4163f3ce",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "Which keyword turns a function into a generator function?",
+  "options": [
+   "return",
+   "async",
+   "yield",
+   "generate"
+  ],
+  "answer": 2,
+  "explanation": "Any function containing yield returns a generator object when called."
+ },
+ {
+  "id": "q13eb384816b",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "With g = (x for x in range(3)), what does list(g) return the second time it is called?",
+  "options": [
+   "[0, 1, 2]",
+   "None",
+   "[]",
+   "It raises StopIteration"
+  ],
+  "answer": 2,
+  "explanation": "A generator is exhausted after one full pass, so a second list() gets no items."
+ },
+ {
+  "id": "q39023bd91ca",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does [(x, y) for x in range(2) for y in range(2) if x != y] return?",
+  "options": [
+   "[(0, 0), (1, 1)]",
+   "[(1, 0), (0, 1)]",
+   "[(0, 1)]",
+   "[(0, 1), (1, 0)]"
+  ],
+  "answer": 3,
+  "explanation": "The for clauses nest left to right, and the filter keeps only pairs with different values."
+ },
+ {
+  "id": "q6ec12b541a1",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does next(iter([])) do?",
+  "options": [
+   "Raises IndexError",
+   "Raises StopIteration",
+   "Returns None",
+   "Raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "next() on an exhausted iterator with no default raises StopIteration."
+ },
+ {
+  "id": "q8b809ffe914",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does sum(x for x in range(5) if x % 2) return?",
+  "options": [
+   "9",
+   "6",
+   "10",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Only the odd values 1 and 3 pass the filter, and 1 + 3 = 4."
+ },
+ {
+  "id": "q1ead0f989db",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "After x = 'outer'; [x for x in range(3)], what is the value of x?",
+  "options": [
+   "2",
+   "0",
+   "'outer'",
+   "It raises NameError"
+  ],
+  "answer": 2,
+  "explanation": "In Python 3 a comprehension has its own scope, so its loop variable does not leak."
+ },
+ {
+  "id": "q478df593356",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "Given def g(): yield from range(2); yield 9, what does list(g()) return?",
+  "options": [
+   "[range(0, 2), 9]",
+   "[0, 1, 2, 9]",
+   "[0, 1, 9]",
+   "[9]"
+  ],
+  "answer": 2,
+  "explanation": "yield from delegates to the inner iterable, yielding each of its items before continuing."
+ },
+ {
+  "id": "q800d26ab464",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "What happens to the value in a generator's return 5 statement?",
+  "options": [
+   "It is yielded as the final item",
+   "It is stored in the value attribute of the StopIteration that ends iteration",
+   "It is discarded silently",
+   "It raises a SyntaxError in generators"
+  ],
+  "answer": 1,
+  "explanation": "A generator's return value is carried by StopIteration.value and is the result of a yield from expression."
+ },
+ {
+  "id": "qffe3df8713c",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "Given def g(): x = yield 1; yield x * 2, after gen = g(); next(gen), what does gen.send(5) return?",
+  "options": [
+   "2",
+   "10",
+   "None",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "send(5) resumes the paused yield, which evaluates to 5, then the generator yields 5 * 2."
+ }
+]

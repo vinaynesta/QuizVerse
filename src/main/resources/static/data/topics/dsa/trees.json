@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q15711c47792",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "What is the maximum number of children a node can have in a binary tree?",
+  "options": [
+   "1",
+   "3",
+   "2",
+   "Unlimited"
+  ],
+  "answer": 2,
+  "explanation": "By definition each binary tree node has at most a left and a right child."
+ },
+ {
+  "id": "q5d61218a0ee",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "In a binary search tree, what does the left subtree of a node contain?",
+  "options": [
+   "Keys greater than the node's key",
+   "Keys less than the node's key",
+   "Keys in any order",
+   "Only keys equal to the node's key"
+  ],
+  "answer": 1,
+  "explanation": "The BST property places smaller keys on the left and larger keys on the right."
+ },
+ {
+  "id": "q80ad0b159cc",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "In what order does an inorder traversal visit the nodes of a binary tree?",
+  "options": [
+   "Left subtree, root, right subtree",
+   "Root, left subtree, right subtree",
+   "Left subtree, right subtree, root",
+   "Level by level from the top"
+  ],
+  "answer": 0,
+  "explanation": "Inorder is left-root-right, which yields sorted order for a BST."
+ },
+ {
+  "id": "q9b2b81e8702",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "What is a tree node with no children called?",
+  "options": [
+   "The root",
+   "An internal node",
+   "A sibling",
+   "A leaf"
+  ],
+  "answer": 3,
+  "explanation": "Leaves are the terminal nodes of a tree with no children."
+ },
+ {
+  "id": "q25c9ecd8815",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "What is the height of a balanced binary search tree containing n nodes?",
+  "options": [
+   "O(log n)",
+   "O(1)",
+   "O(n)",
+   "O(sqrt n)"
+  ],
+  "answer": 0,
+  "explanation": "Balancing keeps both subtrees similar in size, so the height grows logarithmically."
+ },
+ {
+  "id": "q9107ad2f20a",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "A binary tree has root 1, left child 2, right child 3, and node 2 has a left child 4. What is its preorder traversal?",
+  "options": [
+   "4 2 1 3",
+   "4 2 3 1",
+   "1 2 3 4",
+   "1 2 4 3"
+  ],
+  "answer": 3,
+  "explanation": "Preorder visits root, then left subtree, then right subtree."
+ },
+ {
+  "id": "qff660eb16a3",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "What is the worst-case search time in a plain BST built by inserting keys in sorted order?",
+  "options": [
+   "O(log n)",
+   "O(1)",
+   "O(n log n)",
+   "O(n)"
+  ],
+  "answer": 3,
+  "explanation": "Sorted insertions create a degenerate tree that behaves like a linked list."
+ },
+ {
+  "id": "q0d8c198c226",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "Why are B-trees and B+ trees preferred for database and file-system indexes?",
+  "options": [
+   "Their high fanout keeps the tree shallow, minimizing disk page reads",
+   "They use less total memory than arrays",
+   "They require no rebalancing",
+   "They guarantee O(1) lookups"
+  ],
+  "answer": 0,
+  "explanation": "Each node fills a disk page with many keys, so lookups touch only a few pages."
+ },
+ {
+  "id": "q21df0c67c54",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "Compared with a red-black tree, what is characteristic of an AVL tree?",
+  "options": [
+   "It allows duplicate keys while red-black trees do not",
+   "It is less balanced but never needs rotations",
+   "It is more strictly balanced, giving faster lookups but possibly more rotations on updates",
+   "It guarantees O(1) insertion"
+  ],
+  "answer": 2,
+  "explanation": "AVL height stays near 1.44 log n versus about 2 log n for red-black trees, at the cost of more rebalancing."
+ },
+ {
+  "id": "qff8f6cf889d",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "Why is checking only node.left.val < node.val < node.right.val insufficient to validate a BST?",
+  "options": [
+   "It fails on trees with a single node",
+   "It only works for complete binary trees",
+   "It cannot handle negative values",
+   "A node deep in a subtree can violate the bound set by a higher ancestor"
+  ],
+  "answer": 3,
+  "explanation": "Every node must lie within a min/max range inherited from all its ancestors, not just its parent."
+ }
+]

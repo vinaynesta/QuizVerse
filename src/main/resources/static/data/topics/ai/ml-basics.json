@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q540e22b5ff4",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "What is overfitting?",
+  "options": [
+   "A model too simple to capture the underlying pattern in the data",
+   "A dataset with more features than the model can store",
+   "A model that trains for too few epochs to converge",
+   "A model learning noise in the training data so it performs poorly on new data"
+  ],
+  "answer": 3,
+  "explanation": "An overfit model memorizes training-specific noise, so its training performance does not carry over to new data."
+ },
+ {
+  "id": "q6099fe51c9b",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "What is machine learning?",
+  "options": [
+   "Storing large datasets in a relational database for fast lookup",
+   "Writing explicit if-then rules for every possible input case",
+   "Building systems that learn patterns from data rather than following only hand-coded rules",
+   "Compiling source code into optimized machine instructions"
+  ],
+  "answer": 2,
+  "explanation": "Machine learning fits models to data so behavior is learned from examples instead of being fully hand-programmed."
+ },
+ {
+  "id": "q74e421b3e6c",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "Why is data split into training and test sets?",
+  "options": [
+   "To make training run faster on smaller batches",
+   "To estimate how well the model generalizes to unseen data",
+   "To double the amount of data available for training",
+   "To remove outliers before fitting the model"
+  ],
+  "answer": 1,
+  "explanation": "A held-out test set gives an unbiased estimate of performance on data the model never saw during training."
+ },
+ {
+  "id": "q9f6841b89aa",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "In machine learning, what is a feature?",
+  "options": [
+   "The target value the model is trained to predict",
+   "A hyperparameter that controls the learning rate",
+   "The error measured on the held-out test set",
+   "An input variable the model uses to make a prediction"
+  ],
+  "answer": 3,
+  "explanation": "Features are the measurable input attributes fed to a model; the target is what it predicts."
+ },
+ {
+  "id": "q2fffcc402bd",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "Why should features be scaled before using k-NN or gradient-descent-based models?",
+  "options": [
+   "Scaling increases the number of training samples",
+   "Scaling converts categorical features into numeric ones",
+   "Features on larger scales would otherwise dominate distances and slow convergence",
+   "Scaling guarantees that the model will not overfit"
+  ],
+  "answer": 2,
+  "explanation": "Distance calculations and gradient steps are sensitive to feature magnitudes, so unscaled features distort both."
+ },
+ {
+  "id": "q5ef329e2944",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "A model scores 99% accuracy on training data but 70% on validation data. What is the most likely problem?",
+  "options": [
+   "The model is underfitting the training data",
+   "The validation set is too large",
+   "The learning rate is too low",
+   "The model is overfitting the training data"
+  ],
+  "answer": 3,
+  "explanation": "A large gap between training and validation performance is the classic sign of overfitting."
+ },
+ {
+  "id": "qd243fe68fac",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "Fitting a feature scaler on the full dataset before the train/test split is an example of what?",
+  "options": [
+   "Covariate shift",
+   "Underfitting",
+   "Class imbalance",
+   "Data leakage"
+  ],
+  "answer": 3,
+  "explanation": "Test-set statistics influence the training preprocessing, so evaluation scores become optimistically biased."
+ },
+ {
+  "id": "qf40b3bab2cd",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "What is the purpose of a validation set that is separate from the test set?",
+  "options": [
+   "Providing extra data to train the final weights",
+   "Replacing the need for a training set",
+   "Tuning hyperparameters without biasing the final test estimate",
+   "Measuring inference latency in production"
+  ],
+  "answer": 2,
+  "explanation": "Choosing hyperparameters on the test set would leak information; a validation set keeps the test set as an untouched final check."
+ },
+ {
+  "id": "q43398e6dbf5",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Why is shuffled k-fold cross-validation inappropriate for time-series forecasting?",
+  "options": [
+   "Time series always have too few samples for k folds",
+   "Shuffling changes the values of the target variable",
+   "k-fold requires categorical targets",
+   "Random splits let the model train on future data, leaking information"
+  ],
+  "answer": 3,
+  "explanation": "Forecasting must respect temporal order, so walk-forward or time-based splits are used instead."
+ },
+ {
+  "id": "q8bb73f2aaed",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "In the bias-variance trade-off, what typically happens as model complexity increases?",
+  "options": [
+   "Bias decreases and variance increases",
+   "Bias increases and variance decreases",
+   "Both bias and variance decrease indefinitely",
+   "Both bias and variance increase"
+  ],
+  "answer": 0,
+  "explanation": "More flexible models fit the training data more closely, lowering bias but becoming more sensitive to the particular sample."
+ },
+ {
+  "id": "qa6a8ac6e838",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Collecting more training data is most likely to help a model with which problem?",
+  "options": [
+   "High bias from an overly simple model",
+   "Features unrelated to the target",
+   "A bug in the evaluation metric",
+   "High variance"
+  ],
+  "answer": 3,
+  "explanation": "More data constrains a flexible model and reduces overfitting, but cannot fix an underpowered model or useless features."
+ },
+ {
+  "id": "qdf2eb4697a1",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Training and validation errors are both high and close together. What is the likely issue and remedy?",
+  "options": [
+   "High variance; add regularization or more data",
+   "Data leakage; remove features correlated with the target",
+   "High bias; use a more expressive model or better features",
+   "No issue; the model is ready to deploy"
+  ],
+  "answer": 2,
+  "explanation": "A small gap with high error means the model underfits, so it needs more capacity or more informative features."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1b811a63ab5",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "What does a deque (double-ended queue) allow?",
+  "options": [
+   "Insertion and removal only at the front",
+   "Insertion and removal at both ends",
+   "Insertion and removal only at the rear",
+   "Insertion and removal only in the middle"
+  ],
+  "answer": 1,
+  "explanation": "A deque supports adding and removing elements at both the front and the back."
+ },
+ {
+  "id": "qfce14a20eb8",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What is the condition that stops a recursive function from calling itself called?",
+  "options": [
+   "The base case",
+   "The pivot",
+   "The invariant",
+   "The recursive case"
+  ],
+  "answer": 0,
+  "explanation": "The base case returns a result directly without further recursion."
+ },
+ {
+  "id": "q195467f010d",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which operation adds an element to the top of a stack?",
+  "options": [
+   "enqueue",
+   "poll",
+   "push",
+   "peek"
+  ],
+  "answer": 2,
+  "explanation": "push places a new element on top; peek only reads it."
+ },
+ {
+  "id": "qe80a792ed45",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which ordering principle does a queue follow?",
+  "options": [
+   "LIFO (last in, first out)",
+   "FIFO (first in, first out)",
+   "Sorted order",
+   "Highest priority first"
+  ],
+  "answer": 1,
+  "explanation": "Elements leave a queue in the same order they arrived."
+ },
+ {
+  "id": "qdceaee64024",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "What is the time complexity of two nested loops that each run from 1 to n?",
+  "options": [
+   "O(n)",
+   "O(n^2)",
+   "O(2n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "The inner loop runs n times for each of the n outer iterations."
+ },
+ {
+  "id": "qb188aaac0e2",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "What is the worst-case time to access the k-th element of a singly linked list of n nodes?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "There is no random access, so you must follow next pointers from the head."
+ },
+ {
+  "id": "q5d61218a0ee",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "In a binary search tree, what does the left subtree of a node contain?",
+  "options": [
+   "Keys greater than the node's key",
+   "Keys less than the node's key",
+   "Keys in any order",
+   "Only keys equal to the node's key"
+  ],
+  "answer": 1,
+  "explanation": "The BST property places smaller keys on the left and larger keys on the right."
+ },
+ {
+  "id": "q80ad0b159cc",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "In what order does an inorder traversal visit the nodes of a binary tree?",
+  "options": [
+   "Left subtree, root, right subtree",
+   "Root, left subtree, right subtree",
+   "Left subtree, right subtree, root",
+   "Level by level from the top"
+  ],
+  "answer": 0,
+  "explanation": "Inorder is left-root-right, which yields sorted order for a BST."
+ },
+ {
+  "id": "qd53c854dd58",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "What is the bottom-up approach to dynamic programming, which fills a table from the smallest subproblems, commonly called?",
+  "options": [
+   "Tabulation",
+   "Backtracking",
+   "Memoization",
+   "Branch and bound"
+  ],
+  "answer": 0,
+  "explanation": "Tabulation iteratively fills a table starting from base cases, unlike top-down memoization."
+ },
+ {
+  "id": "q5b88c9bbbf0",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What is the worst-case time complexity of binary search on n elements?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Each comparison halves the remaining search range."
+ }
+]

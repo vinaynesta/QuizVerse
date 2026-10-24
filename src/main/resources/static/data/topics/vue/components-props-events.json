@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1bcf8e065fa",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "What file extension is used for Vue single-file components?",
+  "options": [
+   ".vjs",
+   ".sfc",
+   ".vue",
+   ".view"
+  ],
+  "answer": 2,
+  "explanation": "Single-file components combine template, script and style in a .vue file."
+ },
+ {
+  "id": "q32c0f6d5160",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "Which compiler macro declares the events a component emits in script setup?",
+  "options": [
+   "defineEvents()",
+   "defineEmits()",
+   "useEmit()",
+   "declareEmits()"
+  ],
+  "answer": 1,
+  "explanation": "defineEmits() declares emitted events and returns an emit function."
+ },
+ {
+  "id": "q77c224c028b",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "Which compiler macro declares props in script setup?",
+  "options": [
+   "defineProps()",
+   "declareProps()",
+   "useProps()",
+   "props()"
+  ],
+  "answer": 0,
+  "explanation": "defineProps() is a compiler macro available in script setup without an import."
+ },
+ {
+  "id": "qe4591ab4303",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "In which direction do props flow between components?",
+  "options": [
+   "Two-way between parent and child by default",
+   "Upward, from child to parent only",
+   "One-way, from parent down to child",
+   "Sideways between sibling components"
+  ],
+  "answer": 2,
+  "explanation": "Props form a one-way data flow; children communicate upward by emitting events."
+ },
+ {
+  "id": "q1cb19fbeff5",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "A child needs a different value for a prop it received. What is the recommended approach?",
+  "options": [
+   "Assign the new value directly to the prop",
+   "Change it through the parent instance",
+   "Emit an event so the parent updates the value",
+   "Call a set() method on the props object"
+  ],
+  "answer": 2,
+  "explanation": "Props are readonly in the child; the parent owns the data and should update it in response to an event."
+ },
+ {
+  "id": "q63606452e7d",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "What happens to attributes passed to a component that are not declared as props or emits?",
+  "options": [
+   "They are silently discarded",
+   "They fall through to the component's root element",
+   "They cause a runtime error",
+   "They are added to every child element"
+  ],
+  "answer": 1,
+  "explanation": "Undeclared attributes such as class, style and listeners are applied to a single root element by default."
+ },
+ {
+  "id": "qbc58d6b52c7",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "By default, v-model on a custom component in Vue 3 uses which prop and event?",
+  "options": [
+   "value prop and input event",
+   "modelValue prop and update:modelValue event",
+   "v-value prop and sync event",
+   "model prop and change event"
+  ],
+  "answer": 1,
+  "explanation": "Vue 3 changed the default from value/input to modelValue/update:modelValue."
+ },
+ {
+  "id": "qcf7758f1e6b",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "With defineProps({ size: { type: Number, default: 10 } }), what is props.size when the parent omits it?",
+  "options": [
+   "0",
+   "undefined",
+   "null",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "When a prop is absent, its declared default value is used."
+ },
+ {
+  "id": "q35d195ff16a",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "With a prop declared as disabled: Boolean, what is its value for <MyBtn disabled />?",
+  "options": [
+   "true",
+   "''",
+   "'disabled'",
+   "undefined"
+  ],
+  "answer": 0,
+  "explanation": "Boolean props are cast to true when the attribute is present without a value."
+ },
+ {
+  "id": "q50db8623b9c",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "How do you apply fallthrough attributes to an inner element instead of the root?",
+  "options": [
+   "Set inheritAttrs: true and use v-slot",
+   "Use provide('attrs') in the child",
+   "Use defineProps with an attrs option",
+   "Set inheritAttrs: false and bind v-bind=\"$attrs\""
+  ],
+  "answer": 3,
+  "explanation": "Disabling inheritAttrs stops automatic root binding, and $attrs can then be spread on any element."
+ },
+ {
+  "id": "qa8a307f8fec",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "How does a child receive v-model:title from its parent using defineModel?",
+  "options": [
+   "const title = defineModel({ model: 'title' })",
+   "const title = defineProps('title')",
+   "const title = useModel('v-title')",
+   "const title = defineModel('title')"
+  ],
+  "answer": 3,
+  "explanation": "Passing a name to defineModel() binds it to the title prop and update:title event."
+ },
+ {
+  "id": "qf2877ea7c29",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "A child mutates props.user.name where user is an object prop. What happens?",
+  "options": [
+   "Vue throws a readonly error",
+   "The mutation is ignored silently",
+   "It works but is an anti-pattern; Vue does not warn",
+   "The parent's object is cloned first"
+  ],
+  "answer": 2,
+  "explanation": "Props are shallowly readonly, so nested mutations succeed but make data flow hard to reason about."
+ }
+]

@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q24606c3e683",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is a large language model fundamentally trained to do?",
+  "options": [
+   "Translate code into machine instructions",
+   "Look up answers in a fixed database of facts",
+   "Classify documents into a fixed set of topics",
+   "Predict the next token given the preceding text"
+  ],
+  "answer": 3,
+  "explanation": "LLMs are pre-trained on large text corpora with a next-token prediction objective."
+ },
+ {
+  "id": "q5cd85f5fcaf",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What does hallucination mean for an LLM?",
+  "options": [
+   "Refusing to answer a harmless question",
+   "Producing output too slowly for real-time use",
+   "Generating fluent but false or unsupported content",
+   "Repeating the user's prompt back verbatim"
+  ],
+  "answer": 2,
+  "explanation": "LLMs can produce confident, plausible-sounding text that is not grounded in fact."
+ },
+ {
+  "id": "q616c6f7da9f",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is an LLM's context window?",
+  "options": [
+   "The maximum number of tokens the model can consider at once",
+   "The time limit for generating a single response",
+   "The number of users who can query the model simultaneously",
+   "The set of documents used during pre-training"
+  ],
+  "answer": 0,
+  "explanation": "The context window bounds how much prompt plus generated text the model can attend to in one call."
+ },
+ {
+  "id": "qbbd77ae78d9",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is few-shot prompting?",
+  "options": [
+   "Fine-tuning the model on a small labeled dataset",
+   "Limiting the response to a few words",
+   "Including a few worked examples in the prompt to guide the output",
+   "Sending the same prompt several times and averaging"
+  ],
+  "answer": 2,
+  "explanation": "Few-shot prompting shows the model example input-output pairs in context without changing its weights."
+ },
+ {
+  "id": "q1ae9e561d41",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "When is fine-tuning usually preferable to prompting alone?",
+  "options": [
+   "When the model must know facts that change every day",
+   "When you only have three examples of the task",
+   "When you want to need no training data at all",
+   "When you need consistent behavior or style across many requests that prompting cannot reliably achieve"
+  ],
+  "answer": 3,
+  "explanation": "Fine-tuning bakes in task behavior from many examples, whereas fast-changing facts are better served by retrieval."
+ },
+ {
+  "id": "q6f338e86f77",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is chain-of-thought prompting?",
+  "options": [
+   "Linking several models so each answers one word",
+   "Asking the model to reason step by step before giving an answer",
+   "Feeding the model's output back as training data",
+   "Restricting the model to answer in a single token"
+  ],
+  "answer": 1,
+  "explanation": "Eliciting intermediate reasoning steps often improves performance on multi-step problems."
+ },
+ {
+  "id": "qb85065a64a4",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is the effect of lowering the sampling temperature of an LLM?",
+  "options": [
+   "Outputs become more deterministic and focused on high-probability tokens",
+   "The model's context window becomes larger",
+   "Outputs become more random and creative",
+   "Responses are generated faster on the same hardware"
+  ],
+  "answer": 0,
+  "explanation": "Lower temperature sharpens the probability distribution, so likely tokens dominate sampling."
+ },
+ {
+  "id": "qc49b8c19a71",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is a system prompt typically used for?",
+  "options": [
+   "Defining the tokenizer's vocabulary",
+   "Storing the model's weights for faster loading",
+   "Setting persistent instructions, role and constraints for a conversation",
+   "Logging errors returned by the API"
+  ],
+  "answer": 2,
+  "explanation": "The system prompt frames the model's behavior across all user turns in a conversation."
+ },
+ {
+  "id": "q2613d564c33",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "What is the purpose of reinforcement learning from human feedback (RLHF)?",
+  "options": [
+   "Aligning outputs with human preferences using a reward model trained on human rankings",
+   "Compressing the model by removing redundant layers",
+   "Extending the context window via positional interpolation",
+   "Teaching the model new facts by retrieving web pages"
+  ],
+  "answer": 0,
+  "explanation": "Humans compare responses, a reward model learns those preferences, and the LLM is optimized against it."
+ },
+ {
+  "id": "q4467dd13d5e",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "What is top-p (nucleus) sampling?",
+  "options": [
+   "Rejecting whole outputs whose probability falls below p",
+   "Always choosing the single most likely token",
+   "Sampling uniformly from a fixed count of p tokens",
+   "Sampling from the smallest set of tokens whose cumulative probability exceeds p"
+  ],
+  "answer": 3,
+  "explanation": "Nucleus sampling adapts the candidate set size to the model's confidence at each step."
+ },
+ {
+  "id": "q8ddd9eed234",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "Why can greedy decoding produce repetitive text?",
+  "options": [
+   "Greedy decoding samples randomly from the whole vocabulary",
+   "Greedy decoding disables the attention mechanism",
+   "Greedy decoding ignores the prompt after the first token",
+   "Always choosing the most likely token can get stuck in high-probability loops"
+  ],
+  "answer": 3,
+  "explanation": "Deterministic argmax choices can reinforce a repeated phrase, which sampling or repetition penalties help break."
+ },
+ {
+  "id": "qade8c0889e1",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "Why do LLMs often struggle to count the letters in a word?",
+  "options": [
+   "They never see the alphabet during training",
+   "They operate on subword tokens rather than individual characters",
+   "Counting needs a larger context window than any model has",
+   "Temperature randomizes the letters in each word"
+  ],
+  "answer": 1,
+  "explanation": "A word may be a single token, so its character-level makeup is not directly visible to the model."
+ }
+]

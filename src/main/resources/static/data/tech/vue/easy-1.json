@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q3b5362adb18",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "Which function is typically used to make a primitive value like a number reactive?",
+  "options": [
+   "markRaw()",
+   "toRaw()",
+   "ref()",
+   "shallowReadonly()"
+  ],
+  "answer": 2,
+  "explanation": "ref() wraps any value, including primitives, in a reactive object with a .value property."
+ },
+ {
+  "id": "q9b45130d801",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive renders a list of items?",
+  "options": [
+   "v-repeat",
+   "v-each",
+   "v-loop",
+   "v-for"
+  ],
+  "answer": 3,
+  "explanation": "v-for renders an element or block once for each item in a source."
+ },
+ {
+  "id": "qc1a3988bb2e",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What is the shorthand for v-bind:href?",
+  "options": [
+   "@href",
+   ":href",
+   "#href",
+   ".href"
+  ],
+  "answer": 1,
+  "explanation": "A leading colon is the shorthand for v-bind."
+ },
+ {
+  "id": "qb31595d0c94",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "Inside script setup, how do you read the current value of const count = ref(0)?",
+  "options": [
+   "count.get()",
+   "count.value",
+   "count()",
+   "count.current"
+  ],
+  "answer": 1,
+  "explanation": "Refs expose their inner value through the .value property in JavaScript."
+ },
+ {
+  "id": "qef0bdb510d8",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "In script setup, which function gives access to the current route's params and query?",
+  "options": [
+   "useRouter()",
+   "useRoute()",
+   "currentRoute()",
+   "getRoute()"
+  ],
+  "answer": 1,
+  "explanation": "useRoute() returns the current route location; useRouter() returns the router instance used for navigation."
+ },
+ {
+  "id": "q6af4063692d",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive renders an element once and skips all future updates?",
+  "options": [
+   "v-static",
+   "v-freeze",
+   "v-cloak",
+   "v-once"
+  ],
+  "answer": 3,
+  "explanation": "v-once renders the element and its children a single time and treats them as static afterwards."
+ },
+ {
+  "id": "qe4c96c1502f",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "How does v-show differ from v-if?",
+  "options": [
+   "v-show removes the element from the DOM entirely",
+   "v-show toggles CSS display and keeps the element in the DOM",
+   "v-show only works on component tags",
+   "v-show evaluates its condition only once"
+  ],
+  "answer": 1,
+  "explanation": "v-show always renders the element and toggles display, while v-if conditionally creates and destroys it."
+ },
+ {
+  "id": "q411e6ddab80",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which syntax interpolates a value as text in a Vue template?",
+  "options": [
+   "${ message }",
+   "[[ message ]]",
+   "{{ message }}",
+   "<%= message %>"
+  ],
+  "answer": 2,
+  "explanation": "Vue uses double-curly mustache syntax for text interpolation, which is escaped as plain text."
+ },
+ {
+  "id": "q02ef8f24ebc",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "Which element marks where parent-provided content goes in a child template?",
+  "options": [
+   "<content>",
+   "<yield>",
+   "<outlet>",
+   "<slot>"
+  ],
+  "answer": 3,
+  "explanation": "The slot element is the outlet where the parent's slot content is rendered."
+ },
+ {
+  "id": "qbfbd6e9bd66",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "What is script setup in a Vue single-file component?",
+  "options": [
+   "A runtime plugin that loads scripts lazily",
+   "A directive that marks server-only code",
+   "A block used to configure the Vite build",
+   "Compile-time sugar for using the Composition API in SFCs"
+  ],
+  "answer": 3,
+  "explanation": "script setup is processed at compile time and lets top-level bindings be used directly in the template."
+ }
+]

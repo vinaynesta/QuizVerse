@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q39e209a1373",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router v6 and later, which hook returns a function for navigating programmatically?",
+  "options": [
+   "useNavigate",
+   "useLocation",
+   "useParams",
+   "useMatch"
+  ],
+  "answer": 0,
+  "explanation": "useNavigate returns a navigate function you can call, for example navigate('/home'), after an action completes."
+ },
+ {
+  "id": "q0ec1edb67d8",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "What problem does React Context mainly solve?",
+  "options": [
+   "Passing data deep through the tree without prop drilling",
+   "Making every render faster",
+   "Fetching data from a server",
+   "Mapping URLs to components"
+  ],
+  "answer": 0,
+  "explanation": "Context lets any descendant read a value from a provider without passing it through every intermediate component."
+ },
+ {
+  "id": "qb1098f5804c",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Which special prop holds the content nested between a component's opening and closing tags?",
+  "options": [
+   "content",
+   "inner",
+   "children",
+   "body"
+  ],
+  "answer": 2,
+  "explanation": "Anything placed between <Card> and </Card> is passed to Card as props.children."
+ },
+ {
+  "id": "q5d8cee165a2",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "What is the virtual DOM, roughly speaking?",
+  "options": [
+   "An in-memory tree describing the UI that React compares to decide what to update",
+   "A browser API that replaces the real DOM",
+   "A background thread that paints the page",
+   "A CSS engine that computes layout"
+  ],
+  "answer": 0,
+  "explanation": "React builds a lightweight tree of elements, diffs it with the previous one, and applies only the needed changes to the real DOM."
+ },
+ {
+  "id": "q5cbc4ccc270",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "What is useEffect primarily meant for?",
+  "options": [
+   "Declaring local component state",
+   "Synchronizing a component with an external system",
+   "Memoizing expensive calculations",
+   "Defining application routes"
+  ],
+  "answer": 1,
+  "explanation": "Effects let a component stay in sync with things outside React, such as network connections, timers, or browser APIs."
+ },
+ {
+  "id": "q2e0af244287",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "Which of these is one of the Rules of Hooks?",
+  "options": [
+   "Call hooks only inside class components",
+   "Call hooks only inside loops",
+   "Call hooks only inside event handlers",
+   "Call hooks only at the top level of a component or custom hook"
+  ],
+  "answer": 3,
+  "explanation": "Hooks must be called in the same order every render, so they belong at the top level, not inside conditions, loops, or handlers."
+ },
+ {
+  "id": "q531f79a78af",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router, what does useParams return?",
+  "options": [
+   "The dynamic segments of the matched route, such as :id",
+   "The props of the current component",
+   "The parsed query string of the URL",
+   "The browser's history stack"
+  ],
+  "answer": 0,
+  "explanation": "For a route like /users/:id, useParams returns an object such as { id: '42' }."
+ },
+ {
+  "id": "q0aace7628c3",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What does useCallback return?",
+  "options": [
+   "The result of calling the function",
+   "A ref object pointing to the function",
+   "A promise that resolves to the function",
+   "A memoized function that keeps the same identity while its dependencies are unchanged"
+  ],
+  "answer": 3,
+  "explanation": "useCallback caches the function itself, which helps when passing callbacks to memoized children."
+ },
+ {
+  "id": "q4851ba0125b",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Which hook adds local state to a function component?",
+  "options": [
+   "useRef",
+   "useMemo",
+   "useState",
+   "useId"
+  ],
+  "answer": 2,
+  "explanation": "useState returns a state value and a setter, and calling the setter triggers a re-render."
+ },
+ {
+  "id": "q90aa3fa82ee",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "What does useRef return?",
+  "options": [
+   "A state value and setter pair",
+   "A memoized callback function",
+   "The value of the nearest context provider",
+   "A mutable object whose current property persists across renders"
+  ],
+  "answer": 3,
+  "explanation": "useRef returns an object like { current: initialValue } that stays the same object for the component's lifetime."
+ }
+]

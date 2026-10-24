@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q721d208eb81",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which testing framework does spring-boot-starter-test use by default in Spring Boot 3?",
+  "options": [
+   "JUnit 5 (Jupiter)",
+   "TestNG",
+   "JUnit 4",
+   "Spock"
+  ],
+  "answer": 0,
+  "explanation": "spring-boot-starter-test ships JUnit Jupiter; the JUnit 4 vintage engine is not included."
+ },
+ {
+  "id": "q898537fa305",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which class performs requests against Spring MVC controllers without starting a real HTTP server?",
+  "options": [
+   "TestRestTemplate",
+   "MockMvc",
+   "HttpClient",
+   "RestTemplate"
+  ],
+  "answer": 1,
+  "explanation": "MockMvc drives the DispatcherServlet with mock requests, while TestRestTemplate needs a running server."
+ },
+ {
+  "id": "qc946b8c39c1",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which annotation creates a test slice containing only Spring MVC components?",
+  "options": [
+   "@DataJpaTest",
+   "@WebMvcTest",
+   "@JsonTest",
+   "@RestClientTest"
+  ],
+  "answer": 1,
+  "explanation": "@WebMvcTest auto-configures MockMvc and loads controllers, advice, filters and converters but not services or repositories."
+ },
+ {
+  "id": "qcc0ccb74f23",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which test annotation configures JPA repositories with an embedded database and rolls back each test by default?",
+  "options": [
+   "@WebMvcTest",
+   "@JdbcTest",
+   "@DataJpaTest",
+   "@SpringBootTest"
+  ],
+  "answer": 2,
+  "explanation": "@DataJpaTest loads only JPA components, replaces the DataSource with an embedded one, and makes each test transactional."
+ },
+ {
+  "id": "q2120202222d",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What is @DynamicPropertySource typically used for in integration tests?",
+  "options": [
+   "Reloading application.properties between tests",
+   "Registering properties computed at runtime, such as a Testcontainers JDBC URL",
+   "Marking a test as dependent on an external profile",
+   "Generating random test data"
+  ],
+  "answer": 1,
+  "explanation": "The static method adds property suppliers to the Environment before the context starts."
+ },
+ {
+  "id": "q4c4a4eb2cf9",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What does @ServiceConnection on a Testcontainers container field do in Spring Boot 3.1+?",
+  "options": [
+   "Mocks the external service without Docker",
+   "Starts the container only when the prod profile is active",
+   "Auto-configures connection details for the app from the running container",
+   "Registers the container as a Spring MVC endpoint"
+  ],
+  "answer": 2,
+  "explanation": "Boot derives ConnectionDetails beans from the container, removing the need for manual property wiring."
+ },
+ {
+  "id": "q62887b0960d",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "In Spring Boot 3.4+, which Spring Framework annotation replaces the deprecated @MockBean?",
+  "options": [
+   "@MockBeanOverride",
+   "@MockitoBean",
+   "@InjectMocks",
+   "@SpyBean"
+  ],
+  "answer": 1,
+  "explanation": "Spring Framework 6.2 introduced @MockitoBean and @MockitoSpyBean, and Boot 3.4 deprecated @MockBean and @SpyBean."
+ },
+ {
+  "id": "qcd04fee8681",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What does @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT) do?",
+  "options": [
+   "Uses a mock servlet environment with no server",
+   "Starts the server on port 8080 every time",
+   "Starts the real embedded server on a random free port",
+   "Disables the web layer entirely"
+  ],
+  "answer": 2,
+  "explanation": "RANDOM_PORT starts a real server; the chosen port can be injected with @LocalServerPort."
+ },
+ {
+  "id": "q96f411bee80",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "Why can adding different @MockitoBean declarations across test classes slow a test suite?",
+  "options": [
+   "Mockito must recompile classes for each mock",
+   "Mocks disable parallel test execution",
+   "Mocks force a full Maven rebuild",
+   "Each unique mock set changes the context cache key, forcing new contexts"
+  ],
+  "answer": 3,
+  "explanation": "Spring's test context cache reuses a context only when configuration, including bean overrides, is identical."
+ },
+ {
+  "id": "q975057c8f46",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "A @SpringBootTest(webEnvironment = RANDOM_PORT) test is @Transactional and calls the API via TestRestTemplate. Why are the inserted rows not rolled back?",
+  "options": [
+   "The server handles the request in a different thread and transaction",
+   "TestRestTemplate commits the test transaction",
+   "Rollback only works with JUnit 4",
+   "RANDOM_PORT disables all transactions"
+  ],
+  "answer": 0,
+  "explanation": "Test-managed rollback applies to the test thread's transaction, not to transactions in server threads."
+ },
+ {
+  "id": "qa00bd02e063",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "Why does @WebMvcTest(UserController.class) fail with NoSuchBeanDefinitionException for UserService?",
+  "options": [
+   "UserService must be annotated with @RestController",
+   "The slice does not load @Service beans, so the dependency must be mocked",
+   "MockMvc requires services to be static",
+   "@WebMvcTest forbids constructor injection"
+  ],
+  "answer": 1,
+  "explanation": "Provide UserService with @MockitoBean (or @MockBean in older versions) so the controller can be created."
+ },
+ {
+  "id": "qe092b3c3ade",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "How do you make @DataJpaTest use the real database configured in your properties instead of an embedded one?",
+  "options": [
+   "Use @SpringBootTest alongside it",
+   "Add @Transactional(propagation = NEVER)",
+   "Set spring.jpa.show-sql=true",
+   "Add @AutoConfigureTestDatabase(replace = Replace.NONE)"
+  ],
+  "answer": 3,
+  "explanation": "By default @DataJpaTest replaces any DataSource with an embedded one; Replace.NONE keeps yours."
+ }
+]

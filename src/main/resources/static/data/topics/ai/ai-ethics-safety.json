@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q5bacf87fe80",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What is algorithmic bias?",
+  "options": [
+   "Systematically unfair outcomes for certain groups produced by a model",
+   "Random noise added to model weights during training",
+   "The constant offset term in a linear model",
+   "A model's preference for shorter outputs"
+  ],
+  "answer": 0,
+  "explanation": "Algorithmic bias refers to models producing skewed or discriminatory results, often inherited from data or design choices."
+ },
+ {
+  "id": "q6ae0f35f094",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "How can training data introduce bias into a model?",
+  "options": [
+   "Larger datasets always eliminate every source of bias",
+   "The data may underrepresent groups or reflect historical prejudice",
+   "Bias comes only from the choice of optimizer",
+   "Data has no effect once the model is trained"
+  ],
+  "answer": 1,
+  "explanation": "Models learn patterns present in their data, including skewed representation and past discriminatory decisions."
+ },
+ {
+  "id": "qf7f88b53979",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What does human-in-the-loop mean for AI systems?",
+  "options": [
+   "Humans manually compute every model prediction",
+   "Humans review or intervene in AI decisions, especially high-stakes ones",
+   "A model is trained only on images of people",
+   "A loop retrains the model every second"
+  ],
+  "answer": 1,
+  "explanation": "Keeping humans in the loop adds oversight so errors in consequential decisions can be caught and corrected."
+ },
+ {
+  "id": "qfef15014422",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What does explainability mean in AI?",
+  "options": [
+   "Making a model run faster on cheaper hardware",
+   "Making a model's training data publicly available",
+   "Making a model's decisions understandable to humans",
+   "Making a model generate longer responses"
+  ],
+  "answer": 2,
+  "explanation": "Explainability helps people understand why a model produced an output, supporting trust and accountability."
+ },
+ {
+  "id": "q0a3bad3c8c7",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is a model card?",
+  "options": [
+   "Documentation of a model's intended use, performance and limitations",
+   "A license key for accessing a model API",
+   "A dataset of labeled images for evaluation",
+   "A hardware accelerator for running inference"
+  ],
+  "answer": 0,
+  "explanation": "Model cards promote transparency by reporting evaluation results, intended uses and known limitations."
+ },
+ {
+  "id": "q1371a9de332",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is prompt injection?",
+  "options": [
+   "Injecting extra training data to improve accuracy",
+   "Malicious instructions in input that hijack a model's intended behavior",
+   "Adding examples to a prompt for few-shot learning",
+   "Inserting padding tokens to fill a batch"
+  ],
+  "answer": 1,
+  "explanation": "Because LLMs mix instructions and data in one text stream, crafted input can override the developer's instructions."
+ },
+ {
+  "id": "q32a5dfecec6",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is differential privacy?",
+  "options": [
+   "Encrypting the model weights at rest",
+   "Adding calibrated noise so individual records cannot be inferred from outputs",
+   "Removing names from a dataset before training",
+   "Training a separate model for each user"
+  ],
+  "answer": 1,
+  "explanation": "Differential privacy gives a mathematical bound on how much any single record can affect the result, unlike simple anonymization."
+ },
+ {
+  "id": "qefa3fb0e670",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "Why might removing a protected attribute such as race from the inputs fail to prevent discrimination?",
+  "options": [
+   "Other features can act as proxies for the protected attribute",
+   "Models always reconstruct deleted columns from file metadata",
+   "Removing features greatly increases training time",
+   "Protected attributes are required for gradient descent"
+  ],
+  "answer": 0,
+  "explanation": "Correlated features like zip code can encode the same information, so the model can still discriminate indirectly."
+ },
+ {
+  "id": "q3403afaabcc",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What does a membership inference attack try to determine?",
+  "options": [
+   "A model's architecture from its pricing page",
+   "Whether a specific record was part of a model's training data",
+   "Which users are allowed to access a model",
+   "Which cluster a test point belongs to"
+  ],
+  "answer": 1,
+  "explanation": "Models often behave differently on training examples, such as being more confident, which can reveal sensitive membership."
+ },
+ {
+  "id": "q87936e82aed",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is reward hacking, also called specification gaming?",
+  "options": [
+   "An agent exploiting flaws in its objective to score highly without doing the intended task",
+   "A model refusing to optimize its reward",
+   "Training with too high a discount factor",
+   "An attacker stealing a trained reward model"
+  ],
+  "answer": 0,
+  "explanation": "When the reward is an imperfect proxy, optimization pressure finds loopholes that satisfy the metric but not the intent."
+ },
+ {
+  "id": "qa531950471b",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is indirect prompt injection?",
+  "options": [
+   "Instructions hidden in retrieved content or tool outputs that the model may follow",
+   "Injecting gradients to speed up fine-tuning",
+   "A user typing a jailbreak directly into the chat",
+   "Passing prompts through a translation layer first"
+  ],
+  "answer": 0,
+  "explanation": "Agents and RAG systems ingest untrusted text, and instructions embedded there can redirect the model without the user's knowledge."
+ },
+ {
+  "id": "qf3337bd1016",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "Why can a classifier generally not be calibrated and also have equal false positive and false negative rates across groups?",
+  "options": [
+   "Fairness metrics can only be computed on training data",
+   "When base rates differ between groups, these criteria conflict mathematically",
+   "Calibration requires removing all protected attributes",
+   "Equal error rates always imply equal accuracy"
+  ],
+  "answer": 1,
+  "explanation": "Impossibility results show that, except for a perfect predictor, unequal base rates force a trade-off between these fairness criteria."
+ }
+]

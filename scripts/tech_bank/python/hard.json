@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "basics-types",
+    "question": "What does ([] == [], [] is []) evaluate to?",
+    "options": [
+      "(True, True)",
+      "(False, False)",
+      "(True, False)",
+      "(False, True)"
+    ],
+    "answer": 2,
+    "explanation": "== compares contents, but each [] literal creates a distinct object, so is is False."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What does True + True evaluate to?",
+    "options": [
+      "True",
+      "2",
+      "1",
+      "It raises TypeError"
+    ],
+    "answer": 1,
+    "explanation": "bool is a subclass of int with True equal to 1, so the sum is the int 2."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What happens when you call hash((1, [2]))?",
+    "options": [
+      "It raises TypeError",
+      "It returns an int",
+      "It raises ValueError",
+      "It returns None"
+    ],
+    "answer": 0,
+    "explanation": "A tuple is hashable only if all its elements are; the inner list is unhashable."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What does float('nan') == float('nan') evaluate to?",
+    "options": [
+      "False",
+      "True",
+      "None",
+      "It raises ValueError"
+    ],
+    "answer": 0,
+    "explanation": "By IEEE 754 rules NaN is not equal to anything, including itself."
+  },
+  {
+    "topic": "data-structures",
+    "question": "After grid = [[0] * 2] * 2; grid[0][0] = 1, what is grid?",
+    "options": [
+      "[[1, 0], [0, 0]]",
+      "[[1, 0], [1, 0]]",
+      "[[1, 1], [0, 0]]",
+      "[[1, 1], [1, 1]]"
+    ],
+    "answer": 1,
+    "explanation": "Multiplying the outer list copies references, so both rows are the same inner list."
+  },
+  {
+    "topic": "data-structures",
+    "question": "What does {1: 'a', True: 'b', 1.0: 'c'} evaluate to?",
+    "options": [
+      "{1: 'a', True: 'b', 1.0: 'c'}",
+      "{True: 'c'}",
+      "{1: 'a'}",
+      "{1: 'c'}"
+    ],
+    "answer": 3,
+    "explanation": "1, True and 1.0 are equal with equal hashes, so they are one key; the first key object is kept and the last value wins."
+  },
+  {
+    "topic": "data-structures",
+    "question": "What happens if you add keys to a dict while iterating over it with a for loop?",
+    "options": [
+      "The loop silently skips the new keys",
+      "RuntimeError is raised",
+      "The new keys are iterated as well",
+      "Nothing; the loop iterates a copy"
+    ],
+    "answer": 1,
+    "explanation": "Changing a dict's size during iteration raises RuntimeError: dictionary changed size during iteration."
+  },
+  {
+    "topic": "data-structures",
+    "question": "After t = (1, [2]) and then t[1] += [3] inside try/except TypeError, what is t?",
+    "options": [
+      "(1, [2])",
+      "(1, [2], [3])",
+      "(1, [3])",
+      "(1, [2, 3])"
+    ],
+    "answer": 3,
+    "explanation": "The list is extended in place first, then the item assignment to the tuple raises TypeError, so the mutation sticks."
+  },
+  {
+    "topic": "functions",
+    "question": "Given def f(x, acc=[]): acc.append(x); return acc, what does the second call f(2) return after f(1)?",
+    "options": [
+      "[1, 2]",
+      "[2]",
+      "[1]",
+      "[[1], 2]"
+    ],
+    "answer": 0,
+    "explanation": "Default values are evaluated once at definition time, so the same list is reused across calls."
+  },
+  {
+    "topic": "functions",
+    "question": "With fs = [lambda: i for i in range(3)], what is [f() for f in fs]?",
+    "options": [
+      "[2, 2, 2]",
+      "[0, 1, 2]",
+      "[0, 0, 0]",
+      "[1, 2, 3]"
+    ],
+    "answer": 0,
+    "explanation": "Closures look up i when called (late binding), and by then the loop variable is 2."
+  },
+  {
+    "topic": "functions",
+    "question": "Given x = 1 and def f(): print(x); x = 2, what happens when f() is called?",
+    "options": [
+      "It prints 1",
+      "It prints 2",
+      "It prints None",
+      "UnboundLocalError is raised"
+    ],
+    "answer": 3,
+    "explanation": "The assignment makes x local to the whole function, so reading it before assignment fails."
+  },
+  {
+    "topic": "functions",
+    "question": "What does a nonlocal x declaration inside a nested function do?",
+    "options": [
+      "Lets assignments rebind x in the module scope",
+      "Creates a fresh local variable x",
+      "Makes x read-only inside the function",
+      "Lets assignments rebind x in the nearest enclosing function scope"
+    ],
+    "answer": 3,
+    "explanation": "nonlocal targets the closest enclosing function's variable, unlike global which targets module scope."
+  },
+  {
+    "topic": "oop",
+    "question": "With class B(A), class C(A) and class D(B, C), what is [k.__name__ for k in D.__mro__]?",
+    "options": [
+      "['D', 'B', 'A', 'C', 'object']",
+      "['D', 'C', 'B', 'A', 'object']",
+      "['D', 'A', 'B', 'C', 'object']",
+      "['D', 'B', 'C', 'A', 'object']"
+    ],
+    "answer": 3,
+    "explanation": "C3 linearization keeps local order (B before C) and places the shared base A after both."
+  },
+  {
+    "topic": "oop",
+    "question": "What is the main effect of defining __slots__ in a class?",
+    "options": [
+      "Methods become faster because they are compiled",
+      "The class can no longer be subclassed",
+      "All attributes become read-only",
+      "Instances get no per-instance __dict__, saving memory and restricting attributes"
+    ],
+    "answer": 3,
+    "explanation": "__slots__ reserves fixed attribute storage instead of a dict, so undeclared attributes cannot be added."
+  },
+  {
+    "topic": "oop",
+    "question": "What happens to hashing when a class defines __eq__ but not __hash__?",
+    "options": [
+      "Hashing keeps using the default id-based hash",
+      "Its instances become unhashable because __hash__ is set to None",
+      "A hash is derived automatically from __eq__",
+      "Python raises TypeError when the class is created"
+    ],
+    "answer": 1,
+    "explanation": "Overriding __eq__ alone implicitly sets __hash__ = None so equal objects cannot hash differently."
+  },
+  {
+    "topic": "oop",
+    "question": "In class A whose __init__ sets self.__x = 1, under what name is the attribute stored on the instance?",
+    "options": [
+      "_A__x",
+      "__x",
+      "_x",
+      "A__x"
+    ],
+    "answer": 0,
+    "explanation": "Names with two leading underscores are mangled to _ClassName__name to avoid clashes in subclasses."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "After x = 'outer'; [x for x in range(3)], what is the value of x?",
+    "options": [
+      "2",
+      "'outer'",
+      "0",
+      "It raises NameError"
+    ],
+    "answer": 1,
+    "explanation": "In Python 3 a comprehension has its own scope, so its loop variable does not leak."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "Given def g(): x = yield 1; yield x * 2, after gen = g(); next(gen), what does gen.send(5) return?",
+    "options": [
+      "2",
+      "5",
+      "None",
+      "10"
+    ],
+    "answer": 3,
+    "explanation": "send(5) resumes the paused yield, which evaluates to 5, then the generator yields 5 * 2."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "Given def g(): yield from range(2); yield 9, what does list(g()) return?",
+    "options": [
+      "[range(0, 2), 9]",
+      "[0, 1, 2, 9]",
+      "[0, 1, 9]",
+      "[9]"
+    ],
+    "answer": 2,
+    "explanation": "yield from delegates to the inner iterable, yielding each of its items before continuing."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "What happens to the value in a generator's return 5 statement?",
+    "options": [
+      "It is yielded as the final item",
+      "It is discarded silently",
+      "It is stored in the value attribute of the StopIteration that ends iteration",
+      "It raises a SyntaxError in generators"
+    ],
+    "answer": 2,
+    "explanation": "A generator's return value is carried by StopIteration.value and is the result of a yield from expression."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Given def f(): try: return 1 finally: return 2, what does f() return?",
+    "options": [
+      "2",
+      "1",
+      "None",
+      "(1, 2)"
+    ],
+    "answer": 0,
+    "explanation": "finally runs before the function actually returns, and its own return overrides the pending one."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What are ExceptionGroup and except* (Python 3.11+) designed for?",
+    "options": [
+      "Catching exceptions in a specific order of priority",
+      "Converting exceptions into warnings",
+      "Raising and handling several unrelated exceptions together",
+      "Retrying a block until it stops raising"
+    ],
+    "answer": 2,
+    "explanation": "An ExceptionGroup bundles multiple exceptions, and except* handles the matching subgroups, e.g. from concurrent tasks."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which of these exceptions does NOT inherit from Exception?",
+    "options": [
+      "ValueError",
+      "StopIteration",
+      "KeyboardInterrupt",
+      "OSError"
+    ],
+    "answer": 2,
+    "explanation": "KeyboardInterrupt derives directly from BaseException so that except Exception does not swallow Ctrl+C."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What happens to the name e bound by except ValueError as e once the except block ends?",
+    "options": [
+      "It keeps referring to the exception",
+      "It is set to None",
+      "It is deleted",
+      "It is rebound to the traceback"
+    ],
+    "answer": 2,
+    "explanation": "Python implicitly deletes e at the end of the handler to avoid a reference cycle through the traceback."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "What is a namespace package (PEP 420)?",
+    "options": [
+      "A package without __init__.py whose portions may span several directories",
+      "A package that defines __all__",
+      "A package installed into site-packages",
+      "A module that only contains constants"
+    ],
+    "answer": 0,
+    "explanation": "Namespace packages have no __init__.py and can be assembled from multiple sys.path entries."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "What does importlib.reload(mod) do?",
+    "options": [
+      "Re-executes the module's code inside the existing module object",
+      "Creates a new module object and updates every reference to it",
+      "Deletes the module from sys.modules",
+      "Recompiles only the module's changed functions"
+    ],
+    "answer": 0,
+    "explanation": "reload reruns the source in the same module object; objects imported elsewhere with from-import keep the old bindings."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "Why can a file named random.py next to your script break import random?",
+    "options": [
+      "Python forbids file names matching stdlib modules",
+      "The script's directory is first on sys.path, so it shadows the standard module",
+      "The .py file is compiled over the stdlib module",
+      "pip uninstalls the standard module on conflict"
+    ],
+    "answer": 1,
+    "explanation": "sys.path[0] is the script's directory, so the local random.py is found before the standard library."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "Which error typically appears when two modules use from a import X style imports of each other at top level?",
+    "options": [
+      "SyntaxError at the second import",
+      "ImportError about a partially initialized module",
+      "RecursionError from infinite importing",
+      "ModuleNotFoundError for the first module"
+    ],
+    "answer": 1,
+    "explanation": "The second module sees the first one only half-executed in sys.modules, so the name does not exist yet."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "How many nested callables does a decorator with arguments such as @repeat(3) typically involve, counting repeat itself?",
+    "options": [
+      "One: repeat itself",
+      "Three: repeat returns a decorator, which returns a wrapper",
+      "Two: repeat and the wrapper",
+      "Four: repeat, a factory, a decorator and a wrapper"
+    ],
+    "answer": 1,
+    "explanation": "repeat(3) must return the actual decorator, which takes the function and returns the wrapper."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "With @contextmanager def cm(): print('in'); yield; print('out') and no try/finally, is 'out' printed if the with block raises?",
+    "options": [
+      "Yes; code after yield always runs",
+      "Yes, but only after the traceback is shown",
+      "No; the exception is thrown in at the yield and skips the rest",
+      "No, and 'in' is not printed either"
+    ],
+    "answer": 2,
+    "explanation": "The exception is re-raised inside the generator at yield, so cleanup must be in a finally block to run."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "When does a decorator applied to a module-level function run?",
+    "options": [
+      "Every time the decorated function is called",
+      "Only the first time the function is called",
+      "When the program exits",
+      "Once, when the def statement executes at import time"
+    ],
+    "answer": 3,
+    "explanation": "Decoration happens as part of executing the def, so module-level decorators run during import."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "What arguments does __exit__ receive when the with block finished without an exception?",
+    "options": [
+      "Nothing; it is called with no arguments",
+      "The value returned by __enter__",
+      "False, False and False",
+      "None for the exception type, value and traceback"
+    ],
+    "answer": 3,
+    "explanation": "__exit__(exc_type, exc_value, traceback) always receives three arguments, all None on a clean exit."
+  },
+  {
+    "topic": "standard-library",
+    "question": "What must be true of the input for itertools.groupby to put all equal keys into one group?",
+    "options": [
+      "It must already be sorted by the same key",
+      "It must be a list, not an iterator",
+      "It must contain hashable items only",
+      "Nothing; groupby always merges equal keys"
+    ],
+    "answer": 0,
+    "explanation": "groupby only groups consecutive items with equal keys, so unsorted input yields repeated groups."
+  },
+  {
+    "topic": "standard-library",
+    "question": "What does copy.copy produce when given a list of lists?",
+    "options": [
+      "Fully independent copies of every inner list",
+      "The same list object",
+      "A new outer list that shares the same inner lists",
+      "A tuple of the inner lists"
+    ],
+    "answer": 2,
+    "explanation": "copy.copy is shallow; use copy.deepcopy to also copy the nested lists."
+  },
+  {
+    "topic": "standard-library",
+    "question": "What does heapq.heappop(h) return from a list h maintained as a heap?",
+    "options": [
+      "The largest item",
+      "The smallest item",
+      "The most recently pushed item",
+      "The item at index -1"
+    ],
+    "answer": 1,
+    "explanation": "heapq implements a min-heap, so the smallest element is always at h[0] and popped first."
+  },
+  {
+    "topic": "standard-library",
+    "question": "What does functools.partial(int, base=2)('101') return?",
+    "options": [
+      "5",
+      "101",
+      "3",
+      "'101'"
+    ],
+    "answer": 0,
+    "explanation": "partial pre-binds base=2, so the call is int('101', base=2), which is 5."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "Why don't threads speed up CPU-bound pure-Python code in standard CPython 3.12?",
+    "options": [
+      "Python threads are green threads run by the interpreter",
+      "The GIL allows only one thread to execute Python bytecode at a time",
+      "The OS limits each process to one thread",
+      "Threads must be awaited inside an event loop"
+    ],
+    "answer": 1,
+    "explanation": "CPython's global interpreter lock serializes bytecode execution, so threads mainly help I/O-bound work."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "What happens if a coroutine calls time.sleep(1) while running on an asyncio event loop?",
+    "options": [
+      "It suspends only that coroutine, like asyncio.sleep",
+      "It raises RuntimeError inside the loop",
+      "It blocks the entire event loop for one second",
+      "It is automatically moved to a worker thread"
+    ],
+    "answer": 2,
+    "explanation": "time.sleep is a blocking call, so no other task can run until it returns; use await asyncio.sleep instead."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "What does asyncio.create_task(coro()) do?",
+    "options": [
+      "Runs the coroutine to completion before returning",
+      "Starts the coroutine in a new OS thread",
+      "Creates a new event loop for the coroutine",
+      "Schedules the coroutine on the running loop and returns a Task"
+    ],
+    "answer": 3,
+    "explanation": "create_task wraps the coroutine in a Task that the loop runs concurrently while the caller continues."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "Why is counter += 1 on a shared variable not thread-safe in CPython even with the GIL?",
+    "options": [
+      "The GIL is released for every integer operation",
+      "Integers are copied per thread",
+      "It takes several bytecodes, so a thread switch can happen between the read and the write",
+      "+= is executed outside the interpreter"
+    ],
+    "answer": 2,
+    "explanation": "The load, add and store steps are separate, so two threads can read the same old value and lose an update."
+  }
+]

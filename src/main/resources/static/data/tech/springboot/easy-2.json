@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4ff3229c86d",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which source overrides a value set in the application.properties packaged inside the jar?",
+  "options": [
+   "A default set via SpringApplication.setDefaultProperties",
+   "A @PropertySource file on a @Configuration class",
+   "An application.properties file inside a dependency jar",
+   "A command-line argument such as --server.port=9090"
+  ],
+  "answer": 3,
+  "explanation": "Command-line arguments sit near the top of Boot's property precedence order, above packaged config files and defaults."
+ },
+ {
+  "id": "qdcd94c9ae2c",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "Which interface does Spring Security use to load user details by username?",
+  "options": [
+   "UserDetailsService",
+   "UserRepository",
+   "AuthenticationProvider",
+   "PrincipalResolver"
+  ],
+  "answer": 0,
+  "explanation": "UserDetailsService.loadUserByUsername returns a UserDetails used by DaoAuthenticationProvider."
+ },
+ {
+  "id": "q3f65154cbcc",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "Which starter brings in Spring MVC with an embedded Tomcat server?",
+  "options": [
+   "spring-boot-starter-webflux",
+   "spring-boot-starter-servlet",
+   "spring-boot-starter-tomcat-mvc",
+   "spring-boot-starter-web"
+  ],
+  "answer": 3,
+  "explanation": "spring-boot-starter-web includes Spring MVC and spring-boot-starter-tomcat; webflux uses Reactor Netty by default."
+ },
+ {
+  "id": "qfb8fed3575b",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "What happens when you add spring-boot-starter-security without any custom configuration?",
+  "options": [
+   "All endpoints require authentication and a default user with a generated password is created",
+   "Only POST endpoints are secured while GET requests stay open",
+   "Nothing changes until @EnableWebSecurity is added",
+   "The application fails to start until a UserDetailsService is defined"
+  ],
+  "answer": 0,
+  "explanation": "Boot's security auto-configuration secures every endpoint and logs a generated password for the user named user."
+ },
+ {
+  "id": "q717af0283ec",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "How do you configure HTTP security rules in Spring Security 6?",
+  "options": [
+   "Extend WebSecurityConfigurerAdapter and override configure",
+   "Declare a SecurityFilterChain bean that builds the HttpSecurity configuration",
+   "Override a method in SpringBootServletInitializer",
+   "Implement WebMvcConfigurer and add security interceptors"
+  ],
+  "answer": 1,
+  "explanation": "WebSecurityConfigurerAdapter was removed in Spring Security 6; a SecurityFilterChain @Bean is the supported approach."
+ },
+ {
+  "id": "q32540517d60",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which annotation marks the primary key field of a JPA entity?",
+  "options": [
+   "@Key",
+   "@Id",
+   "@PrimaryKey",
+   "@Column(primary = true)"
+  ],
+  "answer": 1,
+  "explanation": "jakarta.persistence.Id designates the entity's identifier property."
+ },
+ {
+  "id": "q4b313cfce1d",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "What is the minimum Java version required by Spring Boot 3?",
+  "options": [
+   "Java 11",
+   "Java 8",
+   "Java 17",
+   "Java 21"
+  ],
+  "answer": 2,
+  "explanation": "Spring Boot 3 and Spring Framework 6 require Java 17 as a baseline."
+ },
+ {
+  "id": "qdaf40b1ede7",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "What does the spring-boot-maven-plugin repackage goal produce?",
+  "options": [
+   "A Docker image",
+   "A WAR file for external application servers only",
+   "A thin jar without dependencies",
+   "An executable jar that nests all dependency jars"
+  ],
+  "answer": 3,
+  "explanation": "repackage rewrites the jar into an executable fat jar runnable with java -jar."
+ },
+ {
+  "id": "qd385c1a3bac",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "By default, which exceptions cause a @Transactional method to roll back?",
+  "options": [
+   "Checked exceptions only",
+   "Unchecked exceptions (RuntimeException and Error)",
+   "Any Throwable, including checked exceptions",
+   "No exceptions unless rollbackFor is set"
+  ],
+  "answer": 1,
+  "explanation": "Spring's default rollback rule mirrors EJB: runtime exceptions and errors roll back, checked exceptions commit."
+ },
+ {
+  "id": "q199c5eb6bdd",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Since Spring 4.3, when can @Autowired be omitted on a constructor?",
+  "options": [
+   "When the class is declared final",
+   "When the constructor is private",
+   "When the bean has prototype scope",
+   "When the class declares exactly one constructor"
+  ],
+  "answer": 3,
+  "explanation": "If a bean class has a single constructor, Spring uses it for injection automatically without @Autowired."
+ }
+]

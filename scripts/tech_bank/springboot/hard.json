@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "core-di",
+    "question": "In @Configuration(proxyBeanMethods = false), what happens when beanA() calls beanB() directly?",
+    "options": [
+      "The container's singleton beanB is returned via CGLIB",
+      "Startup fails because inter-bean calls are forbidden",
+      "A new instance is created by a plain Java call, not the container's singleton",
+      "beanB becomes prototype-scoped automatically"
+    ],
+    "answer": 2,
+    "explanation": "Without CGLIB proxying, @Bean methods are ordinary methods, so inter-bean calls bypass the container."
+  },
+  {
+    "topic": "core-di",
+    "question": "A singleton bean receives a prototype bean through its constructor. What does it get each time it uses that field?",
+    "options": [
+      "A fresh prototype instance on every method call",
+      "A proxy that creates a new instance per call by default",
+      "null after the first use",
+      "The same prototype instance, created once at injection time"
+    ],
+    "answer": 3,
+    "explanation": "Injection happens once; use ObjectProvider, @Lookup or a scoped proxy to get a new prototype each time."
+  },
+  {
+    "topic": "core-di",
+    "question": "In what order are these initialization callbacks invoked for a bean?",
+    "options": [
+      "@PostConstruct, then afterPropertiesSet(), then the custom init method",
+      "afterPropertiesSet(), then @PostConstruct, then the custom init method",
+      "Custom init method, then @PostConstruct, then afterPropertiesSet()",
+      "@PostConstruct, then the custom init method, then afterPropertiesSet()"
+    ],
+    "answer": 0,
+    "explanation": "Annotation callbacks run first, then InitializingBean, then the init method declared on the bean definition."
+  },
+  {
+    "topic": "core-di",
+    "question": "Why is a @PreDestroy method on a prototype-scoped bean never called by the container?",
+    "options": [
+      "Prototype beans are destroyed only on JVM exit",
+      "The container does not manage prototype beans after handing them out",
+      "@PreDestroy is supported only on @Configuration classes",
+      "Prototype beans are always wrapped in proxies that swallow callbacks"
+    ],
+    "answer": 1,
+    "explanation": "Spring configures and returns prototypes but does not track them, so the client is responsible for cleanup."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "Why is @ConditionalOnMissingBean reliable in auto-configurations but risky in ordinary user @Configuration classes?",
+    "options": [
+      "It is evaluated lazily at first injection only in auto-configurations",
+      "User configuration classes ignore all conditions",
+      "It is evaluated against beans registered so far, and auto-configurations are processed after user configuration",
+      "Auto-configurations are processed in a separate child context"
+    ],
+    "answer": 2,
+    "explanation": "Condition evaluation depends on registration order; auto-configurations run after user beans are defined, so they see them."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "What does @AutoConfiguration(after = DataSourceAutoConfiguration.class) control?",
+    "options": [
+      "That it is only applied when DataSourceAutoConfiguration is excluded",
+      "That its beans are created after the application has started",
+      "That DataSourceAutoConfiguration is disabled",
+      "That this auto-configuration is processed after DataSourceAutoConfiguration"
+    ],
+    "answer": 3,
+    "explanation": "Ordering ensures conditions like @ConditionalOnBean(DataSource.class) can see beans from the referenced auto-configuration."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "A bean has @ConditionalOnProperty(name = \"feature.cache.enabled\", havingValue = \"true\") with matchIfMissing left at its default. The property is absent. What happens?",
+    "options": [
+      "The condition does not match and the bean is not created",
+      "The bean is created because missing properties default to true",
+      "Startup fails with a missing property error",
+      "The bean is created lazily on first use"
+    ],
+    "answer": 0,
+    "explanation": "matchIfMissing defaults to false, so an absent property means the condition fails."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "Which Spring Boot utility is designed for testing an auto-configuration's conditions without starting the full application?",
+    "options": [
+      "SpringApplicationBuilder",
+      "ApplicationContextRunner",
+      "MockMvcBuilders",
+      "AnnotationConfigWebApplicationContext"
+    ],
+    "answer": 1,
+    "explanation": "ApplicationContextRunner lets you add configurations and properties and assert on the resulting context quickly."
+  },
+  {
+    "topic": "web-rest",
+    "question": "How does a servlet Filter differ from a Spring MVC HandlerInterceptor?",
+    "options": [
+      "A Filter runs only after the response is committed",
+      "An interceptor can modify requests before any Filter runs",
+      "A Filter runs in the servlet container before DispatcherServlet, while an interceptor runs around the chosen handler",
+      "They are identical, just registered differently"
+    ],
+    "answer": 2,
+    "explanation": "Interceptors have access to the resolved handler method; filters work at the raw servlet level."
+  },
+  {
+    "topic": "web-rest",
+    "question": "In Spring Framework 6, does a request to /users/ match a handler mapped to /users by default?",
+    "options": [
+      "Yes, trailing slashes are always ignored",
+      "Only for GET requests",
+      "Only when the handler uses @RestController",
+      "No, trailing slash matching is disabled by default"
+    ],
+    "answer": 3,
+    "explanation": "Spring 6 deprecated trailing slash matching and turned it off by default."
+  },
+  {
+    "topic": "web-rest",
+    "question": "With Spring Boot's auto-configured ObjectMapper, what happens when a JSON request body contains an unknown property?",
+    "options": [
+      "The property is ignored and deserialization succeeds",
+      "Deserialization fails with UnrecognizedPropertyException",
+      "The request is rejected with 415",
+      "The unknown property is stored in a map automatically"
+    ],
+    "answer": 0,
+    "explanation": "Boot's Jackson configuration disables DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES."
+  },
+  {
+    "topic": "web-rest",
+    "question": "What does spring.threads.virtual.enabled=true do for a Spring MVC app on Java 21?",
+    "options": [
+      "It switches the app to reactive WebFlux",
+      "The embedded server handles requests on virtual threads",
+      "It enables a fixed pool of 200 platform threads",
+      "It makes all controller methods asynchronous futures"
+    ],
+    "answer": 1,
+    "explanation": "Since Boot 3.2 this property configures Tomcat or Jetty and task executors to use virtual threads."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "With spring.jpa.open-in-view=false, what typically causes a LazyInitializationException?",
+    "options": [
+      "Calling save() inside a transaction",
+      "Using @Id with a UUID type",
+      "Accessing a lazy association after the persistence context has closed, e.g. in the controller",
+      "Defining two repositories for the same entity"
+    ],
+    "answer": 2,
+    "explanation": "Lazy proxies need an open persistence context; outside the transaction they cannot load data."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "What happens when SimpleJpaRepository.save() is called with a detached entity that has an existing id?",
+    "options": [
+      "It calls persist and attaches the passed object",
+      "It throws EntityExistsException",
+      "It updates the row but returns null",
+      "It calls EntityManager.merge and returns a managed copy, leaving the passed object detached"
+    ],
+    "answer": 3,
+    "explanation": "For non-new entities save() delegates to merge, so you should use the returned instance."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "What does Spring Boot use for spring.jpa.hibernate.ddl-auto by default with an embedded database and no schema migration tool?",
+    "options": [
+      "create-drop",
+      "update",
+      "validate",
+      "none"
+    ],
+    "answer": 0,
+    "explanation": "Boot defaults to create-drop for embedded databases when no Flyway or Liquibase is detected, otherwise none."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which JPA association is fetched EAGER by default?",
+    "options": [
+      "@OneToMany",
+      "@ManyToOne",
+      "@ManyToMany",
+      "@ElementCollection"
+    ],
+    "answer": 1,
+    "explanation": "To-one associations default to EAGER, while to-many associations default to LAZY."
+  },
+  {
+    "topic": "security",
+    "question": "An app defines two SecurityFilterChain beans. How does Spring Security pick which one handles a request?",
+    "options": [
+      "Both chains run in sequence for every request",
+      "The chain declared last in the class always wins",
+      "The first chain, by @Order, whose securityMatcher matches the request",
+      "It merges the chains into one"
+    ],
+    "answer": 2,
+    "explanation": "FilterChainProxy uses the first matching chain, so specific matchers need higher precedence than catch-all chains."
+  },
+  {
+    "topic": "security",
+    "question": "Why can an @Async method lose the authenticated user from SecurityContextHolder?",
+    "options": [
+      "@Async clears the HTTP session",
+      "Security contexts expire after one second",
+      "Async methods run as an anonymous system user by design",
+      "The default strategy is ThreadLocal, so the new thread has no context unless it is propagated"
+    ],
+    "answer": 3,
+    "explanation": "Use DelegatingSecurityContextExecutor or a propagating strategy to carry the context to other threads."
+  },
+  {
+    "topic": "security",
+    "question": "In Spring Security 6, a custom login endpoint sets SecurityContextHolder but the user is unauthenticated on the next request. Why?",
+    "options": [
+      "The context must be saved explicitly with a SecurityContextRepository",
+      "The session cookie name changed to JSESSION",
+      "SecurityContextHolder is read-only in Spring Security 6",
+      "Custom endpoints must return a JWT"
+    ],
+    "answer": 0,
+    "explanation": "Spring Security 6 uses SecurityContextHolderFilter, which no longer saves the context automatically."
+  },
+  {
+    "topic": "security",
+    "question": "A public method calls a @PreAuthorize(\"hasRole('ADMIN')\") method on this in the same bean. What happens?",
+    "options": [
+      "The check runs as usual",
+      "No authorization check occurs because the call bypasses the proxy",
+      "Startup fails due to self-invocation",
+      "The check runs twice"
+    ],
+    "answer": 1,
+    "explanation": "Method security uses proxies, and internal calls never pass through them."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "What does spring.profiles.group.prod=proddb,prodmq do?",
+    "options": [
+      "It creates a prod profile only when proddb and prodmq are both active",
+      "It merges the three profiles' files into one file at build time",
+      "Activating prod also activates proddb and prodmq",
+      "It disables proddb and prodmq when prod is active"
+    ],
+    "answer": 2,
+    "explanation": "Profile groups let one logical profile expand into several more specific profiles."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "What happens if spring.profiles.active is set inside application-dev.properties?",
+    "options": [
+      "dev activates the listed profiles recursively",
+      "The value is silently ignored",
+      "It replaces the profiles from the command line",
+      "Startup fails, because it is not allowed in profile-specific documents"
+    ],
+    "answer": 3,
+    "explanation": "Since Boot 2.4, using spring.profiles.active in a profile-specific document raises an InvalidConfigDataPropertyException."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "How can one application.properties file contain settings that apply only to the prod profile?",
+    "options": [
+      "Separate documents with #--- and set spring.config.activate.on-profile=prod",
+      "Prefix keys with prod. inside the file",
+      "Wrap them in a [prod] section header",
+      "Use spring.profiles=prod above the keys"
+    ],
+    "answer": 0,
+    "explanation": "Multi-document properties files use #--- separators, and on-profile activates a document conditionally."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "dev is active. Which wins: application-dev.properties packaged in the jar, or application.properties in ./config next to the jar?",
+    "options": [
+      "The packaged application-dev.properties",
+      "The external ./config/application.properties",
+      "Whichever file was modified most recently",
+      "Neither; Boot fails because of the conflict"
+    ],
+    "answer": 1,
+    "explanation": "Boot ranks files outside the jar above packaged ones, including packaged profile-specific files."
+  },
+  {
+    "topic": "testing",
+    "question": "Why can adding different @MockitoBean declarations across test classes slow a test suite?",
+    "options": [
+      "Mockito must recompile classes for each mock",
+      "Mocks disable parallel test execution",
+      "Each unique mock set changes the context cache key, forcing new contexts",
+      "Mocks force a full Maven rebuild"
+    ],
+    "answer": 2,
+    "explanation": "Spring's test context cache reuses a context only when configuration, including bean overrides, is identical."
+  },
+  {
+    "topic": "testing",
+    "question": "A @SpringBootTest(webEnvironment = RANDOM_PORT) test is @Transactional and calls the API via TestRestTemplate. Why are the inserted rows not rolled back?",
+    "options": [
+      "RANDOM_PORT disables all transactions",
+      "TestRestTemplate commits the test transaction",
+      "Rollback only works with JUnit 4",
+      "The server handles the request in a different thread and transaction"
+    ],
+    "answer": 3,
+    "explanation": "Test-managed rollback applies to the test thread's transaction, not to transactions in server threads."
+  },
+  {
+    "topic": "testing",
+    "question": "How do you make @DataJpaTest use the real database configured in your properties instead of an embedded one?",
+    "options": [
+      "Add @AutoConfigureTestDatabase(replace = Replace.NONE)",
+      "Add @Transactional(propagation = NEVER)",
+      "Set spring.jpa.show-sql=true",
+      "Use @SpringBootTest alongside it"
+    ],
+    "answer": 0,
+    "explanation": "By default @DataJpaTest replaces any DataSource with an embedded one; Replace.NONE keeps yours."
+  },
+  {
+    "topic": "testing",
+    "question": "Why does @WebMvcTest(UserController.class) fail with NoSuchBeanDefinitionException for UserService?",
+    "options": [
+      "UserService must be annotated with @RestController",
+      "The slice does not load @Service beans, so the dependency must be mocked",
+      "MockMvc requires services to be static",
+      "@WebMvcTest forbids constructor injection"
+    ],
+    "answer": 1,
+    "explanation": "Provide UserService with @MockitoBean (or @MockBean in older versions) so the controller can be created."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "In Spring Boot 3, which project replaces Spring Cloud Sleuth for distributed tracing?",
+    "options": [
+      "Spring Cloud Zipkin Starter",
+      "OpenCensus Spring",
+      "Micrometer Tracing",
+      "Actuator Trace Endpoint"
+    ],
+    "answer": 2,
+    "explanation": "Sleuth's core moved into Micrometer Tracing, built on the Micrometer Observation API."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "What is the default of management.endpoint.health.show-details?",
+    "options": [
+      "always",
+      "when-authorized",
+      "on-error",
+      "never"
+    ],
+    "answer": 3,
+    "explanation": "By default only the aggregate status is shown, without component details."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "What effect does setting management.server.port=9091 have?",
+    "options": [
+      "Actuator endpoints are served on a separate port from the application",
+      "The app moves to port 9091 and actuator stays on 8080",
+      "All endpoints are disabled except health",
+      "Metrics are pushed to a server on port 9091"
+    ],
+    "answer": 0,
+    "explanation": "A separate management port lets you keep operational endpoints off the public network."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "In Spring Boot 3, how does /actuator/env show property values by default?",
+    "options": [
+      "Values are shown in plain text",
+      "All values are masked",
+      "Only passwords are masked",
+      "Values are hidden only in the prod profile"
+    ],
+    "answer": 1,
+    "explanation": "Boot 3 changed show-values to never by default, so values are masked unless configured otherwise."
+  },
+  {
+    "topic": "transactions",
+    "question": "A public method in OrderService calls this.placeOrder(), which is @Transactional. No transaction is active beforehand. What happens?",
+    "options": [
+      "A new transaction starts as normal",
+      "Startup fails because of self-invocation",
+      "placeOrder runs without a transaction because the call bypasses the proxy",
+      "Spring starts a nested transaction"
+    ],
+    "answer": 2,
+    "explanation": "Self-invocation goes straight to the target object; use a separate bean, self-injection or AspectJ mode."
+  },
+  {
+    "topic": "transactions",
+    "question": "An outer REQUIRED method catches a RuntimeException thrown by an inner REQUIRED method in another bean. What happens at commit?",
+    "options": [
+      "The outer transaction commits normally",
+      "Only the inner method's changes are rolled back",
+      "The inner method is retried automatically",
+      "UnexpectedRollbackException, since the shared transaction was marked rollback-only"
+    ],
+    "answer": 3,
+    "explanation": "Both methods share one physical transaction, and the inner interceptor marked it rollback-only."
+  },
+  {
+    "topic": "transactions",
+    "question": "How does Propagation.NESTED differ from REQUIRES_NEW?",
+    "options": [
+      "NESTED uses a savepoint in the same physical transaction, REQUIRES_NEW starts a separate one",
+      "NESTED creates a new database connection, REQUIRES_NEW does not",
+      "NESTED ignores rollback, REQUIRES_NEW does not",
+      "They are identical aliases"
+    ],
+    "answer": 0,
+    "explanation": "Rolling back a nested scope returns to the savepoint, but an outer rollback also undoes the nested work."
+  },
+  {
+    "topic": "transactions",
+    "question": "What is the default phase of a @TransactionalEventListener?",
+    "options": [
+      "BEFORE_COMMIT",
+      "AFTER_COMMIT",
+      "AFTER_ROLLBACK",
+      "AFTER_COMPLETION"
+    ],
+    "answer": 1,
+    "explanation": "The listener runs only after the publishing transaction commits successfully, unless another phase is set."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "Why can't you switch @Profile-based beans at runtime in a Spring Boot GraalVM native image?",
+    "options": [
+      "Native images cannot read environment variables",
+      "Profiles are only supported in WAR deployments",
+      "AOT processing fixes the bean definitions at build time",
+      "GraalVM strips all annotations"
+    ],
+    "answer": 2,
+    "explanation": "Native images assume a closed world, so profiles and conditions are evaluated during the AOT build."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "In an executable Spring Boot jar, what does the manifest's Main-Class point to?",
+    "options": [
+      "Your @SpringBootApplication class directly",
+      "org.apache.catalina.startup.Bootstrap",
+      "java.lang.ClassLoader",
+      "Spring Boot's JarLauncher, with Start-Class naming your application class"
+    ],
+    "answer": 3,
+    "explanation": "The launcher sets up a class loader for the nested jars and then invokes Start-Class."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "Why does spring-boot-devtools not affect an app started with java -jar from a packaged jar?",
+    "options": [
+      "Devtools turns itself off when the app runs as a fully packaged application",
+      "Maven deletes devtools during packaging",
+      "Devtools needs the prod profile",
+      "java -jar ignores every optional dependency"
+    ],
+    "answer": 0,
+    "explanation": "Devtools treats a packaged launch as production and disables itself; repackage also excludes it by default."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "With spring-boot-starter-parent, how do you usually override the managed version of Jackson?",
+    "options": [
+      "Edit the starter jar's MANIFEST.MF",
+      "Set the jackson-bom.version property in the pom",
+      "Add @JacksonVersion to the main class",
+      "Delete the dependencyManagement section"
+    ],
+    "answer": 1,
+    "explanation": "The parent manages versions through properties, so redefining one changes the version used."
+  }
+]

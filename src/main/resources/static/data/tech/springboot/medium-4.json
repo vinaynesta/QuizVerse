@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa3de1aca290",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "What does placing @Lazy on a constructor parameter do?",
+  "options": [
+   "Injects a proxy that resolves the real bean on first use",
+   "Makes the bean prototype-scoped",
+   "Skips injection if the bean is missing",
+   "Delays the whole application startup until first request"
+  ],
+  "answer": 0,
+  "explanation": "@Lazy at an injection point injects a lazy-resolution proxy, which also helps break circular dependencies."
+ },
+ {
+  "id": "q7cfaed48669",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "When does an auto-configuration annotated with @ConditionalOnClass(DataSource.class) apply?",
+  "options": [
+   "Only when a DataSource bean is already defined",
+   "Only when spring.datasource.url is set",
+   "Only when the class is annotated with @Entity",
+   "Only when DataSource is present on the classpath"
+  ],
+  "answer": 3,
+  "explanation": "@ConditionalOnClass checks classpath presence, which is how starters trigger configuration just by being added."
+ },
+ {
+  "id": "q62887b0960d",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "In Spring Boot 3.4+, which Spring Framework annotation replaces the deprecated @MockBean?",
+  "options": [
+   "@MockBeanOverride",
+   "@MockitoBean",
+   "@InjectMocks",
+   "@SpyBean"
+  ],
+  "answer": 1,
+  "explanation": "Spring Framework 6.2 introduced @MockitoBean and @MockitoSpyBean, and Boot 3.4 deprecated @MockBean and @SpyBean."
+ },
+ {
+  "id": "qecd68837776",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "What is needed for Actuator to serve a /actuator/prometheus scrape endpoint?",
+  "options": [
+   "Only setting management.prometheus=true",
+   "A Prometheus server embedded in the jar",
+   "The micrometer-registry-prometheus dependency plus exposing the endpoint",
+   "Spring Cloud Sleuth on the classpath"
+  ],
+  "answer": 2,
+  "explanation": "Boot auto-configures the Prometheus registry and endpoint when the Micrometer Prometheus registry is present."
+ },
+ {
+  "id": "qd0b70fbad8e",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "Which Spring Boot 3 capability uses AOT processing to compile an app into a standalone native executable?",
+  "options": [
+   "Spring Boot DevTools",
+   "GraalVM native image support",
+   "The Spring Boot CLI",
+   "Layered jar extraction"
+  ],
+  "answer": 1,
+  "explanation": "Boot 3 performs ahead-of-time processing so GraalVM can build a native executable with fast startup."
+ },
+ {
+  "id": "q4c4a4eb2cf9",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What does @ServiceConnection on a Testcontainers container field do in Spring Boot 3.1+?",
+  "options": [
+   "Mocks the external service without Docker",
+   "Starts the container only when the prod profile is active",
+   "Auto-configures connection details for the app from the running container",
+   "Registers the container as a Spring MVC endpoint"
+  ],
+  "answer": 2,
+  "explanation": "Boot derives ConnectionDetails beans from the container, removing the need for manual property wiring."
+ },
+ {
+  "id": "q3081014c562",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "What is spring.config.import used for?",
+  "options": [
+   "Importing Java @Configuration classes by name",
+   "Importing additional configuration sources, such as optional:file:./secrets.properties",
+   "Copying properties into the generated jar",
+   "Adding Maven dependencies at runtime"
+  ],
+  "answer": 1,
+  "explanation": "spring.config.import pulls extra config data, and the optional: prefix avoids failure if the source is absent."
+ },
+ {
+  "id": "q8bee7f8cd9e",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Which authority does hasRole(\"ADMIN\") check for?",
+  "options": [
+   "ADMIN",
+   "AUTHORITY_ADMIN",
+   "ROLE_ADMIN",
+   "SCOPE_ADMIN"
+  ],
+  "answer": 2,
+  "explanation": "hasRole adds the ROLE_ prefix automatically, whereas hasAuthority compares the exact string."
+ },
+ {
+  "id": "qe85ff11dd33",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "What is ObjectProvider<T> useful for at an injection point?",
+  "options": [
+   "Lazily or optionally obtaining a bean, e.g. with getIfAvailable()",
+   "Registering new bean definitions at runtime",
+   "Converting a bean into a different type",
+   "Forcing a singleton to become a prototype"
+  ],
+  "answer": 0,
+  "explanation": "ObjectProvider allows deferred, optional or unique-if-available retrieval without failing at startup."
+ },
+ {
+  "id": "q12bf0a87bf5",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which Spring Framework 6 class represents an RFC 7807 problem details error response?",
+  "options": [
+   "ErrorAttributes",
+   "ApiErrorResponse",
+   "ResponseStatusBody",
+   "ProblemDetail"
+  ],
+  "answer": 3,
+  "explanation": "ProblemDetail models the standard type, title, status, detail and instance fields of a problem details response."
+ }
+]

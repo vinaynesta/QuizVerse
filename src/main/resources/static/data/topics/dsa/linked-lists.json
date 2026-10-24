@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q379855dcae3",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "In a circular singly linked list, what does the last node point to?",
+  "options": [
+   "null",
+   "The first node",
+   "Itself",
+   "The middle node"
+  ],
+  "answer": 1,
+  "explanation": "The tail links back to the head, forming a cycle."
+ },
+ {
+  "id": "qb188aaac0e2",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "What is the worst-case time to access the k-th element of a singly linked list of n nodes?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n^2)"
+  ],
+  "answer": 2,
+  "explanation": "There is no random access, so you must follow next pointers from the head."
+ },
+ {
+  "id": "qfdb7db2c95c",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "What does each node of a singly linked list store?",
+  "options": [
+   "Data and a reference to the next node",
+   "Data and references to the next and previous nodes",
+   "Only data with no references",
+   "Data and its integer index in the list"
+  ],
+  "answer": 0,
+  "explanation": "A singly linked list node holds its value plus one pointer to the following node."
+ },
+ {
+  "id": "q02ea5995d28",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "What are the time and extra space costs of reversing a singly linked list iteratively?",
+  "options": [
+   "O(n log n) time and O(1) space",
+   "O(n) time and O(n) space",
+   "O(n^2) time and O(1) space",
+   "O(n) time and O(1) space"
+  ],
+  "answer": 3,
+  "explanation": "One pass re-points each next reference using just a few pointer variables."
+ },
+ {
+  "id": "q271c3999d47",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "Given only a pointer to a non-tail node in a singly linked list (no head), how can you delete it?",
+  "options": [
+   "Traverse backward to find its predecessor",
+   "Set the node reference to null",
+   "Swap it with the head node",
+   "Copy the next node's value into it and unlink the next node"
+  ],
+  "answer": 3,
+  "explanation": "Without access to the predecessor, you overwrite the node with its successor and remove the successor."
+ },
+ {
+  "id": "q3454cdd82fc",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "What does Floyd's tortoise-and-hare algorithm detect in a linked list?",
+  "options": [
+   "Whether the list is sorted",
+   "Whether the list contains a cycle",
+   "The k-th node from the end",
+   "The number of duplicate values"
+  ],
+  "answer": 1,
+  "explanation": "A fast pointer moving two steps will meet a slow pointer moving one step only if there is a cycle."
+ },
+ {
+  "id": "qecf8184d1fe",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "How can you find the middle node of a singly linked list in a single pass?",
+  "options": [
+   "Move a slow pointer one step and a fast pointer two steps until fast reaches the end",
+   "Store all nodes in a hash set and pick a random one",
+   "Reverse the list and read the head",
+   "Start pointers at both ends and move them toward each other"
+  ],
+  "answer": 0,
+  "explanation": "When the fast pointer reaches the end, the slow pointer has covered half the distance."
+ },
+ {
+  "id": "qb7da33358ec",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "After Floyd's algorithm finds the meeting point inside a cycle, how do you locate the node where the cycle begins?",
+  "options": [
+   "Advance the fast pointer three steps at a time",
+   "Reset one pointer to the head and advance both one step at a time until they meet",
+   "Reverse the list from the meeting point",
+   "Count the cycle length and return the head"
+  ],
+  "answer": 1,
+  "explanation": "The distance from the head to the cycle start equals the distance from the meeting point to the start, modulo cycle length."
+ },
+ {
+  "id": "qd761c69d5f1",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "Which combination of data structures gives an LRU cache O(1) get and put?",
+  "options": [
+   "A hash map plus a doubly linked list",
+   "A min-heap plus an array",
+   "A balanced BST plus a stack",
+   "Two queues"
+  ],
+  "answer": 0,
+  "explanation": "The map finds nodes in O(1) and the list moves or evicts them in O(1)."
+ },
+ {
+  "id": "qdf627cfb83e",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "Why does an LRU cache use a doubly linked list rather than a singly linked one?",
+  "options": [
+   "It uses less memory per node",
+   "Removing a node given a direct reference is O(1) because its predecessor is known",
+   "It allows binary search over the nodes",
+   "It keeps the nodes sorted by key"
+  ],
+  "answer": 1,
+  "explanation": "In a singly linked list, unlinking a node requires finding its predecessor, which takes O(n)."
+ }
+]

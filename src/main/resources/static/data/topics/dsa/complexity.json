@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q32dd17aa446",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "What does O(1) time complexity mean?",
+  "options": [
+   "The algorithm runs in exactly one second",
+   "The algorithm processes one element at a time",
+   "The running time doubles with each input",
+   "The running time does not grow with input size"
+  ],
+  "answer": 3,
+  "explanation": "Constant time means the work is bounded by a fixed amount regardless of n."
+ },
+ {
+  "id": "q44e02f8e3a2",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "Which of these functions grows fastest as n becomes large?",
+  "options": [
+   "n^2",
+   "n^3",
+   "n log n",
+   "2^n"
+  ],
+  "answer": 3,
+  "explanation": "Exponential functions eventually outgrow any polynomial."
+ },
+ {
+  "id": "qb422a607f50",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "What does Big-O notation describe?",
+  "options": [
+   "The exact running time in seconds",
+   "Only the best-case running time",
+   "The average memory used by the CPU",
+   "An asymptotic upper bound on growth rate"
+  ],
+  "answer": 3,
+  "explanation": "Big-O bounds how fast a function can grow as the input size increases."
+ },
+ {
+  "id": "qdceaee64024",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "What is the time complexity of two nested loops that each run from 1 to n?",
+  "options": [
+   "O(n)",
+   "O(n^2)",
+   "O(2n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "The inner loop runs n times for each of the n outer iterations."
+ },
+ {
+  "id": "q4fd5830fd74",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "medium",
+  "question": "What is the time complexity of the loop for (int i = 1; i < n; i *= 2)?",
+  "options": [
+   "O(log n)",
+   "O(n log n)",
+   "O(sqrt n)",
+   "O(n)"
+  ],
+  "answer": 0,
+  "explanation": "i doubles each iteration, so it reaches n after about log2 n steps."
+ },
+ {
+  "id": "q99a9a52b2b2",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "medium",
+  "question": "What is the amortized time to append to a dynamic array that doubles its capacity when full?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(log n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Occasional O(n) copies are spread across many cheap appends, averaging to constant time."
+ },
+ {
+  "id": "q55ab8808e15",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "Why is the O(n * W) 0/1 knapsack DP called pseudo-polynomial?",
+  "options": [
+   "Its runtime is polynomial in the value W but exponential in the number of bits needed to encode W",
+   "It uses polynomial space but exponential time",
+   "It is polynomial only when n is less than W",
+   "It runs in polynomial time only on average"
+  ],
+  "answer": 0,
+  "explanation": "Input size counts the bits of W, so doubling the bit length can square W's magnitude."
+ },
+ {
+  "id": "q9b8a61395d4",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "What does the recurrence T(n) = 2T(n/2) + O(1) solve to?",
+  "options": [
+   "O(log n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(n)"
+  ],
+  "answer": 3,
+  "explanation": "The recursion tree has about 2n nodes, each doing constant work."
+ },
+ {
+  "id": "qd3b11c608d5",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "By the Master Theorem, what does T(n) = 2T(n/2) + O(n) solve to?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)"
+  ],
+  "answer": 3,
+  "explanation": "Work per level is O(n) over log n levels, as in merge sort."
+ },
+ {
+  "id": "qf040554ac47",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "What does the recurrence T(n) = T(n/2) + O(1) solve to?",
+  "options": [
+   "O(1)",
+   "O(n log n)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "The problem halves each step with constant work, as in binary search."
+ }
+]

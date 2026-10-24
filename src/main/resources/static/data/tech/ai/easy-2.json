@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5cd85f5fcaf",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What does hallucination mean for an LLM?",
+  "options": [
+   "Refusing to answer a harmless question",
+   "Producing output too slowly for real-time use",
+   "Generating fluent but false or unsupported content",
+   "Repeating the user's prompt back verbatim"
+  ],
+  "answer": 2,
+  "explanation": "LLMs can produce confident, plausible-sounding text that is not grounded in fact."
+ },
+ {
+  "id": "q74e421b3e6c",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "Why is data split into training and test sets?",
+  "options": [
+   "To make training run faster on smaller batches",
+   "To estimate how well the model generalizes to unseen data",
+   "To double the amount of data available for training",
+   "To remove outliers before fitting the model"
+  ],
+  "answer": 1,
+  "explanation": "A held-out test set gives an unbiased estimate of performance on data the model never saw during training."
+ },
+ {
+  "id": "qe67b83d656e",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What is the goal of the k-means algorithm?",
+  "options": [
+   "Predict a continuous target from k input features",
+   "Partition data into k clusters by minimizing distance to cluster centroids",
+   "Train k separate models and average their predictions",
+   "Select the k most important features for a classifier"
+  ],
+  "answer": 1,
+  "explanation": "k-means iteratively assigns points to the nearest centroid and recomputes centroids to minimize within-cluster squared distance."
+ },
+ {
+  "id": "q1632537b439",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What distinguishes unsupervised learning from supervised learning?",
+  "options": [
+   "It learns only from rewards and penalties",
+   "It requires every example to have a correct label",
+   "It finds structure in data without labeled targets",
+   "It can only be applied to image data"
+  ],
+  "answer": 2,
+  "explanation": "Unsupervised methods such as clustering discover patterns using inputs alone, with no target labels."
+ },
+ {
+  "id": "q9f6841b89aa",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "In machine learning, what is a feature?",
+  "options": [
+   "The target value the model is trained to predict",
+   "A hyperparameter that controls the learning rate",
+   "The error measured on the held-out test set",
+   "An input variable the model uses to make a prediction"
+  ],
+  "answer": 3,
+  "explanation": "Features are the measurable input attributes fed to a model; the target is what it predicts."
+ },
+ {
+  "id": "qbe972707dd3",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "How does k-nearest neighbors classify a new point?",
+  "options": [
+   "By the majority label among the k closest training points",
+   "By fitting a straight line through all training points",
+   "By splitting the feature space with a single threshold",
+   "By averaging the weights of a trained neural network"
+  ],
+  "answer": 0,
+  "explanation": "k-NN is instance-based: it looks up the k nearest labeled examples and takes a vote."
+ },
+ {
+  "id": "q1f69fd3bb99",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What does RAG stand for in applied AI?",
+  "options": [
+   "Reinforced Agent Gradient",
+   "Recursive Attention Graph",
+   "Retrieval-Augmented Generation",
+   "Random Access Generation"
+  ],
+  "answer": 2,
+  "explanation": "RAG combines a retrieval step with text generation by a language model."
+ },
+ {
+  "id": "q2e03ce6c091",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "Logistic regression is mainly used for which kind of task?",
+  "options": [
+   "Predicting continuous values with unbounded output",
+   "Reducing the dimensionality of high-dimensional data",
+   "Clustering points into k groups",
+   "Binary classification by modeling class probability"
+  ],
+  "answer": 3,
+  "explanation": "Logistic regression applies a sigmoid to a linear score to output the probability of the positive class."
+ },
+ {
+  "id": "qd9eb0ddcfda",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What does a pooling layer do in a CNN?",
+  "options": [
+   "Adds new channels by duplicating the input",
+   "Downsamples feature maps to reduce their spatial size",
+   "Computes the final class probabilities",
+   "Converts images into text tokens"
+  ],
+  "answer": 1,
+  "explanation": "Pooling, such as max pooling, summarizes local regions, reducing computation and adding some translation robustness."
+ },
+ {
+  "id": "qdee3d08bdfd",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "What does a confusion matrix show?",
+  "options": [
+   "The correlation between every pair of input features",
+   "The gradients of each layer during backpropagation",
+   "The loss value at each training epoch",
+   "Counts of predicted classes versus actual classes"
+  ],
+  "answer": 3,
+  "explanation": "A confusion matrix tabulates true and false positives and negatives, from which many metrics are derived."
+ }
+]

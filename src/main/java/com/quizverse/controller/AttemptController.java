@@ -5,9 +5,11 @@ import com.quizverse.dto.AttemptDtos.AttemptRequest;
 import com.quizverse.dto.AttemptDtos.AttemptResponse;
 import com.quizverse.dto.AttemptDtos.BestScore;
 import com.quizverse.model.AttemptAnswer;
+import com.quizverse.model.Challenge;
 import com.quizverse.model.QuizAttempt;
 import com.quizverse.model.User;
 import com.quizverse.repository.AttemptAnswerRepository;
+import com.quizverse.repository.ChallengeRepository;
 import com.quizverse.repository.QuizAttemptRepository;
 import com.quizverse.repository.UserRepository;
 import jakarta.validation.Valid;
@@ -35,11 +37,14 @@ public class AttemptController {
     private final QuizAttemptRepository attempts;
     private final AttemptAnswerRepository answers;
     private final UserRepository users;
+    private final ChallengeRepository challenges;
 
-    public AttemptController(QuizAttemptRepository attempts, AttemptAnswerRepository answers, UserRepository users) {
+    public AttemptController(QuizAttemptRepository attempts, AttemptAnswerRepository answers, UserRepository users,
+                             ChallengeRepository challenges) {
         this.attempts = attempts;
         this.answers = answers;
         this.users = users;
+        this.challenges = challenges;
     }
 
     @PostMapping
@@ -63,6 +68,11 @@ public class AttemptController {
         a.setSkipped(req.skipped());
         a.setTimed(req.timed());
         a.setTimeUsedSeconds(req.timeUsedSeconds());
+        if (req.challengeCode() != null) {
+            challenges.findByCode(req.challengeCode())
+                    .filter(c -> sameQuiz(c.getAttempt(), a) && !c.getAttempt().getUser().getId().equals(user.getId()))
+                    .ifPresent(a::setChallenge);
+        }
         attempts.save(a);
         if (req.answers() != null) {
             answers.saveAll(req.answers().stream().map(r -> toAnswer(a, r)).toList());
@@ -84,6 +94,13 @@ public class AttemptController {
                 .map(r -> new BestScore(r[0] + "/" + r[1] + "/" + r[2] + "/" + r[3] + "/" + r[4],
                         (Double) r[5], (Double) r[6], (Long) r[7]))
                 .toList();
+    }
+
+    /** A challenge only counts attempts at its own quiz; the creator's retakes stay ordinary history. */
+    private static boolean sameQuiz(QuizAttempt x, QuizAttempt y) {
+        return x.getKind().equals(y.getKind()) && x.getExamId().equals(y.getExamId())
+                && x.getStageId().equals(y.getStageId()) && x.getSectionId().equals(y.getSectionId())
+                && x.getLevelId().equals(y.getLevelId()) && x.getQuizIndex() == y.getQuizIndex();
     }
 
     private static AttemptAnswer toAnswer(QuizAttempt attempt, AnswerRequest r) {

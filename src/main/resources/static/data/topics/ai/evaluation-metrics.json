@@ -1,0 +1,182 @@
+[
+ {
+  "id": "qa4e4d68432e",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "How is precision calculated?",
+  "options": [
+   "True positives divided by all predicted positives",
+   "True negatives divided by all actual negatives",
+   "Correct predictions divided by total predictions",
+   "True positives divided by all actual positives"
+  ],
+  "answer": 0,
+  "explanation": "Precision answers: of everything predicted positive, how much was actually positive."
+ },
+ {
+  "id": "qbab70caaa43",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "What does accuracy measure for a classifier?",
+  "options": [
+   "The fraction of all predictions that are correct",
+   "The fraction of predicted positives that are truly positive",
+   "The fraction of actual positives that are detected",
+   "The average squared difference between predictions and targets"
+  ],
+  "answer": 0,
+  "explanation": "Accuracy is the number of correct predictions divided by the total number of predictions."
+ },
+ {
+  "id": "qcd5c0c4824c",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "How is recall calculated?",
+  "options": [
+   "True positives divided by all predicted positives",
+   "False positives divided by all actual negatives",
+   "True positives divided by all actual positives",
+   "True negatives divided by all predicted negatives"
+  ],
+  "answer": 2,
+  "explanation": "Recall answers: of all real positives, how many did the model find."
+ },
+ {
+  "id": "qdee3d08bdfd",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "What does a confusion matrix show?",
+  "options": [
+   "The correlation between every pair of input features",
+   "The gradients of each layer during backpropagation",
+   "The loss value at each training epoch",
+   "Counts of predicted classes versus actual classes"
+  ],
+  "answer": 3,
+  "explanation": "A confusion matrix tabulates true and false positives and negatives, from which many metrics are derived."
+ },
+ {
+  "id": "q10bdd97c275",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "For cancer screening, where missing a real case is very costly, which metric should be prioritized?",
+  "options": [
+   "Precision",
+   "Specificity",
+   "Recall",
+   "Accuracy"
+  ],
+  "answer": 2,
+  "explanation": "Recall measures the share of actual positives detected, so maximizing it minimizes missed cases."
+ },
+ {
+  "id": "q2cdb365a797",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What does a ROC AUC of 0.5 indicate?",
+  "options": [
+   "The model detects exactly half of the positives",
+   "The model ranks positives no better than random guessing",
+   "The model always predicts the positive class",
+   "The model is perfectly calibrated"
+  ],
+  "answer": 1,
+  "explanation": "AUC is the probability a random positive is scored above a random negative; 0.5 means chance-level ranking."
+ },
+ {
+  "id": "q68994d76b99",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What is the F1 score?",
+  "options": [
+   "The harmonic mean of precision and recall",
+   "The arithmetic mean of precision and recall",
+   "The product of accuracy and recall",
+   "The area under the ROC curve"
+  ],
+  "answer": 0,
+  "explanation": "F1 uses the harmonic mean, so it is high only when both precision and recall are high."
+ },
+ {
+  "id": "qf6493f08e35",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "In a dataset where 1% of transactions are fraud, why is accuracy a poor metric?",
+  "options": [
+   "Accuracy cannot be computed for binary problems",
+   "Accuracy always penalizes false negatives too heavily",
+   "Accuracy requires probability outputs rather than labels",
+   "A model predicting not fraud for everything scores 99% accuracy"
+  ],
+  "answer": 3,
+  "explanation": "With heavy class imbalance, a trivial majority-class predictor looks excellent on accuracy while catching no fraud."
+ },
+ {
+  "id": "q360a7cc4f68",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "For a heavily imbalanced dataset where the positive class matters most, which curve is usually more informative?",
+  "options": [
+   "The ROC curve, since a large negative class makes it more sensitive",
+   "The precision-recall curve, since ROC can look optimistic when negatives dominate",
+   "The calibration curve, since it measures ranking quality",
+   "The learning curve, since it plots loss against epochs"
+  ],
+  "answer": 1,
+  "explanation": "False positive rate barely moves when negatives are abundant, while precision directly exposes the cost of false positives."
+ },
+ {
+  "id": "q6e501e5c567",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "What does it mean for a classifier to be well calibrated?",
+  "options": [
+   "It achieves the highest possible ROC AUC",
+   "Its predicted probabilities match observed frequencies, e.g. 70% predictions are right about 70% of the time",
+   "It has equal precision and recall",
+   "It predicts each class equally often"
+  ],
+  "answer": 1,
+  "explanation": "Calibration concerns whether probabilities can be trusted as probabilities, which is separate from ranking quality."
+ },
+ {
+  "id": "q82be29405ec",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "Raising a classifier's decision threshold typically has what effect?",
+  "options": [
+   "Recall rises and precision falls",
+   "Precision rises and recall falls",
+   "Both precision and recall rise",
+   "ROC AUC changes significantly"
+  ],
+  "answer": 1,
+  "explanation": "A higher threshold makes fewer, more confident positive predictions, trading missed positives for fewer false alarms."
+ },
+ {
+  "id": "qca4cc3dd5db",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "How does RMSE differ from MAE as a regression metric?",
+  "options": [
+   "RMSE penalizes large errors more heavily because errors are squared",
+   "RMSE and MAE always rank models identically",
+   "MAE penalizes large errors more heavily because it uses absolute values",
+   "RMSE is unaffected by outliers"
+  ],
+  "answer": 0,
+  "explanation": "Squaring magnifies big errors, so RMSE is more sensitive to outliers than MAE."
+ }
+]

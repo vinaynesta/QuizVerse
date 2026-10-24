@@ -9,10 +9,11 @@ const NETWORK_TIMEOUT_MS = 3000;
 
 const SHELL = [
   "index.html", "exam.html", "quiz.html", "history.html", "practice.html", "login.html", "register.html",
-  "profile.html", "reports.html",
+  "profile.html", "reports.html", "challenge.html",
   "css/style.css", "css/quiz.css",
   "js/theme.js", "js/api.js", "js/account.js", "js/auth.js", "js/exam.js", "js/history.js", "js/home.js",
   "js/pending.js", "js/practice.js", "js/profile.js", "js/questions.js", "js/quiz.js", "js/reports.js", "js/share.js",
+  "js/google.js", "js/challenge.js",
   "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "icons/apple-touch-icon.png",
   "data/index.json", "data/backgrounds.json", "data/topics.json", "data/question-topics.json",
   "images/feels like we just met yesterday.jpeg",

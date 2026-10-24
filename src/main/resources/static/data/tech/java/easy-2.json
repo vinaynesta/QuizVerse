@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qfc741abc601",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which exception is thrown when you access an array with an invalid index?",
+  "options": [
+   "IndexOutOfRangeException",
+   "ArrayStoreException",
+   "ArrayIndexOutOfBoundsException",
+   "IllegalArgumentException"
+  ],
+  "answer": 2,
+  "explanation": "Accessing index -1 or length or beyond throws ArrayIndexOutOfBoundsException."
+ },
+ {
+  "id": "qd55ac746d9c",
+  "subject": "java",
+  "topic": "generics",
+  "level": "easy",
+  "question": "What does the diamond operator in new ArrayList<>() do?",
+  "options": [
+   "Creates a raw, untyped ArrayList",
+   "Makes the list thread-safe",
+   "Lets the compiler infer the type arguments",
+   "Creates an array of lists"
+  ],
+  "answer": 2,
+  "explanation": "Since Java 7 the diamond infers type arguments from the target type, avoiding repetition."
+ },
+ {
+  "id": "qad521d88b14",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which functional interface takes no argument and returns a value?",
+  "options": [
+   "Consumer<T>",
+   "Predicate<T>",
+   "Function<T, R>",
+   "Supplier<T>"
+  ],
+  "answer": 3,
+  "explanation": "Supplier.get() takes nothing and returns a T; Consumer takes a value and returns nothing."
+ },
+ {
+  "id": "q14ce7002608",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What does the % operator compute for integers?",
+  "options": [
+   "The remainder of a division",
+   "The integer quotient",
+   "The power of the left operand",
+   "A percentage of the left operand"
+  ],
+  "answer": 0,
+  "explanation": "% is the remainder operator, e.g. 7 % 3 is 1."
+ },
+ {
+  "id": "q6fd140bd0eb",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Which JVM option sets the maximum heap size?",
+  "options": [
+   "-Xms",
+   "-Xmx",
+   "-Xss",
+   "-XX:MaxMetaspaceSize"
+  ],
+  "answer": 1,
+  "explanation": "-Xmx sets the maximum heap, -Xms the initial heap, and -Xss the thread stack size."
+ },
+ {
+  "id": "q7349e8336ec",
+  "subject": "java",
+  "topic": "generics",
+  "level": "easy",
+  "question": "What is the main benefit of using generics?",
+  "options": [
+   "Faster execution through specialized bytecode",
+   "Compile-time type checking that removes explicit casts",
+   "Lower memory use for collections",
+   "Support for multiple class inheritance"
+  ],
+  "answer": 1,
+  "explanation": "Generics catch type errors at compile time; due to erasure they do not change runtime performance."
+ },
+ {
+  "id": "qaa42af168c8",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "What is the feature that allows multi-line string literals delimited by three double quotes?",
+  "options": [
+   "Raw string literals",
+   "Heredocs",
+   "Text blocks",
+   "String templates"
+  ],
+  "answer": 2,
+  "explanation": "Text blocks became a standard feature in Java 15 and use triple double-quote delimiters."
+ },
+ {
+  "id": "qefcc6dcf54b",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Which class is preferred for building a string in a loop in single-threaded code?",
+  "options": [
+   "StringBuffer",
+   "String",
+   "StringBuilder",
+   "CharSequence"
+  ],
+  "answer": 2,
+  "explanation": "StringBuilder is mutable and unsynchronized, so it avoids creating many intermediate String objects."
+ },
+ {
+  "id": "q7989eae71ba",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "Which of these Java releases is a long-term support (LTS) release?",
+  "options": [
+   "Java 19",
+   "Java 21",
+   "Java 22",
+   "Java 20"
+  ],
+  "answer": 1,
+  "explanation": "Java 21 (September 2023) is an LTS release, following Java 17."
+ },
+ {
+  "id": "qb5b4c77c576",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which keyword in a method signature declares that the method may throw a checked exception?",
+  "options": [
+   "throws",
+   "throw",
+   "catch",
+   "raise"
+  ],
+  "answer": 0,
+  "explanation": "throws appears in the method declaration; throw is the statement that actually throws an exception."
+ }
+]

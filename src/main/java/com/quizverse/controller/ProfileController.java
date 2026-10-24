@@ -58,28 +58,41 @@ public class ProfileController {
         return ResponseEntity.ok(UserResponse.of(user, userDetails.isAdmin(user.getUsername())));
     }
 
-    /** Keeps this session logged in and logs out every other one, e.g. a phone someone else has. */
+    /**
+     * Keeps this session logged in and logs out every other one, e.g. a phone someone else has. An account
+     * created with Google sets its first password here without a current one.
+     */
     @PostMapping("/password")
     @Transactional
     public ResponseEntity<?> changePassword(@Valid @RequestBody ChangePasswordRequest req, Principal principal,
                                             HttpServletRequest request) {
         User user = users.findByUsername(principal.getName()).orElseThrow();
-        if (!encoder.matches(req.currentPassword(), user.getPasswordHash())) return wrongPassword();
+        if (user.hasPassword() && !matches(req.currentPassword(), user)) return wrongPassword();
         user.setPasswordHash(encoder.encode(req.newPassword()));
         sessions.invalidateAll(user.getUsername(), request.getSession(false));
         return ResponseEntity.noContent().build();
     }
 
-    /** Removes the user and, through ON DELETE CASCADE, their attempts, answers, bookmarks and reports. */
+    /**
+     * Removes the user and, through ON DELETE CASCADE, their attempts, answers, bookmarks, reports and challenges.
+     * Needs the password, or for a Google-only account, the username typed out.
+     */
     @DeleteMapping
     @Transactional
     public ResponseEntity<?> delete(@Valid @RequestBody DeleteAccountRequest req, Principal principal) {
         User user = users.findByUsername(principal.getName()).orElseThrow();
-        if (!encoder.matches(req.password(), user.getPasswordHash())) return wrongPassword();
+        if (user.hasPassword() ? !matches(req.password(), user) : !user.getUsername().equals(req.confirmUsername())) {
+            return user.hasPassword() ? wrongPassword()
+                    : ResponseEntity.badRequest().body(Map.of("error", "Type your username to confirm."));
+        }
         users.delete(user);
         sessions.invalidateAll(user.getUsername(), null);
         SecurityContextHolder.clearContext();
         return ResponseEntity.noContent().build();
+    }
+
+    private boolean matches(String password, User user) {
+        return password != null && !password.isEmpty() && encoder.matches(password, user.getPasswordHash());
     }
 
     // 400 rather than 401: the frontend reads 401 as "not logged in".

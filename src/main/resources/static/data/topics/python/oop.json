@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q261bd4ccc76",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "What is the conventional name of the first parameter of an instance method?",
+  "options": [
+   "self",
+   "cls",
+   "me",
+   "this"
+  ],
+  "answer": 0,
+  "explanation": "By convention the instance is passed as the first parameter named self; cls is used for class methods."
+ },
+ {
+  "id": "q3f1c8692c77",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which special method defines the informal string returned by str(obj)?",
+  "options": [
+   "__repr__",
+   "__format__",
+   "__string__",
+   "__str__"
+  ],
+  "answer": 3,
+  "explanation": "str() calls __str__; __repr__ is the developer-facing representation used as a fallback."
+ },
+ {
+  "id": "q60a385b2fbe",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which special method initializes a newly created instance?",
+  "options": [
+   "__init__",
+   "__start__",
+   "__create__",
+   "__setup__"
+  ],
+  "answer": 0,
+  "explanation": "__init__ is called after the object is created to set up its initial state."
+ },
+ {
+  "id": "qb3d88390d62",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which built-in checks whether an object is an instance of a class or its subclasses?",
+  "options": [
+   "issubclass()",
+   "isinstance()",
+   "type()",
+   "hasattr()"
+  ],
+  "answer": 1,
+  "explanation": "isinstance(obj, cls) returns True for instances of cls or any subclass of it."
+ },
+ {
+  "id": "q089ff639edd",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "What does the @property decorator let you do?",
+  "options": [
+   "Access a method's result like an attribute, without calling it",
+   "Make an attribute truly private",
+   "Share an attribute between all instances",
+   "Declare a method abstract"
+  ],
+  "answer": 0,
+  "explanation": "property turns a getter method into a managed attribute accessed as obj.name."
+ },
+ {
+  "id": "q524b2baec93",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Given class A: pass and class B(A): pass, what does issubclass(B, object) return?",
+  "options": [
+   "False",
+   "True",
+   "It raises TypeError",
+   "None"
+  ],
+  "answer": 1,
+  "explanation": "Every Python 3 class implicitly inherits from object."
+ },
+ {
+  "id": "q5d8df63563d",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which special method customizes the result of a == b for your objects?",
+  "options": [
+   "__cmp__",
+   "__equals__",
+   "__same__",
+   "__eq__"
+  ],
+  "answer": 3,
+  "explanation": "== calls __eq__; __cmp__ was removed in Python 3."
+ },
+ {
+  "id": "qa707d72df56",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "What does a method decorated with @classmethod receive as its first argument?",
+  "options": [
+   "The instance",
+   "The class itself",
+   "Nothing extra",
+   "The defining module"
+  ],
+  "answer": 1,
+  "explanation": "A classmethod is bound to the class, conventionally received as cls."
+ },
+ {
+  "id": "qc6850911488",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "In class A whose __init__ sets self.__x = 1, under what name is the attribute stored on the instance?",
+  "options": [
+   "_x",
+   "__x",
+   "_A__x",
+   "A__x"
+  ],
+  "answer": 2,
+  "explanation": "Names with two leading underscores are mangled to _ClassName__name to avoid clashes in subclasses."
+ },
+ {
+  "id": "qd5a80800911",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "What is the main effect of defining __slots__ in a class?",
+  "options": [
+   "Instances get no per-instance __dict__, saving memory and restricting attributes",
+   "The class can no longer be subclassed",
+   "All attributes become read-only",
+   "Methods become faster because they are compiled"
+  ],
+  "answer": 0,
+  "explanation": "__slots__ reserves fixed attribute storage instead of a dict, so undeclared attributes cannot be added."
+ },
+ {
+  "id": "qd8e680865a7",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "With class B(A), class C(A) and class D(B, C), what is [k.__name__ for k in D.__mro__]?",
+  "options": [
+   "['D', 'B', 'A', 'C', 'object']",
+   "['D', 'C', 'B', 'A', 'object']",
+   "['D', 'B', 'C', 'A', 'object']",
+   "['D', 'A', 'B', 'C', 'object']"
+  ],
+  "answer": 2,
+  "explanation": "C3 linearization keeps local order (B before C) and places the shared base A after both."
+ },
+ {
+  "id": "qe89c8e8e85b",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "What happens to hashing when a class defines __eq__ but not __hash__?",
+  "options": [
+   "Hashing keeps using the default id-based hash",
+   "Python raises TypeError when the class is created",
+   "A hash is derived automatically from __eq__",
+   "Its instances become unhashable because __hash__ is set to None"
+  ],
+  "answer": 3,
+  "explanation": "Overriding __eq__ alone implicitly sets __hash__ = None so equal objects cannot hash differently."
+ }
+]

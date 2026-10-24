@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q1a1acd4afda",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "What does Thread.sleep(1000) do?",
+  "options": [
+   "Pauses every thread in the JVM for one second",
+   "Pauses the current thread for about one second",
+   "Pauses the current thread for 1000 seconds",
+   "Releases all locks and ends the thread"
+  ],
+  "answer": 1,
+  "explanation": "sleep takes milliseconds and pauses only the calling thread; it does not release monitors it holds."
+ },
+ {
+  "id": "q288be527e35",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which package contains ExecutorService and ConcurrentHashMap?",
+  "options": [
+   "java.lang.thread",
+   "java.util.threads",
+   "java.concurrent",
+   "java.util.concurrent"
+  ],
+  "answer": 3,
+  "explanation": "The java.util.concurrent package provides executors, concurrent collections and synchronizers."
+ },
+ {
+  "id": "qd0d0bb6679d",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which functional interface does the Thread constructor accept as the task to run?",
+  "options": [
+   "Callable",
+   "Executor",
+   "Supplier",
+   "Runnable"
+  ],
+  "answer": 3,
+  "explanation": "new Thread(Runnable) runs the Runnable's run() method; Callable is used with ExecutorService."
+ },
+ {
+  "id": "qf64516d6404",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which Thread method begins executing run() on a new thread?",
+  "options": [
+   "start()",
+   "run()",
+   "execute()",
+   "begin()"
+  ],
+  "answer": 0,
+  "explanation": "start() creates the new thread of execution, which then calls run(); calling run() directly uses the current thread."
+ },
+ {
+  "id": "q00a5f701558",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What does Future.get() do if the task has not completed yet?",
+  "options": [
+   "Returns null immediately",
+   "Throws IllegalStateException immediately",
+   "Blocks until the result is available",
+   "Returns an empty Optional"
+  ],
+  "answer": 2,
+  "explanation": "get() waits for completion; a timed overload get(timeout, unit) throws TimeoutException instead of waiting forever."
+ },
+ {
+  "id": "q3b43ab566e4",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What happens if a thread calls obj.wait() without holding obj's monitor?",
+  "options": [
+   "The call is ignored",
+   "It waits normally until notify() is called",
+   "InterruptedException is thrown",
+   "IllegalMonitorStateException is thrown"
+  ],
+  "answer": 3,
+  "explanation": "wait, notify and notifyAll must be called from code synchronized on that same object."
+ },
+ {
+  "id": "q69c5c43a742",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "Why is count++ on a shared int unsafe when called from several threads?",
+  "options": [
+   "It always causes a deadlock",
+   "It is a read-modify-write that is not atomic, so updates can be lost",
+   "It throws ConcurrentModificationException",
+   "It does not compile in multithreaded code"
+  ],
+  "answer": 1,
+  "explanation": "count++ reads, increments and writes separately, so two threads can read the same value and one update is lost."
+ },
+ {
+  "id": "q8e40c91f3ab",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "Which class offers a lock-free, thread-safe incrementAndGet()?",
+  "options": [
+   "Integer",
+   "ThreadLocal",
+   "AtomicInteger",
+   "Semaphore"
+  ],
+  "answer": 2,
+  "explanation": "AtomicInteger uses compare-and-set operations to update its value atomically without locking."
+ },
+ {
+  "id": "q800e01e8afd",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "Two threads both need locks A and B. What is the standard way to prevent deadlock?",
+  "options": [
+   "Call Thread.yield() between acquisitions",
+   "Declare the lock fields volatile",
+   "Always acquire the locks in the same global order",
+   "Give one thread a higher priority"
+  ],
+  "answer": 2,
+  "explanation": "Consistent lock ordering removes the circular wait that deadlock requires."
+ },
+ {
+  "id": "qa742174b978",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What happens if start() is called twice on the same Thread object?",
+  "options": [
+   "The second call throws IllegalThreadStateException",
+   "The thread's run() executes a second time",
+   "The second call is silently ignored",
+   "The thread restarts from the beginning"
+  ],
+  "answer": 0,
+  "explanation": "A thread can be started only once; to run the task again create a new Thread or use an executor."
+ },
+ {
+  "id": "qf7670684090",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "In Java 21, what typically happens when a virtual thread blocks on I/O?",
+  "options": [
+   "It is converted into a platform thread",
+   "It permanently blocks its OS thread",
+   "It throws an UnsupportedOperationException",
+   "It unmounts from its carrier thread, which can run other virtual threads"
+  ],
+  "answer": 3,
+  "explanation": "Virtual threads are scheduled on a small pool of carrier threads and release them while blocked (except when pinned)."
+ },
+ {
+  "id": "qfe4f6b88e14",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "Which guarantee does the volatile keyword NOT provide?",
+  "options": [
+   "Visibility of writes to other threads",
+   "A happens-before edge from a write to later reads",
+   "Prevention of reordering around the volatile access",
+   "Atomicity of compound actions such as count++"
+  ],
+  "answer": 3,
+  "explanation": "volatile ensures visibility and ordering, but a read-modify-write still needs synchronization or an atomic class."
+ }
+]

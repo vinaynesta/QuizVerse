@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qdf5ab09d149",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "What naming convention do Vue composables conventionally follow?",
+  "options": [
+   "Prefix the name with use, like useMouse",
+   "Suffix the name with Composable",
+   "Prefix the name with a dollar sign",
+   "Write the name in all capital letters"
+  ],
+  "answer": 0,
+  "explanation": "By convention composable functions are named in camelCase starting with use."
+ },
+ {
+  "id": "qd31559b8d9c",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which Vue Router component renders the component matched by the current route?",
+  "options": [
+   "<RouterView>",
+   "<RouterLink>",
+   "<RouteOutlet>",
+   "<PageView>"
+  ],
+  "answer": 0,
+  "explanation": "RouterView is the outlet that displays the matched route component."
+ },
+ {
+  "id": "q2b792fecc49",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which browser extension lets you inspect the component tree and state of a Vue app?",
+  "options": [
+   "Vue Inspector",
+   "Vue DevTools",
+   "Vue Lens",
+   "Vue Profiler Pro"
+  ],
+  "answer": 1,
+  "explanation": "Vue DevTools shows components, props, state, Pinia stores and routing information."
+ },
+ {
+  "id": "q34de9fe8f1d",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which function defines a Pinia store?",
+  "options": [
+   "defineStore()",
+   "newStore()",
+   "registerStore()",
+   "createStore()"
+  ],
+  "answer": 0,
+  "explanation": "Pinia stores are defined with defineStore(), which returns a useXxxStore function."
+ },
+ {
+  "id": "q77c224c028b",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "Which compiler macro declares props in script setup?",
+  "options": [
+   "defineProps()",
+   "declareProps()",
+   "useProps()",
+   "props()"
+  ],
+  "answer": 0,
+  "explanation": "defineProps() is a compiler macro available in script setup without an import."
+ },
+ {
+  "id": "q96f3c99c202",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which state management library is officially recommended for new Vue 3 apps?",
+  "options": [
+   "Vuex",
+   "Redux",
+   "MobX",
+   "Pinia"
+  ],
+  "answer": 3,
+  "explanation": "Pinia is the official recommended store for Vue 3; Vuex is in maintenance mode."
+ },
+ {
+  "id": "qdb146f73b83",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive creates two-way binding on a form input?",
+  "options": [
+   "v-bind",
+   "v-model",
+   "v-sync",
+   "v-link"
+  ],
+  "answer": 1,
+  "explanation": "v-model binds a value to an input and updates it when the user types."
+ },
+ {
+  "id": "q6117bf8c89d",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which command scaffolds a new Vue project with the official tool?",
+  "options": [
+   "npm create vue@latest",
+   "vue new my-app",
+   "npx vue-init my-app",
+   "npm install vue-starter"
+  ],
+  "answer": 0,
+  "explanation": "npm create vue@latest runs create-vue, the official project scaffolding tool."
+ },
+ {
+  "id": "q043cc81ce1f",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "Do you need to write .value when using a top-level ref in a template?",
+  "options": [
+   "Yes, .value is always required in templates",
+   "Only when the ref is used inside v-for",
+   "No, top-level refs are automatically unwrapped in templates",
+   "Only when the component uses the Options API"
+  ],
+  "answer": 2,
+  "explanation": "Vue automatically unwraps top-level refs in templates, so you write {{ count }} rather than {{ count.value }}."
+ },
+ {
+  "id": "q32c0f6d5160",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "Which compiler macro declares the events a component emits in script setup?",
+  "options": [
+   "defineEvents()",
+   "defineEmits()",
+   "useEmit()",
+   "declareEmits()"
+  ],
+  "answer": 1,
+  "explanation": "defineEmits() declares emitted events and returns an emit function."
+ }
+]

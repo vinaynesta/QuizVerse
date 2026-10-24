@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "template-syntax",
+    "question": "Which syntax interpolates a value as text in a Vue template?",
+    "options": [
+      "${ message }",
+      "[[ message ]]",
+      "<%= message %>",
+      "{{ message }}"
+    ],
+    "answer": 3,
+    "explanation": "Vue uses double-curly mustache syntax for text interpolation, which is escaped as plain text."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What is the shorthand for v-bind:href?",
+    "options": [
+      "@href",
+      "#href",
+      ":href",
+      ".href"
+    ],
+    "answer": 2,
+    "explanation": "A leading colon is the shorthand for v-bind."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What is the shorthand for v-on:click?",
+    "options": [
+      ":click",
+      "#click",
+      "$click",
+      "@click"
+    ],
+    "answer": 3,
+    "explanation": "The @ symbol is the shorthand for v-on event listeners."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What does the v-html directive do?",
+    "options": [
+      "Escapes the value and renders it as plain text",
+      "Sets the element's innerHTML to the bound value",
+      "Loads markup from an external HTML file",
+      "Validates HTML markup at compile time"
+    ],
+    "answer": 1,
+    "explanation": "v-html renders raw HTML via innerHTML, so it should never be used with untrusted content."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Which function is typically used to make a primitive value like a number reactive?",
+    "options": [
+      "markRaw()",
+      "ref()",
+      "toRaw()",
+      "shallowReadonly()"
+    ],
+    "answer": 1,
+    "explanation": "ref() wraps any value, including primitives, in a reactive object with a .value property."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Inside script setup, how do you read the current value of const count = ref(0)?",
+    "options": [
+      "count.value",
+      "count.get()",
+      "count()",
+      "count.current"
+    ],
+    "answer": 0,
+    "explanation": "Refs expose their inner value through the .value property in JavaScript."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What kinds of values does reactive() accept?",
+    "options": [
+      "Only primitive values like strings and numbers",
+      "Objects, arrays and collections like Map and Set",
+      "Only functions that return values",
+      "Only DOM elements and template refs"
+    ],
+    "answer": 1,
+    "explanation": "reactive() works by creating a Proxy, so it only works with object types, not primitives."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Do you need to write .value when using a top-level ref in a template?",
+    "options": [
+      "Yes, .value is always required in templates",
+      "No, top-level refs are automatically unwrapped in templates",
+      "Only when the ref is used inside v-for",
+      "Only when the component uses the Options API"
+    ],
+    "answer": 1,
+    "explanation": "Vue automatically unwraps top-level refs in templates, so you write {{ count }} rather than {{ count.value }}."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What is script setup in a Vue single-file component?",
+    "options": [
+      "A runtime plugin that loads scripts lazily",
+      "Compile-time sugar for using the Composition API in SFCs",
+      "A block used to configure the Vite build",
+      "A directive that marks server-only code"
+    ],
+    "answer": 1,
+    "explanation": "script setup is processed at compile time and lets top-level bindings be used directly in the template."
+  },
+  {
+    "topic": "composition-api",
+    "question": "In a component that does not use script setup, where is Composition API code written?",
+    "options": [
+      "Inside the data() option",
+      "Inside the setup() option",
+      "Inside the created() hook",
+      "Inside an init() method"
+    ],
+    "answer": 1,
+    "explanation": "setup() is the entry point for the Composition API in components without script setup."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What is a composable in Vue?",
+    "options": [
+      "A component that has no template",
+      "A scoped CSS module shared by components",
+      "A function that encapsulates reusable stateful logic using the Composition API",
+      "A plugin that registers global components"
+    ],
+    "answer": 2,
+    "explanation": "Composables are plain functions that use reactive APIs and lifecycle hooks to share stateful logic."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What naming convention do Vue composables conventionally follow?",
+    "options": [
+      "Prefix the name with use, like useMouse",
+      "Suffix the name with Composable",
+      "Prefix the name with a dollar sign",
+      "Write the name in all capital letters"
+    ],
+    "answer": 0,
+    "explanation": "By convention composable functions are named in camelCase starting with use."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "Which compiler macro declares props in script setup?",
+    "options": [
+      "useProps()",
+      "declareProps()",
+      "defineProps()",
+      "props()"
+    ],
+    "answer": 2,
+    "explanation": "defineProps() is a compiler macro available in script setup without an import."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "Which compiler macro declares the events a component emits in script setup?",
+    "options": [
+      "defineEvents()",
+      "defineEmits()",
+      "useEmit()",
+      "declareEmits()"
+    ],
+    "answer": 1,
+    "explanation": "defineEmits() declares emitted events and returns an emit function."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "In which direction do props flow between components?",
+    "options": [
+      "Two-way between parent and child by default",
+      "Upward, from child to parent only",
+      "Sideways between sibling components",
+      "One-way, from parent down to child"
+    ],
+    "answer": 3,
+    "explanation": "Props form a one-way data flow; children communicate upward by emitting events."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "What file extension is used for Vue single-file components?",
+    "options": [
+      ".vjs",
+      ".sfc",
+      ".vue",
+      ".view"
+    ],
+    "answer": 2,
+    "explanation": "Single-file components combine template, script and style in a .vue file."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "How are computed properties cached?",
+    "options": [
+      "They re-run on every component render",
+      "They are computed once and never updated",
+      "They re-evaluate only when their reactive dependencies change",
+      "They are cached until the page is reloaded"
+    ],
+    "answer": 2,
+    "explanation": "Computed values are cached based on their reactive dependencies, unlike methods which run on each call."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "Which function runs a side-effect callback when a specific reactive source changes?",
+    "options": [
+      "computed()",
+      "watch()",
+      "toRef()",
+      "defineExpose()"
+    ],
+    "answer": 1,
+    "explanation": "watch() observes an explicit source and calls the callback with new and old values when it changes."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "What does computed() return when given a getter function?",
+    "options": [
+      "A plain JavaScript value",
+      "A deeply reactive object",
+      "A readonly ref",
+      "A Promise that resolves to the value"
+    ],
+    "answer": 2,
+    "explanation": "A getter-only computed returns a readonly computed ref whose value is accessed via .value."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "Which API runs its effect immediately and tracks reactive dependencies automatically?",
+    "options": [
+      "watch()",
+      "onMounted()",
+      "nextTick()",
+      "watchEffect()"
+    ],
+    "answer": 3,
+    "explanation": "watchEffect() runs the function eagerly and re-runs it whenever any reactive state it read changes."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which hook runs after the component has been mounted to the DOM?",
+    "options": [
+      "onCreated",
+      "onReady",
+      "onInit",
+      "onMounted"
+    ],
+    "answer": 3,
+    "explanation": "onMounted is called after the component's DOM tree has been created and inserted."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which Composition API hook runs after a component has been unmounted?",
+    "options": [
+      "onDestroyed",
+      "onRemoved",
+      "onUnmounted",
+      "onDisposed"
+    ],
+    "answer": 2,
+    "explanation": "onUnmounted is the Vue 3 hook for teardown after unmount; destroyed was the Vue 2 name."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "What replaces the beforeCreate and created hooks in the Composition API?",
+    "options": [
+      "The onCreated and onBeforeCreate hooks",
+      "The onMounted hook with an immediate flag",
+      "The setup code itself, which runs at that point",
+      "The onInit hook imported from vue"
+    ],
+    "answer": 2,
+    "explanation": "There are no onCreated hooks; code in setup() or script setup already runs at that stage."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which hook is called after a reactive state change has caused the component's DOM to re-render?",
+    "options": [
+      "onChanged",
+      "onRendered",
+      "onRefreshed",
+      "onUpdated"
+    ],
+    "answer": 3,
+    "explanation": "onUpdated runs after the component has updated its DOM tree due to a reactive state change."
+  },
+  {
+    "topic": "directives",
+    "question": "How does v-show differ from v-if?",
+    "options": [
+      "v-show removes the element from the DOM entirely",
+      "v-show toggles CSS display and keeps the element in the DOM",
+      "v-show only works on component tags",
+      "v-show evaluates its condition only once"
+    ],
+    "answer": 1,
+    "explanation": "v-show always renders the element and toggles display, while v-if conditionally creates and destroys it."
+  },
+  {
+    "topic": "directives",
+    "question": "Which directive renders a list of items?",
+    "options": [
+      "v-for",
+      "v-each",
+      "v-loop",
+      "v-repeat"
+    ],
+    "answer": 0,
+    "explanation": "v-for renders an element or block once for each item in a source."
+  },
+  {
+    "topic": "directives",
+    "question": "Which directive creates two-way binding on a form input?",
+    "options": [
+      "v-model",
+      "v-bind",
+      "v-sync",
+      "v-link"
+    ],
+    "answer": 0,
+    "explanation": "v-model binds a value to an input and updates it when the user types."
+  },
+  {
+    "topic": "directives",
+    "question": "Which directive renders an element once and skips all future updates?",
+    "options": [
+      "v-static",
+      "v-freeze",
+      "v-cloak",
+      "v-once"
+    ],
+    "answer": 3,
+    "explanation": "v-once renders the element and its children a single time and treats them as static afterwards."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "Which element marks where parent-provided content goes in a child template?",
+    "options": [
+      "<content>",
+      "<yield>",
+      "<outlet>",
+      "<slot>"
+    ],
+    "answer": 3,
+    "explanation": "The slot element is the outlet where the parent's slot content is rendered."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "What is the shorthand for v-slot?",
+    "options": [
+      "@",
+      ":",
+      "#",
+      "$"
+    ],
+    "answer": 2,
+    "explanation": "v-slot:header can be written as #header."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "What problem do provide and inject mainly solve?",
+    "options": [
+      "Sharing CSS variables between components",
+      "Passing data deep into the tree without prop drilling",
+      "Lazy loading components from the server",
+      "Validating prop types at runtime"
+    ],
+    "answer": 1,
+    "explanation": "An ancestor provides a value and any descendant can inject it, avoiding passing props through every level."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "What is fallback content for a slot?",
+    "options": [
+      "Content inside the slot tags shown when the parent provides none",
+      "Content shown while an async component loads",
+      "Content rendered only during server-side rendering",
+      "Content shown when the component throws an error"
+    ],
+    "answer": 0,
+    "explanation": "Anything placed between a child's slot tags renders only if the parent passes no content for that slot."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Which state management library is officially recommended for new Vue 3 apps?",
+    "options": [
+      "Vuex",
+      "Redux",
+      "Pinia",
+      "MobX"
+    ],
+    "answer": 2,
+    "explanation": "Pinia is the official recommended store for Vue 3; Vuex is in maintenance mode."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Which Vue Router component renders the component matched by the current route?",
+    "options": [
+      "<RouterView>",
+      "<RouterLink>",
+      "<RouteOutlet>",
+      "<PageView>"
+    ],
+    "answer": 0,
+    "explanation": "RouterView is the outlet that displays the matched route component."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Which function defines a Pinia store?",
+    "options": [
+      "createStore()",
+      "newStore()",
+      "registerStore()",
+      "defineStore()"
+    ],
+    "answer": 3,
+    "explanation": "Pinia stores are defined with defineStore(), which returns a useXxxStore function."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "In script setup, which function gives access to the current route's params and query?",
+    "options": [
+      "useRouter()",
+      "getRoute()",
+      "currentRoute()",
+      "useRoute()"
+    ],
+    "answer": 3,
+    "explanation": "useRoute() returns the current route location; useRouter() returns the router instance used for navigation."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "What build tool does the official create-vue scaffolding use?",
+    "options": [
+      "Vite",
+      "Webpack",
+      "Gulp",
+      "Grunt"
+    ],
+    "answer": 0,
+    "explanation": "create-vue scaffolds projects powered by Vite, which is the recommended tooling."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Which command scaffolds a new Vue project with the official tool?",
+    "options": [
+      "npm create vue@latest",
+      "vue new my-app",
+      "npx vue-init my-app",
+      "npm install vue-starter"
+    ],
+    "answer": 0,
+    "explanation": "npm create vue@latest runs create-vue, the official project scaffolding tool."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Which browser extension lets you inspect the component tree and state of a Vue app?",
+    "options": [
+      "Vue DevTools",
+      "Vue Inspector",
+      "Vue Lens",
+      "Vue Profiler Pro"
+    ],
+    "answer": 0,
+    "explanation": "Vue DevTools shows components, props, state, Pinia stores and routing information."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Which function defines a component that is loaded lazily only when needed?",
+    "options": [
+      "defineAsyncComponent()",
+      "lazyComponent()",
+      "defineLazy()",
+      "loadComponent()"
+    ],
+    "answer": 0,
+    "explanation": "defineAsyncComponent() accepts a loader returning a Promise, enabling code splitting."
+  }
+]

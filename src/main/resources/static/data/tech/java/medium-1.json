@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qec8110240b6",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "In try-with-resources, if the try block throws and close() also throws, what happens to the close() exception?",
+  "options": [
+   "It is discarded with no trace",
+   "It replaces the exception from the try block",
+   "It is added as a suppressed exception on the primary one",
+   "It becomes the cause of the primary exception"
+  ],
+  "answer": 2,
+  "explanation": "The original exception propagates and close() failures are available through getSuppressed()."
+ },
+ {
+  "id": "qacfd426663d",
+  "subject": "java",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Why does List<Object> objs = new ArrayList<String>(); fail to compile?",
+  "options": [
+   "String is not a subclass of Object",
+   "An ArrayList cannot be assigned to a List",
+   "Generic types can only be checked at runtime",
+   "Generics are invariant: List<String> is not a List<Object>"
+  ],
+  "answer": 3,
+  "explanation": "Unlike arrays, generic types are invariant, which prevents adding non-String objects through the List<Object> reference."
+ },
+ {
+  "id": "qe5ec31178d3",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "Where is a local variable of primitive type declared inside a method stored?",
+  "options": [
+   "On the shared heap",
+   "In the method's frame on the thread stack",
+   "In Metaspace",
+   "In the string pool"
+  ],
+  "answer": 1,
+  "explanation": "Local variables live in the stack frame of the invoking thread, which is popped when the method returns."
+ },
+ {
+  "id": "q8e40c91f3ab",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "Which class offers a lock-free, thread-safe incrementAndGet()?",
+  "options": [
+   "Integer",
+   "ThreadLocal",
+   "AtomicInteger",
+   "Semaphore"
+  ],
+  "answer": 2,
+  "explanation": "AtomicInteger uses compare-and-set operations to update its value atomically without locking."
+ },
+ {
+  "id": "q59f9afdbaa0",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What must be true of a local variable referenced inside a lambda body?",
+  "options": [
+   "It must be declared static",
+   "It must be declared volatile",
+   "It must be final or effectively final",
+   "It must be a primitive type"
+  ],
+  "answer": 2,
+  "explanation": "Lambdas capture local variables by value, so the language requires those variables not to be reassigned."
+ },
+ {
+  "id": "qf5c4be7363f",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "A subclass declares a static method with the same signature as a static method in its superclass. What is this called?",
+  "options": [
+   "Method overriding",
+   "Method overloading",
+   "Variable shadowing",
+   "Method hiding"
+  ],
+  "answer": 3,
+  "explanation": "Static methods are not overridden; the subclass version hides the parent one and the call is resolved by the reference type."
+ },
+ {
+  "id": "qe2fc4dc3aa5",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "Why does catch (FileNotFoundException | IOException e) fail to compile?",
+  "options": [
+   "Multi-catch accepts only unchecked exceptions",
+   "Only one checked exception is allowed per catch",
+   "Alternatives in a multi-catch cannot be subclasses of each other",
+   "The variable e must be declared final"
+  ],
+  "answer": 2,
+  "explanation": "FileNotFoundException is a subclass of IOException, so listing both is redundant and rejected."
+ },
+ {
+  "id": "q50472af5bf7",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "If both the try block and the finally block contain return statements, which value is returned?",
+  "options": [
+   "The value from try",
+   "The value from finally",
+   "Neither, it does not compile",
+   "Whichever return executes first"
+  ],
+  "answer": 1,
+  "explanation": "The finally block's return overrides the try block's pending return, which is why returning from finally is discouraged."
+ },
+ {
+  "id": "q00a5f701558",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What does Future.get() do if the task has not completed yet?",
+  "options": [
+   "Returns null immediately",
+   "Throws IllegalStateException immediately",
+   "Blocks until the result is available",
+   "Returns an empty Optional"
+  ],
+  "answer": 2,
+  "explanation": "get() waits for completion; a timed overload get(timeout, unit) throws TimeoutException instead of waiting forever."
+ },
+ {
+  "id": "q65c7e976130",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does the statement Stream.of(1, 2, 3).peek(System.out::println); print on its own?",
+  "options": [
+   "1, 2 and 3 on separate lines",
+   "Nothing",
+   "Only 1",
+   "It throws IllegalStateException"
+  ],
+  "answer": 1,
+  "explanation": "Intermediate operations are lazy; without a terminal operation the pipeline never runs."
+ }
+]
