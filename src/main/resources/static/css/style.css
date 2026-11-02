@@ -433,7 +433,7 @@ a:focus-visible, button:focus-visible, .option:focus-visible {
 .qotd-option:disabled { cursor: default; }
 .qotd-option.correct { border-color: var(--easy); background: var(--good-soft); }
 .qotd-option.incorrect { border-color: var(--hard); background: var(--bad-soft); }
-.daily-card .qotd-result { margin: 4px 0 0; color: var(--text); font-size: 0.9rem; }
+.daily-card .qotd-result { margin: 4px 0 0; color: var(--text); font-size: 0.9rem; white-space: pre-line; }
 .qotd-result[hidden] { display: none; }
 @media (max-width: 720px) {
     .daily-row { grid-template-columns: 1fr; }
@@ -441,10 +441,25 @@ a:focus-visible, button:focus-visible, .option:focus-visible {
 
 /* ---------- Profile ---------- */
 .profile-stack { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 20px; }
+.auth-card label.check-row { flex-direction: row; align-items: center; gap: 10px; font-weight: 500; }
+.auth-card label.check-row input { width: 18px; height: 18px; padding: 0; accent-color: var(--primary); }
 .danger-card { border-top: 4px solid var(--hard); }
 .danger-button { background: var(--hard); color: #fff; padding: 12px 28px; }
 .danger-button:hover { background: #b91c1c; }
 .danger-button:disabled { opacity: 0.6; cursor: wait; }
+.contest-item { display: block; margin-top: 10px; }
+.contest-item.live { border-left: 4px solid var(--easy); }
+.contest-timer { font-variant-numeric: tabular-nums; font-size: 1.2rem; color: var(--primary-text); }
+.contest-questions { list-style: none; display: flex; flex-direction: column; gap: 18px; margin: 12px 0; }
+.contest-q p { margin-bottom: 8px; white-space: pre-line; }
+.contest-q .option { margin-bottom: 6px; }
+.contest-section { font-weight: 700; color: var(--primary-text); border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+.contest-admin { margin-top: 20px; max-width: 520px; }
+.contest-admin select { padding: 10px; border-radius: 10px; border: 1px solid var(--border); font: inherit; background: var(--surface); color: var(--text); }
+.grading { padding: 24px; text-align: center; color: var(--text); }
+.grading .btn-primary { margin-left: 8px; }
+.auth-forgot { margin-top: -8px; text-align: right; font-size: 0.88rem; }
+.auth-forgot a { color: var(--primary-text); font-weight: 600; }
 .auth-switch { text-align: center; color: var(--text-muted); font-size: 0.92rem; }
 .auth-switch a, .history-empty a, .save-status a { color: var(--primary-text); font-weight: 700; }
 
@@ -611,3 +626,14 @@ a:focus-visible, button:focus-visible, .option:focus-visible {
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
 }
+
+/* Admin question editor (#32) on reports.html */
+.edit-open { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+.edit-open input { flex: 1 1 220px; font: inherit; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--field-bg); color: var(--text); }
+.edit-open .btn-resolve { margin-top: 0; }
+.edit-form { display: grid; gap: 10px; margin-bottom: 16px; }
+.edit-form label { display: grid; gap: 4px; font-weight: 600; font-size: 0.9rem; }
+.edit-form textarea, .edit-form input[type="text"] { font: inherit; font-weight: 400; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--field-bg); color: var(--text); width: 100%; box-sizing: border-box; }
+.edit-options { border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; display: grid; gap: 6px; }
+.edit-form .edit-option, .edit-form .edit-hidden { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+.btn-edit, .btn-discard { margin-top: 10px; margin-right: 6px; font: inherit; font-weight: 700; padding: 8px 16px; border-radius: 10px; border: 2px solid var(--primary-line); background: var(--field-bg); color: var(--primary-text); cursor: pointer; }

@@ -1,5 +1,8 @@
-// Profile page: edit name and email, connect Google, change (or first set) the password, delete the account.
-import { changePassword, currentUser, deleteAccount, linkGoogle, unlinkGoogle, updateProfile } from "./api.js";
+// Profile page: edit name and email, email settings, connect Google, change (or first set) the password, delete the account.
+import {
+  changePassword, currentUser, deleteAccount, linkGoogle, setEmailPreferences, setLeaderboardHidden, unlinkGoogle,
+  updateProfile,
+} from "./api.js";
 import { renderGoogleButton } from "./google.js";
 
 const $ = (id) => document.getElementById(id);
@@ -49,6 +52,21 @@ async function init() {
     // The account bar shows the name too.
     const nameLink = document.querySelector(".account-name");
     if (nameLink) nameLink.textContent = updated.displayName;
+    return "Saved.";
+  });
+
+  const emailForm = $("email-form");
+  emailForm.elements.reminders.checked = user.emailReminders;
+  emailForm.elements.weekly.checked = user.emailWeekly;
+  handle(emailForm, async () => {
+    await setEmailPreferences(emailForm.elements.reminders.checked, emailForm.elements.weekly.checked);
+    return "Saved.";
+  });
+
+  const boardForm = $("board-form");
+  boardForm.elements.hidden.checked = user.leaderboardHidden;
+  handle(boardForm, async () => {
+    await setLeaderboardHidden(boardForm.elements.hidden.checked);
     return "Saved.";
   });
 

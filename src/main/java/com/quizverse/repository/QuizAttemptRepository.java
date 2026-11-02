@@ -22,6 +22,30 @@ public interface QuizAttemptRepository extends JpaRepository<QuizAttempt, Long> 
     @Query("select a.completedAt from QuizAttempt a where a.user.id = :userId")
     List<Instant> completionTimes(@Param("userId") Long userId);
 
+    /** When the user last finished a quiz, or null. */
+    @Query("select max(a.completedAt) from QuizAttempt a where a.user.id = :userId")
+    Instant lastCompletion(@Param("userId") Long userId);
+
+    /** The user's quizzes finished since {@code since}, for the weekly summary. */
+    List<QuizAttempt> findByUserIdAndCompletedAtAfter(Long userId, Instant since);
+
+    boolean existsByReceiptHash(String receiptHash);
+
+    /** Verified attempts at one quiz (leaderboard), with their users. */
+    @Query("""
+            select a from QuizAttempt a join fetch a.user
+            where a.verified = true and a.kind = :kind and a.examId = :examId and a.stageId = :stageId
+              and a.sectionId = :sectionId and a.levelId = :levelId and a.quizIndex = :quizIndex""")
+    List<QuizAttempt> verifiedFor(@Param("kind") String kind, @Param("examId") String examId,
+                                  @Param("stageId") String stageId, @Param("sectionId") String sectionId,
+                                  @Param("levelId") String levelId, @Param("quizIndex") int quizIndex);
+
+    /** Verified exam quizzes and mocks finished since {@code since} (weekly leaderboard), with their users. */
+    @Query("""
+            select a from QuizAttempt a join fetch a.user
+            where a.verified = true and a.kind in ('exam', 'mock') and a.completedAt >= :since""")
+    List<QuizAttempt> verifiedSince(@Param("since") Instant since);
+
     /** The daily quiz and the daily tech challenge store their IST date (yyyy-mm-dd) in sectionId. */
     boolean existsByUserIdAndKindAndSectionId(Long userId, String kind, String sectionId);
 

@@ -1,0 +1,23 @@
+#!/bin/sh
+# Blocks commits that would leak credentials. Enable once per clone:
+#   git config core.hooksPath .githooks
+fail=0
+
+# 1. Secret files must never be staged.
+bad_files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '(^|/)\.env($|\.)|application-local\.properties$|\.(pem|key|p12|jks)$' | grep -v '\.env\.example$')
+if [ -n "$bad_files" ]; then
+  echo "pre-commit: refusing to commit secret files:"; echo "$bad_files" | sed 's/^/  /'
+  fail=1
+fi
+
+# 2. Added lines that look like real credentials (generated quiz data is skipped).
+hits=$(git diff --cached -U0 --diff-filter=ACMR -- . ':(exclude)src/main/resources/static/data/**' ':(exclude)src/main/resources/answer-keys.json' ':(exclude).env.example' \
+  | grep -E '^\+[^+]' \
+  | grep -E 're_[A-Za-z0-9_]{20,}|GOCSPX-[A-Za-z0-9_-]{10,}|AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY|postgres(ql)?://[^:$ ]+:[^@$ {]+@|(PASSWORD|SECRET|API_KEY|SIGNING_KEY|_TOKEN)[A-Z_]*=[^$ {][^ ]{7,}|(password|secret|api-key|signing-key)=[^$ {][^ ]{3,}')
+if [ -n "$hits" ]; then
+  echo "pre-commit: possible credentials in staged changes:"; echo "$hits" | cut -c1-160 | sed 's/^/  /'
+  echo "Move the value to .env (see .env.example) and reference it as \${VAR}."
+  fail=1
+fi
+
+[ $fail -eq 0 ] || { echo "Commit blocked. Bypass only if certain: git commit --no-verify"; exit 1; }

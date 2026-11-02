@@ -3,6 +3,7 @@ package com.quizverse.repository;
 import com.quizverse.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
@@ -11,4 +12,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByGoogleSubject(String googleSubject);
     boolean existsByUsername(String username);
     boolean existsByEmail(String email);
+    Optional<User> findByEmailToken(String emailToken);
+    List<User> findByEmailRemindersTrue();
+    List<User> findByEmailWeeklyTrue();
 }

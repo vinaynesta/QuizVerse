@@ -6,13 +6,43 @@
   "level": "medium",
   "question": "Find the compound interest on ₹2000 at 10% per annum for 2 years, compounded annually.",
   "options": [
-   "₹504",
-   "₹399",
    "₹420",
+   "₹399",
+   "₹504",
    "₹417"
   ],
-  "answer": 2,
-  "explanation": "A = 2000(1+10/100)², CI = A − P = ₹420"
+  "answer": 0,
+  "explanation": "Year 1 interest: 10% of 2000 = ₹200; amount = ₹2200.\nYear 2 interest: 10% of 2200 = ₹220.\nCI = 200 + 220 = ₹420.\nFormula: P[(1 + R/100)² − 1] = 2000 × 0.21 = ₹420."
+ },
+ {
+  "id": "q04983993dd6",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹8000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹820",
+   "₹818",
+   "₹817",
+   "₹821"
+  ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 5% of 8000 = ₹400; amount = ₹8400.\nYear 2 interest: 5% of 8400 = ₹420.\nCI = 400 + 420 = ₹820.\nFormula: P[(1 + R/100)² − 1] = 8000 × 0.1 = ₹820."
+ },
+ {
+  "id": "q0714be667c2",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹10000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹4180",
+   "₹4400",
+   "₹4410",
+   "₹5280"
+  ],
+  "answer": 1,
+  "explanation": "Year 1 interest: 20% of 10000 = ₹2000; amount = ₹12000.\nYear 2 interest: 20% of 12000 = ₹2400.\nCI = 2000 + 2400 = ₹4400.\nFormula: P[(1 + R/100)² − 1] = 10000 × 0.44 = ₹4400."
  },
  {
   "id": "q1056fdd58f0",
@@ -27,7 +57,82 @@
    "₹4536"
   ],
   "answer": 1,
-  "explanation": "A = 18000(1+10/100)², CI = A − P = ₹3780"
+  "explanation": "Year 1 interest: 10% of 18000 = ₹1800; amount = ₹19800.\nYear 2 interest: 10% of 19800 = ₹1980.\nCI = 1800 + 1980 = ₹3780.\nFormula: P[(1 + R/100)² − 1] = 18000 × 0.21 = ₹3780."
+ },
+ {
+  "id": "q154be72c3c7",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹8000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹3522",
+   "₹5280",
+   "₹3520",
+   "₹3523"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 20% of 8000 = ₹1600; amount = ₹9600.\nYear 2 interest: 20% of 9600 = ₹1920.\nCI = 1600 + 1920 = ₹3520.\nFormula: P[(1 + R/100)² − 1] = 8000 × 0.44 = ₹3520."
+ },
+ {
+  "id": "q15d8316af85",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹16000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹6688",
+   "₹10560",
+   "₹5280",
+   "₹7040"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 16000 = ₹3200; amount = ₹19200.\nYear 2 interest: 20% of 19200 = ₹3840.\nCI = 3200 + 3840 = ₹7040.\nFormula: P[(1 + R/100)² − 1] = 16000 × 0.44 = ₹7040."
+ },
+ {
+  "id": "q16c5200c2ee",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹18000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2214",
+   "₹1845",
+   "₹2030",
+   "₹1568"
+  ],
+  "answer": 1,
+  "explanation": "Year 1 interest: 5% of 18000 = ₹900; amount = ₹18900.\nYear 2 interest: 5% of 18900 = ₹945.\nCI = 900 + 945 = ₹1845.\nFormula: P[(1 + R/100)² − 1] = 18000 × 0.1 = ₹1845."
+ },
+ {
+  "id": "q19c61bcc30b",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹30000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹15840",
+   "₹13198",
+   "₹11880",
+   "₹13200"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 30000 = ₹6000; amount = ₹36000.\nYear 2 interest: 20% of 36000 = ₹7200.\nCI = 6000 + 7200 = ₹13200.\nFormula: P[(1 + R/100)² − 1] = 30000 × 0.44 = ₹13200."
+ },
+ {
+  "id": "q1c54cf3e4e3",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹22000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹4620",
+   "₹5082",
+   "₹4389",
+   "₹3465"
+  ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 10% of 22000 = ₹2200; amount = ₹24200.\nYear 2 interest: 10% of 24200 = ₹2420.\nCI = 2200 + 2420 = ₹4620.\nFormula: P[(1 + R/100)² − 1] = 22000 × 0.21 = ₹4620."
  },
  {
   "id": "q2c090a4b8d7",
@@ -36,13 +141,13 @@
   "level": "medium",
   "question": "Find the compound interest on ₹4000 at 20% per annum for 2 years, compounded annually.",
   "options": [
-   "₹1760",
    "₹2200",
+   "₹1759",
    "₹1848",
-   "₹1759"
+   "₹1760"
   ],
-  "answer": 0,
-  "explanation": "A = 4000(1+20/100)², CI = A − P = ₹1760"
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 4000 = ₹800; amount = ₹4800.\nYear 2 interest: 20% of 4800 = ₹960.\nCI = 800 + 960 = ₹1760.\nFormula: P[(1 + R/100)² − 1] = 4000 × 0.44 = ₹1760."
  },
  {
   "id": "q34991de704f",
@@ -57,7 +162,7 @@
    "₹1225"
   ],
   "answer": 1,
-  "explanation": "A = 12000(1+5/100)², CI = A − P = ₹1230"
+  "explanation": "Year 1 interest: 5% of 12000 = ₹600; amount = ₹12600.\nYear 2 interest: 5% of 12600 = ₹630.\nCI = 600 + 630 = ₹1230.\nFormula: P[(1 + R/100)² − 1] = 12000 × 0.1 = ₹1230."
  },
  {
   "id": "q39c7c9b08b9",
@@ -66,13 +171,88 @@
   "level": "medium",
   "question": "Find the compound interest on ₹2000 at 5% per annum for 2 years, compounded annually.",
   "options": [
-   "₹205",
    "₹210",
+   "₹215",
    "₹236",
-   "₹215"
+   "₹205"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 5% of 2000 = ₹100; amount = ₹2100.\nYear 2 interest: 5% of 2100 = ₹105.\nCI = 100 + 105 = ₹205.\nFormula: P[(1 + R/100)² − 1] = 2000 × 0.1 = ₹205."
+ },
+ {
+  "id": "q3d1886c0a6a",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹16000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹1638",
+   "₹820",
+   "₹1640",
+   "₹1635"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 5% of 16000 = ₹800; amount = ₹16800.\nYear 2 interest: 5% of 16800 = ₹840.\nCI = 800 + 840 = ₹1640.\nFormula: P[(1 + R/100)² − 1] = 16000 × 0.1 = ₹1640."
+ },
+ {
+  "id": "q54daae9073e",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹26000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹5470",
+   "₹5462",
+   "₹5460",
+   "₹5459"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 10% of 26000 = ₹2600; amount = ₹28600.\nYear 2 interest: 10% of 28600 = ₹2860.\nCI = 2600 + 2860 = ₹5460.\nFormula: P[(1 + R/100)² − 1] = 26000 × 0.21 = ₹5460."
+ },
+ {
+  "id": "q55e92d466f0",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹12000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹5808",
+   "₹6072",
+   "₹5280",
+   "₹4752"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 20% of 12000 = ₹2400; amount = ₹14400.\nYear 2 interest: 20% of 14400 = ₹2880.\nCI = 2400 + 2880 = ₹5280.\nFormula: P[(1 + R/100)² − 1] = 12000 × 0.44 = ₹5280."
+ },
+ {
+  "id": "q58553f8f066",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹6000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹3036",
+   "₹2643",
+   "₹2640",
+   "₹2376"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 20% of 6000 = ₹1200; amount = ₹7200.\nYear 2 interest: 20% of 7200 = ₹1440.\nCI = 1200 + 1440 = ₹2640.\nFormula: P[(1 + R/100)² − 1] = 6000 × 0.44 = ₹2640."
+ },
+ {
+  "id": "q61cb8a3430f",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹28000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2870",
+   "₹2872",
+   "₹3014",
+   "₹2865"
   ],
   "answer": 0,
-  "explanation": "A = 2000(1+5/100)², CI = A − P = ₹205"
+  "explanation": "Year 1 interest: 5% of 28000 = ₹1400; amount = ₹29400.\nYear 2 interest: 5% of 29400 = ₹1470.\nCI = 1400 + 1470 = ₹2870.\nFormula: P[(1 + R/100)² − 1] = 28000 × 0.1 = ₹2870."
  },
  {
   "id": "q6bbede58646",
@@ -82,12 +262,12 @@
   "question": "Find the compound interest on ₹24000 at 20% per annum for 2 years, compounded annually.",
   "options": [
    "₹10555",
-   "₹10560",
    "₹10562",
-   "₹10561"
+   "₹10561",
+   "₹10560"
   ],
-  "answer": 1,
-  "explanation": "A = 24000(1+20/100)², CI = A − P = ₹10560"
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 24000 = ₹4800; amount = ₹28800.\nYear 2 interest: 20% of 28800 = ₹5760.\nCI = 4800 + 5760 = ₹10560.\nFormula: P[(1 + R/100)² − 1] = 24000 × 0.44 = ₹10560."
  },
  {
   "id": "q6eb086ee8b8",
@@ -96,13 +276,13 @@
   "level": "medium",
   "question": "Find the compound interest on ₹10000 at 10% per annum for 2 years, compounded annually.",
   "options": [
-   "₹2097",
-   "₹1785",
    "₹2415",
-   "₹2100"
+   "₹1785",
+   "₹2100",
+   "₹2097"
   ],
-  "answer": 3,
-  "explanation": "A = 10000(1+10/100)², CI = A − P = ₹2100"
+  "answer": 2,
+  "explanation": "Year 1 interest: 10% of 10000 = ₹1000; amount = ₹11000.\nYear 2 interest: 10% of 11000 = ₹1100.\nCI = 1000 + 1100 = ₹2100.\nFormula: P[(1 + R/100)² − 1] = 10000 × 0.21 = ₹2100."
  },
  {
   "id": "q7295754b548",
@@ -117,7 +297,7 @@
    "₹2665"
   ],
   "answer": 3,
-  "explanation": "A = 26000(1+5/100)², CI = A − P = ₹2665"
+  "explanation": "Year 1 interest: 5% of 26000 = ₹1300; amount = ₹27300.\nYear 2 interest: 5% of 27300 = ₹1365.\nCI = 1300 + 1365 = ₹2665.\nFormula: P[(1 + R/100)² − 1] = 26000 × 0.1 = ₹2665."
  },
  {
   "id": "q8044b5183da",
@@ -126,13 +306,28 @@
   "level": "medium",
   "question": "Find the compound interest on ₹8000 at 10% per annum for 2 years, compounded annually.",
   "options": [
-   "₹1690",
-   "₹1260",
    "₹1680",
+   "₹1260",
+   "₹1690",
    "₹1679"
   ],
-  "answer": 2,
-  "explanation": "A = 8000(1+10/100)², CI = A − P = ₹1680"
+  "answer": 0,
+  "explanation": "Year 1 interest: 10% of 8000 = ₹800; amount = ₹8800.\nYear 2 interest: 10% of 8800 = ₹880.\nCI = 800 + 880 = ₹1680.\nFormula: P[(1 + R/100)² − 1] = 8000 × 0.21 = ₹1680."
+ },
+ {
+  "id": "q8395aa786e6",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹22000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹7260",
+   "₹7744",
+   "₹8712",
+   "₹9680"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 22000 = ₹4400; amount = ₹26400.\nYear 2 interest: 20% of 26400 = ₹5280.\nCI = 4400 + 5280 = ₹9680.\nFormula: P[(1 + R/100)² − 1] = 22000 × 0.44 = ₹9680."
  },
  {
   "id": "q8cab450aa7a",
@@ -142,12 +337,27 @@
   "question": "Find the compound interest on ₹6000 at 10% per annum for 2 years, compounded annually.",
   "options": [
    "₹1134",
-   "₹1260",
    "₹1262",
+   "₹1260",
    "₹1258"
   ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 10% of 6000 = ₹600; amount = ₹6600.\nYear 2 interest: 10% of 6600 = ₹660.\nCI = 600 + 660 = ₹1260.\nFormula: P[(1 + R/100)² − 1] = 6000 × 0.21 = ₹1260."
+ },
+ {
+  "id": "q8d7148d1a87",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹30000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹9450",
+   "₹6300",
+   "₹6298",
+   "₹7875"
+  ],
   "answer": 1,
-  "explanation": "A = 6000(1+10/100)², CI = A − P = ₹1260"
+  "explanation": "Year 1 interest: 10% of 30000 = ₹3000; amount = ₹33000.\nYear 2 interest: 10% of 33000 = ₹3300.\nCI = 3000 + 3300 = ₹6300.\nFormula: P[(1 + R/100)² − 1] = 30000 × 0.21 = ₹6300."
  },
  {
   "id": "q97a9b140ef9",
@@ -162,7 +372,7 @@
    "₹11439"
   ],
   "answer": 0,
-  "explanation": "A = 26000(1+20/100)², CI = A − P = ₹11440"
+  "explanation": "Year 1 interest: 20% of 26000 = ₹5200; amount = ₹31200.\nYear 2 interest: 20% of 31200 = ₹6240.\nCI = 5200 + 6240 = ₹11440.\nFormula: P[(1 + R/100)² − 1] = 26000 × 0.44 = ₹11440."
  },
  {
   "id": "q9d0e4ed69ed",
@@ -171,13 +381,43 @@
   "level": "medium",
   "question": "Find the compound interest on ₹4000 at 5% per annum for 2 years, compounded annually.",
   "options": [
+   "₹451",
    "₹412",
    "₹410",
-   "₹451",
    "₹492"
   ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 5% of 4000 = ₹200; amount = ₹4200.\nYear 2 interest: 5% of 4200 = ₹210.\nCI = 200 + 210 = ₹410.\nFormula: P[(1 + R/100)² − 1] = 4000 × 0.1 = ₹410."
+ },
+ {
+  "id": "qaaabd66f59f",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹16000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2688",
+   "₹3360",
+   "₹3370",
+   "₹4032"
+  ],
   "answer": 1,
-  "explanation": "A = 4000(1+5/100)², CI = A − P = ₹410"
+  "explanation": "Year 1 interest: 10% of 16000 = ₹1600; amount = ₹17600.\nYear 2 interest: 10% of 17600 = ₹1760.\nCI = 1600 + 1760 = ₹3360.\nFormula: P[(1 + R/100)² − 1] = 16000 × 0.21 = ₹3360."
+ },
+ {
+  "id": "qb5404b60e0b",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹20000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2048",
+   "₹1025",
+   "₹2055",
+   "₹2050"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 5% of 20000 = ₹1000; amount = ₹21000.\nYear 2 interest: 5% of 21000 = ₹1050.\nCI = 1000 + 1050 = ₹2050.\nFormula: P[(1 + R/100)² − 1] = 20000 × 0.1 = ₹2050."
  },
  {
   "id": "qc34b294e649",
@@ -186,13 +426,13 @@
   "level": "medium",
   "question": "Find the compound interest on ₹14000 at 5% per annum for 2 years, compounded annually.",
   "options": [
+   "₹1435",
    "₹1650",
    "₹1148",
-   "₹1435",
    "₹1438"
   ],
-  "answer": 2,
-  "explanation": "A = 14000(1+5/100)², CI = A − P = ₹1435"
+  "answer": 0,
+  "explanation": "Year 1 interest: 5% of 14000 = ₹700; amount = ₹14700.\nYear 2 interest: 5% of 14700 = ₹735.\nCI = 700 + 735 = ₹1435.\nFormula: P[(1 + R/100)² − 1] = 14000 × 0.1 = ₹1435."
  },
  {
   "id": "qc366b7b8ffb",
@@ -201,13 +441,58 @@
   "level": "medium",
   "question": "Find the compound interest on ₹30000 at 5% per annum for 2 years, compounded annually.",
   "options": [
-   "₹3065",
    "₹3075",
+   "₹2614",
    "₹2306",
-   "₹2614"
+   "₹3065"
+  ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 5% of 30000 = ₹1500; amount = ₹31500.\nYear 2 interest: 5% of 31500 = ₹1575.\nCI = 1500 + 1575 = ₹3075.\nFormula: P[(1 + R/100)² − 1] = 30000 × 0.1 = ₹3075."
+ },
+ {
+  "id": "qc4761569941",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹14000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2938",
+   "₹2940",
+   "₹2950",
+   "₹3087"
   ],
   "answer": 1,
-  "explanation": "A = 30000(1+5/100)², CI = A − P = ₹3075"
+  "explanation": "Year 1 interest: 10% of 14000 = ₹1400; amount = ₹15400.\nYear 2 interest: 10% of 15400 = ₹1540.\nCI = 1400 + 1540 = ₹2940.\nFormula: P[(1 + R/100)² − 1] = 14000 × 0.21 = ₹2940."
+ },
+ {
+  "id": "qc6ab3fa23a0",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹22000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2593",
+   "₹2253",
+   "₹2255",
+   "₹2706"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 5% of 22000 = ₹1100; amount = ₹23100.\nYear 2 interest: 5% of 23100 = ₹1155.\nCI = 1100 + 1155 = ₹2255.\nFormula: P[(1 + R/100)² − 1] = 22000 × 0.1 = ₹2255."
+ },
+ {
+  "id": "qc84c4e3e58e",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹14000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹6155",
+   "₹6165",
+   "₹6160",
+   "₹5544"
+  ],
+  "answer": 2,
+  "explanation": "Year 1 interest: 20% of 14000 = ₹2800; amount = ₹16800.\nYear 2 interest: 20% of 16800 = ₹3360.\nCI = 2800 + 3360 = ₹6160.\nFormula: P[(1 + R/100)² − 1] = 14000 × 0.44 = ₹6160."
  },
  {
   "id": "qcc1fdc7a997",
@@ -216,13 +501,73 @@
   "level": "medium",
   "question": "Find the compound interest on ₹24000 at 5% per annum for 2 years, compounded annually.",
   "options": [
-   "₹2462",
    "₹2460",
+   "₹2462",
    "₹2952",
    "₹3690"
   ],
-  "answer": 1,
-  "explanation": "A = 24000(1+5/100)², CI = A − P = ₹2460"
+  "answer": 0,
+  "explanation": "Year 1 interest: 5% of 24000 = ₹1200; amount = ₹25200.\nYear 2 interest: 5% of 25200 = ₹1260.\nCI = 1200 + 1260 = ₹2460.\nFormula: P[(1 + R/100)² − 1] = 24000 × 0.1 = ₹2460."
+ },
+ {
+  "id": "qcc46ad46ae5",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹20000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹4198",
+   "₹3570",
+   "₹3360",
+   "₹4200"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 10% of 20000 = ₹2000; amount = ₹22000.\nYear 2 interest: 10% of 22000 = ₹2200.\nCI = 2000 + 2200 = ₹4200.\nFormula: P[(1 + R/100)² − 1] = 20000 × 0.21 = ₹4200."
+ },
+ {
+  "id": "qd8e831abc65",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹24000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹5039",
+   "₹6300",
+   "₹5043",
+   "₹5040"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 10% of 24000 = ₹2400; amount = ₹26400.\nYear 2 interest: 10% of 26400 = ₹2640.\nCI = 2400 + 2640 = ₹5040.\nFormula: P[(1 + R/100)² − 1] = 24000 × 0.21 = ₹5040."
+ },
+ {
+  "id": "qdda923a107a",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹6000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹610",
+   "₹769",
+   "₹523",
+   "₹615"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 5% of 6000 = ₹300; amount = ₹6300.\nYear 2 interest: 5% of 6300 = ₹315.\nCI = 300 + 315 = ₹615.\nFormula: P[(1 + R/100)² − 1] = 6000 × 0.1 = ₹615."
+ },
+ {
+  "id": "qded7515d48b",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹2000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹890",
+   "₹879",
+   "₹1012",
+   "₹880"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 2000 = ₹400; amount = ₹2400.\nYear 2 interest: 20% of 2400 = ₹480.\nCI = 400 + 480 = ₹880.\nFormula: P[(1 + R/100)² − 1] = 2000 × 0.44 = ₹880."
  },
  {
   "id": "qe84383e5028",
@@ -231,13 +576,103 @@
   "level": "medium",
   "question": "Find the compound interest on ₹4000 at 10% per annum for 2 years, compounded annually.",
   "options": [
-   "₹630",
-   "₹966",
    "₹840",
+   "₹966",
+   "₹630",
    "₹842"
   ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 10% of 4000 = ₹400; amount = ₹4400.\nYear 2 interest: 10% of 4400 = ₹440.\nCI = 400 + 440 = ₹840.\nFormula: P[(1 + R/100)² − 1] = 4000 × 0.21 = ₹840."
+ },
+ {
+  "id": "qebda220dd07",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹12000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2520",
+   "₹2142",
+   "₹3024",
+   "₹2522"
+  ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 10% of 12000 = ₹1200; amount = ₹13200.\nYear 2 interest: 10% of 13200 = ₹1320.\nCI = 1200 + 1320 = ₹2520.\nFormula: P[(1 + R/100)² − 1] = 12000 × 0.21 = ₹2520."
+ },
+ {
+  "id": "qf24c1025469",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹28000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹12320",
+   "₹12323",
+   "₹15400",
+   "₹14784"
+  ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 20% of 28000 = ₹5600; amount = ₹33600.\nYear 2 interest: 20% of 33600 = ₹6720.\nCI = 5600 + 6720 = ₹12320.\nFormula: P[(1 + R/100)² − 1] = 28000 × 0.44 = ₹12320."
+ },
+ {
+  "id": "qf25e5c27dd1",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹20000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹4400",
+   "₹6600",
+   "₹10120",
+   "₹8800"
+  ],
+  "answer": 3,
+  "explanation": "Year 1 interest: 20% of 20000 = ₹4000; amount = ₹24000.\nYear 2 interest: 20% of 24000 = ₹4800.\nCI = 4000 + 4800 = ₹8800.\nFormula: P[(1 + R/100)² − 1] = 20000 × 0.44 = ₹8800."
+ },
+ {
+  "id": "qf2dabdaa422",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹10000 at 5% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹1025",
+   "₹1024",
+   "₹1027",
+   "₹1026"
+  ],
+  "answer": 0,
+  "explanation": "Year 1 interest: 5% of 10000 = ₹500; amount = ₹10500.\nYear 2 interest: 5% of 10500 = ₹525.\nCI = 500 + 525 = ₹1025.\nFormula: P[(1 + R/100)² − 1] = 10000 × 0.1 = ₹1025."
+ },
+ {
+  "id": "qf31154badbf",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹18000 at 20% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹7915",
+   "₹7920",
+   "₹8316",
+   "₹9900"
+  ],
+  "answer": 1,
+  "explanation": "Year 1 interest: 20% of 18000 = ₹3600; amount = ₹21600.\nYear 2 interest: 20% of 21600 = ₹4320.\nCI = 3600 + 4320 = ₹7920.\nFormula: P[(1 + R/100)² − 1] = 18000 × 0.44 = ₹7920."
+ },
+ {
+  "id": "q01383be41bc",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹22500 for 2 years at 8% per annum?",
+  "options": [
+   "₹158",
+   "₹180",
+   "₹144",
+   "₹137"
+  ],
   "answer": 2,
-  "explanation": "A = 4000(1+10/100)², CI = A − P = ₹840"
+  "explanation": "SI for 2 years = 22500 × 8 × 2/100 = ₹3600.\nCI adds interest on the first year's interest: 8% of 1800 = ₹144.\nShortcut for 2 years: P(R/100)² = 22500 × (8/100)² = ₹144."
  },
  {
   "id": "q06b416b7d76",
@@ -247,12 +682,42 @@
   "question": "What is the difference between the compound interest and simple interest on ₹45000 for 2 years at 20% per annum?",
   "options": [
    "₹1710",
-   "₹1790",
+   "₹1800",
    "₹1795",
-   "₹1800"
+   "₹1790"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 45000 × 20 × 2/100 = ₹18000.\nCI adds interest on the first year's interest: 20% of 9000 = ₹1800.\nShortcut for 2 years: P(R/100)² = 45000 × (20/100)² = ₹1800."
+ },
+ {
+  "id": "q0798c0bab79",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹57500 for 2 years at 20% per annum?",
+  "options": [
+   "₹2297",
+   "₹3450",
+   "₹1150",
+   "₹2300"
   ],
   "answer": 3,
-  "explanation": "Difference = P(R/100)² = ₹1800"
+  "explanation": "SI for 2 years = 57500 × 20 × 2/100 = ₹23000.\nCI adds interest on the first year's interest: 20% of 11500 = ₹2300.\nShortcut for 2 years: P(R/100)² = 57500 × (20/100)² = ₹2300."
+ },
+ {
+  "id": "q08f46b7637d",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹47500 for 2 years at 8% per annum?",
+  "options": [
+   "₹303",
+   "₹304",
+   "₹152",
+   "₹306"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 47500 × 8 × 2/100 = ₹7600.\nCI adds interest on the first year's interest: 8% of 3800 = ₹304.\nShortcut for 2 years: P(R/100)² = 47500 × (8/100)² = ₹304."
  },
  {
   "id": "q0995b6cdbbd",
@@ -267,7 +732,52 @@
    "₹950"
   ],
   "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹1000"
+  "explanation": "SI for 2 years = 25000 × 20 × 2/100 = ₹10000.\nCI adds interest on the first year's interest: 20% of 5000 = ₹1000.\nShortcut for 2 years: P(R/100)² = 25000 × (20/100)² = ₹1000."
+ },
+ {
+  "id": "q0fbe180ab34",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹7500 for 2 years at 12% per annum?",
+  "options": [
+   "₹118",
+   "₹107",
+   "₹108",
+   "₹81"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 7500 × 12 × 2/100 = ₹1800.\nCI adds interest on the first year's interest: 12% of 900 = ₹108.\nShortcut for 2 years: P(R/100)² = 7500 × (12/100)² = ₹108."
+ },
+ {
+  "id": "q10867d75c8d",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹7500 for 2 years at 8% per annum?",
+  "options": [
+   "₹48",
+   "₹53",
+   "₹55",
+   "₹49"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 7500 × 8 × 2/100 = ₹1200.\nCI adds interest on the first year's interest: 8% of 600 = ₹48.\nShortcut for 2 years: P(R/100)² = 7500 × (8/100)² = ₹48."
+ },
+ {
+  "id": "q17d81294c36",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹20000 for 2 years at 20% per annum?",
+  "options": [
+   "₹800",
+   "₹760",
+   "₹802",
+   "₹799"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 20000 × 20 × 2/100 = ₹8000.\nCI adds interest on the first year's interest: 20% of 4000 = ₹800.\nShortcut for 2 years: P(R/100)² = 20000 × (20/100)² = ₹800."
  },
  {
   "id": "q1af522593a9",
@@ -282,7 +792,7 @@
    "₹900"
   ],
   "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹600"
+  "explanation": "SI for 2 years = 60000 × 10 × 2/100 = ₹12000.\nCI adds interest on the first year's interest: 10% of 6000 = ₹600.\nShortcut for 2 years: P(R/100)² = 60000 × (10/100)² = ₹600."
  },
  {
   "id": "q20f69bf274a",
@@ -292,12 +802,42 @@
   "question": "What is the difference between the compound interest and simple interest on ₹60000 for 2 years at 5% per annum?",
   "options": [
    "₹155",
-   "₹152",
    "₹153",
-   "₹150"
+   "₹150",
+   "₹152"
   ],
-  "answer": 3,
-  "explanation": "Difference = P(R/100)² = ₹150"
+  "answer": 2,
+  "explanation": "SI for 2 years = 60000 × 5 × 2/100 = ₹6000.\nCI adds interest on the first year's interest: 5% of 3000 = ₹150.\nShortcut for 2 years: P(R/100)² = 60000 × (5/100)² = ₹150."
+ },
+ {
+  "id": "q214e65779ca",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹32500 for 2 years at 10% per annum?",
+  "options": [
+   "₹260",
+   "₹325",
+   "₹315",
+   "₹335"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 32500 × 10 × 2/100 = ₹6500.\nCI adds interest on the first year's interest: 10% of 3250 = ₹325.\nShortcut for 2 years: P(R/100)² = 32500 × (10/100)² = ₹325."
+ },
+ {
+  "id": "q229f3d64095",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹60000 for 2 years at 20% per annum?",
+  "options": [
+   "₹2401",
+   "₹2400",
+   "₹1800",
+   "₹2760"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 60000 × 20 × 2/100 = ₹24000.\nCI adds interest on the first year's interest: 20% of 12000 = ₹2400.\nShortcut for 2 years: P(R/100)² = 60000 × (20/100)² = ₹2400."
  },
  {
   "id": "q29c62759bef",
@@ -306,13 +846,58 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹17500 for 2 years at 8% per annum?",
   "options": [
+   "₹112",
    "₹106",
    "₹56",
-   "₹112",
    "₹107"
   ],
-  "answer": 2,
-  "explanation": "Difference = P(R/100)² = ₹112"
+  "answer": 0,
+  "explanation": "SI for 2 years = 17500 × 8 × 2/100 = ₹2800.\nCI adds interest on the first year's interest: 8% of 1400 = ₹112.\nShortcut for 2 years: P(R/100)² = 17500 × (8/100)² = ₹112."
+ },
+ {
+  "id": "q2ad6d4116c4",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹37500 for 2 years at 20% per annum?",
+  "options": [
+   "₹1500",
+   "₹1501",
+   "₹1502",
+   "₹1350"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 37500 × 20 × 2/100 = ₹15000.\nCI adds interest on the first year's interest: 20% of 7500 = ₹1500.\nShortcut for 2 years: P(R/100)² = 37500 × (20/100)² = ₹1500."
+ },
+ {
+  "id": "q2ea9303d1fa",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹35000 for 2 years at 10% per annum?",
+  "options": [
+   "₹438",
+   "₹340",
+   "₹351",
+   "₹350"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 35000 × 10 × 2/100 = ₹7000.\nCI adds interest on the first year's interest: 10% of 3500 = ₹350.\nShortcut for 2 years: P(R/100)² = 35000 × (10/100)² = ₹350."
+ },
+ {
+  "id": "q31125407092",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹57500 for 2 years at 12% per annum?",
+  "options": [
+   "₹1242",
+   "₹828",
+   "₹825",
+   "₹787"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 57500 × 12 × 2/100 = ₹13800.\nCI adds interest on the first year's interest: 12% of 6900 = ₹828.\nShortcut for 2 years: P(R/100)² = 57500 × (12/100)² = ₹828."
  },
  {
   "id": "q343d937cdfc",
@@ -321,13 +906,28 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹27500 for 2 years at 10% per annum?",
   "options": [
-   "₹248",
+   "₹275",
    "₹277",
    "₹412",
-   "₹275"
+   "₹248"
   ],
-  "answer": 3,
-  "explanation": "Difference = P(R/100)² = ₹275"
+  "answer": 0,
+  "explanation": "SI for 2 years = 27500 × 10 × 2/100 = ₹5500.\nCI adds interest on the first year's interest: 10% of 2750 = ₹275.\nShortcut for 2 years: P(R/100)² = 27500 × (10/100)² = ₹275."
+ },
+ {
+  "id": "q3655bba8aea",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹12500 for 2 years at 10% per annum?",
+  "options": [
+   "₹131",
+   "₹128",
+   "₹125",
+   "₹124"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 12500 × 10 × 2/100 = ₹2500.\nCI adds interest on the first year's interest: 10% of 1250 = ₹125.\nShortcut for 2 years: P(R/100)² = 12500 × (10/100)² = ₹125."
  },
  {
   "id": "q39280127eb5",
@@ -342,7 +942,22 @@
    "₹38"
   ],
   "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹32"
+  "explanation": "SI for 2 years = 5000 × 8 × 2/100 = ₹800.\nCI adds interest on the first year's interest: 8% of 400 = ₹32.\nShortcut for 2 years: P(R/100)² = 5000 × (8/100)² = ₹32."
+ },
+ {
+  "id": "q39861fb8158",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹45000 for 2 years at 12% per annum?",
+  "options": [
+   "₹972",
+   "₹616",
+   "₹648",
+   "₹745"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 45000 × 12 × 2/100 = ₹10800.\nCI adds interest on the first year's interest: 12% of 5400 = ₹648.\nShortcut for 2 years: P(R/100)² = 45000 × (12/100)² = ₹648."
  },
  {
   "id": "q3b3c06e4002",
@@ -357,7 +972,22 @@
    "₹214"
   ],
   "answer": 2,
-  "explanation": "Difference = P(R/100)² = ₹216"
+  "explanation": "SI for 2 years = 15000 × 12 × 2/100 = ₹3600.\nCI adds interest on the first year's interest: 12% of 1800 = ₹216.\nShortcut for 2 years: P(R/100)² = 15000 × (12/100)² = ₹216."
+ },
+ {
+  "id": "q3e6d6a313f9",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹7500 for 2 years at 20% per annum?",
+  "options": [
+   "₹299",
+   "₹290",
+   "₹270",
+   "₹300"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 7500 × 20 × 2/100 = ₹3000.\nCI adds interest on the first year's interest: 20% of 1500 = ₹300.\nShortcut for 2 years: P(R/100)² = 7500 × (20/100)² = ₹300."
  },
  {
   "id": "q3ef49623bea",
@@ -367,12 +997,27 @@
   "question": "What is the difference between the compound interest and simple interest on ₹42500 for 2 years at 8% per annum?",
   "options": [
    "₹408",
+   "₹258",
    "₹340",
-   "₹272",
-   "₹258"
+   "₹272"
   ],
-  "answer": 2,
-  "explanation": "Difference = P(R/100)² = ₹272"
+  "answer": 3,
+  "explanation": "SI for 2 years = 42500 × 8 × 2/100 = ₹6800.\nCI adds interest on the first year's interest: 8% of 3400 = ₹272.\nShortcut for 2 years: P(R/100)² = 42500 × (8/100)² = ₹272."
+ },
+ {
+  "id": "q3f105da0d28",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹32500 for 2 years at 8% per annum?",
+  "options": [
+   "₹208",
+   "₹218",
+   "₹211",
+   "₹203"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 32500 × 8 × 2/100 = ₹5200.\nCI adds interest on the first year's interest: 8% of 2600 = ₹208.\nShortcut for 2 years: P(R/100)² = 32500 × (8/100)² = ₹208."
  },
  {
   "id": "q4265fb05833",
@@ -381,13 +1026,43 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 12% per annum?",
   "options": [
-   "₹72",
+   "₹69",
    "₹58",
    "₹82",
-   "₹69"
+   "₹72"
   ],
-  "answer": 0,
-  "explanation": "Difference = P(R/100)² = ₹72"
+  "answer": 3,
+  "explanation": "SI for 2 years = 5000 × 12 × 2/100 = ₹1200.\nCI adds interest on the first year's interest: 12% of 600 = ₹72.\nShortcut for 2 years: P(R/100)² = 5000 × (12/100)² = ₹72."
+ },
+ {
+  "id": "q44c0f86a14d",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 5% per annum?",
+  "options": [
+   "₹106",
+   "₹126",
+   "₹100",
+   "₹125"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 50000 × 5 × 2/100 = ₹5000.\nCI adds interest on the first year's interest: 5% of 2500 = ₹125.\nShortcut for 2 years: P(R/100)² = 50000 × (5/100)² = ₹125."
+ },
+ {
+  "id": "q49bd15ea90c",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹15000 for 2 years at 8% per annum?",
+  "options": [
+   "₹48",
+   "₹96",
+   "₹101",
+   "₹77"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 15000 × 8 × 2/100 = ₹2400.\nCI adds interest on the first year's interest: 8% of 1200 = ₹96.\nShortcut for 2 years: P(R/100)² = 15000 × (8/100)² = ₹96."
  },
  {
   "id": "q4aee85ddf17",
@@ -396,13 +1071,103 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 12% per annum?",
   "options": [
-   "₹720",
-   "₹612",
    "₹540",
+   "₹612",
+   "₹720",
    "₹1080"
   ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 50000 × 12 × 2/100 = ₹12000.\nCI adds interest on the first year's interest: 12% of 6000 = ₹720.\nShortcut for 2 years: P(R/100)² = 50000 × (12/100)² = ₹720."
+ },
+ {
+  "id": "q4bcf766ff5f",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹15000 for 2 years at 10% per annum?",
+  "options": [
+   "₹150",
+   "₹140",
+   "₹148",
+   "₹112"
+  ],
   "answer": 0,
-  "explanation": "Difference = P(R/100)² = ₹720"
+  "explanation": "SI for 2 years = 15000 × 10 × 2/100 = ₹3000.\nCI adds interest on the first year's interest: 10% of 1500 = ₹150.\nShortcut for 2 years: P(R/100)² = 15000 × (10/100)² = ₹150."
+ },
+ {
+  "id": "q51c66e50a54",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹47500 for 2 years at 10% per annum?",
+  "options": [
+   "₹478",
+   "₹473",
+   "₹475",
+   "₹594"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 47500 × 10 × 2/100 = ₹9500.\nCI adds interest on the first year's interest: 10% of 4750 = ₹475.\nShortcut for 2 years: P(R/100)² = 47500 × (10/100)² = ₹475."
+ },
+ {
+  "id": "q5692a56df96",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹40000 for 2 years at 5% per annum?",
+  "options": [
+   "₹100",
+   "₹105",
+   "₹50",
+   "₹125"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 40000 × 5 × 2/100 = ₹4000.\nCI adds interest on the first year's interest: 5% of 2000 = ₹100.\nShortcut for 2 years: P(R/100)² = 40000 × (5/100)² = ₹100."
+ },
+ {
+  "id": "q5bf9b1dbd4f",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹25000 for 2 years at 8% per annum?",
+  "options": [
+   "₹163",
+   "₹160",
+   "₹144",
+   "₹152"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 25000 × 8 × 2/100 = ₹4000.\nCI adds interest on the first year's interest: 8% of 2000 = ₹160.\nShortcut for 2 years: P(R/100)² = 25000 × (8/100)² = ₹160."
+ },
+ {
+  "id": "q5f53eb282b5",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹42500 for 2 years at 10% per annum?",
+  "options": [
+   "₹531",
+   "₹510",
+   "₹425",
+   "₹489"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 42500 × 10 × 2/100 = ₹8500.\nCI adds interest on the first year's interest: 10% of 4250 = ₹425.\nShortcut for 2 years: P(R/100)² = 42500 × (10/100)² = ₹425."
+ },
+ {
+  "id": "q6056f03f9bd",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹45000 for 2 years at 10% per annum?",
+  "options": [
+   "₹405",
+   "₹450",
+   "₹451",
+   "₹447"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 45000 × 10 × 2/100 = ₹9000.\nCI adds interest on the first year's interest: 10% of 4500 = ₹450.\nShortcut for 2 years: P(R/100)² = 45000 × (10/100)² = ₹450."
  },
  {
   "id": "q637561f630c",
@@ -417,7 +1182,7 @@
    "₹1602"
   ],
   "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹1600"
+  "explanation": "SI for 2 years = 40000 × 20 × 2/100 = ₹16000.\nCI adds interest on the first year's interest: 20% of 8000 = ₹1600.\nShortcut for 2 years: P(R/100)² = 40000 × (20/100)² = ₹1600."
  },
  {
   "id": "q67fa59bc5c7",
@@ -428,11 +1193,56 @@
   "options": [
    "₹240",
    "₹212",
-   "₹250",
-   "₹375"
+   "₹375",
+   "₹250"
   ],
-  "answer": 2,
-  "explanation": "Difference = P(R/100)² = ₹250"
+  "answer": 3,
+  "explanation": "SI for 2 years = 25000 × 10 × 2/100 = ₹5000.\nCI adds interest on the first year's interest: 10% of 2500 = ₹250.\nShortcut for 2 years: P(R/100)² = 25000 × (10/100)² = ₹250."
+ },
+ {
+  "id": "q6828aa7c840",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 10% per annum?",
+  "options": [
+   "₹750",
+   "₹400",
+   "₹575",
+   "₹500"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 50000 × 10 × 2/100 = ₹10000.\nCI adds interest on the first year's interest: 10% of 5000 = ₹500.\nShortcut for 2 years: P(R/100)² = 50000 × (10/100)² = ₹500."
+ },
+ {
+  "id": "q6ae1d9ff46d",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹10000 for 2 years at 8% per annum?",
+  "options": [
+   "₹64",
+   "₹62",
+   "₹54",
+   "₹59"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 10000 × 8 × 2/100 = ₹1600.\nCI adds interest on the first year's interest: 8% of 800 = ₹64.\nShortcut for 2 years: P(R/100)² = 10000 × (8/100)² = ₹64."
+ },
+ {
+  "id": "q70a30816546",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹20000 for 2 years at 10% per annum?",
+  "options": [
+   "₹200",
+   "₹160",
+   "₹240",
+   "₹180"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 20000 × 10 × 2/100 = ₹4000.\nCI adds interest on the first year's interest: 10% of 2000 = ₹200.\nShortcut for 2 years: P(R/100)² = 20000 × (10/100)² = ₹200."
  },
  {
   "id": "q746102ac7fd",
@@ -441,13 +1251,88 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹27500 for 2 years at 12% per annum?",
   "options": [
-   "₹198",
    "₹396",
+   "₹416",
    "₹297",
-   "₹416"
+   "₹198"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 27500 × 12 × 2/100 = ₹6600.\nCI adds interest on the first year's interest: 12% of 3300 = ₹396.\nShortcut for 2 years: P(R/100)² = 27500 × (12/100)² = ₹396."
+ },
+ {
+  "id": "q75370efd448",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 10% per annum?",
+  "options": [
+   "₹47",
+   "₹50",
+   "₹42",
+   "₹58"
   ],
   "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹396"
+  "explanation": "SI for 2 years = 5000 × 10 × 2/100 = ₹1000.\nCI adds interest on the first year's interest: 10% of 500 = ₹50.\nShortcut for 2 years: P(R/100)² = 5000 × (10/100)² = ₹50."
+ },
+ {
+  "id": "q760498fb97d",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹30000 for 2 years at 20% per annum?",
+  "options": [
+   "₹1320",
+   "₹1800",
+   "₹1020",
+   "₹1200"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 30000 × 20 × 2/100 = ₹12000.\nCI adds interest on the first year's interest: 20% of 6000 = ₹1200.\nShortcut for 2 years: P(R/100)² = 30000 × (20/100)² = ₹1200."
+ },
+ {
+  "id": "q8c898007971",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹52500 for 2 years at 12% per annum?",
+  "options": [
+   "₹761",
+   "₹756",
+   "₹755",
+   "₹869"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 52500 × 12 × 2/100 = ₹12600.\nCI adds interest on the first year's interest: 12% of 6300 = ₹756.\nShortcut for 2 years: P(R/100)² = 52500 × (12/100)² = ₹756."
+ },
+ {
+  "id": "q90327c89f4f",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹25000 for 2 years at 12% per annum?",
+  "options": [
+   "₹359",
+   "₹350",
+   "₹360",
+   "₹365"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 25000 × 12 × 2/100 = ₹6000.\nCI adds interest on the first year's interest: 12% of 3000 = ₹360.\nShortcut for 2 years: P(R/100)² = 25000 × (12/100)² = ₹360."
+ },
+ {
+  "id": "q9536d62fa4a",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹32500 for 2 years at 20% per annum?",
+  "options": [
+   "₹1303",
+   "₹1365",
+   "₹1300",
+   "₹1560"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 32500 × 20 × 2/100 = ₹13000.\nCI adds interest on the first year's interest: 20% of 6500 = ₹1300.\nShortcut for 2 years: P(R/100)² = 32500 × (20/100)² = ₹1300."
  },
  {
   "id": "q9880dbc95dc",
@@ -456,13 +1341,13 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹30000 for 2 years at 10% per annum?",
   "options": [
-   "₹345",
    "₹300",
+   "₹225",
    "₹270",
-   "₹225"
+   "₹345"
   ],
-  "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹300"
+  "answer": 0,
+  "explanation": "SI for 2 years = 30000 × 10 × 2/100 = ₹6000.\nCI adds interest on the first year's interest: 10% of 3000 = ₹300.\nShortcut for 2 years: P(R/100)² = 30000 × (10/100)² = ₹300."
  },
  {
   "id": "q9cfd13e6d23",
@@ -471,13 +1356,13 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹12500 for 2 years at 20% per annum?",
   "options": [
-   "₹500",
    "₹425",
+   "₹500",
    "₹750",
    "₹505"
   ],
-  "answer": 0,
-  "explanation": "Difference = P(R/100)² = ₹500"
+  "answer": 1,
+  "explanation": "SI for 2 years = 12500 × 20 × 2/100 = ₹5000.\nCI adds interest on the first year's interest: 20% of 2500 = ₹500.\nShortcut for 2 years: P(R/100)² = 12500 × (20/100)² = ₹500."
  },
  {
   "id": "qa65553c7d94",
@@ -487,12 +1372,12 @@
   "question": "What is the difference between the compound interest and simple interest on ₹20000 for 2 years at 8% per annum?",
   "options": [
    "₹134",
-   "₹128",
    "₹102",
+   "₹128",
    "₹122"
   ],
-  "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹128"
+  "answer": 2,
+  "explanation": "SI for 2 years = 20000 × 8 × 2/100 = ₹3200.\nCI adds interest on the first year's interest: 8% of 1600 = ₹128.\nShortcut for 2 years: P(R/100)² = 20000 × (8/100)² = ₹128."
  },
  {
   "id": "qae9eba1da3f",
@@ -502,12 +1387,27 @@
   "question": "What is the difference between the compound interest and simple interest on ₹55000 for 2 years at 12% per annum?",
   "options": [
    "₹871",
-   "₹713",
    "₹792",
+   "₹713",
    "₹990"
   ],
-  "answer": 2,
-  "explanation": "Difference = P(R/100)² = ₹792"
+  "answer": 1,
+  "explanation": "SI for 2 years = 55000 × 12 × 2/100 = ₹13200.\nCI adds interest on the first year's interest: 12% of 6600 = ₹792.\nShortcut for 2 years: P(R/100)² = 55000 × (12/100)² = ₹792."
+ },
+ {
+  "id": "qb3a888f4a43",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹60000 for 2 years at 8% per annum?",
+  "options": [
+   "₹384",
+   "₹365",
+   "₹381",
+   "₹192"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 60000 × 8 × 2/100 = ₹9600.\nCI adds interest on the first year's interest: 8% of 4800 = ₹384.\nShortcut for 2 years: P(R/100)² = 60000 × (8/100)² = ₹384."
  },
  {
   "id": "qb77e517b2b3",
@@ -516,12 +1416,417 @@
   "level": "hard",
   "question": "What is the difference between the compound interest and simple interest on ₹35000 for 2 years at 8% per annum?",
   "options": [
-   "₹112",
    "₹224",
+   "₹112",
    "₹269",
    "₹202"
   ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 35000 × 8 × 2/100 = ₹5600.\nCI adds interest on the first year's interest: 8% of 2800 = ₹224.\nShortcut for 2 years: P(R/100)² = 35000 × (8/100)² = ₹224."
+ },
+ {
+  "id": "qb8ed8703cbe",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹37500 for 2 years at 8% per annum?",
+  "options": [
+   "₹240",
+   "₹228",
+   "₹204",
+   "₹239"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 37500 × 8 × 2/100 = ₹6000.\nCI adds interest on the first year's interest: 8% of 3000 = ₹240.\nShortcut for 2 years: P(R/100)² = 37500 × (8/100)² = ₹240."
+ },
+ {
+  "id": "qbbf9119d2f9",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹27500 for 2 years at 8% per annum?",
+  "options": [
+   "₹264",
+   "₹166",
+   "₹220",
+   "₹176"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 27500 × 8 × 2/100 = ₹4400.\nCI adds interest on the first year's interest: 8% of 2200 = ₹176.\nShortcut for 2 years: P(R/100)² = 27500 × (8/100)² = ₹176."
+ },
+ {
+  "id": "qbdd8d1788f6",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹52500 for 2 years at 10% per annum?",
+  "options": [
+   "₹262",
+   "₹522",
+   "₹525",
+   "₹604"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 52500 × 10 × 2/100 = ₹10500.\nCI adds interest on the first year's interest: 10% of 5250 = ₹525.\nShortcut for 2 years: P(R/100)² = 52500 × (10/100)² = ₹525."
+ },
+ {
+  "id": "qbf5cd77c164",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹35000 for 2 years at 20% per annum?",
+  "options": [
+   "₹1120",
+   "₹1400",
+   "₹1405",
+   "₹700"
+  ],
   "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹224"
+  "explanation": "SI for 2 years = 35000 × 20 × 2/100 = ₹14000.\nCI adds interest on the first year's interest: 20% of 7000 = ₹1400.\nShortcut for 2 years: P(R/100)² = 35000 × (20/100)² = ₹1400."
+ },
+ {
+  "id": "qc0694d6e1c8",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 20% per annum?",
+  "options": [
+   "₹195",
+   "₹240",
+   "₹197",
+   "₹200"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 5000 × 20 × 2/100 = ₹2000.\nCI adds interest on the first year's interest: 20% of 1000 = ₹200.\nShortcut for 2 years: P(R/100)² = 5000 × (20/100)² = ₹200."
+ },
+ {
+  "id": "qc221ce9a76a",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹17500 for 2 years at 12% per annum?",
+  "options": [
+   "₹202",
+   "₹277",
+   "₹239",
+   "₹252"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 17500 × 12 × 2/100 = ₹4200.\nCI adds interest on the first year's interest: 12% of 2100 = ₹252.\nShortcut for 2 years: P(R/100)² = 17500 × (12/100)² = ₹252."
+ },
+ {
+  "id": "qc64d39c0139",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹12500 for 2 years at 8% per annum?",
+  "options": [
+   "₹100",
+   "₹80",
+   "₹92",
+   "₹90"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 12500 × 8 × 2/100 = ₹2000.\nCI adds interest on the first year's interest: 8% of 1000 = ₹80.\nShortcut for 2 years: P(R/100)² = 12500 × (8/100)² = ₹80."
+ },
+ {
+  "id": "qc85a434f6d1",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 20% per annum?",
+  "options": [
+   "₹2200",
+   "₹2001",
+   "₹1997",
+   "₹2000"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 50000 × 20 × 2/100 = ₹20000.\nCI adds interest on the first year's interest: 20% of 10000 = ₹2000.\nShortcut for 2 years: P(R/100)² = 50000 × (20/100)² = ₹2000."
+ },
+ {
+  "id": "qc912eb07fb0",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹10000 for 2 years at 12% per annum?",
+  "options": [
+   "₹147",
+   "₹154",
+   "₹144",
+   "₹143"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 10000 × 12 × 2/100 = ₹2400.\nCI adds interest on the first year's interest: 12% of 1200 = ₹144.\nShortcut for 2 years: P(R/100)² = 10000 × (12/100)² = ₹144."
+ },
+ {
+  "id": "qc98c384de99",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹30000 for 2 years at 5% per annum?",
+  "options": [
+   "₹75",
+   "₹65",
+   "₹74",
+   "₹70"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 30000 × 5 × 2/100 = ₹3000.\nCI adds interest on the first year's interest: 5% of 1500 = ₹75.\nShortcut for 2 years: P(R/100)² = 30000 × (5/100)² = ₹75."
+ },
+ {
+  "id": "qcfbe498c194",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹30000 for 2 years at 15% per annum?",
+  "options": [
+   "₹680",
+   "₹608",
+   "₹709",
+   "₹675"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 30000 × 15 × 2/100 = ₹9000.\nCI adds interest on the first year's interest: 15% of 4500 = ₹675.\nShortcut for 2 years: P(R/100)² = 30000 × (15/100)² = ₹675."
+ },
+ {
+  "id": "qd02a520a6fe",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹22500 for 2 years at 10% per annum?",
+  "options": [
+   "₹226",
+   "₹225",
+   "₹230",
+   "₹214"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 22500 × 10 × 2/100 = ₹4500.\nCI adds interest on the first year's interest: 10% of 2250 = ₹225.\nShortcut for 2 years: P(R/100)² = 22500 × (10/100)² = ₹225."
+ },
+ {
+  "id": "qd2dac911fdf",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹20000 for 2 years at 12% per annum?",
+  "options": [
+   "₹290",
+   "₹289",
+   "₹288",
+   "₹144"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 20000 × 12 × 2/100 = ₹4800.\nCI adds interest on the first year's interest: 12% of 2400 = ₹288.\nShortcut for 2 years: P(R/100)² = 20000 × (12/100)² = ₹288."
+ },
+ {
+  "id": "qd7cd5791a46",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹37500 for 2 years at 12% per annum?",
+  "options": [
+   "₹550",
+   "₹537",
+   "₹540",
+   "₹535"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 37500 × 12 × 2/100 = ₹9000.\nCI adds interest on the first year's interest: 12% of 4500 = ₹540.\nShortcut for 2 years: P(R/100)² = 37500 × (12/100)² = ₹540."
+ },
+ {
+  "id": "qd9cec868c71",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹22500 for 2 years at 12% per annum?",
+  "options": [
+   "₹292",
+   "₹324",
+   "₹340",
+   "₹319"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 22500 × 12 × 2/100 = ₹5400.\nCI adds interest on the first year's interest: 12% of 2700 = ₹324.\nShortcut for 2 years: P(R/100)² = 22500 × (12/100)² = ₹324."
+ },
+ {
+  "id": "qe54d002051b",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹40000 for 2 years at 10% per annum?",
+  "options": [
+   "₹400",
+   "₹398",
+   "₹300",
+   "₹340"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 40000 × 10 × 2/100 = ₹8000.\nCI adds interest on the first year's interest: 10% of 4000 = ₹400.\nShortcut for 2 years: P(R/100)² = 40000 × (10/100)² = ₹400."
+ },
+ {
+  "id": "qe5822c4017f",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 15% per annum?",
+  "options": [
+   "₹1406",
+   "₹1181",
+   "₹1125",
+   "₹1130"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 50000 × 15 × 2/100 = ₹15000.\nCI adds interest on the first year's interest: 15% of 7500 = ₹1125.\nShortcut for 2 years: P(R/100)² = 50000 × (15/100)² = ₹1125."
+ },
+ {
+  "id": "qe93d342ece0",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹10000 for 2 years at 20% per annum?",
+  "options": [
+   "₹400",
+   "₹320",
+   "₹440",
+   "₹360"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 10000 × 20 × 2/100 = ₹4000.\nCI adds interest on the first year's interest: 20% of 2000 = ₹400.\nShortcut for 2 years: P(R/100)² = 10000 × (20/100)² = ₹400."
+ },
+ {
+  "id": "qea1fe497b6e",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹52500 for 2 years at 8% per annum?",
+  "options": [
+   "₹334",
+   "₹504",
+   "₹336",
+   "₹339"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 52500 × 8 × 2/100 = ₹8400.\nCI adds interest on the first year's interest: 8% of 4200 = ₹336.\nShortcut for 2 years: P(R/100)² = 52500 × (8/100)² = ₹336."
+ },
+ {
+  "id": "qeb2ecd5300a",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹20000 for 2 years at 5% per annum?",
+  "options": [
+   "₹53",
+   "₹45",
+   "₹50",
+   "₹42"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 20000 × 5 × 2/100 = ₹2000.\nCI adds interest on the first year's interest: 5% of 1000 = ₹50.\nShortcut for 2 years: P(R/100)² = 20000 × (5/100)² = ₹50."
+ },
+ {
+  "id": "qed0a9689235",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹60000 for 2 years at 15% per annum?",
+  "options": [
+   "₹1353",
+   "₹1360",
+   "₹1485",
+   "₹1350"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 60000 × 15 × 2/100 = ₹18000.\nCI adds interest on the first year's interest: 15% of 9000 = ₹1350.\nShortcut for 2 years: P(R/100)² = 60000 × (15/100)² = ₹1350."
+ },
+ {
+  "id": "qef455d7eee7",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹7500 for 2 years at 10% per annum?",
+  "options": [
+   "₹60",
+   "₹56",
+   "₹75",
+   "₹71"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 7500 × 10 × 2/100 = ₹1500.\nCI adds interest on the first year's interest: 10% of 750 = ₹75.\nShortcut for 2 years: P(R/100)² = 7500 × (10/100)² = ₹75."
+ },
+ {
+  "id": "qf26bccb645e",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹32500 for 2 years at 12% per annum?",
+  "options": [
+   "₹466",
+   "₹491",
+   "₹468",
+   "₹398"
+  ],
+  "answer": 2,
+  "explanation": "SI for 2 years = 32500 × 12 × 2/100 = ₹7800.\nCI adds interest on the first year's interest: 12% of 3900 = ₹468.\nShortcut for 2 years: P(R/100)² = 32500 × (12/100)² = ₹468."
+ },
+ {
+  "id": "qf837d1ee291",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹42500 for 2 years at 12% per annum?",
+  "options": [
+   "₹602",
+   "₹520",
+   "₹673",
+   "₹612"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 42500 × 12 × 2/100 = ₹10200.\nCI adds interest on the first year's interest: 12% of 5100 = ₹612.\nShortcut for 2 years: P(R/100)² = 42500 × (12/100)² = ₹612."
+ },
+ {
+  "id": "qfb99e111351",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹55000 for 2 years at 10% per annum?",
+  "options": [
+   "₹605",
+   "₹549",
+   "₹825",
+   "₹550"
+  ],
+  "answer": 3,
+  "explanation": "SI for 2 years = 55000 × 10 × 2/100 = ₹11000.\nCI adds interest on the first year's interest: 10% of 5500 = ₹550.\nShortcut for 2 years: P(R/100)² = 55000 × (10/100)² = ₹550."
+ },
+ {
+  "id": "qfcc693e1fdc",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹35000 for 2 years at 12% per annum?",
+  "options": [
+   "₹504",
+   "₹501",
+   "₹479",
+   "₹378"
+  ],
+  "answer": 0,
+  "explanation": "SI for 2 years = 35000 × 12 × 2/100 = ₹8400.\nCI adds interest on the first year's interest: 12% of 4200 = ₹504.\nShortcut for 2 years: P(R/100)² = 35000 × (12/100)² = ₹504."
+ },
+ {
+  "id": "qfdad2f2fb61",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹10000 for 2 years at 15% per annum?",
+  "options": [
+   "₹236",
+   "₹225",
+   "₹220",
+   "₹270"
+  ],
+  "answer": 1,
+  "explanation": "SI for 2 years = 10000 × 15 × 2/100 = ₹3000.\nCI adds interest on the first year's interest: 15% of 1500 = ₹225.\nShortcut for 2 years: P(R/100)² = 10000 × (15/100)² = ₹225."
  }
 ]

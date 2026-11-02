@@ -1,0 +1,10502 @@
+[
+ {
+  "id": "q02955afb274",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "292",
+   "208",
+   "278",
+   "348"
+  ],
+  "group": {
+   "id": "g85f7fd7fba3",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      110,
+      470,
+      580
+     ],
+     [
+      "BOB",
+      510,
+      180,
+      180,
+      270
+     ],
+     [
+      "PNB",
+      440,
+      480,
+      240,
+      190
+     ],
+     [
+      "Indian",
+      340,
+      170,
+      470,
+      380
+     ],
+     [
+      "Canara",
+      450,
+      450,
+      430,
+      210
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2023: 110 + 180 + 480 + 170 + 450 = 1390.\nAverage = 1390/5 = 278."
+ },
+ {
+  "id": "q1148124bc39",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Union",
+   "SBI",
+   "PNB",
+   "Indian"
+  ],
+  "group": {
+   "id": "gb9337ab9806",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      490,
+      210,
+      590,
+      140
+     ],
+     [
+      "SBI",
+      440,
+      340,
+      180,
+      400
+     ],
+     [
+      "PNB",
+      260,
+      200,
+      130,
+      280
+     ],
+     [
+      "Union",
+      360,
+      580,
+      540,
+      510
+     ],
+     [
+      "Indian",
+      220,
+      190,
+      580,
+      410
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: Canara 1430, SBI 1360, PNB 870, Union 1990, Indian 1400.\nHighest: Union (1990)."
+ },
+ {
+  "id": "q16111fd040e",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of BOB's disbursement to Indian's in 2023?",
+  "options": [
+   "51:37",
+   "37:51",
+   "51:38",
+   "50:37"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2023: BOB = 510, Indian = 370.\n510:370, divide by 10: 51:37."
+ },
+ {
+  "id": "q16eccbb19a9",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "277",
+   "308",
+   "310",
+   "298"
+  ],
+  "group": {
+   "id": "ga5deb259155",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      480,
+      470,
+      430,
+      570
+     ],
+     [
+      "SBI",
+      340,
+      240,
+      170,
+      360
+     ],
+     [
+      "Indian",
+      530,
+      560,
+      430,
+      260
+     ],
+     [
+      "BOB",
+      300,
+      120,
+      350,
+      280
+     ],
+     [
+      "Canara",
+      400,
+      150,
+      320,
+      580
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2023: 470 + 240 + 560 + 120 + 150 = 1540.\nAverage = 1540/5 = 308."
+ },
+ {
+  "id": "q17e47134bc4",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+  "options": [
+   "1732",
+   "865",
+   "1903",
+   "1730"
+  ],
+  "group": {
+   "id": "g85f7fd7fba3",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      110,
+      470,
+      580
+     ],
+     [
+      "BOB",
+      510,
+      180,
+      180,
+      270
+     ],
+     [
+      "PNB",
+      440,
+      480,
+      240,
+      190
+     ],
+     [
+      "Indian",
+      340,
+      170,
+      470,
+      380
+     ],
+     [
+      "Canara",
+      450,
+      450,
+      430,
+      210
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Union: 570 + 110 + 470 + 580 = 1730."
+ },
+ {
+  "id": "q1a612f27ab3",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "490",
+   "564",
+   "735",
+   "514"
+  ],
+  "group": {
+   "id": "gf35f798072c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      530,
+      520,
+      390,
+      160
+     ],
+     [
+      "SBI",
+      500,
+      300,
+      380,
+      380
+     ],
+     [
+      "PNB",
+      440,
+      440,
+      390,
+      530
+     ],
+     [
+      "BOB",
+      420,
+      480,
+      530,
+      420
+     ],
+     [
+      "Indian",
+      560,
+      470,
+      460,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2022: 530 + 500 + 440 + 420 + 560 = 2450.\nAverage = 2450/5 = 490."
+ },
+ {
+  "id": "q1e3c8e606af",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Union",
+   "Indian",
+   "BOB",
+   "Canara"
+  ],
+  "group": {
+   "id": "gbe5df3daab8",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      360,
+      430,
+      130,
+      450
+     ],
+     [
+      "SBI",
+      180,
+      460,
+      270,
+      390
+     ],
+     [
+      "Indian",
+      120,
+      140,
+      140,
+      230
+     ],
+     [
+      "Canara",
+      340,
+      170,
+      240,
+      390
+     ],
+     [
+      "Union",
+      460,
+      480,
+      150,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: BOB 1370, SBI 1300, Indian 630, Canara 1140, Union 1380.\nHighest: Union (1380)."
+ },
+ {
+  "id": "q1e865e73d20",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did PNB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-58.78%",
+   "-32.66%",
+   "-55.51%",
+   "-65.31%"
+  ],
+  "group": {
+   "id": "ge1ab236e62b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      490,
+      220,
+      370,
+      170
+     ],
+     [
+      "BOB",
+      270,
+      130,
+      240,
+      320
+     ],
+     [
+      "Indian",
+      290,
+      490,
+      140,
+      580
+     ],
+     [
+      "SBI",
+      170,
+      520,
+      140,
+      350
+     ],
+     [
+      "Canara",
+      230,
+      260,
+      340,
+      180
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 490; 2025: 170.\nChange = -320.\n% change = -320/490 × 100 = -65.31%."
+ },
+ {
+  "id": "q1f930fea07c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+  "options": [
+   "1029",
+   "490",
+   "980",
+   "979"
+  ],
+  "group": {
+   "id": "g4057d4b45ff",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      370,
+      130,
+      280,
+      200
+     ],
+     [
+      "Canara",
+      470,
+      490,
+      190,
+      440
+     ],
+     [
+      "BOB",
+      120,
+      390,
+      270,
+      210
+     ],
+     [
+      "SBI",
+      390,
+      240,
+      360,
+      440
+     ],
+     [
+      "PNB",
+      310,
+      100,
+      410,
+      560
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Indian: 370 + 130 + 280 + 200 = 980."
+ },
+ {
+  "id": "q2144fb4ea2a",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "12.82%",
+   "10.26%",
+   "10.9%",
+   "9.82%"
+  ],
+  "group": {
+   "id": "g4057d4b45ff",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      370,
+      130,
+      280,
+      200
+     ],
+     [
+      "Canara",
+      470,
+      490,
+      190,
+      440
+     ],
+     [
+      "BOB",
+      120,
+      390,
+      270,
+      210
+     ],
+     [
+      "SBI",
+      390,
+      240,
+      360,
+      440
+     ],
+     [
+      "PNB",
+      310,
+      100,
+      410,
+      560
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2022: 390; 2025: 440.\nChange = 50.\n% change = 50/390 × 100 = 12.82%."
+ },
+ {
+  "id": "q2202b7c1bfe",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Indian's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "1.76%",
+   "11.76%",
+   "8.82%",
+   "14.11%"
+  ],
+  "group": {
+   "id": "g85f7fd7fba3",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      110,
+      470,
+      580
+     ],
+     [
+      "BOB",
+      510,
+      180,
+      180,
+      270
+     ],
+     [
+      "PNB",
+      440,
+      480,
+      240,
+      190
+     ],
+     [
+      "Indian",
+      340,
+      170,
+      470,
+      380
+     ],
+     [
+      "Canara",
+      450,
+      450,
+      430,
+      210
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: 340; 2025: 380.\nChange = 40.\n% change = 40/340 × 100 = 11.76%."
+ },
+ {
+  "id": "q24ef51887a8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "1575",
+   "1492",
+   "1568",
+   "1570"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "BOB: 350 + 510 + 510 + 200 = 1570."
+ },
+ {
+  "id": "q259c5830e47",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of SBI's disbursement to BOB's in 2024?",
+  "options": [
+   "5:7",
+   "18:25",
+   "36:49",
+   "37:49"
+  ],
+  "group": {
+   "id": "ge256d5e6644",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      130,
+      330,
+      570,
+      240
+     ],
+     [
+      "Indian",
+      460,
+      120,
+      580,
+      170
+     ],
+     [
+      "Canara",
+      330,
+      480,
+      220,
+      110
+     ],
+     [
+      "SBI",
+      520,
+      580,
+      360,
+      330
+     ],
+     [
+      "BOB",
+      380,
+      270,
+      490,
+      400
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2024: SBI = 360, BOB = 490.\n360:490, divide by 10: 36:49."
+ },
+ {
+  "id": "q25a340241b6",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+  "options": [
+   "1408",
+   "1280",
+   "1277",
+   "1216"
+  ],
+  "group": {
+   "id": "g4fe636c01b6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      460,
+      300,
+      450,
+      290
+     ],
+     [
+      "BOB",
+      260,
+      450,
+      390,
+      390
+     ],
+     [
+      "Indian",
+      570,
+      100,
+      120,
+      490
+     ],
+     [
+      "Canara",
+      270,
+      190,
+      550,
+      350
+     ],
+     [
+      "PNB",
+      290,
+      370,
+      100,
+      460
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Indian: 570 + 100 + 120 + 490 = 1280."
+ },
+ {
+  "id": "q2857632b6bd",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Union's disbursement to BOB's in 2022?",
+  "options": [
+   "9:11",
+   "44:37",
+   "43:36",
+   "11:9"
+  ],
+  "group": {
+   "id": "g42d6585ba22",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      380,
+      320,
+      560,
+      390
+     ],
+     [
+      "BOB",
+      360,
+      340,
+      160,
+      140
+     ],
+     [
+      "Union",
+      440,
+      440,
+      210,
+      540
+     ],
+     [
+      "Indian",
+      580,
+      440,
+      520,
+      140
+     ],
+     [
+      "PNB",
+      490,
+      330,
+      550,
+      340
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: Union = 440, BOB = 360.\n440:360, divide by 40: 11:9."
+ },
+ {
+  "id": "q2f549605710",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+  "options": [
+   "246",
+   "234",
+   "184",
+   "295"
+  ],
+  "group": {
+   "id": "ge1ab236e62b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      490,
+      220,
+      370,
+      170
+     ],
+     [
+      "BOB",
+      270,
+      130,
+      240,
+      320
+     ],
+     [
+      "Indian",
+      290,
+      490,
+      140,
+      580
+     ],
+     [
+      "SBI",
+      170,
+      520,
+      140,
+      350
+     ],
+     [
+      "Canara",
+      230,
+      260,
+      340,
+      180
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2024: 370 + 240 + 140 + 140 + 340 = 1230.\nAverage = 1230/5 = 246."
+ },
+ {
+  "id": "q2f585e050c2",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "321",
+   "290",
+   "146",
+   "292"
+  ],
+  "group": {
+   "id": "gbe5df3daab8",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      360,
+      430,
+      130,
+      450
+     ],
+     [
+      "SBI",
+      180,
+      460,
+      270,
+      390
+     ],
+     [
+      "Indian",
+      120,
+      140,
+      140,
+      230
+     ],
+     [
+      "Canara",
+      340,
+      170,
+      240,
+      390
+     ],
+     [
+      "Union",
+      460,
+      480,
+      150,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 360 + 180 + 120 + 340 + 460 = 1460.\nAverage = 1460/5 = 292."
+ },
+ {
+  "id": "q356b76e4416",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "396",
+   "401",
+   "594",
+   "397"
+  ],
+  "group": {
+   "id": "g4fe636c01b6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      460,
+      300,
+      450,
+      290
+     ],
+     [
+      "BOB",
+      260,
+      450,
+      390,
+      390
+     ],
+     [
+      "Indian",
+      570,
+      100,
+      120,
+      490
+     ],
+     [
+      "Canara",
+      270,
+      190,
+      550,
+      350
+     ],
+     [
+      "PNB",
+      290,
+      370,
+      100,
+      460
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2025: 290 + 390 + 490 + 350 + 460 = 1980.\nAverage = 1980/5 = 396."
+ },
+ {
+  "id": "q398f7e25267",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did BOB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "33.34%",
+   "31.67%",
+   "41.67%",
+   "62.51%"
+  ],
+  "group": {
+   "id": "g74f32b4ba59",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      370,
+      490,
+      170
+     ],
+     [
+      "PNB",
+      100,
+      450,
+      160,
+      400
+     ],
+     [
+      "SBI",
+      270,
+      210,
+      390,
+      250
+     ],
+     [
+      "Union",
+      460,
+      510,
+      200,
+      370
+     ],
+     [
+      "Indian",
+      200,
+      590,
+      500,
+      260
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: 120; 2025: 170.\nChange = 50.\n% change = 50/120 × 100 = 41.67%."
+ },
+ {
+  "id": "q47a8fd1e4e1",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Canara",
+   "SBI",
+   "PNB",
+   "BOB"
+  ],
+  "group": {
+   "id": "g4fe636c01b6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      460,
+      300,
+      450,
+      290
+     ],
+     [
+      "BOB",
+      260,
+      450,
+      390,
+      390
+     ],
+     [
+      "Indian",
+      570,
+      100,
+      120,
+      490
+     ],
+     [
+      "Canara",
+      270,
+      190,
+      550,
+      350
+     ],
+     [
+      "PNB",
+      290,
+      370,
+      100,
+      460
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: SBI 1500, BOB 1490, Indian 1280, Canara 1360, PNB 1220.\nHighest: SBI (1500)."
+ },
+ {
+  "id": "q48796db80cb",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of SBI's disbursement to Canara's in 2022?",
+  "options": [
+   "1:2",
+   "9:17",
+   "18:35",
+   "19:34"
+  ],
+  "group": {
+   "id": "gbe5df3daab8",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      360,
+      430,
+      130,
+      450
+     ],
+     [
+      "SBI",
+      180,
+      460,
+      270,
+      390
+     ],
+     [
+      "Indian",
+      120,
+      140,
+      140,
+      230
+     ],
+     [
+      "Canara",
+      340,
+      170,
+      240,
+      390
+     ],
+     [
+      "Union",
+      460,
+      480,
+      150,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: SBI = 180, Canara = 340.\n180:340, divide by 20: 9:17."
+ },
+ {
+  "id": "q49db7b1d106",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "BOB",
+   "Canara",
+   "SBI"
+  ],
+  "group": {
+   "id": "g4057d4b45ff",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      370,
+      130,
+      280,
+      200
+     ],
+     [
+      "Canara",
+      470,
+      490,
+      190,
+      440
+     ],
+     [
+      "BOB",
+      120,
+      390,
+      270,
+      210
+     ],
+     [
+      "SBI",
+      390,
+      240,
+      360,
+      440
+     ],
+     [
+      "PNB",
+      310,
+      100,
+      410,
+      560
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: Indian 980, Canara 1590, BOB 990, SBI 1430, PNB 1380.\nHighest: Canara (1590)."
+ },
+ {
+  "id": "q49f738246a3",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "1670",
+   "1837",
+   "1667",
+   "1665"
+  ],
+  "group": {
+   "id": "ge304c80a27e",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      160,
+      520,
+      350,
+      370
+     ],
+     [
+      "PNB",
+      170,
+      390,
+      230,
+      590
+     ],
+     [
+      "Canara",
+      530,
+      260,
+      250,
+      310
+     ],
+     [
+      "BOB",
+      470,
+      270,
+      490,
+      440
+     ],
+     [
+      "SBI",
+      180,
+      430,
+      210,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "BOB: 470 + 270 + 490 + 440 = 1670."
+ },
+ {
+  "id": "q49fbfa217d8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "BOB",
+   "SBI",
+   "PNB",
+   "Canara"
+  ],
+  "group": {
+   "id": "ge304c80a27e",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      160,
+      520,
+      350,
+      370
+     ],
+     [
+      "PNB",
+      170,
+      390,
+      230,
+      590
+     ],
+     [
+      "Canara",
+      530,
+      260,
+      250,
+      310
+     ],
+     [
+      "BOB",
+      470,
+      270,
+      490,
+      440
+     ],
+     [
+      "SBI",
+      180,
+      430,
+      210,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: Union 1400, PNB 1380, Canara 1350, BOB 1670, SBI 1360.\nHighest: BOB (1670)."
+ },
+ {
+  "id": "q5001b65e905",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Union's disbursement to Indian's in 2023?",
+  "options": [
+   "11:17",
+   "10:17",
+   "11:18",
+   "12:17"
+  ],
+  "group": {
+   "id": "g85f7fd7fba3",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      110,
+      470,
+      580
+     ],
+     [
+      "BOB",
+      510,
+      180,
+      180,
+      270
+     ],
+     [
+      "PNB",
+      440,
+      480,
+      240,
+      190
+     ],
+     [
+      "Indian",
+      340,
+      170,
+      470,
+      380
+     ],
+     [
+      "Canara",
+      450,
+      450,
+      430,
+      210
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2023: Union = 110, Indian = 170.\n110:170, divide by 10: 11:17."
+ },
+ {
+  "id": "q5e28703cd02",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "2055",
+   "1367",
+   "1360",
+   "1370"
+  ],
+  "group": {
+   "id": "g5267ccb4937",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      380,
+      580,
+      270,
+      140
+     ],
+     [
+      "Canara",
+      270,
+      300,
+      580,
+      170
+     ],
+     [
+      "SBI",
+      510,
+      210,
+      530,
+      430
+     ],
+     [
+      "PNB",
+      290,
+      540,
+      100,
+      170
+     ],
+     [
+      "Indian",
+      380,
+      540,
+      210,
+      250
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "BOB: 380 + 580 + 270 + 140 = 1370."
+ },
+ {
+  "id": "q603b93c5407",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+  "options": [
+   "1872",
+   "2150",
+   "2244",
+   "1870"
+  ],
+  "group": {
+   "id": "g575ad8abce1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      380,
+      200,
+      150
+     ],
+     [
+      "Canara",
+      170,
+      550,
+      550,
+      220
+     ],
+     [
+      "BOB",
+      540,
+      230,
+      420,
+      580
+     ],
+     [
+      "Indian",
+      380,
+      490,
+      430,
+      570
+     ],
+     [
+      "PNB",
+      270,
+      130,
+      350,
+      520
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Indian: 380 + 490 + 430 + 570 = 1870."
+ },
+ {
+  "id": "q6106c3336fa",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Canara's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-76.43%",
+   "-53.57%",
+   "-71.43%",
+   "-64.29%"
+  ],
+  "group": {
+   "id": "gb9337ab9806",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      490,
+      210,
+      590,
+      140
+     ],
+     [
+      "SBI",
+      440,
+      340,
+      180,
+      400
+     ],
+     [
+      "PNB",
+      260,
+      200,
+      130,
+      280
+     ],
+     [
+      "Union",
+      360,
+      580,
+      540,
+      510
+     ],
+     [
+      "Indian",
+      220,
+      190,
+      580,
+      410
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: 490; 2025: 140.\nChange = -350.\n% change = -350/490 × 100 = -71.43%."
+ },
+ {
+  "id": "q6c136489e6d",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of PNB's disbursement to BOB's in 2025?",
+  "options": [
+   "17:40",
+   "40:17",
+   "20:9",
+   "39:17"
+  ],
+  "group": {
+   "id": "g74f32b4ba59",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      370,
+      490,
+      170
+     ],
+     [
+      "PNB",
+      100,
+      450,
+      160,
+      400
+     ],
+     [
+      "SBI",
+      270,
+      210,
+      390,
+      250
+     ],
+     [
+      "Union",
+      460,
+      510,
+      200,
+      370
+     ],
+     [
+      "Indian",
+      200,
+      590,
+      500,
+      260
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2025: PNB = 400, BOB = 170.\n400:170, divide by 10: 40:17."
+ },
+ {
+  "id": "q6cb82a6448e",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Canara",
+   "Indian",
+   "BOB",
+   "PNB"
+  ],
+  "group": {
+   "id": "gf35f798072c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      530,
+      520,
+      390,
+      160
+     ],
+     [
+      "SBI",
+      500,
+      300,
+      380,
+      380
+     ],
+     [
+      "PNB",
+      440,
+      440,
+      390,
+      530
+     ],
+     [
+      "BOB",
+      420,
+      480,
+      530,
+      420
+     ],
+     [
+      "Indian",
+      560,
+      470,
+      460,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: Canara 1600, SBI 1560, PNB 1800, BOB 1850, Indian 2030.\nHighest: Indian (2030)."
+ },
+ {
+  "id": "q6d407b64ee2",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+  "options": [
+   "1300",
+   "1305",
+   "975",
+   "1365"
+  ],
+  "group": {
+   "id": "gbe5df3daab8",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      360,
+      430,
+      130,
+      450
+     ],
+     [
+      "SBI",
+      180,
+      460,
+      270,
+      390
+     ],
+     [
+      "Indian",
+      120,
+      140,
+      140,
+      230
+     ],
+     [
+      "Canara",
+      340,
+      170,
+      240,
+      390
+     ],
+     [
+      "Union",
+      460,
+      480,
+      150,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "SBI: 180 + 460 + 270 + 390 = 1300."
+ },
+ {
+  "id": "q6d66858de1b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "285",
+   "277",
+   "280",
+   "224"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2023: 370 + 510 + 240 + 180 + 100 = 1400.\nAverage = 1400/5 = 280."
+ },
+ {
+  "id": "q707badcda63",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Indian's disbursement to SBI's in 2023?",
+  "options": [
+   "1:2",
+   "13:25",
+   "7:12",
+   "13:24"
+  ],
+  "group": {
+   "id": "g4057d4b45ff",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      370,
+      130,
+      280,
+      200
+     ],
+     [
+      "Canara",
+      470,
+      490,
+      190,
+      440
+     ],
+     [
+      "BOB",
+      120,
+      390,
+      270,
+      210
+     ],
+     [
+      "SBI",
+      390,
+      240,
+      360,
+      440
+     ],
+     [
+      "PNB",
+      310,
+      100,
+      410,
+      560
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2023: Indian = 130, SBI = 240.\n130:240, divide by 10: 13:24."
+ },
+ {
+  "id": "q75bc4871d24",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "452",
+   "360",
+   "225",
+   "450"
+  ],
+  "group": {
+   "id": "ge304c80a27e",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      160,
+      520,
+      350,
+      370
+     ],
+     [
+      "PNB",
+      170,
+      390,
+      230,
+      590
+     ],
+     [
+      "Canara",
+      530,
+      260,
+      250,
+      310
+     ],
+     [
+      "BOB",
+      470,
+      270,
+      490,
+      440
+     ],
+     [
+      "SBI",
+      180,
+      430,
+      210,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2025: 370 + 590 + 310 + 440 + 540 = 2250.\nAverage = 2250/5 = 450."
+ },
+ {
+  "id": "q7866509e043",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "BOB",
+   "Canara",
+   "PNB",
+   "Indian"
+  ],
+  "group": {
+   "id": "g575ad8abce1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      380,
+      200,
+      150
+     ],
+     [
+      "Canara",
+      170,
+      550,
+      550,
+      220
+     ],
+     [
+      "BOB",
+      540,
+      230,
+      420,
+      580
+     ],
+     [
+      "Indian",
+      380,
+      490,
+      430,
+      570
+     ],
+     [
+      "PNB",
+      270,
+      130,
+      350,
+      520
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: Union 1300, Canara 1490, BOB 1770, Indian 1870, PNB 1270.\nHighest: Indian (1870)."
+ },
+ {
+  "id": "q78dddd29221",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Canara's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "26.47%",
+   "29.41%",
+   "27.41%",
+   "25%"
+  ],
+  "group": {
+   "id": "g575ad8abce1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      380,
+      200,
+      150
+     ],
+     [
+      "Canara",
+      170,
+      550,
+      550,
+      220
+     ],
+     [
+      "BOB",
+      540,
+      230,
+      420,
+      580
+     ],
+     [
+      "Indian",
+      380,
+      490,
+      430,
+      570
+     ],
+     [
+      "PNB",
+      270,
+      130,
+      350,
+      520
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: 170; 2025: 220.\nChange = 50.\n% change = 50/170 × 100 = 29.41%."
+ },
+ {
+  "id": "q7c6a53ade9f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Indian",
+   "BOB",
+   "Union",
+   "PNB"
+  ],
+  "group": {
+   "id": "g74f32b4ba59",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      370,
+      490,
+      170
+     ],
+     [
+      "PNB",
+      100,
+      450,
+      160,
+      400
+     ],
+     [
+      "SBI",
+      270,
+      210,
+      390,
+      250
+     ],
+     [
+      "Union",
+      460,
+      510,
+      200,
+      370
+     ],
+     [
+      "Indian",
+      200,
+      590,
+      500,
+      260
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: BOB 1150, PNB 1110, SBI 1120, Union 1540, Indian 1550.\nHighest: Indian (1550)."
+ },
+ {
+  "id": "q824cab5ec96",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "460",
+   "450",
+   "451",
+   "675"
+  ],
+  "group": {
+   "id": "g42d6585ba22",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      380,
+      320,
+      560,
+      390
+     ],
+     [
+      "BOB",
+      360,
+      340,
+      160,
+      140
+     ],
+     [
+      "Union",
+      440,
+      440,
+      210,
+      540
+     ],
+     [
+      "Indian",
+      580,
+      440,
+      520,
+      140
+     ],
+     [
+      "PNB",
+      490,
+      330,
+      550,
+      340
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: 380 + 360 + 440 + 580 + 490 = 2250.\nAverage = 2250/5 = 450."
+ },
+ {
+  "id": "q858ab8b8a18",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Canara",
+   "Union",
+   "PNB",
+   "BOB"
+  ],
+  "group": {
+   "id": "g42d6585ba22",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      380,
+      320,
+      560,
+      390
+     ],
+     [
+      "BOB",
+      360,
+      340,
+      160,
+      140
+     ],
+     [
+      "Union",
+      440,
+      440,
+      210,
+      540
+     ],
+     [
+      "Indian",
+      580,
+      440,
+      520,
+      140
+     ],
+     [
+      "PNB",
+      490,
+      330,
+      550,
+      340
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: Canara 1650, BOB 1000, Union 1630, Indian 1680, PNB 1710.\nHighest: PNB (1710)."
+ },
+ {
+  "id": "q895f20d0def",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Union's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "126.25%",
+   "121.25%",
+   "131.25%",
+   "150.94%"
+  ],
+  "group": {
+   "id": "ge304c80a27e",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      160,
+      520,
+      350,
+      370
+     ],
+     [
+      "PNB",
+      170,
+      390,
+      230,
+      590
+     ],
+     [
+      "Canara",
+      530,
+      260,
+      250,
+      310
+     ],
+     [
+      "BOB",
+      470,
+      270,
+      490,
+      440
+     ],
+     [
+      "SBI",
+      180,
+      430,
+      210,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: 160; 2025: 370.\nChange = 210.\n% change = 210/160 × 100 = 131.25%."
+ },
+ {
+  "id": "q8e16865a65b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "177",
+   "349",
+   "301",
+   "354"
+  ],
+  "group": {
+   "id": "gb9337ab9806",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      490,
+      210,
+      590,
+      140
+     ],
+     [
+      "SBI",
+      440,
+      340,
+      180,
+      400
+     ],
+     [
+      "PNB",
+      260,
+      200,
+      130,
+      280
+     ],
+     [
+      "Union",
+      360,
+      580,
+      540,
+      510
+     ],
+     [
+      "Indian",
+      220,
+      190,
+      580,
+      410
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 490 + 440 + 260 + 360 + 220 = 1770.\nAverage = 1770/5 = 354."
+ },
+ {
+  "id": "q93e205ea393",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Canara's disbursement to PNB's in 2024?",
+  "options": [
+   "33:37",
+   "17:19",
+   "34:37",
+   "35:37"
+  ],
+  "group": {
+   "id": "ge1ab236e62b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      490,
+      220,
+      370,
+      170
+     ],
+     [
+      "BOB",
+      270,
+      130,
+      240,
+      320
+     ],
+     [
+      "Indian",
+      290,
+      490,
+      140,
+      580
+     ],
+     [
+      "SBI",
+      170,
+      520,
+      140,
+      350
+     ],
+     [
+      "Canara",
+      230,
+      260,
+      340,
+      180
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2024: Canara = 340, PNB = 370.\n340:370, divide by 10: 34:37."
+ },
+ {
+  "id": "q946dd454f48",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+  "options": [
+   "1200",
+   "1600",
+   "1602",
+   "1360"
+  ],
+  "group": {
+   "id": "gf35f798072c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      530,
+      520,
+      390,
+      160
+     ],
+     [
+      "SBI",
+      500,
+      300,
+      380,
+      380
+     ],
+     [
+      "PNB",
+      440,
+      440,
+      390,
+      530
+     ],
+     [
+      "BOB",
+      420,
+      480,
+      530,
+      420
+     ],
+     [
+      "Indian",
+      560,
+      470,
+      460,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Canara: 530 + 520 + 390 + 160 = 1600."
+ },
+ {
+  "id": "q952a3fbe7cd",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+  "options": [
+   "388",
+   "389",
+   "390",
+   "488"
+  ],
+  "group": {
+   "id": "g575ad8abce1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      380,
+      200,
+      150
+     ],
+     [
+      "Canara",
+      170,
+      550,
+      550,
+      220
+     ],
+     [
+      "BOB",
+      540,
+      230,
+      420,
+      580
+     ],
+     [
+      "Indian",
+      380,
+      490,
+      430,
+      570
+     ],
+     [
+      "PNB",
+      270,
+      130,
+      350,
+      520
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2024: 200 + 550 + 420 + 430 + 350 = 1950.\nAverage = 1950/5 = 390."
+ },
+ {
+  "id": "q96b90d746fe",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "SBI",
+   "Canara",
+   "PNB",
+   "Indian"
+  ],
+  "group": {
+   "id": "ga5deb259155",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      480,
+      470,
+      430,
+      570
+     ],
+     [
+      "SBI",
+      340,
+      240,
+      170,
+      360
+     ],
+     [
+      "Indian",
+      530,
+      560,
+      430,
+      260
+     ],
+     [
+      "BOB",
+      300,
+      120,
+      350,
+      280
+     ],
+     [
+      "Canara",
+      400,
+      150,
+      320,
+      580
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: PNB 1950, SBI 1110, Indian 1780, BOB 1050, Canara 1450.\nHighest: PNB (1950)."
+ },
+ {
+  "id": "qa000ded072a",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "287",
+   "304",
+   "435",
+   "290"
+  ],
+  "group": {
+   "id": "g74f32b4ba59",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      370,
+      490,
+      170
+     ],
+     [
+      "PNB",
+      100,
+      450,
+      160,
+      400
+     ],
+     [
+      "SBI",
+      270,
+      210,
+      390,
+      250
+     ],
+     [
+      "Union",
+      460,
+      510,
+      200,
+      370
+     ],
+     [
+      "Indian",
+      200,
+      590,
+      500,
+      260
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2025: 170 + 400 + 250 + 370 + 260 = 1450.\nAverage = 1450/5 = 290."
+ },
+ {
+  "id": "qa3d883fcd19",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "421",
+   "384",
+   "366",
+   "367"
+  ],
+  "group": {
+   "id": "g5267ccb4937",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      380,
+      580,
+      270,
+      140
+     ],
+     [
+      "Canara",
+      270,
+      300,
+      580,
+      170
+     ],
+     [
+      "SBI",
+      510,
+      210,
+      530,
+      430
+     ],
+     [
+      "PNB",
+      290,
+      540,
+      100,
+      170
+     ],
+     [
+      "Indian",
+      380,
+      540,
+      210,
+      250
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: 380 + 270 + 510 + 290 + 380 = 1830.\nAverage = 1830/5 = 366."
+ },
+ {
+  "id": "qa3e9bf2d267",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "BOB",
+   "Canara",
+   "Union"
+  ],
+  "group": {
+   "id": "g85f7fd7fba3",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      110,
+      470,
+      580
+     ],
+     [
+      "BOB",
+      510,
+      180,
+      180,
+      270
+     ],
+     [
+      "PNB",
+      440,
+      480,
+      240,
+      190
+     ],
+     [
+      "Indian",
+      340,
+      170,
+      470,
+      380
+     ],
+     [
+      "Canara",
+      450,
+      450,
+      430,
+      210
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: Union 1730, BOB 1140, PNB 1350, Indian 1360, Canara 1540.\nHighest: Union (1730)."
+ },
+ {
+  "id": "qa4c1a889aba",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by PNB over all the years shown (₹ crore)?",
+  "options": [
+   "1110",
+   "1332",
+   "555",
+   "1105"
+  ],
+  "group": {
+   "id": "g74f32b4ba59",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      370,
+      490,
+      170
+     ],
+     [
+      "PNB",
+      100,
+      450,
+      160,
+      400
+     ],
+     [
+      "SBI",
+      270,
+      210,
+      390,
+      250
+     ],
+     [
+      "Union",
+      460,
+      510,
+      200,
+      370
+     ],
+     [
+      "Indian",
+      200,
+      590,
+      500,
+      260
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "PNB: 100 + 450 + 160 + 400 = 1110."
+ },
+ {
+  "id": "qa501e4c2fdb",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-20%",
+   "-14%",
+   "-34%",
+   "-24%"
+  ],
+  "group": {
+   "id": "gf35f798072c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      530,
+      520,
+      390,
+      160
+     ],
+     [
+      "SBI",
+      500,
+      300,
+      380,
+      380
+     ],
+     [
+      "PNB",
+      440,
+      440,
+      390,
+      530
+     ],
+     [
+      "BOB",
+      420,
+      480,
+      530,
+      420
+     ],
+     [
+      "Indian",
+      560,
+      470,
+      460,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 500; 2025: 380.\nChange = -120.\n% change = -120/500 × 100 = -24%."
+ },
+ {
+  "id": "qa70876a6bba",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did BOB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-61.11%",
+   "-63.11%",
+   "-58.11%",
+   "-76.39%"
+  ],
+  "group": {
+   "id": "g42d6585ba22",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      380,
+      320,
+      560,
+      390
+     ],
+     [
+      "BOB",
+      360,
+      340,
+      160,
+      140
+     ],
+     [
+      "Union",
+      440,
+      440,
+      210,
+      540
+     ],
+     [
+      "Indian",
+      580,
+      440,
+      520,
+      140
+     ],
+     [
+      "PNB",
+      490,
+      330,
+      550,
+      340
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2022: 360; 2025: 140.\nChange = -220.\n% change = -220/360 × 100 = -61.11%."
+ },
+ {
+  "id": "qaaf184c8401",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+  "options": [
+   "1445",
+   "1160",
+   "1450",
+   "1453"
+  ],
+  "group": {
+   "id": "ga5deb259155",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      480,
+      470,
+      430,
+      570
+     ],
+     [
+      "SBI",
+      340,
+      240,
+      170,
+      360
+     ],
+     [
+      "Indian",
+      530,
+      560,
+      430,
+      260
+     ],
+     [
+      "BOB",
+      300,
+      120,
+      350,
+      280
+     ],
+     [
+      "Canara",
+      400,
+      150,
+      320,
+      580
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Canara: 400 + 150 + 320 + 580 = 1450."
+ },
+ {
+  "id": "qab73db8cdf9",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "5.88%",
+   "6.88%",
+   "5%",
+   "7.06%"
+  ],
+  "group": {
+   "id": "ga5deb259155",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      480,
+      470,
+      430,
+      570
+     ],
+     [
+      "SBI",
+      340,
+      240,
+      170,
+      360
+     ],
+     [
+      "Indian",
+      530,
+      560,
+      430,
+      260
+     ],
+     [
+      "BOB",
+      300,
+      120,
+      350,
+      280
+     ],
+     [
+      "Canara",
+      400,
+      150,
+      320,
+      580
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2022: 340; 2025: 360.\nChange = 20.\n% change = 20/340 × 100 = 5.88%."
+ },
+ {
+  "id": "qadc942341b0",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Indian's disbursement to Canara's in 2024?",
+  "options": [
+   "43:55",
+   "42:55",
+   "43:56",
+   "4:5"
+  ],
+  "group": {
+   "id": "g575ad8abce1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      570,
+      380,
+      200,
+      150
+     ],
+     [
+      "Canara",
+      170,
+      550,
+      550,
+      220
+     ],
+     [
+      "BOB",
+      540,
+      230,
+      420,
+      580
+     ],
+     [
+      "Indian",
+      380,
+      490,
+      430,
+      570
+     ],
+     [
+      "PNB",
+      270,
+      130,
+      350,
+      520
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2024: Indian = 430, Canara = 550.\n430:550, divide by 10: 43:55."
+ },
+ {
+  "id": "qae8613b3961",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of BOB's disbursement to Union's in 2025?",
+  "options": [
+   "37:44",
+   "44:37",
+   "22:19",
+   "43:37"
+  ],
+  "group": {
+   "id": "ge304c80a27e",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      160,
+      520,
+      350,
+      370
+     ],
+     [
+      "PNB",
+      170,
+      390,
+      230,
+      590
+     ],
+     [
+      "Canara",
+      530,
+      260,
+      250,
+      310
+     ],
+     [
+      "BOB",
+      470,
+      270,
+      490,
+      440
+     ],
+     [
+      "SBI",
+      180,
+      430,
+      210,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2025: BOB = 440, Union = 370.\n440:370, divide by 10: 44:37."
+ },
+ {
+  "id": "qb55902e0b53",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "SBI",
+   "Indian",
+   "BOB",
+   "Canara"
+  ],
+  "group": {
+   "id": "ge1ab236e62b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      490,
+      220,
+      370,
+      170
+     ],
+     [
+      "BOB",
+      270,
+      130,
+      240,
+      320
+     ],
+     [
+      "Indian",
+      290,
+      490,
+      140,
+      580
+     ],
+     [
+      "SBI",
+      170,
+      520,
+      140,
+      350
+     ],
+     [
+      "Canara",
+      230,
+      260,
+      340,
+      180
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: PNB 1250, BOB 960, Indian 1500, SBI 1180, Canara 1010.\nHighest: Indian (1500)."
+ },
+ {
+  "id": "qb6f417ccaff",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did BOB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "4.47%",
+   "15.26%",
+   "6.05%",
+   "5.26%"
+  ],
+  "group": {
+   "id": "ge256d5e6644",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      130,
+      330,
+      570,
+      240
+     ],
+     [
+      "Indian",
+      460,
+      120,
+      580,
+      170
+     ],
+     [
+      "Canara",
+      330,
+      480,
+      220,
+      110
+     ],
+     [
+      "SBI",
+      520,
+      580,
+      360,
+      330
+     ],
+     [
+      "BOB",
+      380,
+      270,
+      490,
+      400
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 380; 2025: 400.\nChange = 20.\n% change = 20/380 × 100 = 5.26%."
+ },
+ {
+  "id": "qbbbd6a1ba73",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+  "options": [
+   "444",
+   "422",
+   "533",
+   "449"
+  ],
+  "group": {
+   "id": "ge256d5e6644",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      130,
+      330,
+      570,
+      240
+     ],
+     [
+      "Indian",
+      460,
+      120,
+      580,
+      170
+     ],
+     [
+      "Canara",
+      330,
+      480,
+      220,
+      110
+     ],
+     [
+      "SBI",
+      520,
+      580,
+      360,
+      330
+     ],
+     [
+      "BOB",
+      380,
+      270,
+      490,
+      400
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2024: 570 + 580 + 220 + 360 + 490 = 2220.\nAverage = 2220/5 = 444."
+ },
+ {
+  "id": "qbbd3019b9f5",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Indian's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-29.22%",
+   "-34.38%",
+   "-36.38%",
+   "-32.66%"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: 320; 2025: 210.\nChange = -110.\n% change = -110/320 × 100 = -34.38%."
+ },
+ {
+  "id": "qbd12e57729c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+  "options": [
+   "1162",
+   "1010",
+   "909",
+   "1013"
+  ],
+  "group": {
+   "id": "ge1ab236e62b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      490,
+      220,
+      370,
+      170
+     ],
+     [
+      "BOB",
+      270,
+      130,
+      240,
+      320
+     ],
+     [
+      "Indian",
+      290,
+      490,
+      140,
+      580
+     ],
+     [
+      "SBI",
+      170,
+      520,
+      140,
+      350
+     ],
+     [
+      "Canara",
+      230,
+      260,
+      340,
+      180
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Canara: 230 + 260 + 340 + 180 = 1010."
+ },
+ {
+  "id": "qc36fbfa942b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did PNB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "57.62%",
+   "60.62%",
+   "73.27%",
+   "58.62%"
+  ],
+  "group": {
+   "id": "g4fe636c01b6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      460,
+      300,
+      450,
+      290
+     ],
+     [
+      "BOB",
+      260,
+      450,
+      390,
+      390
+     ],
+     [
+      "Indian",
+      570,
+      100,
+      120,
+      490
+     ],
+     [
+      "Canara",
+      270,
+      190,
+      550,
+      350
+     ],
+     [
+      "PNB",
+      290,
+      370,
+      100,
+      460
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 290; 2025: 460.\nChange = 170.\n% change = 170/290 × 100 = 58.62%."
+ },
+ {
+  "id": "qc4f981d5334",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Canara's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "16.71%",
+   "13.97%",
+   "14.71%",
+   "12.5%"
+  ],
+  "group": {
+   "id": "gbe5df3daab8",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      360,
+      430,
+      130,
+      450
+     ],
+     [
+      "SBI",
+      180,
+      460,
+      270,
+      390
+     ],
+     [
+      "Indian",
+      120,
+      140,
+      140,
+      230
+     ],
+     [
+      "Canara",
+      340,
+      170,
+      240,
+      390
+     ],
+     [
+      "Union",
+      460,
+      480,
+      150,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: 340; 2025: 390.\nChange = 50.\n% change = 50/340 × 100 = 14.71%."
+ },
+ {
+  "id": "qc54f748580f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "260",
+   "270",
+   "269",
+   "272"
+  ],
+  "group": {
+   "id": "g4057d4b45ff",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      370,
+      130,
+      280,
+      200
+     ],
+     [
+      "Canara",
+      470,
+      490,
+      190,
+      440
+     ],
+     [
+      "BOB",
+      120,
+      390,
+      270,
+      210
+     ],
+     [
+      "SBI",
+      390,
+      240,
+      360,
+      440
+     ],
+     [
+      "PNB",
+      310,
+      100,
+      410,
+      560
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2023: 130 + 490 + 390 + 240 + 100 = 1350.\nAverage = 1350/5 = 270."
+ },
+ {
+  "id": "qc91ef6e8943",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-19.61%",
+   "-15.69%",
+   "-14.12%",
+   "-25.69%"
+  ],
+  "group": {
+   "id": "g5267ccb4937",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      380,
+      580,
+      270,
+      140
+     ],
+     [
+      "Canara",
+      270,
+      300,
+      580,
+      170
+     ],
+     [
+      "SBI",
+      510,
+      210,
+      530,
+      430
+     ],
+     [
+      "PNB",
+      290,
+      540,
+      100,
+      170
+     ],
+     [
+      "Indian",
+      380,
+      540,
+      210,
+      250
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: 510; 2025: 430.\nChange = -80.\n% change = -80/510 × 100 = -15.69%."
+ },
+ {
+  "id": "qd03c87fc7f1",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+  "options": [
+   "1793",
+   "1956",
+   "1630",
+   "1222"
+  ],
+  "group": {
+   "id": "g42d6585ba22",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      380,
+      320,
+      560,
+      390
+     ],
+     [
+      "BOB",
+      360,
+      340,
+      160,
+      140
+     ],
+     [
+      "Union",
+      440,
+      440,
+      210,
+      540
+     ],
+     [
+      "Indian",
+      580,
+      440,
+      520,
+      140
+     ],
+     [
+      "PNB",
+      490,
+      330,
+      550,
+      340
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Union: 440 + 440 + 210 + 540 = 1630."
+ },
+ {
+  "id": "qd298b99eaf8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+  "options": [
+   "1360",
+   "1020",
+   "1362",
+   "1357"
+  ],
+  "group": {
+   "id": "gb9337ab9806",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      490,
+      210,
+      590,
+      140
+     ],
+     [
+      "SBI",
+      440,
+      340,
+      180,
+      400
+     ],
+     [
+      "PNB",
+      260,
+      200,
+      130,
+      280
+     ],
+     [
+      "Union",
+      360,
+      580,
+      540,
+      510
+     ],
+     [
+      "Indian",
+      220,
+      190,
+      580,
+      410
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "SBI: 440 + 340 + 180 + 400 = 1360."
+ },
+ {
+  "id": "qd320005048d",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Indian's disbursement to PNB's in 2025?",
+  "options": [
+   "46:49",
+   "49:47",
+   "49:46",
+   "24:23"
+  ],
+  "group": {
+   "id": "g4fe636c01b6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      460,
+      300,
+      450,
+      290
+     ],
+     [
+      "BOB",
+      260,
+      450,
+      390,
+      390
+     ],
+     [
+      "Indian",
+      570,
+      100,
+      120,
+      490
+     ],
+     [
+      "Canara",
+      270,
+      190,
+      550,
+      350
+     ],
+     [
+      "PNB",
+      290,
+      370,
+      100,
+      460
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2025: Indian = 490, PNB = 460.\n490:460, divide by 10: 49:46."
+ },
+ {
+  "id": "qd748e6382e2",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "Indian",
+   "Canara",
+   "SBI"
+  ],
+  "group": {
+   "id": "g5267ccb4937",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      380,
+      580,
+      270,
+      140
+     ],
+     [
+      "Canara",
+      270,
+      300,
+      580,
+      170
+     ],
+     [
+      "SBI",
+      510,
+      210,
+      530,
+      430
+     ],
+     [
+      "PNB",
+      290,
+      540,
+      100,
+      170
+     ],
+     [
+      "Indian",
+      380,
+      540,
+      210,
+      250
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: BOB 1370, Canara 1320, SBI 1680, PNB 1100, Indian 1380.\nHighest: SBI (1680)."
+ },
+ {
+  "id": "qd915c4a3feb",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Canara's disbursement to SBI's in 2023?",
+  "options": [
+   "7:12",
+   "3:5",
+   "2:3",
+   "5:8"
+  ],
+  "group": {
+   "id": "ga5deb259155",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      480,
+      470,
+      430,
+      570
+     ],
+     [
+      "SBI",
+      340,
+      240,
+      170,
+      360
+     ],
+     [
+      "Indian",
+      530,
+      560,
+      430,
+      260
+     ],
+     [
+      "BOB",
+      300,
+      120,
+      350,
+      280
+     ],
+     [
+      "Canara",
+      400,
+      150,
+      320,
+      580
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2023: Canara = 150, SBI = 240.\n150:240, divide by 30: 5:8."
+ },
+ {
+  "id": "qdb5b4f85dfd",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of Canara's disbursement to SBI's in 2022?",
+  "options": [
+   "50:53",
+   "53:51",
+   "53:50",
+   "26:25"
+  ],
+  "group": {
+   "id": "gf35f798072c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      530,
+      520,
+      390,
+      160
+     ],
+     [
+      "SBI",
+      500,
+      300,
+      380,
+      380
+     ],
+     [
+      "PNB",
+      440,
+      440,
+      390,
+      530
+     ],
+     [
+      "BOB",
+      420,
+      480,
+      530,
+      420
+     ],
+     [
+      "Indian",
+      560,
+      470,
+      460,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: Canara = 530, SBI = 500.\n530:500, divide by 10: 53:50."
+ },
+ {
+  "id": "qdbcf674d704",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "BOB",
+   "SBI",
+   "Indian",
+   "Union"
+  ],
+  "group": {
+   "id": "ge256d5e6644",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      130,
+      330,
+      570,
+      240
+     ],
+     [
+      "Indian",
+      460,
+      120,
+      580,
+      170
+     ],
+     [
+      "Canara",
+      330,
+      480,
+      220,
+      110
+     ],
+     [
+      "SBI",
+      520,
+      580,
+      360,
+      330
+     ],
+     [
+      "BOB",
+      380,
+      270,
+      490,
+      400
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: Union 1270, Indian 1330, Canara 1140, SBI 1790, BOB 1540.\nHighest: SBI (1790)."
+ },
+ {
+  "id": "qde7953e22ee",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "SBI",
+   "Indian",
+   "BOB"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: Indian 1320, BOB 1570, Canara 1220, PNB 1250, SBI 940.\nHighest: BOB (1570)."
+ },
+ {
+  "id": "qf44232a177a",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+  "options": [
+   "1791",
+   "1790",
+   "1792",
+   "2685"
+  ],
+  "group": {
+   "id": "ge256d5e6644",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      130,
+      330,
+      570,
+      240
+     ],
+     [
+      "Indian",
+      460,
+      120,
+      580,
+      170
+     ],
+     [
+      "Canara",
+      330,
+      480,
+      220,
+      110
+     ],
+     [
+      "SBI",
+      520,
+      580,
+      360,
+      330
+     ],
+     [
+      "BOB",
+      380,
+      270,
+      490,
+      400
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "SBI: 520 + 580 + 360 + 330 = 1790."
+ },
+ {
+  "id": "qf7edfa61b55",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of BOB's disbursement to SBI's in 2022?",
+  "options": [
+   "38:51",
+   "37:51",
+   "19:26",
+   "13:17"
+  ],
+  "group": {
+   "id": "g5267ccb4937",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      380,
+      580,
+      270,
+      140
+     ],
+     [
+      "Canara",
+      270,
+      300,
+      580,
+      170
+     ],
+     [
+      "SBI",
+      510,
+      210,
+      530,
+      430
+     ],
+     [
+      "PNB",
+      290,
+      540,
+      100,
+      170
+     ],
+     [
+      "Indian",
+      380,
+      540,
+      210,
+      250
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2022: BOB = 380, SBI = 510.\n380:510, divide by 10: 38:51."
+ },
+ {
+  "id": "qfc4e5cb3f58",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of SBI's disbursement to Canara's in 2022?",
+  "options": [
+   "43:49",
+   "44:49",
+   "22:25",
+   "45:49"
+  ],
+  "group": {
+   "id": "gb9337ab9806",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      490,
+      210,
+      590,
+      140
+     ],
+     [
+      "SBI",
+      440,
+      340,
+      180,
+      400
+     ],
+     [
+      "PNB",
+      260,
+      200,
+      130,
+      280
+     ],
+     [
+      "Union",
+      360,
+      580,
+      540,
+      510
+     ],
+     [
+      "Indian",
+      220,
+      190,
+      580,
+      410
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: SBI = 440, Canara = 490.\n440:490, divide by 10: 44:49."
+ },
+ {
+  "id": "q04a0ef9ffc7",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of SBI's disbursement to Indian's in 2021?",
+  "options": [
+   "7:9",
+   "57:73",
+   "29:36",
+   "19:24"
+  ],
+  "group": {
+   "id": "g2b4fc83406d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      345,
+      400,
+      140,
+      155,
+      140
+     ],
+     [
+      "Indian",
+      360,
+      140,
+      265,
+      280,
+      360
+     ],
+     [
+      "SBI",
+      285,
+      405,
+      580,
+      190,
+      415
+     ],
+     [
+      "Canara",
+      480,
+      160,
+      350,
+      565,
+      520
+     ],
+     [
+      "Union",
+      510,
+      565,
+      215,
+      200,
+      375
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: SBI = 285, Indian = 360.\n285:360, divide by 15: 19:24."
+ },
+ {
+  "id": "q0c01a1bfd1f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+  "options": [
+   "1456",
+   "1455",
+   "1819",
+   "1454"
+  ],
+  "group": {
+   "id": "g7274cea452b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      150,
+      325,
+      470,
+      105,
+      545
+     ],
+     [
+      "Canara",
+      370,
+      250,
+      495,
+      305,
+      480
+     ],
+     [
+      "BOB",
+      430,
+      315,
+      140,
+      290,
+      280
+     ],
+     [
+      "Union",
+      240,
+      170,
+      345,
+      545,
+      155
+     ],
+     [
+      "Indian",
+      410,
+      500,
+      455,
+      575,
+      160
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Union: 240 + 170 + 345 + 545 + 155 = 1455."
+ },
+ {
+  "id": "q11763dc8346",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did PNB's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-71.19%",
+   "-77.21%",
+   "-70.19%",
+   "-67.19%"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2021: 520; 2025: 155.\nChange = -365.\n% change = -365/520 × 100 = -70.19%."
+ },
+ {
+  "id": "q12f8a4334b4",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "324",
+   "486",
+   "308",
+   "329"
+  ],
+  "group": {
+   "id": "g7274cea452b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      150,
+      325,
+      470,
+      105,
+      545
+     ],
+     [
+      "Canara",
+      370,
+      250,
+      495,
+      305,
+      480
+     ],
+     [
+      "BOB",
+      430,
+      315,
+      140,
+      290,
+      280
+     ],
+     [
+      "Union",
+      240,
+      170,
+      345,
+      545,
+      155
+     ],
+     [
+      "Indian",
+      410,
+      500,
+      455,
+      575,
+      160
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2025: 545 + 480 + 280 + 155 + 160 = 1620.\nAverage = 1620/5 = 324."
+ },
+ {
+  "id": "q1b698b75899",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "BOB",
+   "Indian",
+   "Union"
+  ],
+  "group": {
+   "id": "g3be95d384c6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      275,
+      300,
+      595,
+      130,
+      410
+     ],
+     [
+      "BOB",
+      315,
+      440,
+      280,
+      580,
+      370
+     ],
+     [
+      "SBI",
+      355,
+      550,
+      245,
+      550,
+      185
+     ],
+     [
+      "Union",
+      545,
+      275,
+      305,
+      370,
+      565
+     ],
+     [
+      "Indian",
+      520,
+      550,
+      185,
+      520,
+      380
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: PNB 1710, BOB 1985, SBI 1885, Union 2060, Indian 2155.\nHighest: Indian (2155)."
+ },
+ {
+  "id": "q1d97de09f02",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Canara's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "5.83%",
+   "2.55%",
+   "2.83%",
+   "3.83%"
+  ],
+  "group": {
+   "id": "g00445c7cd24",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      160,
+      245,
+      170,
+      350,
+      155
+     ],
+     [
+      "Canara",
+      530,
+      215,
+      140,
+      590,
+      545
+     ],
+     [
+      "Indian",
+      205,
+      440,
+      515,
+      315,
+      535
+     ],
+     [
+      "Union",
+      110,
+      315,
+      335,
+      590,
+      520
+     ],
+     [
+      "PNB",
+      455,
+      460,
+      330,
+      550,
+      475
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2021: 530; 2025: 545.\nChange = 15.\n% change = 15/530 × 100 = 2.83%."
+ },
+ {
+  "id": "q212d59d438c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Canara",
+   "Union",
+   "PNB",
+   "SBI"
+  ],
+  "group": {
+   "id": "gea8c8078b94",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      280,
+      175,
+      410,
+      245
+     ],
+     [
+      "PNB",
+      320,
+      310,
+      305,
+      160,
+      385
+     ],
+     [
+      "Union",
+      230,
+      160,
+      345,
+      275,
+      565
+     ],
+     [
+      "SBI",
+      360,
+      420,
+      420,
+      200,
+      595
+     ],
+     [
+      "Canara",
+      345,
+      350,
+      145,
+      205,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: BOB 1230, PNB 1480, Union 1575, SBI 1995, Canara 1335.\nHighest: SBI (1995)."
+ },
+ {
+  "id": "q2abcde06056",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Union's disbursement to SBI's in 2025?",
+  "options": [
+   "30:109",
+   "31:110",
+   "31:109",
+   "32:109"
+  ],
+  "group": {
+   "id": "g7274cea452b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      150,
+      325,
+      470,
+      105,
+      545
+     ],
+     [
+      "Canara",
+      370,
+      250,
+      495,
+      305,
+      480
+     ],
+     [
+      "BOB",
+      430,
+      315,
+      140,
+      290,
+      280
+     ],
+     [
+      "Union",
+      240,
+      170,
+      345,
+      545,
+      155
+     ],
+     [
+      "Indian",
+      410,
+      500,
+      455,
+      575,
+      160
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2025: Union = 155, SBI = 545.\n155:545, divide by 5: 31:109."
+ },
+ {
+  "id": "q2c72e81ab4f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Indian's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-51.73%",
+   "-47.46%",
+   "-52.73%",
+   "-54.73%"
+  ],
+  "group": {
+   "id": "g42574905c34",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      275,
+      530,
+      215,
+      240,
+      415
+     ],
+     [
+      "PNB",
+      130,
+      310,
+      290,
+      495,
+      325
+     ],
+     [
+      "BOB",
+      295,
+      150,
+      515,
+      285,
+      185
+     ],
+     [
+      "Union",
+      565,
+      175,
+      595,
+      450,
+      495
+     ],
+     [
+      "Indian",
+      275,
+      380,
+      230,
+      250,
+      130
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2021: 275; 2025: 130.\nChange = -145.\n% change = -145/275 × 100 = -52.73%."
+ },
+ {
+  "id": "q319ce9ae3c1",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "309",
+   "465",
+   "308",
+   "310"
+  ],
+  "group": {
+   "id": "g42574905c34",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      275,
+      530,
+      215,
+      240,
+      415
+     ],
+     [
+      "PNB",
+      130,
+      310,
+      290,
+      495,
+      325
+     ],
+     [
+      "BOB",
+      295,
+      150,
+      515,
+      285,
+      185
+     ],
+     [
+      "Union",
+      565,
+      175,
+      595,
+      450,
+      495
+     ],
+     [
+      "Indian",
+      275,
+      380,
+      230,
+      250,
+      130
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2025: 415 + 325 + 185 + 495 + 130 = 1550.\nAverage = 1550/5 = 310."
+ },
+ {
+  "id": "q36078eb03ee",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "467",
+   "462",
+   "514",
+   "700"
+  ],
+  "group": {
+   "id": "g7c4d606bd2d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      415,
+      460,
+      460,
+      435,
+      150
+     ],
+     [
+      "SBI",
+      270,
+      385,
+      595,
+      335,
+      375
+     ],
+     [
+      "Union",
+      470,
+      445,
+      435,
+      595,
+      595
+     ],
+     [
+      "PNB",
+      115,
+      550,
+      540,
+      570,
+      400
+     ],
+     [
+      "Indian",
+      150,
+      495,
+      195,
+      170,
+      495
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2022: 460 + 385 + 445 + 550 + 495 = 2335.\nAverage = 2335/5 = 467."
+ },
+ {
+  "id": "q3648df194a2",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Indian's disbursement to Union's in 2021?",
+  "options": [
+   "19:23",
+   "23:19",
+   "46:39",
+   "45:38"
+  ],
+  "group": {
+   "id": "g153b15e158c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      520,
+      335,
+      560,
+      175,
+      325
+     ],
+     [
+      "BOB",
+      220,
+      515,
+      410,
+      245,
+      525
+     ],
+     [
+      "Union",
+      190,
+      285,
+      250,
+      290,
+      305
+     ],
+     [
+      "Canara",
+      550,
+      420,
+      525,
+      565,
+      105
+     ],
+     [
+      "Indian",
+      230,
+      470,
+      145,
+      180,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2021: Indian = 230, Union = 190.\n230:190, divide by 10: 23:19."
+ },
+ {
+  "id": "q3c272c0a1f7",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Union's disbursement to Canara's in 2022?",
+  "options": [
+   "43:63",
+   "63:43",
+   "63:44",
+   "62:43"
+  ],
+  "group": {
+   "id": "g00445c7cd24",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      160,
+      245,
+      170,
+      350,
+      155
+     ],
+     [
+      "Canara",
+      530,
+      215,
+      140,
+      590,
+      545
+     ],
+     [
+      "Indian",
+      205,
+      440,
+      515,
+      315,
+      535
+     ],
+     [
+      "Union",
+      110,
+      315,
+      335,
+      590,
+      520
+     ],
+     [
+      "PNB",
+      455,
+      460,
+      330,
+      550,
+      475
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2022: Union = 315, Canara = 215.\n315:215, divide by 5: 63:43."
+ },
+ {
+  "id": "q3e33c4ea793",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "333",
+   "331",
+   "300",
+   "350"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2023: 280 + 555 + 205 + 230 + 395 = 1665.\nAverage = 1665/5 = 333."
+ },
+ {
+  "id": "q3f645c85b9f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2021 (₹ crore)?",
+  "options": [
+   "392",
+   "402",
+   "322",
+   "397"
+  ],
+  "group": {
+   "id": "g3be95d384c6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      275,
+      300,
+      595,
+      130,
+      410
+     ],
+     [
+      "BOB",
+      315,
+      440,
+      280,
+      580,
+      370
+     ],
+     [
+      "SBI",
+      355,
+      550,
+      245,
+      550,
+      185
+     ],
+     [
+      "Union",
+      545,
+      275,
+      305,
+      370,
+      565
+     ],
+     [
+      "Indian",
+      520,
+      550,
+      185,
+      520,
+      380
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2021: 275 + 315 + 355 + 545 + 520 = 2010.\nAverage = 2010/5 = 402."
+ },
+ {
+  "id": "q42557b3c2d1",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+  "options": [
+   "2794",
+   "2540",
+   "2286",
+   "2539"
+  ],
+  "group": {
+   "id": "g7c4d606bd2d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      415,
+      460,
+      460,
+      435,
+      150
+     ],
+     [
+      "SBI",
+      270,
+      385,
+      595,
+      335,
+      375
+     ],
+     [
+      "Union",
+      470,
+      445,
+      435,
+      595,
+      595
+     ],
+     [
+      "PNB",
+      115,
+      550,
+      540,
+      570,
+      400
+     ],
+     [
+      "Indian",
+      150,
+      495,
+      195,
+      170,
+      495
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Union: 470 + 445 + 435 + 595 + 595 = 2540."
+ },
+ {
+  "id": "q42dde1ede4f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by PNB over all the years shown (₹ crore)?",
+  "options": [
+   "2100",
+   "2188",
+   "1750",
+   "1752"
+  ],
+  "group": {
+   "id": "g7fcab93cf68",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      505,
+      525,
+      135,
+      325,
+      260
+     ],
+     [
+      "Canara",
+      510,
+      150,
+      460,
+      595,
+      565
+     ],
+     [
+      "BOB",
+      105,
+      120,
+      560,
+      410,
+      220
+     ],
+     [
+      "SBI",
+      565,
+      390,
+      415,
+      580,
+      280
+     ],
+     [
+      "Union",
+      345,
+      100,
+      555,
+      540,
+      150
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "PNB: 505 + 525 + 135 + 325 + 260 = 1750."
+ },
+ {
+  "id": "q42fb492a3c0",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+  "options": [
+   "1688",
+   "1969",
+   "1875",
+   "1876"
+  ],
+  "group": {
+   "id": "g2b4fc83406d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      345,
+      400,
+      140,
+      155,
+      140
+     ],
+     [
+      "Indian",
+      360,
+      140,
+      265,
+      280,
+      360
+     ],
+     [
+      "SBI",
+      285,
+      405,
+      580,
+      190,
+      415
+     ],
+     [
+      "Canara",
+      480,
+      160,
+      350,
+      565,
+      520
+     ],
+     [
+      "Union",
+      510,
+      565,
+      215,
+      200,
+      375
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "SBI: 285 + 405 + 580 + 190 + 415 = 1875."
+ },
+ {
+  "id": "q444998c9578",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of BOB's disbursement to Canara's in 2023?",
+  "options": [
+   "55:79",
+   "7:10",
+   "56:79",
+   "57:79"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2023: BOB = 280, Canara = 395.\n280:395, divide by 5: 56:79."
+ },
+ {
+  "id": "q45338693da6",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "238",
+   "232",
+   "242",
+   "237"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2025: 170 + 360 + 315 + 185 + 155 = 1185.\nAverage = 1185/5 = 237."
+ },
+ {
+  "id": "q455a1bb845c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+  "options": [
+   "441",
+   "480",
+   "436",
+   "434"
+  ],
+  "group": {
+   "id": "g1b9a293a1d2",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      325,
+      370,
+      235,
+      400,
+      155
+     ],
+     [
+      "SBI",
+      420,
+      395,
+      370,
+      455,
+      490
+     ],
+     [
+      "BOB",
+      115,
+      120,
+      175,
+      545,
+      585
+     ],
+     [
+      "Indian",
+      245,
+      320,
+      470,
+      390,
+      345
+     ],
+     [
+      "PNB",
+      100,
+      155,
+      550,
+      390,
+      170
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2024: 400 + 455 + 545 + 390 + 390 = 2180.\nAverage = 2180/5 = 436."
+ },
+ {
+  "id": "q4882780b637",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+  "options": [
+   "380",
+   "456",
+   "190",
+   "385"
+  ],
+  "group": {
+   "id": "g90ce9467773",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      475,
+      285,
+      140,
+      230,
+      260
+     ],
+     [
+      "Canara",
+      525,
+      125,
+      355,
+      490,
+      525
+     ],
+     [
+      "PNB",
+      190,
+      380,
+      475,
+      395,
+      230
+     ],
+     [
+      "BOB",
+      140,
+      450,
+      465,
+      225,
+      225
+     ],
+     [
+      "SBI",
+      225,
+      390,
+      295,
+      560,
+      175
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2024: 230 + 490 + 395 + 225 + 560 = 1900.\nAverage = 1900/5 = 380."
+ },
+ {
+  "id": "q4ce13125745",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+  "options": [
+   "1870",
+   "2338",
+   "1865",
+   "1860"
+  ],
+  "group": {
+   "id": "g00445c7cd24",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      160,
+      245,
+      170,
+      350,
+      155
+     ],
+     [
+      "Canara",
+      530,
+      215,
+      140,
+      590,
+      545
+     ],
+     [
+      "Indian",
+      205,
+      440,
+      515,
+      315,
+      535
+     ],
+     [
+      "Union",
+      110,
+      315,
+      335,
+      590,
+      520
+     ],
+     [
+      "PNB",
+      455,
+      460,
+      330,
+      550,
+      475
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Union: 110 + 315 + 335 + 590 + 520 = 1870."
+ },
+ {
+  "id": "q5473078f431",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Canara's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-37.81%",
+   "-32.81%",
+   "-22.81%",
+   "-41.01%"
+  ],
+  "group": {
+   "id": "g1becb4a3445",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      340,
+      515,
+      345,
+      390,
+      525
+     ],
+     [
+      "Indian",
+      455,
+      165,
+      295,
+      120,
+      555
+     ],
+     [
+      "Union",
+      375,
+      435,
+      490,
+      175,
+      115
+     ],
+     [
+      "Canara",
+      320,
+      360,
+      525,
+      350,
+      215
+     ],
+     [
+      "SBI",
+      370,
+      255,
+      330,
+      535,
+      195
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2021: 320; 2025: 215.\nChange = -105.\n% change = -105/320 × 100 = -32.81%."
+ },
+ {
+  "id": "q54ad3689f91",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "Union",
+   "Canara",
+   "BOB"
+  ],
+  "group": {
+   "id": "g7fcab93cf68",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      505,
+      525,
+      135,
+      325,
+      260
+     ],
+     [
+      "Canara",
+      510,
+      150,
+      460,
+      595,
+      565
+     ],
+     [
+      "BOB",
+      105,
+      120,
+      560,
+      410,
+      220
+     ],
+     [
+      "SBI",
+      565,
+      390,
+      415,
+      580,
+      280
+     ],
+     [
+      "Union",
+      345,
+      100,
+      555,
+      540,
+      150
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: PNB 1750, Canara 2280, BOB 1415, SBI 2230, Union 1690.\nHighest: Canara (2280)."
+ },
+ {
+  "id": "q585ed15881c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of BOB's disbursement to SBI's in 2021?",
+  "options": [
+   "62:71",
+   "7:8",
+   "64:71",
+   "63:71"
+  ],
+  "group": {
+   "id": "g3be95d384c6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      275,
+      300,
+      595,
+      130,
+      410
+     ],
+     [
+      "BOB",
+      315,
+      440,
+      280,
+      580,
+      370
+     ],
+     [
+      "SBI",
+      355,
+      550,
+      245,
+      550,
+      185
+     ],
+     [
+      "Union",
+      545,
+      275,
+      305,
+      370,
+      565
+     ],
+     [
+      "Indian",
+      520,
+      550,
+      185,
+      520,
+      380
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: BOB = 315, SBI = 355.\n315:355, divide by 5: 63:71."
+ },
+ {
+  "id": "q634925db1f2",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2021 (₹ crore)?",
+  "options": [
+   "297",
+   "396",
+   "475",
+   "397"
+  ],
+  "group": {
+   "id": "g2b4fc83406d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      345,
+      400,
+      140,
+      155,
+      140
+     ],
+     [
+      "Indian",
+      360,
+      140,
+      265,
+      280,
+      360
+     ],
+     [
+      "SBI",
+      285,
+      405,
+      580,
+      190,
+      415
+     ],
+     [
+      "Canara",
+      480,
+      160,
+      350,
+      565,
+      520
+     ],
+     [
+      "Union",
+      510,
+      565,
+      215,
+      200,
+      375
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2021: 345 + 360 + 285 + 480 + 510 = 1980.\nAverage = 1980/5 = 396."
+ },
+ {
+  "id": "q6da102c515c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Indian's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "0%",
+   "-1%",
+   "3%",
+   "-5%"
+  ],
+  "group": {
+   "id": "g2b4fc83406d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      345,
+      400,
+      140,
+      155,
+      140
+     ],
+     [
+      "Indian",
+      360,
+      140,
+      265,
+      280,
+      360
+     ],
+     [
+      "SBI",
+      285,
+      405,
+      580,
+      190,
+      415
+     ],
+     [
+      "Canara",
+      480,
+      160,
+      350,
+      565,
+      520
+     ],
+     [
+      "Union",
+      510,
+      565,
+      215,
+      200,
+      375
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2021: 360; 2025: 360.\nChange = 0.\n% change = 0/360 × 100 = 0%."
+ },
+ {
+  "id": "q6ef75af0d5c",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "294",
+   "295",
+   "300",
+   "305"
+  ],
+  "group": {
+   "id": "g7fcab93cf68",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      505,
+      525,
+      135,
+      325,
+      260
+     ],
+     [
+      "Canara",
+      510,
+      150,
+      460,
+      595,
+      565
+     ],
+     [
+      "BOB",
+      105,
+      120,
+      560,
+      410,
+      220
+     ],
+     [
+      "SBI",
+      565,
+      390,
+      415,
+      580,
+      280
+     ],
+     [
+      "Union",
+      345,
+      100,
+      555,
+      540,
+      150
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2025: 260 + 565 + 220 + 280 + 150 = 1475.\nAverage = 1475/5 = 295."
+ },
+ {
+  "id": "q744d5afd22f",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2021 (₹ crore)?",
+  "options": [
+   "279",
+   "316",
+   "372",
+   "558"
+  ],
+  "group": {
+   "id": "g1becb4a3445",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      340,
+      515,
+      345,
+      390,
+      525
+     ],
+     [
+      "Indian",
+      455,
+      165,
+      295,
+      120,
+      555
+     ],
+     [
+      "Union",
+      375,
+      435,
+      490,
+      175,
+      115
+     ],
+     [
+      "Canara",
+      320,
+      360,
+      525,
+      350,
+      215
+     ],
+     [
+      "SBI",
+      370,
+      255,
+      330,
+      535,
+      195
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2021: 340 + 455 + 375 + 320 + 370 = 1860.\nAverage = 1860/5 = 372."
+ },
+ {
+  "id": "q752645b705a",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Union's disbursement to Indian's in 2022?",
+  "options": [
+   "8:9",
+   "89:100",
+   "89:99",
+   "10:11"
+  ],
+  "group": {
+   "id": "g7c4d606bd2d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      415,
+      460,
+      460,
+      435,
+      150
+     ],
+     [
+      "SBI",
+      270,
+      385,
+      595,
+      335,
+      375
+     ],
+     [
+      "Union",
+      470,
+      445,
+      435,
+      595,
+      595
+     ],
+     [
+      "PNB",
+      115,
+      550,
+      540,
+      570,
+      400
+     ],
+     [
+      "Indian",
+      150,
+      495,
+      195,
+      170,
+      495
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2022: Union = 445, Indian = 495.\n445:495, divide by 5: 89:99."
+ },
+ {
+  "id": "q76b9776c48b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Union",
+   "PNB",
+   "Indian",
+   "BOB"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: Indian 1740, Union 1975, BOB 1575, Canara 1480, PNB 1660.\nHighest: Union (1975)."
+ },
+ {
+  "id": "q781edbef853",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "2283",
+   "1975",
+   "1985",
+   "2978"
+  ],
+  "group": {
+   "id": "g3be95d384c6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      275,
+      300,
+      595,
+      130,
+      410
+     ],
+     [
+      "BOB",
+      315,
+      440,
+      280,
+      580,
+      370
+     ],
+     [
+      "SBI",
+      355,
+      550,
+      245,
+      550,
+      185
+     ],
+     [
+      "Union",
+      545,
+      275,
+      305,
+      370,
+      565
+     ],
+     [
+      "Indian",
+      520,
+      550,
+      185,
+      520,
+      380
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "BOB: 315 + 440 + 280 + 580 + 370 = 1985."
+ },
+ {
+  "id": "q7e3558749cd",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of PNB's disbursement to Indian's in 2024?",
+  "options": [
+   "46:79",
+   "79:47",
+   "79:46",
+   "39:23"
+  ],
+  "group": {
+   "id": "g90ce9467773",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      475,
+      285,
+      140,
+      230,
+      260
+     ],
+     [
+      "Canara",
+      525,
+      125,
+      355,
+      490,
+      525
+     ],
+     [
+      "PNB",
+      190,
+      380,
+      475,
+      395,
+      230
+     ],
+     [
+      "BOB",
+      140,
+      450,
+      465,
+      225,
+      225
+     ],
+     [
+      "SBI",
+      225,
+      390,
+      295,
+      560,
+      175
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2024: PNB = 395, Indian = 230.\n395:230, divide by 5: 79:46."
+ },
+ {
+  "id": "q8d0319c8566",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+  "options": [
+   "1691",
+   "2030",
+   "2255",
+   "2252"
+  ],
+  "group": {
+   "id": "gc7645d5f078",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      440,
+      400,
+      490,
+      145,
+      490
+     ],
+     [
+      "SBI",
+      530,
+      120,
+      255,
+      575,
+      525
+     ],
+     [
+      "BOB",
+      460,
+      300,
+      295,
+      275,
+      160
+     ],
+     [
+      "Canara",
+      525,
+      305,
+      505,
+      460,
+      460
+     ],
+     [
+      "PNB",
+      405,
+      490,
+      270,
+      555,
+      505
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Canara: 525 + 305 + 505 + 460 + 460 = 2255."
+ },
+ {
+  "id": "q8d5a9b5ae95",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Canara's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-12.94%",
+   "-15.94%",
+   "-14.35%",
+   "-10.94%"
+  ],
+  "group": {
+   "id": "gea8c8078b94",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      280,
+      175,
+      410,
+      245
+     ],
+     [
+      "PNB",
+      320,
+      310,
+      305,
+      160,
+      385
+     ],
+     [
+      "Union",
+      230,
+      160,
+      345,
+      275,
+      565
+     ],
+     [
+      "SBI",
+      360,
+      420,
+      420,
+      200,
+      595
+     ],
+     [
+      "Canara",
+      345,
+      350,
+      145,
+      205,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2021: 345; 2025: 290.\nChange = -55.\n% change = -55/345 × 100 = -15.94%."
+ },
+ {
+  "id": "q91710333ad4",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+  "options": [
+   "1565",
+   "1575",
+   "1330",
+   "1487"
+  ],
+  "group": {
+   "id": "g153b15e158c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      520,
+      335,
+      560,
+      175,
+      325
+     ],
+     [
+      "BOB",
+      220,
+      515,
+      410,
+      245,
+      525
+     ],
+     [
+      "Union",
+      190,
+      285,
+      250,
+      290,
+      305
+     ],
+     [
+      "Canara",
+      550,
+      420,
+      525,
+      565,
+      105
+     ],
+     [
+      "Indian",
+      230,
+      470,
+      145,
+      180,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Indian: 230 + 470 + 145 + 180 + 540 = 1565."
+ },
+ {
+  "id": "q923cc04aed0",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Canara's disbursement to PNB's in 2023?",
+  "options": [
+   "54:101",
+   "101:55",
+   "50:27",
+   "101:54"
+  ],
+  "group": {
+   "id": "gc7645d5f078",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      440,
+      400,
+      490,
+      145,
+      490
+     ],
+     [
+      "SBI",
+      530,
+      120,
+      255,
+      575,
+      525
+     ],
+     [
+      "BOB",
+      460,
+      300,
+      295,
+      275,
+      160
+     ],
+     [
+      "Canara",
+      525,
+      305,
+      505,
+      460,
+      460
+     ],
+     [
+      "PNB",
+      405,
+      490,
+      270,
+      555,
+      505
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2023: Canara = 505, PNB = 270.\n505:270, divide by 5: 101:54."
+ },
+ {
+  "id": "q93c44e86782",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "SBI",
+   "PNB",
+   "Canara",
+   "BOB"
+  ],
+  "group": {
+   "id": "gc7645d5f078",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      440,
+      400,
+      490,
+      145,
+      490
+     ],
+     [
+      "SBI",
+      530,
+      120,
+      255,
+      575,
+      525
+     ],
+     [
+      "BOB",
+      460,
+      300,
+      295,
+      275,
+      160
+     ],
+     [
+      "Canara",
+      525,
+      305,
+      505,
+      460,
+      460
+     ],
+     [
+      "PNB",
+      405,
+      490,
+      270,
+      555,
+      505
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: Union 1965, SBI 2005, BOB 1490, Canara 2255, PNB 2225.\nHighest: Canara (2255)."
+ },
+ {
+  "id": "q9473872b7f4",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did PNB's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "24.69%",
+   "22.22%",
+   "23.69%",
+   "28.39%"
+  ],
+  "group": {
+   "id": "gc7645d5f078",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      440,
+      400,
+      490,
+      145,
+      490
+     ],
+     [
+      "SBI",
+      530,
+      120,
+      255,
+      575,
+      525
+     ],
+     [
+      "BOB",
+      460,
+      300,
+      295,
+      275,
+      160
+     ],
+     [
+      "Canara",
+      525,
+      305,
+      505,
+      460,
+      460
+     ],
+     [
+      "PNB",
+      405,
+      490,
+      270,
+      555,
+      505
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2021: 405; 2025: 505.\nChange = 100.\n% change = 100/405 × 100 = 24.69%."
+ },
+ {
+  "id": "q9739df42ace",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Indian",
+   "SBI",
+   "BOB",
+   "Union"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: BOB 1920, Indian 2025, SBI 2410, Union 1660, Canara 1550.\nHighest: SBI (2410)."
+ },
+ {
+  "id": "q9e08fbd96e8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did SBI's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "15%",
+   "16.67%",
+   "17.5%",
+   "14.67%"
+  ],
+  "group": {
+   "id": "g1b9a293a1d2",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      325,
+      370,
+      235,
+      400,
+      155
+     ],
+     [
+      "SBI",
+      420,
+      395,
+      370,
+      455,
+      490
+     ],
+     [
+      "BOB",
+      115,
+      120,
+      175,
+      545,
+      585
+     ],
+     [
+      "Indian",
+      245,
+      320,
+      470,
+      390,
+      345
+     ],
+     [
+      "PNB",
+      100,
+      155,
+      550,
+      390,
+      170
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2021: 420; 2025: 490.\nChange = 70.\n% change = 70/420 × 100 = 16.67%."
+ },
+ {
+  "id": "qa11392afefc",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+  "options": [
+   "2005",
+   "2000",
+   "1994",
+   "1995"
+  ],
+  "group": {
+   "id": "gea8c8078b94",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      280,
+      175,
+      410,
+      245
+     ],
+     [
+      "PNB",
+      320,
+      310,
+      305,
+      160,
+      385
+     ],
+     [
+      "Union",
+      230,
+      160,
+      345,
+      275,
+      565
+     ],
+     [
+      "SBI",
+      360,
+      420,
+      420,
+      200,
+      595
+     ],
+     [
+      "Canara",
+      345,
+      350,
+      145,
+      205,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "SBI: 360 + 420 + 420 + 200 + 595 = 1995."
+ },
+ {
+  "id": "qa85429a7d86",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Union's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "57.53%",
+   "54.48%",
+   "60.53%",
+   "59.53%"
+  ],
+  "group": {
+   "id": "g153b15e158c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      520,
+      335,
+      560,
+      175,
+      325
+     ],
+     [
+      "BOB",
+      220,
+      515,
+      410,
+      245,
+      525
+     ],
+     [
+      "Union",
+      190,
+      285,
+      250,
+      290,
+      305
+     ],
+     [
+      "Canara",
+      550,
+      420,
+      525,
+      565,
+      105
+     ],
+     [
+      "Indian",
+      230,
+      470,
+      145,
+      180,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2021: 190; 2025: 305.\nChange = 115.\n% change = 115/190 × 100 = 60.53%."
+ },
+ {
+  "id": "qad14c269f89",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "2304",
+   "1920",
+   "1632",
+   "1536"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "BOB: 370 + 520 + 280 + 185 + 565 = 1920."
+ },
+ {
+  "id": "qae1852135d8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Indian's disbursement to PNB's in 2025?",
+  "options": [
+   "31:34",
+   "34:31",
+   "17:16",
+   "33:31"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2025: Indian = 170, PNB = 155.\n170:155, divide by 5: 34:31."
+ },
+ {
+  "id": "qb37a61e5012",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+  "options": [
+   "1749",
+   "1587",
+   "795",
+   "1590"
+  ],
+  "group": {
+   "id": "g1becb4a3445",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      340,
+      515,
+      345,
+      390,
+      525
+     ],
+     [
+      "Indian",
+      455,
+      165,
+      295,
+      120,
+      555
+     ],
+     [
+      "Union",
+      375,
+      435,
+      490,
+      175,
+      115
+     ],
+     [
+      "Canara",
+      320,
+      360,
+      525,
+      350,
+      215
+     ],
+     [
+      "SBI",
+      370,
+      255,
+      330,
+      535,
+      195
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Union: 375 + 435 + 490 + 175 + 115 = 1590."
+ },
+ {
+  "id": "qb64a7bdda01",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Indian's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "288%",
+   "227%",
+   "264%",
+   "230%"
+  ],
+  "group": {
+   "id": "g7c4d606bd2d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      415,
+      460,
+      460,
+      435,
+      150
+     ],
+     [
+      "SBI",
+      270,
+      385,
+      595,
+      335,
+      375
+     ],
+     [
+      "Union",
+      470,
+      445,
+      435,
+      595,
+      595
+     ],
+     [
+      "PNB",
+      115,
+      550,
+      540,
+      570,
+      400
+     ],
+     [
+      "Indian",
+      150,
+      495,
+      195,
+      170,
+      495
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: 150; 2025: 495.\nChange = 345.\n% change = 345/150 × 100 = 230%."
+ },
+ {
+  "id": "qbac6b7cbdbd",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "BOB",
+   "Union",
+   "Canara"
+  ],
+  "group": {
+   "id": "g00445c7cd24",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      160,
+      245,
+      170,
+      350,
+      155
+     ],
+     [
+      "Canara",
+      530,
+      215,
+      140,
+      590,
+      545
+     ],
+     [
+      "Indian",
+      205,
+      440,
+      515,
+      315,
+      535
+     ],
+     [
+      "Union",
+      110,
+      315,
+      335,
+      590,
+      520
+     ],
+     [
+      "PNB",
+      455,
+      460,
+      330,
+      550,
+      475
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: BOB 1080, Canara 2020, Indian 2010, Union 1870, PNB 2270.\nHighest: PNB (2270)."
+ },
+ {
+  "id": "qbc330253175",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Union",
+   "Canara",
+   "Indian",
+   "PNB"
+  ],
+  "group": {
+   "id": "g42574905c34",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      275,
+      530,
+      215,
+      240,
+      415
+     ],
+     [
+      "PNB",
+      130,
+      310,
+      290,
+      495,
+      325
+     ],
+     [
+      "BOB",
+      295,
+      150,
+      515,
+      285,
+      185
+     ],
+     [
+      "Union",
+      565,
+      175,
+      595,
+      450,
+      495
+     ],
+     [
+      "Indian",
+      275,
+      380,
+      230,
+      250,
+      130
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: Canara 1675, PNB 1550, BOB 1430, Union 2280, Indian 1265.\nHighest: Union (2280)."
+ },
+ {
+  "id": "qbd8e416d73b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did SBI's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-47.89%",
+   "-49.89%",
+   "-44.89%",
+   "-45.5%"
+  ],
+  "group": {
+   "id": "g3be95d384c6",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      275,
+      300,
+      595,
+      130,
+      410
+     ],
+     [
+      "BOB",
+      315,
+      440,
+      280,
+      580,
+      370
+     ],
+     [
+      "SBI",
+      355,
+      550,
+      245,
+      550,
+      185
+     ],
+     [
+      "Union",
+      545,
+      275,
+      305,
+      370,
+      565
+     ],
+     [
+      "Indian",
+      520,
+      550,
+      185,
+      520,
+      380
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2021: 355; 2025: 185.\nChange = -170.\n% change = -170/355 × 100 = -47.89%."
+ },
+ {
+  "id": "qc6afba87c2a",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "426",
+   "421",
+   "416",
+   "354"
+  ],
+  "group": {
+   "id": "gea8c8078b94",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      280,
+      175,
+      410,
+      245
+     ],
+     [
+      "PNB",
+      320,
+      310,
+      305,
+      160,
+      385
+     ],
+     [
+      "Union",
+      230,
+      160,
+      345,
+      275,
+      565
+     ],
+     [
+      "SBI",
+      360,
+      420,
+      420,
+      200,
+      595
+     ],
+     [
+      "Canara",
+      345,
+      350,
+      145,
+      205,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "2025: 245 + 385 + 565 + 595 + 290 = 2080.\nAverage = 2080/5 = 416."
+ },
+ {
+  "id": "qc6c40fe1810",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+  "options": [
+   "1740",
+   "2175",
+   "1735",
+   "1479"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Indian: 590 + 190 + 545 + 245 + 170 = 1740."
+ },
+ {
+  "id": "qc84011c3915",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Canara's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "33.92%",
+   "30.35%",
+   "44.64%",
+   "35.71%"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: 140; 2025: 190.\nChange = 50.\n% change = 50/140 × 100 = 35.71%."
+ },
+ {
+  "id": "qd0d89e4a042",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "SBI",
+   "Union",
+   "Indian",
+   "BOB"
+  ],
+  "group": {
+   "id": "g1becb4a3445",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      340,
+      515,
+      345,
+      390,
+      525
+     ],
+     [
+      "Indian",
+      455,
+      165,
+      295,
+      120,
+      555
+     ],
+     [
+      "Union",
+      375,
+      435,
+      490,
+      175,
+      115
+     ],
+     [
+      "Canara",
+      320,
+      360,
+      525,
+      350,
+      215
+     ],
+     [
+      "SBI",
+      370,
+      255,
+      330,
+      535,
+      195
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: BOB 2115, Indian 1590, Union 1590, Canara 1770, SBI 1685.\nHighest: BOB (2115)."
+ },
+ {
+  "id": "qd2ffd2890a0",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+  "options": [
+   "1675",
+   "1674",
+   "1508",
+   "1676"
+  ],
+  "group": {
+   "id": "g42574905c34",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      275,
+      530,
+      215,
+      240,
+      415
+     ],
+     [
+      "PNB",
+      130,
+      310,
+      290,
+      495,
+      325
+     ],
+     [
+      "BOB",
+      295,
+      150,
+      515,
+      285,
+      185
+     ],
+     [
+      "Union",
+      565,
+      175,
+      595,
+      450,
+      495
+     ],
+     [
+      "Indian",
+      275,
+      380,
+      230,
+      250,
+      130
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Canara: 275 + 530 + 215 + 240 + 415 = 1675."
+ },
+ {
+  "id": "qd3cb9a90613",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Canara's disbursement to Indian's in 2025?",
+  "options": [
+   "26:83",
+   "83:26",
+   "83:27",
+   "41:13"
+  ],
+  "group": {
+   "id": "g42574905c34",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      275,
+      530,
+      215,
+      240,
+      415
+     ],
+     [
+      "PNB",
+      130,
+      310,
+      290,
+      495,
+      325
+     ],
+     [
+      "BOB",
+      295,
+      150,
+      515,
+      285,
+      185
+     ],
+     [
+      "Union",
+      565,
+      175,
+      595,
+      450,
+      495
+     ],
+     [
+      "Indian",
+      275,
+      380,
+      230,
+      250,
+      130
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2025: Canara = 415, Indian = 130.\n415:130, divide by 5: 83:26."
+ },
+ {
+  "id": "qd4ae6b22e41",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Indian",
+   "Union",
+   "SBI",
+   "BOB"
+  ],
+  "group": {
+   "id": "g7c4d606bd2d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      415,
+      460,
+      460,
+      435,
+      150
+     ],
+     [
+      "SBI",
+      270,
+      385,
+      595,
+      335,
+      375
+     ],
+     [
+      "Union",
+      470,
+      445,
+      435,
+      595,
+      595
+     ],
+     [
+      "PNB",
+      115,
+      550,
+      540,
+      570,
+      400
+     ],
+     [
+      "Indian",
+      150,
+      495,
+      195,
+      170,
+      495
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: BOB 1920, SBI 1960, Union 2540, PNB 2175, Indian 1505.\nHighest: Union (2540)."
+ },
+ {
+  "id": "qd7799b5b319",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did SBI's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "250.16%",
+   "302.83%",
+   "329.16%",
+   "263.33%"
+  ],
+  "group": {
+   "id": "g7274cea452b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      150,
+      325,
+      470,
+      105,
+      545
+     ],
+     [
+      "Canara",
+      370,
+      250,
+      495,
+      305,
+      480
+     ],
+     [
+      "BOB",
+      430,
+      315,
+      140,
+      290,
+      280
+     ],
+     [
+      "Union",
+      240,
+      170,
+      345,
+      545,
+      155
+     ],
+     [
+      "Indian",
+      410,
+      500,
+      455,
+      575,
+      160
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: 150; 2025: 545.\nChange = 395.\n% change = 395/150 × 100 = 263.33%."
+ },
+ {
+  "id": "qe6b8a2645f3",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2021 (₹ crore)?",
+  "options": [
+   "274",
+   "256",
+   "347",
+   "342"
+  ],
+  "group": {
+   "id": "g153b15e158c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      520,
+      335,
+      560,
+      175,
+      325
+     ],
+     [
+      "BOB",
+      220,
+      515,
+      410,
+      245,
+      525
+     ],
+     [
+      "Union",
+      190,
+      285,
+      250,
+      290,
+      305
+     ],
+     [
+      "Canara",
+      550,
+      420,
+      525,
+      565,
+      105
+     ],
+     [
+      "Indian",
+      230,
+      470,
+      145,
+      180,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: 520 + 220 + 190 + 550 + 230 = 1710.\nAverage = 1710/5 = 342."
+ },
+ {
+  "id": "qe7d6c172611",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Canara",
+   "SBI",
+   "Union",
+   "Indian"
+  ],
+  "group": {
+   "id": "g153b15e158c",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      520,
+      335,
+      560,
+      175,
+      325
+     ],
+     [
+      "BOB",
+      220,
+      515,
+      410,
+      245,
+      525
+     ],
+     [
+      "Union",
+      190,
+      285,
+      250,
+      290,
+      305
+     ],
+     [
+      "Canara",
+      550,
+      420,
+      525,
+      565,
+      105
+     ],
+     [
+      "Indian",
+      230,
+      470,
+      145,
+      180,
+      540
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "Totals: SBI 1915, BOB 1915, Union 1320, Canara 2165, Indian 1565.\nHighest: Canara (2165)."
+ },
+ {
+  "id": "qe8c4893e16d",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of SBI's disbursement to Canara's in 2025?",
+  "options": [
+   "119:58",
+   "58:119",
+   "119:59",
+   "59:29"
+  ],
+  "group": {
+   "id": "gea8c8078b94",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      120,
+      280,
+      175,
+      410,
+      245
+     ],
+     [
+      "PNB",
+      320,
+      310,
+      305,
+      160,
+      385
+     ],
+     [
+      "Union",
+      230,
+      160,
+      345,
+      275,
+      565
+     ],
+     [
+      "SBI",
+      360,
+      420,
+      420,
+      200,
+      595
+     ],
+     [
+      "Canara",
+      345,
+      350,
+      145,
+      205,
+      290
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2025: SBI = 595, Canara = 290.\n595:290, divide by 5: 119:58."
+ },
+ {
+  "id": "qe8ee886e5a1",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "SBI",
+   "Canara",
+   "BOB",
+   "Indian"
+  ],
+  "group": {
+   "id": "g90ce9467773",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      475,
+      285,
+      140,
+      230,
+      260
+     ],
+     [
+      "Canara",
+      525,
+      125,
+      355,
+      490,
+      525
+     ],
+     [
+      "PNB",
+      190,
+      380,
+      475,
+      395,
+      230
+     ],
+     [
+      "BOB",
+      140,
+      450,
+      465,
+      225,
+      225
+     ],
+     [
+      "SBI",
+      225,
+      390,
+      295,
+      560,
+      175
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: Indian 1390, Canara 2020, PNB 1670, BOB 1505, SBI 1645.\nHighest: Canara (2020)."
+ },
+ {
+  "id": "qea3e54302c3",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "SBI",
+   "BOB",
+   "Canara",
+   "Indian"
+  ],
+  "group": {
+   "id": "g2b4fc83406d",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      345,
+      400,
+      140,
+      155,
+      140
+     ],
+     [
+      "Indian",
+      360,
+      140,
+      265,
+      280,
+      360
+     ],
+     [
+      "SBI",
+      285,
+      405,
+      580,
+      190,
+      415
+     ],
+     [
+      "Canara",
+      480,
+      160,
+      350,
+      565,
+      520
+     ],
+     [
+      "Union",
+      510,
+      565,
+      215,
+      200,
+      375
+     ]
+    ]
+   }
+  },
+  "answer": 2,
+  "explanation": "Totals: BOB 1180, Indian 1405, SBI 1875, Canara 2075, Union 1865.\nHighest: Canara (2075)."
+ },
+ {
+  "id": "qeb21c506c50",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+  "options": [
+   "742",
+   "1490",
+   "1483",
+   "1485"
+  ],
+  "group": {
+   "id": "g1b9a293a1d2",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      325,
+      370,
+      235,
+      400,
+      155
+     ],
+     [
+      "SBI",
+      420,
+      395,
+      370,
+      455,
+      490
+     ],
+     [
+      "BOB",
+      115,
+      120,
+      175,
+      545,
+      585
+     ],
+     [
+      "Indian",
+      245,
+      320,
+      470,
+      390,
+      345
+     ],
+     [
+      "PNB",
+      100,
+      155,
+      550,
+      390,
+      170
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Canara: 325 + 370 + 235 + 400 + 155 = 1485."
+ },
+ {
+  "id": "qeb6875f5bcc",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did SBI's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-50.44%",
+   "-40.44%",
+   "-37.83%",
+   "-75.66%"
+  ],
+  "group": {
+   "id": "g7fcab93cf68",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      505,
+      525,
+      135,
+      325,
+      260
+     ],
+     [
+      "Canara",
+      510,
+      150,
+      460,
+      595,
+      565
+     ],
+     [
+      "BOB",
+      105,
+      120,
+      560,
+      410,
+      220
+     ],
+     [
+      "SBI",
+      565,
+      390,
+      415,
+      580,
+      280
+     ],
+     [
+      "Union",
+      345,
+      100,
+      555,
+      540,
+      150
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2021: 565; 2025: 280.\nChange = -285.\n% change = -285/565 × 100 = -50.44%."
+ },
+ {
+  "id": "qecba7fb0096",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Union's disbursement to Canara's in 2021?",
+  "options": [
+   "75:64",
+   "64:75",
+   "15:13",
+   "37:32"
+  ],
+  "group": {
+   "id": "g1becb4a3445",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      340,
+      515,
+      345,
+      390,
+      525
+     ],
+     [
+      "Indian",
+      455,
+      165,
+      295,
+      120,
+      555
+     ],
+     [
+      "Union",
+      375,
+      435,
+      490,
+      175,
+      115
+     ],
+     [
+      "Canara",
+      320,
+      360,
+      525,
+      350,
+      215
+     ],
+     [
+      "SBI",
+      370,
+      255,
+      330,
+      535,
+      195
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2021: Union = 375, Canara = 320.\n375:320, divide by 5: 75:64."
+ },
+ {
+  "id": "qede8bc66f44",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "BOB",
+   "Canara",
+   "Indian",
+   "SBI"
+  ],
+  "group": {
+   "id": "g1b9a293a1d2",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      325,
+      370,
+      235,
+      400,
+      155
+     ],
+     [
+      "SBI",
+      420,
+      395,
+      370,
+      455,
+      490
+     ],
+     [
+      "BOB",
+      115,
+      120,
+      175,
+      545,
+      585
+     ],
+     [
+      "Indian",
+      245,
+      320,
+      470,
+      390,
+      345
+     ],
+     [
+      "PNB",
+      100,
+      155,
+      550,
+      390,
+      170
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "Totals: Canara 1485, SBI 2130, BOB 1540, Indian 1770, PNB 1365.\nHighest: SBI (2130)."
+ },
+ {
+  "id": "qef59be38371",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Indian's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-38.47%",
+   "-43.26%",
+   "-52.05%",
+   "-45.26%"
+  ],
+  "group": {
+   "id": "g90ce9467773",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      475,
+      285,
+      140,
+      230,
+      260
+     ],
+     [
+      "Canara",
+      525,
+      125,
+      355,
+      490,
+      525
+     ],
+     [
+      "PNB",
+      190,
+      380,
+      475,
+      395,
+      230
+     ],
+     [
+      "BOB",
+      140,
+      450,
+      465,
+      225,
+      225
+     ],
+     [
+      "SBI",
+      225,
+      390,
+      295,
+      560,
+      175
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2021: 475; 2025: 260.\nChange = -215.\n% change = -215/475 × 100 = -45.26%."
+ },
+ {
+  "id": "qf46f0233fba",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by PNB over all the years shown (₹ crore)?",
+  "options": [
+   "1671",
+   "1670",
+   "1668",
+   "1420"
+  ],
+  "group": {
+   "id": "g90ce9467773",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      475,
+      285,
+      140,
+      230,
+      260
+     ],
+     [
+      "Canara",
+      525,
+      125,
+      355,
+      490,
+      525
+     ],
+     [
+      "PNB",
+      190,
+      380,
+      475,
+      395,
+      230
+     ],
+     [
+      "BOB",
+      140,
+      450,
+      465,
+      225,
+      225
+     ],
+     [
+      "SBI",
+      225,
+      390,
+      295,
+      560,
+      175
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "PNB: 190 + 380 + 475 + 395 + 230 = 1670."
+ },
+ {
+  "id": "qf4e379156c2",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+  "options": [
+   "352",
+   "318",
+   "345",
+   "335"
+  ],
+  "group": {
+   "id": "g00445c7cd24",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      160,
+      245,
+      170,
+      350,
+      155
+     ],
+     [
+      "Canara",
+      530,
+      215,
+      140,
+      590,
+      545
+     ],
+     [
+      "Indian",
+      205,
+      440,
+      515,
+      315,
+      535
+     ],
+     [
+      "Union",
+      110,
+      315,
+      335,
+      590,
+      520
+     ],
+     [
+      "PNB",
+      455,
+      460,
+      330,
+      550,
+      475
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2022: 245 + 215 + 440 + 315 + 460 = 1675.\nAverage = 1675/5 = 335."
+ },
+ {
+  "id": "qfa390f0195d",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "368",
+   "363",
+   "272",
+   "454"
+  ],
+  "group": {
+   "id": "gc7645d5f078",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Union",
+      440,
+      400,
+      490,
+      145,
+      490
+     ],
+     [
+      "SBI",
+      530,
+      120,
+      255,
+      575,
+      525
+     ],
+     [
+      "BOB",
+      460,
+      300,
+      295,
+      275,
+      160
+     ],
+     [
+      "Canara",
+      525,
+      305,
+      505,
+      460,
+      460
+     ],
+     [
+      "PNB",
+      405,
+      490,
+      270,
+      555,
+      505
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "2023: 490 + 255 + 295 + 505 + 270 = 1815.\nAverage = 1815/5 = 363."
+ },
+ {
+  "id": "qfadeb747d3d",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "BOB",
+   "Indian",
+   "Union",
+   "SBI"
+  ],
+  "group": {
+   "id": "g7274cea452b",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "SBI",
+      150,
+      325,
+      470,
+      105,
+      545
+     ],
+     [
+      "Canara",
+      370,
+      250,
+      495,
+      305,
+      480
+     ],
+     [
+      "BOB",
+      430,
+      315,
+      140,
+      290,
+      280
+     ],
+     [
+      "Union",
+      240,
+      170,
+      345,
+      545,
+      155
+     ],
+     [
+      "Indian",
+      410,
+      500,
+      455,
+      575,
+      160
+     ]
+    ]
+   }
+  },
+  "answer": 1,
+  "explanation": "Totals: SBI 1595, Canara 1900, BOB 1455, Union 1455, Indian 2100.\nHighest: Indian (2100)."
+ },
+ {
+  "id": "qfb9cb592c4b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of PNB's disbursement to SBI's in 2025?",
+  "options": [
+   "51:56",
+   "52:57",
+   "53:56",
+   "13:14"
+  ],
+  "group": {
+   "id": "g7fcab93cf68",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "PNB",
+      505,
+      525,
+      135,
+      325,
+      260
+     ],
+     [
+      "Canara",
+      510,
+      150,
+      460,
+      595,
+      565
+     ],
+     [
+      "BOB",
+      105,
+      120,
+      560,
+      410,
+      220
+     ],
+     [
+      "SBI",
+      565,
+      390,
+      415,
+      580,
+      280
+     ],
+     [
+      "Union",
+      345,
+      100,
+      555,
+      540,
+      150
+     ]
+    ]
+   }
+  },
+  "answer": 3,
+  "explanation": "2025: PNB = 260, SBI = 280.\n260:280, divide by 20: 13:14."
+ },
+ {
+  "id": "qfe8382f7e35",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Canara's disbursement to SBI's in 2024?",
+  "options": [
+   "80:91",
+   "79:91",
+   "20:23",
+   "81:91"
+  ],
+  "group": {
+   "id": "g1b9a293a1d2",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Canara",
+      325,
+      370,
+      235,
+      400,
+      155
+     ],
+     [
+      "SBI",
+      420,
+      395,
+      370,
+      455,
+      490
+     ],
+     [
+      "BOB",
+      115,
+      120,
+      175,
+      545,
+      585
+     ],
+     [
+      "Indian",
+      245,
+      320,
+      470,
+      390,
+      345
+     ],
+     [
+      "PNB",
+      100,
+      155,
+      550,
+      390,
+      170
+     ]
+    ]
+   }
+  },
+  "answer": 0,
+  "explanation": "2024: Canara = 400, SBI = 455.\n400:455, divide by 5: 80:91."
+ }
+]

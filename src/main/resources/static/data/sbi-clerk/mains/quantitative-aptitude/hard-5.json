@@ -1,752 +1,942 @@
 [
  {
-  "id": "q341b32e1d1a",
-  "subject": "quant",
-  "topic": "time-work",
-  "level": "hard",
-  "question": "A and B together can do a job in 12 days, B and C in 10 days, and A and C in 20 days. In how many days can A alone do it?",
-  "options": [
-   "59",
-   "58",
-   "60",
-   "65"
-  ],
-  "answer": 2,
-  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
- },
- {
-  "id": "q04eb77b736b",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 27 hours to go 108 km upstream and 6 hours to return downstream. Find the speed of the boat in still water (km/h).",
-  "options": [
-   "10",
-   "16",
-   "21",
-   "11"
-  ],
-  "answer": 3,
-  "explanation": "Upstream 4, downstream 18; still water = (up+down)/2"
- },
- {
-  "id": "q3eff1fb349e",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 200 m and 240 m long run at 66 km/h and 48 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "79",
-   "93",
-   "89",
-   "88"
-  ],
-  "answer": 3,
-  "explanation": "Relative speed = 18 km/h; distance = 440 m"
- },
- {
-  "id": "qe5845e67093",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 9 people is 26 years. When a new person joins, the average rises to 28. How old is the new person?",
-  "options": [
-   "37",
-   "49",
-   "39",
-   "46"
-  ],
-  "answer": 3,
-  "explanation": "10×28 − 9×26 = 46"
- },
- {
-  "id": "q7a3a2cc879e",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 330 m and 330 m long run at 48 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "376",
-   "386",
-   "396",
-   "391"
-  ],
-  "answer": 2,
-  "explanation": "Relative speed = 6 km/h; distance = 660 m"
- },
- {
-  "id": "qd02a9ecc24a",
+  "id": "qee0f375ef35",
   "subject": "quant",
   "topic": "quadratic-equations",
   "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 6x + 5 = 0\nII. y² + 2y − 24 = 0",
+  "question": "Solve both equations and compare x and y.\nI. x² + 3x − 28 = 0\nII. y² + 8y + 7 = 0",
   "options": [
-   "No relation can be established",
-   "x = y",
    "x > y",
-   "x < y"
-  ],
-  "answer": 0,
-  "explanation": "Roots of I: -1, -5; roots of II: 4, -6"
- },
- {
-  "id": "q26a31040091",
-  "subject": "quant",
-  "topic": "mixture",
-  "level": "hard",
-  "question": "A vessel holds 50 litres of pure milk. 30 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
-  "options": [
-   "3",
-   "8",
-   "6",
-   "12"
-  ],
-  "answer": 1,
-  "explanation": "Milk left = 50(1 − 30/50)²"
- },
- {
-  "id": "qa0b8e12426a",
-  "subject": "quant",
-  "topic": "time-work",
-  "level": "hard",
-  "question": "A and B together can do a job in 15 days, B and C in 12 days, and A and C in 20 days. In how many days can A alone do it?",
-  "options": [
-   "75",
-   "60",
-   "57",
-   "30"
-  ],
-  "answer": 1,
-  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
- },
- {
-  "id": "q27e9141b5c5",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 9 people is 29 years. When a new person joins, the average rises to 30. How old is the new person?",
-  "options": [
-   "41",
-   "33",
-   "39",
-   "34"
-  ],
-  "answer": 2,
-  "explanation": "10×30 − 9×29 = 39"
- },
- {
-  "id": "qcda75280457",
-  "subject": "quant",
-  "topic": "percentage",
-  "level": "hard",
-  "question": "A's salary is 150% more than B's. B's salary is what percent less than A's?",
-  "options": [
-   "72%",
-   "48%",
-   "50%",
-   "60%"
-  ],
-  "answer": 3,
-  "explanation": "100x/(100+x) with x = 150"
- },
- {
-  "id": "qf2f18604524",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 8 people is 31 years. When a new person joins, the average rises to 32. How old is the new person?",
-  "options": [
-   "42",
-   "40",
-   "36",
-   "50"
-  ],
-  "answer": 1,
-  "explanation": "9×32 − 8×31 = 40"
- },
- {
-  "id": "qc3a7be45c6b",
-  "subject": "quant",
-  "topic": "time-work",
-  "level": "hard",
-  "question": "A can complete a work in 20 days and B in 30 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
-  "options": [
-   "21",
-   "20",
-   "17",
-   "22"
-  ],
-  "answer": 1,
-  "explanation": "Remaining = 1 − 4(1/20+1/30); B needs remaining × 30 days"
- },
- {
-  "id": "qcd13f7fefb7",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 3 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "19/28",
-   "9/28",
-   "4/13",
-   "24/91"
-  ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 14×13"
- },
- {
-  "id": "qc713f61162a",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 13 hours to go 65 km upstream and 5 hours to return downstream. Find the speed of the stream (km/h).",
-  "options": [
-   "14",
-   "4",
-   "7",
-   "5"
-  ],
-  "answer": 1,
-  "explanation": "Stream = (downstream − upstream)/2 = 4"
- },
- {
-  "id": "q6d58dc3cac9",
-  "subject": "quant",
-  "topic": "permutation-combination",
-  "level": "hard",
-  "question": "A committee of 5 is chosen from 7 men and 5 women. In how many ways can it be formed with at least one man?",
-  "options": [
-   "949",
-   "593",
-   "791",
-   "788"
-  ],
-  "answer": 2,
-  "explanation": "Total C(12,5) minus all-women C(5,5)"
- },
- {
-  "id": "qb7035c84a0c",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 170 m and 180 m long run at 48 km/h and 42 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "189",
-   "209",
-   "210",
-   "220"
-  ],
-  "answer": 2,
-  "explanation": "Relative speed = 6 km/h; distance = 350 m"
- },
- {
-  "id": "q89da721826e",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 2 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "8/21",
-   "1/2",
-   "2/7",
-   "5/21"
-  ],
-  "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 7×6"
- },
- {
-  "id": "q96ebe410966",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 170 m and 380 m long run at 42 km/h and 60 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "113",
-   "110",
-   "100",
-   "105"
-  ],
-  "answer": 1,
-  "explanation": "Relative speed = 18 km/h; distance = 550 m"
- },
- {
-  "id": "qa383c764360",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 340 m and 380 m long run at 78 km/h and 90 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "214",
-   "213",
-   "216",
-   "206"
-  ],
-  "answer": 2,
-  "explanation": "Relative speed = 12 km/h; distance = 720 m"
- },
- {
-  "id": "q74c33928dc1",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 12 hours to go 144 km upstream and 9 hours to return downstream. Find the speed of the stream (km/h).",
-  "options": [
-   "12",
-   "4",
-   "2",
-   "7"
-  ],
-  "answer": 2,
-  "explanation": "Stream = (downstream − upstream)/2 = 2"
- },
- {
-  "id": "qb09f56cb238",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 9 people is 23 years. When a new person joins, the average rises to 24. How old is the new person?",
-  "options": [
-   "38",
-   "30",
-   "28",
-   "33"
-  ],
-  "answer": 3,
-  "explanation": "10×24 − 9×23 = 33"
- },
- {
-  "id": "qa5f2467ba63",
-  "subject": "quant",
-  "topic": "quadratic-equations",
-  "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 15 = 0\nII. y² + 3y + 2 = 0",
-  "options": [
-   "No relation can be established",
-   "x ≤ y",
    "x < y",
-   "x ≥ y"
-  ],
-  "answer": 0,
-  "explanation": "Roots of I: 3, -5; roots of II: -1, -2"
+   "No relation can be established",
+   "x = y"
+  ]
  },
  {
-  "id": "qe86854b41bc",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "Two fair dice are thrown. What is the probability that the sum is 7?",
-  "options": [
-   "2/9",
-   "1/18",
-   "5/36",
-   "1/6"
-  ],
-  "answer": 3,
-  "explanation": "6 favourable outcomes out of 36"
- },
- {
-  "id": "q5711d774df3",
-  "subject": "quant",
-  "topic": "permutation-combination",
-  "level": "hard",
-  "question": "A committee of 4 is chosen from 8 men and 6 women. In how many ways can it be formed with at least one man?",
-  "options": [
-   "1232",
-   "988",
-   "986",
-   "989"
-  ],
-  "answer": 2,
-  "explanation": "Total C(14,4) minus all-women C(6,4)"
- },
- {
-  "id": "q274ea278f5b",
+  "id": "qd11c4884a77",
   "subject": "quant",
   "topic": "trains",
   "level": "hard",
-  "question": "Two trains 170 m and 360 m long run at 96 km/h and 60 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "question": "Two trains 130 m and 330 m long run at 60 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
   "options": [
-   "53",
-   "52",
-   "51",
-   "43"
-  ],
-  "answer": 0,
-  "explanation": "Relative speed = 36 km/h; distance = 530 m"
+   "83",
+   "69",
+   "68",
+   "76"
+  ]
  },
  {
-  "id": "qbd872099d9e",
+  "id": "q44f199ef007",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 270 m and 230 m long run at 84 km/h and 90 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "301",
+   "300",
+   "303",
+   "270"
+  ]
+ },
+ {
+  "id": "qc7e88b321ef",
   "subject": "quant",
   "topic": "time-work",
   "level": "hard",
-  "question": "A can complete a work in 16 days and B in 24 days. They work together for 2 days, then A leaves. In how many more days does B finish the remaining work?",
+  "question": "A can complete a work in 12 days and B in 16 days. They work together for 3 days, then A leaves. In how many more days does B finish the remaining work?",
   "options": [
    "19",
-   "23",
-   "18",
-   "17"
-  ],
-  "answer": 0,
-  "explanation": "Remaining = 1 − 2(1/16+1/24); B needs remaining × 24 days"
+   "9",
+   "7",
+   "8"
+  ]
  },
  {
-  "id": "q980eb6b3f17",
+  "id": "qfcba0977422",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 270 m and 170 m long run at 66 km/h and 48 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "106",
+   "79",
+   "88",
+   "70"
+  ]
+ },
+ {
+  "id": "q88a31313869",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 140 m and 140 m long run at 48 km/h and 36 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "84",
+   "89",
+   "94",
+   "85"
+  ]
+ },
+ {
+  "id": "qb0ed15878fd",
+  "subject": "quant",
+  "topic": "boats-streams",
+  "level": "hard",
+  "question": "A boat takes 2 hours to go 28 km upstream and 1 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "4",
+   "7",
+   "9",
+   "10"
+  ]
+ },
+ {
+  "id": "q3fe0b59207d",
   "subject": "quant",
   "topic": "number-series",
   "level": "hard",
-  "question": "Find the missing number: 4, 17, 69, 277, 1109, ?, 17749",
+  "question": "Find the missing number: 51, 62, 83, 98, ?, 142, 171",
   "options": [
-   "6656",
-   "4437",
-   "4439",
-   "4438"
-  ],
-  "answer": 1,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+   "122",
+   "111",
+   "148",
+   "123"
+  ]
  },
  {
-  "id": "qc1e882e75a8",
+  "id": "qf45981b35bb",
   "subject": "quant",
-  "topic": "mixture",
+  "topic": "probability",
   "level": "hard",
-  "question": "A vessel holds 100 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
+  "question": "A bag has 2 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "48",
-   "64",
-   "96",
-   "65"
-  ],
-  "answer": 1,
-  "explanation": "Milk left = 100(1 − 20/100)²"
+   "7/9",
+   "7/18",
+   "1/3",
+   "1/5"
+  ]
  },
  {
-  "id": "q96f48f05798",
+  "id": "q574b49f9c3a",
   "subject": "quant",
-  "topic": "quadratic-equations",
+  "topic": "boats-streams",
   "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 13x + 40 = 0\nII. y² − 5y − 24 = 0",
+  "question": "A boat takes 38 hours to go 570 km upstream and 30 hours to return downstream. Find the speed of the stream (km/h).",
   "options": [
-   "x > y",
-   "x ≤ y",
-   "x < y",
-   "x ≥ y"
-  ],
-  "answer": 2,
-  "explanation": "Roots of I: -5, -8; roots of II: -3, 8"
+   "2",
+   "12",
+   "1",
+   "5"
+  ]
  },
  {
-  "id": "q1b2446a7273",
+  "id": "qd8a72517352",
   "subject": "quant",
-  "topic": "time-work",
+  "topic": "average",
   "level": "hard",
-  "question": "A and B together can do a job in 20 days, B and C in 10 days, and A and C in 12 days. In how many days can A alone do it?",
+  "question": "The average age of 9 people is 36 years. When a new person joins, the average rises to 37. How old is the new person?",
   "options": [
-   "60",
-   "75",
    "58",
-   "90"
-  ],
-  "answer": 0,
-  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
+   "39",
+   "46",
+   "43"
+  ]
  },
  {
-  "id": "q3b3c06e4002",
+  "id": "q47ad26e7a26",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 290 m and 350 m long run at 84 km/h and 78 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "346",
+   "387",
+   "384",
+   "288"
+  ]
+ },
+ {
+  "id": "q3e6d6a313f9",
   "subject": "quant",
   "topic": "compound-interest",
   "level": "hard",
-  "question": "What is the difference between the compound interest and simple interest on ₹15000 for 2 years at 12% per annum?",
+  "question": "What is the difference between the compound interest and simple interest on ₹7500 for 2 years at 20% per annum?",
   "options": [
-   "₹214",
-   "₹217",
-   "₹213",
-   "₹216"
-  ],
-  "answer": 3,
-  "explanation": "Difference = P(R/100)² = ₹216"
+   "₹299",
+   "₹290",
+   "₹270",
+   "₹300"
+  ]
  },
  {
-  "id": "q75ca3b4ea8f",
+  "id": "q2ba0b8d5f29",
   "subject": "quant",
-  "topic": "average",
+  "topic": "trains",
   "level": "hard",
-  "question": "The average age of 7 people is 29 years. When a new person joins, the average rises to 31. How old is the new person?",
+  "question": "Two trains 390 m and 210 m long run at 96 km/h and 84 km/h in opposite directions on parallel tracks. In how many seconds do they completely cross each other?",
   "options": [
-   "52",
-   "45",
-   "54",
-   "68"
-  ],
-  "answer": 1,
-  "explanation": "8×31 − 7×29 = 45"
+   "11",
+   "22",
+   "12",
+   "10"
+  ]
  },
  {
-  "id": "q9adf82811d7",
+  "id": "qfb05fc20e3d",
   "subject": "quant",
   "topic": "permutation-combination",
   "level": "hard",
-  "question": "A committee of 5 is chosen from 7 men and 6 women. In how many ways can it be formed with at least one man?",
+  "question": "A committee of 3 is chosen from 7 men and 6 women. In how many ways can it be formed with at least one man?",
   "options": [
-   "1473",
-   "640",
-   "1281",
-   "1283"
-  ],
-  "answer": 2,
-  "explanation": "Total C(13,5) minus all-women C(6,5)"
+   "276",
+   "269",
+   "133",
+   "266"
+  ]
  },
  {
-  "id": "q4beb03f209b",
+  "id": "q39861fb8158",
   "subject": "quant",
-  "topic": "time-work",
+  "topic": "compound-interest",
   "level": "hard",
-  "question": "A can complete a work in 10 days and B in 34 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "question": "What is the difference between the compound interest and simple interest on ₹45000 for 2 years at 12% per annum?",
   "options": [
-   "7",
-   "11",
-   "12",
-   "17"
-  ],
-  "answer": 2,
-  "explanation": "Remaining = 1 − 5(1/10+1/34); B needs remaining × 34 days"
+   "₹972",
+   "₹616",
+   "₹648",
+   "₹745"
+  ]
  },
  {
-  "id": "q4829aef8586",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 150 m and 330 m long run at 60 km/h and 36 km/h in opposite directions on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "16",
-   "27",
-   "18",
-   "13"
-  ],
-  "answer": 2,
-  "explanation": "Relative speed = 96 km/h; distance = 480 m"
- },
- {
-  "id": "q50b1d4cacce",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 14 hours to go 84 km upstream and 6 hours to return downstream. Find the speed of the stream (km/h).",
-  "options": [
-   "7",
-   "14",
-   "6",
-   "4"
-  ],
-  "answer": 3,
-  "explanation": "Stream = (downstream − upstream)/2 = 4"
- },
- {
-  "id": "q876c2724c7f",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 190 m and 110 m long run at 72 km/h and 78 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "180",
-   "198",
-   "189",
-   "270"
-  ],
-  "answer": 0,
-  "explanation": "Relative speed = 6 km/h; distance = 300 m"
- },
- {
-  "id": "q0a68826ff46",
+  "id": "qa384eecd4dc",
   "subject": "quant",
   "topic": "number-series",
   "level": "hard",
-  "question": "Find the missing number: 6, 9, 11, ?, 16, 81, 21, 243",
+  "question": "Find the missing number: 5, 4, 7, 12, 9, ?, 11, 108",
   "options": [
-   "20",
-   "27",
-   "26",
-   "32"
-  ],
-  "answer": 1,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+   "37",
+   "36",
+   "41",
+   "43"
+  ]
  },
  {
-  "id": "q8c3d5b641aa",
+  "id": "qf2090ec6abe",
   "subject": "quant",
-  "topic": "probability",
+  "topic": "time-work",
   "level": "hard",
-  "question": "A bag has 2 red, 6 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "question": "A can complete a work in 14 days and B in 21 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
   "options": [
-   "23/36",
-   "1/24",
-   "1/3",
-   "4/9"
-  ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+   "9",
+   "6",
+   "4",
+   "11"
+  ]
  },
  {
-  "id": "q829ab8e9093",
+  "id": "qa5a4d78bd0d",
   "subject": "quant",
   "topic": "trains",
   "level": "hard",
-  "question": "Two trains 240 m and 180 m long run at 78 km/h and 36 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "question": "Two trains 280 m and 240 m long run at 96 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
   "options": [
-   "27",
-   "26",
-   "29",
-   "36"
-  ],
-  "answer": 3,
-  "explanation": "Relative speed = 42 km/h; distance = 420 m"
+   "234",
+   "153",
+   "155",
+   "156"
+  ]
  },
  {
-  "id": "q380c503acdc",
+  "id": "q64a0a3b8959",
   "subject": "quant",
   "topic": "quadratic-equations",
   "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 8 = 0\nII. y² − 15y + 56 = 0",
+  "question": "Solve both equations and compare x and y.\nI. x² − 81 = 0\nII. y² + 5y + 6 = 0",
   "options": [
-   "x ≥ y",
-   "x ≤ y",
    "No relation can be established",
-   "x < y"
-  ],
-  "answer": 3,
-  "explanation": "Roots of I: -1, -8; roots of II: 8, 7"
+   "x > y",
+   "x = y",
+   "x ≤ y"
+  ]
  },
  {
-  "id": "q470598ca5dc",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 5, 17, 53, ?, 485, 1457, 4373",
-  "options": [
-   "121",
-   "129",
-   "161",
-   "153"
-  ],
-  "answer": 2,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q48d9f9068fc",
-  "subject": "quant",
-  "topic": "permutation-combination",
-  "level": "hard",
-  "question": "In how many distinct ways can the letters of the word MISSISSIPPI be arranged?",
-  "options": [
-   "34650",
-   "31185",
-   "34660",
-   "43312"
-  ],
-  "answer": 0,
-  "explanation": "n! divided by the factorial of each repeated letter count"
- },
- {
-  "id": "q7209c700a39",
+  "id": "q80a1110464e",
   "subject": "quant",
   "topic": "probability",
   "level": "hard",
-  "question": "A bag has 2 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "question": "A bag has 4 red, 3 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "6/13",
-   "1/3",
-   "9/13",
-   "12/13"
-  ],
-  "answer": 1,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
- },
- {
-  "id": "q12ebe493938",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 4 people is 35 years. When a new person joins, the average rises to 36. How old is the new person?",
-  "options": [
-   "40",
-   "37",
-   "20",
-   "36"
-  ],
-  "answer": 0,
-  "explanation": "5×36 − 4×35 = 40"
- },
- {
-  "id": "qdee94da980b",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 3 red, 3 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "5/9",
-   "10/27",
    "1/4",
-   "4/5"
-  ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 9×8"
+   "19/66",
+   "16/33",
+   "7/12"
+  ]
  },
  {
-  "id": "q5f9749b44ff",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 2 red, 3 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "2/7",
-   "4/15",
-   "1/2",
-   "3/4"
-  ],
-  "answer": 1,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 6×5"
- },
- {
-  "id": "q384980ecdfe",
-  "subject": "quant",
-  "topic": "permutation-combination",
-  "level": "hard",
-  "question": "In how many distinct ways can the letters of the word LEADER be arranged?",
-  "options": [
-   "270",
-   "360",
-   "450",
-   "350"
-  ],
-  "answer": 1,
-  "explanation": "n! divided by the factorial of each repeated letter count"
- },
- {
-  "id": "q8fb7dc9415a",
+  "id": "qb55b385df4f",
   "subject": "quant",
   "topic": "time-work",
   "level": "hard",
-  "question": "A can complete a work in 20 days and B in 28 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "question": "A can complete a work in 38 days and B in 19 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
   "options": [
-   "16",
-   "20",
-   "14",
-   "26"
-  ],
-  "answer": 0,
-  "explanation": "Remaining = 1 − 5(1/20+1/28); B needs remaining × 28 days"
+   "13",
+   "12",
+   "9",
+   "10"
+  ]
  },
  {
-  "id": "q87027be578d",
+  "id": "qc64723a35ce",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 280 m and 320 m long run at 42 km/h and 60 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "123",
+   "114",
+   "118",
+   "120"
+  ]
+ },
+ {
+  "id": "q4d2e2a917a9",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 27, 64, 125, 216, 343, ?, 729",
+  "options": [
+   "514",
+   "512",
+   "509",
+   "513"
+  ]
+ },
+ {
+  "id": "q445c44cc1b7",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 210 m and 340 m long run at 54 km/h and 36 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "55",
+   "121",
+   "100",
+   "110"
+  ]
+ },
+ {
+  "id": "q46a3d574137",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 110 m and 220 m long run at 48 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "23",
+   "34",
+   "41",
+   "33"
+  ]
+ },
+ {
+  "id": "q144b941a384",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A and B together can do a job in 10 days, B and C in 12 days, and A and C in 20 days. In how many days can A alone do it?",
+  "options": [
+   "45",
+   "30",
+   "33",
+   "26"
+  ]
+ },
+ {
+  "id": "q535c82c9127",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 4 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/11",
+   "5/12",
+   "17/55",
+   "1/12"
+  ]
+ },
+ {
+  "id": "qdf315cf40cc",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 24 = 0\nII. y² + 10y + 16 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "No relation can be established",
+   "x = y"
+  ]
+ },
+ {
+  "id": "qd57ee062295",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 30, 31, 54, ?, 86, 95, 126",
+  "options": [
+   "74",
+   "53",
+   "65",
+   "59"
+  ]
+ },
+ {
+  "id": "q262160374ca",
   "subject": "quant",
   "topic": "average",
   "level": "hard",
-  "question": "The average age of 7 people is 28 years. When a new person joins, the average rises to 31. How old is the new person?",
+  "question": "The average age of 6 people is 23 years. When a new person joins, the average rises to 24. How old is the new person?",
   "options": [
-   "52",
-   "55",
-   "44",
-   "49"
+   "34",
+   "30",
+   "29",
+   "36"
+  ]
+ },
+ {
+  "id": "q4ff65b67bb4",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 28 days and B in 14 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "8",
+   "7",
+   "12",
+   "18"
+  ]
+ },
+ {
+  "id": "qe536ae9a8c0",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 21 days and B in 30 days. They work together for 7 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "23",
+   "13",
+   "10",
+   "3"
+  ]
+ },
+ {
+  "id": "qc52da5234a4",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 320 m and 130 m long run at 60 km/h and 42 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "90",
+   "92",
+   "85",
+   "80"
+  ]
+ },
+ {
+  "id": "q3a4c358a070",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 300 m and 230 m long run at 72 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "109",
+   "104",
+   "106",
+   "85"
+  ]
+ },
+ {
+  "id": "q2ee2a552622",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 7x + 12 = 0\nII. y² − 25 = 0",
+  "options": [
+   "x ≤ y",
+   "x < y",
+   "No relation can be established",
+   "x = y"
+  ]
+ },
+ {
+  "id": "qd9f825d44bd",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 21 days and B in 14 days. They work together for 3 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "8",
+   "7",
+   "10",
+   "9"
+  ]
+ },
+ {
+  "id": "qd431dad9dc9",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 18 days and B in 27 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "6",
+   "22",
+   "18",
+   "12"
+  ]
+ },
+ {
+  "id": "q2b5b40948d5",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 13, 32, 69, ?, 221, 348, 517",
+  "options": [
+   "129",
+   "127",
+   "136",
+   "130"
+  ]
+ },
+ {
+  "id": "qa8dea60e699",
+  "subject": "quant",
+  "topic": "average",
+  "level": "hard",
+  "question": "The average age of 5 people is 24 years. When a new person joins, the average rises to 26. How old is the new person?",
+  "options": [
+   "45",
+   "41",
+   "40",
+   "36"
+  ]
+ },
+ {
+  "id": "qae5356c5766",
+  "subject": "quant",
+  "topic": "boats-streams",
+  "level": "hard",
+  "question": "A boat takes 22 hours to go 154 km upstream and 14 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "2",
+   "5",
+   "12",
+   "7"
+  ]
+ },
+ {
+  "id": "qf02cb4e61e9",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 26 days and B in 39 days. They work together for 2 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "29",
+   "34",
+   "37",
+   "39"
+  ]
+ },
+ {
+  "id": "qba5473505b7",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/17",
+   "2/17",
+   "12/17",
+   "2/3"
+  ]
+ },
+ {
+  "id": "q56756c87c69",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 8x + 16 = 0\nII. y² + 4y − 32 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x < y",
+   "x ≥ y"
+  ]
+ },
+ {
+  "id": "q9536d62fa4a",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹32500 for 2 years at 20% per annum?",
+  "options": [
+   "₹1303",
+   "₹1365",
+   "₹1300",
+   "₹1560"
+  ]
+ },
+ {
+  "id": "qad14c269f89",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "2304",
+   "1920",
+   "1632",
+   "1536"
   ],
-  "answer": 0,
-  "explanation": "8×31 − 7×28 = 52"
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q444998c9578",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of BOB's disbursement to Canara's in 2023?",
+  "options": [
+   "55:79",
+   "7:10",
+   "56:79",
+   "57:79"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "qc84011c3915",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did Canara's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "33.92%",
+   "30.35%",
+   "44.64%",
+   "35.71%"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q3e33c4ea793",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "333",
+   "331",
+   "300",
+   "350"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q9739df42ace",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Indian",
+   "SBI",
+   "BOB",
+   "Union"
+  ],
+  "group": {
+   "id": "gebf9a5559a4",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "BOB",
+      370,
+      520,
+      280,
+      185,
+      565
+     ],
+     [
+      "Indian",
+      515,
+      325,
+      555,
+      505,
+      125
+     ],
+     [
+      "SBI",
+      545,
+      535,
+      205,
+      595,
+      530
+     ],
+     [
+      "Union",
+      455,
+      435,
+      230,
+      415,
+      125
+     ],
+     [
+      "Canara",
+      140,
+      485,
+      395,
+      340,
+      190
+     ]
+    ]
+   }
+  }
  }
 ]

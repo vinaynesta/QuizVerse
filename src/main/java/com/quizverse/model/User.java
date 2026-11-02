@@ -43,6 +43,26 @@ public class User {
     @Column(nullable = false)
     private int dailyGoal = 2;
 
+    /** Opt-in: "you haven't practised in 3 days". */
+    @Column(nullable = false)
+    private boolean emailReminders;
+
+    /** Opt-in: the Monday progress email. */
+    @Column(nullable = false)
+    private boolean emailWeekly;
+
+    /** Random value in the one-click unsubscribe link; made with the first reminder or summary. */
+    @Column(unique = true, length = 43)
+    private String emailToken;
+
+    private Instant lastReminderAt;
+
+    private Instant lastWeeklyAt;
+
+    /** Shown as "Anonymous" on leaderboards and contest results. */
+    @Column(nullable = false)
+    private boolean leaderboardHidden;
+
     public Long getId() { return id; }
     public String getUsername() { return username; }
     public String getEmail() { return email; }
@@ -52,6 +72,12 @@ public class User {
     public int getDailyGoal() { return dailyGoal; }
     public String getGoogleSubject() { return googleSubject; }
     public boolean hasPassword() { return passwordHash != null; }
+    public boolean isEmailReminders() { return emailReminders; }
+    public boolean isEmailWeekly() { return emailWeekly; }
+    public String getEmailToken() { return emailToken; }
+    public Instant getLastReminderAt() { return lastReminderAt; }
+    public Instant getLastWeeklyAt() { return lastWeeklyAt; }
+    public boolean isLeaderboardHidden() { return leaderboardHidden; }
 
     public void setUsername(String username) { this.username = username; }
     public void setEmail(String email) { this.email = email; }
@@ -59,4 +85,10 @@ public class User {
     public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
     public void setDailyGoal(int dailyGoal) { this.dailyGoal = dailyGoal; }
     public void setGoogleSubject(String googleSubject) { this.googleSubject = googleSubject; }
+    public void setEmailReminders(boolean emailReminders) { this.emailReminders = emailReminders; }
+    public void setEmailWeekly(boolean emailWeekly) { this.emailWeekly = emailWeekly; }
+    public void setEmailToken(String emailToken) { this.emailToken = emailToken; }
+    public void setLastReminderAt(Instant lastReminderAt) { this.lastReminderAt = lastReminderAt; }
+    public void setLastWeeklyAt(Instant lastWeeklyAt) { this.lastWeeklyAt = lastWeeklyAt; }
+    public void setLeaderboardHidden(boolean leaderboardHidden) { this.leaderboardHidden = leaderboardHidden; }
 }

@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.time.Clock;
 
@@ -12,6 +13,7 @@ import java.time.Clock;
 @SpringBootApplication(scanBasePackages = "com.quizverse")
 @EntityScan("com.quizverse.model")
 @EnableJpaRepositories("com.quizverse.repository")
+@EnableScheduling
 public class DemoApplication {
 
 	public static void main(String[] args) {

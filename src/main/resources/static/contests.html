@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QuizVerse - Contests</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/quiz.css"/>
+    <script src="js/theme.js"></script>
+    <link rel="manifest" href="manifest.webmanifest"/>
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
+    <meta name="theme-color" content="#312e81"/>
+</head>
+<body>
+    <nav id="account-bar" class="account-bar"></nav>
+    <h1 id="contest-title">Live contests</h1>
+    <div class="quiz-container">
+        <!-- List view (contests.html) -->
+        <section id="contest-list" class="history-card chart-card">
+            <p class="card-sub">Everyone sits the same paper at the same time, then gets an all-India rank and percentile. Questions and options are shuffled for each person.</p>
+            <div id="contest-items"><p class="card-sub">Loading…</p></div>
+        </section>
+
+        <!-- One contest (contests.html?id=N): details, the paper, or results -->
+        <section id="contest-detail" class="history-card chart-card" hidden>
+            <p id="contest-info" class="challenge-intro"></p>
+            <p id="contest-error" class="form-error" role="alert" hidden></p>
+            <div class="challenge-actions">
+                <button type="button" id="contest-register" class="start-quiz-button challenge-take" hidden>Register</button>
+                <button type="button" id="contest-start" class="start-quiz-button challenge-take" hidden>Start the paper</button>
+            </div>
+            <p id="contest-status" class="card-sub" role="status"></p>
+        </section>
+
+        <section id="contest-paper" class="history-card chart-card" hidden>
+            <div class="card-head"><h2 id="paper-title"></h2><b id="paper-timer" class="contest-timer"></b></div>
+            <ol id="paper-questions" class="contest-questions"></ol>
+            <button type="button" id="paper-submit" class="start-quiz-button">Submit</button>
+        </section>
+
+        <section id="contest-results" class="history-card chart-card" hidden>
+            <div class="card-head"><h2>Results</h2></div>
+            <p id="results-you" class="challenge-intro"></p>
+            <div class="table-wrap">
+                <table class="topic-table">
+                    <thead><tr><th>Rank</th><th>Name</th><th class="num">Score</th><th class="num">Correct</th><th class="num">Wrong</th><th class="num">Time</th></tr></thead>
+                    <tbody id="results-rows"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Admins: schedule a contest -->
+        <form id="contest-admin" class="auth-card contest-admin" novalidate hidden>
+            <h2>Schedule a contest</h2>
+            <p class="form-error" role="alert" hidden></p>
+            <p class="form-success" role="status" hidden></p>
+            <label>Title <input name="title" maxlength="120" required placeholder="Sunday IBPS Prelims mock"/></label>
+            <label>Paper <select name="quizKey" required></select></label>
+            <label>Starts at (your local time) <input name="startsAt" type="datetime-local" required/></label>
+            <label>Minutes <input name="minutes" type="number" min="0" max="240" value="0"/>
+                <small>0 = the paper's own time limit</small></label>
+            <button type="submit" class="start-quiz-button">Schedule</button>
+        </form>
+    </div>
+    <script type="module" src="js/account.js"></script>
+    <script type="module" src="js/contests.js"></script>
+</body>
+</html>

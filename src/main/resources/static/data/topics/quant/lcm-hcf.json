@@ -1,18 +1,228 @@
 [
  {
+  "id": "q011e2437ce3",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 39 and 99.",
+  "options": [
+   "4",
+   "5",
+   "3",
+   "1"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n99 and 39 share the factor 3, and no larger one.\nCheck: 39 = 3 × 13, 99 = 3 × 33, and 13 and 33 have no common factor. HCF = 3."
+ },
+ {
   "id": "q01847674ce2",
   "subject": "quant",
   "topic": "lcm-hcf",
   "level": "easy",
   "question": "Find the LCM of 9 and 27.",
   "options": [
-   "28",
-   "22",
    "27",
-   "25"
+   "22",
+   "25",
+   "28"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 9 and 27 is 9.\nLCM × HCF = product of the two numbers.\nLCM = 9 × 27 / 9 = 243 / 9 = 27."
+ },
+ {
+  "id": "q01ba92b1b79",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 36 and 153.",
+  "options": [
+   "6",
+   "7",
+   "19",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n153 and 36 share the factor 9, and no larger one.\nCheck: 36 = 9 × 4, 153 = 9 × 17, and 4 and 17 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q0226c4f4667",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 132 and 117.",
+  "options": [
+   "8",
+   "1",
+   "6",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n132 and 117 share the factor 3, and no larger one.\nCheck: 132 = 3 × 44, 117 = 3 × 39, and 44 and 39 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q02bf7459cc9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 27 and 45.",
+  "options": [
+   "14",
+   "19",
+   "9",
+   "4"
   ],
   "answer": 2,
-  "explanation": "LCM = 9×27/HCF, HCF = 9"
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n45 and 27 share the factor 9, and no larger one.\nCheck: 27 = 9 × 3, 45 = 9 × 5, and 3 and 5 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q0420a023632",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 171 and 45.",
+  "options": [
+   "19",
+   "9",
+   "14",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n171 and 45 share the factor 9, and no larger one.\nCheck: 171 = 9 × 19, 45 = 9 × 5, and 19 and 5 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q050bcf8ad82",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 126 and 96.",
+  "options": [
+   "5",
+   "6",
+   "9",
+   "11"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n126 and 96 share the factor 6, and no larger one.\nCheck: 126 = 6 × 21, 96 = 6 × 16, and 21 and 16 have no common factor. HCF = 6."
+ },
+ {
+  "id": "q07319049e9c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 141 and 63.",
+  "options": [
+   "4",
+   "6",
+   "3",
+   "13"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n141 and 63 share the factor 3, and no larger one.\nCheck: 141 = 3 × 47, 63 = 3 × 21, and 47 and 21 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q075b1c648a4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 69 and 72.",
+  "options": [
+   "8",
+   "13",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n72 and 69 share the factor 3, and no larger one.\nCheck: 69 = 3 × 23, 72 = 3 × 24, and 23 and 24 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q0dba1b4467c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 156 and 174.",
+  "options": [
+   "3",
+   "8",
+   "7",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n174 and 156 share the factor 6, and no larger one.\nCheck: 156 = 6 × 26, 174 = 6 × 29, and 26 and 29 have no common factor. HCF = 6."
+ },
+ {
+  "id": "q0e0311043b0",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 29 and 31.",
+  "options": [
+   "898",
+   "1348",
+   "674",
+   "899"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 29 and 31 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 29 × 31 / 1 = 899 / 1 = 899."
+ },
+ {
+  "id": "q10d78611f95",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 23 and 22.",
+  "options": [
+   "506",
+   "632",
+   "607",
+   "507"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 23 and 22 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 23 × 22 / 1 = 506 / 1 = 506."
+ },
+ {
+  "id": "q13998cb9d86",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 32 and 33.",
+  "options": [
+   "1267",
+   "1061",
+   "1057",
+   "1056"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 32 and 33 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 32 × 33 / 1 = 1056 / 1 = 1056."
+ },
+ {
+  "id": "q13a775b1d5c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 153 and 81.",
+  "options": [
+   "6",
+   "9",
+   "19",
+   "7"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n153 and 81 share the factor 9, and no larger one.\nCheck: 153 = 9 × 17, 81 = 9 × 9, and 17 and 9 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q13d7cfd86c4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 63 and 156.",
+  "options": [
+   "2",
+   "3",
+   "6",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n156 and 63 share the factor 3, and no larger one.\nCheck: 63 = 3 × 21, 156 = 3 × 52, and 21 and 52 have no common factor. HCF = 3."
  },
  {
   "id": "q146cfd16f1f",
@@ -21,13 +231,73 @@
   "level": "easy",
   "question": "Find the LCM of 40 and 21.",
   "options": [
-   "838",
-   "1050",
    "840",
-   "966"
+   "1050",
+   "966",
+   "838"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 40 and 21 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 40 × 21 / 1 = 840 / 1 = 840."
+ },
+ {
+  "id": "q14f0d6dce03",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 32 and 46.",
+  "options": [
+   "736",
+   "731",
+   "773",
+   "735"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 32 and 46 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 32 × 46 / 2 = 1472 / 2 = 736."
+ },
+ {
+  "id": "q1676ee78e52",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 111 and 36.",
+  "options": [
+   "4",
+   "3",
+   "13",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n111 and 36 share the factor 3, and no larger one.\nCheck: 111 = 3 × 37, 36 = 3 × 12, and 37 and 12 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q1a1d54c5e78",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 129 and 21.",
+  "options": [
+   "4",
+   "5",
+   "3",
+   "1"
   ],
   "answer": 2,
-  "explanation": "LCM = 40×21/HCF, HCF = 1"
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n129 and 21 share the factor 3, and no larger one.\nCheck: 129 = 3 × 43, 21 = 3 × 7, and 43 and 7 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q2001bc116d0",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 162 and 171.",
+  "options": [
+   "9",
+   "12",
+   "14",
+   "19"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n171 and 162 share the factor 9, and no larger one.\nCheck: 162 = 9 × 18, 171 = 9 × 19, and 18 and 19 have no common factor. HCF = 9."
  },
  {
   "id": "q2087e855dc7",
@@ -37,12 +307,42 @@
   "question": "Find the HCF of 111 and 144.",
   "options": [
    "13",
+   "2",
    "3",
-   "1",
-   "2"
+   "1"
   ],
-  "answer": 1,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n144 and 111 share the factor 3, and no larger one.\nCheck: 111 = 3 × 37, 144 = 3 × 48, and 37 and 48 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q20d916999ae",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 60 and 12.",
+  "options": [
+   "60",
+   "45",
+   "62",
+   "70"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 60 and 12 is 12.\nLCM × HCF = product of the two numbers.\nLCM = 60 × 12 / 12 = 720 / 12 = 60."
+ },
+ {
+  "id": "q20f951489ee",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 27 and 144.",
+  "options": [
+   "8",
+   "10",
+   "11",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n144 and 27 share the factor 9, and no larger one.\nCheck: 27 = 9 × 3, 144 = 9 × 16, and 3 and 16 have no common factor. HCF = 9."
  },
  {
   "id": "q210cfcdcbfe",
@@ -51,13 +351,13 @@
   "level": "easy",
   "question": "Find the LCM of 38 and 27.",
   "options": [
-   "1077",
    "1026",
+   "975",
    "1024",
-   "975"
+   "1077"
   ],
-  "answer": 1,
-  "explanation": "LCM = 38×27/HCF, HCF = 1"
+  "answer": 0,
+  "explanation": "HCF of 38 and 27 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 38 × 27 / 1 = 1026 / 1 = 1026."
  },
  {
   "id": "q21d05db76d3",
@@ -72,7 +372,7 @@
    "1672"
   ],
   "answer": 0,
-  "explanation": "LCM = 38×55/HCF, HCF = 1"
+  "explanation": "HCF of 38 and 55 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 38 × 55 / 1 = 2090 / 1 = 2090."
  },
  {
   "id": "q21fc8a5bc12",
@@ -81,13 +381,28 @@
   "level": "easy",
   "question": "Find the HCF of 147 and 42.",
   "options": [
+   "10",
    "21",
-   "16",
    "11",
-   "10"
+   "16"
   ],
-  "answer": 0,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n147 and 42 share the factor 21, and no larger one.\nCheck: 147 = 21 × 7, 42 = 21 × 2, and 7 and 2 have no common factor. HCF = 21."
+ },
+ {
+  "id": "q2489c5e39f5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 39 and 42.",
+  "options": [
+   "2",
+   "4",
+   "5",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n42 and 39 share the factor 3, and no larger one.\nCheck: 39 = 3 × 13, 42 = 3 × 14, and 13 and 14 have no common factor. HCF = 3."
  },
  {
   "id": "q253e17cfc42",
@@ -102,7 +417,277 @@
    "1884"
   ],
   "answer": 2,
-  "explanation": "LCM = 39×46/HCF, HCF = 1"
+  "explanation": "HCF of 39 and 46 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 39 × 46 / 1 = 1794 / 1 = 1794."
+ },
+ {
+  "id": "q2a1a8f9ca1c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 42 and 56.",
+  "options": [
+   "169",
+   "165",
+   "252",
+   "168"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 42 and 56 is 14.\nLCM × HCF = product of the two numbers.\nLCM = 42 × 56 / 14 = 2352 / 14 = 168."
+ },
+ {
+  "id": "q2a9f8088412",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 177 and 36.",
+  "options": [
+   "5",
+   "8",
+   "2",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n177 and 36 share the factor 3, and no larger one.\nCheck: 177 = 3 × 59, 36 = 3 × 12, and 59 and 12 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q2c626afa32d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 108 and 75.",
+  "options": [
+   "2",
+   "13",
+   "8",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n108 and 75 share the factor 3, and no larger one.\nCheck: 108 = 3 × 36, 75 = 3 × 25, and 36 and 25 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q2cc2c9e964c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 57 and 180.",
+  "options": [
+   "2",
+   "5",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n180 and 57 share the factor 3, and no larger one.\nCheck: 57 = 3 × 19, 180 = 3 × 60, and 19 and 60 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q3223e996e7b",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 9 and 44.",
+  "options": [
+   "391",
+   "376",
+   "495",
+   "396"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 9 and 44 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 9 × 44 / 1 = 396 / 1 = 396."
+ },
+ {
+  "id": "q34b633ae60d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 147 and 144.",
+  "options": [
+   "4",
+   "6",
+   "5",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n147 and 144 share the factor 3, and no larger one.\nCheck: 147 = 3 × 49, 144 = 3 × 48, and 49 and 48 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q34b9bbe17f0",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 16 and 41.",
+  "options": [
+   "656",
+   "984",
+   "646",
+   "666"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 16 and 41 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 16 × 41 / 1 = 656 / 1 = 656."
+ },
+ {
+  "id": "q35472a8ad12",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 18 and 57.",
+  "options": [
+   "1",
+   "3",
+   "13",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n57 and 18 share the factor 3, and no larger one.\nCheck: 18 = 3 × 6, 57 = 3 × 19, and 6 and 19 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q362f59a37a8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 29 and 43.",
+  "options": [
+   "1250",
+   "1249",
+   "1185",
+   "1247"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 29 and 43 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 29 × 43 / 1 = 1247 / 1 = 1247."
+ },
+ {
+  "id": "q36dbd2bed38",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 27 and 153.",
+  "options": [
+   "11",
+   "4",
+   "9",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n153 and 27 share the factor 9, and no larger one.\nCheck: 27 = 9 × 3, 153 = 9 × 17, and 3 and 17 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q3907ce48975",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 40 and 32.",
+  "options": [
+   "160",
+   "163",
+   "150",
+   "240"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 40 and 32 is 8.\nLCM × HCF = product of the two numbers.\nLCM = 40 × 32 / 8 = 1280 / 8 = 160."
+ },
+ {
+  "id": "q395f420bf9c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 132 and 165.",
+  "options": [
+   "25",
+   "33",
+   "35",
+   "31"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 132 share the factor 33, and no larger one.\nCheck: 132 = 33 × 4, 165 = 33 × 5, and 4 and 5 have no common factor. HCF = 33."
+ },
+ {
+  "id": "q39f53101c95",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 32 and 35.",
+  "options": [
+   "1120",
+   "1123",
+   "1125",
+   "1119"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 32 and 35 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 32 × 35 / 1 = 1120 / 1 = 1120."
+ },
+ {
+  "id": "q3b5b4a573e7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 147 and 141.",
+  "options": [
+   "6",
+   "3",
+   "4",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n147 and 141 share the factor 3, and no larger one.\nCheck: 147 = 3 × 49, 141 = 3 × 47, and 49 and 47 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q3d419685575",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 27 and 51.",
+  "options": [
+   "3",
+   "1",
+   "2",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n51 and 27 share the factor 3, and no larger one.\nCheck: 27 = 3 × 9, 51 = 3 × 17, and 9 and 17 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q3f8bfb40df3",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 144 and 33.",
+  "options": [
+   "2",
+   "3",
+   "1",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n144 and 33 share the factor 3, and no larger one.\nCheck: 144 = 3 × 48, 33 = 3 × 11, and 48 and 11 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q40f1ce4076e",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 47 and 28.",
+  "options": [
+   "1448",
+   "658",
+   "1316",
+   "1579"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 47 and 28 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 47 × 28 / 1 = 1316 / 1 = 1316."
+ },
+ {
+  "id": "q41e81e3cce9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 93 and 21.",
+  "options": [
+   "2",
+   "8",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n93 and 21 share the factor 3, and no larger one.\nCheck: 93 = 3 × 31, 21 = 3 × 7, and 31 and 7 have no common factor. HCF = 3."
  },
  {
   "id": "q46212f09802",
@@ -111,13 +696,193 @@
   "level": "easy",
   "question": "Find the LCM of 49 and 44.",
   "options": [
-   "2048",
    "2156",
+   "1078",
    "2372",
-   "1078"
+   "2048"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 49 and 44 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 49 × 44 / 1 = 2156 / 1 = 2156."
+ },
+ {
+  "id": "q467465d4128",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 138 and 147.",
+  "options": [
+   "3",
+   "4",
+   "8",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n147 and 138 share the factor 3, and no larger one.\nCheck: 138 = 3 × 46, 147 = 3 × 49, and 46 and 49 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q479aa7beed1",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 69 and 138.",
+  "options": [
+   "72",
+   "104",
+   "59",
+   "69"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n138 and 69 share the factor 69, and no larger one.\nCheck: 69 = 69 × 1, 138 = 69 × 2, and 1 and 2 have no common factor. HCF = 69."
+ },
+ {
+  "id": "q48f074fbfec",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 90 and 30.",
+  "options": [
+   "33",
+   "30",
+   "26",
+   "32"
   ],
   "answer": 1,
-  "explanation": "LCM = 49×44/HCF, HCF = 1"
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n90 and 30 share the factor 30, and no larger one.\nCheck: 90 = 30 × 3, 30 = 30 × 1, and 3 and 1 have no common factor. HCF = 30."
+ },
+ {
+  "id": "q4b85dbfc35f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 30 and 34.",
+  "options": [
+   "510",
+   "586",
+   "500",
+   "408"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 30 and 34 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 30 × 34 / 2 = 1020 / 2 = 510."
+ },
+ {
+  "id": "q4fa57284e90",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 90 and 108.",
+  "options": [
+   "18",
+   "27",
+   "14",
+   "16"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n108 and 90 share the factor 18, and no larger one.\nCheck: 90 = 18 × 5, 108 = 18 × 6, and 5 and 6 have no common factor. HCF = 18."
+ },
+ {
+  "id": "q5050744b761",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 111 and 138.",
+  "options": [
+   "13",
+   "4",
+   "3",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n138 and 111 share the factor 3, and no larger one.\nCheck: 111 = 3 × 37, 138 = 3 × 46, and 37 and 46 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q53c29ccc0af",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 26 and 20.",
+  "options": [
+   "286",
+   "260",
+   "262",
+   "259"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 26 and 20 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 26 × 20 / 2 = 520 / 2 = 260."
+ },
+ {
+  "id": "q5811a1b55dd",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 48 and 132.",
+  "options": [
+   "2",
+   "11",
+   "13",
+   "12"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n132 and 48 share the factor 12, and no larger one.\nCheck: 48 = 12 × 4, 132 = 12 × 11, and 4 and 11 have no common factor. HCF = 12."
+ },
+ {
+  "id": "q5afc4db8947",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 60 and 17.",
+  "options": [
+   "1275",
+   "1071",
+   "1020",
+   "1019"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 60 and 17 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 60 × 17 / 1 = 1020 / 1 = 1020."
+ },
+ {
+  "id": "q5caa7acbeed",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 57 and 10.",
+  "options": [
+   "656",
+   "598",
+   "570",
+   "684"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 57 and 10 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 57 × 10 / 1 = 570 / 1 = 570."
+ },
+ {
+  "id": "q5de94ba95e8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 31 and 24.",
+  "options": [
+   "746",
+   "744",
+   "734",
+   "595"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 31 and 24 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 31 × 24 / 1 = 744 / 1 = 744."
+ },
+ {
+  "id": "q5e0cd98ebd7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 180 and 144.",
+  "options": [
+   "46",
+   "34",
+   "33",
+   "36"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n180 and 144 share the factor 36, and no larger one.\nCheck: 180 = 36 × 5, 144 = 36 × 4, and 5 and 4 have no common factor. HCF = 36."
  },
  {
   "id": "q5e5b03b799a",
@@ -132,7 +897,7 @@
    "5"
   ],
   "answer": 2,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n168 and 45 share the factor 3, and no larger one.\nCheck: 45 = 3 × 15, 168 = 3 × 56, and 15 and 56 have no common factor. HCF = 3."
  },
  {
   "id": "q5f0e2836392",
@@ -147,7 +912,247 @@
    "3"
   ],
   "answer": 3,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 144 share the factor 3, and no larger one.\nCheck: 165 = 3 × 55, 144 = 3 × 48, and 55 and 48 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q5fdeb6f7ee9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 52 and 58.",
+  "options": [
+   "1503",
+   "1513",
+   "1206",
+   "1508"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 52 and 58 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 52 × 58 / 2 = 3016 / 2 = 1508."
+ },
+ {
+  "id": "q644fdf3add5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 38 and 45.",
+  "options": [
+   "1624",
+   "1710",
+   "2052",
+   "1796"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 38 and 45 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 38 × 45 / 1 = 1710 / 1 = 1710."
+ },
+ {
+  "id": "q6497c642ef9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 34 and 47.",
+  "options": [
+   "1198",
+   "1603",
+   "1598",
+   "1593"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 34 and 47 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 34 × 47 / 1 = 1598 / 1 = 1598."
+ },
+ {
+  "id": "q668deb4f0c5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 57 and 55.",
+  "options": [
+   "3138",
+   "3145",
+   "3135",
+   "3130"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 57 and 55 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 57 × 55 / 1 = 3135 / 1 = 3135."
+ },
+ {
+  "id": "q672225c39ec",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 12 and 10.",
+  "options": [
+   "70",
+   "90",
+   "60",
+   "61"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 12 and 10 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 12 × 10 / 2 = 120 / 2 = 60."
+ },
+ {
+  "id": "q680d316347d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 42 and 33.",
+  "options": [
+   "452",
+   "460",
+   "416",
+   "462"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 42 and 33 is 3.\nLCM × HCF = product of the two numbers.\nLCM = 42 × 33 / 3 = 1386 / 3 = 462."
+ },
+ {
+  "id": "q681a99600ba",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 33 and 60.",
+  "options": [
+   "1",
+   "3",
+   "13",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n60 and 33 share the factor 3, and no larger one.\nCheck: 33 = 3 × 11, 60 = 3 × 20, and 11 and 20 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q6841e2a5cab",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 55 and 15.",
+  "options": [
+   "124",
+   "82",
+   "165",
+   "155"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 55 and 15 is 5.\nLCM × HCF = product of the two numbers.\nLCM = 55 × 15 / 5 = 825 / 5 = 165."
+ },
+ {
+  "id": "q694210e0463",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 44 and 37.",
+  "options": [
+   "1709",
+   "1628",
+   "1791",
+   "1872"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 44 and 37 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 44 × 37 / 1 = 1628 / 1 = 1628."
+ },
+ {
+  "id": "q6b38dc8ec76",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 138 and 84.",
+  "options": [
+   "4",
+   "6",
+   "16",
+   "7"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n138 and 84 share the factor 6, and no larger one.\nCheck: 138 = 6 × 23, 84 = 6 × 14, and 23 and 14 have no common factor. HCF = 6."
+ },
+ {
+  "id": "q7061246a734",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 54 and 117.",
+  "options": [
+   "9",
+   "8",
+   "4",
+   "11"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n117 and 54 share the factor 9, and no larger one.\nCheck: 54 = 9 × 6, 117 = 9 × 13, and 6 and 13 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q72d21fc67b4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 33 and 45.",
+  "options": [
+   "1",
+   "3",
+   "4",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n45 and 33 share the factor 3, and no larger one.\nCheck: 33 = 3 × 11, 45 = 3 × 15, and 11 and 15 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q748975619f7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 96 and 171.",
+  "options": [
+   "3",
+   "8",
+   "4",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n171 and 96 share the factor 3, and no larger one.\nCheck: 96 = 3 × 32, 171 = 3 × 57, and 32 and 57 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q74b0cf2c3a7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 57 and 25.",
+  "options": [
+   "1069",
+   "1496",
+   "1423",
+   "1425"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 57 and 25 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 57 × 25 / 1 = 1425 / 1 = 1425."
+ },
+ {
+  "id": "q7835f8ee276",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 48 and 40.",
+  "options": [
+   "240",
+   "228",
+   "241",
+   "216"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 48 and 40 is 8.\nLCM × HCF = product of the two numbers.\nLCM = 48 × 40 / 8 = 1920 / 8 = 240."
+ },
+ {
+  "id": "q78babbd271e",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 165 and 45.",
+  "options": [
+   "15",
+   "19",
+   "14",
+   "16"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 45 share the factor 15, and no larger one.\nCheck: 165 = 15 × 11, 45 = 15 × 3, and 11 and 3 have no common factor. HCF = 15."
  },
  {
   "id": "q798983e2d21",
@@ -156,13 +1161,208 @@
   "level": "easy",
   "question": "Find the LCM of 58 and 14.",
   "options": [
-   "396",
-   "203",
    "406",
-   "409"
+   "203",
+   "409",
+   "396"
   ],
-  "answer": 2,
-  "explanation": "LCM = 58×14/HCF, HCF = 2"
+  "answer": 0,
+  "explanation": "HCF of 58 and 14 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 58 × 14 / 2 = 812 / 2 = 406."
+ },
+ {
+  "id": "q7a0f9e64359",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 135 and 93.",
+  "options": [
+   "13",
+   "2",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n135 and 93 share the factor 3, and no larger one.\nCheck: 135 = 3 × 45, 93 = 3 × 31, and 45 and 31 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q7b588130a1e",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 45 and 42.",
+  "options": [
+   "6",
+   "3",
+   "5",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n45 and 42 share the factor 3, and no larger one.\nCheck: 45 = 3 × 15, 42 = 3 × 14, and 15 and 14 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q7cf66e3453c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 56 and 29.",
+  "options": [
+   "1624",
+   "1543",
+   "2030",
+   "1868"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 56 and 29 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 56 × 29 / 1 = 1624 / 1 = 1624."
+ },
+ {
+  "id": "q7d45873ed2a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 72 and 117.",
+  "options": [
+   "4",
+   "9",
+   "7",
+   "14"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n117 and 72 share the factor 9, and no larger one.\nCheck: 72 = 9 × 8, 117 = 9 × 13, and 8 and 13 have no common factor. HCF = 9."
+ },
+ {
+  "id": "q7ee03786bf1",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 36 and 32.",
+  "options": [
+   "278",
+   "293",
+   "245",
+   "288"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 36 and 32 is 4.\nLCM × HCF = product of the two numbers.\nLCM = 36 × 32 / 4 = 1152 / 4 = 288."
+ },
+ {
+  "id": "q86806fd4505",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 42 and 59.",
+  "options": [
+   "2354",
+   "2479",
+   "2475",
+   "2478"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 42 and 59 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 42 × 59 / 1 = 2478 / 1 = 2478."
+ },
+ {
+  "id": "q882749f1105",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 26 and 40.",
+  "options": [
+   "520",
+   "624",
+   "515",
+   "494"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 26 and 40 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 26 × 40 / 2 = 1040 / 2 = 520."
+ },
+ {
+  "id": "q8d723bdaed2",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 24 and 159.",
+  "options": [
+   "2",
+   "4",
+   "8",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n159 and 24 share the factor 3, and no larger one.\nCheck: 24 = 3 × 8, 159 = 3 × 53, and 8 and 53 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q8e103b4f122",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 28 and 51.",
+  "options": [
+   "1499",
+   "1428",
+   "1214",
+   "1785"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 28 and 51 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 28 × 51 / 1 = 1428 / 1 = 1428."
+ },
+ {
+  "id": "q90b52a40bd9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 18 and 141.",
+  "options": [
+   "5",
+   "3",
+   "8",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n141 and 18 share the factor 3, and no larger one.\nCheck: 18 = 3 × 6, 141 = 3 × 47, and 6 and 47 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q912daae4efb",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 14 and 6.",
+  "options": [
+   "44",
+   "42",
+   "46",
+   "41"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 14 and 6 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 14 × 6 / 2 = 84 / 2 = 42."
+ },
+ {
+  "id": "q9355545f59a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 66 and 144.",
+  "options": [
+   "16",
+   "6",
+   "1",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n144 and 66 share the factor 6, and no larger one.\nCheck: 66 = 6 × 11, 144 = 6 × 24, and 11 and 24 have no common factor. HCF = 6."
+ },
+ {
+  "id": "q94a1a4462e2",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 13 and 10.",
+  "options": [
+   "117",
+   "104",
+   "131",
+   "130"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 13 and 10 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 13 × 10 / 1 = 130 / 1 = 130."
  },
  {
   "id": "q955ccdfeb3f",
@@ -173,11 +1373,161 @@
   "options": [
    "6",
    "13",
-   "2",
-   "3"
+   "3",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 162 share the factor 3, and no larger one.\nCheck: 162 = 3 × 54, 165 = 3 × 55, and 54 and 55 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q96ac8bb3ece",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 33 and 165.",
+  "options": [
+   "28",
+   "34",
+   "25",
+   "33"
   ],
   "answer": 3,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 33 share the factor 33, and no larger one.\nCheck: 33 = 33 × 1, 165 = 33 × 5, and 1 and 5 have no common factor. HCF = 33."
+ },
+ {
+  "id": "q975e4ab1f85",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 27 and 162.",
+  "options": [
+   "37",
+   "27",
+   "20",
+   "17"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n162 and 27 share the factor 27, and no larger one.\nCheck: 27 = 27 × 1, 162 = 27 × 6, and 1 and 6 have no common factor. HCF = 27."
+ },
+ {
+  "id": "q9a05e545668",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 21 and 33.",
+  "options": [
+   "234",
+   "231",
+   "116",
+   "277"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 21 and 33 is 3.\nLCM × HCF = product of the two numbers.\nLCM = 21 × 33 / 3 = 693 / 3 = 231."
+ },
+ {
+  "id": "q9a99c3b61e2",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 13 and 16.",
+  "options": [
+   "208",
+   "177",
+   "104",
+   "229"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 13 and 16 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 13 × 16 / 1 = 208 / 1 = 208."
+ },
+ {
+  "id": "q9acf05320e1",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 22 and 31.",
+  "options": [
+   "784",
+   "682",
+   "687",
+   "512"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 22 and 31 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 22 × 31 / 1 = 682 / 1 = 682."
+ },
+ {
+  "id": "q9b37b2bde40",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 123 and 105.",
+  "options": [
+   "3",
+   "2",
+   "1",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n123 and 105 share the factor 3, and no larger one.\nCheck: 123 = 3 × 41, 105 = 3 × 35, and 41 and 35 have no common factor. HCF = 3."
+ },
+ {
+  "id": "q9bdde1f0819",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 84 and 162.",
+  "options": [
+   "6",
+   "3",
+   "4",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n162 and 84 share the factor 6, and no larger one.\nCheck: 84 = 6 × 14, 162 = 6 × 27, and 14 and 27 have no common factor. HCF = 6."
+ },
+ {
+  "id": "q9c19a8bc4d7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 30 and 49.",
+  "options": [
+   "1690",
+   "1468",
+   "1480",
+   "1470"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 30 and 49 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 30 × 49 / 1 = 1470 / 1 = 1470."
+ },
+ {
+  "id": "q9cc2f3afe82",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 6 and 52.",
+  "options": [
+   "151",
+   "146",
+   "156",
+   "179"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 6 and 52 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 6 × 52 / 2 = 312 / 2 = 156."
+ },
+ {
+  "id": "q9e944e42640",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 10 and 37.",
+  "options": [
+   "360",
+   "426",
+   "370",
+   "555"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 10 and 37 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 10 × 37 / 1 = 370 / 1 = 370."
  },
  {
   "id": "qa032ba4ff49",
@@ -186,13 +1536,28 @@
   "level": "easy",
   "question": "Find the LCM of 29 and 17.",
   "options": [
-   "493",
+   "592",
    "496",
    "488",
-   "592"
+   "493"
   ],
-  "answer": 0,
-  "explanation": "LCM = 29×17/HCF, HCF = 1"
+  "answer": 3,
+  "explanation": "HCF of 29 and 17 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 29 × 17 / 1 = 493 / 1 = 493."
+ },
+ {
+  "id": "qa034723f686",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 150 and 180.",
+  "options": [
+   "32",
+   "25",
+   "45",
+   "30"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n180 and 150 share the factor 30, and no larger one.\nCheck: 150 = 30 × 5, 180 = 30 × 6, and 5 and 6 have no common factor. HCF = 30."
  },
  {
   "id": "qa162736a0ea",
@@ -201,13 +1566,178 @@
   "level": "easy",
   "question": "Find the HCF of 177 and 60.",
   "options": [
-   "3",
+   "5",
    "13",
-   "1",
-   "5"
+   "3",
+   "1"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n177 and 60 share the factor 3, and no larger one.\nCheck: 177 = 3 × 59, 60 = 3 × 20, and 59 and 20 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qa3244093c88",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 21 and 114.",
+  "options": [
+   "2",
+   "3",
+   "8",
+   "4"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n114 and 21 share the factor 3, and no larger one.\nCheck: 21 = 3 × 7, 114 = 3 × 38, and 7 and 38 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qa365c6ae4a4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 69 and 126.",
+  "options": [
+   "2",
+   "4",
+   "8",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n126 and 69 share the factor 3, and no larger one.\nCheck: 69 = 3 × 23, 126 = 3 × 42, and 23 and 42 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qa4f71bd76bf",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 87 and 27.",
+  "options": [
+   "3",
+   "2",
+   "13",
+   "8"
   ],
   "answer": 0,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n87 and 27 share the factor 3, and no larger one.\nCheck: 87 = 3 × 29, 27 = 3 × 9, and 29 and 9 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qa55887f767d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 13 and 32.",
+  "options": [
+   "416",
+   "395",
+   "421",
+   "418"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 13 and 32 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 13 × 32 / 1 = 416 / 1 = 416."
+ },
+ {
+  "id": "qa67b7a467d8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 54 and 48.",
+  "options": [
+   "433",
+   "475",
+   "429",
+   "432"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 54 and 48 is 6.\nLCM × HCF = product of the two numbers.\nLCM = 54 × 48 / 6 = 2592 / 6 = 432."
+ },
+ {
+  "id": "qa76801a4b79",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 35 and 40.",
+  "options": [
+   "282",
+   "210",
+   "280",
+   "270"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 35 and 40 is 5.\nLCM × HCF = product of the two numbers.\nLCM = 35 × 40 / 5 = 1400 / 5 = 280."
+ },
+ {
+  "id": "qa8054657208",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 28 and 41.",
+  "options": [
+   "1148",
+   "1263",
+   "1378",
+   "1145"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 28 and 41 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 28 × 41 / 1 = 1148 / 1 = 1148."
+ },
+ {
+  "id": "qa91b10f1be5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 21 and 165.",
+  "options": [
+   "3",
+   "2",
+   "8",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 21 share the factor 3, and no larger one.\nCheck: 21 = 3 × 7, 165 = 3 × 55, and 7 and 55 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qac9fa7e1e66",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 52 and 53.",
+  "options": [
+   "2751",
+   "2756",
+   "1378",
+   "2761"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 52 and 53 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 52 × 53 / 1 = 2756 / 1 = 2756."
+ },
+ {
+  "id": "qad0a0ea0949",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 12 and 33.",
+  "options": [
+   "132",
+   "66",
+   "112",
+   "129"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 12 and 33 is 3.\nLCM × HCF = product of the two numbers.\nLCM = 12 × 33 / 3 = 396 / 3 = 132."
+ },
+ {
+  "id": "qb28d42ce4dd",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 51 and 39.",
+  "options": [
+   "665",
+   "666",
+   "994",
+   "663"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 51 and 39 is 3.\nLCM × HCF = product of the two numbers.\nLCM = 51 × 39 / 3 = 1989 / 3 = 663."
  },
  {
   "id": "qb4e8f236c33",
@@ -216,13 +1746,58 @@
   "level": "easy",
   "question": "Find the LCM of 28 and 17.",
   "options": [
-   "476",
+   "571",
    "405",
    "428",
-   "571"
+   "476"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 28 and 17 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 28 × 17 / 1 = 476 / 1 = 476."
+ },
+ {
+  "id": "qb93984e012c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 171 and 144.",
+  "options": [
+   "12",
+   "10",
+   "9",
+   "8"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n171 and 144 share the factor 9, and no larger one.\nCheck: 171 = 9 × 19, 144 = 9 × 16, and 19 and 16 have no common factor. HCF = 9."
+ },
+ {
+  "id": "qb99f941e929",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 159 and 153.",
+  "options": [
+   "3",
+   "8",
+   "13",
+   "6"
   ],
   "answer": 0,
-  "explanation": "LCM = 28×17/HCF, HCF = 1"
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n159 and 153 share the factor 3, and no larger one.\nCheck: 159 = 3 × 53, 153 = 3 × 51, and 53 and 51 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qbd7307043a8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 57 and 120.",
+  "options": [
+   "3",
+   "2",
+   "6",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n120 and 57 share the factor 3, and no larger one.\nCheck: 57 = 3 × 19, 120 = 3 × 40, and 19 and 40 have no common factor. HCF = 3."
  },
  {
   "id": "qc0162aa4f4e",
@@ -231,13 +1806,43 @@
   "level": "easy",
   "question": "Find the LCM of 40 and 49.",
   "options": [
-   "1955",
    "1960",
+   "2352",
    "1970",
-   "2352"
+   "1955"
   ],
-  "answer": 1,
-  "explanation": "LCM = 40×49/HCF, HCF = 1"
+  "answer": 0,
+  "explanation": "HCF of 40 and 49 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 40 × 49 / 1 = 1960 / 1 = 1960."
+ },
+ {
+  "id": "qc1c04437dec",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 141 and 171.",
+  "options": [
+   "3",
+   "13",
+   "2",
+   "1"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n171 and 141 share the factor 3, and no larger one.\nCheck: 141 = 3 × 47, 171 = 3 × 57, and 47 and 57 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qc2cf55bbbe5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 59 and 9.",
+  "options": [
+   "584",
+   "637",
+   "521",
+   "531"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 59 and 9 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 59 × 9 / 1 = 531 / 1 = 531."
  },
  {
   "id": "qc457f56ca78",
@@ -252,7 +1857,7 @@
    "313"
   ],
   "answer": 2,
-  "explanation": "LCM = 7×47/HCF, HCF = 1"
+  "explanation": "HCF of 7 and 47 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 7 × 47 / 1 = 329 / 1 = 329."
  },
  {
   "id": "qc707dc17148",
@@ -261,13 +1866,58 @@
   "level": "easy",
   "question": "Find the HCF of 57 and 90.",
   "options": [
-   "3",
+   "6",
    "1",
-   "2",
-   "6"
+   "3",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n90 and 57 share the factor 3, and no larger one.\nCheck: 57 = 3 × 19, 90 = 3 × 30, and 19 and 30 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qc80e3797df8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 21 and 9.",
+  "options": [
+   "63",
+   "61",
+   "57",
+   "53"
   ],
   "answer": 0,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "explanation": "HCF of 21 and 9 is 3.\nLCM × HCF = product of the two numbers.\nLCM = 21 × 9 / 3 = 189 / 3 = 63."
+ },
+ {
+  "id": "qc9632d8c88d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 50 and 17.",
+  "options": [
+   "850",
+   "1275",
+   "765",
+   "847"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 50 and 17 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 50 × 17 / 1 = 850 / 1 = 850."
+ },
+ {
+  "id": "qc995dc72856",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 54 and 39.",
+  "options": [
+   "704",
+   "702",
+   "703",
+   "1053"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 54 and 39 is 3.\nLCM × HCF = product of the two numbers.\nLCM = 54 × 39 / 3 = 2106 / 3 = 702."
  },
  {
   "id": "qcc96076f7a5",
@@ -282,7 +1932,22 @@
    "8"
   ],
   "answer": 1,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n123 and 78 share the factor 3, and no larger one.\nCheck: 123 = 3 × 41, 78 = 3 × 26, and 41 and 26 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qd10b44aa5c4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 159 and 174.",
+  "options": [
+   "3",
+   "6",
+   "2",
+   "13"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n174 and 159 share the factor 3, and no larger one.\nCheck: 159 = 3 × 53, 174 = 3 × 58, and 53 and 58 have no common factor. HCF = 3."
  },
  {
   "id": "qd1324dd6a47",
@@ -297,7 +1962,7 @@
    "93"
   ],
   "answer": 1,
-  "explanation": "LCM = 7×13/HCF, HCF = 1"
+  "explanation": "HCF of 7 and 13 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 7 × 13 / 1 = 91 / 1 = 91."
  },
  {
   "id": "qd225eeeab16",
@@ -312,7 +1977,37 @@
    "1632"
   ],
   "answer": 0,
-  "explanation": "LCM = 40×51/HCF, HCF = 1"
+  "explanation": "HCF of 40 and 51 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 40 × 51 / 1 = 2040 / 1 = 2040."
+ },
+ {
+  "id": "qd28a12bc95c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 39 and 38.",
+  "options": [
+   "1630",
+   "1556",
+   "1482",
+   "741"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 39 and 38 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 39 × 38 / 1 = 1482 / 1 = 1482."
+ },
+ {
+  "id": "qd3cabcac05f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 49 and 26.",
+  "options": [
+   "1083",
+   "1529",
+   "1274",
+   "1465"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 49 and 26 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 49 × 26 / 1 = 1274 / 1 = 1274."
  },
  {
   "id": "qd4851052c0b",
@@ -321,13 +2016,43 @@
   "level": "easy",
   "question": "Find the HCF of 90 and 171.",
   "options": [
-   "7",
    "9",
+   "19",
    "6",
-   "19"
+   "7"
   ],
-  "answer": 1,
-  "explanation": "Take the greatest common factor of the two numbers."
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n171 and 90 share the factor 9, and no larger one.\nCheck: 90 = 9 × 10, 171 = 9 × 19, and 10 and 19 have no common factor. HCF = 9."
+ },
+ {
+  "id": "qd916f2e74b8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 43 and 14.",
+  "options": [
+   "600",
+   "722",
+   "602",
+   "604"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 43 and 14 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 43 × 14 / 1 = 602 / 1 = 602."
+ },
+ {
+  "id": "qd92e136132f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 81 and 111.",
+  "options": [
+   "8",
+   "4",
+   "3",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n111 and 81 share the factor 3, and no larger one.\nCheck: 81 = 3 × 27, 111 = 3 × 37, and 27 and 37 have no common factor. HCF = 3."
  },
  {
   "id": "qda7f184641b",
@@ -342,7 +2067,7 @@
    "330"
   ],
   "answer": 1,
-  "explanation": "LCM = 44×60/HCF, HCF = 4"
+  "explanation": "HCF of 44 and 60 is 4.\nLCM × HCF = product of the two numbers.\nLCM = 44 × 60 / 4 = 2640 / 4 = 660."
  },
  {
   "id": "qdb027ee7cf5",
@@ -351,13 +2076,28 @@
   "level": "easy",
   "question": "Find the LCM of 58 and 10.",
   "options": [
-   "295",
-   "261",
    "290",
-   "348"
+   "261",
+   "348",
+   "295"
   ],
-  "answer": 2,
-  "explanation": "LCM = 58×10/HCF, HCF = 2"
+  "answer": 0,
+  "explanation": "HCF of 58 and 10 is 2.\nLCM × HCF = product of the two numbers.\nLCM = 58 × 10 / 2 = 580 / 2 = 290."
+ },
+ {
+  "id": "qdb804c500ea",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 165 and 147.",
+  "options": [
+   "2",
+   "13",
+   "8",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n165 and 147 share the factor 3, and no larger one.\nCheck: 165 = 3 × 55, 147 = 3 × 49, and 55 and 49 have no common factor. HCF = 3."
  },
  {
   "id": "qdb83e00306a",
@@ -368,11 +2108,326 @@
   "options": [
    "414",
    "381",
-   "376",
-   "320"
+   "320",
+   "376"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 47 and 8 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 47 × 8 / 1 = 376 / 1 = 376."
+ },
+ {
+  "id": "qdc20768d4a5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 12 and 53.",
+  "options": [
+   "641",
+   "636",
+   "635",
+   "604"
+  ],
+  "answer": 1,
+  "explanation": "HCF of 12 and 53 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 12 × 53 / 1 = 636 / 1 = 636."
+ },
+ {
+  "id": "qe15eba63dd7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 34 and 29.",
+  "options": [
+   "1035",
+   "493",
+   "986",
+   "989"
   ],
   "answer": 2,
-  "explanation": "LCM = 47×8/HCF, HCF = 1"
+  "explanation": "HCF of 34 and 29 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 34 × 29 / 1 = 986 / 1 = 986."
+ },
+ {
+  "id": "qe55c3a15f01",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 144 and 138.",
+  "options": [
+   "4",
+   "16",
+   "6",
+   "7"
+  ],
+  "answer": 2,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n144 and 138 share the factor 6, and no larger one.\nCheck: 144 = 6 × 24, 138 = 6 × 23, and 24 and 23 have no common factor. HCF = 6."
+ },
+ {
+  "id": "qe577fbc6747",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 156 and 117.",
+  "options": [
+   "33",
+   "58",
+   "31",
+   "39"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n156 and 117 share the factor 39, and no larger one.\nCheck: 156 = 39 × 4, 117 = 39 × 3, and 4 and 3 have no common factor. HCF = 39."
+ },
+ {
+  "id": "qe5a8ae715f4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 30 and 162.",
+  "options": [
+   "1",
+   "16",
+   "9",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n162 and 30 share the factor 6, and no larger one.\nCheck: 30 = 6 × 5, 162 = 6 × 27, and 5 and 27 have no common factor. HCF = 6."
+ },
+ {
+  "id": "qe6b7ac93d58",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 46 and 55.",
+  "options": [
+   "2529",
+   "2533",
+   "2656",
+   "2530"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 46 and 55 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 46 × 55 / 1 = 2530 / 1 = 2530."
+ },
+ {
+  "id": "qe83d71df5fd",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 114 and 63.",
+  "options": [
+   "3",
+   "6",
+   "4",
+   "13"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n114 and 63 share the factor 3, and no larger one.\nCheck: 114 = 3 × 38, 63 = 3 × 21, and 38 and 21 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qe9762a913bb",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 21 and 20.",
+  "options": [
+   "420",
+   "336",
+   "210",
+   "504"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 21 and 20 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 21 × 20 / 1 = 420 / 1 = 420."
+ },
+ {
+  "id": "qea4ee26075f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 19 and 13.",
+  "options": [
+   "259",
+   "210",
+   "244",
+   "247"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 19 and 13 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 19 × 13 / 1 = 247 / 1 = 247."
+ },
+ {
+  "id": "qeab040e9a08",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 30 and 36.",
+  "options": [
+   "1",
+   "6",
+   "8",
+   "16"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n36 and 30 share the factor 6, and no larger one.\nCheck: 30 = 6 × 5, 36 = 6 × 6, and 5 and 6 have no common factor. HCF = 6."
+ },
+ {
+  "id": "qebf29a3e41a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 129 and 75.",
+  "options": [
+   "5",
+   "6",
+   "1",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n129 and 75 share the factor 3, and no larger one.\nCheck: 129 = 3 × 43, 75 = 3 × 25, and 43 and 25 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qedf41cfc498",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 31 and 14.",
+  "options": [
+   "436",
+   "439",
+   "437",
+   "434"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 31 and 14 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 31 × 14 / 1 = 434 / 1 = 434."
+ },
+ {
+  "id": "qeffe0682516",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 66 and 42.",
+  "options": [
+   "6",
+   "11",
+   "7",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n66 and 42 share the factor 6, and no larger one.\nCheck: 66 = 6 × 11, 42 = 6 × 7, and 11 and 7 have no common factor. HCF = 6."
+ },
+ {
+  "id": "qf278f14cde3",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 123 and 81.",
+  "options": [
+   "3",
+   "4",
+   "1",
+   "5"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n123 and 81 share the factor 3, and no larger one.\nCheck: 123 = 3 × 41, 81 = 3 × 27, and 41 and 27 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qf2907f9ae7f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 30 and 84.",
+  "options": [
+   "4",
+   "9",
+   "8",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n84 and 30 share the factor 6, and no larger one.\nCheck: 30 = 6 × 5, 84 = 6 × 14, and 5 and 14 have no common factor. HCF = 6."
+ },
+ {
+  "id": "qf4e1432a756",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 9 and 35.",
+  "options": [
+   "268",
+   "325",
+   "315",
+   "316"
+  ],
+  "answer": 2,
+  "explanation": "HCF of 9 and 35 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 9 × 35 / 1 = 315 / 1 = 315."
+ },
+ {
+  "id": "qf61944752ad",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 14 and 31.",
+  "options": [
+   "434",
+   "499",
+   "542",
+   "429"
+  ],
+  "answer": 0,
+  "explanation": "HCF of 14 and 31 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 14 × 31 / 1 = 434 / 1 = 434."
+ },
+ {
+  "id": "qf758bb658e9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 90 and 60.",
+  "options": [
+   "30",
+   "28",
+   "38",
+   "36"
+  ],
+  "answer": 0,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n90 and 60 share the factor 30, and no larger one.\nCheck: 90 = 30 × 3, 60 = 30 × 2, and 3 and 2 have no common factor. HCF = 30."
+ },
+ {
+  "id": "qfa4ddeb844c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 24 and 78.",
+  "options": [
+   "7",
+   "6",
+   "1",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n78 and 24 share the factor 6, and no larger one.\nCheck: 24 = 6 × 4, 78 = 6 × 13, and 4 and 13 have no common factor. HCF = 6."
+ },
+ {
+  "id": "qfab4a3082d5",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the HCF of 48 and 99.",
+  "options": [
+   "2",
+   "3",
+   "1",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Euclid: divide the larger by the smaller and keep the remainder until it is 0.\n99 and 48 share the factor 3, and no larger one.\nCheck: 48 = 3 × 16, 99 = 3 × 33, and 16 and 33 have no common factor. HCF = 3."
+ },
+ {
+  "id": "qfceb7409666",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "easy",
+  "question": "Find the LCM of 7 and 57.",
+  "options": [
+   "398",
+   "479",
+   "400",
+   "399"
+  ],
+  "answer": 3,
+  "explanation": "HCF of 7 and 57 is 1.\nLCM × HCF = product of the two numbers.\nLCM = 7 × 57 / 1 = 399 / 1 = 399."
  },
  {
   "id": "q0156f3fe656",
@@ -383,11 +2438,56 @@
   "options": [
    "130",
    "132",
+   "117",
+   "120"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 20 = 2² × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q02c07cabe15",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 12 and 20?",
+  "options": [
+   "60",
+   "62",
+   "55",
+   "30"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 12 = 2² × 3, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "q03687dd8fab",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 20 and 24?",
+  "options": [
+   "126",
+   "138",
    "120",
    "117"
   ],
   "answer": 2,
-  "explanation": "LCM of [8, 20, 24] = 120"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 20 = 2² × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q0508055c4e9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 8 and 9?",
+  "options": [
+   "70",
+   "73",
+   "69",
+   "72"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 9 = 3².\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
  },
  {
   "id": "q0a16c62c091",
@@ -396,13 +2496,13 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 6, 8 and 10?",
   "options": [
+   "120",
    "117",
    "122",
-   "120",
    "108"
   ],
-  "answer": 2,
-  "explanation": "LCM of [6, 8, 10] = 120"
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 10 = 2 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "q0ac80d94bc8",
@@ -412,12 +2512,87 @@
   "question": "What is the smallest number divisible by 12, 18 and 20?",
   "options": [
    "175",
-   "178",
    "180",
+   "178",
    "185"
   ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 12 = 2² × 3, 18 = 2 × 3², 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "q0e3180a227d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 10 and 15?",
+  "options": [
+   "31",
+   "24",
+   "30",
+   "36"
+  ],
   "answer": 2,
-  "explanation": "LCM of [12, 18, 20] = 180"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 10 = 2 × 5, 15 = 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3 × 5 = 30."
+ },
+ {
+  "id": "q12c59ce5375",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 9 and 10?",
+  "options": [
+   "180",
+   "370",
+   "360",
+   "362"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 9 = 3², 10 = 2 × 5.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q19ae90a9a06",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 20, 24 and 30?",
+  "options": [
+   "120",
+   "115",
+   "108",
+   "144"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 20 = 2² × 5, 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q1a2015bf209",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 8 and 12?",
+  "options": [
+   "24",
+   "25",
+   "12",
+   "22"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 12 = 2² × 3.\nTake each prime at its highest power: LCM = 2³ × 3 = 24."
+ },
+ {
+  "id": "q22010fca03f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 18 and 30?",
+  "options": [
+   "90",
+   "100",
+   "104",
+   "45"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 18 = 2 × 3², 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
  },
  {
   "id": "q265fc17d434",
@@ -426,13 +2601,133 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 15, 20 and 24?",
   "options": [
-   "120",
    "121",
+   "120",
    "180",
    "125"
   ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 15 = 3 × 5, 20 = 2² × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q26bb06389e2",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 12 and 18?",
+  "options": [
+   "77",
+   "65",
+   "36",
+   "72"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 12 = 2² × 3, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "q26ea3b69262",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 15 and 18?",
+  "options": [
+   "450",
+   "358",
+   "360",
+   "365"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 15 = 3 × 5, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q2b6e0186875",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 12 and 24?",
+  "options": [
+   "14",
+   "27",
+   "19",
+   "24"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 12 = 2² × 3, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 = 24."
+ },
+ {
+  "id": "q2ba194744c1",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 15 and 18?",
+  "options": [
+   "104",
+   "90",
+   "91",
+   "88"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 15 = 3 × 5, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "q2d8df034bab",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 10 and 24?",
+  "options": [
+   "108",
+   "120",
+   "60",
+   "125"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 10 = 2 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q3157ccd8b89",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 18 and 30?",
+  "options": [
+   "76",
+   "89",
+   "135",
+   "90"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 18 = 2 × 3², 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "q31faaa580ac",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 10 and 15?",
+  "options": [
+   "90",
+   "72",
+   "92",
+   "85"
+  ],
   "answer": 0,
-  "explanation": "LCM of [15, 20, 24] = 120"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 10 = 2 × 5, 15 = 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "q3417296533b",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 24 and 30?",
+  "options": [
+   "120",
+   "108",
+   "115",
+   "117"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "q355e3fcfbdc",
@@ -441,13 +2736,118 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 15, 24 and 30?",
   "options": [
+   "120",
    "132",
    "144",
-   "120",
    "130"
   ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 15 = 3 × 5, 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q359635bea17",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 8 and 30?",
+  "options": [
+   "96",
+   "120",
+   "126",
+   "60"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q3735fed0316",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 20 and 30?",
+  "options": [
+   "45",
+   "61",
+   "75",
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 20 = 2² × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "q3a73221f28c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 18 and 24?",
+  "options": [
+   "360",
+   "414",
+   "324",
+   "365"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 18 = 2 × 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q3b47240e3e7",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 15 and 18?",
+  "options": [
+   "93",
+   "81",
+   "90",
+   "45"
+  ],
   "answer": 2,
-  "explanation": "LCM of [15, 24, 30] = 120"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 15 = 3 × 5, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "q3bf6b8b3f3c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 10 and 20?",
+  "options": [
+   "90",
+   "60",
+   "66",
+   "63"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 10 = 2 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "q3dafd423809",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 12 and 24?",
+  "options": [
+   "25",
+   "22",
+   "24",
+   "18"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 12 = 2² × 3, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 = 24."
+ },
+ {
+  "id": "q3fe81d09e98",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 18 and 20?",
+  "options": [
+   "180",
+   "270",
+   "153",
+   "190"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 18 = 2 × 3², 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
  },
  {
   "id": "q436554e7463",
@@ -456,13 +2856,13 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 8, 10 and 30?",
   "options": [
-   "114",
+   "180",
    "122",
-   "120",
-   "180"
+   "114",
+   "120"
   ],
-  "answer": 2,
-  "explanation": "LCM of [8, 10, 30] = 120"
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 10 = 2 × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "q4b5df684238",
@@ -477,7 +2877,37 @@
    "95"
   ],
   "answer": 1,
-  "explanation": "LCM of [6, 9, 30] = 90"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 9 = 3², 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "q4bb264cdb0c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 12 and 18?",
+  "options": [
+   "18",
+   "39",
+   "31",
+   "36"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 12 = 2² × 3, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2² × 3² = 36."
+ },
+ {
+  "id": "q4f07db72716",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 9 and 10?",
+  "options": [
+   "88",
+   "76",
+   "90",
+   "68"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 9 = 3², 10 = 2 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
  },
  {
   "id": "q5e1b98bbc78",
@@ -488,11 +2918,11 @@
   "options": [
    "67",
    "61",
-   "72",
-   "73"
+   "73",
+   "72"
   ],
-  "answer": 2,
-  "explanation": "LCM of [9, 18, 24] = 72"
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 18 = 2 × 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
  },
  {
   "id": "q5ec93e46c48",
@@ -501,13 +2931,13 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 6, 18 and 20?",
   "options": [
-   "180",
-   "144",
    "178",
-   "135"
+   "144",
+   "135",
+   "180"
   ],
-  "answer": 0,
-  "explanation": "LCM of [6, 18, 20] = 180"
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 18 = 2 × 3², 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
  },
  {
   "id": "q6119e6c6dc3",
@@ -516,13 +2946,118 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 8, 10 and 18?",
   "options": [
-   "360",
    "361",
+   "360",
    "342",
    "358"
   ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 10 = 2 × 5, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q65c881ba4bd",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 15 and 18?",
+  "options": [
+   "135",
+   "90",
+   "81",
+   "87"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 15 = 3 × 5, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "q69335673316",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 10 and 24?",
+  "options": [
+   "350",
+   "450",
+   "357",
+   "360"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 10 = 2 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q69635a097a2",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 15 and 20?",
+  "options": [
+   "62",
+   "50",
+   "57",
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 15 = 3 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "q6aeeb309148",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 18 and 24?",
+  "options": [
+   "72",
+   "73",
+   "36",
+   "83"
+  ],
   "answer": 0,
-  "explanation": "LCM of [8, 10, 18] = 360"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 18 = 2 × 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "q6ce97c6e201",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 8 and 15?",
+  "options": [
+   "120",
+   "121",
+   "132",
+   "144"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 15 = 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q7035f9db85b",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 12 and 15?",
+  "options": [
+   "90",
+   "102",
+   "120",
+   "110"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 12 = 2² × 3, 15 = 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q71bab7c9e69",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 20 and 24?",
+  "options": [
+   "540",
+   "361",
+   "360",
+   "432"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 20 = 2² × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
  },
  {
   "id": "q75418949bfd",
@@ -537,7 +3072,22 @@
    "180"
   ],
   "answer": 2,
-  "explanation": "LCM of [8, 20, 30] = 120"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 20 = 2² × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "q79ed62c5202",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 20 and 24?",
+  "options": [
+   "120",
+   "138",
+   "90",
+   "130"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 20 = 2² × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "q7efcaa2d19b",
@@ -552,7 +3102,22 @@
    "170"
   ],
   "answer": 2,
-  "explanation": "LCM of [9, 10, 12] = 180"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 10 = 2 × 5, 12 = 2² × 3.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "q7f7ac756a4a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 24 and 30?",
+  "options": [
+   "123",
+   "120",
+   "119",
+   "96"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "q803bd0c17c2",
@@ -561,13 +3126,28 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 12, 20 and 30?",
   "options": [
-   "60",
    "50",
    "70",
+   "60",
    "59"
   ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 12 = 2² × 3, 20 = 2² × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "q82e577e528c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 8 and 18?",
+  "options": [
+   "72",
+   "71",
+   "36",
+   "70"
+  ],
   "answer": 0,
-  "explanation": "LCM of [12, 20, 30] = 60"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
  },
  {
   "id": "q86c0432c084",
@@ -576,13 +3156,28 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 8, 18 and 24?",
   "options": [
-   "72",
    "83",
+   "72",
    "71",
    "70"
   ],
-  "answer": 0,
-  "explanation": "LCM of [8, 18, 24] = 72"
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 18 = 2 × 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "q8744e9baed9",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 12 and 18?",
+  "options": [
+   "39",
+   "36",
+   "34",
+   "27"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 12 = 2² × 3, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2² × 3² = 36."
  },
  {
   "id": "q88983cb7e93",
@@ -592,12 +3187,12 @@
   "question": "What is the smallest number divisible by 6, 8 and 24?",
   "options": [
    "23",
-   "24",
    "28",
-   "34"
+   "34",
+   "24"
   ],
-  "answer": 1,
-  "explanation": "LCM of [6, 8, 24] = 24"
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 8 = 2³, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 = 24."
  },
  {
   "id": "q89ccdde82d0",
@@ -612,7 +3207,97 @@
    "38"
   ],
   "answer": 2,
-  "explanation": "LCM of [6, 9, 12] = 36"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 9 = 3², 12 = 2² × 3.\nTake each prime at its highest power: LCM = 2² × 3² = 36."
+ },
+ {
+  "id": "q8ac10281c6a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 18 and 20?",
+  "options": [
+   "450",
+   "350",
+   "360",
+   "378"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 18 = 2 × 3², 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q8db455dfaf4",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 9 and 24?",
+  "options": [
+   "79",
+   "36",
+   "68",
+   "72"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 9 = 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "q944cdf24d31",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 10 and 30?",
+  "options": [
+   "20",
+   "35",
+   "15",
+   "30"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 10 = 2 × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3 × 5 = 30."
+ },
+ {
+  "id": "q9591bf05e51",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 18, 24 and 30?",
+  "options": [
+   "359",
+   "370",
+   "355",
+   "360"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 18 = 2 × 3², 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "q990c4e06c4c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 15, 20 and 30?",
+  "options": [
+   "66",
+   "45",
+   "60",
+   "63"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 15 = 3 × 5, 20 = 2² × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "q99a05c82f11",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 15 and 24?",
+  "options": [
+   "342",
+   "370",
+   "360",
+   "180"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 15 = 3 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
  },
  {
   "id": "q9a9408a149f",
@@ -627,7 +3312,7 @@
    "120"
   ],
   "answer": 3,
-  "explanation": "LCM of [10, 12, 24] = 120"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 12 = 2² × 3, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "q9ddb12bbe67",
@@ -636,13 +3321,43 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 9, 10 and 18?",
   "options": [
-   "92",
+   "90",
    "112",
    "95",
-   "90"
+   "92"
   ],
-  "answer": 3,
-  "explanation": "LCM of [9, 10, 18] = 90"
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 10 = 2 × 5, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "qa3b42ab56ee",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 12 and 20?",
+  "options": [
+   "179",
+   "180",
+   "162",
+   "270"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 12 = 2² × 3, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qa54b88ee528",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 9 and 18?",
+  "options": [
+   "72",
+   "71",
+   "70",
+   "77"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 9 = 3², 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
  },
  {
   "id": "qa57729d8b09",
@@ -653,11 +3368,41 @@
   "options": [
    "90",
    "185",
-   "180",
-   "144"
+   "144",
+   "180"
   ],
-  "answer": 2,
-  "explanation": "LCM of [12, 18, 30] = 180"
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 12 = 2² × 3, 18 = 2 × 3², 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qaab27e4d7f8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 15 and 20?",
+  "options": [
+   "120",
+   "122",
+   "125",
+   "119"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 15 = 3 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "qabb5434dad2",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 12 and 20?",
+  "options": [
+   "108",
+   "132",
+   "60",
+   "120"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 12 = 2² × 3, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "qad365e9e206",
@@ -666,13 +3411,13 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 6, 10 and 12?",
   "options": [
-   "58",
    "30",
+   "60",
    "50",
-   "60"
+   "58"
   ],
-  "answer": 3,
-  "explanation": "LCM of [6, 10, 12] = 60"
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 10 = 2 × 5, 12 = 2² × 3.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
  },
  {
   "id": "qb15c6e97dc3",
@@ -681,13 +3426,88 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 8, 9 and 24?",
   "options": [
+   "72",
    "70",
    "58",
-   "72",
    "73"
   ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 9 = 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "qb237f4481df",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 12 and 15?",
+  "options": [
+   "216",
+   "180",
+   "175",
+   "198"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 12 = 2² × 3, 15 = 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qc316e2800b0",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 9 and 15?",
+  "options": [
+   "88",
+   "85",
+   "90",
+   "87"
+  ],
   "answer": 2,
-  "explanation": "LCM of [8, 9, 24] = 72"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 9 = 3², 15 = 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "qc4e155f9382",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 15, 18 and 20?",
+  "options": [
+   "177",
+   "180",
+   "179",
+   "170"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 15 = 3 × 5, 18 = 2 × 3², 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qc7a93788d95",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 10 and 20?",
+  "options": [
+   "40",
+   "43",
+   "42",
+   "35"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 10 = 2 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2³ × 5 = 40."
+ },
+ {
+  "id": "qc7c66aeb584",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 18, 20 and 30?",
+  "options": [
+   "183",
+   "162",
+   "180",
+   "189"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 18 = 2 × 3², 20 = 2² × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
  },
  {
   "id": "qc800fdfc01c",
@@ -696,13 +3516,88 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 9, 15 and 20?",
   "options": [
-   "162",
-   "198",
    "180",
-   "144"
+   "198",
+   "144",
+   "162"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 15 = 3 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qce87a15e10e",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 12, 15 and 20?",
+  "options": [
+   "51",
+   "60",
+   "57",
+   "72"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 12 = 2² × 3, 15 = 3 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "qd10f74ae45f",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 24 and 30?",
+  "options": [
+   "306",
+   "288",
+   "360",
+   "370"
   ],
   "answer": 2,
-  "explanation": "LCM of [9, 15, 20] = 180"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "qd112c66326d",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 12 and 24?",
+  "options": [
+   "72",
+   "54",
+   "83",
+   "58"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 12 = 2² × 3, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "qd2760358f12",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 12 and 20?",
+  "options": [
+   "58",
+   "50",
+   "61",
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 12 = 2² × 3, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "qd27f12a064a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 10 and 12?",
+  "options": [
+   "138",
+   "90",
+   "120",
+   "118"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 10 = 2 × 5, 12 = 2² × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  },
  {
   "id": "qd6e12f6e390",
@@ -711,13 +3606,58 @@
   "level": "medium",
   "question": "What is the smallest number divisible by 9, 12 and 30?",
   "options": [
-   "180",
+   "175",
    "178",
    "189",
-   "175"
+   "180"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 12 = 2² × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qd92f0ad6284",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 15 and 20?",
+  "options": [
+   "60",
+   "69",
+   "66",
+   "54"
   ],
   "answer": 0,
-  "explanation": "LCM of [9, 12, 30] = 180"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 15 = 3 × 5, 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "qde1745d36b8",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 12, 18 and 24?",
+  "options": [
+   "36",
+   "58",
+   "72",
+   "73"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 12 = 2² × 3, 18 = 2 × 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
+ },
+ {
+  "id": "qdfcd24c5030",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 20 and 30?",
+  "options": [
+   "182",
+   "180",
+   "190",
+   "183"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 20 = 2² × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
  },
  {
   "id": "qe1555d7752f",
@@ -727,12 +3667,87 @@
   "question": "What is the smallest number divisible by 6, 12 and 30?",
   "options": [
    "59",
-   "60",
+   "62",
    "51",
-   "62"
+   "60"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 12 = 2² × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2² × 3 × 5 = 60."
+ },
+ {
+  "id": "qe251e51cdac",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 15 and 30?",
+  "options": [
+   "92",
+   "95",
+   "90",
+   "45"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 9 = 3², 15 = 3 × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3² × 5 = 90."
+ },
+ {
+  "id": "qe5a27f3f259",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 10 and 24?",
+  "options": [
+   "125",
+   "115",
+   "120",
+   "121"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 10 = 2 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "qe5fe26b98fd",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 12, 15 and 24?",
+  "options": [
+   "120",
+   "108",
+   "115",
+   "114"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 12 = 2² × 3, 15 = 3 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "qe7de93e7c4a",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 12 and 18?",
+  "options": [
+   "171",
+   "179",
+   "183",
+   "180"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 12 = 2² × 3, 18 = 2 × 3².\nTake each prime at its highest power: LCM = 2² × 3² × 5 = 180."
+ },
+ {
+  "id": "qe94aeb67171",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 9 and 12?",
+  "options": [
+   "68",
+   "72",
+   "86",
+   "90"
   ],
   "answer": 1,
-  "explanation": "LCM of [6, 12, 30] = 60"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 9 = 3², 12 = 2² × 3.\nTake each prime at its highest power: LCM = 2³ × 3² = 72."
  },
  {
   "id": "qe974511a0b6",
@@ -743,10 +3758,130 @@
   "options": [
    "110",
    "114",
-   "120",
-   "180"
+   "180",
+   "120"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 15 = 3 × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "qebe6a087730",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 15 and 30?",
+  "options": [
+   "29",
+   "30",
+   "35",
+   "27"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 6 = 2 × 3, 15 = 3 × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3 × 5 = 30."
+ },
+ {
+  "id": "qebf641d0b90",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 9 and 30?",
+  "options": [
+   "362",
+   "360",
+   "306",
+   "396"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 9 = 3², 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "qecc54ad9681",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 9 and 20?",
+  "options": [
+   "360",
+   "358",
+   "350",
+   "361"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 9 = 3², 20 = 2² × 5.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "qf13e277478e",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 15, 18 and 24?",
+  "options": [
+   "358",
+   "540",
+   "360",
+   "396"
   ],
   "answer": 2,
-  "explanation": "LCM of [8, 15, 30] = 120"
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 15 = 3 × 5, 18 = 2 × 3², 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3² × 5 = 360."
+ },
+ {
+  "id": "qf2f31a74ecd",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 15 and 24?",
+  "options": [
+   "122",
+   "138",
+   "120",
+   "121"
+  ],
+  "answer": 2,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 15 = 3 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "qf34f4ccdf75",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 24 and 30?",
+  "options": [
+   "150",
+   "126",
+   "90",
+   "120"
+  ],
+  "answer": 3,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 8 = 2³, 24 = 2³ × 3, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
+ },
+ {
+  "id": "qf74b095aa5b",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 15 and 30?",
+  "options": [
+   "27",
+   "30",
+   "28",
+   "20"
+  ],
+  "answer": 1,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 15 = 3 × 5, 30 = 2 × 3 × 5.\nTake each prime at its highest power: LCM = 2 × 3 × 5 = 30."
+ },
+ {
+  "id": "qf759ba147d1",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 10, 15 and 24?",
+  "options": [
+   "120",
+   "122",
+   "121",
+   "144"
+  ],
+  "answer": 0,
+  "explanation": "The smallest number divisible by all of them is their LCM.\nPrime factors: 10 = 2 × 5, 15 = 3 × 5, 24 = 2³ × 3.\nTake each prime at its highest power: LCM = 2³ × 3 × 5 = 120."
  }
 ]

@@ -1,78 +1,107 @@
 [
  {
-  "id": "q436554e7463",
+  "id": "q4ef0e436f20",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "medium",
+  "question": "A train 285 m long, running at 54 km/h, crosses a platform 90 m long. How many seconds does it take?",
+  "options": [
+   "25",
+   "28",
+   "19",
+   "21"
+  ]
+ },
+ {
+  "id": "q331d3cfbdc0",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "medium",
+  "question": "A train 240 m long runs at 72 km/h. In how many seconds does it cross a pole?",
+  "options": [
+   "18",
+   "22",
+   "7",
+   "12"
+  ]
+ },
+ {
+  "id": "q7efcaa2d19b",
   "subject": "quant",
   "topic": "lcm-hcf",
   "level": "medium",
-  "question": "What is the smallest number divisible by 8, 10 and 30?",
+  "question": "What is the smallest number divisible by 9, 10 and 12?",
   "options": [
-   "122",
-   "120",
-   "114",
-   "180"
-  ],
-  "answer": 1,
-  "explanation": "LCM of [8, 10, 30] = 120"
+   "198",
+   "162",
+   "180",
+   "170"
+  ]
  },
  {
-  "id": "q0126e26bb17",
+  "id": "q8a72ac852d8",
   "subject": "quant",
-  "topic": "boats-streams",
+  "topic": "ages",
   "level": "medium",
-  "question": "A boat's speed in still water is 19 km/h and the stream flows at 5 km/h. How many hours will it take to go 72 km downstream?",
+  "question": "A father is 47 years old and his son is 13. After how many years will the father be twice as old as the son?",
   "options": [
-   "8",
-   "6",
-   "3",
-   "4"
-  ],
-  "answer": 2,
-  "explanation": "Downstream speed = 24 km/h, time = 72/24"
+   "18",
+   "21",
+   "10",
+   "26"
+  ]
  },
  {
-  "id": "q0d0e36d8edd",
+  "id": "q52a76fddfc6",
   "subject": "quant",
   "topic": "average",
   "level": "medium",
-  "question": "The average of 6 numbers is 25. If one number, 28, is replaced by 64, what is the new average?",
+  "question": "The average of 7 numbers is 28. If one number, 22, is replaced by 57, what is the new average?",
   "options": [
-   "21",
-   "31",
-   "29",
-   "28"
-  ],
-  "answer": 1,
-  "explanation": "Change in sum = 36, so average changes by 36/6"
+   "50",
+   "40",
+   "33",
+   "35"
+  ]
  },
  {
-  "id": "qfc1251fda43",
+  "id": "qfe5cb6e199e",
   "subject": "quant",
-  "topic": "simple-interest",
+  "topic": "percentage",
   "level": "medium",
-  "question": "A sum becomes double in 11 years at simple interest. In how many years will it become 5 times itself?",
+  "question": "The price of an item is increased by 25% and then decreased by 10%. What is the net percentage change? (Give the magnitude.)",
   "options": [
-   "42",
-   "34",
-   "44",
-   "47"
-  ],
-  "answer": 2,
-  "explanation": "Interest of one P takes 11 years, so 4P takes 44 years"
- },
- {
-  "id": "q29b6674c38e",
-  "subject": "quant",
-  "topic": "profit-loss",
-  "level": "medium",
-  "question": "A shopkeeper marks goods 25% above cost price and allows a discount of 5%. What is his profit percent?",
-  "options": [
-   "19.75%",
+   "13.5%",
+   "15.5%",
    "18.75%",
-   "21.56%",
-   "20.75%"
-  ],
-  "answer": 1,
-  "explanation": "Let CP = 100: MP = 125, SP = 118.75"
+   "12.5%"
+  ]
+ },
+ {
+  "id": "q0a16c62c091",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 6, 8 and 10?",
+  "options": [
+   "120",
+   "117",
+   "122",
+   "108"
+  ]
+ },
+ {
+  "id": "qc800fdfc01c",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 15 and 20?",
+  "options": [
+   "180",
+   "198",
+   "144",
+   "162"
+  ]
  },
  {
   "id": "qbfa7ae73dff",
@@ -81,73 +110,11 @@
   "level": "medium",
   "question": "Pipes A and B can fill a tank in 20 and 11 hours, and an outlet C can empty it in 20 hours. If all three are opened together, in how many hours is the tank filled?",
   "options": [
-   "11",
    "10",
+   "9",
    "8",
-   "9"
-  ],
-  "answer": 0,
-  "explanation": "Net rate = 1/20 + 1/11 − 1/20 = 1/11"
- },
- {
-  "id": "q5b42d703677",
-  "subject": "quant",
-  "topic": "ages",
-  "level": "medium",
-  "question": "The sum of a father's and his son's ages is 80 years. The father is 3 times as old as the son. What is the son's age?",
-  "options": [
-   "10",
-   "17",
-   "22",
-   "20"
-  ],
-  "answer": 3,
-  "explanation": "Son = 80/4 = 20"
- },
- {
-  "id": "qb5cd21dbd68",
-  "subject": "quant",
-  "topic": "simple-interest",
-  "level": "medium",
-  "question": "A sum becomes double in 11 years at simple interest. In how many years will it become 4 times itself?",
-  "options": [
-   "43",
-   "33",
-   "23",
-   "34"
-  ],
-  "answer": 1,
-  "explanation": "Interest of one P takes 11 years, so 3P takes 33 years"
- },
- {
-  "id": "q83ab2e13c60",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "medium",
-  "question": "A train 260 m long, running at 72 km/h, crosses a platform 280 m long. How many seconds does it take?",
-  "options": [
-   "24",
-   "25",
-   "40",
-   "27"
-  ],
-  "answer": 3,
-  "explanation": "Distance = 540 m at 20 m/s"
- },
- {
-  "id": "qb7029fa42c4",
-  "subject": "quant",
-  "topic": "profit-loss",
-  "level": "medium",
-  "question": "A shopkeeper marks goods 50% above cost price and allows a discount of 15%. What is his profit percent?",
-  "options": [
-   "17.5%",
-   "37.5%",
-   "20.62%",
-   "27.5%"
-  ],
-  "answer": 3,
-  "explanation": "Let CP = 100: MP = 150, SP = 127.5"
+   "11"
+  ]
  },
  {
   "id": "q34991de704f",
@@ -157,12 +124,166 @@
   "question": "Find the compound interest on ₹12000 at 5% per annum for 2 years, compounded annually.",
   "options": [
    "₹1538",
-   "₹1225",
+   "₹1230",
    "₹615",
-   "₹1230"
-  ],
-  "answer": 3,
-  "explanation": "A = 12000(1+5/100)², CI = A − P = ₹1230"
+   "₹1225"
+  ]
+ },
+ {
+  "id": "q6eb086ee8b8",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "medium",
+  "question": "Find the compound interest on ₹10000 at 10% per annum for 2 years, compounded annually.",
+  "options": [
+   "₹2415",
+   "₹1785",
+   "₹2100",
+   "₹2097"
+  ]
+ },
+ {
+  "id": "q9ddb12bbe67",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 9, 10 and 18?",
+  "options": [
+   "90",
+   "112",
+   "95",
+   "92"
+  ]
+ },
+ {
+  "id": "qf5fa947fa39",
+  "subject": "quant",
+  "topic": "percentage",
+  "level": "medium",
+  "question": "The price of an item is decreased by 30% and then decreased by 10%. What is the net percentage decrease?",
+  "options": [
+   "40%",
+   "34%",
+   "37%",
+   "42%"
+  ]
+ },
+ {
+  "id": "qaff3a3f3ac3",
+  "subject": "quant",
+  "topic": "ages",
+  "level": "medium",
+  "question": "A father is 57 years old and his son is 13. After how many years will the father be twice as old as the son?",
+  "options": [
+   "37",
+   "32",
+   "31",
+   "16"
+  ]
+ },
+ {
+  "id": "q29b6674c38e",
+  "subject": "quant",
+  "topic": "profit-loss",
+  "level": "medium",
+  "question": "A shopkeeper marks goods 25% above cost price and allows a discount of 5%. What is his profit percent?",
+  "options": [
+   "19.75%",
+   "21.56%",
+   "20.75%",
+   "18.75%"
+  ]
+ },
+ {
+  "id": "qb03df582856",
+  "subject": "quant",
+  "topic": "mixture",
+  "level": "medium",
+  "question": "Two varieties of rice costing ₹65/kg and ₹135/kg are mixed in the ratio 1:4. What is the cost per kg of the mixture?",
+  "options": [
+   "₹111",
+   "₹145",
+   "₹109",
+   "₹121"
+  ]
+ },
+ {
+  "id": "q2b9b2e1c3ed",
+  "subject": "quant",
+  "topic": "pipes-cisterns",
+  "level": "medium",
+  "question": "Pipes A and B can fill a tank in 24 and 25 hours, and an outlet C can empty it in 25 hours. If all three are opened together, in how many hours is the tank filled?",
+  "options": [
+   "18",
+   "21",
+   "26",
+   "24"
+  ]
+ },
+ {
+  "id": "q6119e6c6dc3",
+  "subject": "quant",
+  "topic": "lcm-hcf",
+  "level": "medium",
+  "question": "What is the smallest number divisible by 8, 10 and 18?",
+  "options": [
+   "361",
+   "360",
+   "342",
+   "358"
+  ]
+ },
+ {
+  "id": "qa366a813427",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "medium",
+  "question": "A train 130 m long, running at 36 km/h, crosses a platform 120 m long. How many seconds does it take?",
+  "options": [
+   "29",
+   "35",
+   "24",
+   "25"
+  ]
+ },
+ {
+  "id": "qde5038b4af2",
+  "subject": "quant",
+  "topic": "partnership",
+  "level": "medium",
+  "question": "A invests ₹5000 for 12 months and B invests ₹6000 for 6 months. Their total profit is ₹4400. What is A's share?",
+  "options": [
+   "₹2612",
+   "₹2888",
+   "₹2750",
+   "₹2200"
+  ]
+ },
+ {
+  "id": "q90abd6c4a2a",
+  "subject": "quant",
+  "topic": "percentage",
+  "level": "medium",
+  "question": "The price of an item is increased by 10% and then decreased by 20%. What is the net percentage change? (Give the magnitude.)",
+  "options": [
+   "13%",
+   "2%",
+   "22%",
+   "12%"
+  ]
+ },
+ {
+  "id": "q5b42d703677",
+  "subject": "quant",
+  "topic": "ages",
+  "level": "medium",
+  "question": "The sum of a father's and his son's ages is 80 years. The father is 3 times as old as the son. What is the son's age?",
+  "options": [
+   "20",
+   "17",
+   "22",
+   "10"
+  ]
  },
  {
   "id": "q0098ae0e457",
@@ -175,189 +296,72 @@
    "₹399",
    "₹504",
    "₹417"
-  ],
-  "answer": 0,
-  "explanation": "A = 2000(1+10/100)², CI = A − P = ₹420"
+  ]
  },
  {
-  "id": "q9b6d16fc929",
-  "subject": "quant",
-  "topic": "simple-interest",
-  "level": "medium",
-  "question": "A sum becomes double in 4 years at simple interest. In how many years will it become 3 times itself?",
-  "options": [
-   "6",
-   "11",
-   "3",
-   "8"
-  ],
-  "answer": 3,
-  "explanation": "Interest of one P takes 4 years, so 2P takes 8 years"
- },
- {
-  "id": "q9cc4d15d7ec",
-  "subject": "quant",
-  "topic": "average",
-  "level": "medium",
-  "question": "The average of 5 numbers is 27. If one number, 24, is replaced by 44, what is the new average?",
-  "options": [
-   "31",
-   "28",
-   "46",
-   "21"
-  ],
-  "answer": 0,
-  "explanation": "Change in sum = 20, so average changes by 20/5"
- },
- {
-  "id": "q44545923a31",
-  "subject": "quant",
-  "topic": "partnership",
-  "level": "medium",
-  "question": "A invests ₹9000 for 12 months and B invests ₹9000 for 8 months. Their total profit is ₹6300. What is A's share?",
-  "options": [
-   "₹3780",
-   "₹3785",
-   "₹4347",
-   "₹3783"
-  ],
-  "answer": 0,
-  "explanation": "Ratio of capital×time = 108000:72000"
- },
- {
-  "id": "qad644977709",
+  "id": "q240aa7fa5af",
   "subject": "quant",
   "topic": "trains",
   "level": "medium",
-  "question": "A train 210 m long, running at 54 km/h, crosses a platform 195 m long. How many seconds does it take?",
+  "question": "A train 380 m long, running at 72 km/h, crosses a platform 240 m long. How many seconds does it take?",
   "options": [
-   "20",
-   "29",
-   "27",
-   "22"
-  ],
-  "answer": 2,
-  "explanation": "Distance = 405 m at 15 m/s"
+   "36",
+   "16",
+   "31",
+   "26"
+  ]
  },
  {
-  "id": "q651c162e536",
+  "id": "q8cab450aa7a",
   "subject": "quant",
-  "topic": "pipes-cisterns",
+  "topic": "compound-interest",
   "level": "medium",
-  "question": "Pipes A and B can fill a tank in 24 and 22 hours, and an outlet C can empty it in 22 hours. If all three are opened together, in how many hours is the tank filled?",
+  "question": "Find the compound interest on ₹6000 at 10% per annum for 2 years, compounded annually.",
   "options": [
-   "18",
-   "24",
-   "27",
-   "20"
-  ],
-  "answer": 1,
-  "explanation": "Net rate = 1/24 + 1/22 − 1/22 = 1/24"
+   "₹1134",
+   "₹1262",
+   "₹1260",
+   "₹1258"
+  ]
  },
  {
-  "id": "qf279ff65ffd",
+  "id": "q28374a9fa0b",
   "subject": "quant",
   "topic": "percentage",
   "level": "medium",
-  "question": "The price of an item is decreased by 20% and then decreased by 25%. What is the net percentage decrease?",
+  "question": "The population of a town is 10000. It grows by 10% in the first year and by 10% in the second year. What is the population after two years?",
   "options": [
-   "60%",
-   "40%",
-   "43%",
-   "38%"
-  ],
-  "answer": 1,
-  "explanation": "Net change = x + y + xy/100 using signed values."
+   "12100",
+   "6050",
+   "12095",
+   "12101"
+  ]
  },
  {
-  "id": "qa673bf22722",
+  "id": "qabc05753734",
   "subject": "quant",
   "topic": "percentage",
   "level": "medium",
-  "question": "The population of a town is 55000. It grows by 10% in the first year and by 20% in the second year. What is the population after two years?",
+  "question": "The population of a town is 15000. It grows by 20% in the first year and by 10% in the second year. What is the population after two years?",
   "options": [
-   "79860",
-   "72595",
-   "72600",
-   "83490"
-  ],
-  "answer": 2,
-  "explanation": "55000 × 110/100 × 120/100 = 72600"
+   "19800",
+   "21780",
+   "24750",
+   "16830"
+  ]
  },
  {
-  "id": "qad365e9e206",
-  "subject": "quant",
-  "topic": "lcm-hcf",
-  "level": "medium",
-  "question": "What is the smallest number divisible by 6, 10 and 12?",
-  "options": [
-   "50",
-   "30",
-   "60",
-   "58"
-  ],
-  "answer": 2,
-  "explanation": "LCM of [6, 10, 12] = 60"
- },
- {
-  "id": "q238fa885123",
+  "id": "q48a16c09db5",
   "subject": "quant",
   "topic": "mixture",
   "level": "medium",
-  "question": "Two varieties of rice costing ₹75/kg and ₹105/kg are mixed in the ratio 1:2. What is the cost per kg of the mixture?",
+  "question": "Two varieties of rice costing ₹25/kg and ₹85/kg are mixed in the ratio 1:5. What is the cost per kg of the mixture?",
   "options": [
-   "₹95",
-   "₹48",
-   "₹142",
-   "₹90"
-  ],
-  "answer": 0,
-  "explanation": "(75×1 + 105×2)/3 = ₹95"
- },
- {
-  "id": "q75f23b239b5",
-  "subject": "quant",
-  "topic": "pipes-cisterns",
-  "level": "medium",
-  "question": "Pipes A and B can fill a tank in 20 and 8 hours, and an outlet C can empty it in 20 hours. If all three are opened together, in how many hours is the tank filled?",
-  "options": [
-   "5",
-   "8",
-   "6",
-   "9"
-  ],
-  "answer": 1,
-  "explanation": "Net rate = 1/20 + 1/8 − 1/20 = 1/8"
- },
- {
-  "id": "q55c41920257",
-  "subject": "quant",
-  "topic": "ages",
-  "level": "medium",
-  "question": "A father is 58 years old and his son is 15. After how many years will the father be twice as old as the son?",
-  "options": [
-   "38",
-   "27",
-   "28",
-   "14"
-  ],
-  "answer": 2,
-  "explanation": "58 + x = 2(15 + x) gives x = 28"
- },
- {
-  "id": "qe7379c33082",
-  "subject": "quant",
-  "topic": "mixture",
-  "level": "medium",
-  "question": "Two varieties of rice costing ₹70/kg and ₹105/kg are mixed in the ratio 2:3. What is the cost per kg of the mixture?",
-  "options": [
-   "₹91",
-   "₹94",
-   "₹114",
-   "₹92"
-  ],
-  "answer": 0,
-  "explanation": "(70×2 + 105×3)/5 = ₹91"
+   "₹68",
+   "₹73",
+   "₹86",
+   "₹75"
+  ]
  },
  {
   "id": "qbd945150bfe",
@@ -366,237 +370,413 @@
   "level": "medium",
   "question": "A boat's speed in still water is 19 km/h and the stream flows at 5 km/h. How many hours will it take to go 48 km downstream?",
   "options": [
-   "3",
    "2",
+   "3",
    "1",
    "4"
-  ],
-  "answer": 1,
-  "explanation": "Downstream speed = 24 km/h, time = 48/24"
+  ]
  },
  {
-  "id": "q24443495ebb",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "medium",
-  "question": "A boat's speed in still water is 10 km/h and the stream flows at 1 km/h. How many hours will it take to go 55 km downstream?",
-  "options": [
-   "5",
-   "2",
-   "8",
-   "7"
-  ],
-  "answer": 0,
-  "explanation": "Downstream speed = 11 km/h, time = 55/11"
- },
- {
-  "id": "qf9947cc9319",
-  "subject": "quant",
-  "topic": "percentage",
-  "level": "medium",
-  "question": "The population of a town is 45000. It grows by 20% in the first year and by 50% in the second year. What is the population after two years?",
-  "options": [
-   "81005",
-   "80999",
-   "81000",
-   "40500"
-  ],
-  "answer": 2,
-  "explanation": "45000 × 120/100 × 150/100 = 81000"
- },
- {
-  "id": "q8921801e18f",
-  "subject": "quant",
-  "topic": "pipes-cisterns",
-  "level": "medium",
-  "question": "Pipes A and B can fill a tank in 17 and 21 hours, and an outlet C can empty it in 21 hours. If all three are opened together, in how many hours is the tank filled?",
-  "options": [
-   "17",
-   "18",
-   "13",
-   "22"
-  ],
-  "answer": 0,
-  "explanation": "Net rate = 1/17 + 1/21 − 1/21 = 1/17"
- },
- {
-  "id": "qa587917990e",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "medium",
-  "question": "A boat's speed in still water is 17 km/h and the stream flows at 2 km/h. How many hours will it take to go 38 km downstream?",
-  "options": [
-   "5",
-   "1",
-   "12",
-   "2"
-  ],
-  "answer": 3,
-  "explanation": "Downstream speed = 19 km/h, time = 38/19"
- },
- {
-  "id": "qb0728099c50",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "medium",
-  "question": "A train 120 m long, running at 54 km/h, crosses a platform 210 m long. How many seconds does it take?",
-  "options": [
-   "11",
-   "22",
-   "16",
-   "20"
-  ],
-  "answer": 1,
-  "explanation": "Distance = 330 m at 15 m/s"
- },
- {
-  "id": "qa6c103046f0",
-  "subject": "quant",
-  "topic": "average",
-  "level": "medium",
-  "question": "The average of 7 numbers is 24. If one number, 30, is replaced by 51, what is the new average?",
-  "options": [
-   "14",
-   "27",
-   "23",
-   "28"
-  ],
-  "answer": 1,
-  "explanation": "Change in sum = 21, so average changes by 21/7"
- },
- {
-  "id": "qaff4c324357",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "medium",
-  "question": "A train 150 m long, running at 36 km/h, crosses a platform 120 m long. How many seconds does it take?",
-  "options": [
-   "27",
-   "34",
-   "31",
-   "37"
-  ],
-  "answer": 0,
-  "explanation": "Distance = 270 m at 10 m/s"
- },
- {
-  "id": "q486f4896cd3",
-  "subject": "quant",
-  "topic": "percentage",
-  "level": "medium",
-  "question": "The price of an item is increased by 50% and then decreased by 20%. What is the net percentage change? (Give the magnitude.)",
-  "options": [
-   "15%",
-   "20%",
-   "19%",
-   "24%"
-  ],
-  "answer": 1,
-  "explanation": "Net change = x + y + xy/100 using signed values."
- },
- {
-  "id": "qc366b7b8ffb",
-  "subject": "quant",
-  "topic": "compound-interest",
-  "level": "medium",
-  "question": "Find the compound interest on ₹30000 at 5% per annum for 2 years, compounded annually.",
-  "options": [
-   "₹3065",
-   "₹3075",
-   "₹2306",
-   "₹2614"
-  ],
-  "answer": 1,
-  "explanation": "A = 30000(1+5/100)², CI = A − P = ₹3075"
- },
- {
-  "id": "qd3ad2491590",
-  "subject": "quant",
-  "topic": "pipes-cisterns",
-  "level": "medium",
-  "question": "Pipes A and B can fill a tank in 27 and 20 hours, and an outlet C can empty it in 27 hours. If all three are opened together, in how many hours is the tank filled?",
-  "options": [
-   "24",
-   "20",
-   "23",
-   "30"
-  ],
-  "answer": 1,
-  "explanation": "Net rate = 1/27 + 1/20 − 1/27 = 1/20"
- },
- {
-  "id": "qde5038b4af2",
+  "id": "q1b5947a49b9",
   "subject": "quant",
   "topic": "partnership",
   "level": "medium",
-  "question": "A invests ₹5000 for 12 months and B invests ₹6000 for 6 months. Their total profit is ₹4400. What is A's share?",
+  "question": "A invests ₹7000 for 12 months and B invests ₹2000 for 8 months. Their total profit is ₹3800. What is A's share?",
   "options": [
-   "₹2750",
-   "₹2888",
-   "₹2612",
-   "₹2200"
-  ],
-  "answer": 0,
-  "explanation": "Ratio of capital×time = 60000:36000"
+   "₹3192",
+   "₹2394",
+   "₹3182",
+   "₹3197"
+  ]
  },
  {
-  "id": "q3378716ab96",
-  "subject": "quant",
-  "topic": "average",
-  "level": "medium",
-  "question": "The average of 5 numbers is 22. If one number, 35, is replaced by 55, what is the new average?",
-  "options": [
-   "26",
-   "21",
-   "13",
-   "32"
-  ],
-  "answer": 0,
-  "explanation": "Change in sum = 20, so average changes by 20/5"
- },
- {
-  "id": "q6c8b9090846",
-  "subject": "quant",
-  "topic": "average",
-  "level": "medium",
-  "question": "The average of 7 numbers is 36. If one number, 29, is replaced by 57, what is the new average?",
-  "options": [
-   "60",
-   "35",
-   "40",
-   "36"
-  ],
-  "answer": 2,
-  "explanation": "Change in sum = 28, so average changes by 28/7"
- },
- {
-  "id": "q7b4fb990b3f",
-  "subject": "quant",
-  "topic": "pipes-cisterns",
-  "level": "medium",
-  "question": "Pipes A and B can fill a tank in 23 and 14 hours, and an outlet C can empty it in 23 hours. If all three are opened together, in how many hours is the tank filled?",
-  "options": [
-   "14",
-   "19",
-   "10",
-   "12"
-  ],
-  "answer": 0,
-  "explanation": "Net rate = 1/23 + 1/14 − 1/23 = 1/14"
- },
- {
-  "id": "q86c0432c084",
+  "id": "q89ccdde82d0",
   "subject": "quant",
   "topic": "lcm-hcf",
   "level": "medium",
-  "question": "What is the smallest number divisible by 8, 18 and 24?",
+  "question": "What is the smallest number divisible by 6, 9 and 12?",
   "options": [
-   "83",
-   "72",
-   "71",
-   "70"
+   "54",
+   "43",
+   "36",
+   "38"
+  ]
+ },
+ {
+  "id": "q22c86a26925",
+  "subject": "quant",
+  "topic": "percentage",
+  "level": "medium",
+  "question": "The population of a town is 25000. It grows by 20% in the first year and by 50% in the second year. What is the population after two years?",
+  "options": [
+   "44998",
+   "54000",
+   "67500",
+   "45000"
+  ]
+ },
+ {
+  "id": "q0126e26bb17",
+  "subject": "quant",
+  "topic": "boats-streams",
+  "level": "medium",
+  "question": "A boat's speed in still water is 19 km/h and the stream flows at 5 km/h. How many hours will it take to go 72 km downstream?",
+  "options": [
+   "8",
+   "6",
+   "4",
+   "3"
+  ]
+ },
+ {
+  "id": "q8f9d7128c24",
+  "subject": "quant",
+  "topic": "percentage",
+  "level": "medium",
+  "question": "The price of an item is decreased by 30% and then decreased by 25%. What is the net percentage decrease?",
+  "options": [
+   "71.25%",
+   "44.5%",
+   "47.5%",
+   "46.5%"
+  ]
+ },
+ {
+  "id": "q27835f4e032",
+  "subject": "quant",
+  "topic": "pipes-cisterns",
+  "level": "medium",
+  "question": "Pipes A and B can fill a tank in 17 and 26 hours, and an outlet C can empty it in 26 hours. If all three are opened together, in how many hours is the tank filled?",
+  "options": [
+   "17",
+   "27",
+   "14",
+   "20"
+  ]
+ },
+ {
+  "id": "q24ef51887a8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+  "options": [
+   "1575",
+   "1492",
+   "1568",
+   "1570"
   ],
-  "answer": 1,
-  "explanation": "LCM of [8, 18, 24] = 72"
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q16111fd040e",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the ratio of BOB's disbursement to Indian's in 2023?",
+  "options": [
+   "51:37",
+   "37:51",
+   "51:38",
+   "50:37"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "qbbd3019b9f5",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "By what percent did Indian's disbursement change from 2022 to 2025? (Negative means a fall.)",
+  "options": [
+   "-29.22%",
+   "-34.38%",
+   "-36.38%",
+   "-32.66%"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q6d66858de1b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+  "options": [
+   "285",
+   "277",
+   "280",
+   "224"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "qde7953e22ee",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "medium",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "PNB",
+   "SBI",
+   "Indian",
+   "BOB"
+  ],
+  "group": {
+   "id": "g1ff610a7827",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      320,
+      370,
+      420,
+      210
+     ],
+     [
+      "BOB",
+      350,
+      510,
+      510,
+      200
+     ],
+     [
+      "Canara",
+      560,
+      240,
+      320,
+      100
+     ],
+     [
+      "PNB",
+      250,
+      180,
+      500,
+      320
+     ],
+     [
+      "SBI",
+      140,
+      100,
+      170,
+      530
+     ]
+    ]
+   }
+  }
  }
 ]

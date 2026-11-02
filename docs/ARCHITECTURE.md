@@ -61,8 +61,14 @@ flowchart LR
         AuthController
         BookmarkController
         ChallengeController
+        ContestController
+        EmailPreferencesController
         GoogleAuthController
+        LeaderboardController
+        PasswordResetController
         ProfileController
+        QuestionEditController
+        QuizController
         ReportController
         StatsController
         StatusController
@@ -71,6 +77,9 @@ flowchart LR
     subgraph services["Security and services"]
         AppUserDetailsService
         GoogleTokenVerifier
+        QuizCatalog
+        QuizTimer
+        RateLimiter
         SessionSignIn
         SessionTracker
         StorageMode
@@ -80,6 +89,10 @@ flowchart LR
         AttemptAnswerRepository
         BookmarkRepository
         ChallengeRepository
+        ContestEntryRepository
+        ContestRepository
+        PasswordResetTokenRepository
+        QuestionEditRepository
         QuestionReportRepository
         QuizAttemptRepository
         UserRepository
@@ -90,6 +103,8 @@ flowchart LR
     AttemptController --> AttemptAnswerRepository
     AttemptController --> UserRepository
     AttemptController --> ChallengeRepository
+    AttemptController --> QuizCatalog
+    AttemptController --> QuizTimer
     AuthController --> UserRepository
     AuthController --> AppUserDetailsService
     AuthController --> SessionSignIn
@@ -98,13 +113,33 @@ flowchart LR
     ChallengeController --> ChallengeRepository
     ChallengeController --> QuizAttemptRepository
     ChallengeController --> UserRepository
+    ContestController --> ContestRepository
+    ContestController --> ContestEntryRepository
+    ContestController --> UserRepository
+    ContestController --> QuizCatalog
+    EmailPreferencesController --> UserRepository
+    EmailPreferencesController --> AppUserDetailsService
     GoogleAuthController --> GoogleTokenVerifier
     GoogleAuthController --> UserRepository
     GoogleAuthController --> AppUserDetailsService
     GoogleAuthController --> SessionSignIn
+    LeaderboardController --> QuizAttemptRepository
+    LeaderboardController --> UserRepository
+    LeaderboardController --> QuizCatalog
+    LeaderboardController --> AppUserDetailsService
+    LeaderboardController --> Streaks
+    PasswordResetController --> UserRepository
+    PasswordResetController --> PasswordResetTokenRepository
+    PasswordResetController --> SessionTracker
+    PasswordResetController --> RateLimiter
+    PasswordResetController --> StorageMode
     ProfileController --> UserRepository
     ProfileController --> AppUserDetailsService
     ProfileController --> SessionTracker
+    QuestionEditController --> QuestionEditRepository
+    QuizController --> QuizCatalog
+    QuizController --> QuizTimer
+    QuizController --> RateLimiter
     ReportController --> QuestionReportRepository
     ReportController --> UserRepository
     StatsController --> AttemptAnswerRepository
@@ -119,6 +154,10 @@ flowchart LR
     AttemptAnswerRepository -->|attempt_answer| db
     BookmarkRepository -->|bookmark| db
     ChallengeRepository -->|challenge| db
+    ContestEntryRepository -->|contest_entry| db
+    ContestRepository -->|contest| db
+    PasswordResetTokenRepository -->|password_reset_token| db
+    QuestionEditRepository -->|question_edit| db
     QuestionReportRepository -->|question_report| db
     QuizAttemptRepository -->|quiz_attempt| db
     UserRepository -->|app_user| db
@@ -134,6 +173,13 @@ flowchart LR
 <!-- BEGIN GENERATED: endpoints -->
 | Method | Path | Access | Controller | What it does |
 |---|---|---|---|---|
+| POST | `/api/admin/contests` | role ADMIN | ContestController |  |
+| GET | `/api/admin/contests/quizzes` | role ADMIN | ContestController |  |
+| DELETE | `/api/admin/contests/{id}` | role ADMIN | ContestController |  |
+| GET | `/api/admin/question-edits` | role ADMIN | QuestionEditController |  |
+| GET | `/api/admin/question-edits/export` | role ADMIN | QuestionEditController | All edits as scripts/question_edits.json: {"&lt;question id&gt;": {field: value, ...}}, sorted by id. |
+| PUT | `/api/admin/question-edits/{questionId}` | role ADMIN | QuestionEditController |  |
+| DELETE | `/api/admin/question-edits/{questionId}` | role ADMIN | QuestionEditController |  |
 | GET | `/api/admin/reports` | role ADMIN | ReportController |  |
 | POST | `/api/admin/reports/{id}/resolve` | role ADMIN | ReportController |  |
 | GET | `/api/attempts` | login | AttemptController | Newest first. |
@@ -143,22 +189,37 @@ flowchart LR
 | POST | `/api/auth/google` | public | GoogleAuthController |  |
 | POST | `/api/auth/login` | public | AuthController |  |
 | POST | `/api/auth/logout` | public | AuthController |  |
+| POST | `/api/auth/password-reset` | public | PasswordResetController |  |
+| POST | `/api/auth/password-reset/confirm` | public | PasswordResetController |  |
 | POST | `/api/auth/register` | public | AuthController |  |
 | POST | `/api/challenges/from-attempt/{attemptId}` | login | ChallengeController | Creates the challenge for one of your attempts, or returns the existing one (one code per attempt). |
 | GET | `/api/challenges/{code}` | public | ChallengeController | Public, so a link opened by someone logged out still shows what they're being challenged to. |
+| GET | `/api/contests` | public | ContestController | Live first, then upcoming, then those finished in the last 30 days. |
+| GET | `/api/contests/{id}` | public | ContestController |  |
+| GET | `/api/contests/{id}/paper` | login | ContestController |  |
+| POST | `/api/contests/{id}/register` | login | ContestController | Open until the contest ends: joining late still means the deadline is the contest's end. |
+| GET | `/api/contests/{id}/results` | public | ContestController | After the contest (plus grace): ranks, percentiles, and the answer key per question. |
+| POST | `/api/contests/{id}/submit` | login | ContestController | Answers in the order the paper showed them (shuffled questions and options). |
+| POST | `/api/email/unsubscribe` | public | EmailPreferencesController | Turns off every QuizVerse email. |
+| GET | `/api/leaderboards/quiz` | public | LeaderboardController |  |
+| GET | `/api/leaderboards/weekly` | public | LeaderboardController |  |
 | GET | `/api/me` | login | AuthController | The logged-in user, or 401 (the frontend uses this to decide what to show). |
 | PUT | `/api/me` | login | ProfileController |  |
 | DELETE | `/api/me` | login | ProfileController | Removes the user and, through ON DELETE CASCADE, their attempts, answers, bookmarks, reports and challenges. |
 | GET | `/api/me/bookmarks` | login | BookmarkController | Newest first. |
 | PUT | `/api/me/bookmarks/{questionId}` | login | BookmarkController |  |
 | DELETE | `/api/me/bookmarks/{questionId}` | login | BookmarkController |  |
+| PUT | `/api/me/email-preferences` | login | EmailPreferencesController |  |
 | PUT | `/api/me/goal` | login | StreakController |  |
 | POST | `/api/me/google` | login | GoogleAuthController | Connects a Google account to the logged-in user, so they can sign in with either. |
 | DELETE | `/api/me/google` | login | GoogleAuthController | Disconnects Google. |
+| PUT | `/api/me/leaderboard` | login | LeaderboardController |  |
 | GET | `/api/me/mistakes` | login | StatsController | Questions last answered wrong or skipped, newest first. |
 | POST | `/api/me/password` | login | ProfileController | Keeps this session logged in and logs out every other one, e.g. a phone someone else has. |
 | GET | `/api/me/streak` | login | StreakController |  |
 | GET | `/api/me/topics` | login | StatsController |  |
+| POST | `/api/quiz/start` | public | QuizController |  |
+| POST | `/api/quiz/submit` | public | QuizController |  |
 | POST | `/api/reports` | login | ReportController | A second report of the same question by the same user, while the first is open, is a no-op. |
 | GET | `/api/status` | public | StatusController |  |
 <!-- END GENERATED: endpoints -->
@@ -178,6 +239,9 @@ erDiagram
     app_user ||--o{ bookmark : "user_id, on delete cascade"
     app_user ||--o{ question_report : "user_id, on delete cascade"
     quiz_attempt ||--o| challenge : "attempt_id, on delete cascade"
+    app_user ||--o{ password_reset_token : "user_id, on delete cascade"
+    contest ||--o{ contest_entry : "contest_id, on delete cascade"
+    app_user ||--o{ contest_entry : "user_id, on delete cascade"
     app_user {
         bigint id PK "not null"
         varchar username UK "30, not null"
@@ -187,6 +251,12 @@ erDiagram
         timestamptz created_at "not null"
         int daily_goal "not null"
         varchar google_subject UK "255, nullable"
+        boolean email_reminders "not null"
+        boolean email_weekly "not null"
+        varchar email_token UK "43, nullable"
+        timestamptz last_reminder_at "nullable"
+        timestamptz last_weekly_at "nullable"
+        boolean leaderboard_hidden "not null"
     }
     quiz_attempt {
         bigint id PK "not null"
@@ -207,6 +277,8 @@ erDiagram
         timestamptz completed_at "not null"
         varchar kind "16, not null"
         bigint challenge_id FK "nullable"
+        boolean verified "not null"
+        varchar receipt_hash UK "64, nullable"
     }
     attempt_answer {
         bigint id PK "not null"
@@ -239,20 +311,66 @@ erDiagram
         bigint attempt_id FK,UK "not null"
         timestamptz created_at "not null"
     }
+    password_reset_token {
+        bigint id PK "not null"
+        bigint user_id FK "not null"
+        varchar token_hash UK "64, not null"
+        timestamptz expires_at "not null"
+        boolean used "not null"
+        timestamptz created_at "not null"
+    }
+    contest {
+        bigint id PK "not null"
+        varchar title "120, not null"
+        varchar quiz_key "200, not null"
+        timestamptz starts_at "not null"
+        int minutes "not null"
+        timestamptz created_at "not null"
+    }
+    contest_entry {
+        bigint id PK "not null"
+        bigint contest_id FK "not null"
+        bigint user_id FK "not null"
+        timestamptz registered_at "not null"
+        timestamptz started_at "nullable"
+        timestamptz submitted_at "nullable"
+        varchar chosen "1500, nullable"
+        double score "nullable"
+        int correct "nullable"
+        int wrong "nullable"
+        int skipped "nullable"
+        int seconds_used "nullable"
+    }
+    question_edit {
+        bigint id PK "not null"
+        varchar question_id UK "16, not null"
+        varchar question "4000, nullable"
+        varchar options "2000, nullable"
+        int answer "nullable"
+        varchar explanation "4000, nullable"
+        boolean hidden "not null"
+        varchar note "500, nullable"
+        varchar edited_by "50, not null"
+        timestamptz updated_at "not null"
+    }
 ```
 <!-- END GENERATED: schema -->
 
 <!-- BEGIN GENERATED: schema-notes -->
-Built from 6 migrations (V1__accounts_and_attempts.sql … V6__challenges.sql).
+Built from 11 migrations (V1__accounts_and_attempts.sql … V11__question_edits.sql).
 
 | Table | Unique together | Indexes |
 |---|---|---|
 | `app_user` | - | - |
-| `quiz_attempt` | - | `idx_attempt_user` (user_id, completed_at); `idx_attempt_challenge` (challenge_id) |
+| `quiz_attempt` | - | `idx_attempt_user` (user_id, completed_at); `idx_attempt_challenge` (challenge_id); `idx_attempt_board` (verified, exam_id, stage_id, section_id, level_id, quiz_index); `idx_attempt_verified_time` (verified, completed_at) |
 | `attempt_answer` | - | `idx_answer_attempt` (attempt_id); `idx_answer_question` (question_id) |
 | `bookmark` | (user_id, question_id) | - |
 | `question_report` | - | `idx_report_open` (resolved, created_at) |
 | `challenge` | - | - |
+| `password_reset_token` | - | `idx_reset_token_user` (user_id) |
+| `contest` | - | `idx_contest_start` (starts_at) |
+| `contest_entry` | (contest_id, user_id) | `idx_contest_entry_rank` (contest_id, score) |
+| `question_edit` | - | - |
 <!-- END GENERATED: schema-notes -->
 
 ### JPA entities
@@ -285,6 +403,49 @@ classDiagram
         String code
         Instant createdAt
     }
+    class Contest {
+        <<table contest>>
+        Long id
+        String title
+        String quizKey
+        Instant startsAt
+        int minutes
+        Instant createdAt
+    }
+    class ContestEntry {
+        <<table contest_entry>>
+        Long id
+        Instant registeredAt
+        Instant startedAt
+        Instant submittedAt
+        String chosen
+        Double score
+        Integer correct
+        Integer wrong
+        Integer skipped
+        Integer secondsUsed
+    }
+    class PasswordResetToken {
+        <<table password_reset_token>>
+        Long id
+        String tokenHash
+        Instant expiresAt
+        boolean used
+        Instant createdAt
+    }
+    class QuestionEdit {
+        <<table question_edit>>
+        Long id
+        String questionId
+        String question
+        String options
+        Integer answer
+        String explanation
+        boolean hidden
+        String note
+        String editedBy
+        Instant updatedAt
+    }
     class QuestionReport {
         <<table question_report>>
         Long id
@@ -312,6 +473,8 @@ classDiagram
         boolean timed
         int timeUsedSeconds
         Instant completedAt
+        boolean verified
+        String receiptHash
     }
     class User {
         <<table app_user>>
@@ -323,10 +486,19 @@ classDiagram
         String googleSubject
         Instant createdAt
         int dailyGoal
+        boolean emailReminders
+        boolean emailWeekly
+        String emailToken
+        Instant lastReminderAt
+        Instant lastWeeklyAt
+        boolean leaderboardHidden
     }
     AttemptAnswer "*" --> "1" QuizAttempt : attempt
     Bookmark "*" --> "1" User : user
     Challenge "1" --> "1" QuizAttempt : attempt
+    ContestEntry "*" --> "1" Contest : contest
+    ContestEntry "*" --> "1" User : user
+    PasswordResetToken "*" --> "1" User : user
     QuestionReport "*" --> "1" User : user
     QuizAttempt "*" --> "1" User : user
     QuizAttempt "*" --> "0..1" Challenge : challenge
@@ -354,25 +526,33 @@ Plain HTML pages, each loading one or two ES modules. `api.js` wraps `fetch` for
 flowchart LR
     subgraph pages["Pages"]
         page_challenge["challenge.html"]
+        page_contests["contests.html"]
         page_exam["exam.html"]
+        page_forgot-password["forgot-password.html"]
         page_history["history.html"]
         page_index["index.html"]
+        page_leaderboard["leaderboard.html"]
         page_login["login.html"]
         page_practice["practice.html"]
         page_profile["profile.html"]
         page_quiz["quiz.html"]
         page_register["register.html"]
         page_reports["reports.html"]
+        page_reset-password["reset-password.html"]
+        page_unsubscribe["unsubscribe.html"]
     end
     subgraph modules["JS modules"]
         js_account["account.js"]
         js_api["api.js"]
         js_auth["auth.js"]
         js_challenge["challenge.js"]
+        js_contests["contests.js"]
         js_exam["exam.js"]
         js_google["google.js"]
         js_history["history.js"]
         js_home["home.js"]
+        js_leaderboard["leaderboard.js"]
+        js_password-reset["password-reset.js"]
         js_pending["pending.js"]
         js_practice["practice.js"]
         js_profile["profile.js"]
@@ -380,17 +560,23 @@ flowchart LR
         js_quiz["quiz.js"]
         js_reports["reports.js"]
         js_share["share.js"]
+        js_unsubscribe["unsubscribe.js"]
     end
     data[("static/data/*.json<br/>question bank")]
     apiserver(["/api/* (Spring Boot)"])
     page_challenge --> js_account
     page_challenge --> js_challenge
+    page_contests --> js_account
+    page_contests --> js_contests
     page_exam --> js_exam
     page_exam --> js_account
+    page_forgot-password --> js_account
     page_history --> js_account
     page_history --> js_history
     page_index --> js_home
     page_index --> js_account
+    page_leaderboard --> js_account
+    page_leaderboard --> js_leaderboard
     page_login --> js_account
     page_login --> js_auth
     page_practice --> js_account
@@ -403,6 +589,9 @@ flowchart LR
     page_register --> js_auth
     page_reports --> js_account
     page_reports --> js_reports
+    page_reset-password --> js_account
+    page_unsubscribe --> js_account
+    page_unsubscribe --> js_unsubscribe
     js_account --> js_api
     js_account --> js_pending
     js_api -.-> apiserver
@@ -410,6 +599,8 @@ flowchart LR
     js_auth --> js_google
     js_auth --> js_pending
     js_challenge --> js_api
+    js_contests --> js_api
+    js_contests --> js_questions
     js_exam --> js_api
     js_exam -.-> data
     js_google --> js_api
@@ -419,6 +610,8 @@ flowchart LR
     js_home --> js_api
     js_home --> js_questions
     js_home -.-> data
+    js_leaderboard --> js_api
+    js_password-reset --> js_api
     js_practice --> js_questions
     js_profile --> js_api
     js_profile --> js_google
@@ -430,6 +623,7 @@ flowchart LR
     js_quiz -.-> data
     js_reports --> js_api
     js_reports --> js_questions
+    js_unsubscribe --> js_api
 ```
 <!-- END GENERATED: frontend -->
 
@@ -492,6 +686,10 @@ Environment variables the app reads. Real values live in Railway (or your shell)
 | `PORT` | `8080` | `server.port` | all, prod |
 | `QUIZVERSE_ADMIN_USERNAMES` | (none) | `quizverse.admin-usernames` | all |
 | `GOOGLE_CLIENT_ID` | (none) | `quizverse.google-client-id` | all |
+| `RESEND_API_KEY` | (none) | `quizverse.mail.resend-api-key` | all |
+| `MAIL_FROM` | (none) | `quizverse.mail.from` | all |
+| `QUIZVERSE_PUBLIC_URL` | (none) | `quizverse.public-url` | all |
+| `QUIZVERSE_SIGNING_KEY` | (none) | `quizverse.signing-key` | all |
 | `PGHOST` | (none) | `spring.datasource.url` | prod |
 | `PGPORT` | `5432` | `spring.datasource.url` | prod |
 | `PGDATABASE` | (none) | `spring.datasource.url` | prod |
@@ -507,7 +705,7 @@ Environment variables the app reads. Real values live in Railway (or your shell)
 flowchart LR
     dev(["git push / pull request"])
     subgraph maven["Java CI with Maven (maven.yml)"]
-        maven_build["<b>build</b><br/>• Set up JDK 21<br/>• Set up Python<br/>• Check question data is up to date<br/>• Check architecture doc is up to date<br/>• Build and test"]
+        maven_build["<b>build</b><br/>• Set up JDK 21<br/>• Set up Python<br/>• Check question data is up to date<br/>• Build and test"]
     dev -->|push / pull request to main| maven_build
         maven_deploy["<b>deploy</b><br/>• Install Railway CLI<br/>• Deploy to Railway"]
         maven_build -->|main only| maven_deploy
@@ -549,10 +747,16 @@ flowchart LR
 | SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability | 45 | 2100 |
 | IBPS RRB Clerk | Prelims | Reasoning Ability, Numerical Ability | 30 | 1200 |
 | IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability | 45 | 1800 |
+| IBPS PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
+| IBPS PO | Mains | Reasoning & Computer Aptitude, English Language, Data Analysis & Interpretation | 45 | 1725 |
+| SBI PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
+| SBI PO | Mains | Reasoning & Computer Aptitude, Data Analysis & Interpretation, English Language | 45 | 1575 |
+| RBI Assistant | Prelims | English Language, Numerical Ability, Reasoning Ability | 45 | 1500 |
+| RBI Assistant | Mains | Reasoning, English Language, Numerical Ability | 45 | 1800 |
 | Java Practice | Practice | Java | 9 | 142 |
 | Tech Interview Prep | Practice | Data Structures & Algorithms, Java, Python, Spring Boot, React, Vue.js, Artificial Intelligence | 84 | 840 |
 
-Quiz slots can reuse a question (the same bank feeds several exams): 3081 unique questions in 10 subjects.
+Quiz slots can reuse a question (the same bank feeds several exams): 10235 unique questions in 12 subjects.
 <!-- END GENERATED: content -->
 
 ### Daily features
