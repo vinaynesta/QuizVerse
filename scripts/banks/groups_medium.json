@@ -1,0 +1,2762 @@
+[
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "BOB",
+     360,
+     430,
+     130,
+     450
+    ],
+    [
+     "SBI",
+     180,
+     460,
+     270,
+     390
+    ],
+    [
+     "Indian",
+     120,
+     140,
+     140,
+     230
+    ],
+    [
+     "Canara",
+     340,
+     170,
+     240,
+     390
+    ],
+    [
+     "Union",
+     460,
+     480,
+     150,
+     290
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+    "options": [
+     "1300",
+     "1305",
+     "975",
+     "1365"
+    ],
+    "answer": 0,
+    "explanation": "SBI: 180 + 460 + 270 + 390 = 1300."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of SBI's disbursement to Canara's in 2022?",
+    "options": [
+     "1:2",
+     "9:17",
+     "18:35",
+     "19:34"
+    ],
+    "answer": 1,
+    "explanation": "2022: SBI = 180, Canara = 340.\n180:340, divide by 20: 9:17."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did Canara's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "16.71%",
+     "13.97%",
+     "14.71%",
+     "12.5%"
+    ],
+    "answer": 2,
+    "explanation": "2022: 340; 2025: 390.\nChange = 50.\n% change = 50/340 × 100 = 14.71%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+    "options": [
+     "321",
+     "290",
+     "146",
+     "292"
+    ],
+    "answer": 3,
+    "explanation": "2022: 360 + 180 + 120 + 340 + 460 = 1460.\nAverage = 1460/5 = 292."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "Union",
+     "Indian",
+     "BOB",
+     "Canara"
+    ],
+    "answer": 0,
+    "explanation": "Totals: BOB 1370, SBI 1300, Indian 630, Canara 1140, Union 1380.\nHighest: Union (1380)."
+   }
+  ],
+  "id": "g-medium-1"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Amit, Chetan, Deepa, Gautam, Usha, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, pink, red, yellow.\nChetan lives on the ground floor (floor 1).\nGautam lives immediately above Usha.\nAmit lives on a floor above Gautam.\nExactly one person lives between Gautam and Deepa.\nDeepa lives on a floor above Gautam.\nThe person on floor 4 likes red.\nThe person on floor 1 likes pink.\nUsha likes black.\nThe person on floor 5 likes blue.\nThe person on floor 3 likes yellow.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Usha",
+     "Deepa",
+     "Chetan",
+     "Amit"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Chetan (pink), 2 Usha (black), 3 Gautam (yellow), 4 Amit (red), 5 Deepa (blue).\nTop floor: Deepa."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Usha like?",
+    "options": [
+     "pink",
+     "red",
+     "black",
+     "blue"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Chetan (pink), 2 Usha (black), 3 Gautam (yellow), 4 Amit (red), 5 Deepa (blue).\nUsha: black."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Gautam?",
+    "options": [
+     "Usha",
+     "Gautam",
+     "Deepa",
+     "Amit"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Chetan (pink), 2 Usha (black), 3 Gautam (yellow), 4 Amit (red), 5 Deepa (blue).\nFloor 4: Amit."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes pink live?",
+    "options": [
+     "1",
+     "5",
+     "2",
+     "3"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Chetan (pink), 2 Usha (black), 3 Gautam (yellow), 4 Amit (red), 5 Deepa (blue).\npink is Chetan's colour; Chetan is on floor 1."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Deepa and Usha?",
+    "options": [
+     "3",
+     "2",
+     "1",
+     "0"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Chetan (pink), 2 Usha (black), 3 Gautam (yellow), 4 Amit (red), 5 Deepa (blue).\nDeepa is on floor 5, Usha on floor 2: 2 between."
+   }
+  ],
+  "id": "g-medium-2"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "PNB",
+     480,
+     470,
+     430,
+     570
+    ],
+    [
+     "SBI",
+     340,
+     240,
+     170,
+     360
+    ],
+    [
+     "Indian",
+     530,
+     560,
+     430,
+     260
+    ],
+    [
+     "BOB",
+     300,
+     120,
+     350,
+     280
+    ],
+    [
+     "Canara",
+     400,
+     150,
+     320,
+     580
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+    "options": [
+     "1445",
+     "1160",
+     "1450",
+     "1453"
+    ],
+    "answer": 2,
+    "explanation": "Canara: 400 + 150 + 320 + 580 = 1450."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Canara's disbursement to SBI's in 2023?",
+    "options": [
+     "7:12",
+     "3:5",
+     "2:3",
+     "5:8"
+    ],
+    "answer": 3,
+    "explanation": "2023: Canara = 150, SBI = 240.\n150:240, divide by 30: 5:8."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "5.88%",
+     "6.88%",
+     "5%",
+     "7.06%"
+    ],
+    "answer": 0,
+    "explanation": "2022: 340; 2025: 360.\nChange = 20.\n% change = 20/340 × 100 = 5.88%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+    "options": [
+     "277",
+     "308",
+     "310",
+     "298"
+    ],
+    "answer": 1,
+    "explanation": "2023: 470 + 240 + 560 + 120 + 150 = 1540.\nAverage = 1540/5 = 308."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "SBI",
+     "Canara",
+     "PNB",
+     "Indian"
+    ],
+    "answer": 2,
+    "explanation": "Totals: PNB 1950, SBI 1110, Indian 1780, BOB 1050, Canara 1450.\nHighest: PNB (1950)."
+   }
+  ],
+  "id": "g-medium-3"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Deepa, Imran, Jaya, Priya, Wasim, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: blue, green, red, white, yellow.\nExactly one person lives between Wasim and Priya.\nImran lives on an even-numbered floor.\nDeepa lives on an odd-numbered floor.\nWasim lives on a floor above Imran.\nDeepa lives on a floor above Wasim.\nThe person on floor 2 likes white.\nPriya likes red.\nThe person on floor 3 likes green.\nThe person on floor 5 likes blue.\nJaya likes yellow.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Jaya",
+     "Priya",
+     "Imran",
+     "Deepa"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Priya (red), 2 Imran (white), 3 Wasim (green), 4 Jaya (yellow), 5 Deepa (blue).\nTop floor: Deepa."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Jaya like?",
+    "options": [
+     "yellow",
+     "green",
+     "white",
+     "red"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Priya (red), 2 Imran (white), 3 Wasim (green), 4 Jaya (yellow), 5 Deepa (blue).\nJaya: yellow."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Imran?",
+    "options": [
+     "Deepa",
+     "Wasim",
+     "Jaya",
+     "Priya"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Priya (red), 2 Imran (white), 3 Wasim (green), 4 Jaya (yellow), 5 Deepa (blue).\nFloor 3: Wasim."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes white live?",
+    "options": [
+     "3",
+     "4",
+     "2",
+     "1"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Priya (red), 2 Imran (white), 3 Wasim (green), 4 Jaya (yellow), 5 Deepa (blue).\nwhite is Imran's colour; Imran is on floor 2."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Deepa and Wasim?",
+    "options": [
+     "3",
+     "2",
+     "0",
+     "1"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Priya (red), 2 Imran (white), 3 Wasim (green), 4 Jaya (yellow), 5 Deepa (blue).\nDeepa is on floor 5, Wasim on floor 3: 1 between."
+   }
+  ],
+  "id": "g-medium-4"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "BOB",
+     120,
+     370,
+     490,
+     170
+    ],
+    [
+     "PNB",
+     100,
+     450,
+     160,
+     400
+    ],
+    [
+     "SBI",
+     270,
+     210,
+     390,
+     250
+    ],
+    [
+     "Union",
+     460,
+     510,
+     200,
+     370
+    ],
+    [
+     "Indian",
+     200,
+     590,
+     500,
+     260
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by PNB over all the years shown (₹ crore)?",
+    "options": [
+     "1110",
+     "1332",
+     "555",
+     "1105"
+    ],
+    "answer": 0,
+    "explanation": "PNB: 100 + 450 + 160 + 400 = 1110."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of PNB's disbursement to BOB's in 2025?",
+    "options": [
+     "17:40",
+     "40:17",
+     "20:9",
+     "39:17"
+    ],
+    "answer": 1,
+    "explanation": "2025: PNB = 400, BOB = 170.\n400:170, divide by 10: 40:17."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did BOB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "33.34%",
+     "31.67%",
+     "41.67%",
+     "62.51%"
+    ],
+    "answer": 2,
+    "explanation": "2022: 120; 2025: 170.\nChange = 50.\n% change = 50/120 × 100 = 41.67%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+    "options": [
+     "287",
+     "304",
+     "435",
+     "290"
+    ],
+    "answer": 3,
+    "explanation": "2025: 170 + 400 + 250 + 370 + 260 = 1450.\nAverage = 1450/5 = 290."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "Indian",
+     "BOB",
+     "Union",
+     "PNB"
+    ],
+    "answer": 0,
+    "explanation": "Totals: BOB 1150, PNB 1110, SBI 1120, Union 1540, Indian 1550.\nHighest: Indian (1550)."
+   }
+  ],
+  "id": "g-medium-5"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Jaya, Kiran, Manoj, Rahul, Wasim, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: blue, green, pink, white, yellow.\nJaya lives on a floor above Kiran.\nWasim lives on a floor above Manoj.\nManoj lives on a floor above Kiran.\nKiran lives on an odd-numbered floor.\nManoj lives on a floor above Rahul.\nExactly one person lives between Manoj and Wasim.\nThe person on floor 3 likes white.\nThe person on floor 2 likes blue.\nJaya likes pink.\nThe person on floor 5 likes green.\nKiran likes yellow.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Jaya",
+     "Wasim",
+     "Rahul",
+     "Manoj"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Kiran (yellow), 2 Rahul (blue), 3 Manoj (white), 4 Jaya (pink), 5 Wasim (green).\nTop floor: Wasim."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Jaya like?",
+    "options": [
+     "white",
+     "green",
+     "pink",
+     "yellow"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Kiran (yellow), 2 Rahul (blue), 3 Manoj (white), 4 Jaya (pink), 5 Wasim (green).\nJaya: pink."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Manoj?",
+    "options": [
+     "Wasim",
+     "Kiran",
+     "Rahul",
+     "Jaya"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Kiran (yellow), 2 Rahul (blue), 3 Manoj (white), 4 Jaya (pink), 5 Wasim (green).\nFloor 4: Jaya."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes white live?",
+    "options": [
+     "3",
+     "4",
+     "1",
+     "5"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Kiran (yellow), 2 Rahul (blue), 3 Manoj (white), 4 Jaya (pink), 5 Wasim (green).\nwhite is Manoj's colour; Manoj is on floor 3."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Wasim and Jaya?",
+    "options": [
+     "3",
+     "0",
+     "2",
+     "1"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Kiran (yellow), 2 Rahul (blue), 3 Manoj (white), 4 Jaya (pink), 5 Wasim (green).\nWasim is on floor 5, Jaya on floor 4: 0 between."
+   }
+  ],
+  "id": "g-medium-6"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Canara",
+     380,
+     320,
+     560,
+     390
+    ],
+    [
+     "BOB",
+     360,
+     340,
+     160,
+     140
+    ],
+    [
+     "Union",
+     440,
+     440,
+     210,
+     540
+    ],
+    [
+     "Indian",
+     580,
+     440,
+     520,
+     140
+    ],
+    [
+     "PNB",
+     490,
+     330,
+     550,
+     340
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+    "options": [
+     "1793",
+     "1956",
+     "1630",
+     "1222"
+    ],
+    "answer": 2,
+    "explanation": "Union: 440 + 440 + 210 + 540 = 1630."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Union's disbursement to BOB's in 2022?",
+    "options": [
+     "9:11",
+     "44:37",
+     "43:36",
+     "11:9"
+    ],
+    "answer": 3,
+    "explanation": "2022: Union = 440, BOB = 360.\n440:360, divide by 40: 11:9."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did BOB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "-61.11%",
+     "-63.11%",
+     "-58.11%",
+     "-76.39%"
+    ],
+    "answer": 0,
+    "explanation": "2022: 360; 2025: 140.\nChange = -220.\n% change = -220/360 × 100 = -61.11%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+    "options": [
+     "460",
+     "450",
+     "451",
+     "675"
+    ],
+    "answer": 1,
+    "explanation": "2022: 380 + 360 + 440 + 580 + 490 = 2250.\nAverage = 2250/5 = 450."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "Canara",
+     "Union",
+     "PNB",
+     "BOB"
+    ],
+    "answer": 2,
+    "explanation": "Totals: Canara 1650, BOB 1000, Union 1630, Indian 1680, PNB 1710.\nHighest: PNB (1710)."
+   }
+  ],
+  "id": "g-medium-7"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Lata, Priya, Sneha, Usha, Yash, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: blue, green, red, white, yellow.\nPriya lives on a floor above Usha.\nUsha lives on the ground floor (floor 1).\nYash lives immediately above Priya.\nSneha lives on a floor above Lata.\nYash lives on an odd-numbered floor.\nYash lives on a floor above Lata.\nPriya likes white.\nThe person on floor 2 likes yellow.\nYash likes blue.\nUsha likes red.\nThe person on floor 3 likes green.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Lata",
+     "Usha",
+     "Sneha",
+     "Yash"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (red), 2 Lata (yellow), 3 Sneha (green), 4 Priya (white), 5 Yash (blue).\nTop floor: Yash."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Lata like?",
+    "options": [
+     "yellow",
+     "white",
+     "blue",
+     "green"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (red), 2 Lata (yellow), 3 Sneha (green), 4 Priya (white), 5 Yash (blue).\nLata: yellow."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Lata?",
+    "options": [
+     "Priya",
+     "Sneha",
+     "Yash",
+     "Lata"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (red), 2 Lata (yellow), 3 Sneha (green), 4 Priya (white), 5 Yash (blue).\nFloor 3: Sneha."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes red live?",
+    "options": [
+     "2",
+     "5",
+     "1",
+     "3"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (red), 2 Lata (yellow), 3 Sneha (green), 4 Priya (white), 5 Yash (blue).\nred is Usha's colour; Usha is on floor 1."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Sneha and Lata?",
+    "options": [
+     "1",
+     "3",
+     "2",
+     "0"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (red), 2 Lata (yellow), 3 Sneha (green), 4 Priya (white), 5 Yash (blue).\nSneha is on floor 3, Lata on floor 2: 0 between."
+   }
+  ],
+  "id": "g-medium-8"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Canara",
+     490,
+     210,
+     590,
+     140
+    ],
+    [
+     "SBI",
+     440,
+     340,
+     180,
+     400
+    ],
+    [
+     "PNB",
+     260,
+     200,
+     130,
+     280
+    ],
+    [
+     "Union",
+     360,
+     580,
+     540,
+     510
+    ],
+    [
+     "Indian",
+     220,
+     190,
+     580,
+     410
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+    "options": [
+     "1360",
+     "1020",
+     "1362",
+     "1357"
+    ],
+    "answer": 0,
+    "explanation": "SBI: 440 + 340 + 180 + 400 = 1360."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of SBI's disbursement to Canara's in 2022?",
+    "options": [
+     "43:49",
+     "44:49",
+     "22:25",
+     "45:49"
+    ],
+    "answer": 1,
+    "explanation": "2022: SBI = 440, Canara = 490.\n440:490, divide by 10: 44:49."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did Canara's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "-76.43%",
+     "-53.57%",
+     "-71.43%",
+     "-64.29%"
+    ],
+    "answer": 2,
+    "explanation": "2022: 490; 2025: 140.\nChange = -350.\n% change = -350/490 × 100 = -71.43%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+    "options": [
+     "177",
+     "349",
+     "301",
+     "354"
+    ],
+    "answer": 3,
+    "explanation": "2022: 490 + 440 + 260 + 360 + 220 = 1770.\nAverage = 1770/5 = 354."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "Union",
+     "SBI",
+     "PNB",
+     "Indian"
+    ],
+    "answer": 0,
+    "explanation": "Totals: Canara 1430, SBI 1360, PNB 870, Union 1990, Indian 1400.\nHighest: Union (1990)."
+   }
+  ],
+  "id": "g-medium-9"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Hema, Rahul, Wasim, Yash, Zoya, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, white, yellow.\nExactly one person lives between Rahul and Hema.\nRahul lives on a floor above Hema.\nRahul lives on the top floor.\nWasim lives on an even-numbered floor.\nHema lives on a floor above Yash.\nWasim lives immediately above Yash.\nThe person on floor 3 likes white.\nThe person on floor 2 likes black.\nThe person on floor 5 likes blue.\nYash likes green.\nZoya likes yellow.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Yash",
+     "Rahul",
+     "Wasim",
+     "Hema"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Yash (green), 2 Wasim (black), 3 Hema (white), 4 Zoya (yellow), 5 Rahul (blue).\nTop floor: Rahul."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Yash like?",
+    "options": [
+     "blue",
+     "white",
+     "green",
+     "yellow"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Yash (green), 2 Wasim (black), 3 Hema (white), 4 Zoya (yellow), 5 Rahul (blue).\nYash: green."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Wasim?",
+    "options": [
+     "Rahul",
+     "Zoya",
+     "Yash",
+     "Hema"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Yash (green), 2 Wasim (black), 3 Hema (white), 4 Zoya (yellow), 5 Rahul (blue).\nFloor 3: Hema."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes blue live?",
+    "options": [
+     "5",
+     "2",
+     "1",
+     "4"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Yash (green), 2 Wasim (black), 3 Hema (white), 4 Zoya (yellow), 5 Rahul (blue).\nblue is Rahul's colour; Rahul is on floor 5."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Yash and Rahul?",
+    "options": [
+     "0",
+     "3",
+     "2",
+     "1"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Yash (green), 2 Wasim (black), 3 Hema (white), 4 Zoya (yellow), 5 Rahul (blue).\nYash is on floor 1, Rahul on floor 5: 3 between."
+   }
+  ],
+  "id": "g-medium-10"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Indian",
+     370,
+     130,
+     280,
+     200
+    ],
+    [
+     "Canara",
+     470,
+     490,
+     190,
+     440
+    ],
+    [
+     "BOB",
+     120,
+     390,
+     270,
+     210
+    ],
+    [
+     "SBI",
+     390,
+     240,
+     360,
+     440
+    ],
+    [
+     "PNB",
+     310,
+     100,
+     410,
+     560
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+    "options": [
+     "1029",
+     "490",
+     "980",
+     "979"
+    ],
+    "answer": 2,
+    "explanation": "Indian: 370 + 130 + 280 + 200 = 980."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Indian's disbursement to SBI's in 2023?",
+    "options": [
+     "1:2",
+     "13:25",
+     "7:12",
+     "13:24"
+    ],
+    "answer": 3,
+    "explanation": "2023: Indian = 130, SBI = 240.\n130:240, divide by 10: 13:24."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "12.82%",
+     "10.26%",
+     "10.9%",
+     "9.82%"
+    ],
+    "answer": 0,
+    "explanation": "2022: 390; 2025: 440.\nChange = 50.\n% change = 50/390 × 100 = 12.82%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+    "options": [
+     "260",
+     "270",
+     "269",
+     "272"
+    ],
+    "answer": 1,
+    "explanation": "2023: 130 + 490 + 390 + 240 + 100 = 1350.\nAverage = 1350/5 = 270."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "PNB",
+     "BOB",
+     "Canara",
+     "SBI"
+    ],
+    "answer": 2,
+    "explanation": "Totals: Indian 980, Canara 1590, BOB 990, SBI 1430, PNB 1380.\nHighest: Canara (1590)."
+   }
+  ],
+  "id": "g-medium-11"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Gautam, Imran, Lata, Priya, Tarun, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: blue, pink, red, white, yellow.\nGautam lives on an even-numbered floor.\nExactly one person lives between Imran and Tarun.\nGautam lives on a floor above Lata.\nExactly one person lives between Priya and Gautam.\nImran lives immediately above Priya.\nPriya lives immediately above Tarun.\nThe person on floor 2 likes white.\nLata likes red.\nThe person on floor 5 likes blue.\nThe person on floor 3 likes yellow.\nPriya likes pink.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Lata",
+     "Priya",
+     "Tarun",
+     "Imran"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Lata (red), 2 Gautam (white), 3 Tarun (yellow), 4 Priya (pink), 5 Imran (blue).\nTop floor: Imran."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Gautam like?",
+    "options": [
+     "white",
+     "red",
+     "pink",
+     "yellow"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Lata (red), 2 Gautam (white), 3 Tarun (yellow), 4 Priya (pink), 5 Imran (blue).\nGautam: white."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Gautam?",
+    "options": [
+     "Gautam",
+     "Tarun",
+     "Priya",
+     "Lata"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Lata (red), 2 Gautam (white), 3 Tarun (yellow), 4 Priya (pink), 5 Imran (blue).\nFloor 3: Tarun."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes blue live?",
+    "options": [
+     "1",
+     "4",
+     "5",
+     "3"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Lata (red), 2 Gautam (white), 3 Tarun (yellow), 4 Priya (pink), 5 Imran (blue).\nblue is Imran's colour; Imran is on floor 5."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Imran and Gautam?",
+    "options": [
+     "1",
+     "3",
+     "0",
+     "2"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Lata (red), 2 Gautam (white), 3 Tarun (yellow), 4 Priya (pink), 5 Imran (blue).\nImran is on floor 5, Gautam on floor 2: 2 between."
+   }
+  ],
+  "id": "g-medium-12"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Union",
+     160,
+     520,
+     350,
+     370
+    ],
+    [
+     "PNB",
+     170,
+     390,
+     230,
+     590
+    ],
+    [
+     "Canara",
+     530,
+     260,
+     250,
+     310
+    ],
+    [
+     "BOB",
+     470,
+     270,
+     490,
+     440
+    ],
+    [
+     "SBI",
+     180,
+     430,
+     210,
+     540
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+    "options": [
+     "1670",
+     "1837",
+     "1667",
+     "1665"
+    ],
+    "answer": 0,
+    "explanation": "BOB: 470 + 270 + 490 + 440 = 1670."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of BOB's disbursement to Union's in 2025?",
+    "options": [
+     "37:44",
+     "44:37",
+     "22:19",
+     "43:37"
+    ],
+    "answer": 1,
+    "explanation": "2025: BOB = 440, Union = 370.\n440:370, divide by 10: 44:37."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did Union's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "126.25%",
+     "121.25%",
+     "131.25%",
+     "150.94%"
+    ],
+    "answer": 2,
+    "explanation": "2022: 160; 2025: 370.\nChange = 210.\n% change = 210/160 × 100 = 131.25%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+    "options": [
+     "452",
+     "360",
+     "225",
+     "450"
+    ],
+    "answer": 3,
+    "explanation": "2025: 370 + 590 + 310 + 440 + 540 = 2250.\nAverage = 2250/5 = 450."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "BOB",
+     "SBI",
+     "PNB",
+     "Canara"
+    ],
+    "answer": 0,
+    "explanation": "Totals: Union 1400, PNB 1380, Canara 1350, BOB 1670, SBI 1360.\nHighest: BOB (1670)."
+   }
+  ],
+  "id": "g-medium-13"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Gautam, Imran, Kiran, Neha, Rahul, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, red, yellow.\nRahul lives on an even-numbered floor.\nRahul lives on a floor above Neha.\nImran lives immediately above Rahul.\nExactly one person lives between Gautam and Imran.\nImran lives on a floor above Kiran.\nGautam lives immediately above Kiran.\nThe person on floor 4 likes green.\nThe person on floor 2 likes black.\nThe person on floor 1 likes yellow.\nImran likes red.\nThe person on floor 3 likes blue.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Kiran",
+     "Imran",
+     "Gautam",
+     "Rahul"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Neha (yellow), 2 Kiran (black), 3 Gautam (blue), 4 Rahul (green), 5 Imran (red).\nTop floor: Imran."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Kiran like?",
+    "options": [
+     "blue",
+     "yellow",
+     "black",
+     "red"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Neha (yellow), 2 Kiran (black), 3 Gautam (blue), 4 Rahul (green), 5 Imran (red).\nKiran: black."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Rahul?",
+    "options": [
+     "Rahul",
+     "Gautam",
+     "Kiran",
+     "Imran"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Neha (yellow), 2 Kiran (black), 3 Gautam (blue), 4 Rahul (green), 5 Imran (red).\nFloor 5: Imran."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes red live?",
+    "options": [
+     "5",
+     "4",
+     "3",
+     "1"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Neha (yellow), 2 Kiran (black), 3 Gautam (blue), 4 Rahul (green), 5 Imran (red).\nred is Imran's colour; Imran is on floor 5."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Rahul and Gautam?",
+    "options": [
+     "2",
+     "0",
+     "3",
+     "1"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Neha (yellow), 2 Kiran (black), 3 Gautam (blue), 4 Rahul (green), 5 Imran (red).\nRahul is on floor 4, Gautam on floor 3: 0 between."
+   }
+  ],
+  "id": "g-medium-14"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "BOB",
+     380,
+     580,
+     270,
+     140
+    ],
+    [
+     "Canara",
+     270,
+     300,
+     580,
+     170
+    ],
+    [
+     "SBI",
+     510,
+     210,
+     530,
+     430
+    ],
+    [
+     "PNB",
+     290,
+     540,
+     100,
+     170
+    ],
+    [
+     "Indian",
+     380,
+     540,
+     210,
+     250
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+    "options": [
+     "2055",
+     "1367",
+     "1360",
+     "1370"
+    ],
+    "answer": 3,
+    "explanation": "BOB: 380 + 580 + 270 + 140 = 1370."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of BOB's disbursement to SBI's in 2022?",
+    "options": [
+     "38:51",
+     "37:51",
+     "19:26",
+     "13:17"
+    ],
+    "answer": 0,
+    "explanation": "2022: BOB = 380, SBI = 510.\n380:510, divide by 10: 38:51."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "-19.61%",
+     "-15.69%",
+     "-14.12%",
+     "-25.69%"
+    ],
+    "answer": 1,
+    "explanation": "2022: 510; 2025: 430.\nChange = -80.\n% change = -80/510 × 100 = -15.69%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+    "options": [
+     "421",
+     "384",
+     "366",
+     "367"
+    ],
+    "answer": 2,
+    "explanation": "2022: 380 + 270 + 510 + 290 + 380 = 1830.\nAverage = 1830/5 = 366."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "PNB",
+     "Indian",
+     "Canara",
+     "SBI"
+    ],
+    "answer": 3,
+    "explanation": "Totals: BOB 1370, Canara 1320, SBI 1680, PNB 1100, Indian 1380.\nHighest: SBI (1680)."
+   }
+  ],
+  "id": "g-medium-15"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Kiran, Omkar, Sneha, Usha, Varun, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, green, pink, white, yellow.\nOmkar lives on a floor above Varun.\nKiran lives on a floor above Omkar.\nExactly one person lives between Sneha and Omkar.\nOmkar lives on an odd-numbered floor.\nUsha lives on an odd-numbered floor.\nSneha lives on a floor above Kiran.\nKiran likes white.\nThe person on floor 2 likes green.\nUsha likes yellow.\nOmkar likes black.\nThe person on floor 5 likes pink.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Sneha",
+     "Omkar",
+     "Kiran",
+     "Usha"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (yellow), 2 Varun (green), 3 Omkar (black), 4 Kiran (white), 5 Sneha (pink).\nTop floor: Sneha."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Sneha like?",
+    "options": [
+     "green",
+     "pink",
+     "white",
+     "black"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (yellow), 2 Varun (green), 3 Omkar (black), 4 Kiran (white), 5 Sneha (pink).\nSneha: pink."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Kiran?",
+    "options": [
+     "Varun",
+     "Usha",
+     "Sneha",
+     "Kiran"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (yellow), 2 Varun (green), 3 Omkar (black), 4 Kiran (white), 5 Sneha (pink).\nFloor 5: Sneha."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes pink live?",
+    "options": [
+     "3",
+     "1",
+     "2",
+     "5"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (yellow), 2 Varun (green), 3 Omkar (black), 4 Kiran (white), 5 Sneha (pink).\npink is Sneha's colour; Sneha is on floor 5."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Kiran and Omkar?",
+    "options": [
+     "0",
+     "3",
+     "1",
+     "2"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (yellow), 2 Varun (green), 3 Omkar (black), 4 Kiran (white), 5 Sneha (pink).\nKiran is on floor 4, Omkar on floor 3: 0 between."
+   }
+  ],
+  "id": "g-medium-16"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "SBI",
+     460,
+     300,
+     450,
+     290
+    ],
+    [
+     "BOB",
+     260,
+     450,
+     390,
+     390
+    ],
+    [
+     "Indian",
+     570,
+     100,
+     120,
+     490
+    ],
+    [
+     "Canara",
+     270,
+     190,
+     550,
+     350
+    ],
+    [
+     "PNB",
+     290,
+     370,
+     100,
+     460
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+    "options": [
+     "1408",
+     "1280",
+     "1277",
+     "1216"
+    ],
+    "answer": 1,
+    "explanation": "Indian: 570 + 100 + 120 + 490 = 1280."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Indian's disbursement to PNB's in 2025?",
+    "options": [
+     "46:49",
+     "49:47",
+     "49:46",
+     "24:23"
+    ],
+    "answer": 2,
+    "explanation": "2025: Indian = 490, PNB = 460.\n490:460, divide by 10: 49:46."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did PNB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "57.62%",
+     "60.62%",
+     "73.27%",
+     "58.62%"
+    ],
+    "answer": 3,
+    "explanation": "2022: 290; 2025: 460.\nChange = 170.\n% change = 170/290 × 100 = 58.62%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+    "options": [
+     "396",
+     "401",
+     "594",
+     "397"
+    ],
+    "answer": 0,
+    "explanation": "2025: 290 + 390 + 490 + 350 + 460 = 1980.\nAverage = 1980/5 = 396."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "Canara",
+     "SBI",
+     "PNB",
+     "BOB"
+    ],
+    "answer": 1,
+    "explanation": "Totals: SBI 1500, BOB 1490, Indian 1280, Canara 1360, PNB 1220.\nHighest: SBI (1500)."
+   }
+  ],
+  "id": "g-medium-17"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Bhavna, Gautam, Hema, Imran, Wasim, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, red, white, yellow.\nWasim lives on a floor above Bhavna.\nGautam lives on a floor above Bhavna.\nExactly one person lives between Imran and Bhavna.\nImran lives on a floor above Gautam.\nExactly one person lives between Hema and Imran.\nThe person on floor 1 likes black.\nWasim likes yellow.\nThe person on floor 3 likes blue.\nGautam likes white.\nThe person on floor 5 likes red.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Bhavna",
+     "Gautam",
+     "Hema",
+     "Wasim"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Bhavna (black), 2 Gautam (white), 3 Imran (blue), 4 Wasim (yellow), 5 Hema (red).\nTop floor: Hema."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Hema like?",
+    "options": [
+     "yellow",
+     "white",
+     "black",
+     "red"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Bhavna (black), 2 Gautam (white), 3 Imran (blue), 4 Wasim (yellow), 5 Hema (red).\nHema: red."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Imran?",
+    "options": [
+     "Wasim",
+     "Gautam",
+     "Bhavna",
+     "Imran"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Bhavna (black), 2 Gautam (white), 3 Imran (blue), 4 Wasim (yellow), 5 Hema (red).\nFloor 4: Wasim."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes black live?",
+    "options": [
+     "4",
+     "1",
+     "3",
+     "2"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Bhavna (black), 2 Gautam (white), 3 Imran (blue), 4 Wasim (yellow), 5 Hema (red).\nblack is Bhavna's colour; Bhavna is on floor 1."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Hema and Imran?",
+    "options": [
+     "0",
+     "3",
+     "1",
+     "2"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Bhavna (black), 2 Gautam (white), 3 Imran (blue), 4 Wasim (yellow), 5 Hema (red).\nHema is on floor 5, Imran on floor 3: 1 between."
+   }
+  ],
+  "id": "g-medium-18"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Union",
+     570,
+     380,
+     200,
+     150
+    ],
+    [
+     "Canara",
+     170,
+     550,
+     550,
+     220
+    ],
+    [
+     "BOB",
+     540,
+     230,
+     420,
+     580
+    ],
+    [
+     "Indian",
+     380,
+     490,
+     430,
+     570
+    ],
+    [
+     "PNB",
+     270,
+     130,
+     350,
+     520
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+    "options": [
+     "1872",
+     "2150",
+     "2244",
+     "1870"
+    ],
+    "answer": 3,
+    "explanation": "Indian: 380 + 490 + 430 + 570 = 1870."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Indian's disbursement to Canara's in 2024?",
+    "options": [
+     "43:55",
+     "42:55",
+     "43:56",
+     "4:5"
+    ],
+    "answer": 0,
+    "explanation": "2024: Indian = 430, Canara = 550.\n430:550, divide by 10: 43:55."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did Canara's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "26.47%",
+     "29.41%",
+     "27.41%",
+     "25%"
+    ],
+    "answer": 1,
+    "explanation": "2022: 170; 2025: 220.\nChange = 50.\n% change = 50/170 × 100 = 29.41%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+    "options": [
+     "388",
+     "389",
+     "390",
+     "488"
+    ],
+    "answer": 2,
+    "explanation": "2024: 200 + 550 + 420 + 430 + 350 = 1950.\nAverage = 1950/5 = 390."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "BOB",
+     "Canara",
+     "PNB",
+     "Indian"
+    ],
+    "answer": 3,
+    "explanation": "Totals: Union 1300, Canara 1490, BOB 1770, Indian 1870, PNB 1270.\nHighest: Indian (1870)."
+   }
+  ],
+  "id": "g-medium-19"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Chetan, Farah, Rahul, Yash, Zoya, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, green, pink, white, yellow.\nZoya lives on a floor above Farah.\nChetan lives on a floor above Zoya.\nZoya lives on an even-numbered floor.\nYash lives immediately above Rahul.\nChetan lives on the top floor.\nFarah lives on the ground floor (floor 1).\nExactly one person lives between Chetan and Rahul.\nZoya likes green.\nThe person on floor 4 likes pink.\nFarah likes yellow.\nRahul likes black.\nThe person on floor 5 likes white.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Chetan",
+     "Zoya",
+     "Yash",
+     "Farah"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Farah (yellow), 2 Zoya (green), 3 Rahul (black), 4 Yash (pink), 5 Chetan (white).\nTop floor: Chetan."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Chetan like?",
+    "options": [
+     "green",
+     "white",
+     "yellow",
+     "pink"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Farah (yellow), 2 Zoya (green), 3 Rahul (black), 4 Yash (pink), 5 Chetan (white).\nChetan: white."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Rahul?",
+    "options": [
+     "Zoya",
+     "Chetan",
+     "Yash",
+     "Farah"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Farah (yellow), 2 Zoya (green), 3 Rahul (black), 4 Yash (pink), 5 Chetan (white).\nFloor 4: Yash."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes green live?",
+    "options": [
+     "5",
+     "1",
+     "3",
+     "2"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Farah (yellow), 2 Zoya (green), 3 Rahul (black), 4 Yash (pink), 5 Chetan (white).\ngreen is Zoya's colour; Zoya is on floor 2."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Chetan and Rahul?",
+    "options": [
+     "1",
+     "0",
+     "3",
+     "2"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Farah (yellow), 2 Zoya (green), 3 Rahul (black), 4 Yash (pink), 5 Chetan (white).\nChetan is on floor 5, Rahul on floor 3: 1 between."
+   }
+  ],
+  "id": "g-medium-20"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Union",
+     130,
+     330,
+     570,
+     240
+    ],
+    [
+     "Indian",
+     460,
+     120,
+     580,
+     170
+    ],
+    [
+     "Canara",
+     330,
+     480,
+     220,
+     110
+    ],
+    [
+     "SBI",
+     520,
+     580,
+     360,
+     330
+    ],
+    [
+     "BOB",
+     380,
+     270,
+     490,
+     400
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by SBI over all the years shown (₹ crore)?",
+    "options": [
+     "1791",
+     "1790",
+     "1792",
+     "2685"
+    ],
+    "answer": 1,
+    "explanation": "SBI: 520 + 580 + 360 + 330 = 1790."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of SBI's disbursement to BOB's in 2024?",
+    "options": [
+     "5:7",
+     "18:25",
+     "36:49",
+     "37:49"
+    ],
+    "answer": 2,
+    "explanation": "2024: SBI = 360, BOB = 490.\n360:490, divide by 10: 36:49."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did BOB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "4.47%",
+     "15.26%",
+     "6.05%",
+     "5.26%"
+    ],
+    "answer": 3,
+    "explanation": "2022: 380; 2025: 400.\nChange = 20.\n% change = 20/380 × 100 = 5.26%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+    "options": [
+     "444",
+     "422",
+     "533",
+     "449"
+    ],
+    "answer": 0,
+    "explanation": "2024: 570 + 580 + 220 + 360 + 490 = 2220.\nAverage = 2220/5 = 444."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "BOB",
+     "SBI",
+     "Indian",
+     "Union"
+    ],
+    "answer": 1,
+    "explanation": "Totals: Union 1270, Indian 1330, Canara 1140, SBI 1790, BOB 1540.\nHighest: SBI (1790)."
+   }
+  ],
+  "id": "g-medium-21"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Imran, Jaya, Neha, Priya, Rahul, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, green, pink, red, yellow.\nPriya lives immediately above Jaya.\nNeha lives immediately above Imran.\nRahul lives on the ground floor (floor 1).\nExactly one person lives between Priya and Rahul.\nImran likes red.\nPriya likes yellow.\nThe person on floor 5 likes black.\nThe person on floor 2 likes green.\nRahul likes pink.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Rahul",
+     "Imran",
+     "Neha",
+     "Jaya"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Rahul (pink), 2 Jaya (green), 3 Priya (yellow), 4 Imran (red), 5 Neha (black).\nTop floor: Neha."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Rahul like?",
+    "options": [
+     "green",
+     "red",
+     "black",
+     "pink"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Rahul (pink), 2 Jaya (green), 3 Priya (yellow), 4 Imran (red), 5 Neha (black).\nRahul: pink."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Priya?",
+    "options": [
+     "Imran",
+     "Priya",
+     "Jaya",
+     "Rahul"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Rahul (pink), 2 Jaya (green), 3 Priya (yellow), 4 Imran (red), 5 Neha (black).\nFloor 4: Imran."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes red live?",
+    "options": [
+     "2",
+     "4",
+     "3",
+     "1"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Rahul (pink), 2 Jaya (green), 3 Priya (yellow), 4 Imran (red), 5 Neha (black).\nred is Imran's colour; Imran is on floor 4."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Jaya and Priya?",
+    "options": [
+     "2",
+     "1",
+     "0",
+     "3"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Rahul (pink), 2 Jaya (green), 3 Priya (yellow), 4 Imran (red), 5 Neha (black).\nJaya is on floor 2, Priya on floor 3: 0 between."
+   }
+  ],
+  "id": "g-medium-22"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Union",
+     570,
+     110,
+     470,
+     580
+    ],
+    [
+     "BOB",
+     510,
+     180,
+     180,
+     270
+    ],
+    [
+     "PNB",
+     440,
+     480,
+     240,
+     190
+    ],
+    [
+     "Indian",
+     340,
+     170,
+     470,
+     380
+    ],
+    [
+     "Canara",
+     450,
+     450,
+     430,
+     210
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Union over all the years shown (₹ crore)?",
+    "options": [
+     "1732",
+     "865",
+     "1903",
+     "1730"
+    ],
+    "answer": 3,
+    "explanation": "Union: 570 + 110 + 470 + 580 = 1730."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Union's disbursement to Indian's in 2023?",
+    "options": [
+     "11:17",
+     "10:17",
+     "11:18",
+     "12:17"
+    ],
+    "answer": 0,
+    "explanation": "2023: Union = 110, Indian = 170.\n110:170, divide by 10: 11:17."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did Indian's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "1.76%",
+     "11.76%",
+     "8.82%",
+     "14.11%"
+    ],
+    "answer": 1,
+    "explanation": "2022: 340; 2025: 380.\nChange = 40.\n% change = 40/340 × 100 = 11.76%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+    "options": [
+     "292",
+     "208",
+     "278",
+     "348"
+    ],
+    "answer": 2,
+    "explanation": "2023: 110 + 180 + 480 + 170 + 450 = 1390.\nAverage = 1390/5 = 278."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "PNB",
+     "BOB",
+     "Canara",
+     "Union"
+    ],
+    "answer": 3,
+    "explanation": "Totals: Union 1730, BOB 1140, PNB 1350, Indian 1360, Canara 1540.\nHighest: Union (1730)."
+   }
+  ],
+  "id": "g-medium-23"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Bhavna, Gautam, Jaya, Usha, Varun, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, red, yellow.\nExactly one person lives between Gautam and Varun.\nGautam lives on a floor above Usha.\nUsha lives on an odd-numbered floor.\nJaya lives on a floor above Usha.\nGautam lives on an even-numbered floor.\nJaya lives on the top floor.\nVarun lives on a floor above Usha.\nJaya lives immediately above Varun.\nVarun likes yellow.\nGautam likes green.\nBhavna likes red.\nJaya likes black.\nThe person on floor 1 likes blue.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Jaya",
+     "Varun",
+     "Bhavna",
+     "Gautam"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (blue), 2 Gautam (green), 3 Bhavna (red), 4 Varun (yellow), 5 Jaya (black).\nTop floor: Jaya."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Jaya like?",
+    "options": [
+     "blue",
+     "black",
+     "green",
+     "red"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (blue), 2 Gautam (green), 3 Bhavna (red), 4 Varun (yellow), 5 Jaya (black).\nJaya: black."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Gautam?",
+    "options": [
+     "Gautam",
+     "Varun",
+     "Bhavna",
+     "Jaya"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (blue), 2 Gautam (green), 3 Bhavna (red), 4 Varun (yellow), 5 Jaya (black).\nFloor 3: Bhavna."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes green live?",
+    "options": [
+     "4",
+     "3",
+     "1",
+     "2"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (blue), 2 Gautam (green), 3 Bhavna (red), 4 Varun (yellow), 5 Jaya (black).\ngreen is Gautam's colour; Gautam is on floor 2."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Varun and Jaya?",
+    "options": [
+     "0",
+     "1",
+     "3",
+     "2"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Usha (blue), 2 Gautam (green), 3 Bhavna (red), 4 Varun (yellow), 5 Jaya (black).\nVarun is on floor 4, Jaya on floor 5: 0 between."
+   }
+  ],
+  "id": "g-medium-24"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Canara",
+     530,
+     520,
+     390,
+     160
+    ],
+    [
+     "SBI",
+     500,
+     300,
+     380,
+     380
+    ],
+    [
+     "PNB",
+     440,
+     440,
+     390,
+     530
+    ],
+    [
+     "BOB",
+     420,
+     480,
+     530,
+     420
+    ],
+    [
+     "Indian",
+     560,
+     470,
+     460,
+     540
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+    "options": [
+     "1200",
+     "1600",
+     "1602",
+     "1360"
+    ],
+    "answer": 1,
+    "explanation": "Canara: 530 + 520 + 390 + 160 = 1600."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Canara's disbursement to SBI's in 2022?",
+    "options": [
+     "50:53",
+     "53:51",
+     "53:50",
+     "26:25"
+    ],
+    "answer": 2,
+    "explanation": "2022: Canara = 530, SBI = 500.\n530:500, divide by 10: 53:50."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did SBI's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "-20%",
+     "-14%",
+     "-34%",
+     "-24%"
+    ],
+    "answer": 3,
+    "explanation": "2022: 500; 2025: 380.\nChange = -120.\n% change = -120/500 × 100 = -24%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2022 (₹ crore)?",
+    "options": [
+     "490",
+     "564",
+     "735",
+     "514"
+    ],
+    "answer": 0,
+    "explanation": "2022: 530 + 500 + 440 + 420 + 560 = 2450.\nAverage = 2450/5 = 490."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "Canara",
+     "Indian",
+     "BOB",
+     "PNB"
+    ],
+    "answer": 1,
+    "explanation": "Totals: Canara 1600, SBI 1560, PNB 1800, BOB 1850, Indian 2030.\nHighest: Indian (2030)."
+   }
+  ],
+  "id": "g-medium-25"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Chetan, Eshan, Farah, Priya, Rahul, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, pink, red, white.\nPriya lives on an even-numbered floor.\nFarah lives on a floor above Rahul.\nChetan lives immediately above Priya.\nChetan lives on a floor above Eshan.\nRahul lives on a floor above Eshan.\nRahul lives on a floor above Priya.\nThe person on floor 4 likes white.\nThe person on floor 3 likes pink.\nEshan likes black.\nPriya likes red.\nThe person on floor 5 likes blue.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Priya",
+     "Eshan",
+     "Farah",
+     "Chetan"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Eshan (black), 2 Priya (red), 3 Chetan (pink), 4 Rahul (white), 5 Farah (blue).\nTop floor: Farah."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Chetan like?",
+    "options": [
+     "blue",
+     "red",
+     "black",
+     "pink"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Eshan (black), 2 Priya (red), 3 Chetan (pink), 4 Rahul (white), 5 Farah (blue).\nChetan: pink."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Chetan?",
+    "options": [
+     "Rahul",
+     "Priya",
+     "Farah",
+     "Chetan"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Eshan (black), 2 Priya (red), 3 Chetan (pink), 4 Rahul (white), 5 Farah (blue).\nFloor 4: Rahul."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes black live?",
+    "options": [
+     "5",
+     "1",
+     "2",
+     "3"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Eshan (black), 2 Priya (red), 3 Chetan (pink), 4 Rahul (white), 5 Farah (blue).\nblack is Eshan's colour; Eshan is on floor 1."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Priya and Eshan?",
+    "options": [
+     "1",
+     "3",
+     "0",
+     "2"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Eshan (black), 2 Priya (red), 3 Chetan (pink), 4 Rahul (white), 5 Farah (blue).\nPriya is on floor 2, Eshan on floor 1: 0 between."
+   }
+  ],
+  "id": "g-medium-26"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "Indian",
+     320,
+     370,
+     420,
+     210
+    ],
+    [
+     "BOB",
+     350,
+     510,
+     510,
+     200
+    ],
+    [
+     "Canara",
+     560,
+     240,
+     320,
+     100
+    ],
+    [
+     "PNB",
+     250,
+     180,
+     500,
+     320
+    ],
+    [
+     "SBI",
+     140,
+     100,
+     170,
+     530
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by BOB over all the years shown (₹ crore)?",
+    "options": [
+     "1575",
+     "1492",
+     "1568",
+     "1570"
+    ],
+    "answer": 3,
+    "explanation": "BOB: 350 + 510 + 510 + 200 = 1570."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of BOB's disbursement to Indian's in 2023?",
+    "options": [
+     "51:37",
+     "37:51",
+     "51:38",
+     "50:37"
+    ],
+    "answer": 0,
+    "explanation": "2023: BOB = 510, Indian = 370.\n510:370, divide by 10: 51:37."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did Indian's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "-29.22%",
+     "-34.38%",
+     "-36.38%",
+     "-32.66%"
+    ],
+    "answer": 1,
+    "explanation": "2022: 320; 2025: 210.\nChange = -110.\n% change = -110/320 × 100 = -34.38%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2023 (₹ crore)?",
+    "options": [
+     "285",
+     "277",
+     "280",
+     "224"
+    ],
+    "answer": 2,
+    "explanation": "2023: 370 + 510 + 240 + 180 + 100 = 1400.\nAverage = 1400/5 = 280."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "PNB",
+     "SBI",
+     "Indian",
+     "BOB"
+    ],
+    "answer": 3,
+    "explanation": "Totals: Indian 1320, BOB 1570, Canara 1220, PNB 1250, SBI 940.\nHighest: BOB (1570)."
+   }
+  ],
+  "id": "g-medium-27"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Bhavna, Chetan, Hema, Neha, Rahul, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, red, white.\nRahul lives immediately above Bhavna.\nBhavna lives immediately above Neha.\nRahul lives on an odd-numbered floor.\nChetan lives on a floor above Hema.\nBhavna lives on a floor above Hema.\nThe person on floor 4 likes green.\nHema likes red.\nThe person on floor 2 likes white.\nNeha likes black.\nRahul likes blue.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Rahul",
+     "Hema",
+     "Neha",
+     "Chetan"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Hema (red), 2 Chetan (white), 3 Neha (black), 4 Bhavna (green), 5 Rahul (blue).\nTop floor: Rahul."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Neha like?",
+    "options": [
+     "green",
+     "black",
+     "white",
+     "red"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Hema (red), 2 Chetan (white), 3 Neha (black), 4 Bhavna (green), 5 Rahul (blue).\nNeha: black."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Neha?",
+    "options": [
+     "Neha",
+     "Rahul",
+     "Bhavna",
+     "Hema"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Hema (red), 2 Chetan (white), 3 Neha (black), 4 Bhavna (green), 5 Rahul (blue).\nFloor 4: Bhavna."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes green live?",
+    "options": [
+     "2",
+     "3",
+     "5",
+     "4"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Hema (red), 2 Chetan (white), 3 Neha (black), 4 Bhavna (green), 5 Rahul (blue).\ngreen is Bhavna's colour; Bhavna is on floor 4."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Rahul and Bhavna?",
+    "options": [
+     "0",
+     "3",
+     "2",
+     "1"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Hema (red), 2 Chetan (white), 3 Neha (black), 4 Bhavna (green), 5 Rahul (blue).\nRahul is on floor 5, Bhavna on floor 4: 0 between."
+   }
+  ],
+  "id": "g-medium-28"
+ },
+ {
+  "subject": "quant",
+  "kind": "table",
+  "title": "Data interpretation",
+  "setup": {
+   "caption": "Loans disbursed by five banks (₹ crore)",
+   "columns": [
+    "Bank",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+   ],
+   "rows": [
+    [
+     "PNB",
+     490,
+     220,
+     370,
+     170
+    ],
+    [
+     "BOB",
+     270,
+     130,
+     240,
+     320
+    ],
+    [
+     "Indian",
+     290,
+     490,
+     140,
+     580
+    ],
+    [
+     "SBI",
+     170,
+     520,
+     140,
+     350
+    ],
+    [
+     "Canara",
+     230,
+     260,
+     340,
+     180
+    ]
+   ]
+  },
+  "questions": [
+   {
+    "topic": "data-interpretation",
+    "question": "What is the total amount disbursed by Canara over all the years shown (₹ crore)?",
+    "options": [
+     "1162",
+     "1010",
+     "909",
+     "1013"
+    ],
+    "answer": 1,
+    "explanation": "Canara: 230 + 260 + 340 + 180 = 1010."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the ratio of Canara's disbursement to PNB's in 2024?",
+    "options": [
+     "33:37",
+     "17:19",
+     "34:37",
+     "35:37"
+    ],
+    "answer": 2,
+    "explanation": "2024: Canara = 340, PNB = 370.\n340:370, divide by 10: 34:37."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "By what percent did PNB's disbursement change from 2022 to 2025? (Negative means a fall.)",
+    "options": [
+     "-58.78%",
+     "-32.66%",
+     "-55.51%",
+     "-65.31%"
+    ],
+    "answer": 3,
+    "explanation": "2022: 490; 2025: 170.\nChange = -320.\n% change = -320/490 × 100 = -65.31%."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "What is the average disbursement of the five banks in 2024 (₹ crore)?",
+    "options": [
+     "246",
+     "234",
+     "184",
+     "295"
+    ],
+    "answer": 0,
+    "explanation": "2024: 370 + 240 + 140 + 140 + 340 = 1230.\nAverage = 1230/5 = 246."
+   },
+   {
+    "topic": "data-interpretation",
+    "question": "Which bank disbursed the most in total over all the years shown?",
+    "options": [
+     "SBI",
+     "Indian",
+     "BOB",
+     "Canara"
+    ],
+    "answer": 1,
+    "explanation": "Totals: PNB 1250, BOB 960, Indian 1500, SBI 1180, Canara 1010.\nHighest: Indian (1500)."
+   }
+  ],
+  "id": "g-medium-29"
+ },
+ {
+  "subject": "reasoning",
+  "kind": "text",
+  "title": "Puzzle",
+  "setup": "5 people, Amit, Jaya, Lata, Sneha, Varun, live on the 5 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, white, yellow.\nAmit lives immediately above Jaya.\nExactly one person lives between Varun and Lata.\nVarun lives on a floor above Amit.\nLata lives immediately above Amit.\nThe person on floor 4 likes blue.\nThe person on floor 3 likes black.\nVarun likes green.\nJaya likes yellow.\nAmit likes white.",
+  "questions": [
+   {
+    "topic": "puzzle",
+    "question": "Who lives on the top floor?",
+    "options": [
+     "Lata",
+     "Sneha",
+     "Varun",
+     "Amit"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Jaya (yellow), 2 Amit (white), 3 Lata (black), 4 Sneha (blue), 5 Varun (green).\nTop floor: Varun."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Which colour does Sneha like?",
+    "options": [
+     "yellow",
+     "green",
+     "black",
+     "blue"
+    ],
+    "answer": 3,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Jaya (yellow), 2 Amit (white), 3 Lata (black), 4 Sneha (blue), 5 Varun (green).\nSneha: blue."
+   },
+   {
+    "topic": "puzzle",
+    "question": "Who lives immediately above Amit?",
+    "options": [
+     "Lata",
+     "Sneha",
+     "Jaya",
+     "Varun"
+    ],
+    "answer": 0,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Jaya (yellow), 2 Amit (white), 3 Lata (black), 4 Sneha (blue), 5 Varun (green).\nFloor 3: Lata."
+   },
+   {
+    "topic": "puzzle",
+    "question": "On which floor does the person who likes black live?",
+    "options": [
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "answer": 1,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Jaya (yellow), 2 Amit (white), 3 Lata (black), 4 Sneha (blue), 5 Varun (green).\nblack is Lata's colour; Lata is on floor 3."
+   },
+   {
+    "topic": "puzzle",
+    "question": "How many people live between Lata and Jaya?",
+    "options": [
+     "3",
+     "2",
+     "1",
+     "0"
+    ],
+    "answer": 2,
+    "explanation": "Place people using the floor clues first; only one arrangement fits all of them.\nBottom to top: 1 Jaya (yellow), 2 Amit (white), 3 Lata (black), 4 Sneha (blue), 5 Varun (green).\nLata is on floor 3, Jaya on floor 1: 1 between."
+   }
+  ],
+  "id": "g-medium-30"
+ }
+]

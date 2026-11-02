@@ -1,5 +1,35 @@
 [
  {
+  "id": "q013f2e84f1f",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and L in the English alphabet?",
+  "options": [
+   "8",
+   "7",
+   "12",
+   "11"
+  ],
+  "answer": 0,
+  "explanation": "C is letter 3 and L is letter 12.\nLetters strictly between: 12 − 3 − 1 = 8 (DEFGHIJK)."
+ },
+ {
+  "id": "q0162fc18907",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between M and X in the English alphabet?",
+  "options": [
+   "12",
+   "7",
+   "13",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "M is letter 13 and X is letter 24.\nLetters strictly between: 24 − 13 − 1 = 10 (NOPQRSTUVW)."
+ },
+ {
   "id": "q027d9473295",
   "subject": "reasoning",
   "topic": "alphabet",
@@ -12,7 +42,142 @@
    "G"
   ],
   "answer": 3,
-  "explanation": "Count 7 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 7 is G."
+ },
+ {
+  "id": "q02fbc2b6960",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between M and V in the English alphabet?",
+  "options": [
+   "8",
+   "13",
+   "3",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "M is letter 13 and V is letter 22.\nLetters strictly between: 22 − 13 − 1 = 8 (NOPQRSTU)."
+ },
+ {
+  "id": "q0322e26123d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of K in the English alphabet?",
+  "options": [
+   "V",
+   "A",
+   "Q",
+   "S"
+  ],
+  "answer": 3,
+  "explanation": "K is letter 11.\n8 places to the right: 11 + 8 = 19.\nLetter 19 is S."
+ },
+ {
+  "id": "q0485b1dfa71",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and S in the English alphabet?",
+  "options": [
+   "5",
+   "7",
+   "10",
+   "13"
+  ],
+  "answer": 2,
+  "explanation": "H is letter 8 and S is letter 19.\nLetters strictly between: 19 − 8 − 1 = 10 (IJKLMNOPQR)."
+ },
+ {
+  "id": "q07637a27c20",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 24th position from the left end of the English alphabet?",
+  "options": [
+   "R",
+   "X",
+   "E",
+   "H"
+  ],
+  "answer": 1,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 24 is X."
+ },
+ {
+  "id": "q08095ec6e53",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and R in the English alphabet?",
+  "options": [
+   "19",
+   "4",
+   "9",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "H is letter 8 and R is letter 18.\nLetters strictly between: 18 − 8 − 1 = 9 (IJKLMNOPQ)."
+ },
+ {
+  "id": "q0cb228462fe",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and M in the English alphabet?",
+  "options": [
+   "5",
+   "14",
+   "2",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "H is letter 8 and M is letter 13.\nLetters strictly between: 13 − 8 − 1 = 4 (IJKL)."
+ },
+ {
+  "id": "q0d0b6b024bf",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between F and N in the English alphabet?",
+  "options": [
+   "5",
+   "6",
+   "7",
+   "9"
+  ],
+  "answer": 2,
+  "explanation": "F is letter 6 and N is letter 14.\nLetters strictly between: 14 − 6 − 1 = 7 (GHIJKLM)."
+ },
+ {
+  "id": "q0d9885f390c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and I in the English alphabet?",
+  "options": [
+   "7",
+   "6",
+   "5",
+   "10"
+  ],
+  "answer": 2,
+  "explanation": "C is letter 3 and I is letter 9.\nLetters strictly between: 9 − 3 − 1 = 5 (DEFGH)."
+ },
+ {
+  "id": "q0dcd03003fb",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between I and N in the English alphabet?",
+  "options": [
+   "6",
+   "14",
+   "9",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "I is letter 9 and N is letter 14.\nLetters strictly between: 14 − 9 − 1 = 4 (JKLM)."
  },
  {
   "id": "q0ebcc32e243",
@@ -27,7 +192,112 @@
    "N"
   ],
   "answer": 1,
-  "explanation": "Count 23 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 23 is W."
+ },
+ {
+  "id": "q0f43f144336",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of J in the English alphabet?",
+  "options": [
+   "X",
+   "S",
+   "Q",
+   "J"
+  ],
+  "answer": 1,
+  "explanation": "J is letter 10.\n9 places to the right: 10 + 9 = 19.\nLetter 19 is S."
+ },
+ {
+  "id": "q16b196dbd06",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of D in the English alphabet?",
+  "options": [
+   "M",
+   "L",
+   "Q",
+   "I"
+  ],
+  "answer": 3,
+  "explanation": "D is letter 4.\n5 places to the right: 4 + 5 = 9.\nLetter 9 is I."
+ },
+ {
+  "id": "q17cbe6fedea",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 19th position from the left end of the English alphabet?",
+  "options": [
+   "L",
+   "D",
+   "N",
+   "S"
+  ],
+  "answer": 3,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 19 is S."
+ },
+ {
+  "id": "q1898334eb3d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 11th position from the left end of the English alphabet?",
+  "options": [
+   "G",
+   "Z",
+   "K",
+   "L"
+  ],
+  "answer": 2,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 11 is K."
+ },
+ {
+  "id": "q1a4e643b12f",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of L in the English alphabet?",
+  "options": [
+   "K",
+   "G",
+   "Y",
+   "R"
+  ],
+  "answer": 3,
+  "explanation": "L is letter 12.\n6 places to the right: 12 + 6 = 18.\nLetter 18 is R."
+ },
+ {
+  "id": "q1a73c7ec570",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and O in the English alphabet?",
+  "options": [
+   "3",
+   "6",
+   "16",
+   "11"
+  ],
+  "answer": 1,
+  "explanation": "H is letter 8 and O is letter 15.\nLetters strictly between: 15 − 8 − 1 = 6 (IJKLMN)."
+ },
+ {
+  "id": "q1b33224c343",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word CASH?",
+  "options": [
+   "37",
+   "21",
+   "29",
+   "31"
+  ],
+  "answer": 3,
+  "explanation": "C=3 + A=1 + S=19 + H=8.\nSum = 3 + 1 + 19 + 8 = 31."
  },
  {
   "id": "q1bb13248b2e",
@@ -42,7 +312,292 @@
    "T"
   ],
   "answer": 3,
-  "explanation": "N + 6 places"
+  "explanation": "N is letter 14.\n6 places to the right: 14 + 6 = 20.\nLetter 20 is T."
+ },
+ {
+  "id": "q1f896cb1b20",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of A in the English alphabet?",
+  "options": [
+   "P",
+   "Q",
+   "Y",
+   "H"
+  ],
+  "answer": 3,
+  "explanation": "A is letter 1.\n7 places to the right: 1 + 7 = 8.\nLetter 8 is H."
+ },
+ {
+  "id": "q1f899dd5ea2",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of H in the English alphabet?",
+  "options": [
+   "Q",
+   "V",
+   "W",
+   "B"
+  ],
+  "answer": 0,
+  "explanation": "H is letter 8.\n9 places to the right: 8 + 9 = 17.\nLetter 17 is Q."
+ },
+ {
+  "id": "q2251221e632",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of K in the English alphabet?",
+  "options": [
+   "F",
+   "Q",
+   "E",
+   "W"
+  ],
+  "answer": 1,
+  "explanation": "K is letter 11.\n6 places to the right: 11 + 6 = 17.\nLetter 17 is Q."
+ },
+ {
+  "id": "q23b8e51e2ea",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between M and U in the English alphabet?",
+  "options": [
+   "10",
+   "7",
+   "8",
+   "17"
+  ],
+  "answer": 1,
+  "explanation": "M is letter 13 and U is letter 21.\nLetters strictly between: 21 − 13 − 1 = 7 (NOPQRST)."
+ },
+ {
+  "id": "q251b7bccee6",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of D in the English alphabet?",
+  "options": [
+   "J",
+   "B",
+   "E",
+   "H"
+  ],
+  "answer": 3,
+  "explanation": "D is letter 4.\n4 places to the right: 4 + 4 = 8.\nLetter 8 is H."
+ },
+ {
+  "id": "q259aa8823b5",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of P in the English alphabet?",
+  "options": [
+   "U",
+   "G",
+   "F",
+   "W"
+  ],
+  "answer": 0,
+  "explanation": "P is letter 16.\n5 places to the right: 16 + 5 = 21.\nLetter 21 is U."
+ },
+ {
+  "id": "q26ad516d732",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between F and L in the English alphabet?",
+  "options": [
+   "5",
+   "4",
+   "2",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "F is letter 6 and L is letter 12.\nLetters strictly between: 12 − 6 − 1 = 5 (GHIJK)."
+ },
+ {
+  "id": "q28566cbded3",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and L in the English alphabet?",
+  "options": [
+   "3",
+   "4",
+   "6",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "H is letter 8 and L is letter 12.\nLetters strictly between: 12 − 8 − 1 = 3 (IJK)."
+ },
+ {
+  "id": "q2874575e47f",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of M in the English alphabet?",
+  "options": [
+   "H",
+   "O",
+   "R",
+   "I"
+  ],
+  "answer": 2,
+  "explanation": "M is letter 13.\n5 places to the right: 13 + 5 = 18.\nLetter 18 is R."
+ },
+ {
+  "id": "q2a0150ba69e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between L and P in the English alphabet?",
+  "options": [
+   "2",
+   "3",
+   "5",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "L is letter 12 and P is letter 16.\nLetters strictly between: 16 − 12 − 1 = 3 (MNO)."
+ },
+ {
+  "id": "q2a31dd33475",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and N in the English alphabet?",
+  "options": [
+   "6",
+   "8",
+   "4",
+   "1"
+  ],
+  "answer": 0,
+  "explanation": "G is letter 7 and N is letter 14.\nLetters strictly between: 14 − 7 − 1 = 6 (HIJKLM)."
+ },
+ {
+  "id": "q2a965178fd6",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between E and J in the English alphabet?",
+  "options": [
+   "6",
+   "9",
+   "4",
+   "7"
+  ],
+  "answer": 2,
+  "explanation": "E is letter 5 and J is letter 10.\nLetters strictly between: 10 − 5 − 1 = 4 (FGHI)."
+ },
+ {
+  "id": "q2c74b63301c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 13th position from the left end of the English alphabet?",
+  "options": [
+   "I",
+   "R",
+   "M",
+   "E"
+  ],
+  "answer": 2,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 13 is M."
+ },
+ {
+  "id": "q2dee2411427",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between L and Q in the English alphabet?",
+  "options": [
+   "6",
+   "4",
+   "9",
+   "7"
+  ],
+  "answer": 1,
+  "explanation": "L is letter 12 and Q is letter 17.\nLetters strictly between: 17 − 12 − 1 = 4 (MNOP)."
+ },
+ {
+  "id": "q320ed3f63c9",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between D and N in the English alphabet?",
+  "options": [
+   "4",
+   "9",
+   "11",
+   "19"
+  ],
+  "answer": 1,
+  "explanation": "D is letter 4 and N is letter 14.\nLetters strictly between: 14 − 4 − 1 = 9 (EFGHIJKLM)."
+ },
+ {
+  "id": "q32adf57a324",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word CLERK?",
+  "options": [
+   "54",
+   "52",
+   "44",
+   "49"
+  ],
+  "answer": 3,
+  "explanation": "C=3 + L=12 + E=5 + R=18 + K=11.\nSum = 3 + 12 + 5 + 18 + 11 = 49."
+ },
+ {
+  "id": "q35cd3aa7251",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between M and R in the English alphabet?",
+  "options": [
+   "7",
+   "14",
+   "4",
+   "9"
+  ],
+  "answer": 2,
+  "explanation": "M is letter 13 and R is letter 18.\nLetters strictly between: 18 − 13 − 1 = 4 (NOPQ)."
+ },
+ {
+  "id": "q3722d945139",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of J in the English alphabet?",
+  "options": [
+   "P",
+   "O",
+   "U",
+   "L"
+  ],
+  "answer": 0,
+  "explanation": "J is letter 10.\n6 places to the right: 10 + 6 = 16.\nLetter 16 is P."
+ },
+ {
+  "id": "q3d3797cf7a2",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of O in the English alphabet?",
+  "options": [
+   "S",
+   "W",
+   "L",
+   "U"
+  ],
+  "answer": 3,
+  "explanation": "O is letter 15.\n6 places to the right: 15 + 6 = 21.\nLetter 21 is U."
  },
  {
   "id": "q3d95f610173",
@@ -57,7 +612,37 @@
    "W"
   ],
   "answer": 2,
-  "explanation": "Count 3 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 3 is C."
+ },
+ {
+  "id": "q3e007e4ee5c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of L in the English alphabet?",
+  "options": [
+   "Y",
+   "Z",
+   "C",
+   "S"
+  ],
+  "answer": 3,
+  "explanation": "L is letter 12.\n7 places to the right: 12 + 7 = 19.\nLetter 19 is S."
+ },
+ {
+  "id": "q3e935af1fa4",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and K in the English alphabet?",
+  "options": [
+   "8",
+   "3",
+   "6",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "G is letter 7 and K is letter 11.\nLetters strictly between: 11 − 7 − 1 = 3 (HIJ)."
  },
  {
   "id": "q3eb6f1a3b07",
@@ -72,7 +657,37 @@
    "H"
   ],
   "answer": 0,
-  "explanation": "B + 8 places"
+  "explanation": "B is letter 2.\n8 places to the right: 2 + 8 = 10.\nLetter 10 is J."
+ },
+ {
+  "id": "q3f40288a631",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word SHARE?",
+  "options": [
+   "61",
+   "26",
+   "51",
+   "49"
+  ],
+  "answer": 2,
+  "explanation": "S=19 + H=8 + A=1 + R=18 + E=5.\nSum = 19 + 8 + 1 + 18 + 5 = 51."
+ },
+ {
+  "id": "q3ff658b685e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of E in the English alphabet?",
+  "options": [
+   "L",
+   "M",
+   "I",
+   "S"
+  ],
+  "answer": 2,
+  "explanation": "E is letter 5.\n4 places to the right: 5 + 4 = 9.\nLetter 9 is I."
  },
  {
   "id": "q40dc6a46014",
@@ -87,7 +702,187 @@
    "Q"
   ],
   "answer": 0,
-  "explanation": "Count 5 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 5 is E."
+ },
+ {
+  "id": "q419e4c36767",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of G in the English alphabet?",
+  "options": [
+   "K",
+   "L",
+   "N",
+   "J"
+  ],
+  "answer": 2,
+  "explanation": "G is letter 7.\n7 places to the right: 7 + 7 = 14.\nLetter 14 is N."
+ },
+ {
+  "id": "q4257ae2c006",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word GOLD?",
+  "options": [
+   "19",
+   "28",
+   "30",
+   "38"
+  ],
+  "answer": 3,
+  "explanation": "G=7 + O=15 + L=12 + D=4.\nSum = 7 + 15 + 12 + 4 = 38."
+ },
+ {
+  "id": "q4274a086036",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of A in the English alphabet?",
+  "options": [
+   "A",
+   "C",
+   "G",
+   "J"
+  ],
+  "answer": 2,
+  "explanation": "A is letter 1.\n6 places to the right: 1 + 6 = 7.\nLetter 7 is G."
+ },
+ {
+  "id": "q482b453f008",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of L in the English alphabet?",
+  "options": [
+   "K",
+   "E",
+   "L",
+   "P"
+  ],
+  "answer": 3,
+  "explanation": "L is letter 12.\n4 places to the right: 12 + 4 = 16.\nLetter 16 is P."
+ },
+ {
+  "id": "q49d29cc2fe4",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of L in the English alphabet?",
+  "options": [
+   "A",
+   "Y",
+   "U",
+   "O"
+  ],
+  "answer": 2,
+  "explanation": "L is letter 12.\n9 places to the right: 12 + 9 = 21.\nLetter 21 is U."
+ },
+ {
+  "id": "q4a36ab87616",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of P in the English alphabet?",
+  "options": [
+   "Y",
+   "L",
+   "W",
+   "O"
+  ],
+  "answer": 2,
+  "explanation": "P is letter 16.\n7 places to the right: 16 + 7 = 23.\nLetter 23 is W."
+ },
+ {
+  "id": "q4bab86ab077",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of H in the English alphabet?",
+  "options": [
+   "B",
+   "M",
+   "L",
+   "G"
+  ],
+  "answer": 2,
+  "explanation": "H is letter 8.\n4 places to the right: 8 + 4 = 12.\nLetter 12 is L."
+ },
+ {
+  "id": "q4bb3f5f2594",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of A in the English alphabet?",
+  "options": [
+   "D",
+   "T",
+   "Q",
+   "E"
+  ],
+  "answer": 0,
+  "explanation": "A is letter 1.\n3 places to the right: 1 + 3 = 4.\nLetter 4 is D."
+ },
+ {
+  "id": "q4d38d4718e0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between B and H in the English alphabet?",
+  "options": [
+   "3",
+   "4",
+   "6",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "B is letter 2 and H is letter 8.\nLetters strictly between: 8 − 2 − 1 = 5 (CDEFG)."
+ },
+ {
+  "id": "q4dc75abce20",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of A in the English alphabet?",
+  "options": [
+   "E",
+   "P",
+   "R",
+   "D"
+  ],
+  "answer": 0,
+  "explanation": "A is letter 1.\n4 places to the right: 1 + 4 = 5.\nLetter 5 is E."
+ },
+ {
+  "id": "q4f7f0d14bb6",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of E in the English alphabet?",
+  "options": [
+   "T",
+   "D",
+   "K",
+   "W"
+  ],
+  "answer": 2,
+  "explanation": "E is letter 5.\n6 places to the right: 5 + 6 = 11.\nLetter 11 is K."
+ },
+ {
+  "id": "q559ad20d312",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of E in the English alphabet?",
+  "options": [
+   "H",
+   "N",
+   "Z",
+   "V"
+  ],
+  "answer": 1,
+  "explanation": "E is letter 5.\n9 places to the right: 5 + 9 = 14.\nLetter 14 is N."
  },
  {
   "id": "q55db8b7f7ae",
@@ -97,12 +892,42 @@
   "question": "How many letters are there between G and L in the English alphabet?",
   "options": [
    "5",
-   "4",
    "6",
-   "14"
+   "14",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "G is letter 7 and L is letter 12.\nLetters strictly between: 12 − 7 − 1 = 4 (HIJK)."
+ },
+ {
+  "id": "q5634ee7ebd6",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between K and Q in the English alphabet?",
+  "options": [
+   "8",
+   "5",
+   "2",
+   "15"
   ],
   "answer": 1,
-  "explanation": "Positions 7 and 12: 12 − 7 − 1"
+  "explanation": "K is letter 11 and Q is letter 17.\nLetters strictly between: 17 − 11 − 1 = 5 (LMNOP)."
+ },
+ {
+  "id": "q593c4b35f17",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and O in the English alphabet?",
+  "options": [
+   "9",
+   "10",
+   "2",
+   "7"
+  ],
+  "answer": 3,
+  "explanation": "G is letter 7 and O is letter 15.\nLetters strictly between: 15 − 7 − 1 = 7 (HIJKLMN)."
  },
  {
   "id": "q597ef67b48e",
@@ -112,12 +937,12 @@
   "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word MONEY?",
   "options": [
    "69",
-   "72",
    "83",
+   "72",
    "65"
   ],
-  "answer": 1,
-  "explanation": "Add the position of each letter."
+  "answer": 2,
+  "explanation": "M=13 + O=15 + N=14 + E=5 + Y=25.\nSum = 13 + 15 + 14 + 5 + 25 = 72."
  },
  {
   "id": "q5994870896a",
@@ -126,13 +951,223 @@
   "level": "easy",
   "question": "How many letters are there between F and K in the English alphabet?",
   "options": [
-   "6",
+   "4",
    "1",
    "3",
-   "4"
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "F is letter 6 and K is letter 11.\nLetters strictly between: 11 − 6 − 1 = 4 (GHIJ)."
+ },
+ {
+  "id": "q5a4037dbfac",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between L and R in the English alphabet?",
+  "options": [
+   "8",
+   "5",
+   "15",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "L is letter 12 and R is letter 18.\nLetters strictly between: 18 − 12 − 1 = 5 (MNOPQ)."
+ },
+ {
+  "id": "q5d2eb001ef2",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of M in the English alphabet?",
+  "options": [
+   "W",
+   "V",
+   "F",
+   "T"
+  ],
+  "answer": 1,
+  "explanation": "M is letter 13.\n9 places to the right: 13 + 9 = 22.\nLetter 22 is V."
+ },
+ {
+  "id": "q5d2f3de5896",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between J and S in the English alphabet?",
+  "options": [
+   "7",
+   "9",
+   "11",
+   "8"
   ],
   "answer": 3,
-  "explanation": "Positions 6 and 11: 11 − 6 − 1"
+  "explanation": "J is letter 10 and S is letter 19.\nLetters strictly between: 19 − 10 − 1 = 8 (KLMNOPQR)."
+ },
+ {
+  "id": "q5ea79b372cd",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between B and K in the English alphabet?",
+  "options": [
+   "12",
+   "5",
+   "18",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "B is letter 2 and K is letter 11.\nLetters strictly between: 11 − 2 − 1 = 8 (CDEFGHIJ)."
+ },
+ {
+  "id": "q6348d8e1525",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of G in the English alphabet?",
+  "options": [
+   "E",
+   "K",
+   "D",
+   "P"
+  ],
+  "answer": 3,
+  "explanation": "G is letter 7.\n9 places to the right: 7 + 9 = 16.\nLetter 16 is P."
+ },
+ {
+  "id": "q63d2c9092c3",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between B and M in the English alphabet?",
+  "options": [
+   "10",
+   "7",
+   "9",
+   "8"
+  ],
+  "answer": 0,
+  "explanation": "B is letter 2 and M is letter 13.\nLetters strictly between: 13 − 2 − 1 = 10 (CDEFGHIJKL)."
+ },
+ {
+  "id": "q646e5a231de",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of K in the English alphabet?",
+  "options": [
+   "D",
+   "R",
+   "T",
+   "O"
+  ],
+  "answer": 2,
+  "explanation": "K is letter 11.\n9 places to the right: 11 + 9 = 20.\nLetter 20 is T."
+ },
+ {
+  "id": "q647175a013d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between I and S in the English alphabet?",
+  "options": [
+   "6",
+   "9",
+   "8",
+   "12"
+  ],
+  "answer": 1,
+  "explanation": "I is letter 9 and S is letter 19.\nLetters strictly between: 19 − 9 − 1 = 9 (JKLMNOPQR)."
+ },
+ {
+  "id": "q652ff62e4d6",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word NOTE?",
+  "options": [
+   "56",
+   "54",
+   "53",
+   "55"
+  ],
+  "answer": 1,
+  "explanation": "N=14 + O=15 + T=20 + E=5.\nSum = 14 + 15 + 20 + 5 = 54."
+ },
+ {
+  "id": "q65868838747",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of L in the English alphabet?",
+  "options": [
+   "B",
+   "Q",
+   "D",
+   "T"
+  ],
+  "answer": 3,
+  "explanation": "L is letter 12.\n8 places to the right: 12 + 8 = 20.\nLetter 20 is T."
+ },
+ {
+  "id": "q66107223703",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of C in the English alphabet?",
+  "options": [
+   "O",
+   "F",
+   "E",
+   "Y"
+  ],
+  "answer": 1,
+  "explanation": "C is letter 3.\n3 places to the right: 3 + 3 = 6.\nLetter 6 is F."
+ },
+ {
+  "id": "q66444ba907a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of I in the English alphabet?",
+  "options": [
+   "J",
+   "X",
+   "H",
+   "P"
+  ],
+  "answer": 3,
+  "explanation": "I is letter 9.\n7 places to the right: 9 + 7 = 16.\nLetter 16 is P."
+ },
+ {
+  "id": "q67014e0866a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of H in the English alphabet?",
+  "options": [
+   "P",
+   "O",
+   "M",
+   "F"
+  ],
+  "answer": 1,
+  "explanation": "H is letter 8.\n7 places to the right: 8 + 7 = 15.\nLetter 15 is O."
+ },
+ {
+  "id": "q67245c7546e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and Q in the English alphabet?",
+  "options": [
+   "6",
+   "4",
+   "8",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "G is letter 7 and Q is letter 17.\nLetters strictly between: 17 − 7 − 1 = 9 (HIJKLMNOP)."
  },
  {
   "id": "q67342a46bb8",
@@ -147,7 +1182,52 @@
    "M"
   ],
   "answer": 1,
-  "explanation": "Count 8 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 8 is H."
+ },
+ {
+  "id": "q6737ad488e7",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of M in the English alphabet?",
+  "options": [
+   "W",
+   "G",
+   "F",
+   "T"
+  ],
+  "answer": 3,
+  "explanation": "M is letter 13.\n7 places to the right: 13 + 7 = 20.\nLetter 20 is T."
+ },
+ {
+  "id": "q682b402c8d3",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between E and N in the English alphabet?",
+  "options": [
+   "18",
+   "7",
+   "6",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "E is letter 5 and N is letter 14.\nLetters strictly between: 14 − 5 − 1 = 8 (FGHIJKLM)."
+ },
+ {
+  "id": "q68884fb1e70",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word FUND?",
+  "options": [
+   "52",
+   "44",
+   "45",
+   "34"
+  ],
+  "answer": 2,
+  "explanation": "F=6 + U=21 + N=14 + D=4.\nSum = 6 + 21 + 14 + 4 = 45."
  },
  {
   "id": "q6a3c26cf2a8",
@@ -156,13 +1236,58 @@
   "level": "easy",
   "question": "How many letters are there between H and Q in the English alphabet?",
   "options": [
-   "5",
    "8",
+   "11",
    "13",
-   "11"
+   "5"
   ],
-  "answer": 1,
-  "explanation": "Positions 8 and 17: 17 − 8 − 1"
+  "answer": 0,
+  "explanation": "H is letter 8 and Q is letter 17.\nLetters strictly between: 17 − 8 − 1 = 8 (IJKLMNOP)."
+ },
+ {
+  "id": "q6bb890028c7",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word DEBT?",
+  "options": [
+   "31",
+   "16",
+   "21",
+   "30"
+  ],
+  "answer": 0,
+  "explanation": "D=4 + E=5 + B=2 + T=20.\nSum = 4 + 5 + 2 + 20 = 31."
+ },
+ {
+  "id": "q6de4bd4ea59",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of E in the English alphabet?",
+  "options": [
+   "P",
+   "G",
+   "W",
+   "J"
+  ],
+  "answer": 3,
+  "explanation": "E is letter 5.\n5 places to the right: 5 + 5 = 10.\nLetter 10 is J."
+ },
+ {
+  "id": "q7008609dc3b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between F and O in the English alphabet?",
+  "options": [
+   "8",
+   "9",
+   "7",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "F is letter 6 and O is letter 15.\nLetters strictly between: 15 − 6 − 1 = 8 (GHIJKLMN)."
  },
  {
   "id": "q7232189203c",
@@ -177,7 +1302,52 @@
    "S"
   ],
   "answer": 0,
-  "explanation": "B + 5 places"
+  "explanation": "B is letter 2.\n5 places to the right: 2 + 5 = 7.\nLetter 7 is G."
+ },
+ {
+  "id": "q7268af137a0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of C in the English alphabet?",
+  "options": [
+   "G",
+   "Y",
+   "B",
+   "I"
+  ],
+  "answer": 0,
+  "explanation": "C is letter 3.\n4 places to the right: 3 + 4 = 7.\nLetter 7 is G."
+ },
+ {
+  "id": "q728ee72e25d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between K and T in the English alphabet?",
+  "options": [
+   "13",
+   "8",
+   "4",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "K is letter 11 and T is letter 20.\nLetters strictly between: 20 − 11 − 1 = 8 (LMNOPQRS)."
+ },
+ {
+  "id": "q74678f01d0a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of K in the English alphabet?",
+  "options": [
+   "V",
+   "R",
+   "C",
+   "O"
+  ],
+  "answer": 3,
+  "explanation": "K is letter 11.\n4 places to the right: 11 + 4 = 15.\nLetter 15 is O."
  },
  {
   "id": "q74733e794de",
@@ -186,13 +1356,253 @@
   "level": "easy",
   "question": "How many letters are there between C and G in the English alphabet?",
   "options": [
-   "3",
+   "5",
    "13",
    "1",
-   "5"
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "C is letter 3 and G is letter 7.\nLetters strictly between: 7 − 3 − 1 = 3 (DEF)."
+ },
+ {
+  "id": "q79c324655b6",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between A and E in the English alphabet?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "13"
+  ],
+  "answer": 2,
+  "explanation": "A is letter 1 and E is letter 5.\nLetters strictly between: 5 − 1 − 1 = 3 (BCD)."
+ },
+ {
+  "id": "q7aaf145d85f",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between K and O in the English alphabet?",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "K is letter 11 and O is letter 15.\nLetters strictly between: 15 − 11 − 1 = 3 (LMN)."
+ },
+ {
+  "id": "q7b5fd3c5023",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of E in the English alphabet?",
+  "options": [
+   "L",
+   "J",
+   "Z",
+   "N"
   ],
   "answer": 0,
-  "explanation": "Positions 3 and 7: 7 − 3 − 1"
+  "explanation": "E is letter 5.\n7 places to the right: 5 + 7 = 12.\nLetter 12 is L."
+ },
+ {
+  "id": "q7c1150c8c7f",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between D and O in the English alphabet?",
+  "options": [
+   "7",
+   "5",
+   "13",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "D is letter 4 and O is letter 15.\nLetters strictly between: 15 − 4 − 1 = 10 (EFGHIJKLMN)."
+ },
+ {
+  "id": "q7c933911c5b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between J and Q in the English alphabet?",
+  "options": [
+   "6",
+   "16",
+   "3",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "J is letter 10 and Q is letter 17.\nLetters strictly between: 17 − 10 − 1 = 6 (KLMNOP)."
+ },
+ {
+  "id": "q7fdf847783e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of A in the English alphabet?",
+  "options": [
+   "J",
+   "I",
+   "C",
+   "S"
+  ],
+  "answer": 1,
+  "explanation": "A is letter 1.\n8 places to the right: 1 + 8 = 9.\nLetter 9 is I."
+ },
+ {
+  "id": "q8015b0109fc",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between A and F in the English alphabet?",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "9"
+  ],
+  "answer": 1,
+  "explanation": "A is letter 1 and F is letter 6.\nLetters strictly between: 6 − 1 − 1 = 4 (BCDE)."
+ },
+ {
+  "id": "q81dbf2b58d5",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of B in the English alphabet?",
+  "options": [
+   "K",
+   "F",
+   "N",
+   "R"
+  ],
+  "answer": 1,
+  "explanation": "B is letter 2.\n4 places to the right: 2 + 4 = 6.\nLetter 6 is F."
+ },
+ {
+  "id": "q82d30a100a9",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 9th position from the left end of the English alphabet?",
+  "options": [
+   "I",
+   "N",
+   "Y",
+   "W"
+  ],
+  "answer": 0,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 9 is I."
+ },
+ {
+  "id": "q843799afb8e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between A and L in the English alphabet?",
+  "options": [
+   "20",
+   "9",
+   "10",
+   "7"
+  ],
+  "answer": 2,
+  "explanation": "A is letter 1 and L is letter 12.\nLetters strictly between: 12 − 1 − 1 = 10 (BCDEFGHIJK)."
+ },
+ {
+  "id": "q85342edde58",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between K and V in the English alphabet?",
+  "options": [
+   "20",
+   "13",
+   "10",
+   "7"
+  ],
+  "answer": 2,
+  "explanation": "K is letter 11 and V is letter 22.\nLetters strictly between: 22 − 11 − 1 = 10 (LMNOPQRSTU)."
+ },
+ {
+  "id": "q857b455910a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between E and L in the English alphabet?",
+  "options": [
+   "7",
+   "3",
+   "9",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "E is letter 5 and L is letter 12.\nLetters strictly between: 12 − 5 − 1 = 6 (FGHIJK)."
+ },
+ {
+  "id": "q8598017de90",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of N in the English alphabet?",
+  "options": [
+   "B",
+   "Z",
+   "V",
+   "K"
+  ],
+  "answer": 2,
+  "explanation": "N is letter 14.\n8 places to the right: 14 + 8 = 22.\nLetter 22 is V."
+ },
+ {
+  "id": "q86ba6aa8902",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between B and I in the English alphabet?",
+  "options": [
+   "6",
+   "16",
+   "1",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "B is letter 2 and I is letter 9.\nLetters strictly between: 9 − 2 − 1 = 6 (CDEFGH)."
+ },
+ {
+  "id": "q87040e4319d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of G in the English alphabet?",
+  "options": [
+   "K",
+   "P",
+   "O",
+   "U"
+  ],
+  "answer": 2,
+  "explanation": "G is letter 7.\n8 places to the right: 7 + 8 = 15.\nLetter 15 is O."
+ },
+ {
+  "id": "q88a69f2331d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between L and X in the English alphabet?",
+  "options": [
+   "11",
+   "1",
+   "21",
+   "14"
+  ],
+  "answer": 0,
+  "explanation": "L is letter 12 and X is letter 24.\nLetters strictly between: 24 − 12 − 1 = 11 (MNOPQRSTUVW)."
  },
  {
   "id": "q8ca90cc824d",
@@ -202,12 +1612,72 @@
   "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word TABLE?",
   "options": [
    "39",
-   "34",
+   "40",
    "48",
-   "40"
+   "34"
+  ],
+  "answer": 1,
+  "explanation": "T=20 + A=1 + B=2 + L=12 + E=5.\nSum = 20 + 1 + 2 + 12 + 5 = 40."
+ },
+ {
+  "id": "q8d0d92106a8",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of F in the English alphabet?",
+  "options": [
+   "M",
+   "P",
+   "O",
+   "H"
+  ],
+  "answer": 2,
+  "explanation": "F is letter 6.\n9 places to the right: 6 + 9 = 15.\nLetter 15 is O."
+ },
+ {
+  "id": "q906bc25bafa",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between B and L in the English alphabet?",
+  "options": [
+   "9",
+   "4",
+   "7",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "B is letter 2 and L is letter 12.\nLetters strictly between: 12 − 2 − 1 = 9 (CDEFGHIJK)."
+ },
+ {
+  "id": "q916d054cf90",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 14th position from the left end of the English alphabet?",
+  "options": [
+   "N",
+   "O",
+   "W",
+   "J"
+  ],
+  "answer": 0,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 14 is N."
+ },
+ {
+  "id": "q919749eeef8",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of E in the English alphabet?",
+  "options": [
+   "F",
+   "D",
+   "K",
+   "H"
   ],
   "answer": 3,
-  "explanation": "Add the position of each letter."
+  "explanation": "E is letter 5.\n3 places to the right: 5 + 3 = 8.\nLetter 8 is H."
  },
  {
   "id": "q920487e916f",
@@ -222,7 +1692,112 @@
    "A"
   ],
   "answer": 1,
-  "explanation": "J + 5 places"
+  "explanation": "J is letter 10.\n5 places to the right: 10 + 5 = 15.\nLetter 15 is O."
+ },
+ {
+  "id": "q920b72ef043",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and M in the English alphabet?",
+  "options": [
+   "9",
+   "14",
+   "19",
+   "7"
+  ],
+  "answer": 0,
+  "explanation": "C is letter 3 and M is letter 13.\nLetters strictly between: 13 − 3 − 1 = 9 (DEFGHIJKL)."
+ },
+ {
+  "id": "q930f8556f5b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of I in the English alphabet?",
+  "options": [
+   "N",
+   "L",
+   "H",
+   "X"
+  ],
+  "answer": 0,
+  "explanation": "I is letter 9.\n5 places to the right: 9 + 5 = 14.\nLetter 14 is N."
+ },
+ {
+  "id": "q9336029a1b2",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between A and J in the English alphabet?",
+  "options": [
+   "18",
+   "10",
+   "6",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "A is letter 1 and J is letter 10.\nLetters strictly between: 10 − 1 − 1 = 8 (BCDEFGHI)."
+ },
+ {
+  "id": "q933c085c220",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of P in the English alphabet?",
+  "options": [
+   "S",
+   "V",
+   "A",
+   "Z"
+  ],
+  "answer": 0,
+  "explanation": "P is letter 16.\n3 places to the right: 16 + 3 = 19.\nLetter 19 is S."
+ },
+ {
+  "id": "q9524beed74b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word COIN?",
+  "options": [
+   "45",
+   "62",
+   "20",
+   "41"
+  ],
+  "answer": 3,
+  "explanation": "C=3 + O=15 + I=9 + N=14.\nSum = 3 + 15 + 9 + 14 = 41."
+ },
+ {
+  "id": "q97564163ff4",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of M in the English alphabet?",
+  "options": [
+   "L",
+   "O",
+   "Y",
+   "U"
+  ],
+  "answer": 3,
+  "explanation": "M is letter 13.\n8 places to the right: 13 + 8 = 21.\nLetter 21 is U."
+ },
+ {
+  "id": "q97b015b159a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and O in the English alphabet?",
+  "options": [
+   "8",
+   "16",
+   "9",
+   "11"
+  ],
+  "answer": 3,
+  "explanation": "C is letter 3 and O is letter 15.\nLetters strictly between: 15 − 3 − 1 = 11 (DEFGHIJKLMN)."
  },
  {
   "id": "q98948911f45",
@@ -231,13 +1806,28 @@
   "level": "easy",
   "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word CODE?",
   "options": [
-   "29",
    "24",
    "27",
+   "29",
    "25"
   ],
-  "answer": 2,
-  "explanation": "Add the position of each letter."
+  "answer": 1,
+  "explanation": "C=3 + O=15 + D=4 + E=5.\nSum = 3 + 15 + 4 + 5 = 27."
+ },
+ {
+  "id": "q9951a7e27ff",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between K and W in the English alphabet?",
+  "options": [
+   "11",
+   "14",
+   "12",
+   "1"
+  ],
+  "answer": 0,
+  "explanation": "K is letter 11 and W is letter 23.\nLetters strictly between: 23 − 11 − 1 = 11 (LMNOPQRSTUV)."
  },
  {
   "id": "q995ddb70594",
@@ -252,7 +1842,37 @@
    "39"
   ],
   "answer": 1,
-  "explanation": "Add the position of each letter."
+  "explanation": "R=18 + A=1 + T=20 + E=5.\nSum = 18 + 1 + 20 + 5 = 44."
+ },
+ {
+  "id": "q9a597509cab",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and P in the English alphabet?",
+  "options": [
+   "7",
+   "8",
+   "12",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "G is letter 7 and P is letter 16.\nLetters strictly between: 16 − 7 − 1 = 8 (HIJKLMNO)."
+ },
+ {
+  "id": "q9deccad404d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between F and J in the English alphabet?",
+  "options": [
+   "8",
+   "3",
+   "6",
+   "5"
+  ],
+  "answer": 1,
+  "explanation": "F is letter 6 and J is letter 10.\nLetters strictly between: 10 − 6 − 1 = 3 (GHI)."
  },
  {
   "id": "q9fa7f0dbbe3",
@@ -262,12 +1882,27 @@
   "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word PRICE?",
   "options": [
    "38",
-   "41",
    "26",
-   "51"
+   "51",
+   "41"
+  ],
+  "answer": 2,
+  "explanation": "P=16 + R=18 + I=9 + C=3 + E=5.\nSum = 16 + 18 + 9 + 3 + 5 = 51."
+ },
+ {
+  "id": "qa02b8599db3",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 22th position from the left end of the English alphabet?",
+  "options": [
+   "S",
+   "K",
+   "I",
+   "V"
   ],
   "answer": 3,
-  "explanation": "Add the position of each letter."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 22 is V."
  },
  {
   "id": "qa2f115b3d9b",
@@ -276,13 +1911,118 @@
   "level": "easy",
   "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word TRADE?",
   "options": [
-   "47",
+   "48",
    "38",
-   "51",
-   "48"
+   "47",
+   "51"
+  ],
+  "answer": 0,
+  "explanation": "T=20 + R=18 + A=1 + D=4 + E=5.\nSum = 20 + 18 + 1 + 4 + 5 = 48."
+ },
+ {
+  "id": "qa6379da49c5",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of O in the English alphabet?",
+  "options": [
+   "R",
+   "K",
+   "O",
+   "G"
+  ],
+  "answer": 0,
+  "explanation": "O is letter 15.\n3 places to the right: 15 + 3 = 18.\nLetter 18 is R."
+ },
+ {
+  "id": "qa8bd7911ac0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of F in the English alphabet?",
+  "options": [
+   "I",
+   "F",
+   "J",
+   "K"
+  ],
+  "answer": 0,
+  "explanation": "F is letter 6.\n3 places to the right: 6 + 3 = 9.\nLetter 9 is I."
+ },
+ {
+  "id": "qacc189e5e10",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of G in the English alphabet?",
+  "options": [
+   "D",
+   "J",
+   "K",
+   "Q"
+  ],
+  "answer": 1,
+  "explanation": "G is letter 7.\n3 places to the right: 7 + 3 = 10.\nLetter 10 is J."
+ },
+ {
+  "id": "qae17dcbbd71",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of D in the English alphabet?",
+  "options": [
+   "K",
+   "Q",
+   "L",
+   "E"
+  ],
+  "answer": 2,
+  "explanation": "D is letter 4.\n8 places to the right: 4 + 8 = 12.\nLetter 12 is L."
+ },
+ {
+  "id": "qb1d73c88863",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of C in the English alphabet?",
+  "options": [
+   "F",
+   "P",
+   "R",
+   "J"
   ],
   "answer": 3,
-  "explanation": "Add the position of each letter."
+  "explanation": "C is letter 3.\n7 places to the right: 3 + 7 = 10.\nLetter 10 is J."
+ },
+ {
+  "id": "qb7766bf7bdf",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between F and Q in the English alphabet?",
+  "options": [
+   "12",
+   "8",
+   "9",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "F is letter 6 and Q is letter 17.\nLetters strictly between: 17 − 6 − 1 = 10 (GHIJKLMNOP)."
+ },
+ {
+  "id": "qb7a60bbf18b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of I in the English alphabet?",
+  "options": [
+   "Y",
+   "L",
+   "N",
+   "E"
+  ],
+  "answer": 1,
+  "explanation": "I is letter 9.\n3 places to the right: 9 + 3 = 12.\nLetter 12 is L."
  },
  {
   "id": "qb8a708eaa9d",
@@ -291,13 +2031,28 @@
   "level": "easy",
   "question": "How many letters are there between L and T in the English alphabet?",
   "options": [
-   "9",
-   "12",
    "7",
-   "10"
+   "12",
+   "10",
+   "9"
   ],
-  "answer": 2,
-  "explanation": "Positions 12 and 20: 20 − 12 − 1"
+  "answer": 0,
+  "explanation": "L is letter 12 and T is letter 20.\nLetters strictly between: 20 − 12 − 1 = 7 (MNOPQRS)."
+ },
+ {
+  "id": "qbae3cc994d1",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of H in the English alphabet?",
+  "options": [
+   "M",
+   "W",
+   "Q",
+   "S"
+  ],
+  "answer": 0,
+  "explanation": "H is letter 8.\n5 places to the right: 8 + 5 = 13.\nLetter 13 is M."
  },
  {
   "id": "qbb7201199d7",
@@ -312,7 +2067,22 @@
    "L"
   ],
   "answer": 3,
-  "explanation": "Count 12 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 12 is L."
+ },
+ {
+  "id": "qbd592f888fc",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of A in the English alphabet?",
+  "options": [
+   "F",
+   "Z",
+   "S",
+   "W"
+  ],
+  "answer": 0,
+  "explanation": "A is letter 1.\n5 places to the right: 1 + 5 = 6.\nLetter 6 is F."
  },
  {
   "id": "qbee51f2bd5f",
@@ -327,7 +2097,37 @@
    "C"
   ],
   "answer": 0,
-  "explanation": "Count 21 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 21 is U."
+ },
+ {
+  "id": "qc0a72bf9289",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and R in the English alphabet?",
+  "options": [
+   "15",
+   "5",
+   "8",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "G is letter 7 and R is letter 18.\nLetters strictly between: 18 − 7 − 1 = 10 (HIJKLMNOPQ)."
+ },
+ {
+  "id": "qc0eec5313b0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 4th position from the left end of the English alphabet?",
+  "options": [
+   "D",
+   "P",
+   "U",
+   "S"
+  ],
+  "answer": 0,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 4 is D."
  },
  {
   "id": "qc2633f9d83b",
@@ -342,7 +2142,22 @@
    "F"
   ],
   "answer": 1,
-  "explanation": "Count 16 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 16 is P."
+ },
+ {
+  "id": "qc3cf70630a2",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of K in the English alphabet?",
+  "options": [
+   "F",
+   "K",
+   "R",
+   "D"
+  ],
+  "answer": 2,
+  "explanation": "K is letter 11.\n7 places to the right: 11 + 7 = 18.\nLetter 18 is R."
  },
  {
   "id": "qc53904efb21",
@@ -357,7 +2172,7 @@
    "V"
   ],
   "answer": 0,
-  "explanation": "N + 3 places"
+  "explanation": "N is letter 14.\n3 places to the right: 14 + 3 = 17.\nLetter 17 is Q."
  },
  {
   "id": "qc7a4c7ac18a",
@@ -372,7 +2187,112 @@
    "B"
   ],
   "answer": 2,
-  "explanation": "Count 10 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 10 is J."
+ },
+ {
+  "id": "qca7be92688c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between E and O in the English alphabet?",
+  "options": [
+   "11",
+   "6",
+   "8",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "E is letter 5 and O is letter 15.\nLetters strictly between: 15 − 5 − 1 = 9 (FGHIJKLMN)."
+ },
+ {
+  "id": "qcac63d15b8a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of J in the English alphabet?",
+  "options": [
+   "A",
+   "N",
+   "R",
+   "S"
+  ],
+  "answer": 1,
+  "explanation": "J is letter 10.\n4 places to the right: 10 + 4 = 14.\nLetter 14 is N."
+ },
+ {
+  "id": "qcb60dd2463d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of O in the English alphabet?",
+  "options": [
+   "W",
+   "U",
+   "S",
+   "V"
+  ],
+  "answer": 0,
+  "explanation": "O is letter 15.\n8 places to the right: 15 + 8 = 23.\nLetter 23 is W."
+ },
+ {
+  "id": "qcd1502e86ad",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of O in the English alphabet?",
+  "options": [
+   "X",
+   "Z",
+   "Q",
+   "T"
+  ],
+  "answer": 0,
+  "explanation": "O is letter 15.\n9 places to the right: 15 + 9 = 24.\nLetter 24 is X."
+ },
+ {
+  "id": "qcd4bc59d550",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 15th position from the left end of the English alphabet?",
+  "options": [
+   "I",
+   "O",
+   "B",
+   "E"
+  ],
+  "answer": 1,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 15 is O."
+ },
+ {
+  "id": "qce8aff3f60a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between E and Q in the English alphabet?",
+  "options": [
+   "11",
+   "14",
+   "13",
+   "1"
+  ],
+  "answer": 0,
+  "explanation": "E is letter 5 and Q is letter 17.\nLetters strictly between: 17 − 5 − 1 = 11 (FGHIJKLMNOP)."
+ },
+ {
+  "id": "qd133c01e0e4",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of B in the English alphabet?",
+  "options": [
+   "H",
+   "X",
+   "E",
+   "N"
+  ],
+  "answer": 0,
+  "explanation": "B is letter 2.\n6 places to the right: 2 + 6 = 8.\nLetter 8 is H."
  },
  {
   "id": "qd32df86a70c",
@@ -382,12 +2302,57 @@
   "question": "How many letters are there between D and K in the English alphabet?",
   "options": [
    "3",
-   "6",
    "7",
+   "6",
    "9"
   ],
-  "answer": 1,
-  "explanation": "Positions 4 and 11: 11 − 4 − 1"
+  "answer": 2,
+  "explanation": "D is letter 4 and K is letter 11.\nLetters strictly between: 11 − 4 − 1 = 6 (EFGHIJ)."
+ },
+ {
+  "id": "qd5446a2356d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between D and H in the English alphabet?",
+  "options": [
+   "5",
+   "2",
+   "13",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "D is letter 4 and H is letter 8.\nLetters strictly between: 8 − 4 − 1 = 3 (EFG)."
+ },
+ {
+  "id": "qd5a3ef1a3f0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of N in the English alphabet?",
+  "options": [
+   "S",
+   "I",
+   "M",
+   "O"
+  ],
+  "answer": 0,
+  "explanation": "N is letter 14.\n5 places to the right: 14 + 5 = 19.\nLetter 19 is S."
+ },
+ {
+  "id": "qd96ef8dc621",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of K in the English alphabet?",
+  "options": [
+   "U",
+   "V",
+   "L",
+   "N"
+  ],
+  "answer": 3,
+  "explanation": "K is letter 11.\n3 places to the right: 11 + 3 = 14.\nLetter 14 is N."
  },
  {
   "id": "qd9ccb0f9a27",
@@ -402,7 +2367,37 @@
    "H"
   ],
   "answer": 1,
-  "explanation": "Count 18 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 18 is R."
+ },
+ {
+  "id": "qdb3c1686256",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between J and R in the English alphabet?",
+  "options": [
+   "4",
+   "2",
+   "7",
+   "8"
+  ],
+  "answer": 2,
+  "explanation": "J is letter 10 and R is letter 18.\nLetters strictly between: 18 − 10 − 1 = 7 (KLMNOPQ)."
+ },
+ {
+  "id": "qdc425b23815",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and N in the English alphabet?",
+  "options": [
+   "7",
+   "20",
+   "11",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "C is letter 3 and N is letter 14.\nLetters strictly between: 14 − 3 − 1 = 10 (DEFGHIJKLM)."
  },
  {
   "id": "qdef46dc2179",
@@ -417,7 +2412,7 @@
    "4"
   ],
   "answer": 3,
-  "explanation": "Positions 4 and 9: 9 − 4 − 1"
+  "explanation": "D is letter 4 and I is letter 9.\nLetters strictly between: 9 − 4 − 1 = 4 (EFGH)."
  },
  {
   "id": "qdf90cbed85e",
@@ -428,11 +2423,86 @@
   "options": [
    "14",
    "42",
-   "35",
-   "28"
+   "28",
+   "35"
+  ],
+  "answer": 2,
+  "explanation": "B=2 + A=1 + N=14 + K=11.\nSum = 2 + 1 + 14 + 11 = 28."
+ },
+ {
+  "id": "qe19033d5593",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and H in the English alphabet?",
+  "options": [
+   "1",
+   "3",
+   "4",
+   "2"
+  ],
+  "answer": 2,
+  "explanation": "C is letter 3 and H is letter 8.\nLetters strictly between: 8 − 3 − 1 = 4 (DEFG)."
+ },
+ {
+  "id": "qe1c682c44c3",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between J and U in the English alphabet?",
+  "options": [
+   "7",
+   "20",
+   "10",
+   "15"
+  ],
+  "answer": 2,
+  "explanation": "J is letter 10 and U is letter 21.\nLetters strictly between: 21 − 10 − 1 = 10 (KLMNOPQRST)."
+ },
+ {
+  "id": "qe3834e15300",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of J in the English alphabet?",
+  "options": [
+   "N",
+   "R",
+   "F",
+   "D"
+  ],
+  "answer": 1,
+  "explanation": "J is letter 10.\n8 places to the right: 10 + 8 = 18.\nLetter 18 is R."
+ },
+ {
+  "id": "qe3f2be3e483",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of F in the English alphabet?",
+  "options": [
+   "M",
+   "C",
+   "S",
+   "L"
   ],
   "answer": 3,
-  "explanation": "Add the position of each letter."
+  "explanation": "F is letter 6.\n6 places to the right: 6 + 6 = 12.\nLetter 12 is L."
+ },
+ {
+  "id": "qe516065a057",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of L in the English alphabet?",
+  "options": [
+   "Y",
+   "O",
+   "T",
+   "E"
+  ],
+  "answer": 1,
+  "explanation": "L is letter 12.\n3 places to the right: 12 + 3 = 15.\nLetter 15 is O."
  },
  {
   "id": "qe518d9b0fdf",
@@ -441,13 +2511,28 @@
   "level": "easy",
   "question": "How many letters are there between I and U in the English alphabet?",
   "options": [
-   "14",
-   "16",
    "8",
-   "11"
+   "16",
+   "11",
+   "14"
   ],
-  "answer": 3,
-  "explanation": "Positions 9 and 21: 21 − 9 − 1"
+  "answer": 2,
+  "explanation": "I is letter 9 and U is letter 21.\nLetters strictly between: 21 − 9 − 1 = 11 (JKLMNOPQRST)."
+ },
+ {
+  "id": "qe55d4407bec",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word SCORE?",
+  "options": [
+   "60",
+   "70",
+   "65",
+   "48"
+  ],
+  "answer": 0,
+  "explanation": "S=19 + C=3 + O=15 + R=18 + E=5.\nSum = 19 + 3 + 15 + 18 + 5 = 60."
  },
  {
   "id": "qe57c506f653",
@@ -462,7 +2547,82 @@
    "12"
   ],
   "answer": 1,
-  "explanation": "Positions 5 and 13: 13 − 5 − 1"
+  "explanation": "E is letter 5 and M is letter 13.\nLetters strictly between: 13 − 5 − 1 = 7 (FGHIJKL)."
+ },
+ {
+  "id": "qe5aaac424ad",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between J and O in the English alphabet?",
+  "options": [
+   "3",
+   "7",
+   "2",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "J is letter 10 and O is letter 15.\nLetters strictly between: 15 − 10 − 1 = 4 (KLMN)."
+ },
+ {
+  "id": "qe5e0e5218a1",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between A and K in the English alphabet?",
+  "options": [
+   "10",
+   "9",
+   "7",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "A is letter 1 and K is letter 11.\nLetters strictly between: 11 − 1 − 1 = 9 (BCDEFGHIJ)."
+ },
+ {
+  "id": "qe71d5b86dc1",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between L and U in the English alphabet?",
+  "options": [
+   "5",
+   "7",
+   "8",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "L is letter 12 and U is letter 21.\nLetters strictly between: 21 − 12 − 1 = 8 (MNOPQRST)."
+ },
+ {
+  "id": "qe7f3525490e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of P in the English alphabet?",
+  "options": [
+   "Y",
+   "N",
+   "B",
+   "D"
+  ],
+  "answer": 0,
+  "explanation": "P is letter 16.\n9 places to the right: 16 + 9 = 25.\nLetter 25 is Y."
+ },
+ {
+  "id": "qe88c9ddc30b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 9th to the right of N in the English alphabet?",
+  "options": [
+   "T",
+   "W",
+   "Z",
+   "M"
+  ],
+  "answer": 1,
+  "explanation": "N is letter 14.\n9 places to the right: 14 + 9 = 23.\nLetter 23 is W."
  },
  {
   "id": "qe906f7b70e9",
@@ -477,7 +2637,37 @@
    "9"
   ],
   "answer": 0,
-  "explanation": "Positions 1 and 8: 8 − 1 − 1"
+  "explanation": "A is letter 1 and H is letter 8.\nLetters strictly between: 8 − 1 − 1 = 6 (BCDEFG)."
+ },
+ {
+  "id": "qe9b6725a586",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 17th position from the left end of the English alphabet?",
+  "options": [
+   "M",
+   "Q",
+   "S",
+   "K"
+  ],
+  "answer": 1,
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 17 is Q."
+ },
+ {
+  "id": "qe9d8af668f3",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of G in the English alphabet?",
+  "options": [
+   "R",
+   "K",
+   "L",
+   "F"
+  ],
+  "answer": 1,
+  "explanation": "G is letter 7.\n4 places to the right: 7 + 4 = 11.\nLetter 11 is K."
  },
  {
   "id": "qea809b9a943",
@@ -492,7 +2682,67 @@
    "Q"
   ],
   "answer": 2,
-  "explanation": "I + 9 places"
+  "explanation": "I is letter 9.\n9 places to the right: 9 + 9 = 18.\nLetter 18 is R."
+ },
+ {
+  "id": "qeaa3fbf1e6b",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between M and W in the English alphabet?",
+  "options": [
+   "12",
+   "14",
+   "8",
+   "9"
+  ],
+  "answer": 3,
+  "explanation": "M is letter 13 and W is letter 23.\nLetters strictly between: 23 − 13 − 1 = 9 (NOPQRSTUV)."
+ },
+ {
+  "id": "qeb788aa9ef5",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of D in the English alphabet?",
+  "options": [
+   "G",
+   "H",
+   "N",
+   "O"
+  ],
+  "answer": 0,
+  "explanation": "D is letter 4.\n3 places to the right: 4 + 3 = 7.\nLetter 7 is G."
+ },
+ {
+  "id": "qec134ff0aaf",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of M in the English alphabet?",
+  "options": [
+   "I",
+   "Q",
+   "Y",
+   "C"
+  ],
+  "answer": 1,
+  "explanation": "M is letter 13.\n4 places to the right: 13 + 4 = 17.\nLetter 17 is Q."
+ },
+ {
+  "id": "qec5174dca03",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of B in the English alphabet?",
+  "options": [
+   "S",
+   "M",
+   "D",
+   "I"
+  ],
+  "answer": 3,
+  "explanation": "B is letter 2.\n7 places to the right: 2 + 7 = 9.\nLetter 9 is I."
  },
  {
   "id": "qedb3916b1db",
@@ -507,7 +2757,22 @@
    "40"
   ],
   "answer": 3,
-  "explanation": "Add the position of each letter."
+  "explanation": "B=2 + O=15 + A=1 + R=18 + D=4.\nSum = 2 + 15 + 1 + 18 + 4 = 40."
+ },
+ {
+  "id": "qedcaa17c800",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of C in the English alphabet?",
+  "options": [
+   "C",
+   "V",
+   "K",
+   "W"
+  ],
+  "answer": 2,
+  "explanation": "C is letter 3.\n8 places to the right: 3 + 8 = 11.\nLetter 11 is K."
  },
  {
   "id": "qee84d4b920a",
@@ -517,12 +2782,57 @@
   "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word STOCK?",
   "options": [
    "61",
+   "68",
    "63",
-   "71",
-   "68"
+   "71"
   ],
-  "answer": 3,
-  "explanation": "Add the position of each letter."
+  "answer": 1,
+  "explanation": "S=19 + T=20 + O=15 + C=3 + K=11.\nSum = 19 + 20 + 15 + 3 + 11 = 68."
+ },
+ {
+  "id": "qef8387cd44d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between F and P in the English alphabet?",
+  "options": [
+   "8",
+   "10",
+   "9",
+   "12"
+  ],
+  "answer": 2,
+  "explanation": "F is letter 6 and P is letter 16.\nLetters strictly between: 16 − 6 − 1 = 9 (GHIJKLMNO)."
+ },
+ {
+  "id": "qf0598ebdc79",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between G and S in the English alphabet?",
+  "options": [
+   "14",
+   "11",
+   "1",
+   "16"
+  ],
+  "answer": 1,
+  "explanation": "G is letter 7 and S is letter 19.\nLetters strictly between: 19 − 7 − 1 = 11 (HIJKLMNOPQR)."
+ },
+ {
+  "id": "qf09ae5b0f11",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of I in the English alphabet?",
+  "options": [
+   "E",
+   "P",
+   "Q",
+   "O"
+  ],
+  "answer": 2,
+  "explanation": "I is letter 9.\n8 places to the right: 9 + 8 = 17.\nLetter 17 is Q."
  },
  {
   "id": "qf1b5076c1aa",
@@ -537,7 +2847,112 @@
    "I"
   ],
   "answer": 0,
-  "explanation": "Count 20 letters from A."
+  "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 20 is T."
+ },
+ {
+  "id": "qf52498ea8cf",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between I and R in the English alphabet?",
+  "options": [
+   "8",
+   "6",
+   "9",
+   "12"
+  ],
+  "answer": 0,
+  "explanation": "I is letter 9 and R is letter 18.\nLetters strictly between: 18 − 9 − 1 = 8 (JKLMNOPQ)."
+ },
+ {
+  "id": "qf53a2ad964c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 5th to the right of O in the English alphabet?",
+  "options": [
+   "W",
+   "V",
+   "T",
+   "Q"
+  ],
+  "answer": 2,
+  "explanation": "O is letter 15.\n5 places to the right: 15 + 5 = 20.\nLetter 20 is T."
+ },
+ {
+  "id": "qf5e94adca5e",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between J and T in the English alphabet?",
+  "options": [
+   "4",
+   "9",
+   "19",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "J is letter 10 and T is letter 20.\nLetters strictly between: 20 − 10 − 1 = 9 (KLMNOPQRS)."
+ },
+ {
+  "id": "qf824d5629f0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 3th to the right of H in the English alphabet?",
+  "options": [
+   "V",
+   "K",
+   "P",
+   "G"
+  ],
+  "answer": 1,
+  "explanation": "H is letter 8.\n3 places to the right: 8 + 3 = 11.\nLetter 11 is K."
+ },
+ {
+  "id": "qf98dd524481",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 4th to the right of I in the English alphabet?",
+  "options": [
+   "P",
+   "V",
+   "M",
+   "N"
+  ],
+  "answer": 2,
+  "explanation": "I is letter 9.\n4 places to the right: 9 + 4 = 13.\nLetter 13 is M."
+ },
+ {
+  "id": "qfb427ada35a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of D in the English alphabet?",
+  "options": [
+   "Q",
+   "H",
+   "U",
+   "J"
+  ],
+  "answer": 3,
+  "explanation": "D is letter 4.\n6 places to the right: 4 + 6 = 10.\nLetter 10 is J."
+ },
+ {
+  "id": "qfc145db3ebd",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between C and K in the English alphabet?",
+  "options": [
+   "17",
+   "7",
+   "2",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "C is letter 3 and K is letter 11.\nLetters strictly between: 11 − 3 − 1 = 7 (DEFGHIJ)."
  },
  {
   "id": "qfd66ec63eea",
@@ -552,7 +2967,22 @@
    "12"
   ],
   "answer": 0,
-  "explanation": "Positions 9 and 17: 17 − 9 − 1"
+  "explanation": "I is letter 9 and Q is letter 17.\nLetters strictly between: 17 − 9 − 1 = 7 (JKLMNOP)."
+ },
+ {
+  "id": "qfd9f76b472c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and N in the English alphabet?",
+  "options": [
+   "15",
+   "5",
+   "3",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "H is letter 8 and N is letter 14.\nLetters strictly between: 14 − 8 − 1 = 5 (IJKLM)."
  },
  {
   "id": "qfe7f155439c",
@@ -561,12 +2991,57 @@
   "level": "easy",
   "question": "How many letters are there between I and T in the English alphabet?",
   "options": [
-   "10",
-   "9",
    "8",
+   "9",
+   "10",
    "5"
   ],
+  "answer": 2,
+  "explanation": "I is letter 9 and T is letter 20.\nLetters strictly between: 20 − 9 − 1 = 10 (JKLMNOPQRS)."
+ },
+ {
+  "id": "qfe8e32d643d",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between L and S in the English alphabet?",
+  "options": [
+   "3",
+   "16",
+   "4",
+   "6"
+  ],
+  "answer": 3,
+  "explanation": "L is letter 12 and S is letter 19.\nLetters strictly between: 19 − 12 − 1 = 6 (MNOPQR)."
+ },
+ {
+  "id": "qfefd125e66a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 6th to the right of P in the English alphabet?",
+  "options": [
+   "V",
+   "J",
+   "C",
+   "D"
+  ],
   "answer": 0,
-  "explanation": "Positions 9 and 20: 20 − 9 − 1"
+  "explanation": "P is letter 16.\n6 places to the right: 16 + 6 = 22.\nLetter 22 is V."
+ },
+ {
+  "id": "qffbff6561ad",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of J in the English alphabet?",
+  "options": [
+   "Q",
+   "W",
+   "N",
+   "K"
+  ],
+  "answer": 0,
+  "explanation": "J is letter 10.\n7 places to the right: 10 + 7 = 17.\nLetter 17 is Q."
  }
 ]

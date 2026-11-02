@@ -15,8 +15,18 @@
     <nav id="account-bar" class="account-bar"></nav>
     <h1>Question reports</h1>
     <div class="quiz-container">
-        <p class="card-sub on-dark">Open reports, newest first. Fix the question in the bank under <code>scripts/</code>, rebuild the data, then mark the report resolved.</p>
+        <p class="card-sub on-dark">Open reports, newest first. Use <b>Edit</b> to correct a question (or open any
+            question by its id below). Edits go live on the next build: download them, save the file as
+            <code>scripts/question_edits.json</code>, rerun the build scripts and deploy. Then mark the report resolved.</p>
+        <form id="open-question" class="edit-open">
+            <input id="open-question-id" placeholder="Question id, e.g. q012e4c88607" pattern="q[0-9a-f]{11}" required aria-label="Question id"/>
+            <button type="submit" class="btn-resolve">Edit question</button>
+        </form>
+        <div id="edit-panel"></div>
         <div id="report-list" class="report-list"><p class="history-empty history-card">Loading...</p></div>
+        <h2 class="stage-title">Saved edits</h2>
+        <p class="card-sub on-dark"><a id="export-edits" href="/api/admin/question-edits/export" download="question_edits.json">Download question_edits.json</a></p>
+        <div id="edit-list" class="report-list"></div>
     </div>
     <script type="module" src="js/account.js"></script>
     <script type="module" src="js/reports.js"></script>

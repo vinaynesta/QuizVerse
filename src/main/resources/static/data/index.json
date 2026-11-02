@@ -1904,6 +1904,1958 @@
       ]
     },
     {
+      "id": "ibps-po",
+      "name": "IBPS PO",
+      "description": "Probationary Officer. Prelims 100 questions in 60 minutes; Mains 155 questions in 180 minutes, plus a descriptive paper.",
+      "stages": [
+        {
+          "id": "prelims",
+          "name": "Prelims",
+          "sections": [
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 30,
+              "marks": 30,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-po/prelims/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-po/prelims/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-po/prelims/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-po/prelims/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-po/prelims/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-po/prelims/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-po/prelims/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-po/prelims/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-po/prelims/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-po/prelims/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-po/prelims/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-po/prelims/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-po/prelims/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-po/prelims/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-po/prelims/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "quantitative-aptitude",
+              "name": "Quantitative Aptitude",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-po/prelims/quantitative-aptitude/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-po/prelims/quantitative-aptitude/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-po/prelims/quantitative-aptitude/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-po/prelims/quantitative-aptitude/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-po/prelims/quantitative-aptitude/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-po/prelims/quantitative-aptitude/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-po/prelims/quantitative-aptitude/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-po/prelims/quantitative-aptitude/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-po/prelims/quantitative-aptitude/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-po/prelims/quantitative-aptitude/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-po/prelims/quantitative-aptitude/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-po/prelims/quantitative-aptitude/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-po/prelims/quantitative-aptitude/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-po/prelims/quantitative-aptitude/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-po/prelims/quantitative-aptitude/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-po/prelims/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-po/prelims/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-po/prelims/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-po/prelims/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-po/prelims/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-po/prelims/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-po/prelims/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-po/prelims/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-po/prelims/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-po/prelims/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-po/prelims/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-po/prelims/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-po/prelims/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-po/prelims/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-po/prelims/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": []
+        },
+        {
+          "id": "mains",
+          "name": "Mains",
+          "sections": [
+            {
+              "id": "reasoning",
+              "name": "Reasoning & Computer Aptitude",
+              "questions": 45,
+              "marks": 60,
+              "minutes": 60,
+              "note": "These quizzes cover the reasoning part only.",
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-po/mains/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-po/mains/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-po/mains/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-po/mains/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-po/mains/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-po/mains/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-po/mains/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-po/mains/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-po/mains/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-po/mains/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-po/mains/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-po/mains/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-po/mains/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-po/mains/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-po/mains/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 35,
+              "marks": 40,
+              "minutes": 40,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-po/mains/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-po/mains/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-po/mains/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-po/mains/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-po/mains/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-po/mains/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-po/mains/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-po/mains/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-po/mains/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-po/mains/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-po/mains/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-po/mains/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-po/mains/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-po/mains/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-po/mains/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "data-analysis",
+              "name": "Data Analysis & Interpretation",
+              "questions": 35,
+              "marks": 60,
+              "minutes": 45,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "ibps-po/mains/data-analysis/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "ibps-po/mains/data-analysis/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "ibps-po/mains/data-analysis/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "ibps-po/mains/data-analysis/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "ibps-po/mains/data-analysis/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "ibps-po/mains/data-analysis/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "ibps-po/mains/data-analysis/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "ibps-po/mains/data-analysis/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "ibps-po/mains/data-analysis/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "ibps-po/mains/data-analysis/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "ibps-po/mains/data-analysis/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "ibps-po/mains/data-analysis/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "ibps-po/mains/data-analysis/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "ibps-po/mains/data-analysis/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "ibps-po/mains/data-analysis/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": [
+            {
+              "id": "general-economy-banking-awareness",
+              "name": "General/Economy/Banking Awareness",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 35,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sbi-po",
+      "name": "SBI PO",
+      "description": "Probationary Officer. Prelims 100 questions in 60 minutes; Mains 155 questions in 180 minutes, plus a descriptive paper.",
+      "stages": [
+        {
+          "id": "prelims",
+          "name": "Prelims",
+          "sections": [
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-po/prelims/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-po/prelims/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-po/prelims/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-po/prelims/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-po/prelims/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-po/prelims/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-po/prelims/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-po/prelims/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-po/prelims/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-po/prelims/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-po/prelims/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-po/prelims/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-po/prelims/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-po/prelims/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-po/prelims/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "quantitative-aptitude",
+              "name": "Quantitative Aptitude",
+              "questions": 30,
+              "marks": 30,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-po/prelims/quantitative-aptitude/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-po/prelims/quantitative-aptitude/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-po/prelims/quantitative-aptitude/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-po/prelims/quantitative-aptitude/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-po/prelims/quantitative-aptitude/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-po/prelims/quantitative-aptitude/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-po/prelims/quantitative-aptitude/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-po/prelims/quantitative-aptitude/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-po/prelims/quantitative-aptitude/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-po/prelims/quantitative-aptitude/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-po/prelims/quantitative-aptitude/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-po/prelims/quantitative-aptitude/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-po/prelims/quantitative-aptitude/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-po/prelims/quantitative-aptitude/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-po/prelims/quantitative-aptitude/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 30,
+              "marks": 30,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-po/prelims/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-po/prelims/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-po/prelims/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-po/prelims/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-po/prelims/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-po/prelims/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-po/prelims/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-po/prelims/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-po/prelims/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-po/prelims/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-po/prelims/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-po/prelims/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-po/prelims/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-po/prelims/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-po/prelims/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": []
+        },
+        {
+          "id": "mains",
+          "name": "Mains",
+          "sections": [
+            {
+              "id": "reasoning",
+              "name": "Reasoning & Computer Aptitude",
+              "questions": 40,
+              "marks": 60,
+              "minutes": 50,
+              "note": "These quizzes cover the reasoning part only.",
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-po/mains/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-po/mains/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-po/mains/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-po/mains/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-po/mains/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-po/mains/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-po/mains/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-po/mains/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-po/mains/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-po/mains/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-po/mains/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-po/mains/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-po/mains/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-po/mains/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-po/mains/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "data-analysis",
+              "name": "Data Analysis & Interpretation",
+              "questions": 30,
+              "marks": 60,
+              "minutes": 45,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-po/mains/data-analysis/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-po/mains/data-analysis/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-po/mains/data-analysis/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-po/mains/data-analysis/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-po/mains/data-analysis/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-po/mains/data-analysis/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-po/mains/data-analysis/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-po/mains/data-analysis/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-po/mains/data-analysis/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-po/mains/data-analysis/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-po/mains/data-analysis/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-po/mains/data-analysis/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-po/mains/data-analysis/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-po/mains/data-analysis/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-po/mains/data-analysis/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 35,
+              "marks": 40,
+              "minutes": 40,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "sbi-po/mains/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "sbi-po/mains/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "sbi-po/mains/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "sbi-po/mains/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "sbi-po/mains/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "sbi-po/mains/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "sbi-po/mains/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "sbi-po/mains/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "sbi-po/mains/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "sbi-po/mains/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "sbi-po/mains/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "sbi-po/mains/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "sbi-po/mains/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "sbi-po/mains/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "sbi-po/mains/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": [
+            {
+              "id": "general-economy-banking-awareness",
+              "name": "General/Economy/Banking Awareness",
+              "questions": 50,
+              "marks": 60,
+              "minutes": 45,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rbi-assistant",
+      "name": "RBI Assistant",
+      "description": "Assistant, Reserve Bank of India. Prelims 100 questions in 60 minutes; Mains 200 questions in 135 minutes.",
+      "stages": [
+        {
+          "id": "prelims",
+          "name": "Prelims",
+          "sections": [
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 30,
+              "marks": 30,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rbi-assistant/prelims/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rbi-assistant/prelims/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rbi-assistant/prelims/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rbi-assistant/prelims/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rbi-assistant/prelims/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rbi-assistant/prelims/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rbi-assistant/prelims/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rbi-assistant/prelims/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rbi-assistant/prelims/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rbi-assistant/prelims/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rbi-assistant/prelims/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rbi-assistant/prelims/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rbi-assistant/prelims/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rbi-assistant/prelims/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rbi-assistant/prelims/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "numerical-ability",
+              "name": "Numerical Ability",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rbi-assistant/prelims/numerical-ability/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rbi-assistant/prelims/numerical-ability/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rbi-assistant/prelims/numerical-ability/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rbi-assistant/prelims/numerical-ability/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rbi-assistant/prelims/numerical-ability/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rbi-assistant/prelims/numerical-ability/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rbi-assistant/prelims/numerical-ability/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rbi-assistant/prelims/numerical-ability/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rbi-assistant/prelims/numerical-ability/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rbi-assistant/prelims/numerical-ability/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rbi-assistant/prelims/numerical-ability/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rbi-assistant/prelims/numerical-ability/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rbi-assistant/prelims/numerical-ability/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rbi-assistant/prelims/numerical-ability/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rbi-assistant/prelims/numerical-ability/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reasoning",
+              "name": "Reasoning Ability",
+              "questions": 35,
+              "marks": 35,
+              "minutes": 20,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rbi-assistant/prelims/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rbi-assistant/prelims/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rbi-assistant/prelims/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rbi-assistant/prelims/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rbi-assistant/prelims/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rbi-assistant/prelims/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rbi-assistant/prelims/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rbi-assistant/prelims/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rbi-assistant/prelims/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rbi-assistant/prelims/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rbi-assistant/prelims/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rbi-assistant/prelims/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rbi-assistant/prelims/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rbi-assistant/prelims/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rbi-assistant/prelims/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": []
+        },
+        {
+          "id": "mains",
+          "name": "Mains",
+          "sections": [
+            {
+              "id": "reasoning",
+              "name": "Reasoning",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 30,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rbi-assistant/mains/reasoning/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rbi-assistant/mains/reasoning/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rbi-assistant/mains/reasoning/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rbi-assistant/mains/reasoning/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rbi-assistant/mains/reasoning/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rbi-assistant/mains/reasoning/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rbi-assistant/mains/reasoning/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rbi-assistant/mains/reasoning/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rbi-assistant/mains/reasoning/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rbi-assistant/mains/reasoning/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rbi-assistant/mains/reasoning/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rbi-assistant/mains/reasoning/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rbi-assistant/mains/reasoning/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rbi-assistant/mains/reasoning/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rbi-assistant/mains/reasoning/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "english",
+              "name": "English Language",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 30,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rbi-assistant/mains/english/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rbi-assistant/mains/english/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rbi-assistant/mains/english/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rbi-assistant/mains/english/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rbi-assistant/mains/english/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rbi-assistant/mains/english/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rbi-assistant/mains/english/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rbi-assistant/mains/english/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rbi-assistant/mains/english/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rbi-assistant/mains/english/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rbi-assistant/mains/english/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rbi-assistant/mains/english/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rbi-assistant/mains/english/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rbi-assistant/mains/english/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rbi-assistant/mains/english/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "numerical-ability",
+              "name": "Numerical Ability",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 30,
+              "note": null,
+              "levels": [
+                {
+                  "id": "easy",
+                  "name": "Easy",
+                  "quizzes": [
+                    {
+                      "id": "easy-1",
+                      "title": "Easy Quiz 1",
+                      "file": "rbi-assistant/mains/numerical-ability/easy-1.json"
+                    },
+                    {
+                      "id": "easy-2",
+                      "title": "Easy Quiz 2",
+                      "file": "rbi-assistant/mains/numerical-ability/easy-2.json"
+                    },
+                    {
+                      "id": "easy-3",
+                      "title": "Easy Quiz 3",
+                      "file": "rbi-assistant/mains/numerical-ability/easy-3.json"
+                    },
+                    {
+                      "id": "easy-4",
+                      "title": "Easy Quiz 4",
+                      "file": "rbi-assistant/mains/numerical-ability/easy-4.json"
+                    },
+                    {
+                      "id": "easy-5",
+                      "title": "Easy Quiz 5",
+                      "file": "rbi-assistant/mains/numerical-ability/easy-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "medium",
+                  "name": "Medium",
+                  "quizzes": [
+                    {
+                      "id": "medium-1",
+                      "title": "Medium Quiz 1",
+                      "file": "rbi-assistant/mains/numerical-ability/medium-1.json"
+                    },
+                    {
+                      "id": "medium-2",
+                      "title": "Medium Quiz 2",
+                      "file": "rbi-assistant/mains/numerical-ability/medium-2.json"
+                    },
+                    {
+                      "id": "medium-3",
+                      "title": "Medium Quiz 3",
+                      "file": "rbi-assistant/mains/numerical-ability/medium-3.json"
+                    },
+                    {
+                      "id": "medium-4",
+                      "title": "Medium Quiz 4",
+                      "file": "rbi-assistant/mains/numerical-ability/medium-4.json"
+                    },
+                    {
+                      "id": "medium-5",
+                      "title": "Medium Quiz 5",
+                      "file": "rbi-assistant/mains/numerical-ability/medium-5.json"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard",
+                  "name": "Hard",
+                  "quizzes": [
+                    {
+                      "id": "hard-1",
+                      "title": "Hard Quiz 1",
+                      "file": "rbi-assistant/mains/numerical-ability/hard-1.json"
+                    },
+                    {
+                      "id": "hard-2",
+                      "title": "Hard Quiz 2",
+                      "file": "rbi-assistant/mains/numerical-ability/hard-2.json"
+                    },
+                    {
+                      "id": "hard-3",
+                      "title": "Hard Quiz 3",
+                      "file": "rbi-assistant/mains/numerical-ability/hard-3.json"
+                    },
+                    {
+                      "id": "hard-4",
+                      "title": "Hard Quiz 4",
+                      "file": "rbi-assistant/mains/numerical-ability/hard-4.json"
+                    },
+                    {
+                      "id": "hard-5",
+                      "title": "Hard Quiz 5",
+                      "file": "rbi-assistant/mains/numerical-ability/hard-5.json"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "unavailable": [
+            {
+              "id": "general-awareness",
+              "name": "General Awareness",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 25,
+              "note": null
+            },
+            {
+              "id": "computer-knowledge",
+              "name": "Computer Knowledge",
+              "questions": 40,
+              "marks": 40,
+              "minutes": 20,
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "java",
       "name": "Java Practice",
       "description": "Untimed Java practice quizzes.",

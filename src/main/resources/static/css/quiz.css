@@ -85,7 +85,7 @@
 .result { padding: 12px 16px; border-radius: 12px; font-weight: 600; text-align: left; }
 .correct-answer { background: var(--good-soft); color: var(--good-text); }
 .incorrect-answer { background: var(--bad-soft); color: var(--bad-text); }
-.explanation { padding: 12px 16px; border-radius: 12px; background: var(--info-soft); color: var(--info-text); text-align: left; }
+.explanation { padding: 12px 16px; border-radius: 12px; background: var(--info-soft); color: var(--info-text); text-align: left; white-space: pre-line; line-height: 1.55; }
 
 /* Action buttons */
 #next-button, #prev-button, #mark-button, #finish-button, #new-quiz-button, #back-link-button {
@@ -172,7 +172,7 @@
 .review-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 .review-q { font-weight: 600; }
 .review-key { display: inline-block; min-width: 140px; color: var(--text-muted); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.4px; }
-.review-expl { color: var(--info-text); background: var(--info-soft); padding: 8px 12px; border-radius: 8px; margin-top: 6px; }
+.review-expl { color: var(--info-text); background: var(--info-soft); padding: 8px 12px; border-radius: 8px; margin-top: 6px; white-space: pre-line; line-height: 1.5; }
 .badge { font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; color: #fff; background: var(--neutral); }
 .badge.right { background: var(--easy); }
 .badge.wrong { background: var(--hard); }
@@ -298,3 +298,18 @@
     .question-tools .tool-button { padding: 4px 7px; }
     #new-quiz-button, #back-link-button { flex: 1 1 100%; width: 100%; }
 }
+
+/* Grouped questions: the DI table, puzzle or passage shared by a set (see groupSetupHtml in questions.js) */
+.group-setup { background: var(--surface-soft); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; text-align: left; max-height: 45vh; overflow-y: auto; }
+.group-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; }
+.question .group-setup p.group-text, .group-text { font-size: 0.95rem; font-weight: 400; line-height: 1.6; white-space: pre-line; margin: 0; }
+.group-table { border-collapse: collapse; font-size: 0.9rem; min-width: 100%; }
+.group-table caption { caption-side: top; text-align: left; font-weight: 600; padding-bottom: 6px; }
+.group-table th, .group-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+.group-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.badge.needs-review { background: var(--warn-soft); color: var(--warn-text); text-transform: none; letter-spacing: 0; }
+
+/* English/Hindi switch (#18). Devanagari falls back to the system's Hindi font. */
+.lang-toggle { font: inherit; font-size: 0.85rem; font-weight: 700; padding: 5px 12px; border-radius: 10px; border: 2px solid var(--primary-line); background: var(--field-bg); color: var(--primary-text); cursor: pointer; }
+.lang-toggle[hidden] { display: none; }
+[lang="hi"] { font-family: 'Noto Sans Devanagari', 'Nirmala UI', 'Mangal', 'Kohinoor Devanagari', system-ui, sans-serif; }

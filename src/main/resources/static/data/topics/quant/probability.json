@@ -12,7 +12,37 @@
    "11/36"
   ],
   "answer": 1,
-  "explanation": "3 favourable outcomes out of 36"
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 4: (1,3), (2,2), (3,1) = 3 outcomes.\nProbability = 3/36 = 1/12."
+ },
+ {
+  "id": "q03f9af2ce0e",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 3 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "20/33",
+   "3/11",
+   "1/3",
+   "7/22"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 4×3 = 12; both blue: 3×2 = 6; both green: 4×3 = 12.\nProbability = 30/110 = 3/11."
+ },
+ {
+  "id": "q05254bb8cb7",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 2 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/9",
+   "1/3",
+   "2/5",
+   "13/27"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 2×1 = 2; both blue: 2×1 = 2; both green: 5×4 = 20.\nProbability = 24/72 = 1/3."
  },
  {
   "id": "q074e4b26cdc",
@@ -21,13 +51,43 @@
   "level": "hard",
   "question": "A bag has 2 red, 2 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "1/5",
    "1/15",
+   "1/5",
    "2/5",
    "9/10"
   ],
-  "answer": 0,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 5×4"
+  "answer": 1,
+  "explanation": "Total balls = 5. Ordered ways to draw two = 5 × 4 = 20.\nBoth red: 2×1 = 2; both blue: 2×1 = 2; both green: 1×0 = 0.\nProbability = 4/20 = 1/5."
+ },
+ {
+  "id": "q07b2358484d",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 3 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/10",
+   "9/10",
+   "8/11",
+   "14/45"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 2×1 = 2; both blue: 3×2 = 6; both green: 5×4 = 20.\nProbability = 28/90 = 14/45."
+ },
+ {
+  "id": "q08facbec271",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 5 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "14/39",
+   "23/78",
+   "6/13",
+   "38/39"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 3×2 = 6; both blue: 5×4 = 20; both green: 5×4 = 20.\nProbability = 46/156 = 23/78."
  },
  {
   "id": "q12042272994",
@@ -36,13 +96,103 @@
   "level": "hard",
   "question": "A bag has 2 red, 2 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "1/3",
    "17/28",
    "2/7",
+   "1/3",
    "1/9"
   ],
+  "answer": 1,
+  "explanation": "Total balls = 8. Ordered ways to draw two = 8 × 7 = 56.\nBoth red: 2×1 = 2; both blue: 2×1 = 2; both green: 4×3 = 12.\nProbability = 16/56 = 2/7."
+ },
+ {
+  "id": "q129652b0e9e",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 4 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/18",
+   "7/18",
+   "3/5",
+   "17/18"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 2×1 = 2; both blue: 4×3 = 12; both green: 3×2 = 6.\nProbability = 20/72 = 5/18."
+ },
+ {
+  "id": "q129bb58a699",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 3 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/21",
+   "1/8",
+   "2/7",
+   "9/14"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 7. Ordered ways to draw two = 7 × 6 = 42.\nBoth red: 2×1 = 2; both blue: 3×2 = 6; both green: 2×1 = 2.\nProbability = 10/42 = 5/21."
+ },
+ {
+  "id": "q191cf450eae",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 2 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "6/7",
+   "1/3",
+   "9/14",
+   "17/21"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 7. Ordered ways to draw two = 7 × 6 = 42.\nBoth red: 4×3 = 12; both blue: 2×1 = 2; both green: 1×0 = 0.\nProbability = 14/42 = 1/3."
+ },
+ {
+  "id": "q19e3cac3b77",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 6 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "79/91",
+   "23/42",
+   "2/7",
+   "27/91"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 4×3 = 12; both blue: 6×5 = 30; both green: 4×3 = 12.\nProbability = 54/182 = 27/91."
+ },
+ {
+  "id": "q1da5e4f5db9",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 2 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/3",
+   "2/33",
+   "23/24",
+   "35/36"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 6×5 = 30; both blue: 2×1 = 2; both green: 4×3 = 12.\nProbability = 44/132 = 1/3."
+ },
+ {
+  "id": "q24971039cb9",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 5 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "12/13",
+   "23/78",
+   "8/13"
+  ],
   "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 8×7"
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 5×4 = 20; both blue: 5×4 = 20; both green: 3×2 = 6.\nProbability = 46/156 = 23/78."
  },
  {
   "id": "q27fe7b49a57",
@@ -51,13 +201,13 @@
   "level": "hard",
   "question": "A bag has 5 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "2/13",
+   "7/22",
    "8/13",
    "19/66",
-   "7/22"
+   "2/13"
   ],
-  "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+  "answer": 0,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 5×4 = 20; both blue: 5×4 = 20; both green: 2×1 = 2.\nProbability = 42/132 = 7/22."
  },
  {
   "id": "q2b54ef7efcd",
@@ -72,7 +222,67 @@
    "7/24"
   ],
   "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 16×15"
+  "explanation": "Total balls = 16. Ordered ways to draw two = 16 × 15 = 240.\nBoth red: 6×5 = 30; both blue: 5×4 = 20; both green: 5×4 = 20.\nProbability = 70/240 = 7/24."
+ },
+ {
+  "id": "q2c0d8d7dab1",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 4 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "11/12",
+   "19/66",
+   "49/66",
+   "5/6"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 5×4 = 20; both blue: 4×3 = 12; both green: 3×2 = 6.\nProbability = 38/132 = 19/66."
+ },
+ {
+  "id": "q2c4c8a647e7",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 5 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/14",
+   "45/91",
+   "1/3",
+   "2/7"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 4×3 = 12; both blue: 5×4 = 20; both green: 5×4 = 20.\nProbability = 52/182 = 2/7."
+ },
+ {
+  "id": "q2eba1d1911b",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 2 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "11/28",
+   "5/24",
+   "11/16",
+   "17/24"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 8. Ordered ways to draw two = 8 × 7 = 56.\nBoth red: 5×4 = 20; both blue: 2×1 = 2; both green: 1×0 = 0.\nProbability = 22/56 = 11/28."
+ },
+ {
+  "id": "q3235ba53e84",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 3 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/13",
+   "1/66",
+   "19/66",
+   "12/13"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 5×4 = 20; both blue: 3×2 = 6; both green: 4×3 = 12.\nProbability = 38/132 = 19/66."
  },
  {
   "id": "q35d7c5a6f52",
@@ -87,7 +297,22 @@
    "19/66"
   ],
   "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 4×3 = 12; both blue: 5×4 = 20; both green: 3×2 = 6.\nProbability = 38/132 = 19/66."
+ },
+ {
+  "id": "q39e47a925f4",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 2 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/11",
+   "17/45",
+   "1/5",
+   "3/10"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 6×5 = 30; both blue: 2×1 = 2; both green: 2×1 = 2.\nProbability = 34/90 = 17/45."
  },
  {
   "id": "q3f8d1ad5707",
@@ -96,13 +321,88 @@
   "level": "hard",
   "question": "Two fair dice are thrown. What is the probability that the sum is 11?",
   "options": [
-   "1/6",
+   "1/18",
    "1/36",
-   "2/9",
-   "1/18"
+   "1/6",
+   "2/9"
+  ],
+  "answer": 0,
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 11: (5,6), (6,5) = 2 outcomes.\nProbability = 2/36 = 1/18."
+ },
+ {
+  "id": "q44950437dbb",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 5 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/15",
+   "7/15",
+   "3/5",
+   "14/45"
   ],
   "answer": 3,
-  "explanation": "2 favourable outcomes out of 36"
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 2×1 = 2; both blue: 5×4 = 20; both green: 3×2 = 6.\nProbability = 28/90 = 14/45."
+ },
+ {
+  "id": "q4521207b686",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/9",
+   "4/9",
+   "5/18",
+   "5/9"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 4×3 = 12; both blue: 2×1 = 2; both green: 3×2 = 6.\nProbability = 20/72 = 5/18."
+ },
+ {
+  "id": "q466365e3c97",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 3 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "9/16",
+   "1/4",
+   "7/24",
+   "3/16"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 8. Ordered ways to draw two = 8 × 7 = 56.\nBoth red: 3×2 = 6; both blue: 3×2 = 6; both green: 2×1 = 2.\nProbability = 14/56 = 1/4."
+ },
+ {
+  "id": "q4fdb20f4668",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 3 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/9",
+   "1/3",
+   "5/18",
+   "23/27"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 4×3 = 12; both blue: 3×2 = 6; both green: 2×1 = 2.\nProbability = 20/72 = 5/18."
+ },
+ {
+  "id": "q522d4760a3d",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 5 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/13",
+   "11/12",
+   "1/12",
+   "25/66"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 6×5 = 30; both blue: 5×4 = 20; both green: 1×0 = 0.\nProbability = 50/132 = 25/66."
  },
  {
   "id": "q534fee6a2b2",
@@ -117,7 +417,52 @@
    "7/8"
   ],
   "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 8×7"
+  "explanation": "Total balls = 8. Ordered ways to draw two = 8 × 7 = 56.\nBoth red: 2×1 = 2; both blue: 4×3 = 12; both green: 2×1 = 2.\nProbability = 16/56 = 2/7."
+ },
+ {
+  "id": "q535c82c9127",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 4 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/11",
+   "5/12",
+   "17/55",
+   "1/12"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 5×4 = 20; both blue: 4×3 = 12; both green: 2×1 = 2.\nProbability = 34/110 = 17/55."
+ },
+ {
+  "id": "q53771e10d34",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 2 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/3",
+   "11/36",
+   "4/9",
+   "2/9"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 5×4 = 20; both blue: 2×1 = 2; both green: 2×1 = 2.\nProbability = 24/72 = 1/3."
+ },
+ {
+  "id": "q540c1809276",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 4 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/3",
+   "7/10",
+   "5/18",
+   "20/27"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 4×3 = 12; both blue: 4×3 = 12; both green: 1×0 = 0.\nProbability = 24/72 = 1/3."
  },
  {
   "id": "q558613eeb71",
@@ -128,11 +473,86 @@
   "options": [
    "29/30",
    "1/15",
-   "31/105",
-   "11/16"
+   "11/16",
+   "31/105"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 15. Ordered ways to draw two = 15 × 14 = 210.\nBoth red: 6×5 = 30; both blue: 4×3 = 12; both green: 5×4 = 20.\nProbability = 62/210 = 31/105."
+ },
+ {
+  "id": "q58bfeafb68b",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 3 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "11/36",
+   "5/18",
+   "5/9",
+   "3/5"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 2×1 = 2; both blue: 3×2 = 6; both green: 4×3 = 12.\nProbability = 20/72 = 5/18."
+ },
+ {
+  "id": "q59745b66a2f",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 5 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "9/91",
+   "3/14",
+   "2/15"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 5×4 = 20; both blue: 5×4 = 20; both green: 4×3 = 12.\nProbability = 52/182 = 2/7."
+ },
+ {
+  "id": "q5c00e867ee5",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 4 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "35/78",
+   "11/39",
+   "31/39",
+   "1/39"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 4×3 = 12; both blue: 4×3 = 12; both green: 5×4 = 20.\nProbability = 44/156 = 11/39."
+ },
+ {
+  "id": "q5e99ac7e0b0",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 3 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "11/39",
+   "13/14",
+   "1/13",
+   "23/78"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 5×4 = 20; both blue: 3×2 = 6; both green: 5×4 = 20.\nProbability = 46/156 = 23/78."
+ },
+ {
+  "id": "q5f3b33c74c2",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 2 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/5",
+   "7/10",
+   "14/45",
+   "13/30"
   ],
   "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 15×14"
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 3×2 = 6; both blue: 2×1 = 2; both green: 5×4 = 20.\nProbability = 28/90 = 14/45."
  },
  {
   "id": "q5f9749b44ff",
@@ -142,12 +562,12 @@
   "question": "A bag has 2 red, 3 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
    "2/7",
-   "3/4",
+   "4/15",
    "1/2",
-   "4/15"
+   "3/4"
   ],
-  "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 6×5"
+  "answer": 1,
+  "explanation": "Total balls = 6. Ordered ways to draw two = 6 × 5 = 30.\nBoth red: 2×1 = 2; both blue: 3×2 = 6; both green: 1×0 = 0.\nProbability = 8/30 = 4/15."
  },
  {
   "id": "q604f1136080",
@@ -156,13 +576,28 @@
   "level": "hard",
   "question": "A bag has 4 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "2/15",
    "31/105",
+   "2/15",
    "17/30",
    "7/15"
   ],
-  "answer": 1,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 15×14"
+  "answer": 0,
+  "explanation": "Total balls = 15. Ordered ways to draw two = 15 × 14 = 210.\nBoth red: 4×3 = 12; both blue: 6×5 = 30; both green: 5×4 = 20.\nProbability = 62/210 = 31/105."
+ },
+ {
+  "id": "q6534d2d2515",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 6 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "3/5",
+   "16/21",
+   "31/91"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 6×5 = 30; both blue: 6×5 = 30; both green: 2×1 = 2.\nProbability = 62/182 = 31/91."
  },
  {
   "id": "q7209c700a39",
@@ -177,7 +612,67 @@
    "1/3"
   ],
   "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 2×1 = 2; both blue: 6×5 = 30; both green: 5×4 = 20.\nProbability = 52/156 = 1/3."
+ },
+ {
+  "id": "q7243f39f19d",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 5 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/9",
+   "19/66",
+   "10/11",
+   "3/8"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 3×2 = 6; both blue: 5×4 = 20; both green: 4×3 = 12.\nProbability = 38/132 = 19/66."
+ },
+ {
+  "id": "q7745d0c2cb6",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 4 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "29/30",
+   "3/11",
+   "13/45",
+   "4/11"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 4×3 = 12; both blue: 4×3 = 12; both green: 2×1 = 2.\nProbability = 26/90 = 13/45."
+ },
+ {
+  "id": "q787bd5dfd57",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 4 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/11",
+   "1/5",
+   "3/5",
+   "4/15"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 3×2 = 6; both blue: 4×3 = 12; both green: 3×2 = 6.\nProbability = 24/90 = 4/15."
+ },
+ {
+  "id": "q79ff1dc4bec",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/11",
+   "4/5",
+   "14/45",
+   "3/5"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 3×2 = 6; both blue: 5×4 = 20; both green: 2×1 = 2.\nProbability = 28/90 = 14/45."
  },
  {
   "id": "q7acf032dad0",
@@ -186,13 +681,73 @@
   "level": "hard",
   "question": "Two fair dice are thrown. What is the probability that the sum is 3?",
   "options": [
-   "1/18",
-   "2/9",
    "5/36",
+   "2/9",
+   "1/18",
    "7/36"
   ],
+  "answer": 2,
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 3: (1,2), (2,1) = 2 outcomes.\nProbability = 2/36 = 1/18."
+ },
+ {
+  "id": "q7c93f463f56",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 6 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "19/55",
+   "4/33",
+   "4/11",
+   "24/55"
+  ],
   "answer": 0,
-  "explanation": "2 favourable outcomes out of 36"
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 2×1 = 2; both blue: 6×5 = 30; both green: 3×2 = 6.\nProbability = 38/110 = 19/55."
+ },
+ {
+  "id": "q809bde9ba89",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 3 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "16/55",
+   "15/22",
+   "21/22",
+   "3/22"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 5×4 = 20; both blue: 3×2 = 6; both green: 3×2 = 6.\nProbability = 32/110 = 16/55."
+ },
+ {
+  "id": "q80a1110464e",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 3 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/4",
+   "19/66",
+   "16/33",
+   "7/12"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 4×3 = 12; both blue: 3×2 = 6; both green: 5×4 = 20.\nProbability = 38/132 = 19/66."
+ },
+ {
+  "id": "q824acfeeb4f",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 5 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/8",
+   "4/9",
+   "11/28",
+   "13/24"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 8. Ordered ways to draw two = 8 × 7 = 56.\nBoth red: 2×1 = 2; both blue: 5×4 = 20; both green: 1×0 = 0.\nProbability = 22/56 = 11/28."
  },
  {
   "id": "q8542cc95ff6",
@@ -202,12 +757,12 @@
   "question": "A bag has 4 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
    "21/55",
-   "1/4",
    "17/55",
+   "1/4",
    "6/11"
   ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+  "answer": 1,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 4×3 = 12; both blue: 5×4 = 20; both green: 2×1 = 2.\nProbability = 34/110 = 17/55."
  },
  {
   "id": "q897bd16ac85",
@@ -216,13 +771,13 @@
   "level": "hard",
   "question": "Two fair dice are thrown. What is the probability that the sum is 6?",
   "options": [
-   "2/9",
-   "1/4",
    "5/36",
+   "1/4",
+   "2/9",
    "1/18"
   ],
-  "answer": 2,
-  "explanation": "5 favourable outcomes out of 36"
+  "answer": 0,
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 6: (1,5), (2,4), (3,3), (4,2), (5,1) = 5 outcomes.\nProbability = 5/36 = 5/36."
  },
  {
   "id": "q89da721826e",
@@ -231,13 +786,13 @@
   "level": "hard",
   "question": "A bag has 2 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "8/21",
-   "1/2",
    "5/21",
+   "1/2",
+   "8/21",
    "2/7"
   ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 7×6"
+  "answer": 0,
+  "explanation": "Total balls = 7. Ordered ways to draw two = 7 × 6 = 42.\nBoth red: 2×1 = 2; both blue: 2×1 = 2; both green: 3×2 = 6.\nProbability = 10/42 = 5/21."
  },
  {
   "id": "q8c3d5b641aa",
@@ -247,12 +802,27 @@
   "question": "A bag has 2 red, 6 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
    "23/36",
+   "1/24",
    "1/3",
-   "4/9",
-   "1/24"
+   "4/9"
   ],
-  "answer": 1,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
+  "answer": 2,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 2×1 = 2; both blue: 6×5 = 30; both green: 4×3 = 12.\nProbability = 44/132 = 1/3."
+ },
+ {
+  "id": "q93206b1e794",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 3 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "9/11",
+   "13/33",
+   "19/55",
+   "31/33"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 6×5 = 30; both blue: 3×2 = 6; both green: 2×1 = 2.\nProbability = 38/110 = 19/55."
  },
  {
   "id": "q93e48b2d10f",
@@ -267,7 +837,97 @@
    "1/4"
   ],
   "answer": 1,
-  "explanation": "5 favourable outcomes out of 36"
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 8: (2,6), (3,5), (4,4), (5,3), (6,2) = 5 outcomes.\nProbability = 5/36 = 5/36."
+ },
+ {
+  "id": "q95eecb6ba9b",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 4 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "6/11",
+   "4/11",
+   "2/11",
+   "3/11"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 3×2 = 6; both blue: 4×3 = 12; both green: 4×3 = 12.\nProbability = 30/110 = 3/11."
+ },
+ {
+  "id": "q9fc9c1bc4f1",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 4 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/18",
+   "1/10",
+   "25/27",
+   "5/9"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 3×2 = 6; both blue: 4×3 = 12; both green: 2×1 = 2.\nProbability = 20/72 = 5/18."
+ },
+ {
+  "id": "qa0a8c4f8b33",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 5 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/13",
+   "8/13",
+   "11/39",
+   "11/13"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 4×3 = 12; both blue: 5×4 = 20; both green: 4×3 = 12.\nProbability = 44/156 = 11/39."
+ },
+ {
+  "id": "qa2cb1cec5c8",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 6 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "11/35",
+   "1/5",
+   "1/3",
+   "13/15"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 15. Ordered ways to draw two = 15 × 14 = 210.\nBoth red: 6×5 = 30; both blue: 6×5 = 30; both green: 3×2 = 6.\nProbability = 66/210 = 11/35."
+ },
+ {
+  "id": "qa59a1da0d38",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 4 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "12/13",
+   "1/4",
+   "5/18",
+   "19/66"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 3×2 = 6; both blue: 4×3 = 12; both green: 5×4 = 20.\nProbability = 38/132 = 19/66."
+ },
+ {
+  "id": "qaa8ef4e862a",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 4 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/7",
+   "5/7",
+   "2/7",
+   "82/91"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 5×4 = 20; both blue: 4×3 = 12; both green: 5×4 = 20.\nProbability = 52/182 = 2/7."
  },
  {
   "id": "qabbe713f013",
@@ -276,13 +936,88 @@
   "level": "hard",
   "question": "A bag has 6 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "1/22",
-   "1/6",
    "19/55",
+   "1/6",
+   "1/22",
    "2/11"
   ],
+  "answer": 0,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 6×5 = 30; both blue: 2×1 = 2; both green: 3×2 = 6.\nProbability = 38/110 = 19/55."
+ },
+ {
+  "id": "qb13d03a7a92",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 4 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/3",
+   "23/33",
+   "3/11",
+   "15/22"
+  ],
   "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 4×3 = 12; both blue: 4×3 = 12; both green: 3×2 = 6.\nProbability = 30/110 = 3/11."
+ },
+ {
+  "id": "qb1e5038c233",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 2 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/4",
+   "5/7",
+   "1/5",
+   "1/12"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 6. Ordered ways to draw two = 6 × 5 = 30.\nBoth red: 2×1 = 2; both blue: 2×1 = 2; both green: 2×1 = 2.\nProbability = 6/30 = 1/5."
+ },
+ {
+  "id": "qb2c41877743",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "29/32",
+   "11/120",
+   "7/24",
+   "1/2"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 16. Ordered ways to draw two = 16 × 15 = 240.\nBoth red: 5×4 = 20; both blue: 6×5 = 30; both green: 5×4 = 20.\nProbability = 70/240 = 7/24."
+ },
+ {
+  "id": "qb35ef5a90da",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 6 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "13/35",
+   "1/16",
+   "13/15",
+   "31/105"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 15. Ordered ways to draw two = 15 × 14 = 210.\nBoth red: 5×4 = 20; both blue: 6×5 = 30; both green: 4×3 = 12.\nProbability = 62/210 = 31/105."
+ },
+ {
+  "id": "qba5473505b7",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/17",
+   "2/17",
+   "12/17",
+   "2/3"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 17. Ordered ways to draw two = 17 × 16 = 272.\nBoth red: 6×5 = 30; both blue: 6×5 = 30; both green: 5×4 = 20.\nProbability = 80/272 = 5/17."
  },
  {
   "id": "qba60cf8f79c",
@@ -291,13 +1026,73 @@
   "level": "hard",
   "question": "A bag has 2 red, 5 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "17/55",
    "7/55",
+   "17/55",
    "8/11",
    "2/3"
   ],
+  "answer": 1,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 2×1 = 2; both blue: 5×4 = 20; both green: 4×3 = 12.\nProbability = 34/110 = 17/55."
+ },
+ {
+  "id": "qbfe3d522366",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 2 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/33",
+   "5/6",
+   "17/55",
+   "5/11"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 5×4 = 20; both blue: 2×1 = 2; both green: 4×3 = 12.\nProbability = 34/110 = 17/55."
+ },
+ {
+  "id": "qc477da553d8",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 3 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/5",
+   "4/15",
+   "1/6",
+   "14/15"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 4×3 = 12; both blue: 3×2 = 6; both green: 3×2 = 6.\nProbability = 24/90 = 4/15."
+ },
+ {
+  "id": "qc5450e897d6",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 5 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/11",
+   "1/6",
+   "2/11",
+   "23/55"
+  ],
   "answer": 0,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 5×4 = 20; both blue: 5×4 = 20; both green: 1×0 = 0.\nProbability = 40/110 = 4/11."
+ },
+ {
+  "id": "qc5556ea9bda",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 3 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "29/42",
+   "13/42",
+   "4/13",
+   "4/15"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 6×5 = 30; both blue: 3×2 = 6; both green: 5×4 = 20.\nProbability = 56/182 = 4/13."
  },
  {
   "id": "qc88f033b9f2",
@@ -306,13 +1101,28 @@
   "level": "hard",
   "question": "Two fair dice are thrown. What is the probability that the sum is 5?",
   "options": [
-   "1/9",
+   "11/36",
    "1/4",
    "5/18",
-   "11/36"
+   "1/9"
   ],
-  "answer": 0,
-  "explanation": "4 favourable outcomes out of 36"
+  "answer": 3,
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 5: (1,4), (2,3), (3,2), (4,1) = 4 outcomes.\nProbability = 4/36 = 1/9."
+ },
+ {
+  "id": "qccb36fe56f9",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 2 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "2/7",
+   "3/7",
+   "5/21",
+   "1/2"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 7. Ordered ways to draw two = 7 × 6 = 42.\nBoth red: 3×2 = 6; both blue: 2×1 = 2; both green: 2×1 = 2.\nProbability = 10/42 = 5/21."
  },
  {
   "id": "qcd13f7fefb7",
@@ -327,7 +1137,52 @@
    "4/13"
   ],
   "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 14×13"
+  "explanation": "Total balls = 14. Ordered ways to draw two = 14 × 13 = 182.\nBoth red: 3×2 = 6; both blue: 6×5 = 30; both green: 5×4 = 20.\nProbability = 56/182 = 4/13."
+ },
+ {
+  "id": "qd769d4d5b91",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 3 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/22",
+   "1/12",
+   "8/33",
+   "3/4"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 6×5 = 30; both blue: 3×2 = 6; both green: 3×2 = 6.\nProbability = 42/132 = 7/22."
+ },
+ {
+  "id": "qd8ac56f1d34",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 4 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "4/7",
+   "6/7",
+   "1/7",
+   "1/3"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 7. Ordered ways to draw two = 7 × 6 = 42.\nBoth red: 2×1 = 2; both blue: 4×3 = 12; both green: 1×0 = 0.\nProbability = 14/42 = 1/3."
+ },
+ {
+  "id": "qda47d897011",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 6 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "19/55",
+   "53/55",
+   "2/3",
+   "15/22"
+  ],
+  "answer": 0,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 3×2 = 6; both blue: 6×5 = 30; both green: 2×1 = 2.\nProbability = 38/110 = 19/55."
  },
  {
   "id": "qdd2082b6814",
@@ -336,13 +1191,13 @@
   "level": "hard",
   "question": "A bag has 6 red, 3 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
-   "4/13",
-   "3/13",
    "17/39",
+   "3/13",
+   "4/13",
    "25/26"
   ],
-  "answer": 0,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+  "answer": 2,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 6×5 = 30; both blue: 3×2 = 6; both green: 4×3 = 12.\nProbability = 48/156 = 4/13."
  },
  {
   "id": "qdee94da980b",
@@ -357,7 +1212,22 @@
    "4/5"
   ],
   "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 9×8"
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 3×2 = 6; both blue: 3×2 = 6; both green: 3×2 = 6.\nProbability = 18/72 = 1/4."
+ },
+ {
+  "id": "qe2f262f1b92",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 6 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/15",
+   "6/11",
+   "11/15",
+   "2/5"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 3×2 = 6; both blue: 6×5 = 30; both green: 1×0 = 0.\nProbability = 36/90 = 2/5."
  },
  {
   "id": "qe4fbc5d3412",
@@ -372,7 +1242,7 @@
    "1/6"
   ],
   "answer": 0,
-  "explanation": "4 favourable outcomes out of 36"
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 9: (3,6), (4,5), (5,4), (6,3) = 4 outcomes.\nProbability = 4/36 = 1/9."
  },
  {
   "id": "qe86854b41bc",
@@ -381,13 +1251,28 @@
   "level": "hard",
   "question": "Two fair dice are thrown. What is the probability that the sum is 7?",
   "options": [
-   "2/9",
-   "1/18",
    "1/6",
+   "1/18",
+   "2/9",
    "5/36"
   ],
-  "answer": 2,
-  "explanation": "6 favourable outcomes out of 36"
+  "answer": 0,
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes.\nProbability = 6/36 = 1/6."
+ },
+ {
+  "id": "qe91dc429935",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 4 red, 5 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/20",
+   "2/5",
+   "3/10",
+   "16/45"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 10. Ordered ways to draw two = 10 × 9 = 90.\nBoth red: 4×3 = 12; both blue: 5×4 = 20; both green: 1×0 = 0.\nProbability = 32/90 = 16/45."
  },
  {
   "id": "qed07a0bf6b1",
@@ -397,12 +1282,27 @@
   "question": "A bag has 3 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
    "5/24",
-   "4/9",
    "1/4",
+   "4/9",
    "5/8"
   ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 8×7"
+  "answer": 1,
+  "explanation": "Total balls = 8. Ordered ways to draw two = 8 × 7 = 56.\nBoth red: 3×2 = 6; both blue: 2×1 = 2; both green: 3×2 = 6.\nProbability = 14/56 = 1/4."
+ },
+ {
+  "id": "qee1aeea0815",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 2 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "6/7",
+   "4/15",
+   "2/7",
+   "1/3"
+  ],
+  "answer": 1,
+  "explanation": "Total balls = 6. Ordered ways to draw two = 6 × 5 = 30.\nBoth red: 3×2 = 6; both blue: 2×1 = 2; both green: 1×0 = 0.\nProbability = 8/30 = 4/15."
  },
  {
   "id": "qf3390dddd21",
@@ -417,7 +1317,67 @@
    "1/13"
   ],
   "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 4×3 = 12; both blue: 6×5 = 30; both green: 3×2 = 6.\nProbability = 48/156 = 4/13."
+ },
+ {
+  "id": "qf3606241739",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 2 blue and 1 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "3/5",
+   "4/5",
+   "4/9",
+   "2/9"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 6×5 = 30; both blue: 2×1 = 2; both green: 1×0 = 0.\nProbability = 32/72 = 4/9."
+ },
+ {
+  "id": "qf4043d93c41",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 6 red, 2 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/7",
+   "4/13",
+   "2/13",
+   "1/3"
+  ],
+  "answer": 3,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 6×5 = 30; both blue: 2×1 = 2; both green: 5×4 = 20.\nProbability = 52/156 = 1/3."
+ },
+ {
+  "id": "qf45981b35bb",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "7/9",
+   "7/18",
+   "1/3",
+   "1/5"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 9. Ordered ways to draw two = 9 × 8 = 72.\nBoth red: 2×1 = 2; both blue: 5×4 = 20; both green: 2×1 = 2.\nProbability = 24/72 = 1/3."
+ },
+ {
+  "id": "qf47f5cb33fa",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 2 red, 5 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "5/12",
+   "5/6",
+   "7/22",
+   "19/24"
+  ],
+  "answer": 2,
+  "explanation": "Total balls = 12. Ordered ways to draw two = 12 × 11 = 132.\nBoth red: 2×1 = 2; both blue: 5×4 = 20; both green: 5×4 = 20.\nProbability = 42/132 = 7/22."
  },
  {
   "id": "qf4ef501c98a",
@@ -427,12 +1387,12 @@
   "question": "A bag has 5 red, 6 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
   "options": [
    "10/13",
-   "1/3",
    "4/39",
+   "1/3",
    "4/13"
   ],
-  "answer": 1,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 13×12"
+  "answer": 2,
+  "explanation": "Total balls = 13. Ordered ways to draw two = 13 × 12 = 156.\nBoth red: 5×4 = 20; both blue: 6×5 = 30; both green: 2×1 = 2.\nProbability = 52/156 = 1/3."
  },
  {
   "id": "qf7a11aadcde",
@@ -443,11 +1403,11 @@
   "options": [
    "1/2",
    "14/33",
-   "16/55",
-   "10/11"
+   "10/11",
+   "16/55"
   ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
+  "answer": 3,
+  "explanation": "Total balls = 11. Ordered ways to draw two = 11 × 10 = 110.\nBoth red: 3×2 = 6; both blue: 5×4 = 20; both green: 3×2 = 6.\nProbability = 32/110 = 16/55."
  },
  {
   "id": "qfec42b79288",
@@ -456,12 +1416,12 @@
   "level": "hard",
   "question": "Two fair dice are thrown. What is the probability that the sum is 10?",
   "options": [
-   "1/12",
-   "1/36",
    "1/9",
+   "1/36",
+   "1/12",
    "11/36"
   ],
-  "answer": 0,
-  "explanation": "3 favourable outcomes out of 36"
+  "answer": 2,
+  "explanation": "Two dice give 6 × 6 = 36 equally likely outcomes.\nSum 10: (4,6), (5,5), (6,4) = 3 outcomes.\nProbability = 3/36 = 1/12."
  }
 ]

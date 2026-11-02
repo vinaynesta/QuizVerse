@@ -102,6 +102,26 @@ export const linkGoogle = (credential) => api("/api/me/google", { method: "POST"
 export const unlinkGoogle = () => api("/api/me/google", { method: "DELETE" });
 export const createChallenge = (attemptId) => api(`/api/challenges/from-attempt/${attemptId}`, { method: "POST" });
 export const getChallenge = (code) => api(`/api/challenges/${encodeURIComponent(code)}`);
+export const requestPasswordReset = (email) => api("/api/auth/password-reset", { method: "POST", body: { email } });
+export const confirmPasswordReset = (token, newPassword) =>
+  api("/api/auth/password-reset/confirm", { method: "POST", body: { token, newPassword } });
+export const setEmailPreferences = (reminders, weekly) =>
+  api("/api/me/email-preferences", { method: "PUT", body: { reminders, weekly } });
+export const unsubscribe = (token) => api(`/api/email/unsubscribe?token=${encodeURIComponent(token)}`, { method: "POST" });
+export const startServerQuiz = (quiz) => api("/api/quiz/start", { method: "POST", body: { quiz } });
+export const submitServerQuiz = (quiz, startToken, chosen) =>
+  api("/api/quiz/submit", { method: "POST", body: { quiz, startToken, chosen } });
+export const quizLeaderboard = (key) => api(`/api/leaderboards/quiz?key=${encodeURIComponent(key)}`);
+export const weeklyLeaderboard = () => api("/api/leaderboards/weekly");
+export const setLeaderboardHidden = (hidden) => api("/api/me/leaderboard", { method: "PUT", body: { hidden } });
+export const listContests = () => api("/api/contests");
+export const contest = (id) => api(`/api/contests/${id}`);
+export const registerContest = (id) => api(`/api/contests/${id}/register`, { method: "POST" });
+export const contestPaper = (id) => api(`/api/contests/${id}/paper`);
+export const submitContest = (id, chosen) => api(`/api/contests/${id}/submit`, { method: "POST", body: { chosen } });
+export const contestResults = (id) => api(`/api/contests/${id}/results`);
+export const createContest = (c) => api("/api/admin/contests", { method: "POST", body: c });
+export const contestQuizzes = () => api("/api/admin/contests/quizzes");
 export const register = (form) => api("/api/auth/register", { method: "POST", body: form });
 export const login = (loginName, password) =>
   api("/api/auth/login", { method: "POST", body: { login: loginName, password } });
@@ -125,6 +145,10 @@ export const reportQuestion = (questionId, reason, note) =>
   api("/api/reports", { method: "POST", body: { questionId, reason, note } });
 export const openReports = () => api("/api/admin/reports");
 export const resolveReport = (id) => api(`/api/admin/reports/${id}/resolve`, { method: "POST" });
+export const questionEdits = () => api("/api/admin/question-edits");
+export const saveQuestionEdit = (questionId, edit) =>
+  api(`/api/admin/question-edits/${questionId}`, { method: "PUT", body: edit });
+export const discardQuestionEdit = (questionId) => api(`/api/admin/question-edits/${questionId}`, { method: "DELETE" });
 
 /** Only same-site page links (e.g. "quiz.html?exam=..."), so ?next= can't send users elsewhere. */
 export function safeNext(next, fallback = "index.html") {

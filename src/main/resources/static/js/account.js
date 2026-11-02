@@ -38,6 +38,8 @@ async function renderAccountBar() {
          <a href="profile.html" class="account-name" title="Your profile">${escapeHtml(user.displayName)}</a>
          <a href="history.html">My scores</a>
          <a href="practice.html">Practice</a>
+         <a href="leaderboard.html">Leaderboard</a>
+         <a href="contests.html">Contests</a>
          ${user.admin ? '<a href="reports.html">Reports</a>' : ""}
          <button type="button" id="logout-button">Log out</button>
          ${THEME_BUTTON}
@@ -45,6 +47,8 @@ async function renderAccountBar() {
     : `<a class="brand" href="index.html">QuizVerse</a>
        <span class="account-links">
          <a href="practice.html">Practice</a>
+         <a href="leaderboard.html">Leaderboard</a>
+         <a href="contests.html">Contests</a>
          <a href="login.html?next=${next}">Log in</a>
          <a class="account-primary" href="register.html?next=${next}">Sign up</a>
          ${THEME_BUTTON}

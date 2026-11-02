@@ -26,7 +26,7 @@ public class QuizAttempt {
     @JoinColumn(name = "user_id")
     private User user;
 
-    /** "exam" for a quiz from index.json; "revise", "bookmarks" or "custom" for practice sets. */
+    /** "exam" or "mock" for quizzes from index.json, "contest" for a live contest, else a practice set's kind. */
     @Column(nullable = false, length = 16) private String kind = "exam";
     @Column(nullable = false, length = 64) private String examId;
     @Column(nullable = false, length = 64) private String stageId;
@@ -45,6 +45,12 @@ public class QuizAttempt {
 
     @Column(nullable = false)
     private Instant completedAt = Instant.now();
+
+    /** Scored on the server and finished within the time limit: counts on leaderboards. */
+    @Column(nullable = false) private boolean verified;
+
+    /** SHA-256 of the signed receipt, so one finished quiz can't be saved (and ranked) twice. */
+    @Column(unique = true, length = 64) private String receiptHash;
 
     /** Set when this attempt was taken through a friend's challenge link. */
     @ManyToOne(fetch = FetchType.LAZY)
@@ -69,6 +75,8 @@ public class QuizAttempt {
     public int getTimeUsedSeconds() { return timeUsedSeconds; }
     public Instant getCompletedAt() { return completedAt; }
     public Challenge getChallenge() { return challenge; }
+    public boolean isVerified() { return verified; }
+    public String getReceiptHash() { return receiptHash; }
 
     public void setUser(User user) { this.user = user; }
     public void setKind(String kind) { this.kind = kind; }
@@ -86,4 +94,6 @@ public class QuizAttempt {
     public void setTimed(boolean timed) { this.timed = timed; }
     public void setTimeUsedSeconds(int timeUsedSeconds) { this.timeUsedSeconds = timeUsedSeconds; }
     public void setChallenge(Challenge challenge) { this.challenge = challenge; }
+    public void setVerified(boolean verified) { this.verified = verified; }
+    public void setReceiptHash(String receiptHash) { this.receiptHash = receiptHash; }
 }

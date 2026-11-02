@@ -1,611 +1,529 @@
 [
  {
-  "id": "qcb338d7ea1c",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "easy",
-  "question": "A person starts walking towards West and covers 5 km, then turns right and walks 4 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "North-West",
-   "South-West",
-   "East",
-   "South-East"
-  ],
-  "answer": 0,
-  "explanation": "Net displacement: -5 east, 4 north."
- },
- {
-  "id": "q2549ecb254f",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "easy",
-  "question": "Statements: No clocks is roads. Some roads are hills.\nConclusions:\nI. Some clocks are not hills.\nII. Some roads are hills.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q121c5f0c0e6",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "easy",
-  "question": "Statements: U < E > Z < G\nConclusions:\nI. G ≥ Z\nII. U ≤ E",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 4,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "q98948911f45",
+  "id": "q23b8e51e2ea",
   "subject": "reasoning",
   "topic": "alphabet",
   "level": "easy",
-  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word CODE?",
+  "question": "How many letters are there between M and U in the English alphabet?",
   "options": [
-   "29",
-   "24",
-   "27",
-   "25"
-  ],
-  "answer": 2,
-  "explanation": "Add the position of each letter."
- },
- {
-  "id": "qdef46dc2179",
-  "subject": "reasoning",
-  "topic": "alphabet",
-  "level": "easy",
-  "question": "How many letters are there between D and I in the English alphabet?",
-  "options": [
-   "6",
-   "4",
-   "3",
-   "5"
-  ],
-  "answer": 1,
-  "explanation": "Positions 4 and 9: 9 − 4 − 1"
- },
- {
-  "id": "qa60d66bf7ed",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "easy",
-  "question": "Statements: F = M ≥ N ≥ G\nConclusions:\nI. G = F\nII. N ≥ G",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "q7a1fec61ebe",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "easy",
-  "question": "Statements: All chairs are keys. No keys is tables.\nConclusions:\nI. No keys is tables.\nII. All tables are chairs.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 0,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q4c52fe9f184",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, NOTE is written as OPUF. How will GOLD be written in that code?",
-  "options": [
-   "HPME",
-   "FNKC",
-   "IQNF",
-   "DLOG"
-  ],
-  "answer": 0,
-  "explanation": "Rule: each letter moved 1 place(s) forward."
- },
- {
-  "id": "qe906f7b70e9",
-  "subject": "reasoning",
-  "topic": "alphabet",
-  "level": "easy",
-  "question": "How many letters are there between A and H in the English alphabet?",
-  "options": [
+   "10",
+   "8",
    "7",
-   "6",
-   "1",
-   "9"
-  ],
-  "answer": 1,
-  "explanation": "Positions 1 and 8: 8 − 1 − 1"
+   "17"
+  ]
  },
  {
-  "id": "q6a0d5050206",
+  "id": "q7c038cd0696",
   "subject": "reasoning",
   "topic": "coding-decoding",
   "level": "easy",
-  "question": "In a certain code, SHARE is written as WLEVI. How will CODE be written in that code?",
+  "question": "In a certain code, SHARE is written as ERAHS. How will BOARD be written in that code?",
   "options": [
-   "YKZA",
-   "HTIJ",
-   "GSHI",
-   "EDOC"
-  ],
-  "answer": 2,
-  "explanation": "Rule: each letter moved 4 place(s) forward."
+   "CPBSE",
+   "BOARD",
+   "OARDB",
+   "DRAOB"
+  ]
  },
  {
-  "id": "q0fca6be0bf4",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, BOARD is written as DRAOB. How will FUND be written in that code?",
-  "options": [
-   "DNUF",
-   "GVOE",
-   "FUND",
-   "UNDF"
-  ],
-  "answer": 0,
-  "explanation": "The letters are written in reverse order."
- },
- {
-  "id": "q79669174459",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, BOARD is written as DRAOB. How will TABLE be written in that code?",
-  "options": [
-   "UBCMF",
-   "TABLE",
-   "ABLET",
-   "ELBAT"
-  ],
-  "answer": 3,
-  "explanation": "The letters are written in reverse order."
- },
- {
-  "id": "q9380924ccef",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "easy",
-  "question": "Statements: No coins is doors. Some doors are not tables.\nConclusions:\nI. Some tables are doors.\nII. All coins are tables.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "qf0e2f4635db",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "easy",
-  "question": "Statements: All stones are rivers. Some rivers are not lamps.\nConclusions:\nI. No rivers is lamps.\nII. Some rivers are not lamps.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q200ba110ee9",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "easy",
-  "question": "Statements: S ≥ J ≥ X > Q\nConclusions:\nI. Q > S\nII. J ≥ Q",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "q924bea50f01",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, CLERK is written as ENGTM. How will STOCK be written in that code?",
-  "options": [
-   "QRMAI",
-   "UVQEM",
-   "VWRFN",
-   "KCOTS"
-  ],
-  "answer": 1,
-  "explanation": "Rule: each letter moved 2 place(s) forward."
- },
- {
-  "id": "q53da4d627f1",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, MONEY is written as PRQHB. How will GOLD be written in that code?",
-  "options": [
-   "DLIA",
-   "KSPH",
-   "JROG",
-   "DLOG"
-  ],
-  "answer": 2,
-  "explanation": "Rule: each letter moved 3 place(s) forward."
- },
- {
-  "id": "qd849d985d55",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "easy",
-  "question": "Find the missing number: 18, 24, ?, 54, 78, 108",
-  "options": [
-   "34",
-   "35",
-   "40",
-   "36"
-  ],
-  "answer": 3,
-  "explanation": "Look at the difference or ratio between consecutive terms."
- },
- {
-  "id": "q5244a897fe5",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "easy",
-  "question": "Find the missing number: 5, 9, 17, 29, ?, 65",
-  "options": [
-   "68",
-   "45",
-   "47",
-   "52"
-  ],
-  "answer": 1,
-  "explanation": "Look at the difference or ratio between consecutive terms."
- },
- {
-  "id": "q8ca90cc824d",
+  "id": "qd5a3ef1a3f0",
   "subject": "reasoning",
   "topic": "alphabet",
   "level": "easy",
-  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word TABLE?",
+  "question": "Which letter is 5th to the right of N in the English alphabet?",
   "options": [
-   "39",
-   "40",
-   "48",
-   "34"
-  ],
-  "answer": 1,
-  "explanation": "Add the position of each letter."
+   "S",
+   "I",
+   "M",
+   "O"
+  ]
  },
  {
-  "id": "q61fe0e84372",
+  "id": "q427b752cffd",
   "subject": "reasoning",
-  "topic": "number-series",
+  "topic": "direction-sense",
   "level": "easy",
-  "question": "Find the missing number: 81, 100, ?, 144, 169, 196",
+  "question": "A person starts walking towards West and covers 9 km, then turns right and walks 8 km, then turns left and walks 2 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "91",
-   "60",
-   "139",
-   "121"
-  ],
-  "answer": 3,
-  "explanation": "Look at the difference or ratio between consecutive terms."
+   "West",
+   "North-West",
+   "South-East",
+   "South"
+  ]
  },
  {
-  "id": "qa2f115b3d9b",
+  "id": "qef8387cd44d",
   "subject": "reasoning",
   "topic": "alphabet",
   "level": "easy",
-  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word TRADE?",
+  "question": "How many letters are there between F and P in the English alphabet?",
   "options": [
-   "47",
-   "48",
-   "38",
-   "51"
-  ],
-  "answer": 1,
-  "explanation": "Add the position of each letter."
+   "8",
+   "10",
+   "9",
+   "12"
+  ]
  },
  {
-  "id": "q5b808d5e740",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "easy",
-  "question": "Find the missing number: 16, 25, ?, 43, 52, 61",
-  "options": [
-   "34",
-   "35",
-   "39",
-   "32"
-  ],
-  "answer": 0,
-  "explanation": "Look at the difference or ratio between consecutive terms."
- },
- {
-  "id": "q3427f17b117",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "easy",
-  "question": "Find the missing number: 8, 16, 32, ?, 128, 256",
-  "options": [
-   "64",
-   "62",
-   "63",
-   "51"
-  ],
-  "answer": 0,
-  "explanation": "Look at the difference or ratio between consecutive terms."
- },
- {
-  "id": "q47176a4fd52",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "easy",
-  "question": "A person starts walking towards South and covers 8 km, then turns left and walks 6 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "West",
-   "South-East",
-   "South",
-   "North-East"
-  ],
-  "answer": 1,
-  "explanation": "Net displacement: 6 east, -8 north."
- },
- {
-  "id": "qf29ed290e3a",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "easy",
-  "question": "Statements: Some trees are lamps. All lamps are tables.\nConclusions:\nI. Some lamps are not tables.\nII. No trees is lamps.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "qea809b9a943",
-  "subject": "reasoning",
-  "topic": "alphabet",
-  "level": "easy",
-  "question": "Which letter is 9th to the right of I in the English alphabet?",
-  "options": [
-   "J",
-   "U",
-   "R",
-   "Q"
-  ],
-  "answer": 2,
-  "explanation": "I + 9 places"
- },
- {
-  "id": "q8db76bad999",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "easy",
-  "question": "A person starts walking towards West and covers 6 km, then turns left and walks 11 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "South-East",
-   "North",
-   "West",
-   "South-West"
-  ],
-  "answer": 3,
-  "explanation": "Net displacement: -6 east, -11 north."
- },
- {
-  "id": "qa8c36a8098d",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "easy",
-  "question": "Statements: No chairs is pens. Some pens are doors.\nConclusions:\nI. All chairs are doors.\nII. Some pens are doors.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "qc521698a65a",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, LOAN is written as NAOL. How will NOTE be written in that code?",
-  "options": [
-   "OPUF",
-   "NOTE",
-   "ETON",
-   "OTEN"
-  ],
-  "answer": 2,
-  "explanation": "The letters are written in reverse order."
- },
- {
-  "id": "q723661d57b3",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, CODE is written as EDOC. How will GOLD be written in that code?",
-  "options": [
-   "HPME",
-   "DLOG",
-   "GOLD",
-   "OLDG"
-  ],
-  "answer": 1,
-  "explanation": "The letters are written in reverse order."
- },
- {
-  "id": "q24024142c9a",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, GOLD is written as KSPH. How will FUND be written in that code?",
-  "options": [
-   "BQJZ",
-   "KZSI",
-   "DNUF",
-   "JYRH"
-  ],
-  "answer": 3,
-  "explanation": "Rule: each letter moved 4 place(s) forward."
- },
- {
-  "id": "q6ad01c476de",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "easy",
-  "question": "A person starts walking towards North and covers 2 km, then turns right and walks 10 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "South-West",
-   "North",
-   "West",
-   "North-East"
-  ],
-  "answer": 3,
-  "explanation": "Net displacement: 10 east, 2 north."
- },
- {
-  "id": "q36d220c05e4",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "easy",
-  "question": "Find the missing number: 3, 6, 12, 24, ?, 96",
-  "options": [
-   "48",
-   "36",
-   "58",
-   "60"
-  ],
-  "answer": 0,
-  "explanation": "Look at the difference or ratio between consecutive terms."
- },
- {
-  "id": "q18cef7f8a7e",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "easy",
-  "question": "A person starts walking towards East and covers 11 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "South",
-   "South-East",
-   "North-East",
-   "West"
-  ],
-  "answer": 1,
-  "explanation": "Net displacement: 11 east, -12 north."
- },
- {
-  "id": "qf5466832d6d",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, PRICE is written as SULFH. How will LOAN be written in that code?",
-  "options": [
-   "ILXK",
-   "ORDQ",
-   "PSER",
-   "NAOL"
-  ],
-  "answer": 1,
-  "explanation": "Rule: each letter moved 3 place(s) forward."
- },
- {
-  "id": "q0740e8b34b0",
+  "id": "qaabd616f783",
   "subject": "reasoning",
   "topic": "ranking",
   "level": "easy",
-  "question": "In a row of 30 people, P is 6th from the left and Q is 11th from the right. How many people are between them?",
+  "question": "Varun ranks 12th from the top and 22th from the bottom in a class. How many students are in the class?",
   "options": [
-   "11",
-   "8",
-   "13",
+   "41",
+   "16",
+   "33",
+   "31"
+  ]
+ },
+ {
+  "id": "qfd9f76b472c",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "How many letters are there between H and N in the English alphabet?",
+  "options": [
+   "15",
+   "3",
+   "5",
    "6"
-  ],
-  "answer": 2,
-  "explanation": "30 − (6 + 11)"
+  ]
  },
  {
-  "id": "q24b7abe7440",
+  "id": "qcd4bc59d550",
   "subject": "reasoning",
-  "topic": "direction-sense",
+  "topic": "alphabet",
   "level": "easy",
-  "question": "A person starts walking towards North and covers 12 km, then turns right and walks 11 km. In which direction is the person now with respect to the starting point?",
+  "question": "Which letter is at the 15th position from the left end of the English alphabet?",
   "options": [
-   "East",
-   "North-East",
-   "South-West",
-   "West"
-  ],
-  "answer": 1,
-  "explanation": "Net displacement: 11 east, 12 north."
+   "I",
+   "O",
+   "B",
+   "E"
+  ]
  },
  {
-  "id": "qa16912eddb5",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "easy",
-  "question": "In a certain code, CASH is written as HSAC. How will FUND be written in that code?",
-  "options": [
-   "GVOE",
-   "FUND",
-   "DNUF",
-   "UNDF"
-  ],
-  "answer": 2,
-  "explanation": "The letters are written in reverse order."
- },
- {
-  "id": "q5f315a824f6",
+  "id": "qde143c5e6ee",
   "subject": "reasoning",
   "topic": "number-series",
   "level": "easy",
-  "question": "Find the missing number: 81, 100, 121, 144, 169, ?",
+  "question": "Find the missing number: 12, 18, 30, ?, 72, 102",
   "options": [
-   "196",
-   "147",
-   "294",
-   "167"
-  ],
-  "answer": 0,
-  "explanation": "Look at the difference or ratio between consecutive terms."
+   "36",
+   "46",
+   "49",
+   "48"
+  ]
+ },
+ {
+  "id": "qe68d129f219",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "easy",
+  "question": "Statements: Some rivers are tables. All tables are bags.\nConclusions:\nI. Some rivers are not tables.\nII. Some rivers are not bags.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q8cbc76ceff0",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "easy",
+  "question": "Statements: No birds is trees. All trees are shirts.\nConclusions:\nI. No trees is birds.\nII. Some birds are shirts.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "qc0eec5313b0",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is at the 4th position from the left end of the English alphabet?",
+  "options": [
+   "D",
+   "P",
+   "U",
+   "S"
+  ]
+ },
+ {
+  "id": "q41a504b910a",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards West and covers 9 km, then turns left and walks 10 km, then turns left and walks 9 km. How far and in which direction is the person from the starting point?",
+  "options": [
+   "12 km South",
+   "10 km North",
+   "10 km South-West",
+   "10 km South"
+  ]
+ },
+ {
+  "id": "q64d83de2ec7",
+  "subject": "reasoning",
+  "topic": "coding-decoding",
+  "level": "easy",
+  "question": "In a certain code, SCORE is written as VFRUH. How will CODE be written in that code?",
+  "options": [
+   "ZLAB",
+   "GSHI",
+   "FRGH",
+   "EDOC"
+  ]
+ },
+ {
+  "id": "qdc71496986b",
+  "subject": "reasoning",
+  "topic": "inequality",
+  "level": "easy",
+  "question": "Statements: A ≤ S = R ≥ E\nConclusions:\nI. S ≥ E\nII. E ≤ R",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "qdd7f05c2c1f",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards North and covers 4 km, then turns right and walks 6 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North-East",
+   "West",
+   "North"
+  ]
+ },
+ {
+  "id": "q06f2a151221",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "easy",
+  "question": "Statements: Some boxes are pens. All pens are tables.\nConclusions:\nI. Some pens are not boxes.\nII. All boxes are pens.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q46907366aaa",
+  "subject": "reasoning",
+  "topic": "coding-decoding",
+  "level": "easy",
+  "question": "In a certain code, TABLE is written as WDEOH. How will STOCK be written in that code?",
+  "options": [
+   "PQLZH",
+   "WXSGO",
+   "KCOTS",
+   "VWRFN"
+  ]
+ },
+ {
+  "id": "q7c43b637973",
+  "subject": "reasoning",
+  "topic": "coding-decoding",
+  "level": "easy",
+  "question": "In a certain code, BANK is written as KNAB. How will LOAN be written in that code?",
+  "options": [
+   "MPBO",
+   "LOAN",
+   "OANL",
+   "NAOL"
+  ]
+ },
+ {
+  "id": "q42a15b8b7a6",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards West and covers 7 km, then turns left and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-West",
+   "South-West",
+   "North-East",
+   "East"
+  ]
+ },
+ {
+  "id": "qaa9f03a8eba",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards East and covers 12 km, then turns right and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South",
+   "South-East",
+   "North-West",
+   "North"
+  ]
+ },
+ {
+  "id": "q7dba49a46ce",
+  "subject": "reasoning",
+  "topic": "ranking",
+  "level": "easy",
+  "question": "In a class of 47 students, Imran ranks 16th from the top. What is the rank from the bottom?",
+  "options": [
+   "42",
+   "32",
+   "40",
+   "34"
+  ]
+ },
+ {
+  "id": "qe55d4407bec",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values of the word SCORE?",
+  "options": [
+   "65",
+   "60",
+   "70",
+   "48"
+  ]
+ },
+ {
+  "id": "q6305580970e",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards East and covers 7 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-East",
+   "North-East",
+   "East",
+   "North-West"
+  ]
+ },
+ {
+  "id": "q13f80759deb",
+  "subject": "reasoning",
+  "topic": "number-series",
+  "level": "easy",
+  "question": "Find the missing number: 17, 20, ?, 35, 47, 62",
+  "options": [
+   "25",
+   "31",
+   "32",
+   "26"
+  ]
+ },
+ {
+  "id": "q5c819f5250b",
+  "subject": "reasoning",
+  "topic": "coding-decoding",
+  "level": "easy",
+  "question": "In a certain code, CASH is written as HSAC. How will SHARE be written in that code?",
+  "options": [
+   "TIBSF",
+   "SHARE",
+   "ERAHS",
+   "HARES"
+  ]
+ },
+ {
+  "id": "q426c06daf73",
+  "subject": "reasoning",
+  "topic": "ranking",
+  "level": "easy",
+  "question": "Priya ranks 21th from the top and 9th from the bottom in a class. How many students are in the class?",
+  "options": [
+   "35",
+   "29",
+   "24",
+   "26"
+  ]
+ },
+ {
+  "id": "q1c9f702f5d9",
+  "subject": "reasoning",
+  "topic": "number-series",
+  "level": "easy",
+  "question": "Find the missing number: 4, 7, 10, 13, ?, 19",
+  "options": [
+   "17",
+   "16",
+   "26",
+   "18"
+  ]
+ },
+ {
+  "id": "q222f4cec4a4",
+  "subject": "reasoning",
+  "topic": "ranking",
+  "level": "easy",
+  "question": "In a class of 54 students, Deepa ranks 22th from the top. What is the rank from the bottom?",
+  "options": [
+   "34",
+   "36",
+   "33",
+   "32"
+  ]
+ },
+ {
+  "id": "q79e3ce88f79",
+  "subject": "reasoning",
+  "topic": "number-series",
+  "level": "easy",
+  "question": "Find the missing number: 9, 11, ?, 21, 29, 39",
+  "options": [
+   "19",
+   "11",
+   "8",
+   "15"
+  ]
+ },
+ {
+  "id": "q6a1e3af9ff1",
+  "subject": "reasoning",
+  "topic": "coding-decoding",
+  "level": "easy",
+  "question": "In a certain code, CASH is written as HSAC. How will SCORE be written in that code?",
+  "options": [
+   "EROCS",
+   "TDPSF",
+   "SCORE",
+   "CORES"
+  ]
+ },
+ {
+  "id": "qddeba7ed3d9",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "easy",
+  "question": "Statements: Some coins are not chairs. Some chairs are cups.\nConclusions:\nI. All chairs are cups.\nII. Some chairs are coins.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q7f41c334e14",
+  "subject": "reasoning",
+  "topic": "ranking",
+  "level": "easy",
+  "question": "In a class of 44 students, Gautam ranks 6th from the top. What is the rank from the bottom?",
+  "options": [
+   "39",
+   "44",
+   "29",
+   "40"
+  ]
+ },
+ {
+  "id": "q6176a1feaa3",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "easy",
+  "question": "Statements: All boxes are roads. No roads is trees.\nConclusions:\nI. Some boxes are not trees.\nII. Some trees are boxes.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q03b55058166",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards West and covers 5 km, then turns right and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-West",
+   "South-East",
+   "South",
+   "West"
+  ]
+ },
+ {
+  "id": "q65868838747",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 8th to the right of L in the English alphabet?",
+  "options": [
+   "B",
+   "Q",
+   "D",
+   "T"
+  ]
+ },
+ {
+  "id": "qa31a41ad0f0",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards South and covers 6 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "South",
+   "South-West",
+   "North-East"
+  ]
+ },
+ {
+  "id": "q66444ba907a",
+  "subject": "reasoning",
+  "topic": "alphabet",
+  "level": "easy",
+  "question": "Which letter is 7th to the right of I in the English alphabet?",
+  "options": [
+   "J",
+   "X",
+   "H",
+   "P"
+  ]
+ },
+ {
+  "id": "q3436754691c",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "easy",
+  "question": "Statements: No tables is boxes. Some boxes are birds.\nConclusions:\nI. All tables are boxes.\nII. Some tables are not boxes.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q5d34675f803",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "easy",
+  "question": "A person starts walking towards East and covers 12 km, then turns right and walks 11 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North",
+   "North-East",
+   "South-East"
+  ]
  }
 ]

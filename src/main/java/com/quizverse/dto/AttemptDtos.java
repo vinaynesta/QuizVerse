@@ -23,7 +23,9 @@ public final class AttemptDtos {
      * {@code kind} defaults to "exam"; practice sets send "revise", "bookmarks", "custom", "daily" or "tech-daily".
      * The daily quiz and the daily tech challenge put their IST date (yyyy-mm-dd) in {@code sectionId}. A full mock test ("mock") covers
      * every section of a stage: {@code sectionId} is "mock" and {@code quizIndex} the mock number.
-     * {@code challengeCode} is set when the quiz was opened from a friend's challenge link.
+     * {@code challengeCode} is set when the quiz was opened from a friend's challenge link. {@code receipt} comes
+     * from POST /api/quiz/submit; exam quizzes and mocks are re-scored on the server either way, and only those
+     * with a valid receipt are verified (ranked).
      */
     public record AttemptRequest(
             @Pattern(regexp = "exam|revise|bookmarks|custom|daily|tech-daily|mock") String kind,
@@ -41,7 +43,8 @@ public final class AttemptDtos {
             boolean timed,
             @Min(0) @Max(36000) int timeUsedSeconds,
             @Size(max = 500) List<@Valid AnswerRequest> answers,
-            @Pattern(regexp = "[A-Z0-9]{1,10}") String challengeCode) {}
+            @Pattern(regexp = "[A-Z0-9]{1,10}") String challengeCode,
+            @Size(max = 2000) String receipt) {}
 
     /** One question of the attempt. {@code chosen} is null when skipped. */
     public record AnswerRequest(
@@ -57,11 +60,12 @@ public final class AttemptDtos {
 
     public record AttemptResponse(Long id, String kind, String examId, String stageId, String sectionId, String levelId,
                                   int quizIndex, String quizTitle, double score, double maxMarks, int correct,
-                                  int wrong, int skipped, boolean timed, int timeUsedSeconds, Instant completedAt) {
+                                  int wrong, int skipped, boolean timed, int timeUsedSeconds, Instant completedAt,
+                                  boolean verified) {
         public static AttemptResponse of(QuizAttempt a) {
             return new AttemptResponse(a.getId(), a.getKind(), a.getExamId(), a.getStageId(), a.getSectionId(), a.getLevelId(),
                     a.getQuizIndex(), a.getQuizTitle(), a.getScore(), a.getMaxMarks(), a.getCorrect(), a.getWrong(),
-                    a.getSkipped(), a.isTimed(), a.getTimeUsedSeconds(), a.getCompletedAt());
+                    a.getSkipped(), a.isTimed(), a.getTimeUsedSeconds(), a.getCompletedAt(), a.isVerified());
         }
     }
 }

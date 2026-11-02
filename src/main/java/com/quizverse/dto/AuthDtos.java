@@ -35,14 +35,20 @@ public final class AuthDtos {
     /** The password, or for a Google-only account without one, the username typed out as confirmation. */
     public record DeleteAccountRequest(String password, String confirmUsername) {}
 
+    public record EmailPreferencesRequest(boolean reminders, boolean weekly) {}
+
+    public record LeaderboardPreferenceRequest(boolean hidden) {}
+
     /** The ID token from the "Sign in with Google" button. */
     public record GoogleSignInRequest(@NotBlank @Size(max = 4096) String credential) {}
 
     public record UserResponse(Long id, String username, String email, String displayName, Instant createdAt,
-                               boolean admin, boolean hasPassword, boolean googleLinked) {
+                               boolean admin, boolean hasPassword, boolean googleLinked, boolean emailReminders,
+                               boolean emailWeekly, boolean leaderboardHidden) {
         public static UserResponse of(User u, boolean admin) {
             return new UserResponse(u.getId(), u.getUsername(), u.getEmail(), u.getDisplayName(), u.getCreatedAt(),
-                    admin, u.hasPassword(), u.getGoogleSubject() != null);
+                    admin, u.hasPassword(), u.getGoogleSubject() != null, u.isEmailReminders(), u.isEmailWeekly(),
+                    u.isLeaderboardHidden());
         }
     }
 }

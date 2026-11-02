@@ -192,7 +192,16 @@ class DemoApplicationTests {
 				.andExpect(status().isNoContent());
 		mvc.perform(get("/api/admin/reports").session(user)).andExpect(status().isForbidden());
 
-		MockHttpSession admin = register("admin_user", "admin@example.com");
+		// The test classes share one database; ContestTests may have created admin_user already.
+		MockHttpSession admin = new MockHttpSession();
+		int created = mvc.perform(post("/api/auth/register").session(admin).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+						.content("{\"username\":\"admin_user\",\"email\":\"admin@example.com\",\"displayName\":\"Admin\",\"password\":\"secret123\"}"))
+				.andReturn().getResponse().getStatus();
+		if (created != 201) {
+			mvc.perform(post("/api/auth/login").session(admin).with(csrf()).contentType(MediaType.APPLICATION_JSON)
+							.content("{\"login\":\"admin_user\",\"password\":\"secret123\"}"))
+					.andExpect(status().isOk());
+		}
 		mvc.perform(get("/api/me").session(admin)).andExpect(jsonPath("$.admin").value(true));
 		String id = com.jayway.jsonpath.JsonPath.read(
 				mvc.perform(get("/api/admin/reports").session(admin))

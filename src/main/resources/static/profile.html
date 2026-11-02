@@ -41,6 +41,25 @@
             <button type="button" id="google-disconnect" class="btn-secondary" hidden>Disconnect Google</button>
         </section>
 
+        <form id="email-form" class="auth-card" novalidate>
+            <h2>Emails</h2>
+            <p class="card-sub">Sent to the email address above. You can unsubscribe from any email with one click.</p>
+            <p class="form-error" role="alert" hidden></p>
+            <p class="form-success" role="status" hidden></p>
+            <label class="check-row"><input type="checkbox" name="reminders"/> Remind me after 3 days without a quiz</label>
+            <label class="check-row"><input type="checkbox" name="weekly"/> Monday summary of my week</label>
+            <button type="submit" class="start-quiz-button">Save email settings</button>
+        </form>
+
+        <form id="board-form" class="auth-card" novalidate>
+            <h2>Leaderboards</h2>
+            <p class="card-sub">Your name appears on leaderboards and contest results. Your username and email never do.</p>
+            <p class="form-error" role="alert" hidden></p>
+            <p class="form-success" role="status" hidden></p>
+            <label class="check-row"><input type="checkbox" name="hidden"/> Show me as "Anonymous"</label>
+            <button type="submit" class="start-quiz-button">Save</button>
+        </form>
+
         <form id="password-form" class="auth-card" novalidate>
             <h2 id="password-title">Change password</h2>
             <p id="password-sub" class="card-sub" hidden>Your account uses Google sign-in. Set a password to also log in with your username or email.</p>

@@ -30,9 +30,11 @@ jobs:
     - name: Check question data is up to date
       run: |
         python3 -I scripts/gen_banks.py scripts/banks
+        python3 -I scripts/gen_groups.py scripts/banks
         python3 -I scripts/build_questions.py scripts/legacy/java_questions.sql src/main/resources/static/data
-        python3 -I scripts/build_exams.py scripts/banks scripts/english_bank src/main/resources/static/data
-        python3 -I scripts/build_topics.py src/main/resources/static/data
+        python3 -I scripts/build_exams.py scripts/banks scripts/english_bank src/main/resources/static/data src/main/resources/answer-keys.json
+        python3 -I scripts/build_tech.py scripts/tech_bank src/main/resources/static/data
+        python3 -I scripts/build_topics.py src/main/resources/static/data src/main/resources/answer-keys.json scripts/ga_bank
         python3 -I scripts/build_backgrounds.py src/main/resources/static
         git add -A --intent-to-add
         git diff --stat --exit-code || { echo "::error::Generated data differs from the scripts. Run the build scripts and commit the output."; exit 1; }

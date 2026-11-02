@@ -1,541 +1,496 @@
 [
  {
-  "id": "q0b97976f27c",
+  "id": "q3d2a93dd058",
   "subject": "reasoning",
   "topic": "seating-arrangement",
   "level": "hard",
-  "question": "6 friends Deepa, Farah, Manoj, Omkar, Rahul, Yash sit in a straight row facing north. Rahul sits somewhere to the left of Yash. Deepa sits somewhere to the left of Yash. Omkar sits somewhere to the left of Rahul. Omkar sits immediately to the left of Deepa. Omkar sits somewhere to the left of Manoj. Manoj sits somewhere between Omkar and Yash. Yash sits somewhere between Omkar and Farah. Exactly one person sits between Rahul and Omkar.\nWho sits immediately to the right of Omkar?",
+  "question": "7 friends Hema, Kiran, Lata, Omkar, Usha, Wasim, Yash sit in a straight row facing north. Usha and Wasim are not neighbours. Wasim sits at the extreme right end. Kiran and Usha are not neighbours. Kiran sits somewhere between Usha and Yash. Omkar sits immediately to the left of Kiran. Omkar sits somewhere between Lata and Hema. Omkar sits somewhere between Usha and Hema. Exactly one person sits between Usha and Omkar. Hema sits somewhere between Usha and Yash.\nWho sits at the extreme left end?",
   "options": [
-   "Omkar",
-   "Rahul",
+   "Usha",
+   "Lata",
+   "Wasim",
+   "Omkar"
+  ]
+ },
+ {
+  "id": "q0709d4228fb",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "hard",
+  "question": "Statements: All pens are trees. Some trees are doors. No doors is chairs.\nConclusions:\nI. Some pens are chairs.\nII. Some trees are not pens.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q144c2c51666",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "hard",
+  "question": "Statements: Some chairs are stones. No stones is shirts. Some shirts are not bags.\nConclusions:\nI. No shirts is bags.\nII. Some shirts are not chairs.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "qd3db2c5c8a9",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards South and covers 5 km, then turns left and walks 3 km, then turns left and walks 3 km, then turns left and walks 8 km, then turns right and walks 10 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North",
+   "East",
+   "North-West",
+   "West"
+  ]
+ },
+ {
+  "id": "qa353fa59d3a",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards East and covers 5 km, then turns left and walks 9 km, then turns right and walks 10 km, then turns right and walks 9 km, then turns left and walks 11 km, then turns right and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North-West",
+   "West",
+   "South-East"
+  ]
+ },
+ {
+  "id": "qc0221436dcb",
+  "subject": "reasoning",
+  "topic": "seating-arrangement",
+  "level": "hard",
+  "question": "6 friends Amit, Eshan, Hema, Manoj, Sneha, Varun sit in a straight row facing north. Manoj sits somewhere between Amit and Hema. Eshan sits somewhere to the left of Manoj. Varun and Manoj are not neighbours. Amit sits somewhere to the left of Varun. Hema sits somewhere to the left of Sneha. Varun sits somewhere between Amit and Hema. Eshan and Amit are not neighbours. Eshan sits somewhere to the left of Hema.\nWho sits second from the left end?",
+  "options": [
+   "Eshan",
+   "Amit",
    "Manoj",
-   "Deepa"
-  ],
-  "answer": 3,
-  "explanation": "Order from left to right: Omkar, Deepa, Rahul, Manoj, Yash, Farah."
+   "Varun"
+  ]
  },
  {
-  "id": "qd1b2b56bc48",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "hard",
-  "question": "A person starts walking towards North and covers 6 km, then turns right and walks 4 km, then turns right and walks 4 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "East",
-   "South-East",
-   "North-West",
-   "North-East"
-  ],
-  "answer": 2,
-  "explanation": "Net displacement: -1 east, 2 north."
- },
- {
-  "id": "q857ee3a655f",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "hard",
-  "question": "A person starts walking towards East and covers 10 km, then turns right and walks 12 km, then turns left and walks 12 km, then turns left and walks 12 km, then turns right and walks 7 km, then turns left and walks 6 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "South-West",
-   "North-West",
-   "East",
-   "North-East"
-  ],
-  "answer": 3,
-  "explanation": "Net displacement: 29 east, 6 north."
- },
- {
-  "id": "q7d5e8694e5e",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "hard",
-  "question": "Statements: A ≥ Q < B > C > X ≤ F\nConclusions:\nI. F = Q\nII. B ≥ Q",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "qc4a44ecf153",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some boxes are birds. Some birds are coins. No coins is rivers.\nConclusions:\nI. All rivers are boxes.\nII. All birds are boxes.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q3c7357bb1a3",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some flowers are not boxes. All boxes are doors. Some doors are not roads.\nConclusions:\nI. Some doors are not roads.\nII. Some roads are not flowers.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 0,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q4a374d2f3ee",
+  "id": "qdf5eb7ba2fc",
   "subject": "reasoning",
   "topic": "coding-decoding",
   "level": "hard",
-  "question": "In a certain code, STOCK is written as TRRYP. How will NOTE be written in that code?",
+  "question": "In a certain code, SHARE is written as TFDNJ. How will LOAN be written in that code?",
   "options": [
-   "MQQI",
-   "OMWA",
-   "PNXB",
-   "ETON"
-  ],
-  "answer": 1,
-  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
+   "KQXR",
+   "NNEK",
+   "MMDJ",
+   "NAOL"
+  ]
  },
  {
-  "id": "qf5f58f12154",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "hard",
-  "question": "Statements: F ≤ D = U ≤ G > Y > T\nConclusions:\nI. G ≥ F\nII. U ≤ F",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 0,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "qb9a91487281",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: All flowers are coins. Some coins are trees. Some trees are books.\nConclusions:\nI. Some books are flowers.\nII. All books are coins.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "qf68501078fa",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "hard",
-  "question": "6 friends Deepa, Gautam, Jaya, Kiran, Priya, Varun sit in a straight row facing north. Gautam sits somewhere between Kiran and Varun. Kiran sits somewhere between Priya and Varun. Varun sits somewhere between Priya and Deepa. Kiran sits somewhere between Jaya and Gautam. Priya and Kiran are not neighbours. Gautam sits somewhere to the left of Deepa. Kiran sits somewhere to the left of Varun.\nWho sits at the extreme left end?",
-  "options": [
-   "Jaya",
-   "Kiran",
-   "Deepa",
-   "Priya"
-  ],
-  "answer": 3,
-  "explanation": "Order from left to right: Priya, Jaya, Kiran, Gautam, Varun, Deepa."
- },
- {
-  "id": "q571f90ff3f7",
+  "id": "qfdc2fca6b8b",
   "subject": "reasoning",
   "topic": "direction-sense",
   "level": "hard",
-  "question": "A person starts walking towards North and covers 9 km, then turns right and walks 8 km, then turns left and walks 9 km, then turns left and walks 7 km, then turns right and walks 5 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
+  "question": "A person starts walking towards North and covers 10 km, then turns right and walks 6 km, then turns left and walks 6 km, then turns left and walks 5 km, then turns right and walks 6 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North-East",
+   "South",
+   "West"
+  ]
+ },
+ {
+  "id": "q7abe713fbd8",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards North and covers 8 km, then turns left and walks 5 km, then turns left and walks 2 km, then turns left and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South-East",
+   "North-East",
+   "East",
+   "North-West"
+  ]
+ },
+ {
+  "id": "q52558c35b92",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "hard",
+  "question": "Statements: All birds are rivers. No rivers is chairs. Some chairs are not clocks.\nConclusions:\nI. Some chairs are not clocks.\nII. No birds is rivers.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q1c233c531b1",
+  "subject": "reasoning",
+  "topic": "inequality",
+  "level": "hard",
+  "question": "Statements: H = X ≤ U < P ≥ J > N\nConclusions:\nI. X < U\nII. H < P",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q7ea5e182ff2",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "hard",
+  "question": "Statements: All cups are pens. Some pens are roads. No roads is stones.\nConclusions:\nI. Some roads are not cups.\nII. Some roads are not pens.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q43beb81ccf4",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards North and covers 11 km, then turns right and walks 6 km, then turns left and walks 8 km, then turns left and walks 6 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "East",
+   "North-East",
+   "North",
+   "North-West"
+  ]
+ },
+ {
+  "id": "q5d04a871a1c",
+  "subject": "reasoning",
+  "topic": "seating-arrangement",
+  "level": "hard",
+  "question": "7 friends Chetan, Gautam, Imran, Lata, Priya, Rahul, Yash sit in a straight row facing north. Imran and Rahul are not neighbours. Priya sits somewhere to the left of Lata. Imran sits somewhere between Priya and Rahul. Chetan and Yash are not neighbours. Imran sits somewhere between Lata and Chetan. Chetan sits somewhere between Imran and Yash. Gautam sits at one of the extreme ends. Rahul and Lata are not neighbours. Priya sits somewhere between Gautam and Rahul. Imran sits somewhere to the left of Yash.\nWho sits immediately to the right of Priya?",
+  "options": [
+   "Gautam",
+   "Yash",
+   "Lata",
+   "Rahul"
+  ]
+ },
+ {
+  "id": "qc7cca6d5d7c",
+  "subject": "reasoning",
+  "topic": "seating-arrangement",
+  "level": "hard",
+  "question": "7 friends Gautam, Kiran, Manoj, Neha, Omkar, Priya, Varun sit in a straight row facing north. Gautam sits somewhere to the left of Omkar. Exactly one person sits between Gautam and Kiran. Neha sits somewhere to the left of Priya. Manoj sits somewhere to the left of Priya. Priya and Gautam are not neighbours. Omkar and Neha are not neighbours. Exactly one person sits between Kiran and Varun. Gautam sits somewhere between Varun and Omkar. Kiran sits somewhere between Manoj and Priya.\nWho sits second from the left end?",
+  "options": [
+   "Varun",
+   "Kiran",
+   "Priya",
+   "Manoj"
+  ]
+ },
+ {
+  "id": "qf89bd9663c7",
+  "subject": "reasoning",
+  "topic": "inequality",
+  "level": "hard",
+  "question": "Statements: T = A ≥ R ≤ U = X > E\nConclusions:\nI. A > E\nII. U ≤ X",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "qab8121f24ea",
+  "subject": "reasoning",
+  "topic": "seating-arrangement",
+  "level": "hard",
+  "question": "7 friends Bhavna, Eshan, Lata, Manoj, Rahul, Sneha, Varun sit in a straight row facing north. Exactly one person sits between Rahul and Manoj. Exactly one person sits between Varun and Manoj. Lata sits somewhere between Varun and Bhavna. Eshan sits somewhere between Rahul and Sneha. Varun sits somewhere between Sneha and Bhavna. Manoj sits somewhere to the left of Lata. Bhavna sits at one of the extreme ends. Eshan sits somewhere between Rahul and Bhavna.\nWho sits second from the left end?",
+  "options": [
+   "Eshan",
+   "Bhavna",
+   "Manoj",
+   "Rahul"
+  ]
+ },
+ {
+  "id": "q131532ac4ae",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "hard",
+  "question": "Statements: Some coins are not stones. No stones is tables. Some tables are not shirts.\nConclusions:\nI. No shirts is coins.\nII. Some tables are stones.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "qd3c034cf657",
+  "subject": "reasoning",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 20, 28, 38, 50, ?, 80, 98",
+  "options": [
+   "64",
+   "63",
+   "61",
+   "77"
+  ]
+ },
+ {
+  "id": "q0581af0a645",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards South and covers 8 km, then turns left and walks 4 km, then turns right and walks 8 km, then turns right and walks 9 km, then turns right and walks 2 km, then turns left and walks 9 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "South",
+   "West",
+   "South-West",
+   "North-East"
+  ]
+ },
+ {
+  "id": "q7b331b027ae",
+  "subject": "reasoning",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 125, 216, 343, 512, ?, 1000, 1331",
+  "options": [
+   "729",
+   "734",
+   "364",
+   "719"
+  ]
+ },
+ {
+  "id": "qae1fb6c89a0",
+  "subject": "reasoning",
+  "topic": "seating-arrangement",
+  "level": "hard",
+  "question": "7 friends Farah, Imran, Jaya, Manoj, Sneha, Tarun, Usha sit in a straight row facing north. Usha sits somewhere between Sneha and Jaya. Sneha sits somewhere to the left of Usha. Manoj sits somewhere between Imran and Farah. Usha sits immediately to the left of Jaya. Usha sits somewhere to the left of Imran. Manoj sits somewhere between Tarun and Farah. Jaya sits somewhere between Usha and Farah. Sneha sits somewhere between Tarun and Usha. Tarun and Usha are not neighbours.\nWho sits at the extreme left end?",
+  "options": [
+   "Imran",
+   "Jaya",
+   "Sneha",
+   "Tarun"
+  ]
+ },
+ {
+  "id": "qc5dc974da4a",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards North and covers 4 km, then turns right and walks 12 km, then turns left and walks 7 km, then turns left and walks 2 km. In which direction is the person now with respect to the starting point?",
+  "options": [
+   "North-East",
+   "East",
+   "South",
+   "North"
+  ]
+ },
+ {
+  "id": "qa8195f0eb13",
+  "subject": "reasoning",
+  "topic": "coding-decoding",
+  "level": "hard",
+  "question": "In a certain code, TRADE is written as UPDZJ. How will SHARE be written in that code?",
+  "options": [
+   "RJXVZ",
+   "UGEOK",
+   "ERAHS",
+   "TFDNJ"
+  ]
+ },
+ {
+  "id": "qc216d31ba09",
+  "subject": "reasoning",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 12, 18, 28, 42, ?, 82, 108",
+  "options": [
+   "54",
+   "50",
+   "60",
+   "70"
+  ]
+ },
+ {
+  "id": "q4318f440641",
+  "subject": "reasoning",
+  "topic": "seating-arrangement",
+  "level": "hard",
+  "question": "6 friends Chetan, Farah, Imran, Usha, Wasim, Zoya sit in a straight row facing north. Chetan sits somewhere between Zoya and Usha. Imran sits somewhere between Wasim and Zoya. Wasim sits somewhere to the left of Imran. Chetan sits somewhere between Wasim and Usha. Imran sits somewhere to the left of Farah. Wasim sits at one of the extreme ends. Imran sits somewhere to the left of Chetan. Zoya sits somewhere between Farah and Usha.\nWho sits at the extreme right end?",
+  "options": [
+   "Chetan",
+   "Usha",
+   "Zoya",
+   "Wasim"
+  ]
+ },
+ {
+  "id": "q76a93176c28",
+  "subject": "reasoning",
+  "topic": "syllogism",
+  "level": "hard",
+  "question": "Statements: No lamps is doors. No doors is tables. Some tables are rivers.\nConclusions:\nI. Some lamps are not tables.\nII. All doors are tables.",
+  "options": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither conclusion I nor II follows",
+   "Both conclusions I and II follow"
+  ]
+ },
+ {
+  "id": "q31f931dfdbd",
+  "subject": "reasoning",
+  "topic": "direction-sense",
+  "level": "hard",
+  "question": "A person starts walking towards West and covers 4 km, then turns left and walks 7 km, then turns left and walks 11 km, then turns left and walks 8 km, then turns right and walks 9 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South",
    "North-East",
-   "West",
-   "North"
-  ],
-  "answer": 1,
-  "explanation": "Net displacement: 6 east, 23 north."
- },
- {
-  "id": "qf8591c09607",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some cups are not shirts. All shirts are boxes. No boxes is lamps.\nConclusions:\nI. No boxes is shirts.\nII. All shirts are lamps.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q5789fb57559",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "hard",
-  "question": "A person starts walking towards West and covers 4 km, then turns right and walks 4 km, then turns right and walks 4 km, then turns right and walks 10 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "North-West",
-   "East",
    "South-West",
-   "South"
-  ],
-  "answer": 3,
-  "explanation": "Net displacement: 0 east, -6 north."
+   "North"
+  ]
  },
  {
-  "id": "qba37ed5e022",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "hard",
-  "question": "In a certain code, TABLE is written as UYEHJ. How will LOAN be written in that code?",
-  "options": [
-   "KQXR",
-   "NNEK",
-   "MMDJ",
-   "NAOL"
-  ],
-  "answer": 2,
-  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
- },
- {
-  "id": "q4f3631ac650",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some flowers are not cups. Some cups are bags. No bags is birds.\nConclusions:\nI. No cups is flowers.\nII. All cups are birds.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q497fe4d0e07",
+  "id": "qf7143f1cf6d",
   "subject": "reasoning",
   "topic": "inequality",
   "level": "hard",
-  "question": "Statements: A > Q > N > R > C = U\nConclusions:\nI. R < A\nII. U < R",
+  "question": "Statements: D = E = J ≤ B < M ≥ Y\nConclusions:\nI. Y < M\nII. J < D",
   "options": [
    "Only conclusion I follows",
    "Only conclusion II follows",
    "Either conclusion I or II follows",
    "Neither conclusion I nor II follows",
    "Both conclusions I and II follow"
-  ],
-  "answer": 4,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
+  ]
  },
  {
-  "id": "q9b00ea92665",
+  "id": "q78a4c6bc0cb",
   "subject": "reasoning",
   "topic": "seating-arrangement",
   "level": "hard",
-  "question": "7 friends Eshan, Gautam, Hema, Jaya, Manoj, Sneha, Usha sit in a straight row facing north. Jaya sits immediately to the left of Gautam. Gautam sits somewhere between Hema and Sneha. Manoj sits somewhere between Hema and Sneha. Gautam sits somewhere to the left of Usha. Manoj sits somewhere to the left of Eshan. Eshan sits immediately to the left of Sneha. Usha sits somewhere between Manoj and Sneha. Gautam and Usha are not neighbours. Manoj sits somewhere between Jaya and Sneha.\nWho sits second from the left end?",
+  "question": "6 friends Bhavna, Farah, Kiran, Manoj, Sneha, Yash sit in a straight row facing north. Farah sits somewhere between Manoj and Kiran. Yash and Manoj are not neighbours. Manoj sits somewhere to the left of Kiran. Bhavna sits at the extreme left end. Yash sits somewhere to the left of Sneha. Exactly one person sits between Sneha and Farah. Yash sits somewhere between Bhavna and Manoj. Farah sits somewhere between Bhavna and Kiran.\nWho sits at the extreme right end?",
   "options": [
-   "Eshan",
-   "Gautam",
-   "Sneha",
-   "Jaya"
-  ],
-  "answer": 3,
-  "explanation": "Order from left to right: Hema, Jaya, Gautam, Manoj, Usha, Eshan, Sneha."
+   "Yash",
+   "Kiran",
+   "Farah",
+   "Bhavna"
+  ]
  },
  {
-  "id": "qcdf4e2e650e",
+  "id": "q80e72b49554",
   "subject": "reasoning",
-  "topic": "seating-arrangement",
+  "topic": "puzzle",
   "level": "hard",
-  "question": "6 friends Chetan, Deepa, Gautam, Jaya, Manoj, Usha sit in a straight row facing north. Chetan sits immediately to the left of Usha. Exactly one person sits between Deepa and Jaya. Deepa sits somewhere between Chetan and Gautam. Gautam sits somewhere between Deepa and Jaya. Manoj and Chetan are not neighbours. Manoj sits somewhere between Usha and Jaya. Usha and Deepa are not neighbours.\nWho sits at the extreme right end?",
+  "question": "Who lives on the top floor?",
   "options": [
-   "Usha",
-   "Deepa",
-   "Jaya",
-   "Gautam"
-  ],
-  "answer": 2,
-  "explanation": "Order from left to right: Chetan, Usha, Manoj, Deepa, Gautam, Jaya."
- },
- {
-  "id": "qb52cd3b4c88",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some flowers are not clocks. All clocks are pens. All pens are trees.\nConclusions:\nI. All trees are clocks.\nII. Some pens are clocks.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q6324de427b4",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "hard",
-  "question": "In a certain code, NOTE is written as OMWA. How will BANK be written in that code?",
-  "options": [
-   "CYQG",
-   "ACKO",
-   "DZRH",
-   "KNAB"
-  ],
-  "answer": 0,
-  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
- },
- {
-  "id": "q0071012eafd",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "hard",
-  "question": "Statements: M = G < V = Q ≥ F ≤ S\nConclusions:\nI. M < V\nII. F > M",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 0,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "qd7230c53005",
-  "subject": "reasoning",
-  "topic": "inequality",
-  "level": "hard",
-  "question": "Statements: P = V = N ≥ H ≤ C ≤ R\nConclusions:\nI. H ≤ V\nII. N = V",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 4,
-  "explanation": "Combine the statements into one chain; a conclusion follows only if it is always true."
- },
- {
-  "id": "qec48b764110",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 67, 78, 103, ?, 147, 166, 199",
-  "options": [
-   "118",
-   "106",
-   "88",
-   "124"
-  ],
-  "answer": 0,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q48770989801",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "hard",
-  "question": "In a certain code, GOLD is written as HMOZ. How will LOAN be written in that code?",
-  "options": [
-   "KQXR",
-   "MMDJ",
-   "NNEK",
-   "NAOL"
-  ],
-  "answer": 1,
-  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
- },
- {
-  "id": "q2a20bb45163",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some coins are pens. No pens is books. All books are roads.\nConclusions:\nI. All coins are books.\nII. No coins is pens.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "qfc35bb0cc82",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some hills are lamps. No lamps is keys. Some keys are not shirts.\nConclusions:\nI. No lamps is keys.\nII. Some hills are not lamps.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 0,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q53932ac3582",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "hard",
-  "question": "In a certain code, MONEY is written as NMQAD. How will LOAN be written in that code?",
-  "options": [
-   "KQXR",
-   "NNEK",
-   "NAOL",
-   "MMDJ"
-  ],
-  "answer": 3,
-  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
- },
- {
-  "id": "q8ada8df8f4f",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "hard",
-  "question": "In a certain code, SCORE is written as TARNJ. How will STOCK be written in that code?",
-  "options": [
-   "TRRYP",
-   "RVLGF",
-   "USSZQ",
-   "KCOTS"
-  ],
-  "answer": 0,
-  "explanation": "Rule: alternating forward and backward shifts of 1, 2, 3, ...."
- },
- {
-  "id": "q9e654161a0b",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "hard",
-  "question": "7 friends Amit, Chetan, Lata, Manoj, Sneha, Tarun, Zoya sit in a straight row facing north. Exactly one person sits between Tarun and Chetan. Tarun sits somewhere to the left of Manoj. Exactly one person sits between Sneha and Amit. Tarun sits immediately to the left of Lata. Exactly one person sits between Chetan and Manoj. Sneha sits somewhere between Chetan and Manoj. Manoj sits somewhere between Chetan and Amit. Amit sits at one of the extreme ends.\nWho sits at the extreme right end?",
-  "options": [
-   "Tarun",
-   "Chetan",
-   "Amit",
-   "Sneha"
-  ],
-  "answer": 2,
-  "explanation": "Order from left to right: Zoya, Tarun, Lata, Chetan, Sneha, Manoj, Amit."
- },
- {
-  "id": "q42b41928803",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "hard",
-  "question": "6 friends Gautam, Imran, Jaya, Tarun, Wasim, Zoya sit in a straight row facing north. Jaya sits somewhere between Zoya and Imran. Jaya sits immediately to the left of Gautam. Wasim sits somewhere between Zoya and Jaya. Exactly one person sits between Tarun and Wasim. Wasim sits somewhere between Tarun and Imran. Wasim sits somewhere to the left of Imran.\nWho sits second from the left end?",
-  "options": [
-   "Tarun",
+   "Omkar",
    "Imran",
-   "Jaya",
+   "Amit",
    "Zoya"
   ],
-  "answer": 3,
-  "explanation": "Order from left to right: Tarun, Zoya, Wasim, Jaya, Gautam, Imran."
+  "group": {
+   "id": "gdf0e2bf22bc",
+   "kind": "text",
+   "title": "Puzzle",
+   "setup": "6 people, Amit, Chetan, Imran, Omkar, Priya, Zoya, live on the 6 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, pink, white, yellow.\nOmkar lives on a floor above Chetan.\nPriya lives on the ground floor (floor 1).\nOmkar lives on a floor above Amit.\nAmit lives on a floor above Imran.\nZoya lives on a floor above Imran.\nAmit lives on an even-numbered floor.\nExactly one person lives between Priya and Imran.\nZoya lives on the top floor.\nZoya likes white.\nOmkar likes black.\nChetan likes pink.\nAmit likes green.\nPriya likes yellow.\nThe person on floor 3 likes blue."
+  }
  },
  {
-  "id": "q63e5e353ffb",
+  "id": "q96e2dc241fa",
   "subject": "reasoning",
-  "topic": "direction-sense",
+  "topic": "puzzle",
   "level": "hard",
-  "question": "A person starts walking towards East and covers 7 km, then turns right and walks 2 km, then turns left and walks 6 km, then turns left and walks 11 km, then turns right and walks 12 km, then turns right and walks 8 km. In which direction is the person now with respect to the starting point?",
+  "question": "Which colour does Omkar like?",
   "options": [
-   "North-West",
-   "North-East",
-   "South-West",
-   "South-East"
+   "black",
+   "green",
+   "white",
+   "yellow"
   ],
-  "answer": 1,
-  "explanation": "Net displacement: 25 east, 1 north."
+  "group": {
+   "id": "gdf0e2bf22bc",
+   "kind": "text",
+   "title": "Puzzle",
+   "setup": "6 people, Amit, Chetan, Imran, Omkar, Priya, Zoya, live on the 6 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, pink, white, yellow.\nOmkar lives on a floor above Chetan.\nPriya lives on the ground floor (floor 1).\nOmkar lives on a floor above Amit.\nAmit lives on a floor above Imran.\nZoya lives on a floor above Imran.\nAmit lives on an even-numbered floor.\nExactly one person lives between Priya and Imran.\nZoya lives on the top floor.\nZoya likes white.\nOmkar likes black.\nChetan likes pink.\nAmit likes green.\nPriya likes yellow.\nThe person on floor 3 likes blue."
+  }
  },
  {
-  "id": "qb39bead40d9",
+  "id": "q3f997d18ddb",
   "subject": "reasoning",
-  "topic": "seating-arrangement",
+  "topic": "puzzle",
   "level": "hard",
-  "question": "7 friends Bhavna, Eshan, Manoj, Priya, Rahul, Tarun, Varun sit in a straight row facing north. Exactly one person sits between Rahul and Eshan. Exactly one person sits between Bhavna and Tarun. Varun sits somewhere between Tarun and Bhavna. Bhavna sits somewhere between Eshan and Priya. Manoj sits somewhere to the left of Priya. Manoj and Bhavna are not neighbours. Varun sits somewhere between Manoj and Bhavna. Tarun sits somewhere to the left of Bhavna. Exactly one person sits between Priya and Varun. Manoj sits somewhere to the left of Eshan.\nWho sits at the extreme left end?",
+  "question": "Who lives immediately above Chetan?",
   "options": [
-   "Bhavna",
-   "Eshan",
-   "Rahul",
-   "Tarun"
-  ],
-  "answer": 2,
-  "explanation": "Order from left to right: Rahul, Manoj, Eshan, Tarun, Varun, Bhavna, Priya."
- },
- {
-  "id": "q8693e135f9f",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: No bags is trees. Some trees are not rivers. All rivers are birds.\nConclusions:\nI. Some birds are not bags.\nII. No trees is rivers.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw all possible Venn diagrams; a conclusion follows only if it holds in every one."
- },
- {
-  "id": "q2d631e5487c",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "hard",
-  "question": "7 friends Chetan, Gautam, Hema, Neha, Varun, Yash, Zoya sit in a straight row facing north. Zoya sits immediately to the left of Varun. Varun sits somewhere between Zoya and Yash. Gautam sits somewhere between Neha and Yash. Chetan sits somewhere to the left of Gautam. Exactly one person sits between Gautam and Varun. Hema sits somewhere between Neha and Chetan. Exactly one person sits between Neha and Chetan. Hema and Gautam are not neighbours. Neha sits immediately to the left of Hema.\nWho sits exactly in the middle?",
-  "options": [
+   "Amit",
+   "Imran",
    "Chetan",
-   "Hema",
-   "Gautam",
-   "Neha"
+   "Omkar"
   ],
-  "answer": 2,
-  "explanation": "Order from left to right: Neha, Hema, Chetan, Gautam, Zoya, Varun, Yash."
+  "group": {
+   "id": "gdf0e2bf22bc",
+   "kind": "text",
+   "title": "Puzzle",
+   "setup": "6 people, Amit, Chetan, Imran, Omkar, Priya, Zoya, live on the 6 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, pink, white, yellow.\nOmkar lives on a floor above Chetan.\nPriya lives on the ground floor (floor 1).\nOmkar lives on a floor above Amit.\nAmit lives on a floor above Imran.\nZoya lives on a floor above Imran.\nAmit lives on an even-numbered floor.\nExactly one person lives between Priya and Imran.\nZoya lives on the top floor.\nZoya likes white.\nOmkar likes black.\nChetan likes pink.\nAmit likes green.\nPriya likes yellow.\nThe person on floor 3 likes blue."
+  }
  },
  {
-  "id": "qc1b857a350f",
+  "id": "q60aef6643c0",
   "subject": "reasoning",
-  "topic": "number-series",
+  "topic": "puzzle",
   "level": "hard",
-  "question": "Find the missing number: 3, 13, 53, 213, 853, ?, 13653",
+  "question": "On which floor does the person who likes black live?",
   "options": [
-   "2560",
-   "3410",
-   "3423",
-   "3413"
+   "4",
+   "2",
+   "5",
+   "1"
   ],
-  "answer": 3,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
+  "group": {
+   "id": "gdf0e2bf22bc",
+   "kind": "text",
+   "title": "Puzzle",
+   "setup": "6 people, Amit, Chetan, Imran, Omkar, Priya, Zoya, live on the 6 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, pink, white, yellow.\nOmkar lives on a floor above Chetan.\nPriya lives on the ground floor (floor 1).\nOmkar lives on a floor above Amit.\nAmit lives on a floor above Imran.\nZoya lives on a floor above Imran.\nAmit lives on an even-numbered floor.\nExactly one person lives between Priya and Imran.\nZoya lives on the top floor.\nZoya likes white.\nOmkar likes black.\nChetan likes pink.\nAmit likes green.\nPriya likes yellow.\nThe person on floor 3 likes blue."
+  }
+ },
+ {
+  "id": "qe3b5069bc61",
+  "subject": "reasoning",
+  "topic": "puzzle",
+  "level": "hard",
+  "question": "How many people live between Priya and Omkar?",
+  "options": [
+   "2",
+   "1",
+   "0",
+   "3"
+  ],
+  "group": {
+   "id": "gdf0e2bf22bc",
+   "kind": "text",
+   "title": "Puzzle",
+   "setup": "6 people, Amit, Chetan, Imran, Omkar, Priya, Zoya, live on the 6 floors of a building, one per floor (floor 1 is the bottom). Each likes a different colour: black, blue, green, pink, white, yellow.\nOmkar lives on a floor above Chetan.\nPriya lives on the ground floor (floor 1).\nOmkar lives on a floor above Amit.\nAmit lives on a floor above Imran.\nZoya lives on a floor above Imran.\nAmit lives on an even-numbered floor.\nExactly one person lives between Priya and Imran.\nZoya lives on the top floor.\nZoya likes white.\nOmkar likes black.\nChetan likes pink.\nAmit likes green.\nPriya likes yellow.\nThe person on floor 3 likes blue."
+  }
  }
 ]

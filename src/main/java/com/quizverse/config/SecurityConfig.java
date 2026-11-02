@@ -39,10 +39,14 @@ public class SecurityConfig {
                 .requestMatchers("/api/me/**", "/api/attempts/**", "/api/reports/**").authenticated()
                 // Anyone can view a challenge link; creating one needs an account.
                 .requestMatchers(HttpMethod.POST, "/api/challenges/**").authenticated()
+                // Contest listings and results are public; registering and sitting one needs an account.
+                .requestMatchers("/api/contests/*/register", "/api/contests/*/paper", "/api/contests/*/submit").authenticated()
                 .anyRequest().permitAll())
             .csrf(csrf -> csrf
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-                .csrfTokenRequestHandler(csrfHandler))
+                .csrfTokenRequestHandler(csrfHandler)
+                // One-click unsubscribe from mail apps (RFC 8058) can't carry a CSRF token; the link's secret token is the check.
+                .ignoringRequestMatchers("/api/email/unsubscribe"))
             .securityContext(ctx -> ctx.securityContextRepository(securityContextRepository()))
             .exceptionHandling(ex -> ex.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
             .formLogin(AbstractHttpConfigurer::disable)

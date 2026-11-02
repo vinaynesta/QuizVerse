@@ -1,10 +1,12 @@
 import {
   addBookmark, createChallenge, currentUser, listBookmarks, mistakes, removeBookmark, reportQuestion, saveAttempt,
-  streak,
+  startServerQuiz, streak, submitServerQuiz,
 } from "./api.js";
 import { storeOfflineAttempt, storePendingAttempt } from "./pending.js";
 import { shareResult } from "./share.js";
-import { dailyQuestions, istToday, loadTopicPool, questionsById, shuffled, techDailyQuestions } from "./questions.js";
+import {
+  dailyQuestions, groupSetupHtml, istToday, loadTopicPool, questionsById, shuffled, techDailyQuestions,
+} from "./questions.js";
 
 // Two kinds of quiz share this page:
 //  - exam quizzes from index.json: quiz.html?exam=..&stage=..&section=..&level=..&quiz=N
@@ -12,6 +14,8 @@ import { dailyQuestions, istToday, loadTopicPool, questionsById, shuffled, techD
 //  - practice sets: quiz.html?practice=revise | bookmarks | custom | daily | tech-daily
 //    (custom also has topics, level, count, minutes)
 // Exam quizzes and mocks opened from a friend's challenge link also carry &challenge=CODE.
+// Timed exam quizzes and mocks have no answers in their JSON: the server scores them (POST /api/quiz/submit)
+// and sends the answer key back for the review, plus a receipt that ranks the result on leaderboards.
 const params = new URLSearchParams(window.location.search);
 const practiceKind = params.get("practice");
 const examId = params.get("exam");
@@ -19,7 +23,9 @@ const stageId = params.get("stage");
 const sectionId = params.get("section");
 const levelId = params.get("level");
 let quizIdx = Number(params.get("quiz") || 0);
-let challengeCode = /^[A-Z0-9]{1,10}$/.test(params.get("challenge") || "") ? params.get("challenge") : null;
+// Challenge codes are short uppercase ids; anything else in the URL is ignored. The match result (not a
+// second params.get) is what's kept, so only the validated string ever reaches the page.
+let challengeCode = (/^[A-Z0-9]{1,10}$/.exec(params.get("challenge") || "") || [null])[0];
 
 let index = null;
 let exam = null;
@@ -48,18 +54,59 @@ let shownAt = 0; // when the current question was shown, for seconds[]
 let finished = false;
 let bookmarked = new Set();
 let user = null;
+let startToken = null; // from POST /api/quiz/start; proves to the server when the quiz began
+let receipt = null; // from POST /api/quiz/submit when finished in time; saved with the attempt
+const LANG_KEY = "quizverse.lang";
+let lang = (() => { try { return localStorage.getItem(LANG_KEY) === "hi" ? "hi" : "en"; } catch { return "en"; } })();
 
 const $ = (id) => document.getElementById(id);
 const minutes = () =>
   (mock ? mock.sections[secIdx].section.minutes : practice ? practice.minutes : section && section.minutes) || 0;
 const timed = () => minutes() > 0;
+/** Exam quizzes and mocks with a time limit: answers live on the server. Java practice files still carry them. */
+const serverScored = () => !practice && (Boolean(mock) || timed());
+/** The quiz's key on the server, the same shape as a saved attempt. */
+const serverKey = () => (mock ? `${examId}/${stageId}/mock/${levelId}/${mockIdx}`
+  : `${examId}/${stageId}/${sectionId}/${levelId}/${quizIdx}`);
 /** First and one-past-last question that can be visited now: the running section of a mock, else all. */
 const sectionRange = () => (mock ? [mock.sections[secIdx].start, mock.sections[secIdx].end] : [0, questions.length]);
+
+/** Puts "label <a href=url>url</a>" into el with DOM APIs, so nothing in the URL is parsed as HTML. */
+function showLink(el, label, url) {
+  const a = document.createElement("a");
+  a.href = url;
+  a.textContent = url;
+  el.replaceChildren(label, a);
+}
 
 function escapeHtml(text) {
   const div = document.createElement("div");
   div.textContent = text;
   return div.innerHTML;
+}
+
+// Hindi (#18): questions with a "hi" version show it when the viewer picks हिंदी; options are numbers and stay as they are.
+const inHindi = (q) => lang === "hi" && Boolean(q.hi);
+const questionText = (q) => (inHindi(q) ? q.hi.question : q.question);
+const explanationText = (q) => (inHindi(q) && q.hi.explanation ? q.hi.explanation : q.explanation);
+
+function updateLangToggle() {
+  const button = $("lang-toggle");
+  button.hidden = !questions.some((q) => q.hi);
+  button.setAttribute("aria-pressed", String(lang === "hi"));
+  button.textContent = lang === "hi" ? "English" : "हिंदी";
+}
+
+function toggleLang() {
+  if (finished) return; // the review is shown in the language chosen during the quiz
+  lang = lang === "hi" ? "en" : "hi";
+  try {
+    localStorage.setItem(LANG_KEY, lang);
+  } catch {
+    // Private mode: the choice lasts for this page only.
+  }
+  updateLangToggle();
+  showQuestion();
 }
 
 let backgrounds = [];
@@ -98,7 +145,7 @@ function saveProgress() {
   if (finished) return;
   try {
     localStorage.setItem(PROGRESS_KEY, JSON.stringify({
-      key: quizKey(), endAt, current, answers, marked, visited, seconds, secIdx, sectionUsed,
+      key: quizKey(), endAt, current, answers, marked, visited, seconds, secIdx, sectionUsed, startToken,
       // Practice sets are random, so keep the exact questions to resume the same set.
       questionIds: practice ? questions.map((q) => q.id) : null,
     }));
@@ -379,6 +426,12 @@ async function startQuiz() {
   secIdx = mock && ok && resume.secIdx ? Math.min(resume.secIdx, mock.sections.length - 1) : 0;
   sectionUsed = mock && ok && resume.sectionUsed ? resume.sectionUsed : [];
   finished = false;
+  receipt = null;
+  startToken = ok && resume.startToken ? resume.startToken : null;
+  if (serverScored() && !startToken) {
+    // Offline or a server error: the quiz still runs; it just won't be ranked.
+    startToken = await startServerQuiz(serverKey()).then((r) => r.startToken).catch(() => null);
+  }
   $("loading-spinner").style.display = "none";
   $("start-screen").style.display = "none";
   $("quiz-screen").style.display = "flex";
@@ -386,6 +439,7 @@ async function startQuiz() {
   $("back-link-button").style.display = "none";
   $("quiz-label").textContent = quizTitle();
   $("palette-toggle").style.display = timed() ? "" : "none";
+  updateLangToggle();
   clearInterval(timerId);
   if (timed()) {
     endAt = ok && resume.endAt ? resume.endAt : Date.now() + minutes() * 60 * 1000;
@@ -502,10 +556,13 @@ function showQuestion() {
   $("question-container").innerHTML = `
     <div class="question">
       <div class="question-head">
-        <h3>${mock ? `${escapeHtml(mock.sections[secIdx].section.name)} · ` : ""}Question ${current - lo + 1} of ${hi - lo}${marked[current] ? ' <span class="badge marked">Marked</span>' : ""}</h3>
+        <h3>${mock ? `${escapeHtml(mock.sections[secIdx].section.name)} · ` : ""}Question ${current - lo + 1} of ${hi - lo}${marked[current] ? ' <span class="badge marked">Marked</span>' : ""}${
+          q.needsReview ? ' <span class="badge needs-review" title="New content, still being checked. Use Report if something looks wrong.">Draft</span>' : ""}</h3>
         ${questionToolsHtml(q)}
       </div>
-      <p>${escapeHtml(q.question)}</p>
+      ${groupSetupHtml(q)}
+      <p${inHindi(q) ? ' lang="hi"' : ""}>${escapeHtml(questionText(q))}${inHindi(q) && q.hi.needsReview
+        ? ' <span class="badge needs-review" title="Machine-drafted Hindi, still being checked">Draft</span>' : ""}</p>
       <div class="options">${optionsHtml(q, answers[current])}</div>
     </div>`;
   $("result-container").style.display = "none";
@@ -629,7 +686,7 @@ function revealPractice() {
   });
   const ok = chosen === q.answer;
   showResult(ok ? "Correct!" : `Incorrect. The correct answer is: ${q.options[q.answer]}`, ok);
-  if (q.explanation) showExplanation(q.explanation);
+  if (explanationText(q)) showExplanation(explanationText(q));
   $("prev-button").style.display = current > 0 ? "block" : "none";
   if (current < questions.length - 1) {
     $("next-button").textContent = "Next Question";
@@ -649,7 +706,7 @@ function showResult(message, isCorrect) {
 
 function showExplanation(message) {
   const el = $("explanation-container");
-  el.textContent = `Explanation: ${message}`;
+  el.textContent = `Solution:\n${message}`;
   el.style.display = "block";
 }
 
@@ -753,16 +810,67 @@ function onFinishClick() {
   endSection();
 }
 
-function finish() {
+async function finish() {
   if (finished) return;
   stopClock();
   finished = true;
+  $("lang-toggle").hidden = true;
   clearInterval(timerId);
-  clearProgress();
   document.body.classList.remove("palette-open");
-  const total = questions.length;
   const thisSectionSecs = timed() ? Math.min(minutes() * 60, Math.max(0, minutes() * 60 - remaining)) : 0;
   if (mock) sectionUsed[secIdx] = thisSectionSecs;
+  if (serverScored()) {
+    $("question-container").innerHTML = '<p class="grading">Checking your answers…</p>';
+    ["next-button", "prev-button", "mark-button", "finish-button"].forEach((id) => { $(id).style.display = "none"; });
+    if (!(await gradeOnServer())) {
+      // Nothing to score with: keep the answers saved so a refresh (once online) submits them.
+      finished = false;
+      $("question-container").innerHTML = `<p class="grading">Couldn't check your answers: you seem to be offline.
+        Your answers are saved on this device. <button type="button" id="retry-grade" class="btn-primary">Try again</button></p>`;
+      $("retry-grade").addEventListener("click", finish);
+      return;
+    }
+  }
+  clearProgress();
+  showResults(thisSectionSecs);
+}
+
+/**
+ * Sends the answers to the server and fills in each question's answer and explanation from its key. Offline,
+ * falls back to the topic pools cached on this device (matched by option text, as option order differs per
+ * quiz); that result is kept but not ranked. Returns false when neither works.
+ */
+async function gradeOnServer() {
+  try {
+    const res = await submitServerQuiz(serverKey(), startToken, answers);
+    questions.forEach((q, i) => {
+      q.answer = res.answers[i];
+      q.explanation = res.explanations[i];
+      if (q.hi && res.hiExplanations && res.hiExplanations[i]) q.hi.explanation = res.hiExplanations[i];
+    });
+    receipt = res.receipt;
+    return true;
+  } catch (error) {
+    console.error("Server scoring failed:", error);
+  }
+  try {
+    const pool = new Map((await questionsById(questions.map((q) => q.id))).map((q) => [q.id, q]));
+    if (!questions.every((q) => pool.has(q.id))) return false;
+    questions.forEach((q) => {
+      const p = pool.get(q.id);
+      q.answer = q.options.indexOf(p.options[p.answer]);
+      q.explanation = p.explanation;
+      if (q.hi && p.hi) q.hi.explanation = p.hi.explanation;
+    });
+    receipt = null;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function showResults(thisSectionSecs) {
+  const total = questions.length;
   // Scored per section, because marks per question differ (e.g. 40 questions carrying 60 marks).
   const parts = mock
     ? mock.sections.map((m) => ({ name: m.section.name, marks: m.section.marks, start: m.start, end: m.end }))
@@ -810,10 +918,11 @@ function finish() {
           <span class="review-tools"><span class="review-time">${seconds[i]}s</span>${star}
             <button type="button" class="tool-button review-report" data-id="${q.id}" title="Report">⚑</button>
             <span class="badge ${kind}">${label}</span></span></div>
-        <p class="review-q">${escapeHtml(q.question)}</p>
+        ${q.group && (i === 0 || !questions[i - 1].group || questions[i - 1].group.id !== q.group.id) ? groupSetupHtml(q) : ""}
+        <p class="review-q"${inHindi(q) ? ' lang="hi"' : ""}>${escapeHtml(questionText(q))}</p>
         <p><span class="review-key">Your answer</span> ${a === null ? "&mdash;" : escapeHtml(q.options[a])}</p>
         <p><span class="review-key">Correct answer</span> ${escapeHtml(q.options[q.answer])}</p>
-        ${q.explanation ? `<p class="review-expl">${escapeHtml(q.explanation)}</p>` : ""}
+        ${explanationText(q) ? `<p class="review-expl"${inHindi(q) ? ' lang="hi"' : ""}>${escapeHtml(explanationText(q))}</p>` : ""}
       </div>`;
     })
     .join("");
@@ -837,7 +946,10 @@ function finish() {
         <div class="stat"><b>${avgSecs}s</b><span>Avg per answer</span></div>
       </div>${cutoffHtml}${breakdown}
       <p id="save-status" class="save-status"></p>
-      ${challengeCode ? `<p class="challenge-note"><a href="challenge.html?code=${challengeCode}">See how you did against your friend</a></p>` : ""}
+      ${serverScored() ? `<p class="save-status">${receipt ? "Scored on the server: this result counts for the leaderboard."
+        : "Not ranked: this quiz wasn't timed by the server (offline, or the time limit passed)."}
+        <a href="leaderboard.html?quiz=${encodeURIComponent(serverKey())}">See the leaderboard</a></p>` : ""}
+      ${challengeCode ? `<p class="challenge-note"><a href="challenge.html?code=${encodeURIComponent(challengeCode)}">See how you did against your friend</a></p>` : ""}
       <div class="result-actions">
         <button type="button" id="share-button" class="share-button">Share result</button>
         ${!practice && !challengeCode ? '<button type="button" id="challenge-button" class="share-button" hidden>Challenge a friend</button>' : ""}
@@ -882,6 +994,7 @@ function finish() {
       chosen: answers[i], correct: answers[i] === q.answer, seconds: Math.min(seconds[i], 36000),
     })),
     challengeCode: practice ? null : challengeCode,
+    receipt,
   });
 }
 
@@ -892,7 +1005,7 @@ async function onChallenge(attemptId, title) {
   button.disabled = true;
   try {
     const challenge = await createChallenge(attemptId);
-    const link = new URL(`challenge.html?code=${challenge.code}`, window.location.href).href;
+    const link = new URL(`challenge.html?code=${encodeURIComponent(challenge.code)}`, window.location.href).href;
     const text = `I scored ${challenge.creator.score}/${challenge.creator.maxMarks} on ${title} on QuizVerse. Can you beat me?`;
     if (navigator.share) {
       try {
@@ -905,9 +1018,9 @@ async function onChallenge(attemptId, title) {
     }
     try {
       await navigator.clipboard.writeText(`${text} ${link}`);
-      status.innerHTML = `Link copied: <a href="${link}">${link}</a>`;
+      showLink(status, "Link copied: ", link);
     } catch {
-      status.innerHTML = `Send this link to a friend: <a href="${link}">${link}</a>`;
+      showLink(status, "Send this link to a friend: ", link);
     }
   } catch (error) {
     status.textContent = error.message;
@@ -1013,7 +1126,7 @@ function goNextQuiz() {
 }
 
 // ---------- Keyboard shortcuts ----------
-// 1-5 pick an option, N/→ next, P/← previous, M mark, B bookmark, S submit.
+// 1-5 pick an option, N/→ next, P/← previous, M mark, B bookmark, S submit, L English/Hindi.
 // (Numbers only for options: letter keys would clash with B for bookmark.)
 
 document.addEventListener("keydown", (e) => {
@@ -1029,6 +1142,7 @@ document.addEventListener("keydown", (e) => {
   else if (key === "m" && timed()) toggleMark();
   else if (key === "b" && $("bookmark-button")) toggleBookmark();
   else if (key === "s" && visible("finish-button")) onFinishClick();
+  else if (key === "l" && !$("lang-toggle").hidden) toggleLang();
   else return;
   e.preventDefault();
 });
@@ -1040,6 +1154,7 @@ $("mark-button").addEventListener("click", toggleMark);
 $("finish-button").addEventListener("click", onFinishClick);
 $("new-quiz-button").addEventListener("click", goNextQuiz);
 $("palette-toggle").addEventListener("click", () => document.body.classList.toggle("palette-open"));
+$("lang-toggle").addEventListener("click", toggleLang);
 $("report-form").addEventListener("submit", submitReport);
 $("back-link-button").addEventListener("click", () => {
   window.location.href = practice

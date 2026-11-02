@@ -4,13 +4,13 @@ QuizVerse is a web-based multiple-choice quiz app. Pick a subject, answer a set 
 
 ## Features
 
-- **Bank exams and tech interview prep:** IBPS Clerk, SBI Clerk and IBPS RRB Clerk papers (English, Quant, Reasoning), plus a Tech Interview Prep track with DSA, Java, Python, Spring Boot, React, Vue and AI (120 hand-written questions each, Easy/Medium/Hard, with explanations).
+- **Bank exams and tech interview prep:** IBPS Clerk, SBI Clerk, IBPS RRB Clerk, IBPS PO, SBI PO and RBI Assistant papers (English, Quant, Reasoning), plus a Tech Interview Prep track with DSA, Java, Python, Spring Boot, React, Vue and AI (120 hand-written questions each, Easy/Medium/Hard, with explanations).
 - **Multiple quizzes per subject:** each subject has numbered quizzes, and "New Quiz" loads the next one.
 - **Instant feedback:** after each answer you see whether it was correct,
  the right answer and a short explanation.
 - **Score summary:** a final screen shows your score and percentage.
 - **Accounts:** sign up and log in to keep a history of every quiz you finish, with your past scores on the "My scores" page. The profile page (click your name) edits your name and email, changes your password and deletes your account.
-- **Real exam screen:** question palette (answered / not answered / not visited / marked), mark for review, previous/next, keyboard shortcuts (1–4 answer, N next, P previous, M mark, B bookmark, S submit). The timer counts down to a fixed end time and a running quiz survives a page refresh.
+- **Real exam screen:** question palette (answered / not answered / not visited / marked), mark for review, previous/next, keyboard shortcuts (1–4 answer, N next, P previous, M mark, B bookmark, S submit, L English/Hindi). The timer counts down to a fixed end time and a running quiz survives a page refresh.
 - **Progress:** best score per quiz on the exam page, score trend chart, accuracy and average time per topic, and your five weakest topics.
 - **Full mock tests:** sit a whole Prelims or Mains paper from the exam page (Easy, Medium or Hard, 5 of each). Each section has its own timer and locks when its time is up or you submit it, as in IBPS exams. The result shows a score for each section and overall, and a refresh resumes the test.
 - **Cutoffs:** Prelims mock results show the last published General-category cutoff range across states, a few large states, and where your score falls. The figures (in `scripts/build_exams.py`, with sources) come from coaching-site tables, so they're marked approximate.
@@ -20,7 +20,16 @@ QuizVerse is a web-based multiple-choice quiz app. Pick a subject, answer a set 
 - **Share and dark mode:** "Share result" on the score screen makes an image of your score for WhatsApp and other apps (or downloads it on desktop). Every page has a light/dark toggle; without a choice it follows the device setting.
 - **Challenge a friend:** after an exam quiz or full mock, "Challenge a friend" makes a link (`challenge.html?code=...`). Friends see your score, take the same quiz through the link, and appear on that challenge's scoreboard (each friend's first try counts). Viewing is open to anyone; taking it needs an account. Scores are self-reported, so it's for friendly competition.
 - **Google sign-in:** "Continue with Google" on the login and sign-up pages creates an account (no password needed) or signs you in. An existing account is never joined to Google automatically: log in with your password and connect Google on the profile page. Google-only accounts can set a password later. The button only appears when `GOOGLE_CLIENT_ID` is set.
+- **Forgot password:** "Forgot password?" on the login page emails a reset link (valid 30 minutes, single use). Using it logs out every device. Needs email set up (`RESEND_API_KEY`, `MAIL_FROM`, `QUIZVERSE_PUBLIC_URL`); in local test mode the email is printed to the log instead.
+- **Email reminders and weekly summary:** opt-in on the profile page. A reminder after 3 days without a quiz (once per quiet spell, 6:15 p.m. IST) and a Monday 8:10 a.m. IST summary of the week. Every email has a one-click unsubscribe link and `List-Unsubscribe` headers. Runs on one server instance only (a second one would send duplicates).
+- **Server scoring and leaderboards:** timed exam quizzes and full mocks are published without answers. The server scores them (`POST /api/quiz/submit`), checks the time limit with a signed start token, and returns the answer key for the review. Results with a valid receipt are ranked on per-quiz and weekly leaderboards (`leaderboard.html`). Practice sets keep their answers on the device, so practice still works offline. Users can appear as "Anonymous".
+- **Live contests:** admins schedule a contest on `contests.html` (any exam quiz or full mock, a start time and a duration). Users register, then sit the paper in the window: the server serves it with questions and options shuffled per person, keeps the time, and scores it. Ranks and percentiles are published when it ends. Designed for one server instance; a big contest at one start time needs a larger Railway plan and database connections.
 - **Practice:** revise questions you got wrong or skipped, bookmark questions, build custom quizzes by topic/difficulty/length/time, and report broken questions.
+- **Grouped questions:** medium and hard Quant quizzes end with a data interpretation table, Reasoning quizzes with a floor puzzle and English quizzes with a reading comprehension passage, each shared by 5 questions and shown above every one of them. Contests keep a set's questions together.
+- **Step-by-step solutions:** generated Quant and Reasoning questions show the working line by line, with shortcuts; English solutions add a method line for the question type.
+- **Hindi (draft):** easy Quant questions on percentages, simple interest, profit and speed have a Hindi version; the हिंदी button (or L) on the quiz screen switches. Machine-drafted and marked "Draft" until a fluent reviewer checks it.
+- **Computer Knowledge and Banking Awareness (draft):** a starter set of static-fact practice questions (no current affairs), marked "Draft" until checked. Exam sections stay "coming soon" until there are enough.
+- **Question editor (admins):** on the reports page, edit a question's text, options, answer or solution, or hide it. Edits are stored by question id and applied on the next data build (see Question data), so history and bookmarks stay attached.
 
 ## How it works
 
@@ -92,6 +101,9 @@ erDiagram
     app_user ||--o{ bookmark : "user_id, on delete cascade"
     app_user ||--o{ question_report : "user_id, on delete cascade"
     quiz_attempt ||--o| challenge : "attempt_id, on delete cascade"
+    app_user ||--o{ password_reset_token : "user_id, on delete cascade"
+    contest ||--o{ contest_entry : "contest_id, on delete cascade"
+    app_user ||--o{ contest_entry : "user_id, on delete cascade"
     app_user {
         bigint id PK "not null"
         varchar username UK "30, not null"
@@ -101,6 +113,12 @@ erDiagram
         timestamptz created_at "not null"
         int daily_goal "not null"
         varchar google_subject UK "255, nullable"
+        boolean email_reminders "not null"
+        boolean email_weekly "not null"
+        varchar email_token UK "43, nullable"
+        timestamptz last_reminder_at "nullable"
+        timestamptz last_weekly_at "nullable"
+        boolean leaderboard_hidden "not null"
     }
     quiz_attempt {
         bigint id PK "not null"
@@ -121,6 +139,8 @@ erDiagram
         timestamptz completed_at "not null"
         varchar kind "16, not null"
         bigint challenge_id FK "nullable"
+        boolean verified "not null"
+        varchar receipt_hash UK "64, nullable"
     }
     attempt_answer {
         bigint id PK "not null"
@@ -153,6 +173,48 @@ erDiagram
         bigint attempt_id FK,UK "not null"
         timestamptz created_at "not null"
     }
+    password_reset_token {
+        bigint id PK "not null"
+        bigint user_id FK "not null"
+        varchar token_hash UK "64, not null"
+        timestamptz expires_at "not null"
+        boolean used "not null"
+        timestamptz created_at "not null"
+    }
+    contest {
+        bigint id PK "not null"
+        varchar title "120, not null"
+        varchar quiz_key "200, not null"
+        timestamptz starts_at "not null"
+        int minutes "not null"
+        timestamptz created_at "not null"
+    }
+    contest_entry {
+        bigint id PK "not null"
+        bigint contest_id FK "not null"
+        bigint user_id FK "not null"
+        timestamptz registered_at "not null"
+        timestamptz started_at "nullable"
+        timestamptz submitted_at "nullable"
+        varchar chosen "1500, nullable"
+        double score "nullable"
+        int correct "nullable"
+        int wrong "nullable"
+        int skipped "nullable"
+        int seconds_used "nullable"
+    }
+    question_edit {
+        bigint id PK "not null"
+        varchar question_id UK "16, not null"
+        varchar question "4000, nullable"
+        varchar options "2000, nullable"
+        int answer "nullable"
+        varchar explanation "4000, nullable"
+        boolean hidden "not null"
+        varchar note "500, nullable"
+        varchar edited_by "50, not null"
+        timestamptz updated_at "not null"
+    }
 ```
 <!-- END GENERATED: schema -->
 
@@ -175,8 +237,11 @@ Each exam has a **Prelims** and a **Mains** stage. Every section has Easy, Mediu
 | IBPS Clerk | English 30q/20m, Numerical 35q/20m, Reasoning 35q/20m | Reasoning 40q/60 marks/35m, English 40q/35m, Quant 40q/50 marks/35m |
 | SBI Clerk | English 30q/20m, Quant 35q/20m, Reasoning 35q/20m | English 40q/35m, Quant 50q/45m, Reasoning 50q/60 marks/45m |
 | IBPS RRB Clerk | Reasoning 40q/25m, Numerical 40q/20m | Reasoning 40q/50 marks/30m, English 40q/30m, Numerical 40q/50 marks/30m |
+| IBPS PO | English 30q/20m, Quant 35q/20m, Reasoning 35q/20m | Reasoning & Computer 45q/60 marks/60m, English 35q/40 marks/40m, Data Analysis 35q/60 marks/45m |
+| SBI PO | English 40q/20m, Quant 30q/20m, Reasoning 30q/20m | Reasoning & Computer 40q/60 marks/50m, Data Analysis 30q/60 marks/45m, English 35q/40 marks/40m |
+| RBI Assistant | English 30q/20m, Numerical 35q/20m, Reasoning 35q/20m | Reasoning 40q/30m, English 40q/30m, Numerical 40q/30m |
 
-General/Financial Awareness, Computer Knowledge and the Hindi language option have no question bank yet. They are listed as "coming soon". SBI's Reasoning & Computer Aptitude section covers the reasoning part only. A Java practice set and the Tech Interview Prep track (both untimed, instant feedback) are also included.
+General/Financial Awareness and Computer Knowledge exam sections are listed as "coming soon" (a small draft practice set exists). Reasoning & Computer Aptitude sections cover the reasoning part only. PO Mains also has a descriptive paper (letter and essay) that can't be marked as a quiz, so it's left out. The PO and RBI Assistant patterns are from the last notifications; check each new one. A Java practice set and the Tech Interview Prep track (both untimed, instant feedback) are also included.
 
 The patterns come from a published summary of the 2026 patterns plus IBPS pages seen in search results. IBPS's own handout PDFs could not be opened, so check the notification for your cycle.
 
@@ -188,17 +253,20 @@ Everything lives in `src/main/resources/static/data/`. `index.json` lists exams,
 { "id": "...", "topic": "...", "question": "...", "options": ["A", "B", "C", "D"], "answer": 1, "explanation": "..." }
 ```
 
-`answer` is the zero-based index into `options`. `id` is a hash of the subject, question text and options, so it stays the same when the data is rebuilt; saved answers, bookmarks and reports point at it. Each question also has `subject` and `level`. The data is generated by scripts, in this order:
+`answer` is the zero-based index into `options`. **Timed exam quiz files have no `answer` or `explanation`:** `build_exams.py` writes those to `src/main/resources/answer-keys.json` (on the classpath, never served), and the server scores exam quizzes and mocks from it. The practice topic pools (`data/topics/`) keep the answers so practice works offline. `id` is a hash of the subject, question text and options, so it stays the same when the data is rebuilt; saved answers, bookmarks and reports point at it. Each question also has `subject` and `level`. The data is generated by scripts, in this order:
 
 ```bash
 python3 -I scripts/gen_banks.py scripts/banks                      # numerical + reasoning banks (answers computed)
+python3 -I scripts/gen_groups.py scripts/banks                     # DI tables and puzzles: 5 questions per set-up
 python3 -I scripts/build_questions.py scripts/legacy/java_questions.sql src/main/resources/static/data   # Java quizzes
-python3 -I scripts/build_exams.py scripts/banks scripts/english_bank src/main/resources/static/data
+python3 -I scripts/build_exams.py scripts/banks scripts/english_bank src/main/resources/static/data src/main/resources/answer-keys.json
 python3 -I scripts/build_tech.py scripts/tech_bank src/main/resources/static/data   # Tech Interview Prep
-python3 -I scripts/build_topics.py src/main/resources/static/data  # topic pools for practice sets
+python3 -I scripts/build_topics.py src/main/resources/static/data src/main/resources/answer-keys.json scripts/ga_bank  # topic pools for practice sets
 ```
 
-CI rebuilds the data and fails if the committed files differ, so always commit the regenerated output. Changing a question's text or options changes its id; any bookmarks or history on the old id stop finding it (history totals are kept).
+CI rebuilds the data and fails if the committed files differ, so always commit the regenerated output. Changing a question's text or options in a bank changes its id; any bookmarks or history on the old id stop finding it (history totals are kept). To fix a question without that, use the admin editor: download `question_edits.json` from the reports page into `scripts/`, rerun the scripts and commit. Edits keep the original id.
+
+Other inputs: `scripts/banks/groups_*.json` (DI and puzzle sets, `gen_groups.py`), `scripts/english_bank/rc_*.json` (reading passages), `scripts/ga_bank/` (Computer Knowledge and Banking Awareness). Items with `"needsReview": true` show a "Draft" badge; remove the flag once a person has checked the facts. Each exam takes its own 250-question slice of the generated Quant and Reasoning banks (`EXAM_POOLS` in `gen_banks.py`, one per exam in `EXAMS`; raise it when adding an exam). English is one shared bank, so English questions repeat across exams until more are written.
 
 Prelims cutoffs live in `CUTOFFS` in `scripts/build_exams.py`, each with its source URLs. Update them after each result (only with a source), rebuild, and commit `index.json`.
 
@@ -230,11 +298,19 @@ The database schema is managed by Flyway (`src/main/resources/db/migration`). To
 
 ## Configuration
 
+**Local secrets.** Copy `.env.example` to `.env` and fill in values; Spring Boot loads `./.env` automatically. `.env` is gitignored and never committed. In production, set the same names as Railway service variables. The `application*.properties` files only reference these as `${VAR}` and must never hold real values.
+
+**Leak guard.** Enable the pre-commit hook once per clone with `git config core.hooksPath .githooks`. It blocks commits that stage `.env`, key files or `application-local.properties`, or that add lines that look like API keys, passwords or database URLs with credentials.
+
 | Variable | Purpose |
 |---|---|
 | `PORT` | HTTP port. Defaults to 8080 and is set automatically on Railway. |
 | `QUIZVERSE_ADMIN_USERNAMES` | Comma-separated usernames that can review question reports. |
 | `GOOGLE_CLIENT_ID` | OAuth 2.0 web client id from Google Cloud Console (ends in `.apps.googleusercontent.com`). Turns on Google sign-in; leave unset to hide it. It's public (the page sends it to Google), so it isn't a secret. |
+| `RESEND_API_KEY` | API key from [Resend](https://resend.com) for sending email (forgot password, reminders). **Secret**: set it only as a Railway variable. Leave unset to turn email off. |
+| `MAIL_FROM` | Sender, e.g. `QuizVerse <no-reply@yourdomain>`. The domain must be verified in Resend (SPF and DKIM DNS records). |
+| `QUIZVERSE_PUBLIC_URL` | The site's address for links in emails, e.g. `https://thequizverse.up.railway.app`. Required for reset emails in production. |
+| `QUIZVERSE_SIGNING_KEY` | **Secret.** Signs quiz start tokens and receipts for leaderboards. A long random string (e.g. `openssl rand -base64 48`). Unset, a new key is made at each start, so quizzes running during a redeploy aren't ranked. |
 | `SPRING_PROFILES_ACTIVE` | Set to `prod` in production to use PostgreSQL and Secure cookies. |
 | `PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD` | PostgreSQL connection (prod profile). Use Railway's Postgres plugin (reference its variables from the app service, e.g. `${{Postgres.PGHOST}}`) or the values from an external host such as Neon or Supabase. |
 | `PGSSLMODE` | SSL mode for PostgreSQL. Defaults to `require`, which hosted databases need; set `disable` only for a server without SSL. |
@@ -249,8 +325,14 @@ On the Railway app service, set `SPRING_PROFILES_ACTIVE=prod` and the `PG*` vari
 
 1. In [Google Cloud Console](https://console.cloud.google.com/), create a project, then **Google Auth Platform** (APIs & Services → OAuth consent screen): app name QuizVerse, your support email, audience **External**. Scopes: the default `openid`, `email` and `profile` are all it uses.
 2. **Clients → Create client → Web application.** Under **Authorized JavaScript origins** add `https://thequizverse.up.railway.app` (and `http://localhost:8080` for local testing). No redirect URI is needed: the button uses a popup and posts the ID token to `/api/auth/google`.
-3. Copy the client id into `GOOGLE_CLIENT_ID` on the Railway service (and in `application-local.properties` as `quizverse.google-client-id=...` for local runs).
+3. Copy the client id into `GOOGLE_CLIENT_ID` on the Railway service (and as `GOOGLE_CLIENT_ID=...` in `.env` for local runs).
 4. While the consent screen is in **Testing**, only test users you add can sign in. **Publish** it for everyone; for the basic scopes this doesn't need Google's verification.
+
+### Email setup
+
+1. Sign up at [Resend](https://resend.com), add your domain under **Domains** and create the DNS records it shows (SPF, DKIM, and ideally a DMARC record). Wait for it to show **Verified**.
+2. Create an API key with **Sending access** only, and set `RESEND_API_KEY`, `MAIL_FROM` and `QUIZVERSE_PUBLIC_URL` on the Railway service.
+3. Try "Forgot password?" with your own account. Without a verified domain, Resend only delivers to your own address.
 
 ### Backups
 

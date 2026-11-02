@@ -1,602 +1,812 @@
 [
  {
-  "id": "q0d397e0c490",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 3, 9, 21, 45, ?, 189, 381",
-  "options": [
-   "94",
-   "93",
-   "96",
-   "46"
-  ],
-  "answer": 1,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q12ae3fed575",
-  "subject": "quant",
-  "topic": "quadratic-equations",
-  "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 7x + 6 = 0\nII. y² − 11y + 30 = 0",
-  "options": [
-   "x > y",
-   "x ≤ y",
-   "x < y",
-   "x = y"
-  ],
-  "answer": 2,
-  "explanation": "Roots of I: -1, -6; roots of II: 5, 6"
- },
- {
-  "id": "q7202e6a2033",
-  "subject": "quant",
-  "topic": "mixture",
-  "level": "hard",
-  "question": "A vessel holds 200 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
-  "options": [
-   "202",
-   "162",
-   "157",
-   "161"
-  ],
-  "answer": 1,
-  "explanation": "Milk left = 200(1 − 20/200)²"
- },
- {
-  "id": "qf2f18604524",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 8 people is 31 years. When a new person joins, the average rises to 32. How old is the new person?",
-  "options": [
-   "42",
-   "40",
-   "36",
-   "50"
-  ],
-  "answer": 1,
-  "explanation": "9×32 − 8×31 = 40"
- },
- {
-  "id": "q27fe7b49a57",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 5 red, 5 blue and 2 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "2/13",
-   "8/13",
-   "19/66",
-   "7/22"
-  ],
-  "answer": 3,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 12×11"
- },
- {
-  "id": "qe3efd2b2a69",
+  "id": "qc92ae920d44",
   "subject": "quant",
   "topic": "trains",
   "level": "hard",
-  "question": "Two trains 230 m and 360 m long run at 72 km/h and 54 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "question": "Two trains 260 m and 230 m long run at 36 km/h and 42 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
   "options": [
-   "124",
-   "118",
-   "59",
-   "130"
-  ],
-  "answer": 1,
-  "explanation": "Relative speed = 18 km/h; distance = 590 m"
+   "289",
+   "294",
+   "338",
+   "235"
+  ]
  },
  {
-  "id": "qf7af5397741",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 40, 45, 68, 77, ?, 117, 148",
-  "options": [
-   "104",
-   "88",
-   "106",
-   "103"
-  ],
-  "answer": 0,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q604f1136080",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 4 red, 6 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "2/15",
-   "31/105",
-   "17/30",
-   "7/15"
-  ],
-  "answer": 1,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 15×14"
- },
- {
-  "id": "q4aee85ddf17",
-  "subject": "quant",
-  "topic": "compound-interest",
-  "level": "hard",
-  "question": "What is the difference between the compound interest and simple interest on ₹50000 for 2 years at 12% per annum?",
-  "options": [
-   "₹720",
-   "₹612",
-   "₹540",
-   "₹1080"
-  ],
-  "answer": 0,
-  "explanation": "Difference = P(R/100)² = ₹720"
- },
- {
-  "id": "q48d9f9068fc",
-  "subject": "quant",
-  "topic": "permutation-combination",
-  "level": "hard",
-  "question": "In how many distinct ways can the letters of the word MISSISSIPPI be arranged?",
-  "options": [
-   "34650",
-   "31185",
-   "34660",
-   "43312"
-  ],
-  "answer": 0,
-  "explanation": "n! divided by the factorial of each repeated letter count"
- },
- {
-  "id": "qba5ff382787",
-  "subject": "quant",
-  "topic": "percentage",
-  "level": "hard",
-  "question": "A's salary is 25% more than B's. B's salary is what percent less than A's?",
-  "options": [
-   "25%",
-   "15%",
-   "16%",
-   "20%"
-  ],
-  "answer": 3,
-  "explanation": "100x/(100+x) with x = 25"
- },
- {
-  "id": "q4265fb05833",
-  "subject": "quant",
-  "topic": "compound-interest",
-  "level": "hard",
-  "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 12% per annum?",
-  "options": [
-   "₹72",
-   "₹58",
-   "₹82",
-   "₹69"
-  ],
-  "answer": 0,
-  "explanation": "Difference = P(R/100)² = ₹72"
- },
- {
-  "id": "qd61d7351504",
-  "subject": "quant",
-  "topic": "quadratic-equations",
-  "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 3 = 0\nII. y² + 2y − 35 = 0",
-  "options": [
-   "x > y",
-   "No relation can be established",
-   "x = y",
-   "x < y"
-  ],
-  "answer": 1,
-  "explanation": "Roots of I: -3, 1; roots of II: -7, 5"
- },
- {
-  "id": "q77ebff9b212",
-  "subject": "quant",
-  "topic": "trains",
-  "level": "hard",
-  "question": "Two trains 200 m and 370 m long run at 96 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
-  "options": [
-   "154",
-   "171",
-   "181",
-   "173"
-  ],
-  "answer": 1,
-  "explanation": "Relative speed = 12 km/h; distance = 570 m"
- },
- {
-  "id": "q130285d61a7",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 3, 8, 18, 38, ?, 158, 318",
-  "options": [
-   "70",
-   "81",
-   "78",
-   "86"
-  ],
-  "answer": 2,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q66fc0d9d857",
-  "subject": "quant",
-  "topic": "time-work",
-  "level": "hard",
-  "question": "A and B together can do a job in 20 days, B and C in 12 days, and A and C in 10 days. In how many days can A alone do it?",
-  "options": [
-   "35",
-   "30",
-   "45",
-   "15"
-  ],
-  "answer": 1,
-  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
- },
- {
-  "id": "q380c503acdc",
-  "subject": "quant",
-  "topic": "quadratic-equations",
-  "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 8 = 0\nII. y² − 15y + 56 = 0",
-  "options": [
-   "x ≥ y",
-   "x ≤ y",
-   "No relation can be established",
-   "x < y"
-  ],
-  "answer": 3,
-  "explanation": "Roots of I: -1, -8; roots of II: 8, 7"
- },
- {
-  "id": "q8fb7dc9415a",
-  "subject": "quant",
-  "topic": "time-work",
-  "level": "hard",
-  "question": "A can complete a work in 20 days and B in 28 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
-  "options": [
-   "14",
-   "20",
-   "16",
-   "26"
-  ],
-  "answer": 2,
-  "explanation": "Remaining = 1 − 5(1/20+1/28); B needs remaining × 28 days"
- },
- {
-  "id": "qe4fbc5d3412",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "Two fair dice are thrown. What is the probability that the sum is 9?",
-  "options": [
-   "1/9",
-   "5/36",
-   "7/36",
-   "1/6"
-  ],
-  "answer": 0,
-  "explanation": "4 favourable outcomes out of 36"
- },
- {
-  "id": "qabbe713f013",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 6 red, 2 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "1/22",
-   "1/6",
-   "19/55",
-   "2/11"
-  ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
- },
- {
-  "id": "q637561f630c",
-  "subject": "quant",
-  "topic": "compound-interest",
-  "level": "hard",
-  "question": "What is the difference between the compound interest and simple interest on ₹40000 for 2 years at 20% per annum?",
-  "options": [
-   "₹800",
-   "₹1600",
-   "₹1360",
-   "₹1602"
-  ],
-  "answer": 1,
-  "explanation": "Difference = P(R/100)² = ₹1600"
- },
- {
-  "id": "q56d0cb8eb36",
+  "id": "qde1c2d7e2f8",
   "subject": "quant",
   "topic": "boats-streams",
   "level": "hard",
-  "question": "A boat takes 9 hours to go 72 km upstream and 4 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "question": "A boat takes 50 hours to go 1050 km upstream and 42 hours to return downstream. Find the speed of the stream (km/h).",
   "options": [
-   "20",
-   "16",
-   "13",
-   "14"
-  ],
-  "answer": 2,
-  "explanation": "Upstream 8, downstream 18; still water = (up+down)/2"
- },
- {
-  "id": "q40e573d8735",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 29 hours to go 493 km upstream and 17 hours to return downstream. Find the speed of the stream (km/h).",
-  "options": [
+   "12",
+   "2",
    "3",
-   "7",
-   "1",
-   "6"
-  ],
-  "answer": 3,
-  "explanation": "Stream = (downstream − upstream)/2 = 6"
+   "5"
+  ]
  },
  {
-  "id": "q8bdf5032c99",
+  "id": "q0d340685f85",
   "subject": "quant",
   "topic": "time-work",
   "level": "hard",
-  "question": "A and B together can do a job in 15 days, B and C in 20 days, and A and C in 12 days. In how many days can A alone do it?",
-  "options": [
-   "23",
-   "20",
-   "21",
-   "10"
-  ],
-  "answer": 1,
-  "explanation": "Add the three rates, halve, then subtract B and C's combined rate."
- },
- {
-  "id": "q018bf72880a",
-  "subject": "quant",
-  "topic": "mixture",
-  "level": "hard",
-  "question": "A vessel holds 50 litres of pure milk. 20 litres are removed and replaced with water, and the process is repeated once more. How many litres of milk remain?",
-  "options": [
-   "28",
-   "14",
-   "17",
-   "18"
-  ],
-  "answer": 3,
-  "explanation": "Milk left = 50(1 − 20/50)²"
- },
- {
-  "id": "q45c928ca8ed",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 38 hours to go 342 km upstream and 18 hours to return downstream. Find the speed of the boat in still water (km/h).",
-  "options": [
-   "7",
-   "11",
-   "19",
-   "14"
-  ],
-  "answer": 3,
-  "explanation": "Upstream 9, downstream 19; still water = (up+down)/2"
- },
- {
-  "id": "q1ecc55509b5",
-  "subject": "quant",
-  "topic": "time-work",
-  "level": "hard",
-  "question": "A can complete a work in 19 days and B in 38 days. They work together for 3 days, then A leaves. In how many more days does B finish the remaining work?",
-  "options": [
-   "29",
-   "32",
-   "39",
-   "19"
-  ],
-  "answer": 0,
-  "explanation": "Remaining = 1 − 3(1/19+1/38); B needs remaining × 38 days"
- },
- {
-  "id": "q0e5e6d352b9",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 15, 6, 21, 12, 27, 24, ?, 48",
-  "options": [
-   "50",
-   "16",
-   "33",
-   "38"
-  ],
-  "answer": 2,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q066ee5fa7db",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 21, 20, 41, 44, 69, ?, 105",
-  "options": [
-   "68",
-   "38",
-   "76",
-   "91"
-  ],
-  "answer": 2,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "qc5d46076389",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 15 hours to go 240 km upstream and 8 hours to return downstream. Find the speed of the boat in still water (km/h).",
-  "options": [
-   "25",
-   "28",
-   "29",
-   "23"
-  ],
-  "answer": 3,
-  "explanation": "Upstream 16, downstream 30; still water = (up+down)/2"
- },
- {
-  "id": "qe7ccdda580c",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 14, 33, 70, ?, 222, 349, 518",
-  "options": [
-   "129",
-   "131",
-   "196",
-   "138"
-  ],
-  "answer": 1,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "qae9eba1da3f",
-  "subject": "quant",
-  "topic": "compound-interest",
-  "level": "hard",
-  "question": "What is the difference between the compound interest and simple interest on ₹55000 for 2 years at 12% per annum?",
-  "options": [
-   "₹871",
-   "₹713",
-   "₹792",
-   "₹990"
-  ],
-  "answer": 2,
-  "explanation": "Difference = P(R/100)² = ₹792"
- },
- {
-  "id": "qae1afa45814",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 8 people is 26 years. When a new person joins, the average rises to 28. How old is the new person?",
-  "options": [
-   "66",
-   "34",
-   "54",
-   "44"
-  ],
-  "answer": 3,
-  "explanation": "9×28 − 8×26 = 44"
- },
- {
-  "id": "qfec42b79288",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "Two fair dice are thrown. What is the probability that the sum is 10?",
-  "options": [
-   "1/12",
-   "1/36",
-   "1/9",
-   "11/36"
-  ],
-  "answer": 0,
-  "explanation": "3 favourable outcomes out of 36"
- },
- {
-  "id": "q79221197b18",
-  "subject": "quant",
-  "topic": "average",
-  "level": "hard",
-  "question": "The average age of 5 people is 35 years. When a new person joins, the average rises to 36. How old is the new person?",
-  "options": [
-   "38",
-   "41",
-   "51",
-   "37"
-  ],
-  "answer": 1,
-  "explanation": "6×36 − 5×35 = 41"
- },
- {
-  "id": "q8235a619018",
-  "subject": "quant",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 3, 13, 53, 213, ?, 3413, 13653",
-  "options": [
-   "851",
-   "682",
-   "853",
-   "863"
-  ],
-  "answer": 2,
-  "explanation": "Study the pattern in differences, multipliers or alternating terms."
- },
- {
-  "id": "q830c7eb5c38",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 33 hours to go 165 km upstream and 15 hours to return downstream. Find the speed of the boat in still water (km/h).",
-  "options": [
-   "10",
-   "7",
-   "18",
-   "8"
-  ],
-  "answer": 3,
-  "explanation": "Upstream 5, downstream 11; still water = (up+down)/2"
- },
- {
-  "id": "qf7a11aadcde",
-  "subject": "quant",
-  "topic": "probability",
-  "level": "hard",
-  "question": "A bag has 3 red, 5 blue and 3 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
-  "options": [
-   "1/2",
-   "14/33",
-   "16/55",
-   "10/11"
-  ],
-  "answer": 2,
-  "explanation": "Favourable ways / total ways = Σ c(c−1) / 11×10"
- },
- {
-  "id": "q62be8e186d7",
-  "subject": "quant",
-  "topic": "boats-streams",
-  "level": "hard",
-  "question": "A boat takes 30 hours to go 30 km upstream and 2 hours to return downstream. Find the speed of the stream (km/h).",
+  "question": "A can complete a work in 15 days and B in 30 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
   "options": [
    "9",
-   "7",
-   "17",
-   "6"
-  ],
-  "answer": 1,
-  "explanation": "Stream = (downstream − upstream)/2 = 7"
+   "10",
+   "12",
+   "13"
+  ]
  },
  {
-  "id": "q466647e27c5",
+  "id": "qbb196f9aa8b",
+  "subject": "quant",
+  "topic": "average",
+  "level": "hard",
+  "question": "The average age of 9 people is 34 years. When a new person joins, the average rises to 37. How old is the new person?",
+  "options": [
+   "64",
+   "65",
+   "32",
+   "54"
+  ]
+ },
+ {
+  "id": "q5f3b33c74c2",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 3 red, 2 blue and 5 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "1/5",
+   "7/10",
+   "14/45",
+   "13/30"
+  ]
+ },
+ {
+  "id": "q1c61977b390",
+  "subject": "quant",
+  "topic": "boats-streams",
+  "level": "hard",
+  "question": "A boat takes 45 hours to go 315 km upstream and 21 hours to return downstream. Find the speed of the boat in still water (km/h).",
+  "options": [
+   "13",
+   "14",
+   "12",
+   "11"
+  ]
+ },
+ {
+  "id": "qbe1efa68068",
+  "subject": "quant",
+  "topic": "average",
+  "level": "hard",
+  "question": "The average age of 5 people is 27 years. When a new person joins, the average rises to 29. How old is the new person?",
+  "options": [
+   "29",
+   "40",
+   "31",
+   "39"
+  ]
+ },
+ {
+  "id": "qef455d7eee7",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹7500 for 2 years at 10% per annum?",
+  "options": [
+   "₹60",
+   "₹56",
+   "₹75",
+   "₹71"
+  ]
+ },
+ {
+  "id": "q75b2112c7db",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 12 days and B in 22 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "5",
+   "8",
+   "4",
+   "15"
+  ]
+ },
+ {
+  "id": "q59dbdef6cfa",
+  "subject": "quant",
+  "topic": "average",
+  "level": "hard",
+  "question": "The average age of 5 people is 40 years. When a new person joins, the average rises to 43. How old is the new person?",
+  "options": [
+   "29",
+   "58",
+   "55",
+   "72"
+  ]
+ },
+ {
+  "id": "q9c6f770a634",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 216, 343, 512, 729, 1000, ?, 1728",
+  "options": [
+   "1331",
+   "1131",
+   "1398",
+   "1597"
+  ]
+ },
+ {
+  "id": "q49bd15ea90c",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹15000 for 2 years at 8% per annum?",
+  "options": [
+   "₹48",
+   "₹96",
+   "₹101",
+   "₹77"
+  ]
+ },
+ {
+  "id": "qc69858fca03",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 12 days and B in 24 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "10",
+   "6",
+   "9",
+   "14"
+  ]
+ },
+ {
+  "id": "q6d06eba6b8c",
   "subject": "quant",
   "topic": "quadratic-equations",
   "level": "hard",
-  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 16 = 0\nII. y² + 15y + 54 = 0",
+  "question": "Solve both equations and compare x and y.\nI. x² − 8x + 15 = 0\nII. y² + 6y − 27 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "x > y",
+   "No relation can be established"
+  ]
+ },
+ {
+  "id": "q8035ec80f7b",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 32 days and B in 16 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "7",
+   "20",
+   "10",
+   "5"
+  ]
+ },
+ {
+  "id": "q1b9ed8f95c2",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 2, 10, 42, 170, 682, ?, 10922",
+  "options": [
+   "2735",
+   "2730",
+   "2866",
+   "2725"
+  ]
+ },
+ {
+  "id": "q470417ad0a3",
+  "subject": "quant",
+  "topic": "boats-streams",
+  "level": "hard",
+  "question": "A boat takes 7 hours to go 105 km upstream and 5 hours to return downstream. Find the speed of the stream (km/h).",
+  "options": [
+   "4",
+   "3",
+   "2",
+   "8"
+  ]
+ },
+ {
+  "id": "q2ffc769b8c9",
+  "subject": "quant",
+  "topic": "average",
+  "level": "hard",
+  "question": "The average age of 5 people is 40 years. When a new person joins, the average rises to 42. How old is the new person?",
+  "options": [
+   "52",
+   "26",
+   "44",
+   "42"
+  ]
+ },
+ {
+  "id": "q2293e6029dc",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 2, 6, 14, 30, 62, ?, 254",
+  "options": [
+   "139",
+   "116",
+   "94",
+   "126"
+  ]
+ },
+ {
+  "id": "qece8a9015e1",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 300 m and 370 m long run at 90 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "342",
+   "402",
+   "603",
+   "322"
+  ]
+ },
+ {
+  "id": "qf79d528ba04",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 24 days and B in 12 days. They work together for 4 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "6",
+   "3",
+   "1",
+   "8"
+  ]
+ },
+ {
+  "id": "q7f404d557ad",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 10 days and B in 22 days. They work together for 5 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "4",
+   "6",
+   "9",
+   "8"
+  ]
+ },
+ {
+  "id": "q9fa3d89874c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 8x + 12 = 0\nII. y² − 4y + 3 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x ≤ y",
+   "x = y"
+  ]
+ },
+ {
+  "id": "q6e89e65e174",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 3x − 18 = 0\nII. y² + y − 20 = 0",
   "options": [
    "No relation can be established",
-   "x ≥ y",
-   "x ≤ y",
+   "x = y",
+   "x < y",
    "x > y"
+  ]
+ },
+ {
+  "id": "q2a518b03514",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 25 = 0\nII. y² − 25 = 0",
+  "options": [
+   "x > y",
+   "x ≤ y",
+   "No relation can be established",
+   "x ≥ y"
+  ]
+ },
+ {
+  "id": "q89a05defe4c",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 10, 18, 30, ?, 66, 90, 118",
+  "options": [
+   "36",
+   "44",
+   "58",
+   "46"
+  ]
+ },
+ {
+  "id": "q0b4e0a9c4ed",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 7 = 0\nII. y² + 9y + 8 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≥ y",
+   "x = y"
+  ]
+ },
+ {
+  "id": "qe8caf1f2dfc",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 210 m and 240 m long run at 90 km/h and 96 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "270",
+   "269",
+   "268",
+   "243"
+  ]
+ },
+ {
+  "id": "q932060a6f51",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 36 days and B in 30 days. They work together for 6 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "18",
+   "19",
+   "20",
+   "14"
+  ]
+ },
+ {
+  "id": "q2b886a13e18",
+  "subject": "quant",
+  "topic": "trains",
+  "level": "hard",
+  "question": "Two trains 220 m and 110 m long run at 48 km/h and 84 km/h in the same direction on parallel tracks. In how many seconds do they completely cross each other?",
+  "options": [
+   "30",
+   "43",
+   "33",
+   "41"
+  ]
+ },
+ {
+  "id": "q8e44d4862b2",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 12x + 32 = 0\nII. y² + 5y − 14 = 0",
+  "options": [
+   "x < y",
+   "x = y",
+   "No relation can be established",
+   "x > y"
+  ]
+ },
+ {
+  "id": "q75370efd448",
+  "subject": "quant",
+  "topic": "compound-interest",
+  "level": "hard",
+  "question": "What is the difference between the compound interest and simple interest on ₹5000 for 2 years at 10% per annum?",
+  "options": [
+   "₹47",
+   "₹50",
+   "₹42",
+   "₹58"
+  ]
+ },
+ {
+  "id": "qd3c41f3d3fd",
+  "subject": "quant",
+  "topic": "number-series",
+  "level": "hard",
+  "question": "Find the missing number: 67, 78, 103, 118, ?, 166, 199",
+  "options": [
+   "147",
+   "157",
+   "148",
+   "176"
+  ]
+ },
+ {
+  "id": "q3235ba53e84",
+  "subject": "quant",
+  "topic": "probability",
+  "level": "hard",
+  "question": "A bag has 5 red, 3 blue and 4 green balls. Two balls are drawn without replacement. What is the probability that both are of the same colour?",
+  "options": [
+   "8/13",
+   "1/66",
+   "19/66",
+   "12/13"
+  ]
+ },
+ {
+  "id": "qd99b12131b9",
+  "subject": "quant",
+  "topic": "time-work",
+  "level": "hard",
+  "question": "A can complete a work in 20 days and B in 40 days. They work together for 8 days, then A leaves. In how many more days does B finish the remaining work?",
+  "options": [
+   "15",
+   "16",
+   "24",
+   "17"
+  ]
+ },
+ {
+  "id": "qc6c40fe1810",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the total amount disbursed by Indian over all the years shown (₹ crore)?",
+  "options": [
+   "1740",
+   "2175",
+   "1735",
+   "1479"
   ],
-  "answer": 3,
-  "explanation": "Roots of I: 8, 2; roots of II: -6, -9"
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "qae1852135d8",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the ratio of Indian's disbursement to PNB's in 2025?",
+  "options": [
+   "31:34",
+   "34:31",
+   "17:16",
+   "33:31"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q11763dc8346",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "By what percent did PNB's disbursement change from 2021 to 2025? (Negative means a fall.)",
+  "options": [
+   "-71.19%",
+   "-77.21%",
+   "-70.19%",
+   "-67.19%"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q45338693da6",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "What is the average disbursement of the five banks in 2025 (₹ crore)?",
+  "options": [
+   "238",
+   "232",
+   "242",
+   "237"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "id": "q76b9776c48b",
+  "subject": "quant",
+  "topic": "data-interpretation",
+  "level": "hard",
+  "question": "Which bank disbursed the most in total over all the years shown?",
+  "options": [
+   "Union",
+   "PNB",
+   "Indian",
+   "BOB"
+  ],
+  "group": {
+   "id": "ge655706c4b1",
+   "kind": "table",
+   "title": "Data interpretation",
+   "setup": {
+    "caption": "Loans disbursed by five banks (₹ crore)",
+    "columns": [
+     "Bank",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "rows": [
+     [
+      "Indian",
+      590,
+      190,
+      545,
+      245,
+      170
+     ],
+     [
+      "Union",
+      405,
+      495,
+      425,
+      290,
+      360
+     ],
+     [
+      "BOB",
+      540,
+      280,
+      170,
+      270,
+      315
+     ],
+     [
+      "Canara",
+      255,
+      100,
+      555,
+      385,
+      185
+     ],
+     [
+      "PNB",
+      520,
+      250,
+      390,
+      345,
+      155
+     ]
+    ]
+   }
+  }
  }
 ]

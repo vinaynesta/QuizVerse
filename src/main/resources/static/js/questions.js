@@ -105,3 +105,27 @@ export function topicName(listing, subject, topic) {
   const t = s && s.topics.find((x) => x.id === topic);
   return t ? t.name : topic.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
+
+function escapeText(text) {
+  const div = document.createElement("div");
+  div.textContent = String(text);
+  return div.innerHTML;
+}
+
+/**
+ * The shared set-up of a grouped question (DI table, puzzle or reading passage), or "" for a stand-alone one.
+ * Every question of a set carries the same group (scripts/build_exams.py), so any question can show it.
+ */
+export function groupSetupHtml(q) {
+  const g = q && q.group;
+  if (!g) return "";
+  const body = g.kind === "table"
+    ? `<div class="table-wrap"><table class="group-table">
+        ${g.setup.caption ? `<caption>${escapeText(g.setup.caption)}</caption>` : ""}
+        <thead><tr>${g.setup.columns.map((c) => `<th>${escapeText(c)}</th>`).join("")}</tr></thead>
+        <tbody>${g.setup.rows.map((r) => `<tr>${r.map((v, i) => i ? `<td class="num">${escapeText(v)}</td>` : `<th>${escapeText(v)}</th>`).join("")}</tr>`).join("")}</tbody>
+      </table></div>`
+    : `<p class="group-text">${escapeText(g.setup)}</p>`;
+  const review = g.needsReview ? ' <span class="badge needs-review" title="New content, still being checked">Draft</span>' : "";
+  return `<div class="group-setup"><div class="group-title">${escapeText(g.title)}${review}</div>${body}</div>`;
+}
