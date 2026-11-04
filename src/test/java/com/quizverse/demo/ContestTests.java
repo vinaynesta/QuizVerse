@@ -129,7 +129,11 @@ class ContestTests {
 		assertEquals(40, p1.get("questions").size());
 		// No answers in the paper, and each entrant's order differs.
 		assertEquals(false, p1.toString().contains("\"answer\""));
-		assertNotEquals(p1.get("questions").get(0).get("id"), p2.get("questions").get(0).get("id"));
+		List<String> order1 = new ArrayList<>();
+		List<String> order2 = new ArrayList<>();
+		p1.get("questions").forEach(q -> order1.add(q.get("id").asText()));
+		p2.get("questions").forEach(q -> order2.add(q.get("id").asText()));
+		assertNotEquals(order1, order2);
 		// The puzzle set (#19) keeps its 5 questions together and in order, with the shared set-up on each.
 		List<QuizCatalog.Question> original = catalog.questions(catalog.find(QUIZ));
 		List<String> grouped = original.stream().filter(q -> q.group() != null).map(QuizCatalog.Question::id).toList();
