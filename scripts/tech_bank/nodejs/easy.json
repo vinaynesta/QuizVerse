@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "modules",
+    "question": "Which function loads a CommonJS module in Node.js?",
+    "options": [
+      "require()",
+      "import()",
+      "include()",
+      "load()"
+    ],
+    "answer": 0,
+    "explanation": "require() is the synchronous CommonJS loader; import() is the promise-based dynamic form used with ES modules."
+  },
+  {
+    "topic": "modules",
+    "question": "What does module.exports hold by default in a new CommonJS file?",
+    "options": [
+      "undefined",
+      "An empty object {}",
+      "null",
+      "The global object"
+    ],
+    "answer": 1,
+    "explanation": "module.exports starts as an empty object, and exports is a shorthand reference to that same object."
+  },
+  {
+    "topic": "modules",
+    "question": "Which field in package.json makes .js files in that package load as ES modules?",
+    "options": [
+      "\"module\": true",
+      "\"esm\": true",
+      "\"type\": \"module\"",
+      "\"language\": \"esm\""
+    ],
+    "answer": 2,
+    "explanation": "Setting \"type\" to \"module\" makes .js files in that package ES modules; \"type\" defaults to \"commonjs\"."
+  },
+  {
+    "topic": "modules",
+    "question": "In an ES module, which of these is not available by default?",
+    "options": [
+      "import.meta.url",
+      "Top-level await",
+      "import declarations",
+      "__dirname"
+    ],
+    "answer": 3,
+    "explanation": "__dirname and __filename come from the CommonJS module wrapper; ES modules use import.meta.url instead."
+  },
+  {
+    "topic": "npm",
+    "question": "Which file records the exact resolved versions of all installed dependencies?",
+    "options": [
+      "package-lock.json",
+      "package.json",
+      "node_modules/.cache",
+      ".npmrc"
+    ],
+    "answer": 0,
+    "explanation": "package-lock.json stores the exact resolved version and integrity hash of every installed package."
+  },
+  {
+    "topic": "npm",
+    "question": "Which command installs a package as a devDependency?",
+    "options": [
+      "npm install --global <pkg>",
+      "npm install --save-dev <pkg>",
+      "npm install --save-prod <pkg>",
+      "npm publish --dev <pkg>"
+    ],
+    "answer": 1,
+    "explanation": "The --save-dev (or -D) flag records the package under devDependencies in package.json."
+  },
+  {
+    "topic": "npm",
+    "question": "Which field in package.json defines the entry point loaded when another file calls require() on the package?",
+    "options": [
+      "entry",
+      "start",
+      "main",
+      "index"
+    ],
+    "answer": 2,
+    "explanation": "The main field names the file that require() loads for the package; scripts.start is a different thing."
+  },
+  {
+    "topic": "npm",
+    "question": "Where are npm scripts such as start and test defined?",
+    "options": [
+      "The main field of package.json",
+      "The engines field of package.json",
+      "The .npmrc file",
+      "The scripts field of package.json"
+    ],
+    "answer": 3,
+    "explanation": "npm reads runnable commands from the scripts object in package.json."
+  },
+  {
+    "topic": "npm",
+    "question": "How does npm ci differ from npm install?",
+    "options": [
+      "It installs exactly what package-lock.json specifies and fails if the lock file is out of sync",
+      "It installs only global packages",
+      "It ignores the lock file and resolves fresh versions",
+      "It upgrades every dependency to its latest version"
+    ],
+    "answer": 0,
+    "explanation": "npm ci is built for clean, reproducible installs: it requires a lock file and removes any existing node_modules first."
+  },
+  {
+    "topic": "npm",
+    "question": "Which command runs the script named test defined in package.json?",
+    "options": [
+      "npm task test",
+      "npm run test",
+      "npm script test",
+      "npm execute test"
+    ],
+    "answer": 1,
+    "explanation": "npm run <script> executes a named entry from the scripts field; npm test is a shortcut for the same thing."
+  },
+  {
+    "topic": "buffers",
+    "question": "Which method creates a Buffer from a string?",
+    "options": [
+      "Buffer.create()",
+      "new Buffer.String()",
+      "Buffer.from()",
+      "Buffer.parse()"
+    ],
+    "answer": 2,
+    "explanation": "Buffer.from() is the safe modern constructor for creating a Buffer from a string, array, or other buffer; the bare new Buffer() form is deprecated."
+  },
+  {
+    "topic": "buffers",
+    "question": "Can the length of a Buffer be changed after it is allocated?",
+    "options": [
+      "Yes, it grows automatically when written to",
+      "Only when created with Buffer.alloc",
+      "Yes, it resizes when passed to fs.writeFile",
+      "No, its length is fixed when it is created"
+    ],
+    "answer": 3,
+    "explanation": "A Buffer is a fixed-length view over raw bytes; to hold more data you must allocate a new Buffer and copy."
+  },
+  {
+    "topic": "buffers",
+    "question": "Which encoding name produces a URL-safe Base64 string without +, /, or padding characters?",
+    "options": [
+      "'base64url'",
+      "'base64'",
+      "'hex'",
+      "'ascii'"
+    ],
+    "answer": 0,
+    "explanation": "The 'base64url' encoding replaces + and / with - and _ and omits padding; it has been available since Node.js 14.18 and 15.7."
+  },
+  {
+    "topic": "process",
+    "question": "Which property of process holds the array of command-line arguments?",
+    "options": [
+      "process.args",
+      "process.argv",
+      "process.env.ARGS",
+      "process.cmd"
+    ],
+    "answer": 1,
+    "explanation": "process.argv contains the node executable path, the script path, and any extra arguments."
+  },
+  {
+    "topic": "process",
+    "question": "What does setting process.exitCode do?",
+    "options": [
+      "It counts the number of open handles",
+      "It sets the memory limit for the process",
+      "It sets the exit status used when the process exits naturally, without stopping it immediately",
+      "It changes the scheduling priority of the process"
+    ],
+    "answer": 2,
+    "explanation": "process.exitCode is a soft exit status that Node uses if the event loop drains normally, unlike process.exit() which stops immediately."
+  },
+  {
+    "topic": "process",
+    "question": "Which environment variable is conventionally used by many libraries to select production behavior?",
+    "options": [
+      "NODE_MODE",
+      "PROD_ENV",
+      "NODE_STAGE",
+      "NODE_ENV"
+    ],
+    "answer": 3,
+    "explanation": "NODE_ENV is the widely used convention, and Express and many other libraries read it to switch between development and production modes."
+  },
+  {
+    "topic": "process",
+    "question": "Which method immediately terminates the Node.js process with a given exit code?",
+    "options": [
+      "process.exit()",
+      "process.stop()",
+      "process.halt()",
+      "process.end()"
+    ],
+    "answer": 0,
+    "explanation": "process.exit(code) stops the process right away, so pending asynchronous work may be abandoned."
+  },
+  {
+    "topic": "events",
+    "question": "Which EventEmitter method registers a listener that runs only once for an event?",
+    "options": [
+      "on()",
+      "once()",
+      "single()",
+      "first()"
+    ],
+    "answer": 1,
+    "explanation": "once() removes the listener automatically after its first invocation; on() keeps it registered."
+  },
+  {
+    "topic": "events",
+    "question": "What is the default maximum number of listeners per event before Node.js prints a possible memory leak warning?",
+    "options": [
+      "5",
+      "100",
+      "10",
+      "Unlimited"
+    ],
+    "answer": 2,
+    "explanation": "EventEmitter.defaultMaxListeners is 10; setMaxListeners() can change the limit for a specific emitter."
+  },
+  {
+    "topic": "events",
+    "question": "What happens when an EventEmitter emits 'error' and no 'error' listener is attached?",
+    "options": [
+      "The error is silently ignored",
+      "A 'warning' event is emitted instead",
+      "The emitter restarts automatically",
+      "The error is thrown, which can crash the process"
+    ],
+    "answer": 3,
+    "explanation": "Emitting 'error' without a listener throws the error, so an unhandled error event normally terminates the process."
+  },
+  {
+    "topic": "events",
+    "question": "Which method removes a specific listener from an EventEmitter?",
+    "options": [
+      "off() or removeListener()",
+      "delete()",
+      "unbind()",
+      "stop()"
+    ],
+    "answer": 0,
+    "explanation": "off() is an alias of removeListener() and removes the listener that was previously registered with the same function reference."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which module provides file system operations in Node.js?",
+    "options": [
+      "file",
+      "fs",
+      "filesystem",
+      "disk"
+    ],
+    "answer": 1,
+    "explanation": "The built-in fs module offers synchronous, callback, and promise-based file operations."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which function from fs/promises reads an entire file asynchronously?",
+    "options": [
+      "readFileSync",
+      "loadFile",
+      "readFile",
+      "streamFile"
+    ],
+    "answer": 2,
+    "explanation": "fs/promises exports readFile(), which returns a promise resolving with the file contents."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which function synchronously checks whether a path exists?",
+    "options": [
+      "fs.fileExists()",
+      "fs.checkFile()",
+      "fs.hasFile()",
+      "fs.existsSync()"
+    ],
+    "answer": 3,
+    "explanation": "fs.existsSync() returns a boolean; the callback-based fs.exists() is deprecated."
+  },
+  {
+    "topic": "file-system",
+    "question": "What does path.join('a', '..', 'b', 'c.txt') return on POSIX systems?",
+    "options": [
+      "b/c.txt",
+      "a/../b/c.txt",
+      "a/b/c.txt",
+      "/a/b/c.txt"
+    ],
+    "answer": 0,
+    "explanation": "path.join() joins the segments and normalizes them, so a/.. cancels out and the result is b/c.txt."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which path module function returns the extension of a file path, such as '.js'?",
+    "options": [
+      "path.extension()",
+      "path.extname()",
+      "path.ext()",
+      "path.getExt()"
+    ],
+    "answer": 1,
+    "explanation": "path.extname('app.js') returns '.js'; the module has no extension() or ext() function."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which WHATWG-standard class parses URLs in Node.js?",
+    "options": [
+      "UrlParser",
+      "Location",
+      "URL",
+      "Link"
+    ],
+    "answer": 2,
+    "explanation": "The global URL class (also available from the url module) implements the WHATWG URL standard."
+  },
+  {
+    "topic": "http",
+    "question": "Which core module is used to create a basic HTTP server?",
+    "options": [
+      "net",
+      "url",
+      "stream",
+      "http"
+    ],
+    "answer": 3,
+    "explanation": "http.createServer() builds an HTTP server; net provides lower-level TCP sockets."
+  },
+  {
+    "topic": "http",
+    "question": "Which method on the response object sends the remaining data and signals that the response is complete?",
+    "options": [
+      "res.end()",
+      "res.close()",
+      "res.finish()",
+      "res.send()"
+    ],
+    "answer": 0,
+    "explanation": "res.end() finishes the response; res.send() is an Express helper, not part of the core http module."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Which function schedules a callback to run once after a delay in milliseconds?",
+    "options": [
+      "setInterval()",
+      "setTimeout()",
+      "setImmediate()",
+      "delay()"
+    ],
+    "answer": 1,
+    "explanation": "setTimeout() runs its callback once after at least the given delay; setInterval() repeats."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does setInterval() do?",
+    "options": [
+      "Runs a callback once after a delay",
+      "Runs a callback before the current tick ends",
+      "Runs a callback repeatedly at a fixed interval until cleared",
+      "Pauses the event loop for a fixed time"
+    ],
+    "answer": 2,
+    "explanation": "setInterval() keeps calling its callback at the given interval until clearInterval() is called with its handle."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What is the recommended way to handle a rejected promise in async/await code?",
+    "options": [
+      "Ignore it with the void operator",
+      "Wrap it in setTimeout",
+      "Call process.exit() immediately",
+      "Wrap the await in try/catch"
+    ],
+    "answer": 3,
+    "explanation": "A rejected promise throws at the await expression, so try/catch lets you handle it locally."
+  },
+  {
+    "topic": "error-handling",
+    "question": "Which process event is emitted when an exception is thrown and not caught?",
+    "options": [
+      "uncaughtException",
+      "unhandledError",
+      "crash",
+      "fatal"
+    ],
+    "answer": 0,
+    "explanation": "process.on('uncaughtException') receives errors that escaped every try/catch; it is a last-resort hook, not a recovery mechanism."
+  },
+  {
+    "topic": "error-handling",
+    "question": "Which property of an Error object usually contains the stack trace string?",
+    "options": [
+      "trace",
+      "stack",
+      "callstack",
+      "frames"
+    ],
+    "answer": 1,
+    "explanation": "The stack property holds the formatted stack trace, which V8 generates when the Error is created."
+  },
+  {
+    "topic": "streams",
+    "question": "Which kind of stream can be both read from and written to?",
+    "options": [
+      "Readable",
+      "Writable",
+      "Duplex",
+      "Sink"
+    ],
+    "answer": 2,
+    "explanation": "A Duplex stream has independent readable and writable sides, such as a TCP socket."
+  },
+  {
+    "topic": "streams",
+    "question": "Which listener on a Readable stream receives its chunks of data?",
+    "options": [
+      "onChunk()",
+      "read.all()",
+      "pipe.start()",
+      "on('data')"
+    ],
+    "answer": 3,
+    "explanation": "Attaching a 'data' listener switches the stream into flowing mode, and each chunk is passed to the handler."
+  },
+  {
+    "topic": "streams",
+    "question": "What does readable.pipe(writable) do?",
+    "options": [
+      "Connects the readable to the writable and manages the flow of data between them",
+      "Clones the readable stream",
+      "Closes the readable stream immediately",
+      "Converts the stream into a single Buffer"
+    ],
+    "answer": 0,
+    "explanation": "pipe() forwards chunks from the readable to the writable and pauses the source when the destination is full."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Which built-in utility converts a callback-style function into one that returns a promise?",
+    "options": [
+      "util.toPromise()",
+      "util.promisify()",
+      "fs.promisify()",
+      "Promise.wrap()"
+    ],
+    "answer": 1,
+    "explanation": "util.promisify() wraps a function that follows the error-first callback convention so it returns a promise instead."
+  },
+  {
+    "topic": "modules",
+    "question": "What does require() return when the same module is required a second time in one process?",
+    "options": [
+      "A fresh copy of the module",
+      "An error about duplicate loading",
+      "The cached exports from the first load",
+      "undefined"
+    ],
+    "answer": 2,
+    "explanation": "Modules are cached after their first load, so later require() calls return the same exports object."
+  },
+  {
+    "topic": "process",
+    "question": "Which core module lets a Node.js program run shell commands as child processes?",
+    "options": [
+      "os",
+      "cluster",
+      "vm",
+      "child_process"
+    ],
+    "answer": 3,
+    "explanation": "The child_process module provides spawn, exec, and execFile for starting external programs."
+  },
+  {
+    "topic": "modules",
+    "question": "Which keyword exports a value from an ES module?",
+    "options": [
+      "module.exports",
+      "exports.default",
+      "provide",
+      "export"
+    ],
+    "answer": 3,
+    "explanation": "ES modules use export and import, while CommonJS uses module.exports and require()."
+  },
+  {
+    "topic": "modules",
+    "question": "Which file extension makes Node.js always treat a file as an ES module, regardless of package.json?",
+    "options": [
+      ".cjs",
+      ".esm",
+      ".mjs",
+      ".jsx"
+    ],
+    "answer": 2,
+    "explanation": ".mjs files are always ES modules and .cjs files are always CommonJS."
+  },
+  {
+    "topic": "modules",
+    "question": "Which prefix explicitly refers to a built-in core module, as in import fs from '...fs'?",
+    "options": [
+      "core:",
+      "node:",
+      "builtin:",
+      "std:"
+    ],
+    "answer": 1,
+    "explanation": "The node: prefix, such as node:fs, makes it clear a built-in module is meant and cannot be shadowed by an npm package."
+  },
+  {
+    "topic": "npm",
+    "question": "Which command creates a new package.json with default values without asking questions?",
+    "options": [
+      "npm init -y",
+      "npm new",
+      "npm create package",
+      "npm start --init"
+    ],
+    "answer": 0,
+    "explanation": "npm init asks a series of questions, and the -y flag accepts the defaults for all of them."
+  },
+  {
+    "topic": "npm",
+    "question": "What does npx do?",
+    "options": [
+      "Publishes a package to the npm registry",
+      "Removes unused packages from node_modules",
+      "Upgrades npm to the latest version",
+      "Runs a package's executable, downloading it temporarily if it is not installed locally"
+    ],
+    "answer": 3,
+    "explanation": "npx is handy for one-off tools, such as scaffolding commands, without installing them globally."
+  },
+  {
+    "topic": "npm",
+    "question": "Which command removes an installed package and its entry in package.json?",
+    "options": [
+      "npm delete <pkg>",
+      "npm remove-dep <pkg>",
+      "npm uninstall <pkg>",
+      "npm clean <pkg>"
+    ],
+    "answer": 2,
+    "explanation": "npm uninstall (alias npm rm) deletes the package from node_modules and updates package.json and the lock file."
+  },
+  {
+    "topic": "process",
+    "question": "Which method returns the current working directory of the Node.js process?",
+    "options": [
+      "process.dir",
+      "process.cwd()",
+      "__filename",
+      "process.home"
+    ],
+    "answer": 1,
+    "explanation": "process.cwd() returns the directory the process was started from or later changed to, which can differ from the script's location."
+  },
+  {
+    "topic": "process",
+    "question": "Which property holds the version string of the running Node.js, such as 'v22.11.0'?",
+    "options": [
+      "process.version",
+      "process.release",
+      "process.engine",
+      "node.version"
+    ],
+    "answer": 0,
+    "explanation": "process.version gives the Node.js version, and process.versions lists versions of its components such as V8."
+  },
+  {
+    "topic": "process",
+    "question": "Which object lets a Node.js program read the user's environment variables?",
+    "options": [
+      "process.vars",
+      "os.env",
+      "global.environment",
+      "process.env"
+    ],
+    "answer": 3,
+    "explanation": "process.env is an object whose properties are the environment variables of the process."
+  },
+  {
+    "topic": "events",
+    "question": "Which EventEmitter method triggers an event and calls its listeners synchronously?",
+    "options": [
+      "trigger()",
+      "fire()",
+      "emit()",
+      "dispatch()"
+    ],
+    "answer": 2,
+    "explanation": "emit(eventName, ...args) calls each registered listener in order and returns true if there were listeners."
+  },
+  {
+    "topic": "events",
+    "question": "Which module must be imported to create your own EventEmitter?",
+    "options": [
+      "emitter",
+      "events",
+      "stream",
+      "util"
+    ],
+    "answer": 1,
+    "explanation": "EventEmitter is exported by the core events module, and many core classes such as streams extend it."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which fs/promises function writes data to a file, replacing the file if it already exists?",
+    "options": [
+      "writeFile",
+      "appendFile",
+      "createFile",
+      "saveFile"
+    ],
+    "answer": 0,
+    "explanation": "writeFile overwrites the target file by default, whereas appendFile adds to the end of it."
+  },
+  {
+    "topic": "file-system",
+    "question": "Which fs/promises function creates a directory, including missing parent directories when { recursive: true } is passed?",
+    "options": [
+      "makedir",
+      "createDir",
+      "touch",
+      "mkdir"
+    ],
+    "answer": 3,
+    "explanation": "With recursive: true, mkdir creates the whole path and does not fail if the directory already exists."
+  },
+  {
+    "topic": "file-system",
+    "question": "What does path.basename('/home/user/notes.txt') return?",
+    "options": [
+      "'/home/user'",
+      "'notes'",
+      "'notes.txt'",
+      "'.txt'"
+    ],
+    "answer": 2,
+    "explanation": "basename returns the last portion of a path; path.dirname returns '/home/user'."
+  },
+  {
+    "topic": "http",
+    "question": "Which method sets the status code and headers of a Node.js http response in one call?",
+    "options": [
+      "res.status()",
+      "res.writeHead()",
+      "res.setHeaders()",
+      "res.begin()"
+    ],
+    "answer": 1,
+    "explanation": "res.writeHead(200, { 'Content-Type': 'text/plain' }) sends the status line and headers; res.status() is an Express helper."
+  },
+  {
+    "topic": "http",
+    "question": "Which method starts an http server accepting connections on a given port?",
+    "options": [
+      "server.listen()",
+      "server.start()",
+      "server.open()",
+      "server.run()"
+    ],
+    "answer": 0,
+    "explanation": "server.listen(3000) binds the server to the port and begins accepting connections."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Which keyword pauses an async function until a promise settles?",
+    "options": [
+      "yield",
+      "defer",
+      "wait",
+      "await"
+    ],
+    "answer": 3,
+    "explanation": "await suspends the async function until the promise fulfills or rejects without blocking the event loop."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "By convention, what is the first argument passed to a Node.js-style callback?",
+    "options": [
+      "The result of the operation",
+      "The name of the function that was called",
+      "An error object, or null if the operation succeeded",
+      "A timestamp of when the operation finished"
+    ],
+    "answer": 2,
+    "explanation": "Error-first callbacks, like (err, data) => {}, make it easy to check for failures before using the result."
+  },
+  {
+    "topic": "streams",
+    "question": "Which function creates a readable stream for reading a file in chunks?",
+    "options": [
+      "fs.openStream()",
+      "fs.createReadStream()",
+      "fs.readStream()",
+      "fs.streamFile()"
+    ],
+    "answer": 1,
+    "explanation": "Streaming a large file in chunks keeps memory usage low compared with reading it all at once."
+  },
+  {
+    "topic": "error-handling",
+    "question": "What does a try/catch block around synchronous code do when an error is thrown inside it?",
+    "options": [
+      "Control jumps to the catch block, which receives the error",
+      "The error is ignored and execution continues on the next line",
+      "The process always exits immediately",
+      "The error is logged and then rethrown automatically"
+    ],
+    "answer": 0,
+    "explanation": "catch handles errors thrown synchronously in the try block; errors in callbacks that run later are not caught."
+  }
+]

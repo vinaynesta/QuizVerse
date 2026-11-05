@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qed8dd4444ba",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "In a package.json \"exports\" map, what do the \"import\" and \"require\" conditions allow?",
+  "options": [
+   "Restricting the package to ES modules only",
+   "Choosing different dependencies for each environment",
+   "Serving different entry files to ES module imports and CommonJS requires of the same package",
+   "Declaring which packages this package imports"
+  ],
+  "answer": 2,
+  "explanation": "Conditional exports let a dual package point import to an .mjs build and require to a .cjs build."
+ },
+ {
+  "id": "qc2ab2ea7a07",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "What happens when code requires a deep path of a package that has an \"exports\" field not listing that path?",
+  "options": [
+   "Node loads the file anyway",
+   "Node throws ERR_PACKAGE_PATH_NOT_EXPORTED",
+   "Node falls back to the main field",
+   "Node returns an empty object"
+  ],
+  "answer": 1,
+  "explanation": "The exports field encapsulates a package, so only the listed subpaths can be loaded."
+ },
+ {
+  "id": "q820b7866568",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "When does a process.nextTick() callback scheduled inside a promise .then() callback run?",
+  "options": [
+   "Before the .then() callback that scheduled it returns",
+   "In the next timers phase",
+   "Only after all I/O callbacks in the poll phase",
+   "After the current microtask finishes; Node drains the remaining promise microtasks, then the nextTick queue, before the event loop continues"
+  ],
+  "answer": 3,
+  "explanation": "Node alternates draining the nextTick and promise queues until both are empty, so it runs before the loop moves to the next phase."
+ },
+ {
+  "id": "qf67a56e59fc",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "How does a worker thread differ from a cluster worker?",
+  "options": [
+   "They are the same thing with different names",
+   "Worker threads share all JavaScript objects with the main thread",
+   "Cluster workers run on the libuv threadpool",
+   "Worker threads run in the same process with separate V8 isolates, while cluster workers are separate processes"
+  ],
+  "answer": 3,
+  "explanation": "Worker threads are suited to CPU-bound tasks, while cluster scales servers across processes that share a port."
+ },
+ {
+  "id": "q9ebdb80d7ee",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does events.on(emitter, 'data') return?",
+  "options": [
+   "A promise that resolves on the first event",
+   "An array of all past events",
+   "An async iterator that yields the arguments of each emitted 'data' event",
+   "A new EventEmitter that mirrors the original"
+  ],
+  "answer": 2,
+  "explanation": "It lets you consume events with for await, and passing an AbortSignal can stop iteration."
+ },
+ {
+  "id": "qe523837d490",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "What happens to an ArrayBuffer listed in the transfer list of postMessage() to a worker?",
+  "options": [
+   "It is copied, and both sides keep usable copies",
+   "It becomes shared, and both sides can write to it",
+   "Ownership moves to the worker, and the sender's ArrayBuffer becomes detached with zero length",
+   "It is serialized to JSON first"
+  ],
+  "answer": 2,
+  "explanation": "Transferring avoids copying large buffers, but the sender can no longer use them."
+ },
+ {
+  "id": "q0d5d0c38804",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "What does running npm install with the --ignore-scripts flag do?",
+  "options": [
+   "Prevents lifecycle scripts such as preinstall and postinstall from running",
+   "Skips installing devDependencies",
+   "Ignores the package-lock.json file",
+   "Installs packages without verifying their integrity"
+  ],
+  "answer": 0,
+  "explanation": "Install scripts run arbitrary code from dependencies, so disabling them reduces supply chain risk."
+ },
+ {
+  "id": "q23e975fc56e",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What is the purpose of FinalizationRegistry?",
+  "options": [
+   "Guaranteeing that cleanup runs before an object is collected",
+   "Registering a callback that may run after a registered object has been garbage collected",
+   "Preventing an object from being collected",
+   "Forcing garbage collection of an object"
+  ],
+  "answer": 1,
+  "explanation": "Finalizers run at an unspecified time or not at all, so they must not be relied on for essential cleanup."
+ },
+ {
+  "id": "q6f3e2ff101c",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "Which object provides atomic operations and wait/notify on a SharedArrayBuffer between threads?",
+  "options": [
+   "Atomics",
+   "Lock",
+   "Mutex",
+   "SharedMemory"
+  ],
+  "answer": 0,
+  "explanation": "Atomics.add, Atomics.wait and Atomics.notify allow race-free coordination over shared memory."
+ },
+ {
+  "id": "q82d67331352",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "What does the --watch flag do in Node.js 22?",
+  "options": [
+   "Prints every function call to the console",
+   "Restarts the process automatically when the entry file or its imported files change",
+   "Watches environment variables for changes",
+   "Monitors memory usage and exits if it grows"
+  ],
+  "answer": 1,
+  "explanation": "Built-in watch mode removes the need for tools like nodemon in many development setups."
+ }
+]

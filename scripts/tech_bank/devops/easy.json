@@ -1,0 +1,467 @@
+[
+  {
+    "topic": "git-basics",
+    "question": "Which command creates a new, empty Git repository in the current directory?",
+    "options": ["git init", "git create", "git new", "git start"],
+    "answer": 0,
+    "explanation": "git init creates the .git directory that turns the current directory into a repository."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which command stages a file so that it is included in the next commit?",
+    "options": ["git commit <file>", "git add <file>", "git push <file>", "git track <file>"],
+    "answer": 1,
+    "explanation": "git add moves changes from the working tree into the staging area (index)."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which command records the staged changes as a new commit with a message?",
+    "options": ["git save -m 'message'", "git snapshot 'message'", "git commit -m 'message'", "git record -m 'message'"],
+    "answer": 2,
+    "explanation": "git commit -m creates a commit from the staged changes using the given message."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which command shows the current branch and which files are staged, modified, or untracked?",
+    "options": ["git log", "git show", "git diff", "git status"],
+    "answer": 3,
+    "explanation": "git status reports the branch, staged changes, unstaged changes, and untracked files."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which command displays the commit history of the current branch?",
+    "options": ["git log", "git history", "git commits", "git trail"],
+    "answer": 0,
+    "explanation": "git log lists commits reachable from HEAD, newest first, with hashes, authors, and messages."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which option to git commit stages all modified tracked files before committing?",
+    "options": ["-s", "-a", "-f", "-x"],
+    "answer": 1,
+    "explanation": "The -a (--all) option stages changes to already-tracked files; untracked files are still not added."
+  },
+  {
+    "topic": "git-basics",
+    "question": "What does git clone do?",
+    "options": [
+      "Creates an empty repository on a server",
+      "Deletes a remote branch",
+      "Creates a local copy of a remote repository, including its history",
+      "Merges two remote repositories"
+    ],
+    "answer": 2,
+    "explanation": "git clone downloads a repository and its full history and sets up a working copy with a default remote."
+  },
+  {
+    "topic": "branching",
+    "question": "Which command creates a new branch named feature and switches to it?",
+    "options": ["git branch feature --switch", "git checkout feature", "git new feature", "git switch -c feature"],
+    "answer": 3,
+    "explanation": "git switch -c creates the branch and checks it out; git checkout -b does the same."
+  },
+  {
+    "topic": "branching",
+    "question": "Which command lists the local branches in the repository?",
+    "options": ["git branch", "git branches", "git list branch", "git ref --heads"],
+    "answer": 0,
+    "explanation": "Running git branch with no arguments lists local branches and marks the current one with an asterisk."
+  },
+  {
+    "topic": "branching",
+    "question": "Which command deletes the local branch old-feature only if it has already been merged?",
+    "options": ["git branch -D old-feature", "git branch -d old-feature", "git remove branch old-feature", "git rm old-feature"],
+    "answer": 1,
+    "explanation": "The lowercase -d flag refuses to delete a branch with unmerged commits; -D forces deletion."
+  },
+  {
+    "topic": "branching",
+    "question": "What does HEAD point to in a normal Git repository?",
+    "options": [
+      "The remote origin URL",
+      "The first commit ever made",
+      "The currently checked-out branch (or commit)",
+      "The staging area"
+    ],
+    "answer": 2,
+    "explanation": "HEAD is a reference to the current branch, or directly to a commit when in detached HEAD state."
+  },
+  {
+    "topic": "remotes",
+    "question": "Which command downloads new commits from a remote without merging them into your current branch?",
+    "options": ["git pull", "git clone", "git push", "git fetch"],
+    "answer": 3,
+    "explanation": "git fetch updates remote-tracking branches only; git pull is fetch followed by a merge or rebase."
+  },
+  {
+    "topic": "remotes",
+    "question": "Which command adds a remote named origin pointing to a URL?",
+    "options": ["git remote add origin <url>", "git add remote origin <url>", "git origin add <url>", "git remote create origin <url>"],
+    "answer": 0,
+    "explanation": "git remote add <name> <url> registers a new remote under the given name."
+  },
+  {
+    "topic": "remotes",
+    "question": "Which command uploads your local commits to a branch on a remote?",
+    "options": ["git upload", "git push", "git send", "git publish"],
+    "answer": 1,
+    "explanation": "git push sends local commits to the remote and updates the matching remote branch."
+  },
+  {
+    "topic": "remotes",
+    "question": "What is the default name Git gives to the remote created by git clone?",
+    "options": ["upstream", "main", "remote", "origin"],
+    "answer": 3,
+    "explanation": "git clone names the source remote origin unless you pass a different name with --origin."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command removes a file from the staging area but keeps it in the working directory?",
+    "options": ["git checkout --cached <file>", "git reset --hard <file>", "git unstage --keep <file>", "git rm --cached <file>"],
+    "answer": 3,
+    "explanation": "git rm --cached untracks the file in the index while leaving the file on disk."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command discards uncommitted changes to a tracked file in the working directory (Git 2.23 and later)?",
+    "options": ["git restore <file>", "git revert <file>", "git undo <file>", "git clean <file>"],
+    "answer": 0,
+    "explanation": "git restore copies the file back from the index or a commit, discarding unstaged edits."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command creates a new commit that reverses the changes introduced by an earlier commit?",
+    "options": ["git reset <commit>", "git revert <commit>", "git rollback <commit>", "git undo <commit>"],
+    "answer": 1,
+    "explanation": "git revert adds a new inverse commit, so shared history is preserved."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command temporarily sets aside uncommitted changes so you can switch branches?",
+    "options": ["git shelve", "git park", "git stash", "git hide"],
+    "answer": 2,
+    "explanation": "git stash saves modified tracked files and staged changes on a stack and restores a clean working tree."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command shows changes in the working tree that have not yet been staged?",
+    "options": ["git diff --cached", "git log -p", "git show HEAD", "git diff"],
+    "answer": 3,
+    "explanation": "git diff with no arguments compares the working tree with the index; --cached compares the index with HEAD."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command shows the changes that are staged for the next commit?",
+    "options": ["git diff --staged", "git diff HEAD~1", "git status --diff", "git log --staged"],
+    "answer": 0,
+    "explanation": "git diff --staged (same as --cached) compares the index with the last commit, showing what the next commit will contain."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command creates and starts a new container from an image?",
+    "options": ["docker start", "docker run", "docker exec", "docker build"],
+    "answer": 1,
+    "explanation": "docker run creates a new container from an image and starts it; docker start only restarts an existing container."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which file contains the instructions Docker uses to build an image?",
+    "options": ["docker.yml", "image.json", "Dockerfile", "build.toml"],
+    "answer": 2,
+    "explanation": "A Dockerfile is a plain text file of instructions such as FROM, COPY, and RUN that docker build executes."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "What is a Docker image?",
+    "options": [
+      "A running process on the host",
+      "A virtual machine with its own kernel",
+      "A Docker network definition",
+      "A read-only, layered template used to create containers"
+    ],
+    "answer": 3,
+    "explanation": "An image is a stack of read-only filesystem layers plus metadata; containers are created from it."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "What is a Docker container?",
+    "options": [
+      "A runnable instance of an image with its own writable layer",
+      "A registry that stores images",
+      "A file that lists build steps",
+      "A type of Docker volume"
+    ],
+    "answer": 0,
+    "explanation": "A container is a running (or stopped) instance of an image, with a thin writable layer on top of the image layers."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command lists the containers that are currently running?",
+    "options": ["docker images", "docker ps", "docker list", "docker status"],
+    "answer": 1,
+    "explanation": "docker ps lists running containers; docker ps -a includes stopped ones."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command builds an image from the Dockerfile in the current directory and tags it myapp:1.0?",
+    "options": ["docker make -t myapp:1.0 .", "docker image create myapp:1.0 .", "docker build -t myapp:1.0 .", "docker run -t myapp:1.0 ."],
+    "answer": 2,
+    "explanation": "docker build -t sets the image name and tag, and the trailing dot is the build context."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which flag maps host port 80 to container port 8080?",
+    "options": ["-p 8080:80", "-e 80:8080", "--expose 80", "-p 80:8080"],
+    "answer": 3,
+    "explanation": "The -p flag takes hostPort:containerPort, so -p 80:8080 exposes container port 8080 on host port 80."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command stops a running container gracefully by sending SIGTERM and then SIGKILL after a timeout?",
+    "options": ["docker stop", "docker kill", "docker pause", "docker halt"],
+    "answer": 0,
+    "explanation": "docker stop sends SIGTERM, waits a grace period (10 seconds by default), then sends SIGKILL."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command removes a stopped container?",
+    "options": ["docker remove <container>", "docker rm <container>", "docker delete <container>", "docker clean <container>"],
+    "answer": 1,
+    "explanation": "docker rm deletes a container that is not running; docker rm -f also removes a running one."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command opens an interactive shell inside the already running container named web?",
+    "options": ["docker run -it web sh", "docker attach web sh", "docker exec -it web sh", "docker shell web"],
+    "answer": 2,
+    "explanation": "docker exec runs a new process inside a running container; docker run would create a new container instead."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "Which command starts all services defined in docker-compose.yml in the background?",
+    "options": ["docker compose run --all", "docker start --all", "docker compose start --bg", "docker compose up -d"],
+    "answer": 3,
+    "explanation": "docker compose up creates and starts the services, and the -d flag runs them detached."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "Which command stops and removes the containers and default network created by docker compose up?",
+    "options": ["docker compose down", "docker compose stop", "docker compose rm --all", "docker compose kill"],
+    "answer": 0,
+    "explanation": "docker compose down stops and removes the project's containers and networks; stop only pauses them."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which command downloads an image from a registry without starting a container?",
+    "options": ["docker run", "docker pull", "docker fetch", "docker get"],
+    "answer": 1,
+    "explanation": "docker pull downloads an image from a registry; docker run would pull it implicitly and also start a container."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which Dockerfile instruction sets the base image for a build?",
+    "options": ["BASE", "START", "FROM", "IMAGE"],
+    "answer": 2,
+    "explanation": "FROM must be the first instruction (aside from ARG) and names the image the build starts from."
+  },
+  {
+    "topic": "docker-images",
+    "question": "What is the purpose of a .dockerignore file?",
+    "options": [
+      "It sets environment variables for containers",
+      "It lists ports to publish",
+      "It defines the container's startup command",
+      "It excludes matching files from the build context sent to the daemon"
+    ],
+    "answer": 3,
+    "explanation": "Files matched by .dockerignore are not sent with the build context, which keeps builds faster and images cleaner."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which command lists the images stored locally on your machine?",
+    "options": ["docker images", "docker ps -i", "docker list images", "docker image show"],
+    "answer": 0,
+    "explanation": "docker images lists local images with repository, tag, ID, and size."
+  },
+  {
+    "topic": "docker-volumes",
+    "question": "Which mechanism stores container data so that it survives after the container is removed?",
+    "options": ["The container's writable layer", "A Docker volume", "An environment variable", "The /tmp directory"],
+    "answer": 1,
+    "explanation": "Volumes live outside the container's writable layer, which is deleted along with the container."
+  },
+  {
+    "topic": "docker-volumes",
+    "question": "Which command lists the Docker volumes on the host?",
+    "options": ["docker volumes list", "docker vol show", "docker volume ls", "docker ls volumes"],
+    "answer": 2,
+    "explanation": "docker volume ls (or docker volume list) shows the named volumes known to the Docker daemon."
+  },
+  {
+    "topic": "docker-networking",
+    "question": "By default, which network driver does a container attach to when started without a --network flag?",
+    "options": ["host", "none", "overlay", "bridge"],
+    "answer": 3,
+    "explanation": "Containers attach to the default bridge network unless you choose another network."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which file lists patterns for files that Git should not track?",
+    "options": ["README.md", ".gitignore", ".gitconfig", ".gitkeep"],
+    "answer": 1,
+    "explanation": "Untracked files matching patterns in .gitignore are not shown as untracked and are skipped by git add."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which command sets the author name Git records in commits for all of your repositories?",
+    "options": [
+      "git name --set \"Your Name\"",
+      "git commit --author-all \"Your Name\"",
+      "git config --global user.name \"Your Name\"",
+      "git init --user \"Your Name\""
+    ],
+    "answer": 2,
+    "explanation": "git config --global writes user.name to your user-level config, which every repository uses unless overridden."
+  },
+  {
+    "topic": "git-basics",
+    "question": "Which command shows the commit history with each commit on a single line?",
+    "options": ["git log --oneline", "git status --short", "git show --brief", "git diff --oneline"],
+    "answer": 0,
+    "explanation": "git log --oneline prints the abbreviated hash and subject line of each commit."
+  },
+  {
+    "topic": "branching",
+    "question": "Which command switches to the existing branch named main?",
+    "options": ["git branch main", "git checkout -b main", "git init main", "git switch main"],
+    "answer": 3,
+    "explanation": "git switch moves HEAD to an existing branch; -c would create a new one."
+  },
+  {
+    "topic": "branching",
+    "question": "Which command merges the branch feature into the branch you currently have checked out?",
+    "options": ["git merge main feature --into", "git merge feature", "git pull feature", "git rebase --merge feature"],
+    "answer": 1,
+    "explanation": "git merge <branch> integrates the named branch's history into the current branch."
+  },
+  {
+    "topic": "branching",
+    "question": "Which command renames the current branch to main?",
+    "options": ["git rename main", "git switch --name main", "git branch -m main", "git checkout -r main"],
+    "answer": 2,
+    "explanation": "git branch -m (move) renames a branch; with one argument it renames the current branch."
+  },
+  {
+    "topic": "remotes",
+    "question": "Which command fetches from the upstream remote and then integrates the changes into the current branch?",
+    "options": ["git pull", "git fetch", "git clone", "git push"],
+    "answer": 0,
+    "explanation": "git pull is a git fetch followed by a merge (or rebase, if configured) of the upstream branch."
+  },
+  {
+    "topic": "remotes",
+    "question": "Which command lists the configured remotes together with their URLs?",
+    "options": ["git remote list", "git branch -r", "git config remotes", "git remote -v"],
+    "answer": 3,
+    "explanation": "git remote -v shows each remote's fetch and push URLs."
+  },
+  {
+    "topic": "remotes",
+    "question": "Which command pushes the local branch feature to origin and sets it as the upstream for future git push and git pull?",
+    "options": [
+      "git push origin --all",
+      "git push -u origin feature",
+      "git remote add feature origin",
+      "git fetch -u origin feature"
+    ],
+    "answer": 1,
+    "explanation": "The -u (--set-upstream) flag records origin/feature as the tracking branch."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command lets you change the message of your most recent commit, if it has not been pushed yet?",
+    "options": ["git revert --message", "git log --edit", "git commit --amend", "git reset --message"],
+    "answer": 2,
+    "explanation": "git commit --amend replaces the last commit with a new one, letting you edit the message and add staged changes."
+  },
+  {
+    "topic": "undoing-changes",
+    "question": "Which command reapplies the most recently stashed changes and removes that entry from the stash list?",
+    "options": ["git stash pop", "git stash list", "git stash save", "git stash show"],
+    "answer": 0,
+    "explanation": "git stash pop applies the top stash entry and drops it if the apply succeeds."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command prints the output a container has written to stdout and stderr?",
+    "options": [
+      "docker inspect <container>",
+      "docker top <container>",
+      "docker stats <container>",
+      "docker logs <container>"
+    ],
+    "answer": 3,
+    "explanation": "docker logs shows a container's captured stdout and stderr, and -f follows new output."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which command lists all containers, including those that have stopped?",
+    "options": ["docker ps --running", "docker ps -a", "docker container top", "docker images -a"],
+    "answer": 1,
+    "explanation": "By default docker ps shows only running containers; -a includes stopped ones."
+  },
+  {
+    "topic": "docker-basics",
+    "question": "Which docker run flag removes the container automatically when it exits?",
+    "options": ["--detach", "--restart", "--rm", "--init"],
+    "answer": 2,
+    "explanation": "--rm deletes the container and its anonymous volumes as soon as it exits."
+  },
+  {
+    "topic": "docker-networking",
+    "question": "Which command creates a new user-defined bridge network named mynet?",
+    "options": [
+      "docker network create mynet",
+      "docker run --network mynet",
+      "docker network ls mynet",
+      "docker bridge add mynet"
+    ],
+    "answer": 0,
+    "explanation": "docker network create uses the bridge driver by default and gives attached containers name-based DNS."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "Which command shows the logs of the services in a Compose project?",
+    "options": ["docker compose ps", "docker compose build", "docker compose top", "docker compose logs"],
+    "answer": 3,
+    "explanation": "docker compose logs prints the combined output of the project's service containers."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which Dockerfile instruction sets the default command that runs when a container starts, unless arguments override it?",
+    "options": ["RUN", "CMD", "FROM", "WORKDIR"],
+    "answer": 1,
+    "explanation": "CMD provides the default command; RUN executes at build time, not when the container starts."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which Dockerfile instruction sets the directory that later RUN, CMD, COPY, and similar instructions use as their working directory?",
+    "options": ["CD", "PATH", "WORKDIR", "VOLUME"],
+    "answer": 2,
+    "explanation": "WORKDIR sets, and creates if needed, the working directory for subsequent instructions and the container."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which command uploads a tagged local image to a registry?",
+    "options": ["docker push", "docker commit", "docker save", "docker export"],
+    "answer": 0,
+    "explanation": "docker push sends the image's layers to the registry named in its tag."
+  },
+  {
+    "topic": "docker-volumes",
+    "question": "Which docker run option bind-mounts the host directory $(pwd)/src into the container at /app?",
+    "options": ["-p $(pwd)/src:/app", "-e $(pwd)/src:/app", "--network $(pwd)/src:/app", "-v $(pwd)/src:/app"],
+    "answer": 3,
+    "explanation": "-v host-path:container-path creates a bind mount, so host and container see the same files."
+  }
+]

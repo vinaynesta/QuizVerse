@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q11a7f193c40",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "easy",
+  "question": "What is the result of the expression 5 + NULL in standard SQL?",
+  "options": [
+   "5",
+   "0",
+   "An error",
+   "NULL"
+  ],
+  "answer": 3,
+  "explanation": "Arithmetic with NULL yields NULL, because the unknown value makes the whole result unknown."
+ },
+ {
+  "id": "q68eab6e531d",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "easy",
+  "question": "Which predicate correctly tests whether a column is NULL?",
+  "options": [
+   "= NULL",
+   "IS NULL",
+   "NULL()",
+   "== NULL"
+  ],
+  "answer": 1,
+  "explanation": "The IS NULL predicate is the correct test. Comparisons with = or == against NULL never return TRUE."
+ },
+ {
+  "id": "qac63fac1715",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "easy",
+  "question": "Which function returns the first argument that is not NULL?",
+  "options": [
+   "NULLIF",
+   "DISTINCT",
+   "NOT NULL",
+   "COALESCE"
+  ],
+  "answer": 3,
+  "explanation": "COALESCE returns its first non-NULL argument. NULLIF does the opposite and returns NULL when its two arguments are equal."
+ },
+ {
+  "id": "qfe09b367c83",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "easy",
+  "question": "What is the result of the expression NULL = NULL in standard SQL?",
+  "options": [
+   "TRUE",
+   "FALSE",
+   "NULL (unknown)",
+   "An error"
+  ],
+  "answer": 2,
+  "explanation": "Comparing with NULL yields UNKNOWN, which SQL represents as NULL. Two unknown values are not considered equal."
+ },
+ {
+  "id": "q5f5ace6568d",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In PostgreSQL, what does NULL IS NOT DISTINCT FROM NULL evaluate to?",
+  "options": [
+   "An error",
+   "FALSE",
+   "NULL",
+   "TRUE"
+  ],
+  "answer": 3,
+  "explanation": "IS NOT DISTINCT FROM treats two NULLs as equal, which gives TRUE. It is the null-safe equality operator."
+ },
+ {
+  "id": "q621945462cf",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "How does GROUP BY treat multiple NULL values in the grouping column?",
+  "options": [
+   "Each NULL forms its own group",
+   "Rows with NULL are dropped",
+   "All NULLs fall into one group",
+   "NULL groups cause an error"
+  ],
+  "answer": 2,
+  "explanation": "GROUP BY treats NULLs as not distinct from each other, so they form a single group. This differs from comparison operators, which never match NULL."
+ },
+ {
+  "id": "q92ac8f51643",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT 'abc' || NULL return?",
+  "options": [
+   "'abc'",
+   "NULL",
+   "'abcNULL'",
+   "An error"
+  ],
+  "answer": 1,
+  "explanation": "The || operator returns NULL if any operand is NULL; concat() treats NULL as an empty string instead."
+ },
+ {
+  "id": "qb0bbaa58ce8",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In standard SQL three-valued logic, what does NULL AND FALSE evaluate to?",
+  "options": [
+   "An error",
+   "NULL",
+   "TRUE",
+   "FALSE"
+  ],
+  "answer": 3,
+  "explanation": "FALSE AND anything is FALSE, so the unknown operand does not matter; NULL AND TRUE would be NULL."
+ },
+ {
+  "id": "qbf5e7b5f257",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "Given rows with x = 1, 2 and 3, what does SELECT * FROM t WHERE x NOT IN (1, NULL) return?",
+  "options": [
+   "Rows with x = 2 and x = 3",
+   "The row with x = 1",
+   "No rows",
+   "All three rows"
+  ],
+  "answer": 2,
+  "explanation": "x NOT IN (1, NULL) is equivalent to x <> 1 AND x <> NULL. The second term is always UNKNOWN, so no row is ever TRUE."
+ },
+ {
+  "id": "qc3b3f31f48b",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In PostgreSQL, where do NULLs appear with ORDER BY x ASC by default?",
+  "options": [
+   "Last, because NULLs sort as if larger than every other value",
+   "They are excluded from the result",
+   "In random positions",
+   "First, because NULLs sort as smallest"
+  ],
+  "answer": 0,
+  "explanation": "PostgreSQL places NULLs last for ASC and first for DESC unless NULLS FIRST or NULLS LAST is given; MySQL sorts NULLs first for ASC."
+ }
+]

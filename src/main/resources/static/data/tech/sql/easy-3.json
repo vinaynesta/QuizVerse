@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q989cd27b218",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "When ORDER BY is written without a direction keyword, which direction is used?",
+  "options": [
+   "DESC",
+   "ASC",
+   "RANDOM",
+   "NONE"
+  ],
+  "answer": 1,
+  "explanation": "The default sort direction in standard SQL, PostgreSQL and MySQL is ascending (ASC)."
+ },
+ {
+  "id": "q945a1377bf8",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a PRIMARY KEY constraint enforce?",
+  "options": [
+   "Duplicate values allowed but no NULLs",
+   "NULLs allowed but ordered values",
+   "Uniqueness and no NULL values",
+   "Only text values"
+  ],
+  "answer": 2,
+  "explanation": "A primary key requires each value to be unique and not NULL for the key columns."
+ },
+ {
+  "id": "q705caeb71e8",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a RIGHT JOIN keep?",
+  "options": [
+   "All rows from the right table, with NULLs where there is no match on the left",
+   "Only unmatched rows from both tables",
+   "All rows from the left table",
+   "Rows from either table with duplicates removed"
+  ],
+  "answer": 0,
+  "explanation": "RIGHT (OUTER) JOIN is the mirror of LEFT JOIN: every right-table row is kept, and left columns are NULL when unmatched."
+ },
+ {
+  "id": "q94f87d8f279",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does an INNER JOIN return?",
+  "options": [
+   "All rows from the left table",
+   "All rows from both tables",
+   "Rows that match in both tables",
+   "Every combination of rows"
+  ],
+  "answer": 2,
+  "explanation": "INNER JOIN keeps only pairs of rows whose join condition is true, so non-matching rows from either side are dropped."
+ },
+ {
+  "id": "qe8ac11b2e52",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a CROSS JOIN produce?",
+  "options": [
+   "Rows matching on a key",
+   "The union of two tables",
+   "Only rows with NULL keys",
+   "Every combination of rows from both tables"
+  ],
+  "answer": 3,
+  "explanation": "A CROSS JOIN produces the Cartesian product: every row of the first table paired with every row of the second."
+ },
+ {
+  "id": "q9402b72fc15",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which clause filters individual rows before any grouping takes place?",
+  "options": [
+   "HAVING",
+   "WHERE",
+   "ORDER BY",
+   "SELECT"
+  ],
+  "answer": 1,
+  "explanation": "WHERE is applied to individual rows before GROUP BY; HAVING filters groups after aggregation."
+ },
+ {
+  "id": "qbd1d667d34f",
+  "subject": "sql",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What does the A in ACID stand for?",
+  "options": [
+   "Availability",
+   "Atomicity",
+   "Accuracy",
+   "Authorization"
+  ],
+  "answer": 1,
+  "explanation": "ACID stands for Atomicity, Consistency, Isolation and Durability. Atomicity means a transaction is all-or-nothing."
+ },
+ {
+  "id": "q316b01258cf",
+  "subject": "sql",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What is a deadlock?",
+  "options": [
+   "A query that runs forever without returning",
+   "Two or more transactions each waiting for a lock that another holds",
+   "A crash of the database server",
+   "A table that has no primary key"
+  ],
+  "answer": 1,
+  "explanation": "In a deadlock, transactions form a cycle of waits on locks. The database detects it and aborts one of them."
+ },
+ {
+  "id": "q6899baa431d",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "Which constraint validates that a value satisfies a given condition?",
+  "options": [
+   "CHECK",
+   "INDEX",
+   "PRIMARY KEY",
+   "REFERENCES"
+  ],
+  "answer": 0,
+  "explanation": "CHECK defines a boolean condition that each row must satisfy, for example CHECK (price > 0)."
+ },
+ {
+  "id": "qc6212bd7061",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "What does COUNT(column) NOT count?",
+  "options": [
+   "Duplicate values",
+   "Rows that match the WHERE clause",
+   "Rows with NULL in that column",
+   "Empty strings"
+  ],
+  "answer": 2,
+  "explanation": "COUNT(column) skips NULL values. It does count duplicates and empty strings, since those are not NULL."
+ }
+]

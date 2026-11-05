@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q69c0460a1d2",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command switches to the existing branch named main?",
+  "options": [
+   "git branch main",
+   "git switch main",
+   "git init main",
+   "git checkout -b main"
+  ],
+  "answer": 1,
+  "explanation": "git switch moves HEAD to an existing branch; -c would create a new one."
+ },
+ {
+  "id": "q80b9ffefd4a",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command sets the author name Git records in commits for all of your repositories?",
+  "options": [
+   "git name --set \"Your Name\"",
+   "git commit --author-all \"Your Name\"",
+   "git config --global user.name \"Your Name\"",
+   "git init --user \"Your Name\""
+  ],
+  "answer": 2,
+  "explanation": "git config --global writes user.name to your user-level config, which every repository uses unless overridden."
+ },
+ {
+  "id": "q3b5218f8ce6",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which Dockerfile instruction sets the default command that runs when a container starts, unless arguments override it?",
+  "options": [
+   "RUN",
+   "WORKDIR",
+   "FROM",
+   "CMD"
+  ],
+  "answer": 3,
+  "explanation": "CMD provides the default command; RUN executes at build time, not when the container starts."
+ },
+ {
+  "id": "q5b52a57fd39",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command reapplies the most recently stashed changes and removes that entry from the stash list?",
+  "options": [
+   "git stash save",
+   "git stash list",
+   "git stash pop",
+   "git stash show"
+  ],
+  "answer": 2,
+  "explanation": "git stash pop applies the top stash entry and drops it if the apply succeeds."
+ },
+ {
+  "id": "qe9830cbf44b",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which Dockerfile instruction sets the directory that later RUN, CMD, COPY, and similar instructions use as their working directory?",
+  "options": [
+   "WORKDIR",
+   "PATH",
+   "CD",
+   "VOLUME"
+  ],
+  "answer": 0,
+  "explanation": "WORKDIR sets, and creates if needed, the working directory for subsequent instructions and the container."
+ },
+ {
+  "id": "q85759d88594",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command prints the output a container has written to stdout and stderr?",
+  "options": [
+   "docker inspect <container>",
+   "docker top <container>",
+   "docker logs <container>",
+   "docker stats <container>"
+  ],
+  "answer": 2,
+  "explanation": "docker logs shows a container's captured stdout and stderr, and -f follows new output."
+ },
+ {
+  "id": "qeab6e2a562d",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "easy",
+  "question": "Which command creates a new user-defined bridge network named mynet?",
+  "options": [
+   "docker run --network mynet",
+   "docker network create mynet",
+   "docker network ls mynet",
+   "docker bridge add mynet"
+  ],
+  "answer": 1,
+  "explanation": "docker network create uses the bridge driver by default and gives attached containers name-based DNS."
+ },
+ {
+  "id": "q0b0a58921c3",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which file lists patterns for files that Git should not track?",
+  "options": [
+   "README.md",
+   ".gitignore",
+   ".gitconfig",
+   ".gitkeep"
+  ],
+  "answer": 1,
+  "explanation": "Untracked files matching patterns in .gitignore are not shown as untracked and are skipped by git add."
+ },
+ {
+  "id": "qbb249e43a6d",
+  "subject": "devops",
+  "topic": "docker-volumes",
+  "level": "easy",
+  "question": "Which docker run option bind-mounts the host directory $(pwd)/src into the container at /app?",
+  "options": [
+   "-p $(pwd)/src:/app",
+   "-e $(pwd)/src:/app",
+   "--network $(pwd)/src:/app",
+   "-v $(pwd)/src:/app"
+  ],
+  "answer": 3,
+  "explanation": "-v host-path:container-path creates a bind mount, so host and container see the same files."
+ },
+ {
+  "id": "q395c4b84a19",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command pushes the local branch feature to origin and sets it as the upstream for future git push and git pull?",
+  "options": [
+   "git push origin --all",
+   "git fetch -u origin feature",
+   "git remote add feature origin",
+   "git push -u origin feature"
+  ],
+  "answer": 3,
+  "explanation": "The -u (--set-upstream) flag records origin/feature as the tracking branch."
+ }
+]

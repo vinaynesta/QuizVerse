@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q288f6ed2b2b",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "A client reads version 7 from one replica, then reads version 5 from another. Which session guarantee is violated?",
+  "options": [
+   "Monotonic reads",
+   "Writes follow reads",
+   "Monotonic writes",
+   "Exactly-once processing"
+  ],
+  "answer": 0,
+  "explanation": "Monotonic reads means a client never sees an older version after seeing a newer one."
+ },
+ {
+  "id": "q17a212d01f0",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "With N=3, W=1 and R=1, what is the main consequence?",
+  "options": [
+   "Reads may return stale values because read and write sets are not guaranteed to overlap",
+   "Writes become linearizable while reads do not",
+   "Every read is guaranteed to return the latest committed value",
+   "The cluster cannot tolerate any node failure"
+  ],
+  "answer": 0,
+  "explanation": "Since R + W = 2 is not greater than N = 3, a read may hit only replicas that missed the latest write."
+ },
+ {
+  "id": "q6fb8a091562",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Why does a request fanning out to 100 parallel sub-calls, each slow 1% of the time, end up slow so often?",
+  "options": [
+   "Parallel calls always serialize on the network card",
+   "Each parallel call doubles the request payload size",
+   "Tail latency compounds: about 63% of such requests hit at least one slow sub-call",
+   "Fan-out disables connection pooling so every call pays a handshake"
+  ],
+  "answer": 2,
+  "explanation": "The chance that all 100 calls are fast is 0.99^100, roughly 37%, so about 63% of fan-out requests see at least one slow call."
+ },
+ {
+  "id": "qa97943c61b5",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "With N=3, W=2 and R=2, how many replica failures can the system tolerate while still serving both reads and writes?",
+  "options": [
+   "Zero",
+   "One",
+   "Three",
+   "Two"
+  ],
+  "answer": 1,
+  "explanation": "With one replica down, two remain, which satisfies both W=2 and R=2; with two down, only one remains and quorums cannot be formed."
+ },
+ {
+  "id": "q888e177d014",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What is split brain in a replicated system?",
+  "options": [
+   "A node stops answering heartbeats but keeps its lock forever",
+   "Clients are routed to a DNS name that points nowhere",
+   "The database automatically splits one table into two shards",
+   "Two or more nodes each believe they are the active leader, leading to conflicting writes"
+  ],
+  "answer": 3,
+  "explanation": "Split brain typically follows a network partition when leader election is not guarded by a quorum or fencing."
+ },
+ {
+  "id": "q62243c1d40e",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What is the main tradeoff of synchronous replication to a standby?",
+  "options": [
+   "Faster writes but guaranteed data loss",
+   "Linearizable reads automatically, without a leader",
+   "No need for backups",
+   "Lower risk of losing acknowledged writes on failover, at the cost of higher write latency and reduced availability"
+  ],
+  "answer": 3,
+  "explanation": "Waiting for the standby protects acknowledged writes, but a slow or unreachable standby slows or blocks commits."
+ },
+ {
+  "id": "q195ded1d947",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "Sequential consistency differs from linearizability because it does not require which of the following?",
+  "options": [
+   "A single global order of all operations",
+   "Respecting real-time order of operations across different clients",
+   "Each client's operations appearing in program order",
+   "Writes being applied in the same order on all replicas"
+  ],
+  "answer": 1,
+  "explanation": "Sequential consistency needs one global order that respects each client's program order, but not the real-time order between clients."
+ },
+ {
+  "id": "q05dfdbf27be",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What property lets CRDTs converge without coordination?",
+  "options": [
+   "A global lock acquired before every update",
+   "Synchronized clocks with bounded drift under one millisecond",
+   "A single leader that serializes all writes",
+   "Merge operations that are commutative, associative, and idempotent"
+  ],
+  "answer": 3,
+  "explanation": "Because merges are order-independent and idempotent, replicas that have seen the same updates reach the same state regardless of delivery order."
+ },
+ {
+  "id": "q41b18bf9df1",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "How does a saga maintain atomicity across services without two-phase commit?",
+  "options": [
+   "It runs a sequence of local transactions, each with a compensating action that undoes it if a later step fails",
+   "It locks all rows across services until every step finishes",
+   "It replicates the entire database to every service before writing",
+   "It commits all steps in a single database transaction after validation"
+  ],
+  "answer": 0,
+  "explanation": "Sagas trade isolation for availability: each step commits locally and failures are handled by compensation."
+ },
+ {
+  "id": "q508fadd4bc9",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "In PACELC, what does the 'ELC' part describe?",
+  "options": [
+   "The leader election latency after a node crash",
+   "The latency-versus-consistency tradeoff when there is no partition",
+   "The eventual compression ratio of replicated logs",
+   "The end-to-end lag from client to CDN edge"
+  ],
+  "answer": 1,
+  "explanation": "PACELC extends CAP: if Partition, choose availability or consistency; Else, choose latency or consistency."
+ }
+]

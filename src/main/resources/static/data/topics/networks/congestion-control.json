@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q057deeeca40",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "How does TCP CUBIC differ from Reno in growing its window?",
+  "options": [
+   "It halves cwnd on every ACK",
+   "It grows cwnd by exactly one byte per RTT",
+   "It grows cwnd as a cubic function of time since the last loss, largely independent of RTT",
+   "It ignores loss and uses only delay"
+  ],
+  "answer": 2,
+  "explanation": "CUBIC (RFC 9438) uses a cubic curve around the window size at the last loss, which improves fairness and use of high-BDP paths."
+ },
+ {
+  "id": "q13143bd3a40",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "In Reno-style congestion avoidance (the additive-increase phase of AIMD), how fast does cwnd grow?",
+  "options": [
+   "By ssthresh each RTT",
+   "About one MSS per RTT",
+   "Doubling each RTT",
+   "One byte per ACK"
+  ],
+  "answer": 1,
+  "explanation": "RFC 5681 congestion avoidance adds roughly SMSS*SMSS/cwnd per ACK, totaling about one MSS per round trip."
+ },
+ {
+  "id": "q647290810bb",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What is the maximum throughput of a single TCP flow with a 65,535-byte window and a 100 ms RTT, ignoring loss?",
+  "options": [
+   "About 0.65 Mbps",
+   "About 52 Mbps",
+   "About 5.2 Mbps",
+   "About 64 Mbps"
+  ],
+  "answer": 2,
+  "explanation": "Throughput <= window/RTT = 65,535 * 8 bits / 0.1 s = 5,242,800 b/s, about 5.2 Mbps."
+ },
+ {
+  "id": "q7ed25fa4272",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What does Explicit Congestion Notification (ECN) allow routers to do?",
+  "options": [
+   "Mark packets to signal congestion instead of dropping them",
+   "Reorder packets by priority",
+   "Drop packets earlier than normal",
+   "Fragment packets under load"
+  ],
+  "answer": 0,
+  "explanation": "ECN-capable routers set the CE codepoint, the receiver echoes it, and the sender reduces cwnd without a loss."
+ },
+ {
+  "id": "qb8503b9bd70",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Per RFC 5681, what does TCP do when the retransmission timer (RTO) expires?",
+  "options": [
+   "Sets ssthresh = max(FlightSize/2, 2*SMSS), cwnd = 1 SMSS, and re-enters slow start",
+   "Leaves cwnd and ssthresh unchanged",
+   "Doubles cwnd to drain the queue faster",
+   "Halves cwnd and stays in congestion avoidance"
+  ],
+  "answer": 0,
+  "explanation": "A timeout suggests severe congestion, so cwnd drops to the loss window of one segment before slow start resumes."
+ },
+ {
+  "id": "qd104506fa73",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Per RFC 5681, what happens when a sender gets three duplicate ACKs and enters fast retransmit/fast recovery?",
+  "options": [
+   "ssthresh = 2*cwnd and cwnd is unchanged",
+   "cwnd = 0 until a new ACK arrives",
+   "cwnd = 1 SMSS and ssthresh is unchanged",
+   "ssthresh = max(FlightSize/2, 2*SMSS) and cwnd is set to ssthresh + 3*SMSS"
+  ],
+  "answer": 3,
+  "explanation": "Duplicate ACKs show packets are still flowing, so TCP halves rather than collapsing; the +3 accounts for the segments that left the network."
+ },
+ {
+  "id": "qd3dd35f8966",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What does TCP BBR primarily base its sending rate on?",
+  "options": [
+   "ECN marks only",
+   "Packet loss events only",
+   "Estimates of bottleneck bandwidth and minimum RTT",
+   "The receiver's queue length"
+  ],
+  "answer": 2,
+  "explanation": "BBR models the path's delivery rate and propagation delay instead of treating loss as the main congestion signal."
+ },
+ {
+  "id": "qe71bb1a50a0",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "How does TCP's congestion window grow during slow start?",
+  "options": [
+   "Exponentially, roughly doubling each RTT",
+   "It stays constant until a loss",
+   "Linearly, by one MSS per RTT",
+   "It halves every RTT"
+  ],
+  "answer": 0,
+  "explanation": "cwnd increases by about one MSS per ACK, so a full window of ACKs doubles it each round trip."
+ },
+ {
+  "id": "qf5cb9490a94",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Why do long fat networks need the TCP window scale option (RFC 7323)?",
+  "options": [
+   "The 16-bit window field otherwise caps the window at 65,535 bytes",
+   "It is required to enable SACK",
+   "It turns on ECN",
+   "It negotiates the MSS"
+  ],
+  "answer": 0,
+  "explanation": "Without scaling, throughput is limited to 65,535 bytes per RTT; the option shifts the window by up to 14 bits."
+ },
+ {
+  "id": "qf73296eca5c",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What is the bandwidth-delay product of a 100 Mbps path with an 80 ms RTT?",
+  "options": [
+   "8 MB",
+   "125 KB",
+   "10 MB",
+   "1 MB (8 Mbit)"
+  ],
+  "answer": 3,
+  "explanation": "100,000,000 b/s * 0.08 s = 8,000,000 bits = 1,000,000 bytes that must be in flight to fill the pipe."
+ }
+]

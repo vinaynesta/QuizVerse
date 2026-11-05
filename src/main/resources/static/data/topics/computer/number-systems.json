@@ -1,5 +1,117 @@
 [
  {
+  "id": "q04eb91bf790",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "What is the base of the hexadecimal number system?",
+  "options": [
+   "8",
+   "10",
+   "16",
+   "2"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Hexadecimal uses 16 symbols (0-9 and A-F), so its base is 16."
+ },
+ {
+  "id": "q1e5e5c8c7c0",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "Which digits are used in the octal number system?",
+  "options": [
+   "0 to 8",
+   "1 to 8",
+   "0 to 9",
+   "0 to 7"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Octal is base 8, so it uses the eight digits 0 to 7."
+ },
+ {
+  "id": "q24667f352fe",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "What is the decimal value of binary 111?",
+  "options": [
+   "6",
+   "7",
+   "8",
+   "3"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "111 = 1x4 + 1x2 + 1x1 = 7."
+ },
+ {
+  "id": "q9730f2aaa26",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "What is the binary equivalent of decimal 5?",
+  "options": [
+   "111",
+   "110",
+   "101",
+   "100"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "5 = 4 + 1 = 1x2^2 + 0x2^1 + 1x2^0 = 101 in binary."
+ },
+ {
+  "id": "qb82c63aad64",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "What is the base of the binary number system?",
+  "options": [
+   "10",
+   "8",
+   "1",
+   "2"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Binary uses two digits (0 and 1), so its base is 2."
+ },
+ {
+  "id": "qd4de320dd54",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "The hexadecimal digit A represents which decimal value?",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "9"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "In hexadecimal, A = 10, B = 11, ... F = 15."
+ },
+ {
+  "id": "qdd622d08147",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "easy",
+  "question": "What is the base of the decimal number system?",
+  "options": [
+   "10",
+   "2",
+   "8",
+   "16"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The decimal system uses ten digits (0-9), so its base is 10."
+ },
+ {
   "id": "q14adf04cb71",
   "subject": "computer",
   "topic": "number-systems",
@@ -7,13 +119,77 @@
   "question": "What is the decimal value of the binary number 1010?",
   "options": [
    "8",
-   "10",
+   "5",
    "12",
-   "5"
+   "10"
   ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10."
+ },
+ {
+  "id": "q35343644f2a",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "medium",
+  "question": "What is the decimal value of hexadecimal 1F?",
+  "options": [
+   "30",
+   "31",
+   "32",
+   "15"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10.",
-  "needsReview": true
+  "explanation": "(1F)16 = 1x16 + 15 = 31."
+ },
+ {
+  "id": "q3f4f3b60579",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "medium",
+  "question": "What is the 1's complement of the binary number 1011?",
+  "options": [
+   "0100",
+   "0101",
+   "1100",
+   "1010"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The 1's complement is found by flipping every bit: 1011 becomes 0100."
+ },
+ {
+  "id": "q46f69c13fdc",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "medium",
+  "question": "What is the decimal value of octal 17?",
+  "options": [
+   "17",
+   "13",
+   "15",
+   "16"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "(17)8 = 1x8 + 7 = 15."
+ },
+ {
+  "id": "q99f927a1fc9",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "medium",
+  "question": "What is the binary equivalent of decimal 25?",
+  "options": [
+   "11001",
+   "11010",
+   "10011",
+   "11100"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "25 = 16 + 8 + 1, so the binary form is 11001."
  },
  {
   "id": "qbc9b598ba1e",
@@ -27,8 +203,184 @@
    "1 and 2",
    "0 to 7"
   ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "Binary is base 2, so it uses only 0 and 1.",
-  "needsReview": true
+  "explanation": "Binary is base 2, so it uses only 0 and 1."
+ },
+ {
+  "id": "qc8090a39d53",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "medium",
+  "question": "What is the decimal value of binary 101101?",
+  "options": [
+   "43",
+   "54",
+   "46",
+   "45"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "101101 = 32 + 8 + 4 + 1 = 45."
+ },
+ {
+  "id": "qda267a76e19",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "medium",
+  "question": "What is the octal equivalent of decimal 100?",
+  "options": [
+   "144",
+   "124",
+   "140",
+   "164"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "100 / 8 = 12 r 4, 12 / 8 = 1 r 4, 1 / 8 = 0 r 1; reading remainders upward gives 144 (64 + 32 + 4 = 100)."
+ },
+ {
+  "id": "q021cee94b51",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the decimal value of hexadecimal 2AF?",
+  "options": [
+   "687",
+   "685",
+   "703",
+   "671"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "2AF = 2x256 + 10x16 + 15 = 512 + 160 + 15 = 687."
+ },
+ {
+  "id": "q11b4792a24e",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the result of the binary addition 1011 + 1101?",
+  "options": [
+   "10110",
+   "11000",
+   "11100",
+   "10100"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "1011 = 11 and 1101 = 13; 11 + 13 = 24 = 11000 in binary."
+ },
+ {
+  "id": "q1726f807a90",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the 2's complement of the 8-bit binary number 01101100?",
+  "options": [
+   "10010100",
+   "10011100",
+   "10010011",
+   "10010101"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "1's complement of 01101100 is 10010011; adding 1 gives 10010100."
+ },
+ {
+  "id": "q5f50ddf0d1e",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the hexadecimal equivalent of decimal 1000?",
+  "options": [
+   "3E0",
+   "2E8",
+   "3E8",
+   "3F8"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "1000 / 16 = 62 r 8, 62 / 16 = 3 r 14 (E), 3 / 16 = 0 r 3, so 1000 = 3E8 (768 + 224 + 8)."
+ },
+ {
+  "id": "q79d8a665a27",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the hexadecimal equivalent of binary 11011011?",
+  "options": [
+   "DB",
+   "BD",
+   "DA",
+   "CB"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Group into 4 bits: 1101 = D and 1011 = B, giving DB."
+ },
+ {
+  "id": "qa919e952979",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the range of numbers that can be represented by an 8-bit signed integer in 2's complement form?",
+  "options": [
+   "-127 to +127",
+   "-128 to +128",
+   "0 to 255",
+   "-128 to +127"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "An n-bit 2's complement range is -2^(n-1) to 2^(n-1) - 1, i.e. -128 to +127 for 8 bits."
+ },
+ {
+  "id": "qc0d61c7e11e",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the binary equivalent of decimal 0.625?",
+  "options": [
+   "0.101",
+   "0.011",
+   "0.111",
+   "0.110"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "0.625x2 = 1.25 (1), 0.25x2 = 0.5 (0), 0.5x2 = 1.0 (1), so 0.625 = 0.101."
+ },
+ {
+  "id": "qd16ddbbea9e",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the binary equivalent of octal 725?",
+  "options": [
+   "111010110",
+   "111001101",
+   "110010101",
+   "111010101"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Replace each octal digit with 3 bits: 7 = 111, 2 = 010, 5 = 101, giving 111010101."
+ },
+ {
+  "id": "qd2f546e7c50",
+  "subject": "computer",
+  "topic": "number-systems",
+  "level": "hard",
+  "question": "What is the decimal value of binary 110.11?",
+  "options": [
+   "6.3",
+   "6.5",
+   "7.75",
+   "6.75"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "110 = 6 and .11 = 1/2 + 1/4 = 0.75, so 110.11 = 6.75."
  }
 ]

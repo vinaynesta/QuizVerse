@@ -478,5 +478,245 @@
     ],
     "answer": 1,
     "explanation": "The parent manages versions through properties, so redefining one changes the version used."
+  },
+  {
+    "topic": "core-di",
+    "question": "Why should a @Bean method returning a BeanFactoryPostProcessor be declared static?",
+    "options": [
+      "Because static methods are proxied by CGLIB",
+      "So the bean becomes prototype-scoped",
+      "So Spring can call it without instantiating the configuration class early, which would skip @Autowired and @Value processing on it",
+      "Because non-static @Bean methods cannot return interfaces"
+    ],
+    "answer": 2,
+    "explanation": "BeanFactoryPostProcessors are created very early, so a non-static method forces premature creation of its enclosing configuration bean."
+  },
+  {
+    "topic": "core-di",
+    "question": "When circular references are allowed, why can a cycle between two singletons be resolved with setter or field injection but not with constructor injection?",
+    "options": [
+      "Constructor injection disables singleton caching",
+      "Setter injection creates a copy of each bean",
+      "Spring can expose an early reference to a partially created bean only after it has been instantiated, which a constructor cycle never reaches",
+      "Constructor parameters are resolved in a separate context"
+    ],
+    "answer": 2,
+    "explanation": "With setter or field injection, the bean is instantiated first and an early reference is cached; with constructors neither bean can be instantiated."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "When does @ConditionalOnSingleCandidate(DataSource.class) match?",
+    "options": [
+      "When no DataSource bean exists",
+      "When exactly one DataSource bean exists, or several exist and one is primary",
+      "When at least one DataSource bean exists",
+      "When the DataSource class is on the classpath"
+    ],
+    "answer": 1,
+    "explanation": "It is used by auto-configurations that need one unambiguous bean to wire into, such as JdbcTemplate."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "What is an EnvironmentPostProcessor and how is it registered?",
+    "options": [
+      "A @Bean that edits properties after all beans are created",
+      "A hook that customizes the Environment before the context refreshes, registered in META-INF/spring.factories",
+      "A @Component that listens for property changes",
+      "An Actuator endpoint that rewrites properties"
+    ],
+    "answer": 1,
+    "explanation": "Because it runs before beans exist, it cannot be a regular bean and is discovered through spring.factories."
+  },
+  {
+    "topic": "web-rest",
+    "question": "A controller has its own @ExceptionHandler for IllegalStateException, and a @ControllerAdvice also handles it. Which handles an exception thrown in that controller?",
+    "options": [
+      "The handler in the controller itself",
+      "The @ControllerAdvice handler",
+      "Both, in registration order",
+      "Neither, because the conflict fails startup"
+    ],
+    "answer": 0,
+    "explanation": "Spring MVC checks the controller's local @ExceptionHandler methods before global @ControllerAdvice beans."
+  },
+  {
+    "topic": "web-rest",
+    "question": "What happens when a Spring MVC handler returns a CompletableFuture<User>?",
+    "options": [
+      "The client receives the future serialized as JSON",
+      "The servlet thread blocks on get() before returning",
+      "The request is processed asynchronously and the servlet thread is released until the future completes",
+      "Spring MVC rejects the return type"
+    ],
+    "answer": 2,
+    "explanation": "Spring MVC uses Servlet async support and writes the response when the future completes."
+  },
+  {
+    "topic": "web-rest",
+    "question": "In Spring Boot 3, what is the default for server.error.include-message?",
+    "options": [
+      "always",
+      "on-param",
+      "on-trace-param",
+      "never, so the exception message is left out of the default error response"
+    ],
+    "answer": 3,
+    "explanation": "The message is hidden by default to avoid leaking internal details, and can be enabled per property."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "How does a derived Spring Data JPA method like deleteByStatus(String status) run by default?",
+    "options": [
+      "It issues a single bulk DELETE statement",
+      "It marks the rows as soft-deleted",
+      "It loads the matching entities and removes each one, so lifecycle callbacks and cascades apply",
+      "It truncates the table"
+    ],
+    "answer": 2,
+    "explanation": "Derived delete queries go through EntityManager.remove for each entity and need an active transaction."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Why can't Spring Data optimize the SQL for an open interface projection that uses @Value(\"#{target.firstName + ' ' + target.lastName}\")?",
+    "options": [
+      "SpEL projections are run in the database",
+      "Open projections are only supported for native queries",
+      "The projection is evaluated before the query runs",
+      "The SpEL expression may use any property of the target, so the whole entity must be loaded"
+    ],
+    "answer": 3,
+    "explanation": "Closed projections let Spring Data select only the needed columns, while open projections need the full entity."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Inside a @Transactional method, you load a managed entity and change a field but never call save(). What happens at commit?",
+    "options": [
+      "Hibernate dirty checking flushes an UPDATE for the change",
+      "Nothing, because save() was not called",
+      "The change is rolled back",
+      "An exception says the entity is detached"
+    ],
+    "answer": 0,
+    "explanation": "Managed entities are tracked in the persistence context and changes are flushed automatically at commit."
+  },
+  {
+    "topic": "security",
+    "question": "In authorizeHttpRequests, rules for anyRequest().authenticated() are declared before requestMatchers(\"/public/**\").permitAll(). What is the result?",
+    "options": [
+      "/public/** is still public because specific rules always win",
+      "Both rules are merged",
+      "Configuration fails, since anyRequest() must be the last rule",
+      "Only /public/** requires authentication"
+    ],
+    "answer": 2,
+    "explanation": "Rules are matched in order, and Spring Security 6 rejects adding matchers after anyRequest()."
+  },
+  {
+    "topic": "security",
+    "question": "With Spring Security's default DelegatingPasswordEncoder, what does a stored password hash look like?",
+    "options": [
+      "A prefix naming the algorithm, like {bcrypt}, followed by the hash",
+      "A plain bcrypt hash without any prefix",
+      "The password Base64-encoded",
+      "An encrypted value that can be decrypted with a key"
+    ],
+    "answer": 0,
+    "explanation": "The {id} prefix lets the encoder choose the right algorithm and lets you migrate algorithms over time."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which environment variable binds to the list element my.servers[0] through relaxed binding?",
+    "options": [
+      "MY_SERVERS[0]",
+      "MY_SERVERS_0",
+      "MY.SERVERS.0",
+      "MYSERVERS_ZERO"
+    ],
+    "answer": 1,
+    "explanation": "Relaxed binding maps environment variables by replacing dots with underscores and writing indexes as underscore-separated numbers."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "A @ConfigurationProperties class is annotated with @Validated and has a @NotNull field that is missing from the config. What happens?",
+    "options": [
+      "The field stays null and a warning is logged",
+      "Application startup fails with a binding validation error",
+      "Spring injects a default instance",
+      "Validation runs only when the field is read"
+    ],
+    "answer": 1,
+    "explanation": "Validated configuration properties are checked at bind time, so invalid config fails fast at startup."
+  },
+  {
+    "topic": "testing",
+    "question": "In a test class, how does a nested static @TestConfiguration class differ from a nested static @Configuration class?",
+    "options": [
+      "@TestConfiguration adds to the application's configuration, while a nested @Configuration replaces it",
+      "They behave identically",
+      "@TestConfiguration replaces the main configuration, while @Configuration adds to it",
+      "@TestConfiguration only works with @WebMvcTest"
+    ],
+    "answer": 0,
+    "explanation": "A nested @Configuration stops Spring Boot from finding the @SpringBootConfiguration, whereas @TestConfiguration is additive."
+  },
+  {
+    "topic": "testing",
+    "question": "Why can heavy use of @DirtiesContext make a test suite much slower?",
+    "options": [
+      "It runs every test twice",
+      "It disables lazy initialization",
+      "It forces the use of a real HTTP server",
+      "It closes the context and removes it from the cache, forcing the next tests to build a new one"
+    ],
+    "answer": 3,
+    "explanation": "The TestContext framework normally reuses cached contexts, and @DirtiesContext throws that reuse away."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "Which API in Spring Boot 3 lets you instrument a block of code once and get both metrics and traces?",
+    "options": [
+      "The Actuator /metrics endpoint",
+      "The Micrometer Observation API via ObservationRegistry",
+      "Spring Cloud Sleuth's Tracer",
+      "java.util.logging handlers"
+    ],
+    "answer": 1,
+    "explanation": "An Observation is handled by registered handlers, which can produce timers and spans from a single instrumentation point."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "Why is it usually a mistake to include a database health check in the Kubernetes liveness probe?",
+    "options": [
+      "Liveness probes cannot call databases",
+      "The database check makes the probe return 404",
+      "Liveness is checked only once at startup",
+      "A database outage would make Kubernetes restart every pod even though restarting cannot fix it"
+    ],
+    "answer": 3,
+    "explanation": "Liveness should reflect whether the app itself is broken; external dependencies belong in readiness, if anywhere."
+  },
+  {
+    "topic": "transactions",
+    "question": "A @Transactional(readOnly = true) service method calls a default @Transactional method on another bean that writes data. What happens?",
+    "options": [
+      "The inner method starts a new read-write transaction",
+      "The writes always succeed and commit normally",
+      "Spring throws an exception before the call",
+      "The inner method joins the outer read-only transaction, so its own settings are ignored and Hibernate may not flush the writes"
+    ],
+    "answer": 3,
+    "explanation": "With REQUIRED propagation, the inner method takes part in the existing transaction and its characteristics, including readOnly."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "What does running a Spring Boot jar on the JVM with -Dspring.aot.enabled=true do?",
+    "options": [
+      "Uses the AOT-generated bean definitions and initialization code produced at build time",
+      "Compiles the app into a native image at startup",
+      "Enables the JIT's tiered compilation",
+      "Turns on lazy initialization"
+    ],
+    "answer": 0,
+    "explanation": "After the process-aot build step, this flag makes the JVM app use the pre-generated code instead of runtime configuration processing."
   }
 ]

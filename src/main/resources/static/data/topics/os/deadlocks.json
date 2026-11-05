@@ -1,0 +1,242 @@
+[
+ {
+  "id": "q883cfe91607",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "What is a deadlock?",
+  "options": [
+   "A process using too much CPU",
+   "A crashed kernel",
+   "A process stuck in an infinite loop",
+   "A set of processes each waiting for a resource held by another process in the set, so none can proceed"
+  ],
+  "answer": 3,
+  "explanation": "In a deadlock every process in the set waits for an event only another blocked member can cause, so none ever progresses."
+ },
+ {
+  "id": "qb05a2dee9f5",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "Which graph is commonly used to model resource allocation and detect deadlocks?",
+  "options": [
+   "Dependency-injection graph",
+   "Control-flow graph",
+   "Call graph",
+   "Resource-allocation graph"
+  ],
+  "answer": 3,
+  "explanation": "A resource-allocation graph has request and assignment edges between processes and resources; cycles indicate possible deadlock."
+ },
+ {
+  "id": "qeb91dec47bb",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "What is starvation?",
+  "options": [
+   "Two processes waiting on each other",
+   "A process waiting indefinitely because other processes are always favored",
+   "A process blocked on I/O",
+   "The system running out of memory"
+  ],
+  "answer": 1,
+  "explanation": "Starvation (indefinite blocking) occurs when a process is continually passed over, e.g. a low-priority process in strict priority scheduling."
+ },
+ {
+  "id": "q3d83e1b01fb",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Imposing a total ordering on resource types and requiring processes to request them in increasing order prevents which deadlock condition?",
+  "options": [
+   "Mutual exclusion",
+   "Circular wait",
+   "No preemption",
+   "Hold and wait"
+  ],
+  "answer": 1,
+  "explanation": "If every process acquires resources in the same global order, no cycle of waiting processes can form."
+ },
+ {
+  "id": "q820359dddad",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "In a resource-allocation graph where every resource type has exactly one instance, a cycle means:",
+  "options": [
+   "A deadlock exists",
+   "The system is in a safe state",
+   "Deadlock may or may not exist",
+   "Starvation has occurred but not deadlock"
+  ],
+  "answer": 0,
+  "explanation": "With single-instance resources a cycle is both necessary and sufficient for deadlock."
+ },
+ {
+  "id": "q8f3ee0c4211",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Which statement about unsafe states is correct?",
+  "options": [
+   "Every unsafe state is a deadlock",
+   "An unsafe state can never lead to deadlock",
+   "Unsafe states only occur with single-instance resources",
+   "An unsafe state may lead to deadlock, but is not necessarily deadlocked"
+  ],
+  "answer": 3,
+  "explanation": "Deadlocked states are a subset of unsafe states; in an unsafe state the OS can no longer guarantee that deadlock will be avoided."
+ },
+ {
+  "id": "qb0475c463b1",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Requiring each process to request and be allocated all its resources before it begins executing prevents which condition?",
+  "options": [
+   "Circular wait",
+   "Mutual exclusion",
+   "Hold and wait",
+   "No preemption"
+  ],
+  "answer": 2,
+  "explanation": "A process can never hold some resources while waiting for others, though this lowers resource utilization and can cause starvation."
+ },
+ {
+  "id": "qb8cd5cc1079",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "In a resource-allocation graph where some resource types have multiple instances, a cycle means:",
+  "options": [
+   "A deadlock definitely exists",
+   "The system is definitely safe",
+   "A deadlock may exist, but not necessarily",
+   "Every process in the cycle has terminated"
+  ],
+  "answer": 2,
+  "explanation": "With multiple instances, a process outside the cycle may release an instance and break it, so a cycle is necessary but not sufficient."
+ },
+ {
+  "id": "qef15825a3e1",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Which of the following is NOT one of the four necessary (Coffman) conditions for deadlock?",
+  "options": [
+   "No preemption",
+   "Mutual exclusion",
+   "Hold and wait",
+   "Starvation"
+  ],
+  "answer": 3,
+  "explanation": "The four conditions are mutual exclusion, hold and wait, no preemption and circular wait; starvation is a separate problem."
+ },
+ {
+  "id": "qf103e2c89af",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "In deadlock avoidance, when is a system in a safe state?",
+  "options": [
+   "When there exists some ordering of processes in which each can obtain its maximum need and finish",
+   "When no process is currently waiting",
+   "When all resources are free",
+   "When there is no cycle in the wait-for graph at the moment"
+  ],
+  "answer": 0,
+  "explanation": "A safe state has at least one safe sequence where each process's remaining needs can be met by available resources plus those released by earlier processes."
+ },
+ {
+  "id": "q315a2ceafe7",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "When does the banker's algorithm grant a resource request that does not exceed Need or Available?",
+  "options": [
+   "Always, immediately",
+   "Only if pretending to grant it leaves the system in a safe state",
+   "Only if no other process is waiting",
+   "Only if the request is for a single instance"
+  ],
+  "answer": 1,
+  "explanation": "The resource-request algorithm tentatively allocates, runs the safety algorithm and rolls back (making the process wait) if the result is unsafe."
+ },
+ {
+  "id": "q4c64b11d411",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "For single-instance resources, deadlock detection builds a wait-for graph from the resource-allocation graph. What does it do to get it?",
+  "options": [
+   "It adds an edge from every resource to every process",
+   "It removes the resource nodes and collapses edges so that Pi -> Pj means Pi waits for a resource held by Pj",
+   "It reverses all assignment edges",
+   "It keeps only the resource nodes"
+  ],
+  "answer": 1,
+  "explanation": "A deadlock exists exactly when the wait-for graph has a cycle, which can be found in O(n^2) time."
+ },
+ {
+  "id": "q8ff257f815e",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "In the banker's algorithm, how is the Need matrix computed?",
+  "options": [
+   "Need = Available - Allocation",
+   "Need = Max - Allocation",
+   "Need = Max + Allocation",
+   "Need = Allocation - Available"
+  ],
+  "answer": 1,
+  "explanation": "Need[i][j] is the number of additional instances of resource j that process i may still request before finishing."
+ },
+ {
+  "id": "q963ba9ce00d",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Three processes share a resource type, and each needs at most 2 instances. What is the minimum number of instances that guarantees no deadlock?",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "In the worst case each process holds 1 instance (3 total); one more instance lets some process finish, so n(m - 1) + 1 = 3 x 1 + 1 = 4."
+ },
+ {
+  "id": "q97f8983c6c2",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Banker's algorithm: Available = (3,3,2). Allocation: P0 (0,1,0), P1 (2,0,0), P2 (3,0,2), P3 (2,1,1), P4 (0,0,2). Max: P0 (7,5,3), P1 (3,2,2), P2 (9,0,2), P3 (2,2,2), P4 (4,3,3). Which is a safe sequence?",
+  "options": [
+   "<P0, P1, P2, P3, P4>",
+   "<P2, P1, P3, P4, P0>",
+   "<P1, P3, P4, P0, P2>",
+   "<P4, P1, P3, P0, P2>"
+  ],
+  "answer": 2,
+  "explanation": "Need = Max - Allocation; P1 (need 1,2,2) can run, raising Available to (5,3,2), then P3 to (7,4,3), P4 to (7,4,5), P0 to (7,5,5) and P2 to (10,5,7); P0, P2 and P4 cannot run first."
+ },
+ {
+  "id": "qbcd16a311e8",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "What is the time complexity of the banker's safety algorithm for n processes and m resource types?",
+  "options": [
+   "O(n + m)",
+   "O(m x n^2)",
+   "O(n log m)",
+   "O(2^n)"
+  ],
+  "answer": 1,
+  "explanation": "Up to n passes, each scanning n processes and comparing m-element vectors, gives O(m x n^2)."
+ }
+]

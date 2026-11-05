@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q46a377b4674",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "easy",
+  "question": "By default, which network driver does a container attach to when started without a --network flag?",
+  "options": [
+   "host",
+   "none",
+   "bridge",
+   "overlay"
+  ],
+  "answer": 2,
+  "explanation": "Containers attach to the default bridge network unless you choose another network."
+ },
+ {
+  "id": "qeab6e2a562d",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "easy",
+  "question": "Which command creates a new user-defined bridge network named mynet?",
+  "options": [
+   "docker run --network mynet",
+   "docker network create mynet",
+   "docker network ls mynet",
+   "docker bridge add mynet"
+  ],
+  "answer": 1,
+  "explanation": "docker network create uses the bridge driver by default and gives attached containers name-based DNS."
+ },
+ {
+  "id": "qbb72ccfa34c",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "medium",
+  "question": "What lets containers on the same user-defined bridge network reach each other by container name?",
+  "options": [
+   "IP addresses hardcoded in the application",
+   "Docker's embedded DNS server, which resolves container names",
+   "Manual edits to each container's /etc/hosts",
+   "Environment variables only"
+  ],
+  "answer": 1,
+  "explanation": "User-defined bridge networks run an embedded DNS server, so containers can resolve each other by name. The default bridge does not provide this."
+ },
+ {
+  "id": "qd215ee5b316",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "medium",
+  "question": "Which Docker network driver makes a container use the host's network stack directly?",
+  "options": [
+   "none",
+   "bridge",
+   "host",
+   "overlay"
+  ],
+  "answer": 2,
+  "explanation": "With the host driver the container shares the host's network namespace instead of getting its own IP."
+ }
+]

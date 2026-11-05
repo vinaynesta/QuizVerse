@@ -1,5 +1,20 @@
 [
  {
+  "id": "q2458272754e",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Which function from react-dom/client creates a root to render a React 18+ app into a DOM node?",
+  "options": [
+   "ReactDOM.render",
+   "createRoot",
+   "mount",
+   "hydrate"
+  ],
+  "answer": 1,
+  "explanation": "createRoot(container).render(<App />) replaces the legacy ReactDOM.render, which was removed in React 19."
+ },
+ {
   "id": "q5d8cee165a2",
   "subject": "react",
   "topic": "rendering-reconciliation",
@@ -58,6 +73,51 @@
   ],
   "answer": 1,
   "explanation": "State updates, parent re-renders, and context changes all cause a component to render again."
+ },
+ {
+  "id": "qe9a268408d1",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "What does StrictMode do?",
+  "options": [
+   "Makes the production build faster",
+   "Prevents components from using state",
+   "Enables extra development-only checks such as double-invoking renders and effects",
+   "Enforces TypeScript types at runtime"
+  ],
+  "answer": 2,
+  "explanation": "StrictMode helps find impure renders and missing cleanups and has no effect in production."
+ },
+ {
+  "id": "q02f62ebc17e",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "What is an Error Boundary?",
+  "options": [
+   "A browser API for uncaught promise errors",
+   "A hook that wraps fetch calls in try/catch",
+   "A Strict Mode warning",
+   "A component that catches render errors in its subtree and shows fallback UI"
+  ],
+  "answer": 3,
+  "explanation": "Error boundaries are class components with getDerivedStateFromError or componentDidCatch; they do not catch errors in event handlers."
+ },
+ {
+  "id": "q61ee6f2cd25",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "Two components of the same type render at the same position in the tree across renders. What happens to the state?",
+  "options": [
+   "React always resets the state",
+   "React keeps the state because it sees the same component at the same position",
+   "React copies the state to a new instance",
+   "React swaps state with the sibling component"
+  ],
+  "answer": 1,
+  "explanation": "State is tied to the position in the tree; it persists while the same type renders in the same place."
  },
  {
   "id": "q8c0e8a06fea",
@@ -120,6 +180,21 @@
   "explanation": "Rendering computes what should change; committing applies those changes to the DOM, after which effects run."
  },
  {
+  "id": "q1b4188cda73",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "What does hydrateRoot do compared with createRoot?",
+  "options": [
+   "It attaches React to HTML that was already rendered on the server instead of creating the DOM from scratch",
+   "It renders the app twice for consistency checks",
+   "It only works with class components",
+   "It makes the app render without JavaScript"
+  ],
+  "answer": 0,
+  "explanation": "Hydration reuses the existing server-rendered DOM and attaches event handlers, and React reports mismatches."
+ },
+ {
   "id": "q3eebec6e037",
   "subject": "react",
   "topic": "rendering-reconciliation",
@@ -163,6 +238,21 @@
   ],
   "answer": 2,
   "explanation": "Automatic batching in React 18+ groups updates in timeouts, promises, and native handlers, not just React events."
+ },
+ {
+  "id": "qb267b30a493",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "What does React use to decide whether to reuse a DOM node when reconciling two children lists that both have keys?",
+  "options": [
+   "Only the array index",
+   "The text content of the element",
+   "The element type and the key together",
+   "The order in which components were imported"
+  ],
+  "answer": 2,
+  "explanation": "Elements with the same type and key are matched across renders, so they keep their DOM and state even if moved."
  },
  {
   "id": "qddd08158b21",

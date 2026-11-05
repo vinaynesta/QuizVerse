@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q7a2983f33bc",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "What is the main effect of annotating a value as `any`?",
+  "options": [
+   "The compiler infers the most specific type automatically",
+   "The value is checked more strictly at runtime",
+   "The value can only hold primitives",
+   "Type checking is effectively turned off for that value"
+  ],
+  "answer": 3,
+  "explanation": "any opts out of type checking, so any property access or call is allowed without errors."
+ },
+ {
+  "id": "q3b491fb7e06",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "What does the type `A & B` represent?",
+  "options": [
+   "A type that excludes members of B from A",
+   "Only the members A and B share",
+   "A type that has all members of both A and B",
+   "A type that has members of either A or B"
+  ],
+  "answer": 2,
+  "explanation": "& creates an intersection, combining the requirements of both types."
+ },
+ {
+  "id": "qb8db33309dc",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "Which command-line tool is the TypeScript compiler?",
+  "options": [
+   "tsc",
+   "ts-build",
+   "tsx",
+   "typescriptc"
+  ],
+  "answer": 0,
+  "explanation": "tsc is the official compiler shipped with the typescript package."
+ },
+ {
+  "id": "q0d00aedd350",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "Given `let t: [string, number] = [\"a\", 1];`, what is the type of `t[1]`?",
+  "options": [
+   "any",
+   "string | number",
+   "number",
+   "string"
+  ],
+  "answer": 2,
+  "explanation": "Tuples have a fixed type per position, so index 1 has type number."
+ },
+ {
+  "id": "qc9d24dae0c7",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Given `interface User { readonly id: number }`, what happens with `user.id = 5;`?",
+  "options": [
+   "It works but logs a warning",
+   "It silently does nothing",
+   "A compile-time error, because id is readonly",
+   "It throws a TypeError at runtime"
+  ],
+  "answer": 2,
+  "explanation": "readonly is a compile-time check that prevents reassignment after initialization."
+ },
+ {
+  "id": "q7c9b01dbb00",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How does interface `B` inherit the members of interface `A`?",
+  "options": [
+   "interface B : A {}",
+   "interface B extends A {}",
+   "interface B implements A {}",
+   "interface B inherits A {}"
+  ],
+  "answer": 1,
+  "explanation": "Interfaces use extends to inherit members; implements is used by classes."
+ },
+ {
+  "id": "qf657aabe2d3",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Given `let dir: \"left\" | \"right\";`, which assignment compiles?",
+  "options": [
+   "dir = \"left\";",
+   "dir = 0;",
+   "dir = \"Left\";",
+   "dir = \"up\";"
+  ],
+  "answer": 0,
+  "explanation": "A union of string literal types only accepts those exact (case-sensitive) values."
+ },
+ {
+  "id": "q8f29b24b39e",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "What is the key difference between `any` and `unknown`?",
+  "options": [
+   "unknown can only hold objects, any can hold anything",
+   "unknown must be narrowed before you can use it; any can be used freely",
+   "any must be narrowed before use; unknown can be used freely",
+   "There is no difference; they are aliases"
+  ],
+  "answer": 1,
+  "explanation": "Both accept any value, but unknown is the type-safe counterpart that forces a check before use."
+ },
+ {
+  "id": "qeb5523364de",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which of these can a type alias express directly that an interface cannot?",
+  "options": [
+   "An object with optional properties",
+   "An object with methods",
+   "An object with readonly properties",
+   "A union such as `string | number`"
+  ],
+  "answer": 3,
+  "explanation": "Interfaces describe object shapes only, while type aliases can name unions, primitives, tuples and more."
+ },
+ {
+  "id": "q131774f1d2c",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "How do you declare an optional parameter `x` of type string?",
+  "options": [
+   "function f(x: string?) {}",
+   "function f(x: string = optional) {}",
+   "function f(x?: string) {}",
+   "function f(optional x: string) {}"
+  ],
+  "answer": 2,
+  "explanation": "A ? after the parameter name makes it optional; it must come after required parameters."
+ }
+]

@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q147d6803499",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does const [a, b] = [1, 2]; assign to b?",
+  "options": [
+   "[1, 2]",
+   "1",
+   "2",
+   "undefined"
+  ],
+  "answer": 2,
+  "explanation": "Array destructuring assigns elements by position, so b gets the second element."
+ },
+ {
+  "id": "q4c1e158b593",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does [...[1, 2], 3] evaluate to?",
+  "options": [
+   "[[1, 2], 3]",
+   "SyntaxError",
+   "[3, 1, 2]",
+   "[1, 2, 3]"
+  ],
+  "answer": 3,
+  "explanation": "The spread syntax expands the inner array's elements into the new array literal."
+ },
+ {
+  "id": "qb17dde0f37f",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "Given const { title } = { title: \"Book\", pages: 100 }; what is title?",
+  "options": [
+   "undefined",
+   "{ title: \"Book\" }",
+   "100",
+   "\"Book\""
+  ],
+  "answer": 3,
+  "explanation": "Object destructuring pulls out the property with the matching name."
+ },
+ {
+  "id": "qb82a4abb8ec",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does user?.address?.city return if user is undefined?",
+  "options": [
+   "TypeError",
+   "null",
+   "undefined",
+   "\"\""
+  ],
+  "answer": 2,
+  "explanation": "Optional chaining short-circuits and returns undefined instead of throwing when a reference is nullish."
+ },
+ {
+  "id": "q3c43b65eaac",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What does new Set([1, 2, 2, 3]).size return?",
+  "options": [
+   "4",
+   "3",
+   "1",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "A Set stores unique values, so the duplicate 2 is kept only once."
+ },
+ {
+  "id": "qe22bf34f2a2",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What is the main difference between a Map and a plain object for key-value storage?",
+  "options": [
+   "Map keys must be strings",
+   "Maps cannot be iterated",
+   "Objects preserve insertion order and Maps do not",
+   "Map keys can be any value, including objects"
+  ],
+  "answer": 3,
+  "explanation": "Map accepts any value as a key and has a size property and direct iteration."
+ }
+]

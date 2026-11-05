@@ -1,5 +1,35 @@
 [
  {
+  "id": "q004c091595e",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "What happens at each internal node of a decision tree?",
+  "options": [
+   "All features are averaged into one value",
+   "A neural network layer is applied to the input",
+   "The final class prediction is output",
+   "The data is split based on a test of a feature value"
+  ],
+  "answer": 3,
+  "explanation": "Internal nodes route examples by feature tests, such as age > 30, and leaves hold the predictions."
+ },
+ {
+  "id": "q202940e02a8",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "What does linear regression model?",
+  "options": [
+   "A tree of yes or no decisions over the features",
+   "A linear relationship between input features and a continuous target value",
+   "The probability that a point belongs to each cluster",
+   "A sequence of words generated one at a time"
+  ],
+  "answer": 1,
+  "explanation": "Linear regression fits a weighted sum of features plus an intercept, usually by minimizing squared error."
+ },
+ {
   "id": "q2e03ce6c091",
   "subject": "ai",
   "topic": "supervised-learning",
@@ -60,6 +90,21 @@
   "explanation": "k-NN is instance-based: it looks up the k nearest labeled examples and takes a vote."
  },
  {
+  "id": "q25b58565606",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "What does L2 (ridge) regularization do to a linear model's weights?",
+  "options": [
+   "Sets most weights exactly to zero",
+   "Removes the bias term from the model",
+   "Doubles the learning rate for large weights",
+   "Penalizes squared weights, shrinking them toward zero without usually making them exactly zero"
+  ],
+  "answer": 3,
+  "explanation": "The squared penalty discourages large weights smoothly, unlike L1, which tends to produce exact zeros."
+ },
+ {
   "id": "q34519afcf03",
   "subject": "ai",
   "topic": "supervised-learning",
@@ -105,6 +150,21 @@
   "explanation": "SVMs choose the separating hyperplane with the largest distance to the nearest points of each class."
  },
  {
+  "id": "qb3b38e943f3",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "What is the effect of limiting a decision tree's maximum depth?",
+  "options": [
+   "It increases the number of features the tree can use",
+   "It guarantees perfect training accuracy",
+   "It restricts model complexity, which reduces overfitting",
+   "It converts the tree into a linear model"
+  ],
+  "answer": 2,
+  "explanation": "Deep trees can carve out tiny regions that memorize noise, so capping depth acts as regularization."
+ },
+ {
   "id": "qd57548cf1a3",
   "subject": "ai",
   "topic": "supervised-learning",
@@ -148,6 +208,36 @@
   ],
   "answer": 2,
   "explanation": "Boosting combines weak, high-bias learners sequentially so the ensemble fits patterns each alone would miss."
+ },
+ {
+  "id": "q6a84960c24f",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "hard",
+  "question": "In gradient boosting, what is the usual effect of a smaller learning rate (shrinkage)?",
+  "options": [
+   "The individual trees become deeper",
+   "Fewer trees are needed and the model trains faster",
+   "Each tree contributes less, so more trees are needed but generalization usually improves",
+   "The model switches from boosting to bagging"
+  ],
+  "answer": 2,
+  "explanation": "Shrinkage slows learning so the ensemble takes smaller corrective steps, which acts as regularization."
+ },
+ {
+  "id": "q7ca214bc777",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "hard",
+  "question": "Why are decision trees largely insensitive to monotonic transformations of a feature, such as taking a logarithm?",
+  "options": [
+   "Trees normalize all features automatically before training",
+   "Logarithms are applied internally to every feature",
+   "Trees ignore numeric features entirely",
+   "Splits depend only on the ordering of feature values, which monotonic transformations preserve"
+  ],
+  "answer": 3,
+  "explanation": "A threshold split on x corresponds to an equivalent threshold on log(x), so the tree structure is unchanged."
  },
  {
   "id": "qaaaed1a13ba",

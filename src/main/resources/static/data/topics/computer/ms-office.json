@@ -11,9 +11,9 @@
    "Ctrl + C",
    "Ctrl + Z"
   ],
+  "needsReview": true,
   "answer": 2,
-  "explanation": "Ctrl + C copies, Ctrl + X cuts, Ctrl + V pastes and Ctrl + Z undoes.",
-  "needsReview": true
+  "explanation": "Ctrl + C copies, Ctrl + X cuts, Ctrl + V pastes and Ctrl + Z undoes."
  },
  {
   "id": "q3c209227f19",
@@ -23,13 +23,13 @@
   "question": "Which shortcut undoes the last action in most Windows programs?",
   "options": [
    "Ctrl + Y",
-   "Ctrl + Z",
+   "Ctrl + A",
    "Ctrl + U",
-   "Ctrl + A"
+   "Ctrl + Z"
   ],
-  "answer": 1,
-  "explanation": "Ctrl + Z undoes; Ctrl + Y redoes.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Ctrl + Z undoes; Ctrl + Y redoes."
  },
  {
   "id": "qb2aba71b23a",
@@ -38,14 +38,62 @@
   "level": "easy",
   "question": "What is the default file extension of a document saved in MS Word 2007 or later?",
   "options": [
-   ".doc",
    ".docx",
+   ".doc",
    ".txt",
    ".xlsx"
   ],
-  "answer": 1,
-  "explanation": "Word 2007 and later save as .docx; .xlsx is Excel.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Word 2007 and later save as .docx; .xlsx is Excel."
+ },
+ {
+  "id": "qca8ed72f981",
+  "subject": "computer",
+  "topic": "ms-office",
+  "level": "easy",
+  "question": "MS Access is mainly used as a:",
+  "options": [
+   "Presentation program",
+   "Email client",
+   "Word processor",
+   "Database management program"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "MS Access is Microsoft's desktop database management system."
+ },
+ {
+  "id": "qfca60641939",
+  "subject": "computer",
+  "topic": "ms-office",
+  "level": "easy",
+  "question": "Which MS Office application is mainly used for managing email, calendar and contacts?",
+  "options": [
+   "MS Access",
+   "MS Excel",
+   "MS Outlook",
+   "MS Publisher"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "MS Outlook is the Office email and personal information manager."
+ },
+ {
+  "id": "q31d2b7318a9",
+  "subject": "computer",
+  "topic": "ms-office",
+  "level": "medium",
+  "question": "In MS Access, which object actually stores the data in rows and columns?",
+  "options": [
+   "Module",
+   "Report",
+   "Macro",
+   "Table"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Tables hold the data; queries, forms and reports work with it."
  },
  {
   "id": "q717cd7da154",
@@ -55,13 +103,13 @@
   "question": "Which key starts a slide show from the first slide in MS PowerPoint?",
   "options": [
    "F1",
-   "F5",
+   "F12",
    "F7",
-   "F12"
+   "F5"
   ],
-  "answer": 1,
-  "explanation": "F5 starts the slide show from the beginning (Shift + F5 starts from the current slide).",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "F5 starts the slide show from the beginning (Shift + F5 starts from the current slide)."
  },
  {
   "id": "q9b308f629fd",
@@ -71,12 +119,60 @@
   "question": "In MS Excel, what does the cell reference B3 mean?",
   "options": [
    "Row B, column 3",
-   "Column B, row 3",
+   "Book B, page 3",
    "Sheet B, cell 3",
-   "Book B, page 3"
+   "Column B, row 3"
   ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Excel names cells by column letter then row number."
+ },
+ {
+  "id": "qae0cf9ebc4f",
+  "subject": "computer",
+  "topic": "ms-office",
+  "level": "medium",
+  "question": "Which MS Outlook feature is used to schedule appointments and meetings?",
+  "options": [
+   "Inbox",
+   "Calendar",
+   "Journal",
+   "Junk folder"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "Excel names cells by column letter then row number.",
-  "needsReview": true
+  "explanation": "The Outlook Calendar stores appointments, meetings and events."
+ },
+ {
+  "id": "qfefcf031daf",
+  "subject": "computer",
+  "topic": "ms-office",
+  "level": "medium",
+  "question": "In MS Access, which object is used to retrieve records that meet specific conditions?",
+  "options": [
+   "Query",
+   "Table",
+   "Form",
+   "Page"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A query selects, filters or calculates data from one or more tables."
+ },
+ {
+  "id": "qad398dfe665",
+  "subject": "computer",
+  "topic": "ms-office",
+  "level": "hard",
+  "question": "In MS Access, which object provides a user-friendly screen for entering and viewing records one at a time?",
+  "options": [
+   "Form",
+   "Query",
+   "Report",
+   "Table"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Forms are used for data entry and viewing; reports are for formatted printed output."
  }
 ]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf24135adacf",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What does DMA (Direct Memory Access) allow?",
+  "options": [
+   "Processes to share memory",
+   "User programs to access kernel memory",
+   "The CPU to bypass its cache",
+   "A device controller to transfer data directly to or from memory without the CPU handling each byte"
+  ],
+  "answer": 3,
+  "explanation": "With DMA the CPU sets up a transfer and the controller moves the whole block, interrupting the CPU only when it is done."
+ },
+ {
+  "id": "q71011d0fdb4",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "What is swapping?",
+  "options": [
+   "Exchanging the values of two variables",
+   "Switching the CPU between user and kernel mode",
+   "Rotating log files",
+   "Moving a process (or its pages) between main memory and a backing store on disk"
+  ],
+  "answer": 3,
+  "explanation": "Swapping temporarily moves processes or pages out to disk to free memory and brings them back later."
+ },
+ {
+  "id": "q248f3fcb341",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "Which semaphore operation decrements the semaphore and may block the caller?",
+  "options": [
+   "signal() / V()",
+   "wait() / P()",
+   "init()",
+   "fork()"
+  ],
+  "answer": 1,
+  "explanation": "wait() (P) decrements the semaphore and blocks if no units are available; signal() (V) increments it and may wake a waiter."
+ },
+ {
+  "id": "q66ccc5d3969",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "What is turnaround time in CPU scheduling?",
+  "options": [
+   "Time spent waiting for I/O",
+   "Time spent only executing on the CPU",
+   "Time from submission to the first response",
+   "Time from process submission to completion"
+  ],
+  "answer": 3,
+  "explanation": "Turnaround time = completion time - arrival time, covering waiting, executing and I/O time."
+ },
+ {
+  "id": "q0e2ee8dc835",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "What is an inode in UNIX file systems?",
+  "options": [
+   "A device driver",
+   "The file's name in a directory",
+   "A data structure storing a file's metadata and pointers to its data blocks",
+   "A network socket"
+  ],
+  "answer": 2,
+  "explanation": "An inode holds owner, permissions, size, timestamps and block pointers; the file name lives in the directory entry, not the inode."
+ },
+ {
+  "id": "q2184fe1c68b",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "easy",
+  "question": "Unused space inside an allocated block, such as the unfilled part of a process's last page, is called:",
+  "options": [
+   "Compaction",
+   "External fragmentation",
+   "Internal fragmentation",
+   "Swapping"
+  ],
+  "answer": 2,
+  "explanation": "Internal fragmentation is wasted space inside an allocated unit because the allocation is larger than requested."
+ },
+ {
+  "id": "qeb91dec47bb",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "What is starvation?",
+  "options": [
+   "Two processes waiting on each other",
+   "A process waiting indefinitely because other processes are always favored",
+   "A process blocked on I/O",
+   "The system running out of memory"
+  ],
+  "answer": 1,
+  "explanation": "Starvation (indefinite blocking) occurs when a process is continually passed over, e.g. a low-priority process in strict priority scheduling."
+ },
+ {
+  "id": "q19cd2f78ba0",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "What is a context switch?",
+  "options": [
+   "Moving a page from disk into memory",
+   "Switching from user mode to kernel mode only",
+   "Saving the state of the current process and loading the saved state of another",
+   "Changing the active keyboard layout"
+  ],
+  "answer": 2,
+  "explanation": "A context switch saves the running process's context in its PCB and restores another's; it is pure overhead because no useful work is done during it."
+ },
+ {
+  "id": "q1a588eb9df8",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "easy",
+  "question": "Which term describes free memory split into small non-contiguous holes that are too small to satisfy requests?",
+  "options": [
+   "Internal fragmentation",
+   "Thrashing",
+   "Paging",
+   "External fragmentation"
+  ],
+  "answer": 3,
+  "explanation": "External fragmentation means total free memory is sufficient but it is not contiguous; compaction or paging addresses it."
+ },
+ {
+  "id": "qfac6881a0a9",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "Which UNIX system call creates a new process by duplicating the calling process?",
+  "options": [
+   "exec()",
+   "wait()",
+   "exit()",
+   "fork()"
+  ],
+  "answer": 3,
+  "explanation": "fork() creates a child that is a copy of the parent; exec() replaces a process image rather than creating a process."
+ }
+]

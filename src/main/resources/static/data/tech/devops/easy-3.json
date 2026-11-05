@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q779461f574d",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command downloads new commits from a remote without merging them into your current branch?",
+  "options": [
+   "git pull",
+   "git fetch",
+   "git push",
+   "git clone"
+  ],
+  "answer": 1,
+  "explanation": "git fetch updates remote-tracking branches only; git pull is fetch followed by a merge or rebase."
+ },
+ {
+  "id": "qbf7f5efd3bc",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command creates a new commit that reverses the changes introduced by an earlier commit?",
+  "options": [
+   "git revert <commit>",
+   "git reset <commit>",
+   "git rollback <commit>",
+   "git undo <commit>"
+  ],
+  "answer": 0,
+  "explanation": "git revert adds a new inverse commit, so shared history is preserved."
+ },
+ {
+  "id": "q649b5c682bc",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command opens an interactive shell inside the already running container named web?",
+  "options": [
+   "docker run -it web sh",
+   "docker attach web sh",
+   "docker shell web",
+   "docker exec -it web sh"
+  ],
+  "answer": 3,
+  "explanation": "docker exec runs a new process inside a running container; docker run would create a new container instead."
+ },
+ {
+  "id": "qa517ef4b1ef",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command records the staged changes as a new commit with a message?",
+  "options": [
+   "git save -m 'message'",
+   "git snapshot 'message'",
+   "git commit -m 'message'",
+   "git record -m 'message'"
+  ],
+  "answer": 2,
+  "explanation": "git commit -m creates a commit from the staged changes using the given message."
+ },
+ {
+  "id": "q852fa7b98ac",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command removes a stopped container?",
+  "options": [
+   "docker remove <container>",
+   "docker rm <container>",
+   "docker delete <container>",
+   "docker clean <container>"
+  ],
+  "answer": 1,
+  "explanation": "docker rm deletes a container that is not running; docker rm -f also removes a running one."
+ },
+ {
+  "id": "qf3ee2e38937",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command lists the containers that are currently running?",
+  "options": [
+   "docker images",
+   "docker list",
+   "docker ps",
+   "docker status"
+  ],
+  "answer": 2,
+  "explanation": "docker ps lists running containers; docker ps -a includes stopped ones."
+ },
+ {
+  "id": "qda17eb8625a",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which command lists the images stored locally on your machine?",
+  "options": [
+   "docker list images",
+   "docker ps -i",
+   "docker images",
+   "docker image show"
+  ],
+  "answer": 2,
+  "explanation": "docker images lists local images with repository, tag, ID, and size."
+ },
+ {
+  "id": "qe019ba54978",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "What is the purpose of a .dockerignore file?",
+  "options": [
+   "It sets environment variables for containers",
+   "It excludes matching files from the build context sent to the daemon",
+   "It defines the container's startup command",
+   "It lists ports to publish"
+  ],
+  "answer": 1,
+  "explanation": "Files matched by .dockerignore are not sent with the build context, which keeps builds faster and images cleaner."
+ },
+ {
+  "id": "q95c91ead9ce",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command shows the changes that are staged for the next commit?",
+  "options": [
+   "git diff --staged",
+   "git diff HEAD~1",
+   "git status --diff",
+   "git log --staged"
+  ],
+  "answer": 0,
+  "explanation": "git diff --staged (same as --cached) compares the index with the last commit, showing what the next commit will contain."
+ },
+ {
+  "id": "qca2c6234561",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command creates and starts a new container from an image?",
+  "options": [
+   "docker start",
+   "docker run",
+   "docker exec",
+   "docker build"
+  ],
+  "answer": 1,
+  "explanation": "docker run creates a new container from an image and starts it; docker start only restarts an existing container."
+ }
+]

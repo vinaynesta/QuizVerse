@@ -60,6 +60,51 @@
   "explanation": "Spring Boot loads application-{profile}.properties for each active profile on top of application.properties."
  },
  {
+  "id": "qdf161570140",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Besides application.properties, which configuration file format does Spring Boot support out of the box?",
+  "options": [
+   "TOML, as application.toml",
+   "YAML, as application.yml",
+   "XML, as application.xml",
+   "INI, as application.ini"
+  ],
+  "answer": 1,
+  "explanation": "Spring Boot loads application.yml (or .yaml) using SnakeYAML, which the starters include."
+ },
+ {
+  "id": "qfaf38c22466",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which annotation binds a group of properties sharing a prefix to a typed Java object?",
+  "options": [
+   "@PropertySource",
+   "@Value",
+   "@ConfigurationProperties",
+   "@EnableConfiguration"
+  ],
+  "answer": 2,
+  "explanation": "@ConfigurationProperties(prefix = \"app\") binds app.* properties to the fields or constructor of a class or record."
+ },
+ {
+  "id": "q011f7f99ca1",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which location takes precedence if both define the same property: classpath:application.properties or classpath:config/application.properties?",
+  "options": [
+   "classpath:application.properties",
+   "classpath:config/application.properties",
+   "Neither; startup fails on a conflict",
+   "Whichever file was modified most recently"
+  ],
+  "answer": 1,
+  "explanation": "Spring Boot loads the classpath root first and then classpath:/config/, so the later config/ location overrides it."
+ },
+ {
   "id": "q3081014c562",
   "subject": "springboot",
   "topic": "configuration-profiles",
@@ -75,6 +120,21 @@
   "explanation": "spring.config.import pulls extra config data, and the optional: prefix avoids failure if the source is absent."
  },
  {
+  "id": "q4ac40536f97",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "What does @Value(\"${app.timeout:30}\") inject when app.timeout is not defined?",
+  "options": [
+   "An empty string",
+   "null",
+   "30",
+   "Nothing, because startup fails"
+  ],
+  "answer": 2,
+  "explanation": "The text after the colon is the default used when the placeholder cannot be resolved."
+ },
+ {
   "id": "q5a08933e63f",
   "subject": "springboot",
   "topic": "configuration-profiles",
@@ -88,6 +148,21 @@
   ],
   "answer": 3,
   "explanation": "Kebab-case is the canonical form; upper snake case is intended for environment variables."
+ },
+ {
+  "id": "q5febd26ea09",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which annotation on a configuration class registers all @ConfigurationProperties classes found in its packages?",
+  "options": [
+   "@EnableAutoConfiguration",
+   "@PropertySource",
+   "@ComponentScan",
+   "@ConfigurationPropertiesScan"
+  ],
+  "answer": 3,
+  "explanation": "@ConfigurationPropertiesScan finds and registers @ConfigurationProperties types without listing them in @EnableConfigurationProperties."
  },
  {
   "id": "qbcab9b2165d",
@@ -120,6 +195,21 @@
   "explanation": "Relaxed binding maps environment variables by replacing dots with underscores, removing dashes and upper-casing."
  },
  {
+  "id": "q2973b211ee7",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "Which environment variable binds to the list element my.servers[0] through relaxed binding?",
+  "options": [
+   "MY_SERVERS[0]",
+   "MY_SERVERS_0",
+   "MY.SERVERS.0",
+   "MYSERVERS_ZERO"
+  ],
+  "answer": 1,
+  "explanation": "Relaxed binding maps environment variables by replacing dots with underscores and writing indexes as underscore-separated numbers."
+ },
+ {
   "id": "q473cc65f6e9",
   "subject": "springboot",
   "topic": "configuration-profiles",
@@ -148,6 +238,21 @@
   ],
   "answer": 3,
   "explanation": "Profile groups let one logical profile expand into several more specific profiles."
+ },
+ {
+  "id": "qcca0d3870be",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "A @ConfigurationProperties class is annotated with @Validated and has a @NotNull field that is missing from the config. What happens?",
+  "options": [
+   "The field stays null and a warning is logged",
+   "Validation runs only when the field is read",
+   "Spring injects a default instance",
+   "Application startup fails with a binding validation error"
+  ],
+  "answer": 3,
+  "explanation": "Validated configuration properties are checked at bind time, so invalid config fails fast at startup."
  },
  {
   "id": "qe27c33a0585",

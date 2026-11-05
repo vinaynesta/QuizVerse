@@ -1,6 +1,8 @@
 import { bestScores, currentUser } from "./api.js";
 
 const examId = new URLSearchParams(window.location.search).get("exam");
+/** An exam's wrong-answer penalty as text: "1/3" for APPSC, "0.25" for the bank exams. */
+const penalty = (x) => (Math.abs(x - 1 / 3) < 1e-9 ? "1/3" : String(x));
 // "exam/stage/section/level/quizIndex" -> { bestScore, maxMarks, attempts }, for logged-in users.
 let best = new Map();
 
@@ -15,7 +17,7 @@ function renderExam(index) {
   document.getElementById("exam-title").textContent = exam.name;
   const timed = exam.stages.some((st) => st.sections.some((sec) => sec.minutes));
   document.getElementById("exam-info").textContent = timed
-    ? `${exam.description} Each quiz uses the real section's question count, marks and time limit. Wrong answers cost ${index.negativeMarking} of a question's marks.`
+    ? `${exam.description} Each quiz uses the real section's question count, marks and time limit. Wrong answers cost ${penalty(exam.negativeMarking ?? index.negativeMarking)} of a question's marks.`
     : exam.description;
 
   list.innerHTML = exam.stages

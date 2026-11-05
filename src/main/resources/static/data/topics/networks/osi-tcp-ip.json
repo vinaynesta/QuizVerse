@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q20fa52b7e8e",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "In the TCP/IP model, which layer does HTTP belong to?",
+  "options": [
+   "Link",
+   "Application",
+   "Internet",
+   "Transport"
+  ],
+  "answer": 1,
+  "explanation": "HTTP is an application-layer protocol that runs on top of a transport protocol such as TCP."
+ },
+ {
+  "id": "q920b23be9f2",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "What is the protocol data unit called at the transport layer when TCP is used?",
+  "options": [
+   "Frame",
+   "Segment",
+   "Bit",
+   "Packet"
+  ],
+  "answer": 1,
+  "explanation": "TCP data units are segments; packets are Layer 3 and frames are Layer 2."
+ },
+ {
+  "id": "qce9fecabe56",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "At which OSI layer do traditional Ethernet switches primarily operate?",
+  "options": [
+   "Transport (Layer 4)",
+   "Data Link (Layer 2)",
+   "Network (Layer 3)",
+   "Physical (Layer 1)"
+  ],
+  "answer": 1,
+  "explanation": "Switches forward frames using MAC addresses, which are Layer 2 identifiers."
+ },
+ {
+  "id": "qd3cf5d16a67",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "How many layers does the OSI reference model have?",
+  "options": [
+   "5",
+   "4",
+   "7",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "OSI has seven layers: Physical, Data Link, Network, Transport, Session, Presentation, Application."
+ },
+ {
+  "id": "qf363f4bb4a4",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "Which OSI layer is responsible for logical addressing and routing packets between networks?",
+  "options": [
+   "Data Link layer",
+   "Transport layer",
+   "Network layer",
+   "Session layer"
+  ],
+  "answer": 2,
+  "explanation": "The Network layer (Layer 3) handles IP addressing and path selection between networks."
+ }
+]

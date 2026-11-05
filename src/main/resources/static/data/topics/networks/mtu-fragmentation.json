@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q01cde2b05c6",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "With a 1500-byte Ethernet MTU, a 20-byte IPv4 header and a 20-byte TCP header with no options, what is the TCP MSS?",
+  "options": [
+   "1500 bytes",
+   "1460 bytes",
+   "1440 bytes",
+   "1480 bytes"
+  ],
+  "answer": 1,
+  "explanation": "MSS = MTU - IP header - TCP header = 1500 - 20 - 20 = 1460; IPv6's 40-byte header would make it 1440."
+ },
+ {
+  "id": "q37b9d91fad3",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "In IPv6, who may fragment a packet?",
+  "options": [
+   "Any router along the path",
+   "Both the source and routers",
+   "Only the source host, using a Fragment extension header",
+   "Nobody, since IPv6 cannot carry fragments"
+  ],
+  "answer": 2,
+  "explanation": "IPv6 routers never fragment; they send ICMPv6 Packet Too Big, and the source fragments or lowers its packet size."
+ },
+ {
+  "id": "q95acbd6fd69",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "What does IPv4 Path MTU Discovery (RFC 1191) rely on?",
+  "options": [
+   "Setting the DF bit and receiving ICMP 'Fragmentation Needed' messages",
+   "DNS records advertising the MTU",
+   "TCP RST segments from routers",
+   "ARP replies carrying the link MTU"
+  ],
+  "answer": 0,
+  "explanation": "Routers that can't forward a DF packet return ICMP type 3 code 4 with the next-hop MTU; filtering that ICMP causes PMTUD black holes."
+ },
+ {
+  "id": "qccb67b5c1bb",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "A 4000-byte IPv4 datagram (20-byte header, 3980 bytes of data) is fragmented over a 1500-byte MTU. What is the Fragment Offset field of the third fragment?",
+  "options": [
+   "2960",
+   "185",
+   "360",
+   "370"
+  ],
+  "answer": 3,
+  "explanation": "Each fragment carries 1480 data bytes (a multiple of 8), so the third starts at byte 2960, and the offset is in 8-byte units: 2960 / 8 = 370."
+ }
+]

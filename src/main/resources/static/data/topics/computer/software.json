@@ -1,19 +1,195 @@
 [
  {
+  "id": "q014bd5885f4",
+  "subject": "computer",
+  "topic": "software",
+  "level": "easy",
+  "question": "Software that manages the computer's hardware and provides a platform for running other programs is called:",
+  "options": [
+   "Shareware",
+   "Application software",
+   "Utility software",
+   "System software"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "System software, such as the operating system, controls hardware and lets application programs run."
+ },
+ {
+  "id": "q16fbb24ec53",
+  "subject": "computer",
+  "topic": "software",
+  "level": "easy",
+  "question": "The physical parts of a computer are called hardware, while the programs that run on it are called:",
+  "options": [
+   "Hardware",
+   "Circuits",
+   "Peripherals",
+   "Software"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Software is the set of programs and instructions that tell the hardware what to do."
+ },
+ {
+  "id": "q61931a921fa",
+  "subject": "computer",
+  "topic": "software",
+  "level": "easy",
+  "question": "MS Word is an example of:",
+  "options": [
+   "System software",
+   "Application software",
+   "An operating system",
+   "A compiler"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "MS Word helps the user perform a specific task (word processing), so it is application software."
+ },
+ {
+  "id": "q75057538ad2",
+  "subject": "computer",
+  "topic": "software",
+  "level": "easy",
+  "question": "Software whose source code is freely available to view, modify and share is called:",
+  "options": [
+   "Open source software",
+   "Proprietary software",
+   "Closed source software",
+   "Shareware"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Open source software publishes its source code so anyone can study, change and distribute it."
+ },
+ {
+  "id": "q7d761919861",
+  "subject": "computer",
+  "topic": "software",
+  "level": "easy",
+  "question": "Software that can be used without paying anything, but whose source code is usually not shared, is called:",
+  "options": [
+   "Shareware",
+   "Freeware",
+   "Firmware",
+   "Licensed software"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Freeware is distributed free of cost, though the author normally keeps the source code and copyright."
+ },
+ {
   "id": "q81515984a9a",
   "subject": "computer",
   "topic": "software",
   "level": "easy",
   "question": "Which of these is an operating system?",
   "options": [
-   "MS Word",
    "Linux",
+   "MS Word",
    "Google Chrome",
    "MS Excel"
   ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Linux is an operating system; the others are application programs."
+ },
+ {
+  "id": "q9bcc1a0791a",
+  "subject": "computer",
+  "topic": "software",
+  "level": "easy",
+  "question": "Which of these is NOT application software?",
+  "options": [
+   "MS Excel",
+   "Adobe Photoshop",
+   "Windows",
+   "VLC Media Player"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Windows is an operating system, which is system software; the others are applications."
+ },
+ {
+  "id": "q0a93955ffdf",
+  "subject": "computer",
+  "topic": "software",
+  "level": "medium",
+  "question": "A group of related application programs sold together, such as MS Office, is called a:",
+  "options": [
+   "Device driver",
+   "Kernel",
+   "Firmware",
+   "Software suite"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A software suite (package) bundles related applications like a word processor, spreadsheet and presentation tool."
+ },
+ {
+  "id": "q2097aec734f",
+  "subject": "computer",
+  "topic": "software",
+  "level": "medium",
+  "question": "Software given free for a trial period, after which the user is expected to pay, is called:",
+  "options": [
+   "Shareware",
+   "Open source software",
+   "Freeware",
+   "Public domain software"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Shareware is distributed on a try-before-you-buy basis."
+ },
+ {
+  "id": "q6e6ae3fb71c",
+  "subject": "computer",
+  "topic": "software",
+  "level": "medium",
+  "question": "Device drivers, which let the operating system communicate with hardware, are a type of:",
+  "options": [
+   "Hardware",
+   "Application software",
+   "A programming language",
+   "System software"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Device drivers are system software that act as translators between the OS and hardware devices."
+ },
+ {
+  "id": "q6ea25962804",
+  "subject": "computer",
+  "topic": "software",
+  "level": "medium",
+  "question": "Software that has no copyright and can be used, copied and changed by anyone for any purpose is called:",
+  "options": [
+   "Shareware",
+   "Proprietary software",
+   "Public domain software",
+   "Licensed software"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Public domain software carries no copyright restrictions at all."
+ },
+ {
+  "id": "qb7f69879d59",
+  "subject": "computer",
+  "topic": "software",
+  "level": "medium",
+  "question": "Software that is permanently stored in ROM or flash memory of a device is called:",
+  "options": [
+   "Freeware",
+   "Firmware",
+   "Shareware",
+   "Groupware"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "Linux is an operating system; the others are application programs.",
-  "needsReview": true
+  "explanation": "Firmware is low-level software built into hardware, such as the BIOS on a motherboard."
  },
  {
   "id": "qed1cb642d34",
@@ -23,12 +199,60 @@
   "question": "A program that translates a whole high-level program into machine code before it runs is a:",
   "options": [
    "Interpreter",
-   "Compiler",
    "Assembler",
+   "Compiler",
    "Debugger"
   ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A compiler translates the whole program at once; an interpreter translates and runs it line by line."
+ },
+ {
+  "id": "q3fbdb31e15e",
+  "subject": "computer",
+  "topic": "software",
+  "level": "hard",
+  "question": "In software licensing, EULA stands for:",
+  "options": [
+   "Electronic Usage Licence Act",
+   "End User Legal Authority",
+   "Enterprise Usage License Agreement",
+   "End User License Agreement"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A EULA is the contract between the software publisher and the user that sets terms of use."
+ },
+ {
+  "id": "q4963a15e242",
+  "subject": "computer",
+  "topic": "software",
+  "level": "hard",
+  "question": "A licensing method that lets users modify and redistribute software only if derived works keep the same freedoms is called:",
+  "options": [
+   "Shareware",
+   "Copyleft",
+   "Freeware",
+   "Public domain"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "A compiler translates the whole program at once; an interpreter translates and runs it line by line.",
-  "needsReview": true
+  "explanation": "Copyleft licences such as the GNU GPL require modified versions to be shared under the same terms."
+ },
+ {
+  "id": "qc7bca97ffe2",
+  "subject": "computer",
+  "topic": "software",
+  "level": "hard",
+  "question": "Software that sits between the operating system and applications, letting different programs communicate and share data, is called:",
+  "options": [
+   "Middleware",
+   "Firmware",
+   "Freeware",
+   "Malware"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Middleware acts as a bridge between applications, databases and operating systems, especially in distributed systems."
  }
 ]

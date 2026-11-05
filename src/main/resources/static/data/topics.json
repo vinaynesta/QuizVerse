@@ -449,11 +449,63 @@
    "name": "Computer Knowledge",
    "topics": [
     {
+     "id": "abbreviations",
+     "name": "Abbreviations",
+     "file": "topics/computer/abbreviations.json",
+     "levels": {
+      "easy": 12,
+      "medium": 2,
+      "hard": 3
+     }
+    },
+    {
+     "id": "cloud-computing",
+     "name": "Cloud Computing",
+     "file": "topics/computer/cloud-computing.json",
+     "levels": {
+      "easy": 1,
+      "medium": 3,
+      "hard": 4
+     }
+    },
+    {
+     "id": "computer-history",
+     "name": "Computer History",
+     "file": "topics/computer/computer-history.json",
+     "levels": {
+      "easy": 10,
+      "medium": 11,
+      "hard": 6
+     }
+    },
+    {
      "id": "database",
      "name": "Database",
      "file": "topics/computer/database.json",
      "levels": {
-      "medium": 1
+      "easy": 7,
+      "medium": 13,
+      "hard": 13
+     }
+    },
+    {
+     "id": "email",
+     "name": "Email",
+     "file": "topics/computer/email.json",
+     "levels": {
+      "easy": 6,
+      "medium": 3,
+      "hard": 1
+     }
+    },
+    {
+     "id": "file-formats",
+     "name": "File Formats",
+     "file": "topics/computer/file-formats.json",
+     "levels": {
+      "easy": 8,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -461,8 +513,39 @@
      "name": "Hardware",
      "file": "topics/computer/hardware.json",
      "levels": {
-      "easy": 3,
-      "medium": 3
+      "easy": 11,
+      "medium": 11,
+      "hard": 8
+     }
+    },
+    {
+     "id": "input-output",
+     "name": "Input Output",
+     "file": "topics/computer/input-output.json",
+     "levels": {
+      "easy": 9,
+      "medium": 9,
+      "hard": 7
+     }
+    },
+    {
+     "id": "internet",
+     "name": "Internet",
+     "file": "topics/computer/internet.json",
+     "levels": {
+      "easy": 17,
+      "medium": 8,
+      "hard": 7
+     }
+    },
+    {
+     "id": "logic-gates",
+     "name": "Logic Gates",
+     "file": "topics/computer/logic-gates.json",
+     "levels": {
+      "easy": 4,
+      "medium": 2,
+      "hard": 4
      }
     },
     {
@@ -470,8 +553,19 @@
      "name": "MS Office",
      "file": "topics/computer/ms-office.json",
      "levels": {
-      "easy": 3,
-      "medium": 2
+      "easy": 5,
+      "medium": 5,
+      "hard": 1
+     }
+    },
+    {
+     "id": "memory",
+     "name": "Memory",
+     "file": "topics/computer/memory.json",
+     "levels": {
+      "easy": 6,
+      "medium": 10,
+      "hard": 8
      }
     },
     {
@@ -479,8 +573,49 @@
      "name": "Memory Units",
      "file": "topics/computer/memory-units.json",
      "levels": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 4
+     }
+    },
+    {
+     "id": "ms-excel",
+     "name": "Ms Excel",
+     "file": "topics/computer/ms-excel.json",
+     "levels": {
+      "easy": 10,
+      "medium": 16,
+      "hard": 24
+     }
+    },
+    {
+     "id": "ms-powerpoint",
+     "name": "Ms Powerpoint",
+     "file": "topics/computer/ms-powerpoint.json",
+     "levels": {
+      "easy": 3,
+      "medium": 2,
+      "hard": 4
+     }
+    },
+    {
+     "id": "ms-word",
+     "name": "Ms Word",
+     "file": "topics/computer/ms-word.json",
+     "levels": {
       "easy": 2,
-      "medium": 1
+      "medium": 5,
+      "hard": 4
+     }
+    },
+    {
+     "id": "network-devices",
+     "name": "Network Devices",
+     "file": "topics/computer/network-devices.json",
+     "levels": {
+      "easy": 4,
+      "medium": 6,
+      "hard": 3
      }
     },
     {
@@ -488,8 +623,9 @@
      "name": "Networking",
      "file": "topics/computer/networking.json",
      "levels": {
-      "easy": 1,
-      "medium": 3
+      "easy": 11,
+      "medium": 17,
+      "hard": 13
      }
     },
     {
@@ -497,7 +633,39 @@
      "name": "Number Systems",
      "file": "topics/computer/number-systems.json",
      "levels": {
-      "medium": 2
+      "easy": 7,
+      "medium": 8,
+      "hard": 9
+     }
+    },
+    {
+     "id": "operating-systems",
+     "name": "Operating Systems",
+     "file": "topics/computer/operating-systems.json",
+     "levels": {
+      "easy": 13,
+      "medium": 18,
+      "hard": 18
+     }
+    },
+    {
+     "id": "programming-basics",
+     "name": "Programming Basics",
+     "file": "topics/computer/programming-basics.json",
+     "levels": {
+      "easy": 9,
+      "medium": 8,
+      "hard": 8
+     }
+    },
+    {
+     "id": "protocols",
+     "name": "Protocols",
+     "file": "topics/computer/protocols.json",
+     "levels": {
+      "easy": 2,
+      "medium": 6,
+      "hard": 12
      }
     },
     {
@@ -505,8 +673,19 @@
      "name": "Security",
      "file": "topics/computer/security.json",
      "levels": {
-      "easy": 1,
-      "medium": 1
+      "easy": 12,
+      "medium": 16,
+      "hard": 18
+     }
+    },
+    {
+     "id": "shortcuts",
+     "name": "Shortcuts",
+     "file": "topics/computer/shortcuts.json",
+     "levels": {
+      "easy": 23,
+      "medium": 14,
+      "hard": 7
      }
     },
     {
@@ -514,22 +693,45 @@
      "name": "Software",
      "file": "topics/computer/software.json",
      "levels": {
-      "easy": 1,
-      "medium": 1
+      "easy": 7,
+      "medium": 6,
+      "hard": 3
+     }
+    },
+    {
+     "id": "utilities",
+     "name": "Utilities",
+     "file": "topics/computer/utilities.json",
+     "levels": {
+      "easy": 4,
+      "medium": 2,
+      "hard": 4
      }
     }
    ]
   },
   {
    "id": "banking",
-   "name": "Banking Awareness",
+   "name": "Banking & General Awareness",
    "topics": [
+    {
+     "id": "accounts-deposits",
+     "name": "Accounts Deposits",
+     "file": "topics/banking/accounts-deposits.json",
+     "levels": {
+      "easy": 9,
+      "medium": 5,
+      "hard": 2
+     }
+    },
     {
      "id": "banking-history",
      "name": "Banking History",
      "file": "topics/banking/banking-history.json",
      "levels": {
-      "medium": 2
+      "easy": 9,
+      "medium": 11,
+      "hard": 14
      }
     },
     {
@@ -537,8 +739,149 @@
      "name": "Banking Terms",
      "file": "topics/banking/banking-terms.json",
      "levels": {
-      "easy": 2,
-      "medium": 5
+      "easy": 14,
+      "medium": 9,
+      "hard": 7
+     }
+    },
+    {
+     "id": "basel-capital",
+     "name": "Basel Capital",
+     "file": "topics/banking/basel-capital.json",
+     "levels": {
+      "easy": 3,
+      "medium": 6,
+      "hard": 8
+     }
+    },
+    {
+     "id": "books-authors",
+     "name": "Books Authors",
+     "file": "topics/banking/books-authors.json",
+     "levels": {
+      "easy": 5,
+      "medium": 5,
+      "hard": 7
+     }
+    },
+    {
+     "id": "committees",
+     "name": "Committees",
+     "file": "topics/banking/committees.json",
+     "levels": {
+      "easy": 3,
+      "medium": 7,
+      "hard": 7
+     }
+    },
+    {
+     "id": "constitution",
+     "name": "Constitution",
+     "file": "topics/banking/constitution.json",
+     "levels": {
+      "easy": 4,
+      "medium": 6,
+      "hard": 8
+     }
+    },
+    {
+     "id": "culture",
+     "name": "Culture",
+     "file": "topics/banking/culture.json",
+     "levels": {
+      "easy": 5,
+      "medium": 4,
+      "hard": 2
+     }
+    },
+    {
+     "id": "currency",
+     "name": "Currency",
+     "file": "topics/banking/currency.json",
+     "levels": {
+      "easy": 9,
+      "medium": 6,
+      "hard": 10
+     }
+    },
+    {
+     "id": "digital-banking",
+     "name": "Digital Banking",
+     "file": "topics/banking/digital-banking.json",
+     "levels": {
+      "easy": 9,
+      "medium": 7,
+      "hard": 6
+     }
+    },
+    {
+     "id": "economy",
+     "name": "Economy",
+     "file": "topics/banking/economy.json",
+     "levels": {
+      "easy": 10,
+      "medium": 14,
+      "hard": 9
+     }
+    },
+    {
+     "id": "financial-inclusion",
+     "name": "Financial Inclusion",
+     "file": "topics/banking/financial-inclusion.json",
+     "levels": {
+      "easy": 7,
+      "medium": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "financial-markets",
+     "name": "Financial Markets",
+     "file": "topics/banking/financial-markets.json",
+     "levels": {
+      "easy": 14,
+      "medium": 9,
+      "hard": 11
+     }
+    },
+    {
+     "id": "fiscal-policy",
+     "name": "Fiscal Policy",
+     "file": "topics/banking/fiscal-policy.json",
+     "levels": {
+      "easy": 5,
+      "medium": 10,
+      "hard": 8
+     }
+    },
+    {
+     "id": "geography",
+     "name": "Geography",
+     "file": "topics/banking/geography.json",
+     "levels": {
+      "easy": 9,
+      "medium": 10,
+      "hard": 7
+     }
+    },
+    {
+     "id": "govt-schemes",
+     "name": "Govt Schemes",
+     "file": "topics/banking/govt-schemes.json",
+     "levels": {
+      "easy": 7,
+      "medium": 8,
+      "hard": 3
+     }
+    },
+    {
+     "id": "important-days",
+     "name": "Important Days",
+     "file": "topics/banking/important-days.json",
+     "levels": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 7
      }
     },
     {
@@ -546,7 +889,69 @@
      "name": "Institutions",
      "file": "topics/banking/institutions.json",
      "levels": {
-      "medium": 3
+      "easy": 10,
+      "medium": 15,
+      "hard": 11
+     }
+    },
+    {
+     "id": "insurance",
+     "name": "Insurance",
+     "file": "topics/banking/insurance.json",
+     "levels": {
+      "easy": 7,
+      "medium": 3,
+      "hard": 6
+     }
+    },
+    {
+     "id": "international-institutions",
+     "name": "International Institutions",
+     "file": "topics/banking/international-institutions.json",
+     "levels": {
+      "easy": 13,
+      "medium": 9,
+      "hard": 2
+     }
+    },
+    {
+     "id": "loans-credit",
+     "name": "Loans Credit",
+     "file": "topics/banking/loans-credit.json",
+     "levels": {
+      "easy": 7,
+      "medium": 8,
+      "hard": 6
+     }
+    },
+    {
+     "id": "monetary-policy",
+     "name": "Monetary Policy",
+     "file": "topics/banking/monetary-policy.json",
+     "levels": {
+      "easy": 16,
+      "medium": 22,
+      "hard": 14
+     }
+    },
+    {
+     "id": "money-supply",
+     "name": "Money Supply",
+     "file": "topics/banking/money-supply.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 6
+     }
+    },
+    {
+     "id": "npa-recovery",
+     "name": "Npa Recovery",
+     "file": "topics/banking/npa-recovery.json",
+     "levels": {
+      "easy": 5,
+      "medium": 12,
+      "hard": 12
      }
     },
     {
@@ -554,8 +959,9 @@
      "name": "Payment Systems",
      "file": "topics/banking/payments.json",
      "levels": {
-      "easy": 2,
-      "medium": 1
+      "easy": 21,
+      "medium": 25,
+      "hard": 30
      }
     },
     {
@@ -563,8 +969,745 @@
      "name": "RBI & Monetary Policy",
      "file": "topics/banking/rbi.json",
      "levels": {
+      "easy": 15,
+      "medium": 13,
+      "hard": 12
+     }
+    },
+    {
+     "id": "regulators",
+     "name": "Regulators",
+     "file": "topics/banking/regulators.json",
+     "levels": {
+      "easy": 7,
+      "medium": 5,
+      "hard": 8
+     }
+    },
+    {
+     "id": "static-gk",
+     "name": "Static Gk",
+     "file": "topics/banking/static-gk.json",
+     "levels": {
+      "easy": 11,
+      "medium": 11,
+      "hard": 11
+     }
+    },
+    {
+     "id": "taxation",
+     "name": "Taxation",
+     "file": "topics/banking/taxation.json",
+     "levels": {
+      "easy": 6,
+      "medium": 6,
+      "hard": 8
+     }
+    },
+    {
+     "id": "types-of-banks",
+     "name": "Types Of Banks",
+     "file": "topics/banking/types-of-banks.json",
+     "levels": {
+      "easy": 6,
+      "medium": 7,
+      "hard": 7
+     }
+    }
+   ]
+  },
+  {
+   "id": "history",
+   "name": "History & Culture",
+   "topics": [
+    {
+     "id": "andhra-ancient",
+     "name": "Ancient Andhra",
+     "file": "topics/history/andhra-ancient.json",
+     "levels": {
+      "easy": 9,
+      "medium": 10,
+      "hard": 15
+     }
+    },
+    {
+     "id": "ancient-india",
+     "name": "Ancient India",
+     "file": "topics/history/ancient-india.json",
+     "levels": {
+      "easy": 13,
+      "medium": 12,
+      "hard": 3
+     }
+    },
+    {
+     "id": "andhra-movement",
+     "name": "Andhra Movement",
+     "file": "topics/history/andhra-movement.json",
+     "levels": {
+      "easy": 4,
+      "medium": 12,
+      "hard": 10
+     }
+    },
+    {
+     "id": "art-culture",
+     "name": "Art & Culture",
+     "file": "topics/history/art-culture.json",
+     "levels": {
+      "easy": 7,
+      "medium": 7,
+      "hard": 8
+     }
+    },
+    {
+     "id": "andhra-medieval",
+     "name": "Medieval Andhra",
+     "file": "topics/history/andhra-medieval.json",
+     "levels": {
+      "easy": 14,
+      "medium": 10,
+      "hard": 20
+     }
+    },
+    {
+     "id": "medieval-india",
+     "name": "Medieval India",
+     "file": "topics/history/medieval-india.json",
+     "levels": {
+      "easy": 7,
+      "medium": 11,
+      "hard": 4
+     }
+    },
+    {
+     "id": "andhra-modern",
+     "name": "Modern Andhra",
+     "file": "topics/history/andhra-modern.json",
+     "levels": {
+      "easy": 6,
+      "medium": 15,
+      "hard": 8
+     }
+    },
+    {
+     "id": "modern-india",
+     "name": "Modern India",
+     "file": "topics/history/modern-india.json",
+     "levels": {
+      "easy": 10,
+      "medium": 5,
+      "hard": 8
+     }
+    },
+    {
+     "id": "national-movement",
+     "name": "National Movement",
+     "file": "topics/history/national-movement.json",
+     "levels": {
+      "easy": 15,
+      "medium": 8,
+      "hard": 8
+     }
+    },
+    {
+     "id": "state-formation",
+     "name": "State Formation",
+     "file": "topics/history/state-formation.json",
+     "levels": {
+      "easy": 15,
+      "medium": 10,
+      "hard": 16
+     }
+    }
+   ]
+  },
+  {
+   "id": "polity",
+   "name": "Polity & Governance",
+   "topics": [
+    {
+     "id": "amendments",
+     "name": "Amendments",
+     "file": "topics/polity/amendments.json",
+     "levels": {
+      "easy": 1,
+      "medium": 6,
+      "hard": 14
+     }
+    },
+    {
+     "id": "constitution-basics",
+     "name": "Constitution Basics",
+     "file": "topics/polity/constitution-basics.json",
+     "levels": {
+      "easy": 13,
+      "medium": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "constitutional-bodies",
+     "name": "Constitutional Bodies",
+     "file": "topics/polity/constitutional-bodies.json",
+     "levels": {
+      "easy": 5,
+      "medium": 2,
+      "hard": 3
+     }
+    },
+    {
+     "id": "federalism",
+     "name": "Federalism",
+     "file": "topics/polity/federalism.json",
+     "levels": {
+      "easy": 5,
+      "medium": 8,
+      "hard": 7
+     }
+    },
+    {
+     "id": "fundamental-rights",
+     "name": "Fundamental Rights",
+     "file": "topics/polity/fundamental-rights.json",
+     "levels": {
+      "easy": 9,
+      "medium": 12,
+      "hard": 7
+     }
+    },
+    {
+     "id": "governance",
+     "name": "Governance",
+     "file": "topics/polity/governance.json",
+     "levels": {
+      "easy": 7,
+      "medium": 5,
+      "hard": 5
+     }
+    },
+    {
+     "id": "international-relations",
+     "name": "International Relations",
+     "file": "topics/polity/international-relations.json",
+     "levels": {
+      "easy": 9,
+      "medium": 5,
+      "hard": 7
+     }
+    },
+    {
+     "id": "judiciary",
+     "name": "Judiciary",
+     "file": "topics/polity/judiciary.json",
+     "levels": {
+      "easy": 4,
+      "medium": 5,
+      "hard": 4
+     }
+    },
+    {
+     "id": "local-government",
+     "name": "Local Government",
+     "file": "topics/polity/local-government.json",
+     "levels": {
+      "easy": 12,
+      "medium": 13,
+      "hard": 12
+     }
+    },
+    {
+     "id": "parliament",
+     "name": "Parliament",
+     "file": "topics/polity/parliament.json",
+     "levels": {
+      "easy": 8,
+      "medium": 7,
+      "hard": 5
+     }
+    },
+    {
+     "id": "social-justice",
+     "name": "Social Justice",
+     "file": "topics/polity/social-justice.json",
+     "levels": {
+      "easy": 12,
+      "medium": 13,
+      "hard": 15
+     }
+    },
+    {
+     "id": "state-government",
+     "name": "State Government",
+     "file": "topics/polity/state-government.json",
+     "levels": {
+      "easy": 10,
+      "medium": 14,
+      "hard": 11
+     }
+    },
+    {
+     "id": "union-government",
+     "name": "Union Government",
+     "file": "topics/polity/union-government.json",
+     "levels": {
+      "easy": 5,
+      "medium": 7,
+      "hard": 7
+     }
+    }
+   ]
+  },
+  {
+   "id": "economy",
+   "name": "Economy (India & AP)",
+   "topics": [
+    {
+     "id": "ap-agriculture",
+     "name": "AP Agriculture",
+     "file": "topics/economy/ap-agriculture.json",
+     "levels": {
+      "easy": 14,
+      "medium": 13,
+      "hard": 4
+     }
+    },
+    {
+     "id": "ap-economy",
+     "name": "AP Economy",
+     "file": "topics/economy/ap-economy.json",
+     "levels": {
+      "easy": 7,
+      "medium": 2,
+      "hard": 4
+     }
+    },
+    {
+     "id": "ap-industry",
+     "name": "AP Industry",
+     "file": "topics/economy/ap-industry.json",
+     "levels": {
+      "easy": 12,
+      "medium": 12,
+      "hard": 19
+     }
+    },
+    {
+     "id": "ap-irrigation",
+     "name": "AP Irrigation",
+     "file": "topics/economy/ap-irrigation.json",
+     "levels": {
+      "easy": 12,
+      "medium": 14,
+      "hard": 10
+     }
+    },
+    {
+     "id": "ap-reorganisation",
+     "name": "AP Reorganisation",
+     "file": "topics/economy/ap-reorganisation.json",
+     "levels": {
+      "easy": 5,
+      "medium": 9,
+      "hard": 13
+     }
+    },
+    {
+     "id": "agriculture",
+     "name": "Agriculture",
+     "file": "topics/economy/agriculture.json",
+     "levels": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 7
+     }
+    },
+    {
+     "id": "economic-concepts",
+     "name": "Economic Concepts",
+     "file": "topics/economy/economic-concepts.json",
+     "levels": {
+      "easy": 16,
+      "medium": 12,
+      "hard": 12
+     }
+    },
+    {
+     "id": "external-sector",
+     "name": "External Sector",
+     "file": "topics/economy/external-sector.json",
+     "levels": {
+      "easy": 3,
+      "medium": 3,
+      "hard": 5
+     }
+    },
+    {
+     "id": "industry",
+     "name": "Industry",
+     "file": "topics/economy/industry.json",
+     "levels": {
+      "easy": 3,
+      "medium": 3,
+      "hard": 5
+     }
+    },
+    {
+     "id": "planning",
+     "name": "Planning",
+     "file": "topics/economy/planning.json",
+     "levels": {
+      "easy": 10,
+      "medium": 12,
+      "hard": 8
+     }
+    },
+    {
+     "id": "poverty-unemployment",
+     "name": "Poverty & Unemployment",
+     "file": "topics/economy/poverty-unemployment.json",
+     "levels": {
+      "easy": 4,
+      "medium": 5,
+      "hard": 7
+     }
+    },
+    {
+     "id": "public-finance",
+     "name": "Public Finance",
+     "file": "topics/economy/public-finance.json",
+     "levels": {
+      "easy": 6,
+      "medium": 9,
+      "hard": 6
+     }
+    }
+   ]
+  },
+  {
+   "id": "geography",
+   "name": "Geography",
+   "topics": [
+    {
+     "id": "ap-climate-soils",
+     "name": "AP Climate & Soils",
+     "file": "topics/geography/ap-climate-soils.json",
+     "levels": {
+      "easy": 7,
+      "medium": 7,
+      "hard": 6
+     }
+    },
+    {
+     "id": "ap-cultural-geography",
+     "name": "AP Cultural Geography",
+     "file": "topics/geography/ap-cultural-geography.json",
+     "levels": {
+      "easy": 8,
+      "medium": 7,
+      "hard": 8
+     }
+    },
+    {
+     "id": "ap-forests-wildlife",
+     "name": "AP Forests & Wildlife",
+     "file": "topics/geography/ap-forests-wildlife.json",
+     "levels": {
+      "easy": 8,
+      "medium": 7,
+      "hard": 8
+     }
+    },
+    {
+     "id": "ap-minerals",
+     "name": "AP Minerals",
+     "file": "topics/geography/ap-minerals.json",
+     "levels": {
+      "easy": 6,
+      "medium": 5,
+      "hard": 9
+     }
+    },
+    {
+     "id": "ap-physiography",
+     "name": "AP Physiography",
+     "file": "topics/geography/ap-physiography.json",
+     "levels": {
+      "easy": 10,
+      "medium": 10,
+      "hard": 8
+     }
+    },
+    {
+     "id": "ap-rivers",
+     "name": "AP Rivers",
+     "file": "topics/geography/ap-rivers.json",
+     "levels": {
+      "easy": 11,
+      "medium": 14,
+      "hard": 11
+     }
+    },
+    {
+     "id": "climate",
+     "name": "Climate",
+     "file": "topics/geography/climate.json",
+     "levels": {
+      "easy": 8,
+      "medium": 9,
+      "hard": 10
+     }
+    },
+    {
+     "id": "human-geography",
+     "name": "Human Geography",
+     "file": "topics/geography/human-geography.json",
+     "levels": {
+      "easy": 3,
+      "medium": 1,
+      "hard": 3
+     }
+    },
+    {
+     "id": "indian-physiography",
+     "name": "Indian Physiography",
+     "file": "topics/geography/indian-physiography.json",
+     "levels": {
+      "easy": 7,
+      "medium": 8,
+      "hard": 8
+     }
+    },
+    {
+     "id": "indian-rivers",
+     "name": "Indian Rivers",
+     "file": "topics/geography/indian-rivers.json",
+     "levels": {
+      "easy": 5,
+      "medium": 7,
+      "hard": 8
+     }
+    },
+    {
+     "id": "physical-geography",
+     "name": "Physical Geography",
+     "file": "topics/geography/physical-geography.json",
+     "levels": {
+      "easy": 13,
+      "medium": 12,
+      "hard": 6
+     }
+    },
+    {
+     "id": "resources",
+     "name": "Resources",
+     "file": "topics/geography/resources.json",
+     "levels": {
+      "easy": 6,
+      "medium": 4,
+      "hard": 6
+     }
+    },
+    {
+     "id": "world-geography",
+     "name": "World Geography",
+     "file": "topics/geography/world-geography.json",
+     "levels": {
+      "easy": 8,
+      "medium": 9,
+      "hard": 9
+     }
+    }
+   ]
+  },
+  {
+   "id": "science-tech",
+   "name": "Science & Technology",
+   "topics": [
+    {
+     "id": "biology",
+     "name": "Biology",
+     "file": "topics/science-tech/biology.json",
+     "levels": {
+      "easy": 12,
+      "medium": 12,
+      "hard": 9
+     }
+    },
+    {
+     "id": "biotechnology",
+     "name": "Biotechnology",
+     "file": "topics/science-tech/biotechnology.json",
+     "levels": {
+      "easy": 6,
+      "medium": 5,
+      "hard": 6
+     }
+    },
+    {
+     "id": "chemistry",
+     "name": "Chemistry",
+     "file": "topics/science-tech/chemistry.json",
+     "levels": {
+      "easy": 10,
+      "medium": 11,
+      "hard": 8
+     }
+    },
+    {
+     "id": "climate-change",
+     "name": "Climate Change",
+     "file": "topics/science-tech/climate-change.json",
+     "levels": {
       "easy": 2,
-      "medium": 3
+      "medium": 2,
+      "hard": 6
+     }
+    },
+    {
+     "id": "defence",
+     "name": "Defence",
+     "file": "topics/science-tech/defence.json",
+     "levels": {
+      "easy": 8,
+      "medium": 9,
+      "hard": 10
+     }
+    },
+    {
+     "id": "emerging-tech",
+     "name": "Emerging Tech",
+     "file": "topics/science-tech/emerging-tech.json",
+     "levels": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 6
+     }
+    },
+    {
+     "id": "energy",
+     "name": "Energy",
+     "file": "topics/science-tech/energy.json",
+     "levels": {
+      "easy": 7,
+      "medium": 5,
+      "hard": 6
+     }
+    },
+    {
+     "id": "environment",
+     "name": "Environment",
+     "file": "topics/science-tech/environment.json",
+     "levels": {
+      "easy": 7,
+      "medium": 5,
+      "hard": 10
+     }
+    },
+    {
+     "id": "health",
+     "name": "Health",
+     "file": "topics/science-tech/health.json",
+     "levels": {
+      "easy": 7,
+      "medium": 7,
+      "hard": 7
+     }
+    },
+    {
+     "id": "ict",
+     "name": "ICT",
+     "file": "topics/science-tech/ict.json",
+     "levels": {
+      "easy": 13,
+      "medium": 12,
+      "hard": 8
+     }
+    },
+    {
+     "id": "physics",
+     "name": "Physics",
+     "file": "topics/science-tech/physics.json",
+     "levels": {
+      "easy": 12,
+      "medium": 13,
+      "hard": 10
+     }
+    },
+    {
+     "id": "space",
+     "name": "Space",
+     "file": "topics/science-tech/space.json",
+     "levels": {
+      "easy": 12,
+      "medium": 15,
+      "hard": 14
+     }
+    }
+   ]
+  },
+  {
+   "id": "admin-psych",
+   "name": "Administrative & Psychological Abilities",
+   "topics": [
+    {
+     "id": "decision-making",
+     "name": "Decision Making",
+     "file": "topics/admin-psych/decision-making.json",
+     "levels": {
+      "easy": 12,
+      "medium": 15,
+      "hard": 18
+     }
+    },
+    {
+     "id": "emotional-intelligence",
+     "name": "Emotional Intelligence",
+     "file": "topics/admin-psych/emotional-intelligence.json",
+     "levels": {
+      "easy": 15,
+      "medium": 15,
+      "hard": 15
+     }
+    },
+    {
+     "id": "ethics-integrity",
+     "name": "Ethics Integrity",
+     "file": "topics/admin-psych/ethics-integrity.json",
+     "levels": {
+      "easy": 17,
+      "medium": 15,
+      "hard": 13
+     }
+    },
+    {
+     "id": "leadership-motivation",
+     "name": "Leadership Motivation",
+     "file": "topics/admin-psych/leadership-motivation.json",
+     "levels": {
+      "easy": 13,
+      "medium": 16,
+      "hard": 16
+     }
+    },
+    {
+     "id": "psychology-basics",
+     "name": "Psychology Basics",
+     "file": "topics/admin-psych/psychology-basics.json",
+     "levels": {
+      "easy": 17,
+      "medium": 14,
+      "hard": 14
+     }
+    },
+    {
+     "id": "social-intelligence",
+     "name": "Social Intelligence",
+     "file": "topics/admin-psych/social-intelligence.json",
+     "levels": {
+      "easy": 16,
+      "medium": 15,
+      "hard": 14
      }
     }
    ]
@@ -578,9 +1721,9 @@
      "name": "Arrays & Strings",
      "file": "topics/dsa/arrays-strings.json",
      "levels": {
-      "easy": 4,
-      "medium": 3,
-      "hard": 3
+      "easy": 6,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -588,9 +1731,9 @@
      "name": "Complexity",
      "file": "topics/dsa/complexity.json",
      "levels": {
-      "easy": 4,
-      "medium": 2,
-      "hard": 4
+      "easy": 5,
+      "medium": 3,
+      "hard": 5
      }
     },
     {
@@ -598,9 +1741,9 @@
      "name": "Dynamic Programming",
      "file": "topics/dsa/dynamic-programming.json",
      "levels": {
-      "easy": 3,
-      "medium": 4,
-      "hard": 3
+      "easy": 4,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -608,9 +1751,9 @@
      "name": "Graphs",
      "file": "topics/dsa/graphs.json",
      "levels": {
-      "easy": 3,
-      "medium": 4,
-      "hard": 3
+      "easy": 5,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -618,8 +1761,8 @@
      "name": "Greedy",
      "file": "topics/dsa/greedy.json",
      "levels": {
-      "easy": 2,
-      "medium": 4,
+      "easy": 3,
+      "medium": 5,
       "hard": 4
      }
     },
@@ -628,9 +1771,9 @@
      "name": "Hashing",
      "file": "topics/dsa/hashing.json",
      "levels": {
-      "easy": 3,
-      "medium": 4,
-      "hard": 3
+      "easy": 5,
+      "medium": 6,
+      "hard": 5
      }
     },
     {
@@ -638,9 +1781,9 @@
      "name": "Heaps",
      "file": "topics/dsa/heaps.json",
      "levels": {
-      "easy": 3,
-      "medium": 3,
-      "hard": 4
+      "easy": 4,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -648,9 +1791,9 @@
      "name": "Linked Lists",
      "file": "topics/dsa/linked-lists.json",
      "levels": {
-      "easy": 3,
-      "medium": 4,
-      "hard": 3
+      "easy": 5,
+      "medium": 6,
+      "hard": 5
      }
     },
     {
@@ -658,9 +1801,9 @@
      "name": "Recursion & Backtracking",
      "file": "topics/dsa/recursion-backtracking.json",
      "levels": {
-      "easy": 3,
+      "easy": 4,
       "medium": 3,
-      "hard": 4
+      "hard": 5
      }
     },
     {
@@ -668,9 +1811,9 @@
      "name": "Sorting & Searching",
      "file": "topics/dsa/sorting-searching.json",
      "levels": {
-      "easy": 4,
-      "medium": 3,
-      "hard": 3
+      "easy": 6,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -678,9 +1821,9 @@
      "name": "Stacks & Queues",
      "file": "topics/dsa/stacks-queues.json",
      "levels": {
-      "easy": 4,
-      "medium": 3,
-      "hard": 3
+      "easy": 6,
+      "medium": 5,
+      "hard": 4
      }
     },
     {
@@ -688,9 +1831,9 @@
      "name": "Trees",
      "file": "topics/dsa/trees.json",
      "levels": {
-      "easy": 4,
-      "medium": 3,
-      "hard": 3
+      "easy": 7,
+      "medium": 6,
+      "hard": 6
      }
     }
    ]
@@ -704,9 +1847,9 @@
      "name": "Collections",
      "file": "topics/java/collections.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -714,9 +1857,9 @@
      "name": "Concurrency",
      "file": "topics/java/concurrency.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -743,9 +1886,9 @@
      "name": "Core Syntax",
      "file": "topics/java/core-syntax.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 8,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -761,9 +1904,9 @@
      "name": "Exceptions",
      "file": "topics/java/exceptions.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -771,9 +1914,9 @@
      "name": "Generics",
      "file": "topics/java/generics.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -781,9 +1924,9 @@
      "name": "JVM & Memory",
      "file": "topics/java/jvm-memory.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -807,9 +1950,9 @@
      "name": "Modern Java",
      "file": "topics/java/modern-java.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -817,9 +1960,9 @@
      "name": "OOP",
      "file": "topics/java/oop.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 7,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -835,9 +1978,9 @@
      "name": "Streams & Lambdas",
      "file": "topics/java/streams-lambdas.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -845,9 +1988,9 @@
      "name": "Strings",
      "file": "topics/java/strings.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 5
      }
     }
    ]
@@ -861,9 +2004,9 @@
      "name": "Async & Concurrency",
      "file": "topics/python/async-concurrency.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -871,9 +2014,9 @@
      "name": "Basics & Types",
      "file": "topics/python/basics-types.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 7,
+      "medium": 8,
+      "hard": 8
      }
     },
     {
@@ -881,9 +2024,9 @@
      "name": "Comprehensions & Generators",
      "file": "topics/python/comprehensions-generators.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -891,9 +2034,9 @@
      "name": "Data Structures",
      "file": "topics/python/data-structures.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 8,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -901,9 +2044,9 @@
      "name": "Decorators & Context Managers",
      "file": "topics/python/decorators-context-managers.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -911,9 +2054,9 @@
      "name": "Exceptions",
      "file": "topics/python/exceptions.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -921,9 +2064,9 @@
      "name": "Functions",
      "file": "topics/python/functions.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 5
      }
     },
     {
@@ -931,9 +2074,9 @@
      "name": "Modules & Packages",
      "file": "topics/python/modules-packages.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -941,9 +2084,9 @@
      "name": "OOP",
      "file": "topics/python/oop.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -951,9 +2094,9 @@
      "name": "Standard Library",
      "file": "topics/python/standard-library.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 5
      }
     }
    ]
@@ -967,9 +2110,9 @@
      "name": "Actuator & Observability",
      "file": "topics/springboot/actuator-observability.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -977,9 +2120,9 @@
      "name": "Auto Configuration",
      "file": "topics/springboot/auto-configuration.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -987,9 +2130,9 @@
      "name": "Build & Deployment",
      "file": "topics/springboot/deployment-build.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -997,9 +2140,9 @@
      "name": "Configuration & Profiles",
      "file": "topics/springboot/configuration-profiles.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -1007,9 +2150,9 @@
      "name": "Core & Dependency Injection",
      "file": "topics/springboot/core-di.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 7,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -1017,9 +2160,9 @@
      "name": "Data JPA",
      "file": "topics/springboot/data-jpa.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 7,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -1027,9 +2170,9 @@
      "name": "Security",
      "file": "topics/springboot/security.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1037,9 +2180,9 @@
      "name": "Testing",
      "file": "topics/springboot/testing.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1047,9 +2190,9 @@
      "name": "Transactions",
      "file": "topics/springboot/transactions.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -1057,9 +2200,9 @@
      "name": "Web & REST",
      "file": "topics/springboot/web-rest.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 8,
+      "medium": 7,
+      "hard": 7
      }
     }
    ]
@@ -1073,9 +2216,9 @@
      "name": "Context & State Management",
      "file": "topics/react/context-state-management.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1083,9 +2226,9 @@
      "name": "Effects",
      "file": "topics/react/effects.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1093,9 +2236,9 @@
      "name": "Forms & Events",
      "file": "topics/react/forms-events.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1103,9 +2246,9 @@
      "name": "Hooks",
      "file": "topics/react/hooks.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1113,9 +2256,9 @@
      "name": "JSX & Components",
      "file": "topics/react/jsx-components.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 8,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -1123,9 +2266,9 @@
      "name": "Performance",
      "file": "topics/react/performance.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1133,9 +2276,9 @@
      "name": "Props & State",
      "file": "topics/react/props-state.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 7,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -1143,9 +2286,9 @@
      "name": "React 19 & Server Components",
      "file": "topics/react/react-19-server-components.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 6
      }
     },
     {
@@ -1153,9 +2296,9 @@
      "name": "Rendering & Reconciliation",
      "file": "topics/react/rendering-reconciliation.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1163,9 +2306,9 @@
      "name": "Routing & Data Fetching",
      "file": "topics/react/routing-data-fetching.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 6
      }
     }
    ]
@@ -1179,9 +2322,9 @@
      "name": "Components, Props & Events",
      "file": "topics/vue/components-props-events.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 6
      }
     },
     {
@@ -1189,9 +2332,9 @@
      "name": "Composition API",
      "file": "topics/vue/composition-api.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 7
      }
     },
     {
@@ -1199,9 +2342,9 @@
      "name": "Computed & Watchers",
      "file": "topics/vue/computed-watchers.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1209,9 +2352,9 @@
      "name": "Directives",
      "file": "topics/vue/directives.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1219,9 +2362,9 @@
      "name": "Lifecycle",
      "file": "topics/vue/lifecycle.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1229,9 +2372,9 @@
      "name": "Performance & Tooling",
      "file": "topics/vue/performance-tooling.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -1239,9 +2382,9 @@
      "name": "Reactivity",
      "file": "topics/vue/reactivity.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 7,
+      "hard": 7
      }
     },
     {
@@ -1249,9 +2392,9 @@
      "name": "Router & Pinia",
      "file": "topics/vue/router-pinia.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1259,9 +2402,9 @@
      "name": "Slots, Provide & Inject",
      "file": "topics/vue/slots-provide-inject.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 5,
+      "medium": 5,
+      "hard": 5
      }
     },
     {
@@ -1269,9 +2412,9 @@
      "name": "Template Syntax",
      "file": "topics/vue/template-syntax.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 8,
+      "medium": 6,
+      "hard": 6
      }
     }
    ]
@@ -1285,9 +2428,9 @@
      "name": "AI Ethics & Safety",
      "file": "topics/ai/ai-ethics-safety.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1295,9 +2438,9 @@
      "name": "Deep Learning Architectures",
      "file": "topics/ai/deep-learning-architectures.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1305,9 +2448,9 @@
      "name": "Evaluation Metrics",
      "file": "topics/ai/evaluation-metrics.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1315,9 +2458,9 @@
      "name": "LLMs & Prompting",
      "file": "topics/ai/llms-prompting.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1325,9 +2468,9 @@
      "name": "ML Basics",
      "file": "topics/ai/ml-basics.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1335,9 +2478,9 @@
      "name": "NLP & Transformers",
      "file": "topics/ai/nlp-transformers.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1345,9 +2488,9 @@
      "name": "Neural Networks",
      "file": "topics/ai/neural-networks.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1355,9 +2498,9 @@
      "name": "RAG & Agents",
      "file": "topics/ai/rag-agents.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1365,9 +2508,9 @@
      "name": "Supervised Learning",
      "file": "topics/ai/supervised-learning.json",
      "levels": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
      }
     },
     {
@@ -1375,9 +2518,1294 @@
      "name": "Unsupervised Learning",
      "file": "topics/ai/unsupervised-learning.json",
      "levels": {
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
+     }
+    }
+   ]
+  },
+  {
+   "id": "sql",
+   "name": "SQL & Databases",
+   "topics": [
+    {
+     "id": "aggregation",
+     "name": "Aggregation",
+     "file": "topics/sql/aggregation.json",
+     "levels": {
+      "easy": 6,
+      "medium": 6,
+      "hard": 6
+     }
+    },
+    {
+     "id": "constraints",
+     "name": "Constraints",
+     "file": "topics/sql/constraints.json",
+     "levels": {
+      "easy": 6,
+      "medium": 5
+     }
+    },
+    {
+     "id": "cte",
+     "name": "Cte",
+     "file": "topics/sql/cte.json",
+     "levels": {
+      "medium": 2,
+      "hard": 5
+     }
+    },
+    {
+     "id": "data-types",
+     "name": "Data Types",
+     "file": "topics/sql/data-types.json",
+     "levels": {
       "easy": 4,
       "medium": 4,
+      "hard": 5
+     }
+    },
+    {
+     "id": "ddl",
+     "name": "Ddl",
+     "file": "topics/sql/ddl.json",
+     "levels": {
+      "easy": 2
+     }
+    },
+    {
+     "id": "dml",
+     "name": "Dml",
+     "file": "topics/sql/dml.json",
+     "levels": {
+      "easy": 3,
+      "medium": 1
+     }
+    },
+    {
+     "id": "indexes",
+     "name": "Indexes",
+     "file": "topics/sql/indexes.json",
+     "levels": {
+      "easy": 4,
+      "medium": 6,
+      "hard": 7
+     }
+    },
+    {
+     "id": "isolation-levels",
+     "name": "Isolation Levels",
+     "file": "topics/sql/isolation-levels.json",
+     "levels": {
+      "medium": 9,
+      "hard": 8
+     }
+    },
+    {
+     "id": "joins",
+     "name": "Joins",
+     "file": "topics/sql/joins.json",
+     "levels": {
+      "easy": 6,
+      "medium": 5,
+      "hard": 6
+     }
+    },
+    {
+     "id": "normalization",
+     "name": "Normalization",
+     "file": "topics/sql/normalization.json",
+     "levels": {
+      "easy": 4,
+      "medium": 3
+     }
+    },
+    {
+     "id": "null-handling",
+     "name": "Null Handling",
+     "file": "topics/sql/null-handling.json",
+     "levels": {
+      "easy": 4,
+      "hard": 6
+     }
+    },
+    {
+     "id": "query-optimization",
+     "name": "Query Optimization",
+     "file": "topics/sql/query-optimization.json",
+     "levels": {
+      "medium": 7,
+      "hard": 6
+     }
+    },
+    {
+     "id": "select-basics",
+     "name": "Select Basics",
+     "file": "topics/sql/select-basics.json",
+     "levels": {
+      "easy": 11
+     }
+    },
+    {
+     "id": "set-operations",
+     "name": "Set Operations",
+     "file": "topics/sql/set-operations.json",
+     "levels": {
+      "easy": 1
+     }
+    },
+    {
+     "id": "subqueries",
+     "name": "Subqueries",
+     "file": "topics/sql/subqueries.json",
+     "levels": {
+      "easy": 3,
+      "medium": 5,
       "hard": 4
+     }
+    },
+    {
+     "id": "transactions",
+     "name": "Transactions",
+     "file": "topics/sql/transactions.json",
+     "levels": {
+      "easy": 6,
+      "hard": 2
+     }
+    },
+    {
+     "id": "window-functions",
+     "name": "Window Functions",
+     "file": "topics/sql/window-functions.json",
+     "levels": {
+      "medium": 7,
+      "hard": 5
+     }
+    }
+   ]
+  },
+  {
+   "id": "nodejs",
+   "name": "Node.js",
+   "topics": [
+    {
+     "id": "async-patterns",
+     "name": "Async Patterns",
+     "file": "topics/nodejs/async-patterns.json",
+     "levels": {
+      "easy": 6,
+      "medium": 9,
+      "hard": 9
+     }
+    },
+    {
+     "id": "buffers",
+     "name": "Buffers",
+     "file": "topics/nodejs/buffers.json",
+     "levels": {
+      "easy": 3,
+      "medium": 5
+     }
+    },
+    {
+     "id": "clustering",
+     "name": "Clustering",
+     "file": "topics/nodejs/clustering.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "error-handling",
+     "name": "Error Handling",
+     "file": "topics/nodejs/error-handling.json",
+     "levels": {
+      "easy": 3,
+      "medium": 4,
+      "hard": 4
+     }
+    },
+    {
+     "id": "event-loop",
+     "name": "Event Loop",
+     "file": "topics/nodejs/event-loop.json",
+     "levels": {
+      "hard": 12
+     }
+    },
+    {
+     "id": "events",
+     "name": "Events",
+     "file": "topics/nodejs/events.json",
+     "levels": {
+      "easy": 6,
+      "medium": 4
+     }
+    },
+    {
+     "id": "express",
+     "name": "Express",
+     "file": "topics/nodejs/express.json",
+     "levels": {
+      "medium": 9
+     }
+    },
+    {
+     "id": "file-system",
+     "name": "File System",
+     "file": "topics/nodejs/file-system.json",
+     "levels": {
+      "easy": 9
+     }
+    },
+    {
+     "id": "http",
+     "name": "Http",
+     "file": "topics/nodejs/http.json",
+     "levels": {
+      "easy": 4,
+      "medium": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "memory",
+     "name": "Memory",
+     "file": "topics/nodejs/memory.json",
+     "levels": {
+      "hard": 9
+     }
+    },
+    {
+     "id": "modules",
+     "name": "Modules",
+     "file": "topics/nodejs/modules.json",
+     "levels": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 4
+     }
+    },
+    {
+     "id": "npm",
+     "name": "Npm",
+     "file": "topics/nodejs/npm.json",
+     "levels": {
+      "easy": 9,
+      "medium": 6,
+      "hard": 4
+     }
+    },
+    {
+     "id": "process",
+     "name": "Process",
+     "file": "topics/nodejs/process.json",
+     "levels": {
+      "easy": 8,
+      "medium": 6,
+      "hard": 4
+     }
+    },
+    {
+     "id": "streams",
+     "name": "Streams",
+     "file": "topics/nodejs/streams.json",
+     "levels": {
+      "easy": 4,
+      "medium": 8,
+      "hard": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "devops",
+   "name": "Git & DevOps",
+   "topics": [
+    {
+     "id": "branching",
+     "name": "Branching",
+     "file": "topics/devops/branching.json",
+     "levels": {
+      "easy": 7
+     }
+    },
+    {
+     "id": "ci-cd",
+     "name": "Ci Cd",
+     "file": "topics/devops/ci-cd.json",
+     "levels": {
+      "medium": 6,
+      "hard": 6
+     }
+    },
+    {
+     "id": "deployment-strategies",
+     "name": "Deployment Strategies",
+     "file": "topics/devops/deployment-strategies.json",
+     "levels": {
+      "hard": 9
+     }
+    },
+    {
+     "id": "docker-basics",
+     "name": "Docker Basics",
+     "file": "topics/devops/docker-basics.json",
+     "levels": {
+      "easy": 13
+     }
+    },
+    {
+     "id": "docker-builds",
+     "name": "Docker Builds",
+     "file": "topics/devops/docker-builds.json",
+     "levels": {
+      "hard": 10
+     }
+    },
+    {
+     "id": "docker-compose",
+     "name": "Docker Compose",
+     "file": "topics/devops/docker-compose.json",
+     "levels": {
+      "easy": 3,
+      "medium": 4
+     }
+    },
+    {
+     "id": "docker-images",
+     "name": "Docker Images",
+     "file": "topics/devops/docker-images.json",
+     "levels": {
+      "easy": 7,
+      "medium": 6
+     }
+    },
+    {
+     "id": "docker-networking",
+     "name": "Docker Networking",
+     "file": "topics/devops/docker-networking.json",
+     "levels": {
+      "easy": 2,
+      "medium": 2
+     }
+    },
+    {
+     "id": "docker-volumes",
+     "name": "Docker Volumes",
+     "file": "topics/devops/docker-volumes.json",
+     "levels": {
+      "easy": 3
+     }
+    },
+    {
+     "id": "git-basics",
+     "name": "Git Basics",
+     "file": "topics/devops/git-basics.json",
+     "levels": {
+      "easy": 10
+     }
+    },
+    {
+     "id": "git-history",
+     "name": "Git History",
+     "file": "topics/devops/git-history.json",
+     "levels": {
+      "medium": 7
+     }
+    },
+    {
+     "id": "git-internals",
+     "name": "Git Internals",
+     "file": "topics/devops/git-internals.json",
+     "levels": {
+      "hard": 8
+     }
+    },
+    {
+     "id": "git-recovery",
+     "name": "Git Recovery",
+     "file": "topics/devops/git-recovery.json",
+     "levels": {
+      "hard": 9
+     }
+    },
+    {
+     "id": "infrastructure-as-code",
+     "name": "Infrastructure As Code",
+     "file": "topics/devops/infrastructure-as-code.json",
+     "levels": {
+      "medium": 4
+     }
+    },
+    {
+     "id": "kubernetes",
+     "name": "Kubernetes",
+     "file": "topics/devops/kubernetes.json",
+     "levels": {
+      "medium": 11
+     }
+    },
+    {
+     "id": "kubernetes-probes",
+     "name": "Kubernetes Probes",
+     "file": "topics/devops/kubernetes-probes.json",
+     "levels": {
+      "hard": 8
+     }
+    },
+    {
+     "id": "kubernetes-scheduling",
+     "name": "Kubernetes Scheduling",
+     "file": "topics/devops/kubernetes-scheduling.json",
+     "levels": {
+      "hard": 10
+     }
+    },
+    {
+     "id": "linux-shell",
+     "name": "Linux Shell",
+     "file": "topics/devops/linux-shell.json",
+     "levels": {
+      "medium": 6
+     }
+    },
+    {
+     "id": "merging-rebasing",
+     "name": "Merging Rebasing",
+     "file": "topics/devops/merging-rebasing.json",
+     "levels": {
+      "medium": 11
+     }
+    },
+    {
+     "id": "monitoring",
+     "name": "Monitoring",
+     "file": "topics/devops/monitoring.json",
+     "levels": {
+      "medium": 3
+     }
+    },
+    {
+     "id": "remotes",
+     "name": "Remotes",
+     "file": "topics/devops/remotes.json",
+     "levels": {
+      "easy": 7
+     }
+    },
+    {
+     "id": "undoing-changes",
+     "name": "Undoing Changes",
+     "file": "topics/devops/undoing-changes.json",
+     "levels": {
+      "easy": 8
+     }
+    }
+   ]
+  },
+  {
+   "id": "system-design",
+   "name": "System Design",
+   "topics": [
+    {
+     "id": "api-design",
+     "name": "Api Design",
+     "file": "topics/system-design/api-design.json",
+     "levels": {
+      "easy": 11,
+      "medium": 7
+     }
+    },
+    {
+     "id": "caching",
+     "name": "Caching",
+     "file": "topics/system-design/caching.json",
+     "levels": {
+      "easy": 9,
+      "medium": 8
+     }
+    },
+    {
+     "id": "cap-theorem",
+     "name": "Cap Theorem",
+     "file": "topics/system-design/cap-theorem.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "cdn",
+     "name": "Cdn",
+     "file": "topics/system-design/cdn.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "consensus",
+     "name": "Consensus",
+     "file": "topics/system-design/consensus.json",
+     "levels": {
+      "hard": 9
+     }
+    },
+    {
+     "id": "consistency",
+     "name": "Consistency",
+     "file": "topics/system-design/consistency.json",
+     "levels": {
+      "medium": 7
+     }
+    },
+    {
+     "id": "consistency-models",
+     "name": "Consistency Models",
+     "file": "topics/system-design/consistency-models.json",
+     "levels": {
+      "hard": 10
+     }
+    },
+    {
+     "id": "databases",
+     "name": "Databases",
+     "file": "topics/system-design/databases.json",
+     "levels": {
+      "easy": 8
+     }
+    },
+    {
+     "id": "databases-scaling",
+     "name": "Databases Scaling",
+     "file": "topics/system-design/databases-scaling.json",
+     "levels": {
+      "medium": 9
+     }
+    },
+    {
+     "id": "distributed-transactions",
+     "name": "Distributed Transactions",
+     "file": "topics/system-design/distributed-transactions.json",
+     "levels": {
+      "hard": 10
+     }
+    },
+    {
+     "id": "failure-modes",
+     "name": "Failure Modes",
+     "file": "topics/system-design/failure-modes.json",
+     "levels": {
+      "hard": 8
+     }
+    },
+    {
+     "id": "load-balancing",
+     "name": "Load Balancing",
+     "file": "topics/system-design/load-balancing.json",
+     "levels": {
+      "easy": 7,
+      "medium": 6
+     }
+    },
+    {
+     "id": "messaging",
+     "name": "Messaging",
+     "file": "topics/system-design/messaging.json",
+     "levels": {
+      "medium": 8
+     }
+    },
+    {
+     "id": "performance",
+     "name": "Performance",
+     "file": "topics/system-design/performance.json",
+     "levels": {
+      "easy": 8
+     }
+    },
+    {
+     "id": "quorum-replication",
+     "name": "Quorum Replication",
+     "file": "topics/system-design/quorum-replication.json",
+     "levels": {
+      "hard": 9
+     }
+    },
+    {
+     "id": "rate-limiting",
+     "name": "Rate Limiting",
+     "file": "topics/system-design/rate-limiting.json",
+     "levels": {
+      "medium": 8
+     }
+    },
+    {
+     "id": "reliability",
+     "name": "Reliability",
+     "file": "topics/system-design/reliability.json",
+     "levels": {
+      "easy": 5,
+      "medium": 7
+     }
+    },
+    {
+     "id": "replication",
+     "name": "Replication",
+     "file": "topics/system-design/replication.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "scalability",
+     "name": "Scalability",
+     "file": "topics/system-design/scalability.json",
+     "levels": {
+      "easy": 7
+     }
+    }
+   ]
+  },
+  {
+   "id": "javascript",
+   "name": "JavaScript",
+   "topics": [
+    {
+     "id": "array-methods",
+     "name": "Array Methods",
+     "file": "topics/javascript/array-methods.json",
+     "levels": {
+      "medium": 9
+     }
+    },
+    {
+     "id": "arrays-objects",
+     "name": "Arrays Objects",
+     "file": "topics/javascript/arrays-objects.json",
+     "levels": {
+      "easy": 7
+     }
+    },
+    {
+     "id": "classes",
+     "name": "Classes",
+     "file": "topics/javascript/classes.json",
+     "levels": {
+      "medium": 4
+     }
+    },
+    {
+     "id": "control-flow",
+     "name": "Control Flow",
+     "file": "topics/javascript/control-flow.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "dom-events",
+     "name": "Dom Events",
+     "file": "topics/javascript/dom-events.json",
+     "levels": {
+      "medium": 2
+     }
+    },
+    {
+     "id": "error-handling",
+     "name": "Error Handling",
+     "file": "topics/javascript/error-handling.json",
+     "levels": {
+      "medium": 3
+     }
+    },
+    {
+     "id": "es6-features",
+     "name": "Es6 Features",
+     "file": "topics/javascript/es6-features.json",
+     "levels": {
+      "easy": 4,
+      "medium": 2
+     }
+    },
+    {
+     "id": "event-loop",
+     "name": "Event Loop",
+     "file": "topics/javascript/event-loop.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "functions",
+     "name": "Functions",
+     "file": "topics/javascript/functions.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "generators",
+     "name": "Generators",
+     "file": "topics/javascript/generators.json",
+     "levels": {
+      "hard": 6
+     }
+    },
+    {
+     "id": "modules",
+     "name": "Modules",
+     "file": "topics/javascript/modules.json",
+     "levels": {
+      "medium": 2
+     }
+    },
+    {
+     "id": "objects-advanced",
+     "name": "Objects Advanced",
+     "file": "topics/javascript/objects-advanced.json",
+     "levels": {
+      "hard": 4
+     }
+    },
+    {
+     "id": "operators",
+     "name": "Operators",
+     "file": "topics/javascript/operators.json",
+     "levels": {
+      "easy": 6
+     }
+    },
+    {
+     "id": "promises-async",
+     "name": "Promises Async",
+     "file": "topics/javascript/promises-async.json",
+     "levels": {
+      "medium": 7
+     }
+    },
+    {
+     "id": "prototypes",
+     "name": "Prototypes",
+     "file": "topics/javascript/prototypes.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "scope-closures",
+     "name": "Scope Closures",
+     "file": "topics/javascript/scope-closures.json",
+     "levels": {
+      "medium": 5
+     }
+    },
+    {
+     "id": "strings",
+     "name": "Strings",
+     "file": "topics/javascript/strings.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "tdz-hoisting",
+     "name": "Tdz Hoisting",
+     "file": "topics/javascript/tdz-hoisting.json",
+     "levels": {
+      "hard": 6
+     }
+    },
+    {
+     "id": "this-binding",
+     "name": "This Binding",
+     "file": "topics/javascript/this-binding.json",
+     "levels": {
+      "medium": 6
+     }
+    },
+    {
+     "id": "types-coercion",
+     "name": "Types Coercion",
+     "file": "topics/javascript/types-coercion.json",
+     "levels": {
+      "easy": 6,
+      "hard": 10
+     }
+    },
+    {
+     "id": "variables",
+     "name": "Variables",
+     "file": "topics/javascript/variables.json",
+     "levels": {
+      "easy": 4
+     }
+    }
+   ]
+  },
+  {
+   "id": "typescript",
+   "name": "TypeScript",
+   "topics": [
+    {
+     "id": "advanced-generics",
+     "name": "Advanced Generics",
+     "file": "topics/typescript/advanced-generics.json",
+     "levels": {
+      "hard": 2
+     }
+    },
+    {
+     "id": "any-unknown",
+     "name": "Any Unknown",
+     "file": "topics/typescript/any-unknown.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "arrays-tuples",
+     "name": "Arrays Tuples",
+     "file": "topics/typescript/arrays-tuples.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "basic-types",
+     "name": "Basic Types",
+     "file": "topics/typescript/basic-types.json",
+     "levels": {
+      "easy": 7
+     }
+    },
+    {
+     "id": "classes",
+     "name": "Classes",
+     "file": "topics/typescript/classes.json",
+     "levels": {
+      "medium": 6
+     }
+    },
+    {
+     "id": "compiler-config",
+     "name": "Compiler Config",
+     "file": "topics/typescript/compiler-config.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "conditional-types",
+     "name": "Conditional Types",
+     "file": "topics/typescript/conditional-types.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "enums",
+     "name": "Enums",
+     "file": "topics/typescript/enums.json",
+     "levels": {
+      "easy": 3
+     }
+    },
+    {
+     "id": "functions",
+     "name": "Functions",
+     "file": "topics/typescript/functions.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "generics",
+     "name": "Generics",
+     "file": "topics/typescript/generics.json",
+     "levels": {
+      "medium": 8
+     }
+    },
+    {
+     "id": "infer",
+     "name": "Infer",
+     "file": "topics/typescript/infer.json",
+     "levels": {
+      "hard": 5
+     }
+    },
+    {
+     "id": "interfaces-types",
+     "name": "Interfaces Types",
+     "file": "topics/typescript/interfaces-types.json",
+     "levels": {
+      "easy": 8
+     }
+    },
+    {
+     "id": "keyof-typeof",
+     "name": "Keyof Typeof",
+     "file": "topics/typescript/keyof-typeof.json",
+     "levels": {
+      "medium": 3
+     }
+    },
+    {
+     "id": "mapped-types",
+     "name": "Mapped Types",
+     "file": "topics/typescript/mapped-types.json",
+     "levels": {
+      "hard": 6
+     }
+    },
+    {
+     "id": "never",
+     "name": "Never",
+     "file": "topics/typescript/never.json",
+     "levels": {
+      "hard": 3
+     }
+    },
+    {
+     "id": "readonly",
+     "name": "Readonly",
+     "file": "topics/typescript/readonly.json",
+     "levels": {
+      "medium": 3
+     }
+    },
+    {
+     "id": "satisfies",
+     "name": "Satisfies",
+     "file": "topics/typescript/satisfies.json",
+     "levels": {
+      "hard": 5
+     }
+    },
+    {
+     "id": "strict-flags",
+     "name": "Strict Flags",
+     "file": "topics/typescript/strict-flags.json",
+     "levels": {
+      "hard": 5
+     }
+    },
+    {
+     "id": "template-literal-types",
+     "name": "Template Literal Types",
+     "file": "topics/typescript/template-literal-types.json",
+     "levels": {
+      "hard": 2
+     }
+    },
+    {
+     "id": "type-inference",
+     "name": "Type Inference",
+     "file": "topics/typescript/type-inference.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "unions-narrowing",
+     "name": "Unions Narrowing",
+     "file": "topics/typescript/unions-narrowing.json",
+     "levels": {
+      "medium": 9
+     }
+    },
+    {
+     "id": "utility-types",
+     "name": "Utility Types",
+     "file": "topics/typescript/utility-types.json",
+     "levels": {
+      "medium": 11
+     }
+    },
+    {
+     "id": "variance",
+     "name": "Variance",
+     "file": "topics/typescript/variance.json",
+     "levels": {
+      "hard": 5
+     }
+    }
+   ]
+  },
+  {
+   "id": "os",
+   "name": "Operating Systems",
+   "topics": [
+    {
+     "id": "concurrency",
+     "name": "Concurrency",
+     "file": "topics/os/concurrency.json",
+     "levels": {
+      "hard": 3
+     }
+    },
+    {
+     "id": "cpu-scheduling",
+     "name": "Cpu Scheduling",
+     "file": "topics/os/cpu-scheduling.json",
+     "levels": {
+      "easy": 5,
+      "medium": 10,
+      "hard": 3
+     }
+    },
+    {
+     "id": "deadlocks",
+     "name": "Deadlocks",
+     "file": "topics/os/deadlocks.json",
+     "levels": {
+      "easy": 3,
+      "medium": 7,
+      "hard": 6
+     }
+    },
+    {
+     "id": "file-systems",
+     "name": "File Systems",
+     "file": "topics/os/file-systems.json",
+     "levels": {
+      "easy": 3,
+      "hard": 3
+     }
+    },
+    {
+     "id": "io-systems",
+     "name": "Io Systems",
+     "file": "topics/os/io-systems.json",
+     "levels": {
+      "easy": 4,
+      "medium": 1,
+      "hard": 1
+     }
+    },
+    {
+     "id": "kernel",
+     "name": "Kernel",
+     "file": "topics/os/kernel.json",
+     "levels": {
+      "easy": 3
+     }
+    },
+    {
+     "id": "memory-management",
+     "name": "Memory Management",
+     "file": "topics/os/memory-management.json",
+     "levels": {
+      "easy": 4,
+      "medium": 7,
+      "hard": 6
+     }
+    },
+    {
+     "id": "processes-threads",
+     "name": "Processes Threads",
+     "file": "topics/os/processes-threads.json",
+     "levels": {
+      "easy": 7
+     }
+    },
+    {
+     "id": "synchronization",
+     "name": "Synchronization",
+     "file": "topics/os/synchronization.json",
+     "levels": {
+      "easy": 4,
+      "medium": 10,
+      "hard": 5
+     }
+    },
+    {
+     "id": "system-calls",
+     "name": "System Calls",
+     "file": "topics/os/system-calls.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "virtual-memory",
+     "name": "Virtual Memory",
+     "file": "topics/os/virtual-memory.json",
+     "levels": {
+      "easy": 3,
+      "medium": 5,
+      "hard": 13
+     }
+    }
+   ]
+  },
+  {
+   "id": "networks",
+   "name": "Computer Networks",
+   "topics": [
+    {
+     "id": "arp",
+     "name": "Arp",
+     "file": "topics/networks/arp.json",
+     "levels": {
+      "medium": 6
+     }
+    },
+    {
+     "id": "congestion-control",
+     "name": "Congestion Control",
+     "file": "topics/networks/congestion-control.json",
+     "levels": {
+      "hard": 10
+     }
+    },
+    {
+     "id": "dhcp",
+     "name": "Dhcp",
+     "file": "topics/networks/dhcp.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "dns",
+     "name": "Dns",
+     "file": "topics/networks/dns.json",
+     "levels": {
+      "easy": 5,
+      "medium": 3
+     }
+    },
+    {
+     "id": "http-https",
+     "name": "Http Https",
+     "file": "topics/networks/http-https.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "http-methods",
+     "name": "Http Methods",
+     "file": "topics/networks/http-methods.json",
+     "levels": {
+      "medium": 5
+     }
+    },
+    {
+     "id": "http-status",
+     "name": "Http Status",
+     "file": "topics/networks/http-status.json",
+     "levels": {
+      "medium": 6
+     }
+    },
+    {
+     "id": "http2-http3",
+     "name": "Http2 Http3",
+     "file": "topics/networks/http2-http3.json",
+     "levels": {
+      "hard": 7
+     }
+    },
+    {
+     "id": "ip-addressing",
+     "name": "Ip Addressing",
+     "file": "topics/networks/ip-addressing.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "link-layer",
+     "name": "Link Layer",
+     "file": "topics/networks/link-layer.json",
+     "levels": {
+      "easy": 4
+     }
+    },
+    {
+     "id": "mtu-fragmentation",
+     "name": "Mtu Fragmentation",
+     "file": "topics/networks/mtu-fragmentation.json",
+     "levels": {
+      "hard": 4
+     }
+    },
+    {
+     "id": "nat",
+     "name": "Nat",
+     "file": "topics/networks/nat.json",
+     "levels": {
+      "medium": 4
+     }
+    },
+    {
+     "id": "osi-tcp-ip",
+     "name": "Osi Tcp Ip",
+     "file": "topics/networks/osi-tcp-ip.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "ports",
+     "name": "Ports",
+     "file": "topics/networks/ports.json",
+     "levels": {
+      "easy": 5
+     }
+    },
+    {
+     "id": "routing",
+     "name": "Routing",
+     "file": "topics/networks/routing.json",
+     "levels": {
+      "easy": 2,
+      "hard": 5
+     }
+    },
+    {
+     "id": "subnetting",
+     "name": "Subnetting",
+     "file": "topics/networks/subnetting.json",
+     "levels": {
+      "medium": 10
+     }
+    },
+    {
+     "id": "tcp-handshake",
+     "name": "Tcp Handshake",
+     "file": "topics/networks/tcp-handshake.json",
+     "levels": {
+      "medium": 5
+     }
+    },
+    {
+     "id": "tcp-states",
+     "name": "Tcp States",
+     "file": "topics/networks/tcp-states.json",
+     "levels": {
+      "hard": 6
+     }
+    },
+    {
+     "id": "tcp-udp",
+     "name": "Tcp Udp",
+     "file": "topics/networks/tcp-udp.json",
+     "levels": {
+      "easy": 6,
+      "medium": 1
+     }
+    },
+    {
+     "id": "tls",
+     "name": "Tls",
+     "file": "topics/networks/tls.json",
+     "levels": {
+      "hard": 8
      }
     }
    ]

@@ -1,0 +1,197 @@
+[
+ {
+  "id": "q07030fac665",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "What is the N+1 query problem?",
+  "options": [
+   "Running one query to fetch a list and then one more query for each item in it",
+   "A query that joins N+1 tables",
+   "A query that returns one more row than expected",
+   "An index with N+1 levels"
+  ],
+  "answer": 0,
+  "explanation": "Batching with a join or a single IN query replaces many round trips with one."
+ },
+ {
+  "id": "q2705418cf1f",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Compared with UNION ALL, what extra work does UNION perform?",
+  "options": [
+   "It removes duplicate rows, which typically requires a sort or hash step",
+   "It adds a row number to each row",
+   "It sorts the output by the first column",
+   "It locks both source tables"
+  ],
+  "answer": 0,
+  "explanation": "UNION must deduplicate, which costs a sort or hash aggregate. UNION ALL simply concatenates the results and is cheaper when duplicates are acceptable or impossible."
+ },
+ {
+  "id": "q44f2fbaecdb",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Why is SELECT * discouraged in production code?",
+  "options": [
+   "It returns duplicate rows",
+   "It is not allowed in PostgreSQL",
+   "It always disables indexes",
+   "It fetches unneeded columns and can break when the table schema changes"
+  ],
+  "answer": 3,
+  "explanation": "Fetching only needed columns reduces I/O and network traffic and makes queries robust to added columns. It can also prevent covering index use."
+ },
+ {
+  "id": "q5258bd8916b",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Why does OFFSET-based pagination get slow for deep pages?",
+  "options": [
+   "OFFSET disables the use of every index",
+   "The database still has to produce and discard all the skipped rows",
+   "OFFSET forces a full table lock",
+   "Each page re-sorts the entire database"
+  ],
+  "answer": 1,
+  "explanation": "Keyset pagination, such as WHERE id > last_seen ORDER BY id LIMIT n, avoids scanning skipped rows."
+ },
+ {
+  "id": "q5e3d9f3991b",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Which PostgreSQL command refreshes the planner's table statistics?",
+  "options": [
+   "REINDEX",
+   "VACUUM FULL",
+   "ANALYZE",
+   "CHECKPOINT"
+  ],
+  "answer": 2,
+  "explanation": "ANALYZE samples table data and updates the statistics the planner uses to estimate row counts and choose plans."
+ },
+ {
+  "id": "q79784935031",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "What is the key difference between EXPLAIN and EXPLAIN ANALYZE in PostgreSQL?",
+  "options": [
+   "EXPLAIN runs the query and ANALYZE only prints the plan",
+   "EXPLAIN ANALYZE executes the query and reports actual row counts and timings, while EXPLAIN shows only the estimated plan",
+   "EXPLAIN ANALYZE estimates costs without executing the query",
+   "They are identical except for output formatting"
+  ],
+  "answer": 1,
+  "explanation": "EXPLAIN alone does not run the statement. EXPLAIN ANALYZE runs it, so it has side effects for data-changing statements and should be wrapped in a transaction if needed."
+ },
+ {
+  "id": "qbcc4cd668f8",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "In PostgreSQL with the C collation, which LIKE pattern can use a B-tree index on a text column?",
+  "options": [
+   "'smith%'",
+   "'_mith'",
+   "'%smith'",
+   "'%mit%'"
+  ],
+  "answer": 0,
+  "explanation": "A pattern with a fixed prefix can be turned into a range search on the index. Patterns that begin with a wildcard cannot."
+ },
+ {
+  "id": "q04b55944148",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "A query returns the 10 newest orders with ORDER BY created_at DESC LIMIT 10 on a large table. Which index helps most?",
+  "options": [
+   "A hash index on id",
+   "An index on created_at, so the database can read rows in order and stop early",
+   "A unique index on customer_name",
+   "A bitmap index on status"
+  ],
+  "answer": 1,
+  "explanation": "A B-tree on created_at can be scanned backwards and stopped after ten rows, avoiding a full sort of the table."
+ },
+ {
+  "id": "q3b71086e222",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "In MySQL, why can WHERE phone = 5551234 skip an index on a VARCHAR phone column?",
+  "options": [
+   "MySQL never indexes VARCHAR columns",
+   "Comparing a string column with a number converts the column values to numbers, so the index cannot be searched",
+   "Numeric literals disable all indexes in a query",
+   "The index is used, but only for sorting"
+  ],
+  "answer": 1,
+  "explanation": "Quoting the literal, WHERE phone = '5551234', keeps the comparison on strings so the index applies."
+ },
+ {
+  "id": "q5a892ac5d60",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "Why can WHERE a = 1 OR b = 2 be harder to optimize than an AND condition, even with separate indexes on a and b?",
+  "options": [
+   "OR conditions can never use any index",
+   "Each index covers only one branch, so the planner must combine two index scans or fall back to a sequential scan",
+   "The database evaluates OR conditions only after sorting",
+   "OR forces the query to run under SERIALIZABLE isolation"
+  ],
+  "answer": 1,
+  "explanation": "PostgreSQL can use a BitmapOr of two index scans, and rewriting as UNION is another option, but neither single index alone suffices."
+ },
+ {
+  "id": "q831fecb433a",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "EXPLAIN ANALYZE shows a Seq Scan estimated at 10 rows but returning 1,000,000 rows. What is the most likely cause?",
+  "options": [
+   "The index is corrupted",
+   "Stale or inaccurate planner statistics",
+   "The query contains a LIMIT clause",
+   "The database is running in SERIALIZABLE mode"
+  ],
+  "answer": 1,
+  "explanation": "A large gap between estimated and actual rows points to outdated statistics or skewed data, which can lead to poor join and scan choices. Running ANALYZE is the usual first step."
+ },
+ {
+  "id": "qe333870bb16",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "Which join algorithm does PostgreSQL typically choose for two large unsorted inputs joined on equality when no useful index exists?",
+  "options": [
+   "Nested loop join",
+   "Index-only join",
+   "Cartesian product",
+   "Hash join"
+  ],
+  "answer": 3,
+  "explanation": "A hash join builds a hash table on the smaller input and probes it with the other, which is efficient for large unsorted equality joins."
+ },
+ {
+  "id": "qe8d265ba00c",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "Which predicate can use a B-tree index on created_at efficiently?",
+  "options": [
+   "WHERE created_at >= '2024-01-01' AND created_at < '2025-01-01'",
+   "WHERE YEAR(created_at) = 2024",
+   "WHERE created_at::text LIKE '2024%'",
+   "WHERE created_at + INTERVAL '0 days' = '2024-06-01'"
+  ],
+  "answer": 0,
+  "explanation": "A range predicate on the bare column is sargable. Wrapping the column in a function or cast, as in the other options, usually prevents index use."
+ }
+]

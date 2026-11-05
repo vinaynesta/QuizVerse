@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0c382d7e240",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "In the Options API, what is the Vue 3 name of the hook that runs after a component is unmounted?",
+  "options": [
+   "destroyed",
+   "removed",
+   "detached",
+   "unmounted"
+  ],
+  "answer": 3,
+  "explanation": "Vue 3 renamed destroyed to unmounted, and beforeDestroy to beforeUnmount."
+ },
+ {
   "id": "q26f393e15bf",
   "subject": "vue",
   "topic": "lifecycle",
@@ -28,6 +43,21 @@
   ],
   "answer": 0,
   "explanation": "onMounted is called after the component's DOM tree has been created and inserted."
+ },
+ {
+  "id": "q95688abb1b1",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which Composition API hook runs before the component is mounted to the DOM?",
+  "options": [
+   "onMounted",
+   "onBeforeMount",
+   "onCreated",
+   "onBeforeUpdate"
+  ],
+  "answer": 1,
+  "explanation": "onBeforeMount runs after setup and before the initial DOM is rendered."
  },
  {
   "id": "q9ddb7cca33c",
@@ -60,6 +90,21 @@
   "explanation": "onUpdated runs after the component has updated its DOM tree due to a reactive state change."
  },
  {
+  "id": "q0450a194cac",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "Which hook runs when the component's reactive state changes, before the DOM is patched?",
+  "options": [
+   "onUpdated",
+   "onBeforeMount",
+   "onBeforeUpdate",
+   "onRenderTracked"
+  ],
+  "answer": 2,
+  "explanation": "onBeforeUpdate is useful to read the DOM state before Vue updates it."
+ },
+ {
   "id": "q76a3fec5985",
   "subject": "vue",
   "topic": "lifecycle",
@@ -73,6 +118,21 @@
   ],
   "answer": 3,
   "explanation": "A parent is considered mounted only after all of its synchronous children have mounted."
+ },
+ {
+  "id": "q978f430b856",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "In the Options API, in which hook is the component's DOM first available through this.$el?",
+  "options": [
+   "mounted",
+   "beforeMount",
+   "created",
+   "beforeCreate"
+  ],
+  "answer": 0,
+  "explanation": "In created the instance and data exist but nothing has been rendered yet; the DOM is available in mounted."
  },
  {
   "id": "qb036e5b8f26",
@@ -120,6 +180,21 @@
   "explanation": "Template refs are assigned during mounting, so they should be accessed in onMounted or later."
  },
  {
+  "id": "q0410ef20320",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "What is onRenderTriggered used for?",
+  "options": [
+   "Running code after each SSR render",
+   "Measuring network requests",
+   "Forcing a re-render manually",
+   "Debugging which reactive dependency caused a component to re-render, in development"
+  ],
+  "answer": 3,
+  "explanation": "onRenderTriggered and onRenderTracked are development-only debug hooks that receive a dependency event."
+ },
+ {
   "id": "q6706be4babf",
   "subject": "vue",
   "topic": "lifecycle",
@@ -148,6 +223,21 @@
   ],
   "answer": 1,
   "explanation": "Vue buffers updates until the next tick, so nextTick() waits until the DOM reflects the change."
+ },
+ {
+  "id": "qa3090801a3e",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "In which order do onBeforeUnmount and onUnmounted run for a parent and its child when the parent unmounts?",
+  "options": [
+   "Child onBeforeUnmount first, then parent onBeforeUnmount, then parent onUnmounted, then child onUnmounted",
+   "Parent onBeforeUnmount, child onBeforeUnmount, child onUnmounted, parent onUnmounted",
+   "Parent onUnmounted before any child hook",
+   "Only the parent hooks run"
+  ],
+  "answer": 1,
+  "explanation": "Before-hooks run top-down, and the unmounted hooks complete bottom-up, as children finish before parents."
  },
  {
   "id": "qb72b11e8d81",

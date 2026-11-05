@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qfe80dd2af97",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a mutex lock primarily used for?",
+  "options": [
+   "Ensuring mutual exclusion so only one thread holds the lock at a time",
+   "Counting available disk blocks",
+   "Translating virtual addresses",
+   "Scheduling I/O requests"
+  ],
+  "answer": 0,
+  "explanation": "A thread acquires the mutex before entering a critical section and releases it on exit, so only one thread is inside at a time."
+ },
+ {
+  "id": "qff2a135c553",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "What does a file descriptor represent in UNIX?",
+  "options": [
+   "The file's size",
+   "The file's permission string",
+   "A small integer handle referring to an entry in the process's open-file table",
+   "The disk partition number"
+  ],
+  "answer": 2,
+  "explanation": "open() returns a small integer (e.g. 0, 1, 2 for stdin/stdout/stderr) that indexes the per-process open-file table."
+ },
+ {
+  "id": "q8af04e53d9a",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "What is a system call?",
+  "options": [
+   "A user library function that never enters the kernel",
+   "A programmatic request from a user program to the kernel for a service",
+   "A hardware interrupt raised by a device",
+   "A call from the kernel into a user process"
+  ],
+  "answer": 1,
+  "explanation": "System calls are the interface through which user programs request kernel services such as I/O or process creation, trapping into kernel mode."
+ },
+ {
+  "id": "qa678d4ec918",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "A process that has finished executing but whose parent has not yet called wait() is called a:",
+  "options": [
+   "Orphan process",
+   "Daemon process",
+   "Zombie process",
+   "Idle process"
+  ],
+  "answer": 2,
+  "explanation": "A zombie keeps its process-table entry and exit status until the parent collects it with wait()."
+ },
+ {
+  "id": "qb177d4d44aa",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "Which OS component selects a process from the ready queue and allocates the CPU to it?",
+  "options": [
+   "CPU scheduler (short-term scheduler)",
+   "Loader",
+   "Spooler",
+   "Linker"
+  ],
+  "answer": 0,
+  "explanation": "The short-term (CPU) scheduler picks the next ready process, and the dispatcher then gives it control of the CPU."
+ },
+ {
+  "id": "qda83f42a096",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is a device driver?",
+  "options": [
+   "A hardware chip on a device",
+   "A bus protocol",
+   "A user application",
+   "Kernel software that provides a uniform interface for controlling a specific hardware device"
+  ],
+  "answer": 3,
+  "explanation": "Device drivers hide device-specific details from the rest of the kernel behind a standard interface."
+ },
+ {
+  "id": "q4ae74ed0b56",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "What does the exec() family of system calls do?",
+  "options": [
+   "Creates a child process",
+   "Terminates the current process",
+   "Replaces the current process image with a new program",
+   "Waits for a child to finish"
+  ],
+  "answer": 2,
+  "explanation": "exec() loads a new program into the current process's address space; the PID stays the same."
+ },
+ {
+  "id": "q98fca070b40",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a race condition?",
+  "options": [
+   "Two processes competing for the highest priority",
+   "A situation where the outcome depends on the unpredictable order in which concurrent threads access shared data",
+   "A deadlock between two threads",
+   "A type of scheduling algorithm"
+  ],
+  "answer": 1,
+  "explanation": "Race conditions arise when unsynchronized threads interleave operations on shared data, producing timing-dependent results."
+ },
+ {
+  "id": "qa5fd56f4913",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is an interrupt?",
+  "options": [
+   "A signal from hardware (or software) that makes the CPU suspend its current work and run a handler",
+   "A user-level exception handler",
+   "A type of disk block",
+   "A system call that ends a process"
+  ],
+  "answer": 0,
+  "explanation": "On an interrupt the CPU saves its state and jumps to the handler found via the interrupt vector, then resumes the interrupted work."
+ },
+ {
+  "id": "q43954038c70",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "Which type of link is a separate file containing a path to the target and breaks if the target is deleted?",
+  "options": [
+   "Hard link",
+   "Symbolic (soft) link",
+   "Inode link",
+   "Mount link"
+  ],
+  "answer": 1,
+  "explanation": "A symbolic link stores a path name, so it dangles if the target is removed; a hard link is another directory entry for the same inode."
+ }
+]

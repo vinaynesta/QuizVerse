@@ -1,0 +1,197 @@
+[
+ {
+  "id": "q09bb0e5b31e",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "easy",
+  "question": "Which data type is used to store whole numbers?",
+  "options": [
+   "BOOLEAN",
+   "VARCHAR",
+   "DATE",
+   "INTEGER"
+  ],
+  "answer": 3,
+  "explanation": "INTEGER stores whole numbers. VARCHAR stores text, DATE stores calendar dates, and BOOLEAN stores true or false."
+ },
+ {
+  "id": "q779e521d5b9",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "easy",
+  "question": "Which data type stores both a calendar date and a time of day?",
+  "options": [
+   "DATE",
+   "TIME",
+   "TIMESTAMP",
+   "INTERVAL"
+  ],
+  "answer": 2,
+  "explanation": "TIMESTAMP holds both date and time. DATE holds only the date, TIME only the time of day, and INTERVAL a duration."
+ },
+ {
+  "id": "q80dacd51907",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "easy",
+  "question": "Which PostgreSQL data type stores true or false values?",
+  "options": [
+   "BIT STRING",
+   "BOOLEAN",
+   "CHAR(1)",
+   "BINARY"
+  ],
+  "answer": 1,
+  "explanation": "PostgreSQL's BOOLEAN type holds TRUE, FALSE or NULL."
+ },
+ {
+  "id": "q9c07a16de44",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "easy",
+  "question": "What does a VARCHAR(n) column store?",
+  "options": [
+   "Variable-length strings up to n characters",
+   "Always exactly n characters",
+   "Only numbers",
+   "Binary data"
+  ],
+  "answer": 0,
+  "explanation": "VARCHAR(n) holds variable-length character data up to a maximum of n characters, without padding shorter values."
+ },
+ {
+  "id": "q2e74ac7d2c5",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "Why is a binary floating-point type such as FLOAT generally avoided for money values?",
+  "options": [
+   "Many decimal fractions, such as 0.1, cannot be represented exactly in binary",
+   "It is too slow to store on any disk",
+   "It cannot hold negative numbers",
+   "It cannot be used in arithmetic"
+  ],
+  "answer": 0,
+  "explanation": "Binary floating point introduces rounding error in decimal values. Use NUMERIC or DECIMAL for exact currency arithmetic."
+ },
+ {
+  "id": "q3303971b3cc",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "In PostgreSQL, what is the difference between storing 'abc' in CHAR(5) and in VARCHAR(5)?",
+  "options": [
+   "CHAR stores 3 characters, while VARCHAR pads to 5",
+   "Both store exactly 5 characters",
+   "VARCHAR rejects strings shorter than 5 characters",
+   "CHAR pads the value with spaces to 5 characters, while VARCHAR stores 'abc' without padding"
+  ],
+  "answer": 3,
+  "explanation": "CHAR(n) is blank-padded to n characters, while VARCHAR(n) stores only the characters given. Trailing spaces in CHAR are insignificant in comparisons."
+ },
+ {
+  "id": "q41b6a638bec",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "What does NUMERIC(10,2) store?",
+  "options": [
+   "A 10-bit integer with two bytes of padding",
+   "Up to 10 total digits, with exactly 2 digits after the decimal point, stored exactly",
+   "A floating-point number with 10 significant bits",
+   "Ten decimal places, with two digits in total"
+  ],
+  "answer": 1,
+  "explanation": "NUMERIC(precision, scale) stores exact decimal values with up to 10 digits in total, of which 2 are after the decimal point."
+ },
+ {
+  "id": "qaa67f1f5078",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "In PostgreSQL, how does the JSONB type differ from the JSON type?",
+  "options": [
+   "JSONB can store only arrays, while JSON stores objects",
+   "JSONB stores a decomposed binary form that supports indexing, while JSON stores the exact input text",
+   "JSON is faster to query because it is pre-parsed",
+   "JSONB keeps duplicate keys and whitespace exactly as entered"
+  ],
+  "answer": 1,
+  "explanation": "JSONB discards whitespace and duplicate keys, and supports GIN indexes and fast containment operators."
+ },
+ {
+  "id": "q11a8f25d68e",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "What does TIMESTAMP WITHOUT TIME ZONE store in PostgreSQL?",
+  "options": [
+   "A date and time plus the name of the time zone",
+   "A date and time converted to UTC",
+   "A date and time with no time zone conversion applied on storage",
+   "Only the time of day"
+  ],
+  "answer": 2,
+  "explanation": "The value is stored exactly as given, with no offset. Use TIMESTAMP WITH TIME ZONE when instants must be compared across zones."
+ },
+ {
+  "id": "q2cf2ddb1d93",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT 7 / 2 return?",
+  "options": [
+   "3",
+   "3.5",
+   "4",
+   "An error"
+  ],
+  "answer": 0,
+  "explanation": "Dividing two integers in PostgreSQL performs integer division and truncates toward zero. Cast one operand to NUMERIC or DOUBLE PRECISION to get 3.5."
+ },
+ {
+  "id": "q325f964954a",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT 0.1::float8 + 0.2::float8 = 0.3::float8 return?",
+  "options": [
+   "TRUE",
+   "An error",
+   "FALSE",
+   "NULL"
+  ],
+  "answer": 2,
+  "explanation": "Binary double-precision values cannot represent 0.1, 0.2 and 0.3 exactly, so the sum differs from 0.3 in the last bits."
+ },
+ {
+  "id": "q595220ed8dd",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "A VARCHAR column holds the values '9' and '10'. With a typical locale collation, what order does ORDER BY col ASC produce?",
+  "options": [
+   "'10' then '9'",
+   "The order is undefined",
+   "The same as numeric order",
+   "'9' then '10'"
+  ],
+  "answer": 0,
+  "explanation": "Text sorts character by character, so '1' comes before '9' and '10' sorts first. Store numbers in numeric columns to sort them numerically."
+ },
+ {
+  "id": "q8ab2be93f19",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT DATE '2024-01-31' + INTERVAL '1 month' return?",
+  "options": [
+   "2024-02-29 00:00:00",
+   "2024-03-01 00:00:00",
+   "2024-03-02 00:00:00",
+   "An error, because February has no 31st day"
+  ],
+  "answer": 0,
+  "explanation": "Adding months clamps to the last valid day of the target month, and date plus interval yields a timestamp."
+ }
+]

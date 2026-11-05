@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0a92389af2d",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command stages a file so that it is included in the next commit?",
+  "options": [
+   "git add <file>",
+   "git commit <file>",
+   "git push <file>",
+   "git track <file>"
+  ],
+  "answer": 0,
+  "explanation": "git add moves changes from the working tree into the staging area (index)."
+ },
+ {
+  "id": "q0b0a58921c3",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which file lists patterns for files that Git should not track?",
+  "options": [
+   "README.md",
+   ".gitignore",
+   ".gitconfig",
+   ".gitkeep"
+  ],
+  "answer": 1,
+  "explanation": "Untracked files matching patterns in .gitignore are not shown as untracked and are skipped by git add."
+ },
+ {
+  "id": "q2af18a2a400",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "What does git clone do?",
+  "options": [
+   "Creates an empty repository on a server",
+   "Creates a local copy of a remote repository, including its history",
+   "Deletes a remote branch",
+   "Merges two remote repositories"
+  ],
+  "answer": 1,
+  "explanation": "git clone downloads a repository and its full history and sets up a working copy with a default remote."
+ },
+ {
+  "id": "q4888436035c",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command displays the commit history of the current branch?",
+  "options": [
+   "git history",
+   "git log",
+   "git commits",
+   "git trail"
+  ],
+  "answer": 1,
+  "explanation": "git log lists commits reachable from HEAD, newest first, with hashes, authors, and messages."
+ },
+ {
+  "id": "q5bc37440533",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command creates a new, empty Git repository in the current directory?",
+  "options": [
+   "git init",
+   "git create",
+   "git new",
+   "git start"
+  ],
+  "answer": 0,
+  "explanation": "git init creates the .git directory that turns the current directory into a repository."
+ },
+ {
+  "id": "q7b83caff6a1",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command shows the current branch and which files are staged, modified, or untracked?",
+  "options": [
+   "git status",
+   "git show",
+   "git diff",
+   "git log"
+  ],
+  "answer": 0,
+  "explanation": "git status reports the branch, staged changes, unstaged changes, and untracked files."
+ },
+ {
+  "id": "q7dac2520a08",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command shows the commit history with each commit on a single line?",
+  "options": [
+   "git status --short",
+   "git log --oneline",
+   "git show --brief",
+   "git diff --oneline"
+  ],
+  "answer": 1,
+  "explanation": "git log --oneline prints the abbreviated hash and subject line of each commit."
+ },
+ {
+  "id": "q80b9ffefd4a",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command sets the author name Git records in commits for all of your repositories?",
+  "options": [
+   "git name --set \"Your Name\"",
+   "git commit --author-all \"Your Name\"",
+   "git config --global user.name \"Your Name\"",
+   "git init --user \"Your Name\""
+  ],
+  "answer": 2,
+  "explanation": "git config --global writes user.name to your user-level config, which every repository uses unless overridden."
+ },
+ {
+  "id": "qa517ef4b1ef",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command records the staged changes as a new commit with a message?",
+  "options": [
+   "git save -m 'message'",
+   "git snapshot 'message'",
+   "git commit -m 'message'",
+   "git record -m 'message'"
+  ],
+  "answer": 2,
+  "explanation": "git commit -m creates a commit from the staged changes using the given message."
+ },
+ {
+  "id": "qecae1a06f62",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which option to git commit stages all modified tracked files before committing?",
+  "options": [
+   "-s",
+   "-f",
+   "-a",
+   "-x"
+  ],
+  "answer": 2,
+  "explanation": "The -a (--all) option stages changes to already-tracked files; untracked files are still not added."
+ }
+]

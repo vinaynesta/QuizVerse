@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0583d61fdd6",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "Which QoS class is assigned to a pod whose containers set no CPU or memory requests or limits?",
+  "options": [
+   "BestEffort",
+   "Burstable",
+   "Guaranteed",
+   "Unbounded"
+  ],
+  "answer": 0,
+  "explanation": "BestEffort pods have no resource guarantees and are among the first evicted under node memory pressure."
+ },
+ {
+  "id": "q1b001e8ca29",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "How does requiredDuringSchedulingIgnoredDuringExecution node affinity differ from preferredDuringSchedulingIgnoredDuringExecution?",
+  "options": [
+   "Required rules are re-checked and evict running pods; preferred rules are not",
+   "Preferred rules apply only to DaemonSets",
+   "Required is a hard rule the scheduler must satisfy; preferred is a weighted soft preference",
+   "Required rules apply only after the pod starts"
+  ],
+  "answer": 2,
+  "explanation": "IgnoredDuringExecution means neither kind evicts pods that are already running if labels change."
+ },
+ {
+  "id": "q1ef78d276ee",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "Which pod spec field lets a pod run only on nodes that carry a specific label?",
+  "options": [
+   "spec.nodeSelector",
+   "spec.priorityClassName",
+   "spec.serviceAccountName",
+   "spec.hostname"
+  ],
+  "answer": 0,
+  "explanation": "nodeSelector is the simplest constraint: the scheduler only places the pod on nodes whose labels match."
+ },
+ {
+  "id": "q3bcf2c1e1f7",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What does a taint on a node do?",
+  "options": [
+   "Repels pods unless they have a matching toleration",
+   "Attracts pods with matching labels",
+   "Deletes pods that are not running",
+   "Limits the node's network bandwidth"
+  ],
+  "answer": 0,
+  "explanation": "Tainted nodes reject pods that do not tolerate the taint, which is how dedicated nodes are reserved."
+ },
+ {
+  "id": "q4a75c9e36e4",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What does a podAntiAffinity rule with topologyKey kubernetes.io/hostname express?",
+  "options": [
+   "Pods must run on the same node",
+   "Pods should be placed on nodes with the most free CPU",
+   "Pods must share a volume",
+   "Pods should avoid being scheduled onto a node that already runs matching pods"
+  ],
+  "answer": 3,
+  "explanation": "Anti-affinity spreads matching replicas across nodes; the hostname topology key means each node is one topology domain."
+ },
+ {
+  "id": "q8580d0dd68d",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What is the difference between resource requests and limits in a Kubernetes container spec?",
+  "options": [
+   "They are identical; limits only document the value",
+   "Requests cap runtime usage; limits are used for scheduling",
+   "Requests are used by the scheduler to place the pod; limits cap runtime usage (CPU is throttled, and exceeding memory can get the container OOM-killed)",
+   "Requests apply only to GPUs"
+  ],
+  "answer": 2,
+  "explanation": "The scheduler uses requests to find a node with enough allocatable capacity, while limits are enforced by the kubelet and the container runtime."
+ },
+ {
+  "id": "q8bf339b3fb9",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What is the effect of a PodDisruptionBudget?",
+  "options": [
+   "It limits the memory each pod can use",
+   "It limits voluntary disruptions, such as node drains, so a minimum number of pods stay available",
+   "It prevents pods from being scheduled at all",
+   "It restarts pods whenever a node is upgraded"
+  ],
+  "answer": 1,
+  "explanation": "A PDB constrains voluntary evictions, but it does not stop involuntary failures such as node crashes."
+ },
+ {
+  "id": "q9f813933ef5",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "Which QoS class does a pod get when every container sets CPU and memory requests equal to its limits?",
+  "options": [
+   "BestEffort",
+   "Guaranteed",
+   "Burstable",
+   "Critical"
+  ],
+  "answer": 1,
+  "explanation": "Guaranteed pods have requests equal to limits for both resources in every container."
+ },
+ {
+  "id": "qa41c4a0d6ac",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What does a topologySpreadConstraint with maxSkew: 1 and topologyKey topology.kubernetes.io/zone aim for?",
+  "options": [
+   "The count of matching pods in any two zones differs by at most one",
+   "Exactly one pod per zone",
+   "All pods in the zone with the most free capacity",
+   "At most one zone may run the workload"
+  ],
+  "answer": 0,
+  "explanation": "maxSkew bounds the difference between the most and least populated topology domains."
+ },
+ {
+  "id": "qf1556335280",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "A pod stays Pending with the event 'Insufficient memory'. What is the most likely cause?",
+  "options": [
+   "The image failed to pull",
+   "The liveness probe failed",
+   "The Service has no endpoints",
+   "The scheduler found no node with enough free allocatable memory for the pod's requests"
+  ],
+  "answer": 3,
+  "explanation": "A Pending pod has not been bound to a node yet, and the scheduler reports insufficient resources when no node fits its memory request."
+ }
+]

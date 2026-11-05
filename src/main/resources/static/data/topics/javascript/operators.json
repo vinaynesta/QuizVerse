@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q1cde6942a13",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does null ?? \"default\" evaluate to?",
+  "options": [
+   "undefined",
+   "null",
+   "\"default\"",
+   "false"
+  ],
+  "answer": 2,
+  "explanation": "The nullish coalescing operator returns its right operand when the left is null or undefined."
+ },
+ {
+  "id": "q3ac6957c046",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 2 ** 3?",
+  "options": [
+   "8",
+   "9",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "** is the exponentiation operator, so 2 ** 3 is 2 raised to the power 3."
+ },
+ {
+  "id": "q44500e31595",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 5 == \"5\"?",
+  "options": [
+   "false",
+   "true",
+   "TypeError",
+   "NaN"
+  ],
+  "answer": 1,
+  "explanation": "Loose equality converts the string to a number before comparing, so 5 equals 5."
+ },
+ {
+  "id": "q6626e368a34",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 5 === \"5\"?",
+  "options": [
+   "true",
+   "TypeError",
+   "undefined",
+   "false"
+  ],
+  "answer": 3,
+  "explanation": "Strict equality compares without type conversion, and a number is never strictly equal to a string."
+ },
+ {
+  "id": "qc2951a0d5c4",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 7 % 3?",
+  "options": [
+   "2.33",
+   "1",
+   "0",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "The remainder operator returns what is left after dividing 7 by 3, which is 1."
+ },
+ {
+  "id": "qd0d64a13f46",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does 0 || \"fallback\" evaluate to?",
+  "options": [
+   "0",
+   "true",
+   "\"fallback\"",
+   "false"
+  ],
+  "answer": 2,
+  "explanation": "|| returns the first truthy operand, and 0 is falsy."
+ }
+]

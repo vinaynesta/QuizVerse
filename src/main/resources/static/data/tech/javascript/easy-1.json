@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qcf980e88cc4",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Which array method removes and returns the first element?",
+  "options": [
+   "shift",
+   "splice",
+   "slice",
+   "pop"
+  ],
+  "answer": 0,
+  "explanation": "shift removes the first element and returns it; pop removes the last."
+ },
+ {
+  "id": "q2d18b9d47b3",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does a function return if it has no return statement?",
+  "options": [
+   "undefined",
+   "null",
+   "0",
+   "The last evaluated expression"
+  ],
+  "answer": 0,
+  "explanation": "Functions without an explicit return value return undefined."
+ },
+ {
+  "id": "q0dff4601c0e",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Which syntax creates a template literal that embeds a variable name?",
+  "options": [
+   "\"Hello ${name}\"",
+   "'Hello #{name}'",
+   "`Hello ${name}`",
+   "`Hello {{name}}`"
+  ],
+  "answer": 2,
+  "explanation": "Template literals use backticks and ${expression} for interpolation."
+ },
+ {
+  "id": "q147d6803499",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does const [a, b] = [1, 2]; assign to b?",
+  "options": [
+   "[1, 2]",
+   "1",
+   "2",
+   "undefined"
+  ],
+  "answer": 2,
+  "explanation": "Array destructuring assigns elements by position, so b gets the second element."
+ },
+ {
+  "id": "q04975579342",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Which method checks whether an array contains a value and returns a boolean?",
+  "options": [
+   "has",
+   "includes",
+   "exists",
+   "contains"
+  ],
+  "answer": 1,
+  "explanation": "Array.prototype.includes returns true or false and also correctly detects NaN."
+ },
+ {
+  "id": "qba006c5ac78",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "Which declaration creates a block-scoped variable that cannot be reassigned?",
+  "options": [
+   "var",
+   "let",
+   "const",
+   "static"
+  ],
+  "answer": 2,
+  "explanation": "const is block-scoped and its binding cannot be reassigned after initialization."
+ },
+ {
+  "id": "qb82a4abb8ec",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does user?.address?.city return if user is undefined?",
+  "options": [
+   "TypeError",
+   "null",
+   "undefined",
+   "\"\""
+  ],
+  "answer": 2,
+  "explanation": "Optional chaining short-circuits and returns undefined instead of throwing when a reference is nullish."
+ },
+ {
+  "id": "qfbca78a3bc8",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which syntax defines an arrow function that returns the square of x?",
+  "options": [
+   "function => x * x",
+   "(x) :: x * x",
+   "x -> x * x",
+   "x => x * x"
+  ],
+  "answer": 3,
+  "explanation": "Arrow functions use =>, and a single parameter needs no parentheses with an expression body returned implicitly."
+ },
+ {
+  "id": "qfe274f40629",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does function sum(...nums) { return nums.length; } sum(1, 2, 3) return?",
+  "options": [
+   "1",
+   "3",
+   "undefined",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "Rest parameters collect the remaining arguments into a real array, which here has three elements."
+ },
+ {
+  "id": "q747e275bf3b",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"a,b,c\".split(\",\") return?",
+  "options": [
+   "\"abc\"",
+   "[\"a\", \"b\", \"c\"]",
+   "[\"a,b,c\"]",
+   "[\"a\", \",\", \"b\", \",\", \"c\"]"
+  ],
+  "answer": 1,
+  "explanation": "split divides the string at each separator and returns an array of the pieces."
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q2a9fe3cddfc",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "easy",
+  "question": "Which statement removes rows that match a condition from a table?",
+  "options": [
+   "DROP FROM t WHERE ...",
+   "DELETE FROM t WHERE ...",
+   "REMOVE FROM t WHERE ...",
+   "TRUNCATE t WHERE ..."
+  ],
+  "answer": 1,
+  "explanation": "DELETE removes the rows that satisfy its WHERE clause and leaves the table structure in place."
+ },
+ {
+  "id": "q3400956bbc7",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "easy",
+  "question": "Which statement adds new rows to a table?",
+  "options": [
+   "UPDATE",
+   "ALTER",
+   "INSERT",
+   "CREATE"
+  ],
+  "answer": 2,
+  "explanation": "INSERT INTO table (cols) VALUES (...) adds rows, while UPDATE changes existing ones."
+ },
+ {
+  "id": "qee16e691449",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "easy",
+  "question": "What happens when an UPDATE statement has no WHERE clause?",
+  "options": [
+   "Every row in the table is updated",
+   "Only the first row is updated",
+   "No rows are updated",
+   "The statement fails with a syntax error"
+  ],
+  "answer": 0,
+  "explanation": "Without WHERE, UPDATE applies the change to all rows, which is a common and costly mistake."
+ },
+ {
+  "id": "q0c595551f34",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "medium",
+  "question": "In PostgreSQL, what does INSERT ... ON CONFLICT (id) DO UPDATE SET ... do?",
+  "options": [
+   "Always updates and never inserts",
+   "Fails the whole statement if a conflict occurs",
+   "Deletes the conflicting row and inserts a new one",
+   "Inserts the row, or updates the existing row when a row with the same id already exists"
+  ],
+  "answer": 3,
+  "explanation": "ON CONFLICT implements an upsert; MySQL offers similar behavior with INSERT ... ON DUPLICATE KEY UPDATE."
+ }
+]

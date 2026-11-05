@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q33465f3992c",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What is a gray failure?",
+  "options": [
+   "A failure where logs are written in grayscale",
+   "A permanent failure that requires hardware replacement",
+   "A network outage affecting only IPv6 traffic",
+   "A component looks healthy to some observers but is degraded for others, so simple health checks may miss it"
+  ],
+  "answer": 3,
+  "explanation": "Gray failures evade binary health checks because the component still answers some probes while failing real traffic."
+ },
+ {
+  "id": "q6fb8a091562",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Why does a request fanning out to 100 parallel sub-calls, each slow 1% of the time, end up slow so often?",
+  "options": [
+   "Parallel calls always serialize on the network card",
+   "Each parallel call doubles the request payload size",
+   "Tail latency compounds: about 63% of such requests hit at least one slow sub-call",
+   "Fan-out disables connection pooling so every call pays a handshake"
+  ],
+  "answer": 2,
+  "explanation": "The chance that all 100 calls are fast is 0.99^100, roughly 37%, so about 63% of fan-out requests see at least one slow call."
+ },
+ {
+  "id": "q7bd7867dcd2",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Why can a long garbage collection pause make a healthy node behave like a failed one?",
+  "options": [
+   "It deletes the node's data",
+   "While paused, it misses heartbeats and lease renewals, so peers may declare it dead and it may act on stale assumptions when it resumes",
+   "It changes the node's IP address",
+   "It permanently corrupts its log"
+  ],
+  "answer": 1,
+  "explanation": "Process pauses are a key reason distributed systems cannot rely on timing or leases without fencing."
+ },
+ {
+  "id": "q888e177d014",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What is split brain in a replicated system?",
+  "options": [
+   "A node stops answering heartbeats but keeps its lock forever",
+   "Clients are routed to a DNS name that points nowhere",
+   "The database automatically splits one table into two shards",
+   "Two or more nodes each believe they are the active leader, leading to conflicting writes"
+  ],
+  "answer": 3,
+  "explanation": "Split brain typically follows a network partition when leader election is not guarded by a quorum or fencing."
+ },
+ {
+  "id": "q9e52b493fb5",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What characterizes a metastable failure?",
+  "options": [
+   "A failure caused only by disk corruption",
+   "A failure that resolves itself within one heartbeat interval",
+   "A failure confined to a single availability zone",
+   "The system stays degraded after the original trigger is gone, sustained by a feedback loop such as retries or cache refill storms"
+  ],
+  "answer": 3,
+  "explanation": "Metastable failures persist because the recovery mechanisms themselves keep demand above capacity."
+ },
+ {
+  "id": "qe9afca70169",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Which is a common cause of cascading failure?",
+  "options": [
+   "Using UUIDs as primary keys",
+   "Enabling TLS 1.3 on all endpoints",
+   "Compressing responses with gzip",
+   "Retry amplification, where clients retry aggressively against an already overloaded service"
+  ],
+  "answer": 3,
+  "explanation": "Extra retries add load exactly when the service has the least capacity, pushing dependent services over their limits too."
+ },
+ {
+  "id": "qecf3cbd94f8",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Why is using wall-clock timestamps for last-write-wins conflict resolution risky?",
+  "options": [
+   "Wall clocks cannot be read by application code",
+   "Every CPU core must have an identical clock or the write fails",
+   "Timestamps overflow a 32-bit integer within a day",
+   "Clock skew between nodes can make a causally older write appear newer and win"
+  ],
+  "answer": 3,
+  "explanation": "Clocks on different machines are not perfectly synchronized, so the 'latest' timestamp may belong to the earlier event."
+ },
+ {
+  "id": "qfbb55fd8f09",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What is a poison pill message?",
+  "options": [
+   "A message intentionally sent to shut down a cluster",
+   "A message encrypted with an invalid key",
+   "A message that consistently crashes or fails its consumer, blocking progress if it is retried forever",
+   "A message with a high priority"
+  ],
+  "answer": 2,
+  "explanation": "Limiting retries and routing such messages to a dead-letter queue keeps the consumer moving."
+ }
+]

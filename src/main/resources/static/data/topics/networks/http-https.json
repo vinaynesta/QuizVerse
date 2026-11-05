@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q5e0288ac680",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "HTTP is described as stateless. What does that mean?",
+  "options": [
+   "Responses can never be cached",
+   "The protocol cannot carry cookies",
+   "Each request is independent; the server keeps no session state by default",
+   "The connection is never reused"
+  ],
+  "answer": 2,
+  "explanation": "HTTP itself does not remember prior requests; state is added with cookies, tokens or server-side sessions."
+ },
+ {
+  "id": "q8b67e638862",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "What does HTTPS add on top of HTTP?",
+  "options": [
+   "Automatic caching",
+   "Encryption and server authentication via TLS",
+   "Response compression",
+   "Faster DNS resolution"
+  ],
+  "answer": 1,
+  "explanation": "HTTPS runs HTTP over TLS, which encrypts traffic and authenticates the server with a certificate."
+ },
+ {
+  "id": "q8ee579cc590",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "Which HTTP status code means the requested resource was not found?",
+  "options": [
+   "500",
+   "403",
+   "401",
+   "404"
+  ],
+  "answer": 3,
+  "explanation": "404 Not Found means the server has no current representation for the target URL."
+ },
+ {
+  "id": "qa859984b1de",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "Which HTTP status code indicates a successful request?",
+  "options": [
+   "200",
+   "301",
+   "404",
+   "500"
+  ],
+  "answer": 0,
+  "explanation": "200 OK means success; 404 is Not Found, 500 a server error and 301 a permanent redirect."
+ }
+]

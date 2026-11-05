@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8f3ee0c4211",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Which statement about unsafe states is correct?",
+  "options": [
+   "Every unsafe state is a deadlock",
+   "An unsafe state can never lead to deadlock",
+   "Unsafe states only occur with single-instance resources",
+   "An unsafe state may lead to deadlock, but is not necessarily deadlocked"
+  ],
+  "answer": 3,
+  "explanation": "Deadlocked states are a subset of unsafe states; in an unsafe state the OS can no longer guarantee that deadlock will be avoided."
+ },
+ {
+  "id": "q560e2cb0d6d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Which technique prevents starvation in priority scheduling?",
+  "options": [
+   "Reducing the time quantum",
+   "Using FCFS within each priority",
+   "Aging, which gradually raises the priority of long-waiting processes",
+   "Making scheduling non-preemptive"
+  ],
+  "answer": 2,
+  "explanation": "Aging raises a waiting process's priority over time, so eventually it gets the CPU."
+ },
+ {
+  "id": "qb8cd5cc1079",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "In a resource-allocation graph where some resource types have multiple instances, a cycle means:",
+  "options": [
+   "A deadlock definitely exists",
+   "The system is definitely safe",
+   "A deadlock may exist, but not necessarily",
+   "Every process in the cycle has terminated"
+  ],
+  "answer": 2,
+  "explanation": "With multiple instances, a process outside the cycle may release an instance and break it, so a cycle is necessary but not sufficient."
+ },
+ {
+  "id": "qd8fca7bcbc8",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "A counting semaphore S is initialized to 10. Then 6 wait (P) and 4 signal (V) operations are performed. What is the final value of S?",
+  "options": [
+   "12",
+   "0",
+   "8",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "Each P decrements and each V increments, so S = 10 - 6 + 4 = 8 (the value never reaches 0, so nothing blocks)."
+ },
+ {
+  "id": "q81e83396c24",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "In pure demand paging, when is a page brought into memory?",
+  "options": [
+   "All pages are loaded when the process starts",
+   "Only when it is first referenced and causes a page fault",
+   "When the process is swapped out",
+   "At fixed time intervals"
+  ],
+  "answer": 1,
+  "explanation": "A lazy swapper never loads a page until it is needed, so a process starts with no pages resident."
+ },
+ {
+  "id": "q2b742853b88",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does LRU replacement cause?",
+  "options": [
+   "9",
+   "12",
+   "15",
+   "10"
+  ],
+  "answer": 1,
+  "explanation": "Simulating LRU, which evicts the least recently used page, gives 12 faults, between optimal (9) and FIFO (15) on this string."
+ },
+ {
+  "id": "q3fef5f5bf57",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "A system has 32-bit logical addresses and 4 KB pages. How many entries does a single-level page table have?",
+  "options": [
+   "2^22",
+   "2^12",
+   "2^32",
+   "2^20"
+  ],
+  "answer": 3,
+  "explanation": "A 4 KB page needs a 12-bit offset, leaving 32 - 12 = 20 bits for the page number, so 2^20 entries."
+ },
+ {
+  "id": "q4dee9faaf68",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "In the semaphore-based bounded-buffer (producer-consumer) solution with n slots, what are the initial values of empty, full and mutex?",
+  "options": [
+   "empty = 0, full = n, mutex = 1",
+   "empty = 1, full = 1, mutex = n",
+   "empty = n, full = n, mutex = 0",
+   "empty = n, full = 0, mutex = 1"
+  ],
+  "answer": 3,
+  "explanation": "Initially all n slots are empty and none are full, and mutex = 1 allows one process at a time to touch the buffer."
+ },
+ {
+  "id": "q820359dddad",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "In a resource-allocation graph where every resource type has exactly one instance, a cycle means:",
+  "options": [
+   "A deadlock exists",
+   "The system is in a safe state",
+   "Deadlock may or may not exist",
+   "Starvation has occurred but not deadlock"
+  ],
+  "answer": 0,
+  "explanation": "With single-instance resources a cycle is both necessary and sufficient for deadlock."
+ },
+ {
+  "id": "q034c82c7c19",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "A counting semaphore controls access to a pool of 5 identical printers. What should its initial value be?",
+  "options": [
+   "0",
+   "5",
+   "-5",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "A counting semaphore starts at the number of available instances; each wait() takes one and blocks when the count reaches 0."
+ }
+]

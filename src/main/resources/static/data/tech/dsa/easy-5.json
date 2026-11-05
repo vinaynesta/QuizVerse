@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6a1a1966c8a",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What is the best-case time complexity of insertion sort on n elements?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(1)",
+   "O(n^2)"
+  ],
+  "answer": 0,
+  "explanation": "On an already sorted array each element is compared once with its predecessor and no shifts occur."
+ },
+ {
+  "id": "q976bd560b12",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "With F(0) = 0 and F(1) = 1, what is the Fibonacci number F(7)?",
+  "options": [
+   "8",
+   "13",
+   "11",
+   "21"
+  ],
+  "answer": 1,
+  "explanation": "The sequence runs 0, 1, 1, 2, 3, 5, 8, 13, so F(7) is 13."
+ },
+ {
+  "id": "q88cec07b5aa",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What does a hash function do in a hash table?",
+  "options": [
+   "Sorts the keys in ascending order",
+   "Encrypts the stored values",
+   "Maps a key to a bucket index",
+   "Counts how many keys are stored"
+  ],
+  "answer": 2,
+  "explanation": "The hash function converts a key into an index that determines where the entry is stored."
+ },
+ {
+  "id": "qa99e902ec7e",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What happens when you insert a value that is already present into a hash set?",
+  "options": [
+   "The value is stored a second time",
+   "The set remains unchanged",
+   "An error is always raised",
+   "The existing value is deleted"
+  ],
+  "answer": 1,
+  "explanation": "A set stores each distinct element at most once, so adding a duplicate has no effect."
+ },
+ {
+  "id": "q9c6677f97e2",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "In what order does a postorder traversal visit the nodes of a binary tree?",
+  "options": [
+   "Root, left subtree, then right subtree",
+   "Left subtree, right subtree, then root",
+   "Left subtree, root, then right subtree",
+   "Level by level from top to bottom"
+  ],
+  "answer": 1,
+  "explanation": "Postorder processes both children before the node itself."
+ },
+ {
+  "id": "qfe583e3d29b",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which stack operation returns the top element without removing it?",
+  "options": [
+   "pop",
+   "enqueue",
+   "push",
+   "peek"
+  ],
+  "answer": 3,
+  "explanation": "peek inspects the top element while leaving the stack unchanged."
+ },
+ {
+  "id": "qa4421894b9f",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "Which data structure does an iterative depth-first search typically use to track vertices to visit?",
+  "options": [
+   "Queue",
+   "Stack",
+   "Priority queue",
+   "Hash map only"
+  ],
+  "answer": 1,
+  "explanation": "A stack makes DFS explore the most recently discovered vertex first, going deep before backtracking."
+ },
+ {
+  "id": "q957b20aa5b8",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "If height is counted in edges, what is the height of a tree consisting of a single node?",
+  "options": [
+   "0",
+   "1",
+   "-1",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "With no edges below the root, the longest root-to-leaf path has zero edges."
+ },
+ {
+  "id": "q3c3e517504c",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which data structure most naturally implements the undo feature of a text editor?",
+  "options": [
+   "Queue",
+   "Binary search tree",
+   "Hash table",
+   "Stack"
+  ],
+  "answer": 3,
+  "explanation": "Undo reverses the most recent action first, which is last-in, first-out behavior."
+ },
+ {
+  "id": "q5d415d6c55d",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "In a non-circular singly linked list, what does the next pointer of the last node hold?",
+  "options": [
+   "A reference to itself",
+   "A reference to the head",
+   "null",
+   "A reference to the second-to-last node"
+  ],
+  "answer": 2,
+  "explanation": "A null next pointer marks the end of the list."
+ }
+]

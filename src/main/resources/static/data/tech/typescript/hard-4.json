@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q382cf1ad649",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "Which declaration form is exempt from strictFunctionTypes and keeps bivariant parameter checking?",
+  "options": [
+   "Property with a function type, e.g. `interface I { m: (x: Dog) => void }`",
+   "Arrow functions assigned to const",
+   "Method shorthand, e.g. `interface I { m(x: Dog): void }`",
+   "Standalone function type aliases"
+  ],
+  "answer": 2,
+  "explanation": "strictFunctionTypes applies to function type syntax but deliberately not to method declarations."
+ },
+ {
+  "id": "q4804b8a9359",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "Given `const c = { port: 8080 } satisfies Record<string, number | string>;`, what is the type of `c.port`?",
+  "options": [
+   "8080",
+   "number",
+   "string | number",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "satisfies keeps the inferred type of the object literal, so port stays number."
+ },
+ {
+  "id": "q381275fb37a",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "What does `{ [K in keyof T as T[K] extends Function ? never : K]: T[K] }` produce?",
+  "options": [
+   "T without its function-typed properties",
+   "T with every property typed as never",
+   "T with only its function-typed properties",
+   "A compile error, because never cannot be a key"
+  ],
+  "answer": 0,
+  "explanation": "Remapping a key to never removes it from the resulting type."
+ },
+ {
+  "id": "q546b877da23",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Un<T> = T extends Promise<infer U> ? Un<U> : T;`, what is `Un<Promise<Promise<number>>>`?",
+  "options": [
+   "Promise<Promise<number>>",
+   "never",
+   "Promise<number>",
+   "number"
+  ],
+  "answer": 3,
+  "explanation": "The recursive conditional keeps unwrapping until the type is no longer a Promise."
+ },
+ {
+  "id": "qbfd8c622172",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Which mapped type is equivalent to `Required<T>`?",
+  "options": [
+   "{ [K in keyof T]?: T[K] }",
+   "{ [K in keyof T]-?: T[K] }",
+   "{ +readonly [K in keyof T]: T[K] }",
+   "{ [K in keyof T]: NonNullable<K> }"
+  ],
+  "answer": 1,
+  "explanation": "-? strips the optional modifier from each property."
+ },
+ {
+  "id": "qb062514ab58",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type IsString<T> = T extends string ? true : false;`, what is `IsString<\"a\">`?",
+  "options": [
+   "false",
+   "never",
+   "boolean",
+   "true"
+  ],
+  "answer": 3,
+  "explanation": "The literal \"a\" is assignable to string, so the true branch is chosen."
+ },
+ {
+  "id": "qac65a06a1f7",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With noUncheckedIndexedAccess enabled, what is the type of `arr[0]` when `arr: string[]`?",
+  "options": [
+   "string",
+   "string | undefined",
+   "unknown",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "The flag adds undefined to element and index signature access because the index may be out of range."
+ },
+ {
+  "id": "q05ca7612541",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type First<T> = T extends [infer F, ...unknown[]] ? F : never;`, what is `First<[1, 2, 3]>`?",
+  "options": [
+   "[1]",
+   "1",
+   "1 | 2 | 3",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "The tuple pattern binds F to the first element type."
+ },
+ {
+  "id": "qa1542192515",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With `Dog` extending `Animal`, what happens with `const dogs: Dog[] = []; const animals: Animal[] = dogs;`?",
+  "options": [
+   "It compiles only with an explicit cast",
+   "Compile error, because arrays are invariant",
+   "It compiles, because arrays are treated covariantly",
+   "Compile error, because arrays are contravariant"
+  ],
+  "answer": 2,
+  "explanation": "TypeScript treats mutable arrays covariantly for convenience, even though this is technically unsound."
+ },
+ {
+  "id": "q095554675f0",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Given ``type Getters<T> = { [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K] };``, what is `Getters<{ name: string }>`?",
+  "options": [
+   "{ getname: () => string }",
+   "{ getName: string }",
+   "{ name: () => string }",
+   "{ getName: () => string }"
+  ],
+  "answer": 3,
+  "explanation": "The as clause remaps each key through the template literal, and Capitalize uppercases the first letter."
+ }
+]

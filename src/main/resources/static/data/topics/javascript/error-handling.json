@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q46e41e6fe1a",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What does new Error(\"outer\", { cause: err }) do?",
+  "options": [
+   "Throws err immediately",
+   "Merges the messages of both errors",
+   "Creates an error that records err as its cause property",
+   "Is a SyntaxError"
+  ],
+  "answer": 2,
+  "explanation": "The cause option (ES2022) attaches the original error so error chains can be inspected."
+ },
+ {
+  "id": "q56b8e844cb8",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "Which is the recommended way to throw an error?",
+  "options": [
+   "console.error(\"message\")",
+   "throw \"message\"",
+   "return Error(\"message\")",
+   "throw new Error(\"message\")"
+  ],
+  "answer": 3,
+  "explanation": "Throwing Error objects provides a message and a stack trace; throwing strings loses that information."
+ },
+ {
+  "id": "q8ef7b06fd3a",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "When does the finally block of a try statement run?",
+  "options": [
+   "Only if no error is thrown",
+   "Only if an error is caught",
+   "Only if the try block returns",
+   "Always, whether or not an error occurred"
+  ],
+  "answer": 3,
+  "explanation": "finally runs after try and catch regardless of the outcome, even if they return."
+ }
+]

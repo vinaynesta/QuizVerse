@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5132ca498cd",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is a lost update?",
+  "options": [
+   "Two transactions read the same value and both write back, so one overwrites the other's change",
+   "A committed change is lost after a server crash",
+   "An UPDATE that matches no rows",
+   "A transaction reads uncommitted data from another"
+  ],
+  "answer": 0,
+  "explanation": "Lost updates can be prevented with SELECT ... FOR UPDATE, atomic UPDATE expressions or a stricter isolation level."
+ },
+ {
+  "id": "q54c41e33ac5",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "What does LAG(price) OVER (ORDER BY day) return for each row?",
+  "options": [
+   "The lowest price seen so far",
+   "The price from the next row in day order",
+   "The price from the previous row in day order, or NULL for the first row",
+   "The difference between this row's price and the previous one"
+  ],
+  "answer": 2,
+  "explanation": "LAG reads a value from an earlier row in the window ordering, and LEAD reads from a later row."
+ },
+ {
+  "id": "q6d2076b93f9",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is the default transaction isolation level in MySQL InnoDB?",
+  "options": [
+   "READ COMMITTED",
+   "READ UNCOMMITTED",
+   "REPEATABLE READ",
+   "SERIALIZABLE"
+  ],
+  "answer": 2,
+  "explanation": "InnoDB defaults to REPEATABLE READ, while PostgreSQL defaults to READ COMMITTED."
+ },
+ {
+  "id": "q7ed536f9d5f",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "Why does a composite index on (a, b) generally not help a query filtering only on WHERE b = 10?",
+  "options": [
+   "Composite indexes can be used only for ORDER BY",
+   "Column b is not stored in the index at all",
+   "Entries are sorted by a first, so matching b values are scattered across the index",
+   "The database must rebuild the index for each query"
+  ],
+  "answer": 2,
+  "explanation": "A B-tree composite index is usable from its leftmost column; filtering on a later column alone usually cannot seek into it."
+ },
+ {
+  "id": "qb81360e497b",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "In PostgreSQL, what does COUNT(*) FILTER (WHERE status = 'paid') compute?",
+  "options": [
+   "The total row count, ignoring the filter",
+   "The number of distinct status values",
+   "The number of rows in each group whose status is 'paid'",
+   "The number of groups that contain a paid row"
+  ],
+  "answer": 2,
+  "explanation": "The FILTER clause restricts the rows that feed a single aggregate without affecting other aggregates in the query."
+ },
+ {
+  "id": "qb887d311c18",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "medium",
+  "question": "Can a single non-recursive CTE be referenced more than once in the same query?",
+  "options": [
+   "Only in the WHERE clause",
+   "No, each CTE can be referenced only once",
+   "Only if it is declared RECURSIVE",
+   "Yes, the main query can refer to it multiple times"
+  ],
+  "answer": 3,
+  "explanation": "A CTE is visible to the whole statement that follows WITH, so it can be joined or selected from repeatedly."
+ },
+ {
+  "id": "qcbebb7f2e99",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "Which PostgreSQL function concatenates values from many rows into one string with a separator?",
+  "options": [
+   "concat_ws",
+   "array_length",
+   "group_concat",
+   "string_agg"
+  ],
+  "answer": 3,
+  "explanation": "string_agg(name, ', ') joins values per group; MySQL's equivalent is GROUP_CONCAT."
+ },
+ {
+  "id": "qaa67f1f5078",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "In PostgreSQL, how does the JSONB type differ from the JSON type?",
+  "options": [
+   "JSONB can store only arrays, while JSON stores objects",
+   "JSONB stores a decomposed binary form that supports indexing, while JSON stores the exact input text",
+   "JSON is faster to query because it is pre-parsed",
+   "JSONB keeps duplicate keys and whitespace exactly as entered"
+  ],
+  "answer": 1,
+  "explanation": "JSONB discards whitespace and duplicate keys, and supports GIN indexes and fast containment operators."
+ },
+ {
+  "id": "qa630ecb3fb8",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "What is a subquery placed in the FROM clause called?",
+  "options": [
+   "A derived table",
+   "A scalar subquery",
+   "A correlated subquery",
+   "A materialized view"
+  ],
+  "answer": 0,
+  "explanation": "A derived table acts as an inline temporary result set that the outer query can select from and join."
+ },
+ {
+  "id": "qa7d77a28239",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "MySQL does not support FULL OUTER JOIN. How is it usually emulated?",
+  "options": [
+   "A CROSS JOIN filtered with WHERE",
+   "A LEFT JOIN combined with a RIGHT JOIN using UNION",
+   "An INNER JOIN with the NATURAL keyword",
+   "Two INNER JOINs combined with INTERSECT"
+  ],
+  "answer": 1,
+  "explanation": "UNION of the left and right joins returns matched rows plus unmatched rows from each side, removing the duplicated matches."
+ }
+]

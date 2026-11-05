@@ -6,14 +6,62 @@
   "level": "easy",
   "question": "Which of these is an input device?",
   "options": [
-   "Printer",
-   "Speaker",
    "Keyboard",
+   "Speaker",
+   "Printer",
    "Monitor"
   ],
-  "answer": 2,
-  "explanation": "A keyboard sends data into the computer; printers, speakers and monitors are output devices.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A keyboard sends data into the computer; printers, speakers and monitors are output devices."
+ },
+ {
+  "id": "q49b9c2db8cb",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "The box that houses the motherboard, power supply and drives of a desktop computer is called the:",
+  "options": [
+   "Monitor",
+   "Keyboard",
+   "Router",
+   "System unit (cabinet)"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The system unit or cabinet holds the motherboard, SMPS, drives and other internal parts."
+ },
+ {
+  "id": "q5bae15251b7",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "What does UPS stand for?",
+  "options": [
+   "Universal Power Source",
+   "Uninterruptible Power Supply",
+   "Unified Power System",
+   "Uninterrupted Processing Supply"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A UPS (Uninterruptible Power Supply) gives battery backup to a computer during a power cut."
+ },
+ {
+  "id": "q6a6f4fc31f5",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "What does CPU stand for?",
+  "options": [
+   "Central Processing Unit",
+   "Central Program Unit",
+   "Computer Processing Unit",
+   "Central Peripheral Unit"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "CPU stands for Central Processing Unit."
  },
  {
   "id": "q740ef8db763",
@@ -22,14 +70,94 @@
   "level": "easy",
   "question": "Which memory loses its contents when the power is switched off?",
   "options": [
-   "ROM",
-   "Hard disk",
    "RAM",
+   "Hard disk",
+   "ROM",
    "Pen drive"
   ],
-  "answer": 2,
-  "explanation": "RAM is volatile memory: it needs power to keep data.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "RAM is volatile memory: it needs power to keep data."
+ },
+ {
+  "id": "q7a3d4415df2",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "Which unit inside a computer converts AC mains power into the DC power used by its components?",
+  "options": [
+   "UPS",
+   "Router",
+   "Modem",
+   "SMPS"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The SMPS (Switched Mode Power Supply) converts AC mains supply into regulated DC for the components."
+ },
+ {
+  "id": "q9618d54a3fe",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "The main circuit board to which the CPU, RAM and other components are connected is called the:",
+  "options": [
+   "Motherboard",
+   "Hard disk",
+   "SMPS",
+   "Graphics card"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The motherboard is the main printed circuit board that connects all components of a computer."
+ },
+ {
+  "id": "q993869e49cb",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "The physical parts of a computer that you can touch are called:",
+  "options": [
+   "Software",
+   "Shareware",
+   "Freeware",
+   "Hardware"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Hardware refers to the physical, tangible components of a computer."
+ },
+ {
+  "id": "qbc0e93d6b12",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "Which port is commonly used to connect a pen drive to a computer?",
+  "options": [
+   "VGA",
+   "PS/2",
+   "RJ-45",
+   "USB"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Pen drives connect through the USB (Universal Serial Bus) port."
+ },
+ {
+  "id": "qe698937022c",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "easy",
+  "question": "Which part of the CPU directs and coordinates all the operations of the computer?",
+  "options": [
+   "Arithmetic Logic Unit",
+   "Control Unit",
+   "Cache",
+   "Hard disk"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Control Unit (CU) fetches and decodes instructions and directs the other units."
  },
  {
   "id": "qf2f3d3a6970",
@@ -38,14 +166,78 @@
   "level": "easy",
   "question": "Which part of a computer is called its 'brain'?",
   "options": [
-   "RAM",
    "CPU",
+   "RAM",
    "Hard disk",
    "Monitor"
   ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The CPU (Central Processing Unit) carries out instructions, so it is called the brain of the computer."
+ },
+ {
+  "id": "q0d04bf962bf",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "What does GPU stand for?",
+  "options": [
+   "Graphical Peripheral Unit",
+   "General Processing Unit",
+   "Graphics Processing Unit",
+   "Global Processing Unit"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A GPU (Graphics Processing Unit) is a processor specialised for rendering images and video."
+ },
+ {
+  "id": "q109397a8a60",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "Which metal component fitted on the CPU draws heat away from it?",
+  "options": [
+   "Heat sink",
+   "Northbridge",
+   "Modem",
+   "SMPS"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A heat sink, usually with a fan, absorbs and dissipates heat from the processor."
+ },
+ {
+  "id": "q288d2f42ad3",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "Which connector is used to plug an Ethernet network cable into a computer?",
+  "options": [
+   "RJ-11",
+   "RJ-45",
+   "DVI",
+   "VGA"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "The CPU (Central Processing Unit) carries out instructions, so it is called the brain of the computer.",
-  "needsReview": true
+  "explanation": "Ethernet cables use the 8-pin RJ-45 connector; RJ-11 is used for telephone lines."
+ },
+ {
+  "id": "q4f45c14b9c5",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "The clock speed of a CPU is measured in:",
+  "options": [
+   "Bytes",
+   "Hertz (e.g. GHz)",
+   "Dots per inch",
+   "Bits per second"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "CPU clock speed is measured in hertz, usually gigahertz (GHz) for modern processors."
  },
  {
   "id": "q554b2399746",
@@ -54,14 +246,30 @@
   "level": "medium",
   "question": "Which small, fast memory sits between the CPU and main memory to speed up access?",
   "options": [
-   "Cache memory",
+   "ROM",
    "Virtual memory",
    "Flash memory",
-   "ROM"
+   "Cache memory"
   ],
-  "answer": 0,
-  "explanation": "Cache memory keeps frequently used data close to the CPU.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Cache memory keeps frequently used data close to the CPU."
+ },
+ {
+  "id": "q5e5221bd4bb",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "Which component keeps the system clock running and BIOS settings saved when the computer is switched off?",
+  "options": [
+   "SMPS",
+   "Heat sink",
+   "CMOS battery",
+   "Cooling fan"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A small CMOS battery on the motherboard powers the real-time clock and keeps BIOS settings."
  },
  {
   "id": "q722b3e8ed8c",
@@ -70,14 +278,62 @@
   "level": "medium",
   "question": "The program that starts the computer and checks the hardware when it is switched on is stored in:",
   "options": [
-   "RAM",
    "ROM (BIOS/firmware)",
+   "RAM",
    "Hard disk only",
    "Cache"
   ],
-  "answer": 1,
-  "explanation": "The BIOS/UEFI firmware is stored in non-volatile ROM so it is available at start-up.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The BIOS/UEFI firmware is stored in non-volatile ROM so it is available at start-up."
+ },
+ {
+  "id": "q77d441e5cb2",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "Which interface is commonly used to connect hard disks and SSDs to the motherboard in modern PCs?",
+  "options": [
+   "VGA",
+   "PS/2",
+   "HDMI",
+   "SATA"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "SATA (Serial ATA) is the standard interface for connecting storage drives."
+ },
+ {
+  "id": "qaba4c890c5b",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "Which port carries both high-definition digital video and audio over a single cable?",
+  "options": [
+   "HDMI",
+   "VGA",
+   "PS/2",
+   "Serial port"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "HDMI (High-Definition Multimedia Interface) carries digital video and audio together; VGA carries only analog video."
+ },
+ {
+  "id": "qe06db1c680b",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "medium",
+  "question": "The hardware check run by the BIOS each time a computer starts is called:",
+  "options": [
+   "Booting sector",
+   "Defragmentation",
+   "POST (Power-On Self-Test)",
+   "Formatting"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "POST (Power-On Self-Test) checks hardware such as RAM and keyboard at start-up."
  },
  {
   "id": "qe922628ada6",
@@ -86,13 +342,141 @@
   "level": "medium",
   "question": "Which part of the CPU performs arithmetic and logical operations?",
   "options": [
-   "Control Unit",
    "ALU",
+   "Control Unit",
    "Register",
    "Cache"
   ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The ALU (Arithmetic Logic Unit) does calculations and comparisons; the control unit directs the work."
+ },
+ {
+  "id": "q1773eb3a162",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "Which of the system buses is unidirectional, carrying signals only from the CPU?",
+  "options": [
+   "Data bus",
+   "Address bus",
+   "Both data and address bus",
+   "None of these"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "The ALU (Arithmetic Logic Unit) does calculations and comparisons; the control unit directs the work.",
-  "needsReview": true
+  "explanation": "The address bus carries memory addresses only from the CPU to memory/devices, while the data bus is bidirectional."
+ },
+ {
+  "id": "q32aba50c423",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "What is the correct order of the basic machine (instruction) cycle?",
+  "options": [
+   "Decode, Fetch, Execute",
+   "Fetch, Execute, Decode",
+   "Execute, Fetch, Decode",
+   "Fetch, Decode, Execute"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The CPU first fetches an instruction from memory, decodes it, and then executes it."
+ },
+ {
+  "id": "q4aea11028ee",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "Which CPU register holds the instruction currently being decoded and executed?",
+  "options": [
+   "Program Counter",
+   "Memory Address Register",
+   "Instruction Register",
+   "Accumulator"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The Instruction Register (IR) holds the instruction that has just been fetched for decoding and execution."
+ },
+ {
+  "id": "q5cfc06c3539",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "A CPU with a 32-bit address bus can directly address how much memory (byte-addressable)?",
+  "options": [
+   "2 GB",
+   "32 GB",
+   "4 GB",
+   "4 MB"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "2^32 bytes = 2^2 x 2^30 bytes = 4 GB."
+ },
+ {
+  "id": "q6fa98de2943",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "Older printers were connected using which port, also known as the Centronics port?",
+  "options": [
+   "Serial port",
+   "PS/2 port",
+   "Parallel port",
+   "RJ-11 port"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The parallel (Centronics/LPT) port sent several bits at once and was widely used for printers."
+ },
+ {
+  "id": "q70ddac99e96",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "On older motherboards, which chip connected the CPU to high-speed components such as RAM and the graphics card?",
+  "options": [
+   "Southbridge",
+   "Northbridge",
+   "BIOS chip",
+   "CMOS chip"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The northbridge handled fast links (CPU, RAM, graphics), while the southbridge handled slower I/O devices."
+ },
+ {
+  "id": "qc8a778a5ea6",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "MIPS, a measure of processor performance, stands for:",
+  "options": [
+   "Mega Integrated Processing System",
+   "Million Information Per Second",
+   "Million Instructions Per Second",
+   "Multiple Instructions Per Second"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "MIPS (Million Instructions Per Second) expresses how many instructions a processor executes."
+ },
+ {
+  "id": "qf7dcc765a35",
+  "subject": "computer",
+  "topic": "hardware",
+  "level": "hard",
+  "question": "Which CPU register holds the address of the next instruction to be executed?",
+  "options": [
+   "Accumulator",
+   "Program Counter",
+   "Instruction Register",
+   "Memory Buffer Register"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Program Counter (PC) stores the memory address of the next instruction to fetch."
  }
 ]

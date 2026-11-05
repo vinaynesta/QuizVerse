@@ -30,6 +30,21 @@
   "explanation": "Kruskal's repeatedly adds the cheapest edge that does not create a cycle."
  },
  {
+  "id": "q96cbcb3decb",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "easy",
+  "question": "Making 30 cents greedily from coins of 25, 10, 5, and 1 cents, how many coins are used?",
+  "options": [
+   "3",
+   "4",
+   "6",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Greedy takes a 25 and then a 5, for two coins in total."
+ },
+ {
   "id": "q2b89b706358",
   "subject": "dsa",
   "topic": "greedy",
@@ -58,6 +73,21 @@
   ],
   "answer": 1,
   "explanation": "Prim grows a single tree by always taking the cheapest edge crossing the tree's boundary."
+ },
+ {
+  "id": "q7a8a40a98c3",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "In the jump game problem (decide whether the last index is reachable), what does the O(n) greedy solution track?",
+  "options": [
+   "The farthest index reachable so far",
+   "The shortest jump seen so far",
+   "The number of zeros in the array",
+   "Every possible path in a list"
+  ],
+  "answer": 0,
+  "explanation": "If the current index ever exceeds the farthest reachable index, the end cannot be reached."
  },
  {
   "id": "q8bbaf669e09",

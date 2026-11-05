@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2178ee7a8d3",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "A host wants to send a packet to an IP on a different subnet. Whose MAC address does it resolve with ARP?",
+  "options": [
+   "The DNS server's",
+   "The remote destination host's",
+   "The subnet broadcast address's",
+   "Its default gateway's"
+  ],
+  "answer": 3,
+  "explanation": "Off-subnet traffic is framed to the next-hop router, so the host ARPs for the gateway's IP."
+ },
+ {
+  "id": "q6f0e23df3eb",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What is a gratuitous ARP?",
+  "options": [
+   "An ARP reply sent by a proxy on behalf of another subnet",
+   "An ARP request for an unknown remote host",
+   "An unsolicited ARP announcing a host's own IP-to-MAC mapping",
+   "A Reverse ARP lookup of an IP from a MAC"
+  ],
+  "answer": 2,
+  "explanation": "Gratuitous ARP updates neighbors' caches (e.g. after failover) and helps detect duplicate IPs."
+ },
+ {
+  "id": "q754381fae50",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "How is an ARP request normally sent?",
+  "options": [
+   "As a multicast to 224.0.0.1",
+   "As a broadcast frame on the local segment",
+   "As a unicast to the DNS server",
+   "As a unicast to the default gateway"
+  ],
+  "answer": 1,
+  "explanation": "The requester doesn't know the target MAC yet, so it broadcasts to FF:FF:FF:FF:FF:FF; the reply is unicast."
+ },
+ {
+  "id": "q36ef1080dc2",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "If a client's SYN carries initial sequence number x and the server's ISN is y, what acknowledgment number is in the server's SYN-ACK?",
+  "options": [
+   "x",
+   "0",
+   "x + 1",
+   "y + 1"
+  ],
+  "answer": 2,
+  "explanation": "The SYN consumes one sequence number, so the server acknowledges x + 1 as the next byte it expects."
+ },
+ {
+  "id": "q32c1ebb50e6",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "For an outbound packet, which header fields does a NAPT device rewrite?",
+  "options": [
+   "Destination IP address and port",
+   "Only the TTL",
+   "Only the MAC addresses",
+   "Source IP address and source port"
+  ],
+  "answer": 3,
+  "explanation": "NAPT replaces the private source address and port with its public address and a chosen port (and fixes checksums)."
+ },
+ {
+  "id": "qcc9aab918e3",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "medium",
+  "question": "What does the TCP receive window field advertise?",
+  "options": [
+   "The measured round-trip time",
+   "The maximum segment size",
+   "How many more bytes the receiver can currently buffer",
+   "The sender's congestion window"
+  ],
+  "answer": 2,
+  "explanation": "The receive window is flow control: it stops a fast sender from overrunning the receiver's buffer."
+ },
+ {
+  "id": "q0390baf5281",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code indicates that a resource has moved permanently?",
+  "options": [
+   "307",
+   "301",
+   "304",
+   "302"
+  ],
+  "answer": 1,
+  "explanation": "301 Moved Permanently (and 308) are permanent; 302 and 307 are temporary redirects."
+ },
+ {
+  "id": "q2867596b88e",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What does ARP do?",
+  "options": [
+   "Resolves an IPv4 address to a MAC address on the local link",
+   "Assigns IP addresses to hosts",
+   "Routes packets between subnets",
+   "Resolves domain names to IP addresses"
+  ],
+  "answer": 0,
+  "explanation": "ARP finds the link-layer address for a next-hop IPv4 address on the same broadcast domain."
+ },
+ {
+  "id": "q25bec4ffd34",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the broadcast address of host 10.0.5.130/25?",
+  "options": [
+   "10.0.5.127",
+   "10.0.255.255",
+   "10.0.5.254",
+   "10.0.5.255"
+  ],
+  "answer": 3,
+  "explanation": "/25 splits the last octet into 0-127 and 128-255; 130 is in the upper half, whose broadcast is .255."
+ },
+ {
+  "id": "q6a91c226d63",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code means a gateway or proxy received an invalid response from the upstream server?",
+  "options": [
+   "500 Internal Server Error",
+   "504 Gateway Timeout",
+   "502 Bad Gateway",
+   "503 Service Unavailable"
+  ],
+  "answer": 2,
+  "explanation": "502 is an invalid upstream response; 504 is when the upstream did not respond in time."
+ }
+]

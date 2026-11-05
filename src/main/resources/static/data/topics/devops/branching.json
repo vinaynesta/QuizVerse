@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q050b3adea6a",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command creates a new branch named feature and switches to it?",
+  "options": [
+   "git branch feature --switch",
+   "git checkout feature",
+   "git switch -c feature",
+   "git new feature"
+  ],
+  "answer": 2,
+  "explanation": "git switch -c creates the branch and checks it out; git checkout -b does the same."
+ },
+ {
+  "id": "q437acf3efcd",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command deletes the local branch old-feature only if it has already been merged?",
+  "options": [
+   "git branch -D old-feature",
+   "git rm old-feature",
+   "git remove branch old-feature",
+   "git branch -d old-feature"
+  ],
+  "answer": 3,
+  "explanation": "The lowercase -d flag refuses to delete a branch with unmerged commits; -D forces deletion."
+ },
+ {
+  "id": "q5465eae4457",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command renames the current branch to main?",
+  "options": [
+   "git branch -m main",
+   "git switch --name main",
+   "git rename main",
+   "git checkout -r main"
+  ],
+  "answer": 0,
+  "explanation": "git branch -m (move) renames a branch; with one argument it renames the current branch."
+ },
+ {
+  "id": "q69c0460a1d2",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command switches to the existing branch named main?",
+  "options": [
+   "git branch main",
+   "git switch main",
+   "git init main",
+   "git checkout -b main"
+  ],
+  "answer": 1,
+  "explanation": "git switch moves HEAD to an existing branch; -c would create a new one."
+ },
+ {
+  "id": "q75f3be5c1c7",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command lists the local branches in the repository?",
+  "options": [
+   "git branches",
+   "git branch",
+   "git list branch",
+   "git ref --heads"
+  ],
+  "answer": 1,
+  "explanation": "Running git branch with no arguments lists local branches and marks the current one with an asterisk."
+ },
+ {
+  "id": "q7920da66b57",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "What does HEAD point to in a normal Git repository?",
+  "options": [
+   "The remote origin URL",
+   "The first commit ever made",
+   "The staging area",
+   "The currently checked-out branch (or commit)"
+  ],
+  "answer": 3,
+  "explanation": "HEAD is a reference to the current branch, or directly to a commit when in detached HEAD state."
+ },
+ {
+  "id": "qd2f1b4ca1e4",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command merges the branch feature into the branch you currently have checked out?",
+  "options": [
+   "git merge feature",
+   "git merge main feature --into",
+   "git pull feature",
+   "git rebase --merge feature"
+  ],
+  "answer": 0,
+  "explanation": "git merge <branch> integrates the named branch's history into the current branch."
+ }
+]

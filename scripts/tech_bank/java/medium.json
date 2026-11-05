@@ -478,5 +478,245 @@
     ],
     "answer": 0,
     "explanation": "A sealed class restricts its direct subclasses to those named in permits, each of which must be final, sealed or non-sealed."
+  },
+  {
+    "topic": "oop",
+    "question": "Since Java 9, can an interface declare private methods?",
+    "options": [
+      "Yes, as helpers for its default and other methods",
+      "No, every interface method must be public",
+      "Only if the interface is sealed",
+      "Only private abstract methods"
+    ],
+    "answer": 0,
+    "explanation": "Private interface methods let default methods share code without exposing it."
+  },
+  {
+    "topic": "oop",
+    "question": "Which code can access a protected member of a class?",
+    "options": [
+      "Only code in the same class",
+      "Only subclasses in the same package",
+      "Any code anywhere",
+      "Code in the same package and subclasses"
+    ],
+    "answer": 3,
+    "explanation": "protected adds subclass access on top of package-private visibility."
+  },
+  {
+    "topic": "oop",
+    "question": "Can a constructor be declared final?",
+    "options": [
+      "Yes, to prevent subclass constructors",
+      "No, it is a compile error",
+      "Yes, but only in abstract classes",
+      "Yes, and it makes the class immutable"
+    ],
+    "answer": 1,
+    "explanation": "Constructors are not inherited or overridden, so final is not a legal modifier for them."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does (int) 3.99 evaluate to?",
+    "options": [
+      "4",
+      "3",
+      "3.99",
+      "It does not compile"
+    ],
+    "answer": 1,
+    "explanation": "Casting a double to int truncates toward zero."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "After int i = 5; int j = i++ + ++i;, what is j?",
+    "options": [
+      "11",
+      "10",
+      "12",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "i++ yields 5 and makes i 6, then ++i makes i 7 and yields 7, so j = 5 + 7 = 12."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does System.out.println('a' + 1) print?",
+    "options": [
+      "b",
+      "a1",
+      "98",
+      "97"
+    ],
+    "answer": 2,
+    "explanation": "The char is promoted to int 97 before addition, and println(int) prints 98."
+  },
+  {
+    "topic": "collections",
+    "question": "Which class is the recommended general-purpose stack or FIFO queue implementation in modern Java?",
+    "options": [
+      "Stack",
+      "ArrayDeque",
+      "Vector",
+      "Hashtable"
+    ],
+    "answer": 1,
+    "explanation": "ArrayDeque is faster than the legacy synchronized Stack and supports both stack and queue operations."
+  },
+  {
+    "topic": "collections",
+    "question": "What does Collections.unmodifiableList(list) return?",
+    "options": [
+      "A read-only view that reflects later changes to the original list",
+      "An independent immutable copy",
+      "A synchronized copy",
+      "The same list with its elements frozen"
+    ],
+    "answer": 0,
+    "explanation": "The view blocks modification through itself but still sees changes made through the backing list."
+  },
+  {
+    "topic": "collections",
+    "question": "To sort a List with Collections.sort(list) and no Comparator, what must its elements implement?",
+    "options": [
+      "Comparator",
+      "Iterable",
+      "Cloneable",
+      "Comparable"
+    ],
+    "answer": 3,
+    "explanation": "Without a Comparator, sorting uses each element's natural ordering via compareTo."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What does Iterator.next() throw when there are no more elements?",
+    "options": [
+      "IndexOutOfBoundsException",
+      "NullPointerException",
+      "IllegalStateException",
+      "NoSuchElementException"
+    ],
+    "answer": 3,
+    "explanation": "Callers should check hasNext() first, or next() throws NoSuchElementException."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What happens if you write catch (IOException e) for a try block whose code cannot throw IOException?",
+    "options": [
+      "It is a compile error",
+      "It compiles and the catch is simply never used",
+      "It compiles with only a warning",
+      "It throws an IOException at runtime"
+    ],
+    "answer": 0,
+    "explanation": "The compiler rejects catch clauses for checked exceptions that the try block can never throw."
+  },
+  {
+    "topic": "generics",
+    "question": "What is type erasure in Java generics?",
+    "options": [
+      "The JVM deletes unused generic classes at runtime",
+      "Generic types are converted into separate classes for each type argument",
+      "The compiler removes type arguments and replaces type parameters with their bounds or Object",
+      "Type parameters are inferred at runtime from the actual objects"
+    ],
+    "answer": 2,
+    "explanation": "Erasure keeps generics compatible with pre-generics bytecode, so type arguments are mostly unavailable at runtime."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does IntStream.rangeClosed(1, 4).sum() return?",
+    "options": [
+      "10",
+      "6",
+      "4",
+      "15"
+    ],
+    "answer": 0,
+    "explanation": "rangeClosed includes both endpoints, so the sum is 1 + 2 + 3 + 4 = 10."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does Stream.of(3, 1, 2).sorted().findFirst().get() return?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "An empty Optional"
+    ],
+    "answer": 2,
+    "explanation": "sorted() orders the elements as 1, 2, 3, and findFirst returns the first."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does Optional.ofNullable(null).orElse(\"x\") return?",
+    "options": [
+      "\"x\"",
+      "null",
+      "An empty Optional",
+      "It throws NullPointerException"
+    ],
+    "answer": 0,
+    "explanation": "ofNullable(null) creates an empty Optional, so orElse returns the fallback."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What does ExecutorService.shutdown() do?",
+    "options": [
+      "Interrupts all running tasks immediately",
+      "Blocks until every task completes",
+      "Stops accepting new tasks while letting already submitted tasks finish",
+      "Discards all queued tasks"
+    ],
+    "answer": 2,
+    "explanation": "shutdown() is an orderly shutdown; use awaitTermination to wait and shutdownNow to interrupt."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What does a CountDownLatch let threads do?",
+    "options": [
+      "Lock a resource for exclusive access",
+      "Run tasks on a fixed schedule",
+      "Exchange objects in pairs",
+      "Wait until a counter is decremented to zero by other threads"
+    ],
+    "answer": 3,
+    "explanation": "Threads call await() and are released once countDown() has been called the configured number of times."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "In HotSpot since Java 8, which native memory area stores class metadata, replacing PermGen?",
+    "options": [
+      "Eden space",
+      "Metaspace",
+      "The thread stack",
+      "The string pool"
+    ],
+    "answer": 1,
+    "explanation": "Metaspace is allocated from native memory and grows as needed unless MaxMetaspaceSize is set."
+  },
+  {
+    "topic": "strings",
+    "question": "What does \"a-b-c\".replace(\"-\", \"\") return?",
+    "options": [
+      "\"a-b-c\"",
+      "\"abc\"",
+      "\"ab-c\"",
+      "\"-\""
+    ],
+    "answer": 1,
+    "explanation": "replace substitutes every occurrence of the target sequence."
+  },
+  {
+    "topic": "modern-java",
+    "question": "Given record Point(int x, int y), how do you read the x component of a Point p?",
+    "options": [
+      "p.getX()",
+      "p.x",
+      "p.get(\"x\")",
+      "p.x()"
+    ],
+    "answer": 3,
+    "explanation": "Records generate accessor methods named exactly after their components, and the fields themselves are private."
   }
 ]

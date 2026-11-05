@@ -60,6 +60,21 @@
   "explanation": "Computed values are cached based on their reactive dependencies, unlike methods which run on each call."
  },
  {
+  "id": "qecdc030aa31",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "In the Options API, which option defines cached derived values?",
+  "options": [
+   "methods",
+   "watch",
+   "computed",
+   "data"
+  ],
+  "answer": 2,
+  "explanation": "Properties in the computed option are cached and recalculated only when their reactive dependencies change."
+ },
+ {
   "id": "q009c0d69cdc",
   "subject": "vue",
   "topic": "computed-watchers",
@@ -73,6 +88,36 @@
   ],
   "answer": 3,
   "explanation": "immediate: true runs the callback immediately with the current value as well as on later changes."
+ },
+ {
+  "id": "q03215633f44",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "What does the deep option do for watch?",
+  "options": [
+   "Watches all components in the tree",
+   "Triggers the callback on nested property mutations of the watched source",
+   "Makes the callback run before the DOM update",
+   "Debounces the callback"
+  ],
+  "answer": 1,
+  "explanation": "deep: true traverses the source so nested changes trigger it, which is implicit when watching a reactive object directly."
+ },
+ {
+  "id": "q7d6014df474",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "How do you stop a watcher created with watch() before the component unmounts?",
+  "options": [
+   "Call watch.off()",
+   "Call the stop function returned by watch()",
+   "Watchers cannot be stopped manually",
+   "Set the source to null"
+  ],
+  "answer": 1,
+  "explanation": "watch and watchEffect return a handle you can call to stop the watcher."
  },
  {
   "id": "q7efaf0bff1a",
@@ -150,6 +195,21 @@
   "explanation": "Tracking happens during synchronous execution, so reads after an await are not recorded."
  },
  {
+  "id": "q300393bd35c",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "In Vue 3.4+, a computed returns the same primitive value after its dependencies change. What happens to effects depending on it?",
+  "options": [
+   "They are not triggered, because the computed value did not change",
+   "They always re-run",
+   "Vue throws a warning",
+   "The computed is recreated"
+  ],
+  "answer": 0,
+  "explanation": "Since 3.4, computed only triggers dependents when its computed value actually changes."
+ },
+ {
   "id": "q6355305652d",
   "subject": "vue",
   "topic": "computed-watchers",
@@ -178,5 +238,20 @@
   ],
   "answer": 0,
   "explanation": "watch only fires on changes to its declared source, while watchEffect runs immediately and tracks whatever it reads."
+ },
+ {
+  "id": "qf70a8b3530b",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "What does the once: true option do for watch in Vue 3.4+?",
+  "options": [
+   "The callback runs only for the first change and the watcher then stops",
+   "The callback runs once immediately and then on every change",
+   "Duplicate changes in one tick are ignored forever",
+   "The source is read only once at creation"
+  ],
+  "answer": 0,
+  "explanation": "once: true makes the watcher stop itself after its callback has fired a single time."
  }
 ]

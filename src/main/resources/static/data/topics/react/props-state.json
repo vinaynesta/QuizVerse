@@ -15,6 +15,21 @@
   "explanation": "Setting state schedules a re-render; the new value is visible on the next render, not in the current one."
  },
  {
+  "id": "q4547ebac3cc",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Can a component change the props it receives?",
+  "options": [
+   "Only for props that are objects",
+   "Yes, by assigning to props directly",
+   "Yes, but only inside useEffect",
+   "No, props are read-only for the receiving component"
+  ],
+  "answer": 3,
+  "explanation": "Props should be treated as immutable; a component asks its parent to change them, often via a callback prop."
+ },
+ {
   "id": "q4851ba0125b",
   "subject": "react",
   "topic": "props-state",
@@ -28,6 +43,21 @@
   ],
   "answer": 2,
   "explanation": "useState returns a state value and a setter, and calling the setter triggers a re-render."
+ },
+ {
+  "id": "q4e7e807fc04",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "How does a child component tell its parent that something happened?",
+  "options": [
+   "By calling a function the parent passed as a prop",
+   "By modifying the parent's state variable directly",
+   "By returning a value from render",
+   "By dispatching a DOM event to the parent"
+  ],
+  "answer": 0,
+  "explanation": "Parents pass callbacks like onChange, and children call them to communicate upward."
  },
  {
   "id": "qb1098f5804c",
@@ -60,6 +90,21 @@
   "explanation": "Props are passed down by the parent and should be treated as read-only by the receiving component."
  },
  {
+  "id": "qfda4a3f4bc2",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "How do you give a prop a default value in a function component?",
+  "options": [
+   "Use a default value when destructuring, like function Button({ size = 'md' })",
+   "Call setDefaultProps() inside the component",
+   "Pass default={...} to the component",
+   "Defaults are impossible in function components"
+  ],
+  "answer": 0,
+  "explanation": "JavaScript default parameter values are the recommended way to define default props."
+ },
+ {
   "id": "q4cc1a7db5a0",
   "subject": "react",
   "topic": "props-state",
@@ -75,6 +120,21 @@
   "explanation": "Lifting state up gives a single source of truth that both siblings receive via props, along with a setter."
  },
  {
+  "id": "q5589baf143e",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is the correct way to update one field of an object in state, like { name, age }?",
+  "options": [
+   "person.age = 31; setPerson(person)",
+   "setPerson({ ...person, age: 31 })",
+   "setPerson.age(31)",
+   "setPerson(age: 31)"
+  ],
+  "answer": 1,
+  "explanation": "State should be replaced with a new object; spreading copies the other fields."
+ },
+ {
   "id": "q92511473f76",
   "subject": "react",
   "topic": "props-state",
@@ -88,6 +148,36 @@
   ],
   "answer": 1,
   "explanation": "State must be treated as immutable; creating a new array lets React detect the change by reference."
+ },
+ {
+  "id": "qc226016da40",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "When should a piece of data be stored in a ref instead of state?",
+  "options": [
+   "When it must be shown on screen",
+   "When multiple components need it",
+   "When it does not affect the rendered output, such as a timer id",
+   "Never, refs are only for DOM nodes"
+  ],
+  "answer": 2,
+  "explanation": "Refs hold mutable values that persist across renders without triggering a re-render, so they suit data the JSX does not read."
+ },
+ {
+  "id": "qc92373dea49",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is a good reason to keep state as minimal as possible?",
+  "options": [
+   "Values that can be computed from props or other state should be computed during render to avoid getting out of sync",
+   "Minimal state disables re-renders",
+   "useState is slow for strings",
+   "React limits each component to three state variables"
+  ],
+  "answer": 0,
+  "explanation": "Redundant state must be kept in sync manually, which is a common source of bugs."
  },
  {
   "id": "qcdd8670a5a4",
@@ -150,6 +240,21 @@
   "explanation": "The first queues a replacement with 5, then the updater runs on that pending value, producing 6."
  },
  {
+  "id": "q5c5bfd3ddb2",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "Why does a state variable that holds a function need useState(() => fn) instead of useState(fn)?",
+  "options": [
+   "Functions cannot be stored in state at all",
+   "It avoids creating a closure",
+   "useState calls a function argument as an initializer, so fn would be called and its return value stored",
+   "useState(fn) makes the state read-only"
+  ],
+  "answer": 2,
+  "explanation": "A function passed to useState is treated as a lazy initializer, and the same applies to setState updaters."
+ },
+ {
   "id": "q817fe0769e1",
   "subject": "react",
   "topic": "props-state",
@@ -163,6 +268,21 @@
   ],
   "answer": 1,
   "explanation": "State is a snapshot for the current render; the new value is only available on the next render."
+ },
+ {
+  "id": "q901fda5c5e1",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "During render, a component compares props.items with a prevItems state value and calls setPrevItems(props.items) when they differ. What does React do?",
+  "options": [
+   "It throws a Too many re-renders error every time",
+   "It discards the returned JSX and immediately re-renders that component with the new state before rendering its children",
+   "It schedules the update for after the commit",
+   "It ignores state updates made during render"
+  ],
+  "answer": 1,
+  "explanation": "Setting the component's own state during render, guarded by a condition, is the documented pattern for adjusting state when a prop changes."
  },
  {
   "id": "qf973a484a8d",

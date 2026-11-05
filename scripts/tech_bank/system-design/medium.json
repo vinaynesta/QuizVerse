@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "caching",
+    "question": "In a write-through cache, when is a write acknowledged to the client?",
+    "options": [
+      "After it has been written to both the cache and the backing store",
+      "After it is written only to the cache, before the store is updated",
+      "Only after the entry is evicted from the cache",
+      "After the next read of the same key"
+    ],
+    "answer": 0,
+    "explanation": "Write-through trades higher write latency for the guarantee that the cache and store agree."
+  },
+  {
+    "topic": "caching",
+    "question": "Which description matches the cache-aside pattern?",
+    "options": [
+      "The cache automatically pulls every row from the database on each write",
+      "The application checks the cache first, loads from the database on a miss, and then populates the cache",
+      "The database pushes every change into the cache as the only read path",
+      "Clients write only to the cache, which flushes to the database nightly"
+    ],
+    "answer": 1,
+    "explanation": "In cache-aside the application controls population and invalidation of the cache."
+  },
+  {
+    "topic": "caching",
+    "question": "What is the main risk of a write-back (write-behind) cache?",
+    "options": [
+      "Reads always return data that is older than the database",
+      "Writes cannot proceed while the cache is warming up",
+      "Acknowledged writes can be lost if the cache fails before the data reaches the database",
+      "Every read must bypass the cache to stay correct"
+    ],
+    "answer": 2,
+    "explanation": "Write-back acknowledges writes early and flushes later, so unflushed data exists only in the cache."
+  },
+  {
+    "topic": "caching",
+    "question": "Which approach avoids explicit invalidation when content changes?",
+    "options": [
+      "Lowering the TTL to one millisecond for every key",
+      "Disabling the cache during every write",
+      "Storing each entry twice on the same cache node",
+      "Embedding a content version or hash in the cache key so changed content gets a new key"
+    ],
+    "answer": 3,
+    "explanation": "Old keys simply stop being requested and age out, so no delete is needed."
+  },
+  {
+    "topic": "caching",
+    "question": "What is a cache stampede (thundering herd)?",
+    "options": [
+      "Many concurrent requests miss on the same expired key and overload the backing store",
+      "A cache growing beyond its memory limit without evicting entries",
+      "Two services writing conflicting values to the same key",
+      "Clients repeatedly receiving 304 Not Modified responses"
+    ],
+    "answer": 0,
+    "explanation": "Mitigations include request coalescing, locking during regeneration, and refreshing hot keys before they expire."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "Why is sharding by a monotonically increasing timestamp a common mistake?",
+    "options": [
+      "Reads can no longer be routed to any shard",
+      "All new writes concentrate on the newest shard, creating a write hotspot",
+      "Primary keys stop being unique across shards",
+      "Replication lag drops to zero"
+    ],
+    "answer": 1,
+    "explanation": "Sequential keys send nearly every insert to the same key range, so one shard takes most of the write load."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "What is the main tradeoff of hash-based sharding compared with range-based sharding?",
+    "options": [
+      "Range queries become faster while writes concentrate on one shard",
+      "Adding shards never requires moving any data",
+      "Keys spread evenly, but range scans must query many shards",
+      "Joins become local to a single shard automatically"
+    ],
+    "answer": 2,
+    "explanation": "Hashing destroys key ordering, so range queries touch many shards, while range sharding risks hotspots."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "Why does consistent hashing reduce data movement compared with hash(key) mod N?",
+    "options": [
+      "It guarantees strict global ordering of keys across nodes",
+      "It eliminates the need for replication",
+      "It places every key on every node",
+      "Adding or removing a node remaps only a small fraction of keys instead of nearly all of them"
+    ],
+    "answer": 3,
+    "explanation": "With mod N, changing N reshuffles most keys; on a hash ring only keys adjacent to the changed node move."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "What is the core challenge of a transaction that spans multiple shards?",
+    "options": [
+      "Coordinating an atomic commit across shards, typically with 2PC or saga-style compensation",
+      "Shards are not allowed to store more than one table",
+      "Each shard requires a different SQL dialect",
+      "Transactions are disabled by default on every shard"
+    ],
+    "answer": 0,
+    "explanation": "Atomicity across independent databases needs a coordination protocol, which adds latency and failure modes."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "A user saves a profile change, then immediately reads from a replica and sees the old value. What anomaly is this?",
+    "options": [
+      "Split brain",
+      "A read-your-writes violation caused by replication lag",
+      "Write skew",
+      "Cache penetration"
+    ],
+    "answer": 1,
+    "explanation": "The primary acknowledged the write, but the lagging replica has not yet applied it."
+  },
+  {
+    "topic": "messaging",
+    "question": "Which pattern delivers each message to every subscribing consumer group?",
+    "options": [
+      "Point-to-point queue",
+      "Round-robin load balancing",
+      "Publish/subscribe",
+      "Synchronous request/response RPC"
+    ],
+    "answer": 2,
+    "explanation": "In pub/sub each subscriber receives its own copy, whereas a work queue hands each message to one consumer."
+  },
+  {
+    "topic": "messaging",
+    "question": "In Kafka, what limits the parallelism of a single consumer group reading one topic?",
+    "options": [
+      "The number of brokers in the cluster only",
+      "The topic's replication factor",
+      "The retention period in hours",
+      "The number of partitions, since each partition is assigned to at most one consumer in the group"
+    ],
+    "answer": 3,
+    "explanation": "Consumers beyond the partition count sit idle within the group."
+  },
+  {
+    "topic": "messaging",
+    "question": "With at-least-once delivery, what must a consumer do to avoid double effects?",
+    "options": [
+      "Make processing idempotent, for example by deduplicating on a message ID",
+      "Disable acknowledgements so messages are never redelivered",
+      "Process messages only in one strict global order",
+      "Store messages only in memory"
+    ],
+    "answer": 0,
+    "explanation": "A redelivery can happen after a crash that occurs before the ack, so the same message may arrive twice."
+  },
+  {
+    "topic": "messaging",
+    "question": "What is the purpose of a dead-letter queue?",
+    "options": [
+      "To keep the primary archive of all messages",
+      "To hold messages that repeatedly fail processing so they do not block the main flow",
+      "To replicate messages across regions",
+      "To cache consumer responses for a day"
+    ],
+    "answer": 1,
+    "explanation": "Failed messages are parked for inspection or replay instead of being retried forever."
+  },
+  {
+    "topic": "messaging",
+    "question": "Where does Kafka guarantee ordering of records?",
+    "options": [
+      "Across all partitions of a topic",
+      "Across all topics in the cluster",
+      "Within a single partition",
+      "Across every consumer group independently"
+    ],
+    "answer": 2,
+    "explanation": "Ordering is per partition; there is no global order across partitions."
+  },
+  {
+    "topic": "api-design",
+    "question": "Why do payment APIs accept an Idempotency-Key header on POST requests?",
+    "options": [
+      "To compress the request body before transmission",
+      "To authenticate the caller's identity",
+      "To route the request to the nearest data center",
+      "So retries after a timeout do not create duplicate charges"
+    ],
+    "answer": 3,
+    "explanation": "The server stores the key and result so a repeated request returns the original outcome instead of executing again."
+  },
+  {
+    "topic": "api-design",
+    "question": "Why is cursor-based pagination often preferred over offset pagination for large, changing datasets?",
+    "options": [
+      "Offsets can skip or repeat items when rows are inserted or deleted between pages",
+      "Offsets cannot be sorted by any column",
+      "Cursors remove the need for an index",
+      "Cursors always return the full dataset in one response"
+    ],
+    "answer": 0,
+    "explanation": "A cursor anchors to a position such as the last seen key, so concurrent inserts do not shift the window."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which HTTP method best fits updating only the email field of a user resource?",
+    "options": [
+      "PUT, because it updates only the fields that are provided",
+      "PATCH",
+      "DELETE followed by POST",
+      "GET with a JSON request body"
+    ],
+    "answer": 1,
+    "explanation": "PATCH applies a partial modification; PUT is defined as replacing the whole resource."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which API change is most likely to break existing clients?",
+    "options": [
+      "Adding a new optional field to a response",
+      "Adding a new endpoint",
+      "Renaming a field in a response",
+      "Adding an optional query parameter with a default value"
+    ],
+    "answer": 2,
+    "explanation": "Clients that read the old field name fail when it disappears, while additive changes are generally safe."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "Which response best tells a client to back off and retry later?",
+    "options": [
+      "400 Bad Request with a Retry-After header",
+      "401 Unauthorized with a WWW-Authenticate header",
+      "404 Not Found with a Location header",
+      "429 Too Many Requests with a Retry-After header"
+    ],
+    "answer": 3,
+    "explanation": "429 signals rate limiting, and Retry-After indicates how long to wait before retrying."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "Which rate-limiting algorithm allows short bursts while enforcing a long-run average rate?",
+    "options": [
+      "Token bucket",
+      "Fixed window counter",
+      "Consistent hashing",
+      "Round-robin scheduling"
+    ],
+    "answer": 0,
+    "explanation": "Tokens accumulate up to the bucket capacity, so bursts up to that size pass while the refill rate sets the average."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "What weakness does a fixed-window counter rate limiter have?",
+    "options": [
+      "It cannot count requests per individual user",
+      "A burst straddling a window boundary can let through up to twice the intended limit",
+      "It needs a sorted set and cannot scale horizontally",
+      "It drops every request when the window resets"
+    ],
+    "answer": 1,
+    "explanation": "Requests at the end of one window and the start of the next are counted in different windows, so they can double up."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "What is needed to enforce one rate limit across several stateless API servers?",
+    "options": [
+      "Disabling the limit whenever more than one node is running",
+      "Storing the counter only in the client's cookie",
+      "Shared counter state, such as a central store like Redis, or approximate per-node limits",
+      "Increasing each server's thread pool size"
+    ],
+    "answer": 2,
+    "explanation": "Without shared state each node counts independently, so the effective global limit is multiplied by the node count."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "Which rate-limiting approach is most accurate but uses the most memory, since it stores a timestamp for each request?",
+    "options": [
+      "Fixed window counter",
+      "Token bucket",
+      "Leaky bucket meter",
+      "Sliding window log"
+    ],
+    "answer": 3,
+    "explanation": "The log gives exact counts over any window, at the cost of storing every request timestamp in that window."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "How should a client react to repeated 429 responses?",
+    "options": [
+      "Retry with exponential backoff and random jitter, honoring Retry-After when present",
+      "Retry immediately in a tight loop until the call succeeds",
+      "Send the same request from many threads in parallel",
+      "Switch to HTTP/1.0 and resend the request"
+    ],
+    "answer": 0,
+    "explanation": "Backoff with jitter reduces synchronized retry spikes that would keep the service overloaded."
+  },
+  {
+    "topic": "reliability",
+    "question": "Which situation makes automatic retries most dangerous?",
+    "options": [
+      "Retrying a GET request to a read-only endpoint",
+      "Retrying a non-idempotent operation, such as charging a card, without a deduplication key",
+      "Retrying a health check probe",
+      "Retrying a DNS lookup"
+    ],
+    "answer": 1,
+    "explanation": "A retry after an ambiguous timeout may repeat the side effect if the first attempt actually succeeded."
+  },
+  {
+    "topic": "reliability",
+    "question": "What does the half-open state in a circuit breaker do?",
+    "options": [
+      "Rejects all requests permanently until the process restarts",
+      "Routes every request to a backup region",
+      "Lets a limited number of trial requests through to test whether the dependency has recovered",
+      "Caches all responses for an hour"
+    ],
+    "answer": 2,
+    "explanation": "If the trial calls succeed the breaker closes again; if they fail it reopens."
+  },
+  {
+    "topic": "reliability",
+    "question": "What does the bulkhead pattern achieve?",
+    "options": [
+      "It splits a database into shards by row range",
+      "It duplicates the entire service in every region",
+      "It compresses messages to reduce bandwidth",
+      "It isolates resource pools per dependency so one failing dependency cannot exhaust shared capacity"
+    ],
+    "answer": 3,
+    "explanation": "Named after ship compartments, bulkheads keep one failure from sinking the whole system."
+  },
+  {
+    "topic": "reliability",
+    "question": "Which is an example of graceful degradation?",
+    "options": [
+      "Showing a product page without personalized recommendations when the recommendation service is down",
+      "Returning HTTP 500 for every request when any dependency fails",
+      "Disabling checkout whenever a cache miss occurs",
+      "Turning off all logging when a dependency is slow"
+    ],
+    "answer": 0,
+    "explanation": "The core experience keeps working while a non-critical feature is reduced or removed."
+  },
+  {
+    "topic": "reliability",
+    "question": "Why is random jitter added to retry delays?",
+    "options": [
+      "It guarantees that retries succeed on the first attempt",
+      "It spreads retries out so many clients do not hit a recovering service at the same moment",
+      "It forces requests to arrive in strict FIFO order",
+      "It reduces the number of TCP packets sent"
+    ],
+    "answer": 1,
+    "explanation": "Synchronized retries create spikes that can prevent a recovering service from catching up."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What is a drawback of sticky sessions (session affinity)?",
+    "options": [
+      "Requests can no longer be encrypted",
+      "Health checks stop working",
+      "Load can become uneven, and losing the pinned server loses that user's in-memory session",
+      "The load balancer must store the full database"
+    ],
+    "answer": 2,
+    "explanation": "Pinning clients to servers reduces balancing flexibility and ties session state to a specific instance."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What information does a Layer 4 load balancer typically use to route traffic?",
+    "options": [
+      "The full HTTP path and cookies",
+      "The decrypted JSON body of each request",
+      "The query plan of the database",
+      "IP addresses and TCP/UDP ports, without inspecting HTTP content"
+    ],
+    "answer": 3,
+    "explanation": "L4 balancers forward connections based on network and transport headers, which is fast but content-blind."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "Which technique sends users to the nearest regional deployment based on their location?",
+    "options": [
+      "GeoDNS or latency-based DNS routing",
+      "Round-robin TCP port mapping",
+      "Sticky cookie injection at the database",
+      "Two-phase commit across regions"
+    ],
+    "answer": 0,
+    "explanation": "DNS resolvers return different addresses depending on the query's origin or the lowest-latency region."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What is the power of two random choices load-balancing strategy?",
+    "options": [
+      "Send each request to two servers at once and keep the first response",
+      "Sample two servers at random and send the request to the less loaded one",
+      "Alternate between two data centers every hour",
+      "Split each request into two halves for parallel processing"
+    ],
+    "answer": 1,
+    "explanation": "Comparing just two random candidates captures most of the benefit of checking every server, at much lower cost."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "Why can a deep health check that verifies a shared database be risky?",
+    "options": [
+      "Health checks permanently consume the database's write capacity",
+      "Load balancers ignore any health check that touches a dependency",
+      "A brief database blip can mark every instance unhealthy at once, causing a full outage",
+      "Health checks disable TLS on every connection"
+    ],
+    "answer": 2,
+    "explanation": "Shallow checks report whether the instance itself is alive, so a shared dependency failure does not remove all capacity."
+  },
+  {
+    "topic": "consistency",
+    "question": "In an eventually consistent system, what is guaranteed if no new writes occur?",
+    "options": [
+      "Every read immediately returns the latest write",
+      "Writes are rejected while replicas synchronize",
+      "Replicas never diverge, even while writes are in flight",
+      "All replicas eventually converge to the same value"
+    ],
+    "answer": 3,
+    "explanation": "Eventual consistency promises convergence over time, not immediate agreement on every read."
+  },
+  {
+    "topic": "consistency",
+    "question": "Which guarantee means a user always sees their own previous updates?",
+    "options": [
+      "Read-your-writes consistency",
+      "Linearizability across all clients",
+      "Exactly-once delivery",
+      "Last-writer-wins merging"
+    ],
+    "answer": 0,
+    "explanation": "Read-your-writes is a session guarantee; it can be met by routing a user's reads to the primary or to a replica that has their write."
+  },
+  {
+    "topic": "consistency",
+    "question": "What is the main risk of last-write-wins conflict resolution?",
+    "options": [
+      "It requires a global lock on every write",
+      "Concurrent updates can silently overwrite each other, and clock skew can pick the wrong winner",
+      "It makes reads impossible during replication",
+      "It requires all writes to go through a single leader"
+    ],
+    "answer": 1,
+    "explanation": "LWW keeps one value and discards the others, so a legitimate concurrent update can be lost."
+  },
+  {
+    "topic": "consistency",
+    "question": "How does an ETag or version field prevent lost updates?",
+    "options": [
+      "It encrypts the record so only one client can read it",
+      "It forces every read to hit the primary",
+      "The update succeeds only if the version still matches what the client last read",
+      "It deletes the old record after each update"
+    ],
+    "answer": 2,
+    "explanation": "This is optimistic concurrency control; a mismatch returns a conflict so the client can re-read and retry."
+  },
+  {
+    "topic": "consistency",
+    "question": "Which consistency model is weaker than linearizability but still preserves cause-and-effect ordering?",
+    "options": [
+      "Serializability without any ordering",
+      "Read uncommitted",
+      "Exactly-once processing",
+      "Causal consistency"
+    ],
+    "answer": 3,
+    "explanation": "Causal consistency keeps causally related operations in order, while concurrent operations may be seen in different orders."
+  },
+  {
+    "topic": "caching",
+    "question": "What is negative caching?",
+    "options": [
+      "Caching the fact that a lookup found nothing, so repeated misses do not hit the database",
+      "Evicting the most popular entries first",
+      "Storing only deleted records",
+      "Disabling the cache during high load"
+    ],
+    "answer": 0,
+    "explanation": "Short-lived entries for not-found results protect the backing store from repeated lookups for missing keys."
+  },
+  {
+    "topic": "caching",
+    "question": "In a write-around cache, what happens on a write?",
+    "options": [
+      "The data is written to the cache and the database together",
+      "The data goes directly to the database, bypassing the cache",
+      "The data is written only to the cache",
+      "The write is rejected until the cache is cleared"
+    ],
+    "answer": 1,
+    "explanation": "Write-around avoids filling the cache with data that may never be read."
+  },
+  {
+    "topic": "caching",
+    "question": "Which technique helps prevent a cache stampede when a hot key expires?",
+    "options": [
+      "Lowering the TTL of the key",
+      "Disabling the cache for that key",
+      "Letting only one request recompute the value, using a lock or request coalescing, while others wait or get the stale value",
+      "Sending every miss to a different database replica"
+    ],
+    "answer": 2,
+    "explanation": "Single-flight recomputation keeps one expiry from triggering many identical backend queries."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "What is denormalization?",
+    "options": [
+      "Splitting tables into smaller normalized tables",
+      "Removing all indexes",
+      "Encrypting duplicated columns",
+      "Storing redundant copies of data to avoid expensive joins on reads"
+    ],
+    "answer": 3,
+    "explanation": "Denormalization trades extra storage and harder writes for faster reads."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "What is connection pooling?",
+    "options": [
+      "Reusing a set of open database connections across requests instead of opening a new one each time",
+      "Combining several databases into one",
+      "Sharding a table across connections",
+      "Caching query results in the client"
+    ],
+    "answer": 0,
+    "explanation": "Opening connections is expensive, and pools also cap how many connections hit the database."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "What is a hot partition (hot shard)?",
+    "options": [
+      "A shard that stores only cached data",
+      "A shard receiving a disproportionate share of traffic, often due to a skewed key",
+      "A shard that was recently added",
+      "A shard located in the hottest data center"
+    ],
+    "answer": 1,
+    "explanation": "Skewed keys, such as a celebrity's user ID, concentrate load on one shard."
+  },
+  {
+    "topic": "databases-scaling",
+    "question": "What does a covering index allow a database to do?",
+    "options": [
+      "Store a table in multiple regions",
+      "Lock fewer rows during writes",
+      "Answer a query entirely from the index without reading the table rows",
+      "Skip writing to the transaction log"
+    ],
+    "answer": 2,
+    "explanation": "If the index contains every column a query needs, the extra lookup into the table is avoided."
+  },
+  {
+    "topic": "messaging",
+    "question": "What is back pressure in a messaging system?",
+    "options": [
+      "Sending messages in reverse order",
+      "Encrypting messages in transit",
+      "Retrying failed messages immediately",
+      "A slow consumer signaling or forcing producers to slow down so queues do not grow without bound"
+    ],
+    "answer": 3,
+    "explanation": "Without back pressure, a fast producer can exhaust memory or queue capacity."
+  },
+  {
+    "topic": "messaging",
+    "question": "What is the main benefit of putting a queue between a web server and a slow worker?",
+    "options": [
+      "Requests are acknowledged quickly, and work is processed asynchronously at the worker's pace",
+      "Every request is guaranteed to finish faster",
+      "The worker no longer needs error handling",
+      "Messages are processed in a random order"
+    ],
+    "answer": 0,
+    "explanation": "The queue decouples the services and absorbs traffic spikes."
+  },
+  {
+    "topic": "messaging",
+    "question": "What does a Kafka consumer offset represent?",
+    "options": [
+      "The total size of the topic",
+      "The position of the next record the consumer group will read in a partition",
+      "The number of consumers in the group",
+      "The time a message was produced"
+    ],
+    "answer": 1,
+    "explanation": "Committed offsets let a consumer group resume where it left off after a restart."
+  },
+  {
+    "topic": "api-design",
+    "question": "What is a key advantage of gRPC over REST with JSON for internal service-to-service calls?",
+    "options": [
+      "It works directly in every browser without a proxy",
+      "It needs no schema",
+      "Compact binary Protocol Buffers over HTTP/2, with generated typed clients",
+      "It always uses UDP"
+    ],
+    "answer": 2,
+    "explanation": "Protobuf messages are smaller and faster to parse than JSON, and the schema generates client code."
+  },
+  {
+    "topic": "api-design",
+    "question": "What problem does GraphQL mainly address compared with fixed REST endpoints?",
+    "options": [
+      "Server-side caching of responses",
+      "Encrypting API traffic",
+      "Rate limiting clients",
+      "Over-fetching and under-fetching, by letting clients request exactly the fields they need"
+    ],
+    "answer": 3,
+    "explanation": "A single GraphQL query can fetch nested data that might take several REST calls."
+  },
+  {
+    "topic": "api-design",
+    "question": "What is an API gateway?",
+    "options": [
+      "A single entry point that routes requests to backend services and handles concerns such as authentication and rate limiting",
+      "A database that stores API keys",
+      "A library that generates API documentation",
+      "A load balancer that only works at Layer 4"
+    ],
+    "answer": 0,
+    "explanation": "Gateways centralize cross-cutting concerns so each service need not implement them."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "How does the leaky bucket algorithm shape traffic?",
+    "options": [
+      "It allows unlimited bursts",
+      "It processes requests at a constant outflow rate, queuing or dropping excess",
+      "It resets the counter at fixed window boundaries",
+      "It blocks clients permanently after one violation"
+    ],
+    "answer": 1,
+    "explanation": "The bucket drains at a fixed rate, smoothing bursts into a steady stream."
+  },
+  {
+    "topic": "rate-limiting",
+    "question": "How does a sliding window counter rate limiter estimate the request count?",
+    "options": [
+      "It stores a timestamp for every request",
+      "It counts only the current fixed window",
+      "It weights the previous window's count by its overlap with the sliding window and adds the current window's count",
+      "It uses a random sample of requests"
+    ],
+    "answer": 2,
+    "explanation": "This approximation smooths boundary bursts using just two counters per key."
+  },
+  {
+    "topic": "reliability",
+    "question": "Why should every remote call have a timeout?",
+    "options": [
+      "Timeouts make calls faster",
+      "Timeouts are required by HTTP",
+      "Timeouts remove the need for retries",
+      "Without one, a hung dependency can tie up threads and connections indefinitely"
+    ],
+    "answer": 3,
+    "explanation": "Bounded waits free resources so a slow dependency cannot stall the caller."
+  },
+  {
+    "topic": "reliability",
+    "question": "What does a circuit breaker do when it is in the open state?",
+    "options": [
+      "Fails calls immediately without contacting the failing dependency",
+      "Sends all calls to the dependency",
+      "Sends a few trial calls",
+      "Restarts the dependency"
+    ],
+    "answer": 0,
+    "explanation": "Failing fast gives the dependency time to recover and keeps callers from waiting on timeouts."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What is connection draining (deregistration delay)?",
+    "options": [
+      "Closing all connections at once when a server fails",
+      "Letting in-flight requests finish on a server being removed, while sending it no new requests",
+      "Limiting connections per client",
+      "Moving connections between data centers"
+    ],
+    "answer": 1,
+    "explanation": "Draining lets instances leave rotation during deploys or scale-in without dropping requests."
+  },
+  {
+    "topic": "consistency",
+    "question": "What is optimistic concurrency control?",
+    "options": [
+      "Locking every row before reading it",
+      "Allowing all writes and keeping the first one",
+      "Proceeding without locks and checking for conflicts at commit, retrying if data changed",
+      "Running transactions one at a time"
+    ],
+    "answer": 2,
+    "explanation": "It works well when conflicts are rare, since no locks are held while work is done."
+  },
+  {
+    "topic": "consistency",
+    "question": "What does strong consistency guarantee for reads?",
+    "options": [
+      "Reads are always served from a local cache",
+      "Reads may return any previously written value",
+      "Reads never fail during a network partition",
+      "Every read returns the most recent committed write"
+    ],
+    "answer": 3,
+    "explanation": "Strongly consistent systems behave as if there were a single up-to-date copy, often at a cost in latency or availability."
+  }
+]

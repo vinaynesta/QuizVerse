@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0358d789144",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "Which kind of stream can be both read from and written to?",
+  "options": [
+   "Readable",
+   "Duplex",
+   "Writable",
+   "Sink"
+  ],
+  "answer": 1,
+  "explanation": "A Duplex stream has independent readable and writable sides, such as a TCP socket."
+ },
+ {
+  "id": "qbb973d9b5bd",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "easy",
+  "question": "Which process event is emitted when an exception is thrown and not caught?",
+  "options": [
+   "uncaughtException",
+   "unhandledError",
+   "crash",
+   "fatal"
+  ],
+  "answer": 0,
+  "explanation": "process.on('uncaughtException') receives errors that escaped every try/catch; it is a last-resort hook, not a recovery mechanism."
+ },
+ {
+  "id": "q3ad28956f06",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "easy",
+  "question": "Can the length of a Buffer be changed after it is allocated?",
+  "options": [
+   "Yes, it grows automatically when written to",
+   "Only when created with Buffer.alloc",
+   "Yes, it resizes when passed to fs.writeFile",
+   "No, its length is fixed when it is created"
+  ],
+  "answer": 3,
+  "explanation": "A Buffer is a fixed-length view over raw bytes; to hold more data you must allocate a new Buffer and copy."
+ },
+ {
+  "id": "q0aa810684a2",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "Which function schedules a callback to run once after a delay in milliseconds?",
+  "options": [
+   "setInterval()",
+   "setTimeout()",
+   "setImmediate()",
+   "delay()"
+  ],
+  "answer": 1,
+  "explanation": "setTimeout() runs its callback once after at least the given delay; setInterval() repeats."
+ },
+ {
+  "id": "q2d69540a4be",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "What does module.exports hold by default in a new CommonJS file?",
+  "options": [
+   "An empty object {}",
+   "undefined",
+   "null",
+   "The global object"
+  ],
+  "answer": 0,
+  "explanation": "module.exports starts as an empty object, and exports is a shorthand reference to that same object."
+ },
+ {
+  "id": "qcee69aa9b53",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "What does path.join('a', '..', 'b', 'c.txt') return on POSIX systems?",
+  "options": [
+   "a/b/c.txt",
+   "a/../b/c.txt",
+   "b/c.txt",
+   "/a/b/c.txt"
+  ],
+  "answer": 2,
+  "explanation": "path.join() joins the segments and normalizes them, so a/.. cancels out and the result is b/c.txt."
+ },
+ {
+  "id": "qe737d6ab424",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "What does require() return when the same module is required a second time in one process?",
+  "options": [
+   "A fresh copy of the module",
+   "An error about duplicate loading",
+   "The cached exports from the first load",
+   "undefined"
+  ],
+  "answer": 2,
+  "explanation": "Modules are cached after their first load, so later require() calls return the same exports object."
+ },
+ {
+  "id": "q518a4ff1907",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "How does npm ci differ from npm install?",
+  "options": [
+   "It ignores the lock file and resolves fresh versions",
+   "It installs only global packages",
+   "It installs exactly what package-lock.json specifies and fails if the lock file is out of sync",
+   "It upgrades every dependency to its latest version"
+  ],
+  "answer": 2,
+  "explanation": "npm ci is built for clean, reproducible installs: it requires a lock file and removes any existing node_modules first."
+ },
+ {
+  "id": "q3e710e22b5f",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which function loads a CommonJS module in Node.js?",
+  "options": [
+   "load()",
+   "import()",
+   "include()",
+   "require()"
+  ],
+  "answer": 3,
+  "explanation": "require() is the synchronous CommonJS loader; import() is the promise-based dynamic form used with ES modules."
+ },
+ {
+  "id": "q4881ad04261",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which core module is used to create a basic HTTP server?",
+  "options": [
+   "net",
+   "url",
+   "stream",
+   "http"
+  ],
+  "answer": 3,
+  "explanation": "http.createServer() builds an HTTP server; net provides lower-level TCP sockets."
+ }
+]

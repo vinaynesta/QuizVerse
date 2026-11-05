@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q40c309f8fdc",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "easy",
+  "question": "What is a correlated subquery?",
+  "options": [
+   "A subquery that always returns exactly one row",
+   "A subquery that references a column from the outer query",
+   "A subquery placed only in the FROM clause",
+   "A subquery that runs once before the main query"
+  ],
+  "answer": 1,
+  "explanation": "A correlated subquery refers to columns of the outer query, so it depends on each outer row."
+ },
+ {
+  "id": "q8333c777726",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "easy",
+  "question": "What is a subquery?",
+  "options": [
+   "A SELECT statement nested inside another SQL statement",
+   "A query limited to a single table",
+   "A query that runs on a schedule",
+   "A stored procedure that returns rows"
+  ],
+  "answer": 0,
+  "explanation": "Subqueries can appear in WHERE, FROM or SELECT clauses to supply values or rows to the outer statement."
+ },
+ {
+  "id": "qe7e5a9a992d",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "easy",
+  "question": "What does EXISTS return?",
+  "options": [
+   "TRUE if the subquery returns at least one row, otherwise FALSE",
+   "The first row of the subquery",
+   "The number of rows in the subquery",
+   "NULL when the subquery is empty"
+  ],
+  "answer": 0,
+  "explanation": "EXISTS is a boolean test: it is TRUE when the subquery produces at least one row and FALSE when it produces none."
+ },
+ {
+  "id": "q01b0c555281",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "Which predicate is generally safer than NOT IN when the subquery column can contain NULL?",
+  "options": [
+   "NOT LIKE",
+   "NOT EXISTS",
+   "NOT BETWEEN",
+   "NOT UNIQUE"
+  ],
+  "answer": 1,
+  "explanation": "NOT IN returns no rows if the list contains NULL, because the comparison becomes unknown. NOT EXISTS is not affected by NULL in the subquery."
+ },
+ {
+  "id": "q89311f3d081",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "In a correlated subquery, how often is the inner query typically evaluated?",
+  "options": [
+   "Once, before the outer query starts",
+   "Once for each row of the outer query",
+   "Once per distinct value in the result",
+   "Only when the outer query returns no rows"
+  ],
+  "answer": 1,
+  "explanation": "Because the inner query references outer columns, it must be re-evaluated for each outer row, unless the optimizer rewrites it as a join."
+ },
+ {
+  "id": "q8cbc388655d",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "What does WHERE id IN (SELECT customer_id FROM orders WHERE 1 = 0) return?",
+  "options": [
+   "All rows, because the subquery returns nothing to exclude",
+   "No rows, because IN against an empty set is FALSE",
+   "Rows where id is NULL",
+   "An error, because the subquery is empty"
+  ],
+  "answer": 1,
+  "explanation": "IN with an empty list is FALSE for every value, so no outer rows satisfy the predicate."
+ },
+ {
+  "id": "qa630ecb3fb8",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "What is a subquery placed in the FROM clause called?",
+  "options": [
+   "A derived table",
+   "A scalar subquery",
+   "A correlated subquery",
+   "A materialized view"
+  ],
+  "answer": 0,
+  "explanation": "A derived table acts as an inline temporary result set that the outer query can select from and join."
+ },
+ {
+  "id": "qc0cd4476136",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "What does WHERE salary = (SELECT MAX(salary) FROM employees) return?",
+  "options": [
+   "Employees in the lowest salary band",
+   "All employees ordered by salary",
+   "Employees earning the overall maximum salary, which may be more than one person",
+   "Exactly one employee, always"
+  ],
+  "answer": 2,
+  "explanation": "The scalar subquery returns the single maximum value, and every employee with that salary matches, so ties give multiple rows."
+ },
+ {
+  "id": "q1729e3718df",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "Which statement about EXISTS is true?",
+  "options": [
+   "It is FALSE if any selected column is NULL",
+   "It compares values with NULL using =",
+   "It returns the number of matching rows",
+   "It is TRUE if the subquery returns at least one row, even when every selected column is NULL"
+  ],
+  "answer": 3,
+  "explanation": "EXISTS only checks whether a row is produced. The values in the select list, including NULLs, do not affect the result."
+ },
+ {
+  "id": "q61f80b6c31c",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "Which predicate is equivalent to x IN (SELECT y FROM t)?",
+  "options": [
+   "x = ALL (SELECT y FROM t)",
+   "x > ANY (SELECT y FROM t)",
+   "x = ANY (SELECT y FROM t)",
+   "EXISTS (SELECT y FROM t)"
+  ],
+  "answer": 2,
+  "explanation": "= ANY is TRUE when x equals at least one returned value, which is exactly what IN tests."
+ },
+ {
+  "id": "qb591cf5beda",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "What does x > ALL (SELECT y FROM empty_table) evaluate to?",
+  "options": [
+   "NULL",
+   "FALSE",
+   "TRUE",
+   "An error"
+  ],
+  "answer": 2,
+  "explanation": "ALL over an empty set is vacuously TRUE, while ANY over an empty set is FALSE."
+ },
+ {
+  "id": "qe9186d1be94",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "What happens when a scalar subquery in a SELECT list returns more than one row?",
+  "options": [
+   "Only the first row is used silently",
+   "The rows are returned as a set",
+   "The extra rows become NULL",
+   "A runtime error is raised"
+  ],
+  "answer": 3,
+  "explanation": "PostgreSQL raises an error such as 'more than one row returned by a subquery used as an expression'. Use LIMIT 1, an aggregate, or a join to make it deterministic."
+ }
+]

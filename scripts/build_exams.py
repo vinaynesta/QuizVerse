@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Assemble exam-pattern quizzes from the question banks.
 
-Usage: python3 -I scripts/build_exams.py <banks-dir> <english-bank-dir> <data-dir> <answer-keys.json>
+Usage: python3 -I scripts/build_exams.py <banks-dir> <english-bank-dir> <data-dir> <answer-keys.json> [<ga-bank-dir>]
 
 Banks: <banks-dir>/{quant,reasoning}_{easy,medium,hard}.json (scripts/gen_banks.py)
        <banks-dir>/groups_{medium,hard}.json (scripts/gen_groups.py: DI tables and puzzles)
        <english-bank-dir>/{easy,medium,hard}.json and rc_{medium,hard}.json (reading comprehension sets)
+       <ga-bank-dir>/{computer,banking}/*.json (hand-written, each question with its own "level"; defaults to
+       scripts/ga_bank). Computer Knowledge and the General/Financial/Banking Awareness sections use these.
+       They are drafts ("needsReview", shown with a Draft badge) until someone checks the facts.
 Output: <data-dir>/<exam>/<stage>/<section>/<level>-<n>.json and <data-dir>/index.json.
         Timed exam quizzes are published without "answer" and "explanation": those go to <answer-keys.json>
         (outside static/), and the server scores exam quizzes and mocks with them (leaderboards).
@@ -17,8 +20,9 @@ Admin corrections exported from the question editor (scripts/question_edits.json
 on top of the banks; an edited question keeps its original id, so history and bookmarks stay attached.
 Bank questions that no quiz uses any more go to <data-dir>/practice-extra.json, so build_topics.py keeps them in
 the practice pools and saved bookmarks still find them. Medium and hard Quant quizzes end with one DI set, Reasoning quizzes with one
-puzzle set and English quizzes with one reading comprehension passage (GROUP_SIZE questions sharing a table or set-up, carried as "group" on each of them). Sections we have no bank for (General Awareness,
-Computer, Hindi) are listed as "unavailable" so the app can show them as coming soon.
+puzzle set and English quizzes with one reading comprehension passage (GROUP_SIZE questions sharing a table or set-up, carried as "group" on each of them). English, Computer and Banking are
+shared banks that every exam draws from in full. A section with no bank can be listed under "unavailable" so the
+app shows it as coming soon.
 The Java practice quizzes in <data-dir>/java are indexed untimed.
 """
 import hashlib
@@ -32,6 +36,9 @@ LEVELS = [("easy", "Easy"), ("medium", "Medium"), ("hard", "Hard")]
 QUIZZES_PER_LEVEL = 5
 GROUP_SIZE = 5  # questions per DI table / puzzle in scripts/gen_groups.py
 POOL_SIZE = 250  # QUANT_PER_LEVEL in scripts/gen_banks.py: one exam's slice of a Quant or Reasoning bank
+GA_SUBJECTS = ("computer", "banking", "history", "polity", "economy", "geography", "science-tech",
+               "admin-psych")  # hand-written banks in <ga-bank-dir>/<subject>/*.json
+GA_DIR = Path(__file__).resolve().parent / "ga_bank"
 
 
 def sec(id_, name, bank, q, marks, minutes, note=None):
@@ -52,8 +59,9 @@ EXAMS = [
             {"id": "mains", "name": "Mains", "sections": [
                 sec("reasoning", "Reasoning Ability", "reasoning", 40, 60, 35),
                 sec("english", "English Language", "english", 40, 40, 35),
-                sec("quantitative-aptitude", "Quantitative Aptitude", "quant", 40, 50, 35)],
-             "unavailable": [sec("general-financial-awareness", "General/Financial Awareness", None, 40, 50, 20)]},
+                sec("quantitative-aptitude", "Quantitative Aptitude", "quant", 40, 50, 35),
+                sec("general-financial-awareness", "General/Financial Awareness", "banking", 40, 50, 20)],
+             "unavailable": []},
         ],
     },
     {
@@ -69,8 +77,9 @@ EXAMS = [
                 sec("english", "General English", "english", 40, 40, 35),
                 sec("quantitative-aptitude", "Quantitative Aptitude", "quant", 50, 50, 45),
                 sec("reasoning", "Reasoning Ability", "reasoning", 50, 60, 45,
-                    "The real section is Reasoning Ability & Computer Aptitude; these quizzes cover the reasoning part only.")],
-             "unavailable": [sec("general-financial-awareness", "General/Financial Awareness", None, 50, 50, 35)]},
+                    "The real section is Reasoning Ability & Computer Aptitude; these quizzes cover the reasoning part only."),
+                sec("general-financial-awareness", "General/Financial Awareness", "banking", 50, 50, 35)],
+             "unavailable": []},
         ],
     },
     {
@@ -84,9 +93,10 @@ EXAMS = [
             {"id": "mains", "name": "Mains", "sections": [
                 sec("reasoning", "Reasoning Ability", "reasoning", 40, 50, 30),
                 sec("english", "English Language", "english", 40, 40, 30),
-                sec("numerical-ability", "Numerical Ability", "quant", 40, 50, 30)],
-             "unavailable": [sec("computer-knowledge", "Computer Knowledge", None, 40, 20, 15),
-                             sec("general-awareness", "General Awareness", None, 40, 40, 15)]},
+                sec("numerical-ability", "Numerical Ability", "quant", 40, 50, 30),
+                sec("computer-knowledge", "Computer Knowledge", "computer", 40, 20, 15),
+                sec("general-awareness", "General Awareness", "banking", 40, 40, 15)],
+             "unavailable": []},
         ],
     },    # Added Oct 2026 (#17) from the last notified patterns; check each new notification, these change often.
     # PO Mains also has a descriptive paper (letter and essay) that a quiz can't mark, so it's left out.
@@ -104,8 +114,9 @@ EXAMS = [
                 sec("reasoning", "Reasoning & Computer Aptitude", "reasoning", 45, 60, 60,
                     "These quizzes cover the reasoning part only."),
                 sec("english", "English Language", "english", 35, 40, 40),
-                sec("data-analysis", "Data Analysis & Interpretation", "quant", 35, 60, 45)],
-             "unavailable": [sec("general-economy-banking-awareness", "General/Economy/Banking Awareness", None, 40, 40, 35)]},
+                sec("data-analysis", "Data Analysis & Interpretation", "quant", 35, 60, 45),
+                sec("general-economy-banking-awareness", "General/Economy/Banking Awareness", "banking", 40, 40, 35)],
+             "unavailable": []},
         ],
     },
     {
@@ -122,8 +133,9 @@ EXAMS = [
                 sec("reasoning", "Reasoning & Computer Aptitude", "reasoning", 40, 60, 50,
                     "These quizzes cover the reasoning part only."),
                 sec("data-analysis", "Data Analysis & Interpretation", "quant", 30, 60, 45),
-                sec("english", "English Language", "english", 35, 40, 40)],
-             "unavailable": [sec("general-economy-banking-awareness", "General/Economy/Banking Awareness", None, 50, 60, 45)]},
+                sec("english", "English Language", "english", 35, 40, 40),
+                sec("general-economy-banking-awareness", "General/Economy/Banking Awareness", "banking", 50, 60, 45)],
+             "unavailable": []},
         ],
     },
     {
@@ -139,9 +151,35 @@ EXAMS = [
             {"id": "mains", "name": "Mains", "sections": [
                 sec("reasoning", "Reasoning", "reasoning", 40, 40, 30),
                 sec("english", "English Language", "english", 40, 40, 30),
-                sec("numerical-ability", "Numerical Ability", "quant", 40, 40, 30)],
-             "unavailable": [sec("general-awareness", "General Awareness", None, 40, 40, 25),
-                             sec("computer-knowledge", "Computer Knowledge", None, 40, 40, 20)]},
+                sec("numerical-ability", "Numerical Ability", "quant", 40, 40, 30),
+                sec("general-awareness", "General Awareness", "banking", 40, 40, 25),
+                sec("computer-knowledge", "Computer Knowledge", "computer", 40, 40, 20)],
+             "unavailable": []},
+        ],
+    },
+    # Added Nov 2026. APPSC Group 1 Prelims (screening): two papers of 120 questions / 120 marks / 120 minutes,
+    # 1/3 negative marking. The notification lists each paper's sections but not a count per section, so these use
+    # the usual split (30 per Paper I section; Paper II: 60 mental ability and administrative/psychological, 30
+    # science and technology, 30 current events). Current events go stale, so that section stays "coming soon".
+    # Mental ability comes from the generated reasoning bank and shares IBPS Clerk's slice (pool 0).
+    {
+        "id": "appsc-group-1", "name": "APPSC Group 1",
+        "description": "Andhra Pradesh Public Service Commission Group 1 Prelims (screening test): Paper I General "
+                       "Studies and Paper II General Aptitude, 120 questions in 120 minutes each.",
+        "negativeMarking": 1 / 3, "quizzesPerLevel": 3, "pool": 0,
+        "stages": [
+            {"id": "paper-1", "name": "Prelims Paper I", "sections": [
+                sec("history-culture", "History and Culture", "history", 30, 30, 30),
+                sec("polity", "Constitution, Polity, Social Justice & International Relations", "polity", 30, 30, 30),
+                sec("economy", "Indian and Andhra Pradesh Economy and Planning", "economy", 30, 30, 30),
+                sec("geography", "Geography", "geography", 30, 30, 30)],
+             "unavailable": []},
+            {"id": "paper-2", "name": "Prelims Paper II", "sections": [
+                sec("mental-ability", "General Mental Ability", "reasoning", 30, 30, 30),
+                sec("admin-psych", "Administrative and Psychological Abilities", "admin-psych", 30, 30, 30),
+                sec("science-tech", "Science and Technology", "science-tech", 30, 30, 30)],
+             "unavailable": [sec("current-events", "Current Events of Regional, National and International Importance",
+                                 None, 30, 30, 30)]},
         ],
     },
 ]
@@ -190,6 +228,8 @@ def published(subject, level, q, group=None):
            "question": q["question"], "options": q["options"]}
     if group:
         out["group"] = group
+    if q.get("needsReview"):  # hand-written draft: the quiz shows a "Draft" badge until someone checks it
+        out["needsReview"] = True
     if q.get("hi"):  # Hindi text (#18); its explanation is secret like the English one, see hi_explanation
         out["hi"] = {"question": q["hi"]["question"], "needsReview": q["hi"].get("needsReview", False)}
     return out
@@ -248,10 +288,38 @@ def load_groups(subject, level, banks_dir, english_dir):
     return sets
 
 
-def load_bank(name, level, banks_dir, english_dir, pool=0):
-    """The whole English bank, or the exam's slice of a generated bank."""
+GA_KEYS = {"topic", "level", "question", "options", "answer", "explanation"}
+
+
+def load_ga_bank(subject, ga_dir=None):
+    """Every hand-written question of a Computer or Banking bank, all levels, in a fixed order (files by name)."""
+    out, seen = [], set()
+    for path in sorted((Path(ga_dir or GA_DIR) / subject).glob("*.json")):
+        for n, q in enumerate(json.loads(path.read_text())):
+            where = f"{path} #{n + 1}"
+            if not GA_KEYS <= set(q) <= GA_KEYS | {"needsReview"}:
+                sys.exit(f"{where}: keys must be {sorted(GA_KEYS)} plus optional needsReview")
+            opts = q["options"]
+            if len(opts) != 4 or len(set(opts)) != 4 or not all(isinstance(o, str) and o.strip() for o in opts):
+                sys.exit(f"{where}: needs 4 distinct non-empty options")
+            if not isinstance(q["answer"], int) or not 0 <= q["answer"] < 4:
+                sys.exit(f"{where}: answer must be 0-3")
+            if q["level"] not in {lv for lv, _ in LEVELS}:
+                sys.exit(f"{where}: level must be easy, medium or hard")
+            qid = question_id(subject, q)
+            if qid in seen:
+                sys.exit(f"{where}: duplicate question")
+            seen.add(qid)
+            out.append(q)
+    return out
+
+
+def load_bank(name, level, banks_dir, english_dir, pool=0, ga_dir=None):
+    """The whole English, Computer or Banking bank, or the exam's slice of a generated bank."""
     if name == "english":
         return json.loads((Path(english_dir) / f"{level}.json").read_text())
+    if name in GA_SUBJECTS:
+        return [q for q in load_ga_bank(name, ga_dir) if q["level"] == level]
     bank = json.loads((Path(banks_dir) / f"{name}_{level}.json").read_text())
     if len(bank) < (pool + 1) * POOL_SIZE:
         sys.exit(f"{name}_{level}: no slice {pool} (bank has {len(bank)}); raise EXAM_POOLS in gen_banks.py")
@@ -308,15 +376,19 @@ def meta(s):
             "minutes": s["minutes"], "note": s["note"]}
 
 
-def main(banks_dir, english_dir, data_dir, keys_path):
+def main(banks_dir, english_dir, data_dir, keys_path, ga_dir=None):
     out = Path(data_dir)
     keys = {}
     for exam in EXAMS:  # drop stale output of earlier layouts
         shutil.rmtree(out / exam["id"], ignore_errors=True)
     index = {"negativeMarking": 0.25, "exams": []}
     used = set()
-    for pool, exam in enumerate(EXAMS):
+    for n_exam, exam in enumerate(EXAMS):
+        pool = exam.get("pool", n_exam)
+        per_level = exam.get("quizzesPerLevel", QUIZZES_PER_LEVEL)
         entry = {k: exam[k] for k in ("id", "name", "description")}
+        if "negativeMarking" in exam:  # the exam's own penalty; otherwise index["negativeMarking"]
+            entry["negativeMarking"] = exam["negativeMarking"]
         entry["stages"] = []
         for stage in exam["stages"]:
             st = {"id": stage["id"], "name": stage["name"], "sections": [],
@@ -331,19 +403,19 @@ def main(banks_dir, english_dir, data_dir, keys_path):
                 s_entry = meta(s)
                 s_entry["levels"] = []
                 for level, level_name in LEVELS:
-                    bank = load_bank(s["bank"], level, banks_dir, english_dir, pool)
+                    bank = load_bank(s["bank"], level, banks_dir, english_dir, pool, ga_dir)
                     key = f"{exam['id']}/{stage['id']}/{s['id']}/{level}"
                     rng = random.Random(key)
                     sets = load_groups(s["bank"], level, banks_dir, english_dir)
-                    sets = rng.sample(sets, QUIZZES_PER_LEVEL) if len(sets) >= QUIZZES_PER_LEVEL else []
+                    sets = rng.sample(sets, per_level) if len(sets) >= per_level else []
                     single = s["questions"] - (GROUP_SIZE if sets else 0)
-                    need = single * QUIZZES_PER_LEVEL
+                    need = single * per_level
                     if len(bank) < need:
                         sys.exit(f"{exam['id']}/{stage['id']}/{s['id']}/{level}: need {need}, bank has {len(bank)}")
                     balance_answers(bank, rng)
                     rng.shuffle(bank)
                     quizzes = []
-                    for n in range(1, QUIZZES_PER_LEVEL + 1):
+                    for n in range(1, per_level + 1):
                         chunk = [(edited(s["bank"], q), None) for q in bank[(n - 1) * single: n * single]]
                         if sets:
                             g = group_meta(s["bank"], sets[n - 1])
@@ -423,6 +495,6 @@ def check_ids(out, index):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
+    if len(sys.argv) not in (5, 6):
         sys.exit(__doc__)
-    main(*sys.argv[1:5])
+    main(*sys.argv[1:6])

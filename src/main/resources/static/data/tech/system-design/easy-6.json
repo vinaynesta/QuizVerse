@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q759782b00e7",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What is the main purpose of monitoring and alerting?",
+  "options": [
+   "To speed up database queries",
+   "To detect problems quickly and notify the people who can fix them",
+   "To replace testing",
+   "To reduce storage costs"
+  ],
+  "answer": 1,
+  "explanation": "Monitoring tracks system health, and alerts notify on-call engineers when thresholds are breached."
+ },
+ {
+  "id": "q13ee527e439",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP method is typically used to delete a resource?",
+  "options": [
+   "DELETE",
+   "POST",
+   "GET",
+   "HEAD"
+  ],
+  "answer": 0,
+  "explanation": "DELETE removes the resource identified by the URL and is idempotent."
+ },
+ {
+  "id": "q1704fd442e0",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which data format do most web APIs use for request and response bodies today?",
+  "options": [
+   "CSV",
+   "JSON",
+   "Binary executables",
+   "Plain HTML pages"
+  ],
+  "answer": 1,
+  "explanation": "JSON is lightweight, human-readable, and supported by nearly every language."
+ },
+ {
+  "id": "q492f83d8580",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What is a microservices architecture?",
+  "options": [
+   "A server with many CPU cores",
+   "A single application deployed as one unit",
+   "A database split into many tables",
+   "An application built as small services that can be deployed and scaled independently"
+  ],
+  "answer": 3,
+  "explanation": "Each service owns one capability and can be released and scaled on its own, at the cost of more network calls."
+ },
+ {
+  "id": "qc018de1746f",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What does auto-scaling usually react to when adding or removing instances?",
+  "options": [
+   "The number of developers on the team",
+   "The time since the last deployment only",
+   "The size of the codebase",
+   "Metrics such as CPU usage, request rate, or queue length"
+  ],
+  "answer": 3,
+  "explanation": "Auto-scaling policies compare load metrics against thresholds or targets to adjust capacity."
+ },
+ {
+  "id": "q9e8406e050b",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What is a reverse proxy?",
+  "options": [
+   "A database that reverses query results",
+   "A proxy that clients configure to reach any website",
+   "A server that sits in front of backend servers and forwards client requests to them",
+   "A firewall that blocks outgoing traffic"
+  ],
+  "answer": 2,
+  "explanation": "Reverse proxies such as Nginx can handle load balancing, TLS termination, and caching for backends."
+ },
+ {
+  "id": "qb20b500cee9",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What does weighted round robin allow?",
+  "options": [
+   "Sending all traffic to the fastest server",
+   "Routing by the client's IP address",
+   "Sending proportionally more requests to servers with higher capacity",
+   "Removing unhealthy servers"
+  ],
+  "answer": 2,
+  "explanation": "Each server gets a weight, and the rotation sends traffic in proportion to it."
+ },
+ {
+  "id": "qfe3fb7141fa",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is an in-memory key-value store commonly used as a shared application cache?",
+  "options": [
+   "Elasticsearch",
+   "PostgreSQL",
+   "Apache Kafka",
+   "Redis"
+  ],
+  "answer": 3,
+  "explanation": "Redis keeps data in memory and supports key-based reads and writes with expiration."
+ },
+ {
+  "id": "qc72f1655675",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "Where does browser caching store responses?",
+  "options": [
+   "On the origin server's disk",
+   "On the user's device, controlled by HTTP headers such as Cache-Control",
+   "In the database's buffer pool",
+   "In the load balancer's routing table"
+  ],
+  "answer": 1,
+  "explanation": "The browser reuses cached responses for repeat visits until they expire or must be revalidated."
+ },
+ {
+  "id": "q2e82f96582d",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "Which is a typical strength of NoSQL document databases?",
+  "options": [
+   "A fixed schema enforced on every write",
+   "Mandatory joins across many tables",
+   "Flexible schemas that store nested, varying records",
+   "Built-in support only for SQL queries"
+  ],
+  "answer": 2,
+  "explanation": "Document stores such as MongoDB let each record have its own shape."
+ }
+]

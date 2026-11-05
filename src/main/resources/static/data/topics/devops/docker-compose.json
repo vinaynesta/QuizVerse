@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q50812bc3c88",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "easy",
+  "question": "Which command shows the logs of the services in a Compose project?",
+  "options": [
+   "docker compose ps",
+   "docker compose build",
+   "docker compose top",
+   "docker compose logs"
+  ],
+  "answer": 3,
+  "explanation": "docker compose logs prints the combined output of the project's service containers."
+ },
+ {
+  "id": "qb55252cfc0c",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "easy",
+  "question": "Which command starts all services defined in docker-compose.yml in the background?",
+  "options": [
+   "docker compose run --all",
+   "docker compose up -d",
+   "docker compose start --bg",
+   "docker start --all"
+  ],
+  "answer": 1,
+  "explanation": "docker compose up creates and starts the services, and the -d flag runs them detached."
+ },
+ {
+  "id": "qf294886a805",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "easy",
+  "question": "Which command stops and removes the containers and default network created by docker compose up?",
+  "options": [
+   "docker compose down",
+   "docker compose stop",
+   "docker compose rm --all",
+   "docker compose kill"
+  ],
+  "answer": 0,
+  "explanation": "docker compose down stops and removes the project's containers and networks; stop only pauses them."
+ },
+ {
+  "id": "q3b1c29c5b06",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "Which file does Docker Compose read automatically to supply values for variables such as ${TAG} in the Compose file?",
+  "options": [
+   "Dockerfile",
+   "A .env file in the project directory",
+   ".dockerignore",
+   "compose.lock"
+  ],
+  "answer": 1,
+  "explanation": "Compose reads .env from the project directory for variable interpolation."
+ },
+ {
+  "id": "qb3196200fe7",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "By default, how does one service in a Compose project reach another service named db?",
+  "options": [
+   "Through a volume shared between the services",
+   "Only through a port published on the host",
+   "By the container's IP address, which must be hard-coded",
+   "By using the hostname db on the project's default network"
+  ],
+  "answer": 3,
+  "explanation": "Compose attaches services to a default project network where each service name resolves via DNS."
+ },
+ {
+  "id": "qe6ca050aeb0",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "Which Compose setting makes a service wait until another service passes its healthcheck?",
+  "options": [
+   "links: [db]",
+   "network_mode: host",
+   "restart: always",
+   "depends_on with condition: service_healthy"
+  ],
+  "answer": 3,
+  "explanation": "depends_on with condition: service_healthy delays the dependent service until the dependency's healthcheck reports healthy."
+ },
+ {
+  "id": "qf13b0573576",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "By default, what does depends_on in a Compose file guarantee?",
+  "options": [
+   "Containers share the same filesystem",
+   "The dependency is healthy before starting",
+   "Dependencies are scaled to one replica",
+   "Start order only; it does not wait for the service to be ready"
+  ],
+  "answer": 3,
+  "explanation": "Without a condition, depends_on only controls startup order; readiness requires a healthcheck condition."
+ }
+]

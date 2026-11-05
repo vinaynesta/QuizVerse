@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qd34cc7537f4",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Which practice keeps apt package lists out of a Debian-based image?",
+  "options": [
+   "Install packages in one RUN and delete apt lists in a later RUN",
+   "Use COPY instead of RUN to install packages",
+   "Install and remove apt lists within the same RUN instruction",
+   "Set ENV APT_CACHE=0 at the top of the file"
+  ],
+  "answer": 2,
+  "explanation": "Files deleted in a later layer still exist in the earlier layer, so cleanup must happen in the same RUN that created them."
+ },
+ {
+  "id": "qfabf20c0033",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What does a fast-forward merge do?",
+  "options": [
+   "Discards the target branch",
+   "Creates a merge commit with two parents every time",
+   "Rewrites history by replaying commits onto a new base",
+   "Moves the branch pointer forward to the target commit without creating a merge commit"
+  ],
+  "answer": 3,
+  "explanation": "When the target branch is a direct descendant of the current one, Git just advances the pointer, so no merge commit is needed."
+ },
+ {
+  "id": "qe6ecde133d4",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "What is the main purpose of a pipeline artifact?",
+  "options": [
+   "To store secrets securely across jobs",
+   "To pass built outputs such as binaries or images between stages",
+   "To trigger a rollback automatically",
+   "To replace source control"
+  ],
+  "answer": 1,
+  "explanation": "Artifacts carry outputs from one job to later jobs, such as a test or deploy stage, so they do not need to rebuild."
+ },
+ {
+  "id": "q690a85b2565",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Which command shows the layers that make up an image, along with their sizes and the commands that created them?",
+  "options": [
+   "docker ls --layers",
+   "docker history <image>",
+   "docker stats <image>",
+   "docker layers <image>"
+  ],
+  "answer": 1,
+  "explanation": "docker history lists each layer of an image with the instruction that produced it and its size."
+ },
+ {
+  "id": "q567d1e8f2ce",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What is a Kubernetes Job used for?",
+  "options": [
+   "Running a long-lived web server",
+   "Running pods to completion, such as batch tasks",
+   "Keeping a stable network identity for pods",
+   "Storing secrets"
+  ],
+  "answer": 1,
+  "explanation": "A Job runs one or more pods until they complete successfully, which suits batch work such as migrations."
+ },
+ {
+  "id": "qd215ee5b316",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "medium",
+  "question": "Which Docker network driver makes a container use the host's network stack directly?",
+  "options": [
+   "none",
+   "bridge",
+   "host",
+   "overlay"
+  ],
+  "answer": 2,
+  "explanation": "With the host driver the container shares the host's network namespace instead of getting its own IP."
+ },
+ {
+  "id": "qb646e47d69e",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "Which command shows the last 20 lines of a log file and keeps printing new lines as they are written?",
+  "options": [
+   "tail -n 20 -f log",
+   "cat -f log",
+   "less --follow log",
+   "head -20 -f log"
+  ],
+  "answer": 0,
+  "explanation": "tail -n 20 -f prints the last 20 lines and follows the file as it grows."
+ },
+ {
+  "id": "qbd0ce127268",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Why should you avoid rebasing commits that have already been pushed to a shared branch?",
+  "options": [
+   "Rebase cannot run on remote branches",
+   "It automatically force-pushes the branch",
+   "Rebase deletes the remote's reflog",
+   "Rebasing rewrites commit hashes, so collaborators' histories diverge from yours"
+  ],
+  "answer": 3,
+  "explanation": "Rewritten commits have new hashes, so anyone who based work on the old commits must reconcile two divergent histories."
+ },
+ {
+  "id": "q606ac40bf7e",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "What does git bisect do?",
+  "options": [
+   "Splits a repository into two independent repositories",
+   "Creates two branches from one commit",
+   "Performs a binary search through commits to find which one introduced a bug",
+   "Compresses the object database"
+  ],
+  "answer": 2,
+  "explanation": "Bisect marks commits as good or bad and narrows the range by halves until it finds the first bad commit."
+ },
+ {
+  "id": "q203a18a7b69",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which object provides declarative updates and rollback for a set of pods by managing ReplicaSets?",
+  "options": [
+   "Service",
+   "ConfigMap",
+   "Deployment",
+   "Namespace"
+  ],
+  "answer": 2,
+  "explanation": "A Deployment creates and manages ReplicaSets, rolling out new versions and keeping revision history for rollback."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbfdb3b7903d",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "What does the constraint in `function feed<T extends Animal>(a: T)` require?",
+  "options": [
+   "Animal must be assignable to T",
+   "T must be exactly Animal, not a subtype",
+   "The argument's type must be assignable to Animal",
+   "T must be a class that extends Animal"
+  ],
+  "answer": 2,
+  "explanation": "extends in a constraint means the type argument must be a subtype of (assignable to) Animal."
+ },
+ {
+  "id": "q0948d9c2bff",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "Which type keeps only the `id` and `name` properties of `User`?",
+  "options": [
+   "Pick<User, \"id\" | \"name\">",
+   "Partial<User, \"id\" | \"name\">",
+   "Omit<User, \"id\" | \"name\">",
+   "Extract<User, \"id\" | \"name\">"
+  ],
+  "answer": 0,
+  "explanation": "Pick<T, K> constructs a type from just the listed keys."
+ },
+ {
+  "id": "q09af84d0312",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does `class Dog implements Animal` do?",
+  "options": [
+   "Checks at compile time that Dog satisfies the Animal interface",
+   "Automatically adds Animal's properties to Dog",
+   "Copies Animal's method implementations into Dog",
+   "Makes Dog a subclass of Animal at runtime"
+  ],
+  "answer": 0,
+  "explanation": "implements is only a compile-time shape check; it adds no code or members."
+ },
+ {
+  "id": "qaf060a65529",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Readonly<Point>` do?",
+  "options": [
+   "Makes Point's properties optional",
+   "Freezes the object at runtime",
+   "Marks every property of Point as readonly",
+   "Removes all methods from Point"
+  ],
+  "answer": 2,
+  "explanation": "Readonly<T> is a compile-time mapped type; it does not call Object.freeze."
+ },
+ {
+  "id": "qc90befbaacc",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "How do ECMAScript `#private` fields differ from TypeScript's `private` modifier?",
+  "options": [
+   "#private fields can be accessed by subclasses",
+   "#private is enforced at runtime, while private is only a compile-time check",
+   "There is no difference",
+   "private is enforced at runtime, while #private is only a compile-time check"
+  ],
+  "answer": 1,
+  "explanation": "TypeScript's private is erased in output, whereas #fields are true JavaScript private fields."
+ },
+ {
+  "id": "qec79d38c411",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "Given `function make() { return { ok: true }; }`, what is `ReturnType<typeof make>`?",
+  "options": [
+   "{ ok: boolean }",
+   "boolean",
+   "typeof make",
+   "() => { ok: boolean }"
+  ],
+  "answer": 0,
+  "explanation": "ReturnType extracts the return type of a function type, obtained here with typeof."
+ },
+ {
+  "id": "q27732cedf21",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "What does the non-null assertion in `el!.focus()` do?",
+  "options": [
+   "Removes null and undefined from el's type with no runtime check",
+   "Throws at runtime if el is null",
+   "Makes focus() optional, like ?.",
+   "Converts el to a boolean"
+  ],
+  "answer": 0,
+  "explanation": "! only affects the type checker; if the value is actually null, the call still fails at runtime."
+ },
+ {
+  "id": "qbc6e6468af6",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "After calling `assertIsString(v)` declared as `function assertIsString(v: unknown): asserts v is string`, what is v's type in the following code?",
+  "options": [
+   "unknown",
+   "void",
+   "boolean",
+   "string"
+  ],
+  "answer": 3,
+  "explanation": "An assertion signature narrows the argument for the rest of the scope, since the function throws otherwise."
+ },
+ {
+  "id": "q58150d99b55",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "What is the difference between `const` and `readonly`?",
+  "options": [
+   "They are interchangeable in every position",
+   "const applies to variables; readonly applies to properties",
+   "const applies to properties; readonly applies to variables",
+   "readonly is enforced at runtime, const is not"
+  ],
+  "answer": 1,
+  "explanation": "Use const for bindings and readonly for properties, index signatures and array types."
+ },
+ {
+  "id": "q2a44c852a21",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does `constructor(private name: string) {}` do?",
+  "options": [
+   "Is a syntax error in TypeScript",
+   "Creates a getter for name only",
+   "Declares a parameter that is hidden from callers",
+   "Declares a private property name and assigns the argument to it"
+  ],
+  "answer": 3,
+  "explanation": "Parameter properties declare and initialize a class member in one step."
+ }
+]

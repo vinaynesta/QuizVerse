@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "congestion-control",
+    "question": "How does TCP's congestion window grow during slow start?",
+    "options": [
+      "It halves every RTT",
+      "It stays constant until a loss",
+      "Linearly, by one MSS per RTT",
+      "Exponentially, roughly doubling each RTT"
+    ],
+    "answer": 3,
+    "explanation": "cwnd increases by about one MSS per ACK, so a full window of ACKs doubles it each round trip."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "In Reno-style congestion avoidance (the additive-increase phase of AIMD), how fast does cwnd grow?",
+    "options": [
+      "About one MSS per RTT",
+      "By ssthresh each RTT",
+      "Doubling each RTT",
+      "One byte per ACK"
+    ],
+    "answer": 0,
+    "explanation": "RFC 5681 congestion avoidance adds roughly SMSS*SMSS/cwnd per ACK, totaling about one MSS per round trip."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "Per RFC 5681, what happens when a sender gets three duplicate ACKs and enters fast retransmit/fast recovery?",
+    "options": [
+      "ssthresh = max(FlightSize/2, 2*SMSS) and cwnd is set to ssthresh + 3*SMSS",
+      "cwnd = 0 until a new ACK arrives",
+      "cwnd = 1 SMSS and ssthresh is unchanged",
+      "ssthresh = 2*cwnd and cwnd is unchanged"
+    ],
+    "answer": 0,
+    "explanation": "Duplicate ACKs show packets are still flowing, so TCP halves rather than collapsing; the +3 accounts for the segments that left the network."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "Per RFC 5681, what does TCP do when the retransmission timer (RTO) expires?",
+    "options": [
+      "Halves cwnd and stays in congestion avoidance",
+      "Leaves cwnd and ssthresh unchanged",
+      "Doubles cwnd to drain the queue faster",
+      "Sets ssthresh = max(FlightSize/2, 2*SMSS), cwnd = 1 SMSS, and re-enters slow start"
+    ],
+    "answer": 3,
+    "explanation": "A timeout suggests severe congestion, so cwnd drops to the loss window of one segment before slow start resumes."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What is the bandwidth-delay product of a 100 Mbps path with an 80 ms RTT?",
+    "options": [
+      "8 MB",
+      "125 KB",
+      "1 MB (8 Mbit)",
+      "10 MB"
+    ],
+    "answer": 2,
+    "explanation": "100,000,000 b/s * 0.08 s = 8,000,000 bits = 1,000,000 bytes that must be in flight to fill the pipe."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "Why do long fat networks need the TCP window scale option (RFC 7323)?",
+    "options": [
+      "It turns on ECN",
+      "It is required to enable SACK",
+      "The 16-bit window field otherwise caps the window at 65,535 bytes",
+      "It negotiates the MSS"
+    ],
+    "answer": 2,
+    "explanation": "Without scaling, throughput is limited to 65,535 bytes per RTT; the option shifts the window by up to 14 bits."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What is the maximum throughput of a single TCP flow with a 65,535-byte window and a 100 ms RTT, ignoring loss?",
+    "options": [
+      "About 0.65 Mbps",
+      "About 52 Mbps",
+      "About 5.2 Mbps",
+      "About 64 Mbps"
+    ],
+    "answer": 2,
+    "explanation": "Throughput <= window/RTT = 65,535 * 8 bits / 0.1 s = 5,242,800 b/s, about 5.2 Mbps."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "How does TCP CUBIC differ from Reno in growing its window?",
+    "options": [
+      "It grows cwnd as a cubic function of time since the last loss, largely independent of RTT",
+      "It grows cwnd by exactly one byte per RTT",
+      "It halves cwnd on every ACK",
+      "It ignores loss and uses only delay"
+    ],
+    "answer": 0,
+    "explanation": "CUBIC (RFC 9438) uses a cubic curve around the window size at the last loss, which improves fairness and use of high-BDP paths."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What does TCP BBR primarily base its sending rate on?",
+    "options": [
+      "ECN marks only",
+      "Packet loss events only",
+      "Estimates of bottleneck bandwidth and minimum RTT",
+      "The receiver's queue length"
+    ],
+    "answer": 2,
+    "explanation": "BBR models the path's delivery rate and propagation delay instead of treating loss as the main congestion signal."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What does Explicit Congestion Notification (ECN) allow routers to do?",
+    "options": [
+      "Fragment packets under load",
+      "Reorder packets by priority",
+      "Drop packets earlier than normal",
+      "Mark packets to signal congestion instead of dropping them"
+    ],
+    "answer": 3,
+    "explanation": "ECN-capable routers set the CE codepoint, the receiver echoes it, and the sender reduces cwnd without a loss."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "Which side of a TCP connection enters the TIME_WAIT state?",
+    "options": [
+      "The side that performs the active close (sends the first FIN)",
+      "Both sides, always",
+      "Only the server",
+      "The passive closer"
+    ],
+    "answer": 0,
+    "explanation": "The active closer passes through FIN_WAIT states and then waits in TIME_WAIT after ACKing the peer's FIN."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "How long does a TCP endpoint remain in TIME_WAIT per the TCP specification?",
+    "options": [
+      "Until the application closes the socket",
+      "2 x MSL (maximum segment lifetime)",
+      "One RTT",
+      "One retransmission timeout"
+    ],
+    "answer": 1,
+    "explanation": "RFC 9293 specifies waiting twice the maximum segment lifetime so stray segments in both directions can expire."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "Why does TCP keep a connection in TIME_WAIT after closing?",
+    "options": [
+      "To retransmit the final ACK if it is lost and let old duplicates expire before the 4-tuple is reused",
+      "To keep the TLS session resumable",
+      "To wait for DNS caches to expire",
+      "To let the congestion window reset"
+    ],
+    "answer": 0,
+    "explanation": "If the last ACK is lost the peer resends its FIN; the wait also stops delayed segments from corrupting a new incarnation."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "Which state does the passive closer enter after receiving the peer's FIN and acknowledging it?",
+    "options": [
+      "FIN_WAIT_2",
+      "CLOSING",
+      "CLOSE_WAIT",
+      "LAST_ACK"
+    ],
+    "answer": 2,
+    "explanation": "It stays in CLOSE_WAIT until its application calls close(), which sends a FIN and moves it to LAST_ACK."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "A server shows thousands of sockets stuck in CLOSE_WAIT. What is the most likely cause?",
+    "options": [
+      "An ongoing SYN flood",
+      "TIME_WAIT timers set too high",
+      "Heavy packet loss on the network",
+      "The application is not calling close() after the peer closed"
+    ],
+    "answer": 3,
+    "explanation": "CLOSE_WAIT persists until the local app closes the socket, so a leak indicates a missing close in application code."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "What attack are TCP SYN cookies designed to mitigate?",
+    "options": [
+      "ARP spoofing",
+      "DNS amplification",
+      "Slowloris slow-header attacks",
+      "SYN floods that exhaust the half-open connection backlog"
+    ],
+    "answer": 3,
+    "explanation": "SYN cookies encode connection state in the server's ISN so no backlog entry is needed until the final ACK arrives."
+  },
+  {
+    "topic": "tls",
+    "question": "How many round trips does a full TLS 1.3 handshake take before the client can send application data (not counting TCP)?",
+    "options": [
+      "2 RTT",
+      "1 RTT",
+      "3 RTT",
+      "0 RTT"
+    ],
+    "answer": 1,
+    "explanation": "The client sends key shares in ClientHello, so after the server's flight it can send Finished and data; TLS 1.2 needed 2 RTT."
+  },
+  {
+    "topic": "tls",
+    "question": "Which key exchange method is NOT permitted in TLS 1.3?",
+    "options": [
+      "ECDHE",
+      "FFDHE (finite-field ephemeral DH)",
+      "PSK with (EC)DHE",
+      "Static RSA key transport"
+    ],
+    "answer": 3,
+    "explanation": "TLS 1.3 (RFC 8446) removed static RSA and static DH, so every full handshake has forward secrecy."
+  },
+  {
+    "topic": "tls",
+    "question": "What is the main security risk of TLS 1.3 0-RTT early data?",
+    "options": [
+      "It can be replayed by an attacker",
+      "It forces a downgrade to SSL 3.0",
+      "It prevents certificate validation",
+      "It is sent in plaintext"
+    ],
+    "answer": 0,
+    "explanation": "Early data has no protection against replay across connections, so it should only carry idempotent requests."
+  },
+  {
+    "topic": "tls",
+    "question": "In TLS 1.3, how is the server's Certificate message sent?",
+    "options": [
+      "Encrypted under the handshake traffic keys",
+      "As a hash only, never the full chain",
+      "Only inside 0-RTT early data",
+      "In plaintext, as in TLS 1.2"
+    ],
+    "answer": 0,
+    "explanation": "Everything after ServerHello, including EncryptedExtensions, Certificate and CertificateVerify, is encrypted in TLS 1.3."
+  },
+  {
+    "topic": "tls",
+    "question": "What is the purpose of the key_share extension in a TLS 1.3 ClientHello?",
+    "options": [
+      "It carries a session ticket for resumption",
+      "It carries the client's ephemeral (EC)DHE public values so a shared secret can be computed in one round trip",
+      "It carries the server hostname",
+      "It lists the supported cipher suites"
+    ],
+    "answer": 1,
+    "explanation": "Sending key shares up front lets the server reply with its share and derive handshake keys immediately."
+  },
+  {
+    "topic": "tls",
+    "question": "What does a TLS 1.3 server send if it supports one of the client's groups but the ClientHello has no key share for it?",
+    "options": [
+      "A handshake_failure alert",
+      "HelloRetryRequest",
+      "ChangeCipherSpec",
+      "ServerHelloDone"
+    ],
+    "answer": 1,
+    "explanation": "HelloRetryRequest names the group to use, and the client resends ClientHello with that key share, costing an extra RTT."
+  },
+  {
+    "topic": "tls",
+    "question": "Which TLS extension carries the hostname so a server hosting many sites can choose the right certificate?",
+    "options": [
+      "OCSP stapling (status_request)",
+      "key_share",
+      "SNI (Server Name Indication)",
+      "ALPN"
+    ],
+    "answer": 2,
+    "explanation": "SNI puts the requested hostname in ClientHello; Encrypted Client Hello can hide it."
+  },
+  {
+    "topic": "tls",
+    "question": "What does the ALPN extension do?",
+    "options": [
+      "Pins the server certificate",
+      "Enables session resumption",
+      "Compresses TLS records",
+      "Negotiates the application protocol (e.g. h2 or http/1.1) during the TLS handshake"
+    ],
+    "answer": 3,
+    "explanation": "ALPN lets client and server agree on HTTP/2 or HTTP/1.1 without an extra round trip."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "Which HTTP/1.1 limitation does HTTP/2 stream multiplexing address?",
+    "options": [
+      "TCP-level head-of-line blocking after packet loss",
+      "Application-level head-of-line blocking, by interleaving many streams on one connection",
+      "The cost of the TLS handshake",
+      "DNS lookup latency"
+    ],
+    "answer": 1,
+    "explanation": "HTTP/2 splits messages into frames on independent streams, so one slow response doesn't block others at the HTTP layer."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "Why can HTTP/2 still suffer from head-of-line blocking?",
+    "options": [
+      "Server push blocks other streams",
+      "One lost TCP segment stalls every stream because TCP delivers bytes strictly in order",
+      "HPACK forces requests to be serialized",
+      "HTTP/2 frames cannot exceed 1 KB"
+    ],
+    "answer": 1,
+    "explanation": "All HTTP/2 streams share one TCP byte stream, so a loss holds back data for all of them until it is retransmitted."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "What transport does HTTP/3 run over?",
+    "options": [
+      "TCP with TLS 1.3",
+      "QUIC over UDP",
+      "Raw IP with no transport layer",
+      "SCTP"
+    ],
+    "answer": 1,
+    "explanation": "HTTP/3 (RFC 9114) maps HTTP onto QUIC (RFC 9000), which runs over UDP."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "Which header compression scheme does HTTP/3 use?",
+    "options": [
+      "gzip",
+      "Brotli",
+      "HPACK",
+      "QPACK"
+    ],
+    "answer": 3,
+    "explanation": "QPACK (RFC 9204) adapts HPACK so out-of-order delivery across QUIC streams doesn't cause head-of-line blocking."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "Which QUIC feature lets a connection survive a client's IP address change, e.g. moving from Wi-Fi to cellular?",
+    "options": [
+      "Connection IDs that are independent of the IP/port 4-tuple",
+      "TCP Fast Open",
+      "Nagle's algorithm",
+      "Selective acknowledgments"
+    ],
+    "answer": 0,
+    "explanation": "QUIC identifies connections by connection ID, so packets from a new address can be matched and the path migrated."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "How does QUIC use TLS?",
+    "options": [
+      "It runs TLS over a TCP connection beneath QUIC",
+      "It integrates the TLS 1.3 handshake, carrying its messages in QUIC CRYPTO frames",
+      "It doesn't use encryption at all",
+      "It uses DTLS 1.2 records"
+    ],
+    "answer": 1,
+    "explanation": "RFC 9001 uses TLS 1.3 for keys and authentication while QUIC handles packet protection and transport."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "How does a browser typically learn that a server supports HTTP/3?",
+    "options": [
+      "An ICMP probe to UDP port 443",
+      "An Upgrade: h3 request header",
+      "The SNI value in the certificate",
+      "An Alt-Svc header or HTTPS DNS record advertising h3"
+    ],
+    "answer": 3,
+    "explanation": "Since HTTP/3 uses a different transport, clients discover it via Alt-Svc or SVCB/HTTPS records rather than an in-band Upgrade."
+  },
+  {
+    "topic": "routing",
+    "question": "What kind of routing protocol is BGP?",
+    "options": [
+      "A path-vector protocol used between autonomous systems",
+      "A link-state interior gateway protocol",
+      "A flooding protocol for a single LAN",
+      "A distance-vector protocol limited to 15 hops"
+    ],
+    "answer": 0,
+    "explanation": "BGP exchanges reachability with the full AS path attached and is the Internet's inter-domain (EGP) protocol."
+  },
+  {
+    "topic": "routing",
+    "question": "How does OSPF compute its routes?",
+    "options": [
+      "It runs Bellman-Ford on neighbors' distance vectors",
+      "It selects routes by AS_PATH length and policy",
+      "It uses hop count with a 15-hop maximum",
+      "It runs Dijkstra's shortest-path-first algorithm over a link-state database"
+    ],
+    "answer": 3,
+    "explanation": "Each OSPF router floods LSAs to build an identical topology map, then computes a shortest-path tree."
+  },
+  {
+    "topic": "routing",
+    "question": "Which transport and port does BGP use?",
+    "options": [
+      "UDP port 179",
+      "TCP port 179",
+      "UDP port 520",
+      "IP protocol 89"
+    ],
+    "answer": 1,
+    "explanation": "BGP sessions run over TCP 179; UDP 520 is RIP and IP protocol 89 is OSPF."
+  },
+  {
+    "topic": "routing",
+    "question": "How does eBGP prevent routing loops between autonomous systems?",
+    "options": [
+      "Packets have a TTL limit",
+      "Spanning Tree Protocol blocks redundant links",
+      "A router rejects routes whose AS_PATH already contains its own AS number",
+      "Split horizon between neighbors"
+    ],
+    "answer": 2,
+    "explanation": "The AS_PATH records every AS a route traversed, so seeing your own ASN means the route has looped back."
+  },
+  {
+    "topic": "routing",
+    "question": "A router has routes for 10.0.0.0/8 and 10.1.0.0/16. Which route is used for a packet to 10.1.2.3?",
+    "options": [
+      "Both equally, via ECMP",
+      "The /8 route, because it is more general",
+      "The /16 route, by longest prefix match",
+      "Whichever route was learned first"
+    ],
+    "answer": 2,
+    "explanation": "IP forwarding picks the most specific matching prefix; administrative distance only breaks ties between identical prefixes."
+  },
+  {
+    "topic": "mtu-fragmentation",
+    "question": "With a 1500-byte Ethernet MTU, a 20-byte IPv4 header and a 20-byte TCP header with no options, what is the TCP MSS?",
+    "options": [
+      "1500 bytes",
+      "1460 bytes",
+      "1440 bytes",
+      "1480 bytes"
+    ],
+    "answer": 1,
+    "explanation": "MSS = MTU - IP header - TCP header = 1500 - 20 - 20 = 1460; IPv6's 40-byte header would make it 1440."
+  },
+  {
+    "topic": "mtu-fragmentation",
+    "question": "In IPv6, who may fragment a packet?",
+    "options": [
+      "Any router along the path",
+      "Both the source and routers",
+      "Only the source host, using a Fragment extension header",
+      "Nobody, since IPv6 cannot carry fragments"
+    ],
+    "answer": 2,
+    "explanation": "IPv6 routers never fragment; they send ICMPv6 Packet Too Big, and the source fragments or lowers its packet size."
+  },
+  {
+    "topic": "mtu-fragmentation",
+    "question": "A 4000-byte IPv4 datagram (20-byte header, 3980 bytes of data) is fragmented over a 1500-byte MTU. What is the Fragment Offset field of the third fragment?",
+    "options": [
+      "2960",
+      "185",
+      "370",
+      "360"
+    ],
+    "answer": 2,
+    "explanation": "Each fragment carries 1480 data bytes (a multiple of 8), so the third starts at byte 2960, and the offset is in 8-byte units: 2960 / 8 = 370."
+  },
+  {
+    "topic": "mtu-fragmentation",
+    "question": "What does IPv4 Path MTU Discovery (RFC 1191) rely on?",
+    "options": [
+      "Setting the DF bit and receiving ICMP 'Fragmentation Needed' messages",
+      "DNS records advertising the MTU",
+      "TCP RST segments from routers",
+      "ARP replies carrying the link MTU"
+    ],
+    "answer": 0,
+    "explanation": "Routers that can't forward a DF packet return ICMP type 3 code 4 with the next-hop MTU; filtering that ICMP causes PMTUD black holes."
+  }
+]

@@ -60,6 +60,21 @@
   "explanation": "threading.Thread is the standard high-level API for OS threads."
  },
  {
+  "id": "qfeb59f1be86",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "easy",
+  "question": "What does GIL stand for in CPython?",
+  "options": [
+   "Global Import Library",
+   "General Input Loop",
+   "Global Interpreter Lock",
+   "Generator Iteration Limit"
+  ],
+  "answer": 2,
+  "explanation": "The GIL lets only one thread execute Python bytecode at a time in standard CPython."
+ },
+ {
   "id": "q005b69c5957",
   "subject": "python",
   "topic": "async-concurrency",
@@ -73,6 +88,21 @@
   ],
   "answer": 3,
   "explanation": "Calling a coroutine function only creates a coroutine object; nothing runs until it is awaited or scheduled."
+ },
+ {
+  "id": "q90ae68aeb1d",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "medium",
+  "question": "Which concurrent.futures class runs callables in separate worker processes?",
+  "options": [
+   "ThreadPoolExecutor",
+   "AsyncExecutor",
+   "ProcessPoolExecutor",
+   "MultiprocessExecutor"
+  ],
+  "answer": 2,
+  "explanation": "ProcessPoolExecutor sidesteps the GIL for CPU-bound work by using multiple processes."
  },
  {
   "id": "qa0b80b467f6",
@@ -178,5 +208,20 @@
   ],
   "answer": 3,
   "explanation": "create_task wraps the coroutine in a Task that the loop runs concurrently while the caller continues."
+ },
+ {
+  "id": "qeddea0c7836",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "hard",
+  "question": "In Python 3.11+, what does asyncio.TaskGroup do when one of its tasks raises an exception?",
+  "options": [
+   "Ignores the failure and lets other tasks finish",
+   "Cancels the remaining tasks and raises an ExceptionGroup when the block exits",
+   "Restarts the failed task",
+   "Stops the event loop immediately"
+  ],
+  "answer": 1,
+  "explanation": "TaskGroup provides structured concurrency, collecting failures into an ExceptionGroup."
  }
 ]

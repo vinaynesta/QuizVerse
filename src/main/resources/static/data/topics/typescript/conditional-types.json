@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q2767428c521",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "What is `type T = boolean extends true ? 1 : 0;`?",
+  "options": [
+   "never",
+   "0",
+   "1",
+   "0 | 1"
+  ],
+  "answer": 1,
+  "explanation": "There is no type parameter, so nothing distributes; boolean (true | false) is not assignable to true."
+ },
+ {
+  "id": "q6851bcf341d",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type D<T> = T extends true ? \"yes\" : \"no\";`, what is `D<boolean>`?",
+  "options": [
+   "\"yes\" | \"no\"",
+   "\"yes\"",
+   "never",
+   "\"no\""
+  ],
+  "answer": 0,
+  "explanation": "boolean is the union true | false, so the distributive conditional maps each member separately."
+ },
+ {
+  "id": "q75b4b269e7c",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type ToArray<T> = T extends any ? T[] : never;`, what is `ToArray<string | number>`?",
+  "options": [
+   "(string | number)[]",
+   "string[] | number[]",
+   "[string, number]",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "Conditional types distribute over naked type parameters, so each union member is mapped separately."
+ },
+ {
+  "id": "q869e9997477",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "How do you prevent a conditional type from distributing over a union type argument?",
+  "options": [
+   "Declare T with a default of never",
+   "Wrap both sides in brackets: [T] extends [U] ? X : Y",
+   "Use T extends U ?? X : Y",
+   "Add the readonly modifier to T"
+  ],
+  "answer": 1,
+  "explanation": "Distribution only applies when the checked type is a naked type parameter; wrapping it in a tuple disables that."
+ },
+ {
+  "id": "qb062514ab58",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type IsString<T> = T extends string ? true : false;`, what is `IsString<\"a\">`?",
+  "options": [
+   "false",
+   "never",
+   "boolean",
+   "true"
+  ],
+  "answer": 3,
+  "explanation": "The literal \"a\" is assignable to string, so the true branch is chosen."
+ },
+ {
+  "id": "qbd9132738d7",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type F<T> = [T] extends [string] ? \"s\" : \"o\";`, what is `F<string | number>`?",
+  "options": [
+   "never",
+   "\"o\"",
+   "\"s\" | \"o\"",
+   "\"s\""
+  ],
+  "answer": 1,
+  "explanation": "The tuple wrapper prevents distribution, and string | number as a whole is not assignable to string."
+ },
+ {
+  "id": "qcbac0f8de92",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type F<T> = T extends string ? \"s\" : \"o\";`, what is `F<never>`?",
+  "options": [
+   "\"o\"",
+   "\"s\" | \"o\"",
+   "never",
+   "\"s\""
+  ],
+  "answer": 2,
+  "explanation": "never is the empty union, and distributing over zero members yields never."
+ }
+]

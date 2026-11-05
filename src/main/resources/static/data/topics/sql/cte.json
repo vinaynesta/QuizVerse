@@ -1,0 +1,107 @@
+[
+ {
+  "id": "qb887d311c18",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "medium",
+  "question": "Can a single non-recursive CTE be referenced more than once in the same query?",
+  "options": [
+   "Only in the WHERE clause",
+   "No, each CTE can be referenced only once",
+   "Only if it is declared RECURSIVE",
+   "Yes, the main query can refer to it multiple times"
+  ],
+  "answer": 3,
+  "explanation": "A CTE is visible to the whole statement that follows WITH, so it can be joined or selected from repeatedly."
+ },
+ {
+  "id": "qd05a04b81da",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "medium",
+  "question": "What is a common table expression (CTE)?",
+  "options": [
+   "A permanent table stored in a special schema",
+   "A named temporary result set defined with WITH and usable within a single statement",
+   "An index that spans several tables",
+   "A trigger that runs before each query"
+  ],
+  "answer": 1,
+  "explanation": "CTEs make complex queries more readable by naming intermediate results."
+ },
+ {
+  "id": "q2e95a00ce7f",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "How can a recursive CTE using UNION ALL avoid infinite recursion when traversing a graph that contains cycles?",
+  "options": [
+   "Add ORDER BY to the anchor member",
+   "Replace UNION ALL with INTERSECT",
+   "Declare the CTE as MATERIALIZED",
+   "Track the visited path in a column and exclude nodes already on it"
+  ],
+  "answer": 3,
+  "explanation": "Without cycle detection the recursive member keeps finding new rows; PostgreSQL 14+ also offers a CYCLE clause for this."
+ },
+ {
+  "id": "q72d566c0817",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "In PostgreSQL 12 and later, how is a non-recursive CTE that is referenced once treated by default?",
+  "options": [
+   "It is always materialized into a temporary table",
+   "It is executed twice",
+   "It is inlined into the main query, unless MATERIALIZED is specified",
+   "It is converted into a view"
+  ],
+  "answer": 2,
+  "explanation": "Since PostgreSQL 12, such CTEs are inlined by default. WITH ... AS MATERIALIZED forces the old behaviour of computing the CTE once."
+ },
+ {
+  "id": "q8f9e67a89da",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "In PostgreSQL, can a DELETE ... RETURNING statement be used inside a WITH clause?",
+  "options": [
+   "No, CTEs may contain only SELECT statements",
+   "Only if the CTE is declared RECURSIVE",
+   "Only when the main query is also a DELETE",
+   "Yes, and its returned rows can feed the main query, such as inserting them into an archive table"
+  ],
+  "answer": 3,
+  "explanation": "Data-modifying CTEs let one statement move rows atomically, for example deleting from one table and inserting into another."
+ },
+ {
+  "id": "qd7271d263b8",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "What causes a recursive CTE to stop producing rows?",
+  "options": [
+   "Any UNION automatically limits recursion to 100 rows",
+   "The CTE is referenced in the outer query",
+   "The anchor member returns only NULL values",
+   "The recursive member produces no new rows"
+  ],
+  "answer": 3,
+  "explanation": "Recursion ends when an iteration of the recursive member returns no rows. Without a termination condition, a cycle can recurse indefinitely, so use UNION to deduplicate or a depth limit."
+ },
+ {
+  "id": "qfd9b1e11d57",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "What structure must a recursive CTE have?",
+  "options": [
+   "A non-recursive SELECT followed by a WHERE clause",
+   "An anchor member and a recursive member that references the CTE, combined with UNION or UNION ALL",
+   "A subquery in the HAVING clause only",
+   "A UNION of two independent queries that never reference the CTE name"
+  ],
+  "answer": 1,
+  "explanation": "The anchor provides the starting rows and the recursive member references the CTE itself. The two are combined with UNION or UNION ALL."
+ }
+]

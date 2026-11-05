@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qcc835c88c3a",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "In React 19, what happens if a ref callback returns a function?",
+  "options": [
+   "React ignores the returned value",
+   "React calls the function on every render",
+   "React calls that function as cleanup when the element is detached, instead of calling the ref with null",
+   "React throws because ref callbacks must return undefined"
+  ],
+  "answer": 2,
+  "explanation": "Ref callbacks can now return a cleanup function, similar to effects."
+ },
+ {
+  "id": "q5c5bfd3ddb2",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "Why does a state variable that holds a function need useState(() => fn) instead of useState(fn)?",
+  "options": [
+   "Functions cannot be stored in state at all",
+   "It avoids creating a closure",
+   "useState calls a function argument as an initializer, so fn would be called and its return value stored",
+   "useState(fn) makes the state read-only"
+  ],
+  "answer": 2,
+  "explanation": "A function passed to useState is treated as a lazy initializer, and the same applies to setState updaters."
+ },
+ {
+  "id": "q5035d87c225",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "A custom hook returns an object literal { value, setValue } on every render. What problem can this create?",
+  "options": [
+   "The hook's state is shared between components",
+   "setValue stops working after the first render",
+   "React throws because hooks cannot return objects",
+   "Consumers that put the returned object in effect dependencies or memo props see a new reference every render"
+  ],
+  "answer": 3,
+  "explanation": "Unless memoized, the object identity changes each render, which can retrigger effects or break memoization."
+ },
+ {
+  "id": "q4227756140c",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "Why does moving frequently changing state down into a small child component often improve performance?",
+  "options": [
+   "Only that child and its descendants re-render when the state changes, not its former siblings",
+   "It turns the state into a ref",
+   "React skips rendering children of stateful components",
+   "It enables server rendering for the parent"
+  ],
+  "answer": 0,
+  "explanation": "State updates re-render the owning component's subtree, so keeping state close to where it is used shrinks that subtree."
+ },
+ {
+  "id": "q6beb68b619d",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Why does a component written as const Item = memo(function Item(props) {...}) still show as Item in React DevTools?",
+  "options": [
+   "memo copies the variable name at runtime",
+   "React reads the file name",
+   "DevTools reads the name of the inner named function",
+   "DevTools always shows Memo instead"
+  ],
+  "answer": 2,
+  "explanation": "Naming the function passed to memo or forwardRef gives the component a useful display name in DevTools and error stacks."
+ },
+ {
+  "id": "q2724dc15ba8",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "Why might splitting state and dispatch into two separate contexts improve performance?",
+  "options": [
+   "It removes the need for a reducer",
+   "dispatch changes on every render",
+   "React allows only one value per context",
+   "Components that only dispatch do not re-render when the state changes, because dispatch is stable"
+  ],
+  "answer": 3,
+  "explanation": "dispatch from useReducer has a stable identity, so a context holding only dispatch never triggers re-renders."
+ },
+ {
+  "id": "qd812efcec22",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "Why can't a Client Component import a Server Component module directly?",
+  "options": [
+   "React throws when two components share a name",
+   "Imported modules become part of the client bundle, so the Server Component would run as client code; pass it as children instead",
+   "Server Components have no default export",
+   "Client Components cannot render JSX"
+  ],
+  "answer": 1,
+  "explanation": "Server Components can be passed to Client Components as props like children, which keeps them rendered on the server."
+ },
+ {
+  "id": "qad6955aff2b",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "What does useSyncExternalStore require from the getSnapshot function?",
+  "options": [
+   "It must return a new object every call",
+   "It must return a cached value that stays identical by Object.is while the store has not changed",
+   "It must be async",
+   "It must subscribe to the store"
+  ],
+  "answer": 1,
+  "explanation": "Returning a fresh object each time makes React think the store changed on every render, causing an infinite loop."
+ },
+ {
+  "id": "qde7258d8e18",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "Why might onClick on a parent div fire after a React portal child is clicked, even though the portal renders elsewhere in the DOM?",
+  "options": [
+   "React re-dispatches every click globally",
+   "Portals copy event listeners to the body",
+   "Browsers bubble events to every div",
+   "Events in portals propagate through the React tree, not the DOM tree"
+  ],
+  "answer": 3,
+  "explanation": "A portal stays a child of its React parent, so synthetic events bubble to React ancestors."
+ },
+ {
+  "id": "q971011af2de",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "In React 19, a form uses action={submit} where submit is a Server Function. What happens if JavaScript has not loaded yet when the user submits?",
+  "options": [
+   "The form can still submit as a regular form post when used with a framework that supports progressive enhancement",
+   "The browser shows an error",
+   "The data is silently lost",
+   "Nothing happens until hydration completes in all cases"
+  ],
+  "answer": 0,
+  "explanation": "Server Function form actions can work before hydration, which is a key benefit of progressive enhancement."
+ }
+]

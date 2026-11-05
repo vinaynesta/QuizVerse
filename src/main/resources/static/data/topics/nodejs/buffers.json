@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q109a492a925",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "easy",
+  "question": "Which encoding name produces a URL-safe Base64 string without +, /, or padding characters?",
+  "options": [
+   "'hex'",
+   "'base64'",
+   "'base64url'",
+   "'ascii'"
+  ],
+  "answer": 2,
+  "explanation": "The 'base64url' encoding replaces + and / with - and _ and omits padding; it has been available since Node.js 14.18 and 15.7."
+ },
+ {
+  "id": "q3ad28956f06",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "easy",
+  "question": "Can the length of a Buffer be changed after it is allocated?",
+  "options": [
+   "Yes, it grows automatically when written to",
+   "Only when created with Buffer.alloc",
+   "Yes, it resizes when passed to fs.writeFile",
+   "No, its length is fixed when it is created"
+  ],
+  "answer": 3,
+  "explanation": "A Buffer is a fixed-length view over raw bytes; to hold more data you must allocate a new Buffer and copy."
+ },
+ {
+  "id": "q5ab0460ba39",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "easy",
+  "question": "Which method creates a Buffer from a string?",
+  "options": [
+   "Buffer.create()",
+   "new Buffer.String()",
+   "Buffer.from()",
+   "Buffer.parse()"
+  ],
+  "answer": 2,
+  "explanation": "Buffer.from() is the safe modern constructor for creating a Buffer from a string, array, or other buffer; the bare new Buffer() form is deprecated."
+ },
+ {
+  "id": "q071e4aeb446",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "What does Buffer.byteLength('café') return?",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "The é takes two bytes in UTF-8, so the string is 5 bytes even though it has 4 characters."
+ },
+ {
+  "id": "q94252117db5",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "Which call reads a 32-bit unsigned big-endian integer from the start of a Buffer?",
+  "options": [
+   "buf.readUInt32BE(0)",
+   "buf.toString('uint32')",
+   "Number(buf.subarray(0, 4))",
+   "buf.readInt16LE(0)"
+  ],
+  "answer": 0,
+  "explanation": "Buffer provides typed read and write methods with explicit endianness for parsing binary formats."
+ },
+ {
+  "id": "qa9084a69bf4",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "What does buf.subarray(0, 4) return for a Buffer buf?",
+  "options": [
+   "A string with the first 4 characters",
+   "An independent copy of the first 4 bytes",
+   "A new Buffer that shares memory with buf, so changes to it affect the original",
+   "The number 4"
+  ],
+  "answer": 2,
+  "explanation": "subarray (and the deprecated slice) creates a view over the same memory, unlike Buffer.from(buf), which copies."
+ },
+ {
+  "id": "qb86f46c229d",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "Why should a Buffer from Buffer.allocUnsafe() be overwritten before its contents are used?",
+  "options": [
+   "It can contain leftover bytes from memory that was used earlier",
+   "It is stored as UTF-16 by default",
+   "It is read-only until it is filled",
+   "It has zero length until it is written"
+  ],
+  "answer": 0,
+  "explanation": "allocUnsafe() skips zero-filling for speed, so unwritten bytes can expose old data."
+ },
+ {
+  "id": "qfc46463c4cc",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "Which call correctly joins an array of Buffer chunks into one Buffer?",
+  "options": [
+   "chunks.join('')",
+   "Buffer.merge(chunks)",
+   "Buffer.concat(chunks)",
+   "new Buffer(chunks)"
+  ],
+  "answer": 2,
+  "explanation": "join() converts each chunk to a string, which can corrupt binary data; new Buffer() is deprecated."
+ }
+]

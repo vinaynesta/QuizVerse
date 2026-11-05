@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q0142fa3334e",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Given const user = { name: \"Ana\" }; how do you read the name property?",
+  "options": [
+   "user->name",
+   "user.name",
+   "user::name",
+   "user(name)"
+  ],
+  "answer": 1,
+  "explanation": "Object properties are accessed with dot notation or bracket notation like user[\"name\"]."
+ },
+ {
+  "id": "q04975579342",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Which method checks whether an array contains a value and returns a boolean?",
+  "options": [
+   "has",
+   "includes",
+   "exists",
+   "contains"
+  ],
+  "answer": 1,
+  "explanation": "Array.prototype.includes returns true or false and also correctly detects NaN."
+ },
+ {
+  "id": "q56d624dfa0d",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [1, 2, 3].length return?",
+  "options": [
+   "2",
+   "undefined",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "length gives the number of elements, which is 3."
+ },
+ {
+  "id": "qa68592aef78",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Which array method adds an element to the end of an array?",
+  "options": [
+   "unshift",
+   "push",
+   "shift",
+   "pop"
+  ],
+  "answer": 1,
+  "explanation": "push appends elements to the end; unshift adds to the start."
+ },
+ {
+  "id": "qb2b9258977e",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [10, 20, 30].indexOf(40) return?",
+  "options": [
+   "-1",
+   "null",
+   "undefined",
+   "0"
+  ],
+  "answer": 0,
+  "explanation": "indexOf returns -1 when the element is not found."
+ },
+ {
+  "id": "qca747d45332",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does Object.keys({ a: 1, b: 2 }) return?",
+  "options": [
+   "[1, 2]",
+   "{ a: 1, b: 2 }",
+   "[[\"a\", 1], [\"b\", 2]]",
+   "[\"a\", \"b\"]"
+  ],
+  "answer": 3,
+  "explanation": "Object.keys returns an array of the object's own enumerable string keys."
+ },
+ {
+  "id": "qcf980e88cc4",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Which array method removes and returns the first element?",
+  "options": [
+   "shift",
+   "splice",
+   "slice",
+   "pop"
+  ],
+  "answer": 0,
+  "explanation": "shift removes the first element and returns it; pop removes the last."
+ }
+]

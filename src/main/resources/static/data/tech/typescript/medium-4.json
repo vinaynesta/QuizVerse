@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8d940018ee0",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "Given `const colors = { red: \"#f00\", blue: \"#00f\" };`, what is `keyof typeof colors`?",
+  "options": [
+   "string",
+   "\"red\" | \"blue\"",
+   "{ red: string; blue: string }",
+   "\"#f00\" | \"#00f\""
+  ],
+  "answer": 1,
+  "explanation": "typeof gets the object's type and keyof then extracts its property names."
+ },
+ {
+  "id": "q0738789243a",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "What is the purpose of `const _exhaustive: never = shape;` in the default branch of a switch over a union?",
+  "options": [
+   "To get a compile error if any union member is not handled",
+   "To tell the compiler to skip type checking",
+   "To clear the shape variable at runtime",
+   "To convert shape to an empty object"
+  ],
+  "answer": 0,
+  "explanation": "If an unhandled member reaches default, its type is not never, so the assignment fails to compile."
+ },
+ {
+  "id": "q26fea0666cc",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(s: string | undefined) { if (s) { /* here */ } }`, what is s's type at `here`?",
+  "options": [
+   "never",
+   "string | undefined",
+   "undefined",
+   "string"
+  ],
+  "answer": 3,
+  "explanation": "Truthiness narrowing removes undefined (and null) from the union."
+ },
+ {
+  "id": "qb93d159c9cc",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "What is the correct return type for a user-defined type guard that checks whether `p: Fish | Bird` is a Fish?",
+  "options": [
+   "p is Fish",
+   "asserts Fish",
+   "Fish",
+   "boolean as Fish"
+  ],
+  "answer": 0,
+  "explanation": "A type predicate of the form param is Type tells the compiler to narrow when the function returns true."
+ },
+ {
+  "id": "q448773caf8d",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `class Stack<T> { push(item: T) {} }`, what happens with `new Stack<number>().push(\"a\")`?",
+  "options": [
+   "It compiles; T widens to string | number",
+   "It compiles but throws at runtime",
+   "It compiles because generics accept any value",
+   "A compile error, because T is fixed to number"
+  ],
+  "answer": 3,
+  "explanation": "Once the class is instantiated with number, push only accepts number."
+ },
+ {
+  "id": "q382bb6ae92f",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `function get<T, K extends keyof T>(obj: T, key: K): T[K]`, what does `get({ a: 1, b: \"x\" }, \"b\")` return as a type?",
+  "options": [
+   "number",
+   "string",
+   "unknown",
+   "string | number"
+  ],
+  "answer": 1,
+  "explanation": "T[K] is an indexed access type, so with K = \"b\" the result is the type of property b."
+ },
+ {
+  "id": "q1d041b7bbb1",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "For `function f(a: string, b: number): void`, what is `Parameters<typeof f>`?",
+  "options": [
+   "{ a: string; b: number }",
+   "[a: string, b: number]",
+   "(string | number)[]",
+   "string | number"
+  ],
+  "answer": 1,
+  "explanation": "Parameters<T> produces a tuple of the function's parameter types."
+ },
+ {
+  "id": "q524ed0c3ad4",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Required<{ a?: number; b?: string }>` produce?",
+  "options": [
+   "{ a: number | undefined; b: string | undefined }",
+   "{ a?: number; b?: string }",
+   "{ readonly a: number; readonly b: string }",
+   "{ a: number; b: string }"
+  ],
+  "answer": 3,
+  "explanation": "Required<T> removes the optional modifier from every property."
+ },
+ {
+  "id": "q27d46896c5d",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "What is `keyof { a: number; b: string }`?",
+  "options": [
+   "number | string",
+   "{ a: \"a\"; b: \"b\" }",
+   "\"a\" | \"b\"",
+   "[\"a\", \"b\"]"
+  ],
+  "answer": 2,
+  "explanation": "keyof produces a union of the property names of an object type."
+ },
+ {
+  "id": "q684ac32b24f",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "Which type is `User` without its `password` property?",
+  "options": [
+   "Pick<User, \"password\">",
+   "Partial<User>",
+   "Omit<User, \"password\">",
+   "Exclude<User, \"password\">"
+  ],
+  "answer": 2,
+  "explanation": "Omit<T, K> keeps every property except the listed keys; Exclude works on union members, not properties."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q82d4d6a58a9",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which Kubernetes object routes external HTTP(S) traffic to Services inside the cluster, using a controller that implements it?",
+  "options": [
+   "ConfigMap",
+   "PersistentVolume",
+   "Ingress",
+   "Job"
+  ],
+  "answer": 2,
+  "explanation": "An Ingress defines host and path routing rules, and an Ingress controller implements them."
+ },
+ {
+  "id": "q68b0e78f9c8",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Which option makes a force push refuse to overwrite remote commits you have not fetched?",
+  "options": [
+   "--force",
+   "--force-with-lease",
+   "--mirror",
+   "--prune"
+  ],
+  "answer": 1,
+  "explanation": "--force-with-lease aborts if the remote branch has moved since your last fetch, protecting others' work."
+ },
+ {
+  "id": "q31f0210c0e0",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "What is the purpose of Terraform state?",
+  "options": [
+   "It stores the source code for modules",
+   "It is a cache of Docker images",
+   "It holds encrypted passwords for the cloud provider",
+   "It maps configuration resources to real-world objects so Terraform knows what it manages"
+  ],
+  "answer": 3,
+  "explanation": "The state file records the real resource IDs and attributes that correspond to each resource block, which Terraform needs to plan changes."
+ },
+ {
+  "id": "qd985a479dd5",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What does git rebase -i (interactive rebase) allow you to do?",
+  "options": [
+   "Only view the commit graph",
+   "Merge two repositories interactively",
+   "Reorder, squash, edit, or drop commits in a range",
+   "Stage individual hunks only"
+  ],
+  "answer": 2,
+  "explanation": "Interactive rebase opens a todo list where you pick, reword, squash, reorder, or drop commits."
+ },
+ {
+  "id": "q1998219472c",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What is a three-way merge based on?",
+  "options": [
+   "Three remotes",
+   "The last three commits on each branch",
+   "Two branch tips and their latest common ancestor",
+   "The working tree, index and HEAD only"
+  ],
+  "answer": 2,
+  "explanation": "Git compares both branch tips against their merge base (the common ancestor) to combine the changes."
+ },
+ {
+  "id": "qcc7489c25f6",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What is the main benefit of squash merging a feature branch?",
+  "options": [
+   "It keeps every intermediate commit with its original hash",
+   "It preserves a merge commit with two parents",
+   "It rebases the target branch onto the feature branch",
+   "It collapses the feature's commits into one commit on the target branch"
+  ],
+  "answer": 3,
+  "explanation": "A squash merge produces a single commit on the target branch, which keeps the main history tidy."
+ },
+ {
+  "id": "q6c798094c39",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "What does chmod 640 file do?",
+  "options": [
+   "Gives the owner read and write, the group read, and others no access",
+   "Gives everyone read and write access",
+   "Gives the owner read, write and execute, the group read, and others write",
+   "Makes the file executable by all users"
+  ],
+  "answer": 0,
+  "explanation": "The octal digits map to owner (6 = rw-), group (4 = r--), and others (0 = ---)."
+ },
+ {
+  "id": "q37c47893c58",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "During a conflicted merge, which command marks a file as resolved after you edit it?",
+  "options": [
+   "git checkout --ours",
+   "git commit --resolve",
+   "git mark <file>",
+   "git add <file>"
+  ],
+  "answer": 3,
+  "explanation": "Staging the edited file records the resolution; the merge is completed with git commit afterwards."
+ },
+ {
+  "id": "qf15c9db9604",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Why does Docker reuse cached layers during a build?",
+  "options": [
+   "Layers are compressed into a single file on every build",
+   "Docker caches all layers globally across machines by default",
+   "Each instruction that is unchanged, along with its inputs, produces the same layer, so it is reused",
+   "The cache is used only for the base image"
+  ],
+  "answer": 2,
+  "explanation": "If an instruction and its inputs have not changed, Docker reuses the layer it produced last time; a change invalidates that layer and every layer after it."
+ },
+ {
+  "id": "q33ab16da22a",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "Why should CI secrets be injected from a secret store at runtime rather than committed to the repository?",
+  "options": [
+   "Committed secrets persist in history and forks, so they can leak",
+   "Secrets run faster in CI",
+   "Git cannot store strings longer than 64 characters",
+   "CI systems cannot read files"
+  ],
+  "answer": 0,
+  "explanation": "Anything committed stays in the repository history, so a secret store plus runtime injection limits exposure."
+ }
+]

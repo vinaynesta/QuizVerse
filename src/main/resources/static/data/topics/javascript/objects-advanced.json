@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q1061f38d828",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does JSON.stringify({ a: undefined, b: () => 1, c: 1 }) return?",
+  "options": [
+   "'{\"a\":null,\"b\":null,\"c\":1}'",
+   "'{\"c\":1}'",
+   "'{\"a\":undefined,\"c\":1}'",
+   "TypeError"
+  ],
+  "answer": 1,
+  "explanation": "Properties whose values are undefined, functions or symbols are omitted from JSON object output."
+ },
+ {
+  "id": "q22b8df17d36",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst o = Object.freeze({ inner: { v: 1 } });\no.inner.v = 2;\nconsole.log(o.inner.v);",
+  "options": [
+   "1",
+   "2",
+   "TypeError",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "Object.freeze is shallow: o's own properties cannot change, but the nested object is still mutable."
+ },
+ {
+  "id": "q412b8f419a1",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does Object.keys({ b: 1, 2: 1, a: 1, 1: 1 }) return?",
+  "options": [
+   "[\"1\", \"2\", \"b\", \"a\"]",
+   "[\"b\", \"2\", \"a\", \"1\"]",
+   "[\"a\", \"b\", \"1\", \"2\"]",
+   "[\"b\", \"a\", \"1\", \"2\"]"
+  ],
+  "answer": 0,
+  "explanation": "Integer-like keys come first in ascending order, followed by string keys in insertion order."
+ },
+ {
+  "id": "qf338ff27646",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst a = { n: { v: 1 } };\nconst b = { ...a };\nb.n.v = 2;\nconsole.log(a.n.v);",
+  "options": [
+   "1",
+   "undefined",
+   "TypeError",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Object spread makes a shallow copy, so a.n and b.n refer to the same nested object; structuredClone would make a deep copy."
+ }
+]

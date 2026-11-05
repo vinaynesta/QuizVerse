@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q11a2c863cce",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "What transport does HTTP/3 run over?",
+  "options": [
+   "TCP with TLS 1.3",
+   "QUIC over UDP",
+   "Raw IP with no transport layer",
+   "SCTP"
+  ],
+  "answer": 1,
+  "explanation": "HTTP/3 (RFC 9114) maps HTTP onto QUIC (RFC 9000), which runs over UDP."
+ },
+ {
+  "id": "q576d01abeec",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Which QUIC feature lets a connection survive a client's IP address change, e.g. moving from Wi-Fi to cellular?",
+  "options": [
+   "Selective acknowledgments",
+   "TCP Fast Open",
+   "Nagle's algorithm",
+   "Connection IDs that are independent of the IP/port 4-tuple"
+  ],
+  "answer": 3,
+  "explanation": "QUIC identifies connections by connection ID, so packets from a new address can be matched and the path migrated."
+ },
+ {
+  "id": "q5ef59574026",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Which HTTP/1.1 limitation does HTTP/2 stream multiplexing address?",
+  "options": [
+   "TCP-level head-of-line blocking after packet loss",
+   "DNS lookup latency",
+   "The cost of the TLS handshake",
+   "Application-level head-of-line blocking, by interleaving many streams on one connection"
+  ],
+  "answer": 3,
+  "explanation": "HTTP/2 splits messages into frames on independent streams, so one slow response doesn't block others at the HTTP layer."
+ },
+ {
+  "id": "q5fff6b82c92",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "How does a browser typically learn that a server supports HTTP/3?",
+  "options": [
+   "An ICMP probe to UDP port 443",
+   "An Alt-Svc header or HTTPS DNS record advertising h3",
+   "The SNI value in the certificate",
+   "An Upgrade: h3 request header"
+  ],
+  "answer": 1,
+  "explanation": "Since HTTP/3 uses a different transport, clients discover it via Alt-Svc or SVCB/HTTPS records rather than an in-band Upgrade."
+ },
+ {
+  "id": "q994be2d2a84",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Why can HTTP/2 still suffer from head-of-line blocking?",
+  "options": [
+   "Server push blocks other streams",
+   "HPACK forces requests to be serialized",
+   "One lost TCP segment stalls every stream because TCP delivers bytes strictly in order",
+   "HTTP/2 frames cannot exceed 1 KB"
+  ],
+  "answer": 2,
+  "explanation": "All HTTP/2 streams share one TCP byte stream, so a loss holds back data for all of them until it is retransmitted."
+ },
+ {
+  "id": "qa0589239255",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "How does QUIC use TLS?",
+  "options": [
+   "It runs TLS over a TCP connection beneath QUIC",
+   "It doesn't use encryption at all",
+   "It integrates the TLS 1.3 handshake, carrying its messages in QUIC CRYPTO frames",
+   "It uses DTLS 1.2 records"
+  ],
+  "answer": 2,
+  "explanation": "RFC 9001 uses TLS 1.3 for keys and authentication while QUIC handles packet protection and transport."
+ },
+ {
+  "id": "qaddc83a72fa",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Which header compression scheme does HTTP/3 use?",
+  "options": [
+   "QPACK",
+   "Brotli",
+   "HPACK",
+   "gzip"
+  ],
+  "answer": 0,
+  "explanation": "QPACK (RFC 9204) adapts HPACK so out-of-order delivery across QUIC streams doesn't cause head-of-line blocking."
+ }
+]

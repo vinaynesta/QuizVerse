@@ -1,0 +1,257 @@
+[
+ {
+  "id": "q1b529641763",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "In PostgreSQL, what happens after a statement fails inside an explicit transaction block?",
+  "options": [
+   "The transaction is aborted, and later statements fail until ROLLBACK is issued",
+   "The remaining statements run normally",
+   "The failed statement is retried automatically",
+   "The whole session is closed"
+  ],
+  "answer": 0,
+  "explanation": "PostgreSQL puts the transaction in an aborted state. Only ROLLBACK (or ROLLBACK TO SAVEPOINT) is accepted until the transaction is ended."
+ },
+ {
+  "id": "q40591e5cd75",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What does SELECT ... FOR UPDATE do in PostgreSQL?",
+  "options": [
+   "Locks the selected rows so other transactions cannot update or delete them until commit",
+   "Locks the entire table for reads",
+   "Creates a snapshot copy of the table",
+   "Prevents the query from being committed"
+  ],
+  "answer": 0,
+  "explanation": "FOR UPDATE takes row-level locks on the rows returned, blocking concurrent modifications until the transaction ends."
+ },
+ {
+  "id": "q5132ca498cd",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is a lost update?",
+  "options": [
+   "Two transactions read the same value and both write back, so one overwrites the other's change",
+   "A committed change is lost after a server crash",
+   "An UPDATE that matches no rows",
+   "A transaction reads uncommitted data from another"
+  ],
+  "answer": 0,
+  "explanation": "Lost updates can be prevented with SELECT ... FOR UPDATE, atomic UPDATE expressions or a stricter isolation level."
+ },
+ {
+  "id": "q697a657567c",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "Under READ COMMITTED isolation in PostgreSQL, which anomaly can occur?",
+  "options": [
+   "Dirty read",
+   "Non-repeatable read",
+   "No anomaly is possible",
+   "Only write skew"
+  ],
+  "answer": 1,
+  "explanation": "READ COMMITTED prevents dirty reads, but two reads of the same row in one transaction can return different committed values."
+ },
+ {
+  "id": "q6d2076b93f9",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is the default transaction isolation level in MySQL InnoDB?",
+  "options": [
+   "READ COMMITTED",
+   "READ UNCOMMITTED",
+   "REPEATABLE READ",
+   "SERIALIZABLE"
+  ],
+  "answer": 2,
+  "explanation": "InnoDB defaults to REPEATABLE READ, while PostgreSQL defaults to READ COMMITTED."
+ },
+ {
+  "id": "q75922c717e5",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What does SAVEPOINT allow inside a transaction?",
+  "options": [
+   "Rolling back to a named point without aborting the whole transaction",
+   "Running a second transaction in parallel on the same connection",
+   "Automatically retrying deadlocked statements",
+   "Committing part of the transaction early while keeping the rest open"
+  ],
+  "answer": 0,
+  "explanation": "ROLLBACK TO SAVEPOINT undoes work since the savepoint and keeps the surrounding transaction active."
+ },
+ {
+  "id": "q8e725f068e8",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is the default transaction isolation level in PostgreSQL?",
+  "options": [
+   "SERIALIZABLE",
+   "READ UNCOMMITTED",
+   "REPEATABLE READ",
+   "READ COMMITTED"
+  ],
+  "answer": 3,
+  "explanation": "PostgreSQL defaults to READ COMMITTED. Its READ UNCOMMITTED level behaves the same as READ COMMITTED."
+ },
+ {
+  "id": "qdd92c8edf66",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "Which anomaly occurs when a repeated range query returns rows that another committed transaction inserted?",
+  "options": [
+   "Dirty read",
+   "Phantom read",
+   "Lost update",
+   "Non-repeatable read"
+  ],
+  "answer": 1,
+  "explanation": "A phantom read involves new rows appearing in a re-run query. A non-repeatable read involves existing rows changing."
+ },
+ {
+  "id": "qf6cc28421f1",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is a dirty read?",
+  "options": [
+   "Reading a row that was deleted and later re-inserted",
+   "Reading the same row twice and getting different values",
+   "Reading rows that a concurrent transaction inserted into a range",
+   "Reading data written by another transaction that has not yet committed"
+  ],
+  "answer": 3,
+  "explanation": "A dirty read sees uncommitted data, which may be rolled back and so never truly existed."
+ },
+ {
+  "id": "q11f8354bad3",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In PostgreSQL SERIALIZABLE isolation, what should the application do when a serialization failure (SQLSTATE 40001) occurs?",
+  "options": [
+   "Retry the whole transaction",
+   "Commit the transaction anyway",
+   "Lower the isolation level to READ UNCOMMITTED",
+   "Ignore the error and continue"
+  ],
+  "answer": 0,
+  "explanation": "Serializable snapshot isolation can abort transactions that would produce a non-serializable result. The standard response is to retry the entire transaction."
+ },
+ {
+  "id": "q1a7e57b6748",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "What does FOR UPDATE SKIP LOCKED do in PostgreSQL?",
+  "options": [
+   "Disables locking for the query",
+   "Skips rows that fail a CHECK constraint",
+   "Ignores locks held by the current transaction",
+   "Skips rows that other transactions have locked instead of waiting for them"
+  ],
+  "answer": 3,
+  "explanation": "SKIP LOCKED is commonly used to build job queues, where each worker claims unlocked rows without blocking on others."
+ },
+ {
+  "id": "q4ae2f268c70",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "What happens with SELECT ... FOR UPDATE NOWAIT in PostgreSQL when a selected row is locked by another transaction?",
+  "options": [
+   "The query waits indefinitely and then times out",
+   "The locked rows are returned with NULL values",
+   "The table is locked without waiting",
+   "An error is raised immediately"
+  ],
+  "answer": 3,
+  "explanation": "NOWAIT makes the statement fail at once with a lock-not-available error instead of blocking, so the application can handle the conflict."
+ },
+ {
+  "id": "q4e9f2dd91dc",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In MySQL InnoDB at REPEATABLE READ, what do gap locks taken by locking reads prevent?",
+  "options": [
+   "Dirty reads of uncommitted data",
+   "Other transactions reading any row in the table",
+   "The current transaction from updating its own rows",
+   "Other transactions inserting rows into the locked range between index records"
+  ],
+  "answer": 3,
+  "explanation": "Gap and next-key locks block inserts into scanned ranges, which prevents phantom rows for locking reads."
+ },
+ {
+  "id": "q5685324b7a1",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In PostgreSQL READ COMMITTED, when is the snapshot for a statement taken?",
+  "options": [
+   "Once, when the transaction starts",
+   "Once at the first read of each table",
+   "At the start of each statement",
+   "At the fetch of each row"
+  ],
+  "answer": 2,
+  "explanation": "Each statement in READ COMMITTED sees data committed before that statement began, which is why two statements in one transaction can see different data."
+ },
+ {
+  "id": "q65cede92c90",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "Which anomaly can occur under PostgreSQL REPEATABLE READ but is prevented by SERIALIZABLE?",
+  "options": [
+   "Dirty read",
+   "Write skew",
+   "Non-repeatable read",
+   "Phantom read"
+  ],
+  "answer": 1,
+  "explanation": "PostgreSQL's REPEATABLE READ is snapshot isolation, which already prevents dirty, non-repeatable and phantom reads but still allows write skew."
+ },
+ {
+  "id": "q81fb022648b",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In MySQL InnoDB at REPEATABLE READ, when is the read snapshot for consistent non-locking reads established?",
+  "options": [
+   "At every statement",
+   "When the connection opens",
+   "At the first consistent read in the transaction",
+   "At COMMIT"
+  ],
+  "answer": 2,
+  "explanation": "InnoDB creates the read view at the first consistent read, and later consistent reads in the same transaction reuse it."
+ },
+ {
+  "id": "qa414bbeded8",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "What does SELECT ... FOR SHARE do in PostgreSQL?",
+  "options": [
+   "Locks the whole table exclusively",
+   "Takes a shared row lock that blocks updates and deletes of those rows but allows other shared locks",
+   "Makes the rows read-only for all sessions permanently",
+   "Copies the rows into a temporary table"
+  ],
+  "answer": 1,
+  "explanation": "FOR SHARE prevents concurrent UPDATE, DELETE and FOR UPDATE on the selected rows while still letting other transactions take FOR SHARE locks."
+ }
+]

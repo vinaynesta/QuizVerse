@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qddd5d6ae23d",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command runs the script named test defined in package.json?",
+  "options": [
+   "npm task test",
+   "npm run test",
+   "npm script test",
+   "npm execute test"
+  ],
+  "answer": 1,
+  "explanation": "npm run <script> executes a named entry from the scripts field; npm test is a shortcut for the same thing."
+ },
+ {
+  "id": "q18e3254a6d7",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "easy",
+  "question": "What happens when an EventEmitter emits 'error' and no 'error' listener is attached?",
+  "options": [
+   "The error is silently ignored",
+   "The error is thrown, which can crash the process",
+   "The emitter restarts automatically",
+   "A 'warning' event is emitted instead"
+  ],
+  "answer": 1,
+  "explanation": "Emitting 'error' without a listener throws the error, so an unhandled error event normally terminates the process."
+ },
+ {
+  "id": "qa87224244d6",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "easy",
+  "question": "Which EventEmitter method registers a listener that runs only once for an event?",
+  "options": [
+   "on()",
+   "first()",
+   "single()",
+   "once()"
+  ],
+  "answer": 3,
+  "explanation": "once() removes the listener automatically after its first invocation; on() keeps it registered."
+ },
+ {
+  "id": "qf85ce595ec7",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which environment variable is conventionally used by many libraries to select production behavior?",
+  "options": [
+   "NODE_MODE",
+   "PROD_ENV",
+   "NODE_ENV",
+   "NODE_STAGE"
+  ],
+  "answer": 2,
+  "explanation": "NODE_ENV is the widely used convention, and Express and many other libraries read it to switch between development and production modes."
+ },
+ {
+  "id": "qa4a6abe58ae",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which WHATWG-standard class parses URLs in Node.js?",
+  "options": [
+   "URL",
+   "Location",
+   "UrlParser",
+   "Link"
+  ],
+  "answer": 0,
+  "explanation": "The global URL class (also available from the url module) implements the WHATWG URL standard."
+ },
+ {
+  "id": "qd5f842dedf1",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "What does setInterval() do?",
+  "options": [
+   "Runs a callback repeatedly at a fixed interval until cleared",
+   "Runs a callback before the current tick ends",
+   "Runs a callback once after a delay",
+   "Pauses the event loop for a fixed time"
+  ],
+  "answer": 0,
+  "explanation": "setInterval() keeps calling its callback at the given interval until clearInterval() is called with its handle."
+ },
+ {
+  "id": "q600779be247",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "Which built-in utility converts a callback-style function into one that returns a promise?",
+  "options": [
+   "util.toPromise()",
+   "fs.promisify()",
+   "util.promisify()",
+   "Promise.wrap()"
+  ],
+  "answer": 2,
+  "explanation": "util.promisify() wraps a function that follows the error-first callback convention so it returns a promise instead."
+ },
+ {
+  "id": "q7a53eb29d9e",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which property of process holds the array of command-line arguments?",
+  "options": [
+   "process.args",
+   "process.env.ARGS",
+   "process.argv",
+   "process.cmd"
+  ],
+  "answer": 2,
+  "explanation": "process.argv contains the node executable path, the script path, and any extra arguments."
+ },
+ {
+  "id": "qc36e237f76e",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "easy",
+  "question": "What is the default maximum number of listeners per event before Node.js prints a possible memory leak warning?",
+  "options": [
+   "5",
+   "10",
+   "100",
+   "Unlimited"
+  ],
+  "answer": 1,
+  "explanation": "EventEmitter.defaultMaxListeners is 10; setMaxListeners() can change the limit for a specific emitter."
+ },
+ {
+  "id": "qb0f8cc7e9f6",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "What does setting process.exitCode do?",
+  "options": [
+   "It counts the number of open handles",
+   "It sets the memory limit for the process",
+   "It changes the scheduling priority of the process",
+   "It sets the exit status used when the process exits naturally, without stopping it immediately"
+  ],
+  "answer": 3,
+  "explanation": "process.exitCode is a soft exit status that Node uses if the event loop drains normally, unlike process.exit() which stops immediately."
+ }
+]

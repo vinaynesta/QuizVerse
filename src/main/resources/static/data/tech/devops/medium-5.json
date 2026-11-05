@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q542af0e2d1f",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "Why are CI dependency caches commonly keyed on a hash of the lock file?",
+  "options": [
+   "It encrypts the cached dependencies",
+   "It forces a full reinstall on every run",
+   "It lets jobs share caches across unrelated repositories",
+   "The cache is reused until the dependencies change, then rebuilt"
+  ],
+  "answer": 3,
+  "explanation": "A new lock-file hash produces a new key, so stale dependencies are not restored."
+ },
+ {
+  "id": "qc67c00a34d7",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "Why do teams store Terraform state in a remote backend that supports locking?",
+  "options": [
+   "The state is shared, and locking stops two concurrent applies from corrupting it",
+   "It makes terraform plan run offline",
+   "Remote state removes the need for providers",
+   "Locking encrypts the configuration files"
+  ],
+  "answer": 0,
+  "explanation": "A shared backend gives everyone the same state, and the lock serializes operations that write it."
+ },
+ {
+  "id": "q57984f27baf",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What does git merge --no-ff do?",
+  "options": [
+   "Rebases the branch before merging it",
+   "Refuses to merge if any conflicts are found",
+   "Always creates a merge commit, even when a fast-forward would be possible",
+   "Merges without updating the working tree"
+  ],
+  "answer": 2,
+  "explanation": "--no-ff forces a merge commit so the branch's existence is preserved in history."
+ },
+ {
+  "id": "q96af74d9b30",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command lists the commits that are reachable from feature but not from main?",
+  "options": [
+   "git log feature..main",
+   "git diff main feature",
+   "git show main feature",
+   "git log main..feature"
+  ],
+  "answer": 3,
+  "explanation": "The A..B range means commits reachable from B but not from A."
+ },
+ {
+  "id": "qbd58e01cb7d",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "During a rebase you resolve a conflict and stage the file. Which command resumes the rebase?",
+  "options": [
+   "git commit --rebase",
+   "git merge --continue-rebase",
+   "git rebase --continue",
+   "git rebase --skip"
+  ],
+  "answer": 2,
+  "explanation": "git rebase --continue applies the resolved commit and moves on to the remaining ones; --skip would drop the commit."
+ },
+ {
+  "id": "q17f875d6892",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which kubectl command shows a pod's detailed state together with its recent events?",
+  "options": [
+   "kubectl get pod <name> --events",
+   "kubectl describe pod <name>",
+   "kubectl logs <name>",
+   "kubectl top pod <name>"
+  ],
+  "answer": 1,
+  "explanation": "kubectl describe shows conditions, container states, and related events such as scheduling or image pull failures."
+ },
+ {
+  "id": "qb3196200fe7",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "By default, how does one service in a Compose project reach another service named db?",
+  "options": [
+   "Through a volume shared between the services",
+   "Only through a port published on the host",
+   "By the container's IP address, which must be hard-coded",
+   "By using the hostname db on the project's default network"
+  ],
+  "answer": 3,
+  "explanation": "Compose attaches services to a default project network where each service name resolves via DNS."
+ },
+ {
+  "id": "qd35237aac55",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Which command abandons a conflicted merge in progress and restores the pre-merge state?",
+  "options": [
+   "git merge --abort",
+   "git stash",
+   "git reset --soft",
+   "git revert --merge"
+  ],
+  "answer": 0,
+  "explanation": "git merge --abort tries to reconstruct the state from before the merge started."
+ },
+ {
+  "id": "q52ba0db1fd9",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which command rolls the Deployment web back to its previous revision?",
+  "options": [
+   "kubectl rollout undo deployment/web",
+   "kubectl apply --undo deployment/web",
+   "kubectl scale deployment/web --revision=-1",
+   "kubectl delete deployment web --previous"
+  ],
+  "answer": 0,
+  "explanation": "kubectl rollout undo reverts to the previous ReplicaSet revision unless --to-revision is given."
+ },
+ {
+  "id": "q28852497e1a",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which Kubernetes object runs a copy of a pod on every eligible node, for example a log collector?",
+  "options": [
+   "StatefulSet",
+   "Deployment",
+   "DaemonSet",
+   "ReplicaSet"
+  ],
+  "answer": 2,
+  "explanation": "A DaemonSet schedules one pod per matching node and adds pods as nodes join."
+ }
+]

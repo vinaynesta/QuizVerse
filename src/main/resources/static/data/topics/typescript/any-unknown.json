@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q186bfc51f3b",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Which compiler option reports an error when a parameter's type would implicitly be `any`?",
+  "options": [
+   "noImplicitAny",
+   "strictAny",
+   "noAny",
+   "implicitAnyCheck"
+  ],
+  "answer": 0,
+  "explanation": "noImplicitAny (included in strict) flags declarations whose type silently falls back to any."
+ },
+ {
+  "id": "q5c30e6fd15d",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Which snippet safely calls a string method on `v: unknown`?",
+  "options": [
+   "v.toUpperCase();",
+   "if (v !== null) { v.toUpperCase(); }",
+   "if (v) { v.toUpperCase(); }",
+   "if (typeof v === \"string\") { v.toUpperCase(); }"
+  ],
+  "answer": 3,
+  "explanation": "A typeof check narrows unknown to string inside the block; truthiness or null checks do not establish it is a string."
+ },
+ {
+  "id": "q7a2983f33bc",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "What is the main effect of annotating a value as `any`?",
+  "options": [
+   "The compiler infers the most specific type automatically",
+   "The value is checked more strictly at runtime",
+   "The value can only hold primitives",
+   "Type checking is effectively turned off for that value"
+  ],
+  "answer": 3,
+  "explanation": "any opts out of type checking, so any property access or call is allowed without errors."
+ },
+ {
+  "id": "q8f29b24b39e",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "What is the key difference between `any` and `unknown`?",
+  "options": [
+   "unknown can only hold objects, any can hold anything",
+   "unknown must be narrowed before you can use it; any can be used freely",
+   "any must be narrowed before use; unknown can be used freely",
+   "There is no difference; they are aliases"
+  ],
+  "answer": 1,
+  "explanation": "Both accept any value, but unknown is the type-safe counterpart that forces a check before use."
+ },
+ {
+  "id": "qb8d933faa61",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Given `let v: unknown = \"hi\";`, which operation compiles without narrowing?",
+  "options": [
+   "v.toUpperCase();",
+   "let a: any = v;",
+   "let s: string = v;",
+   "let n = v + 1;"
+  ],
+  "answer": 1,
+  "explanation": "unknown is only assignable to unknown and any; using it in other ways requires narrowing first."
+ }
+]

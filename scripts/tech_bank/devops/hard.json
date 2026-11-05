@@ -1,0 +1,687 @@
+[
+  {
+    "topic": "git-recovery",
+    "question": "You are in detached HEAD state and have made commits you want to keep. What is the safest first step?",
+    "options": [
+      "git branch <name> to create a branch at the current commit",
+      "git reset --hard origin/main",
+      "git checkout -- . to discard the changes",
+      "git gc --prune=now"
+    ],
+    "answer": 0,
+    "explanation": "Creating a branch gives the commits a reference, so they are not left unreachable when you switch away."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "You ran git reset --hard and lost a commit. Which command helps you find its hash so you can recover it?",
+    "options": ["git stash list", "git reflog", "git log --all --diff-filter=D", "git show-ref --deleted"],
+    "answer": 1,
+    "explanation": "The reflog records where HEAD and branch tips pointed, so the lost commit's hash is usually still listed there."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "Where does Git store the reflog data for HEAD and each branch?",
+    "options": [
+      "In the .gitignore file",
+      "In the index file only",
+      "In .git/logs/ for HEAD and each ref",
+      "In the packfiles"
+    ],
+    "answer": 2,
+    "explanation": "Reflogs are plain files under .git/logs, one per reference, and are local to your clone."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "What is the default expiry for reflog entries that are no longer reachable from any branch or tag?",
+    "options": [
+      "Immediately after the reset",
+      "One hour",
+      "90 days",
+      "30 days"
+    ],
+    "answer": 3,
+    "explanation": "gc.reflogExpireUnreachable defaults to 30 days, while reachable entries default to 90 days (gc.reflogExpire)."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "What does git cherry-pick <commit> do?",
+    "options": [
+      "Applies the changes introduced by that commit onto the current branch as a new commit",
+      "Moves the branch pointer to that commit",
+      "Deletes that commit from history",
+      "Lists the commits not present in the current branch"
+    ],
+    "answer": 0,
+    "explanation": "Cherry-pick replays a single commit's diff on top of HEAD, producing a new commit with a different hash."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "After a lost branch's tip hash is found in the reflog, which command recreates the branch at that commit?",
+    "options": ["git restore-branch", "git branch <name> <hash>", "git checkout --orphan <hash>", "git fetch --undelete"],
+    "answer": 1,
+    "explanation": "git branch <name> <hash> creates a new branch pointing at the given commit."
+  },
+  {
+    "topic": "git-internals",
+    "question": "In Git's object model, which object type stores a directory listing that maps names to blobs and subtrees?",
+    "options": ["blob", "commit", "tree", "tag"],
+    "answer": 2,
+    "explanation": "A tree object lists entries with modes, names, and hashes for files (blobs) and subdirectories (trees)."
+  },
+  {
+    "topic": "git-internals",
+    "question": "What does a blob object store?",
+    "options": [
+      "Commit metadata such as author and message",
+      "Directory entries and their names",
+      "Reference names such as branch names",
+      "File contents, without the file name or path"
+    ],
+    "answer": 3,
+    "explanation": "Blobs hold only the content of a file; names and paths are stored in the tree objects that point to the blob."
+  },
+  {
+    "topic": "git-internals",
+    "question": "Which fields does a Git commit object record?",
+    "options": [
+      "A tree hash, parent commit hash(es), author, committer, and message",
+      "Only a diff against its parent",
+      "A list of branch names",
+      "A compressed copy of the working tree"
+    ],
+    "answer": 0,
+    "explanation": "A commit points to a root tree snapshot and its parent commits, plus identity, timestamps, and the message."
+  },
+  {
+    "topic": "git-internals",
+    "question": "Why does a merge commit have more than one parent?",
+    "options": [
+      "It means the commit contains two trees",
+      "It records that the histories of two lines of development were combined",
+      "It was created by a rebase",
+      "It marks an annotated tag"
+    ],
+    "answer": 1,
+    "explanation": "Each parent is a commit that was joined into the merge, which is how Git records the combined history."
+  },
+  {
+    "topic": "git-internals",
+    "question": "How does Git identify objects in its object database?",
+    "options": [
+      "By sequential integer IDs",
+      "By file modification time",
+      "By a hash of the object's content (SHA-1, or SHA-256 in SHA-256 repositories)",
+      "By the file path"
+    ],
+    "answer": 2,
+    "explanation": "Objects are content-addressed, so identical content always gets the same hash."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "What is the main benefit of a multi-stage Dockerfile?",
+    "options": [
+      "It runs multiple containers simultaneously",
+      "It automatically pushes the image to a registry",
+      "It creates a separate volume for each stage",
+      "Build tools stay in an earlier stage, and only the needed artifacts are copied into a slim final image"
+    ],
+    "answer": 3,
+    "explanation": "Compilers and build dependencies do not ship in the final image, which keeps it smaller and reduces attack surface."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "In a multi-stage build, what does COPY --from=builder do?",
+    "options": [
+      "Copies files from the stage named builder into the current stage",
+      "Copies files from the host into the builder stage",
+      "Copies an image from the registry into the current stage",
+      "Copies the build history of the builder stage"
+    ],
+    "answer": 0,
+    "explanation": "--from refers to a previous build stage by name or index and copies files out of it."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "Why does using a distroless or scratch base image in the final stage reduce attack surface?",
+    "options": [
+      "It includes more package managers for updates",
+      "It contains fewer packages, shells, and tools an attacker could use",
+      "It disables all networking for the container",
+      "It removes the need for a Dockerfile"
+    ],
+    "answer": 1,
+    "explanation": "Minimal base images omit shells and package managers, so there is less an attacker can run after compromise."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "Which statement about passing a secret through an ARG in a Dockerfile is correct?",
+    "options": [
+      "ARG values are never stored anywhere in the image",
+      "Using --secret mounts is the only way ARG values appear in the image",
+      "ARG values used during a build can be seen in docker history and image metadata",
+      "BuildKit redacts all ARG values automatically"
+    ],
+    "answer": 2,
+    "explanation": "Build arguments are recorded in image history, so secrets should be passed with BuildKit --mount=type=secret instead."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "What does a BuildKit cache mount such as RUN --mount=type=cache do for a package manager directory?",
+    "options": [
+      "Copies the directory into the final image",
+      "Makes the image immutable",
+      "Deletes the cache after the build finishes",
+      "Persists the directory across builds without storing it in an image layer"
+    ],
+    "answer": 3,
+    "explanation": "Cache mounts speed up repeated builds while keeping the cached data out of the resulting image."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "Why are rarely changing instructions, such as installing OS packages, placed before frequently changing COPY instructions?",
+    "options": [
+      "Layer caching: a change in a later layer does not invalidate the earlier cached layers",
+      "Docker runs earlier instructions only once in parallel",
+      "It reduces the number of files in the build context",
+      "It makes COPY faster by pre-compressing files"
+    ],
+    "answer": 0,
+    "explanation": "Cache invalidation flows downward, so stable steps placed first stay cached when source files change."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "In a blue-green deployment, what happens at cutover?",
+    "options": [
+      "Pods are replaced one at a time",
+      "Traffic is switched from the blue environment to the fully running green environment",
+      "The blue environment is deleted before the green one starts",
+      "The database schema is rolled back"
+    ],
+    "answer": 1,
+    "explanation": "Both environments run side by side, and the router or load balancer switches traffic to green in one step."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "What is a key tradeoff of blue-green deployment compared with a rolling update?",
+    "options": [
+      "It needs no extra capacity",
+      "It has no rollback path",
+      "It needs roughly double capacity during the switch, but rollback is a fast traffic switch back",
+      "It cannot be used with load balancers"
+    ],
+    "answer": 2,
+    "explanation": "Running two full environments costs extra capacity, but reverting is just repointing traffic to the old environment."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "A rolling update runs old and new versions at the same time. What is the main risk this creates?",
+    "options": [
+      "No rollback is possible",
+      "Downtime for all users",
+      "Traffic cannot be load balanced",
+      "Clients may hit both versions, so APIs and database schemas must be backward compatible"
+    ],
+    "answer": 3,
+    "explanation": "During the rollout, requests can reach either version, so changes must be compatible with the version before them."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "What does a canary deployment do?",
+    "options": [
+      "Routes a small share of traffic to the new version and increases it while metrics stay healthy",
+      "Deploys to all regions at once",
+      "Runs the new version only in staging",
+      "Keeps the old version off the network permanently"
+    ],
+    "answer": 0,
+    "explanation": "A canary exposes a small slice of real traffic to the new version and expands the rollout if error rates and latency look good."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "In a Kubernetes Deployment's rolling update strategy, what do maxSurge and maxUnavailable control?",
+    "options": [
+      "The number of replicas per node",
+      "How many pods can be created above the desired count, and how many can be unavailable, during the update",
+      "The CPU limits of each pod",
+      "The timeout for probes"
+    ],
+    "answer": 1,
+    "explanation": "maxSurge sets the extra pods allowed above replicas, and maxUnavailable sets how many can be down during the rollout."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "Why are blue-green and canary releases often paired with feature flags?",
+    "options": [
+      "Feature flags replace the need for tests",
+      "Feature flags compile the code faster",
+      "Feature flags separate code deployment from feature release, so code can ship dark and be enabled later",
+      "Feature flags remove the need for a load balancer"
+    ],
+    "answer": 2,
+    "explanation": "Feature flags let you deploy code safely and turn a feature on, or off, without another deployment."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "Which pod spec field lets a pod run only on nodes that carry a specific label?",
+    "options": ["spec.hostname", "spec.priorityClassName", "spec.serviceAccountName", "spec.nodeSelector"],
+    "answer": 3,
+    "explanation": "nodeSelector is the simplest constraint: the scheduler only places the pod on nodes whose labels match."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "What is the difference between resource requests and limits in a Kubernetes container spec?",
+    "options": [
+      "Requests are used by the scheduler to place the pod; limits cap runtime usage (CPU is throttled, and exceeding memory can get the container OOM-killed)",
+      "Requests cap runtime usage; limits are used for scheduling",
+      "They are identical; limits only document the value",
+      "Requests apply only to GPUs"
+    ],
+    "answer": 0,
+    "explanation": "The scheduler uses requests to find a node with enough allocatable capacity, while limits are enforced by the kubelet and the container runtime."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "What does a taint on a node do?",
+    "options": [
+      "Attracts pods with matching labels",
+      "Repels pods unless they have a matching toleration",
+      "Deletes pods that are not running",
+      "Limits the node's network bandwidth"
+    ],
+    "answer": 1,
+    "explanation": "Tainted nodes reject pods that do not tolerate the taint, which is how dedicated nodes are reserved."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "What does a podAntiAffinity rule with topologyKey kubernetes.io/hostname express?",
+    "options": [
+      "Pods must run on the same node",
+      "Pods should be placed on nodes with the most free CPU",
+      "Pods should avoid being scheduled onto a node that already runs matching pods",
+      "Pods must share a volume"
+    ],
+    "answer": 2,
+    "explanation": "Anti-affinity spreads matching replicas across nodes; the hostname topology key means each node is one topology domain."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "A pod stays Pending with the event 'Insufficient memory'. What is the most likely cause?",
+    "options": [
+      "The image failed to pull",
+      "The liveness probe failed",
+      "The Service has no endpoints",
+      "The scheduler found no node with enough free allocatable memory for the pod's requests"
+    ],
+    "answer": 3,
+    "explanation": "A Pending pod has not been bound to a node yet, and the scheduler reports insufficient resources when no node fits its memory request."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "What is the effect of a PodDisruptionBudget?",
+    "options": [
+      "It limits voluntary disruptions, such as node drains, so a minimum number of pods stay available",
+      "It limits the memory each pod can use",
+      "It prevents pods from being scheduled at all",
+      "It restarts pods whenever a node is upgraded"
+    ],
+    "answer": 0,
+    "explanation": "A PDB constrains voluntary evictions, but it does not stop involuntary failures such as node crashes."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "What happens when a liveness probe fails repeatedly?",
+    "options": [
+      "The Service removes the pod from its endpoints only",
+      "The kubelet restarts the container",
+      "The scheduler moves the pod to another node immediately",
+      "The Deployment deletes the pod permanently"
+    ],
+    "answer": 1,
+    "explanation": "A failing liveness probe makes the kubelet kill and restart the container according to the pod's restart policy."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "What does a readiness probe failure cause?",
+    "options": [
+      "The container is restarted",
+      "Nothing; readiness only writes logs",
+      "The pod is removed from Service endpoints until it passes again",
+      "The pod is deleted and recreated on another node"
+    ],
+    "answer": 2,
+    "explanation": "Readiness controls traffic: a not-ready pod stays running but receives no traffic from Services."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "Why use a startupProbe?",
+    "options": [
+      "To replace readiness checks entirely",
+      "To check the health of the node",
+      "To run one-time initialization scripts",
+      "To hold off liveness and readiness checks until a slow-starting app is up, so it is not killed prematurely"
+    ],
+    "answer": 3,
+    "explanation": "While a startup probe has not succeeded, liveness and readiness probes are disabled, which protects slow-booting apps from restarts."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "Which probe mechanisms does Kubernetes support?",
+    "options": [
+      "httpGet, tcpSocket, exec, and grpc",
+      "ssh, ping, and dns",
+      "smtp, ftp, and imap",
+      "sql, redis, and kafka"
+    ],
+    "answer": 0,
+    "explanation": "Probes can make an HTTP GET, open a TCP socket, run a command in the container, or call a gRPC health service."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "What does initialDelaySeconds set on a probe?",
+    "options": [
+      "The interval between probes",
+      "The time to wait after the container starts before the first probe runs",
+      "The number of failures before action is taken",
+      "The timeout for each probe"
+    ],
+    "answer": 1,
+    "explanation": "initialDelaySeconds is the delay between container start and the first probe; periodSeconds controls the interval."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "A liveness probe checks an endpoint that also depends on a database. If the database goes down, what is a common risk?",
+    "options": [
+      "Pods are scheduled onto fewer nodes",
+      "The database is backed up automatically",
+      "All pods are restarted together, which worsens the outage",
+      "Services switch to ClusterIP type"
+    ],
+    "answer": 2,
+    "explanation": "Liveness should check only the process itself; coupling it to dependencies can cause a restart cascade across all replicas."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "Which practice is a common supply-chain safeguard for CI pipelines?",
+    "options": [
+      "Use latest tags for every base image",
+      "Disable build logs",
+      "Run every job as root with full secrets",
+      "Pin actions and base images to immutable digests or commit SHAs"
+    ],
+    "answer": 3,
+    "explanation": "Pinning to digests or SHAs means a moved or compromised tag cannot silently change what your pipeline runs."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "Why should CI jobs use least-privilege tokens?",
+    "options": [
+      "So a compromised step can only affect what its token allows",
+      "To make builds faster",
+      "Because tokens expire automatically after each run",
+      "To avoid the need for code review"
+    ],
+    "answer": 0,
+    "explanation": "Limiting token scope reduces the damage a malicious dependency or a compromised step can do."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "What is the goal of ordering pipeline stages to fail fast?",
+    "options": [
+      "Run the slowest tests first",
+      "Run cheap checks such as lint and unit tests first, so failures surface early",
+      "Skip tests on the main branch",
+      "Deploy before the tests run"
+    ],
+    "answer": 1,
+    "explanation": "Cheap checks catch most problems in seconds, so expensive jobs such as integration tests and deploys run only when earlier stages pass."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "What does a deployment gate based on an SLO check do?",
+    "options": [
+      "Compiles the code again before deploying",
+      "Rewrites the git history of the release branch",
+      "Blocks promotion or triggers a rollback if error rate or latency breaches its threshold during rollout",
+      "Deletes old container images"
+    ],
+    "answer": 2,
+    "explanation": "Automated analysis of live metrics during a rollout decides whether to continue, pause, or roll back."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "Why does pinning a lock file and base image versions make builds more reproducible?",
+    "options": [
+      "It skips dependency resolution entirely",
+      "It guarantees the build has no CVEs",
+      "It removes the need for a container registry",
+      "The same inputs resolve to the same dependency versions and artifacts, so builds repeat"
+    ],
+    "answer": 3,
+    "explanation": "Reproducibility depends on fixing every input, including dependency versions and base image digests, so repeated builds produce the same result."
+  },
+  {
+    "topic": "git-internals",
+    "question": "What is the main job of git gc?",
+    "options": [
+      "Compress loose objects into packfiles and prune old unreachable objects",
+      "Delete merged branches from the remote",
+      "Rewrite history to remove large files",
+      "Verify commit signatures"
+    ],
+    "answer": 0,
+    "explanation": "git gc packs objects and refs and removes unreachable objects older than the prune expiry."
+  },
+  {
+    "topic": "git-internals",
+    "question": "How is a lightweight tag stored, compared with an annotated tag?",
+    "options": [
+      "As a tag object with a message and tagger",
+      "As a ref under refs/tags that points directly at a commit, with no tag object",
+      "As an entry in .git/config",
+      "As a special commit with no parents"
+    ],
+    "answer": 1,
+    "explanation": "Annotated tags create a tag object holding a message and tagger; lightweight tags are just refs."
+  },
+  {
+    "topic": "git-internals",
+    "question": "What does the .git/index file hold?",
+    "options": [
+      "The reflog for HEAD",
+      "The list of configured remotes",
+      "The staging area: paths with their blob hashes and file metadata for the next commit",
+      "Packed copies of all commits"
+    ],
+    "answer": 2,
+    "explanation": "The index records the tree that the next commit will contain, plus stat data used to detect changes quickly."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "A lost commit no longer appears in any reflog, but it has not been pruned yet. Which command can still locate it?",
+    "options": ["git log --all", "git reflog --expire", "git branch --contains", "git fsck --lost-found"],
+    "answer": 3,
+    "explanation": "git fsck finds dangling objects in the object database, and --lost-found writes them to .git/lost-found."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "What does git reset --soft HEAD~1 do?",
+    "options": [
+      "Moves the branch to the parent commit and keeps the undone commit's changes staged",
+      "Deletes the last commit and discards its changes",
+      "Creates a new commit that reverses the last one",
+      "Unstages all files but keeps the branch where it is"
+    ],
+    "answer": 0,
+    "explanation": "--soft moves only the branch pointer, leaving the index and working tree untouched."
+  },
+  {
+    "topic": "git-recovery",
+    "question": "A secret was committed and pushed to a shared remote. Besides rewriting history to remove it, what is essential?",
+    "options": [
+      "Running git gc on your local clone",
+      "Revoking and rotating the secret, since it may already have been copied",
+      "Deleting the local branch",
+      "Adding the file to .gitignore"
+    ],
+    "answer": 1,
+    "explanation": "Clones, forks, and caches may already contain the secret, so removing it from history does not make it safe."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "Why is putting RUN apt-get update and RUN apt-get install in separate instructions a problem?",
+    "options": [
+      "apt-get cannot run twice in one Dockerfile",
+      "It doubles the image size",
+      "The cached update layer can be reused in later builds, so install runs against stale package lists",
+      "It disables BuildKit"
+    ],
+    "answer": 2,
+    "explanation": "Combining update and install in one RUN invalidates both together when the package list changes."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "How can a BuildKit build use a private token without leaving it in any image layer?",
+    "options": [
+      "Pass it with ARG and unset it in the next instruction",
+      "Store it in ENV and delete it in the final stage",
+      "Copy it in and remove it with RUN rm",
+      "Mount it with RUN --mount=type=secret so it is available only during that step"
+    ],
+    "answer": 3,
+    "explanation": "Secret mounts are exposed to a single RUN step and are never written to the image or its cache."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "Why run a container with an init process such as tini (docker run --init) as PID 1?",
+    "options": [
+      "It reaps zombie processes and forwards signals, which an application running as PID 1 may not do",
+      "It makes the image smaller",
+      "It enables the container to use the host network",
+      "It replaces the need for health checks"
+    ],
+    "answer": 0,
+    "explanation": "PID 1 has special signal and child-reaping duties in Linux that most applications do not implement."
+  },
+  {
+    "topic": "docker-builds",
+    "question": "What does docker buildx build --platform linux/amd64,linux/arm64 produce?",
+    "options": [
+      "Two unrelated images with different tags",
+      "A multi-platform image whose index points to one variant per architecture",
+      "A single image that emulates both architectures at runtime",
+      "A build that fails unless the host has both CPU types"
+    ],
+    "answer": 1,
+    "explanation": "The image index lets each client pull the variant matching its platform."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "What is the expand-and-contract (parallel change) approach to database migrations during zero-downtime deploys?",
+    "options": [
+      "Lock the database while every service is upgraded at once",
+      "Restore a backup into a new schema on each release",
+      "Add the new schema alongside the old one, migrate readers and writers, then remove the old schema in a later release",
+      "Run migrations only during rollback"
+    ],
+    "answer": 2,
+    "explanation": "Each step stays compatible with both old and new application versions running at the same time."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "What does the Recreate strategy in a Kubernetes Deployment do?",
+    "options": [
+      "Creates new pods before deleting old ones",
+      "Shifts traffic gradually by percentage",
+      "Runs both versions permanently",
+      "Terminates all old pods before creating new ones, causing downtime"
+    ],
+    "answer": 3,
+    "explanation": "Recreate avoids running two versions at once, at the cost of a gap in availability."
+  },
+  {
+    "topic": "deployment-strategies",
+    "question": "What is traffic mirroring (shadowing) used for when releasing a new version?",
+    "options": [
+      "Copying live requests to the new version and discarding its responses, to test it under real load without affecting users",
+      "Sending all users to the new version at once",
+      "Keeping a full copy of the database in another region",
+      "Rolling back by replaying old requests"
+    ],
+    "answer": 0,
+    "explanation": "Users still get responses from the current version, so problems in the shadow version have no user impact."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "Which QoS class does a pod get when every container sets CPU and memory requests equal to its limits?",
+    "options": ["BestEffort", "Guaranteed", "Burstable", "Critical"],
+    "answer": 1,
+    "explanation": "Guaranteed pods have requests equal to limits for both resources in every container."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "Which QoS class is assigned to a pod whose containers set no CPU or memory requests or limits?",
+    "options": ["Guaranteed", "Burstable", "BestEffort", "Unbounded"],
+    "answer": 2,
+    "explanation": "BestEffort pods have no resource guarantees and are among the first evicted under node memory pressure."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "How does requiredDuringSchedulingIgnoredDuringExecution node affinity differ from preferredDuringSchedulingIgnoredDuringExecution?",
+    "options": [
+      "Required rules are re-checked and evict running pods; preferred rules are not",
+      "Preferred rules apply only to DaemonSets",
+      "Required rules apply only after the pod starts",
+      "Required is a hard rule the scheduler must satisfy; preferred is a weighted soft preference"
+    ],
+    "answer": 3,
+    "explanation": "IgnoredDuringExecution means neither kind evicts pods that are already running if labels change."
+  },
+  {
+    "topic": "kubernetes-scheduling",
+    "question": "What does a topologySpreadConstraint with maxSkew: 1 and topologyKey topology.kubernetes.io/zone aim for?",
+    "options": [
+      "The count of matching pods in any two zones differs by at most one",
+      "Exactly one pod per zone",
+      "All pods in the zone with the most free capacity",
+      "At most one zone may run the workload"
+    ],
+    "answer": 0,
+    "explanation": "maxSkew bounds the difference between the most and least populated topology domains."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "What does the CrashLoopBackOff status indicate?",
+    "options": [
+      "The image could not be pulled",
+      "The container keeps crashing, and the kubelet restarts it with an increasing back-off delay",
+      "The pod is waiting for a node with enough memory",
+      "The readiness probe is failing but the container is running"
+    ],
+    "answer": 1,
+    "explanation": "Restart delays grow exponentially up to a cap of five minutes while the container keeps exiting."
+  },
+  {
+    "topic": "kubernetes-probes",
+    "question": "When does the kubelet treat a probe as failed?",
+    "options": [
+      "After the first failed check",
+      "Only when the container exits",
+      "After failureThreshold consecutive failures, which defaults to 3",
+      "After timeoutSeconds elapses once"
+    ],
+    "answer": 2,
+    "explanation": "A probe must fail failureThreshold times in a row before the kubelet acts on it."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "What does OIDC federation between a CI system and a cloud provider achieve?",
+    "options": [
+      "It encrypts build logs",
+      "It lets CI jobs run on the cloud provider's hardware",
+      "It replaces the need for code review",
+      "Jobs exchange a short-lived signed identity token for temporary cloud credentials, avoiding long-lived stored keys"
+    ],
+    "answer": 3,
+    "explanation": "The cloud trusts tokens from the CI issuer, scoped by claims such as repository and branch."
+  }
+]

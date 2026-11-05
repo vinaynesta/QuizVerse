@@ -478,5 +478,245 @@
     ],
     "answer": 1,
     "explanation": "Keeping humans in the loop adds oversight so errors in consequential decisions can be caught and corrected."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "What is underfitting?",
+    "options": [
+      "A model that memorizes noise in the training data",
+      "A model trained for too many epochs",
+      "A model whose test set is larger than its training set",
+      "A model too simple to capture the underlying pattern, so it performs poorly even on training data"
+    ],
+    "answer": 3,
+    "explanation": "An underfit model has high bias: it misses real structure, so both training and test error stay high."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "In supervised learning, what is a label?",
+    "options": [
+      "A name given to each column of the dataset",
+      "A tag marking a row as training or test data",
+      "The known target value the model learns to predict",
+      "The identifier of the trained model version"
+    ],
+    "answer": 2,
+    "explanation": "Labels are the ground-truth outputs paired with inputs, such as spam or not spam for an email."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What does linear regression model?",
+    "options": [
+      "A tree of yes or no decisions over the features",
+      "A linear relationship between input features and a continuous target value",
+      "The probability that a point belongs to each cluster",
+      "A sequence of words generated one at a time"
+    ],
+    "answer": 1,
+    "explanation": "Linear regression fits a weighted sum of features plus an intercept, usually by minimizing squared error."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What happens at each internal node of a decision tree?",
+    "options": [
+      "The data is split based on a test of a feature value",
+      "A neural network layer is applied to the input",
+      "The final class prediction is output",
+      "All features are averaged into one value"
+    ],
+    "answer": 0,
+    "explanation": "Internal nodes route examples by feature tests, such as age > 30, and leaves hold the predictions."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "What is clustering?",
+    "options": [
+      "Predicting a numeric value from labeled examples",
+      "Removing duplicate rows from a dataset",
+      "Sorting data points by a single feature",
+      "Grouping similar data points together without using labels"
+    ],
+    "answer": 3,
+    "explanation": "Clustering is an unsupervised task that discovers groups of similar points on its own."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "In k-means, what is a cluster centroid?",
+    "options": [
+      "The data point farthest from all others",
+      "The first point chosen from the dataset",
+      "The mean position of all points assigned to that cluster",
+      "The boundary line between two clusters"
+    ],
+    "answer": 2,
+    "explanation": "K-means repeatedly assigns points to the nearest centroid and recomputes each centroid as the mean of its points."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "In binary classification, what is a false positive?",
+    "options": [
+      "Predicting the negative class when the actual class is positive",
+      "Predicting the positive class when the actual class is negative",
+      "Correctly predicting the positive class",
+      "Correctly predicting the negative class"
+    ],
+    "answer": 1,
+    "explanation": "A false positive is a false alarm, such as flagging a legitimate email as spam."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "Which metric is commonly used to evaluate a regression model?",
+    "options": [
+      "Mean squared error",
+      "Precision",
+      "Recall",
+      "F1 score"
+    ],
+    "answer": 0,
+    "explanation": "Mean squared error averages squared differences between predicted and actual values; the others are classification metrics."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What is a weight in a neural network?",
+    "options": [
+      "The number of layers in the network",
+      "The size of the training dataset",
+      "A fixed constant chosen before training and never changed",
+      "A learnable parameter that scales how much an input contributes to a neuron"
+    ],
+    "answer": 3,
+    "explanation": "Weights are adjusted during training so the network's outputs better match the targets."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does a loss function measure during training?",
+    "options": [
+      "How many parameters the model has",
+      "How long each training step takes",
+      "How far the model's predictions are from the target values",
+      "How much memory the model uses"
+    ],
+    "answer": 2,
+    "explanation": "Training minimizes the loss, so it defines what counts as a good prediction."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What does a convolutional filter do in a CNN?",
+    "options": [
+      "Randomly removes pixels from the image",
+      "Slides over the input computing weighted sums to detect local patterns such as edges",
+      "Converts the image to grayscale",
+      "Sorts the pixels by brightness"
+    ],
+    "answer": 1,
+    "explanation": "Each filter's learned weights respond to a particular local pattern wherever it appears in the input."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What does the word deep refer to in deep learning?",
+    "options": [
+      "Neural networks with many stacked layers",
+      "Models trained on very large hard drives",
+      "Algorithms that search deep decision trees",
+      "Training that runs for a very long time"
+    ],
+    "answer": 0,
+    "explanation": "Depth means many layers, which let networks learn increasingly abstract features."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What is sentiment analysis?",
+    "options": [
+      "Translating text from one language to another",
+      "Counting how many words a document contains",
+      "Correcting spelling mistakes in text",
+      "Determining whether text expresses a positive, negative or neutral opinion"
+    ],
+    "answer": 3,
+    "explanation": "Sentiment analysis classifies the emotional tone or opinion expressed in text, such as product reviews."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What does named entity recognition do?",
+    "options": [
+      "Assigns a unique id to every word in the vocabulary",
+      "Generates new names for products",
+      "Finds and classifies names of people, organizations and places in text",
+      "Checks whether a sentence is grammatically correct"
+    ],
+    "answer": 2,
+    "explanation": "Named entity recognition labels spans of text with entity types such as PERSON, ORG or LOCATION."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is zero-shot prompting?",
+    "options": [
+      "Training a model from scratch with no data",
+      "Asking a model to perform a task without giving any examples in the prompt",
+      "Sending an empty prompt to the model",
+      "Setting the model's temperature to zero"
+    ],
+    "answer": 1,
+    "explanation": "In zero-shot prompting the model relies only on the instruction and its pre-trained knowledge."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is a prompt in the context of LLMs?",
+    "options": [
+      "The input text given to the model to instruct it or provide context",
+      "The model's internal weights",
+      "The error message shown when a request fails",
+      "The hardware the model runs on"
+    ],
+    "answer": 0,
+    "explanation": "The prompt is everything the model reads before generating, including instructions, context and examples."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is semantic search?",
+    "options": [
+      "Searching only within document titles",
+      "Sorting results alphabetically",
+      "Searching for exact strings with regular expressions",
+      "Finding results by meaning rather than by exact keyword matches"
+    ],
+    "answer": 3,
+    "explanation": "Semantic search compares embeddings, so a query can match relevant text that uses different words."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "In an LLM agent, what is a tool?",
+    "options": [
+      "A hardware accelerator used to run the model",
+      "A prompt template stored on disk",
+      "An external function or API the model can request to call, such as a calculator or web search",
+      "A library used to train the model"
+    ],
+    "answer": 2,
+    "explanation": "Tools let an agent act beyond text generation by having the application execute calls and return results."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is a deepfake?",
+    "options": [
+      "A neural network with an unusually large number of layers",
+      "Synthetic media created with AI that realistically imitates a real person",
+      "A dataset containing fake labels",
+      "A model that refuses to answer questions"
+    ],
+    "answer": 1,
+    "explanation": "Deepfakes use generative models to fabricate realistic images, audio or video of real people, raising misuse concerns."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "Why is data privacy a concern when training AI models on personal data?",
+    "options": [
+      "Models can memorize and later reveal personal information from their training data",
+      "Personal data makes models train more slowly",
+      "Personal data cannot be stored in digital form",
+      "Models trained on personal data cannot be deployed"
+    ],
+    "answer": 0,
+    "explanation": "Sensitive details in training data can leak through model outputs, so data handling and consent matter."
   }
 ]

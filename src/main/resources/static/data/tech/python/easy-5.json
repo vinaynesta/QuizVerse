@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf4d0c88ea47",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does 2 ** 3 evaluate to?",
+  "options": [
+   "5",
+   "6",
+   "9",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "** is the exponentiation operator, and 2 to the power 3 is 8."
+ },
+ {
+  "id": "q23b91cfebc0",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "Which statement imports the math module under the name m?",
+  "options": [
+   "import m from math",
+   "from math import m",
+   "import math as m",
+   "import math = m"
+  ],
+  "answer": 2,
+  "explanation": "The as clause binds the module to an alias in the current namespace."
+ },
+ {
+  "id": "qa46b4cce057",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "Which list method removes and returns the last item when called without arguments?",
+  "options": [
+   "remove()",
+   "del()",
+   "popleft()",
+   "pop()"
+  ],
+  "answer": 3,
+  "explanation": "list.pop() defaults to the last index."
+ },
+ {
+  "id": "qc9989cda17c",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "What does with open('f.txt') as f: guarantee about the file?",
+  "options": [
+   "It is closed when the block exits, even if an exception occurs",
+   "It is read fully into memory",
+   "It is opened in write mode",
+   "It is deleted after the block"
+  ],
+  "answer": 0,
+  "explanation": "The file object's __exit__ closes the file however the block ends."
+ },
+ {
+  "id": "q387617abdfa",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which built-in lets a subclass method call the parent class's version of a method?",
+  "options": [
+   "super()",
+   "parent()",
+   "base()",
+   "self.parent"
+  ],
+  "answer": 0,
+  "explanation": "super() returns a proxy that delegates to the next class in the method resolution order."
+ },
+ {
+  "id": "qe7ad4aadc15",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "How do you write a tuple containing only the integer 5?",
+  "options": [
+   "(5,)",
+   "[5]",
+   "tuple 5",
+   "(5)"
+  ],
+  "answer": 0,
+  "explanation": "The trailing comma makes the tuple; (5) is just the integer 5 in parentheses."
+ },
+ {
+  "id": "q37c7c29022c",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does list(range(2, 5)) return?",
+  "options": [
+   "[2, 3, 4]",
+   "[3, 4, 5]",
+   "[2, 3, 4, 5]",
+   "[2, 5]"
+  ],
+  "answer": 0,
+  "explanation": "range includes the start and excludes the stop."
+ },
+ {
+  "id": "qfeb59f1be86",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "easy",
+  "question": "What does GIL stand for in CPython?",
+  "options": [
+   "Global Import Library",
+   "General Input Loop",
+   "Global Interpreter Lock",
+   "Generator Iteration Limit"
+  ],
+  "answer": 2,
+  "explanation": "The GIL lets only one thread execute Python bytecode at a time in standard CPython."
+ },
+ {
+  "id": "q6ccd9994aa6",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which exception is raised when you access a list index that is out of range?",
+  "options": [
+   "KeyError",
+   "RangeError",
+   "ValueError",
+   "IndexError"
+  ],
+  "answer": 3,
+  "explanation": "Sequences raise IndexError for invalid positions, while mappings raise KeyError for missing keys."
+ },
+ {
+  "id": "q631177eca67",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which standard module provides the datetime class whose now() method returns the current local date and time?",
+  "options": [
+   "time",
+   "calendar",
+   "datetime",
+   "clock"
+  ],
+  "answer": 2,
+  "explanation": "datetime.datetime.now() returns a datetime for the current moment."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe1fb202fa03",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "In the CAP theorem, what does availability specifically require?",
+  "options": [
+   "Every request received by a non-failing node gets a non-error response",
+   "The system has 99.99% uptime",
+   "At least a majority of nodes are reachable",
+   "Data is replicated to every region"
+  ],
+  "answer": 0,
+  "explanation": "CAP availability is a strict property: any live node must respond, even if it cannot reach others."
+ },
+ {
+  "id": "q5c8a473850a",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is hinted handoff?",
+  "options": [
+   "Forwarding reads to the fastest replica",
+   "A temporary node storing writes meant for an unavailable replica and delivering them when it recovers",
+   "Transferring leadership to a follower",
+   "Splitting a partition across two nodes"
+  ],
+  "answer": 1,
+  "explanation": "It keeps writes available during transient failures and is often paired with sloppy quorums."
+ },
+ {
+  "id": "q2a1b5f3843c",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is anti-entropy with Merkle trees used for?",
+  "options": [
+   "Encrypting replicated data",
+   "Electing a leader",
+   "Efficiently finding and repairing divergent data between replicas by comparing hashes of key ranges",
+   "Ordering writes globally"
+  ],
+  "answer": 2,
+  "explanation": "Comparing tree hashes top-down quickly narrows mismatches to the key ranges that differ."
+ },
+ {
+  "id": "q551d370cf60",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "How does an orchestrated saga differ from a choreographed saga?",
+  "options": [
+   "Orchestrated sagas use two-phase commit",
+   "A central orchestrator tells each participant what to do next, instead of participants reacting to each other's events",
+   "Orchestrated sagas need no messaging",
+   "Choreographed sagas cannot compensate"
+  ],
+  "answer": 1,
+  "explanation": "Orchestration centralizes the flow logic, while choreography spreads it across event subscribers."
+ },
+ {
+  "id": "q77b30dd39cc",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "What problem do leader leases with fencing tokens address?",
+  "options": [
+   "Slow disk writes on followers",
+   "A deposed leader that is paused or partitioned continuing to act as leader",
+   "Uneven sharding of keys",
+   "High read latency"
+  ],
+  "answer": 1,
+  "explanation": "Storage rejects requests carrying a fencing token lower than the latest one issued."
+ },
+ {
+  "id": "q7a45aaf68b1",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What is change data capture (CDC)?",
+  "options": [
+   "Streaming row-level changes from a database's write-ahead or replication log to other systems",
+   "Comparing two databases row by row",
+   "Caching database query results",
+   "Copying an entire database nightly"
+  ],
+  "answer": 0,
+  "explanation": "CDC tools such as Debezium tail the log and publish each insert, update, and delete as an event."
+ },
+ {
+  "id": "qc1ee556d272",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What is the key limitation of Lamport timestamps?",
+  "options": [
+   "If a has a smaller timestamp than b, it does not follow that a happened before b",
+   "They require synchronized physical clocks",
+   "They cannot order events on the same process",
+   "They grow with the number of nodes"
+  ],
+  "answer": 0,
+  "explanation": "Lamport clocks are consistent with causality but cannot distinguish concurrent events from ordered ones."
+ },
+ {
+  "id": "q7bd7867dcd2",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Why can a long garbage collection pause make a healthy node behave like a failed one?",
+  "options": [
+   "It deletes the node's data",
+   "While paused, it misses heartbeats and lease renewals, so peers may declare it dead and it may act on stale assumptions when it resumes",
+   "It changes the node's IP address",
+   "It permanently corrupts its log"
+  ],
+  "answer": 1,
+  "explanation": "Process pauses are a key reason distributed systems cannot rely on timing or leases without fencing."
+ },
+ {
+  "id": "qa87d105f69d",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "Which anomaly occurs when a transaction reads a value written by another transaction that has not committed yet?",
+  "options": [
+   "Dirty read",
+   "Write skew",
+   "Phantom read",
+   "Lost update"
+  ],
+  "answer": 0,
+  "explanation": "Dirty reads are allowed at read uncommitted and prevented at read committed and above."
+ },
+ {
+  "id": "q028bf7e653c",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why does exactly-once delivery over an unreliable network usually reduce to at-least-once delivery plus idempotent processing?",
+  "options": [
+   "A sender cannot distinguish a lost message from a lost acknowledgment, so it must retry, and duplicates must be deduplicated",
+   "Networks never duplicate messages",
+   "Idempotency makes delivery faster",
+   "Exactly-once is guaranteed by TCP across process restarts"
+  ],
+  "answer": 0,
+  "explanation": "Effectively-once semantics come from retries combined with deduplication or transactional processing."
+ }
+]

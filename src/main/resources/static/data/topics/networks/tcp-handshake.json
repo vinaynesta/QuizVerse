@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q36ef1080dc2",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "If a client's SYN carries initial sequence number x and the server's ISN is y, what acknowledgment number is in the server's SYN-ACK?",
+  "options": [
+   "x",
+   "0",
+   "x + 1",
+   "y + 1"
+  ],
+  "answer": 2,
+  "explanation": "The SYN consumes one sequence number, so the server acknowledges x + 1 as the next byte it expects."
+ },
+ {
+  "id": "q5093fe19da4",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "How much sequence-number space does a TCP SYN flag consume?",
+  "options": [
+   "One MSS worth",
+   "One sequence number",
+   "None",
+   "Two sequence numbers"
+  ],
+  "answer": 1,
+  "explanation": "SYN and FIN each consume one sequence number even though they carry no data, so they can be acknowledged."
+ },
+ {
+  "id": "q539614a4a60",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "What is the correct order of segments in the TCP three-way handshake?",
+  "options": [
+   "SYN, SYN-ACK, ACK",
+   "ACK, SYN, SYN-ACK",
+   "SYN, ACK, SYN-ACK",
+   "SYN, SYN, ACK"
+  ],
+  "answer": 0,
+  "explanation": "The client sends SYN, the server replies SYN-ACK, and the client confirms with ACK."
+ },
+ {
+  "id": "qab7d35ec1d1",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "What does a TCP segment with the RST flag indicate?",
+  "options": [
+   "A graceful close of the connection",
+   "A keepalive probe",
+   "The connection is being aborted immediately",
+   "A receive window update"
+  ],
+  "answer": 2,
+  "explanation": "RST resets the connection abruptly, e.g. for a closed port or an error, without the FIN handshake."
+ },
+ {
+  "id": "qc7a0cd5cced",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "In a TCP close where each side sends its own FIN and no ACK is piggybacked, how many segments are exchanged?",
+  "options": [
+   "3",
+   "4",
+   "1",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Each direction is closed with a FIN and its ACK: FIN, ACK, FIN, ACK; it can drop to 3 if an ACK and FIN are combined."
+ }
+]

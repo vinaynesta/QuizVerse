@@ -126,12 +126,12 @@
   "level": "easy",
   "question": "A person starts walking towards West and covers 5 km, then turns right and walks 4 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "East",
    "North-West",
+   "East",
    "North",
    "West"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Use east as +x and north as +y. 5 km West: (-5, 0).\nTurn right to face North, 4 km: (-5, 4).\nTurn right to face East, 3 km: (-2, 4).\nNet: 2 km west, 4 km north.\nSo the person is to the North-West of the start."
  },
  {
@@ -201,12 +201,12 @@
   "level": "easy",
   "question": "A person starts walking towards West and covers 8 km, then turns right and walks 3 km, then turns left and walks 11 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-West",
-   "North",
    "North-East",
-   "South-East"
+   "North",
+   "South-East",
+   "North-West"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Use east as +x and north as +y. 8 km West: (-8, 0).\nTurn right to face North, 3 km: (-8, 3).\nTurn left to face West, 11 km: (-19, 3).\nNet: 19 km west, 3 km north.\nSo the person is to the North-West of the start."
  },
  {
@@ -277,11 +277,11 @@
   "question": "A person starts walking towards East and covers 9 km, then turns left and walks 8 km, then turns left and walks 5 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "North-West",
+   "South-East",
    "North",
-   "North-East",
-   "South-East"
+   "North-East"
   ],
-  "answer": 2,
+  "answer": 3,
   "explanation": "Use east as +x and north as +y. 9 km East: (9, 0).\nTurn left to face North, 8 km: (9, 8).\nTurn left to face West, 5 km: (4, 8).\nNet: 4 km east, 8 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -306,12 +306,12 @@
   "level": "easy",
   "question": "A person starts walking towards East and covers 11 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "South-East",
+   "South",
    "West",
    "North-East",
-   "South"
+   "South-East"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Use east as +x and north as +y. 11 km East: (11, 0).\nTurn right to face South, 12 km: (11, -12).\nNet: 11 km east, 12 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -397,11 +397,11 @@
   "question": "A person starts walking towards North and covers 12 km, then turns right and walks 11 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "East",
-   "North-East",
    "South-West",
-   "West"
+   "West",
+   "North-East"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "Use east as +x and north as +y. 12 km North: (0, 12).\nTurn right to face East, 11 km: (11, 12).\nNet: 11 km east, 12 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -472,11 +472,11 @@
   "question": "A person starts walking towards North and covers 7 km, then turns right and walks 4 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South",
-   "North-West",
    "East",
-   "North-East"
+   "North-East",
+   "North-West"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 7 km North: (0, 7).\nTurn right to face East, 4 km: (4, 7).\nNet: 4 km east, 7 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -981,12 +981,12 @@
   "level": "easy",
   "question": "A person starts walking towards South and covers 12 km, then turns left and walks 9 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "West",
    "North",
+   "South-East",
    "North-East",
-   "South-East"
+   "West"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 12 km South: (0, -12).\nTurn left to face East, 9 km: (9, -12).\nNet: 9 km east, 12 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -1521,12 +1521,12 @@
   "level": "easy",
   "question": "A person starts walking towards North and covers 2 km, then turns right and walks 10 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-East",
+   "South-West",
    "North",
-   "West",
-   "South-West"
+   "North-East",
+   "West"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 2 km North: (0, 2).\nTurn right to face East, 10 km: (10, 2).\nNet: 10 km east, 2 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -1881,12 +1881,12 @@
   "level": "easy",
   "question": "A person starts walking towards East and covers 5 km, then turns right and walks 5 km, then turns left and walks 4 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "East",
    "South-East",
+   "East",
    "North",
    "West"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Use east as +x and north as +y. 5 km East: (5, 0).\nTurn right to face South, 5 km: (5, -5).\nTurn left to face East, 4 km: (9, -5).\nNet: 9 km east, 5 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -2151,12 +2151,12 @@
   "level": "easy",
   "question": "A person starts walking towards East and covers 8 km, then turns left and walks 2 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-East",
    "East",
+   "North-East",
    "South-East",
    "West"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 8 km East: (8, 0).\nTurn left to face North, 2 km: (8, 2).\nTurn right to face East, 5 km: (13, 2).\nNet: 13 km east, 2 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -2691,12 +2691,12 @@
   "level": "easy",
   "question": "A person starts walking towards South and covers 10 km, then turns right and walks 3 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "South-West",
    "North-East",
+   "North-West",
    "South",
-   "North-West"
+   "South-West"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 10 km South: (0, -10).\nTurn right to face West, 3 km: (-3, -10).\nTurn right to face North, 12 km: (-3, 2).\nNet: 3 km west, 2 km north.\nSo the person is to the North-West of the start."
  },
  {
@@ -2841,12 +2841,12 @@
   "level": "easy",
   "question": "A person starts walking towards South and covers 5 km, then turns left and walks 5 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "West",
    "South-West",
    "South-East",
+   "West",
    "South"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 5 km South: (0, -5).\nTurn left to face East, 5 km: (5, -5).\nTurn right to face South, 3 km: (5, -8).\nNet: 5 km east, 8 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -2962,11 +2962,11 @@
   "question": "A person starts walking towards North and covers 10 km, then turns left and walks 10 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South-East",
-   "North",
+   "North-West",
    "East",
-   "North-West"
+   "North"
   ],
-  "answer": 3,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 10 km North: (0, 10).\nTurn left to face West, 10 km: (-10, 10).\nNet: 10 km west, 10 km north.\nSo the person is to the North-West of the start."
  },
  {
@@ -3532,11 +3532,11 @@
   "question": "A person starts walking towards East and covers 8 km, then turns right and walks 10 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South-East",
-   "South-West",
    "North-East",
+   "South-West",
    "South"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 8 km East: (8, 0).\nTurn right to face South, 10 km: (8, -10).\nTurn right to face West, 12 km: (-4, -10).\nNet: 4 km west, 10 km south.\nSo the person is to the South-West of the start."
  },
  {
@@ -3607,11 +3607,11 @@
   "question": "A person starts walking towards North and covers 5 km, then turns right and walks 5 km, then turns left and walks 2 km, then turns right and walks 6 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South",
-   "North-East",
    "North-West",
+   "North-East",
    "East"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 5 km North: (0, 5).\nTurn right to face East, 5 km: (5, 5).\nTurn left to face North, 2 km: (5, 7).\nTurn right to face East, 6 km: (11, 7).\nNet: 11 km east, 7 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -3907,11 +3907,11 @@
   "question": "A person starts walking towards South and covers 4 km, then turns right and walks 7 km, then turns right and walks 7 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South-East",
-   "North",
    "North-West",
+   "North",
    "East"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 4 km South: (0, -4).\nTurn right to face West, 7 km: (-7, -4).\nTurn right to face North, 7 km: (-7, 3).\nNet: 7 km west, 3 km north.\nSo the person is to the North-West of the start."
  },
  {
@@ -4386,12 +4386,12 @@
   "level": "medium",
   "question": "A person starts walking towards West and covers 8 km, then turns left and walks 4 km, then turns right and walks 7 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "West",
    "South-West",
+   "West",
    "North-East",
    "South-East"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Use east as +x and north as +y. 8 km West: (-8, 0).\nTurn left to face South, 4 km: (-8, -4).\nTurn right to face West, 7 km: (-15, -4).\nNet: 15 km west, 4 km south.\nSo the person is to the South-West of the start."
  },
  {
@@ -4461,12 +4461,12 @@
   "level": "medium",
   "question": "A person starts walking towards West and covers 2 km, then turns left and walks 5 km, then turns right and walks 8 km. In which direction is the person now with respect to the starting point?",
   "options": [
+   "South-West",
    "North-East",
-   "South",
    "North-West",
-   "South-West"
+   "South"
   ],
-  "answer": 3,
+  "answer": 0,
   "explanation": "Use east as +x and north as +y. 2 km West: (-2, 0).\nTurn left to face South, 5 km: (-2, -5).\nTurn right to face West, 8 km: (-10, -5).\nNet: 10 km west, 5 km south.\nSo the person is to the South-West of the start."
  },
  {
@@ -4612,11 +4612,11 @@
   "question": "A person starts walking towards East and covers 2 km, then turns right and walks 2 km, then turns left and walks 8 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "North-West",
+   "East",
    "South-East",
-   "West",
-   "East"
+   "West"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 2 km East: (2, 0).\nTurn right to face South, 2 km: (2, -2).\nTurn left to face East, 8 km: (10, -2).\nTurn right to face South, 12 km: (10, -14).\nNet: 10 km east, 14 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -4926,12 +4926,12 @@
   "level": "medium",
   "question": "A person starts walking towards North and covers 5 km, then turns right and walks 6 km, then turns left and walks 6 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-East",
-   "East",
    "North-West",
+   "East",
+   "North-East",
    "North"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 5 km North: (0, 5).\nTurn right to face East, 6 km: (6, 5).\nTurn left to face North, 6 km: (6, 11).\nNet: 6 km east, 11 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -5166,12 +5166,12 @@
   "level": "medium",
   "question": "A person starts walking towards West and covers 7 km, then turns left and walks 4 km, then turns left and walks 9 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "South-East",
+   "West",
    "South-West",
    "North",
-   "West"
+   "South-East"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Use east as +x and north as +y. 7 km West: (-7, 0).\nTurn left to face South, 4 km: (-7, -4).\nTurn left to face East, 9 km: (2, -4).\nNet: 2 km east, 4 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -5527,11 +5527,11 @@
   "question": "A person starts walking towards South and covers 6 km, then turns right and walks 6 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "West",
-   "North-East",
    "South-West",
+   "North-East",
    "North"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 6 km South: (0, -6).\nTurn right to face West, 6 km: (-6, -6).\nTurn right to face North, 3 km: (-6, -3).\nNet: 6 km west, 3 km south.\nSo the person is to the South-West of the start."
  },
  {
@@ -5707,11 +5707,11 @@
   "question": "A person starts walking towards South and covers 2 km, then turns left and walks 8 km, then turns right and walks 12 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South-West",
-   "North",
    "South-East",
+   "North",
    "South"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Use east as +x and north as +y. 2 km South: (0, -2).\nTurn left to face East, 8 km: (8, -2).\nTurn right to face South, 12 km: (8, -14).\nNet: 8 km east, 14 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -6036,12 +6036,12 @@
   "level": "hard",
   "question": "A person starts walking towards West and covers 3 km, then turns right and walks 12 km, then turns right and walks 11 km, then turns left and walks 9 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-West",
    "North-East",
+   "North-West",
    "North",
    "South"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Use east as +x and north as +y. 3 km West: (-3, 0).\nTurn right to face North, 12 km: (-3, 12).\nTurn right to face East, 11 km: (8, 12).\nTurn left to face North, 9 km: (8, 21).\nTurn right to face East, 3 km: (11, 21).\nNet: 11 km east, 21 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -6607,11 +6607,11 @@
   "question": "A person starts walking towards North and covers 9 km, then turns right and walks 8 km, then turns left and walks 9 km, then turns left and walks 7 km, then turns right and walks 5 km, then turns right and walks 5 km. In which direction is the person now with respect to the starting point?",
   "options": [
    "South",
+   "North",
    "North-East",
-   "West",
-   "North"
+   "West"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 9 km North: (0, 9).\nTurn right to face East, 8 km: (8, 9).\nTurn left to face North, 9 km: (8, 18).\nTurn left to face West, 7 km: (1, 18).\nTurn right to face North, 5 km: (1, 23).\nTurn right to face East, 5 km: (6, 23).\nNet: 6 km east, 23 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -6621,12 +6621,12 @@
   "level": "hard",
   "question": "A person starts walking towards West and covers 4 km, then turns right and walks 4 km, then turns right and walks 4 km, then turns right and walks 10 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "South",
    "North-West",
+   "East",
    "South-West",
-   "East"
+   "South"
   ],
-  "answer": 0,
+  "answer": 3,
   "explanation": "Use east as +x and north as +y. 4 km West: (-4, 0).\nTurn right to face North, 4 km: (-4, 4).\nTurn right to face East, 4 km: (0, 4).\nTurn right to face South, 10 km: (0, -6).\nNet: 0 km east, 6 km south.\nSo the person is to the South of the start."
  },
  {
@@ -6891,12 +6891,12 @@
   "level": "hard",
   "question": "A person starts walking towards South and covers 10 km, then turns left and walks 7 km, then turns left and walks 12 km, then turns left and walks 3 km, then turns left and walks 5 km, then turns left and walks 8 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "South-West",
    "South-East",
+   "West",
    "North-East",
-   "West"
+   "South-West"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Use east as +x and north as +y. 10 km South: (0, -10).\nTurn left to face East, 7 km: (7, -10).\nTurn left to face North, 12 km: (7, 2).\nTurn left to face West, 3 km: (4, 2).\nTurn left to face South, 5 km: (4, -3).\nTurn left to face East, 8 km: (12, -3).\nNet: 12 km east, 3 km south.\nSo the person is to the South-East of the start."
  },
  {
@@ -7221,12 +7221,12 @@
   "level": "hard",
   "question": "A person starts walking towards East and covers 10 km, then turns right and walks 12 km, then turns left and walks 12 km, then turns left and walks 12 km, then turns right and walks 7 km, then turns left and walks 6 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-East",
    "South-West",
    "East",
+   "North-East",
    "North-West"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 10 km East: (10, 0).\nTurn right to face South, 12 km: (10, -12).\nTurn left to face East, 12 km: (22, -12).\nTurn left to face North, 12 km: (22, 0).\nTurn right to face East, 7 km: (29, 0).\nTurn left to face North, 6 km: (29, 6).\nNet: 29 km east, 6 km north.\nSo the person is to the North-East of the start."
  },
  {
@@ -8076,12 +8076,12 @@
   "level": "hard",
   "question": "A person starts walking towards West and covers 4 km, then turns left and walks 9 km, then turns right and walks 9 km, then turns left and walks 4 km, then turns right and walks 3 km. In which direction is the person now with respect to the starting point?",
   "options": [
-   "North-East",
-   "North",
    "North-West",
-   "South-West"
+   "North",
+   "South-West",
+   "North-East"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "Use east as +x and north as +y. 4 km West: (-4, 0).\nTurn left to face South, 9 km: (-4, -9).\nTurn right to face West, 9 km: (-13, -9).\nTurn left to face South, 4 km: (-13, -13).\nTurn right to face West, 3 km: (-16, -13).\nNet: 16 km west, 13 km south.\nSo the person is to the South-West of the start."
  },
  {

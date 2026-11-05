@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "threading.Thread is the standard high-level API for OS threads."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What does 2 ** 3 evaluate to?",
+    "options": [
+      "8",
+      "6",
+      "9",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "** is the exponentiation operator, and 2 to the power 3 is 8."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What does int(3.9) return?",
+    "options": [
+      "3",
+      "4",
+      "3.9",
+      "It raises ValueError"
+    ],
+    "answer": 0,
+    "explanation": "int() truncates a float toward zero."
+  },
+  {
+    "topic": "basics-types",
+    "question": "What does 'ab' * 3 evaluate to?",
+    "options": [
+      "'ab3'",
+      "'ababab'",
+      "It raises TypeError",
+      "['ab', 'ab', 'ab']"
+    ],
+    "answer": 1,
+    "explanation": "Multiplying a string by an int repeats it."
+  },
+  {
+    "topic": "data-structures",
+    "question": "What does [1, 2, 3][-1] return?",
+    "options": [
+      "1",
+      "2",
+      "It raises IndexError",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "Negative indexes count from the end, so -1 is the last element."
+  },
+  {
+    "topic": "data-structures",
+    "question": "What does [0, 1, 2, 3, 4][1:3] return?",
+    "options": [
+      "[1, 2, 3]",
+      "[0, 1, 2]",
+      "[2, 3]",
+      "[1, 2]"
+    ],
+    "answer": 3,
+    "explanation": "A slice includes the start index and excludes the stop index."
+  },
+  {
+    "topic": "data-structures",
+    "question": "How do you write a tuple containing only the integer 5?",
+    "options": [
+      "(5)",
+      "[5]",
+      "tuple 5",
+      "(5,)"
+    ],
+    "answer": 3,
+    "explanation": "The trailing comma makes the tuple; (5) is just the integer 5 in parentheses."
+  },
+  {
+    "topic": "data-structures",
+    "question": "Which list method removes and returns the last item when called without arguments?",
+    "options": [
+      "remove()",
+      "del()",
+      "popleft()",
+      "pop()"
+    ],
+    "answer": 3,
+    "explanation": "list.pop() defaults to the last index."
+  },
+  {
+    "topic": "functions",
+    "question": "Given def greet(name='World'), what is name when greet() is called with no arguments?",
+    "options": [
+      "None",
+      "'World'",
+      "''",
+      "It raises TypeError"
+    ],
+    "answer": 1,
+    "explanation": "Parameters with default values take that default when no argument is passed."
+  },
+  {
+    "topic": "functions",
+    "question": "Which keyword exits a function and sends a value back to the caller?",
+    "options": [
+      "yield",
+      "break",
+      "return",
+      "exit"
+    ],
+    "answer": 2,
+    "explanation": "return ends the function call and gives its value to the caller."
+  },
+  {
+    "topic": "oop",
+    "question": "Which keyword defines a class?",
+    "options": [
+      "def",
+      "struct",
+      "class",
+      "object"
+    ],
+    "answer": 2,
+    "explanation": "A class statement starts with the class keyword followed by the class name."
+  },
+  {
+    "topic": "oop",
+    "question": "Which built-in lets a subclass method call the parent class's version of a method?",
+    "options": [
+      "super()",
+      "parent()",
+      "base()",
+      "self.parent"
+    ],
+    "answer": 0,
+    "explanation": "super() returns a proxy that delegates to the next class in the method resolution order."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "What does [x for x in range(6) if x % 2 == 0] evaluate to?",
+    "options": [
+      "[2, 4, 6]",
+      "[1, 3, 5]",
+      "[0, 2, 4]",
+      "[0, 2, 4, 6]"
+    ],
+    "answer": 2,
+    "explanation": "range(6) yields 0 through 5, and the condition keeps the even numbers."
+  },
+  {
+    "topic": "comprehensions-generators",
+    "question": "What does list(range(2, 5)) return?",
+    "options": [
+      "[2, 3, 4, 5]",
+      "[3, 4, 5]",
+      "[2, 3, 4]",
+      "[2, 5]"
+    ],
+    "answer": 2,
+    "explanation": "range includes the start and excludes the stop."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which exception does 1 / 0 raise?",
+    "options": [
+      "ValueError",
+      "ZeroDivisionError",
+      "ArithmeticWarning",
+      "It returns inf"
+    ],
+    "answer": 1,
+    "explanation": "Dividing a number by zero raises ZeroDivisionError."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which exception is raised when you access a list index that is out of range?",
+    "options": [
+      "KeyError",
+      "IndexError",
+      "ValueError",
+      "RangeError"
+    ],
+    "answer": 1,
+    "explanation": "Sequences raise IndexError for invalid positions, while mappings raise KeyError for missing keys."
+  },
+  {
+    "topic": "modules-packages",
+    "question": "Which statement imports the math module under the name m?",
+    "options": [
+      "import m from math",
+      "import math as m",
+      "from math import m",
+      "import math = m"
+    ],
+    "answer": 1,
+    "explanation": "The as clause binds the module to an alias in the current namespace."
+  },
+  {
+    "topic": "decorators-context-managers",
+    "question": "What does with open('f.txt') as f: guarantee about the file?",
+    "options": [
+      "It is opened in write mode",
+      "It is read fully into memory",
+      "It is closed when the block exits, even if an exception occurs",
+      "It is deleted after the block"
+    ],
+    "answer": 2,
+    "explanation": "The file object's __exit__ closes the file however the block ends."
+  },
+  {
+    "topic": "standard-library",
+    "question": "Which standard module provides the datetime class whose now() method returns the current local date and time?",
+    "options": [
+      "time",
+      "calendar",
+      "clock",
+      "datetime"
+    ],
+    "answer": 3,
+    "explanation": "datetime.datetime.now() returns a datetime for the current moment."
+  },
+  {
+    "topic": "standard-library",
+    "question": "Which standard module exposes command-line arguments as a list named argv?",
+    "options": [
+      "sys",
+      "os",
+      "argparse",
+      "shutil"
+    ],
+    "answer": 0,
+    "explanation": "sys.argv holds the script name followed by its arguments."
+  },
+  {
+    "topic": "async-concurrency",
+    "question": "What does GIL stand for in CPython?",
+    "options": [
+      "Global Interpreter Lock",
+      "General Input Loop",
+      "Global Import Library",
+      "Generator Iteration Limit"
+    ],
+    "answer": 0,
+    "explanation": "The GIL lets only one thread execute Python bytecode at a time in standard CPython."
   }
 ]

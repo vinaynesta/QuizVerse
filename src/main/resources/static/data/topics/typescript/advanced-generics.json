@@ -1,0 +1,32 @@
+[
+ {
+  "id": "qe3b58dd2a9b",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "What is the purpose of `NoInfer<T>` (TypeScript 5.4+) in a parameter type?",
+  "options": [
+   "It forces T to be inferred as never",
+   "It disables type checking for the parameter",
+   "It makes the parameter optional",
+   "It stops that position from being used as an inference candidate for T"
+  ],
+  "answer": 3,
+  "explanation": "NoInfer blocks inference from that site, so T is inferred from other arguments and then checked there."
+ },
+ {
+  "id": "qefda85e00d8",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "Given `function f<const T>(x: T): T`, what is T inferred as for `f([\"a\", \"b\"])`?",
+  "options": [
+   "string[]",
+   "(\"a\" | \"b\")[]",
+   "[string, string]",
+   "readonly [\"a\", \"b\"]"
+  ],
+  "answer": 3,
+  "explanation": "A const type parameter (TS 5.0+) infers types as if the argument were written with as const."
+ }
+]

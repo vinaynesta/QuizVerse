@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6a2e81be6a9",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Elem<T> = T extends (infer U)[] ? U : never;`, what is `Elem<string[]>`?",
+  "options": [
+   "string[]",
+   "never",
+   "string",
+   "unknown"
+  ],
+  "answer": 2,
+  "explanation": "infer U captures the array element type when the pattern matches."
+ },
+ {
+  "id": "q438ad33b505",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With exactOptionalPropertyTypes enabled and `type T = { a?: number }`, what happens with `const t: T = { a: undefined };`?",
+  "options": [
+   "It compiles only under strictNullChecks off",
+   "It compiles and a is removed",
+   "It compiles",
+   "A compile error, because a may be omitted but not explicitly set to undefined"
+  ],
+  "answer": 3,
+  "explanation": "The flag distinguishes a missing property from one explicitly holding undefined."
+ },
+ {
+  "id": "q6851bcf341d",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type D<T> = T extends true ? \"yes\" : \"no\";`, what is `D<boolean>`?",
+  "options": [
+   "\"yes\" | \"no\"",
+   "\"yes\"",
+   "never",
+   "\"no\""
+  ],
+  "answer": 0,
+  "explanation": "boolean is the union true | false, so the distributive conditional maps each member separately."
+ },
+ {
+  "id": "q0613254278d",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "What is ``type E = `on${\"click\" | \"focus\"}`;``?",
+  "options": [
+   "string",
+   "`on${string}`",
+   "\"onclick|focus\"",
+   "\"onclick\" | \"onfocus\""
+  ],
+  "answer": 3,
+  "explanation": "Template literal types distribute over unions in their placeholders."
+ },
+ {
+  "id": "q15e18ae7b18",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Which mapped type is equivalent to `Partial<T>`?",
+  "options": [
+   "{ readonly [K in keyof T]: T[K] }",
+   "{ [K in T]: K }",
+   "{ [K in keyof T]?: T[K] }",
+   "{ [K in keyof T]-?: T[K] }"
+  ],
+  "answer": 2,
+  "explanation": "Adding ? to each mapped key makes every property optional, which is how Partial is defined."
+ },
+ {
+  "id": "qefda85e00d8",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "Given `function f<const T>(x: T): T`, what is T inferred as for `f([\"a\", \"b\"])`?",
+  "options": [
+   "string[]",
+   "(\"a\" | \"b\")[]",
+   "[string, string]",
+   "readonly [\"a\", \"b\"]"
+  ],
+  "answer": 3,
+  "explanation": "A const type parameter (TS 5.0+) infers types as if the argument were written with as const."
+ },
+ {
+  "id": "qad6663d8524",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "What does the `satisfies` operator do?",
+  "options": [
+   "Casts the expression to the type, like as",
+   "Widens the expression's type to the given type",
+   "Checks that an expression matches a type while keeping the expression's own inferred type",
+   "Adds a runtime validation check"
+  ],
+  "answer": 2,
+  "explanation": "satisfies (TS 4.9+) validates against a type without changing the inferred type."
+ },
+ {
+  "id": "qeb413879710",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "Why is `function fail(msg: string): never { throw new Error(msg); }` typed as returning never?",
+  "options": [
+   "It returns an empty object",
+   "never is required on all functions that take parameters",
+   "It never completes normally, so it never produces a value",
+   "It returns undefined"
+  ],
+  "answer": 2,
+  "explanation": "never marks functions that always throw or loop forever."
+ },
+ {
+  "id": "qcbac0f8de92",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type F<T> = T extends string ? \"s\" : \"o\";`, what is `F<never>`?",
+  "options": [
+   "\"o\"",
+   "\"s\" | \"o\"",
+   "never",
+   "\"s\""
+  ],
+  "answer": 2,
+  "explanation": "never is the empty union, and distributing over zero members yields never."
+ },
+ {
+  "id": "q4f5b5f9ed2c",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With `Dog` extending `Animal` and strictFunctionTypes on, is `(x: Animal) => void` assignable to `(x: Dog) => void`?",
+  "options": [
+   "No, because Dog is narrower than Animal",
+   "Only when strictFunctionTypes is disabled",
+   "Only if Animal is an interface",
+   "Yes"
+  ],
+  "answer": 3,
+  "explanation": "Parameters are contravariant: a function handling any Animal can safely receive a Dog."
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q35f469634ca",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What happens if you call a class like a function, e.g. User() without new?",
+  "options": [
+   "It returns undefined",
+   "It creates an instance anyway",
+   "It returns the class itself",
+   "A TypeError is thrown"
+  ],
+  "answer": 3,
+  "explanation": "Class constructors cannot be invoked without new; doing so throws a TypeError."
+ },
+ {
+  "id": "q8212c1fe508",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does the # prefix mean on a class field like #count?",
+  "options": [
+   "It is a computed property",
+   "It is a static field",
+   "It is a private field accessible only inside the class body",
+   "It is a read-only getter"
+  ],
+  "answer": 2,
+  "explanation": "Fields prefixed with # are truly private and cannot be accessed from outside the class."
+ },
+ {
+  "id": "qa9ce42bf0d3",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "Which keyword calls the parent class constructor in a subclass?",
+  "options": [
+   "super()",
+   "this.parent()",
+   "base()",
+   "parent()"
+  ],
+  "answer": 0,
+  "explanation": "A derived class constructor must call super() before using this."
+ },
+ {
+  "id": "qc06f31d927f",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "How do you call a static method greet defined on class User?",
+  "options": [
+   "User.greet()",
+   "new User().greet()",
+   "User.prototype.greet()",
+   "this.greet() from anywhere"
+  ],
+  "answer": 0,
+  "explanation": "Static methods belong to the class constructor itself, not to instances."
+ }
+]

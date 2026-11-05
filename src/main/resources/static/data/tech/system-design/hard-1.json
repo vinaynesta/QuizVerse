@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q22b693ea3e5",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "An AP system accepts writes on both sides of a partition. What must it handle later?",
+  "options": [
+   "Permanent loss of every write made during the partition",
+   "A mandatory two-phase commit after healing",
+   "Conflicting concurrent updates that need reconciliation when the partition heals",
+   "Permanent disabling of leader election"
+  ],
+  "answer": 2,
+  "explanation": "Accepting writes on both sides means the same data can diverge, so the system needs conflict detection and resolution."
+ },
+ {
+  "id": "q37ca012b3f4",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "What problem does the transactional outbox pattern solve?",
+  "options": [
+   "Atomically updating a database and publishing an event, so one cannot succeed while the other fails",
+   "Encrypting events at rest without a key service",
+   "Removing the need for consumers to be idempotent",
+   "Making reads faster by caching query results in a queue"
+  ],
+  "answer": 0,
+  "explanation": "The event is written to an outbox table in the same local transaction as the state change, then relayed to the broker."
+ },
+ {
+  "id": "q5412a7a4ace",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is a sloppy quorum?",
+  "options": [
+   "A write quorum that can accept writes on nodes outside the key's home replicas, weakening the overlap guarantee",
+   "A quorum that requires all N replicas to acknowledge every write",
+   "A quorum that ignores write timestamps entirely",
+   "A read-only quorum used only during backups"
+  ],
+  "answer": 0,
+  "explanation": "Dynamo-style systems use sloppy quorums with hinted handoff for availability, so R + W > N no longer guarantees seeing the latest write."
+ },
+ {
+  "id": "q9e52b493fb5",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What characterizes a metastable failure?",
+  "options": [
+   "A failure caused only by disk corruption",
+   "A failure that resolves itself within one heartbeat interval",
+   "A failure confined to a single availability zone",
+   "The system stays degraded after the original trigger is gone, sustained by a feedback loop such as retries or cache refill storms"
+  ],
+  "answer": 3,
+  "explanation": "Metastable failures persist because the recovery mechanisms themselves keep demand above capacity."
+ },
+ {
+  "id": "q25a81f24096",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "What does the CAP theorem say about a distributed data store during a network partition?",
+  "options": [
+   "It must trade off between consistency and availability",
+   "It can guarantee both consistency and availability if replicas sit in one region",
+   "Partition tolerance is optional and can be dropped",
+   "It guarantees linearizable reads with no latency cost"
+  ],
+  "answer": 0,
+  "explanation": "Under a partition, a system must either reject or delay some requests to stay consistent, or serve possibly stale data to stay available."
+ },
+ {
+  "id": "q4b0903edf86",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "Why does requiring a strict majority of votes help prevent split brain?",
+  "options": [
+   "A majority always holds the most recent clock reading",
+   "Two disjoint groups cannot both contain a majority of the same cluster, so at most one side can make progress",
+   "Majorities let every node read from disk instead of memory",
+   "Majority voting removes the need for replication"
+  ],
+  "answer": 1,
+  "explanation": "Any two majorities of the same membership intersect, so at most one partition side can win an election or commit."
+ },
+ {
+  "id": "q25f507c5842",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why are compensating actions insufficient for some side effects, such as sending an email?",
+  "options": [
+   "Email servers reject all compensating messages",
+   "Once delivered, the effect cannot be truly undone, so a compensation can only be a follow-up such as a correction message",
+   "Compensations must run inside the same database transaction",
+   "Compensations are only permitted for read operations"
+  ],
+  "answer": 1,
+  "explanation": "Some actions are irreversible in the outside world, so sagas must model them as forward-only steps with corrective follow-ups."
+ },
+ {
+  "id": "q24b263b4918",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "In Raft, when is a log entry considered committed?",
+  "options": [
+   "When the leader writes it to its own disk",
+   "When a client reads it back",
+   "When every follower acknowledges it",
+   "When the leader has replicated it to a majority of servers"
+  ],
+  "answer": 3,
+  "explanation": "Committing on majority replication means the entry survives any minority failure and will be seen by future leaders."
+ },
+ {
+  "id": "q9b3e02a78c0",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "What is the purpose of the term number in Raft?",
+  "options": [
+   "It acts as a logical clock so stale leaders and messages can be detected and rejected",
+   "It sets the size of log segments on disk",
+   "It is the wall-clock time of the last heartbeat",
+   "It identifies the client that issued the request"
+  ],
+  "answer": 0,
+  "explanation": "Terms order leadership epochs, so a node that sees a higher term steps down and ignores lower-term messages."
+ },
+ {
+  "id": "qecf3cbd94f8",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "Why is using wall-clock timestamps for last-write-wins conflict resolution risky?",
+  "options": [
+   "Wall clocks cannot be read by application code",
+   "Every CPU core must have an identical clock or the write fails",
+   "Timestamps overflow a 32-bit integer within a day",
+   "Clock skew between nodes can make a causally older write appear newer and win"
+  ],
+  "answer": 3,
+  "explanation": "Clocks on different machines are not perfectly synchronized, so the 'latest' timestamp may belong to the earlier event."
+ }
+]

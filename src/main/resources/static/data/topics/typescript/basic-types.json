@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q66da6fd86bb",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "With strictNullChecks enabled, what happens with `let s: string = null;`?",
+  "options": [
+   "It compiles but throws at runtime",
+   "A compile-time error, because null is not assignable to string",
+   "It compiles because null is assignable to every type",
+   "It compiles and s becomes undefined"
+  ],
+  "answer": 1,
+  "explanation": "Under strictNullChecks, null and undefined are distinct types and must be included explicitly, e.g. string | null."
+ },
+ {
+  "id": "qb336c847366",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which TypeScript type covers both integer and floating-point values?",
+  "options": [
+   "double",
+   "int",
+   "float",
+   "number"
+  ],
+  "answer": 3,
+  "explanation": "TypeScript has a single number type (IEEE 754 doubles); bigint is separate for arbitrary-precision integers."
+ },
+ {
+  "id": "qc9fc81c2dd7",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which primitive type annotation is used for text values in TypeScript?",
+  "options": [
+   "char",
+   "text",
+   "str",
+   "string"
+  ],
+  "answer": 3,
+  "explanation": "TypeScript uses the lowercase string type for all text; there is no separate char type."
+ },
+ {
+  "id": "qe3197129a9a",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What return type does TypeScript infer for a function that has no return statement?",
+  "options": [
+   "never",
+   "null",
+   "void",
+   "any"
+  ],
+  "answer": 2,
+  "explanation": "A function that completes without returning a value is inferred to return void; never is for functions that never complete."
+ },
+ {
+  "id": "qe35fa636a37",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What does `let id: string | number;` allow?",
+  "options": [
+   "id can hold either a string or a number",
+   "id must be both a string and a number at once",
+   "id can only hold the literal values \"string\" or \"number\"",
+   "id is an array of strings and numbers"
+  ],
+  "answer": 0,
+  "explanation": "The | operator creates a union type, meaning the value may be any one of the listed types."
+ },
+ {
+  "id": "qf24b30aec0f",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What is the correct annotation for a variable holding true or false?",
+  "options": [
+   "let done: bit",
+   "let done: bool",
+   "let done: flag",
+   "let done: boolean"
+  ],
+  "answer": 3,
+  "explanation": "The primitive type for true/false values is boolean."
+ },
+ {
+  "id": "qf657aabe2d3",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Given `let dir: \"left\" | \"right\";`, which assignment compiles?",
+  "options": [
+   "dir = \"left\";",
+   "dir = 0;",
+   "dir = \"Left\";",
+   "dir = \"up\";"
+  ],
+  "answer": 0,
+  "explanation": "A union of string literal types only accepts those exact (case-sensitive) values."
+ }
+]

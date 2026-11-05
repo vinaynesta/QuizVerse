@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q227b8460e2d",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "How do you explicitly supply a type argument when calling `function parse<T>(s: string): T`?",
+  "options": [
+   "parse[User](s)",
+   "parse(s)<User>",
+   "parse(s) as<User>",
+   "parse<User>(s)"
+  ],
+  "answer": 3,
+  "explanation": "Explicit type arguments go in angle brackets between the function name and the argument list."
+ },
+ {
+  "id": "q382bb6ae92f",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `function get<T, K extends keyof T>(obj: T, key: K): T[K]`, what does `get({ a: 1, b: \"x\" }, \"b\")` return as a type?",
+  "options": [
+   "number",
+   "string",
+   "unknown",
+   "string | number"
+  ],
+  "answer": 1,
+  "explanation": "T[K] is an indexed access type, so with K = \"b\" the result is the type of property b."
+ },
+ {
+  "id": "q448773caf8d",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `class Stack<T> { push(item: T) {} }`, what happens with `new Stack<number>().push(\"a\")`?",
+  "options": [
+   "It compiles; T widens to string | number",
+   "It compiles but throws at runtime",
+   "It compiles because generics accept any value",
+   "A compile error, because T is fixed to number"
+  ],
+  "answer": 3,
+  "explanation": "Once the class is instantiated with number, push only accepts number."
+ },
+ {
+  "id": "q6144752c464",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "When `K extends keyof T`, what does the type `T[K]` represent?",
+  "options": [
+   "The key names of T as strings",
+   "An array of T with length K",
+   "A tuple of T and K",
+   "The type of the property K on T"
+  ],
+  "answer": 3,
+  "explanation": "T[K] is an indexed access type that looks up property types."
+ },
+ {
+  "id": "q83dfe5c9111",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Which syntax gives a generic type parameter a default?",
+  "options": [
+   "interface Box<T default string> { value: T }",
+   "interface Box<T = string> { value: T }",
+   "interface Box<T: string> { value: T }",
+   "interface Box<T ?? string> { value: T }"
+  ],
+  "answer": 1,
+  "explanation": "Type parameter defaults use = and apply when the argument is not supplied or inferred."
+ },
+ {
+  "id": "qbfdb3b7903d",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "What does the constraint in `function feed<T extends Animal>(a: T)` require?",
+  "options": [
+   "Animal must be assignable to T",
+   "T must be exactly Animal, not a subtype",
+   "The argument's type must be assignable to Animal",
+   "T must be a class that extends Animal"
+  ],
+  "answer": 2,
+  "explanation": "extends in a constraint means the type argument must be a subtype of (assignable to) Animal."
+ },
+ {
+  "id": "qc66e06d359b",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Why is `function first<T>(arr: T[]): T` better than `function first(arr: any[]): any`?",
+  "options": [
+   "It preserves the relationship between the input element type and the return type",
+   "It runs faster at runtime",
+   "It prevents passing empty arrays",
+   "It forces callers to pass explicit type arguments"
+  ],
+  "answer": 0,
+  "explanation": "Generics carry the caller's type through, so first([1, 2]) returns number instead of any."
+ },
+ {
+  "id": "qfdd8a3dd1b3",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `function len<T extends { length: number }>(x: T) { return x.length; }`, which call is a compile error?",
+  "options": [
+   "len(\"abc\")",
+   "len(42)",
+   "len([1, 2, 3])",
+   "len({ length: 5 })"
+  ],
+  "answer": 1,
+  "explanation": "number has no length property, so it does not satisfy the constraint."
+ }
+]

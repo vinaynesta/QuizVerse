@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q0894b75fc43",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "What does a blob object store?",
+  "options": [
+   "Commit metadata such as author and message",
+   "Directory entries and their names",
+   "File contents, without the file name or path",
+   "Reference names such as branch names"
+  ],
+  "answer": 2,
+  "explanation": "Blobs hold only the content of a file; names and paths are stored in the tree objects that point to the blob."
+ },
+ {
+  "id": "q09d89ac876c",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "In Git's object model, which object type stores a directory listing that maps names to blobs and subtrees?",
+  "options": [
+   "blob",
+   "commit",
+   "tree",
+   "tag"
+  ],
+  "answer": 2,
+  "explanation": "A tree object lists entries with modes, names, and hashes for files (blobs) and subdirectories (trees)."
+ },
+ {
+  "id": "q51548c2d00f",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "Why does a merge commit have more than one parent?",
+  "options": [
+   "It means the commit contains two trees",
+   "It records that the histories of two lines of development were combined",
+   "It was created by a rebase",
+   "It marks an annotated tag"
+  ],
+  "answer": 1,
+  "explanation": "Each parent is a commit that was joined into the merge, which is how Git records the combined history."
+ },
+ {
+  "id": "q5a79b075221",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "Which fields does a Git commit object record?",
+  "options": [
+   "A list of branch names",
+   "Only a diff against its parent",
+   "A tree hash, parent commit hash(es), author, committer, and message",
+   "A compressed copy of the working tree"
+  ],
+  "answer": 2,
+  "explanation": "A commit points to a root tree snapshot and its parent commits, plus identity, timestamps, and the message."
+ },
+ {
+  "id": "q6e664cad760",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "How does Git identify objects in its object database?",
+  "options": [
+   "By sequential integer IDs",
+   "By file modification time",
+   "By the file path",
+   "By a hash of the object's content (SHA-1, or SHA-256 in SHA-256 repositories)"
+  ],
+  "answer": 3,
+  "explanation": "Objects are content-addressed, so identical content always gets the same hash."
+ },
+ {
+  "id": "q90e82839eb2",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "What does the .git/index file hold?",
+  "options": [
+   "The staging area: paths with their blob hashes and file metadata for the next commit",
+   "The list of configured remotes",
+   "The reflog for HEAD",
+   "Packed copies of all commits"
+  ],
+  "answer": 0,
+  "explanation": "The index records the tree that the next commit will contain, plus stat data used to detect changes quickly."
+ },
+ {
+  "id": "qa472f09e474",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "How is a lightweight tag stored, compared with an annotated tag?",
+  "options": [
+   "As a tag object with a message and tagger",
+   "As a ref under refs/tags that points directly at a commit, with no tag object",
+   "As an entry in .git/config",
+   "As a special commit with no parents"
+  ],
+  "answer": 1,
+  "explanation": "Annotated tags create a tag object holding a message and tagger; lightweight tags are just refs."
+ },
+ {
+  "id": "qf58ee6f39df",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "What is the main job of git gc?",
+  "options": [
+   "Verify commit signatures",
+   "Delete merged branches from the remote",
+   "Rewrite history to remove large files",
+   "Compress loose objects into packfiles and prune old unreachable objects"
+  ],
+  "answer": 3,
+  "explanation": "git gc packs objects and refs and removes unreachable objects older than the prune expiry."
+ }
+]

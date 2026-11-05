@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q457b42f4a6e",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "What is the primary purpose of DNS?",
+  "options": [
+   "Translating domain names into IP addresses",
+   "Encrypting web traffic",
+   "Assigning IP addresses to hosts",
+   "Forwarding packets between networks"
+  ],
+  "answer": 0,
+  "explanation": "DNS is a distributed directory that resolves human-readable names to addresses and other records."
+ },
+ {
+  "id": "qa52436f882c",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type makes one name an alias for another canonical name?",
+  "options": [
+   "SOA",
+   "A",
+   "NS",
+   "CNAME"
+  ],
+  "answer": 3,
+  "explanation": "A CNAME points a name to a canonical name, whose records are then looked up."
+ },
+ {
+  "id": "qa9daa3da8b0",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type specifies the mail servers for a domain?",
+  "options": [
+   "PTR",
+   "TXT",
+   "MX",
+   "NS"
+  ],
+  "answer": 2,
+  "explanation": "MX (mail exchanger) records list mail servers with preference values."
+ },
+ {
+  "id": "qcc0bb7ca107",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type maps a hostname to an IPv4 address?",
+  "options": [
+   "A",
+   "AAAA",
+   "CNAME",
+   "MX"
+  ],
+  "answer": 0,
+  "explanation": "An A record holds a 32-bit IPv4 address; AAAA holds an IPv6 address."
+ },
+ {
+  "id": "qf69c6f92daa",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type maps a hostname to an IPv6 address?",
+  "options": [
+   "PTR",
+   "AAAA",
+   "A",
+   "SRV"
+  ],
+  "answer": 1,
+  "explanation": "AAAA records hold 128-bit IPv6 addresses."
+ },
+ {
+  "id": "q49409ec2cb7",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "What controls how long a resolver may cache a DNS record?",
+  "options": [
+   "The SOA serial number",
+   "The record's TTL",
+   "The MX preference value",
+   "The number of NS records"
+  ],
+  "answer": 1,
+  "explanation": "Each resource record carries a TTL in seconds that bounds how long it can be cached."
+ },
+ {
+  "id": "q6072cb08583",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "When does DNS use TCP instead of UDP?",
+  "options": [
+   "When a response is truncated for UDP, and for zone transfers",
+   "Never, DNS is UDP-only",
+   "Always, for every query",
+   "Only for AAAA lookups"
+  ],
+  "answer": 0,
+  "explanation": "A response with the TC bit set makes the client retry over TCP; AXFR/IXFR zone transfers also use TCP."
+ },
+ {
+  "id": "q9a25ee1fbbc",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "What does a recursive DNS resolver do?",
+  "options": [
+   "Queries root, TLD and authoritative servers on the client's behalf and caches results",
+   "Signs zones with DNSSEC keys",
+   "Hosts the authoritative zone file for a domain",
+   "Registers new domain names"
+  ],
+  "answer": 0,
+  "explanation": "Stub resolvers ask a recursive resolver, which walks the hierarchy and caches answers per their TTL."
+ }
+]

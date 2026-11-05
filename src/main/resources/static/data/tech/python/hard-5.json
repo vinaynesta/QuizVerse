@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2b173fdf4a8",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "What happens when you append to a collections.deque(maxlen=3) that already holds 3 items?",
+  "options": [
+   "The item at the opposite (left) end is discarded",
+   "The deque grows to 4 items",
+   "The new item is ignored",
+   "It raises IndexError"
+  ],
+  "answer": 0,
+  "explanation": "A bounded deque drops items from the opposite end to stay within maxlen."
+ },
+ {
+  "id": "qae58028caa0",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "Which special method actually creates a new instance before __init__ runs?",
+  "options": [
+   "__alloc__",
+   "__create__",
+   "__call__",
+   "__new__"
+  ],
+  "answer": 3,
+  "explanation": "__new__ is a static method that returns the instance, which is then passed to __init__."
+ },
+ {
+  "id": "q4868d3ed57f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "What does the __closure__ attribute of a nested function that uses a variable from its enclosing function contain?",
+  "options": [
+   "A tuple of cell objects holding the captured variables",
+   "A copy of the enclosing function's source code",
+   "A dict of all global variables",
+   "None, because closures store nothing"
+  ],
+  "answer": 0,
+  "explanation": "Free variables are stored in cells, which is why closures see the variable's latest value."
+ },
+ {
+  "id": "qddb80a0f8cc",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does sorted(['b', 'A', 'c']) return?",
+  "options": [
+   "['A', 'b', 'c']",
+   "['A', 'c', 'b']",
+   "['b', 'c', 'A']",
+   "['c', 'b', 'A']"
+  ],
+  "answer": 0,
+  "explanation": "Strings compare by code point, and uppercase letters come before lowercase letters."
+ },
+ {
+  "id": "q43faecbaca2",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "What is a descriptor in Python?",
+  "options": [
+   "Any docstring attached to a class",
+   "A metaclass that validates types",
+   "A module-level variable describing a class",
+   "An object defining __get__, __set__, or __delete__ that customizes attribute access when stored as a class attribute"
+  ],
+  "answer": 3,
+  "explanation": "property, classmethod, and functions acting as methods all rely on the descriptor protocol."
+ },
+ {
+  "id": "q9312251dd5c",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "What does calling close() on a suspended generator do?",
+  "options": [
+   "Resets the generator to its start",
+   "Returns the generator's next value",
+   "Raises GeneratorExit at the paused yield so the generator can clean up",
+   "Deletes the generator function"
+  ],
+  "answer": 2,
+  "explanation": "If the generator catches GeneratorExit and yields again, close() raises RuntimeError."
+ },
+ {
+  "id": "qe24659c778d",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After a = [1, 2, 3]; a[1:2] = [7, 8, 9], what is a?",
+  "options": [
+   "[1, [7, 8, 9], 3]",
+   "[1, 7, 3]",
+   "It raises ValueError",
+   "[1, 7, 8, 9, 3]"
+  ],
+  "answer": 3,
+  "explanation": "Slice assignment replaces the slice with the elements of the iterable and can change the list's length."
+ },
+ {
+  "id": "q2b68b692d61",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "When a new exception is raised inside an except block without using from, what is the new exception's __context__ set to?",
+  "options": [
+   "None",
+   "The exception that was being handled",
+   "The new exception itself",
+   "The first exception raised in the program"
+  ],
+  "answer": 1,
+  "explanation": "This implicit chaining produces the 'During handling of the above exception' message in tracebacks."
+ },
+ {
+  "id": "q871deb26804",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does int('1_000') return?",
+  "options": [
+   "1",
+   "1000",
+   "It raises ValueError",
+   "'1000'"
+  ],
+  "answer": 1,
+  "explanation": "Since Python 3.6, int() accepts single underscores between digits, as in numeric literals."
+ },
+ {
+  "id": "q0d5833b46fd",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "How does __getattr__ differ from __getattribute__?",
+  "options": [
+   "__getattr__ is called on every attribute access",
+   "__getattr__ only works on class attributes",
+   "They are aliases for the same hook",
+   "__getattr__ is called only when normal attribute lookup fails"
+  ],
+  "answer": 3,
+  "explanation": "__getattribute__ intercepts every lookup, while __getattr__ is a fallback for missing attributes."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q10bd72e37d7",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "What does a @Version field on a JPA entity enable?",
+  "options": [
+   "Automatic audit timestamps",
+   "Keeping historical versions of every row",
+   "Optimistic locking with a version check on update",
+   "Schema versioning for migrations"
+  ],
+  "answer": 2,
+  "explanation": "The provider increments the version on update and fails with an optimistic locking exception if another transaction changed the row first."
+ },
+ {
+  "id": "qbb7b04912ec",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which annotation enables CORS for a particular controller or handler method?",
+  "options": [
+   "@EnableCors",
+   "@AllowOrigin",
+   "@CrossOrigin",
+   "@CorsMapping"
+  ],
+  "answer": 2,
+  "explanation": "@CrossOrigin configures allowed origins and methods locally; global CORS can be set via WebMvcConfigurer.addCorsMappings."
+ },
+ {
+  "id": "q61e5ebb3727",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "What does spring.main.lazy-initialization=true do?",
+  "options": [
+   "Creates beans when they are first needed rather than at startup",
+   "Makes all beans prototype-scoped",
+   "Delays the web server start until the first request",
+   "Disables auto-configuration until requested"
+  ],
+  "answer": 0,
+  "explanation": "Lazy initialization speeds up startup but can hide configuration problems until a bean is first used."
+ },
+ {
+  "id": "q5fb3a93a4a9",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "What does sessionCreationPolicy(SessionCreationPolicy.STATELESS) do in Spring Security 6?",
+  "options": [
+   "Every request gets a new session",
+   "Sessions are stored in a database instead of memory",
+   "Spring Security never creates an HttpSession or uses it to obtain the SecurityContext",
+   "CSRF tokens are stored in cookies"
+  ],
+  "answer": 2,
+  "explanation": "STATELESS suits token-based APIs where each request carries its own credentials."
+ },
+ {
+  "id": "q19f50ae1f8c",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Which starter configures an app to validate JWT bearer tokens as an OAuth2 resource server?",
+  "options": [
+   "spring-boot-starter-oauth2-client",
+   "spring-boot-starter-jwt",
+   "spring-boot-starter-security-oidc",
+   "spring-boot-starter-oauth2-resource-server"
+  ],
+  "answer": 3,
+  "explanation": "The resource server starter plus a property like spring.security.oauth2.resourceserver.jwt.issuer-uri enables JWT validation."
+ },
+ {
+  "id": "q4ac40536f97",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "What does @Value(\"${app.timeout:30}\") inject when app.timeout is not defined?",
+  "options": [
+   "An empty string",
+   "null",
+   "30",
+   "Nothing, because startup fails"
+  ],
+  "answer": 2,
+  "explanation": "The text after the colon is the default used when the placeholder cannot be resolved."
+ },
+ {
+  "id": "qc3dec2fb2b0",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "A constructor needs a DataSource, two DataSource beans exist, and neither is @Primary nor qualified. What happens?",
+  "options": [
+   "Spring injects the first bean it registered",
+   "Spring injects null",
+   "Spring creates a third DataSource",
+   "Startup fails with NoUniqueBeanDefinitionException"
+  ],
+  "answer": 3,
+  "explanation": "With multiple candidates and no way to choose, Spring cannot resolve the dependency and fails at startup."
+ },
+ {
+  "id": "q5724fb9d4d3",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which annotation sets the HTTP status returned for a handler method or a custom exception class?",
+  "options": [
+   "@ResponseBody",
+   "@StatusCode",
+   "@ExceptionHandler",
+   "@ResponseStatus"
+  ],
+  "answer": 3,
+  "explanation": "@ResponseStatus(HttpStatus.NOT_FOUND) on an exception class makes Spring MVC respond with that status when it is thrown."
+ },
+ {
+  "id": "qdac6e361483",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "In Spring Boot 3.4+, which annotation wraps an existing bean in a Mockito spy inside the test context?",
+  "options": [
+   "@SpyBean",
+   "@MockitoSpyBean",
+   "@InjectMocks",
+   "@MockitoBean"
+  ],
+  "answer": 1,
+  "explanation": "Spring Framework 6.2's @MockitoSpyBean replaces Spring Boot's deprecated @SpyBean."
+ },
+ {
+  "id": "q5febd26ea09",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which annotation on a configuration class registers all @ConfigurationProperties classes found in its packages?",
+  "options": [
+   "@EnableAutoConfiguration",
+   "@PropertySource",
+   "@ComponentScan",
+   "@ConfigurationPropertiesScan"
+  ],
+  "answer": 3,
+  "explanation": "@ConfigurationPropertiesScan finds and registers @ConfigurationProperties types without listing them in @EnableConfigurationProperties."
+ }
+]

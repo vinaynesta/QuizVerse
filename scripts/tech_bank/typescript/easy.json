@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "basic-types",
+    "question": "Which primitive type annotation is used for text values in TypeScript?",
+    "options": [
+      "char",
+      "text",
+      "str",
+      "string"
+    ],
+    "answer": 3,
+    "explanation": "TypeScript uses the lowercase string type for all text; there is no separate char type."
+  },
+  {
+    "topic": "basic-types",
+    "question": "Which TypeScript type covers both integer and floating-point values?",
+    "options": [
+      "double",
+      "int",
+      "number",
+      "float"
+    ],
+    "answer": 2,
+    "explanation": "TypeScript has a single number type (IEEE 754 doubles); bigint is separate for arbitrary-precision integers."
+  },
+  {
+    "topic": "basic-types",
+    "question": "What is the correct annotation for a variable holding true or false?",
+    "options": [
+      "let done: bit",
+      "let done: bool",
+      "let done: flag",
+      "let done: boolean"
+    ],
+    "answer": 3,
+    "explanation": "The primitive type for true/false values is boolean."
+  },
+  {
+    "topic": "basic-types",
+    "question": "What does `let id: string | number;` allow?",
+    "options": [
+      "id must be both a string and a number at once",
+      "id can hold either a string or a number",
+      "id can only hold the literal values \"string\" or \"number\"",
+      "id is an array of strings and numbers"
+    ],
+    "answer": 1,
+    "explanation": "The | operator creates a union type, meaning the value may be any one of the listed types."
+  },
+  {
+    "topic": "basic-types",
+    "question": "With strictNullChecks enabled, what happens with `let s: string = null;`?",
+    "options": [
+      "It compiles but throws at runtime",
+      "A compile-time error, because null is not assignable to string",
+      "It compiles because null is assignable to every type",
+      "It compiles and s becomes undefined"
+    ],
+    "answer": 1,
+    "explanation": "Under strictNullChecks, null and undefined are distinct types and must be included explicitly, e.g. string | null."
+  },
+  {
+    "topic": "basic-types",
+    "question": "What return type does TypeScript infer for a function that has no return statement?",
+    "options": [
+      "void",
+      "null",
+      "never",
+      "any"
+    ],
+    "answer": 0,
+    "explanation": "A function that completes without returning a value is inferred to return void; never is for functions that never complete."
+  },
+  {
+    "topic": "basic-types",
+    "question": "Given `let dir: \"left\" | \"right\";`, which assignment compiles?",
+    "options": [
+      "dir = 0;",
+      "dir = \"left\";",
+      "dir = \"Left\";",
+      "dir = \"up\";"
+    ],
+    "answer": 1,
+    "explanation": "A union of string literal types only accepts those exact (case-sensitive) values."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "What is the main effect of annotating a value as `any`?",
+    "options": [
+      "The compiler infers the most specific type automatically",
+      "Type checking is effectively turned off for that value",
+      "The value can only hold primitives",
+      "The value is checked more strictly at runtime"
+    ],
+    "answer": 1,
+    "explanation": "any opts out of type checking, so any property access or call is allowed without errors."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "Given `let v: unknown = \"hi\";`, which operation compiles without narrowing?",
+    "options": [
+      "v.toUpperCase();",
+      "let a: any = v;",
+      "let s: string = v;",
+      "let n = v + 1;"
+    ],
+    "answer": 1,
+    "explanation": "unknown is only assignable to unknown and any; using it in other ways requires narrowing first."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "What is the key difference between `any` and `unknown`?",
+    "options": [
+      "unknown can only hold objects, any can hold anything",
+      "unknown must be narrowed before you can use it; any can be used freely",
+      "any must be narrowed before use; unknown can be used freely",
+      "There is no difference; they are aliases"
+    ],
+    "answer": 1,
+    "explanation": "Both accept any value, but unknown is the type-safe counterpart that forces a check before use."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "Which snippet safely calls a string method on `v: unknown`?",
+    "options": [
+      "v.toUpperCase();",
+      "if (v !== null) { v.toUpperCase(); }",
+      "if (typeof v === \"string\") { v.toUpperCase(); }",
+      "if (v) { v.toUpperCase(); }"
+    ],
+    "answer": 2,
+    "explanation": "A typeof check narrows unknown to string inside the block; truthiness or null checks do not establish it is a string."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "Which compiler option reports an error when a parameter's type would implicitly be `any`?",
+    "options": [
+      "noImplicitAny",
+      "strictAny",
+      "noAny",
+      "implicitAnyCheck"
+    ],
+    "answer": 0,
+    "explanation": "noImplicitAny (included in strict) flags declarations whose type silently falls back to any."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "Which keyword declares an interface in TypeScript?",
+    "options": [
+      "struct",
+      "shape",
+      "interface",
+      "protocol"
+    ],
+    "answer": 2,
+    "explanation": "Object shapes are declared with the interface keyword (or with a type alias)."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "How do you mark the property `age` as optional in an interface?",
+    "options": [
+      "optional age: number;",
+      "age?: number;",
+      "age: number?;",
+      "age: number | optional;"
+    ],
+    "answer": 1,
+    "explanation": "A ? after the property name makes it optional, so its type effectively includes undefined."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "Which construct supports declaration merging when declared twice with the same name?",
+    "options": [
+      "Neither",
+      "type alias",
+      "Both interface and type alias",
+      "interface"
+    ],
+    "answer": 3,
+    "explanation": "Multiple interface declarations with the same name are merged; redeclaring a type alias is an error."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "Which of these can a type alias express directly that an interface cannot?",
+    "options": [
+      "An object with optional properties",
+      "An object with methods",
+      "A union such as `string | number`",
+      "An object with readonly properties"
+    ],
+    "answer": 2,
+    "explanation": "Interfaces describe object shapes only, while type aliases can name unions, primitives, tuples and more."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "How does interface `B` inherit the members of interface `A`?",
+    "options": [
+      "interface B : A {}",
+      "interface B implements A {}",
+      "interface B extends A {}",
+      "interface B inherits A {}"
+    ],
+    "answer": 2,
+    "explanation": "Interfaces use extends to inherit members; implements is used by classes."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "Given `interface User { readonly id: number }`, what happens with `user.id = 5;`?",
+    "options": [
+      "It works but logs a warning",
+      "A compile-time error, because id is readonly",
+      "It silently does nothing",
+      "It throws a TypeError at runtime"
+    ],
+    "answer": 1,
+    "explanation": "readonly is a compile-time check that prevents reassignment after initialization."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "What does the type `A & B` represent?",
+    "options": [
+      "A type that excludes members of B from A",
+      "Only the members A and B share",
+      "A type that has all members of both A and B",
+      "A type that has members of either A or B"
+    ],
+    "answer": 2,
+    "explanation": "& creates an intersection, combining the requirements of both types."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "What happens with `const p: { x: number } = { x: 1, y: 2 };`?",
+    "options": [
+      "It compiles and p has type { x: number; y: number }",
+      "It compiles and y is dropped",
+      "It compiles but y becomes undefined",
+      "A compile error: object literal may only specify known properties"
+    ],
+    "answer": 3,
+    "explanation": "Excess property checking flags extra properties in object literals assigned to a typed target."
+  },
+  {
+    "topic": "functions",
+    "question": "Which signature correctly annotates both parameters and the return type?",
+    "options": [
+      "function add(a: number, b: number) => number",
+      "function add(number a, number b): number",
+      "function add(a, b): number(a, b)",
+      "function add(a: number, b: number): number"
+    ],
+    "answer": 3,
+    "explanation": "Parameters are annotated as name: Type and the return type follows the parameter list after a colon."
+  },
+  {
+    "topic": "functions",
+    "question": "How do you declare an optional parameter `x` of type string?",
+    "options": [
+      "function f(x: string?) {}",
+      "function f(x: string = optional) {}",
+      "function f(x?: string) {}",
+      "function f(optional x: string) {}"
+    ],
+    "answer": 2,
+    "explanation": "A ? after the parameter name makes it optional; it must come after required parameters."
+  },
+  {
+    "topic": "functions",
+    "question": "In `function greet(name = \"World\") {}`, what type is inferred for `name`?",
+    "options": [
+      "any",
+      "\"World\"",
+      "string",
+      "unknown"
+    ],
+    "answer": 2,
+    "explanation": "A default value lets TypeScript infer the parameter type, widened to string."
+  },
+  {
+    "topic": "functions",
+    "question": "Which signature accepts any number of numeric arguments?",
+    "options": [
+      "function sum(nums: ...number) {}",
+      "function sum(nums...: number) {}",
+      "function sum(*nums: number) {}",
+      "function sum(...nums: number[]) {}"
+    ],
+    "answer": 3,
+    "explanation": "Rest parameters use ... before the name and are typed as an array."
+  },
+  {
+    "topic": "functions",
+    "question": "Which declares a type for functions that take a number and return a string?",
+    "options": [
+      "type Fn = function(number): string;",
+      "type Fn = (n: number) => string;",
+      "type Fn = Function<number, string>;",
+      "type Fn = (number) -> string;"
+    ],
+    "answer": 1,
+    "explanation": "Function types use arrow syntax with named parameters: (params) => ReturnType."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "Which type is equivalent to `number[]`?",
+    "options": [
+      "Array<number>",
+      "List<number>",
+      "[number]",
+      "number<>"
+    ],
+    "answer": 0,
+    "explanation": "T[] and Array<T> are the same type; [number] is a one-element tuple."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "Given `let t: [string, number] = [\"a\", 1];`, what is the type of `t[1]`?",
+    "options": [
+      "number",
+      "string | number",
+      "any",
+      "string"
+    ],
+    "answer": 0,
+    "explanation": "Tuples have a fixed type per position, so index 1 has type number."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "Given `const xs: readonly string[] = [\"a\"];`, which operation is a compile error?",
+    "options": [
+      "xs.map(s => s.toUpperCase());",
+      "xs[0];",
+      "xs.length;",
+      "xs.push(\"b\");"
+    ],
+    "answer": 3,
+    "explanation": "readonly arrays remove mutating methods like push, while reading and non-mutating methods remain available."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "What happens with `let t: [string, number] = [1, \"a\"];`?",
+    "options": [
+      "It compiles and the values are reordered",
+      "It compiles because both types are present",
+      "It compiles but throws at runtime",
+      "A compile error, because tuple element order matters"
+    ],
+    "answer": 3,
+    "explanation": "Each tuple position has its own type, so a number cannot be placed where a string is expected."
+  },
+  {
+    "topic": "type-inference",
+    "question": "What type does TypeScript infer for `x` in `let x = 5;`?",
+    "options": [
+      "5",
+      "int",
+      "number",
+      "any"
+    ],
+    "answer": 2,
+    "explanation": "let declarations are widened from the literal 5 to number because they can be reassigned."
+  },
+  {
+    "topic": "type-inference",
+    "question": "What type does TypeScript infer for `y` in `const y = \"hello\";`?",
+    "options": [
+      "string",
+      "The literal type \"hello\"",
+      "any",
+      "String"
+    ],
+    "answer": 1,
+    "explanation": "const bindings cannot be reassigned, so the narrow literal type is kept."
+  },
+  {
+    "topic": "type-inference",
+    "question": "What type is inferred for `const arr = [1, \"a\"];`?",
+    "options": [
+      "(string | number)[]",
+      "[number, string]",
+      "readonly [1, \"a\"]",
+      "any[]"
+    ],
+    "answer": 0,
+    "explanation": "Array literals infer an array of the union of element types, not a tuple, unless as const is used."
+  },
+  {
+    "topic": "type-inference",
+    "question": "What happens with `let x = 5; x = \"five\";`?",
+    "options": [
+      "It compiles because x has type any",
+      "It compiles; x becomes string | number",
+      "A compile error, because x was inferred as number",
+      "It compiles but throws at runtime"
+    ],
+    "answer": 2,
+    "explanation": "Inference fixes the variable's type at declaration, so later assignments must match it."
+  },
+  {
+    "topic": "enums",
+    "question": "Given `enum Color { Red, Green, Blue }`, what is the value of `Color.Green`?",
+    "options": [
+      "1",
+      "\"Green\"",
+      "0",
+      "2"
+    ],
+    "answer": 0,
+    "explanation": "Numeric enum members are auto-numbered starting at 0, so Green is 1."
+  },
+  {
+    "topic": "enums",
+    "question": "Given `enum Dir { Up = \"UP\", Down = \"DOWN\" }`, what is the value of `Dir.Up`?",
+    "options": [
+      "\"Up\"",
+      "0",
+      "1",
+      "\"UP\""
+    ],
+    "answer": 3,
+    "explanation": "String enum members take exactly the string value they are initialized with."
+  },
+  {
+    "topic": "enums",
+    "question": "What is distinctive about a `const enum`?",
+    "options": [
+      "It is emitted as a frozen object with extra runtime checks",
+      "Its members can be reassigned at runtime",
+      "It can only contain string members",
+      "Member references are inlined as values and no enum object is emitted by default"
+    ],
+    "answer": 3,
+    "explanation": "const enums are erased at compile time and their usages are replaced with literal values."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "What is the default name of a TypeScript project's configuration file?",
+    "options": [
+      "tsconfig.json",
+      "typescript.json",
+      "ts.json",
+      "tsc.config.js"
+    ],
+    "answer": 0,
+    "explanation": "tsc looks for tsconfig.json to find compiler options and the files in a project."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "Which command-line tool is the TypeScript compiler?",
+    "options": [
+      "tsc",
+      "ts-build",
+      "tsx",
+      "typescriptc"
+    ],
+    "answer": 0,
+    "explanation": "tsc is the official compiler shipped with the typescript package."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "What does setting `\"strict\": true` in tsconfig.json do?",
+    "options": [
+      "Enables a family of strict type-checking options at once",
+      "Makes the emitted JavaScript use \"use strict\" only",
+      "Turns all warnings into runtime errors",
+      "Disables the any type entirely"
+    ],
+    "answer": 0,
+    "explanation": "strict turns on options such as strictNullChecks, noImplicitAny and strictFunctionTypes together."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "Which compiler option sets the directory for emitted JavaScript files?",
+    "options": [
+      "outDir",
+      "rootDir",
+      "emitPath",
+      "distDir"
+    ],
+    "answer": 0,
+    "explanation": "outDir controls where compiled output is written; rootDir describes where the source lives."
+  }
+]

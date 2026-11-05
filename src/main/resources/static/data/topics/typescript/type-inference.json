@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q0431a6798d3",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What type does TypeScript infer for `y` in `const y = \"hello\";`?",
+  "options": [
+   "string",
+   "any",
+   "The literal type \"hello\"",
+   "String"
+  ],
+  "answer": 2,
+  "explanation": "const bindings cannot be reassigned, so the narrow literal type is kept."
+ },
+ {
+  "id": "q72800db2c81",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What happens with `let x = 5; x = \"five\";`?",
+  "options": [
+   "It compiles because x has type any",
+   "It compiles; x becomes string | number",
+   "It compiles but throws at runtime",
+   "A compile error, because x was inferred as number"
+  ],
+  "answer": 3,
+  "explanation": "Inference fixes the variable's type at declaration, so later assignments must match it."
+ },
+ {
+  "id": "q98b690e73f5",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What type is inferred for `const arr = [1, \"a\"];`?",
+  "options": [
+   "[number, string]",
+   "(string | number)[]",
+   "readonly [1, \"a\"]",
+   "any[]"
+  ],
+  "answer": 1,
+  "explanation": "Array literals infer an array of the union of element types, not a tuple, unless as const is used."
+ },
+ {
+  "id": "qd95efcd2334",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What type does TypeScript infer for `x` in `let x = 5;`?",
+  "options": [
+   "number",
+   "int",
+   "5",
+   "any"
+  ],
+  "answer": 0,
+  "explanation": "let declarations are widened from the literal 5 to number because they can be reassigned."
+ }
+]

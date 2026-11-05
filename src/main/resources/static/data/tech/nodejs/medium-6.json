@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qda0dd7e6128",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "medium",
+  "question": "In what order are multiple listeners for the same event called by default?",
+  "options": [
+   "In the order they were registered",
+   "In reverse registration order",
+   "In random order",
+   "Concurrently on separate threads"
+  ],
+  "answer": 0,
+  "explanation": "Listeners run synchronously in registration order, and prependListener() can add one to the front."
+ },
+ {
+  "id": "q8eaced3d861",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "Which method of the os module returns the number of logical CPU cores?",
+  "options": [
+   "os.cores()",
+   "process.cpuCount",
+   "os.cpus().length",
+   "os.threads()"
+  ],
+  "answer": 2,
+  "explanation": "os.cpus() returns one entry per logical core; os.availableParallelism() is a newer alternative."
+ },
+ {
+  "id": "qa9084a69bf4",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "What does buf.subarray(0, 4) return for a Buffer buf?",
+  "options": [
+   "A string with the first 4 characters",
+   "An independent copy of the first 4 bytes",
+   "A new Buffer that shares memory with buf, so changes to it affect the original",
+   "The number 4"
+  ],
+  "answer": 2,
+  "explanation": "subarray (and the deprecated slice) creates a view over the same memory, unlike Buffer.from(buf), which copies."
+ },
+ {
+  "id": "qca1c19ca594",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In Express, how does req.query differ from req.params?",
+  "options": [
+   "req.query holds the request body",
+   "req.query holds parsed query-string values, while req.params holds named route segments",
+   "They are aliases for the same object",
+   "req.params holds headers and req.query holds cookies"
+  ],
+  "answer": 1,
+  "explanation": "For /users/42?sort=name, req.params.id is '42' and req.query.sort is 'name'."
+ },
+ {
+  "id": "q94252117db5",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "Which call reads a 32-bit unsigned big-endian integer from the start of a Buffer?",
+  "options": [
+   "buf.readUInt32BE(0)",
+   "buf.toString('uint32')",
+   "Number(buf.subarray(0, 4))",
+   "buf.readInt16LE(0)"
+  ],
+  "answer": 0,
+  "explanation": "Buffer provides typed read and write methods with explicit endianness for parsing binary formats."
+ },
+ {
+  "id": "qb96e59640cb",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "What does a package.json dependency version written as \"*\" allow?",
+  "options": [
+   "Only the version currently installed",
+   "Only the latest major version",
+   "Only pre-release versions",
+   "Any version of the package"
+  ],
+  "answer": 3,
+  "explanation": "A star range matches all versions, which makes installs unpredictable and is best avoided."
+ },
+ {
+  "id": "qf4159baa27b",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In Express, what does req.params contain for the route /users/:id when the request path is /users/42?",
+  "options": [
+   "{ id: 42 }",
+   "An empty object, because params come from the query string",
+   "{ users: '42' }",
+   "{ id: '42' }"
+  ],
+  "answer": 3,
+  "explanation": "Route parameters are captured from the path as strings, so the value is '42', not a number."
+ },
+ {
+  "id": "q60967dbbc2d",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "Why is it better to throw an Error object than a plain string such as throw 'failed'?",
+  "options": [
+   "An Error object captures a stack trace and works with instanceof checks, while a thrown string carries neither",
+   "Error objects are caught faster by the V8 engine",
+   "Strings cannot be thrown in strict mode",
+   "A thrown string crashes the process even inside try/catch"
+  ],
+  "answer": 0,
+  "explanation": "Throwing Error instances, or subclasses, keeps stack traces and lets handlers distinguish error types."
+ },
+ {
+  "id": "q964822d131f",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "What does app.use('/api', router) do in Express?",
+  "options": [
+   "Handles only requests whose path is exactly /api",
+   "Registers the router for GET requests only",
+   "Replaces all previously registered middleware",
+   "Mounts the router so it handles requests whose path starts with /api"
+  ],
+  "answer": 3,
+  "explanation": "Inside the router, paths are relative to the mount point, so a router route /users matches /api/users."
+ },
+ {
+  "id": "q0abee2561c0",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What does stream.Readable.from() create?",
+  "options": [
+   "A Readable stream from a file path",
+   "A Writable stream that collects data into an array",
+   "A Readable stream from an iterable or async iterable",
+   "A copy of an existing Readable stream"
+  ],
+  "answer": 2,
+  "explanation": "Readable.from(['a', 'b']) or Readable.from(asyncGenerator()) is an easy way to turn iterables into streams."
+ }
+]

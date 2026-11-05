@@ -30,6 +30,21 @@
   "explanation": "A function that finishes without a return statement implicitly returns None."
  },
  {
+  "id": "q61ab0f00aca",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which keyword exits a function and sends a value back to the caller?",
+  "options": [
+   "yield",
+   "return",
+   "break",
+   "exit"
+  ],
+  "answer": 1,
+  "explanation": "return ends the function call and gives its value to the caller."
+ },
+ {
   "id": "q9b79208c3ee",
   "subject": "python",
   "topic": "functions",
@@ -43,6 +58,21 @@
   ],
   "answer": 0,
   "explanation": "Named functions are defined with the def keyword."
+ },
+ {
+  "id": "qc9233002475",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Given def greet(name='World'), what is name when greet() is called with no arguments?",
+  "options": [
+   "'World'",
+   "None",
+   "''",
+   "It raises TypeError"
+  ],
+  "answer": 0,
+  "explanation": "Parameters with default values take that default when no argument is passed."
  },
  {
   "id": "qe4fe5ec1b19",
@@ -90,6 +120,36 @@
   "explanation": "The keyword argument overrides the default, so 1 + 5 = 6."
  },
  {
+  "id": "q38b5eec57e2",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "What does map(str, [1, 2]) return in Python 3?",
+  "options": [
+   "The list ['1', '2']",
+   "A lazy map iterator",
+   "The string '12'",
+   "A tuple of strings"
+  ],
+  "answer": 1,
+  "explanation": "map is lazy in Python 3; wrap it in list() to materialize the results."
+ },
+ {
+  "id": "q5090932af7d",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "Given def f(a, b, c): return a + b * c, what does f(*[1, 2, 3]) return?",
+  "options": [
+   "7",
+   "9",
+   "6",
+   "It raises TypeError"
+  ],
+  "answer": 0,
+  "explanation": "The list is unpacked to a=1, b=2, c=3, so the result is 1 + 2 * 3 = 7."
+ },
+ {
   "id": "q745401e61f1",
   "subject": "python",
   "topic": "functions",
@@ -103,6 +163,21 @@
   ],
   "answer": 3,
   "explanation": "y falls back to its default 3, so the result is 2 * 3."
+ },
+ {
+  "id": "q7ad08cc402f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "What does a global x statement inside a function do?",
+  "options": [
+   "Creates a new local copy of x",
+   "Makes x read-only",
+   "Makes assignments to x in the function rebind the module-level x",
+   "Shares x across all imported modules"
+  ],
+  "answer": 2,
+  "explanation": "Without global, assigning to x inside the function would create a local variable."
  },
  {
   "id": "qc748d0b3d2f",
@@ -148,6 +223,21 @@
   ],
   "answer": 1,
   "explanation": "nonlocal targets the closest enclosing function's variable, unlike global which targets module scope."
+ },
+ {
+  "id": "q4868d3ed57f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "hard",
+  "question": "What does the __closure__ attribute of a nested function that uses a variable from its enclosing function contain?",
+  "options": [
+   "A tuple of cell objects holding the captured variables",
+   "A copy of the enclosing function's source code",
+   "A dict of all global variables",
+   "None, because closures store nothing"
+  ],
+  "answer": 0,
+  "explanation": "Free variables are stored in cells, which is why closures see the variable's latest value."
  },
  {
   "id": "qdfcb30080ba",

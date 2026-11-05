@@ -30,6 +30,36 @@
   "explanation": "The java.util.concurrent package provides executors, concurrent collections and synchronizers."
  },
  {
+  "id": "q5a5bfb8dd4c",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "What does calling t.join() on a Thread t do?",
+  "options": [
+   "Starts thread t",
+   "Merges t into the current thread",
+   "Stops thread t immediately",
+   "Waits until thread t finishes"
+  ],
+  "answer": 3,
+  "explanation": "join blocks the calling thread until the target thread terminates."
+ },
+ {
+  "id": "qbd9679aa9e4",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which keyword makes a method acquire a monitor lock before it runs?",
+  "options": [
+   "synchronized",
+   "volatile",
+   "transient",
+   "static"
+  ],
+  "answer": 0,
+  "explanation": "A synchronized instance method locks on this, and a static one locks on the Class object."
+ },
+ {
   "id": "qd0d0bb6679d",
   "subject": "java",
   "topic": "concurrency",
@@ -75,6 +105,21 @@
   "explanation": "get() waits for completion; a timed overload get(timeout, unit) throws TimeoutException instead of waiting forever."
  },
  {
+  "id": "q0f4214bc0ac",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What does a CountDownLatch let threads do?",
+  "options": [
+   "Lock a resource for exclusive access",
+   "Run tasks on a fixed schedule",
+   "Wait until a counter is decremented to zero by other threads",
+   "Exchange objects in pairs"
+  ],
+  "answer": 2,
+  "explanation": "Threads call await() and are released once countDown() has been called the configured number of times."
+ },
+ {
   "id": "q3b43ab566e4",
   "subject": "java",
   "topic": "concurrency",
@@ -105,6 +150,21 @@
   "explanation": "count++ reads, increments and writes separately, so two threads can read the same value and one update is lost."
  },
  {
+  "id": "q89c2d5641c1",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What does ExecutorService.shutdown() do?",
+  "options": [
+   "Interrupts all running tasks immediately",
+   "Blocks until every task completes",
+   "Discards all queued tasks",
+   "Stops accepting new tasks while letting already submitted tasks finish"
+  ],
+  "answer": 3,
+  "explanation": "shutdown() is an orderly shutdown; use awaitTermination to wait and shutdownNow to interrupt."
+ },
+ {
   "id": "q8e40c91f3ab",
   "subject": "java",
   "topic": "concurrency",
@@ -118,6 +178,21 @@
   ],
   "answer": 2,
   "explanation": "AtomicInteger uses compare-and-set operations to update its value atomically without locking."
+ },
+ {
+  "id": "q6a4fcc18dd6",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "Which capability does ReentrantLock offer that a synchronized block does not?",
+  "options": [
+   "Reentrancy for the same thread",
+   "Timed and interruptible lock acquisition via tryLock and lockInterruptibly",
+   "Mutual exclusion between threads",
+   "Automatic release when the block exits"
+  ],
+  "answer": 1,
+  "explanation": "Both are reentrant, but only ReentrantLock can attempt a lock with a timeout or be interrupted while waiting."
  },
  {
   "id": "q800e01e8afd",
@@ -148,6 +223,21 @@
   ],
   "answer": 0,
   "explanation": "A thread can be started only once; to run the task again create a new Thread or use an executor."
+ },
+ {
+  "id": "qbf893ba4b74",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What does the Java Memory Model guarantee about a call to Thread.start()?",
+  "options": [
+   "Actions before start() in the starting thread happen-before every action in the started thread",
+   "Only volatile fields are visible to the new thread",
+   "The new thread runs before start() returns",
+   "Nothing; the new thread may see stale values of all fields"
+  ],
+  "answer": 0,
+  "explanation": "start() establishes a happens-before edge, so writes made before it are visible to the new thread."
  },
  {
   "id": "qf7670684090",

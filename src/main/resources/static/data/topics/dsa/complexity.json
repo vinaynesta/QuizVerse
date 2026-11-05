@@ -60,6 +60,36 @@
   "explanation": "The inner loop runs n times for each of the n outer iterations."
  },
  {
+  "id": "qf5a165b14b3",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "Which list orders these complexities from slowest-growing to fastest-growing?",
+  "options": [
+   "O(n), O(log n), O(1), O(n^2)",
+   "O(log n), O(1), O(n), O(n^2)",
+   "O(1), O(n), O(log n), O(n^2)",
+   "O(1), O(log n), O(n), O(n^2)"
+  ],
+  "answer": 3,
+  "explanation": "Constant time grows slowest, followed by logarithmic, linear, and quadratic."
+ },
+ {
+  "id": "q4fcb15ba4c2",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "medium",
+  "question": "What is the time complexity of the nested loops for (i = 0; i < n; i++) for (j = i; j < n; j++)?",
+  "options": [
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)",
+   "O(n^3)"
+  ],
+  "answer": 1,
+  "explanation": "The inner loop runs n + (n - 1) + ... + 1 = n(n + 1)/2 times in total."
+ },
+ {
   "id": "q4fd5830fd74",
   "subject": "dsa",
   "topic": "complexity",
@@ -103,6 +133,21 @@
   ],
   "answer": 0,
   "explanation": "Input size counts the bits of W, so doubling the bit length can square W's magnitude."
+ },
+ {
+  "id": "q90b32c3b067",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "By the Master Theorem, what does T(n) = 3T(n/2) + O(n) solve to?",
+  "options": [
+   "O(n log n)",
+   "O(n^2)",
+   "O(n^(log2 3)), about O(n^1.585)",
+   "O(n^3)"
+  ],
+  "answer": 2,
+  "explanation": "Since log2 3 > 1, the leaf work dominates, as in Karatsuba multiplication."
  },
  {
   "id": "q9b8a61395d4",

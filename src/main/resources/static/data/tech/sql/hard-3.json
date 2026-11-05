@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qeaa4a56d711",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "Why is an index on a boolean column that splits rows roughly 50/50 often unhelpful for filtering?",
+  "options": [
+   "Matching about half the rows makes a sequential scan cheaper than many index lookups",
+   "Boolean columns cannot be indexed",
+   "Indexes only support integer columns",
+   "The planner ignores all indexes on boolean columns by rule"
+  ],
+  "answer": 0,
+  "explanation": "When a predicate matches a large fraction of the table, reading the table sequentially is usually cheaper than random index lookups."
+ },
+ {
+  "id": "q11f8354bad3",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In PostgreSQL SERIALIZABLE isolation, what should the application do when a serialization failure (SQLSTATE 40001) occurs?",
+  "options": [
+   "Retry the whole transaction",
+   "Commit the transaction anyway",
+   "Lower the isolation level to READ UNCOMMITTED",
+   "Ignore the error and continue"
+  ],
+  "answer": 0,
+  "explanation": "Serializable snapshot isolation can abort transactions that would produce a non-serializable result. The standard response is to retry the entire transaction."
+ },
+ {
+  "id": "q11a8f25d68e",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "What does TIMESTAMP WITHOUT TIME ZONE store in PostgreSQL?",
+  "options": [
+   "A date and time plus the name of the time zone",
+   "A date and time converted to UTC",
+   "A date and time with no time zone conversion applied on storage",
+   "Only the time of day"
+  ],
+  "answer": 2,
+  "explanation": "The value is stored exactly as given, with no offset. Use TIMESTAMP WITH TIME ZONE when instants must be compared across zones."
+ },
+ {
+  "id": "qe58aad95395",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "Why generally can a B-tree index on name not serve WHERE name LIKE '%son'?",
+  "options": [
+   "The pattern has no fixed prefix, so the index cannot locate a starting point in sorted order",
+   "B-tree indexes cannot store text",
+   "LIKE disables all indexes in every database",
+   "B-tree indexes only support equality lookups"
+  ],
+  "answer": 0,
+  "explanation": "A B-tree is sorted by the leading characters, so without a fixed prefix the engine cannot seek to a starting position. A trigram or reverse-string index can help instead."
+ },
+ {
+  "id": "q9f4140777c0",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "What does NTILE(4) OVER (ORDER BY score) produce?",
+  "options": [
+   "The fourth row of the ordered partition",
+   "A bucket number from 1 to 4, with rows split into groups of nearly equal size",
+   "The top four rows by score",
+   "The score divided by four"
+  ],
+  "answer": 1,
+  "explanation": "NTILE(n) assigns each row to one of n buckets, numbered 1 to n, with bucket sizes differing by at most one row."
+ },
+ {
+  "id": "q38fad813e11",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "Which PostgreSQL expression computes the median of column x?",
+  "options": [
+   "MEDIAN(x)",
+   "AVG(x) MEDIAN",
+   "percentile_cont(0.5) WITHIN GROUP (ORDER BY x)",
+   "PERCENTILE(x, 0.5)"
+  ],
+  "answer": 2,
+  "explanation": "percentile_cont is an ordered-set aggregate. Its 0.5 fraction gives the median, interpolating between values when needed."
+ },
+ {
+  "id": "q770732f5904",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "Why does LAST_VALUE(x) OVER (ORDER BY ts) often return the current row's value in PostgreSQL?",
+  "options": [
+   "Because LAST_VALUE ignores the ORDER BY clause",
+   "Because the default frame ends at the current row",
+   "Because LAST_VALUE always returns the first row of the partition",
+   "Because window functions are evaluated before ORDER BY"
+  ],
+  "answer": 1,
+  "explanation": "With ORDER BY and no frame clause the frame runs up to the current row, so the last value in the frame is the current row. Use ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING to see the true last row."
+ },
+ {
+  "id": "q17124509c05",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "What is a partial index?",
+  "options": [
+   "An index that covers only some of a table's columns",
+   "An index that is rebuilt only during off-peak hours",
+   "An index that stays incomplete until VACUUM runs",
+   "An index built only on rows that satisfy a WHERE predicate"
+  ],
+  "answer": 3,
+  "explanation": "A partial index, such as CREATE INDEX ... WHERE status = 'open', indexes only the matching subset, saving space and write cost."
+ },
+ {
+  "id": "q621945462cf",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "How does GROUP BY treat multiple NULL values in the grouping column?",
+  "options": [
+   "Each NULL forms its own group",
+   "Rows with NULL are dropped",
+   "All NULLs fall into one group",
+   "NULL groups cause an error"
+  ],
+  "answer": 2,
+  "explanation": "GROUP BY treats NULLs as not distinct from each other, so they form a single group. This differs from comparison operators, which never match NULL."
+ },
+ {
+  "id": "qe333870bb16",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "Which join algorithm does PostgreSQL typically choose for two large unsorted inputs joined on equality when no useful index exists?",
+  "options": [
+   "Nested loop join",
+   "Index-only join",
+   "Cartesian product",
+   "Hash join"
+  ],
+  "answer": 3,
+  "explanation": "A hash join builds a hash table on the smaller input and probes it with the other, which is efficient for large unsorted equality joins."
+ }
+]

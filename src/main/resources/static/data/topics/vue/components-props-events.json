@@ -30,6 +30,21 @@
   "explanation": "defineEmits() declares emitted events and returns an emit function."
  },
  {
+  "id": "q361ffecad99",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "In the Options API, how does a component emit an event named save?",
+  "options": [
+   "this.emit('save')",
+   "this.$emit('save')",
+   "emit.save()",
+   "this.$dispatch('save')"
+  ],
+  "answer": 1,
+  "explanation": "$emit triggers a custom event that the parent can listen to with @save."
+ },
+ {
   "id": "q77c224c028b",
   "subject": "vue",
   "topic": "components-props-events",
@@ -60,6 +75,21 @@
   "explanation": "Props form a one-way data flow; children communicate upward by emitting events."
  },
  {
+  "id": "qfa2cfbba5d5",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "How does a parent listen to a child's custom event named close?",
+  "options": [
+   "<Child :close=\"onClose\" />",
+   "<Child #close=\"onClose\" />",
+   "<Child @close=\"onClose\" />",
+   "<Child v-close=\"onClose\" />"
+  ],
+  "answer": 2,
+  "explanation": "@close is shorthand for v-on:close and runs the handler when the child emits close."
+ },
+ {
   "id": "q1cb19fbeff5",
   "subject": "vue",
   "topic": "components-props-events",
@@ -75,6 +105,36 @@
   "explanation": "Props are readonly in the child; the parent owns the data and should update it in response to an event."
  },
  {
+  "id": "q31cc4ab5508",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "Which compiler macro sets component options like name or inheritAttrs from inside script setup?",
+  "options": [
+   "defineOptions",
+   "defineConfig",
+   "defineComponent",
+   "useOptions"
+  ],
+  "answer": 0,
+  "explanation": "defineOptions, available since Vue 3.3, removes the need for a separate script block to set options."
+ },
+ {
+  "id": "q563dd01622e",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "Why must an object or array default for a prop be written as a factory, like default: () => []?",
+  "options": [
+   "Because Vue cannot store arrays in props",
+   "To make the prop required",
+   "To make the prop reactive",
+   "So each component instance gets its own fresh object instead of sharing one"
+  ],
+  "answer": 3,
+  "explanation": "A shared default object would be mutated by all instances that use it."
+ },
+ {
   "id": "q63606452e7d",
   "subject": "vue",
   "topic": "components-props-events",
@@ -88,6 +148,21 @@
   ],
   "answer": 1,
   "explanation": "Undeclared attributes such as class, style and listeners are applied to a single root element by default."
+ },
+ {
+  "id": "q7565c564eaa",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "How do you declare a prop that must be provided by the parent?",
+  "options": [
+   "{ type: String, needed: true }",
+   "{ type: String!, default: null }",
+   "{ mandatory: String }",
+   "{ type: String, required: true }"
+  ],
+  "answer": 3,
+  "explanation": "With required: true Vue warns in development when the parent omits the prop."
  },
  {
   "id": "qbc58d6b52c7",
@@ -150,6 +225,21 @@
   "explanation": "Disabling inheritAttrs stops automatic root binding, and $attrs can then be spread on any element."
  },
  {
+  "id": "q5d88ce0874b",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "A child with multiple root nodes receives class=\"big\" from its parent and does not bind $attrs. What happens?",
+  "options": [
+   "The class is silently applied to the parent",
+   "The class goes on the first root node",
+   "The class goes on every root node",
+   "Vue warns that fallthrough attributes could not be applied automatically"
+  ],
+  "answer": 3,
+  "explanation": "With multiple roots there is no single element to receive attributes, so you must bind $attrs explicitly."
+ },
+ {
   "id": "qa8a307f8fec",
   "subject": "vue",
   "topic": "components-props-events",
@@ -163,6 +253,21 @@
   ],
   "answer": 3,
   "explanation": "Passing a name to defineModel() binds it to the title prop and update:title event."
+ },
+ {
+  "id": "qb23a7e98a09",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "What does declaring emits: ['click'] on a component change about a native click listener the parent adds?",
+  "options": [
+   "Nothing; native and component listeners always both fire",
+   "The click event is prevented from bubbling",
+   "The listener is treated as a component event and no longer falls through to the root element as a native listener",
+   "The component emits click twice"
+  ],
+  "answer": 2,
+  "explanation": "Declared events are removed from $attrs, so the parent's @click only fires when the child emits it."
  },
  {
   "id": "qf2877ea7c29",

@@ -1,0 +1,32 @@
+[
+ {
+  "id": "q8f85bc858d9",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "What is event delegation?",
+  "options": [
+   "Attaching one listener to a parent and using event.target to handle events from its children",
+   "Dispatching custom events from a worker",
+   "Passing an event to setTimeout",
+   "Calling listeners in reverse order"
+  ],
+  "answer": 0,
+  "explanation": "Because events bubble, a single parent listener can handle events from many current and future child elements."
+ },
+ {
+  "id": "qc4e35145617",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "What does event.preventDefault() do?",
+  "options": [
+   "Removes the event listener",
+   "Stops the event from bubbling",
+   "Cancels the browser's default action for the event",
+   "Prevents other listeners on the same element"
+  ],
+  "answer": 2,
+  "explanation": "preventDefault stops default behaviour like form submission; stopPropagation is what stops bubbling."
+ }
+]

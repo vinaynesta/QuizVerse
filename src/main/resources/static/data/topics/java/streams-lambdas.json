@@ -15,6 +15,21 @@
   "explanation": "filter is an intermediate operation returning a new Stream; it never modifies the source."
  },
  {
+  "id": "q9d85a684716",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which stream operation transforms each element into another value?",
+  "options": [
+   "filter",
+   "map",
+   "count",
+   "forEach"
+  ],
+  "answer": 1,
+  "explanation": "map applies a function to every element and produces a stream of the results."
+ },
+ {
   "id": "qad521d88b14",
   "subject": "java",
   "topic": "streams-lambdas",
@@ -45,6 +60,21 @@
   "explanation": "collect produces a result and ends the pipeline; filter, map and sorted are intermediate operations."
  },
  {
+  "id": "qeda5b50c4c2",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "What does the method reference String::length represent?",
+  "options": [
+   "A field holding the length of all strings",
+   "A function that takes a String and returns its length",
+   "A static constant for the maximum String length",
+   "A call to length() on the String class itself"
+  ],
+  "answer": 1,
+  "explanation": "An unbound instance method reference uses its first argument as the receiver."
+ },
+ {
   "id": "qfd3d971332c",
   "subject": "java",
   "topic": "streams-lambdas",
@@ -58,6 +88,36 @@
   ],
   "answer": 2,
   "explanation": "Java lambdas use the arrow token ->, with parameters on the left and the body on the right."
+ },
+ {
+  "id": "q266fb170a68",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Optional.ofNullable(null).orElse(\"x\") return?",
+  "options": [
+   "null",
+   "\"x\"",
+   "An empty Optional",
+   "It throws NullPointerException"
+  ],
+  "answer": 1,
+  "explanation": "ofNullable(null) creates an empty Optional, so orElse returns the fallback."
+ },
+ {
+  "id": "q2ac734bfcb1",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Stream.of(3, 1, 2).sorted().findFirst().get() return?",
+  "options": [
+   "3",
+   "1",
+   "2",
+   "An empty Optional"
+  ],
+  "answer": 1,
+  "explanation": "sorted() orders the elements as 1, 2, 3, and findFirst returns the first."
  },
  {
   "id": "q59f9afdbaa0",
@@ -105,6 +165,21 @@
   "explanation": "groupingBy builds a Map from the classifier result to a List of the elements with that key."
  },
  {
+  "id": "q8f6ac6ec08a",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does IntStream.rangeClosed(1, 4).sum() return?",
+  "options": [
+   "10",
+   "6",
+   "4",
+   "15"
+  ],
+  "answer": 0,
+  "explanation": "rangeClosed includes both endpoints, so the sum is 1 + 2 + 3 + 4 = 10."
+ },
+ {
   "id": "q8f967804fa0",
   "subject": "java",
   "topic": "streams-lambdas",
@@ -133,6 +208,36 @@
   ],
   "answer": 1,
   "explanation": "The two-argument toMap rejects duplicate keys; pass a merge function to resolve collisions."
+ },
+ {
+  "id": "q21d00671cf2",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What does IntStream.range(0, 5).boxed().collect(Collectors.partitioningBy(n -> n % 2 == 0)) produce?",
+  "options": [
+   "{true=[0, 2, 4]}",
+   "{false=[1, 3], true=[0, 2, 4]}",
+   "{false=[0, 2, 4], true=[1, 3]}",
+   "{0=[0, 2, 4], 1=[1, 3]}"
+  ],
+  "answer": 1,
+  "explanation": "partitioningBy always returns a map with both false and true keys, holding the failing and passing elements."
+ },
+ {
+  "id": "q2932e1433c1",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What does Stream.iterate(1, n -> n * 2).limit(5).reduce(0, Integer::sum) return?",
+  "options": [
+   "32",
+   "15",
+   "31",
+   "63"
+  ],
+  "answer": 2,
+  "explanation": "The stream yields 1, 2, 4, 8, 16, which sum to 31."
  },
  {
   "id": "q59745711845",

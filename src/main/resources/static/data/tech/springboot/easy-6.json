@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4d062db6529",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "What does @Value(\"${app.name}\") on a field do?",
+  "options": [
+   "Creates a bean named app.name",
+   "Injects the value of the app.name property",
+   "Validates that the field is not null",
+   "Exposes the field as a REST parameter"
+  ],
+  "answer": 1,
+  "explanation": "@Value resolves the ${...} placeholder against the Environment and injects the resulting property value."
+ },
+ {
+  "id": "q75cc67b8628",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which Gradle task, added by the Spring Boot plugin, builds an executable jar?",
+  "options": [
+   "shadowJar",
+   "bootJar",
+   "fatJar",
+   "assembleBoot"
+  ],
+  "answer": 1,
+  "explanation": "The Spring Boot Gradle plugin adds bootJar, which packages the application and its dependencies into an executable jar."
+ },
+ {
+  "id": "q58c43ad4499",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation binds a query string parameter such as ?page=2 to a method parameter?",
+  "options": [
+   "@RequestParam",
+   "@PathVariable",
+   "@RequestBody",
+   "@ModelAttribute"
+  ],
+  "answer": 0,
+  "explanation": "@RequestParam reads request parameters such as query string values by name."
+ },
+ {
+  "id": "qfaf38c22466",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Which annotation binds a group of properties sharing a prefix to a typed Java object?",
+  "options": [
+   "@PropertySource",
+   "@Value",
+   "@ConfigurationProperties",
+   "@EnableConfiguration"
+  ],
+  "answer": 2,
+  "explanation": "@ConfigurationProperties(prefix = \"app\") binds app.* properties to the fields or constructor of a class or record."
+ },
+ {
+  "id": "qad4dae13c50",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which annotation loads the full application context for an integration test?",
+  "options": [
+   "@WebMvcTest",
+   "@DataJpaTest",
+   "@JsonTest",
+   "@SpringBootTest"
+  ],
+  "answer": 3,
+  "explanation": "@SpringBootTest bootstraps the complete application context, unlike slice annotations that load only part of it."
+ },
+ {
+  "id": "qa5ed001edd0",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which annotation declares a method inside a @Configuration class whose return value becomes a bean?",
+  "options": [
+   "@Bean",
+   "@Autowired",
+   "@Import",
+   "@Component"
+  ],
+  "answer": 0,
+  "explanation": "A @Bean method is called by Spring and its returned object is registered in the application context."
+ },
+ {
+  "id": "q15565db4599",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "In Spring Security terms, what is authentication?",
+  "options": [
+   "Verifying who a user is",
+   "Deciding what a user is allowed to do",
+   "Encrypting HTTP traffic",
+   "Logging security events"
+  ],
+  "answer": 0,
+  "explanation": "Authentication establishes identity, while authorization decides access for that identity."
+ },
+ {
+  "id": "q82bdb3ff780",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which JPA annotation asks the persistence provider to generate a value for the primary key?",
+  "options": [
+   "@Column",
+   "@Version",
+   "@Transient",
+   "@GeneratedValue"
+  ],
+  "answer": 3,
+  "explanation": "@GeneratedValue on an @Id field lets the provider or database generate keys using a strategy such as IDENTITY or SEQUENCE."
+ },
+ {
+  "id": "qf7b3e500955",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which property sets the JDBC URL of Spring Boot's auto-configured DataSource?",
+  "options": [
+   "spring.jpa.url",
+   "spring.jdbc.connection",
+   "server.datasource.url",
+   "spring.datasource.url"
+  ],
+  "answer": 3,
+  "explanation": "spring.datasource.url, together with username and password properties, configures the default DataSource."
+ },
+ {
+  "id": "q451f5773536",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which connection pool does Spring Boot use by default when it is on the classpath?",
+  "options": [
+   "C3P0",
+   "Apache Commons DBCP2",
+   "HikariCP",
+   "Tomcat JDBC Pool"
+  ],
+  "answer": 2,
+  "explanation": "HikariCP is preferred by Spring Boot and is included transitively by the JDBC and JPA starters."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9978c7371d3",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "What is the type `string & number`?",
+  "options": [
+   "never",
+   "string | number",
+   "unknown",
+   "object"
+  ],
+  "answer": 0,
+  "explanation": "No value can be both a string and a number, so the intersection reduces to never."
+ },
+ {
+  "id": "qe3b58dd2a9b",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "What is the purpose of `NoInfer<T>` (TypeScript 5.4+) in a parameter type?",
+  "options": [
+   "It forces T to be inferred as never",
+   "It disables type checking for the parameter",
+   "It makes the parameter optional",
+   "It stops that position from being used as an inference candidate for T"
+  ],
+  "answer": 3,
+  "explanation": "NoInfer blocks inference from that site, so T is inferred from other arguments and then checked there."
+ },
+ {
+  "id": "q47a7d1e7aff",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With strictNullChecks disabled, what is true about null and undefined?",
+  "options": [
+   "They cannot be used at all",
+   "They become distinct types that must be declared explicitly",
+   "They are only assignable to any",
+   "They are assignable to every type"
+  ],
+  "answer": 3,
+  "explanation": "Without strictNullChecks, null and undefined are in the domain of every type."
+ },
+ {
+  "id": "qa8e223768fe",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Which definition reproduces the built-in `ReturnType<T>` behavior for function types?",
+  "options": [
+   "T extends (...args: any[]) => infer R ? R : never",
+   "T extends Function ? T[\"return\"] : never",
+   "keyof T extends \"return\" ? T : never",
+   "T extends (...args: infer R) => any ? R : never"
+  ],
+  "answer": 0,
+  "explanation": "infer R in the return position captures the function's return type; inferring from args gives the parameters instead."
+ },
+ {
+  "id": "qac5c2938fb5",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "Under `\"strict\": true` in TypeScript 5.x, what is the type of `e` in `try { } catch (e) { }`?",
+  "options": [
+   "unknown",
+   "any",
+   "never",
+   "Error"
+  ],
+  "answer": 0,
+  "explanation": "useUnknownInCatchVariables, part of strict, types catch variables as unknown."
+ },
+ {
+  "id": "qba89a2578e0",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "Which type is assignable to every other type?",
+  "options": [
+   "object",
+   "unknown",
+   "any",
+   "never"
+  ],
+  "answer": 3,
+  "explanation": "never is the bottom type; unknown is the top type that everything is assignable to."
+ },
+ {
+  "id": "q6360c61d7b6",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "What is the type of `routes` in `const routes = [\"/a\", \"/b\"] as const satisfies readonly string[];`?",
+  "options": [
+   "string[]",
+   "readonly [\"/a\", \"/b\"]",
+   "(\"/a\" | \"/b\")[]",
+   "readonly string[]"
+  ],
+  "answer": 1,
+  "explanation": "as const produces a readonly literal tuple and satisfies checks it without widening."
+ },
+ {
+  "id": "q14c1104104f",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "What happens with `const o = { a: 1, b: 2 } satisfies { a: number };`?",
+  "options": [
+   "A compile error from excess property checking on b",
+   "It compiles but b is removed at runtime",
+   "It compiles and o has type { a: number; b: number }",
+   "It compiles and o has type { a: number }"
+  ],
+  "answer": 0,
+  "explanation": "satisfies applies excess property checks to object literals just like an annotation does."
+ },
+ {
+  "id": "q75b4b269e7c",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type ToArray<T> = T extends any ? T[] : never;`, what is `ToArray<string | number>`?",
+  "options": [
+   "(string | number)[]",
+   "string[] | number[]",
+   "[string, number]",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "Conditional types distribute over naked type parameters, so each union member is mapped separately."
+ },
+ {
+  "id": "qec921bfe1c6",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type H<T> = T extends [infer X extends string, ...unknown[]] ? X : never;`, what is `H<[42, \"a\"]>`?",
+  "options": [
+   "42",
+   "\"a\"",
+   "never",
+   "string"
+  ],
+  "answer": 2,
+  "explanation": "The extends constraint on infer makes the match fail when the first element is not a string, so the false branch is taken."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1b4188cda73",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "What does hydrateRoot do compared with createRoot?",
+  "options": [
+   "It attaches React to HTML that was already rendered on the server instead of creating the DOM from scratch",
+   "It renders the app twice for consistency checks",
+   "It only works with class components",
+   "It makes the app render without JavaScript"
+  ],
+  "answer": 0,
+  "explanation": "Hydration reuses the existing server-rendered DOM and attaches event handlers, and React reports mismatches."
+ },
+ {
+  "id": "qa318c351096",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "What happens when a promise read with use() rejects?",
+  "options": [
+   "The nearest error boundary catches it and shows its fallback",
+   "use() returns undefined",
+   "Suspense keeps showing the fallback forever",
+   "The rejection is silently ignored"
+  ],
+  "answer": 0,
+  "explanation": "A rejected promise read with use() throws during render, which an error boundary can catch."
+ },
+ {
+  "id": "qab31e95e3f8",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "What information does the onRender callback of the <Profiler> component receive?",
+  "options": [
+   "The list of props that changed",
+   "The JavaScript heap size",
+   "Timing details such as the profiler id, the phase and actualDuration for each commit",
+   "The network requests made during render"
+  ],
+  "answer": 2,
+  "explanation": "Profiler measures how often a subtree renders and how long rendering takes."
+ },
+ {
+  "id": "q901fda5c5e1",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "hard",
+  "question": "During render, a component compares props.items with a prevItems state value and calls setPrevItems(props.items) when they differ. What does React do?",
+  "options": [
+   "It throws a Too many re-renders error every time",
+   "It discards the returned JSX and immediately re-renders that component with the new state before rendering its children",
+   "It schedules the update for after the commit",
+   "It ignores state updates made during render"
+  ],
+  "answer": 1,
+  "explanation": "Setting the component's own state during render, guarded by a condition, is the documented pattern for adjusting state when a prop changes."
+ },
+ {
+  "id": "q2a8b122db1c",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Why can returning a component definition from a hook, such as const Comp = useMemo(() => () => <div />, [dep]), cause state loss?",
+  "options": [
+   "useMemo cannot return functions",
+   "Whenever dep changes a new component type is created, so React unmounts the old subtree and mounts a fresh one",
+   "Hooks cannot return JSX",
+   "React caches component types globally"
+  ],
+  "answer": 1,
+  "explanation": "React compares component types by reference, and a new function means a different type at that position."
+ },
+ {
+  "id": "qbad194f3959",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "Why does nesting Suspense boundaries help a page that loads several independent data sources?",
+  "options": [
+   "It disables waterfalls in effects",
+   "Nested boundaries run fetches in parallel automatically",
+   "React requires one boundary per component",
+   "Each boundary can reveal its content as its data arrives instead of waiting for everything"
+  ],
+  "answer": 3,
+  "explanation": "Suspense shows the closest boundary's fallback, so finer-grained boundaries allow progressive reveal."
+ },
+ {
+  "id": "q3a091111115",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A component renders <Ctx.Provider value=\"inner\"> in its own JSX and also calls useContext(Ctx). Which value does it read?",
+  "options": [
+   "The Provider it renders",
+   "Both values merged",
+   "The nearest Provider above it, not one it renders in its own output",
+   "The default value always"
+  ],
+  "answer": 2,
+  "explanation": "useContext looks upward from the calling component, so providers in its own returned JSX do not affect it."
+ },
+ {
+  "id": "q2fb8b2b6050",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "An effect subscribes to a chat room using roomId, and roomId changes from 'a' to 'b'. In what order does React run code?",
+  "options": [
+   "The cleanup with roomId 'a' runs, then the effect with roomId 'b'",
+   "Only the effect for 'b' runs",
+   "The effect for 'b' runs, then the cleanup for 'a'",
+   "The cleanup runs only on unmount"
+  ],
+  "answer": 0,
+  "explanation": "Before re-running an effect, React runs the previous cleanup with the values captured from the previous render."
+ },
+ {
+  "id": "qb267b30a493",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "hard",
+  "question": "What does React use to decide whether to reuse a DOM node when reconciling two children lists that both have keys?",
+  "options": [
+   "Only the array index",
+   "The text content of the element",
+   "The element type and the key together",
+   "The order in which components were imported"
+  ],
+  "answer": 2,
+  "explanation": "Elements with the same type and key are matched across renders, so they keep their DOM and state even if moved."
+ },
+ {
+  "id": "q26ef6e2d824",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "hard",
+  "question": "What does the cache function from React do in Server Components?",
+  "options": [
+   "Stores data in the browser's localStorage",
+   "Memoizes a function's result for the duration of a single server request",
+   "Caches HTTP responses across all users forever",
+   "Replaces useMemo in Client Components"
+  ],
+  "answer": 1,
+  "explanation": "cache lets multiple components share the result of a data fetch within one render pass on the server."
+ }
+]

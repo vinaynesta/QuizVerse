@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1a4625a700f",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What is the ReAct pattern for LLM agents?",
+  "options": [
+   "Training the agent with reinforcement learning only",
+   "Running several models in parallel and voting",
+   "Reacting to user input with predefined canned responses",
+   "Interleaving reasoning steps with actions such as tool calls and the observations they return"
+  ],
+  "answer": 3,
+  "explanation": "ReAct alternates thinking and acting so each observation can inform the next decision."
+ },
+ {
+  "id": "qb3b38e943f3",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "What is the effect of limiting a decision tree's maximum depth?",
+  "options": [
+   "It increases the number of features the tree can use",
+   "It guarantees perfect training accuracy",
+   "It restricts model complexity, which reduces overfitting",
+   "It converts the tree into a linear model"
+  ],
+  "answer": 2,
+  "explanation": "Deep trees can carve out tiny regions that memorize noise, so capping depth acts as regularization."
+ },
+ {
+  "id": "q76a02489dad",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What does the stride of a convolutional layer control?",
+  "options": [
+   "The number of filters in the layer",
+   "The number of color channels in the input",
+   "How many positions the filter moves at each step, which affects the output size",
+   "The activation function applied after convolution"
+  ],
+  "answer": 2,
+  "explanation": "A stride of 2 skips every other position, roughly halving each spatial dimension of the output."
+ },
+ {
+  "id": "qbf17e7831b9",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What does a ROC curve plot?",
+  "options": [
+   "Precision against recall at a single threshold",
+   "Training loss against the number of epochs",
+   "True positive rate against false positive rate across decision thresholds",
+   "Accuracy against dataset size"
+  ],
+  "answer": 2,
+  "explanation": "Sweeping the threshold traces the trade-off between catching positives and raising false alarms."
+ },
+ {
+  "id": "q2abd29ace9c",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What is data augmentation in image models?",
+  "options": [
+   "Adding more layers to the network",
+   "Collecting a separate test set",
+   "Increasing image resolution at inference time",
+   "Creating modified copies of training images, such as flips and crops, to improve generalization"
+  ],
+  "answer": 3,
+  "explanation": "Augmentation exposes the model to plausible variations, reducing overfitting without new labeled data."
+ },
+ {
+  "id": "qe4d5af9107d",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What is the softmax function typically used for in a classifier?",
+  "options": [
+   "Introducing sparsity by zeroing negative values",
+   "Normalizing input features before training",
+   "Converting raw output scores into a probability distribution over classes",
+   "Reducing the learning rate during training"
+  ],
+  "answer": 2,
+  "explanation": "Softmax exponentiates and normalizes scores so outputs are positive and sum to 1."
+ },
+ {
+  "id": "qb382dd59a8b",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is a jailbreak in the context of LLMs?",
+  "options": [
+   "Running a model on unauthorized hardware",
+   "Copying a model's weights from a server",
+   "Fine-tuning a model on a new language",
+   "A crafted prompt designed to make a model bypass its safety guidelines"
+  ],
+  "answer": 3,
+  "explanation": "Jailbreaks use role-play, obfuscation or other tricks to elicit content the model is meant to refuse."
+ },
+ {
+  "id": "q25b58565606",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "medium",
+  "question": "What does L2 (ridge) regularization do to a linear model's weights?",
+  "options": [
+   "Sets most weights exactly to zero",
+   "Removes the bias term from the model",
+   "Doubles the learning rate for large weights",
+   "Penalizes squared weights, shrinking them toward zero without usually making them exactly zero"
+  ],
+  "answer": 3,
+  "explanation": "The squared penalty discourages large weights smoothly, unlike L1, which tends to produce exact zeros."
+ },
+ {
+  "id": "qc22bd6842f9",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What does R-squared measure for a regression model?",
+  "options": [
+   "The average absolute prediction error",
+   "The proportion of the target's variance explained by the model",
+   "The number of features in the model",
+   "The correlation between two input features"
+  ],
+  "answer": 1,
+  "explanation": "An R-squared of 1 means a perfect fit, while 0 means the model does no better than predicting the mean."
+ },
+ {
+  "id": "q0789c0cf9b6",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "How does k-fold cross-validation work?",
+  "options": [
+   "The data is split into k parts; the model trains on k-1 parts and validates on the remaining one, rotating and averaging the results",
+   "The model is trained k times on the full dataset with different random seeds",
+   "Only the first k rows are used for validation",
+   "The features are split into k groups and one model is trained per group"
+  ],
+  "answer": 0,
+  "explanation": "Every example is used for validation exactly once, giving a more reliable estimate than a single split."
+ }
+]

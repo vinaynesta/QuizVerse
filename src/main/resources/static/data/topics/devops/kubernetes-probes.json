@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q4381a19bbce",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "Why use a startupProbe?",
+  "options": [
+   "To hold off liveness and readiness checks until a slow-starting app is up, so it is not killed prematurely",
+   "To check the health of the node",
+   "To run one-time initialization scripts",
+   "To replace readiness checks entirely"
+  ],
+  "answer": 0,
+  "explanation": "While a startup probe has not succeeded, liveness and readiness probes are disabled, which protects slow-booting apps from restarts."
+ },
+ {
+  "id": "q4bed2caf42f",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "Which probe mechanisms does Kubernetes support?",
+  "options": [
+   "ssh, ping, and dns",
+   "httpGet, tcpSocket, exec, and grpc",
+   "smtp, ftp, and imap",
+   "sql, redis, and kafka"
+  ],
+  "answer": 1,
+  "explanation": "Probes can make an HTTP GET, open a TCP socket, run a command in the container, or call a gRPC health service."
+ },
+ {
+  "id": "q4ed1d67a395",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What does a readiness probe failure cause?",
+  "options": [
+   "The pod is removed from Service endpoints until it passes again",
+   "Nothing; readiness only writes logs",
+   "The container is restarted",
+   "The pod is deleted and recreated on another node"
+  ],
+  "answer": 0,
+  "explanation": "Readiness controls traffic: a not-ready pod stays running but receives no traffic from Services."
+ },
+ {
+  "id": "q5eefc5627e9",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What does initialDelaySeconds set on a probe?",
+  "options": [
+   "The interval between probes",
+   "The time to wait after the container starts before the first probe runs",
+   "The number of failures before action is taken",
+   "The timeout for each probe"
+  ],
+  "answer": 1,
+  "explanation": "initialDelaySeconds is the delay between container start and the first probe; periodSeconds controls the interval."
+ },
+ {
+  "id": "q997a98ff5ea",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "A liveness probe checks an endpoint that also depends on a database. If the database goes down, what is a common risk?",
+  "options": [
+   "Pods are scheduled onto fewer nodes",
+   "The database is backed up automatically",
+   "All pods are restarted together, which worsens the outage",
+   "Services switch to ClusterIP type"
+  ],
+  "answer": 2,
+  "explanation": "Liveness should check only the process itself; coupling it to dependencies can cause a restart cascade across all replicas."
+ },
+ {
+  "id": "qc5aaf74d4c1",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What happens when a liveness probe fails repeatedly?",
+  "options": [
+   "The Service removes the pod from its endpoints only",
+   "The scheduler moves the pod to another node immediately",
+   "The kubelet restarts the container",
+   "The Deployment deletes the pod permanently"
+  ],
+  "answer": 2,
+  "explanation": "A failing liveness probe makes the kubelet kill and restart the container according to the pod's restart policy."
+ },
+ {
+  "id": "qcd96942fda6",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "When does the kubelet treat a probe as failed?",
+  "options": [
+   "After the first failed check",
+   "Only when the container exits",
+   "After failureThreshold consecutive failures, which defaults to 3",
+   "After timeoutSeconds elapses once"
+  ],
+  "answer": 2,
+  "explanation": "A probe must fail failureThreshold times in a row before the kubelet acts on it."
+ },
+ {
+  "id": "qe776205bd18",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What does the CrashLoopBackOff status indicate?",
+  "options": [
+   "The container keeps crashing, and the kubelet restarts it with an increasing back-off delay",
+   "The image could not be pulled",
+   "The pod is waiting for a node with enough memory",
+   "The readiness probe is failing but the container is running"
+  ],
+  "answer": 0,
+  "explanation": "Restart delays grow exponentially up to a cap of five minutes while the container keeps exiting."
+ }
+]

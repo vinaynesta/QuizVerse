@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q0afe83b6650",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command discards uncommitted changes to a tracked file in the working directory (Git 2.23 and later)?",
+  "options": [
+   "git restore <file>",
+   "git revert <file>",
+   "git undo <file>",
+   "git clean <file>"
+  ],
+  "answer": 0,
+  "explanation": "git restore copies the file back from the index or a commit, discarding unstaged edits."
+ },
+ {
+  "id": "q3eaa651a0a7",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command shows changes in the working tree that have not yet been staged?",
+  "options": [
+   "git diff --cached",
+   "git log -p",
+   "git show HEAD",
+   "git diff"
+  ],
+  "answer": 3,
+  "explanation": "git diff with no arguments compares the working tree with the index; --cached compares the index with HEAD."
+ },
+ {
+  "id": "q5b52a57fd39",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command reapplies the most recently stashed changes and removes that entry from the stash list?",
+  "options": [
+   "git stash save",
+   "git stash list",
+   "git stash pop",
+   "git stash show"
+  ],
+  "answer": 2,
+  "explanation": "git stash pop applies the top stash entry and drops it if the apply succeeds."
+ },
+ {
+  "id": "q5c92438e11a",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command lets you change the message of your most recent commit, if it has not been pushed yet?",
+  "options": [
+   "git revert --message",
+   "git log --edit",
+   "git reset --message",
+   "git commit --amend"
+  ],
+  "answer": 3,
+  "explanation": "git commit --amend replaces the last commit with a new one, letting you edit the message and add staged changes."
+ },
+ {
+  "id": "q6e0b3117ccc",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command removes a file from the staging area but keeps it in the working directory?",
+  "options": [
+   "git checkout --cached <file>",
+   "git reset --hard <file>",
+   "git rm --cached <file>",
+   "git unstage --keep <file>"
+  ],
+  "answer": 2,
+  "explanation": "git rm --cached untracks the file in the index while leaving the file on disk."
+ },
+ {
+  "id": "q95c91ead9ce",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command shows the changes that are staged for the next commit?",
+  "options": [
+   "git diff --staged",
+   "git diff HEAD~1",
+   "git status --diff",
+   "git log --staged"
+  ],
+  "answer": 0,
+  "explanation": "git diff --staged (same as --cached) compares the index with the last commit, showing what the next commit will contain."
+ },
+ {
+  "id": "qb065f3ef362",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command temporarily sets aside uncommitted changes so you can switch branches?",
+  "options": [
+   "git shelve",
+   "git park",
+   "git hide",
+   "git stash"
+  ],
+  "answer": 3,
+  "explanation": "git stash saves modified tracked files and staged changes on a stack and restores a clean working tree."
+ },
+ {
+  "id": "qbf7f5efd3bc",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command creates a new commit that reverses the changes introduced by an earlier commit?",
+  "options": [
+   "git revert <commit>",
+   "git reset <commit>",
+   "git rollback <commit>",
+   "git undo <commit>"
+  ],
+  "answer": 0,
+  "explanation": "git revert adds a new inverse commit, so shared history is preserved."
+ }
+]

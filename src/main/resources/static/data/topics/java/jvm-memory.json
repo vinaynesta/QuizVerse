@@ -45,6 +45,21 @@
   "explanation": "javac compiles source to platform-neutral bytecode, which the JVM interprets and JIT-compiles."
  },
  {
+  "id": "qbdfee5f8657",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Which JVM component automatically reclaims memory used by objects that are no longer reachable?",
+  "options": [
+   "The JIT compiler",
+   "The bytecode verifier",
+   "The class loader",
+   "The garbage collector"
+  ],
+  "answer": 3,
+  "explanation": "Java has no manual free; the garbage collector reclaims unreachable objects."
+ },
+ {
   "id": "qe071598f27b",
   "subject": "java",
   "topic": "jvm-memory",
@@ -105,6 +120,21 @@
   "explanation": "System.gc() only suggests a collection; the JVM may ignore it, for example with -XX:+DisableExplicitGC."
  },
  {
+  "id": "qb83a296a508",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "In HotSpot since Java 8, which native memory area stores class metadata, replacing PermGen?",
+  "options": [
+   "Metaspace",
+   "Eden space",
+   "The thread stack",
+   "The string pool"
+  ],
+  "answer": 0,
+  "explanation": "Metaspace is allocated from native memory and grows as needed unless MaxMetaspaceSize is set."
+ },
+ {
   "id": "qe5ec31178d3",
   "subject": "java",
   "topic": "jvm-memory",
@@ -150,6 +180,21 @@
   "explanation": "HotSpot collectors trace reachability rather than counting references, so unreachable cycles are reclaimed."
  },
  {
+  "id": "q30ba4e8691f",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "What does java.lang.OutOfMemoryError: Metaspace usually indicate?",
+  "options": [
+   "Too much class metadata, often from a class loader leak",
+   "A thread's call stack is too deep",
+   "The heap is full of ordinary objects",
+   "Too many threads were created"
+  ],
+  "answer": 0,
+  "explanation": "Metaspace holds class metadata, so it fills up when classes are loaded but their class loaders are never released."
+ },
+ {
   "id": "q3c6608c934c",
   "subject": "java",
   "topic": "jvm-memory",
@@ -163,6 +208,21 @@
   ],
   "answer": 1,
   "explanation": "Class initialization is lazy and happens once, triggered by the first active use of the class."
+ },
+ {
+  "id": "q4f9e459f798",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "Which java.lang.ref reference type lets its referent be reclaimed only when the JVM is running low on memory, making it suitable for caches?",
+  "options": [
+   "SoftReference",
+   "PhantomReference",
+   "WeakReference",
+   "StrongReference"
+  ],
+  "answer": 0,
+  "explanation": "Softly reachable objects are cleared before an OutOfMemoryError is thrown, while weak references are cleared at the next collection."
  },
  {
   "id": "qe8ee47d7ad7",

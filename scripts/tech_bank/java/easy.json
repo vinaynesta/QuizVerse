@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "Java 21 (September 2023) is an LTS release, following Java 17."
+  },
+  {
+    "topic": "oop",
+    "question": "Which keyword calls a superclass constructor from a subclass constructor?",
+    "options": [
+      "this",
+      "extends",
+      "super",
+      "parent"
+    ],
+    "answer": 2,
+    "explanation": "super(...) must be the first statement of the constructor and invokes the superclass constructor."
+  },
+  {
+    "topic": "oop",
+    "question": "Which keyword does a class use to declare that it implements an interface?",
+    "options": [
+      "implements",
+      "extends",
+      "inherits",
+      "uses"
+    ],
+    "answer": 0,
+    "explanation": "A class extends at most one class but can implement any number of interfaces."
+  },
+  {
+    "topic": "oop",
+    "question": "What is method overloading?",
+    "options": [
+      "Redefining a superclass method in a subclass with the same signature",
+      "Calling a method from inside itself",
+      "Defining methods with the same name but different parameter lists",
+      "Declaring a method in an interface without a body"
+    ],
+    "answer": 2,
+    "explanation": "The compiler chooses among overloads based on the argument types at the call site."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "Which primitive type holds a single 16-bit UTF-16 code unit?",
+    "options": [
+      "char",
+      "byte",
+      "short",
+      "String"
+    ],
+    "answer": 0,
+    "explanation": "A Java char is an unsigned 16-bit value representing a UTF-16 code unit."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "How many bits does a Java int occupy?",
+    "options": [
+      "32",
+      "16",
+      "64",
+      "It depends on the platform"
+    ],
+    "answer": 0,
+    "explanation": "Java fixes int at 32 bits on every platform."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does the expression 10 == 10.0 evaluate to?",
+    "options": [
+      "false",
+      "It does not compile",
+      "It throws an exception",
+      "true"
+    ],
+    "answer": 3,
+    "explanation": "The int is widened to double before comparison, and 10.0 equals 10.0."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "Which method signature is the standard entry point of a standalone Java application?",
+    "options": [
+      "public static void main(String[] args)",
+      "public void main()",
+      "static int main(String args)",
+      "public static void start(String[] args)"
+    ],
+    "answer": 0,
+    "explanation": "The java launcher looks for this signature in the class it is asked to run."
+  },
+  {
+    "topic": "collections",
+    "question": "Which method returns the number of elements in an ArrayList?",
+    "options": [
+      "length()",
+      "count()",
+      "length",
+      "size()"
+    ],
+    "answer": 3,
+    "explanation": "Collections use size(), while arrays use the length field and strings use length()."
+  },
+  {
+    "topic": "collections",
+    "question": "Which List implementation is backed by a resizable array?",
+    "options": [
+      "LinkedList",
+      "ArrayList",
+      "TreeSet",
+      "HashMap"
+    ],
+    "answer": 1,
+    "explanation": "ArrayList stores its elements in an internal array that grows as needed."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Which block handles an exception thrown inside a try block?",
+    "options": [
+      "finally",
+      "catch",
+      "throw",
+      "throws"
+    ],
+    "answer": 1,
+    "explanation": "A matching catch block receives and handles the thrown exception."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What exception does Integer.parseInt(\"abc\") throw?",
+    "options": [
+      "NumberFormatException",
+      "ClassCastException",
+      "ArithmeticException",
+      "NullPointerException"
+    ],
+    "answer": 0,
+    "explanation": "parseInt throws NumberFormatException when the string is not a valid integer."
+  },
+  {
+    "topic": "generics",
+    "question": "Which of these is a valid generic method declaration?",
+    "options": [
+      "public void <T> print(T item)",
+      "public void print<T>(T item)",
+      "public <T> void print(T item)",
+      "public T<> void print(T item)"
+    ],
+    "answer": 2,
+    "explanation": "The type parameter list goes between the modifiers and the return type."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does the method reference String::length represent?",
+    "options": [
+      "A field holding the length of all strings",
+      "A static constant for the maximum String length",
+      "A function that takes a String and returns its length",
+      "A call to length() on the String class itself"
+    ],
+    "answer": 2,
+    "explanation": "An unbound instance method reference uses its first argument as the receiver."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "Which stream operation transforms each element into another value?",
+    "options": [
+      "filter",
+      "forEach",
+      "count",
+      "map"
+    ],
+    "answer": 3,
+    "explanation": "map applies a function to every element and produces a stream of the results."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Which keyword makes a method acquire a monitor lock before it runs?",
+    "options": [
+      "volatile",
+      "synchronized",
+      "transient",
+      "static"
+    ],
+    "answer": 1,
+    "explanation": "A synchronized instance method locks on this, and a static one locks on the Class object."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What does calling t.join() on a Thread t do?",
+    "options": [
+      "Starts thread t",
+      "Merges t into the current thread",
+      "Stops thread t immediately",
+      "Waits until thread t finishes"
+    ],
+    "answer": 3,
+    "explanation": "join blocks the calling thread until the target thread terminates."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Which JVM component automatically reclaims memory used by objects that are no longer reachable?",
+    "options": [
+      "The JIT compiler",
+      "The garbage collector",
+      "The class loader",
+      "The bytecode verifier"
+    ],
+    "answer": 1,
+    "explanation": "Java has no manual free; the garbage collector reclaims unreachable objects."
+  },
+  {
+    "topic": "strings",
+    "question": "What does \"Hello\".length() return?",
+    "options": [
+      "4",
+      "6",
+      "It does not compile",
+      "5"
+    ],
+    "answer": 3,
+    "explanation": "length() returns the number of UTF-16 code units, and \"Hello\" has five."
+  },
+  {
+    "topic": "strings",
+    "question": "Which method should you use to check whether two String objects have the same characters?",
+    "options": [
+      "==",
+      "equals()",
+      "compare()",
+      "same()"
+    ],
+    "answer": 1,
+    "explanation": "== compares references, while equals() compares contents."
+  },
+  {
+    "topic": "modern-java",
+    "question": "Which method, added by the SequencedCollection interface in Java 21, returns the first element of a List?",
+    "options": [
+      "first()",
+      "peekHead()",
+      "getFirst()",
+      "front()"
+    ],
+    "answer": 2,
+    "explanation": "Java 21 added getFirst() and getLast() to sequenced collections such as List and Deque."
   }
 ]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q74ac45b12f2",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "What happens when a Transform stream's transform callback is called with an error?",
+  "options": [
+   "The stream is destroyed and emits 'error'",
+   "The chunk is skipped and processing continues",
+   "The error is silently ignored",
+   "The stream pauses until resume() is called"
+  ],
+  "answer": 0,
+  "explanation": "Passing an error to the callback destroys the stream, and pipeline() propagates it to its completion callback."
+ },
+ {
+  "id": "q958af14009e",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Which environment variable changes the size of the libuv threadpool?",
+  "options": [
+   "NODE_THREADS",
+   "UV_THREADPOOL_SIZE",
+   "LIBUV_WORKERS",
+   "NODE_OPTIONS=--threads"
+  ],
+  "answer": 1,
+  "explanation": "It must be set before the threadpool is first used, typically before the process starts."
+ },
+ {
+  "id": "q20c8c4beb54",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What does queueMicrotask(fn) do?",
+  "options": [
+   "Schedules fn for the check phase",
+   "Adds fn to the libuv threadpool",
+   "Queues fn on the same microtask queue used by promise callbacks",
+   "Runs fn synchronously before returning"
+  ],
+  "answer": 2,
+  "explanation": "queueMicrotask is the standard way to schedule a microtask without creating a promise; it runs after process.nextTick callbacks."
+ },
+ {
+  "id": "q4f18f75be83",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "In stream.pipeline(), what should be used to transform data with an async generator?",
+  "options": [
+   "A synchronous array map callback",
+   "An EventEmitter with a 'transform' event",
+   "A Promise passed in place of a stream",
+   "An async generator function that takes the source iterable and yields transformed chunks"
+  ],
+  "answer": 3,
+  "explanation": "pipeline accepts async generator functions as stages, which receive the previous stage as an async iterable."
+ },
+ {
+  "id": "q1dfbed87b6d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "hard",
+  "question": "What is the default value of server.requestTimeout in Node.js 20 and 22?",
+  "options": [
+   "0, meaning no timeout",
+   "120000 ms (2 minutes)",
+   "5000 ms (5 seconds)",
+   "300000 ms (5 minutes)"
+  ],
+  "answer": 3,
+  "explanation": "Since Node.js 18 the server aborts requests that take longer than five minutes to be fully received, which limits slow-request attacks."
+ },
+ {
+  "id": "q8a29ad2c074",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "What does the AbortSignal.any() static method do?",
+  "options": [
+   "Returns a signal that aborts when any of the given signals aborts",
+   "Aborts every pending operation in the process",
+   "Returns true if any signal has aborted",
+   "Creates a signal that never aborts"
+  ],
+  "answer": 0,
+  "explanation": "It is useful for combining a user cancellation signal with a timeout signal, such as AbortSignal.timeout()."
+ },
+ {
+  "id": "q85af3d75655",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Which API measures how much the event loop is delayed, for example by long synchronous work?",
+  "options": [
+   "util.inspect.loopLag()",
+   "process.hrtime.loopDelay()",
+   "os.loadavg()",
+   "perf_hooks.monitorEventLoopDelay()"
+  ],
+  "answer": 3,
+  "explanation": "monitorEventLoopDelay() samples loop delay into a histogram with percentiles such as p99."
+ },
+ {
+  "id": "q15c7e219ae8",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does util.promisify.custom allow?",
+  "options": [
+   "Converting promises back into callbacks",
+   "A function to specify exactly which promise-returning version util.promisify() should use",
+   "Running promises on a worker thread",
+   "Promisifying every function in a module at once"
+  ],
+  "answer": 1,
+  "explanation": "Functions whose callbacks do not follow the (err, value) pattern can define this symbol to promisify correctly."
+ },
+ {
+  "id": "qf0a5836c573",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Why can a closure stored in a long-lived object cause a memory leak?",
+  "options": [
+   "Closures are never garbage collected",
+   "Closures copy the entire heap",
+   "It keeps alive the variables it captures, which can reference large objects",
+   "Closures disable the garbage collector for their module"
+  ],
+  "answer": 2,
+  "explanation": "As long as the closure is reachable, everything it references from its scope stays reachable too."
+ },
+ {
+  "id": "qe2d8dfabae7",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does a heap snapshot from v8.writeHeapSnapshot() help diagnose?",
+  "options": [
+   "Which objects are retaining memory and why, for finding leaks",
+   "How long each HTTP request took",
+   "Which functions use the most CPU time",
+   "Which npm packages are outdated"
+  ],
+  "answer": 0,
+  "explanation": "Comparing snapshots taken over time reveals growing object types and their retainer chains."
+ }
+]

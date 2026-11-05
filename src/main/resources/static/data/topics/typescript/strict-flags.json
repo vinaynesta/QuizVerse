@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q438ad33b505",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With exactOptionalPropertyTypes enabled and `type T = { a?: number }`, what happens with `const t: T = { a: undefined };`?",
+  "options": [
+   "It compiles only under strictNullChecks off",
+   "It compiles and a is removed",
+   "It compiles",
+   "A compile error, because a may be omitted but not explicitly set to undefined"
+  ],
+  "answer": 3,
+  "explanation": "The flag distinguishes a missing property from one explicitly holding undefined."
+ },
+ {
+  "id": "q47a7d1e7aff",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With strictNullChecks disabled, what is true about null and undefined?",
+  "options": [
+   "They cannot be used at all",
+   "They become distinct types that must be declared explicitly",
+   "They are only assignable to any",
+   "They are assignable to every type"
+  ],
+  "answer": 3,
+  "explanation": "Without strictNullChecks, null and undefined are in the domain of every type."
+ },
+ {
+  "id": "qac5c2938fb5",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "Under `\"strict\": true` in TypeScript 5.x, what is the type of `e` in `try { } catch (e) { }`?",
+  "options": [
+   "unknown",
+   "any",
+   "never",
+   "Error"
+  ],
+  "answer": 0,
+  "explanation": "useUnknownInCatchVariables, part of strict, types catch variables as unknown."
+ },
+ {
+  "id": "qac65a06a1f7",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With noUncheckedIndexedAccess enabled, what is the type of `arr[0]` when `arr: string[]`?",
+  "options": [
+   "string",
+   "string | undefined",
+   "unknown",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "The flag adds undefined to element and index signature access because the index may be out of range."
+ },
+ {
+  "id": "qaff4b8f66d0",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "What does strictPropertyInitialization report?",
+  "options": [
+   "Constructors that call super twice",
+   "Class properties that are declared but not definitely assigned in the constructor",
+   "Variables used before declaration",
+   "Properties initialized with any"
+  ],
+  "answer": 1,
+  "explanation": "With strictNullChecks, it requires non-optional properties to be initialized or marked with !."
+ }
+]

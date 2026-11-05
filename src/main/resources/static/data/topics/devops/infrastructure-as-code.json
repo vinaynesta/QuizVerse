@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q2504459c237",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "What does terraform plan do?",
+  "options": [
+   "Applies changes to the real infrastructure",
+   "Shows the changes Terraform would make to reach the desired configuration, without applying them",
+   "Destroys all resources in the state file",
+   "Formats the .tf files"
+  ],
+  "answer": 1,
+  "explanation": "terraform plan computes and displays an execution plan; terraform apply is what makes the changes."
+ },
+ {
+  "id": "q31f0210c0e0",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "What is the purpose of Terraform state?",
+  "options": [
+   "It stores the source code for modules",
+   "It is a cache of Docker images",
+   "It holds encrypted passwords for the cloud provider",
+   "It maps configuration resources to real-world objects so Terraform knows what it manages"
+  ],
+  "answer": 3,
+  "explanation": "The state file records the real resource IDs and attributes that correspond to each resource block, which Terraform needs to plan changes."
+ },
+ {
+  "id": "q4f691bb884a",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "What does idempotent mean for an infrastructure-as-code run?",
+  "options": [
+   "It always deletes and recreates resources",
+   "Each run creates new resources with new names",
+   "It can only be run once per environment",
+   "Running it again with the same configuration makes no further changes once the desired state is reached"
+  ],
+  "answer": 3,
+  "explanation": "An idempotent apply converges on the declared state, so repeating it with no config changes results in no changes."
+ },
+ {
+  "id": "qc67c00a34d7",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "Why do teams store Terraform state in a remote backend that supports locking?",
+  "options": [
+   "The state is shared, and locking stops two concurrent applies from corrupting it",
+   "It makes terraform plan run offline",
+   "Remote state removes the need for providers",
+   "Locking encrypts the configuration files"
+  ],
+  "answer": 0,
+  "explanation": "A shared backend gives everyone the same state, and the lock serializes operations that write it."
+ }
+]

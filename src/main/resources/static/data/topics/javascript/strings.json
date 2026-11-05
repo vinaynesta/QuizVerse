@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q0dff4601c0e",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Which syntax creates a template literal that embeds a variable name?",
+  "options": [
+   "\"Hello ${name}\"",
+   "'Hello #{name}'",
+   "`Hello ${name}`",
+   "`Hello {{name}}`"
+  ],
+  "answer": 2,
+  "explanation": "Template literals use backticks and ${expression} for interpolation."
+ },
+ {
+  "id": "q747e275bf3b",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"a,b,c\".split(\",\") return?",
+  "options": [
+   "\"abc\"",
+   "[\"a\", \"b\", \"c\"]",
+   "[\"a,b,c\"]",
+   "[\"a\", \",\", \"b\", \",\", \"c\"]"
+  ],
+  "answer": 1,
+  "explanation": "split divides the string at each separator and returns an array of the pieces."
+ },
+ {
+  "id": "q8923a8300ff",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Strings in JavaScript are best described as:",
+  "options": [
+   "Mutable character arrays",
+   "Mutable objects",
+   "Linked lists of characters",
+   "Immutable primitive values"
+  ],
+  "answer": 3,
+  "explanation": "String methods always return new strings; the original string value is never changed."
+ },
+ {
+  "id": "q9212be9d47f",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"JavaScript\".toUpperCase() return?",
+  "options": [
+   "\"JAVASCRIPT\"",
+   "\"Javascript\"",
+   "\"javascript\"",
+   "\"JavaScript\""
+  ],
+  "answer": 0,
+  "explanation": "toUpperCase returns a new string with all characters converted to upper case."
+ }
+]

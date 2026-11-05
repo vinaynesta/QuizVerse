@@ -1,0 +1,272 @@
+[
+ {
+  "id": "q40e27b98ece",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which clause filters groups after aggregation has been computed?",
+  "options": [
+   "WHERE",
+   "GROUP BY",
+   "ORDER BY",
+   "HAVING"
+  ],
+  "answer": 3,
+  "explanation": "HAVING applies conditions to aggregated groups, for example HAVING COUNT(*) > 5."
+ },
+ {
+  "id": "q48e67423c75",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "What does GROUP BY dept do in a query that also uses COUNT(*)?",
+  "options": [
+   "Sorts the rows by dept without combining them",
+   "Removes the dept column from the result",
+   "Collects rows with the same dept into groups so COUNT(*) is computed per department",
+   "Counts the number of distinct columns in the table"
+  ],
+  "answer": 2,
+  "explanation": "GROUP BY combines rows sharing the grouping value, and aggregates then produce one result per group."
+ },
+ {
+  "id": "q6e49447c1d3",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which expression counts all rows in a table, including rows whose columns contain NULL?",
+  "options": [
+   "SUM(*)",
+   "COUNT(*)",
+   "AVG(*)",
+   "MAX(*)"
+  ],
+  "answer": 1,
+  "explanation": "COUNT(*) counts rows regardless of NULL values. SUM, AVG and MAX do not accept an asterisk."
+ },
+ {
+  "id": "q8056faa9a92",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which aggregate function returns the largest value in a column?",
+  "options": [
+   "MAX",
+   "TOP",
+   "SUM",
+   "GREATEST_ROW"
+  ],
+  "answer": 0,
+  "explanation": "MAX returns the highest non-NULL value in the group, and MIN returns the lowest."
+ },
+ {
+  "id": "qc6212bd7061",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "What does COUNT(column) NOT count?",
+  "options": [
+   "Duplicate values",
+   "Rows that match the WHERE clause",
+   "Rows with NULL in that column",
+   "Empty strings"
+  ],
+  "answer": 2,
+  "explanation": "COUNT(column) skips NULL values. It does count duplicates and empty strings, since those are not NULL."
+ },
+ {
+  "id": "qf25df3b3ab7",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which SQL function returns the arithmetic mean of a numeric column?",
+  "options": [
+   "MEAN",
+   "AVERAGE",
+   "MID",
+   "AVG"
+  ],
+  "answer": 3,
+  "explanation": "AVG is the standard aggregate function for the arithmetic mean of a numeric column."
+ },
+ {
+  "id": "q05d24ace592",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "What is the difference between WHERE and HAVING?",
+  "options": [
+   "WHERE filters rows before grouping, while HAVING filters groups after aggregation",
+   "They are interchangeable in every query",
+   "WHERE runs after GROUP BY, while HAVING runs before it",
+   "WHERE works only with COUNT, while HAVING works with any column"
+  ],
+  "answer": 0,
+  "explanation": "WHERE is evaluated on individual rows before aggregation. HAVING is evaluated on groups and can reference aggregate results."
+ },
+ {
+  "id": "q273bf296fb2",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "How does COUNT(DISTINCT col) treat NULL values?",
+  "options": [
+   "It counts NULL as one distinct value",
+   "It returns an error",
+   "It counts each NULL row separately",
+   "It ignores NULL values"
+  ],
+  "answer": 3,
+  "explanation": "All aggregate functions that take an argument ignore NULL inputs, and that includes the DISTINCT form of COUNT."
+ },
+ {
+  "id": "qb81360e497b",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "In PostgreSQL, what does COUNT(*) FILTER (WHERE status = 'paid') compute?",
+  "options": [
+   "The total row count, ignoring the filter",
+   "The number of distinct status values",
+   "The number of rows in each group whose status is 'paid'",
+   "The number of groups that contain a paid row"
+  ],
+  "answer": 2,
+  "explanation": "The FILTER clause restricts the rows that feed a single aggregate without affecting other aggregates in the query."
+ },
+ {
+  "id": "qcbebb7f2e99",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "Which PostgreSQL function concatenates values from many rows into one string with a separator?",
+  "options": [
+   "concat_ws",
+   "array_length",
+   "group_concat",
+   "string_agg"
+  ],
+  "answer": 3,
+  "explanation": "string_agg(name, ', ') joins values per group; MySQL's equivalent is GROUP_CONCAT."
+ },
+ {
+  "id": "qd95f727e9f1",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "How does AVG treat NULL values in a column in standard SQL?",
+  "options": [
+   "It treats them as zero",
+   "It ignores them and averages the non-NULL values",
+   "It returns NULL if any value is NULL",
+   "It treats them as the largest value"
+  ],
+  "answer": 1,
+  "explanation": "Aggregate functions other than COUNT(*) skip NULL inputs, so AVG divides by the count of non-NULL values."
+ },
+ {
+  "id": "qfbdcb894f15",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "In PostgreSQL, what happens when you run SELECT dept, name, COUNT(*) FROM emp GROUP BY dept?",
+  "options": [
+   "It returns one row per dept with an arbitrary name",
+   "It returns one row per employee",
+   "It fails with an error that name must appear in GROUP BY or inside an aggregate",
+   "It returns NULL for name in every group"
+  ],
+  "answer": 2,
+  "explanation": "PostgreSQL requires every non-aggregated select column to appear in GROUP BY. MySQL may accept this query only when ONLY_FULL_GROUP_BY is disabled."
+ },
+ {
+  "id": "q20cb2dfbcd7",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "What does SELECT COUNT(x), SUM(x) FROM t return when t has no rows?",
+  "options": [
+   "0 and NULL",
+   "0 and 0",
+   "NULL and NULL",
+   "NULL and 0"
+  ],
+  "answer": 0,
+  "explanation": "COUNT over an empty set returns 0, while SUM over an empty set returns NULL. This is a common surprise in reports."
+ },
+ {
+  "id": "q38fad813e11",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "Which PostgreSQL expression computes the median of column x?",
+  "options": [
+   "MEDIAN(x)",
+   "AVG(x) MEDIAN",
+   "percentile_cont(0.5) WITHIN GROUP (ORDER BY x)",
+   "PERCENTILE(x, 0.5)"
+  ],
+  "answer": 2,
+  "explanation": "percentile_cont is an ordered-set aggregate. Its 0.5 fraction gives the median, interpolating between values when needed."
+ },
+ {
+  "id": "q3d73cf0dd24",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "A column x contains 1, NULL and 3. What does SELECT AVG(x) return?",
+  "options": [
+   "1.33",
+   "2",
+   "4",
+   "NULL"
+  ],
+  "answer": 1,
+  "explanation": "AVG ignores the NULL and averages the two non-NULL values, (1 + 3) / 2 = 2, rather than dividing by three rows."
+ },
+ {
+  "id": "q72d987e76f5",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "In PostgreSQL, what does GROUP BY ROLLUP (region, city) add beyond GROUP BY region, city?",
+  "options": [
+   "A row for every possible region and city combination, including absent ones",
+   "Subtotal rows for each region and a grand total row",
+   "Only the grand total, replacing the detail rows",
+   "Running totals ordered by city"
+  ],
+  "answer": 1,
+  "explanation": "ROLLUP produces grouping sets (region, city), (region) and (), with NULLs in rolled-up columns."
+ },
+ {
+  "id": "q8d561cc02bd",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "What does SELECT COUNT(*) FROM orders GROUP BY status return when orders is empty?",
+  "options": [
+   "One row with 0",
+   "An error",
+   "One row with NULL",
+   "No rows"
+  ],
+  "answer": 3,
+  "explanation": "Grouping an empty input produces no groups, so no rows are returned. Without GROUP BY, the same query returns a single row with 0."
+ },
+ {
+  "id": "qe425eb1219f",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "A query LEFT JOINs departments to employees and computes COUNT(e.id) per department. What does a department with no employees show?",
+  "options": [
+   "1",
+   "NULL",
+   "0",
+   "No row for that department"
+  ],
+  "answer": 2,
+  "explanation": "The unmatched department row has NULL for e.id, and COUNT(e.id) skips NULLs, giving 0. COUNT(*) would give 1 for the same department."
+ }
+]

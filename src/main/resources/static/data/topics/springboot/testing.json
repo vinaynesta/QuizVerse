@@ -30,6 +30,21 @@
   "explanation": "MockMvc drives the DispatcherServlet with mock requests, while TestRestTemplate needs a running server."
  },
  {
+  "id": "qad4dae13c50",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "easy",
+  "question": "Which annotation loads the full application context for an integration test?",
+  "options": [
+   "@WebMvcTest",
+   "@DataJpaTest",
+   "@JsonTest",
+   "@SpringBootTest"
+  ],
+  "answer": 3,
+  "explanation": "@SpringBootTest bootstraps the complete application context, unlike slice annotations that load only part of it."
+ },
+ {
   "id": "qc946b8c39c1",
   "subject": "springboot",
   "topic": "testing",
@@ -118,6 +133,66 @@
   ],
   "answer": 2,
   "explanation": "RANDOM_PORT starts a real server; the chosen port can be injected with @LocalServerPort."
+ },
+ {
+  "id": "qdac6e361483",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "In Spring Boot 3.4+, which annotation wraps an existing bean in a Mockito spy inside the test context?",
+  "options": [
+   "@SpyBean",
+   "@MockitoSpyBean",
+   "@InjectMocks",
+   "@MockitoBean"
+  ],
+  "answer": 1,
+  "explanation": "Spring Framework 6.2's @MockitoSpyBean replaces Spring Boot's deprecated @SpyBean."
+ },
+ {
+  "id": "qf052f5700aa",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What does the @JsonTest slice set up?",
+  "options": [
+   "An embedded HTTP server for JSON endpoints",
+   "Jackson serialization support, including JacksonTester, without the full context",
+   "Contract tests for JSON schemas",
+   "A JSON-based in-memory database"
+  ],
+  "answer": 1,
+  "explanation": "@JsonTest auto-configures the ObjectMapper and JSON testers so you can test serialization in isolation."
+ },
+ {
+  "id": "q0fb0a2e7ba0",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "Why can heavy use of @DirtiesContext make a test suite much slower?",
+  "options": [
+   "It closes the context and removes it from the cache, forcing the next tests to build a new one",
+   "It disables lazy initialization",
+   "It forces the use of a real HTTP server",
+   "It runs every test twice"
+  ],
+  "answer": 0,
+  "explanation": "The TestContext framework normally reuses cached contexts, and @DirtiesContext throws that reuse away."
+ },
+ {
+  "id": "q1287ece1b33",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "In a test class, how does a nested static @TestConfiguration class differ from a nested static @Configuration class?",
+  "options": [
+   "They behave identically",
+   "@TestConfiguration adds to the application's configuration, while a nested @Configuration replaces it",
+   "@TestConfiguration replaces the main configuration, while @Configuration adds to it",
+   "@TestConfiguration only works with @WebMvcTest"
+  ],
+  "answer": 1,
+  "explanation": "A nested @Configuration stops Spring Boot from finding the @SpringBootConfiguration, whereas @TestConfiguration is additive."
  },
  {
   "id": "q96f411bee80",

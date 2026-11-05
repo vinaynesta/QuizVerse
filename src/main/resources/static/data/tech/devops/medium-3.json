@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0456de74bed",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What does a Kubernetes Service provide?",
+  "options": [
+   "A stable network endpoint and load balancing for pods selected by labels",
+   "A way to schedule pods to specific nodes only",
+   "A container image registry",
+   "Persistent storage for pods"
+  ],
+  "answer": 0,
+  "explanation": "A Service gives a stable virtual IP and DNS name and routes traffic to the healthy pods that match its selector."
+ },
+ {
+  "id": "qd421a0d7a52",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "Which bash variable holds the exit status of the last command that ran in the foreground?",
+  "options": [
+   "$?",
+   "$!",
+   "$#",
+   "$@"
+  ],
+  "answer": 0,
+  "explanation": "$? expands to the exit status of the most recent foreground command, where 0 means success."
+ },
+ {
+  "id": "qd3613213281",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Which statement best describes git rebase?",
+  "options": [
+   "It replays commits from the current branch onto a new base, creating new commit objects",
+   "It creates a merge commit joining two histories",
+   "It copies a whole repository into a new directory",
+   "It deletes commits that are not on the remote"
+  ],
+  "answer": 0,
+  "explanation": "Rebase reapplies each commit on top of a new base; the rewritten commits get new hashes."
+ },
+ {
+  "id": "q9cc1bae172d",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "Which command finds all files under /var/log whose names end in .log?",
+  "options": [
+   "grep -r '*.log' /var/log",
+   "find /var/log -name '*.log'",
+   "ls /var/log/*.log --recursive",
+   "which *.log /var/log"
+  ],
+  "answer": 1,
+  "explanation": "find walks the directory tree and -name matches file names against the glob pattern."
+ },
+ {
+  "id": "q09044e92a34",
+  "subject": "devops",
+  "topic": "monitoring",
+  "level": "medium",
+  "question": "In Prometheus, what does a counter metric represent?",
+  "options": [
+   "A value that can go up and down, like memory use",
+   "A text label",
+   "A histogram of request latencies",
+   "A cumulative value that only increases (except on reset)"
+  ],
+  "answer": 3,
+  "explanation": "Counters such as total requests only go up, and rate() is used to turn them into per-second rates."
+ },
+ {
+  "id": "q7b6c7be5468",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command shows which commit and author last modified each line of a file?",
+  "options": [
+   "git log --who <file>",
+   "git blame <file>",
+   "git annotate-all <file>",
+   "git show --author <file>"
+  ],
+  "answer": 1,
+  "explanation": "git blame annotates each line with the commit that last changed it."
+ },
+ {
+  "id": "qc15b9260e00",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "What does the pipe operator | do in a shell?",
+  "options": [
+   "Sends the standard output of one command to the standard input of the next",
+   "Runs commands in the background",
+   "Redirects error messages to a file",
+   "Creates a symbolic link"
+  ],
+  "answer": 0,
+  "explanation": "A pipe connects stdout of the left command to stdin of the right command."
+ },
+ {
+  "id": "q7f2458158b6",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command creates an annotated tag v1.2.0 with a release message?",
+  "options": [
+   "git release v1.2.0",
+   "git commit --tag v1.2.0",
+   "git tag -a v1.2.0 -m \"Release 1.2.0\"",
+   "git branch v1.2.0 --tag"
+  ],
+  "answer": 2,
+  "explanation": "git tag -a creates an annotated tag object that stores the tagger, date, and message."
+ },
+ {
+  "id": "qbb72ccfa34c",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "medium",
+  "question": "What lets containers on the same user-defined bridge network reach each other by container name?",
+  "options": [
+   "IP addresses hardcoded in the application",
+   "Docker's embedded DNS server, which resolves container names",
+   "Manual edits to each container's /etc/hosts",
+   "Environment variables only"
+  ],
+  "answer": 1,
+  "explanation": "User-defined bridge networks run an embedded DNS server, so containers can resolve each other by name. The default bridge does not provide this."
+ },
+ {
+  "id": "q28c7f284b11",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command shows the changes introduced by a single commit?",
+  "options": [
+   "git diff HEAD",
+   "git show <commit>",
+   "git log --only",
+   "git status <commit>"
+  ],
+  "answer": 1,
+  "explanation": "git show <commit> displays the commit metadata along with the diff it introduced."
+ }
+]

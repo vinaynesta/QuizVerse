@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q74017a4ad09",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "In command > out.log 2>&1, what does 2>&1 do?",
+  "options": [
+   "Runs the command twice",
+   "Redirects stderr to wherever stdout currently points, so both go to out.log",
+   "Appends to out.log instead of overwriting it",
+   "Sends stdout to stderr"
+  ],
+  "answer": 1,
+  "explanation": "File descriptor 2 (stderr) is duplicated from descriptor 1 (stdout) after stdout was redirected to the file."
+ },
+ {
+  "id": "qcadbf63e431",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Why is the exec form CMD [\"node\", \"server.js\"] usually preferred over the shell form CMD node server.js?",
+  "options": [
+   "The process runs directly as PID 1 and receives signals such as SIGTERM, instead of being wrapped in /bin/sh -c",
+   "Shell form cannot read environment variables",
+   "Exec form makes the build cache more effective",
+   "Exec form produces smaller images"
+  ],
+  "answer": 0,
+  "explanation": "With shell form, the shell becomes PID 1 and may not forward stop signals to the app."
+ },
+ {
+  "id": "q301cbc0af11",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What is the default type of a Kubernetes Service when none is specified?",
+  "options": [
+   "NodePort",
+   "ClusterIP",
+   "LoadBalancer",
+   "ExternalName"
+  ],
+  "answer": 1,
+  "explanation": "ClusterIP exposes the Service on an internal cluster IP reachable only from inside the cluster."
+ },
+ {
+  "id": "q2905e038c7f",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "What does git log -S 'someFunction' find?",
+  "options": [
+   "Commits signed by that author",
+   "Commits whose message contains that string",
+   "Commits that changed the number of occurrences of that string",
+   "Commits on branches whose name contains that string"
+  ],
+  "answer": 2,
+  "explanation": "The pickaxe option -S finds commits that added or removed occurrences of the string; --grep searches messages."
+ },
+ {
+  "id": "qe01c1191890",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command searches the tracked files of the repository for a text pattern?",
+  "options": [
+   "git find <pattern>",
+   "git grep <pattern>",
+   "git search <pattern>",
+   "git log --files <pattern>"
+  ],
+  "answer": 1,
+  "explanation": "git grep searches tracked files in the working tree, or a given commit, for the pattern."
+ },
+ {
+  "id": "qb5e9bb6e4f6",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which Kubernetes object gives each pod a stable name and its own persistent volume, as databases often need?",
+  "options": [
+   "Deployment",
+   "DaemonSet",
+   "StatefulSet",
+   "CronJob"
+  ],
+  "answer": 2,
+  "explanation": "StatefulSet pods get ordinal names like db-0 and per-pod PersistentVolumeClaims from volumeClaimTemplates."
+ },
+ {
+  "id": "q3b1c29c5b06",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "Which file does Docker Compose read automatically to supply values for variables such as ${TAG} in the Compose file?",
+  "options": [
+   "Dockerfile",
+   "A .env file in the project directory",
+   ".dockerignore",
+   "compose.lock"
+  ],
+  "answer": 1,
+  "explanation": "Compose reads .env from the project directory for variable interpolation."
+ },
+ {
+  "id": "q04d548d8fc6",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "When a Dockerfile defines both ENTRYPOINT and CMD in exec form, how are they combined?",
+  "options": [
+   "ENTRYPOINT sets the executable, and CMD supplies default arguments that docker run arguments can replace",
+   "Only the instruction written last takes effect",
+   "CMD runs first, then ENTRYPOINT",
+   "ENTRYPOINT runs at build time and CMD runs at start time"
+  ],
+  "answer": 0,
+  "explanation": "Arguments passed to docker run replace CMD and are appended to the ENTRYPOINT."
+ },
+ {
+  "id": "qbc1502ee0a0",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "What is a matrix build in a CI pipeline?",
+  "options": [
+   "A build that compiles only changed files",
+   "A pipeline that deploys to several environments at once",
+   "A job that runs only when all other jobs fail",
+   "Running the same job across combinations of parameters, such as OS and language versions"
+  ],
+  "answer": 3,
+  "explanation": "A matrix expands one job definition into one run per parameter combination."
+ },
+ {
+  "id": "q9d700721dcf",
+  "subject": "devops",
+  "topic": "monitoring",
+  "level": "medium",
+  "question": "Which Prometheus metric type represents a value that can go up and down, such as current memory usage?",
+  "options": [
+   "Counter",
+   "Histogram",
+   "Summary",
+   "Gauge"
+  ],
+  "answer": 3,
+  "explanation": "A gauge is a single value that can increase or decrease; a counter only increases."
+ }
+]

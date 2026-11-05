@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5ab0460ba39",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "easy",
+  "question": "Which method creates a Buffer from a string?",
+  "options": [
+   "Buffer.create()",
+   "new Buffer.String()",
+   "Buffer.from()",
+   "Buffer.parse()"
+  ],
+  "answer": 2,
+  "explanation": "Buffer.from() is the safe modern constructor for creating a Buffer from a string, array, or other buffer; the bare new Buffer() form is deprecated."
+ },
+ {
+  "id": "qf68e5b7d1d9",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which method immediately terminates the Node.js process with a given exit code?",
+  "options": [
+   "process.end()",
+   "process.stop()",
+   "process.halt()",
+   "process.exit()"
+  ],
+  "answer": 3,
+  "explanation": "process.exit(code) stops the process right away, so pending asynchronous work may be abandoned."
+ },
+ {
+  "id": "q74c68361f56",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command installs a package as a devDependency?",
+  "options": [
+   "npm install --global <pkg>",
+   "npm publish --dev <pkg>",
+   "npm install --save-prod <pkg>",
+   "npm install --save-dev <pkg>"
+  ],
+  "answer": 3,
+  "explanation": "The --save-dev (or -D) flag records the package under devDependencies in package.json."
+ },
+ {
+  "id": "qa89b525fd87",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Where are npm scripts such as start and test defined?",
+  "options": [
+   "The main field of package.json",
+   "The engines field of package.json",
+   "The .npmrc file",
+   "The scripts field of package.json"
+  ],
+  "answer": 3,
+  "explanation": "npm reads runnable commands from the scripts object in package.json."
+ },
+ {
+  "id": "q8366e47d4ca",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "What is the recommended way to handle a rejected promise in async/await code?",
+  "options": [
+   "Wrap the await in try/catch",
+   "Wrap it in setTimeout",
+   "Call process.exit() immediately",
+   "Ignore it with the void operator"
+  ],
+  "answer": 0,
+  "explanation": "A rejected promise throws at the await expression, so try/catch lets you handle it locally."
+ },
+ {
+  "id": "q21c9c99dde0",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "easy",
+  "question": "Which method removes a specific listener from an EventEmitter?",
+  "options": [
+   "off() or removeListener()",
+   "delete()",
+   "unbind()",
+   "stop()"
+  ],
+  "answer": 0,
+  "explanation": "off() is an alias of removeListener() and removes the listener that was previously registered with the same function reference."
+ },
+ {
+  "id": "q5299f684e5f",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which file records the exact resolved versions of all installed dependencies?",
+  "options": [
+   ".npmrc",
+   "package.json",
+   "node_modules/.cache",
+   "package-lock.json"
+  ],
+  "answer": 3,
+  "explanation": "package-lock.json stores the exact resolved version and integrity hash of every installed package."
+ },
+ {
+  "id": "q6b9fd71c7a0",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which path module function returns the extension of a file path, such as '.js'?",
+  "options": [
+   "path.extension()",
+   "path.ext()",
+   "path.extname()",
+   "path.getExt()"
+  ],
+  "answer": 2,
+  "explanation": "path.extname('app.js') returns '.js'; the module has no extension() or ext() function."
+ },
+ {
+  "id": "qd49f91aa9da",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "What does readable.pipe(writable) do?",
+  "options": [
+   "Connects the readable to the writable and manages the flow of data between them",
+   "Clones the readable stream",
+   "Closes the readable stream immediately",
+   "Converts the stream into a single Buffer"
+  ],
+  "answer": 0,
+  "explanation": "pipe() forwards chunks from the readable to the writable and pauses the source when the destination is full."
+ },
+ {
+  "id": "qe68ce122cb3",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which field in package.json defines the entry point loaded when another file calls require() on the package?",
+  "options": [
+   "entry",
+   "main",
+   "start",
+   "index"
+  ],
+  "answer": 1,
+  "explanation": "The main field names the file that require() loads for the package; scripts.start is a different thing."
+ }
+]

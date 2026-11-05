@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0582caf297e",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which annotation marks a class as a Spring-managed component that component scanning can discover?",
+  "options": [
+   "@Configurable",
+   "@Entity",
+   "@Component",
+   "@Value"
+  ],
+  "answer": 2,
+  "explanation": "@Component (and stereotypes like @Service and @Repository) registers the class as a bean when it is found by component scanning."
+ },
+ {
   "id": "q0e2af6575d4",
   "subject": "springboot",
   "topic": "core-di",
@@ -30,6 +45,21 @@
   "explanation": "If a bean class has a single constructor, Spring uses it for injection automatically without @Autowired."
  },
  {
+  "id": "q4d062db6529",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "What does @Value(\"${app.name}\") on a field do?",
+  "options": [
+   "Creates a bean named app.name",
+   "Injects the value of the app.name property",
+   "Validates that the field is not null",
+   "Exposes the field as a REST parameter"
+  ],
+  "answer": 1,
+  "explanation": "@Value resolves the ${...} placeholder against the Environment and injects the resulting property value."
+ },
+ {
   "id": "q8a1bf0e8dcf",
   "subject": "springboot",
   "topic": "core-di",
@@ -43,6 +73,21 @@
   ],
   "answer": 3,
   "explanation": "Unless specified otherwise, the container creates one shared instance per bean definition, which is singleton scope."
+ },
+ {
+  "id": "qa5ed001edd0",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which annotation declares a method inside a @Configuration class whose return value becomes a bean?",
+  "options": [
+   "@Bean",
+   "@Autowired",
+   "@Import",
+   "@Component"
+  ],
+  "answer": 0,
+  "explanation": "A @Bean method is called by Spring and its returned object is registered in the application context."
  },
  {
   "id": "qbe93f10925a",
@@ -60,6 +105,21 @@
   "explanation": "Constructor injection makes dependencies explicit, allows final fields, and guarantees the object is fully initialized."
  },
  {
+  "id": "q193ba28b04d",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "Since Spring Boot 2.6, what happens by default when two beans depend on each other in a cycle?",
+  "options": [
+   "Spring resolves the cycle silently with proxies",
+   "Startup fails because circular references are prohibited by default",
+   "The second bean is injected as null",
+   "Spring retries creation until it succeeds"
+  ],
+  "answer": 1,
+  "explanation": "spring.main.allow-circular-references defaults to false, so cycles cause a startup failure unless you opt back in."
+ },
+ {
   "id": "q2112c29efd4",
   "subject": "springboot",
   "topic": "core-di",
@@ -73,6 +133,21 @@
   ],
   "answer": 3,
   "explanation": "Spring injects all matching beans into a collection-typed injection point, ordered by @Order or Ordered when present."
+ },
+ {
+  "id": "q61e5ebb3727",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "What does spring.main.lazy-initialization=true do?",
+  "options": [
+   "Creates beans when they are first needed rather than at startup",
+   "Makes all beans prototype-scoped",
+   "Delays the web server start until the first request",
+   "Disables auto-configuration until requested"
+  ],
+  "answer": 0,
+  "explanation": "Lazy initialization speeds up startup but can hide configuration problems until a bean is first used."
  },
  {
   "id": "qa3de1aca290",
@@ -103,6 +178,21 @@
   ],
   "answer": 3,
   "explanation": "An explicit @Qualifier at the injection point takes precedence over @Primary."
+ },
+ {
+  "id": "qc3dec2fb2b0",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "A constructor needs a DataSource, two DataSource beans exist, and neither is @Primary nor qualified. What happens?",
+  "options": [
+   "Spring injects the first bean it registered",
+   "Spring injects null",
+   "Spring creates a third DataSource",
+   "Startup fails with NoUniqueBeanDefinitionException"
+  ],
+  "answer": 3,
+  "explanation": "With multiple candidates and no way to choose, Spring cannot resolve the dependency and fails at startup."
  },
  {
   "id": "qe85ff11dd33",
@@ -150,6 +240,21 @@
   "explanation": "Injection happens once; use ObjectProvider, @Lookup or a scoped proxy to get a new prototype each time."
  },
  {
+  "id": "q75aa9ad4ee3",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "When circular references are allowed, why can a cycle between two singletons be resolved with setter or field injection but not with constructor injection?",
+  "options": [
+   "Constructor injection disables singleton caching",
+   "Setter injection creates a copy of each bean",
+   "Constructor parameters are resolved in a separate context",
+   "Spring can expose an early reference to a partially created bean only after it has been instantiated, which a constructor cycle never reaches"
+  ],
+  "answer": 3,
+  "explanation": "With setter or field injection, the bean is instantiated first and an early reference is cached; with constructors neither bean can be instantiated."
+ },
+ {
   "id": "q9a984a387a2",
   "subject": "springboot",
   "topic": "core-di",
@@ -163,6 +268,21 @@
   ],
   "answer": 2,
   "explanation": "Annotation callbacks run first, then InitializingBean, then the init method declared on the bean definition."
+ },
+ {
+  "id": "qaf0e87b5a20",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "Why should a @Bean method returning a BeanFactoryPostProcessor be declared static?",
+  "options": [
+   "So Spring can call it without instantiating the configuration class early, which would skip @Autowired and @Value processing on it",
+   "So the bean becomes prototype-scoped",
+   "Because static methods are proxied by CGLIB",
+   "Because non-static @Bean methods cannot return interfaces"
+  ],
+  "answer": 0,
+  "explanation": "BeanFactoryPostProcessors are created very early, so a non-static method forces premature creation of its enclosing configuration bean."
  },
  {
   "id": "qb6d296726e4",

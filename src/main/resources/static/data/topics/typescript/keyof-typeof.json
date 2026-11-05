@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q27d46896c5d",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "What is `keyof { a: number; b: string }`?",
+  "options": [
+   "number | string",
+   "{ a: \"a\"; b: \"b\" }",
+   "\"a\" | \"b\"",
+   "[\"a\", \"b\"]"
+  ],
+  "answer": 2,
+  "explanation": "keyof produces a union of the property names of an object type."
+ },
+ {
+  "id": "q8d940018ee0",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "Given `const colors = { red: \"#f00\", blue: \"#00f\" };`, what is `keyof typeof colors`?",
+  "options": [
+   "string",
+   "\"red\" | \"blue\"",
+   "{ red: string; blue: string }",
+   "\"#f00\" | \"#00f\""
+  ],
+  "answer": 1,
+  "explanation": "typeof gets the object's type and keyof then extracts its property names."
+ },
+ {
+  "id": "qcb7ac6e74ee",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "Given `const config = { port: 80, host: \"x\" };`, what does `type C = typeof config;` produce?",
+  "options": [
+   "{ port: 80; host: \"x\" }",
+   "\"object\"",
+   "object",
+   "{ port: number; host: string }"
+  ],
+  "answer": 3,
+  "explanation": "typeof in a type position captures the inferred type of a value, with widened literals for mutable properties."
+ }
+]

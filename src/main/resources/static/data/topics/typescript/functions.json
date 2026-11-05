@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q131774f1d2c",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "How do you declare an optional parameter `x` of type string?",
+  "options": [
+   "function f(x: string?) {}",
+   "function f(x: string = optional) {}",
+   "function f(x?: string) {}",
+   "function f(optional x: string) {}"
+  ],
+  "answer": 2,
+  "explanation": "A ? after the parameter name makes it optional; it must come after required parameters."
+ },
+ {
+  "id": "q34d782a54a8",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "In `function greet(name = \"World\") {}`, what type is inferred for `name`?",
+  "options": [
+   "any",
+   "string",
+   "\"World\"",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "A default value lets TypeScript infer the parameter type, widened to string."
+ },
+ {
+  "id": "q683ab45571f",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which declares a type for functions that take a number and return a string?",
+  "options": [
+   "type Fn = (n: number) => string;",
+   "type Fn = function(number): string;",
+   "type Fn = Function<number, string>;",
+   "type Fn = (number) -> string;"
+  ],
+  "answer": 0,
+  "explanation": "Function types use arrow syntax with named parameters: (params) => ReturnType."
+ },
+ {
+  "id": "q7f584741137",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which signature accepts any number of numeric arguments?",
+  "options": [
+   "function sum(nums: ...number) {}",
+   "function sum(nums...: number) {}",
+   "function sum(...nums: number[]) {}",
+   "function sum(*nums: number) {}"
+  ],
+  "answer": 2,
+  "explanation": "Rest parameters use ... before the name and are typed as an array."
+ },
+ {
+  "id": "qd5e2b6839b2",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which signature correctly annotates both parameters and the return type?",
+  "options": [
+   "function add(a: number, b: number) => number",
+   "function add(a: number, b: number): number",
+   "function add(a, b): number(a, b)",
+   "function add(number a, number b): number"
+  ],
+  "answer": 1,
+  "explanation": "Parameters are annotated as name: Type and the return type follows the parameter list after a colon."
+ }
+]

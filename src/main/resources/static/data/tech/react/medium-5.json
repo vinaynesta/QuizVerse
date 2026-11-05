@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q50c6e4f89b2",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "When is wrapping a calculation in useMemo usually worthwhile?",
+  "options": [
+   "Always, for every value",
+   "Only for string concatenation",
+   "When the calculation is noticeably expensive or its result is passed to memoized children",
+   "Never, as it slows every render"
+  ],
+  "answer": 2,
+  "explanation": "useMemo adds overhead, so it pays off for slow calculations or to keep referential equality for memoized children."
+ },
+ {
+  "id": "qc036b258b7a",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "What is useImperativeHandle used for?",
+  "options": [
+   "Forcing a component to re-render",
+   "Running code before the browser paints",
+   "Customizing the value a parent receives through a ref to your component",
+   "Reading context without a provider"
+  ],
+  "answer": 2,
+  "explanation": "It lets a component expose a limited set of methods like focus() instead of the raw DOM node."
+ },
+ {
+  "id": "q9620bcc401f",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "Why do components often combine useReducer with context?",
+  "options": [
+   "Because useReducer cannot work without context",
+   "To make state persist across page reloads",
+   "To keep complex state in one place and let deep components read it and dispatch actions without prop drilling",
+   "To avoid re-renders entirely"
+  ],
+  "answer": 2,
+  "explanation": "The reducer centralizes update logic while context makes state and dispatch available anywhere below the provider."
+ },
+ {
+  "id": "qde16cc912af",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What does the second argument to memo(Component, arePropsEqual) do?",
+  "options": [
+   "Provides a custom comparison that returns true when a re-render can be skipped",
+   "Lists the props that should trigger renders",
+   "Sets a cache timeout",
+   "Marks props as required"
+  ],
+  "answer": 0,
+  "explanation": "By default memo compares props shallowly; the custom function replaces that comparison."
+ },
+ {
+  "id": "qf34c38eae86",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "Where must the key go when mapping items to Fragments that each render two elements?",
+  "options": [
+   "On the first child inside the short <></> syntax",
+   "On both children",
+   "On the Fragment, using the explicit <Fragment key={id}> syntax",
+   "Keys are not needed for Fragments"
+  ],
+  "answer": 2,
+  "explanation": "The short <></> syntax cannot take a key, so use <Fragment key={...}> when the Fragment is the list item."
+ },
+ {
+  "id": "qc92373dea49",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "medium",
+  "question": "What is a good reason to keep state as minimal as possible?",
+  "options": [
+   "Values that can be computed from props or other state should be computed during render to avoid getting out of sync",
+   "Minimal state disables re-renders",
+   "useState is slow for strings",
+   "React limits each component to three state variables"
+  ],
+  "answer": 0,
+  "explanation": "Redundant state must be kept in sync manually, which is a common source of bugs."
+ },
+ {
+  "id": "q02f62ebc17e",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "What is an Error Boundary?",
+  "options": [
+   "A browser API for uncaught promise errors",
+   "A hook that wraps fetch calls in try/catch",
+   "A Strict Mode warning",
+   "A component that catches render errors in its subtree and shows fallback UI"
+  ],
+  "answer": 3,
+  "explanation": "Error boundaries are class components with getDerivedStateFromError or componentDidCatch; they do not catch errors in event handlers."
+ },
+ {
+  "id": "q61ee6f2cd25",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "medium",
+  "question": "Two components of the same type render at the same position in the tree across renders. What happens to the state?",
+  "options": [
+   "React always resets the state",
+   "React keeps the state because it sees the same component at the same position",
+   "React copies the state to a new instance",
+   "React swaps state with the sibling component"
+  ],
+  "answer": 1,
+  "explanation": "State is tied to the position in the tree; it persists while the same type renders in the same place."
+ },
+ {
+  "id": "q75b9e27a8ed",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "How do you render a component whose type is chosen at runtime, such as const Icon = icons[name]?",
+  "options": [
+   "Wrap the name in a string, like <'Icon' />",
+   "Render <icons[name] /> directly",
+   "Call React.render(icons[name])",
+   "Assign it to a capitalized variable and render <Icon />"
+  ],
+  "answer": 3,
+  "explanation": "JSX requires a capitalized identifier for component types, so put the dynamic type in a capitalized variable first."
+ },
+ {
+  "id": "qeabd886c544",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "What does dangerouslySetInnerHTML={{ __html: html }} do?",
+  "options": [
+   "Renders the HTML as escaped text",
+   "Sanitizes the HTML before inserting it",
+   "Converts the HTML into React elements safely",
+   "Inserts the raw HTML string without escaping it, risking XSS"
+  ],
+  "answer": 3,
+  "explanation": "React normally escapes text, and this prop bypasses that, so the HTML must come from a trusted or sanitized source."
+ }
+]

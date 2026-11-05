@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf1556335280",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "A pod stays Pending with the event 'Insufficient memory'. What is the most likely cause?",
+  "options": [
+   "The image failed to pull",
+   "The liveness probe failed",
+   "The Service has no endpoints",
+   "The scheduler found no node with enough free allocatable memory for the pod's requests"
+  ],
+  "answer": 3,
+  "explanation": "A Pending pod has not been bound to a node yet, and the scheduler reports insufficient resources when no node fits its memory request."
+ },
+ {
+  "id": "qd083114a41f",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "In a blue-green deployment, what happens at cutover?",
+  "options": [
+   "Pods are replaced one at a time",
+   "Traffic is switched from the blue environment to the fully running green environment",
+   "The blue environment is deleted before the green one starts",
+   "The database schema is rolled back"
+  ],
+  "answer": 1,
+  "explanation": "Both environments run side by side, and the router or load balancer switches traffic to green in one step."
+ },
+ {
+  "id": "q4ed1d67a395",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What does a readiness probe failure cause?",
+  "options": [
+   "The pod is removed from Service endpoints until it passes again",
+   "Nothing; readiness only writes logs",
+   "The container is restarted",
+   "The pod is deleted and recreated on another node"
+  ],
+  "answer": 0,
+  "explanation": "Readiness controls traffic: a not-ready pod stays running but receives no traffic from Services."
+ },
+ {
+  "id": "q5a79b075221",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "Which fields does a Git commit object record?",
+  "options": [
+   "A list of branch names",
+   "Only a diff against its parent",
+   "A tree hash, parent commit hash(es), author, committer, and message",
+   "A compressed copy of the working tree"
+  ],
+  "answer": 2,
+  "explanation": "A commit points to a root tree snapshot and its parent commits, plus identity, timestamps, and the message."
+ },
+ {
+  "id": "q665a57c7596",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "Where does Git store the reflog data for HEAD and each branch?",
+  "options": [
+   "In the .gitignore file",
+   "In the index file only",
+   "In .git/logs/ for HEAD and each ref",
+   "In the packfiles"
+  ],
+  "answer": 2,
+  "explanation": "Reflogs are plain files under .git/logs, one per reference, and are local to your clone."
+ },
+ {
+  "id": "q51548c2d00f",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "Why does a merge commit have more than one parent?",
+  "options": [
+   "It means the commit contains two trees",
+   "It records that the histories of two lines of development were combined",
+   "It was created by a rebase",
+   "It marks an annotated tag"
+  ],
+  "answer": 1,
+  "explanation": "Each parent is a commit that was joined into the merge, which is how Git records the combined history."
+ },
+ {
+  "id": "q4381a19bbce",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "Why use a startupProbe?",
+  "options": [
+   "To hold off liveness and readiness checks until a slow-starting app is up, so it is not killed prematurely",
+   "To check the health of the node",
+   "To run one-time initialization scripts",
+   "To replace readiness checks entirely"
+  ],
+  "answer": 0,
+  "explanation": "While a startup probe has not succeeded, liveness and readiness probes are disabled, which protects slow-booting apps from restarts."
+ },
+ {
+  "id": "q48e4f0ec2b8",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "In a multi-stage build, what does COPY --from=builder do?",
+  "options": [
+   "Copies files from the host into the builder stage",
+   "Copies files from the stage named builder into the current stage",
+   "Copies an image from the registry into the current stage",
+   "Copies the build history of the builder stage"
+  ],
+  "answer": 1,
+  "explanation": "--from refers to a previous build stage by name or index and copies files out of it."
+ },
+ {
+  "id": "q0894b75fc43",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "What does a blob object store?",
+  "options": [
+   "Commit metadata such as author and message",
+   "Directory entries and their names",
+   "File contents, without the file name or path",
+   "Reference names such as branch names"
+  ],
+  "answer": 2,
+  "explanation": "Blobs hold only the content of a file; names and paths are stored in the tree objects that point to the blob."
+ },
+ {
+  "id": "q8bf339b3fb9",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What is the effect of a PodDisruptionBudget?",
+  "options": [
+   "It limits the memory each pod can use",
+   "It limits voluntary disruptions, such as node drains, so a minimum number of pods stay available",
+   "It prevents pods from being scheduled at all",
+   "It restarts pods whenever a node is upgraded"
+  ],
+  "answer": 1,
+  "explanation": "A PDB constrains voluntary evictions, but it does not stop involuntary failures such as node crashes."
+ }
+]

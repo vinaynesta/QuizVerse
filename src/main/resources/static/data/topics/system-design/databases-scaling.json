@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q0f1d9f8de4b",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is a hot partition (hot shard)?",
+  "options": [
+   "A shard that stores only cached data",
+   "A shard receiving a disproportionate share of traffic, often due to a skewed key",
+   "A shard that was recently added",
+   "A shard located in the hottest data center"
+  ],
+  "answer": 1,
+  "explanation": "Skewed keys, such as a celebrity's user ID, concentrate load on one shard."
+ },
+ {
+  "id": "q20fb4061834",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is connection pooling?",
+  "options": [
+   "Sharding a table across connections",
+   "Combining several databases into one",
+   "Reusing a set of open database connections across requests instead of opening a new one each time",
+   "Caching query results in the client"
+  ],
+  "answer": 2,
+  "explanation": "Opening connections is expensive, and pools also cap how many connections hit the database."
+ },
+ {
+  "id": "q3dff1ab6f31",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is denormalization?",
+  "options": [
+   "Storing redundant copies of data to avoid expensive joins on reads",
+   "Removing all indexes",
+   "Encrypting duplicated columns",
+   "Splitting tables into smaller normalized tables"
+  ],
+  "answer": 0,
+  "explanation": "Denormalization trades extra storage and harder writes for faster reads."
+ },
+ {
+  "id": "q69a52c7c4de",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "Why does consistent hashing reduce data movement compared with hash(key) mod N?",
+  "options": [
+   "It guarantees strict global ordering of keys across nodes",
+   "Adding or removing a node remaps only a small fraction of keys instead of nearly all of them",
+   "It places every key on every node",
+   "It eliminates the need for replication"
+  ],
+  "answer": 1,
+  "explanation": "With mod N, changing N reshuffles most keys; on a hash ring only keys adjacent to the changed node move."
+ },
+ {
+  "id": "q8fbb9ab5eae",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "A user saves a profile change, then immediately reads from a replica and sees the old value. What anomaly is this?",
+  "options": [
+   "Split brain",
+   "Write skew",
+   "A read-your-writes violation caused by replication lag",
+   "Cache penetration"
+  ],
+  "answer": 2,
+  "explanation": "The primary acknowledged the write, but the lagging replica has not yet applied it."
+ },
+ {
+  "id": "qbee72b75160",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What does a covering index allow a database to do?",
+  "options": [
+   "Store a table in multiple regions",
+   "Lock fewer rows during writes",
+   "Skip writing to the transaction log",
+   "Answer a query entirely from the index without reading the table rows"
+  ],
+  "answer": 3,
+  "explanation": "If the index contains every column a query needs, the extra lookup into the table is avoided."
+ },
+ {
+  "id": "qdeaa49df1dc",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is the main tradeoff of hash-based sharding compared with range-based sharding?",
+  "options": [
+   "Range queries become faster while writes concentrate on one shard",
+   "Keys spread evenly, but range scans must query many shards",
+   "Adding shards never requires moving any data",
+   "Joins become local to a single shard automatically"
+  ],
+  "answer": 1,
+  "explanation": "Hashing destroys key ordering, so range queries touch many shards, while range sharding risks hotspots."
+ },
+ {
+  "id": "qf9c08006def",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is the core challenge of a transaction that spans multiple shards?",
+  "options": [
+   "Each shard requires a different SQL dialect",
+   "Shards are not allowed to store more than one table",
+   "Coordinating an atomic commit across shards, typically with 2PC or saga-style compensation",
+   "Transactions are disabled by default on every shard"
+  ],
+  "answer": 2,
+  "explanation": "Atomicity across independent databases needs a coordination protocol, which adds latency and failure modes."
+ },
+ {
+  "id": "qf9d6b1eff3c",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "Why is sharding by a monotonically increasing timestamp a common mistake?",
+  "options": [
+   "Reads can no longer be routed to any shard",
+   "Replication lag drops to zero",
+   "Primary keys stop being unique across shards",
+   "All new writes concentrate on the newest shard, creating a write hotspot"
+  ],
+  "answer": 3,
+  "explanation": "Sequential keys send nearly every insert to the same key range, so one shard takes most of the write load."
+ }
+]

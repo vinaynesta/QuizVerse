@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q1a84a7a054d",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method asks a proxy to open a tunnel, as used for HTTPS through a forward proxy?",
+  "options": [
+   "TRACE",
+   "POST",
+   "CONNECT",
+   "OPTIONS"
+  ],
+  "answer": 2,
+  "explanation": "CONNECT tells the proxy to establish a TCP tunnel to the target host:port, over which TLS then runs."
+ },
+ {
+  "id": "q3095f59bea7",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method is defined (RFC 5789) for applying partial modifications to a resource?",
+  "options": [
+   "TRACE",
+   "PUT",
+   "PATCH",
+   "OPTIONS"
+  ],
+  "answer": 2,
+  "explanation": "PATCH sends a set of changes; PUT sends a complete replacement representation."
+ },
+ {
+  "id": "q7f924f32b4f",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method does a browser send for a CORS preflight request?",
+  "options": [
+   "PATCH",
+   "OPTIONS",
+   "GET",
+   "HEAD"
+  ],
+  "answer": 1,
+  "explanation": "The preflight is an OPTIONS request carrying Access-Control-Request-Method/Headers to ask what is allowed."
+ },
+ {
+  "id": "qa07f66c2254",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method is idempotent but not safe?",
+  "options": [
+   "HEAD",
+   "PUT",
+   "POST",
+   "GET"
+  ],
+  "answer": 1,
+  "explanation": "PUT replaces a resource, so repeating it yields the same state (idempotent) but it modifies data (not safe); GET and HEAD are safe, POST is neither."
+ },
+ {
+  "id": "qb05f1d035c9",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method returns the same headers as GET but no response body?",
+  "options": [
+   "TRACE",
+   "HEAD",
+   "CONNECT",
+   "OPTIONS"
+  ],
+  "answer": 1,
+  "explanation": "HEAD is used to check metadata such as Content-Length or Last-Modified without downloading the body."
+ }
+]

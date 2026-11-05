@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qdab2d7463b9",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "What must a component return when it should render nothing?",
+  "options": [
+   "null",
+   "The number 0",
+   "An empty div is required",
+   "The string \"none\""
+  ],
+  "answer": 0,
+  "explanation": "Returning null tells React to render nothing for that component."
+ },
+ {
+  "id": "q4e7e807fc04",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "How does a child component tell its parent that something happened?",
+  "options": [
+   "By calling a function the parent passed as a prop",
+   "By modifying the parent's state variable directly",
+   "By returning a value from render",
+   "By dispatching a DOM event to the parent"
+  ],
+  "answer": 0,
+  "explanation": "Parents pass callbacks like onChange, and children call them to communicate upward."
+ },
+ {
+  "id": "qe9a268408d1",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "What does StrictMode do?",
+  "options": [
+   "Makes the production build faster",
+   "Prevents components from using state",
+   "Enables extra development-only checks such as double-invoking renders and effects",
+   "Enforces TypeScript types at runtime"
+  ],
+  "answer": 2,
+  "explanation": "StrictMode helps find impure renders and missing cleanups and has no effect in production."
+ },
+ {
+  "id": "q567f7ad323d",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Which component shows a fallback while a lazy component is loading?",
+  "options": [
+   "ErrorBoundary",
+   "Suspense",
+   "Fragment",
+   "Profiler"
+  ],
+  "answer": 1,
+  "explanation": "Wrap lazy components in <Suspense fallback={...}> to show a placeholder until the code arrives."
+ },
+ {
+  "id": "q376cab41014",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "How do you write a comment inside JSX markup?",
+  "options": [
+   "<!-- comment -->",
+   "// comment on its own line",
+   "{/* comment */}",
+   "# comment"
+  ],
+  "answer": 2,
+  "explanation": "Inside JSX, comments must be JavaScript comments wrapped in curly braces."
+ },
+ {
+  "id": "qd17f8effb84",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "Where can you call React hooks?",
+  "options": [
+   "Inside any regular JavaScript function",
+   "Inside loops when they run a fixed number of times",
+   "At the top level of function components or custom hooks",
+   "Inside class component methods"
+  ],
+  "answer": 2,
+  "explanation": "Hooks may only be called from React function components or custom hooks, at the top level."
+ },
+ {
+  "id": "q76b273f44ee",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "Which event prop runs when a user submits a form?",
+  "options": [
+   "onSend",
+   "onFormPost",
+   "onSubmit",
+   "onConfirm"
+  ],
+  "answer": 2,
+  "explanation": "onSubmit on a form element fires when the form is submitted by a button or by pressing Enter."
+ },
+ {
+  "id": "q771a43d7c9c",
+  "subject": "react",
+  "topic": "react-19-server-components",
+  "level": "easy",
+  "question": "In React 19, how can a component render a <title> tag?",
+  "options": [
+   "By calling document.setTitle()",
+   "Only by editing index.html",
+   "Only through a third-party helmet library",
+   "Render <title> anywhere in the component and React hoists it into the document head"
+  ],
+  "answer": 3,
+  "explanation": "React 19 supports document metadata tags like title, meta and link and hoists them to the head."
+ },
+ {
+  "id": "qe3078534751",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "Which attribute name is used for a label's for attribute in JSX?",
+  "options": [
+   "for",
+   "labelFor",
+   "forId",
+   "htmlFor"
+  ],
+  "answer": 3,
+  "explanation": "Because for is a reserved word in JavaScript, React uses htmlFor."
+ },
+ {
+  "id": "q849f886d09a",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "Which hook is a good place to subscribe to a browser event like window resize?",
+  "options": [
+   "useEffect",
+   "useState",
+   "useId",
+   "useMemo"
+  ],
+  "answer": 0,
+  "explanation": "Subscriptions to external systems belong in an effect, with an unsubscribe in its cleanup."
+ }
+]

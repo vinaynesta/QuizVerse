@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6c9a13a077e",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "In authorizeHttpRequests, rules for anyRequest().authenticated() are declared before requestMatchers(\"/public/**\").permitAll(). What is the result?",
+  "options": [
+   "/public/** is still public because specific rules always win",
+   "Both rules are merged",
+   "Configuration fails, since anyRequest() must be the last rule",
+   "Only /public/** requires authentication"
+  ],
+  "answer": 2,
+  "explanation": "Rules are matched in order, and Spring Security 6 rejects adding matchers after anyRequest()."
+ },
+ {
+  "id": "qcca0d3870be",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "A @ConfigurationProperties class is annotated with @Validated and has a @NotNull field that is missing from the config. What happens?",
+  "options": [
+   "The field stays null and a warning is logged",
+   "Validation runs only when the field is read",
+   "Spring injects a default instance",
+   "Application startup fails with a binding validation error"
+  ],
+  "answer": 3,
+  "explanation": "Validated configuration properties are checked at bind time, so invalid config fails fast at startup."
+ },
+ {
+  "id": "q204ce301ab8",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "How does a derived Spring Data JPA method like deleteByStatus(String status) run by default?",
+  "options": [
+   "It issues a single bulk DELETE statement",
+   "It marks the rows as soft-deleted",
+   "It loads the matching entities and removes each one, so lifecycle callbacks and cascades apply",
+   "It truncates the table"
+  ],
+  "answer": 2,
+  "explanation": "Derived delete queries go through EntityManager.remove for each entity and need an active transaction."
+ },
+ {
+  "id": "q316ba86a7cf",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "Why is it usually a mistake to include a database health check in the Kubernetes liveness probe?",
+  "options": [
+   "Liveness probes cannot call databases",
+   "The database check makes the probe return 404",
+   "Liveness is checked only once at startup",
+   "A database outage would make Kubernetes restart every pod even though restarting cannot fix it"
+  ],
+  "answer": 3,
+  "explanation": "Liveness should reflect whether the app itself is broken; external dependencies belong in readiness, if anywhere."
+ },
+ {
+  "id": "qedf45ce692a",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "What is an EnvironmentPostProcessor and how is it registered?",
+  "options": [
+   "A @Bean that edits properties after all beans are created",
+   "A hook that customizes the Environment before the context refreshes, registered in META-INF/spring.factories",
+   "A @Component that listens for property changes",
+   "An Actuator endpoint that rewrites properties"
+  ],
+  "answer": 1,
+  "explanation": "Because it runs before beans exist, it cannot be a regular bean and is discovered through spring.factories."
+ },
+ {
+  "id": "q38d3adcb709",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "A controller has its own @ExceptionHandler for IllegalStateException, and a @ControllerAdvice also handles it. Which handles an exception thrown in that controller?",
+  "options": [
+   "The handler in the controller itself",
+   "The @ControllerAdvice handler",
+   "Both, in registration order",
+   "Neither, because the conflict fails startup"
+  ],
+  "answer": 0,
+  "explanation": "Spring MVC checks the controller's local @ExceptionHandler methods before global @ControllerAdvice beans."
+ },
+ {
+  "id": "q1287ece1b33",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "In a test class, how does a nested static @TestConfiguration class differ from a nested static @Configuration class?",
+  "options": [
+   "They behave identically",
+   "@TestConfiguration adds to the application's configuration, while a nested @Configuration replaces it",
+   "@TestConfiguration replaces the main configuration, while @Configuration adds to it",
+   "@TestConfiguration only works with @WebMvcTest"
+  ],
+  "answer": 1,
+  "explanation": "A nested @Configuration stops Spring Boot from finding the @SpringBootConfiguration, whereas @TestConfiguration is additive."
+ },
+ {
+  "id": "q75aa9ad4ee3",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "When circular references are allowed, why can a cycle between two singletons be resolved with setter or field injection but not with constructor injection?",
+  "options": [
+   "Constructor injection disables singleton caching",
+   "Setter injection creates a copy of each bean",
+   "Constructor parameters are resolved in a separate context",
+   "Spring can expose an early reference to a partially created bean only after it has been instantiated, which a constructor cycle never reaches"
+  ],
+  "answer": 3,
+  "explanation": "With setter or field injection, the bean is instantiated first and an early reference is cached; with constructors neither bean can be instantiated."
+ },
+ {
+  "id": "q0cdea8563a3",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "Inside a @Transactional method, you load a managed entity and change a field but never call save(). What happens at commit?",
+  "options": [
+   "Nothing, because save() was not called",
+   "Hibernate dirty checking flushes an UPDATE for the change",
+   "The change is rolled back",
+   "An exception says the entity is detached"
+  ],
+  "answer": 1,
+  "explanation": "Managed entities are tracked in the persistence context and changes are flushed automatically at commit."
+ },
+ {
+  "id": "qf5fb942d5d5",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "What does running a Spring Boot jar on the JVM with -Dspring.aot.enabled=true do?",
+  "options": [
+   "Compiles the app into a native image at startup",
+   "Uses the AOT-generated bean definitions and initialization code produced at build time",
+   "Enables the JIT's tiered compilation",
+   "Turns on lazy initialization"
+  ],
+  "answer": 1,
+  "explanation": "After the process-aot build step, this flag makes the JVM app use the pre-generated code instead of runtime configuration processing."
+ }
+]

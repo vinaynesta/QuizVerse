@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbe9564575d0",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What address range does 172.16.32.0/20 cover?",
+  "options": [
+   "172.16.32.0 - 172.16.35.255",
+   "172.16.32.0 - 172.16.47.255",
+   "172.16.32.0 - 172.16.63.255",
+   "172.16.0.0 - 172.16.47.255"
+  ],
+  "answer": 1,
+  "explanation": "/20 leaves 12 host bits = 4096 addresses = 16 values of the third octet, so 32 through 47."
+ },
+ {
+  "id": "qbb3fdc1eb85",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "Why can't an external host normally initiate a connection to a host behind NAPT?",
+  "options": [
+   "NAT blocks DNS responses",
+   "NAT drops all UDP traffic",
+   "NAT rewrites the destination MAC to broadcast",
+   "With no existing mapping, the NAT device doesn't know which internal host should receive it"
+  ],
+  "answer": 3,
+  "explanation": "Mappings are created by outbound traffic; unsolicited inbound packets match no entry unless port forwarding is configured."
+ },
+ {
+  "id": "qba21411de54",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the dotted-decimal subnet mask for a /26 prefix?",
+  "options": [
+   "255.255.255.192",
+   "255.255.255.128",
+   "255.255.255.224",
+   "255.255.255.240"
+  ],
+  "answer": 0,
+  "explanation": "/26 sets 2 bits in the last octet: 128 + 64 = 192."
+ },
+ {
+  "id": "q6da9e80ae52",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code does an origin server return when a request lacks valid authentication credentials?",
+  "options": [
+   "400 Bad Request",
+   "401 Unauthorized",
+   "407 Proxy Authentication Required",
+   "403 Forbidden"
+  ],
+  "answer": 1,
+  "explanation": "401 means authenticate and retry, with a WWW-Authenticate header; 407 is the proxy equivalent."
+ },
+ {
+  "id": "q14f92da7eae",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "What does HTTP status 429 mean?",
+  "options": [
+   "Too Many Requests",
+   "Conflict",
+   "Request Timeout",
+   "Content Too Large"
+  ],
+  "answer": 0,
+  "explanation": "429 signals rate limiting and may include a Retry-After header; 408 is Request Timeout, 409 Conflict, 413 Content Too Large."
+ },
+ {
+  "id": "q9a25ee1fbbc",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "What does a recursive DNS resolver do?",
+  "options": [
+   "Queries root, TLD and authoritative servers on the client's behalf and caches results",
+   "Signs zones with DNSSEC keys",
+   "Hosts the authoritative zone file for a domain",
+   "Registers new domain names"
+  ],
+  "answer": 0,
+  "explanation": "Stub resolvers ask a recursive resolver, which walks the hierarchy and caches answers per their TTL."
+ },
+ {
+  "id": "qe298e3ee9fc",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many /26 subnets fit into a single /24?",
+  "options": [
+   "8",
+   "2",
+   "6",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Borrowing 2 bits (26 - 24) yields 2^2 = 4 subnets of 64 addresses each."
+ },
+ {
+  "id": "q6072cb08583",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "When does DNS use TCP instead of UDP?",
+  "options": [
+   "When a response is truncated for UDP, and for zone transfers",
+   "Never, DNS is UDP-only",
+   "Always, for every query",
+   "Only for AAAA lookups"
+  ],
+  "answer": 0,
+  "explanation": "A response with the TC bit set makes the client retry over TCP; AXFR/IXFR zone transfers also use TCP."
+ },
+ {
+  "id": "q540ff1f8026",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What happens in an ARP spoofing attack?",
+  "options": [
+   "An attacker sends forged ARP replies linking its MAC to another host's IP",
+   "An attacker exhausts the DHCP address pool",
+   "An attacker overloads the switch's CPU with pings",
+   "An attacker floods DNS servers with queries"
+  ],
+  "answer": 0,
+  "explanation": "Poisoned ARP caches send victims' traffic to the attacker, enabling man-in-the-middle interception."
+ },
+ {
+  "id": "q7f924f32b4f",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method does a browser send for a CORS preflight request?",
+  "options": [
+   "PATCH",
+   "OPTIONS",
+   "GET",
+   "HEAD"
+  ],
+  "answer": 1,
+  "explanation": "The preflight is an OPTIONS request carrying Access-Control-Request-Method/Headers to ask what is allowed."
+ }
+]

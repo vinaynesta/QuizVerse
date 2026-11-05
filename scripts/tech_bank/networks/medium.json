@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "tcp-handshake",
+    "question": "What is the correct order of segments in the TCP three-way handshake?",
+    "options": [
+      "SYN, SYN-ACK, ACK",
+      "ACK, SYN, SYN-ACK",
+      "SYN, ACK, SYN-ACK",
+      "SYN, SYN, ACK"
+    ],
+    "answer": 0,
+    "explanation": "The client sends SYN, the server replies SYN-ACK, and the client confirms with ACK."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "If a client's SYN carries initial sequence number x and the server's ISN is y, what acknowledgment number is in the server's SYN-ACK?",
+    "options": [
+      "x",
+      "0",
+      "x + 1",
+      "y + 1"
+    ],
+    "answer": 2,
+    "explanation": "The SYN consumes one sequence number, so the server acknowledges x + 1 as the next byte it expects."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "In a TCP close where each side sends its own FIN and no ACK is piggybacked, how many segments are exchanged?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "4"
+    ],
+    "answer": 3,
+    "explanation": "Each direction is closed with a FIN and its ACK: FIN, ACK, FIN, ACK; it can drop to 3 if an ACK and FIN are combined."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "What does a TCP segment with the RST flag indicate?",
+    "options": [
+      "The connection is being aborted immediately",
+      "A keepalive probe",
+      "A graceful close of the connection",
+      "A receive window update"
+    ],
+    "answer": 0,
+    "explanation": "RST resets the connection abruptly, e.g. for a closed port or an error, without the FIN handshake."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "How much sequence-number space does a TCP SYN flag consume?",
+    "options": [
+      "One MSS worth",
+      "None",
+      "One sequence number",
+      "Two sequence numbers"
+    ],
+    "answer": 2,
+    "explanation": "SYN and FIN each consume one sequence number even though they carry no data, so they can be acknowledged."
+  },
+  {
+    "topic": "subnetting",
+    "question": "How many usable host addresses does a /24 IPv4 subnet provide?",
+    "options": [
+      "256",
+      "252",
+      "254",
+      "255"
+    ],
+    "answer": 2,
+    "explanation": "2^(32-24) = 256 addresses, minus the network and broadcast addresses, leaves 254."
+  },
+  {
+    "topic": "subnetting",
+    "question": "How many usable host addresses does a /27 IPv4 subnet provide?",
+    "options": [
+      "30",
+      "32",
+      "62",
+      "28"
+    ],
+    "answer": 0,
+    "explanation": "2^(32-27) = 32 addresses, minus network and broadcast, gives 30 usable hosts."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the dotted-decimal subnet mask for a /26 prefix?",
+    "options": [
+      "255.255.255.224",
+      "255.255.255.128",
+      "255.255.255.192",
+      "255.255.255.240"
+    ],
+    "answer": 2,
+    "explanation": "/26 sets 2 bits in the last octet: 128 + 64 = 192."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the network address of host 192.168.10.77/26?",
+    "options": [
+      "192.168.10.76",
+      "192.168.10.0",
+      "192.168.10.72",
+      "192.168.10.64"
+    ],
+    "answer": 3,
+    "explanation": "/26 blocks are 64 addresses (0, 64, 128, 192); 77 falls in the 64-127 block, so the network is .64."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the broadcast address of host 10.0.5.130/25?",
+    "options": [
+      "10.0.5.127",
+      "10.0.255.255",
+      "10.0.5.254",
+      "10.0.5.255"
+    ],
+    "answer": 3,
+    "explanation": "/25 splits the last octet into 0-127 and 128-255; 130 is in the upper half, whose broadcast is .255."
+  },
+  {
+    "topic": "subnetting",
+    "question": "Which CIDR prefix length corresponds to the mask 255.255.240.0?",
+    "options": [
+      "/19",
+      "/20",
+      "/22",
+      "/21"
+    ],
+    "answer": 1,
+    "explanation": "240 = 11110000 adds 4 bits to the 16 from the first two octets: 16 + 4 = 20."
+  },
+  {
+    "topic": "subnetting",
+    "question": "How many /26 subnets fit into a single /24?",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "Borrowing 2 bits (26 - 24) yields 2^2 = 4 subnets of 64 addresses each."
+  },
+  {
+    "topic": "subnetting",
+    "question": "How many usable host addresses does a /30 subnet provide in classic subnetting?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "2^2 = 4 addresses minus network and broadcast leaves 2, which is why /30 is used for point-to-point links."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the longest prefix (smallest subnet) that still provides at least 100 usable IPv4 hosts?",
+    "options": [
+      "/26",
+      "/27",
+      "/25",
+      "/24"
+    ],
+    "answer": 2,
+    "explanation": "/25 gives 128 - 2 = 126 hosts; /26 gives only 64 - 2 = 62."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What address range does 172.16.32.0/20 cover?",
+    "options": [
+      "172.16.32.0 - 172.16.35.255",
+      "172.16.0.0 - 172.16.47.255",
+      "172.16.32.0 - 172.16.63.255",
+      "172.16.32.0 - 172.16.47.255"
+    ],
+    "answer": 3,
+    "explanation": "/20 leaves 12 host bits = 4096 addresses = 16 values of the third octet, so 32 through 47."
+  },
+  {
+    "topic": "http-methods",
+    "question": "Which HTTP method is idempotent but not safe?",
+    "options": [
+      "HEAD",
+      "PUT",
+      "POST",
+      "GET"
+    ],
+    "answer": 1,
+    "explanation": "PUT replaces a resource, so repeating it yields the same state (idempotent) but it modifies data (not safe); GET and HEAD are safe, POST is neither."
+  },
+  {
+    "topic": "http-methods",
+    "question": "Which HTTP method is defined (RFC 5789) for applying partial modifications to a resource?",
+    "options": [
+      "TRACE",
+      "PATCH",
+      "PUT",
+      "OPTIONS"
+    ],
+    "answer": 1,
+    "explanation": "PATCH sends a set of changes; PUT sends a complete replacement representation."
+  },
+  {
+    "topic": "http-methods",
+    "question": "Which HTTP method returns the same headers as GET but no response body?",
+    "options": [
+      "TRACE",
+      "CONNECT",
+      "HEAD",
+      "OPTIONS"
+    ],
+    "answer": 2,
+    "explanation": "HEAD is used to check metadata such as Content-Length or Last-Modified without downloading the body."
+  },
+  {
+    "topic": "http-methods",
+    "question": "Which HTTP method asks a proxy to open a tunnel, as used for HTTPS through a forward proxy?",
+    "options": [
+      "CONNECT",
+      "POST",
+      "TRACE",
+      "OPTIONS"
+    ],
+    "answer": 0,
+    "explanation": "CONNECT tells the proxy to establish a TCP tunnel to the target host:port, over which TLS then runs."
+  },
+  {
+    "topic": "http-methods",
+    "question": "Which HTTP method does a browser send for a CORS preflight request?",
+    "options": [
+      "OPTIONS",
+      "PATCH",
+      "GET",
+      "HEAD"
+    ],
+    "answer": 0,
+    "explanation": "The preflight is an OPTIONS request carrying Access-Control-Request-Method/Headers to ask what is allowed."
+  },
+  {
+    "topic": "http-status",
+    "question": "Which status code does an origin server return when a request lacks valid authentication credentials?",
+    "options": [
+      "400 Bad Request",
+      "407 Proxy Authentication Required",
+      "401 Unauthorized",
+      "403 Forbidden"
+    ],
+    "answer": 2,
+    "explanation": "401 means authenticate and retry, with a WWW-Authenticate header; 407 is the proxy equivalent."
+  },
+  {
+    "topic": "http-status",
+    "question": "Which status code indicates that a resource has moved permanently?",
+    "options": [
+      "307",
+      "301",
+      "304",
+      "302"
+    ],
+    "answer": 1,
+    "explanation": "301 Moved Permanently (and 308) are permanent; 302 and 307 are temporary redirects."
+  },
+  {
+    "topic": "http-status",
+    "question": "What does 304 Not Modified mean in response to a conditional request?",
+    "options": [
+      "The resource was deleted",
+      "The client's cached copy is still valid",
+      "The resource moved to a new URL",
+      "The server hit an internal error"
+    ],
+    "answer": 1,
+    "explanation": "For If-None-Match or If-Modified-Since requests, 304 tells the client to reuse its cached representation."
+  },
+  {
+    "topic": "http-status",
+    "question": "Which status code means a gateway or proxy received an invalid response from the upstream server?",
+    "options": [
+      "500 Internal Server Error",
+      "504 Gateway Timeout",
+      "503 Service Unavailable",
+      "502 Bad Gateway"
+    ],
+    "answer": 3,
+    "explanation": "502 is an invalid upstream response; 504 is when the upstream did not respond in time."
+  },
+  {
+    "topic": "http-status",
+    "question": "What does HTTP status 429 mean?",
+    "options": [
+      "Conflict",
+      "Too Many Requests",
+      "Request Timeout",
+      "Content Too Large"
+    ],
+    "answer": 1,
+    "explanation": "429 signals rate limiting and may include a Retry-After header; 408 is Request Timeout, 409 Conflict, 413 Content Too Large."
+  },
+  {
+    "topic": "http-status",
+    "question": "Which status code fits a client that is authenticated but not allowed to access the resource?",
+    "options": [
+      "405 Method Not Allowed",
+      "403 Forbidden",
+      "401 Unauthorized",
+      "404 Not Found"
+    ],
+    "answer": 1,
+    "explanation": "403 means the server understood who you are but refuses access; re-authenticating will not help."
+  },
+  {
+    "topic": "arp",
+    "question": "What does ARP do?",
+    "options": [
+      "Resolves an IPv4 address to a MAC address on the local link",
+      "Assigns IP addresses to hosts",
+      "Routes packets between subnets",
+      "Resolves domain names to IP addresses"
+    ],
+    "answer": 0,
+    "explanation": "ARP finds the link-layer address for a next-hop IPv4 address on the same broadcast domain."
+  },
+  {
+    "topic": "arp",
+    "question": "How is an ARP request normally sent?",
+    "options": [
+      "As a multicast to 224.0.0.1",
+      "As a unicast to the default gateway",
+      "As a unicast to the DNS server",
+      "As a broadcast frame on the local segment"
+    ],
+    "answer": 3,
+    "explanation": "The requester doesn't know the target MAC yet, so it broadcasts to FF:FF:FF:FF:FF:FF; the reply is unicast."
+  },
+  {
+    "topic": "arp",
+    "question": "A host wants to send a packet to an IP on a different subnet. Whose MAC address does it resolve with ARP?",
+    "options": [
+      "The DNS server's",
+      "The remote destination host's",
+      "Its default gateway's",
+      "The subnet broadcast address's"
+    ],
+    "answer": 2,
+    "explanation": "Off-subnet traffic is framed to the next-hop router, so the host ARPs for the gateway's IP."
+  },
+  {
+    "topic": "arp",
+    "question": "Which mechanism replaces ARP in IPv6?",
+    "options": [
+      "RARP",
+      "Neighbor Discovery Protocol (ICMPv6)",
+      "IGMP",
+      "DHCPv6"
+    ],
+    "answer": 1,
+    "explanation": "IPv6 uses ICMPv6 Neighbor Solicitation and Advertisement messages, sent to solicited-node multicast addresses."
+  },
+  {
+    "topic": "arp",
+    "question": "What is a gratuitous ARP?",
+    "options": [
+      "An ARP reply sent by a proxy on behalf of another subnet",
+      "An ARP request for an unknown remote host",
+      "A Reverse ARP lookup of an IP from a MAC",
+      "An unsolicited ARP announcing a host's own IP-to-MAC mapping"
+    ],
+    "answer": 3,
+    "explanation": "Gratuitous ARP updates neighbors' caches (e.g. after failover) and helps detect duplicate IPs."
+  },
+  {
+    "topic": "arp",
+    "question": "What happens in an ARP spoofing attack?",
+    "options": [
+      "An attacker overloads the switch's CPU with pings",
+      "An attacker exhausts the DHCP address pool",
+      "An attacker sends forged ARP replies linking its MAC to another host's IP",
+      "An attacker floods DNS servers with queries"
+    ],
+    "answer": 2,
+    "explanation": "Poisoned ARP caches send victims' traffic to the attacker, enabling man-in-the-middle interception."
+  },
+  {
+    "topic": "nat",
+    "question": "What does NAT overload (PAT/NAPT) do?",
+    "options": [
+      "Encrypts packet headers between sites",
+      "Maps many private hosts to one public IP using distinct source ports",
+      "Translates IPv4 addresses into IPv6",
+      "Maps one private IP to one public IP statically"
+    ],
+    "answer": 1,
+    "explanation": "NAPT tracks connections by translated source port so many internal hosts can share one public address."
+  },
+  {
+    "topic": "nat",
+    "question": "Why can't an external host normally initiate a connection to a host behind NAPT?",
+    "options": [
+      "NAT blocks DNS responses",
+      "NAT drops all UDP traffic",
+      "With no existing mapping, the NAT device doesn't know which internal host should receive it",
+      "NAT rewrites the destination MAC to broadcast"
+    ],
+    "answer": 2,
+    "explanation": "Mappings are created by outbound traffic; unsolicited inbound packets match no entry unless port forwarding is configured."
+  },
+  {
+    "topic": "nat",
+    "question": "For an outbound packet, which header fields does a NAPT device rewrite?",
+    "options": [
+      "Destination IP address and port",
+      "Only the TTL",
+      "Only the MAC addresses",
+      "Source IP address and source port"
+    ],
+    "answer": 3,
+    "explanation": "NAPT replaces the private source address and port with its public address and a chosen port (and fixes checksums)."
+  },
+  {
+    "topic": "nat",
+    "question": "What is configuring a NAT router to send inbound traffic on a given port to a specific internal host called?",
+    "options": [
+      "NAT64",
+      "DHCP relay",
+      "Proxy ARP",
+      "Port forwarding"
+    ],
+    "answer": 3,
+    "explanation": "Port forwarding is a static NAPT mapping that lets external clients reach an internal server."
+  },
+  {
+    "topic": "dns",
+    "question": "What does a recursive DNS resolver do?",
+    "options": [
+      "Queries root, TLD and authoritative servers on the client's behalf and caches results",
+      "Signs zones with DNSSEC keys",
+      "Hosts the authoritative zone file for a domain",
+      "Registers new domain names"
+    ],
+    "answer": 0,
+    "explanation": "Stub resolvers ask a recursive resolver, which walks the hierarchy and caches answers per their TTL."
+  },
+  {
+    "topic": "dns",
+    "question": "What controls how long a resolver may cache a DNS record?",
+    "options": [
+      "The SOA serial number",
+      "The record's TTL",
+      "The MX preference value",
+      "The number of NS records"
+    ],
+    "answer": 1,
+    "explanation": "Each resource record carries a TTL in seconds that bounds how long it can be cached."
+  },
+  {
+    "topic": "dns",
+    "question": "When does DNS use TCP instead of UDP?",
+    "options": [
+      "Only for AAAA lookups",
+      "Never, DNS is UDP-only",
+      "Always, for every query",
+      "When a response is truncated for UDP, and for zone transfers"
+    ],
+    "answer": 3,
+    "explanation": "A response with the TC bit set makes the client retry over TCP; AXFR/IXFR zone transfers also use TCP."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "What does the TCP receive window field advertise?",
+    "options": [
+      "How many more bytes the receiver can currently buffer",
+      "The maximum segment size",
+      "The measured round-trip time",
+      "The sender's congestion window"
+    ],
+    "answer": 0,
+    "explanation": "The receive window is flow control: it stops a fast sender from overrunning the receiver's buffer."
+  }
+]

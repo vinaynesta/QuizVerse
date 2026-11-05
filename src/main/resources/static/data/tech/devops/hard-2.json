@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qfef064078d7",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "Why does pinning a lock file and base image versions make builds more reproducible?",
+  "options": [
+   "It skips dependency resolution entirely",
+   "It guarantees the build has no CVEs",
+   "It removes the need for a container registry",
+   "The same inputs resolve to the same dependency versions and artifacts, so builds repeat"
+  ],
+  "answer": 3,
+  "explanation": "Reproducibility depends on fixing every input, including dependency versions and base image digests, so repeated builds produce the same result."
+ },
+ {
+  "id": "q09d89ac876c",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "In Git's object model, which object type stores a directory listing that maps names to blobs and subtrees?",
+  "options": [
+   "blob",
+   "commit",
+   "tree",
+   "tag"
+  ],
+  "answer": 2,
+  "explanation": "A tree object lists entries with modes, names, and hashes for files (blobs) and subdirectories (trees)."
+ },
+ {
+  "id": "q1ef78d276ee",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "Which pod spec field lets a pod run only on nodes that carry a specific label?",
+  "options": [
+   "spec.nodeSelector",
+   "spec.priorityClassName",
+   "spec.serviceAccountName",
+   "spec.hostname"
+  ],
+  "answer": 0,
+  "explanation": "nodeSelector is the simplest constraint: the scheduler only places the pod on nodes whose labels match."
+ },
+ {
+  "id": "qc5aaf74d4c1",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What happens when a liveness probe fails repeatedly?",
+  "options": [
+   "The Service removes the pod from its endpoints only",
+   "The scheduler moves the pod to another node immediately",
+   "The kubelet restarts the container",
+   "The Deployment deletes the pod permanently"
+  ],
+  "answer": 2,
+  "explanation": "A failing liveness probe makes the kubelet kill and restart the container according to the pod's restart policy."
+ },
+ {
+  "id": "q88bdd93db0c",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "Why are blue-green and canary releases often paired with feature flags?",
+  "options": [
+   "Feature flags replace the need for tests",
+   "Feature flags compile the code faster",
+   "Feature flags remove the need for a load balancer",
+   "Feature flags separate code deployment from feature release, so code can ship dark and be enabled later"
+  ],
+  "answer": 3,
+  "explanation": "Feature flags let you deploy code safely and turn a feature on, or off, without another deployment."
+ },
+ {
+  "id": "q171ee7db5ab",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What does a canary deployment do?",
+  "options": [
+   "Routes a small share of traffic to the new version and increases it while metrics stay healthy",
+   "Deploys to all regions at once",
+   "Runs the new version only in staging",
+   "Keeps the old version off the network permanently"
+  ],
+  "answer": 0,
+  "explanation": "A canary exposes a small slice of real traffic to the new version and expands the rollout if error rates and latency look good."
+ },
+ {
+  "id": "q8192712bbfa",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "What is the goal of ordering pipeline stages to fail fast?",
+  "options": [
+   "Run cheap checks such as lint and unit tests first, so failures surface early",
+   "Run the slowest tests first",
+   "Skip tests on the main branch",
+   "Deploy before the tests run"
+  ],
+  "answer": 0,
+  "explanation": "Cheap checks catch most problems in seconds, so expensive jobs such as integration tests and deploys run only when earlier stages pass."
+ },
+ {
+  "id": "q4bed2caf42f",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "Which probe mechanisms does Kubernetes support?",
+  "options": [
+   "ssh, ping, and dns",
+   "httpGet, tcpSocket, exec, and grpc",
+   "smtp, ftp, and imap",
+   "sql, redis, and kafka"
+  ],
+  "answer": 1,
+  "explanation": "Probes can make an HTTP GET, open a TCP socket, run a command in the container, or call a gRPC health service."
+ },
+ {
+  "id": "q43236fa0287",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "You are in detached HEAD state and have made commits you want to keep. What is the safest first step?",
+  "options": [
+   "git reset --hard origin/main",
+   "git branch <name> to create a branch at the current commit",
+   "git checkout -- . to discard the changes",
+   "git gc --prune=now"
+  ],
+  "answer": 1,
+  "explanation": "Creating a branch gives the commits a reference, so they are not left unreachable when you switch away."
+ },
+ {
+  "id": "q8580d0dd68d",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What is the difference between resource requests and limits in a Kubernetes container spec?",
+  "options": [
+   "They are identical; limits only document the value",
+   "Requests cap runtime usage; limits are used for scheduling",
+   "Requests are used by the scheduler to place the pod; limits cap runtime usage (CPU is throttled, and exceeding memory can get the container OOM-killed)",
+   "Requests apply only to GPUs"
+  ],
+  "answer": 2,
+  "explanation": "The scheduler uses requests to find a node with enough allocatable capacity, while limits are enforced by the kubelet and the container runtime."
+ }
+]

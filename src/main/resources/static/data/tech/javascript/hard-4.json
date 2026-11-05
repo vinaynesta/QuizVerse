@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q32c3111a671",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What happens when this runs?\nlet x = 1;\n{ console.log(x); let x = 2; }",
+  "options": [
+   "1 is logged",
+   "2 is logged",
+   "ReferenceError is thrown",
+   "undefined is logged"
+  ],
+  "answer": 2,
+  "explanation": "The inner let x shadows the outer one for the whole block, and reading it before its declaration is a TDZ error."
+ },
+ {
+  "id": "q0799acf87c6",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nconsole.log(1);\nsetTimeout(() => console.log(2));\nPromise.resolve().then(() => console.log(3));\nconsole.log(4);",
+  "options": [
+   "1 4 2 3",
+   "1 2 3 4",
+   "1 4 3 2",
+   "1 3 4 2"
+  ],
+  "answer": 2,
+  "explanation": "Synchronous code runs first, then the microtask queue (promise callbacks), then macrotasks such as timers."
+ },
+ {
+  "id": "qa609effbfa0",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does the last line log?\nfunction* g() { const x = yield 1; yield x * 2; }\nconst it = g();\nit.next();\nconsole.log(it.next(5).value);",
+  "options": [
+   "NaN",
+   "2",
+   "10",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "The value passed to next becomes the result of the paused yield expression, so x is 5 and the next yield produces 10."
+ },
+ {
+  "id": "q70ea305446a",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [] + {} evaluate to?",
+  "options": [
+   "NaN",
+   "0",
+   "\"{}\"",
+   "\"[object Object]\""
+  ],
+  "answer": 3,
+  "explanation": "[] becomes \"\" and {} becomes \"[object Object]\", and + concatenates the strings."
+ },
+ {
+  "id": "q68a289b18ac",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "Given function* g() { yield 1; yield 2; } and const it = g(); it.next(); what does it.return(9) return?",
+  "options": [
+   "{ value: 9, done: true }",
+   "{ value: 9, done: false }",
+   "{ value: 2, done: false }",
+   "undefined"
+  ],
+  "answer": 0,
+  "explanation": "return finishes the generator early and produces the given value with done: true."
+ },
+ {
+  "id": "q26fc6d308dc",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What are the results of null == 0 and null >= 0?",
+  "options": [
+   "true and true",
+   "false and false",
+   "false and true",
+   "true and false"
+  ],
+  "answer": 2,
+  "explanation": "Loose equality treats null as equal only to undefined, but relational comparison converts null to the number 0."
+ },
+ {
+  "id": "qabc926d00d6",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nasync function f() { console.log(\"a\"); await null; console.log(\"b\"); }\nf();\nconsole.log(\"c\");",
+  "options": [
+   "a b c",
+   "b a c",
+   "c a b",
+   "a c b"
+  ],
+  "answer": 3,
+  "explanation": "An async function runs synchronously until its first await; the rest is resumed as a microtask after the current script finishes."
+ },
+ {
+  "id": "q24dcce99ac9",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What are the results of NaN === NaN and Object.is(NaN, NaN)?",
+  "options": [
+   "true and true",
+   "true and false",
+   "false and false",
+   "false and true"
+  ],
+  "answer": 3,
+  "explanation": "NaN is not equal to itself under === but Object.is uses SameValue, which treats NaN as equal to NaN."
+ },
+ {
+  "id": "q461a13e0299",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nnew Promise(resolve => { console.log(1); resolve(); console.log(2); })\n  .then(() => console.log(3));\nconsole.log(4);",
+  "options": [
+   "1 2 4 3",
+   "1 2 3 4",
+   "4 1 2 3",
+   "1 3 2 4"
+  ],
+  "answer": 0,
+  "explanation": "The executor runs synchronously, and resolve does not stop it; the then callback is a microtask that runs after the script."
+ },
+ {
+  "id": "qf0d7cdfec26",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does [...b()] return?\nfunction* a() { yield 1; yield 2; }\nfunction* b() { yield 0; yield* a(); yield 3; }",
+  "options": [
+   "[0, 1, 2, 3]",
+   "[0, [1, 2], 3]",
+   "[0, 3]",
+   "[0, a, 3]"
+  ],
+  "answer": 0,
+  "explanation": "yield* delegates to another iterable and yields each of its values in turn."
+ }
+]

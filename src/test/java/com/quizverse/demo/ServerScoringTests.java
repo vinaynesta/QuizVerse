@@ -238,4 +238,47 @@ class ServerScoringTests {
 				.filter(q -> q.group() != null).count();
 		assertEquals(5, grouped);
 	}
+
+	@Test
+	void formerComingSoonSectionsAreScoredAndInTheMocks() throws Exception {
+		// RBI Assistant Mains: Reasoning, English, Numerical Ability, General Awareness and Computer Knowledge.
+		QuizCatalog.Quiz mock = catalog.find("rbi-assistant/mains/mock/hard/0");
+		assertNotNull(mock);
+		List<QuizCatalog.Question> qs = catalog.questions(mock);
+		assertEquals(200, qs.size());
+		assertEquals(qs.size(), catalog.answers(mock).size());
+		List<QuizCatalog.Question> computer = qs.stream().filter(q -> q.subject().equals("computer")).toList();
+		assertEquals(40, computer.size());
+		assertTrue(computer.stream().allMatch(QuizCatalog.Question::needsReview), "hand-written drafts keep their badge");
+		assertTrue(qs.stream().filter(q -> q.subject().equals("quant")).noneMatch(QuizCatalog.Question::needsReview));
+
+		QuizCatalog.Quiz ga = catalog.find("sbi-po/mains/general-economy-banking-awareness/easy/4");
+		assertNotNull(ga);
+		assertEquals(50, catalog.questions(ga).size());
+	}
+
+	@Test
+	void appscGroupOnePapersUseOneThirdNegativeMarking() throws Exception {
+		QuizCatalog.Quiz paper1 = catalog.find("appsc-group-1/paper-1/mock/medium/2");
+		assertNotNull(paper1, "Paper I full mock");
+		assertEquals(120, paper1.questionCount());
+		assertEquals(120.0, paper1.maxMarks());
+		assertEquals(120, paper1.minutes());
+		assertNotNull(catalog.find("appsc-group-1/paper-2/mock/hard/0"), "Paper II full mock without current events");
+
+		// One right, one wrong, the rest skipped: 1 - 1/3 per section mark of 1.
+		QuizCatalog.Quiz section = catalog.find("appsc-group-1/paper-1/polity/easy/0");
+		List<Integer> key = catalog.answers(section);
+		List<Integer> chosen = new ArrayList<>(java.util.Collections.nCopies(key.size(), (Integer) null));
+		chosen.set(0, key.get(0));
+		chosen.set(1, (key.get(1) + 1) % 4);
+		assertEquals(0.67, catalog.score(section, chosen).score(), 0.001);
+
+		// Bank exams keep their 1/4.
+		QuizCatalog.Quiz bank = catalog.find("ibps-clerk/prelims/english/easy/0");
+		List<Integer> bankKey = catalog.answers(bank);
+		List<Integer> bankChosen = new ArrayList<>(java.util.Collections.nCopies(bankKey.size(), (Integer) null));
+		bankChosen.set(0, (bankKey.get(0) + 1) % 4);
+		assertEquals(-0.25, catalog.score(bank, bankChosen).score(), 0.001);
+	}
 }

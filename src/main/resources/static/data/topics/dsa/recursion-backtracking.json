@@ -30,6 +30,21 @@
   "explanation": "Each call adds a stack frame, and unbounded recursion exhausts the call stack."
  },
  {
+  "id": "qc12c9e1dda9",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What does a correct recursive factorial function return for factorial(4)?",
+  "options": [
+   "10",
+   "24",
+   "16",
+   "12"
+  ],
+  "answer": 1,
+  "explanation": "factorial(4) = 4 * 3 * 2 * 1 = 24."
+ },
+ {
   "id": "qfce14a20eb8",
   "subject": "dsa",
   "topic": "recursion-backtracking",
@@ -88,6 +103,21 @@
   ],
   "answer": 2,
   "explanation": "The recursion depth is n, and each active call holds a stack frame."
+ },
+ {
+  "id": "q36ad3235cd2",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "How many distinct strings of 4 pairs of balanced parentheses are there?",
+  "options": [
+   "8",
+   "12",
+   "14",
+   "16"
+  ],
+  "answer": 2,
+  "explanation": "The count is the 4th Catalan number, C(8, 4) / 5 = 14."
  },
  {
   "id": "q681fce41ea1",

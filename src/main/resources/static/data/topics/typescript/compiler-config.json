@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q2f69dd105c6",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "Which compiler option sets the directory for emitted JavaScript files?",
+  "options": [
+   "emitPath",
+   "rootDir",
+   "outDir",
+   "distDir"
+  ],
+  "answer": 2,
+  "explanation": "outDir controls where compiled output is written; rootDir describes where the source lives."
+ },
+ {
+  "id": "q668ad6d93ef",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "What is the default name of a TypeScript project's configuration file?",
+  "options": [
+   "ts.json",
+   "typescript.json",
+   "tsconfig.json",
+   "tsc.config.js"
+  ],
+  "answer": 2,
+  "explanation": "tsc looks for tsconfig.json to find compiler options and the files in a project."
+ },
+ {
+  "id": "qa4fa3fb460e",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "What does setting `\"strict\": true` in tsconfig.json do?",
+  "options": [
+   "Enables a family of strict type-checking options at once",
+   "Makes the emitted JavaScript use \"use strict\" only",
+   "Turns all warnings into runtime errors",
+   "Disables the any type entirely"
+  ],
+  "answer": 0,
+  "explanation": "strict turns on options such as strictNullChecks, noImplicitAny and strictFunctionTypes together."
+ },
+ {
+  "id": "qb8db33309dc",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "Which command-line tool is the TypeScript compiler?",
+  "options": [
+   "tsc",
+   "ts-build",
+   "tsx",
+   "typescriptc"
+  ],
+  "answer": 0,
+  "explanation": "tsc is the official compiler shipped with the typescript package."
+ }
+]

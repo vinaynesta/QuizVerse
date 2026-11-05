@@ -30,6 +30,21 @@
   "explanation": "REQUIRED joins an existing transaction or creates a new one if none exists."
  },
  {
+  "id": "q4d286ee9c4f",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "Which interface is Spring's central abstraction for imperative transaction management?",
+  "options": [
+   "TransactionTemplate",
+   "DataSource",
+   "EntityManager",
+   "PlatformTransactionManager"
+  ],
+  "answer": 3,
+  "explanation": "Implementations such as JpaTransactionManager and DataSourceTransactionManager implement PlatformTransactionManager."
+ },
+ {
   "id": "q515dcd1837e",
   "subject": "springboot",
   "topic": "transactions",
@@ -105,6 +120,21 @@
   "explanation": "TransactionTemplate.execute runs a callback inside a transaction using the configured PlatformTransactionManager."
  },
  {
+  "id": "q8ac044f3d53",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "What isolation level does @Transactional use when none is specified?",
+  "options": [
+   "SERIALIZABLE",
+   "REPEATABLE_READ in all databases",
+   "READ_UNCOMMITTED",
+   "Isolation.DEFAULT, meaning the underlying datastore's default"
+  ],
+  "answer": 3,
+  "explanation": "Isolation.DEFAULT defers to the database, for example READ COMMITTED on PostgreSQL."
+ },
+ {
   "id": "qdf9704c7e17",
   "subject": "springboot",
   "topic": "transactions",
@@ -148,6 +178,21 @@
   ],
   "answer": 1,
   "explanation": "Rolling back a nested scope returns to the savepoint, but an outer rollback also undoes the nested work."
+ },
+ {
+  "id": "q76d7f20bdb5",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "A @Transactional(readOnly = true) service method calls a default @Transactional method on another bean that writes data. What happens?",
+  "options": [
+   "The inner method starts a new read-write transaction",
+   "The writes always succeed and commit normally",
+   "The inner method joins the outer read-only transaction, so its own settings are ignored and Hibernate may not flush the writes",
+   "Spring throws an exception before the call"
+  ],
+  "answer": 2,
+  "explanation": "With REQUIRED propagation, the inner method takes part in the existing transaction and its characteristics, including readOnly."
  },
  {
   "id": "q868fee32639",

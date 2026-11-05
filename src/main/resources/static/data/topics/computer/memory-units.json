@@ -1,5 +1,69 @@
 [
  {
+  "id": "q038aa674b2d",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "1 MB is equal to how many KB?",
+  "options": [
+   "2048",
+   "1000",
+   "512",
+   "1024"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1 MB = 2^10 KB = 1024 KB."
+ },
+ {
+  "id": "q065c1ae9cbd",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "What is the smallest unit of data in a computer?",
+  "options": [
+   "Bit",
+   "Nibble",
+   "Byte",
+   "Kilobyte"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A bit (binary digit, 0 or 1) is the smallest unit of data."
+ },
+ {
+  "id": "q18d00dff874",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "A group of 4 bits is called a:",
+  "options": [
+   "Nibble",
+   "Kilobit",
+   "Word",
+   "Byte"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "4 bits make a nibble, and 2 nibbles (8 bits) make a byte."
+ },
+ {
+  "id": "q298a3bca2a7",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "Which of these is the smallest unit of memory?",
+  "options": [
+   "MB",
+   "GB",
+   "TB",
+   "KB"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "KB < MB < GB < TB, each being 1024 times the previous one."
+ },
+ {
   "id": "q4bcb8fba4a6",
   "subject": "computer",
   "topic": "memory-units",
@@ -11,9 +75,9 @@
    "100",
    "2048"
   ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "In binary units, 1 KB = 2¹⁰ = 1024 bytes.",
-  "needsReview": true
+  "explanation": "In binary units, 1 KB = 2¹⁰ = 1024 bytes."
  },
  {
   "id": "q51eb6705178",
@@ -23,13 +87,125 @@
   "question": "How many bits make one byte?",
   "options": [
    "4",
-   "8",
    "16",
+   "8",
    "10"
   ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "1 byte = 8 bits."
+ },
+ {
+  "id": "q58c1a16cb18",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "1 GB is equal to how many MB?",
+  "options": [
+   "1000",
+   "1024",
+   "100",
+   "512"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "1 byte = 8 bits.",
-  "needsReview": true
+  "explanation": "1 GB = 2^10 MB = 1024 MB."
+ },
+ {
+  "id": "qfa494c346dc",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "1 TB is equal to how many GB?",
+  "options": [
+   "1000",
+   "1024",
+   "100",
+   "2048"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "1 TB = 2^10 GB = 1024 GB."
+ },
+ {
+  "id": "q09bf519e42a",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "1 KB is equal to how many bits?",
+  "options": [
+   "1024",
+   "8000",
+   "4096",
+   "8192"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1 KB = 1024 bytes = 1024 x 8 bits = 8192 bits."
+ },
+ {
+  "id": "q0c239ad1fca",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "2 MB is equal to how many KB?",
+  "options": [
+   "2000",
+   "2048",
+   "1024",
+   "4096"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "2 MB = 2 x 1024 KB = 2048 KB."
+ },
+ {
+  "id": "q0d5d3a79729",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "16384 bytes is equal to:",
+  "options": [
+   "16 KB",
+   "1.6 KB",
+   "164 KB",
+   "16 MB"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "16384 / 1024 = 16, so 16384 bytes = 16 KB."
+ },
+ {
+  "id": "q100362a97b7",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "1 petabyte (PB) is equal to 1024:",
+  "options": [
+   "Gigabytes",
+   "Megabytes",
+   "Exabytes",
+   "Terabytes"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1 PB = 1024 TB; the next unit, 1 EB, is 1024 PB."
+ },
+ {
+  "id": "q6fdb03e23ac",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "Which of these is the correct ascending order of units?",
+  "options": [
+   "Nibble < Bit < Byte < Kilobyte",
+   "Bit < Nibble < Byte < Kilobyte",
+   "Bit < Byte < Nibble < Kilobyte",
+   "Byte < Bit < Nibble < Kilobyte"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A bit is 1 binary digit, a nibble is 4 bits, a byte is 8 bits and a KB is 1024 bytes."
  },
  {
   "id": "qfc64c65d73c",
@@ -40,11 +216,75 @@
   "options": [
    "Gigabyte",
    "Megabyte",
-   "Terabyte",
-   "Kilobyte"
+   "Kilobyte",
+   "Terabyte"
   ],
-  "answer": 2,
-  "explanation": "KB < MB < GB < TB; each step is 1024 times the previous one.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "KB < MB < GB < TB; each step is 1024 times the previous one."
+ },
+ {
+  "id": "q1a8a36456b4",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "1 GB is equal to how many bytes?",
+  "options": [
+   "1,000,000,000",
+   "1,048,576",
+   "1,099,511,627,776",
+   "1,073,741,824"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1 GB = 2^30 bytes = 1024 x 1024 x 1024 = 1,073,741,824 bytes."
+ },
+ {
+  "id": "q3c7e0d822c4",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "3 MB is equal to how many bits?",
+  "options": [
+   "24,000,000",
+   "25,165,824",
+   "3,145,728",
+   "25,165,000"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "3 MB = 3 x 1024 x 1024 bytes = 3,145,728 bytes; x 8 = 25,165,824 bits."
+ },
+ {
+  "id": "qa49efa65d60",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "How many nibbles are there in 1 KB?",
+  "options": [
+   "512",
+   "1024",
+   "4096",
+   "2048"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1 KB = 1024 bytes and 1 byte = 2 nibbles, so 1024 x 2 = 2048 nibbles."
+ },
+ {
+  "id": "qf3ef344a65a",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "Which of these is the largest unit of memory?",
+  "options": [
+   "Zettabyte",
+   "Yottabyte",
+   "Exabyte",
+   "Petabyte"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The order is PB < EB < ZB < YB, each 1024 times the previous one."
  }
 ]

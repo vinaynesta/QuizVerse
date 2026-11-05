@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qde7291ce29e",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "What does npm 7+ do when two packages require incompatible versions of the same peer dependency?",
+  "options": [
+   "It installs both versions silently",
+   "It skips all peer dependencies without a warning",
+   "It picks the oldest version and ignores the other package",
+   "It fails with an ERESOLVE error unless the conflict is resolved, for example with --legacy-peer-deps or overrides"
+  ],
+  "answer": 3,
+  "explanation": "Strict peer dependency resolution is the default in npm 7 and later."
+ },
+ {
+  "id": "qcb0a648cd85",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "Which mechanism lets worker threads share the same memory without copying it?",
+  "options": [
+   "SharedArrayBuffer",
+   "structuredClone()",
+   "process.send()",
+   "postMessage() with a plain object"
+  ],
+  "answer": 0,
+  "explanation": "SharedArrayBuffer is shared between threads, usually coordinated with Atomics; the other options copy data."
+ },
+ {
+  "id": "q9b6e66c47f9",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "Why is it advised to exit after logging a process 'uncaughtException'?",
+  "options": [
+   "The handler works only once and then disables itself",
+   "Node stops processing new events after the handler runs",
+   "The handler cannot read the error object",
+   "The process may be in an inconsistent state after an unexpected error, so continuing is unsafe"
+  ],
+  "answer": 3,
+  "explanation": "Uncaught exceptions mean the program's invariants may be broken, so a clean restart is the safer recovery."
+ },
+ {
+  "id": "q7cf32bf1841",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does the --max-old-space-size flag control?",
+  "options": [
+   "The maximum call stack depth",
+   "The number of worker threads",
+   "The maximum size of V8's old-generation heap, in megabytes",
+   "The size of the Buffer pool"
+  ],
+  "answer": 2,
+  "explanation": "It caps the old-generation heap V8 may use; Buffer contents live outside the heap and are not limited by it."
+ },
+ {
+  "id": "qb5f9432ae22",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the risk of calling process.nextTick() recursively in a loop?",
+  "options": [
+   "It makes timers fire more accurately",
+   "It automatically turns callbacks into promises",
+   "It has no effect on the event loop",
+   "It can starve I/O and timers, because the nextTick queue is drained before the loop moves on"
+  ],
+  "answer": 3,
+  "explanation": "Because the nextTick queue is fully drained before the loop continues, a self-scheduling callback can block I/O indefinitely."
+ },
+ {
+  "id": "q0e8672b62f7",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Inside an I/O callback, which runs first: setTimeout(fn, 0) or setImmediate(fn)?",
+  "options": [
+   "setTimeout, because timers always run before I/O",
+   "setImmediate, because the check phase comes before the next timers phase",
+   "They run in the same phase in the order they were scheduled",
+   "It depends on the disk speed"
+  ],
+  "answer": 1,
+  "explanation": "After the poll phase finishes the I/O callback, the loop reaches the check phase before wrapping around to timers."
+ },
+ {
+  "id": "qe6a228c08fe",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What happens if one of the promises passed to Promise.all() rejects?",
+  "options": [
+   "Promise.all() waits for all and returns the errors as an array",
+   "Promise.all() rejects immediately with that reason, while the other promises keep running",
+   "Promise.all() resolves with undefined for that entry",
+   "Promise.all() retries the rejected promise once"
+  ],
+  "answer": 1,
+  "explanation": "Promise.all() settles on the first rejection; the other operations are not cancelled."
+ },
+ {
+  "id": "qc211a3e592d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "hard",
+  "question": "What is the default maximum size of HTTP request headers in Node.js 20 and 22?",
+  "options": [
+   "There is no limit",
+   "1 MiB",
+   "8 KiB",
+   "16 KiB"
+  ],
+  "answer": 3,
+  "explanation": "The default maxHeaderSize is 16384 bytes and can be changed with the --max-http-header-size flag."
+ },
+ {
+  "id": "qdcdac465ea4",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Why can two small Buffers from Buffer.allocUnsafe() share one underlying ArrayBuffer?",
+  "options": [
+   "Node slices small allocations out of a preallocated 8 KiB pool to reduce allocation overhead",
+   "Pools are used only for Buffers over 1 MiB",
+   "Pooled buffers are stored in the disk cache",
+   "The pool holds compiled JavaScript code"
+  ],
+  "answer": 0,
+  "explanation": "Small allocations are carved from a shared pool, which is why Buffers can share memory."
+ },
+ {
+  "id": "qcf473e7b1d2",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "Why does in-memory session state break when requests are spread across cluster workers?",
+  "options": [
+   "Workers cannot read HTTP cookies",
+   "Each worker has its own memory, so a later request may reach a worker that lacks the session",
+   "The cluster module disables the http module",
+   "Cluster workers cannot parse JSON request bodies"
+  ],
+  "answer": 1,
+  "explanation": "Workers are separate processes, so sessions must live in a shared store or use sticky routing."
+ }
+]

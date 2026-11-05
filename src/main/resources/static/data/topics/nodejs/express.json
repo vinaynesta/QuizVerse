@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q18a4f4ed365",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "A POST route reads req.body as undefined even though the client sends JSON. What is the most likely cause?",
+  "options": [
+   "The route was declared with app.get() to receive a POST request",
+   "The response was never sent back to the client",
+   "The server is listening on the wrong port",
+   "express.json() is registered after the route that reads req.body"
+  ],
+  "answer": 3,
+  "explanation": "Middleware runs in registration order, so the body parser must be added before any route that needs the parsed body."
+ },
+ {
+  "id": "q30add84dcbb",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "How many parameters must an Express error-handling middleware function declare for Express to recognize it?",
+  "options": [
+   "Four: (err, req, res, next)",
+   "Two: (err, res)",
+   "Three: (err, req, res)",
+   "One: (err)"
+  ],
+  "answer": 0,
+  "explanation": "Express identifies error middleware by its arity, so it needs exactly four parameters even when next is unused."
+ },
+ {
+  "id": "q80c7ce5cf7c",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "What is express.Router() best described as?",
+  "options": [
+   "A mini-application with its own middleware and routes, which can be mounted on a path",
+   "A class that stores session data between requests",
+   "A function that validates request bodies against a schema",
+   "A cache of compiled view templates"
+  ],
+  "answer": 0,
+  "explanation": "A router is middleware-like: app.use('/api', router) mounts its routes under that path prefix."
+ },
+ {
+  "id": "q82a7db59004",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In an Express route, what does calling next('route') do?",
+  "options": [
+   "It skips the remaining handlers for the current route and continues to the next matching route",
+   "It ends the response with a 404 status",
+   "It restarts the middleware stack from the first app.use()",
+   "It throws an error to the error-handling middleware"
+  ],
+  "answer": 0,
+  "explanation": "Passing the string 'route' to next() jumps out of the current route's handler stack; any other argument is treated as an error."
+ },
+ {
+  "id": "q964822d131f",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "What does app.use('/api', router) do in Express?",
+  "options": [
+   "Handles only requests whose path is exactly /api",
+   "Registers the router for GET requests only",
+   "Replaces all previously registered middleware",
+   "Mounts the router so it handles requests whose path starts with /api"
+  ],
+  "answer": 3,
+  "explanation": "Inside the router, paths are relative to the mount point, so a router route /users matches /api/users."
+ },
+ {
+  "id": "qbc831e7c1ea",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "What does res.json({ ok: true }) do in Express?",
+  "options": [
+   "Parses the request body as JSON",
+   "Stores the object in the session",
+   "Serializes the object to JSON, sets the Content-Type to application/json and sends the response",
+   "Writes the object to a JSON file on disk"
+  ],
+  "answer": 2,
+  "explanation": "res.json is a convenience over res.send that handles serialization and the content type header."
+ },
+ {
+  "id": "qca1c19ca594",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In Express, how does req.query differ from req.params?",
+  "options": [
+   "req.query holds the request body",
+   "req.query holds parsed query-string values, while req.params holds named route segments",
+   "They are aliases for the same object",
+   "req.params holds headers and req.query holds cookies"
+  ],
+  "answer": 1,
+  "explanation": "For /users/42?sort=name, req.params.id is '42' and req.query.sort is 'name'."
+ },
+ {
+  "id": "qe9f0a1de1ed",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In Express 4, what happens when an async route handler rejects its promise and nothing catches it?",
+  "options": [
+   "Express automatically sends the rejection to the error middleware",
+   "The process always exits with code 1",
+   "Express retries the handler once",
+   "The request can hang, because Express 4 does not forward the rejection to error middleware"
+  ],
+  "answer": 3,
+  "explanation": "Express 4 only handles synchronous throws and errors passed to next(); Express 5 forwards rejected promises to error middleware."
+ },
+ {
+  "id": "qf4159baa27b",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In Express, what does req.params contain for the route /users/:id when the request path is /users/42?",
+  "options": [
+   "{ id: 42 }",
+   "An empty object, because params come from the query string",
+   "{ users: '42' }",
+   "{ id: '42' }"
+  ],
+  "answer": 3,
+  "explanation": "Route parameters are captured from the path as strings, so the value is '42', not a number."
+ }
+]

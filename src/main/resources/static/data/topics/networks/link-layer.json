@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q9cff5b329ec",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "Which device operates at the physical layer and repeats incoming signals out of all other ports?",
+  "options": [
+   "Switch",
+   "Router",
+   "Bridge",
+   "Hub"
+  ],
+  "answer": 3,
+  "explanation": "A hub is a multiport repeater with no address awareness; switches and bridges are Layer 2."
+ },
+ {
+  "id": "q9e283c1ffce",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "How long is an Ethernet MAC address?",
+  "options": [
+   "48 bits",
+   "128 bits",
+   "64 bits",
+   "32 bits"
+  ],
+  "answer": 0,
+  "explanation": "A MAC-48 address is 6 bytes, written as six hex pairs."
+ },
+ {
+  "id": "qb2324d5f53d",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "What is the Ethernet broadcast MAC address?",
+  "options": [
+   "01:00:5E:00:00:01",
+   "00:00:00:00:00:00",
+   "7F:FF:FF:FF:FF:FF",
+   "FF:FF:FF:FF:FF:FF"
+  ],
+  "answer": 3,
+  "explanation": "All-ones is the broadcast address; 01:00:5E prefixes are IPv4 multicast."
+ },
+ {
+  "id": "qe15377bff85",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "Which device forwards frames based on a table of MAC addresses?",
+  "options": [
+   "Switch",
+   "Hub",
+   "Router",
+   "Repeater"
+  ],
+  "answer": 0,
+  "explanation": "A switch learns which MAC is on which port and forwards frames only where needed."
+ }
+]

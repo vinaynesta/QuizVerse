@@ -199,7 +199,7 @@ With the 25% buffer, everything comes to roughly **140–210 developer-days** (a
 ### Content
 
 #### 16. General/Financial Awareness and Computer Knowledge (15–25 days)
-**Started (26 Oct 2026).** `scripts/ga_bank/` holds 25 Computer Knowledge and 20 Banking Awareness questions (static facts only, no current affairs), all `needsReview`. They're practice topics; exam sections stay "coming soon" until there are enough (about 200 per level per subject) and they have been checked.
+**Started (26 Oct 2026).** `scripts/ga_bank/` holds 25 Computer Knowledge and 20 Banking Awareness questions (static facts only, no current affairs), all `needsReview`. They're practice topics; exam sections stay "coming soon" until there are enough (about 200 per level per subject) and they have been checked. **Update 4 Nov 2026:** the banks now fill every former "coming soon" Mains section (Computer Knowledge, General/Financial/Economy/Banking Awareness) and the mocks include them. Everything is still `needsReview` and shows a Draft badge until checked.
 - **What:** fill the current "coming soon" sections.
 - **Analysis:** these can't be generated. Computer Knowledge is fairly fixed (hardware, MS Office, networking, shortcuts), so 600 questions can be written once (about 6–8 days including review). General/Financial Awareness splits into fixed banking topics (RBI, monetary policy, banking terms: write once) and **current affairs, which go out of date every month**. Current affairs needs either an ongoing monthly job (~2 days a month) or has to be left out.
 - **Risk:** high. Wrong facts hurt trust. Every question needs a source and a person to check it. AI-drafted questions especially need fact-checking, because confident mistakes on dates and figures are common.

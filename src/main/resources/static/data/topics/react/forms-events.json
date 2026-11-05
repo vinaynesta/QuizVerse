@@ -30,6 +30,36 @@
   "explanation": "You pass the function itself; writing handleClick() would call it during render instead of on click."
  },
  {
+  "id": "q76b273f44ee",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "Which event prop runs when a user submits a form?",
+  "options": [
+   "onSend",
+   "onFormPost",
+   "onSubmit",
+   "onConfirm"
+  ],
+  "answer": 2,
+  "explanation": "onSubmit on a form element fires when the form is submitted by a button or by pressing Enter."
+ },
+ {
+  "id": "q9cb405e1954",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "What does e.target.value hold in an input's onChange handler?",
+  "options": [
+   "The input's current text",
+   "The input's name attribute",
+   "The keyboard key code",
+   "The previous text before the change"
+  ],
+  "answer": 0,
+  "explanation": "The event target is the input element, and its value property holds what the user has typed."
+ },
+ {
   "id": "qd9b03ec4ae1",
   "subject": "react",
   "topic": "forms-events",
@@ -73,6 +103,36 @@
   ],
   "answer": 2,
   "explanation": "Wrapping the call in an arrow function defers it until the click instead of calling it during render."
+ },
+ {
+  "id": "q21bbad9f729",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "How do you make a checkbox a controlled input?",
+  "options": [
+   "Bind value={isOn}",
+   "Bind checked={isOn} and update state in onChange",
+   "Use selected={isOn}",
+   "Use defaultChecked with onChange"
+  ],
+  "answer": 1,
+  "explanation": "For checkboxes, React controls the checked attribute rather than value."
+ },
+ {
+  "id": "q2d7a4799b1d",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "medium",
+  "question": "How do you read all named fields of a form in its submit handler without controlled inputs?",
+  "options": [
+   "Create new FormData(e.currentTarget) and read values by name",
+   "Call useState for each field inside the handler",
+   "Use document.forms.values()",
+   "Read e.target.value"
+  ],
+  "answer": 0,
+  "explanation": "FormData collects each named input from the form element."
  },
  {
   "id": "q576c4f9a4d8",
@@ -178,5 +238,35 @@
   ],
   "answer": 0,
   "explanation": "React 19 resets uncontrolled fields after a successful action, and requestFormReset can do it manually."
+ },
+ {
+  "id": "q971011af2de",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "In React 19, a form uses action={submit} where submit is a Server Function. What happens if JavaScript has not loaded yet when the user submits?",
+  "options": [
+   "The form can still submit as a regular form post when used with a framework that supports progressive enhancement",
+   "The browser shows an error",
+   "The data is silently lost",
+   "Nothing happens until hydration completes in all cases"
+  ],
+  "answer": 0,
+  "explanation": "Server Function form actions can work before hydration, which is a key benefit of progressive enhancement."
+ },
+ {
+  "id": "qde7258d8e18",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "hard",
+  "question": "Why might onClick on a parent div fire after a React portal child is clicked, even though the portal renders elsewhere in the DOM?",
+  "options": [
+   "React re-dispatches every click globally",
+   "Portals copy event listeners to the body",
+   "Browsers bubble events to every div",
+   "Events in portals propagate through the React tree, not the DOM tree"
+  ],
+  "answer": 3,
+  "explanation": "A portal stays a child of its React parent, so synthetic events bubble to React ancestors."
  }
 ]

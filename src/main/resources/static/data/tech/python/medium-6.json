@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe9c9ced0c87",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 'a,b,c'.split(',') return?",
+  "options": [
+   "['a', 'b', 'c']",
+   "('a', 'b', 'c')",
+   "'abc'",
+   "['a,b,c']"
+  ],
+  "answer": 0,
+  "explanation": "split returns a list of the pieces between separators."
+ },
+ {
+  "id": "qf94565d40d5",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does int('ff', 16) return?",
+  "options": [
+   "15",
+   "255",
+   "It raises ValueError",
+   "ff"
+  ],
+  "answer": 1,
+  "explanation": "The second argument is the base, and hexadecimal ff is 15 * 16 + 15 = 255."
+ },
+ {
+  "id": "qbe49454b081",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which special method should return an unambiguous, developer-oriented representation and is used by the interactive REPL?",
+  "options": [
+   "__str__",
+   "__format__",
+   "__doc__",
+   "__repr__"
+  ],
+  "answer": 3,
+  "explanation": "The REPL and repr() use __repr__, and str() falls back to it when __str__ is not defined."
+ },
+ {
+  "id": "q7ad08cc402f",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "What does a global x statement inside a function do?",
+  "options": [
+   "Creates a new local copy of x",
+   "Makes x read-only",
+   "Makes assignments to x in the function rebind the module-level x",
+   "Shares x across all imported modules"
+  ],
+  "answer": 2,
+  "explanation": "Without global, assigning to x inside the function would create a local variable."
+ },
+ {
+  "id": "qf95e35f6fe0",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does dict.fromkeys(['a', 'b'], 0) return?",
+  "options": [
+   "{'a': 'b'}",
+   "{0: ['a', 'b']}",
+   "[('a', 0), ('b', 0)]",
+   "{'a': 0, 'b': 0}"
+  ],
+  "answer": 3,
+  "explanation": "fromkeys creates a dict mapping each given key to the same value."
+ },
+ {
+  "id": "qe2dff666457",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "When x is -1, what does assert x > 0, 'must be positive' do (with assertions enabled)?",
+  "options": [
+   "Raises ValueError with message 'must be positive'",
+   "Prints 'must be positive' and continues",
+   "Raises AssertionError with message 'must be positive'",
+   "Returns False"
+  ],
+  "answer": 2,
+  "explanation": "A failing assert raises AssertionError with the given message; python -O disables asserts."
+ },
+ {
+  "id": "q38b5eec57e2",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "What does map(str, [1, 2]) return in Python 3?",
+  "options": [
+   "The list ['1', '2']",
+   "A lazy map iterator",
+   "The string '12'",
+   "A tuple of strings"
+  ],
+  "answer": 1,
+  "explanation": "map is lazy in Python 3; wrap it in list() to materialize the results."
+ },
+ {
+  "id": "q4ab305e7a66",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does [3, 1, 2].sort() return?",
+  "options": [
+   "[1, 2, 3]",
+   "[3, 2, 1]",
+   "A sorted iterator",
+   "None"
+  ],
+  "answer": 3,
+  "explanation": "list.sort() sorts in place and returns None; sorted() returns a new list."
+ },
+ {
+  "id": "qe1a8ed0cd00",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 10 % -3 evaluate to?",
+  "options": [
+   "1",
+   "-2",
+   "-1",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Python's % result takes the sign of the divisor, and 10 = (-3) * (-4) + (-2)."
+ },
+ {
+  "id": "q5090932af7d",
+  "subject": "python",
+  "topic": "functions",
+  "level": "medium",
+  "question": "Given def f(a, b, c): return a + b * c, what does f(*[1, 2, 3]) return?",
+  "options": [
+   "7",
+   "9",
+   "6",
+   "It raises TypeError"
+  ],
+  "answer": 0,
+  "explanation": "The list is unpacked to a=1, b=2, c=3, so the result is 1 + 2 * 3 = 7."
+ }
+]

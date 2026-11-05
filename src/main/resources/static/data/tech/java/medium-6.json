@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0f4214bc0ac",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What does a CountDownLatch let threads do?",
+  "options": [
+   "Lock a resource for exclusive access",
+   "Run tasks on a fixed schedule",
+   "Wait until a counter is decremented to zero by other threads",
+   "Exchange objects in pairs"
+  ],
+  "answer": 2,
+  "explanation": "Threads call await() and are released once countDown() has been called the configured number of times."
+ },
+ {
+  "id": "qe324a406c3e",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "What does Collections.unmodifiableList(list) return?",
+  "options": [
+   "The same list with its elements frozen",
+   "An independent immutable copy",
+   "A synchronized copy",
+   "A read-only view that reflects later changes to the original list"
+  ],
+  "answer": 3,
+  "explanation": "The view blocks modification through itself but still sees changes made through the backing list."
+ },
+ {
+  "id": "q0873f216f7d",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "What does (int) 3.99 evaluate to?",
+  "options": [
+   "3",
+   "4",
+   "3.99",
+   "It does not compile"
+  ],
+  "answer": 0,
+  "explanation": "Casting a double to int truncates toward zero."
+ },
+ {
+  "id": "qad70add160a",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "What does System.out.println('a' + 1) print?",
+  "options": [
+   "98",
+   "a1",
+   "b",
+   "97"
+  ],
+  "answer": 0,
+  "explanation": "The char is promoted to int 97 before addition, and println(int) prints 98."
+ },
+ {
+  "id": "qb83a296a508",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "medium",
+  "question": "In HotSpot since Java 8, which native memory area stores class metadata, replacing PermGen?",
+  "options": [
+   "Metaspace",
+   "Eden space",
+   "The thread stack",
+   "The string pool"
+  ],
+  "answer": 0,
+  "explanation": "Metaspace is allocated from native memory and grows as needed unless MaxMetaspaceSize is set."
+ },
+ {
+  "id": "q15f7e820605",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "Which class is the recommended general-purpose stack or FIFO queue implementation in modern Java?",
+  "options": [
+   "Stack",
+   "Vector",
+   "ArrayDeque",
+   "Hashtable"
+  ],
+  "answer": 2,
+  "explanation": "ArrayDeque is faster than the legacy synchronized Stack and supports both stack and queue operations."
+ },
+ {
+  "id": "q46bf26cb9a0",
+  "subject": "java",
+  "topic": "generics",
+  "level": "medium",
+  "question": "What is type erasure in Java generics?",
+  "options": [
+   "The JVM deletes unused generic classes at runtime",
+   "Generic types are converted into separate classes for each type argument",
+   "Type parameters are inferred at runtime from the actual objects",
+   "The compiler removes type arguments and replaces type parameters with their bounds or Object"
+  ],
+  "answer": 3,
+  "explanation": "Erasure keeps generics compatible with pre-generics bytecode, so type arguments are mostly unavailable at runtime."
+ },
+ {
+  "id": "q0de638439be",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Since Java 9, can an interface declare private methods?",
+  "options": [
+   "No, every interface method must be public",
+   "Yes, as helpers for its default and other methods",
+   "Only if the interface is sealed",
+   "Only private abstract methods"
+  ],
+  "answer": 1,
+  "explanation": "Private interface methods let default methods share code without exposing it."
+ },
+ {
+  "id": "q61d5fdcc7d5",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "After int i = 5; int j = i++ + ++i;, what is j?",
+  "options": [
+   "11",
+   "10",
+   "13",
+   "12"
+  ],
+  "answer": 3,
+  "explanation": "i++ yields 5 and makes i 6, then ++i makes i 7 and yields 7, so j = 5 + 7 = 12."
+ },
+ {
+  "id": "q8f6ac6ec08a",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does IntStream.rangeClosed(1, 4).sum() return?",
+  "options": [
+   "10",
+   "6",
+   "4",
+   "15"
+  ],
+  "answer": 0,
+  "explanation": "rangeClosed includes both endpoints, so the sum is 1 + 2 + 3 + 4 = 10."
+ }
+]

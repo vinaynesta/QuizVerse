@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q0deb52d3e54",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "Which rate-limiting approach is most accurate but uses the most memory, since it stores a timestamp for each request?",
+  "options": [
+   "Fixed window counter",
+   "Token bucket",
+   "Leaky bucket meter",
+   "Sliding window log"
+  ],
+  "answer": 3,
+  "explanation": "The log gives exact counts over any window, at the cost of storing every request timestamp in that window."
+ },
+ {
+  "id": "q60a69bf2922",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "What is needed to enforce one rate limit across several stateless API servers?",
+  "options": [
+   "Disabling the limit whenever more than one node is running",
+   "Storing the counter only in the client's cookie",
+   "Increasing each server's thread pool size",
+   "Shared counter state, such as a central store like Redis, or approximate per-node limits"
+  ],
+  "answer": 3,
+  "explanation": "Without shared state each node counts independently, so the effective global limit is multiplied by the node count."
+ },
+ {
+  "id": "q71f7e901d57",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "How does a sliding window counter rate limiter estimate the request count?",
+  "options": [
+   "It stores a timestamp for every request",
+   "It counts only the current fixed window",
+   "It weights the previous window's count by its overlap with the sliding window and adds the current window's count",
+   "It uses a random sample of requests"
+  ],
+  "answer": 2,
+  "explanation": "This approximation smooths boundary bursts using just two counters per key."
+ },
+ {
+  "id": "q793a35e8f19",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "How does the leaky bucket algorithm shape traffic?",
+  "options": [
+   "It allows unlimited bursts",
+   "It resets the counter at fixed window boundaries",
+   "It processes requests at a constant outflow rate, queuing or dropping excess",
+   "It blocks clients permanently after one violation"
+  ],
+  "answer": 2,
+  "explanation": "The bucket drains at a fixed rate, smoothing bursts into a steady stream."
+ },
+ {
+  "id": "q933a913f4e2",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "How should a client react to repeated 429 responses?",
+  "options": [
+   "Send the same request from many threads in parallel",
+   "Retry immediately in a tight loop until the call succeeds",
+   "Retry with exponential backoff and random jitter, honoring Retry-After when present",
+   "Switch to HTTP/1.0 and resend the request"
+  ],
+  "answer": 2,
+  "explanation": "Backoff with jitter reduces synchronized retry spikes that would keep the service overloaded."
+ },
+ {
+  "id": "q94d6b799c12",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "Which rate-limiting algorithm allows short bursts while enforcing a long-run average rate?",
+  "options": [
+   "Fixed window counter",
+   "Token bucket",
+   "Consistent hashing",
+   "Round-robin scheduling"
+  ],
+  "answer": 1,
+  "explanation": "Tokens accumulate up to the bucket capacity, so bursts up to that size pass while the refill rate sets the average."
+ },
+ {
+  "id": "qb7e8592bfd5",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "What weakness does a fixed-window counter rate limiter have?",
+  "options": [
+   "It cannot count requests per individual user",
+   "It needs a sorted set and cannot scale horizontally",
+   "A burst straddling a window boundary can let through up to twice the intended limit",
+   "It drops every request when the window resets"
+  ],
+  "answer": 2,
+  "explanation": "Requests at the end of one window and the start of the next are counted in different windows, so they can double up."
+ },
+ {
+  "id": "qfc628bae470",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "Which response best tells a client to back off and retry later?",
+  "options": [
+   "429 Too Many Requests with a Retry-After header",
+   "401 Unauthorized with a WWW-Authenticate header",
+   "404 Not Found with a Location header",
+   "400 Bad Request with a Retry-After header"
+  ],
+  "answer": 0,
+  "explanation": "429 signals rate limiting, and Retry-After indicates how long to wait before retrying."
+ }
+]

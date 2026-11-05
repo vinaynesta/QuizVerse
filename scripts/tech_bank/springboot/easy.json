@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "build-image uses Buildpacks to create an OCI image without a Dockerfile."
+  },
+  {
+    "topic": "core-di",
+    "question": "Which annotation marks a class as a Spring-managed component that component scanning can discover?",
+    "options": [
+      "@Configurable",
+      "@Entity",
+      "@Component",
+      "@Value"
+    ],
+    "answer": 2,
+    "explanation": "@Component (and stereotypes like @Service and @Repository) registers the class as a bean when it is found by component scanning."
+  },
+  {
+    "topic": "core-di",
+    "question": "Which annotation declares a method inside a @Configuration class whose return value becomes a bean?",
+    "options": [
+      "@Component",
+      "@Autowired",
+      "@Import",
+      "@Bean"
+    ],
+    "answer": 3,
+    "explanation": "A @Bean method is called by Spring and its returned object is registered in the application context."
+  },
+  {
+    "topic": "core-di",
+    "question": "What does @Value(\"${app.name}\") on a field do?",
+    "options": [
+      "Injects the value of the app.name property",
+      "Creates a bean named app.name",
+      "Validates that the field is not null",
+      "Exposes the field as a REST parameter"
+    ],
+    "answer": 0,
+    "explanation": "@Value resolves the ${...} placeholder against the Environment and injects the resulting property value."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "Which annotation combines @Configuration, @EnableAutoConfiguration and @ComponentScan?",
+    "options": [
+      "@SpringBootConfiguration",
+      "@SpringBootApplication",
+      "@EnableWebMvc",
+      "@AutoConfiguration"
+    ],
+    "answer": 1,
+    "explanation": "@SpringBootApplication is a convenience meta-annotation that bundles these three annotations on the main class."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "By default, which packages does component scanning from @SpringBootApplication cover?",
+    "options": [
+      "Every package on the classpath",
+      "The package of the annotated class and all its subpackages",
+      "Only packages listed in application.properties",
+      "Only the root default package"
+    ],
+    "answer": 1,
+    "explanation": "Scanning starts at the main class's package, which is why that class is usually placed in a root package."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation maps HTTP GET requests to a controller method?",
+    "options": [
+      "@PostMapping",
+      "@GetMapping",
+      "@ResponseBody",
+      "@RequestHeader"
+    ],
+    "answer": 1,
+    "explanation": "@GetMapping is a shortcut for @RequestMapping(method = RequestMethod.GET)."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation binds a query string parameter such as ?page=2 to a method parameter?",
+    "options": [
+      "@RequestParam",
+      "@PathVariable",
+      "@RequestBody",
+      "@ModelAttribute"
+    ],
+    "answer": 0,
+    "explanation": "@RequestParam reads request parameters such as query string values by name."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation tells Spring MVC to deserialize the HTTP request body into a method parameter?",
+    "options": [
+      "@ResponseBody",
+      "@RequestPart",
+      "@RequestAttribute",
+      "@RequestBody"
+    ],
+    "answer": 3,
+    "explanation": "@RequestBody uses an HttpMessageConverter, such as the Jackson one, to convert the body into the parameter type."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which library does spring-boot-starter-web use by default to convert objects to and from JSON?",
+    "options": [
+      "Jackson",
+      "Gson",
+      "JSON-B (Yasson)",
+      "org.json"
+    ],
+    "answer": 0,
+    "explanation": "The web starter pulls in spring-boot-starter-json, which auto-configures a Jackson ObjectMapper."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which property sets the JDBC URL of Spring Boot's auto-configured DataSource?",
+    "options": [
+      "spring.jpa.url",
+      "spring.jdbc.connection",
+      "spring.datasource.url",
+      "server.datasource.url"
+    ],
+    "answer": 2,
+    "explanation": "spring.datasource.url, together with username and password properties, configures the default DataSource."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which connection pool does Spring Boot use by default when it is on the classpath?",
+    "options": [
+      "HikariCP",
+      "Apache Commons DBCP2",
+      "C3P0",
+      "Tomcat JDBC Pool"
+    ],
+    "answer": 0,
+    "explanation": "HikariCP is preferred by Spring Boot and is included transitively by the JDBC and JPA starters."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which JPA annotation asks the persistence provider to generate a value for the primary key?",
+    "options": [
+      "@Column",
+      "@Version",
+      "@GeneratedValue",
+      "@Transient"
+    ],
+    "answer": 2,
+    "explanation": "@GeneratedValue on an @Id field lets the provider or database generate keys using a strategy such as IDENTITY or SEQUENCE."
+  },
+  {
+    "topic": "security",
+    "question": "In Spring Security terms, what is authentication?",
+    "options": [
+      "Verifying who a user is",
+      "Deciding what a user is allowed to do",
+      "Encrypting HTTP traffic",
+      "Logging security events"
+    ],
+    "answer": 0,
+    "explanation": "Authentication establishes identity, while authorization decides access for that identity."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which annotation binds a group of properties sharing a prefix to a typed Java object?",
+    "options": [
+      "@PropertySource",
+      "@Value",
+      "@EnableConfiguration",
+      "@ConfigurationProperties"
+    ],
+    "answer": 3,
+    "explanation": "@ConfigurationProperties(prefix = \"app\") binds app.* properties to the fields or constructor of a class or record."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Besides application.properties, which configuration file format does Spring Boot support out of the box?",
+    "options": [
+      "TOML, as application.toml",
+      "YAML, as application.yml",
+      "XML, as application.xml",
+      "INI, as application.ini"
+    ],
+    "answer": 1,
+    "explanation": "Spring Boot loads application.yml (or .yaml) using SnakeYAML, which the starters include."
+  },
+  {
+    "topic": "testing",
+    "question": "Which annotation loads the full application context for an integration test?",
+    "options": [
+      "@WebMvcTest",
+      "@DataJpaTest",
+      "@SpringBootTest",
+      "@JsonTest"
+    ],
+    "answer": 2,
+    "explanation": "@SpringBootTest bootstraps the complete application context, unlike slice annotations that load only part of it."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "Which logging implementation does Spring Boot use by default with the starters?",
+    "options": [
+      "Log4j 2",
+      "java.util.logging",
+      "Tinylog",
+      "Logback"
+    ],
+    "answer": 3,
+    "explanation": "spring-boot-starter-logging brings in Logback, with SLF4J as the logging API."
+  },
+  {
+    "topic": "transactions",
+    "question": "Which interface is Spring's central abstraction for imperative transaction management?",
+    "options": [
+      "TransactionTemplate",
+      "PlatformTransactionManager",
+      "EntityManager",
+      "DataSource"
+    ],
+    "answer": 1,
+    "explanation": "Implementations such as JpaTransactionManager and DataSourceTransactionManager implement PlatformTransactionManager."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "Which Gradle task, added by the Spring Boot plugin, builds an executable jar?",
+    "options": [
+      "shadowJar",
+      "fatJar",
+      "bootJar",
+      "assembleBoot"
+    ],
+    "answer": 2,
+    "explanation": "The Spring Boot Gradle plugin adds bootJar, which packages the application and its dependencies into an executable jar."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "Which web tool generates a new Spring Boot project with chosen dependencies?",
+    "options": [
+      "Maven Central search",
+      "Spring Cloud Config Server",
+      "JHipster Registry",
+      "Spring Initializr at start.spring.io"
+    ],
+    "answer": 3,
+    "explanation": "Spring Initializr generates a ready-to-build Maven or Gradle project, and IDEs integrate with it."
   }
 ]

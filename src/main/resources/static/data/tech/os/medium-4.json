@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qb0475c463b1",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Requiring each process to request and be allocated all its resources before it begins executing prevents which condition?",
+  "options": [
+   "Circular wait",
+   "Mutual exclusion",
+   "Hold and wait",
+   "No preemption"
+  ],
+  "answer": 2,
+  "explanation": "A process can never hold some resources while waiting for others, though this lowers resource utilization and can cause starvation."
+ },
+ {
+  "id": "q3d83e1b01fb",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Imposing a total ordering on resource types and requiring processes to request them in increasing order prevents which deadlock condition?",
+  "options": [
+   "Mutual exclusion",
+   "Circular wait",
+   "No preemption",
+   "Hold and wait"
+  ],
+  "answer": 1,
+  "explanation": "If every process acquires resources in the same global order, no cycle of waiting processes can form."
+ },
+ {
+  "id": "q0419c3fc646",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "Which type of fragmentation does paging eliminate?",
+  "options": [
+   "Internal fragmentation",
+   "Both internal and external fragmentation",
+   "External fragmentation",
+   "Neither"
+  ],
+  "answer": 2,
+  "explanation": "Any free frame can hold any page, so there are no unusable holes between allocations, though the last page of a process may still waste space internally."
+ },
+ {
+  "id": "q8cd249f7c49",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "Which page-replacement policy replaces the page that will not be used for the longest period of time in the future?",
+  "options": [
+   "LRU",
+   "FIFO",
+   "Optimal (OPT/MIN)",
+   "Second-chance"
+  ],
+  "answer": 2,
+  "explanation": "OPT gives the lowest possible fault rate but needs future knowledge, so it serves mainly as a benchmark."
+ },
+ {
+  "id": "qa2eb3a4086e",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What property of the test_and_set() hardware instruction makes it usable for building locks?",
+  "options": [
+   "It disables all interrupts permanently",
+   "It runs only in user mode",
+   "It executes atomically",
+   "It is faster than a regular load"
+  ],
+  "answer": 2,
+  "explanation": "test_and_set reads the old value and sets the word to true as one indivisible step, so only one thread can see false and take the lock."
+ },
+ {
+  "id": "q63912a715e5",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "Under segmentation, segment 2 has base 4300 and limit 400. What physical address does logical address (segment 2, offset 53) map to?",
+  "options": [
+   "4700",
+   "453",
+   "4353",
+   "Trap: addressing error"
+  ],
+  "answer": 2,
+  "explanation": "Offset 53 is less than limit 400, so it is valid and maps to base + offset = 4300 + 53 = 4353."
+ },
+ {
+  "id": "q58810d206e6",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What happens when signal() is called on a monitor condition variable that has no waiting threads?",
+  "options": [
+   "The signal is saved for the next thread that waits",
+   "Nothing; the signal has no effect",
+   "An exception is raised",
+   "The calling thread blocks"
+  ],
+  "answer": 1,
+  "explanation": "Unlike a semaphore's signal(), which always increments the count, a condition variable's signal() is lost if nobody is waiting."
+ },
+ {
+  "id": "qef15825a3e1",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Which of the following is NOT one of the four necessary (Coffman) conditions for deadlock?",
+  "options": [
+   "No preemption",
+   "Mutual exclusion",
+   "Hold and wait",
+   "Starvation"
+  ],
+  "answer": 3,
+  "explanation": "The four conditions are mutual exclusion, hold and wait, no preemption and circular wait; starvation is a separate problem."
+ },
+ {
+  "id": "qf9fec248d4b",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What guarantee does a monitor provide?",
+  "options": [
+   "Only one thread can be active inside the monitor at a time",
+   "All threads run in parallel inside it",
+   "Deadlock can never occur",
+   "Condition variables keep a count of signals"
+  ],
+  "answer": 0,
+  "explanation": "A monitor enforces mutual exclusion on its procedures automatically; condition variables then let threads wait inside it for specific conditions."
+ },
+ {
+  "id": "q5d3207e2fbe",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Processes P1, P2, P3 arrive at time 0 in that order with bursts 24, 3 and 3 ms. With Round Robin and a 4 ms quantum, what is the average waiting time?",
+  "options": [
+   "17 ms",
+   "5.67 ms",
+   "3 ms",
+   "7.33 ms"
+  ],
+  "answer": 1,
+  "explanation": "The schedule is P1 0-4, P2 4-7, P3 7-10, then P1 10-30, so waits are P1 = 10 - 4 = 6, P2 = 4, P3 = 7; average 17 / 3 = 5.67 ms."
+ }
+]

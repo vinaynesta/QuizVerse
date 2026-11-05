@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbdfee5f8657",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "easy",
+  "question": "Which JVM component automatically reclaims memory used by objects that are no longer reachable?",
+  "options": [
+   "The JIT compiler",
+   "The bytecode verifier",
+   "The class loader",
+   "The garbage collector"
+  ],
+  "answer": 3,
+  "explanation": "Java has no manual free; the garbage collector reclaims unreachable objects."
+ },
+ {
+  "id": "qeda5b50c4c2",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "What does the method reference String::length represent?",
+  "options": [
+   "A field holding the length of all strings",
+   "A function that takes a String and returns its length",
+   "A static constant for the maximum String length",
+   "A call to length() on the String class itself"
+  ],
+  "answer": 1,
+  "explanation": "An unbound instance method reference uses its first argument as the receiver."
+ },
+ {
+  "id": "q9d85a684716",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "easy",
+  "question": "Which stream operation transforms each element into another value?",
+  "options": [
+   "filter",
+   "map",
+   "count",
+   "forEach"
+  ],
+  "answer": 1,
+  "explanation": "map applies a function to every element and produces a stream of the results."
+ },
+ {
+  "id": "q24a79b729fa",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which List implementation is backed by a resizable array?",
+  "options": [
+   "ArrayList",
+   "LinkedList",
+   "TreeSet",
+   "HashMap"
+  ],
+  "answer": 0,
+  "explanation": "ArrayList stores its elements in an internal array that grows as needed."
+ },
+ {
+  "id": "q2e45183924a",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What does the expression 10 == 10.0 evaluate to?",
+  "options": [
+   "false",
+   "true",
+   "It throws an exception",
+   "It does not compile"
+  ],
+  "answer": 1,
+  "explanation": "The int is widened to double before comparison, and 10.0 equals 10.0."
+ },
+ {
+  "id": "q6b1777a07c5",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which method returns the number of elements in an ArrayList?",
+  "options": [
+   "size()",
+   "count()",
+   "length",
+   "length()"
+  ],
+  "answer": 0,
+  "explanation": "Collections use size(), while arrays use the length field and strings use length()."
+ },
+ {
+  "id": "q97ad75414f9",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "Which primitive type holds a single 16-bit UTF-16 code unit?",
+  "options": [
+   "byte",
+   "char",
+   "short",
+   "String"
+  ],
+  "answer": 1,
+  "explanation": "A Java char is an unsigned 16-bit value representing a UTF-16 code unit."
+ },
+ {
+  "id": "q6e9191041a4",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "Which method signature is the standard entry point of a standalone Java application?",
+  "options": [
+   "static int main(String args)",
+   "public void main()",
+   "public static void main(String[] args)",
+   "public static void start(String[] args)"
+  ],
+  "answer": 2,
+  "explanation": "The java launcher looks for this signature in the class it is asked to run."
+ },
+ {
+  "id": "q4d7d3749041",
+  "subject": "java",
+  "topic": "generics",
+  "level": "easy",
+  "question": "Which of these is a valid generic method declaration?",
+  "options": [
+   "public void <T> print(T item)",
+   "public void print<T>(T item)",
+   "public T<> void print(T item)",
+   "public <T> void print(T item)"
+  ],
+  "answer": 3,
+  "explanation": "The type parameter list goes between the modifiers and the return type."
+ },
+ {
+  "id": "q74dfb49338d",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Which method should you use to check whether two String objects have the same characters?",
+  "options": [
+   "==",
+   "compare()",
+   "equals()",
+   "same()"
+  ],
+  "answer": 2,
+  "explanation": "== compares references, while equals() compares contents."
+ }
+]

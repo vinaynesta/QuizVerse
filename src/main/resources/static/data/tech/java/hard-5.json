@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbe25daf1a57",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "Can an individual enum constant have its own class body that overrides methods?",
+  "options": [
+   "No, all constants must share one implementation",
+   "Yes, constant-specific class bodies can override methods",
+   "Only if the enum is declared abstract with the abstract keyword",
+   "Only in enums that implement no interfaces"
+  ],
+  "answer": 1,
+  "explanation": "Each constant with a body becomes an anonymous subclass of the enum type."
+ },
+ {
+  "id": "qf259e02a2d0",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "What does Arrays.asList(new int[]{1, 2, 3}).size() return?",
+  "options": [
+   "3",
+   "0",
+   "It does not compile",
+   "1"
+  ],
+  "answer": 3,
+  "explanation": "int[] is not boxed into Integer elements, so the varargs list holds a single int[] element."
+ },
+ {
+  "id": "q21d00671cf2",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What does IntStream.range(0, 5).boxed().collect(Collectors.partitioningBy(n -> n % 2 == 0)) produce?",
+  "options": [
+   "{true=[0, 2, 4]}",
+   "{false=[1, 3], true=[0, 2, 4]}",
+   "{false=[0, 2, 4], true=[1, 3]}",
+   "{0=[0, 2, 4], 1=[1, 3]}"
+  ],
+  "answer": 1,
+  "explanation": "partitioningBy always returns a map with both false and true keys, holding the failing and passing elements."
+ },
+ {
+  "id": "q937bc8620e4",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does System.out.println((byte) 200) print?",
+  "options": [
+   "200",
+   "56",
+   "-56",
+   "-128"
+  ],
+  "answer": 2,
+  "explanation": "The cast keeps the low 8 bits, and 200 - 256 = -56 in two's complement."
+ },
+ {
+  "id": "qb2b04fd875a",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A class implements two interfaces that both provide a default method void m() with the same signature. What happens?",
+  "options": [
+   "The first interface listed wins",
+   "The call is resolved randomly at runtime",
+   "The second interface listed wins",
+   "It fails to compile unless the class overrides m()"
+  ],
+  "answer": 3,
+  "explanation": "The conflict must be resolved explicitly, for example by overriding m() and calling A.super.m()."
+ },
+ {
+  "id": "qbf893ba4b74",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What does the Java Memory Model guarantee about a call to Thread.start()?",
+  "options": [
+   "Actions before start() in the starting thread happen-before every action in the started thread",
+   "Only volatile fields are visible to the new thread",
+   "The new thread runs before start() returns",
+   "Nothing; the new thread may see stale values of all fields"
+  ],
+  "answer": 0,
+  "explanation": "start() establishes a happens-before edge, so writes made before it are visible to the new thread."
+ },
+ {
+  "id": "q6a4fcc18dd6",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "Which capability does ReentrantLock offer that a synchronized block does not?",
+  "options": [
+   "Reentrancy for the same thread",
+   "Timed and interruptible lock acquisition via tryLock and lockInterruptibly",
+   "Mutual exclusion between threads",
+   "Automatic release when the block exits"
+  ],
+  "answer": 1,
+  "explanation": "Both are reentrant, but only ReentrantLock can attempt a lock with a timeout or be interrupted while waiting."
+ },
+ {
+  "id": "q2932e1433c1",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "hard",
+  "question": "What does Stream.iterate(1, n -> n * 2).limit(5).reduce(0, Integer::sum) return?",
+  "options": [
+   "32",
+   "15",
+   "31",
+   "63"
+  ],
+  "answer": 2,
+  "explanation": "The stream yields 1, 2, 4, 8, 16, which sum to 31."
+ },
+ {
+  "id": "qc98b60f641d",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "For a variable of type List<? super Integer>, what can you add, and what type do you get when reading?",
+  "options": [
+   "You can add any Number, and reads return Integer",
+   "You can add nothing, and reads return Integer",
+   "You can add Integer values, and reads return Object",
+   "You can add Object values, and reads return Number"
+  ],
+  "answer": 2,
+  "explanation": "A super-bounded wildcard is a consumer: it safely accepts Integer, but the element type is only known to be some supertype."
+ },
+ {
+  "id": "qeec078d4dda",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "How do iterators of a CopyOnWriteArrayList behave if the list is modified during iteration?",
+  "options": [
+   "They throw ConcurrentModificationException",
+   "They immediately reflect every modification",
+   "They iterate over a snapshot and never throw ConcurrentModificationException",
+   "They block until the modification finishes"
+  ],
+  "answer": 2,
+  "explanation": "Every write copies the backing array, so existing iterators keep reading the old array."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q390afca0e74",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "Which Error constructor option stores an underlying error so it can be wrapped and inspected later?",
+  "options": [
+   "{ inner }",
+   "{ cause }",
+   "{ parent }",
+   "{ source }"
+  ],
+  "answer": 1,
+  "explanation": "new Error(message, { cause }) is available since Node.js 16.9 and is read back from error.cause."
+ },
+ {
+  "id": "q6d7a98e5713",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "When two CommonJS modules require each other, what does the module that loads second receive from the first?",
+  "options": [
+   "The complete exports, because Node loads both at once",
+   "An error, since circular requires are not allowed",
+   "The partially filled exports object as it exists at that moment",
+   "undefined, always"
+  ],
+  "answer": 2,
+  "explanation": "The first module is still executing when the cycle is detected, so its exports may be incomplete."
+ },
+ {
+  "id": "qa88d3a4a595",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "medium",
+  "question": "What does new URL('https://x.io/p?a=1&a=2').searchParams.get('a') return?",
+  "options": [
+   "'2'",
+   "['1', '2']",
+   "'1'",
+   "null"
+  ],
+  "answer": 2,
+  "explanation": "get() returns the first value for a key; getAll() returns every value."
+ },
+ {
+  "id": "q8d4b3ee518f",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "Which version range does \"~1.4.2\" allow?",
+  "options": [
+   ">=1.4.2 <2.0.0",
+   "Exactly 1.4.2",
+   ">=1.4.2 <1.5.0",
+   ">=1.4.0 <3.0.0"
+  ],
+  "answer": 2,
+  "explanation": "A tilde range allows patch updates only; a caret range also allows minor updates."
+ },
+ {
+  "id": "q7f89076554e",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Why does this code not wait for each save() to finish before logging 'done'? items.forEach(async (item) => { await save(item); }); console.log('done');",
+  "options": [
+   "console.log always runs before any promise settles",
+   "save() must return a value synchronously",
+   "await cannot be used inside arrow functions",
+   "forEach ignores the promises returned by its callbacks, so the loop does not wait"
+  ],
+  "answer": 3,
+  "explanation": "Use a for...of loop with await, or Promise.all() over items.map(), to wait for all the saves."
+ },
+ {
+  "id": "qee2ed339648",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "Why is exec('ls ' + userInput) riskier than spawn('ls', [userInput])?",
+  "options": [
+   "spawn cannot accept user input at all",
+   "exec always runs as root",
+   "exec runs the string through a shell, so shell metacharacters in the input can inject commands",
+   "spawn blocks the event loop while the child runs"
+  ],
+  "answer": 2,
+  "explanation": "With an argument array and no shell, spawn passes the input as a single literal argument."
+ },
+ {
+  "id": "qda784eefddf",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What advantage does stream.pipeline() have over chaining .pipe() calls?",
+  "options": [
+   "It buffers the whole input in memory before writing",
+   "It forwards errors to one callback and destroys every stream in the chain when one fails",
+   "It disables backpressure so writes are faster",
+   "It runs each stream on its own thread"
+  ],
+  "answer": 1,
+  "explanation": "pipe() does not propagate errors or clean up the other streams automatically, which can leak resources."
+ },
+ {
+  "id": "qd0413f5f8d0",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "Which event on a writable stream fires after end() has been called and all pending data has been flushed?",
+  "options": [
+   "'close'",
+   "'finish'",
+   "'end'",
+   "'drain'"
+  ],
+  "answer": 1,
+  "explanation": "'finish' signals that all data has been handed to the underlying system; 'end' is a readable-side event."
+ },
+ {
+  "id": "qa0bb2c567d2",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "Which kind of stream is meant to change data as it passes through, such as a gzip compressor?",
+  "options": [
+   "Readable",
+   "Writable",
+   "Transform",
+   "Server"
+  ],
+  "answer": 2,
+  "explanation": "A Transform is a Duplex stream whose output is computed from its input."
+ },
+ {
+  "id": "qac7536c9180",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "What is the usual pattern for a graceful shutdown of an HTTP server on SIGTERM?",
+  "options": [
+   "Call process.abort() right away",
+   "Send SIGKILL to the process ID",
+   "Ignore the signal because SIGTERM cannot be caught",
+   "Call server.close() and let in-flight requests finish before exiting"
+  ],
+  "answer": 3,
+  "explanation": "SIGTERM can be handled with process.on('SIGTERM'), which lets the server drain before the process exits."
+ }
+]

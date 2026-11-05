@@ -1,0 +1,482 @@
+[
+  {
+    "topic": "osi-tcp-ip",
+    "question": "Which OSI layer is responsible for logical addressing and routing packets between networks?",
+    "options": [
+      "Data Link layer",
+      "Transport layer",
+      "Network layer",
+      "Session layer"
+    ],
+    "answer": 2,
+    "explanation": "The Network layer (Layer 3) handles IP addressing and path selection between networks."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "How many layers does the OSI reference model have?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "7"
+    ],
+    "answer": 3,
+    "explanation": "OSI has seven layers: Physical, Data Link, Network, Transport, Session, Presentation, Application."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "At which OSI layer do traditional Ethernet switches primarily operate?",
+    "options": [
+      "Transport (Layer 4)",
+      "Physical (Layer 1)",
+      "Network (Layer 3)",
+      "Data Link (Layer 2)"
+    ],
+    "answer": 3,
+    "explanation": "Switches forward frames using MAC addresses, which are Layer 2 identifiers."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "In the TCP/IP model, which layer does HTTP belong to?",
+    "options": [
+      "Application",
+      "Link",
+      "Internet",
+      "Transport"
+    ],
+    "answer": 0,
+    "explanation": "HTTP is an application-layer protocol that runs on top of a transport protocol such as TCP."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "What is the protocol data unit called at the transport layer when TCP is used?",
+    "options": [
+      "Frame",
+      "Bit",
+      "Segment",
+      "Packet"
+    ],
+    "answer": 2,
+    "explanation": "TCP data units are segments; packets are Layer 3 and frames are Layer 2."
+  },
+  {
+    "topic": "ports",
+    "question": "What is the default port for HTTPS?",
+    "options": [
+      "22",
+      "443",
+      "80",
+      "8080"
+    ],
+    "answer": 1,
+    "explanation": "HTTPS (HTTP over TLS) uses TCP port 443 by default; 80 is plain HTTP."
+  },
+  {
+    "topic": "ports",
+    "question": "What is the default port for SSH?",
+    "options": [
+      "21",
+      "23",
+      "22",
+      "25"
+    ],
+    "answer": 2,
+    "explanation": "SSH listens on TCP 22; 21 is FTP control, 23 is Telnet and 25 is SMTP."
+  },
+  {
+    "topic": "ports",
+    "question": "Which port is used by default for DNS queries?",
+    "options": [
+      "161",
+      "67",
+      "53",
+      "123"
+    ],
+    "answer": 2,
+    "explanation": "DNS uses port 53 over UDP (and TCP); 67 is DHCP, 123 NTP, 161 SNMP."
+  },
+  {
+    "topic": "ports",
+    "question": "Which port is traditionally used for SMTP mail relay between mail servers?",
+    "options": [
+      "25",
+      "110",
+      "143",
+      "993"
+    ],
+    "answer": 0,
+    "explanation": "Server-to-server SMTP uses TCP 25; 110 is POP3, 143 IMAP and 993 IMAPS."
+  },
+  {
+    "topic": "ports",
+    "question": "What is the default port for plain HTTP?",
+    "options": [
+      "443",
+      "21",
+      "80",
+      "8443"
+    ],
+    "answer": 2,
+    "explanation": "Unencrypted HTTP uses TCP port 80 by default."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "Which transport protocol provides reliable, ordered delivery of a byte stream?",
+    "options": [
+      "ICMP",
+      "TCP",
+      "UDP",
+      "IP"
+    ],
+    "answer": 1,
+    "explanation": "TCP uses sequence numbers, acknowledgments and retransmission to guarantee ordered, reliable delivery."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "Which of these transport protocols is connectionless?",
+    "options": [
+      "DCCP",
+      "TCP",
+      "SCTP",
+      "UDP"
+    ],
+    "answer": 3,
+    "explanation": "UDP sends independent datagrams with no handshake; TCP, SCTP and DCCP all set up connections."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "How large is the UDP header?",
+    "options": [
+      "20 bytes",
+      "8 bytes",
+      "32 bytes",
+      "16 bytes"
+    ],
+    "answer": 1,
+    "explanation": "The UDP header has four 2-byte fields: source port, destination port, length and checksum."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "Why is UDP commonly used for live voice and video?",
+    "options": [
+      "It avoids waiting for retransmissions, so late data is simply skipped",
+      "It encrypts media streams automatically",
+      "It allows much larger packets than TCP",
+      "It guarantees delivery of every packet"
+    ],
+    "answer": 0,
+    "explanation": "For real-time media, a retransmitted packet usually arrives too late to be useful, so UDP's low latency wins."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "What is the minimum size of a TCP header?",
+    "options": [
+      "16 bytes",
+      "20 bytes",
+      "8 bytes",
+      "40 bytes"
+    ],
+    "answer": 1,
+    "explanation": "A TCP header without options is 20 bytes; options can extend it up to 60 bytes."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "Which protocol uses sequence numbers so the receiver can reorder data and detect loss?",
+    "options": [
+      "TCP",
+      "ARP",
+      "ICMP",
+      "UDP"
+    ],
+    "answer": 0,
+    "explanation": "TCP numbers every byte so the receiver can reassemble in order and acknowledge what arrived."
+  },
+  {
+    "topic": "dns",
+    "question": "What is the primary purpose of DNS?",
+    "options": [
+      "Forwarding packets between networks",
+      "Encrypting web traffic",
+      "Assigning IP addresses to hosts",
+      "Translating domain names into IP addresses"
+    ],
+    "answer": 3,
+    "explanation": "DNS is a distributed directory that resolves human-readable names to addresses and other records."
+  },
+  {
+    "topic": "dns",
+    "question": "Which DNS record type maps a hostname to an IPv4 address?",
+    "options": [
+      "A",
+      "AAAA",
+      "CNAME",
+      "MX"
+    ],
+    "answer": 0,
+    "explanation": "An A record holds a 32-bit IPv4 address; AAAA holds an IPv6 address."
+  },
+  {
+    "topic": "dns",
+    "question": "Which DNS record type specifies the mail servers for a domain?",
+    "options": [
+      "PTR",
+      "TXT",
+      "MX",
+      "NS"
+    ],
+    "answer": 2,
+    "explanation": "MX (mail exchanger) records list mail servers with preference values."
+  },
+  {
+    "topic": "dns",
+    "question": "Which DNS record type maps a hostname to an IPv6 address?",
+    "options": [
+      "PTR",
+      "AAAA",
+      "A",
+      "SRV"
+    ],
+    "answer": 1,
+    "explanation": "AAAA records hold 128-bit IPv6 addresses."
+  },
+  {
+    "topic": "dns",
+    "question": "Which DNS record type makes one name an alias for another canonical name?",
+    "options": [
+      "SOA",
+      "A",
+      "NS",
+      "CNAME"
+    ],
+    "answer": 3,
+    "explanation": "A CNAME points a name to a canonical name, whose records are then looked up."
+  },
+  {
+    "topic": "dhcp",
+    "question": "What does DHCP do?",
+    "options": [
+      "Maps IP addresses to MAC addresses",
+      "Automatically assigns IP configuration to hosts",
+      "Resolves hostnames to IP addresses",
+      "Encrypts traffic on the LAN"
+    ],
+    "answer": 1,
+    "explanation": "DHCP leases IP addresses and settings like gateway and DNS servers to clients."
+  },
+  {
+    "topic": "dhcp",
+    "question": "Which UDP ports do a DHCPv4 server and client use?",
+    "options": [
+      "Server 53, client 53",
+      "Server 20, client 21",
+      "Server 67, client 68",
+      "Server 80, client 443"
+    ],
+    "answer": 2,
+    "explanation": "DHCPv4 servers listen on UDP 67 and clients on UDP 68."
+  },
+  {
+    "topic": "dhcp",
+    "question": "What is the correct order of the DHCPv4 lease exchange (DORA)?",
+    "options": [
+      "Discover, Offer, Request, Acknowledge",
+      "Discover, Request, Offer, Acknowledge",
+      "Offer, Discover, Acknowledge, Request",
+      "Request, Offer, Discover, Acknowledge"
+    ],
+    "answer": 0,
+    "explanation": "The client broadcasts Discover, servers Offer, the client Requests one offer and the server Acknowledges."
+  },
+  {
+    "topic": "dhcp",
+    "question": "Besides an IP address, what does DHCP commonly provide to clients?",
+    "options": [
+      "A TCP port number",
+      "Default gateway and DNS server addresses",
+      "A TLS certificate",
+      "The client's MAC address"
+    ],
+    "answer": 1,
+    "explanation": "DHCP options carry settings such as subnet mask, router (gateway) and DNS servers; the MAC is burned into the NIC."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "How many bits are in an IPv4 address?",
+    "options": [
+      "128",
+      "48",
+      "32",
+      "64"
+    ],
+    "answer": 2,
+    "explanation": "IPv4 addresses are 32 bits, usually written as four decimal octets."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "How many bits are in an IPv6 address?",
+    "options": [
+      "64",
+      "256",
+      "32",
+      "128"
+    ],
+    "answer": 3,
+    "explanation": "IPv6 addresses are 128 bits, written as eight groups of four hex digits."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "Which of these is a private IPv4 address under RFC 1918?",
+    "options": [
+      "8.8.8.8",
+      "192.168.1.10",
+      "11.0.0.1",
+      "172.32.0.1"
+    ],
+    "answer": 1,
+    "explanation": "RFC 1918 reserves 10.0.0.0/8, 172.16.0.0/12 (172.16-172.31) and 192.168.0.0/16; 172.32.0.1 is outside the /12."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "What is the address 127.0.0.1 used for?",
+    "options": [
+      "Default gateway",
+      "Loopback to the local host",
+      "Multicast to all hosts",
+      "Limited broadcast"
+    ],
+    "answer": 1,
+    "explanation": "127.0.0.0/8 is the IPv4 loopback range; traffic to it never leaves the host."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "What is the IPv6 loopback address?",
+    "options": [
+      "ff02::1",
+      "fe80::1",
+      "::",
+      "::1"
+    ],
+    "answer": 3,
+    "explanation": "::1 is loopback; :: is unspecified, fe80::/10 is link-local and ff02::1 is all-nodes multicast."
+  },
+  {
+    "topic": "http-https",
+    "question": "What does HTTPS add on top of HTTP?",
+    "options": [
+      "Encryption and server authentication via TLS",
+      "Automatic caching",
+      "Response compression",
+      "Faster DNS resolution"
+    ],
+    "answer": 0,
+    "explanation": "HTTPS runs HTTP over TLS, which encrypts traffic and authenticates the server with a certificate."
+  },
+  {
+    "topic": "http-https",
+    "question": "Which HTTP status code indicates a successful request?",
+    "options": [
+      "404",
+      "301",
+      "200",
+      "500"
+    ],
+    "answer": 2,
+    "explanation": "200 OK means success; 404 is Not Found, 500 a server error and 301 a permanent redirect."
+  },
+  {
+    "topic": "http-https",
+    "question": "HTTP is described as stateless. What does that mean?",
+    "options": [
+      "Responses can never be cached",
+      "The protocol cannot carry cookies",
+      "Each request is independent; the server keeps no session state by default",
+      "The connection is never reused"
+    ],
+    "answer": 2,
+    "explanation": "HTTP itself does not remember prior requests; state is added with cookies, tokens or server-side sessions."
+  },
+  {
+    "topic": "http-https",
+    "question": "Which HTTP status code means the requested resource was not found?",
+    "options": [
+      "500",
+      "403",
+      "401",
+      "404"
+    ],
+    "answer": 3,
+    "explanation": "404 Not Found means the server has no current representation for the target URL."
+  },
+  {
+    "topic": "link-layer",
+    "question": "How long is an Ethernet MAC address?",
+    "options": [
+      "48 bits",
+      "128 bits",
+      "64 bits",
+      "32 bits"
+    ],
+    "answer": 0,
+    "explanation": "A MAC-48 address is 6 bytes, written as six hex pairs."
+  },
+  {
+    "topic": "link-layer",
+    "question": "Which device forwards frames based on a table of MAC addresses?",
+    "options": [
+      "Switch",
+      "Hub",
+      "Router",
+      "Repeater"
+    ],
+    "answer": 0,
+    "explanation": "A switch learns which MAC is on which port and forwards frames only where needed."
+  },
+  {
+    "topic": "routing",
+    "question": "Which protocol does the ping utility use?",
+    "options": [
+      "TCP",
+      "ARP",
+      "UDP",
+      "ICMP"
+    ],
+    "answer": 3,
+    "explanation": "ping sends ICMP Echo Request messages and waits for Echo Replies."
+  },
+  {
+    "topic": "routing",
+    "question": "What does a router consult to decide where to forward an IP packet?",
+    "options": [
+      "Its DNS cache",
+      "Its routing table",
+      "Its ARP cache",
+      "Its MAC address table"
+    ],
+    "answer": 1,
+    "explanation": "Routers look up the destination IP in the routing table to choose the next hop and interface."
+  },
+  {
+    "topic": "link-layer",
+    "question": "What is the Ethernet broadcast MAC address?",
+    "options": [
+      "01:00:5E:00:00:01",
+      "00:00:00:00:00:00",
+      "7F:FF:FF:FF:FF:FF",
+      "FF:FF:FF:FF:FF:FF"
+    ],
+    "answer": 3,
+    "explanation": "All-ones is the broadcast address; 01:00:5E prefixes are IPv4 multicast."
+  },
+  {
+    "topic": "link-layer",
+    "question": "Which device operates at the physical layer and repeats incoming signals out of all other ports?",
+    "options": [
+      "Hub",
+      "Router",
+      "Bridge",
+      "Switch"
+    ],
+    "answer": 0,
+    "explanation": "A hub is a multiport repeater with no address awareness; switches and bridges are Layer 2."
+  }
+]

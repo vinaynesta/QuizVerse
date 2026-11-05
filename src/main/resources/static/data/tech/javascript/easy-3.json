@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8bab6d14ad5",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What is the scope of a variable declared with var inside a function?",
+  "options": [
+   "Function scope",
+   "Global scope always",
+   "Module scope",
+   "Block scope"
+  ],
+  "answer": 0,
+  "explanation": "var declarations are scoped to the enclosing function, not to blocks."
+ },
+ {
+  "id": "qd38d2a0d59e",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "Given const obj = { a: 1 }; which statement is allowed?",
+  "options": [
+   "obj = { a: 2 };",
+   "const obj = {};",
+   "obj.a = 2;",
+   "delete obj;"
+  ],
+  "answer": 2,
+  "explanation": "const prevents rebinding the variable, but the object it references can still be mutated."
+ },
+ {
+  "id": "q481820b5740",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "Which of these is NOT a primitive type in JavaScript?",
+  "options": [
+   "bigint",
+   "symbol",
+   "boolean",
+   "array"
+  ],
+  "answer": 3,
+  "explanation": "Arrays are objects; the primitives are string, number, bigint, boolean, undefined, symbol and null."
+ },
+ {
+  "id": "q44500e31595",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 5 == \"5\"?",
+  "options": [
+   "false",
+   "true",
+   "TypeError",
+   "NaN"
+  ],
+  "answer": 1,
+  "explanation": "Loose equality converts the string to a number before comparing, so 5 equals 5."
+ },
+ {
+  "id": "q4c1e158b593",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does [...[1, 2], 3] evaluate to?",
+  "options": [
+   "[[1, 2], 3]",
+   "SyntaxError",
+   "[3, 1, 2]",
+   "[1, 2, 3]"
+  ],
+  "answer": 3,
+  "explanation": "The spread syntax expands the inner array's elements into the new array literal."
+ },
+ {
+  "id": "q0142fa3334e",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Given const user = { name: \"Ana\" }; how do you read the name property?",
+  "options": [
+   "user->name",
+   "user.name",
+   "user::name",
+   "user(name)"
+  ],
+  "answer": 1,
+  "explanation": "Object properties are accessed with dot notation or bracket notation like user[\"name\"]."
+ },
+ {
+  "id": "qb2b9258977e",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [10, 20, 30].indexOf(40) return?",
+  "options": [
+   "-1",
+   "null",
+   "undefined",
+   "0"
+  ],
+  "answer": 0,
+  "explanation": "indexOf returns -1 when the element is not found."
+ },
+ {
+  "id": "q45d2584ba90",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "What does the expression age >= 18 ? \"adult\" : \"minor\" return when age is 20?",
+  "options": [
+   "\"minor\"",
+   "\"adult\"",
+   "undefined",
+   "true"
+  ],
+  "answer": 1,
+  "explanation": "The conditional operator returns the second operand when the condition is truthy."
+ },
+ {
+  "id": "qb17dde0f37f",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "Given const { title } = { title: \"Book\", pages: 100 }; what is title?",
+  "options": [
+   "undefined",
+   "{ title: \"Book\" }",
+   "100",
+   "\"Book\""
+  ],
+  "answer": 3,
+  "explanation": "Object destructuring pulls out the property with the matching name."
+ },
+ {
+  "id": "qa68592aef78",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Which array method adds an element to the end of an array?",
+  "options": [
+   "unshift",
+   "push",
+   "shift",
+   "pop"
+  ],
+  "answer": 1,
+  "explanation": "push appends elements to the end; unshift adds to the start."
+ }
+]

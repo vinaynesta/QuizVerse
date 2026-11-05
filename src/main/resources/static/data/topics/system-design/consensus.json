@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q07d689422cd",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "In Raft, what triggers a follower to start an election?",
+  "options": [
+   "A client request",
+   "The leader reaching its log size limit",
+   "A configuration change",
+   "Not hearing from a leader within its randomized election timeout"
+  ],
+  "answer": 3,
+  "explanation": "Randomized timeouts reduce the chance of split votes."
+ },
+ {
+  "id": "q2233f7d7a86",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "Why do Raft and Paxos clusters usually have an odd number of nodes?",
+  "options": [
+   "Even sizes cannot elect a leader",
+   "Even sizes lose data",
+   "Odd sizes avoid network partitions",
+   "Adding a node to make an even count raises the majority size without tolerating any extra failures"
+  ],
+  "answer": 3,
+  "explanation": "Both 3 and 4 nodes tolerate one failure, so the fourth node adds cost without fault tolerance."
+ },
+ {
+  "id": "q24b263b4918",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "In Raft, when is a log entry considered committed?",
+  "options": [
+   "When the leader writes it to its own disk",
+   "When a client reads it back",
+   "When every follower acknowledges it",
+   "When the leader has replicated it to a majority of servers"
+  ],
+  "answer": 3,
+  "explanation": "Committing on majority replication means the entry survives any minority failure and will be seen by future leaders."
+ },
+ {
+  "id": "q2a2e9936e21",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "How many total replicas are needed to tolerate f Byzantine (arbitrary) faults in a protocol such as PBFT?",
+  "options": [
+   "f + 1",
+   "2f + 1",
+   "3f + 1",
+   "2f"
+  ],
+  "answer": 2,
+  "explanation": "Byzantine faults require 3f + 1 replicas; 2f + 1 is sufficient only for crash faults."
+ },
+ {
+  "id": "q567802e303a",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "What does the FLP impossibility result state?",
+  "options": [
+   "In an asynchronous system, no deterministic consensus algorithm can guarantee termination if even one process may crash",
+   "Consensus cannot tolerate any message loss at all",
+   "Consensus is impossible for clusters with more than three nodes",
+   "Consensus requires synchronized atomic clocks in every node"
+  ],
+  "answer": 0,
+  "explanation": "Practical protocols such as Raft and Paxos get around FLP with timeouts and partial synchrony assumptions, sacrificing guaranteed termination in some cases."
+ },
+ {
+  "id": "q723d241726c",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "How does Raft ensure that an elected leader has all committed entries?",
+  "options": [
+   "The leader copies logs from every follower after election",
+   "A voter refuses candidates whose log is less up to date than its own",
+   "Committed entries are stored only on the leader",
+   "Clients resend all committed entries"
+  ],
+  "answer": 1,
+  "explanation": "Since committed entries are on a majority, any winning candidate must hold them."
+ },
+ {
+  "id": "q77b30dd39cc",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "What problem do leader leases with fencing tokens address?",
+  "options": [
+   "Slow disk writes on followers",
+   "A deposed leader that is paused or partitioned continuing to act as leader",
+   "Uneven sharding of keys",
+   "High read latency"
+  ],
+  "answer": 1,
+  "explanation": "Storage rejects requests carrying a fencing token lower than the latest one issued."
+ },
+ {
+  "id": "q9b3e02a78c0",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "What is the purpose of the term number in Raft?",
+  "options": [
+   "It acts as a logical clock so stale leaders and messages can be detected and rejected",
+   "It sets the size of log segments on disk",
+   "It is the wall-clock time of the last heartbeat",
+   "It identifies the client that issued the request"
+  ],
+  "answer": 0,
+  "explanation": "Terms order leadership epochs, so a node that sees a higher term steps down and ignores lower-term messages."
+ },
+ {
+  "id": "qc5e4e123426",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "In Raft, a candidate becomes leader after receiving votes from:",
+  "options": [
+   "Any single follower",
+   "Every node in the cluster",
+   "A majority of the cluster",
+   "Exactly half of the nodes plus the client"
+  ],
+  "answer": 2,
+  "explanation": "A majority quorum ensures at most one leader can be elected per term."
+ }
+]

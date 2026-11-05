@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qea564ef8f3c",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nPromise.resolve().then(() => { console.log(\"a\"); Promise.resolve().then(() => console.log(\"b\")); });\nsetTimeout(() => console.log(\"c\"));",
+  "options": [
+   "a c b",
+   "a b c",
+   "c a b",
+   "b a c"
+  ],
+  "answer": 1,
+  "explanation": "The microtask queue is drained completely, including microtasks added during draining, before the next macrotask runs."
+ },
+ {
+  "id": "q412b8f419a1",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does Object.keys({ b: 1, 2: 1, a: 1, 1: 1 }) return?",
+  "options": [
+   "[\"1\", \"2\", \"b\", \"a\"]",
+   "[\"b\", \"2\", \"a\", \"1\"]",
+   "[\"a\", \"b\", \"1\", \"2\"]",
+   "[\"b\", \"a\", \"1\", \"2\"]"
+  ],
+  "answer": 0,
+  "explanation": "Integer-like keys come first in ascending order, followed by string keys in insertion order."
+ },
+ {
+  "id": "qaa9b2a3cd5b",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does obj instanceof Ctor actually check?",
+  "options": [
+   "Whether obj was created by calling Ctor directly",
+   "Whether obj.constructor === Ctor",
+   "Whether Ctor.prototype appears anywhere in obj's prototype chain",
+   "Whether obj has all properties of Ctor"
+  ],
+  "answer": 2,
+  "explanation": "instanceof walks the prototype chain of obj looking for Ctor.prototype (unless Symbol.hasInstance is customized)."
+ },
+ {
+  "id": "q3c494014632",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [] + [] evaluate to?",
+  "options": [
+   "[]",
+   "\"\" (empty string)",
+   "undefined",
+   "0"
+  ],
+  "answer": 1,
+  "explanation": "Both arrays convert to primitives via toString, giving empty strings that concatenate to an empty string."
+ },
+ {
+  "id": "q89507c72c2b",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does 1n + 1 evaluate to?",
+  "options": [
+   "TypeError: cannot mix BigInt and other types",
+   "2n",
+   "2",
+   "\"11\""
+  ],
+  "answer": 0,
+  "explanation": "Arithmetic operators do not implicitly mix BigInt and Number; one side must be converted explicitly."
+ },
+ {
+  "id": "qbdffcd726c0",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nasync function a() { console.log(1); await b(); console.log(2); }\nasync function b() { console.log(3); }\na();\nconsole.log(4);",
+  "options": [
+   "1 2 3 4",
+   "1 3 4 2",
+   "1 3 2 4",
+   "3 1 4 2"
+  ],
+  "answer": 1,
+  "explanation": "a logs 1 and calls b synchronously, which logs 3; the code after await resumes as a microtask after 4 is logged."
+ },
+ {
+  "id": "q8bb9e66e5ab",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What makes an object usable in a for...of loop?",
+  "options": [
+   "Having a [Symbol.iterator] method that returns an iterator",
+   "Having numeric keys",
+   "Extending Array",
+   "Having a length property"
+  ],
+  "answer": 0,
+  "explanation": "for...of uses the iteration protocol: it calls obj[Symbol.iterator]() and repeatedly calls next on the result."
+ },
+ {
+  "id": "qe21f5ea0a11",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What are the results of 0 === -0 and Object.is(0, -0)?",
+  "options": [
+   "false and false",
+   "true and false",
+   "false and true",
+   "true and true"
+  ],
+  "answer": 1,
+  "explanation": "Strict equality treats +0 and -0 as equal, but Object.is distinguishes them."
+ },
+ {
+  "id": "qd5c27392be0",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "Given class A {} and class B extends A {}, what does Object.getPrototypeOf(B) === A return?",
+  "options": [
+   "TypeError",
+   "false",
+   "undefined",
+   "true"
+  ],
+  "answer": 3,
+  "explanation": "extends links both chains: B.prototype inherits from A.prototype and the constructor B itself inherits from A, enabling static inheritance."
+ },
+ {
+  "id": "q7f614b3895d",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does the third call return?\nfunction* g() { yield 1; yield 2; }\nconst it = g();\nit.next(); it.next();\nit.next();",
+  "options": [
+   "{ value: 2, done: true }",
+   "{ value: undefined, done: true }",
+   "undefined",
+   "{ value: 3, done: false }"
+  ],
+  "answer": 1,
+  "explanation": "After the last yield, the generator finishes and next returns done: true with the return value, which is undefined here."
+ }
+]

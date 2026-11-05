@@ -7,13 +7,77 @@
   "question": "What does 'KYC' stand for in banking?",
   "options": [
    "Keep Your Cash",
-   "Know Your Customer",
+   "Know Your Credit",
    "Key Yearly Charge",
-   "Know Your Credit"
+   "Know Your Customer"
   ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "KYC (Know Your Customer) is the process of verifying a customer's identity and address."
+ },
+ {
+  "id": "q1cce7bf8b5d",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "The person named in a cheque to receive the money is the:",
+  "options": [
+   "Payee",
+   "Drawee",
+   "Guarantor",
+   "Drawer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The payee is the person to whom the cheque amount is payable."
+ },
+ {
+  "id": "q22c19d39f0a",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "In a cheque, the bank on which the cheque is drawn is called the:",
+  "options": [
+   "Drawee",
+   "Payee",
+   "Drawer",
+   "Holder in due course"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The drawee is the bank directed to pay the amount of the cheque."
+ },
+ {
+  "id": "q25eedc88bf4",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "On a cheque, what does 'MICR' stand for?",
+  "options": [
+   "Machine Integrated Cheque Reader",
+   "Magnetic Ink Character Recognition",
+   "Magnetic Integrated Code Reader",
+   "Micro Ink Cheque Recognition"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "KYC (Know Your Customer) is the process of verifying a customer's identity and address.",
-  "needsReview": true
+  "explanation": "MICR codes printed in magnetic ink allow machines to read cheque details quickly."
+ },
+ {
+  "id": "q3403a5c718d",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "A cheque that bears a date later than the date on which it is issued is called a:",
+  "options": [
+   "Stale cheque",
+   "Post-dated cheque",
+   "Ante-dated cheque",
+   "Mutilated cheque"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A post-dated cheque carries a future date and can be paid only on or after that date."
  },
  {
   "id": "q355586493e7",
@@ -22,14 +86,142 @@
   "level": "easy",
   "question": "What does 'ATM' stand for?",
   "options": [
-   "Any Time Money",
    "Automated Teller Machine",
+   "Any Time Money",
    "Automatic Transfer Machine",
    "Account Transfer Mode"
   ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "ATM stands for Automated Teller Machine."
+ },
+ {
+  "id": "q3952180c33e",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "A higher CASA ratio generally means a bank has:",
+  "options": [
+   "Higher cost of funds",
+   "Lower cost of funds",
+   "Higher NPAs",
+   "Lower capital adequacy"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "ATM stands for Automated Teller Machine.",
-  "needsReview": true
+  "explanation": "Current and savings deposits pay little or no interest, so a higher CASA share lowers the bank's cost of funds."
+ },
+ {
+  "id": "q4cefae679b4",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "The person who writes and signs a cheque is called the:",
+  "options": [
+   "Drawee",
+   "Drawer",
+   "Payee",
+   "Endorsee"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The drawer is the account holder who draws (issues) the cheque."
+ },
+ {
+  "id": "q8453b3a6704",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "The term 'Bancassurance' refers to:",
+  "options": [
+   "Insurance companies accepting bank deposits",
+   "Banks reinsuring their own loans",
+   "The RBI insuring commercial banks",
+   "Banks selling insurance products to their customers"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "In bancassurance, banks distribute insurance policies through their branch network."
+ },
+ {
+  "id": "qbff17c6014e",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "A cheque that is payable to whoever presents it at the bank counter is a:",
+  "options": [
+   "Order cheque",
+   "Bearer cheque",
+   "Account payee cheque",
+   "Specially crossed cheque"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A bearer cheque is payable to the person holding and presenting it."
+ },
+ {
+  "id": "qcc2bbf8f686",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "In cheque clearing, what does 'CTS' stand for?",
+  "options": [
+   "Cheque Transfer Service",
+   "Clearing Transaction System",
+   "Central Truncation Scheme",
+   "Cheque Truncation System"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Under the Cheque Truncation System, an electronic image of the cheque is sent for clearing instead of the physical cheque."
+ },
+ {
+  "id": "qce3a7a88eae",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "A Demand Draft is best described as a negotiable instrument that is:",
+  "options": [
+   "Issued by a post office for money orders",
+   "Issued by a customer on his own savings account",
+   "Issued only by the Reserve Bank of India",
+   "Issued by a bank, directing its own branch or correspondent to pay"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A demand draft is drawn by a bank on itself (another branch or correspondent), so it is not dishonoured for lack of funds."
+ },
+ {
+  "id": "qd90acc55781",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "What does 'IFSC' stand for?",
+  "options": [
+   "International Funds Settlement Code",
+   "Indian Financial System Code",
+   "Inter-bank Financial Service Code",
+   "Indian Fund Security Code"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The IFSC is an 11-character code identifying a bank branch for electronic fund transfers."
+ },
+ {
+  "id": "qf256d9654b4",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "easy",
+  "question": "A cheque presented for payment after its validity period has expired is called a:",
+  "options": [
+   "Post-dated cheque",
+   "Bearer cheque",
+   "Crossed cheque",
+   "Stale cheque"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A cheque presented after its validity period is stale and the bank will not pay it."
  },
  {
   "id": "q07b192846fd",
@@ -43,9 +235,41 @@
    "Self cheque",
    "Stale cheque"
   ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "Two parallel lines across a cheque (crossing) mean it must be paid into a bank account.",
-  "needsReview": true
+  "explanation": "Two parallel lines across a cheque (crossing) mean it must be paid into a bank account."
+ },
+ {
+  "id": "q4979c9d68c9",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "medium",
+  "question": "The rate at which the RBI buys or rediscounts bills of exchange and other commercial paper, as defined in Section 49 of the RBI Act, is the:",
+  "options": [
+   "Repo rate",
+   "Reverse repo rate",
+   "Bank rate",
+   "Base rate"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Section 49 of the RBI Act defines the bank rate as the standard rate at which the RBI buys or rediscounts bills."
+ },
+ {
+  "id": "q4c36a15a61a",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "medium",
+  "question": "Dishonour of a cheque for insufficient funds is an offence under which section of the Negotiable Instruments Act?",
+  "options": [
+   "Section 6",
+   "Section 124",
+   "Section 138",
+   "Section 13"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Section 138 of the NI Act makes dishonour of a cheque for insufficient funds a criminal offence."
  },
  {
   "id": "q551c1dec2c5",
@@ -54,14 +278,14 @@
   "level": "medium",
   "question": "A loan account generally becomes a Non-Performing Asset (NPA) when interest or principal is overdue for more than:",
   "options": [
-   "30 days",
-   "60 days",
    "90 days",
+   "60 days",
+   "30 days",
    "180 days"
   ],
-  "answer": 2,
-  "explanation": "Under RBI norms, a term loan becomes an NPA when dues stay unpaid for more than 90 days.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Under RBI norms, a term loan becomes an NPA when dues stay unpaid for more than 90 days."
  },
  {
   "id": "q58d78223cce",
@@ -71,13 +295,13 @@
   "question": "A cheque is generally valid for how long from the date written on it?",
   "options": [
    "1 month",
-   "3 months",
+   "1 year",
    "6 months",
-   "1 year"
+   "3 months"
   ],
-  "answer": 1,
-  "explanation": "Since 1 April 2012, cheques are valid for 3 months from their date; after that they are stale.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Since 1 April 2012, cheques are valid for 3 months from their date; after that they are stale."
  },
  {
   "id": "q5df0118c75e",
@@ -88,12 +312,44 @@
   "options": [
    "₹1 lakh",
    "₹2 lakh",
-   "₹5 lakh",
-   "₹10 lakh"
+   "₹10 lakh",
+   "₹5 lakh"
   ],
-  "answer": 2,
-  "explanation": "Since 4 February 2020 the limit is ₹5 lakh, covering principal and interest. Check for any later change.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Since 4 February 2020 the limit is ₹5 lakh, covering principal and interest. Check for any later change."
+ },
+ {
+  "id": "q872aec2612c",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "medium",
+  "question": "An order cheque is transferred from one person to another by:",
+  "options": [
+   "Endorsement and delivery",
+   "Registration with the drawee bank",
+   "Mere delivery",
+   "It cannot be transferred"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "An order cheque needs the payee's endorsement followed by delivery; a bearer cheque passes by mere delivery."
+ },
+ {
+  "id": "qa217b361d4c",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "medium",
+  "question": "A cheque crossing that contains the name of a particular bank between the lines is called:",
+  "options": [
+   "General crossing",
+   "Special crossing",
+   "Account payee crossing",
+   "Not negotiable crossing"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "In special crossing, the cheque is paid only through the bank named in the crossing."
  },
  {
   "id": "qe259849200f",
@@ -103,12 +359,124 @@
   "question": "The Basel norms for banks are mainly about:",
   "options": [
    "Interest rates",
-   "Capital adequacy and risk",
+   "Priority-sector lending",
    "Branch expansion",
-   "Priority-sector lending"
+   "Capital adequacy and risk"
   ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The Basel Accords set minimum capital and risk-management standards for banks."
+ },
+ {
+  "id": "q2f6bee508fa",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "After receiving notice of a dishonoured cheque under Section 138 of the NI Act, how many days does the drawer have to pay before the offence is complete?",
+  "options": [
+   "30 days",
+   "15 days",
+   "60 days",
+   "7 days"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "The Basel Accords set minimum capital and risk-management standards for banks.",
-  "needsReview": true
+  "explanation": "The payee must send notice within 30 days of learning of dishonour, and the drawer then has 15 days to pay."
+ },
+ {
+  "id": "q4019a8269cf",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "An endorsement marked 'sans recourse' means that the endorser:",
+  "options": [
+   "Excludes his own liability to subsequent holders",
+   "Restricts further negotiation of the instrument",
+   "Makes payment conditional on an event",
+   "Transfers the instrument to a bank only"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A sans recourse endorsement relieves the endorser of liability if the instrument is dishonoured."
+ },
+ {
+  "id": "q4a0b9a2b9bc",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "A garnishee order received by a bank is:",
+  "options": [
+   "An RBI order to close a branch",
+   "A customer's instruction to stop payment",
+   "An order to transfer unclaimed deposits",
+   "A court order attaching money of a judgment debtor held by the bank"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A garnishee order, issued by a court, directs the bank to hold funds of a debtor for the creditor's claim."
+ },
+ {
+  "id": "q524d3c71176",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "A bank's right to combine a customer's debit and credit balances held in the same capacity to recover dues is called:",
+  "options": [
+   "Right of subrogation",
+   "Garnishee right",
+   "Right of set-off",
+   "Right of appropriation"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Set-off lets the banker adjust a credit balance against a debit balance of the same customer in the same right."
+ },
+ {
+  "id": "qb3359c968b7",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "When a customer deposits money in a savings account, the bank becomes the customer's:",
+  "options": [
+   "Debtor",
+   "Creditor",
+   "Agent",
+   "Trustee"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "For deposits, the bank owes money to the customer, so the bank is the debtor and the customer the creditor."
+ },
+ {
+  "id": "qb53008af73c",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "From an Indian bank's point of view, its own foreign-currency account maintained with a bank abroad is called a:",
+  "options": [
+   "Nostro account",
+   "Loro account",
+   "Vostro account",
+   "Escrow account"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Nostro means 'our account with you'; Vostro means 'your account with us'."
+ },
+ {
+  "id": "qdb8d709923e",
+  "subject": "banking",
+  "topic": "banking-terms",
+  "level": "hard",
+  "question": "In the case of a safe deposit locker, the relationship between the bank and the customer is that of:",
+  "options": [
+   "Lessor and lessee",
+   "Debtor and creditor",
+   "Trustee and beneficiary",
+   "Principal and agent"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The bank leases the locker to the customer, so the relationship is lessor-lessee."
  }
 ]

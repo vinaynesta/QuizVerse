@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q637097fbffe",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What is elasticity in cloud systems?",
+  "options": [
+   "Retrying failed requests with a fixed delay",
+   "Storing data in multiple formats for compatibility",
+   "Compressing HTTP responses to save bandwidth",
+   "Automatically adding or removing capacity as demand changes"
+  ],
+  "answer": 3,
+  "explanation": "Elastic systems scale out and in with load, usually driven by metrics or schedules."
+ },
+ {
+  "id": "q5460f7c08af",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "Which strategy routes new requests to the server with the fewest active connections?",
+  "options": [
+   "Least connections",
+   "Round robin",
+   "Random selection with no state",
+   "Source port hashing"
+  ],
+  "answer": 0,
+  "explanation": "Least connections adapts better than round robin when request durations vary."
+ },
+ {
+  "id": "qda32495c654",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "Why are stateless web servers easy to scale horizontally?",
+  "options": [
+   "Stateless servers never need a network connection",
+   "They remove the need for a database entirely",
+   "They automatically encrypt all traffic",
+   "Any instance can serve any request because no session data lives on the instance"
+  ],
+  "answer": 3,
+  "explanation": "Because no per-client state is stored locally, requests can be routed to any instance."
+ },
+ {
+  "id": "q3964af4926c",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is throughput?",
+  "options": [
+   "The time taken by one request from start to finish",
+   "The delay between a DNS lookup and a TCP connect",
+   "The largest message size a server accepts",
+   "The amount of work completed per unit of time"
+  ],
+  "answer": 3,
+  "explanation": "Throughput is a rate, such as requests or megabytes processed per second."
+ },
+ {
+  "id": "qf55e6ef5205",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Which change most directly reduces latency for users far from the origin server?",
+  "options": [
+   "Adding more log lines to every request",
+   "Serving content from a location closer to those users",
+   "Increasing the number of automatic retries",
+   "Removing all caching from the request path"
+  ],
+  "answer": 1,
+  "explanation": "Moving data closer to users cuts propagation distance, which dominates for distant clients."
+ },
+ {
+  "id": "q36c6148bee0",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is latency?",
+  "options": [
+   "The time taken to complete a single request",
+   "The number of requests processed per second",
+   "The percentage of requests that succeed",
+   "The number of concurrent connections open"
+  ],
+  "answer": 0,
+  "explanation": "Latency measures how long one operation takes, usually in milliseconds."
+ },
+ {
+  "id": "q4a50de1c2e2",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which statement correctly distinguishes 401 from 403?",
+  "options": [
+   "401 means rate limited; 403 means the request body is malformed",
+   "401 means not found; 403 means the server crashed",
+   "401 means authentication is missing or invalid; 403 means the client is authenticated but not allowed",
+   "They are interchangeable names for the same condition"
+  ],
+  "answer": 2,
+  "explanation": "401 is about who the caller is; 403 is about what an authenticated caller may do."
+ },
+ {
+  "id": "qe9ea389b417",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is a read replica?",
+  "options": [
+   "A database that accepts writes independently of the primary",
+   "A backup that cannot be queried until restored",
+   "A copy of a database that serves read queries, usually updated from the primary",
+   "A client-side cache stored only in memory"
+  ],
+  "answer": 2,
+  "explanation": "Read replicas offload read traffic from the primary; with asynchronous replication they may lag slightly."
+ },
+ {
+  "id": "q4f32b189ba0",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What does the 'A' in ACID stand for?",
+  "options": [
+   "Atomicity",
+   "Authorization",
+   "Availability",
+   "Asynchrony"
+  ],
+  "answer": 0,
+  "explanation": "Atomicity means a transaction either fully applies or not at all."
+ },
+ {
+  "id": "q725d6ea02d0",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is the main risk of a long TTL on data that changes often?",
+  "options": [
+   "The cache will delete the origin data",
+   "Writes will be blocked until the TTL expires",
+   "Requests will be routed to the wrong region",
+   "Clients may keep receiving stale values for the length of the TTL"
+  ],
+  "answer": 3,
+  "explanation": "A long TTL trades freshness for fewer origin requests; stale data persists until expiry or invalidation."
+ }
+]

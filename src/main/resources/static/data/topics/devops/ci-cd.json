@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0bf03cd3644",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "What is continuous delivery?",
+  "options": [
+   "Tests run only once per night",
+   "Every change is deployed to production automatically with no gate",
+   "Deployments happen only on weekends",
+   "Every change that passes the pipeline is kept releasable, with production deployment usually behind a manual approval"
+  ],
+  "answer": 3,
+  "explanation": "Continuous delivery keeps software in a releasable state at all times; continuous deployment removes the manual approval step."
+ },
+ {
+  "id": "q33ab16da22a",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "Why should CI secrets be injected from a secret store at runtime rather than committed to the repository?",
+  "options": [
+   "Committed secrets persist in history and forks, so they can leak",
+   "Secrets run faster in CI",
+   "Git cannot store strings longer than 64 characters",
+   "CI systems cannot read files"
+  ],
+  "answer": 0,
+  "explanation": "Anything committed stays in the repository history, so a secret store plus runtime injection limits exposure."
+ },
+ {
+  "id": "q542af0e2d1f",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "Why are CI dependency caches commonly keyed on a hash of the lock file?",
+  "options": [
+   "It encrypts the cached dependencies",
+   "It forces a full reinstall on every run",
+   "It lets jobs share caches across unrelated repositories",
+   "The cache is reused until the dependencies change, then rebuilt"
+  ],
+  "answer": 3,
+  "explanation": "A new lock-file hash produces a new key, so stale dependencies are not restored."
+ },
+ {
+  "id": "qbc1502ee0a0",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "What is a matrix build in a CI pipeline?",
+  "options": [
+   "A build that compiles only changed files",
+   "A pipeline that deploys to several environments at once",
+   "A job that runs only when all other jobs fail",
+   "Running the same job across combinations of parameters, such as OS and language versions"
+  ],
+  "answer": 3,
+  "explanation": "A matrix expands one job definition into one run per parameter combination."
+ },
+ {
+  "id": "qd057f461c5b",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "In a typical CI pipeline, which stage normally runs first on each commit?",
+  "options": [
+   "Build and test on each commit",
+   "Monitor",
+   "Deploy to production",
+   "Approve release"
+  ],
+  "answer": 0,
+  "explanation": "Pipelines start by building and testing the commit so that broken changes are caught before anything is deployed."
+ },
+ {
+  "id": "qe6ecde133d4",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "What is the main purpose of a pipeline artifact?",
+  "options": [
+   "To store secrets securely across jobs",
+   "To pass built outputs such as binaries or images between stages",
+   "To trigger a rollback automatically",
+   "To replace source control"
+  ],
+  "answer": 1,
+  "explanation": "Artifacts carry outputs from one job to later jobs, such as a test or deploy stage, so they do not need to rebuild."
+ },
+ {
+  "id": "q2145a67639c",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "What does OIDC federation between a CI system and a cloud provider achieve?",
+  "options": [
+   "It encrypts build logs",
+   "Jobs exchange a short-lived signed identity token for temporary cloud credentials, avoiding long-lived stored keys",
+   "It replaces the need for code review",
+   "It lets CI jobs run on the cloud provider's hardware"
+  ],
+  "answer": 1,
+  "explanation": "The cloud trusts tokens from the CI issuer, scoped by claims such as repository and branch."
+ },
+ {
+  "id": "q8192712bbfa",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "What is the goal of ordering pipeline stages to fail fast?",
+  "options": [
+   "Run cheap checks such as lint and unit tests first, so failures surface early",
+   "Run the slowest tests first",
+   "Skip tests on the main branch",
+   "Deploy before the tests run"
+  ],
+  "answer": 0,
+  "explanation": "Cheap checks catch most problems in seconds, so expensive jobs such as integration tests and deploys run only when earlier stages pass."
+ },
+ {
+  "id": "qc8dd5f9d1bf",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "Why should CI jobs use least-privilege tokens?",
+  "options": [
+   "To make builds faster",
+   "So a compromised step can only affect what its token allows",
+   "Because tokens expire automatically after each run",
+   "To avoid the need for code review"
+  ],
+  "answer": 1,
+  "explanation": "Limiting token scope reduces the damage a malicious dependency or a compromised step can do."
+ },
+ {
+  "id": "qd3dea100b2f",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "Which practice is a common supply-chain safeguard for CI pipelines?",
+  "options": [
+   "Use latest tags for every base image",
+   "Pin actions and base images to immutable digests or commit SHAs",
+   "Run every job as root with full secrets",
+   "Disable build logs"
+  ],
+  "answer": 1,
+  "explanation": "Pinning to digests or SHAs means a moved or compromised tag cannot silently change what your pipeline runs."
+ },
+ {
+  "id": "qdcc0085bb41",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "What does a deployment gate based on an SLO check do?",
+  "options": [
+   "Blocks promotion or triggers a rollback if error rate or latency breaches its threshold during rollout",
+   "Rewrites the git history of the release branch",
+   "Compiles the code again before deploying",
+   "Deletes old container images"
+  ],
+  "answer": 0,
+  "explanation": "Automated analysis of live metrics during a rollout decides whether to continue, pause, or roll back."
+ },
+ {
+  "id": "qfef064078d7",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "Why does pinning a lock file and base image versions make builds more reproducible?",
+  "options": [
+   "It skips dependency resolution entirely",
+   "It guarantees the build has no CVEs",
+   "It removes the need for a container registry",
+   "The same inputs resolve to the same dependency versions and artifacts, so builds repeat"
+  ],
+  "answer": 3,
+  "explanation": "Reproducibility depends on fixing every input, including dependency versions and base image digests, so repeated builds produce the same result."
+ }
+]

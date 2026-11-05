@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qde7fd62ac8f",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which keyword removes duplicate rows from a query result?",
+  "options": [
+   "UNIQUE",
+   "ONLY",
+   "SINGLE",
+   "DISTINCT"
+  ],
+  "answer": 3,
+  "explanation": "SELECT DISTINCT returns each distinct row once. UNIQUE is a constraint keyword, not a query modifier in standard SQL."
+ },
+ {
+  "id": "q6e49447c1d3",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which expression counts all rows in a table, including rows whose columns contain NULL?",
+  "options": [
+   "SUM(*)",
+   "COUNT(*)",
+   "AVG(*)",
+   "MAX(*)"
+  ],
+  "answer": 1,
+  "explanation": "COUNT(*) counts rows regardless of NULL values. SUM, AVG and MAX do not accept an asterisk."
+ },
+ {
+  "id": "q40c309f8fdc",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "easy",
+  "question": "What is a correlated subquery?",
+  "options": [
+   "A subquery that always returns exactly one row",
+   "A subquery that references a column from the outer query",
+   "A subquery placed only in the FROM clause",
+   "A subquery that runs once before the main query"
+  ],
+  "answer": 1,
+  "explanation": "A correlated subquery refers to columns of the outer query, so it depends on each outer row."
+ },
+ {
+  "id": "qffc3866df4f",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a LEFT JOIN return?",
+  "options": [
+   "All rows from the left table, with NULLs where there is no match on the right",
+   "Only rows matching in both tables",
+   "Only unmatched rows from the right table",
+   "Every combination of rows"
+  ],
+  "answer": 0,
+  "explanation": "LEFT (OUTER) JOIN preserves every row of the left table and fills right-side columns with NULL when no match exists."
+ },
+ {
+  "id": "q30f318e913c",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What is a self join?",
+  "options": [
+   "Joining two different databases",
+   "Joining a table to itself, using table aliases to distinguish the two roles",
+   "Joining a table with a copy of a different table",
+   "Joining a view with a table"
+  ],
+  "answer": 1,
+  "explanation": "A self join references the same table twice, usually with aliases, for example to match employees with their managers."
+ },
+ {
+  "id": "q40e27b98ece",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which clause filters groups after aggregation has been computed?",
+  "options": [
+   "WHERE",
+   "GROUP BY",
+   "ORDER BY",
+   "HAVING"
+  ],
+  "answer": 3,
+  "explanation": "HAVING applies conditions to aggregated groups, for example HAVING COUNT(*) > 5."
+ },
+ {
+  "id": "qf3d1d2e9a9b",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "What does SELECT * return?",
+  "options": [
+   "All columns of the tables in the FROM clause",
+   "Only primary key columns",
+   "Only numeric columns",
+   "Only the first column"
+  ],
+  "answer": 0,
+  "explanation": "The asterisk is shorthand for every column of the table or tables named in FROM."
+ },
+ {
+  "id": "q895f5d5c97a",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "easy",
+  "question": "Which normal form removes transitive dependencies between non-key attributes?",
+  "options": [
+   "3NF",
+   "2NF",
+   "5NF",
+   "1NF"
+  ],
+  "answer": 0,
+  "explanation": "Third normal form requires non-key attributes to depend only on the primary key, not on other non-key attributes."
+ },
+ {
+  "id": "qfe4e843b293",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "What is a view?",
+  "options": [
+   "A physical copy of a table stored on disk",
+   "A stored query that presents its results as a virtual table",
+   "A type of index spanning two tables",
+   "A trigger that runs on insert"
+  ],
+  "answer": 1,
+  "explanation": "A view is a named, stored query. Its rows are computed from the underlying tables when the view is queried."
+ },
+ {
+  "id": "q49a797cb7d2",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "easy",
+  "question": "What is the main benefit of an index?",
+  "options": [
+   "Smaller table size on disk",
+   "Automatic data validation",
+   "Prevention of concurrent access",
+   "Faster lookups on the indexed columns"
+  ],
+  "answer": 3,
+  "explanation": "An index lets the database locate matching rows without scanning the whole table, speeding up lookups and some sorts or joins."
+ }
+]

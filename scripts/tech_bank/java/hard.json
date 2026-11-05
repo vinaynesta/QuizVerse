@@ -478,5 +478,245 @@
     ],
     "answer": 1,
     "explanation": "Records already extend java.lang.Record and are implicitly final, though they may implement interfaces."
+  },
+  {
+    "topic": "oop",
+    "question": "A class implements two interfaces that both provide a default method void m() with the same signature. What happens?",
+    "options": [
+      "The first interface listed wins",
+      "It fails to compile unless the class overrides m()",
+      "The second interface listed wins",
+      "The call is resolved randomly at runtime"
+    ],
+    "answer": 1,
+    "explanation": "The conflict must be resolved explicitly, for example by overriding m() and calling A.super.m()."
+  },
+  {
+    "topic": "oop",
+    "question": "Can an individual enum constant have its own class body that overrides methods?",
+    "options": [
+      "Yes, constant-specific class bodies can override methods",
+      "No, all constants must share one implementation",
+      "Only if the enum is declared abstract with the abstract keyword",
+      "Only in enums that implement no interfaces"
+    ],
+    "answer": 0,
+    "explanation": "Each constant with a body becomes an anonymous subclass of the enum type."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does System.out.println((byte) 200) print?",
+    "options": [
+      "200",
+      "-56",
+      "56",
+      "-128"
+    ],
+    "answer": 1,
+    "explanation": "The cast keeps the low 8 bits, and 200 - 256 = -56 in two's complement."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does Integer.MAX_VALUE + 1 evaluate to?",
+    "options": [
+      "2147483648",
+      "It throws ArithmeticException",
+      "Integer.MIN_VALUE (-2147483648)",
+      "Integer.MAX_VALUE"
+    ],
+    "answer": 2,
+    "explanation": "int arithmetic silently overflows by wrapping around in two's complement."
+  },
+  {
+    "topic": "core-syntax",
+    "question": "What does -7 % 3 evaluate to in Java?",
+    "options": [
+      "-1",
+      "2",
+      "1",
+      "-2"
+    ],
+    "answer": 0,
+    "explanation": "The result of % takes the sign of the dividend, and -7 = 3 * (-2) + (-1)."
+  },
+  {
+    "topic": "strings",
+    "question": "What does \"\\u00DF\".toUpperCase() (the German sharp s) return?",
+    "options": [
+      "\"SS\"",
+      "\"\\u00DF\" unchanged",
+      "\"S\"",
+      "\"B\""
+    ],
+    "answer": 0,
+    "explanation": "Unicode case mapping uppercases the sharp s to two characters, so the string length changes."
+  },
+  {
+    "topic": "collections",
+    "question": "What happens when you put a null key or null value into a ConcurrentHashMap?",
+    "options": [
+      "It stores the null like HashMap does",
+      "It throws NullPointerException",
+      "It silently ignores the call",
+      "It stores the entry in a special null bucket"
+    ],
+    "answer": 1,
+    "explanation": "ConcurrentHashMap forbids nulls so that a null result from get() always means the key is absent."
+  },
+  {
+    "topic": "collections",
+    "question": "How do iterators of a CopyOnWriteArrayList behave if the list is modified during iteration?",
+    "options": [
+      "They throw ConcurrentModificationException",
+      "They iterate over a snapshot and never throw ConcurrentModificationException",
+      "They immediately reflect every modification",
+      "They block until the modification finishes"
+    ],
+    "answer": 1,
+    "explanation": "Every write copies the backing array, so existing iterators keep reading the old array."
+  },
+  {
+    "topic": "collections",
+    "question": "What does Arrays.asList(new int[]{1, 2, 3}).size() return?",
+    "options": [
+      "3",
+      "0",
+      "It does not compile",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "int[] is not boxed into Integer elements, so the varargs list holds a single int[] element."
+  },
+  {
+    "topic": "exceptions",
+    "question": "What is thrown when a static initializer throws an unchecked exception during class initialization?",
+    "options": [
+      "ClassNotFoundException",
+      "The original exception, unwrapped",
+      "NoSuchMethodError",
+      "ExceptionInInitializerError"
+    ],
+    "answer": 3,
+    "explanation": "The exception is wrapped, and later attempts to use the class get NoClassDefFoundError."
+  },
+  {
+    "topic": "exceptions",
+    "question": "Can a lambda implementing java.util.function.Function throw a checked IOException without catching it?",
+    "options": [
+      "No, because Function.apply declares no checked exceptions",
+      "Yes, lambdas are exempt from checked exception rules",
+      "Yes, if the enclosing method declares throws IOException",
+      "Only inside a parallel stream"
+    ],
+    "answer": 0,
+    "explanation": "A lambda body may only throw the checked exceptions declared by its functional interface's method."
+  },
+  {
+    "topic": "generics",
+    "question": "For a variable of type List<? super Integer>, what can you add, and what type do you get when reading?",
+    "options": [
+      "You can add any Number, and reads return Integer",
+      "You can add nothing, and reads return Integer",
+      "You can add Integer values, and reads return Object",
+      "You can add Object values, and reads return Number"
+    ],
+    "answer": 2,
+    "explanation": "A super-bounded wildcard is a consumer: it safely accepts Integer, but the element type is only known to be some supertype."
+  },
+  {
+    "topic": "generics",
+    "question": "Why does declaring static T value; inside class Box<T> fail to compile?",
+    "options": [
+      "T must be bounded before it can be used in a field",
+      "Static fields must be primitives",
+      "Generic classes cannot have static members",
+      "Static members are shared across all parameterizations, so they cannot use the class type parameter"
+    ],
+    "answer": 3,
+    "explanation": "There is only one static field for Box<String>, Box<Integer>, and so on, so no single T applies."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does Stream.iterate(1, n -> n * 2).limit(5).reduce(0, Integer::sum) return?",
+    "options": [
+      "32",
+      "31",
+      "15",
+      "63"
+    ],
+    "answer": 1,
+    "explanation": "The stream yields 1, 2, 4, 8, 16, which sum to 31."
+  },
+  {
+    "topic": "streams-lambdas",
+    "question": "What does IntStream.range(0, 5).boxed().collect(Collectors.partitioningBy(n -> n % 2 == 0)) produce?",
+    "options": [
+      "{false=[1, 3], true=[0, 2, 4]}",
+      "{true=[0, 2, 4]}",
+      "{false=[0, 2, 4], true=[1, 3]}",
+      "{0=[0, 2, 4], 1=[1, 3]}"
+    ],
+    "answer": 0,
+    "explanation": "partitioningBy always returns a map with both false and true keys, holding the failing and passing elements."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What does the Java Memory Model guarantee about a call to Thread.start()?",
+    "options": [
+      "Nothing; the new thread may see stale values of all fields",
+      "Only volatile fields are visible to the new thread",
+      "The new thread runs before start() returns",
+      "Actions before start() in the starting thread happen-before every action in the started thread"
+    ],
+    "answer": 3,
+    "explanation": "start() establishes a happens-before edge, so writes made before it are visible to the new thread."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Which capability does ReentrantLock offer that a synchronized block does not?",
+    "options": [
+      "Reentrancy for the same thread",
+      "Automatic release when the block exits",
+      "Mutual exclusion between threads",
+      "Timed and interruptible lock acquisition via tryLock and lockInterruptibly"
+    ],
+    "answer": 3,
+    "explanation": "Both are reentrant, but only ReentrantLock can attempt a lock with a timeout or be interrupted while waiting."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "Which java.lang.ref reference type lets its referent be reclaimed only when the JVM is running low on memory, making it suitable for caches?",
+    "options": [
+      "WeakReference",
+      "PhantomReference",
+      "SoftReference",
+      "StrongReference"
+    ],
+    "answer": 2,
+    "explanation": "Softly reachable objects are cleared before an OutOfMemoryError is thrown, while weak references are cleared at the next collection."
+  },
+  {
+    "topic": "jvm-memory",
+    "question": "What does java.lang.OutOfMemoryError: Metaspace usually indicate?",
+    "options": [
+      "The heap is full of ordinary objects",
+      "A thread's call stack is too deep",
+      "Too much class metadata, often from a class loader leak",
+      "Too many threads were created"
+    ],
+    "answer": 2,
+    "explanation": "Metaspace holds class metadata, so it fills up when classes are loaded but their class loaders are never released."
+  },
+  {
+    "topic": "modern-java",
+    "question": "In Java 21, when does case String s when s.isEmpty() -> ... match in a pattern switch?",
+    "options": [
+      "Whenever the selector is a String",
+      "Only when the selector is null",
+      "When the selector is a String and the guard s.isEmpty() is true",
+      "When the guard is true, regardless of type"
+    ],
+    "answer": 2,
+    "explanation": "A guarded pattern requires both the type pattern to match and the when condition to hold."
   }
 ]

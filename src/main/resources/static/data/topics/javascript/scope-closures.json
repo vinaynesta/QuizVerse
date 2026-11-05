@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q17eef30b930",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What does this log?\nfor (let i = 0; i < 3; i++) { setTimeout(() => console.log(i)); }",
+  "options": [
+   "3 3 3",
+   "0 1 2",
+   "2 2 2",
+   "undefined undefined undefined"
+  ],
+  "answer": 1,
+  "explanation": "let creates a fresh binding of i for each loop iteration, so each callback captures its own value."
+ },
+ {
+  "id": "q2ee77251336",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "Which is a common practical use of closures?",
+  "options": [
+   "Speeding up for loops",
+   "Creating private state that is only reachable through returned functions",
+   "Making objects immutable",
+   "Converting callbacks into synchronous code"
+  ],
+  "answer": 1,
+  "explanation": "Variables captured by a closure cannot be accessed from outside except through the functions that close over them."
+ },
+ {
+  "id": "q51678a0361d",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What does this log?\nfunction counter() { let n = 0; return () => ++n; }\nconst c = counter();\nc(); c();\nconsole.log(c());",
+  "options": [
+   "1",
+   "NaN",
+   "0",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "The returned function closes over the same n, which is incremented on each call, so the third call returns 3."
+ },
+ {
+  "id": "q6bbf014b6fc",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What does this log?\nfor (var i = 0; i < 3; i++) { setTimeout(() => console.log(i)); }",
+  "options": [
+   "0 1 2",
+   "0 0 0",
+   "3 3 3",
+   "undefined undefined undefined"
+  ],
+  "answer": 2,
+  "explanation": "var creates a single function-scoped i shared by all callbacks, and it is 3 by the time they run."
+ },
+ {
+  "id": "q8a3cc9e3cf4",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What is a closure in JavaScript?",
+  "options": [
+   "An object whose properties are frozen",
+   "A function that has finished executing",
+   "A function together with references to the variables of the scope where it was created",
+   "A block that runs immediately after declaration"
+  ],
+  "answer": 2,
+  "explanation": "A closure lets an inner function keep accessing variables of its outer scope even after that outer function has returned."
+ }
+]

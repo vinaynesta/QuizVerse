@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q162916e29ca",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which method on the response object sends the remaining data and signals that the response is complete?",
+  "options": [
+   "res.close()",
+   "res.end()",
+   "res.finish()",
+   "res.send()"
+  ],
+  "answer": 1,
+  "explanation": "res.end() finishes the response; res.send() is an Express helper, not part of the core http module."
+ },
+ {
+  "id": "qa14d3a4fa29",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "Which listener on a Readable stream receives its chunks of data?",
+  "options": [
+   "on('data')",
+   "read.all()",
+   "pipe.start()",
+   "onChunk()"
+  ],
+  "answer": 0,
+  "explanation": "Attaching a 'data' listener switches the stream into flowing mode, and each chunk is passed to the handler."
+ },
+ {
+  "id": "q6568fd9901a",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which module provides file system operations in Node.js?",
+  "options": [
+   "file",
+   "fs",
+   "filesystem",
+   "disk"
+  ],
+  "answer": 1,
+  "explanation": "The built-in fs module offers synchronous, callback, and promise-based file operations."
+ },
+ {
+  "id": "qeb920b6a4fa",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which field in package.json makes .js files in that package load as ES modules?",
+  "options": [
+   "\"module\": true",
+   "\"esm\": true",
+   "\"language\": \"esm\"",
+   "\"type\": \"module\""
+  ],
+  "answer": 3,
+  "explanation": "Setting \"type\" to \"module\" makes .js files in that package ES modules; \"type\" defaults to \"commonjs\"."
+ },
+ {
+  "id": "q109a492a925",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "easy",
+  "question": "Which encoding name produces a URL-safe Base64 string without +, /, or padding characters?",
+  "options": [
+   "'hex'",
+   "'base64'",
+   "'base64url'",
+   "'ascii'"
+  ],
+  "answer": 2,
+  "explanation": "The 'base64url' encoding replaces + and / with - and _ and omits padding; it has been available since Node.js 14.18 and 15.7."
+ },
+ {
+  "id": "qdb9a9841bbd",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "easy",
+  "question": "Which property of an Error object usually contains the stack trace string?",
+  "options": [
+   "trace",
+   "stack",
+   "callstack",
+   "frames"
+  ],
+  "answer": 1,
+  "explanation": "The stack property holds the formatted stack trace, which V8 generates when the Error is created."
+ },
+ {
+  "id": "qc089c190027",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which function from fs/promises reads an entire file asynchronously?",
+  "options": [
+   "readFile",
+   "loadFile",
+   "readFileSync",
+   "streamFile"
+  ],
+  "answer": 0,
+  "explanation": "fs/promises exports readFile(), which returns a promise resolving with the file contents."
+ },
+ {
+  "id": "qbd2668ee048",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which function synchronously checks whether a path exists?",
+  "options": [
+   "fs.fileExists()",
+   "fs.checkFile()",
+   "fs.existsSync()",
+   "fs.hasFile()"
+  ],
+  "answer": 2,
+  "explanation": "fs.existsSync() returns a boolean; the callback-based fs.exists() is deprecated."
+ },
+ {
+  "id": "qd996facac66",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "In an ES module, which of these is not available by default?",
+  "options": [
+   "__dirname",
+   "Top-level await",
+   "import declarations",
+   "import.meta.url"
+  ],
+  "answer": 0,
+  "explanation": "__dirname and __filename come from the CommonJS module wrapper; ES modules use import.meta.url instead."
+ },
+ {
+  "id": "q72b0b453146",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which core module lets a Node.js program run shell commands as child processes?",
+  "options": [
+   "os",
+   "child_process",
+   "vm",
+   "cluster"
+  ],
+  "answer": 1,
+  "explanation": "The child_process module provides spawn, exec, and execFile for starting external programs."
+ }
+]

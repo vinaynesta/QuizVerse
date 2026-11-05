@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe71bb1a50a0",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "How does TCP's congestion window grow during slow start?",
+  "options": [
+   "Exponentially, roughly doubling each RTT",
+   "It stays constant until a loss",
+   "Linearly, by one MSS per RTT",
+   "It halves every RTT"
+  ],
+  "answer": 0,
+  "explanation": "cwnd increases by about one MSS per ACK, so a full window of ACKs doubles it each round trip."
+ },
+ {
+  "id": "q057deeeca40",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "How does TCP CUBIC differ from Reno in growing its window?",
+  "options": [
+   "It halves cwnd on every ACK",
+   "It grows cwnd by exactly one byte per RTT",
+   "It grows cwnd as a cubic function of time since the last loss, largely independent of RTT",
+   "It ignores loss and uses only delay"
+  ],
+  "answer": 2,
+  "explanation": "CUBIC (RFC 9438) uses a cubic curve around the window size at the last loss, which improves fairness and use of high-BDP paths."
+ },
+ {
+  "id": "qd7a1baed0e7",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "What kind of routing protocol is BGP?",
+  "options": [
+   "A path-vector protocol used between autonomous systems",
+   "A link-state interior gateway protocol",
+   "A flooding protocol for a single LAN",
+   "A distance-vector protocol limited to 15 hops"
+  ],
+  "answer": 0,
+  "explanation": "BGP exchanges reachability with the full AS path attached and is the Internet's inter-domain (EGP) protocol."
+ },
+ {
+  "id": "qf9d0b079b4f",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What is the main security risk of TLS 1.3 0-RTT early data?",
+  "options": [
+   "It forces a downgrade to SSL 3.0",
+   "It can be replayed by an attacker",
+   "It prevents certificate validation",
+   "It is sent in plaintext"
+  ],
+  "answer": 1,
+  "explanation": "Early data has no protection against replay across connections, so it should only carry idempotent requests."
+ },
+ {
+  "id": "q5e3896225c3",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "Which key exchange method is NOT permitted in TLS 1.3?",
+  "options": [
+   "ECDHE",
+   "FFDHE (finite-field ephemeral DH)",
+   "Static RSA key transport",
+   "PSK with (EC)DHE"
+  ],
+  "answer": 2,
+  "explanation": "TLS 1.3 (RFC 8446) removed static RSA and static DH, so every full handshake has forward secrecy."
+ },
+ {
+  "id": "q34010a7429b",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does a TLS 1.3 server send if it supports one of the client's groups but the ClientHello has no key share for it?",
+  "options": [
+   "A handshake_failure alert",
+   "ChangeCipherSpec",
+   "HelloRetryRequest",
+   "ServerHelloDone"
+  ],
+  "answer": 2,
+  "explanation": "HelloRetryRequest names the group to use, and the client resends ClientHello with that key share, costing an extra RTT."
+ },
+ {
+  "id": "q5ef59574026",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Which HTTP/1.1 limitation does HTTP/2 stream multiplexing address?",
+  "options": [
+   "TCP-level head-of-line blocking after packet loss",
+   "DNS lookup latency",
+   "The cost of the TLS handshake",
+   "Application-level head-of-line blocking, by interleaving many streams on one connection"
+  ],
+  "answer": 3,
+  "explanation": "HTTP/2 splits messages into frames on independent streams, so one slow response doesn't block others at the HTTP layer."
+ },
+ {
+  "id": "qccb67b5c1bb",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "A 4000-byte IPv4 datagram (20-byte header, 3980 bytes of data) is fragmented over a 1500-byte MTU. What is the Fragment Offset field of the third fragment?",
+  "options": [
+   "2960",
+   "185",
+   "360",
+   "370"
+  ],
+  "answer": 3,
+  "explanation": "Each fragment carries 1480 data bytes (a multiple of 8), so the third starts at byte 2960, and the offset is in 8-byte units: 2960 / 8 = 370."
+ },
+ {
+  "id": "q13143bd3a40",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "In Reno-style congestion avoidance (the additive-increase phase of AIMD), how fast does cwnd grow?",
+  "options": [
+   "By ssthresh each RTT",
+   "About one MSS per RTT",
+   "Doubling each RTT",
+   "One byte per ACK"
+  ],
+  "answer": 1,
+  "explanation": "RFC 5681 congestion avoidance adds roughly SMSS*SMSS/cwnd per ACK, totaling about one MSS per round trip."
+ },
+ {
+  "id": "q576d01abeec",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Which QUIC feature lets a connection survive a client's IP address change, e.g. moving from Wi-Fi to cellular?",
+  "options": [
+   "Selective acknowledgments",
+   "TCP Fast Open",
+   "Nagle's algorithm",
+   "Connection IDs that are independent of the IP/port 4-tuple"
+  ],
+  "answer": 3,
+  "explanation": "QUIC identifies connections by connection ID, so packets from a new address can be matched and the path migrated."
+ }
+]

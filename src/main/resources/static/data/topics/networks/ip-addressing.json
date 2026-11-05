@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q1c048cfe52e",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "How many bits are in an IPv6 address?",
+  "options": [
+   "64",
+   "128",
+   "32",
+   "256"
+  ],
+  "answer": 1,
+  "explanation": "IPv6 addresses are 128 bits, written as eight groups of four hex digits."
+ },
+ {
+  "id": "q2b234b2bed6",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "Which of these is a private IPv4 address under RFC 1918?",
+  "options": [
+   "8.8.8.8",
+   "192.168.1.10",
+   "11.0.0.1",
+   "172.32.0.1"
+  ],
+  "answer": 1,
+  "explanation": "RFC 1918 reserves 10.0.0.0/8, 172.16.0.0/12 (172.16-172.31) and 192.168.0.0/16; 172.32.0.1 is outside the /12."
+ },
+ {
+  "id": "q3d1d68817a9",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "How many bits are in an IPv4 address?",
+  "options": [
+   "32",
+   "48",
+   "128",
+   "64"
+  ],
+  "answer": 0,
+  "explanation": "IPv4 addresses are 32 bits, usually written as four decimal octets."
+ },
+ {
+  "id": "q4ddc5b4c5be",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "What is the IPv6 loopback address?",
+  "options": [
+   "ff02::1",
+   "fe80::1",
+   "::",
+   "::1"
+  ],
+  "answer": 3,
+  "explanation": "::1 is loopback; :: is unspecified, fe80::/10 is link-local and ff02::1 is all-nodes multicast."
+ },
+ {
+  "id": "qbed1110b87d",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "What is the address 127.0.0.1 used for?",
+  "options": [
+   "Default gateway",
+   "Multicast to all hosts",
+   "Loopback to the local host",
+   "Limited broadcast"
+  ],
+  "answer": 2,
+  "explanation": "127.0.0.0/8 is the IPv4 loopback range; traffic to it never leaves the host."
+ }
+]

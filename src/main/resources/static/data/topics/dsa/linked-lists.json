@@ -15,6 +15,36 @@
   "explanation": "The tail links back to the head, forming a cycle."
  },
  {
+  "id": "q44ab7c30765",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "In a doubly linked list, what does each node store besides its data?",
+  "options": [
+   "References to both the next and the previous node",
+   "Only a reference to the head node",
+   "Only a reference to the next node",
+   "The index of the node in the list"
+  ],
+  "answer": 0,
+  "explanation": "The extra previous pointer allows traversal in both directions."
+ },
+ {
+  "id": "q5d415d6c55d",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "In a non-circular singly linked list, what does the next pointer of the last node hold?",
+  "options": [
+   "A reference to itself",
+   "A reference to the head",
+   "null",
+   "A reference to the second-to-last node"
+  ],
+  "answer": 2,
+  "explanation": "A null next pointer marks the end of the list."
+ },
+ {
   "id": "qb188aaac0e2",
   "subject": "dsa",
   "topic": "linked-lists",
@@ -75,6 +105,21 @@
   "explanation": "Without access to the predecessor, you overwrite the node with its successor and remove the successor."
  },
  {
+  "id": "q2dd71a01cbb",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "What is the time complexity of merging two sorted linked lists of lengths m and n into one sorted list?",
+  "options": [
+   "O(m * n)",
+   "O((m + n) log(m + n))",
+   "O(m + n)",
+   "O(max(m, n)^2)"
+  ],
+  "answer": 2,
+  "explanation": "Each step moves one node into the result, so the work is linear in the total length."
+ },
+ {
   "id": "q3454cdd82fc",
   "subject": "dsa",
   "topic": "linked-lists",
@@ -105,6 +150,21 @@
   "explanation": "When the fast pointer reaches the end, the slow pointer has covered half the distance."
  },
  {
+  "id": "qeeb49e54ed2",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "Given a direct reference to a node in a doubly linked list, how long does deleting that node take?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(n log n)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "The node's previous and next pointers allow its neighbors to be relinked without a traversal."
+ },
+ {
   "id": "qb7da33358ec",
   "subject": "dsa",
   "topic": "linked-lists",
@@ -118,6 +178,21 @@
   ],
   "answer": 1,
   "explanation": "The distance from the head to the cycle start equals the distance from the meeting point to the start, modulo cycle length."
+ },
+ {
+  "id": "qc7f0f46f711",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "How can you find the intersection node of two singly linked lists in O(m + n) time and O(1) extra space?",
+  "options": [
+   "Advance two pointers and redirect each to the other list's head when it reaches the end",
+   "Store every node of one list in a hash set",
+   "Reverse both lists and compare their heads",
+   "Compare every node of one list with every node of the other"
+  ],
+  "answer": 0,
+  "explanation": "After switching, both pointers travel m + n nodes in total and meet at the intersection, or at null if there is none."
  },
  {
   "id": "qd761c69d5f1",
@@ -148,5 +223,20 @@
   ],
   "answer": 1,
   "explanation": "In a singly linked list, unlinking a node requires finding its predecessor, which takes O(n)."
+ },
+ {
+  "id": "qf6824bad179",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "Which sorting algorithm is generally best suited to sorting a singly linked list in O(n log n) time?",
+  "options": [
+   "Heapsort",
+   "Quicksort with random-access pivot selection",
+   "Binary insertion sort",
+   "Merge sort"
+  ],
+  "answer": 3,
+  "explanation": "Merge sort needs only sequential access and can merge lists by relinking nodes without extra arrays."
  }
 ]

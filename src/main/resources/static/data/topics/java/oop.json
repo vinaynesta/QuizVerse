@@ -30,6 +30,36 @@
   "explanation": "A class declared final cannot be extended; const is reserved but unused in Java."
  },
  {
+  "id": "q8e21d83484a",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "What is method overloading?",
+  "options": [
+   "Redefining a superclass method in a subclass with the same signature",
+   "Calling a method from inside itself",
+   "Defining methods with the same name but different parameter lists",
+   "Declaring a method in an interface without a body"
+  ],
+  "answer": 2,
+  "explanation": "The compiler chooses among overloads based on the argument types at the call site."
+ },
+ {
+  "id": "qa4f2ff28b15",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword does a class use to declare that it implements an interface?",
+  "options": [
+   "uses",
+   "extends",
+   "inherits",
+   "implements"
+  ],
+  "answer": 3,
+  "explanation": "A class extends at most one class but can implement any number of interfaces."
+ },
+ {
   "id": "qbe00ab90c19",
   "subject": "java",
   "topic": "oop",
@@ -60,6 +90,36 @@
   "explanation": "Abstract classes cannot be instantiated directly; they can have constructors, state and abstract methods for subclasses to implement."
  },
  {
+  "id": "qd903e47e5fb",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword calls a superclass constructor from a subclass constructor?",
+  "options": [
+   "super",
+   "extends",
+   "this",
+   "parent"
+  ],
+  "answer": 0,
+  "explanation": "super(...) must be the first statement of the constructor and invokes the superclass constructor."
+ },
+ {
+  "id": "q0de638439be",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Since Java 9, can an interface declare private methods?",
+  "options": [
+   "No, every interface method must be public",
+   "Yes, as helpers for its default and other methods",
+   "Only if the interface is sealed",
+   "Only private abstract methods"
+  ],
+  "answer": 1,
+  "explanation": "Private interface methods let default methods share code without exposing it."
+ },
+ {
   "id": "q1031e18865f",
   "subject": "java",
   "topic": "oop",
@@ -73,6 +133,21 @@
   ],
   "answer": 0,
   "explanation": "Instance method calls use dynamic dispatch based on the actual object type."
+ },
+ {
+  "id": "q2a96dd1522b",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Can a constructor be declared final?",
+  "options": [
+   "Yes, to prevent subclass constructors",
+   "Yes, but only in abstract classes",
+   "No, it is a compile error",
+   "Yes, and it makes the class immutable"
+  ],
+  "answer": 2,
+  "explanation": "Constructors are not inherited or overridden, so final is not a legal modifier for them."
  },
  {
   "id": "q6f799c57b85",
@@ -103,6 +178,21 @@
   ],
   "answer": 2,
   "explanation": "An overriding method cannot have weaker access than the method it overrides."
+ },
+ {
+  "id": "qb27a02705f5",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which code can access a protected member of a class?",
+  "options": [
+   "Only code in the same class",
+   "Code in the same package and subclasses",
+   "Any code anywhere",
+   "Only subclasses in the same package"
+  ],
+  "answer": 1,
+  "explanation": "protected adds subclass access on top of package-private visibility."
  },
  {
   "id": "qf5c4be7363f",
@@ -165,6 +255,21 @@
   "explanation": "Private methods are not inherited, so they cannot be overridden; @Override on it would fail to compile."
  },
  {
+  "id": "qb2b04fd875a",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "A class implements two interfaces that both provide a default method void m() with the same signature. What happens?",
+  "options": [
+   "The first interface listed wins",
+   "The call is resolved randomly at runtime",
+   "The second interface listed wins",
+   "It fails to compile unless the class overrides m()"
+  ],
+  "answer": 3,
+  "explanation": "The conflict must be resolved explicitly, for example by overriding m() and calling A.super.m()."
+ },
+ {
   "id": "qb82abcb1a13",
   "subject": "java",
   "topic": "oop",
@@ -178,5 +283,20 @@
   ],
   "answer": 1,
   "explanation": "Since Java 5 an override may narrow a reference return type, e.g. clone() returning the class's own type."
+ },
+ {
+  "id": "qbe25daf1a57",
+  "subject": "java",
+  "topic": "oop",
+  "level": "hard",
+  "question": "Can an individual enum constant have its own class body that overrides methods?",
+  "options": [
+   "No, all constants must share one implementation",
+   "Yes, constant-specific class bodies can override methods",
+   "Only if the enum is declared abstract with the abstract keyword",
+   "Only in enums that implement no interfaces"
+  ],
+  "answer": 1,
+  "explanation": "Each constant with a body becomes an anonymous subclass of the enum type."
  }
 ]

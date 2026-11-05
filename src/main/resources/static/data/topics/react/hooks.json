@@ -45,6 +45,21 @@
   "explanation": "Hooks must be called in the same order every render, so they belong at the top level, not inside conditions, loops, or handlers."
  },
  {
+  "id": "q3f3c3858466",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "What does useState return?",
+  "options": [
+   "Only the current state value",
+   "An array with the current state value and a function to update it",
+   "A promise that resolves to the state",
+   "An object with get and set methods"
+  ],
+  "answer": 1,
+  "explanation": "Destructuring like const [count, setCount] = useState(0) reads the value and the setter from the returned pair."
+ },
+ {
   "id": "q90aa3fa82ee",
   "subject": "react",
   "topic": "hooks",
@@ -58,6 +73,21 @@
   ],
   "answer": 3,
   "explanation": "useRef returns an object like { current: initialValue } that stays the same object for the component's lifetime."
+ },
+ {
+  "id": "qd17f8effb84",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "Where can you call React hooks?",
+  "options": [
+   "Inside any regular JavaScript function",
+   "Inside loops when they run a fixed number of times",
+   "At the top level of function components or custom hooks",
+   "Inside class component methods"
+  ],
+  "answer": 2,
+  "explanation": "Hooks may only be called from React function components or custom hooks, at the top level."
  },
  {
   "id": "q02dda87ae3f",
@@ -90,6 +120,21 @@
   "explanation": "useId produces ids that match during hydration, for use in htmlFor or aria attributes, and is not meant for list keys."
  },
  {
+  "id": "qc036b258b7a",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "What is useImperativeHandle used for?",
+  "options": [
+   "Forcing a component to re-render",
+   "Running code before the browser paints",
+   "Customizing the value a parent receives through a ref to your component",
+   "Reading context without a provider"
+  ],
+  "answer": 2,
+  "explanation": "It lets a component expose a limited set of methods like focus() instead of the raw DOM node."
+ },
+ {
   "id": "qd0edb85842c",
   "subject": "react",
   "topic": "hooks",
@@ -120,6 +165,21 @@
   "explanation": "Custom hooks share stateful logic, not state; each call creates separate state for its component."
  },
  {
+  "id": "qe1a16a90622",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "medium",
+  "question": "What does useReducer return?",
+  "options": [
+   "An array with the current state and a dispatch function",
+   "An object with state and setState",
+   "Only the reducer function",
+   "A promise for the next state"
+  ],
+  "answer": 0,
+  "explanation": "const [state, dispatch] = useReducer(reducer, initialArg) gives the state and a stable dispatch function."
+ },
+ {
   "id": "q11813ac38d7",
   "subject": "react",
   "topic": "hooks",
@@ -148,6 +208,36 @@
   ],
   "answer": 3,
   "explanation": "useSyncExternalStore avoids tearing, where different parts of the UI show different store values in one render."
+ },
+ {
+  "id": "q5035d87c225",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "A custom hook returns an object literal { value, setValue } on every render. What problem can this create?",
+  "options": [
+   "The hook's state is shared between components",
+   "setValue stops working after the first render",
+   "React throws because hooks cannot return objects",
+   "Consumers that put the returned object in effect dependencies or memo props see a new reference every render"
+  ],
+  "answer": 3,
+  "explanation": "Unless memoized, the object identity changes each render, which can retrigger effects or break memoization."
+ },
+ {
+  "id": "qad6955aff2b",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "hard",
+  "question": "What does useSyncExternalStore require from the getSnapshot function?",
+  "options": [
+   "It must return a new object every call",
+   "It must return a cached value that stays identical by Object.is while the store has not changed",
+   "It must be async",
+   "It must subscribe to the store"
+  ],
+  "answer": 1,
+  "explanation": "Returning a fresh object each time makes React think the store changed on every render, causing an infinite loop."
  },
  {
   "id": "qd32458b5ab0",

@@ -15,6 +15,21 @@
   "explanation": "from module import name binds just that name in the current namespace."
  },
  {
+  "id": "q23b91cfebc0",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "easy",
+  "question": "Which statement imports the math module under the name m?",
+  "options": [
+   "import m from math",
+   "from math import m",
+   "import math as m",
+   "import math = m"
+  ],
+  "answer": 2,
+  "explanation": "The as clause binds the module to an alias in the current namespace."
+ },
+ {
   "id": "q59cd10ead78",
   "subject": "python",
   "topic": "modules-packages",
@@ -58,6 +73,21 @@
   ],
   "answer": 2,
   "explanation": "pip is Python's standard package installer for the Python Package Index."
+ },
+ {
+  "id": "q21cd23f2ab3",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "What does a virtual environment created with python -m venv provide?",
+  "options": [
+   "A sandbox that blocks network and file access",
+   "A compiled executable of your project",
+   "An isolated environment with its own interpreter link and site-packages",
+   "A copy of the operating system's libraries"
+  ],
+  "answer": 2,
+  "explanation": "Packages installed while a venv is active go into its own site-packages, separate from the system Python."
  },
  {
   "id": "q4ccf5cd8e91",
@@ -118,6 +148,21 @@
   ],
   "answer": 0,
   "explanation": "Imported modules are cached in sys.modules, so a repeat import just binds the existing object."
+ },
+ {
+  "id": "q087b1ba3023",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "hard",
+  "question": "What does defining a module-level __getattr__(name) function do (PEP 562)?",
+  "options": [
+   "It intercepts every attribute access on the module",
+   "It runs whenever the module is imported",
+   "It is called for attribute lookups on the module that are not found normally",
+   "It replaces the module's __dict__"
+  ],
+  "answer": 2,
+  "explanation": "Module __getattr__ enables lazy attributes and deprecation warnings for removed names."
  },
  {
   "id": "q266a452faac",

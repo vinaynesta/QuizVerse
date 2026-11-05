@@ -45,6 +45,21 @@
   "explanation": "Anything placed between a child's slot tags renders only if the parent passes no content for that slot."
  },
  {
+  "id": "q97e634c69fb",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What are named slots used for?",
+  "options": [
+   "Giving a slot a CSS class",
+   "Importing slots from another file",
+   "Naming the component itself",
+   "Letting a component expose several distinct places for parent content"
+  ],
+  "answer": 3,
+  "explanation": "A component can define <slot name=\"header\"> and other slots, and the parent fills each by name."
+ },
+ {
   "id": "qd38d6755430",
   "subject": "vue",
   "topic": "slots-provide-inject",
@@ -58,6 +73,21 @@
   ],
   "answer": 3,
   "explanation": "v-slot:header can be written as #header."
+ },
+ {
+  "id": "q4c37cb8ad86",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "Which API exposes the slots a component received in script setup?",
+  "options": [
+   "useSlots()",
+   "defineSlots() only",
+   "this.$slots",
+   "getSlots()"
+  ],
+  "answer": 0,
+  "explanation": "useSlots() returns the same object as $slots, while defineSlots() is a type-only macro for slot types."
  },
  {
   "id": "q59ee9cd2c9c",
@@ -178,5 +208,20 @@
   ],
   "answer": 2,
   "explanation": "Symbol keys are unique, and InjectionKey carries the type so inject() returns T or undefined."
+ },
+ {
+  "id": "qfc9ce5aa01f",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "How does a renderless component typically expose its logic to the parent?",
+  "options": [
+   "By passing state and functions as scoped slot props without rendering markup of its own",
+   "By providing global variables",
+   "By emitting an event on every change",
+   "By using v-html to inject templates"
+  ],
+  "answer": 0,
+  "explanation": "Renderless components render only the default slot with props, leaving all markup to the consumer."
  }
 ]

@@ -1,0 +1,612 @@
+[
+  {
+    "topic": "merging-rebasing",
+    "question": "What does a fast-forward merge do?",
+    "options": [
+      "Moves the branch pointer forward to the target commit without creating a merge commit",
+      "Creates a merge commit with two parents every time",
+      "Rewrites history by replaying commits onto a new base",
+      "Discards the target branch"
+    ],
+    "answer": 0,
+    "explanation": "When the target branch is a direct descendant of the current one, Git just advances the pointer, so no merge commit is needed."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "Which statement best describes git rebase?",
+    "options": [
+      "It creates a merge commit joining two histories",
+      "It replays commits from the current branch onto a new base, creating new commit objects",
+      "It copies a whole repository into a new directory",
+      "It deletes commits that are not on the remote"
+    ],
+    "answer": 1,
+    "explanation": "Rebase reapplies each commit on top of a new base; the rewritten commits get new hashes."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "Why should you avoid rebasing commits that have already been pushed to a shared branch?",
+    "options": [
+      "Rebase cannot run on remote branches",
+      "It automatically force-pushes the branch",
+      "Rebasing rewrites commit hashes, so collaborators' histories diverge from yours",
+      "Rebase deletes the remote's reflog"
+    ],
+    "answer": 2,
+    "explanation": "Rewritten commits have new hashes, so anyone who based work on the old commits must reconcile two divergent histories."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "What is the main benefit of squash merging a feature branch?",
+    "options": [
+      "It keeps every intermediate commit with its original hash",
+      "It preserves a merge commit with two parents",
+      "It rebases the target branch onto the feature branch",
+      "It collapses the feature's commits into one commit on the target branch"
+    ],
+    "answer": 3,
+    "explanation": "A squash merge produces a single commit on the target branch, which keeps the main history tidy."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "During a conflicted merge, which command marks a file as resolved after you edit it?",
+    "options": ["git add <file>", "git commit --resolve", "git mark <file>", "git checkout --ours"],
+    "answer": 0,
+    "explanation": "Staging the edited file records the resolution; the merge is completed with git commit afterwards."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "What does git rebase -i (interactive rebase) allow you to do?",
+    "options": [
+      "Only view the commit graph",
+      "Reorder, squash, edit, or drop commits in a range",
+      "Merge two repositories interactively",
+      "Stage individual hunks only"
+    ],
+    "answer": 1,
+    "explanation": "Interactive rebase opens a todo list where you pick, reword, squash, reorder, or drop commits."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "Which option makes a force push refuse to overwrite remote commits you have not fetched?",
+    "options": ["--force", "--mirror", "--force-with-lease", "--prune"],
+    "answer": 2,
+    "explanation": "--force-with-lease aborts if the remote branch has moved since your last fetch, protecting others' work."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "What is a three-way merge based on?",
+    "options": [
+      "Three remotes",
+      "The last three commits on each branch",
+      "The working tree, index and HEAD only",
+      "Two branch tips and their latest common ancestor"
+    ],
+    "answer": 3,
+    "explanation": "Git compares both branch tips against their merge base (the common ancestor) to combine the changes."
+  },
+  {
+    "topic": "git-history",
+    "question": "Which command shows which commit and author last modified each line of a file?",
+    "options": ["git blame <file>", "git log --who <file>", "git annotate-all <file>", "git show --author <file>"],
+    "answer": 0,
+    "explanation": "git blame annotates each line with the commit that last changed it."
+  },
+  {
+    "topic": "git-history",
+    "question": "What does git bisect do?",
+    "options": [
+      "Splits a repository into two independent repositories",
+      "Performs a binary search through commits to find which one introduced a bug",
+      "Creates two branches from one commit",
+      "Compresses the object database"
+    ],
+    "answer": 1,
+    "explanation": "Bisect marks commits as good or bad and narrows the range by halves until it finds the first bad commit."
+  },
+  {
+    "topic": "git-history",
+    "question": "Which command creates an annotated tag v1.2.0 with a release message?",
+    "options": [
+      "git release v1.2.0",
+      "git commit --tag v1.2.0",
+      "git tag -a v1.2.0 -m \"Release 1.2.0\"",
+      "git branch v1.2.0 --tag"
+    ],
+    "answer": 2,
+    "explanation": "git tag -a creates an annotated tag object that stores the tagger, date, and message."
+  },
+  {
+    "topic": "git-history",
+    "question": "Which command shows the changes introduced by a single commit?",
+    "options": ["git diff HEAD", "git status <commit>", "git log --only", "git show <commit>"],
+    "answer": 3,
+    "explanation": "git show <commit> displays the commit metadata along with the diff it introduced."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Why does Docker reuse cached layers during a build?",
+    "options": [
+      "Each instruction that is unchanged, along with its inputs, produces the same layer, so it is reused",
+      "Docker caches all layers globally across machines by default",
+      "Layers are compressed into a single file on every build",
+      "The cache is used only for the base image"
+    ],
+    "answer": 0,
+    "explanation": "If an instruction and its inputs have not changed, Docker reuses the layer it produced last time; a change invalidates that layer and every layer after it."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Why copy package.json and run npm install before copying the rest of the application source in a Node Dockerfile?",
+    "options": [
+      "Dependencies are reinstalled on every source change",
+      "The dependency layer can be cached until package.json changes",
+      "Source files are excluded from the image",
+      "It makes the final image smaller"
+    ],
+    "answer": 1,
+    "explanation": "Source edits invalidate only the layers after the COPY of the source, so the slow npm install layer stays cached."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which practice keeps apt package lists out of a Debian-based image?",
+    "options": [
+      "Install packages in one RUN and delete apt lists in a later RUN",
+      "Use COPY instead of RUN to install packages",
+      "Install and remove apt lists within the same RUN instruction",
+      "Set ENV APT_CACHE=0 at the top of the file"
+    ],
+    "answer": 2,
+    "explanation": "Files deleted in a later layer still exist in the earlier layer, so cleanup must happen in the same RUN that created them."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Which command shows the layers that make up an image, along with their sizes and the commands that created them?",
+    "options": ["docker ls --layers", "docker layers <image>", "docker stats <image>", "docker history <image>"],
+    "answer": 3,
+    "explanation": "docker history lists each layer of an image with the instruction that produced it and its size."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "By default, what does depends_on in a Compose file guarantee?",
+    "options": [
+      "Start order only; it does not wait for the service to be ready",
+      "The dependency is healthy before starting",
+      "Dependencies are scaled to one replica",
+      "Containers share the same filesystem"
+    ],
+    "answer": 0,
+    "explanation": "Without a condition, depends_on only controls startup order; readiness requires a healthcheck condition."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "Which Compose setting makes a service wait until another service passes its healthcheck?",
+    "options": [
+      "links: [db]",
+      "depends_on with condition: service_healthy",
+      "restart: always",
+      "network_mode: host"
+    ],
+    "answer": 1,
+    "explanation": "depends_on with condition: service_healthy delays the dependent service until the dependency's healthcheck reports healthy."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "In a typical CI pipeline, which stage normally runs first on each commit?",
+    "options": ["Deploy to production", "Monitor", "Build and test on each commit", "Approve release"],
+    "answer": 2,
+    "explanation": "Pipelines start by building and testing the commit so that broken changes are caught before anything is deployed."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "What is the main purpose of a pipeline artifact?",
+    "options": [
+      "To store secrets securely across jobs",
+      "To replace source control",
+      "To trigger a rollback automatically",
+      "To pass built outputs such as binaries or images between stages"
+    ],
+    "answer": 3,
+    "explanation": "Artifacts carry outputs from one job to later jobs, such as a test or deploy stage, so they do not need to rebuild."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "What is continuous delivery?",
+    "options": [
+      "Every change that passes the pipeline is kept releasable, with production deployment usually behind a manual approval",
+      "Every change is deployed to production automatically with no gate",
+      "Deployments happen only on weekends",
+      "Tests run only once per night"
+    ],
+    "answer": 0,
+    "explanation": "Continuous delivery keeps software in a releasable state at all times; continuous deployment removes the manual approval step."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "Why should CI secrets be injected from a secret store at runtime rather than committed to the repository?",
+    "options": [
+      "Secrets run faster in CI",
+      "Committed secrets persist in history and forks, so they can leak",
+      "Git cannot store strings longer than 64 characters",
+      "CI systems cannot read files"
+    ],
+    "answer": 1,
+    "explanation": "Anything committed stays in the repository history, so a secret store plus runtime injection limits exposure."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which object provides declarative updates and rollback for a set of pods by managing ReplicaSets?",
+    "options": ["Service", "ConfigMap", "Deployment", "Namespace"],
+    "answer": 2,
+    "explanation": "A Deployment creates and manages ReplicaSets, rolling out new versions and keeping revision history for rollback."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "What does a Kubernetes Service provide?",
+    "options": [
+      "Persistent storage for pods",
+      "A way to schedule pods to specific nodes only",
+      "A container image registry",
+      "A stable network endpoint and load balancing for pods selected by labels"
+    ],
+    "answer": 3,
+    "explanation": "A Service gives a stable virtual IP and DNS name and routes traffic to the healthy pods that match its selector."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "What is the purpose of a PersistentVolumeClaim?",
+    "options": [
+      "A request for storage that binds to a PersistentVolume",
+      "A node-level log file",
+      "A ConfigMap of secrets",
+      "A network policy"
+    ],
+    "answer": 0,
+    "explanation": "A PVC asks for storage with a size and access mode, and Kubernetes binds it to a matching PersistentVolume."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which object stores non-confidential configuration data as key-value pairs that pods can consume?",
+    "options": ["Secret", "ConfigMap", "Ingress", "StatefulSet"],
+    "answer": 1,
+    "explanation": "ConfigMaps hold plain configuration data; sensitive values belong in Secrets."
+  },
+  {
+    "topic": "infrastructure-as-code",
+    "question": "What does terraform plan do?",
+    "options": [
+      "Applies changes to the real infrastructure",
+      "Destroys all resources in the state file",
+      "Shows the changes Terraform would make to reach the desired configuration, without applying them",
+      "Formats the .tf files"
+    ],
+    "answer": 2,
+    "explanation": "terraform plan computes and displays an execution plan; terraform apply is what makes the changes."
+  },
+  {
+    "topic": "infrastructure-as-code",
+    "question": "What is the purpose of Terraform state?",
+    "options": [
+      "It stores the source code for modules",
+      "It is a cache of Docker images",
+      "It holds encrypted passwords for the cloud provider",
+      "It maps configuration resources to real-world objects so Terraform knows what it manages"
+    ],
+    "answer": 3,
+    "explanation": "The state file records the real resource IDs and attributes that correspond to each resource block, which Terraform needs to plan changes."
+  },
+  {
+    "topic": "infrastructure-as-code",
+    "question": "What does idempotent mean for an infrastructure-as-code run?",
+    "options": [
+      "Running it again with the same configuration makes no further changes once the desired state is reached",
+      "Each run creates new resources with new names",
+      "It can only be run once per environment",
+      "It always deletes and recreates resources"
+    ],
+    "answer": 0,
+    "explanation": "An idempotent apply converges on the declared state, so repeating it with no config changes results in no changes."
+  },
+  {
+    "topic": "monitoring",
+    "question": "In Prometheus, what does a counter metric represent?",
+    "options": [
+      "A value that can go up and down, like memory use",
+      "A cumulative value that only increases (except on reset)",
+      "A histogram of request latencies",
+      "A text label"
+    ],
+    "answer": 1,
+    "explanation": "Counters such as total requests only go up, and rate() is used to turn them into per-second rates."
+  },
+  {
+    "topic": "monitoring",
+    "question": "Which Prometheus metric type buckets observations such as request latency so percentiles can be estimated with histogram_quantile?",
+    "options": ["Gauge", "Counter", "Histogram", "Info"],
+    "answer": 2,
+    "explanation": "Histograms store cumulative bucket counts, and histogram_quantile estimates quantiles from them."
+  },
+  {
+    "topic": "linux-shell",
+    "question": "Which command shows the last 20 lines of a log file and keeps printing new lines as they are written?",
+    "options": ["head -20 -f log", "cat -f log", "less --follow log", "tail -n 20 -f log"],
+    "answer": 3,
+    "explanation": "tail -n 20 -f prints the last 20 lines and follows the file as it grows."
+  },
+  {
+    "topic": "linux-shell",
+    "question": "What does the pipe operator | do in a shell?",
+    "options": [
+      "Sends the standard output of one command to the standard input of the next",
+      "Runs commands in the background",
+      "Redirects error messages to a file",
+      "Creates a symbolic link"
+    ],
+    "answer": 0,
+    "explanation": "A pipe connects stdout of the left command to stdin of the right command."
+  },
+  {
+    "topic": "linux-shell",
+    "question": "Which bash variable holds the exit status of the last command that ran in the foreground?",
+    "options": ["$!", "$?", "$#", "$@"],
+    "answer": 1,
+    "explanation": "$? expands to the exit status of the most recent foreground command, where 0 means success."
+  },
+  {
+    "topic": "linux-shell",
+    "question": "Which command finds all files under /var/log whose names end in .log?",
+    "options": [
+      "grep -r '*.log' /var/log",
+      "ls /var/log/*.log --recursive",
+      "find /var/log -name '*.log'",
+      "which *.log /var/log"
+    ],
+    "answer": 2,
+    "explanation": "find walks the directory tree and -name matches file names against the glob pattern."
+  },
+  {
+    "topic": "linux-shell",
+    "question": "What does chmod 640 file do?",
+    "options": [
+      "Makes the file executable by all users",
+      "Gives everyone read and write access",
+      "Gives the owner read, write and execute, the group read, and others write",
+      "Gives the owner read and write, the group read, and others no access"
+    ],
+    "answer": 3,
+    "explanation": "The octal digits map to owner (6 = rw-), group (4 = r--), and others (0 = ---)."
+  },
+  {
+    "topic": "docker-networking",
+    "question": "Which Docker network driver makes a container use the host's network stack directly?",
+    "options": ["host", "bridge", "none", "overlay"],
+    "answer": 0,
+    "explanation": "With the host driver the container shares the host's network namespace instead of getting its own IP."
+  },
+  {
+    "topic": "docker-networking",
+    "question": "What lets containers on the same user-defined bridge network reach each other by container name?",
+    "options": [
+      "IP addresses hardcoded in the application",
+      "Docker's embedded DNS server, which resolves container names",
+      "Manual edits to each container's /etc/hosts",
+      "Environment variables only"
+    ],
+    "answer": 1,
+    "explanation": "User-defined bridge networks run an embedded DNS server, so containers can resolve each other by name. The default bridge does not provide this."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which Kubernetes object routes external HTTP(S) traffic to Services inside the cluster, using a controller that implements it?",
+    "options": ["ConfigMap", "PersistentVolume", "Ingress", "Job"],
+    "answer": 2,
+    "explanation": "An Ingress defines host and path routing rules, and an Ingress controller implements them."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "What is a Kubernetes Job used for?",
+    "options": [
+      "Running a long-lived web server",
+      "Storing secrets",
+      "Keeping a stable network identity for pods",
+      "Running pods to completion, such as batch tasks"
+    ],
+    "answer": 3,
+    "explanation": "A Job runs one or more pods until they complete successfully, which suits batch work such as migrations."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "What does git merge --no-ff do?",
+    "options": [
+      "Always creates a merge commit, even when a fast-forward would be possible",
+      "Refuses to merge if any conflicts are found",
+      "Rebases the branch before merging it",
+      "Merges without updating the working tree"
+    ],
+    "answer": 0,
+    "explanation": "--no-ff forces a merge commit so the branch's existence is preserved in history."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "During a rebase you resolve a conflict and stage the file. Which command resumes the rebase?",
+    "options": ["git commit --rebase", "git rebase --continue", "git merge --continue-rebase", "git rebase --skip"],
+    "answer": 1,
+    "explanation": "git rebase --continue applies the resolved commit and moves on to the remaining ones; --skip would drop the commit."
+  },
+  {
+    "topic": "merging-rebasing",
+    "question": "Which command abandons a conflicted merge in progress and restores the pre-merge state?",
+    "options": ["git reset --soft", "git stash", "git merge --abort", "git revert --merge"],
+    "answer": 2,
+    "explanation": "git merge --abort tries to reconstruct the state from before the merge started."
+  },
+  {
+    "topic": "git-history",
+    "question": "Which command lists the commits that are reachable from feature but not from main?",
+    "options": ["git log feature..main", "git diff main feature", "git show main feature", "git log main..feature"],
+    "answer": 3,
+    "explanation": "The A..B range means commits reachable from B but not from A."
+  },
+  {
+    "topic": "git-history",
+    "question": "What does git log -S 'someFunction' find?",
+    "options": [
+      "Commits that changed the number of occurrences of that string",
+      "Commits whose message contains that string",
+      "Commits signed by that author",
+      "Commits on branches whose name contains that string"
+    ],
+    "answer": 0,
+    "explanation": "The pickaxe option -S finds commits that added or removed occurrences of the string; --grep searches messages."
+  },
+  {
+    "topic": "git-history",
+    "question": "Which command searches the tracked files of the repository for a text pattern?",
+    "options": ["git find <pattern>", "git grep <pattern>", "git search <pattern>", "git log --files <pattern>"],
+    "answer": 1,
+    "explanation": "git grep searches tracked files in the working tree, or a given commit, for the pattern."
+  },
+  {
+    "topic": "docker-images",
+    "question": "When a Dockerfile defines both ENTRYPOINT and CMD in exec form, how are they combined?",
+    "options": [
+      "CMD runs first, then ENTRYPOINT",
+      "Only the instruction written last takes effect",
+      "ENTRYPOINT sets the executable, and CMD supplies default arguments that docker run arguments can replace",
+      "ENTRYPOINT runs at build time and CMD runs at start time"
+    ],
+    "answer": 2,
+    "explanation": "Arguments passed to docker run replace CMD and are appended to the ENTRYPOINT."
+  },
+  {
+    "topic": "docker-images",
+    "question": "Why is the exec form CMD [\"node\", \"server.js\"] usually preferred over the shell form CMD node server.js?",
+    "options": [
+      "Exec form produces smaller images",
+      "Shell form cannot read environment variables",
+      "Exec form makes the build cache more effective",
+      "The process runs directly as PID 1 and receives signals such as SIGTERM, instead of being wrapped in /bin/sh -c"
+    ],
+    "answer": 3,
+    "explanation": "With shell form, the shell becomes PID 1 and may not forward stop signals to the app."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "By default, how does one service in a Compose project reach another service named db?",
+    "options": [
+      "By using the hostname db on the project's default network",
+      "Only through a port published on the host",
+      "By the container's IP address, which must be hard-coded",
+      "Through a volume shared between the services"
+    ],
+    "answer": 0,
+    "explanation": "Compose attaches services to a default project network where each service name resolves via DNS."
+  },
+  {
+    "topic": "docker-compose",
+    "question": "Which file does Docker Compose read automatically to supply values for variables such as ${TAG} in the Compose file?",
+    "options": ["Dockerfile", "A .env file in the project directory", ".dockerignore", "compose.lock"],
+    "answer": 1,
+    "explanation": "Compose reads .env from the project directory for variable interpolation."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "What is a matrix build in a CI pipeline?",
+    "options": [
+      "A build that compiles only changed files",
+      "A pipeline that deploys to several environments at once",
+      "Running the same job across combinations of parameters, such as OS and language versions",
+      "A job that runs only when all other jobs fail"
+    ],
+    "answer": 2,
+    "explanation": "A matrix expands one job definition into one run per parameter combination."
+  },
+  {
+    "topic": "ci-cd",
+    "question": "Why are CI dependency caches commonly keyed on a hash of the lock file?",
+    "options": [
+      "It encrypts the cached dependencies",
+      "It forces a full reinstall on every run",
+      "It lets jobs share caches across unrelated repositories",
+      "The cache is reused until the dependencies change, then rebuilt"
+    ],
+    "answer": 3,
+    "explanation": "A new lock-file hash produces a new key, so stale dependencies are not restored."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which Kubernetes object runs a copy of a pod on every eligible node, for example a log collector?",
+    "options": ["DaemonSet", "Deployment", "StatefulSet", "ReplicaSet"],
+    "answer": 0,
+    "explanation": "A DaemonSet schedules one pod per matching node and adds pods as nodes join."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which Kubernetes object gives each pod a stable name and its own persistent volume, as databases often need?",
+    "options": ["Deployment", "StatefulSet", "DaemonSet", "CronJob"],
+    "answer": 1,
+    "explanation": "StatefulSet pods get ordinal names like db-0 and per-pod PersistentVolumeClaims from volumeClaimTemplates."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which kubectl command shows a pod's detailed state together with its recent events?",
+    "options": [
+      "kubectl get pod <name> --events",
+      "kubectl logs <name>",
+      "kubectl describe pod <name>",
+      "kubectl top pod <name>"
+    ],
+    "answer": 2,
+    "explanation": "kubectl describe shows conditions, container states, and related events such as scheduling or image pull failures."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "Which command rolls the Deployment web back to its previous revision?",
+    "options": [
+      "kubectl delete deployment web --previous",
+      "kubectl apply --undo deployment/web",
+      "kubectl scale deployment/web --revision=-1",
+      "kubectl rollout undo deployment/web"
+    ],
+    "answer": 3,
+    "explanation": "kubectl rollout undo reverts to the previous ReplicaSet revision unless --to-revision is given."
+  },
+  {
+    "topic": "kubernetes",
+    "question": "What is the default type of a Kubernetes Service when none is specified?",
+    "options": ["ClusterIP", "NodePort", "LoadBalancer", "ExternalName"],
+    "answer": 0,
+    "explanation": "ClusterIP exposes the Service on an internal cluster IP reachable only from inside the cluster."
+  },
+  {
+    "topic": "infrastructure-as-code",
+    "question": "Why do teams store Terraform state in a remote backend that supports locking?",
+    "options": [
+      "It makes terraform plan run offline",
+      "The state is shared, and locking stops two concurrent applies from corrupting it",
+      "Remote state removes the need for providers",
+      "Locking encrypts the configuration files"
+    ],
+    "answer": 1,
+    "explanation": "A shared backend gives everyone the same state, and the lock serializes operations that write it."
+  },
+  {
+    "topic": "monitoring",
+    "question": "Which Prometheus metric type represents a value that can go up and down, such as current memory usage?",
+    "options": ["Counter", "Histogram", "Gauge", "Summary"],
+    "answer": 2,
+    "explanation": "A gauge is a single value that can increase or decrease; a counter only increases."
+  },
+  {
+    "topic": "linux-shell",
+    "question": "In command > out.log 2>&1, what does 2>&1 do?",
+    "options": [
+      "Runs the command twice",
+      "Sends stdout to stderr",
+      "Appends to out.log instead of overwriting it",
+      "Redirects stderr to wherever stdout currently points, so both go to out.log"
+    ],
+    "answer": 3,
+    "explanation": "File descriptor 2 (stderr) is duplicated from descriptor 1 (stdout) after stdout was redirected to the file."
+  }
+]

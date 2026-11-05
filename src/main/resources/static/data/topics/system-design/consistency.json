@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q5c848e25e4a",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "In an eventually consistent system, what is guaranteed if no new writes occur?",
+  "options": [
+   "All replicas eventually converge to the same value",
+   "Writes are rejected while replicas synchronize",
+   "Replicas never diverge, even while writes are in flight",
+   "Every read immediately returns the latest write"
+  ],
+  "answer": 0,
+  "explanation": "Eventual consistency promises convergence over time, not immediate agreement on every read."
+ },
+ {
+  "id": "q5eb8757f379",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "How does an ETag or version field prevent lost updates?",
+  "options": [
+   "The update succeeds only if the version still matches what the client last read",
+   "It forces every read to hit the primary",
+   "It encrypts the record so only one client can read it",
+   "It deletes the old record after each update"
+  ],
+  "answer": 0,
+  "explanation": "This is optimistic concurrency control; a mismatch returns a conflict so the client can re-read and retry."
+ },
+ {
+  "id": "q6c3712cc528",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "What is optimistic concurrency control?",
+  "options": [
+   "Locking every row before reading it",
+   "Allowing all writes and keeping the first one",
+   "Proceeding without locks and checking for conflicts at commit, retrying if data changed",
+   "Running transactions one at a time"
+  ],
+  "answer": 2,
+  "explanation": "It works well when conflicts are rare, since no locks are held while work is done."
+ },
+ {
+  "id": "qa1484385b9b",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "Which guarantee means a user always sees their own previous updates?",
+  "options": [
+   "Last-writer-wins merging",
+   "Linearizability across all clients",
+   "Exactly-once delivery",
+   "Read-your-writes consistency"
+  ],
+  "answer": 3,
+  "explanation": "Read-your-writes is a session guarantee; it can be met by routing a user's reads to the primary or to a replica that has their write."
+ },
+ {
+  "id": "qfccbf5d1ac1",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "What is the main risk of last-write-wins conflict resolution?",
+  "options": [
+   "Concurrent updates can silently overwrite each other, and clock skew can pick the wrong winner",
+   "It requires a global lock on every write",
+   "It makes reads impossible during replication",
+   "It requires all writes to go through a single leader"
+  ],
+  "answer": 0,
+  "explanation": "LWW keeps one value and discards the others, so a legitimate concurrent update can be lost."
+ },
+ {
+  "id": "qfd99f08f59a",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "What does strong consistency guarantee for reads?",
+  "options": [
+   "Reads are always served from a local cache",
+   "Reads may return any previously written value",
+   "Every read returns the most recent committed write",
+   "Reads never fail during a network partition"
+  ],
+  "answer": 2,
+  "explanation": "Strongly consistent systems behave as if there were a single up-to-date copy, often at a cost in latency or availability."
+ },
+ {
+  "id": "qffeafaacda3",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "Which consistency model is weaker than linearizability but still preserves cause-and-effect ordering?",
+  "options": [
+   "Serializability without any ordering",
+   "Causal consistency",
+   "Exactly-once processing",
+   "Read uncommitted"
+  ],
+  "answer": 1,
+  "explanation": "Causal consistency keeps causally related operations in order, while concurrent operations may be seen in different orders."
+ }
+]

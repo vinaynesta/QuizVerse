@@ -45,6 +45,21 @@
   "explanation": "A deque supports adding and removing elements at both the front and the back."
  },
  {
+  "id": "q3c3e517504c",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which data structure most naturally implements the undo feature of a text editor?",
+  "options": [
+   "Queue",
+   "Binary search tree",
+   "Hash table",
+   "Stack"
+  ],
+  "answer": 3,
+  "explanation": "Undo reverses the most recent action first, which is last-in, first-out behavior."
+ },
+ {
   "id": "qe80a792ed45",
   "subject": "dsa",
   "topic": "stacks-queues",
@@ -58,6 +73,21 @@
   ],
   "answer": 1,
   "explanation": "Elements leave a queue in the same order they arrived."
+ },
+ {
+  "id": "qfe583e3d29b",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "easy",
+  "question": "Which stack operation returns the top element without removing it?",
+  "options": [
+   "pop",
+   "enqueue",
+   "push",
+   "peek"
+  ],
+  "answer": 3,
+  "explanation": "peek inspects the top element while leaving the stack unchanged."
  },
  {
   "id": "q130df03f16d",
@@ -105,6 +135,36 @@
   "explanation": "Using a stack: 3 + 4 = 7, then 7 * 2 = 14."
  },
  {
+  "id": "qe9ee1b593ce",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "In a queue implemented as a circular array of capacity n, how is the next rear index usually computed?",
+  "options": [
+   "(rear - 1) % n",
+   "rear + 1",
+   "(rear + 1) % n",
+   "rear * 2 % n"
+  ],
+  "answer": 2,
+  "explanation": "The modulo wraps the index back to 0 after the last slot."
+ },
+ {
+  "id": "qf632a8099bb",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "What does the prefix expression * + 2 3 4 evaluate to?",
+  "options": [
+   "14",
+   "24",
+   "10",
+   "20"
+  ],
+  "answer": 3,
+  "explanation": "It means (2 + 3) * 4, which is 20."
+ },
+ {
   "id": "q460a01748f1",
   "subject": "dsa",
   "topic": "stacks-queues",
@@ -148,5 +208,20 @@
   ],
   "answer": 1,
   "explanation": "Pairing each level with its minimum lets getMin read the top and pop restore the previous minimum."
+ },
+ {
+  "id": "qeb9c2ce9710",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "What is the time complexity of finding the largest rectangle in a histogram of n bars using a monotonic stack?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 0,
+  "explanation": "Each bar is pushed and popped at most once, and its maximal width is determined when it is popped."
  }
 ]

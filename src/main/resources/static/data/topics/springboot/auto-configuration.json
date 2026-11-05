@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0f6b89d75f1",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "Which annotation combines @Configuration, @EnableAutoConfiguration and @ComponentScan?",
+  "options": [
+   "@SpringBootConfiguration",
+   "@EnableWebMvc",
+   "@SpringBootApplication",
+   "@AutoConfiguration"
+  ],
+  "answer": 2,
+  "explanation": "@SpringBootApplication is a convenience meta-annotation that bundles these three annotations on the main class."
+ },
+ {
   "id": "q3f65154cbcc",
   "subject": "springboot",
   "topic": "auto-configuration",
@@ -58,6 +73,36 @@
   ],
   "answer": 0,
   "explanation": "The exclude attribute of @SpringBootApplication (or @EnableAutoConfiguration) prevents that auto-configuration from being applied."
+ },
+ {
+  "id": "qfc48e5c3f35",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "By default, which packages does component scanning from @SpringBootApplication cover?",
+  "options": [
+   "The package of the annotated class and all its subpackages",
+   "Every package on the classpath",
+   "Only packages listed in application.properties",
+   "Only the root default package"
+  ],
+  "answer": 0,
+  "explanation": "Scanning starts at the main class's package, which is why that class is usually placed in a root package."
+ },
+ {
+  "id": "q0fd3185d2e4",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "What does @ConditionalOnBean(CacheManager.class) on a @Bean method do?",
+  "options": [
+   "Registers the bean only if a CacheManager bean is already defined",
+   "Creates a CacheManager if none exists",
+   "Makes the bean depend on CacheManager's lifecycle",
+   "Registers the bean only if the CacheManager class is on the classpath"
+  ],
+  "answer": 0,
+  "explanation": "@ConditionalOnBean checks the bean definitions registered so far, which is why it is mainly used in auto-configurations with careful ordering."
  },
  {
   "id": "q1188fe7a4d9",
@@ -135,6 +180,21 @@
   "explanation": "Condition evaluation depends on registration order; auto-configurations run after user beans are defined, so they see them."
  },
  {
+  "id": "q417a92e3052",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "When does @ConditionalOnSingleCandidate(DataSource.class) match?",
+  "options": [
+   "When no DataSource bean exists",
+   "When at least one DataSource bean exists",
+   "When exactly one DataSource bean exists, or several exist and one is primary",
+   "When the DataSource class is on the classpath"
+  ],
+  "answer": 2,
+  "explanation": "It is used by auto-configurations that need one unambiguous bean to wire into, such as JdbcTemplate."
+ },
+ {
   "id": "qb24484e8333",
   "subject": "springboot",
   "topic": "auto-configuration",
@@ -178,5 +238,20 @@
   ],
   "answer": 1,
   "explanation": "ApplicationContextRunner lets you add configurations and properties and assert on the resulting context quickly."
+ },
+ {
+  "id": "qedf45ce692a",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "What is an EnvironmentPostProcessor and how is it registered?",
+  "options": [
+   "A @Bean that edits properties after all beans are created",
+   "A hook that customizes the Environment before the context refreshes, registered in META-INF/spring.factories",
+   "A @Component that listens for property changes",
+   "An Actuator endpoint that rewrites properties"
+  ],
+  "answer": 1,
+  "explanation": "Because it runs before beans exist, it cannot be a regular bean and is discovered through spring.factories."
  }
 ]

@@ -15,6 +15,36 @@
   "explanation": "A good hash function spreads keys evenly, so each bucket holds few entries on average."
  },
  {
+  "id": "q88cec07b5aa",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What does a hash function do in a hash table?",
+  "options": [
+   "Sorts the keys in ascending order",
+   "Encrypts the stored values",
+   "Maps a key to a bucket index",
+   "Counts how many keys are stored"
+  ],
+  "answer": 2,
+  "explanation": "The hash function converts a key into an index that determines where the entry is stored."
+ },
+ {
+  "id": "qa99e902ec7e",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "easy",
+  "question": "What happens when you insert a value that is already present into a hash set?",
+  "options": [
+   "The value is stored a second time",
+   "The set remains unchanged",
+   "An error is always raised",
+   "The existing value is deleted"
+  ],
+  "answer": 1,
+  "explanation": "A set stores each distinct element at most once, so adding a duplicate has no effect."
+ },
+ {
   "id": "qe336da29468",
   "subject": "dsa",
   "topic": "hashing",
@@ -43,6 +73,21 @@
   ],
   "answer": 3,
   "explanation": "A collision occurs when distinct keys map to the same slot and must be resolved."
+ },
+ {
+  "id": "q5f10cea8322",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "What is the expected time complexity of solving two-sum on an unsorted array of n elements with a hash map?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 0,
+  "explanation": "For each element, the complement is looked up in expected O(1) time before the element is inserted."
  },
  {
   "id": "q93160223947",
@@ -75,6 +120,21 @@
   "explanation": "Each element is inserted and checked in expected O(1) time."
  },
  {
+  "id": "qdc582fe15d8",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "When a hash table grows its bucket array after exceeding its load factor, what must happen to the existing entries?",
+  "options": [
+   "They are sorted by key",
+   "They stay in their old bucket indexes",
+   "They are discarded",
+   "They are rehashed into the new buckets"
+  ],
+  "answer": 3,
+  "explanation": "Bucket indexes depend on the table size, so each entry's position must be recomputed."
+ },
+ {
   "id": "qec0e0c414ee",
   "subject": "dsa",
   "topic": "hashing",
@@ -103,6 +163,21 @@
   ],
   "answer": 1,
   "explanation": "Equal objects must have equal hash codes, or HashMap will look in the wrong bucket."
+ },
+ {
+  "id": "q19b528fd3f3",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the worst-case lookup time in cuckoo hashing?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(sqrt n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "A key can only reside in one of a fixed number of candidate positions, so a lookup checks a constant number of slots."
  },
  {
   "id": "q5dc33e0215a",
@@ -148,5 +223,20 @@
   ],
   "answer": 0,
   "explanation": "Treeifying a heavily loaded bucket limits worst-case lookups in it to O(log n)."
+ },
+ {
+  "id": "qea5c2fdd81b",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the expected time complexity of finding the longest consecutive-integer sequence in an unsorted array of n elements using a hash set?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 0,
+  "explanation": "Counting starts only from numbers whose predecessor is absent, so each number is visited a constant number of times."
  }
 ]

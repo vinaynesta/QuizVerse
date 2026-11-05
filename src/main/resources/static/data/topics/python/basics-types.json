@@ -45,6 +45,21 @@
   "explanation": "Empty sequences, including the empty string, are falsy."
  },
  {
+  "id": "q668731ce07b",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does 'ab' * 3 evaluate to?",
+  "options": [
+   "'ab3'",
+   "It raises TypeError",
+   "'ababab'",
+   "['ab', 'ab', 'ab']"
+  ],
+  "answer": 2,
+  "explanation": "Multiplying a string by an int repeats it."
+ },
+ {
   "id": "q7328b1a891c",
   "subject": "python",
   "topic": "basics-types",
@@ -58,6 +73,36 @@
   ],
   "answer": 3,
   "explanation": "The / operator always performs true division and returns a float, even for two ints."
+ },
+ {
+  "id": "q761ada617f2",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does int(3.9) return?",
+  "options": [
+   "4",
+   "3",
+   "3.9",
+   "It raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "int() truncates a float toward zero."
+ },
+ {
+  "id": "qf4d0c88ea47",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does 2 ** 3 evaluate to?",
+  "options": [
+   "5",
+   "6",
+   "9",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "** is the exponentiation operator, and 2 to the power 3 is 8."
  },
  {
   "id": "q0749499e196",
@@ -105,6 +150,21 @@
   "explanation": "Binary floating point cannot represent these values exactly, so the sum is 0.30000000000000004."
  },
  {
+  "id": "qaf8ea77f63a",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 'Python'[1:4] return?",
+  "options": [
+   "'yth'",
+   "'Pyt'",
+   "'ytho'",
+   "'yt'"
+  ],
+  "answer": 0,
+  "explanation": "The slice takes indexes 1, 2, and 3."
+ },
+ {
   "id": "qb6a148e68dd",
   "subject": "python",
   "topic": "basics-types",
@@ -118,6 +178,51 @@
   ],
   "answer": 0,
   "explanation": "A slice with step -1 walks the string backwards, reversing it."
+ },
+ {
+  "id": "qe1a8ed0cd00",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 10 % -3 evaluate to?",
+  "options": [
+   "1",
+   "-2",
+   "-1",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Python's % result takes the sign of the divisor, and 10 = (-3) * (-4) + (-2)."
+ },
+ {
+  "id": "qe9c9ced0c87",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 'a,b,c'.split(',') return?",
+  "options": [
+   "['a', 'b', 'c']",
+   "('a', 'b', 'c')",
+   "'abc'",
+   "['a,b,c']"
+  ],
+  "answer": 0,
+  "explanation": "split returns a list of the pieces between separators."
+ },
+ {
+  "id": "qf94565d40d5",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does int('ff', 16) return?",
+  "options": [
+   "15",
+   "255",
+   "It raises ValueError",
+   "ff"
+  ],
+  "answer": 1,
+  "explanation": "The second argument is the base, and hexadecimal ff is 15 * 16 + 15 = 255."
  },
  {
   "id": "q15b9c4cfc4c",
@@ -150,6 +255,21 @@
   "explanation": "By IEEE 754 rules NaN is not equal to anything, including itself."
  },
  {
+  "id": "q78b4b8bbb1c",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "After a, *b, c = (1, 2, 3, 4, 5), what is b?",
+  "options": [
+   "[2, 3]",
+   "[2, 3, 4]",
+   "(2, 3, 4)",
+   "It raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "The starred target collects all leftover items into a list, even when unpacking a tuple."
+ },
+ {
   "id": "q7963d8ac5fb",
   "subject": "python",
   "topic": "basics-types",
@@ -165,6 +285,21 @@
   "explanation": "bool is a subclass of int with True equal to 1, so the sum is the int 2."
  },
  {
+  "id": "q871deb26804",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does int('1_000') return?",
+  "options": [
+   "1",
+   "1000",
+   "It raises ValueError",
+   "'1000'"
+  ],
+  "answer": 1,
+  "explanation": "Since Python 3.6, int() accepts single underscores between digits, as in numeric literals."
+ },
+ {
   "id": "qaddbfc5c46f",
   "subject": "python",
   "topic": "basics-types",
@@ -178,5 +313,35 @@
   ],
   "answer": 1,
   "explanation": "== compares contents, but each [] literal creates a distinct object, so is is False."
+ },
+ {
+  "id": "qc09ef20becd",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does (1, 2) < (1, 2, 0) evaluate to?",
+  "options": [
+   "False",
+   "It raises TypeError",
+   "True",
+   "None"
+  ],
+  "answer": 2,
+  "explanation": "Tuples compare element by element, and when one is a prefix of the other, the shorter one is smaller."
+ },
+ {
+  "id": "qddb80a0f8cc",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "hard",
+  "question": "What does sorted(['b', 'A', 'c']) return?",
+  "options": [
+   "['A', 'b', 'c']",
+   "['A', 'c', 'b']",
+   "['b', 'c', 'A']",
+   "['c', 'b', 'A']"
+  ],
+  "answer": 0,
+  "explanation": "Strings compare by code point, and uppercase letters come before lowercase letters."
  }
 ]

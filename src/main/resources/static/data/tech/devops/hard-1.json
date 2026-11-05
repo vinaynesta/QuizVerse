@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qd3dea100b2f",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "Which practice is a common supply-chain safeguard for CI pipelines?",
+  "options": [
+   "Use latest tags for every base image",
+   "Pin actions and base images to immutable digests or commit SHAs",
+   "Run every job as root with full secrets",
+   "Disable build logs"
+  ],
+  "answer": 1,
+  "explanation": "Pinning to digests or SHAs means a moved or compromised tag cannot silently change what your pipeline runs."
+ },
+ {
+  "id": "q3b426d9a103",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "What is the main benefit of a multi-stage Dockerfile?",
+  "options": [
+   "Build tools stay in an earlier stage, and only the needed artifacts are copied into a slim final image",
+   "It automatically pushes the image to a registry",
+   "It creates a separate volume for each stage",
+   "It runs multiple containers simultaneously"
+  ],
+  "answer": 0,
+  "explanation": "Compilers and build dependencies do not ship in the final image, which keeps it smaller and reduces attack surface."
+ },
+ {
+  "id": "qc8dd5f9d1bf",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "Why should CI jobs use least-privilege tokens?",
+  "options": [
+   "To make builds faster",
+   "So a compromised step can only affect what its token allows",
+   "Because tokens expire automatically after each run",
+   "To avoid the need for code review"
+  ],
+  "answer": 1,
+  "explanation": "Limiting token scope reduces the damage a malicious dependency or a compromised step can do."
+ },
+ {
+  "id": "qcbbca26e76a",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "In a Kubernetes Deployment's rolling update strategy, what do maxSurge and maxUnavailable control?",
+  "options": [
+   "How many pods can be created above the desired count, and how many can be unavailable, during the update",
+   "The number of replicas per node",
+   "The CPU limits of each pod",
+   "The timeout for probes"
+  ],
+  "answer": 0,
+  "explanation": "maxSurge sets the extra pods allowed above replicas, and maxUnavailable sets how many can be down during the rollout."
+ },
+ {
+  "id": "qf9e0edef141",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "What is the default expiry for reflog entries that are no longer reachable from any branch or tag?",
+  "options": [
+   "Immediately after the reset",
+   "One hour",
+   "90 days",
+   "30 days"
+  ],
+  "answer": 3,
+  "explanation": "gc.reflogExpireUnreachable defaults to 30 days, while reachable entries default to 90 days (gc.reflogExpire)."
+ },
+ {
+  "id": "q3bcf2c1e1f7",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What does a taint on a node do?",
+  "options": [
+   "Repels pods unless they have a matching toleration",
+   "Attracts pods with matching labels",
+   "Deletes pods that are not running",
+   "Limits the node's network bandwidth"
+  ],
+  "answer": 0,
+  "explanation": "Tainted nodes reject pods that do not tolerate the taint, which is how dedicated nodes are reserved."
+ },
+ {
+  "id": "qdcc0085bb41",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "What does a deployment gate based on an SLO check do?",
+  "options": [
+   "Blocks promotion or triggers a rollback if error rate or latency breaches its threshold during rollout",
+   "Rewrites the git history of the release branch",
+   "Compiles the code again before deploying",
+   "Deletes old container images"
+  ],
+  "answer": 0,
+  "explanation": "Automated analysis of live metrics during a rollout decides whether to continue, pause, or roll back."
+ },
+ {
+  "id": "q10bea9a3f63",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why are rarely changing instructions, such as installing OS packages, placed before frequently changing COPY instructions?",
+  "options": [
+   "It makes COPY faster by pre-compressing files",
+   "Docker runs earlier instructions only once in parallel",
+   "It reduces the number of files in the build context",
+   "Layer caching: a change in a later layer does not invalidate the earlier cached layers"
+  ],
+  "answer": 3,
+  "explanation": "Cache invalidation flows downward, so stable steps placed first stay cached when source files change."
+ },
+ {
+  "id": "q328a8cf8581",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "A rolling update runs old and new versions at the same time. What is the main risk this creates?",
+  "options": [
+   "No rollback is possible",
+   "Clients may hit both versions, so APIs and database schemas must be backward compatible",
+   "Traffic cannot be load balanced",
+   "Downtime for all users"
+  ],
+  "answer": 1,
+  "explanation": "During the rollout, requests can reach either version, so changes must be compatible with the version before them."
+ },
+ {
+  "id": "q12946ec2f69",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why does using a distroless or scratch base image in the final stage reduce attack surface?",
+  "options": [
+   "It includes more package managers for updates",
+   "It removes the need for a Dockerfile",
+   "It disables all networking for the container",
+   "It contains fewer packages, shells, and tools an attacker could use"
+  ],
+  "answer": 3,
+  "explanation": "Minimal base images omit shells and package managers, so there is less an attacker can run after compromise."
+ }
+]

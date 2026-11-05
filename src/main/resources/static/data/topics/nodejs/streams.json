@@ -1,0 +1,242 @@
+[
+ {
+  "id": "q0358d789144",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "Which kind of stream can be both read from and written to?",
+  "options": [
+   "Readable",
+   "Duplex",
+   "Writable",
+   "Sink"
+  ],
+  "answer": 1,
+  "explanation": "A Duplex stream has independent readable and writable sides, such as a TCP socket."
+ },
+ {
+  "id": "qa14d3a4fa29",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "Which listener on a Readable stream receives its chunks of data?",
+  "options": [
+   "on('data')",
+   "read.all()",
+   "pipe.start()",
+   "onChunk()"
+  ],
+  "answer": 0,
+  "explanation": "Attaching a 'data' listener switches the stream into flowing mode, and each chunk is passed to the handler."
+ },
+ {
+  "id": "qd49f91aa9da",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "What does readable.pipe(writable) do?",
+  "options": [
+   "Connects the readable to the writable and manages the flow of data between them",
+   "Clones the readable stream",
+   "Closes the readable stream immediately",
+   "Converts the stream into a single Buffer"
+  ],
+  "answer": 0,
+  "explanation": "pipe() forwards chunks from the readable to the writable and pauses the source when the destination is full."
+ },
+ {
+  "id": "qf25d5a977b4",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "Which function creates a readable stream for reading a file in chunks?",
+  "options": [
+   "fs.openStream()",
+   "fs.createReadStream()",
+   "fs.readStream()",
+   "fs.streamFile()"
+  ],
+  "answer": 1,
+  "explanation": "Streaming a large file in chunks keeps memory usage low compared with reading it all at once."
+ },
+ {
+  "id": "q0abee2561c0",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What does stream.Readable.from() create?",
+  "options": [
+   "A Readable stream from a file path",
+   "A Writable stream that collects data into an array",
+   "A Readable stream from an iterable or async iterable",
+   "A copy of an existing Readable stream"
+  ],
+  "answer": 2,
+  "explanation": "Readable.from(['a', 'b']) or Readable.from(asyncGenerator()) is an easy way to turn iterables into streams."
+ },
+ {
+  "id": "q44b088f084d",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "How can you consume a Readable stream with async iteration?",
+  "options": [
+   "await readable.readAll()",
+   "for (const chunk in readable) { ... }",
+   "readable.forEachSync(chunk => { ... })",
+   "for await (const chunk of readable) { ... }"
+  ],
+  "answer": 3,
+  "explanation": "Readable streams implement Symbol.asyncIterator, and async iteration also respects backpressure."
+ },
+ {
+  "id": "q481e919bce8",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What does a false return value from writable.write() signal?",
+  "options": [
+   "The data has already been flushed to disk",
+   "The chunk was rejected and will never be written",
+   "The stream has ended and cannot be reused",
+   "The internal buffer has reached highWaterMark, so the producer should pause until 'drain' is emitted"
+  ],
+  "answer": 3,
+  "explanation": "A false return is backpressure: the writable is holding enough unflushed data that the producer should wait for 'drain'."
+ },
+ {
+  "id": "q64e3b92dbda",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "A multi-byte UTF-8 character is split across two chunks of a Readable. What avoids corrupting it when the chunks become text?",
+  "options": [
+   "Call chunk.toString() on each chunk separately",
+   "Set highWaterMark to 1 byte",
+   "Call Buffer.byteLength() on every chunk",
+   "Call readable.setEncoding('utf8') so Node decodes characters across chunk boundaries"
+  ],
+  "answer": 3,
+  "explanation": "With setEncoding, Node uses a StringDecoder that keeps partial bytes until the character is complete."
+ },
+ {
+  "id": "qa0bb2c567d2",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "Which kind of stream is meant to change data as it passes through, such as a gzip compressor?",
+  "options": [
+   "Readable",
+   "Writable",
+   "Transform",
+   "Server"
+  ],
+  "answer": 2,
+  "explanation": "A Transform is a Duplex stream whose output is computed from its input."
+ },
+ {
+  "id": "qca02434e5bd",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What is the default highWaterMark for an object-mode Readable?",
+  "options": [
+   "16 KiB",
+   "1 object",
+   "16 objects",
+   "64 KiB"
+  ],
+  "answer": 2,
+  "explanation": "In object mode the highWaterMark counts objects rather than bytes, and the default is 16."
+ },
+ {
+  "id": "qd0413f5f8d0",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "Which event on a writable stream fires after end() has been called and all pending data has been flushed?",
+  "options": [
+   "'close'",
+   "'finish'",
+   "'end'",
+   "'drain'"
+  ],
+  "answer": 1,
+  "explanation": "'finish' signals that all data has been handed to the underlying system; 'end' is a readable-side event."
+ },
+ {
+  "id": "qda784eefddf",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What advantage does stream.pipeline() have over chaining .pipe() calls?",
+  "options": [
+   "It buffers the whole input in memory before writing",
+   "It forwards errors to one callback and destroys every stream in the chain when one fails",
+   "It disables backpressure so writes are faster",
+   "It runs each stream on its own thread"
+  ],
+  "answer": 1,
+  "explanation": "pipe() does not propagate errors or clean up the other streams automatically, which can leak resources."
+ },
+ {
+  "id": "q2912a3fa80b",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "What does writable.uncork() do after several writes were corked?",
+  "options": [
+   "Discards all buffered writes",
+   "Closes the writable stream",
+   "Flushes the buffered writes to the underlying system, combining them where possible",
+   "Doubles the buffer size"
+  ],
+  "answer": 2,
+  "explanation": "cork() holds writes so they can be batched; uncork() releases them."
+ },
+ {
+  "id": "q4f18f75be83",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "In stream.pipeline(), what should be used to transform data with an async generator?",
+  "options": [
+   "A synchronous array map callback",
+   "An EventEmitter with a 'transform' event",
+   "A Promise passed in place of a stream",
+   "An async generator function that takes the source iterable and yields transformed chunks"
+  ],
+  "answer": 3,
+  "explanation": "pipeline accepts async generator functions as stages, which receive the previous stage as an async iterable."
+ },
+ {
+  "id": "q5cec9b20331",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "What does readable.resume() do?",
+  "options": [
+   "Rewinds the stream to its beginning",
+   "Switches a paused Readable into flowing mode so its data is emitted",
+   "Doubles the highWaterMark",
+   "Closes the stream and releases its resources"
+  ],
+  "answer": 1,
+  "explanation": "resume() starts data flow for a stream that is paused, such as one with no data listener."
+ },
+ {
+  "id": "q74ac45b12f2",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "What happens when a Transform stream's transform callback is called with an error?",
+  "options": [
+   "The stream is destroyed and emits 'error'",
+   "The chunk is skipped and processing continues",
+   "The error is silently ignored",
+   "The stream pauses until resume() is called"
+  ],
+  "answer": 0,
+  "explanation": "Passing an error to the callback destroys the stream, and pipeline() propagates it to its completion callback."
+ }
+]

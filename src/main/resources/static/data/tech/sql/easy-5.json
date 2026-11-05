@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qdbb41f75613",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "In a LIKE pattern, which wildcard matches any sequence of zero or more characters?",
+  "options": [
+   "_",
+   "*",
+   "%",
+   "?"
+  ],
+  "answer": 2,
+  "explanation": "% matches any run of characters, including none, so 'a%' matches every string that starts with a."
+ },
+ {
+  "id": "q7931757df20",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a UNIQUE constraint enforce?",
+  "options": [
+   "The column can never contain NULL",
+   "The column must reference another table",
+   "The column value must be greater than zero",
+   "No two rows can have the same non-NULL value in the constrained column"
+  ],
+  "answer": 3,
+  "explanation": "UNIQUE prevents duplicate values, while NOT NULL and CHECK enforce other rules."
+ },
+ {
+  "id": "q8da7f027162",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a FULL OUTER JOIN return?",
+  "options": [
+   "Only rows that match in both tables",
+   "Only rows from the left table",
+   "All rows from both tables, with NULLs where a row has no match on the other side",
+   "Every combination of rows from both tables"
+  ],
+  "answer": 2,
+  "explanation": "A full outer join combines the effects of a left join and a right join."
+ },
+ {
+  "id": "q7e533ede35a",
+  "subject": "sql",
+  "topic": "ddl",
+  "level": "easy",
+  "question": "Which statement removes a table together with its definition and all of its data?",
+  "options": [
+   "DELETE TABLE",
+   "REMOVE TABLE",
+   "DROP TABLE",
+   "CLEAR TABLE"
+  ],
+  "answer": 2,
+  "explanation": "DROP TABLE deletes the table object itself, whereas DELETE only removes rows."
+ },
+ {
+  "id": "q1afabb56f92",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "What does AS do in SELECT price * qty AS total FROM items?",
+  "options": [
+   "Creates a new column named total in the items table",
+   "Sorts the result by total",
+   "Filters rows where total is not NULL",
+   "Gives the computed column the alias total in the result"
+  ],
+  "answer": 3,
+  "explanation": "AS assigns an alias to a column or expression in the result set without changing the table."
+ },
+ {
+  "id": "qc526cc1eb35",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "In a LIKE pattern, which wildcard matches exactly one character?",
+  "options": [
+   "%",
+   "_",
+   "*",
+   "#"
+  ],
+  "answer": 1,
+  "explanation": "The underscore matches a single character, so 'c_t' matches cat and cut but not cart."
+ },
+ {
+  "id": "qbc3324cae31",
+  "subject": "sql",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "What does the durability property in ACID guarantee?",
+  "options": [
+   "Transactions run one at a time",
+   "Once a transaction commits, its changes survive crashes and power failures",
+   "Queries always finish within a time limit",
+   "Data types never change after creation"
+  ],
+  "answer": 1,
+  "explanation": "Durability is typically achieved by writing changes to a log on disk before reporting a commit."
+ },
+ {
+  "id": "q8333c777726",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "easy",
+  "question": "What is a subquery?",
+  "options": [
+   "A SELECT statement nested inside another SQL statement",
+   "A query limited to a single table",
+   "A query that runs on a schedule",
+   "A stored procedure that returns rows"
+  ],
+  "answer": 0,
+  "explanation": "Subqueries can appear in WHERE, FROM or SELECT clauses to supply values or rows to the outer statement."
+ },
+ {
+  "id": "qb4ac19ea731",
+  "subject": "sql",
+  "topic": "ddl",
+  "level": "easy",
+  "question": "Which statement adds a new column to an existing table?",
+  "options": [
+   "UPDATE TABLE t ADD c INTEGER;",
+   "INSERT COLUMN c INTO t;",
+   "CREATE COLUMN c ON t;",
+   "ALTER TABLE t ADD COLUMN c INTEGER;"
+  ],
+  "answer": 3,
+  "explanation": "ALTER TABLE changes a table's structure, including adding, dropping or modifying columns."
+ },
+ {
+  "id": "q3400956bbc7",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "easy",
+  "question": "Which statement adds new rows to a table?",
+  "options": [
+   "UPDATE",
+   "ALTER",
+   "INSERT",
+   "CREATE"
+  ],
+  "answer": 2,
+  "explanation": "INSERT INTO table (cols) VALUES (...) adds rows, while UPDATE changes existing ones."
+ }
+]

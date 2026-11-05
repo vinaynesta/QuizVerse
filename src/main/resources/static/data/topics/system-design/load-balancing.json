@@ -1,0 +1,197 @@
+[
+ {
+  "id": "q31bc21ed9af",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "Which algorithm sends each new request to the next server in a fixed rotation?",
+  "options": [
+   "IP hash",
+   "Least connections",
+   "Round robin",
+   "Geographic routing"
+  ],
+  "answer": 2,
+  "explanation": "Round robin cycles through backends in order, which is simple but ignores differences in server load."
+ },
+ {
+  "id": "q5460f7c08af",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "Which strategy routes new requests to the server with the fewest active connections?",
+  "options": [
+   "Least connections",
+   "Round robin",
+   "Random selection with no state",
+   "Source port hashing"
+  ],
+  "answer": 0,
+  "explanation": "Least connections adapts better than round robin when request durations vary."
+ },
+ {
+  "id": "q664daaa4549",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What is the purpose of health checks in a load balancer?",
+  "options": [
+   "Removing unhealthy backends from rotation until they recover",
+   "Caching static files at the edge",
+   "Encrypting traffic between clients and servers",
+   "Increasing the number of database replicas"
+  ],
+  "answer": 0,
+  "explanation": "The balancer probes backends and stops sending traffic to any that fail the check."
+ },
+ {
+  "id": "q9e8406e050b",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What is a reverse proxy?",
+  "options": [
+   "A database that reverses query results",
+   "A proxy that clients configure to reach any website",
+   "A server that sits in front of backend servers and forwards client requests to them",
+   "A firewall that blocks outgoing traffic"
+  ],
+  "answer": 2,
+  "explanation": "Reverse proxies such as Nginx can handle load balancing, TLS termination, and caching for backends."
+ },
+ {
+  "id": "qa0efce49245",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What can a Layer 7 (application-layer) load balancer do that a Layer 4 balancer typically cannot?",
+  "options": [
+   "Operate on MAC addresses inside the local network",
+   "Store database rows for faster reads",
+   "Route only UDP traffic",
+   "Route requests based on HTTP details such as the URL path or headers"
+  ],
+  "answer": 3,
+  "explanation": "Layer 7 balancers parse application protocols, so they can route by content; Layer 4 works on IP and port."
+ },
+ {
+  "id": "qb20b500cee9",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What does weighted round robin allow?",
+  "options": [
+   "Sending all traffic to the fastest server",
+   "Routing by the client's IP address",
+   "Sending proportionally more requests to servers with higher capacity",
+   "Removing unhealthy servers"
+  ],
+  "answer": 2,
+  "explanation": "Each server gets a weight, and the rotation sends traffic in proportion to it."
+ },
+ {
+  "id": "qf99f710d072",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What is the main purpose of a load balancer?",
+  "options": [
+   "Distributing incoming requests across multiple backend servers",
+   "Compiling source code during deployment",
+   "Replacing the primary database",
+   "Storing user sessions permanently on disk"
+  ],
+  "answer": 0,
+  "explanation": "A load balancer spreads traffic so no single backend is overwhelmed."
+ },
+ {
+  "id": "q05671b65004",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What information does a Layer 4 load balancer typically use to route traffic?",
+  "options": [
+   "The full HTTP path and cookies",
+   "The decrypted JSON body of each request",
+   "IP addresses and TCP/UDP ports, without inspecting HTTP content",
+   "The query plan of the database"
+  ],
+  "answer": 2,
+  "explanation": "L4 balancers forward connections based on network and transport headers, which is fast but content-blind."
+ },
+ {
+  "id": "q138c25e0961",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What is a drawback of sticky sessions (session affinity)?",
+  "options": [
+   "Load can become uneven, and losing the pinned server loses that user's in-memory session",
+   "Health checks stop working",
+   "Requests can no longer be encrypted",
+   "The load balancer must store the full database"
+  ],
+  "answer": 0,
+  "explanation": "Pinning clients to servers reduces balancing flexibility and ties session state to a specific instance."
+ },
+ {
+  "id": "q1e1e67f9e22",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What is connection draining (deregistration delay)?",
+  "options": [
+   "Closing all connections at once when a server fails",
+   "Letting in-flight requests finish on a server being removed, while sending it no new requests",
+   "Limiting connections per client",
+   "Moving connections between data centers"
+  ],
+  "answer": 1,
+  "explanation": "Draining lets instances leave rotation during deploys or scale-in without dropping requests."
+ },
+ {
+  "id": "q2f5e8bfdb98",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "Which technique sends users to the nearest regional deployment based on their location?",
+  "options": [
+   "Two-phase commit across regions",
+   "Round-robin TCP port mapping",
+   "Sticky cookie injection at the database",
+   "GeoDNS or latency-based DNS routing"
+  ],
+  "answer": 3,
+  "explanation": "DNS resolvers return different addresses depending on the query's origin or the lowest-latency region."
+ },
+ {
+  "id": "q77ee6b37245",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What is the power of two random choices load-balancing strategy?",
+  "options": [
+   "Send each request to two servers at once and keep the first response",
+   "Alternate between two data centers every hour",
+   "Sample two servers at random and send the request to the less loaded one",
+   "Split each request into two halves for parallel processing"
+  ],
+  "answer": 2,
+  "explanation": "Comparing just two random candidates captures most of the benefit of checking every server, at much lower cost."
+ },
+ {
+  "id": "qd57a99de562",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "Why can a deep health check that verifies a shared database be risky?",
+  "options": [
+   "Health checks permanently consume the database's write capacity",
+   "Load balancers ignore any health check that touches a dependency",
+   "Health checks disable TLS on every connection",
+   "A brief database blip can mark every instance unhealthy at once, causing a full outage"
+  ],
+  "answer": 3,
+  "explanation": "Shallow checks report whether the instance itself is alive, so a shared dependency failure does not remove all capacity."
+ }
+]

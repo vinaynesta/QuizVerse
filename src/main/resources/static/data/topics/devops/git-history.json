@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q28c7f284b11",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command shows the changes introduced by a single commit?",
+  "options": [
+   "git diff HEAD",
+   "git show <commit>",
+   "git log --only",
+   "git status <commit>"
+  ],
+  "answer": 1,
+  "explanation": "git show <commit> displays the commit metadata along with the diff it introduced."
+ },
+ {
+  "id": "q2905e038c7f",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "What does git log -S 'someFunction' find?",
+  "options": [
+   "Commits signed by that author",
+   "Commits whose message contains that string",
+   "Commits that changed the number of occurrences of that string",
+   "Commits on branches whose name contains that string"
+  ],
+  "answer": 2,
+  "explanation": "The pickaxe option -S finds commits that added or removed occurrences of the string; --grep searches messages."
+ },
+ {
+  "id": "q606ac40bf7e",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "What does git bisect do?",
+  "options": [
+   "Splits a repository into two independent repositories",
+   "Creates two branches from one commit",
+   "Performs a binary search through commits to find which one introduced a bug",
+   "Compresses the object database"
+  ],
+  "answer": 2,
+  "explanation": "Bisect marks commits as good or bad and narrows the range by halves until it finds the first bad commit."
+ },
+ {
+  "id": "q7b6c7be5468",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command shows which commit and author last modified each line of a file?",
+  "options": [
+   "git log --who <file>",
+   "git blame <file>",
+   "git annotate-all <file>",
+   "git show --author <file>"
+  ],
+  "answer": 1,
+  "explanation": "git blame annotates each line with the commit that last changed it."
+ },
+ {
+  "id": "q7f2458158b6",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command creates an annotated tag v1.2.0 with a release message?",
+  "options": [
+   "git release v1.2.0",
+   "git commit --tag v1.2.0",
+   "git tag -a v1.2.0 -m \"Release 1.2.0\"",
+   "git branch v1.2.0 --tag"
+  ],
+  "answer": 2,
+  "explanation": "git tag -a creates an annotated tag object that stores the tagger, date, and message."
+ },
+ {
+  "id": "q96af74d9b30",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command lists the commits that are reachable from feature but not from main?",
+  "options": [
+   "git log feature..main",
+   "git diff main feature",
+   "git show main feature",
+   "git log main..feature"
+  ],
+  "answer": 3,
+  "explanation": "The A..B range means commits reachable from B but not from A."
+ },
+ {
+  "id": "qe01c1191890",
+  "subject": "devops",
+  "topic": "git-history",
+  "level": "medium",
+  "question": "Which command searches the tracked files of the repository for a text pattern?",
+  "options": [
+   "git find <pattern>",
+   "git grep <pattern>",
+   "git search <pattern>",
+   "git log --files <pattern>"
+  ],
+  "answer": 1,
+  "explanation": "git grep searches tracked files in the working tree, or a given commit, for the pattern."
+ }
+]

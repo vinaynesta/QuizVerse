@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q54c41e33ac5",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "What does LAG(price) OVER (ORDER BY day) return for each row?",
+  "options": [
+   "The lowest price seen so far",
+   "The price from the next row in day order",
+   "The price from the previous row in day order, or NULL for the first row",
+   "The difference between this row's price and the previous one"
+  ],
+  "answer": 2,
+  "explanation": "LAG reads a value from an earlier row in the window ordering, and LEAD reads from a later row."
+ },
+ {
+  "id": "q82f198bf437",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "For scores 90, 90, 80, what do RANK() and DENSE_RANK() assign to the score 80?",
+  "options": [
+   "RANK 3, DENSE_RANK 2",
+   "RANK 2, DENSE_RANK 2",
+   "RANK 2, DENSE_RANK 3",
+   "RANK 1, DENSE_RANK 3"
+  ],
+  "answer": 0,
+  "explanation": "RANK leaves a gap after the tie, so 80 gets 3. DENSE_RANK does not leave gaps, so 80 gets 2."
+ },
+ {
+  "id": "q8e46219697c",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "Which clause divides rows into independent groups inside a window function?",
+  "options": [
+   "GROUP BY",
+   "HAVING",
+   "PARTITION BY",
+   "DISTINCT"
+  ],
+  "answer": 2,
+  "explanation": "PARTITION BY defines the groups over which the window function is computed, without collapsing rows the way GROUP BY does."
+ },
+ {
+  "id": "qa7e0ce9e439",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "Which frame computes a 7-row moving average that ends at the current row?",
+  "options": [
+   "AVG(x) OVER (ORDER BY day ROWS BETWEEN 7 PRECEDING AND 7 FOLLOWING)",
+   "AVG(x) OVER (PARTITION BY 7 ORDER BY day)",
+   "AVG(x) OVER (ORDER BY day ROWS 7 FOLLOWING)",
+   "AVG(x) OVER (ORDER BY day ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)"
+  ],
+  "answer": 3,
+  "explanation": "Six preceding rows plus the current row make seven rows in each frame."
+ },
+ {
+  "id": "qc056c364433",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "What does ROW_NUMBER() do with tied ORDER BY values?",
+  "options": [
+   "It assigns distinct sequential numbers and breaks ties arbitrarily",
+   "It gives tied rows the same number",
+   "It skips numbers after each tie",
+   "It returns NULL for tied rows"
+  ],
+  "answer": 0,
+  "explanation": "ROW_NUMBER always produces unique consecutive numbers. Tied rows get different numbers, and their relative order is not guaranteed unless the ORDER BY is unique."
+ },
+ {
+  "id": "qc4152c86c8f",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "How do window functions differ from aggregates used with GROUP BY?",
+  "options": [
+   "They can only be used on numeric columns",
+   "They always collapse the result to one row",
+   "They compute values over related rows while keeping every input row in the output",
+   "They must be used inside a WHERE clause"
+  ],
+  "answer": 2,
+  "explanation": "A window function adds a computed column per row instead of merging rows into one per group."
+ },
+ {
+  "id": "qe4c7d5a95f7",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "In PostgreSQL, with SUM(amount) OVER (ORDER BY day) and no frame clause, which rows contribute to the sum for each row?",
+  "options": [
+   "Only the current row",
+   "All rows in the table",
+   "All preceding rows, including peers that tie with the current row on day",
+   "Only the previous row and the current row"
+  ],
+  "answer": 2,
+  "explanation": "The default frame is RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW, which includes all rows whose ORDER BY value equals the current row's value."
+ },
+ {
+  "id": "q1e3ddcb4288",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "In a window frame with tied ORDER BY values, how does RANGE differ from ROWS?",
+  "options": [
+   "ROWS includes peers and RANGE does not",
+   "RANGE works only on text columns",
+   "RANGE includes all peer rows that share the current row's ORDER BY value, while ROWS counts physical rows",
+   "They always produce identical results"
+  ],
+  "answer": 2,
+  "explanation": "With ties, a RANGE frame ending at CURRENT ROW extends through all peers, while a ROWS frame stops at the current physical row."
+ },
+ {
+  "id": "q770732f5904",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "Why does LAST_VALUE(x) OVER (ORDER BY ts) often return the current row's value in PostgreSQL?",
+  "options": [
+   "Because LAST_VALUE ignores the ORDER BY clause",
+   "Because the default frame ends at the current row",
+   "Because LAST_VALUE always returns the first row of the partition",
+   "Because window functions are evaluated before ORDER BY"
+  ],
+  "answer": 1,
+  "explanation": "With ORDER BY and no frame clause the frame runs up to the current row, so the last value in the frame is the current row. Use ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING to see the true last row."
+ },
+ {
+  "id": "q79d44ebfe9c",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "Can a window function appear directly in a WHERE clause?",
+  "options": [
+   "No, it must be computed in a subquery or CTE and then filtered outside it",
+   "Yes, but only together with PARTITION BY",
+   "Yes, in every SQL dialect",
+   "Only in MySQL"
+  ],
+  "answer": 0,
+  "explanation": "Window functions are evaluated after WHERE, so filtering on them requires wrapping the query in a subquery or CTE."
+ },
+ {
+  "id": "q7acf796f326",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "What does PERCENT_RANK() return for the first row of each partition?",
+  "options": [
+   "1 divided by the partition size",
+   "1",
+   "NULL",
+   "0"
+  ],
+  "answer": 3,
+  "explanation": "PERCENT_RANK is (rank - 1) / (rows in partition - 1), so the first-ranked row always gets 0."
+ },
+ {
+  "id": "q9f4140777c0",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "What does NTILE(4) OVER (ORDER BY score) produce?",
+  "options": [
+   "The fourth row of the ordered partition",
+   "A bucket number from 1 to 4, with rows split into groups of nearly equal size",
+   "The top four rows by score",
+   "The score divided by four"
+  ],
+  "answer": 1,
+  "explanation": "NTILE(n) assigns each row to one of n buckets, numbered 1 to n, with bucket sizes differing by at most one row."
+ }
+]

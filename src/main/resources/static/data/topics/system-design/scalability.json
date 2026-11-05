@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q0e7c2aa9fd4",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "Which is a main drawback of vertical scaling?",
+  "options": [
+   "It cannot be done without rewriting the database",
+   "It always increases network latency between services",
+   "It has a hard ceiling set by the largest machine available",
+   "It requires a load balancer in front of the server"
+  ],
+  "answer": 2,
+  "explanation": "A single machine can only grow so far, and one node remains a single point of failure."
+ },
+ {
+  "id": "q492f83d8580",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What is a microservices architecture?",
+  "options": [
+   "A server with many CPU cores",
+   "A single application deployed as one unit",
+   "A database split into many tables",
+   "An application built as small services that can be deployed and scaled independently"
+  ],
+  "answer": 3,
+  "explanation": "Each service owns one capability and can be released and scaled on its own, at the cost of more network calls."
+ },
+ {
+  "id": "q637097fbffe",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What is elasticity in cloud systems?",
+  "options": [
+   "Retrying failed requests with a fixed delay",
+   "Storing data in multiple formats for compatibility",
+   "Compressing HTTP responses to save bandwidth",
+   "Automatically adding or removing capacity as demand changes"
+  ],
+  "answer": 3,
+  "explanation": "Elastic systems scale out and in with load, usually driven by metrics or schedules."
+ },
+ {
+  "id": "qc018de1746f",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What does auto-scaling usually react to when adding or removing instances?",
+  "options": [
+   "The number of developers on the team",
+   "The time since the last deployment only",
+   "The size of the codebase",
+   "Metrics such as CPU usage, request rate, or queue length"
+  ],
+  "answer": 3,
+  "explanation": "Auto-scaling policies compare load metrics against thresholds or targets to adjust capacity."
+ },
+ {
+  "id": "qda32495c654",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "Why are stateless web servers easy to scale horizontally?",
+  "options": [
+   "Stateless servers never need a network connection",
+   "They remove the need for a database entirely",
+   "They automatically encrypt all traffic",
+   "Any instance can serve any request because no session data lives on the instance"
+  ],
+  "answer": 3,
+  "explanation": "Because no per-client state is stored locally, requests can be routed to any instance."
+ },
+ {
+  "id": "qf0228500d9b",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "Which best describes vertical scaling?",
+  "options": [
+   "Adding more servers behind a load balancer",
+   "Partitioning data across several regions",
+   "Caching responses at edge locations",
+   "Adding CPU, memory, or disk to an existing server"
+  ],
+  "answer": 3,
+  "explanation": "Vertical scaling (scale up) increases the capacity of one node; horizontal scaling adds nodes."
+ },
+ {
+  "id": "qf7b00dcaab4",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What does horizontal scaling mean?",
+  "options": [
+   "Adding more machines to share the load",
+   "Upgrading the CPU and RAM of a single machine",
+   "Splitting one codebase into separate deployable services",
+   "Increasing the disk size of a database volume"
+  ],
+  "answer": 0,
+  "explanation": "Horizontal scaling adds nodes; vertical scaling adds resources to a single node."
+ }
+]

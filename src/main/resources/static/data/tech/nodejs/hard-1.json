@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q956b46ba7ba",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "Which package.json field forces a transitive dependency to a specific version in npm?",
+  "options": [
+   "forced",
+   "resolutions in .npmrc",
+   "overrides",
+   "pins"
+  ],
+  "answer": 2,
+  "explanation": "The overrides field lets you replace the version of nested dependencies; resolutions is a Yarn feature."
+ },
+ {
+  "id": "q5e6fe14b033",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does the --expose-gc flag enable?",
+  "options": [
+   "A smaller Buffer pool allocation size",
+   "Automatic heap snapshots on exit",
+   "Garbage collection logs for every allocation",
+   "A global gc() function for triggering garbage collection manually"
+  ],
+  "answer": 3,
+  "explanation": "With the flag set, code can call global.gc() to request a collection; it is mainly useful for diagnostics."
+ },
+ {
+  "id": "qdf2f6d67f7c",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "In the main module, outside any I/O callback, what is the order of setTimeout(fn, 0) and setImmediate(fn)?",
+  "options": [
+   "setTimeout always runs first",
+   "setImmediate always runs first",
+   "It is not deterministic; it depends on whether 1 ms has elapsed when the loop starts",
+   "They always run in the order written"
+  ],
+  "answer": 2,
+  "explanation": "The timer may or may not be due when the loop enters the timers phase, so the order can vary between runs."
+ },
+ {
+  "id": "qed3b91f5c48",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "Which EventEmitter constructor option makes rejected promises returned by async listeners emit 'error' instead of going unhandled?",
+  "options": [
+   "asyncMode: true",
+   "promises: true",
+   "captureRejections: true",
+   "autoAsync: true"
+  ],
+  "answer": 2,
+  "explanation": "captureRejections was added in Node.js 13.4 and 12.16 and routes async listener rejections to the 'error' event."
+ },
+ {
+  "id": "qeafcc7e9f3f",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does timeout.unref() do?",
+  "options": [
+   "Lets the process exit even if this timer is still pending",
+   "Cancels the timer",
+   "Runs the callback immediately",
+   "Doubles the delay"
+  ],
+  "answer": 0,
+  "explanation": "An unref'd timer does not keep the event loop alive, so it will not block process exit."
+ },
+ {
+  "id": "q840fe9a962e",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What is 'this' inside a regular (non-arrow) function passed to setTimeout() in Node.js?",
+  "options": [
+   "The global object",
+   "undefined",
+   "The process object",
+   "The Timeout object returned by setTimeout()"
+  ],
+  "answer": 3,
+  "explanation": "In Node.js the callback's this is the Timeout object; in browsers it is window."
+ },
+ {
+  "id": "q5cec9b20331",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "What does readable.resume() do?",
+  "options": [
+   "Rewinds the stream to its beginning",
+   "Switches a paused Readable into flowing mode so its data is emitted",
+   "Doubles the highWaterMark",
+   "Closes the stream and releases its resources"
+  ],
+  "answer": 1,
+  "explanation": "resume() starts data flow for a stream that is paused, such as one with no data listener."
+ },
+ {
+  "id": "q406cc520f55",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "After a timer callback finishes, what runs before the next timer or I/O callback?",
+  "options": [
+   "Only the next timer callback",
+   "All process.nextTick callbacks, then all promise microtasks, repeating until both queues are empty",
+   "Nothing; microtasks wait for the next loop iteration",
+   "The poll phase starts from scratch"
+  ],
+  "answer": 1,
+  "explanation": "Node drains the nextTick queue and then the promise microtask queue between callbacks, repeating until both are empty."
+ },
+ {
+  "id": "qad6da9ce3b0",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "What happens to a plain object sent with postMessage() to a worker thread when no transfer list is given?",
+  "options": [
+   "It is copied with the structured clone algorithm, so the worker gets its own copy",
+   "It is serialized to a JSON string",
+   "The sender's copy is detached and unusable",
+   "The worker receives a live reference to the same object"
+  ],
+  "answer": 0,
+  "explanation": "Only transferable objects listed in the transfer list move ownership; ordinary objects are cloned."
+ },
+ {
+  "id": "qcaeebdb9a07",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Which API reports rss, heapUsed and external memory for the current process?",
+  "options": [
+   "process.memoryUsage()",
+   "buffer.memoryStats()",
+   "gc.stats()",
+   "os.freemem()"
+  ],
+  "answer": 0,
+  "explanation": "os.freemem() reports system-wide free memory, not the memory used by this process."
+ }
+]

@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q05ca7612541",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type First<T> = T extends [infer F, ...unknown[]] ? F : never;`, what is `First<[1, 2, 3]>`?",
+  "options": [
+   "[1]",
+   "1",
+   "1 | 2 | 3",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "The tuple pattern binds F to the first element type."
+ },
+ {
+  "id": "q546b877da23",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Un<T> = T extends Promise<infer U> ? Un<U> : T;`, what is `Un<Promise<Promise<number>>>`?",
+  "options": [
+   "Promise<Promise<number>>",
+   "never",
+   "Promise<number>",
+   "number"
+  ],
+  "answer": 3,
+  "explanation": "The recursive conditional keeps unwrapping until the type is no longer a Promise."
+ },
+ {
+  "id": "q6a2e81be6a9",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Elem<T> = T extends (infer U)[] ? U : never;`, what is `Elem<string[]>`?",
+  "options": [
+   "string[]",
+   "never",
+   "string",
+   "unknown"
+  ],
+  "answer": 2,
+  "explanation": "infer U captures the array element type when the pattern matches."
+ },
+ {
+  "id": "qa8e223768fe",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Which definition reproduces the built-in `ReturnType<T>` behavior for function types?",
+  "options": [
+   "T extends (...args: any[]) => infer R ? R : never",
+   "T extends Function ? T[\"return\"] : never",
+   "keyof T extends \"return\" ? T : never",
+   "T extends (...args: infer R) => any ? R : never"
+  ],
+  "answer": 0,
+  "explanation": "infer R in the return position captures the function's return type; inferring from args gives the parameters instead."
+ },
+ {
+  "id": "qec921bfe1c6",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type H<T> = T extends [infer X extends string, ...unknown[]] ? X : never;`, what is `H<[42, \"a\"]>`?",
+  "options": [
+   "42",
+   "\"a\"",
+   "never",
+   "string"
+  ],
+  "answer": 2,
+  "explanation": "The extends constraint on infer makes the match fail when the first element is not a string, so the false branch is taken."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5e1dd636b23",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does @keyup.enter=\"submit\" do?",
+  "options": [
+   "Calls submit on any key press",
+   "Prevents the Enter key's default action",
+   "Submits the parent form automatically",
+   "Calls submit only when the Enter key is released"
+  ],
+  "answer": 3,
+  "explanation": "Key modifiers filter keyboard events so the handler runs only for the named key."
+ },
+ {
+  "id": "q31cc4ab5508",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "Which compiler macro sets component options like name or inheritAttrs from inside script setup?",
+  "options": [
+   "defineOptions",
+   "defineConfig",
+   "defineComponent",
+   "useOptions"
+  ],
+  "answer": 0,
+  "explanation": "defineOptions, available since Vue 3.3, removes the need for a separate script block to set options."
+ },
+ {
+  "id": "q03215633f44",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "What does the deep option do for watch?",
+  "options": [
+   "Watches all components in the tree",
+   "Triggers the callback on nested property mutations of the watched source",
+   "Makes the callback run before the DOM update",
+   "Debounces the callback"
+  ],
+  "answer": 1,
+  "explanation": "deep: true traverses the source so nested changes trigger it, which is implicit when watching a reactive object directly."
+ },
+ {
+  "id": "q4c37cb8ad86",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "medium",
+  "question": "Which API exposes the slots a component received in script setup?",
+  "options": [
+   "useSlots()",
+   "defineSlots() only",
+   "this.$slots",
+   "getSlots()"
+  ],
+  "answer": 0,
+  "explanation": "useSlots() returns the same object as $slots, while defineSlots() is a type-only macro for slot types."
+ },
+ {
+  "id": "q978f430b856",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "In the Options API, in which hook is the component's DOM first available through this.$el?",
+  "options": [
+   "mounted",
+   "beforeMount",
+   "created",
+   "beforeCreate"
+  ],
+  "answer": 0,
+  "explanation": "In created the instance and data exist but nothing has been rendered yet; the DOM is available in mounted."
+ },
+ {
+  "id": "q962b821e102",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does :style=\"{ fontSize: size + 'px' }\" do?",
+  "options": [
+   "Creates a scoped style block",
+   "Adds a CSS class named fontSize",
+   "Binds an inline font-size style computed from size",
+   "Sets a style only on hover"
+  ],
+  "answer": 2,
+  "explanation": "Object syntax for :style accepts camelCase or quoted kebab-case CSS properties."
+ },
+ {
+  "id": "qaf3dcc6ac3b",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "How do you change several Pinia state properties in a single patch?",
+  "options": [
+   "store.setState({ a: 1, b: 2 })",
+   "store.commit('a', 1)",
+   "store.$update(a, b)",
+   "store.$patch({ a: 1, b: 2 })"
+  ],
+  "answer": 3,
+  "explanation": "$patch applies a partial object or a mutation function as a single change entry for devtools."
+ },
+ {
+  "id": "q563dd01622e",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "Why must an object or array default for a prop be written as a factory, like default: () => []?",
+  "options": [
+   "Because Vue cannot store arrays in props",
+   "To make the prop required",
+   "To make the prop reactive",
+   "So each component instance gets its own fresh object instead of sharing one"
+  ],
+  "answer": 3,
+  "explanation": "A shared default object would be mutated by all instances that use it."
+ },
+ {
+  "id": "qb8f2e891f24",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "Why is the Map or Set held in reactive() still reactive when you call map.set()?",
+  "options": [
+   "Vue's proxies instrument collection methods like set, add and delete",
+   "Vue polls the collection for changes",
+   "Maps are converted to plain objects",
+   "Only Map is supported, not Set"
+  ],
+  "answer": 0,
+  "explanation": "Vue 3 provides special proxy handlers for Map, Set, WeakMap and WeakSet."
+ },
+ {
+  "id": "q8105f36be8a",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does toRef(state, 'count') create from const state = reactive({ count: 0 })?",
+  "options": [
+   "A copy of the value that is no longer reactive",
+   "A computed that is read-only",
+   "A ref that stays linked to state.count in both directions",
+   "A new reactive object containing only count"
+  ],
+  "answer": 2,
+  "explanation": "toRef creates a ref that reads and writes the source property, so changes sync both ways."
+ }
+]

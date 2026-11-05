@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6626e368a34",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 5 === \"5\"?",
+  "options": [
+   "true",
+   "TypeError",
+   "undefined",
+   "false"
+  ],
+  "answer": 3,
+  "explanation": "Strict equality compares without type conversion, and a number is never strictly equal to a string."
+ },
+ {
+  "id": "q0ceed080ef4",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof null return?",
+  "options": [
+   "\"object\"",
+   "\"null\"",
+   "\"undefined\"",
+   "\"symbol\""
+  ],
+  "answer": 0,
+  "explanation": "typeof null returns \"object\", a long-standing quirk kept for backward compatibility."
+ },
+ {
+  "id": "q31213c2ba43",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "Which loop iterates over the values of an array such as [\"x\", \"y\"]?",
+  "options": [
+   "for...in",
+   "for...of",
+   "for...each",
+   "while...in"
+  ],
+  "answer": 1,
+  "explanation": "for...of iterates values of iterables; for...in iterates enumerable property keys."
+ },
+ {
+  "id": "q56d624dfa0d",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [1, 2, 3].length return?",
+  "options": [
+   "2",
+   "undefined",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "length gives the number of elements, which is 3."
+ },
+ {
+  "id": "q67cb431e4f6",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "In a switch statement, what happens if a matching case has no break?",
+  "options": [
+   "A SyntaxError is thrown",
+   "Execution falls through to the next case",
+   "The switch restarts",
+   "Only that case runs anyway"
+  ],
+  "answer": 1,
+  "explanation": "Without break, execution continues into the following case bodies."
+ },
+ {
+  "id": "qca747d45332",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does Object.keys({ a: 1, b: 2 }) return?",
+  "options": [
+   "[1, 2]",
+   "{ a: 1, b: 2 }",
+   "[[\"a\", 1], [\"b\", 2]]",
+   "[\"a\", \"b\"]"
+  ],
+  "answer": 3,
+  "explanation": "Object.keys returns an array of the object's own enumerable string keys."
+ },
+ {
+  "id": "qf44a82ca5f9",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What is the value of a variable declared with let but not assigned?",
+  "options": [
+   "\"\"",
+   "null",
+   "0",
+   "undefined"
+  ],
+  "answer": 3,
+  "explanation": "A declared but unassigned let variable is initialized to undefined."
+ },
+ {
+  "id": "q1a5252f3fb8",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof undefined return?",
+  "options": [
+   "\"object\"",
+   "\"null\"",
+   "\"undefined\"",
+   "\"void\""
+  ],
+  "answer": 2,
+  "explanation": "The undefined value has its own type and typeof reports \"undefined\"."
+ },
+ {
+  "id": "qff0429d2817",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does function greet(name = \"Guest\") { return name; } greet() return?",
+  "options": [
+   "\"Guest\"",
+   "\"name\"",
+   "undefined",
+   "TypeError"
+  ],
+  "answer": 0,
+  "explanation": "Default parameter values are used when the argument is missing or undefined."
+ },
+ {
+  "id": "qec65f122259",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which kind of function declaration is hoisted together with its body?",
+  "options": [
+   "const foo = () => {}",
+   "const foo = function() {}",
+   "function foo() {}",
+   "let foo = function() {}"
+  ],
+  "answer": 2,
+  "explanation": "Function declarations are hoisted fully, so they can be called before they appear in the code."
+ }
+]

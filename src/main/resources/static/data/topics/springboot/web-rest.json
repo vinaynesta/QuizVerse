@@ -15,6 +15,21 @@
   "explanation": "Spring Boot's embedded server listens on 8080 unless server.port is set."
  },
  {
+  "id": "q58c43ad4499",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation binds a query string parameter such as ?page=2 to a method parameter?",
+  "options": [
+   "@RequestParam",
+   "@PathVariable",
+   "@RequestBody",
+   "@ModelAttribute"
+  ],
+  "answer": 0,
+  "explanation": "@RequestParam reads request parameters such as query string values by name."
+ },
+ {
   "id": "q6f91cab1ebe",
   "subject": "springboot",
   "topic": "web-rest",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "ResponseEntity represents the full HTTP response, including status, headers and body."
+ },
+ {
+  "id": "q7281e6a43e2",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation tells Spring MVC to deserialize the HTTP request body into a method parameter?",
+  "options": [
+   "@ResponseBody",
+   "@RequestBody",
+   "@RequestAttribute",
+   "@RequestPart"
+  ],
+  "answer": 1,
+  "explanation": "@RequestBody uses an HttpMessageConverter, such as the Jackson one, to convert the body into the parameter type."
  },
  {
   "id": "q7282309f514",
@@ -60,6 +90,36 @@
   "explanation": "@PathVariable extracts values from URI template variables, while @RequestParam reads query or form parameters."
  },
  {
+  "id": "q89bf72eb6b5",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation maps HTTP GET requests to a controller method?",
+  "options": [
+   "@PostMapping",
+   "@ResponseBody",
+   "@GetMapping",
+   "@RequestHeader"
+  ],
+  "answer": 2,
+  "explanation": "@GetMapping is a shortcut for @RequestMapping(method = RequestMethod.GET)."
+ },
+ {
+  "id": "qe7614f1b3d1",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which library does spring-boot-starter-web use by default to convert objects to and from JSON?",
+  "options": [
+   "Gson",
+   "Jackson",
+   "JSON-B (Yasson)",
+   "org.json"
+  ],
+  "answer": 1,
+  "explanation": "The web starter pulls in spring-boot-starter-json, which auto-configures a Jackson ObjectMapper."
+ },
+ {
   "id": "q12bf0a87bf5",
   "subject": "springboot",
   "topic": "web-rest",
@@ -88,6 +148,51 @@
   ],
   "answer": 0,
   "explanation": "@RestControllerAdvice applies @ExceptionHandler methods across controllers and writes their results as response bodies."
+ },
+ {
+  "id": "q5724fb9d4d3",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which annotation sets the HTTP status returned for a handler method or a custom exception class?",
+  "options": [
+   "@ResponseBody",
+   "@StatusCode",
+   "@ExceptionHandler",
+   "@ResponseStatus"
+  ],
+  "answer": 3,
+  "explanation": "@ResponseStatus(HttpStatus.NOT_FOUND) on an exception class makes Spring MVC respond with that status when it is thrown."
+ },
+ {
+  "id": "qa7c57c1d72b",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which annotation binds an HTTP request header to a controller method parameter?",
+  "options": [
+   "@RequestHeader",
+   "@RequestParam",
+   "@CookieValue",
+   "@RequestAttribute"
+  ],
+  "answer": 0,
+  "explanation": "@RequestHeader(\"X-Request-Id\") reads that header value and can convert it to the parameter type."
+ },
+ {
+  "id": "qbb7b04912ec",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which annotation enables CORS for a particular controller or handler method?",
+  "options": [
+   "@EnableCors",
+   "@AllowOrigin",
+   "@CrossOrigin",
+   "@CorsMapping"
+  ],
+  "answer": 2,
+  "explanation": "@CrossOrigin configures allowed origins and methods locally; global CORS can be set via WebMvcConfigurer.addCorsMappings."
  },
  {
   "id": "qe04ea9c5236",
@@ -120,6 +225,21 @@
   "explanation": "RestClient offers a fluent API over the same infrastructure as RestTemplate; WebClient is the reactive client."
  },
  {
+  "id": "q0078fbea86b",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "In Spring Boot 3, what is the default for server.error.include-message?",
+  "options": [
+   "always",
+   "on-param",
+   "never, so the exception message is left out of the default error response",
+   "on-trace-param"
+  ],
+  "answer": 2,
+  "explanation": "The message is hidden by default to avoid leaking internal details, and can be enabled per property."
+ },
+ {
   "id": "q0fe4f2b1770",
   "subject": "springboot",
   "topic": "web-rest",
@@ -133,6 +253,36 @@
   ],
   "answer": 0,
   "explanation": "Spring 6 deprecated trailing slash matching and turned it off by default."
+ },
+ {
+  "id": "q172051e37f6",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "What happens when a Spring MVC handler returns a CompletableFuture<User>?",
+  "options": [
+   "The client receives the future serialized as JSON",
+   "The servlet thread blocks on get() before returning",
+   "Spring MVC rejects the return type",
+   "The request is processed asynchronously and the servlet thread is released until the future completes"
+  ],
+  "answer": 3,
+  "explanation": "Spring MVC uses Servlet async support and writes the response when the future completes."
+ },
+ {
+  "id": "q38d3adcb709",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "A controller has its own @ExceptionHandler for IllegalStateException, and a @ControllerAdvice also handles it. Which handles an exception thrown in that controller?",
+  "options": [
+   "The handler in the controller itself",
+   "The @ControllerAdvice handler",
+   "Both, in registration order",
+   "Neither, because the conflict fails startup"
+  ],
+  "answer": 0,
+  "explanation": "Spring MVC checks the controller's local @ExceptionHandler methods before global @ControllerAdvice beans."
  },
  {
   "id": "q3c49653474e",

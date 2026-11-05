@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q80cb0323a3e",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does 0.1 + 0.2 === 0.3 evaluate to?",
+  "options": [
+   "true",
+   "false",
+   "NaN",
+   "TypeError"
+  ],
+  "answer": 1,
+  "explanation": "IEEE 754 doubles cannot represent these decimals exactly, so the sum is 0.30000000000000004."
+ },
+ {
+  "id": "q40f20e098c0",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What happens when this runs?\nconsole.log(x);\nlet x = 1;",
+  "options": [
+   "1 is logged",
+   "undefined is logged",
+   "ReferenceError is thrown",
+   "null is logged"
+  ],
+  "answer": 2,
+  "explanation": "let bindings are hoisted but uninitialized; accessing them before the declaration is in the temporal dead zone and throws."
+ },
+ {
+  "id": "q951b2885b76",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does [...g()] return?\nfunction* g() { yield 1; return 2; }",
+  "options": [
+   "[1, 2]",
+   "[2]",
+   "[]",
+   "[1]"
+  ],
+  "answer": 3,
+  "explanation": "Spread and for...of stop when done is true and ignore the value from return."
+ },
+ {
+  "id": "q8656c7321ab",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() {}\nconst f = new F();\nF.prototype = { tag: \"new\" };\nconsole.log(f.tag);",
+  "options": [
+   "\"new\"",
+   "null",
+   "undefined",
+   "TypeError"
+  ],
+  "answer": 2,
+  "explanation": "f's prototype was fixed at creation to the original F.prototype object; replacing F.prototype afterwards does not affect it."
+ },
+ {
+  "id": "q2e6eaa0d9aa",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nconst parent = { x: 1 };\nconst child = Object.create(parent);\nchild.x = 2;\nconsole.log(parent.x);",
+  "options": [
+   "2",
+   "undefined",
+   "TypeError",
+   "1"
+  ],
+  "answer": 3,
+  "explanation": "Assigning to child.x creates an own property on child that shadows the inherited one; parent is unchanged."
+ },
+ {
+  "id": "q214d1e29725",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What does this log?\nvar x = 1;\nfunction f() { console.log(x); var x = 2; }\nf();",
+  "options": [
+   "undefined",
+   "1",
+   "2",
+   "ReferenceError"
+  ],
+  "answer": 0,
+  "explanation": "The inner var x is hoisted to the top of f and initialized to undefined, shadowing the outer x."
+ },
+ {
+  "id": "q5b2bc992340",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() {}\nF.prototype.greet = () => \"hi\";\nconst f = new F();\nF.prototype.greet = () => \"bye\";\nconsole.log(f.greet());",
+  "options": [
+   "\"hi\"",
+   "undefined",
+   "\"bye\"",
+   "TypeError"
+  ],
+  "answer": 2,
+  "explanation": "f looks up greet on F.prototype at call time, so it sees the updated method."
+ },
+ {
+  "id": "qb5d519badaa",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "Given const c = Object.create({ a: 1 }); what are \"a\" in c and Object.hasOwn(c, \"a\")?",
+  "options": [
+   "false and false",
+   "true and false",
+   "true and true",
+   "false and true"
+  ],
+  "answer": 1,
+  "explanation": "The in operator checks the whole prototype chain, while Object.hasOwn checks only own properties."
+ },
+ {
+  "id": "qb57794134ca",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nPromise.resolve().then(() => { console.log(1); setTimeout(() => console.log(2)); });\nsetTimeout(() => console.log(3));",
+  "options": [
+   "1 3 2",
+   "1 2 3",
+   "3 1 2",
+   "3 2 1"
+  ],
+  "answer": 0,
+  "explanation": "The microtask logs 1 first; the timer it schedules is queued after the timer for 3, which was registered earlier."
+ },
+ {
+  "id": "qe4f43f233c7",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What do \"5\" - 2 and \"5\" + 2 evaluate to?",
+  "options": [
+   "3 and 7",
+   "\"3\" and \"52\"",
+   "NaN and \"52\"",
+   "3 and \"52\""
+  ],
+  "answer": 3,
+  "explanation": "The - operator only works on numbers so the string is converted, while + concatenates when either operand is a string."
+ }
+]

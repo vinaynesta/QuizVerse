@@ -1,0 +1,282 @@
+[
+  {
+    "topic": "processes-threads",
+    "question": "What is a process?",
+    "options": ["A program in execution", "A program stored on disk", "A single CPU instruction", "A file descriptor table"],
+    "answer": 0,
+    "explanation": "A process is an active program in execution with its own state, while a program on disk is a passive entity."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "Which resource do threads of the same process share?",
+    "options": ["Program counter", "Stack", "Address space (code, data and heap)", "Register set"],
+    "answer": 2,
+    "explanation": "Threads share their process's code, data, heap and open files, but each thread has its own program counter, registers and stack."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "Which data structure does the OS use to store information about each process, such as its state, registers and scheduling data?",
+    "options": ["Page table", "Process Control Block (PCB)", "Inode", "Interrupt vector"],
+    "answer": 1,
+    "explanation": "The PCB holds per-process information (state, program counter, registers, scheduling and memory info) that the kernel uses to manage the process."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "A process that has finished executing but whose parent has not yet called wait() is called a:",
+    "options": ["Orphan process", "Daemon process", "Idle process", "Zombie process"],
+    "answer": 3,
+    "explanation": "A zombie keeps its process-table entry and exit status until the parent collects it with wait()."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "In the five-state process model, which state means a process is waiting to be assigned the CPU?",
+    "options": ["Waiting", "Ready", "Running", "Terminated"],
+    "answer": 1,
+    "explanation": "Ready processes can run and are waiting only for the CPU; Waiting processes are blocked on an event such as I/O."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "On UNIX/Linux, what happens to a child process whose parent terminates without waiting for it?",
+    "options": ["It becomes an orphan and is adopted by init (or a subreaper)", "It is immediately killed by the kernel", "It stays a zombie forever", "It takes over its parent's PID"],
+    "answer": 0,
+    "explanation": "Orphaned processes are re-parented to init/systemd (or a designated subreaper), which reaps them when they exit."
+  },
+  {
+    "topic": "kernel",
+    "question": "What is the kernel?",
+    "options": ["The graphical shell users interact with", "The core part of the OS that runs in privileged mode and manages hardware resources", "A compiler that builds the OS", "The bootloader stored in firmware"],
+    "answer": 1,
+    "explanation": "The kernel is the always-running core of the OS that manages CPU, memory and devices in kernel (privileged) mode."
+  },
+  {
+    "topic": "kernel",
+    "question": "Which kernel design keeps only minimal functions in the kernel and runs services such as file systems and drivers in user space?",
+    "options": ["Monolithic kernel", "Batch kernel", "Microkernel", "Bootloader kernel"],
+    "answer": 2,
+    "explanation": "A microkernel provides only essentials like IPC, scheduling and basic memory management, moving other services to user-space processes."
+  },
+  {
+    "topic": "kernel",
+    "question": "What is the purpose of the mode bit in the CPU?",
+    "options": ["To select between 32-bit and 64-bit execution", "To enable floating-point instructions", "To indicate that the cache is dirty", "To distinguish user mode from kernel mode"],
+    "answer": 3,
+    "explanation": "The mode bit lets hardware tell whether code runs in user or kernel mode, so privileged instructions can only execute in kernel mode."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "What is a context switch?",
+    "options": ["Saving the state of the current process and loading the saved state of another", "Switching from user mode to kernel mode only", "Moving a page from disk into memory", "Changing the active keyboard layout"],
+    "answer": 0,
+    "explanation": "A context switch saves the running process's context in its PCB and restores another's; it is pure overhead because no useful work is done during it."
+  },
+  {
+    "topic": "system-calls",
+    "question": "What is a system call?",
+    "options": ["A user library function that never enters the kernel", "A programmatic request from a user program to the kernel for a service", "A hardware interrupt raised by a device", "A call from the kernel into a user process"],
+    "answer": 1,
+    "explanation": "System calls are the interface through which user programs request kernel services such as I/O or process creation, trapping into kernel mode."
+  },
+  {
+    "topic": "system-calls",
+    "question": "Which UNIX system call creates a new process by duplicating the calling process?",
+    "options": ["exec()", "wait()", "fork()", "exit()"],
+    "answer": 2,
+    "explanation": "fork() creates a child that is a copy of the parent; exec() replaces a process image rather than creating a process."
+  },
+  {
+    "topic": "system-calls",
+    "question": "What does the exec() family of system calls do?",
+    "options": ["Creates a child process", "Terminates the current process", "Waits for a child to finish", "Replaces the current process image with a new program"],
+    "answer": 3,
+    "explanation": "exec() loads a new program into the current process's address space; the PID stays the same."
+  },
+  {
+    "topic": "system-calls",
+    "question": "In the child process, what value does a successful fork() return?",
+    "options": ["0", "The child's PID", "The parent's PID", "-1"],
+    "answer": 0,
+    "explanation": "fork() returns 0 in the child and the child's PID in the parent; -1 indicates failure."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Which CPU scheduling algorithm runs processes strictly in order of arrival?",
+    "options": ["Shortest Job First", "First-Come, First-Served (FCFS)", "Round Robin", "Priority scheduling"],
+    "answer": 1,
+    "explanation": "FCFS serves processes in the order they enter the ready queue, using a simple FIFO queue."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "What is the time quantum in Round Robin scheduling?",
+    "options": ["The total CPU time a process needs", "The time taken to perform a context switch", "The maximum CPU time slice a process gets before it is preempted", "The time a process spends in the ready queue"],
+    "answer": 2,
+    "explanation": "In Round Robin each process runs for at most one quantum, then is preempted and placed at the back of the ready queue."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Which OS component selects a process from the ready queue and allocates the CPU to it?",
+    "options": ["Linker", "Loader", "Spooler", "CPU scheduler (short-term scheduler)"],
+    "answer": 3,
+    "explanation": "The short-term (CPU) scheduler picks the next ready process, and the dispatcher then gives it control of the CPU."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "What is turnaround time in CPU scheduling?",
+    "options": ["Time from process submission to completion", "Time spent only executing on the CPU", "Time from submission to the first response", "Time spent waiting for I/O"],
+    "answer": 0,
+    "explanation": "Turnaround time = completion time - arrival time, covering waiting, executing and I/O time."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "In preemptive scheduling, what can happen to a running process?",
+    "options": ["It always runs until its CPU burst finishes", "The OS can take the CPU away from it before its burst finishes", "It is never allowed to perform I/O", "It is moved permanently to disk"],
+    "answer": 1,
+    "explanation": "Preemptive schedulers can interrupt a running process (e.g. on a timer or a higher-priority arrival) and give the CPU to another."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is a critical section?",
+    "options": ["A part of the kernel that handles errors", "A region of memory reserved for the OS", "A code segment that accesses shared resources and must not be executed by more than one process at a time", "The first instruction executed at boot"],
+    "answer": 2,
+    "explanation": "A critical section touches shared data, so concurrent execution of it by multiple processes must be prevented."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is a race condition?",
+    "options": ["Two processes competing for the highest priority", "A type of scheduling algorithm", "A deadlock between two threads", "A situation where the outcome depends on the unpredictable order in which concurrent threads access shared data"],
+    "answer": 3,
+    "explanation": "Race conditions arise when unsynchronized threads interleave operations on shared data, producing timing-dependent results."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is a mutex lock primarily used for?",
+    "options": ["Ensuring mutual exclusion so only one thread holds the lock at a time", "Counting available disk blocks", "Translating virtual addresses", "Scheduling I/O requests"],
+    "answer": 0,
+    "explanation": "A thread acquires the mutex before entering a critical section and releases it on exit, so only one thread is inside at a time."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Which semaphore operation decrements the semaphore and may block the caller?",
+    "options": ["signal() / V()", "wait() / P()", "init()", "fork()"],
+    "answer": 1,
+    "explanation": "wait() (P) decrements the semaphore and blocks if no units are available; signal() (V) increments it and may wake a waiter."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "What is a deadlock?",
+    "options": ["A process using too much CPU", "A crashed kernel", "A set of processes each waiting for a resource held by another process in the set, so none can proceed", "A process stuck in an infinite loop"],
+    "answer": 2,
+    "explanation": "In a deadlock every process in the set waits for an event only another blocked member can cause, so none ever progresses."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "What is starvation?",
+    "options": ["Two processes waiting on each other", "The system running out of memory", "A process blocked on I/O", "A process waiting indefinitely because other processes are always favored"],
+    "answer": 3,
+    "explanation": "Starvation (indefinite blocking) occurs when a process is continually passed over, e.g. a low-priority process in strict priority scheduling."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Which graph is commonly used to model resource allocation and detect deadlocks?",
+    "options": ["Resource-allocation graph", "Control-flow graph", "Call graph", "Dependency-injection graph"],
+    "answer": 0,
+    "explanation": "A resource-allocation graph has request and assignment edges between processes and resources; cycles indicate possible deadlock."
+  },
+  {
+    "topic": "memory-management",
+    "question": "What is the job of the Memory Management Unit (MMU)?",
+    "options": ["Allocating disk blocks", "Translating logical (virtual) addresses to physical addresses at run time", "Scheduling processes", "Compressing memory pages"],
+    "answer": 1,
+    "explanation": "The MMU is hardware that maps each virtual address generated by the CPU to a physical address."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Which term describes free memory split into small non-contiguous holes that are too small to satisfy requests?",
+    "options": ["Internal fragmentation", "Thrashing", "External fragmentation", "Paging"],
+    "answer": 2,
+    "explanation": "External fragmentation means total free memory is sufficient but it is not contiguous; compaction or paging addresses it."
+  },
+  {
+    "topic": "memory-management",
+    "question": "In paging, physical memory is divided into fixed-size blocks called:",
+    "options": ["Segments", "Pages", "Sectors", "Frames"],
+    "answer": 3,
+    "explanation": "Physical memory is split into frames and logical memory into pages of the same size."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Unused space inside an allocated block, such as the unfilled part of a process's last page, is called:",
+    "options": ["Internal fragmentation", "External fragmentation", "Compaction", "Swapping"],
+    "answer": 0,
+    "explanation": "Internal fragmentation is wasted space inside an allocated unit because the allocation is larger than requested."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What is virtual memory?",
+    "options": ["Memory located on the GPU", "A technique that lets processes run without being entirely in physical memory, giving each its own large address space", "Cache memory inside the CPU", "Read-only memory"],
+    "answer": 1,
+    "explanation": "Virtual memory separates logical from physical memory, so programs can be larger than RAM and only needed pages are kept resident."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What is a page fault?",
+    "options": ["A corrupted page on disk", "An error in the page-table format", "A trap raised when a process accesses a page that is not currently in physical memory", "A failed write to the CPU cache"],
+    "answer": 2,
+    "explanation": "When the referenced page's valid bit is not set, the MMU traps to the OS, which loads the page from backing store and restarts the instruction."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What is swapping?",
+    "options": ["Exchanging the values of two variables", "Switching the CPU between user and kernel mode", "Rotating log files", "Moving a process (or its pages) between main memory and a backing store on disk"],
+    "answer": 3,
+    "explanation": "Swapping temporarily moves processes or pages out to disk to free memory and brings them back later."
+  },
+  {
+    "topic": "file-systems",
+    "question": "What is an inode in UNIX file systems?",
+    "options": ["A data structure storing a file's metadata and pointers to its data blocks", "The file's name in a directory", "A device driver", "A network socket"],
+    "answer": 0,
+    "explanation": "An inode holds owner, permissions, size, timestamps and block pointers; the file name lives in the directory entry, not the inode."
+  },
+  {
+    "topic": "file-systems",
+    "question": "What does a file descriptor represent in UNIX?",
+    "options": ["The file's size", "A small integer handle referring to an entry in the process's open-file table", "The file's permission string", "The disk partition number"],
+    "answer": 1,
+    "explanation": "open() returns a small integer (e.g. 0, 1, 2 for stdin/stdout/stderr) that indexes the per-process open-file table."
+  },
+  {
+    "topic": "file-systems",
+    "question": "Which type of link is a separate file containing a path to the target and breaks if the target is deleted?",
+    "options": ["Hard link", "Inode link", "Symbolic (soft) link", "Mount link"],
+    "answer": 2,
+    "explanation": "A symbolic link stores a path name, so it dangles if the target is removed; a hard link is another directory entry for the same inode."
+  },
+  {
+    "topic": "io-systems",
+    "question": "What is an interrupt?",
+    "options": ["A system call that ends a process", "A user-level exception handler", "A type of disk block", "A signal from hardware (or software) that makes the CPU suspend its current work and run a handler"],
+    "answer": 3,
+    "explanation": "On an interrupt the CPU saves its state and jumps to the handler found via the interrupt vector, then resumes the interrupted work."
+  },
+  {
+    "topic": "io-systems",
+    "question": "What does DMA (Direct Memory Access) allow?",
+    "options": ["A device controller to transfer data directly to or from memory without the CPU handling each byte", "User programs to access kernel memory", "The CPU to bypass its cache", "Processes to share memory"],
+    "answer": 0,
+    "explanation": "With DMA the CPU sets up a transfer and the controller moves the whole block, interrupting the CPU only when it is done."
+  },
+  {
+    "topic": "io-systems",
+    "question": "What is a device driver?",
+    "options": ["A hardware chip on a device", "Kernel software that provides a uniform interface for controlling a specific hardware device", "A user application", "A bus protocol"],
+    "answer": 1,
+    "explanation": "Device drivers hide device-specific details from the rest of the kernel behind a standard interface."
+  },
+  {
+    "topic": "io-systems",
+    "question": "What is spooling?",
+    "options": ["Rotating disk platters", "Encrypting I/O traffic", "Buffering output (e.g. print jobs) on disk so a slow device can process jobs one at a time", "Polling a device in a loop"],
+    "answer": 2,
+    "explanation": "A spool holds output for devices like printers that cannot interleave jobs, so each job is queued and printed in turn."
+  }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q10bea9a3f63",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why are rarely changing instructions, such as installing OS packages, placed before frequently changing COPY instructions?",
+  "options": [
+   "It makes COPY faster by pre-compressing files",
+   "Docker runs earlier instructions only once in parallel",
+   "It reduces the number of files in the build context",
+   "Layer caching: a change in a later layer does not invalidate the earlier cached layers"
+  ],
+  "answer": 3,
+  "explanation": "Cache invalidation flows downward, so stable steps placed first stay cached when source files change."
+ },
+ {
+  "id": "q12946ec2f69",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why does using a distroless or scratch base image in the final stage reduce attack surface?",
+  "options": [
+   "It includes more package managers for updates",
+   "It removes the need for a Dockerfile",
+   "It disables all networking for the container",
+   "It contains fewer packages, shells, and tools an attacker could use"
+  ],
+  "answer": 3,
+  "explanation": "Minimal base images omit shells and package managers, so there is less an attacker can run after compromise."
+ },
+ {
+  "id": "q2e3d1ca9f17",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "What does docker buildx build --platform linux/amd64,linux/arm64 produce?",
+  "options": [
+   "Two unrelated images with different tags",
+   "A build that fails unless the host has both CPU types",
+   "A single image that emulates both architectures at runtime",
+   "A multi-platform image whose index points to one variant per architecture"
+  ],
+  "answer": 3,
+  "explanation": "The image index lets each client pull the variant matching its platform."
+ },
+ {
+  "id": "q3b426d9a103",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "What is the main benefit of a multi-stage Dockerfile?",
+  "options": [
+   "Build tools stay in an earlier stage, and only the needed artifacts are copied into a slim final image",
+   "It automatically pushes the image to a registry",
+   "It creates a separate volume for each stage",
+   "It runs multiple containers simultaneously"
+  ],
+  "answer": 0,
+  "explanation": "Compilers and build dependencies do not ship in the final image, which keeps it smaller and reduces attack surface."
+ },
+ {
+  "id": "q48e4f0ec2b8",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "In a multi-stage build, what does COPY --from=builder do?",
+  "options": [
+   "Copies files from the host into the builder stage",
+   "Copies files from the stage named builder into the current stage",
+   "Copies an image from the registry into the current stage",
+   "Copies the build history of the builder stage"
+  ],
+  "answer": 1,
+  "explanation": "--from refers to a previous build stage by name or index and copies files out of it."
+ },
+ {
+  "id": "q541fa9ab36a",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "How can a BuildKit build use a private token without leaving it in any image layer?",
+  "options": [
+   "Mount it with RUN --mount=type=secret so it is available only during that step",
+   "Store it in ENV and delete it in the final stage",
+   "Copy it in and remove it with RUN rm",
+   "Pass it with ARG and unset it in the next instruction"
+  ],
+  "answer": 0,
+  "explanation": "Secret mounts are exposed to a single RUN step and are never written to the image or its cache."
+ },
+ {
+  "id": "q70c8f3acadc",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why run a container with an init process such as tini (docker run --init) as PID 1?",
+  "options": [
+   "It makes the image smaller",
+   "It reaps zombie processes and forwards signals, which an application running as PID 1 may not do",
+   "It enables the container to use the host network",
+   "It replaces the need for health checks"
+  ],
+  "answer": 1,
+  "explanation": "PID 1 has special signal and child-reaping duties in Linux that most applications do not implement."
+ },
+ {
+  "id": "q98a0caf1c0d",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Which statement about passing a secret through an ARG in a Dockerfile is correct?",
+  "options": [
+   "ARG values are never stored anywhere in the image",
+   "Using --secret mounts is the only way ARG values appear in the image",
+   "BuildKit redacts all ARG values automatically",
+   "ARG values used during a build can be seen in docker history and image metadata"
+  ],
+  "answer": 3,
+  "explanation": "Build arguments are recorded in image history, so secrets should be passed with BuildKit --mount=type=secret instead."
+ },
+ {
+  "id": "q9c851114e01",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why is putting RUN apt-get update and RUN apt-get install in separate instructions a problem?",
+  "options": [
+   "apt-get cannot run twice in one Dockerfile",
+   "It doubles the image size",
+   "It disables BuildKit",
+   "The cached update layer can be reused in later builds, so install runs against stale package lists"
+  ],
+  "answer": 3,
+  "explanation": "Combining update and install in one RUN invalidates both together when the package list changes."
+ },
+ {
+  "id": "qba554db37f2",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "What does a BuildKit cache mount such as RUN --mount=type=cache do for a package manager directory?",
+  "options": [
+   "Copies the directory into the final image",
+   "Makes the image immutable",
+   "Persists the directory across builds without storing it in an image layer",
+   "Deletes the cache after the build finishes"
+  ],
+  "answer": 2,
+  "explanation": "Cache mounts speed up repeated builds while keeping the cached data out of the resulting image."
+ }
+]

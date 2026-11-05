@@ -1,0 +1,167 @@
+[
+ {
+  "id": "q0948d9c2bff",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "Which type keeps only the `id` and `name` properties of `User`?",
+  "options": [
+   "Pick<User, \"id\" | \"name\">",
+   "Partial<User, \"id\" | \"name\">",
+   "Omit<User, \"id\" | \"name\">",
+   "Extract<User, \"id\" | \"name\">"
+  ],
+  "answer": 0,
+  "explanation": "Pick<T, K> constructs a type from just the listed keys."
+ },
+ {
+  "id": "q17d99830f9a",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `NonNullable<string | null | undefined>`?",
+  "options": [
+   "string | undefined",
+   "string",
+   "string | null",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "NonNullable removes null and undefined from a type."
+ },
+ {
+  "id": "q1d041b7bbb1",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "For `function f(a: string, b: number): void`, what is `Parameters<typeof f>`?",
+  "options": [
+   "{ a: string; b: number }",
+   "[a: string, b: number]",
+   "(string | number)[]",
+   "string | number"
+  ],
+  "answer": 1,
+  "explanation": "Parameters<T> produces a tuple of the function's parameter types."
+ },
+ {
+  "id": "q375d7e2590a",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `Exclude<\"a\" | \"b\" | \"c\", \"a\">`?",
+  "options": [
+   "never",
+   "\"b\" | \"c\"",
+   "\"a\"",
+   "\"a\" | \"b\" | \"c\""
+  ],
+  "answer": 1,
+  "explanation": "Exclude removes union members assignable to the second argument."
+ },
+ {
+  "id": "q524ed0c3ad4",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Required<{ a?: number; b?: string }>` produce?",
+  "options": [
+   "{ a: number | undefined; b: string | undefined }",
+   "{ a?: number; b?: string }",
+   "{ readonly a: number; readonly b: string }",
+   "{ a: number; b: string }"
+  ],
+  "answer": 3,
+  "explanation": "Required<T> removes the optional modifier from every property."
+ },
+ {
+  "id": "q684ac32b24f",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "Which type is `User` without its `password` property?",
+  "options": [
+   "Pick<User, \"password\">",
+   "Partial<User>",
+   "Omit<User, \"password\">",
+   "Exclude<User, \"password\">"
+  ],
+  "answer": 2,
+  "explanation": "Omit<T, K> keeps every property except the listed keys; Exclude works on union members, not properties."
+ },
+ {
+  "id": "q6dec58a9ba7",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Partial<User>` produce?",
+  "options": [
+   "A type with only some randomly chosen properties of User",
+   "A type with all properties made readonly",
+   "A type with all properties set to unknown",
+   "A type with all of User's properties made optional"
+  ],
+  "answer": 3,
+  "explanation": "Partial<T> maps every property of T to an optional property."
+ },
+ {
+  "id": "qaf060a65529",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Readonly<Point>` do?",
+  "options": [
+   "Makes Point's properties optional",
+   "Freezes the object at runtime",
+   "Marks every property of Point as readonly",
+   "Removes all methods from Point"
+  ],
+  "answer": 2,
+  "explanation": "Readonly<T> is a compile-time mapped type; it does not call Object.freeze."
+ },
+ {
+  "id": "qbe6dc470523",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `Awaited<Promise<string>>`?",
+  "options": [
+   "string | undefined",
+   "string",
+   "Promise<string>",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "Awaited models what await produces, unwrapping (nested) promises."
+ },
+ {
+  "id": "qe7985ffd9da",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Record<string, number>` describe?",
+  "options": [
+   "An array that alternates strings and numbers",
+   "A tuple of a string and a number",
+   "An object whose keys are strings and whose values are numbers",
+   "A Map instance from string to number"
+  ],
+  "answer": 2,
+  "explanation": "Record<K, V> builds an object type with keys of type K and values of type V."
+ },
+ {
+  "id": "qec79d38c411",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "Given `function make() { return { ok: true }; }`, what is `ReturnType<typeof make>`?",
+  "options": [
+   "{ ok: boolean }",
+   "boolean",
+   "typeof make",
+   "() => { ok: boolean }"
+  ],
+  "answer": 0,
+  "explanation": "ReturnType extracts the return type of a function type, obtained here with typeof."
+ }
+]

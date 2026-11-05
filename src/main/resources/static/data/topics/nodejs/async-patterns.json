@@ -1,0 +1,362 @@
+[
+ {
+  "id": "q0aa810684a2",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "Which function schedules a callback to run once after a delay in milliseconds?",
+  "options": [
+   "setInterval()",
+   "setTimeout()",
+   "setImmediate()",
+   "delay()"
+  ],
+  "answer": 1,
+  "explanation": "setTimeout() runs its callback once after at least the given delay; setInterval() repeats."
+ },
+ {
+  "id": "q600779be247",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "Which built-in utility converts a callback-style function into one that returns a promise?",
+  "options": [
+   "util.toPromise()",
+   "fs.promisify()",
+   "util.promisify()",
+   "Promise.wrap()"
+  ],
+  "answer": 2,
+  "explanation": "util.promisify() wraps a function that follows the error-first callback convention so it returns a promise instead."
+ },
+ {
+  "id": "q6019b3e38ab",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "By convention, what is the first argument passed to a Node.js-style callback?",
+  "options": [
+   "The result of the operation",
+   "The name of the function that was called",
+   "An error object, or null if the operation succeeded",
+   "A timestamp of when the operation finished"
+  ],
+  "answer": 2,
+  "explanation": "Error-first callbacks, like (err, data) => {}, make it easy to check for failures before using the result."
+ },
+ {
+  "id": "q8366e47d4ca",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "What is the recommended way to handle a rejected promise in async/await code?",
+  "options": [
+   "Wrap the await in try/catch",
+   "Wrap it in setTimeout",
+   "Call process.exit() immediately",
+   "Ignore it with the void operator"
+  ],
+  "answer": 0,
+  "explanation": "A rejected promise throws at the await expression, so try/catch lets you handle it locally."
+ },
+ {
+  "id": "qab482277155",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "Which keyword pauses an async function until a promise settles?",
+  "options": [
+   "yield",
+   "defer",
+   "await",
+   "wait"
+  ],
+  "answer": 2,
+  "explanation": "await suspends the async function until the promise fulfills or rejects without blocking the event loop."
+ },
+ {
+  "id": "qd5f842dedf1",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "What does setInterval() do?",
+  "options": [
+   "Runs a callback repeatedly at a fixed interval until cleared",
+   "Runs a callback before the current tick ends",
+   "Runs a callback once after a delay",
+   "Pauses the event loop for a fixed time"
+  ],
+  "answer": 0,
+  "explanation": "setInterval() keeps calling its callback at the given interval until clearInterval() is called with its handle."
+ },
+ {
+  "id": "q05ac99a5d08",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Two independent 100 ms operations are awaited one after the other. Roughly how long does the pair take?",
+  "options": [
+   "About 200 ms",
+   "About 100 ms",
+   "About 50 ms",
+   "About 0 ms"
+  ],
+  "answer": 0,
+  "explanation": "Sequential awaits add their durations; running them concurrently with Promise.all() would take about 100 ms."
+ },
+ {
+  "id": "q0e6e01c7c48",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Why is fs.readFileSync() usually a poor choice inside an HTTP request handler?",
+  "options": [
+   "It cannot read binary files",
+   "It blocks the event loop, so other requests wait until the read finishes",
+   "It closes the HTTP server",
+   "It starts a new Node.js process"
+  ],
+  "answer": 1,
+  "explanation": "A synchronous read holds the single thread until the file is fully read; fs.promises.readFile() avoids that."
+ },
+ {
+  "id": "q4d8a4465f79",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What does Promise.any() reject with when every input promise rejects?",
+  "options": [
+   "Only the first rejection reason",
+   "An AggregateError containing all the rejection reasons",
+   "An array of the fulfilled values",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "If no input fulfills, any() rejects with an AggregateError whose errors property lists every reason."
+ },
+ {
+  "id": "q70d8c1aac46",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What does Promise.race() settle with?",
+  "options": [
+   "The first fulfilled value only",
+   "The outcome of the first promise to settle, whether fulfilled or rejected",
+   "An array of every result",
+   "The value of the slowest promise"
+  ],
+  "answer": 1,
+  "explanation": "race() follows whichever input settles first, including by rejection."
+ },
+ {
+  "id": "q7f89076554e",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Why does this code not wait for each save() to finish before logging 'done'? items.forEach(async (item) => { await save(item); }); console.log('done');",
+  "options": [
+   "console.log always runs before any promise settles",
+   "save() must return a value synchronously",
+   "await cannot be used inside arrow functions",
+   "forEach ignores the promises returned by its callbacks, so the loop does not wait"
+  ],
+  "answer": 3,
+  "explanation": "Use a for...of loop with await, or Promise.all() over items.map(), to wait for all the saves."
+ },
+ {
+  "id": "q87080ff776b",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What does the promise-based setTimeout from 'timers/promises' let you write?",
+  "options": [
+   "await setTimeout(1000) to pause an async function for about one second",
+   "Timers that keep the process alive forever",
+   "Timers that run in a worker thread",
+   "setTimeout calls that run synchronously"
+  ],
+  "answer": 0,
+  "explanation": "timers/promises exports promise versions of setTimeout, setImmediate and setInterval."
+ },
+ {
+  "id": "q8be6bcfa0b9",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What is the effective minimum delay for setTimeout(fn, 0) in Node.js?",
+  "options": [
+   "0 ms, so the callback runs synchronously",
+   "About 1 ms",
+   "4 ms, as in browsers",
+   "10 ms"
+  ],
+  "answer": 1,
+  "explanation": "Delays below 1 are coerced to 1, so setTimeout(fn, 0) behaves like a 1 ms timer."
+ },
+ {
+  "id": "qe6df24fe21a",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Which Promise combinator waits for every promise to settle and reports each outcome, whether fulfilled or rejected?",
+  "options": [
+   "Promise.all()",
+   "Promise.race()",
+   "Promise.any()",
+   "Promise.allSettled()"
+  ],
+  "answer": 3,
+  "explanation": "allSettled() resolves once all inputs settle, with a status and value or reason for each one."
+ },
+ {
+  "id": "qff641c39d8a",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "How can a long-running fetch() call in Node.js be cancelled after 5 seconds?",
+  "options": [
+   "Call fetch.cancel(5000)",
+   "Pass { signal: AbortSignal.timeout(5000) } to fetch()",
+   "Wrap fetch() in setTimeout()",
+   "Set process.env.FETCH_TIMEOUT to 5000"
+  ],
+  "answer": 1,
+  "explanation": "When the signal aborts, fetch rejects with an AbortError or TimeoutError and the request is cancelled."
+ },
+ {
+  "id": "q15c7e219ae8",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does util.promisify.custom allow?",
+  "options": [
+   "Converting promises back into callbacks",
+   "A function to specify exactly which promise-returning version util.promisify() should use",
+   "Running promises on a worker thread",
+   "Promisifying every function in a module at once"
+  ],
+  "answer": 1,
+  "explanation": "Functions whose callbacks do not follow the (err, value) pattern can define this symbol to promisify correctly."
+ },
+ {
+  "id": "q406cc520f55",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "After a timer callback finishes, what runs before the next timer or I/O callback?",
+  "options": [
+   "Only the next timer callback",
+   "All process.nextTick callbacks, then all promise microtasks, repeating until both queues are empty",
+   "Nothing; microtasks wait for the next loop iteration",
+   "The poll phase starts from scratch"
+  ],
+  "answer": 1,
+  "explanation": "Node drains the nextTick queue and then the promise microtask queue between callbacks, repeating until both are empty."
+ },
+ {
+  "id": "q840fe9a962e",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What is 'this' inside a regular (non-arrow) function passed to setTimeout() in Node.js?",
+  "options": [
+   "The global object",
+   "undefined",
+   "The process object",
+   "The Timeout object returned by setTimeout()"
+  ],
+  "answer": 3,
+  "explanation": "In Node.js the callback's this is the Timeout object; in browsers it is window."
+ },
+ {
+  "id": "q8a59cb0007b",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What happens with setTimeout(fn, 2 ** 31)?",
+  "options": [
+   "The callback runs after about 24.8 days as expected",
+   "A RangeError is thrown immediately",
+   "The callback runs after 2^31 seconds",
+   "The delay exceeds the 32-bit limit, so Node sets it to 1 ms and emits a TimeoutOverflowWarning"
+  ],
+  "answer": 3,
+  "explanation": "Timer delays must fit in a signed 32-bit integer; larger values overflow and fire almost immediately."
+ },
+ {
+  "id": "q9ebdb80d7ee",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does events.on(emitter, 'data') return?",
+  "options": [
+   "A promise that resolves on the first event",
+   "An array of all past events",
+   "An async iterator that yields the arguments of each emitted 'data' event",
+   "A new EventEmitter that mirrors the original"
+  ],
+  "answer": 2,
+  "explanation": "It lets you consume events with for await, and passing an AbortSignal can stop iteration."
+ },
+ {
+  "id": "qa740c8bfdb5",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does this print? setTimeout(() => console.log('A')); Promise.resolve().then(() => console.log('B')); console.log('C');",
+  "options": [
+   "B, C, A",
+   "A, B, C",
+   "C, B, A",
+   "C, A, B"
+  ],
+  "answer": 2,
+  "explanation": "Synchronous code runs first, then the promise microtask, and the timer callback runs last in a later phase."
+ },
+ {
+  "id": "qe6a228c08fe",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What happens if one of the promises passed to Promise.all() rejects?",
+  "options": [
+   "Promise.all() waits for all and returns the errors as an array",
+   "Promise.all() rejects immediately with that reason, while the other promises keep running",
+   "Promise.all() resolves with undefined for that entry",
+   "Promise.all() retries the rejected promise once"
+  ],
+  "answer": 1,
+  "explanation": "Promise.all() settles on the first rejection; the other operations are not cancelled."
+ },
+ {
+  "id": "qeafcc7e9f3f",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does timeout.unref() do?",
+  "options": [
+   "Lets the process exit even if this timer is still pending",
+   "Cancels the timer",
+   "Runs the callback immediately",
+   "Doubles the delay"
+  ],
+  "answer": 0,
+  "explanation": "An unref'd timer does not keep the event loop alive, so it will not block process exit."
+ },
+ {
+  "id": "qf4f9cea415c",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does AsyncLocalStorage provide?",
+  "options": [
+   "Context values that follow an asynchronous call chain without being passed as arguments",
+   "A promise-based version of localStorage",
+   "A queue that drains before microtasks",
+   "A shared memory buffer between threads"
+  ],
+  "answer": 0,
+  "explanation": "AsyncLocalStorage.run() stores a value that stays visible to callbacks started inside that context."
+ }
+]

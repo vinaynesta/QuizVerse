@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q90e82839eb2",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "What does the .git/index file hold?",
+  "options": [
+   "The staging area: paths with their blob hashes and file metadata for the next commit",
+   "The list of configured remotes",
+   "The reflog for HEAD",
+   "Packed copies of all commits"
+  ],
+  "answer": 0,
+  "explanation": "The index records the tree that the next commit will contain, plus stat data used to detect changes quickly."
+ },
+ {
+  "id": "qa41c4a0d6ac",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What does a topologySpreadConstraint with maxSkew: 1 and topologyKey topology.kubernetes.io/zone aim for?",
+  "options": [
+   "The count of matching pods in any two zones differs by at most one",
+   "Exactly one pod per zone",
+   "All pods in the zone with the most free capacity",
+   "At most one zone may run the workload"
+  ],
+  "answer": 0,
+  "explanation": "maxSkew bounds the difference between the most and least populated topology domains."
+ },
+ {
+  "id": "q9c851114e01",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why is putting RUN apt-get update and RUN apt-get install in separate instructions a problem?",
+  "options": [
+   "apt-get cannot run twice in one Dockerfile",
+   "It doubles the image size",
+   "It disables BuildKit",
+   "The cached update layer can be reused in later builds, so install runs against stale package lists"
+  ],
+  "answer": 3,
+  "explanation": "Combining update and install in one RUN invalidates both together when the package list changes."
+ },
+ {
+  "id": "qf58ee6f39df",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "What is the main job of git gc?",
+  "options": [
+   "Verify commit signatures",
+   "Delete merged branches from the remote",
+   "Rewrite history to remove large files",
+   "Compress loose objects into packfiles and prune old unreachable objects"
+  ],
+  "answer": 3,
+  "explanation": "git gc packs objects and refs and removes unreachable objects older than the prune expiry."
+ },
+ {
+  "id": "q40347613c86",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What is traffic mirroring (shadowing) used for when releasing a new version?",
+  "options": [
+   "Keeping a full copy of the database in another region",
+   "Sending all users to the new version at once",
+   "Copying live requests to the new version and discarding its responses, to test it under real load without affecting users",
+   "Rolling back by replaying old requests"
+  ],
+  "answer": 2,
+  "explanation": "Users still get responses from the current version, so problems in the shadow version have no user impact."
+ },
+ {
+  "id": "q0583d61fdd6",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "Which QoS class is assigned to a pod whose containers set no CPU or memory requests or limits?",
+  "options": [
+   "BestEffort",
+   "Burstable",
+   "Guaranteed",
+   "Unbounded"
+  ],
+  "answer": 0,
+  "explanation": "BestEffort pods have no resource guarantees and are among the first evicted under node memory pressure."
+ },
+ {
+  "id": "q676f7ac0fc8",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "A secret was committed and pushed to a shared remote. Besides rewriting history to remove it, what is essential?",
+  "options": [
+   "Running git gc on your local clone",
+   "Deleting the local branch",
+   "Revoking and rotating the secret, since it may already have been copied",
+   "Adding the file to .gitignore"
+  ],
+  "answer": 2,
+  "explanation": "Clones, forks, and caches may already contain the secret, so removing it from history does not make it safe."
+ },
+ {
+  "id": "q62caf5e1045",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "A lost commit no longer appears in any reflog, but it has not been pruned yet. Which command can still locate it?",
+  "options": [
+   "git log --all",
+   "git reflog --expire",
+   "git branch --contains",
+   "git fsck --lost-found"
+  ],
+  "answer": 3,
+  "explanation": "git fsck finds dangling objects in the object database, and --lost-found writes them to .git/lost-found."
+ },
+ {
+  "id": "qf42ff949b4c",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What is the expand-and-contract (parallel change) approach to database migrations during zero-downtime deploys?",
+  "options": [
+   "Lock the database while every service is upgraded at once",
+   "Restore a backup into a new schema on each release",
+   "Add the new schema alongside the old one, migrate readers and writers, then remove the old schema in a later release",
+   "Run migrations only during rollback"
+  ],
+  "answer": 2,
+  "explanation": "Each step stays compatible with both old and new application versions running at the same time."
+ },
+ {
+  "id": "qcd96942fda6",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "When does the kubelet treat a probe as failed?",
+  "options": [
+   "After the first failed check",
+   "Only when the container exits",
+   "After failureThreshold consecutive failures, which defaults to 3",
+   "After timeoutSeconds elapses once"
+  ],
+  "answer": 2,
+  "explanation": "A probe must fail failureThreshold times in a row before the kubelet acts on it."
+ }
+]

@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q46391534fe3",
+  "subject": "devops",
+  "topic": "docker-volumes",
+  "level": "easy",
+  "question": "Which mechanism stores container data so that it survives after the container is removed?",
+  "options": [
+   "The container's writable layer",
+   "A Docker volume",
+   "An environment variable",
+   "The /tmp directory"
+  ],
+  "answer": 1,
+  "explanation": "Volumes live outside the container's writable layer, which is deleted along with the container."
+ },
+ {
+  "id": "qbb249e43a6d",
+  "subject": "devops",
+  "topic": "docker-volumes",
+  "level": "easy",
+  "question": "Which docker run option bind-mounts the host directory $(pwd)/src into the container at /app?",
+  "options": [
+   "-p $(pwd)/src:/app",
+   "-e $(pwd)/src:/app",
+   "--network $(pwd)/src:/app",
+   "-v $(pwd)/src:/app"
+  ],
+  "answer": 3,
+  "explanation": "-v host-path:container-path creates a bind mount, so host and container see the same files."
+ },
+ {
+  "id": "qc15a3912992",
+  "subject": "devops",
+  "topic": "docker-volumes",
+  "level": "easy",
+  "question": "Which command lists the Docker volumes on the host?",
+  "options": [
+   "docker volumes list",
+   "docker vol show",
+   "docker volume ls",
+   "docker ls volumes"
+  ],
+  "answer": 2,
+  "explanation": "docker volume ls (or docker volume list) shows the named volumes known to the Docker daemon."
+ }
+]

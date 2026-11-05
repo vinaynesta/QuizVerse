@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q0bec6d85948",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "In the many-to-one threading model, what happens when one user thread makes a blocking system call?",
+  "options": [
+   "Only that thread blocks",
+   "The entire process blocks, because all user threads map to a single kernel thread",
+   "The kernel creates a new kernel thread",
+   "The system call is silently converted to non-blocking"
+  ],
+  "answer": 1,
+  "explanation": "The kernel sees only one schedulable entity, so a blocking call stalls every thread, and the threads cannot run in parallel on multicore CPUs."
+ },
+ {
+  "id": "q67598f0e0be",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "By Amdahl's law, what is the maximum speedup on 4 cores for a program that is 75% parallelizable?",
+  "options": [
+   "About 2.29",
+   "4.0",
+   "3.0",
+   "About 1.75"
+  ],
+  "answer": 0,
+  "explanation": "Speedup = 1 / (S + (1 - S) / N) = 1 / (0.25 + 0.75 / 4) = 1 / 0.4375, about 2.29."
+ },
+ {
+  "id": "qfae7dce40c2",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "Why should a thread call wait() on a condition variable inside a while loop rather than an if statement?",
+  "options": [
+   "To avoid a context switch",
+   "Because if statements are not allowed inside monitors",
+   "To keep the lock held while waiting",
+   "Because of spurious wakeups and because another thread may change the condition before the woken thread reacquires the lock"
+  ],
+  "answer": 3,
+  "explanation": "Under Mesa-style semantics, a signaled thread only becomes runnable, so it must recheck the predicate once it gets the lock back."
+ }
+]

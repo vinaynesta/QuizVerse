@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "Model cards promote transparency by reporting evaluation results, intended uses and known limitations."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "What is the purpose of one-hot encoding?",
+    "options": [
+      "Compressing numeric features into a single bit",
+      "Representing categorical values as binary vectors without implying an order between them",
+      "Removing outliers from numeric columns",
+      "Scaling features to the range 0 to 1"
+    ],
+    "answer": 1,
+    "explanation": "Encoding categories as integers would suggest a false ordering, so each category gets its own binary column instead."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "How does k-fold cross-validation work?",
+    "options": [
+      "The data is split into k parts; the model trains on k-1 parts and validates on the remaining one, rotating and averaging the results",
+      "The model is trained k times on the full dataset with different random seeds",
+      "Only the first k rows are used for validation",
+      "The features are split into k groups and one model is trained per group"
+    ],
+    "answer": 0,
+    "explanation": "Every example is used for validation exactly once, giving a more reliable estimate than a single split."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What does L2 (ridge) regularization do to a linear model's weights?",
+    "options": [
+      "Sets most weights exactly to zero",
+      "Removes the bias term from the model",
+      "Doubles the learning rate for large weights",
+      "Penalizes squared weights, shrinking them toward zero without usually making them exactly zero"
+    ],
+    "answer": 3,
+    "explanation": "The squared penalty discourages large weights smoothly, unlike L1, which tends to produce exact zeros."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "What is the effect of limiting a decision tree's maximum depth?",
+    "options": [
+      "It increases the number of features the tree can use",
+      "It guarantees perfect training accuracy",
+      "It restricts model complexity, which reduces overfitting",
+      "It converts the tree into a linear model"
+    ],
+    "answer": 2,
+    "explanation": "Deep trees can carve out tiny regions that memorize noise, so capping depth acts as regularization."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "How does agglomerative hierarchical clustering work?",
+    "options": [
+      "It starts with one cluster and randomly splits it until k clusters remain",
+      "It starts with every point as its own cluster and repeatedly merges the closest clusters",
+      "It assigns points to k fixed centroids chosen in advance",
+      "It labels points as core, border or noise based on density"
+    ],
+    "answer": 1,
+    "explanation": "The sequence of merges forms a dendrogram that can be cut at any level to get a chosen number of clusters."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "In PCA, what does the first principal component represent?",
+    "options": [
+      "The direction along which the data has the greatest variance",
+      "The feature with the largest mean value",
+      "The direction with the least variance",
+      "The first column of the original dataset"
+    ],
+    "answer": 0,
+    "explanation": "Principal components are ordered by explained variance, and the first captures the most."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What does a ROC curve plot?",
+    "options": [
+      "Precision against recall at a single threshold",
+      "Training loss against the number of epochs",
+      "Accuracy against dataset size",
+      "True positive rate against false positive rate across decision thresholds"
+    ],
+    "answer": 3,
+    "explanation": "Sweeping the threshold traces the trade-off between catching positives and raising false alarms."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "What does R-squared measure for a regression model?",
+    "options": [
+      "The average absolute prediction error",
+      "The number of features in the model",
+      "The proportion of the target's variance explained by the model",
+      "The correlation between two input features"
+    ],
+    "answer": 2,
+    "explanation": "An R-squared of 1 means a perfect fit, while 0 means the model does no better than predicting the mean."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What is the softmax function typically used for in a classifier?",
+    "options": [
+      "Introducing sparsity by zeroing negative values",
+      "Converting raw output scores into a probability distribution over classes",
+      "Normalizing input features before training",
+      "Reducing the learning rate during training"
+    ],
+    "answer": 1,
+    "explanation": "Softmax exponentiates and normalizes scores so outputs are positive and sum to 1."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "What does momentum add to gradient descent?",
+    "options": [
+      "A running velocity from past gradients that speeds progress along consistent directions and dampens oscillation",
+      "A random restart whenever the loss increases",
+      "A penalty on large weights",
+      "A larger batch size at each step"
+    ],
+    "answer": 0,
+    "explanation": "Momentum accumulates past updates, helping the optimizer move through ravines and flat regions faster."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What does the stride of a convolutional layer control?",
+    "options": [
+      "The number of filters in the layer",
+      "The number of color channels in the input",
+      "The activation function applied after convolution",
+      "How many positions the filter moves at each step, which affects the output size"
+    ],
+    "answer": 3,
+    "explanation": "A stride of 2 skips every other position, roughly halving each spatial dimension of the output."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What is data augmentation in image models?",
+    "options": [
+      "Adding more layers to the network",
+      "Collecting a separate test set",
+      "Creating modified copies of training images, such as flips and crops, to improve generalization",
+      "Increasing image resolution at inference time"
+    ],
+    "answer": 2,
+    "explanation": "Augmentation exposes the model to plausible variations, reducing overfitting without new labeled data."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "In attention, how are the query, key and value vectors used?",
+    "options": [
+      "Keys are added to values and queries are discarded",
+      "Queries are compared with keys to compute weights, which are used to mix the values",
+      "Values are compared with queries to choose one key",
+      "All three are concatenated and passed to a softmax"
+    ],
+    "answer": 1,
+    "explanation": "Attention weights come from query-key similarity, and the output is the weighted sum of value vectors."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What does TF-IDF weighting do?",
+    "options": [
+      "Weights a term by its frequency in a document, reduced by how many documents contain it",
+      "Counts only the first occurrence of each word",
+      "Ranks words by their length",
+      "Replaces each word with its dictionary definition"
+    ],
+    "answer": 0,
+    "explanation": "Terms common across all documents get low weight, while terms distinctive to a document get high weight."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is LoRA (low-rank adaptation) used for?",
+    "options": [
+      "Compressing a dataset before training",
+      "Increasing a model's context window",
+      "Removing toxic content from training data",
+      "Parameter-efficient fine-tuning that trains small low-rank matrices added to frozen model weights"
+    ],
+    "answer": 3,
+    "explanation": "LoRA updates only a small number of added parameters, making fine-tuning cheaper in memory and storage."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is a stop sequence in LLM generation?",
+    "options": [
+      "A list of words the model is forbidden to use",
+      "The maximum number of requests per minute",
+      "A string that ends generation when the model produces it",
+      "A token that marks the start of the system prompt"
+    ],
+    "answer": 2,
+    "explanation": "Stop sequences let applications cut off output at a known delimiter, such as the end of a structured answer."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What is the ReAct pattern for LLM agents?",
+    "options": [
+      "Training the agent with reinforcement learning only",
+      "Interleaving reasoning steps with actions such as tool calls and the observations they return",
+      "Reacting to user input with predefined canned responses",
+      "Running several models in parallel and voting"
+    ],
+    "answer": 1,
+    "explanation": "ReAct alternates thinking and acting so each observation can inform the next decision."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "Why should the same embedding model be used to index documents and to embed queries?",
+    "options": [
+      "Different models produce vectors in incompatible spaces, so similarity scores between them would be meaningless",
+      "Using two models doubles storage costs but gives the same results",
+      "Query embeddings must be longer than document embeddings",
+      "The vector database only accepts one model name"
+    ],
+    "answer": 0,
+    "explanation": "Similarity search only works when queries and documents are mapped into the same embedding space."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is a jailbreak in the context of LLMs?",
+    "options": [
+      "Running a model on unauthorized hardware",
+      "Copying a model's weights from a server",
+      "Fine-tuning a model on a new language",
+      "A crafted prompt designed to make a model bypass its safety guidelines"
+    ],
+    "answer": 3,
+    "explanation": "Jailbreaks use role-play, obfuscation or other tricks to elicit content the model is meant to refuse."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is red teaming for AI systems?",
+    "options": [
+      "Labeling training data with colored tags",
+      "Monitoring server uptime in production",
+      "Deliberately probing a model adversarially to uncover harmful behaviors or vulnerabilities before deployment",
+      "Choosing the color scheme of a chatbot interface"
+    ],
+    "answer": 2,
+    "explanation": "Red teams simulate attackers and misuse so problems can be fixed before real users encounter them."
   }
 ]

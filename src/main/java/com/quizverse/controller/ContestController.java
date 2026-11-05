@@ -79,7 +79,8 @@ public class ContestController {
     public record ContestView(Long id, String title, String quizKey, Instant startsAt, Instant endsAt, int minutes,
                               int questions, double maxMarks, String state, long registered, String you) {}
 
-    public record PaperQuestion(int n, String id, String section, String question, List<String> options, JsonNode group) {}
+    public record PaperQuestion(int n, String id, String section, String question, List<String> options, JsonNode group,
+                                boolean needsReview) {}
 
     public record Paper(Long contestId, String title, Instant deadline, int minutes, List<PaperQuestion> questions) {}
 
@@ -158,7 +159,7 @@ public class ContestController {
             Question q = qs.get(order.questions[n]);
             List<String> opts = new ArrayList<>();
             for (int k : order.options[order.questions[n]]) opts.add(q.options().get(k));
-            out.add(new PaperQuestion(n, q.id(), q.section(), q.question(), opts, q.group()));
+            out.add(new PaperQuestion(n, q.id(), q.section(), q.question(), opts, q.group(), q.needsReview()));
         }
         return ResponseEntity.ok(new Paper(c.getId(), c.getTitle(), deadline(c, e), c.getMinutes(), out));
     }

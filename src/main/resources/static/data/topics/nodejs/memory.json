@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q23e975fc56e",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What is the purpose of FinalizationRegistry?",
+  "options": [
+   "Guaranteeing that cleanup runs before an object is collected",
+   "Registering a callback that may run after a registered object has been garbage collected",
+   "Preventing an object from being collected",
+   "Forcing garbage collection of an object"
+  ],
+  "answer": 1,
+  "explanation": "Finalizers run at an unspecified time or not at all, so they must not be relied on for essential cleanup."
+ },
+ {
+  "id": "q53391621ebb",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "A request handler adds an event listener on every request and never removes it. What is the best fix?",
+  "options": [
+   "Call setMaxListeners(0) so the warning stops",
+   "Wrap the handler in process.nextTick()",
+   "Remove the listener when the request finishes, or attach it once outside the handler",
+   "Call global.gc() after each request"
+  ],
+  "answer": 2,
+  "explanation": "The listener list keeps growing and holds references, so the leak must be fixed at the source; raising the limit only hides the warning."
+ },
+ {
+  "id": "q5e5cddfc032",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does a WeakMap hold its keys as?",
+  "options": [
+   "Weak references, so an entry does not keep its key object alive",
+   "Copies of the key strings",
+   "Strong references that are never collected",
+   "Numeric indexes into the heap"
+  ],
+  "answer": 0,
+  "explanation": "Entries can be garbage collected once the key object has no other references."
+ },
+ {
+  "id": "q5e6fe14b033",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does the --expose-gc flag enable?",
+  "options": [
+   "A smaller Buffer pool allocation size",
+   "Automatic heap snapshots on exit",
+   "Garbage collection logs for every allocation",
+   "A global gc() function for triggering garbage collection manually"
+  ],
+  "answer": 3,
+  "explanation": "With the flag set, code can call global.gc() to request a collection; it is mainly useful for diagnostics."
+ },
+ {
+  "id": "q7cf32bf1841",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does the --max-old-space-size flag control?",
+  "options": [
+   "The maximum call stack depth",
+   "The number of worker threads",
+   "The maximum size of V8's old-generation heap, in megabytes",
+   "The size of the Buffer pool"
+  ],
+  "answer": 2,
+  "explanation": "It caps the old-generation heap V8 may use; Buffer contents live outside the heap and are not limited by it."
+ },
+ {
+  "id": "qcaeebdb9a07",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Which API reports rss, heapUsed and external memory for the current process?",
+  "options": [
+   "process.memoryUsage()",
+   "buffer.memoryStats()",
+   "gc.stats()",
+   "os.freemem()"
+  ],
+  "answer": 0,
+  "explanation": "os.freemem() reports system-wide free memory, not the memory used by this process."
+ },
+ {
+  "id": "qdcdac465ea4",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Why can two small Buffers from Buffer.allocUnsafe() share one underlying ArrayBuffer?",
+  "options": [
+   "Node slices small allocations out of a preallocated 8 KiB pool to reduce allocation overhead",
+   "Pools are used only for Buffers over 1 MiB",
+   "Pooled buffers are stored in the disk cache",
+   "The pool holds compiled JavaScript code"
+  ],
+  "answer": 0,
+  "explanation": "Small allocations are carved from a shared pool, which is why Buffers can share memory."
+ },
+ {
+  "id": "qe2d8dfabae7",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does a heap snapshot from v8.writeHeapSnapshot() help diagnose?",
+  "options": [
+   "Which objects are retaining memory and why, for finding leaks",
+   "How long each HTTP request took",
+   "Which functions use the most CPU time",
+   "Which npm packages are outdated"
+  ],
+  "answer": 0,
+  "explanation": "Comparing snapshots taken over time reveals growing object types and their retainer chains."
+ },
+ {
+  "id": "qf0a5836c573",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Why can a closure stored in a long-lived object cause a memory leak?",
+  "options": [
+   "Closures are never garbage collected",
+   "Closures copy the entire heap",
+   "It keeps alive the variables it captures, which can reference large objects",
+   "Closures disable the garbage collector for their module"
+  ],
+  "answer": 2,
+  "explanation": "As long as the closure is reachable, everything it references from its scope stays reachable too."
+ }
+]

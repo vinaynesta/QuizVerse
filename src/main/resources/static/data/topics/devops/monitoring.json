@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q09044e92a34",
+  "subject": "devops",
+  "topic": "monitoring",
+  "level": "medium",
+  "question": "In Prometheus, what does a counter metric represent?",
+  "options": [
+   "A value that can go up and down, like memory use",
+   "A text label",
+   "A histogram of request latencies",
+   "A cumulative value that only increases (except on reset)"
+  ],
+  "answer": 3,
+  "explanation": "Counters such as total requests only go up, and rate() is used to turn them into per-second rates."
+ },
+ {
+  "id": "q2e9c125ca68",
+  "subject": "devops",
+  "topic": "monitoring",
+  "level": "medium",
+  "question": "Which Prometheus metric type buckets observations such as request latency so percentiles can be estimated with histogram_quantile?",
+  "options": [
+   "Histogram",
+   "Counter",
+   "Gauge",
+   "Info"
+  ],
+  "answer": 0,
+  "explanation": "Histograms store cumulative bucket counts, and histogram_quantile estimates quantiles from them."
+ },
+ {
+  "id": "q9d700721dcf",
+  "subject": "devops",
+  "topic": "monitoring",
+  "level": "medium",
+  "question": "Which Prometheus metric type represents a value that can go up and down, such as current memory usage?",
+  "options": [
+   "Counter",
+   "Histogram",
+   "Summary",
+   "Gauge"
+  ],
+  "answer": 3,
+  "explanation": "A gauge is a single value that can increase or decrease; a counter only increases."
+ }
+]

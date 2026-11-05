@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q4ae74ed0b56",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "What does the exec() family of system calls do?",
+  "options": [
+   "Creates a child process",
+   "Terminates the current process",
+   "Replaces the current process image with a new program",
+   "Waits for a child to finish"
+  ],
+  "answer": 2,
+  "explanation": "exec() loads a new program into the current process's address space; the PID stays the same."
+ },
+ {
+  "id": "q8af04e53d9a",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "What is a system call?",
+  "options": [
+   "A user library function that never enters the kernel",
+   "A programmatic request from a user program to the kernel for a service",
+   "A hardware interrupt raised by a device",
+   "A call from the kernel into a user process"
+  ],
+  "answer": 1,
+  "explanation": "System calls are the interface through which user programs request kernel services such as I/O or process creation, trapping into kernel mode."
+ },
+ {
+  "id": "qfac6881a0a9",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "Which UNIX system call creates a new process by duplicating the calling process?",
+  "options": [
+   "exec()",
+   "wait()",
+   "exit()",
+   "fork()"
+  ],
+  "answer": 3,
+  "explanation": "fork() creates a child that is a copy of the parent; exec() replaces a process image rather than creating a process."
+ },
+ {
+  "id": "qfd3fc9fa941",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "In the child process, what value does a successful fork() return?",
+  "options": [
+   "0",
+   "The child's PID",
+   "The parent's PID",
+   "-1"
+  ],
+  "answer": 0,
+  "explanation": "fork() returns 0 in the child and the child's PID in the parent; -1 indicates failure."
+ }
+]

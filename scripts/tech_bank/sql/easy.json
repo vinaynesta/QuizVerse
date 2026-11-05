@@ -1,0 +1,537 @@
+[
+  {
+    "topic": "select-basics",
+    "question": "Which clause filters individual rows before any grouping takes place?",
+    "options": ["WHERE", "HAVING", "ORDER BY", "SELECT"],
+    "answer": 0,
+    "explanation": "WHERE is applied to individual rows before GROUP BY; HAVING filters groups after aggregation."
+  },
+  {
+    "topic": "select-basics",
+    "question": "Which keyword removes duplicate rows from a query result?",
+    "options": ["UNIQUE", "ONLY", "DISTINCT", "SINGLE"],
+    "answer": 2,
+    "explanation": "SELECT DISTINCT returns each distinct row once. UNIQUE is a constraint keyword, not a query modifier in standard SQL."
+  },
+  {
+    "topic": "select-basics",
+    "question": "What does SELECT * return?",
+    "options": ["Only the first column", "Only primary key columns", "Only numeric columns", "All columns of the tables in the FROM clause"],
+    "answer": 3,
+    "explanation": "The asterisk is shorthand for every column of the table or tables named in FROM."
+  },
+  {
+    "topic": "select-basics",
+    "question": "Which operator checks whether a value matches any value in a given list?",
+    "options": ["LIKE", "IN", "BETWEEN", "EXISTS"],
+    "answer": 1,
+    "explanation": "IN tests membership in a list of values. LIKE matches text patterns, BETWEEN tests a range, and EXISTS tests for any returned row."
+  },
+  {
+    "topic": "select-basics",
+    "question": "Which clause restricts how many rows a query returns in PostgreSQL and MySQL?",
+    "options": ["WHERE ROWCOUNT", "MAX_ROWS", "TAKE", "LIMIT"],
+    "answer": 3,
+    "explanation": "LIMIT caps the number of rows returned in both PostgreSQL and MySQL."
+  },
+  {
+    "topic": "select-basics",
+    "question": "When ORDER BY is written without a direction keyword, which direction is used?",
+    "options": ["ASC", "DESC", "RANDOM", "NONE"],
+    "answer": 0,
+    "explanation": "The default sort direction in standard SQL, PostgreSQL and MySQL is ascending (ASC)."
+  },
+  {
+    "topic": "select-basics",
+    "question": "What is a view?",
+    "options": [
+      "A physical copy of a table stored on disk",
+      "A type of index spanning two tables",
+      "A stored query that presents its results as a virtual table",
+      "A trigger that runs on insert"
+    ],
+    "answer": 2,
+    "explanation": "A view is a named, stored query. Its rows are computed from the underlying tables when the view is queried."
+  },
+  {
+    "topic": "aggregation",
+    "question": "Which expression counts all rows in a table, including rows whose columns contain NULL?",
+    "options": ["COUNT(*)", "SUM(*)", "AVG(*)", "MAX(*)"],
+    "answer": 0,
+    "explanation": "COUNT(*) counts rows regardless of NULL values. SUM, AVG and MAX do not accept an asterisk."
+  },
+  {
+    "topic": "aggregation",
+    "question": "Which clause filters groups after aggregation has been computed?",
+    "options": ["WHERE", "GROUP BY", "ORDER BY", "HAVING"],
+    "answer": 3,
+    "explanation": "HAVING applies conditions to aggregated groups, for example HAVING COUNT(*) > 5."
+  },
+  {
+    "topic": "aggregation",
+    "question": "Which SQL function returns the arithmetic mean of a numeric column?",
+    "options": ["MEAN", "AVERAGE", "AVG", "MID"],
+    "answer": 2,
+    "explanation": "AVG is the standard aggregate function for the arithmetic mean of a numeric column."
+  },
+  {
+    "topic": "aggregation",
+    "question": "What does COUNT(column) NOT count?",
+    "options": ["Duplicate values", "Rows with NULL in that column", "Rows that match the WHERE clause", "Empty strings"],
+    "answer": 1,
+    "explanation": "COUNT(column) skips NULL values. It does count duplicates and empty strings, since those are not NULL."
+  },
+  {
+    "topic": "null-handling",
+    "question": "What is the result of the expression NULL = NULL in standard SQL?",
+    "options": ["TRUE", "FALSE", "NULL (unknown)", "An error"],
+    "answer": 2,
+    "explanation": "Comparing with NULL yields UNKNOWN, which SQL represents as NULL. Two unknown values are not considered equal."
+  },
+  {
+    "topic": "null-handling",
+    "question": "Which predicate correctly tests whether a column is NULL?",
+    "options": ["= NULL", "== NULL", "NULL()", "IS NULL"],
+    "answer": 3,
+    "explanation": "The IS NULL predicate is the correct test. Comparisons with = or == against NULL never return TRUE."
+  },
+  {
+    "topic": "null-handling",
+    "question": "Which function returns the first argument that is not NULL?",
+    "options": ["NULLIF", "COALESCE", "NOT NULL", "DISTINCT"],
+    "answer": 1,
+    "explanation": "COALESCE returns its first non-NULL argument. NULLIF does the opposite and returns NULL when its two arguments are equal."
+  },
+  {
+    "topic": "joins",
+    "question": "What does an INNER JOIN return?",
+    "options": ["Rows that match in both tables", "All rows from both tables", "All rows from the left table", "Every combination of rows"],
+    "answer": 0,
+    "explanation": "INNER JOIN keeps only pairs of rows whose join condition is true, so non-matching rows from either side are dropped."
+  },
+  {
+    "topic": "joins",
+    "question": "What does a LEFT JOIN return?",
+    "options": [
+      "Only unmatched rows from the right table",
+      "Only rows matching in both tables",
+      "All rows from the left table, with NULLs where there is no match on the right",
+      "Every combination of rows"
+    ],
+    "answer": 2,
+    "explanation": "LEFT (OUTER) JOIN preserves every row of the left table and fills right-side columns with NULL when no match exists."
+  },
+  {
+    "topic": "joins",
+    "question": "What does a CROSS JOIN produce?",
+    "options": ["Rows matching on a key", "Every combination of rows from both tables", "Only rows with NULL keys", "The union of two tables"],
+    "answer": 1,
+    "explanation": "A CROSS JOIN produces the Cartesian product: every row of the first table paired with every row of the second."
+  },
+  {
+    "topic": "joins",
+    "question": "What is a self join?",
+    "options": [
+      "Joining two different databases",
+      "Joining a view with a table",
+      "Joining a table with a copy of a different table",
+      "Joining a table to itself, using table aliases to distinguish the two roles"
+    ],
+    "answer": 3,
+    "explanation": "A self join references the same table twice, usually with aliases, for example to match employees with their managers."
+  },
+  {
+    "topic": "joins",
+    "question": "What does a RIGHT JOIN keep?",
+    "options": [
+      "All rows from the left table",
+      "Only unmatched rows from both tables",
+      "All rows from the right table, with NULLs where there is no match on the left",
+      "Rows from either table with duplicates removed"
+    ],
+    "answer": 2,
+    "explanation": "RIGHT (OUTER) JOIN is the mirror of LEFT JOIN: every right-table row is kept, and left columns are NULL when unmatched."
+  },
+  {
+    "topic": "constraints",
+    "question": "What does a PRIMARY KEY constraint enforce?",
+    "options": [
+      "Duplicate values allowed but no NULLs",
+      "Uniqueness and no NULL values",
+      "NULLs allowed but ordered values",
+      "Only text values"
+    ],
+    "answer": 1,
+    "explanation": "A primary key requires each value to be unique and not NULL for the key columns."
+  },
+  {
+    "topic": "constraints",
+    "question": "What does a FOREIGN KEY constraint guarantee?",
+    "options": [
+      "A value in the column exists in the referenced table's key column",
+      "Values are unique across all tables in the database",
+      "A copy of the referenced row is stored in the child table",
+      "The parent table cannot be updated"
+    ],
+    "answer": 0,
+    "explanation": "A foreign key enforces referential integrity: each non-NULL value must match an existing key in the referenced table."
+  },
+  {
+    "topic": "constraints",
+    "question": "Which constraint ensures that a column value is never NULL?",
+    "options": ["UNIQUE", "DEFAULT", "CHECK", "NOT NULL"],
+    "answer": 3,
+    "explanation": "NOT NULL rejects NULL values in the column. UNIQUE and CHECK do not prevent NULL in the way NOT NULL does."
+  },
+  {
+    "topic": "constraints",
+    "question": "Which constraint validates that a value satisfies a given condition?",
+    "options": ["PRIMARY KEY", "INDEX", "CHECK", "REFERENCES"],
+    "answer": 2,
+    "explanation": "CHECK defines a boolean condition that each row must satisfy, for example CHECK (price > 0)."
+  },
+  {
+    "topic": "data-types",
+    "question": "What does a VARCHAR(n) column store?",
+    "options": [
+      "Always exactly n characters",
+      "Variable-length strings up to n characters",
+      "Only numbers",
+      "Binary data"
+    ],
+    "answer": 1,
+    "explanation": "VARCHAR(n) holds variable-length character data up to a maximum of n characters, without padding shorter values."
+  },
+  {
+    "topic": "data-types",
+    "question": "Which data type is used to store whole numbers?",
+    "options": ["INTEGER", "VARCHAR", "DATE", "BOOLEAN"],
+    "answer": 0,
+    "explanation": "INTEGER stores whole numbers. VARCHAR stores text, DATE stores calendar dates, and BOOLEAN stores true or false."
+  },
+  {
+    "topic": "data-types",
+    "question": "Which data type stores both a calendar date and a time of day?",
+    "options": ["DATE", "TIME", "TIMESTAMP", "INTERVAL"],
+    "answer": 2,
+    "explanation": "TIMESTAMP holds both date and time. DATE holds only the date, TIME only the time of day, and INTERVAL a duration."
+  },
+  {
+    "topic": "indexes",
+    "question": "Which statement creates an index on the col column of table t?",
+    "options": [
+      "CREATE INDEX idx_name ON t (col);",
+      "INDEX t ADD col;",
+      "CREATE TABLE INDEX idx_name;",
+      "ALTER t INDEX col;"
+    ],
+    "answer": 0,
+    "explanation": "CREATE INDEX name ON table (column) is the standard syntax for creating an index."
+  },
+  {
+    "topic": "indexes",
+    "question": "What is the main benefit of an index?",
+    "options": [
+      "Smaller table size on disk",
+      "Automatic data validation",
+      "Prevention of concurrent access",
+      "Faster lookups on the indexed columns"
+    ],
+    "answer": 3,
+    "explanation": "An index lets the database locate matching rows without scanning the whole table, speeding up lookups and some sorts or joins."
+  },
+  {
+    "topic": "indexes",
+    "question": "Which index type is the default in PostgreSQL and MySQL InnoDB?",
+    "options": ["Hash", "B-tree", "Bitmap", "GIN"],
+    "answer": 1,
+    "explanation": "B-tree (B+tree in InnoDB) is the default index structure. Hash, bitmap and GIN indexes must be requested explicitly."
+  },
+  {
+    "topic": "indexes",
+    "question": "What is a common cost of adding more indexes to a table?",
+    "options": [
+      "Loss of referential integrity",
+      "Data becomes unsorted",
+      "Slower writes, because each index must be maintained on INSERT, UPDATE and DELETE",
+      "Queries always return NULL"
+    ],
+    "answer": 2,
+    "explanation": "Every index must be updated when rows change, so write operations get slower as indexes are added."
+  },
+  {
+    "topic": "normalization",
+    "question": "Which normal form requires that every attribute hold atomic (single) values?",
+    "options": ["1NF", "2NF", "5NF", "3NF"],
+    "answer": 0,
+    "explanation": "First normal form requires atomic values and no repeating groups. Higher normal forms build on this."
+  },
+  {
+    "topic": "normalization",
+    "question": "Which normal form removes partial dependencies on part of a composite key?",
+    "options": ["1NF", "2NF", "4NF", "Denormalization"],
+    "answer": 1,
+    "explanation": "Second normal form requires non-key attributes to depend on the whole composite key, not just a part of it."
+  },
+  {
+    "topic": "normalization",
+    "question": "Which normal form removes transitive dependencies between non-key attributes?",
+    "options": ["1NF", "2NF", "5NF", "3NF"],
+    "answer": 3,
+    "explanation": "Third normal form requires non-key attributes to depend only on the primary key, not on other non-key attributes."
+  },
+  {
+    "topic": "normalization",
+    "question": "Which anomaly occurs when deleting one fact also removes unrelated data?",
+    "options": ["Insertion anomaly", "Deletion anomaly", "Update anomaly", "Join anomaly"],
+    "answer": 1,
+    "explanation": "A deletion anomaly happens when removing a row also erases facts that should have survived, usually because of poor table design."
+  },
+  {
+    "topic": "transactions",
+    "question": "What does the A in ACID stand for?",
+    "options": ["Atomicity", "Availability", "Accuracy", "Authorization"],
+    "answer": 0,
+    "explanation": "ACID stands for Atomicity, Consistency, Isolation and Durability. Atomicity means a transaction is all-or-nothing."
+  },
+  {
+    "topic": "transactions",
+    "question": "Which statement undoes all uncommitted changes made in the current transaction?",
+    "options": ["COMMIT", "SAVEPOINT", "TRUNCATE", "ROLLBACK"],
+    "answer": 3,
+    "explanation": "ROLLBACK discards the uncommitted work of the current transaction. COMMIT makes it permanent."
+  },
+  {
+    "topic": "transactions",
+    "question": "Which statement starts an explicit transaction in PostgreSQL?",
+    "options": ["START", "OPEN TRANSACTION", "BEGIN", "GO"],
+    "answer": 2,
+    "explanation": "BEGIN (or START TRANSACTION) opens an explicit transaction block in PostgreSQL and MySQL."
+  },
+  {
+    "topic": "transactions",
+    "question": "What is a deadlock?",
+    "options": [
+      "A query that runs forever without returning",
+      "Two or more transactions each waiting for a lock that another holds",
+      "A crash of the database server",
+      "A table that has no primary key"
+    ],
+    "answer": 1,
+    "explanation": "In a deadlock, transactions form a cycle of waits on locks. The database detects it and aborts one of them."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What is a correlated subquery?",
+    "options": [
+      "A subquery that always returns exactly one row",
+      "A subquery that references a column from the outer query",
+      "A subquery placed only in the FROM clause",
+      "A subquery that runs once before the main query"
+    ],
+    "answer": 1,
+    "explanation": "A correlated subquery refers to columns of the outer query, so it depends on each outer row."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What does EXISTS return?",
+    "options": [
+      "The number of rows in the subquery",
+      "The first row of the subquery",
+      "TRUE if the subquery returns at least one row, otherwise FALSE",
+      "NULL when the subquery is empty"
+    ],
+    "answer": 2,
+    "explanation": "EXISTS is a boolean test: it is TRUE when the subquery produces at least one row and FALSE when it produces none."
+  },
+  {
+    "topic": "select-basics",
+    "question": "Which operator selects values within an inclusive range, such as prices from 10 to 20?",
+    "options": ["BETWEEN", "IN", "LIKE", "EXISTS"],
+    "answer": 0,
+    "explanation": "x BETWEEN 10 AND 20 is equivalent to x >= 10 AND x <= 20, so both endpoints are included."
+  },
+  {
+    "topic": "select-basics",
+    "question": "In a LIKE pattern, which wildcard matches any sequence of zero or more characters?",
+    "options": ["_", "*", "?", "%"],
+    "answer": 3,
+    "explanation": "% matches any run of characters, including none, so 'a%' matches every string that starts with a."
+  },
+  {
+    "topic": "select-basics",
+    "question": "In a LIKE pattern, which wildcard matches exactly one character?",
+    "options": ["%", "*", "_", "#"],
+    "answer": 2,
+    "explanation": "The underscore matches a single character, so 'c_t' matches cat and cut but not cart."
+  },
+  {
+    "topic": "select-basics",
+    "question": "What does AS do in SELECT price * qty AS total FROM items?",
+    "options": [
+      "Creates a new column named total in the items table",
+      "Gives the computed column the alias total in the result",
+      "Filters rows where total is not NULL",
+      "Sorts the result by total"
+    ],
+    "answer": 1,
+    "explanation": "AS assigns an alias to a column or expression in the result set without changing the table."
+  },
+  {
+    "topic": "aggregation",
+    "question": "Which aggregate function returns the largest value in a column?",
+    "options": ["MAX", "TOP", "SUM", "GREATEST_ROW"],
+    "answer": 0,
+    "explanation": "MAX returns the highest non-NULL value in the group, and MIN returns the lowest."
+  },
+  {
+    "topic": "aggregation",
+    "question": "What does GROUP BY dept do in a query that also uses COUNT(*)?",
+    "options": [
+      "Sorts the rows by dept without combining them",
+      "Removes the dept column from the result",
+      "Counts the number of distinct columns in the table",
+      "Collects rows with the same dept into groups so COUNT(*) is computed per department"
+    ],
+    "answer": 3,
+    "explanation": "GROUP BY combines rows sharing the grouping value, and aggregates then produce one result per group."
+  },
+  {
+    "topic": "dml",
+    "question": "Which statement adds new rows to a table?",
+    "options": ["UPDATE", "ALTER", "INSERT", "CREATE"],
+    "answer": 2,
+    "explanation": "INSERT INTO table (cols) VALUES (...) adds rows, while UPDATE changes existing ones."
+  },
+  {
+    "topic": "dml",
+    "question": "What happens when an UPDATE statement has no WHERE clause?",
+    "options": [
+      "Only the first row is updated",
+      "Every row in the table is updated",
+      "No rows are updated",
+      "The statement fails with a syntax error"
+    ],
+    "answer": 1,
+    "explanation": "Without WHERE, UPDATE applies the change to all rows, which is a common and costly mistake."
+  },
+  {
+    "topic": "dml",
+    "question": "Which statement removes rows that match a condition from a table?",
+    "options": [
+      "DELETE FROM t WHERE ...",
+      "DROP FROM t WHERE ...",
+      "REMOVE FROM t WHERE ...",
+      "TRUNCATE t WHERE ..."
+    ],
+    "answer": 0,
+    "explanation": "DELETE removes the rows that satisfy its WHERE clause and leaves the table structure in place."
+  },
+  {
+    "topic": "ddl",
+    "question": "Which statement removes a table together with its definition and all of its data?",
+    "options": ["DELETE TABLE", "REMOVE TABLE", "CLEAR TABLE", "DROP TABLE"],
+    "answer": 3,
+    "explanation": "DROP TABLE deletes the table object itself, whereas DELETE only removes rows."
+  },
+  {
+    "topic": "ddl",
+    "question": "Which statement adds a new column to an existing table?",
+    "options": [
+      "UPDATE TABLE t ADD c INTEGER;",
+      "INSERT COLUMN c INTO t;",
+      "ALTER TABLE t ADD COLUMN c INTEGER;",
+      "CREATE COLUMN c ON t;"
+    ],
+    "answer": 2,
+    "explanation": "ALTER TABLE changes a table's structure, including adding, dropping or modifying columns."
+  },
+  {
+    "topic": "joins",
+    "question": "What does a FULL OUTER JOIN return?",
+    "options": [
+      "Only rows that match in both tables",
+      "All rows from both tables, with NULLs where a row has no match on the other side",
+      "Only rows from the left table",
+      "Every combination of rows from both tables"
+    ],
+    "answer": 1,
+    "explanation": "A full outer join combines the effects of a left join and a right join."
+  },
+  {
+    "topic": "set-operations",
+    "question": "Which set operator returns only the rows that appear in the results of both queries?",
+    "options": ["INTERSECT", "UNION", "EXCEPT", "UNION ALL"],
+    "answer": 0,
+    "explanation": "INTERSECT keeps rows present in both result sets, while EXCEPT keeps rows in the first but not the second."
+  },
+  {
+    "topic": "null-handling",
+    "question": "What is the result of the expression 5 + NULL in standard SQL?",
+    "options": ["5", "0", "An error", "NULL"],
+    "answer": 3,
+    "explanation": "Arithmetic with NULL yields NULL, because the unknown value makes the whole result unknown."
+  },
+  {
+    "topic": "constraints",
+    "question": "What does a UNIQUE constraint enforce?",
+    "options": [
+      "The column can never contain NULL",
+      "The column must reference another table",
+      "No two rows can have the same non-NULL value in the constrained column",
+      "The column value must be greater than zero"
+    ],
+    "answer": 2,
+    "explanation": "UNIQUE prevents duplicate values, while NOT NULL and CHECK enforce other rules."
+  },
+  {
+    "topic": "constraints",
+    "question": "What does a DEFAULT clause on a column do?",
+    "options": [
+      "Prevents the column from being updated",
+      "Supplies a value when an INSERT does not provide one for that column",
+      "Makes the column the primary key",
+      "Rejects any value other than the default"
+    ],
+    "answer": 1,
+    "explanation": "DEFAULT fills in a predefined value, such as 0 or CURRENT_TIMESTAMP, when the column is omitted."
+  },
+  {
+    "topic": "transactions",
+    "question": "Which statement makes all changes in the current transaction permanent?",
+    "options": ["COMMIT", "SAVE", "ROLLBACK", "END CHANGES"],
+    "answer": 0,
+    "explanation": "COMMIT ends the transaction and makes its changes durable and visible to other sessions."
+  },
+  {
+    "topic": "transactions",
+    "question": "What does the durability property in ACID guarantee?",
+    "options": [
+      "Transactions run one at a time",
+      "Data types never change after creation",
+      "Queries always finish within a time limit",
+      "Once a transaction commits, its changes survive crashes and power failures"
+    ],
+    "answer": 3,
+    "explanation": "Durability is typically achieved by writing changes to a log on disk before reporting a commit."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What is a subquery?",
+    "options": [
+      "A query that runs on a schedule",
+      "A query limited to a single table",
+      "A SELECT statement nested inside another SQL statement",
+      "A stored procedure that returns rows"
+    ],
+    "answer": 2,
+    "explanation": "Subqueries can appear in WHERE, FROM or SELECT clauses to supply values or rows to the outer statement."
+  },
+  {
+    "topic": "data-types",
+    "question": "Which PostgreSQL data type stores true or false values?",
+    "options": ["BIT STRING", "BOOLEAN", "CHAR(1)", "BINARY"],
+    "answer": 1,
+    "explanation": "PostgreSQL's BOOLEAN type holds TRUE, FALSE or NULL."
+  }
+]

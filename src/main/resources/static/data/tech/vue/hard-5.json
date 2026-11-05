@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0410ef20320",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "What is onRenderTriggered used for?",
+  "options": [
+   "Running code after each SSR render",
+   "Measuring network requests",
+   "Forcing a re-render manually",
+   "Debugging which reactive dependency caused a component to re-render, in development"
+  ],
+  "answer": 3,
+  "explanation": "onRenderTriggered and onRenderTracked are development-only debug hooks that receive a dependency event."
+ },
+ {
+  "id": "q83990a8c431",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "What does Vue Router's scrollBehavior option control?",
+  "options": [
+   "The scrollbar style",
+   "Whether the router can be scrolled by keyboard",
+   "Where the page scrolls after navigation, such as the top or a saved position",
+   "Lazy loading of routes when scrolling"
+  ],
+  "answer": 2,
+  "explanation": "scrollBehavior returns a position, such as savedPosition for back navigation or a hash target."
+ },
+ {
+  "id": "q6940c49827b",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "What does effectScope() let a composable do?",
+  "options": [
+   "Run effects in a separate thread",
+   "Collect reactive effects like computed and watchers so they can all be stopped together",
+   "Share effects between apps",
+   "Delay effects until mount"
+  ],
+  "answer": 1,
+  "explanation": "Effects created inside scope.run() are captured and disposed with scope.stop()."
+ },
+ {
+  "id": "qe659269c448",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "In Vue 3.5+, what does useTemplateRef('input') return?",
+  "options": [
+   "The DOM element synchronously during setup",
+   "A reactive copy of the element's attributes",
+   "A function to query the DOM",
+   "A shallow ref that is filled with the element or component whose ref attribute is 'input' after mount"
+  ],
+  "answer": 3,
+  "explanation": "useTemplateRef matches by the ref attribute string and avoids needing a variable with the same name."
+ },
+ {
+  "id": "qf70a8b3530b",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "What does the once: true option do for watch in Vue 3.4+?",
+  "options": [
+   "The callback runs only for the first change and the watcher then stops",
+   "The callback runs once immediately and then on every change",
+   "Duplicate changes in one tick are ignored forever",
+   "The source is read only once at creation"
+  ],
+  "answer": 0,
+  "explanation": "once: true makes the watcher stop itself after its callback has fired a single time."
+ },
+ {
+  "id": "qf18649fe84f",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "Which hook of a custom directive object runs when the element is inserted into the DOM?",
+  "options": [
+   "inserted",
+   "bind",
+   "mounted",
+   "created only"
+  ],
+  "answer": 2,
+  "explanation": "Vue 3 directive hooks mirror component lifecycle names, so Vue 2's inserted became mounted."
+ },
+ {
+  "id": "qa3090801a3e",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "hard",
+  "question": "In which order do onBeforeUnmount and onUnmounted run for a parent and its child when the parent unmounts?",
+  "options": [
+   "Child onBeforeUnmount first, then parent onBeforeUnmount, then parent onUnmounted, then child onUnmounted",
+   "Parent onBeforeUnmount, child onBeforeUnmount, child onUnmounted, parent onUnmounted",
+   "Parent onUnmounted before any child hook",
+   "Only the parent hooks run"
+  ],
+  "answer": 1,
+  "explanation": "Before-hooks run top-down, and the unmounted hooks complete bottom-up, as children finish before parents."
+ },
+ {
+  "id": "q3c16770711b",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "How is <MyComp v-bind=\"obj\" title=\"x\" /> resolved when obj also has a title property in Vue 3?",
+  "options": [
+   "The v-bind object always wins",
+   "Individual attributes always win regardless of order",
+   "Order matters, and the later binding wins, so title=\"x\" overrides obj.title",
+   "Vue throws a duplicate attribute error"
+  ],
+  "answer": 2,
+  "explanation": "Vue 3 merges bindings in the order they appear, unlike Vue 2 where individual attributes always won."
+ },
+ {
+  "id": "qbf04428b81d",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "What does defineAsyncComponent's loadingComponent and delay option combination achieve?",
+  "options": [
+   "The component loads after the delay even if ready",
+   "The loading component is shown only if loading takes longer than the delay, avoiding flicker",
+   "The loading component replaces the async component permanently",
+   "Errors are retried after the delay"
+  ],
+  "answer": 1,
+  "explanation": "delay defaults to 200 ms so fast loads do not briefly flash a spinner."
+ },
+ {
+  "id": "q3e441ff82c3",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "What is the result of v-on=\"{ mousedown: onDown, mouseup: onUp }\" on an element?",
+  "options": [
+   "Only the first listener is attached",
+   "A compile error, because v-on requires an argument",
+   "The object is passed as a single event name",
+   "Both listeners are attached, as object syntax binds multiple events"
+  ],
+  "answer": 3,
+  "explanation": "v-on without an argument accepts an object of event-to-handler pairs, but modifiers are not supported in that form."
+ }
+]

@@ -478,5 +478,245 @@
     ],
     "answer": 0,
     "explanation": "SpringBootServletInitializer bootstraps the application when the servlet container starts the WAR."
+  },
+  {
+    "topic": "core-di",
+    "question": "A constructor needs a DataSource, two DataSource beans exist, and neither is @Primary nor qualified. What happens?",
+    "options": [
+      "Spring injects the first bean it registered",
+      "Spring injects null",
+      "Spring creates a third DataSource",
+      "Startup fails with NoUniqueBeanDefinitionException"
+    ],
+    "answer": 3,
+    "explanation": "With multiple candidates and no way to choose, Spring cannot resolve the dependency and fails at startup."
+  },
+  {
+    "topic": "core-di",
+    "question": "Since Spring Boot 2.6, what happens by default when two beans depend on each other in a cycle?",
+    "options": [
+      "Startup fails because circular references are prohibited by default",
+      "Spring resolves the cycle silently with proxies",
+      "The second bean is injected as null",
+      "Spring retries creation until it succeeds"
+    ],
+    "answer": 0,
+    "explanation": "spring.main.allow-circular-references defaults to false, so cycles cause a startup failure unless you opt back in."
+  },
+  {
+    "topic": "core-di",
+    "question": "What does spring.main.lazy-initialization=true do?",
+    "options": [
+      "Makes all beans prototype-scoped",
+      "Creates beans when they are first needed rather than at startup",
+      "Delays the web server start until the first request",
+      "Disables auto-configuration until requested"
+    ],
+    "answer": 1,
+    "explanation": "Lazy initialization speeds up startup but can hide configuration problems until a bean is first used."
+  },
+  {
+    "topic": "auto-configuration",
+    "question": "What does @ConditionalOnBean(CacheManager.class) on a @Bean method do?",
+    "options": [
+      "Registers the bean only if a CacheManager bean is already defined",
+      "Creates a CacheManager if none exists",
+      "Makes the bean depend on CacheManager's lifecycle",
+      "Registers the bean only if the CacheManager class is on the classpath"
+    ],
+    "answer": 0,
+    "explanation": "@ConditionalOnBean checks the bean definitions registered so far, which is why it is mainly used in auto-configurations with careful ordering."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which annotation on a configuration class registers all @ConfigurationProperties classes found in its packages?",
+    "options": [
+      "@EnableAutoConfiguration",
+      "@PropertySource",
+      "@ConfigurationPropertiesScan",
+      "@ComponentScan"
+    ],
+    "answer": 2,
+    "explanation": "@ConfigurationPropertiesScan finds and registers @ConfigurationProperties types without listing them in @EnableConfigurationProperties."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation sets the HTTP status returned for a handler method or a custom exception class?",
+    "options": [
+      "@ResponseBody",
+      "@StatusCode",
+      "@ExceptionHandler",
+      "@ResponseStatus"
+    ],
+    "answer": 3,
+    "explanation": "@ResponseStatus(HttpStatus.NOT_FOUND) on an exception class makes Spring MVC respond with that status when it is thrown."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation enables CORS for a particular controller or handler method?",
+    "options": [
+      "@EnableCors",
+      "@CrossOrigin",
+      "@AllowOrigin",
+      "@CorsMapping"
+    ],
+    "answer": 1,
+    "explanation": "@CrossOrigin configures allowed origins and methods locally; global CORS can be set via WebMvcConfigurer.addCorsMappings."
+  },
+  {
+    "topic": "web-rest",
+    "question": "Which annotation binds an HTTP request header to a controller method parameter?",
+    "options": [
+      "@RequestHeader",
+      "@RequestParam",
+      "@CookieValue",
+      "@RequestAttribute"
+    ],
+    "answer": 0,
+    "explanation": "@RequestHeader(\"X-Request-Id\") reads that header value and can convert it to the parameter type."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "How do Spring Data repository methods support pagination?",
+    "options": [
+      "Adding LIMIT manually to the method name",
+      "Accepting a Pageable parameter and returning Page<T> or Slice<T>",
+      "Annotating the method with @Paginate",
+      "Returning a Stream and skipping elements"
+    ],
+    "answer": 1,
+    "explanation": "Passing PageRequest.of(page, size) as a Pageable makes Spring Data apply limit and offset, and Page also includes the total count."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "Which database migration tools does Spring Boot auto-configure when found on the classpath?",
+    "options": [
+      "Hibernate Envers and jOOQ",
+      "DbUnit and Testcontainers",
+      "Ant and Gradle",
+      "Flyway and Liquibase"
+    ],
+    "answer": 3,
+    "explanation": "Spring Boot runs Flyway or Liquibase migrations at startup when their libraries are present."
+  },
+  {
+    "topic": "data-jpa",
+    "question": "What does a @Version field on a JPA entity enable?",
+    "options": [
+      "Automatic audit timestamps",
+      "Optimistic locking with a version check on update",
+      "Keeping historical versions of every row",
+      "Schema versioning for migrations"
+    ],
+    "answer": 1,
+    "explanation": "The provider increments the version on update and fails with an optimistic locking exception if another transaction changed the row first."
+  },
+  {
+    "topic": "security",
+    "question": "What does sessionCreationPolicy(SessionCreationPolicy.STATELESS) do in Spring Security 6?",
+    "options": [
+      "Spring Security never creates an HttpSession or uses it to obtain the SecurityContext",
+      "Sessions are stored in a database instead of memory",
+      "Every request gets a new session",
+      "CSRF tokens are stored in cookies"
+    ],
+    "answer": 0,
+    "explanation": "STATELESS suits token-based APIs where each request carries its own credentials."
+  },
+  {
+    "topic": "security",
+    "question": "Which starter configures an app to validate JWT bearer tokens as an OAuth2 resource server?",
+    "options": [
+      "spring-boot-starter-oauth2-client",
+      "spring-boot-starter-jwt",
+      "spring-boot-starter-oauth2-resource-server",
+      "spring-boot-starter-security-oidc"
+    ],
+    "answer": 2,
+    "explanation": "The resource server starter plus a property like spring.security.oauth2.resourceserver.jwt.issuer-uri enables JWT validation."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "What does @Value(\"${app.timeout:30}\") inject when app.timeout is not defined?",
+    "options": [
+      "30",
+      "null",
+      "An empty string",
+      "Nothing, because startup fails"
+    ],
+    "answer": 0,
+    "explanation": "The text after the colon is the default used when the placeholder cannot be resolved."
+  },
+  {
+    "topic": "configuration-profiles",
+    "question": "Which location takes precedence if both define the same property: classpath:application.properties or classpath:config/application.properties?",
+    "options": [
+      "classpath:application.properties",
+      "Neither; startup fails on a conflict",
+      "classpath:config/application.properties",
+      "Whichever file was modified most recently"
+    ],
+    "answer": 2,
+    "explanation": "Spring Boot loads the classpath root first and then classpath:/config/, so the later config/ location overrides it."
+  },
+  {
+    "topic": "testing",
+    "question": "What does the @JsonTest slice set up?",
+    "options": [
+      "An embedded HTTP server for JSON endpoints",
+      "A JSON-based in-memory database",
+      "Contract tests for JSON schemas",
+      "Jackson serialization support, including JacksonTester, without the full context"
+    ],
+    "answer": 3,
+    "explanation": "@JsonTest auto-configures the ObjectMapper and JSON testers so you can test serialization in isolation."
+  },
+  {
+    "topic": "testing",
+    "question": "In Spring Boot 3.4+, which annotation wraps an existing bean in a Mockito spy inside the test context?",
+    "options": [
+      "@SpyBean",
+      "@MockitoBean",
+      "@InjectMocks",
+      "@MockitoSpyBean"
+    ],
+    "answer": 3,
+    "explanation": "Spring Framework 6.2's @MockitoSpyBean replaces Spring Boot's deprecated @SpyBean."
+  },
+  {
+    "topic": "actuator-observability",
+    "question": "How can /actuator/info show the build version and artifact from Maven?",
+    "options": [
+      "Annotate the main class with @BuildInfo",
+      "Set management.info.version=true only",
+      "Run the spring-boot-maven-plugin build-info goal to generate META-INF/build-info.properties",
+      "Expose the /actuator/build endpoint"
+    ],
+    "answer": 2,
+    "explanation": "When build-info.properties is present, Spring Boot auto-configures a BuildProperties bean used by the info endpoint."
+  },
+  {
+    "topic": "transactions",
+    "question": "What isolation level does @Transactional use when none is specified?",
+    "options": [
+      "SERIALIZABLE",
+      "Isolation.DEFAULT, meaning the underlying datastore's default",
+      "READ_UNCOMMITTED",
+      "REPEATABLE_READ in all databases"
+    ],
+    "answer": 1,
+    "explanation": "Isolation.DEFAULT defers to the database, for example READ COMMITTED on PostgreSQL."
+  },
+  {
+    "topic": "deployment-build",
+    "question": "What does the spring-boot-docker-compose module do in Spring Boot 3.1+?",
+    "options": [
+      "Generates a compose file from your beans",
+      "Builds a Docker image during mvn package",
+      "Starts services from a compose file on startup and creates service connections to them",
+      "Deploys the app to Docker Swarm"
+    ],
+    "answer": 2,
+    "explanation": "During development it runs docker compose up and auto-configures connection details for recognised containers."
   }
 ]

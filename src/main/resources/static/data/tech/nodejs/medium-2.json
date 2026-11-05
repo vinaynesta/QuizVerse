@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q32b85016d2e",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What does require.resolve('lodash') return?",
+  "options": [
+   "The module's exports object",
+   "The version number from its package.json",
+   "The absolute path Node would load for that module",
+   "A boolean telling whether it is installed"
+  ],
+  "answer": 2,
+  "explanation": "require.resolve() returns the resolved file path without loading the module."
+ },
+ {
+  "id": "qd5d206a9fd6",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "medium",
+  "question": "What causes Node.js to print a possible memory leak warning for an EventEmitter?",
+  "options": [
+   "More than the configured maximum number of listeners (10 by default) on one event",
+   "Calling emit() more than 10 times",
+   "Registering more than 10 different event names",
+   "A listener that declares more than 10 parameters"
+  ],
+  "answer": 0,
+  "explanation": "setMaxListeners() changes the limit for a single emitter; the warning is a hint, not proof of a leak."
+ },
+ {
+  "id": "qa6f192e556e",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "What JavaScript type do values from process.env always have?",
+  "options": [
+   "Whatever type was set in the shell",
+   "Number when the value looks numeric",
+   "Boolean for 'true' and 'false'",
+   "String"
+  ],
+  "answer": 3,
+  "explanation": "Environment variables are always strings; convert them with Number() or a parser when needed."
+ },
+ {
+  "id": "q481e919bce8",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What does a false return value from writable.write() signal?",
+  "options": [
+   "The data has already been flushed to disk",
+   "The chunk was rejected and will never be written",
+   "The stream has ended and cannot be reused",
+   "The internal buffer has reached highWaterMark, so the producer should pause until 'drain' is emitted"
+  ],
+  "answer": 3,
+  "explanation": "A false return is backpressure: the writable is holding enough unflushed data that the producer should wait for 'drain'."
+ },
+ {
+  "id": "q80c7ce5cf7c",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "What is express.Router() best described as?",
+  "options": [
+   "A mini-application with its own middleware and routes, which can be mounted on a path",
+   "A class that stores session data between requests",
+   "A function that validates request bodies against a schema",
+   "A cache of compiled view templates"
+  ],
+  "answer": 0,
+  "explanation": "A router is middleware-like: app.use('/api', router) mounts its routes under that path prefix."
+ },
+ {
+  "id": "q82a7db59004",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In an Express route, what does calling next('route') do?",
+  "options": [
+   "It skips the remaining handlers for the current route and continues to the next matching route",
+   "It ends the response with a 404 status",
+   "It restarts the middleware stack from the first app.use()",
+   "It throws an error to the error-handling middleware"
+  ],
+  "answer": 0,
+  "explanation": "Passing the string 'route' to next() jumps out of the current route's handler stack; any other argument is treated as an error."
+ },
+ {
+  "id": "q30add84dcbb",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "How many parameters must an Express error-handling middleware function declare for Express to recognize it?",
+  "options": [
+   "Four: (err, req, res, next)",
+   "Two: (err, res)",
+   "Three: (err, req, res)",
+   "One: (err)"
+  ],
+  "answer": 0,
+  "explanation": "Express identifies error middleware by its arity, so it needs exactly four parameters even when next is unused."
+ },
+ {
+  "id": "q84433bce54f",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "medium",
+  "question": "Which helper returns a promise that resolves the next time a given event is emitted on an EventEmitter?",
+  "options": [
+   "emitter.toPromise()",
+   "events.promise()",
+   "events.once()",
+   "util.waitFor()"
+  ],
+  "answer": 2,
+  "explanation": "events.once(emitter, name) resolves with the emitted arguments and rejects if an 'error' event fires first."
+ },
+ {
+  "id": "qb86f46c229d",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "Why should a Buffer from Buffer.allocUnsafe() be overwritten before its contents are used?",
+  "options": [
+   "It can contain leftover bytes from memory that was used earlier",
+   "It is stored as UTF-16 by default",
+   "It is read-only until it is filled",
+   "It has zero length until it is written"
+  ],
+  "answer": 0,
+  "explanation": "allocUnsafe() skips zero-filling for speed, so unwritten bytes can expose old data."
+ },
+ {
+  "id": "q071e4aeb446",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "What does Buffer.byteLength('café') return?",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "The é takes two bytes in UTF-8, so the string is 5 bytes even though it has 4 characters."
+ }
+]

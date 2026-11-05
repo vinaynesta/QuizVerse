@@ -478,5 +478,245 @@
     ],
     "answer": 0,
     "explanation": "defineAsyncComponent() accepts a loader returning a Promise, enabling code splitting."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "Which function creates a Vue 3 application instance?",
+    "options": [
+      "new Vue",
+      "Vue.mount",
+      "defineApp",
+      "createApp"
+    ],
+    "answer": 3,
+    "explanation": "Vue 3 apps start with createApp(App).mount('#app'), replacing the Vue 2 new Vue() constructor."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What is the shorthand syntax for binding an attribute with the same name as a variable in Vue 3.4+, like :id=\"id\"?",
+    "options": [
+      "#id",
+      "@id",
+      "v-id",
+      ":id"
+    ],
+    "answer": 3,
+    "explanation": "Since Vue 3.4, :id with no value binds to a variable named id in scope."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "Which directive renders an element only when an expression is truthy, removing it otherwise?",
+    "options": [
+      "v-show",
+      "v-bind",
+      "v-if",
+      "v-model"
+    ],
+    "answer": 2,
+    "explanation": "v-if conditionally creates and destroys the element and its children."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "Which directive provides an alternative block after a v-if when its condition is false?",
+    "options": [
+      "v-otherwise",
+      "v-not",
+      "v-unless",
+      "v-else"
+    ],
+    "answer": 3,
+    "explanation": "v-else must immediately follow an element with v-if or v-else-if."
+  },
+  {
+    "topic": "reactivity",
+    "question": "In the Options API, which option returns the component's reactive state object?",
+    "options": [
+      "data",
+      "props",
+      "state",
+      "setup"
+    ],
+    "answer": 0,
+    "explanation": "The data option is a function returning an object whose properties become reactive and available on this."
+  },
+  {
+    "topic": "reactivity",
+    "question": "In script setup, how do you update const count = ref(0) to 5?",
+    "options": [
+      "count.value = 5",
+      "count = 5",
+      "count(5)",
+      "setCount(5)"
+    ],
+    "answer": 0,
+    "explanation": "Refs are changed through their .value property in JavaScript code."
+  },
+  {
+    "topic": "composition-api",
+    "question": "In the Options API, which option holds functions that can be called from the template, like event handlers?",
+    "options": [
+      "computed",
+      "watch",
+      "methods",
+      "actions"
+    ],
+    "answer": 2,
+    "explanation": "Functions in methods are bound to the component instance and can be used in templates and other options."
+  },
+  {
+    "topic": "composition-api",
+    "question": "Which three blocks can a Vue single-file component contain at top level?",
+    "options": [
+      "html, js and css",
+      "view, model and controller",
+      "template, script and style",
+      "header, body and footer"
+    ],
+    "answer": 2,
+    "explanation": "An SFC combines the template, script and style for one component in a .vue file."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "In the Options API, how does a component emit an event named save?",
+    "options": [
+      "this.emit('save')",
+      "this.$emit('save')",
+      "emit.save()",
+      "this.$dispatch('save')"
+    ],
+    "answer": 1,
+    "explanation": "$emit triggers a custom event that the parent can listen to with @save."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "How does a parent listen to a child's custom event named close?",
+    "options": [
+      "<Child :close=\"onClose\" />",
+      "<Child #close=\"onClose\" />",
+      "<Child v-close=\"onClose\" />",
+      "<Child @close=\"onClose\" />"
+    ],
+    "answer": 3,
+    "explanation": "@close is shorthand for v-on:close and runs the handler when the child emits close."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "In the Options API, which option defines cached derived values?",
+    "options": [
+      "methods",
+      "computed",
+      "watch",
+      "data"
+    ],
+    "answer": 1,
+    "explanation": "Properties in the computed option are cached and recalculated only when their reactive dependencies change."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which Composition API hook runs before the component is mounted to the DOM?",
+    "options": [
+      "onMounted",
+      "onBeforeMount",
+      "onCreated",
+      "onBeforeUpdate"
+    ],
+    "answer": 1,
+    "explanation": "onBeforeMount runs after setup and before the initial DOM is rendered."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "In the Options API, what is the Vue 3 name of the hook that runs after a component is unmounted?",
+    "options": [
+      "destroyed",
+      "unmounted",
+      "detached",
+      "removed"
+    ],
+    "answer": 1,
+    "explanation": "Vue 3 renamed destroyed to unmounted, and beforeDestroy to beforeUnmount."
+  },
+  {
+    "topic": "directives",
+    "question": "Which directive is placed after v-if to add another condition?",
+    "options": [
+      "v-else-if",
+      "v-elif",
+      "v-if-else",
+      "v-or"
+    ],
+    "answer": 0,
+    "explanation": "v-else-if chains another condition and must follow a v-if or another v-else-if."
+  },
+  {
+    "topic": "directives",
+    "question": "Which directive's contents are skipped entirely during compilation so mustache syntax shows literally?",
+    "options": [
+      "v-once",
+      "v-cloak",
+      "v-pre",
+      "v-text"
+    ],
+    "answer": 2,
+    "explanation": "v-pre skips compilation for the element and its children, which is useful for showing raw template syntax."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "What are named slots used for?",
+    "options": [
+      "Giving a slot a CSS class",
+      "Importing slots from another file",
+      "Letting a component expose several distinct places for parent content",
+      "Naming the component itself"
+    ],
+    "answer": 2,
+    "explanation": "A component can define <slot name=\"header\"> and other slots, and the parent fills each by name."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Which Vue Router component creates a link that navigates without a full page reload?",
+    "options": [
+      "RouterView",
+      "RouterLink",
+      "RouteAnchor",
+      "NavLink"
+    ],
+    "answer": 1,
+    "explanation": "<RouterLink to=\"/about\"> renders an anchor and handles navigation on the client."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "In script setup, which function returns the router instance for navigation?",
+    "options": [
+      "useRouter",
+      "useRoute",
+      "getRouter",
+      "createRouter"
+    ],
+    "answer": 0,
+    "explanation": "useRouter() returns the router, whose push and replace methods navigate, while useRoute() returns the current route."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Which built-in component caches inactive component instances instead of destroying them?",
+    "options": [
+      "Suspense",
+      "Teleport",
+      "Transition",
+      "KeepAlive"
+    ],
+    "answer": 3,
+    "explanation": "Wrapping dynamic components in <KeepAlive> preserves their state when switching away."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "Which built-in component renders part of a component's template into a different DOM location, such as body?",
+    "options": [
+      "Teleport",
+      "Portal",
+      "KeepAlive",
+      "Transfer"
+    ],
+    "answer": 0,
+    "explanation": "<Teleport to=\"body\"> is useful for modals and overlays that should escape their parent's styling."
   }
 ]

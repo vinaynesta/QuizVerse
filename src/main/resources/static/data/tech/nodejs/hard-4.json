@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1a6f0ecaf55",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "In which event loop phase do setImmediate() callbacks run?",
+  "options": [
+   "The pending callbacks phase",
+   "The timers phase",
+   "The close callbacks phase",
+   "The check phase, which runs right after the poll phase"
+  ],
+  "answer": 3,
+  "explanation": "setImmediate() callbacks run in the check phase; timers run in the timers phase at the start of each loop iteration."
+ },
+ {
+  "id": "qa740c8bfdb5",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does this print? setTimeout(() => console.log('A')); Promise.resolve().then(() => console.log('B')); console.log('C');",
+  "options": [
+   "B, C, A",
+   "A, B, C",
+   "C, B, A",
+   "C, A, B"
+  ],
+  "answer": 2,
+  "explanation": "Synchronous code runs first, then the promise microtask, and the timer callback runs last in a later phase."
+ },
+ {
+  "id": "qa932a91f94c",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "What does process.kill(process.pid, 0) do?",
+  "options": [
+   "Kills the current process",
+   "Checks whether the process exists without sending a signal",
+   "Pauses the event loop",
+   "Sends SIGTERM to the parent"
+  ],
+  "answer": 1,
+  "explanation": "Signal 0 performs only the permission and existence check."
+ },
+ {
+  "id": "qe800ff3d2e8",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "With the default scheduling policy on Linux, how does the cluster primary distribute incoming connections to workers?",
+  "options": [
+   "Each request is copied to every worker",
+   "Connections always go to the first worker that started",
+   "The client chooses a worker through a cookie",
+   "The primary accepts connections and hands them to workers in round-robin order"
+  ],
+  "answer": 3,
+  "explanation": "The default policy (SCHED_RR) is used on all platforms except Windows, where the OS distributes connections."
+ },
+ {
+  "id": "q5c12bfe1510",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "Why can process.exit() cut off output written to stdout when stdout is a pipe?",
+  "options": [
+   "Pipes cannot carry strings",
+   "process.exit() closes stdout before writing anything",
+   "Writes to pipes are asynchronous on POSIX, so pending data may not be flushed before exit",
+   "Pipes are always buffered in a file first"
+  ],
+  "answer": 2,
+  "explanation": "Pipe writes can complete later, so calling process.exit() immediately can drop queued output."
+ },
+ {
+  "id": "qa5dd2e8bb45",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "hard",
+  "question": "What does server.keepAliveTimeout control?",
+  "options": [
+   "The maximum size of a request body",
+   "How long an idle keep-alive connection stays open waiting for another request",
+   "How long the server waits before restarting",
+   "The interval between ping frames"
+  ],
+  "answer": 1,
+  "explanation": "Idle keep-alive sockets are closed after this many milliseconds with no new request."
+ },
+ {
+  "id": "q44c0ab709f0",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "What does the integrity field in package-lock.json protect against?",
+  "options": [
+   "A tampered or corrupted package tarball, by checking a hash when it is installed",
+   "Peer dependency version conflicts",
+   "Accidental deletion of node_modules",
+   "Use of an outdated Node.js version"
+  ],
+  "answer": 0,
+  "explanation": "The integrity value is a subresource-integrity hash that npm verifies against the downloaded tarball."
+ },
+ {
+  "id": "q021ddba8996",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "Which Node.js crypto API derives a key synchronously, blocking the event loop while it runs?",
+  "options": [
+   "crypto.pbkdf2() with a callback",
+   "crypto.scrypt() with a callback",
+   "crypto.pbkdf2Sync()",
+   "crypto.randomBytes() with a callback"
+  ],
+  "answer": 2,
+  "explanation": "The Sync variant blocks the thread; the callback forms run on the libuv threadpool."
+ },
+ {
+  "id": "qdbf36f98aad",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "Inside a CommonJS file, what is a relative require('./util') path resolved against?",
+  "options": [
+   "The directory of the file that contains the require() call",
+   "The current working directory of the process",
+   "The directory of the entry script only",
+   "The node_modules folder"
+  ],
+  "answer": 0,
+  "explanation": "Relative paths are resolved from the calling file's location, not from where node was started."
+ },
+ {
+  "id": "q1c3ebcfcad5",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the default size of the libuv threadpool used for file system and DNS lookup work?",
+  "options": [
+   "1 thread",
+   "4 threads",
+   "8 threads",
+   "One thread per CPU core"
+  ],
+  "answer": 1,
+  "explanation": "UV_THREADPOOL_SIZE changes the size, up to a maximum of 1024."
+ }
+]

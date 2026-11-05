@@ -878,10 +878,10 @@
   "options": [
    "11",
    "8",
-   "5",
-   "10"
+   "10",
+   "5"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "P and everyone to P's left: 12. Q and everyone to Q's right: 7.\nSince 12 + 7 < 29, they don't overlap. Between them: 29 − (12 + 7) = 10."
  },
  {
@@ -1177,11 +1177,11 @@
   "question": "In a row of 27 people, P is 10th from the left and Q is 12th from the right. How many people are between them?",
   "options": [
    "7",
-   "5",
+   "10",
    "3",
-   "10"
+   "5"
   ],
-  "answer": 1,
+  "answer": 3,
   "explanation": "P and everyone to P's left: 10. Q and everyone to Q's right: 12.\nSince 10 + 12 < 27, they don't overlap. Between them: 27 − (10 + 12) = 5."
  },
  {
@@ -1686,12 +1686,12 @@
   "level": "easy",
   "question": "In a row of 26 people, P is 10th from the left and Q is 6th from the right. How many people are between them?",
   "options": [
-   "10",
+   "11",
    "20",
-   "15",
-   "11"
+   "10",
+   "15"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "P and everyone to P's left: 10. Q and everyone to Q's right: 6.\nSince 10 + 6 < 26, they don't overlap. Between them: 26 − (10 + 6) = 10."
  },
  {
@@ -1717,11 +1717,11 @@
   "question": "In a class of 54 students, Yash ranks 11th from the top. What is the rank from the bottom?",
   "options": [
    "45",
-   "43",
    "44",
+   "43",
    "53"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "10 students are above, so 54 − 11 = 43 are below.\nRank from the bottom = 43 + 1 = 44."
  },
  {
@@ -2932,11 +2932,11 @@
   "question": "In a row of 40 people, P is 7th from the left and Q is 13th from the right. How many people are between them?",
   "options": [
    "16",
-   "20",
    "30",
+   "20",
    "23"
   ],
-  "answer": 1,
+  "answer": 2,
   "explanation": "P and everyone to P's left: 7. Q and everyone to Q's right: 13.\nSince 7 + 13 < 40, they don't overlap. Between them: 40 − (7 + 13) = 20."
  },
  {
@@ -3442,11 +3442,11 @@
   "question": "In a row of 25 people, P is 10th from the left and Q is 5th from the right. How many people are between them?",
   "options": [
    "15",
-   "9",
    "7",
-   "10"
+   "10",
+   "9"
   ],
-  "answer": 3,
+  "answer": 2,
   "explanation": "P and everyone to P's left: 10. Q and everyone to Q's right: 5.\nSince 10 + 5 < 25, they don't overlap. Between them: 25 − (10 + 5) = 10."
  },
  {
@@ -4071,12 +4071,12 @@
   "level": "medium",
   "question": "Farah ranks 12th from the top and 10th from the bottom in a class. How many students are in the class?",
   "options": [
-   "21",
-   "23",
    "26",
+   "23",
+   "21",
    "10"
   ],
-  "answer": 0,
+  "answer": 2,
   "explanation": "Counting from the top (12) and from the bottom (10) counts this student twice.\nTotal = 12 + 10 − 1 = 21."
  },
  {
@@ -4506,12 +4506,12 @@
   "level": "medium",
   "question": "In a row of 40 people, P is 10th from the left and Q is 6th from the right. How many people are between them?",
   "options": [
-   "24",
    "19",
+   "24",
    "30",
    "27"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "P and everyone to P's left: 10. Q and everyone to Q's right: 6.\nSince 10 + 6 < 40, they don't overlap. Between them: 40 − (10 + 6) = 24."
  },
  {
@@ -4582,11 +4582,11 @@
   "question": "Neha ranks 5th from the top and 13th from the bottom in a class. How many students are in the class?",
   "options": [
    "19",
-   "14",
    "17",
+   "14",
    "20"
   ],
-  "answer": 2,
+  "answer": 1,
   "explanation": "Counting from the top (5) and from the bottom (13) counts this student twice.\nTotal = 5 + 13 − 1 = 17."
  },
  {
@@ -4731,12 +4731,12 @@
   "level": "medium",
   "question": "In a row of 27 people, P is 12th from the left and Q is 9th from the right. How many people are between them?",
   "options": [
+   "7",
    "6",
-   "4",
    "9",
-   "7"
+   "4"
   ],
-  "answer": 0,
+  "answer": 1,
   "explanation": "P and everyone to P's left: 12. Q and everyone to Q's right: 9.\nSince 12 + 9 < 27, they don't overlap. Between them: 27 − (12 + 9) = 6."
  },
  {
@@ -5001,12 +5001,12 @@
   "level": "medium",
   "question": "Bhavna ranks 17th from the top and 20th from the bottom in a class. How many students are in the class?",
   "options": [
-   "46",
    "36",
+   "54",
    "35",
-   "54"
+   "46"
   ],
-  "answer": 1,
+  "answer": 0,
   "explanation": "Counting from the top (17) and from the bottom (20) counts this student twice.\nTotal = 17 + 20 − 1 = 36."
  },
  {

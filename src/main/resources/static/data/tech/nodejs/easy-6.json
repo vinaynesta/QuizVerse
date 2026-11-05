@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qda6ec9e83c9",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which method returns the current working directory of the Node.js process?",
+  "options": [
+   "process.dir",
+   "__filename",
+   "process.cwd()",
+   "process.home"
+  ],
+  "answer": 2,
+  "explanation": "process.cwd() returns the directory the process was started from or later changed to, which can differ from the script's location."
+ },
+ {
+  "id": "qa14d7c7cbf2",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "easy",
+  "question": "What does a try/catch block around synchronous code do when an error is thrown inside it?",
+  "options": [
+   "The error is ignored and execution continues on the next line",
+   "Control jumps to the catch block, which receives the error",
+   "The process always exits immediately",
+   "The error is logged and then rethrown automatically"
+  ],
+  "answer": 1,
+  "explanation": "catch handles errors thrown synchronously in the try block; errors in callbacks that run later are not caught."
+ },
+ {
+  "id": "q20b8b78991d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which method starts an http server accepting connections on a given port?",
+  "options": [
+   "server.listen()",
+   "server.start()",
+   "server.open()",
+   "server.run()"
+  ],
+  "answer": 0,
+  "explanation": "server.listen(3000) binds the server to the port and begins accepting connections."
+ },
+ {
+  "id": "q133aa0678bb",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "What does npx do?",
+  "options": [
+   "Runs a package's executable, downloading it temporarily if it is not installed locally",
+   "Removes unused packages from node_modules",
+   "Upgrades npm to the latest version",
+   "Publishes a package to the npm registry"
+  ],
+  "answer": 0,
+  "explanation": "npx is handy for one-off tools, such as scaffolding commands, without installing them globally."
+ },
+ {
+  "id": "qe9176ad5128",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "easy",
+  "question": "Which module must be imported to create your own EventEmitter?",
+  "options": [
+   "emitter",
+   "util",
+   "stream",
+   "events"
+  ],
+  "answer": 3,
+  "explanation": "EventEmitter is exported by the core events module, and many core classes such as streams extend it."
+ },
+ {
+  "id": "qf6c96b5912e",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which property holds the version string of the running Node.js, such as 'v22.11.0'?",
+  "options": [
+   "process.engine",
+   "process.release",
+   "process.version",
+   "node.version"
+  ],
+  "answer": 2,
+  "explanation": "process.version gives the Node.js version, and process.versions lists versions of its components such as V8."
+ },
+ {
+  "id": "qe3d58b5b965",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "easy",
+  "question": "Which EventEmitter method triggers an event and calls its listeners synchronously?",
+  "options": [
+   "trigger()",
+   "emit()",
+   "fire()",
+   "dispatch()"
+  ],
+  "answer": 1,
+  "explanation": "emit(eventName, ...args) calls each registered listener in order and returns true if there were listeners."
+ },
+ {
+  "id": "qf3acf0abded",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which file extension makes Node.js always treat a file as an ES module, regardless of package.json?",
+  "options": [
+   ".cjs",
+   ".mjs",
+   ".esm",
+   ".jsx"
+  ],
+  "answer": 1,
+  "explanation": ".mjs files are always ES modules and .cjs files are always CommonJS."
+ },
+ {
+  "id": "q95777b84801",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which fs/promises function creates a directory, including missing parent directories when { recursive: true } is passed?",
+  "options": [
+   "mkdir",
+   "createDir",
+   "touch",
+   "makedir"
+  ],
+  "answer": 0,
+  "explanation": "With recursive: true, mkdir creates the whole path and does not fail if the directory already exists."
+ },
+ {
+  "id": "qcdc474f1d44",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which method sets the status code and headers of a Node.js http response in one call?",
+  "options": [
+   "res.status()",
+   "res.begin()",
+   "res.setHeaders()",
+   "res.writeHead()"
+  ],
+  "answer": 3,
+  "explanation": "res.writeHead(200, { 'Content-Type': 'text/plain' }) sends the status line and headers; res.status() is an Express helper."
+ }
+]

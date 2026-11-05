@@ -45,6 +45,21 @@
   "explanation": "@d above def f is shorthand for f = d(f), so a decorator is just a callable that wraps or replaces f."
  },
  {
+  "id": "qc9989cda17c",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "easy",
+  "question": "What does with open('f.txt') as f: guarantee about the file?",
+  "options": [
+   "It is closed when the block exits, even if an exception occurs",
+   "It is read fully into memory",
+   "It is opened in write mode",
+   "It is deleted after the block"
+  ],
+  "answer": 0,
+  "explanation": "The file object's __exit__ closes the file however the block ends."
+ },
+ {
   "id": "qe3feb7f18d4",
   "subject": "python",
   "topic": "decorators-context-managers",
@@ -120,6 +135,21 @@
   "explanation": "A truthy return value from __exit__ tells Python to swallow the exception."
  },
  {
+  "id": "qc9523854e6a",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "Which contextlib helper ignores specified exception types raised inside a with block?",
+  "options": [
+   "contextlib.nullcontext",
+   "contextlib.ignore",
+   "contextlib.closing",
+   "contextlib.suppress"
+  ],
+  "answer": 3,
+  "explanation": "with suppress(FileNotFoundError): silently swallows that exception type and continues after the block."
+ },
+ {
   "id": "q0a0b55723e5",
   "subject": "python",
   "topic": "decorators-context-managers",
@@ -163,6 +193,36 @@
   ],
   "answer": 3,
   "explanation": "The exception is re-raised inside the generator at yield, so cleanup must be in a finally block to run."
+ },
+ {
+  "id": "q35f5ce88157",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "What does contextlib.ExitStack let you do?",
+  "options": [
+   "Turn a generator into a decorator",
+   "Run a with block in a separate thread",
+   "Suppress all exceptions automatically",
+   "Enter a dynamic number of context managers and unwind them all reliably"
+  ],
+  "answer": 3,
+  "explanation": "ExitStack collects callbacks and context managers and exits them in reverse order when the stack closes."
+ },
+ {
+  "id": "q5c8450d0589",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "hard",
+  "question": "What happens when a function decorated with @functools.cache is called with a list argument?",
+  "options": [
+   "It raises TypeError because the list is unhashable",
+   "The list is converted to a tuple automatically",
+   "The call is cached by the list's id",
+   "The cache is silently bypassed"
+  ],
+  "answer": 0,
+  "explanation": "The cache key is built from the arguments, so they must all be hashable."
  },
  {
   "id": "qe3aa8405e7a",

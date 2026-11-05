@@ -1,0 +1,197 @@
+[
+ {
+  "id": "q286d7cfe7d1",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "What is a Docker container?",
+  "options": [
+   "A type of Docker volume",
+   "A registry that stores images",
+   "A file that lists build steps",
+   "A runnable instance of an image with its own writable layer"
+  ],
+  "answer": 3,
+  "explanation": "A container is a running (or stopped) instance of an image, with a thin writable layer on top of the image layers."
+ },
+ {
+  "id": "q3b0cfb4fbd9",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which flag maps host port 80 to container port 8080?",
+  "options": [
+   "-p 8080:80",
+   "-e 80:8080",
+   "--expose 80",
+   "-p 80:8080"
+  ],
+  "answer": 3,
+  "explanation": "The -p flag takes hostPort:containerPort, so -p 80:8080 exposes container port 8080 on host port 80."
+ },
+ {
+  "id": "q58891f5e859",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which file contains the instructions Docker uses to build an image?",
+  "options": [
+   "docker.yml",
+   "image.json",
+   "Dockerfile",
+   "build.toml"
+  ],
+  "answer": 2,
+  "explanation": "A Dockerfile is a plain text file of instructions such as FROM, COPY, and RUN that docker build executes."
+ },
+ {
+  "id": "q63b93a24461",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command stops a running container gracefully by sending SIGTERM and then SIGKILL after a timeout?",
+  "options": [
+   "docker stop",
+   "docker kill",
+   "docker pause",
+   "docker halt"
+  ],
+  "answer": 0,
+  "explanation": "docker stop sends SIGTERM, waits a grace period (10 seconds by default), then sends SIGKILL."
+ },
+ {
+  "id": "q649b5c682bc",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command opens an interactive shell inside the already running container named web?",
+  "options": [
+   "docker run -it web sh",
+   "docker attach web sh",
+   "docker shell web",
+   "docker exec -it web sh"
+  ],
+  "answer": 3,
+  "explanation": "docker exec runs a new process inside a running container; docker run would create a new container instead."
+ },
+ {
+  "id": "q7cbc3aa71c1",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which docker run flag removes the container automatically when it exits?",
+  "options": [
+   "--rm",
+   "--restart",
+   "--detach",
+   "--init"
+  ],
+  "answer": 0,
+  "explanation": "--rm deletes the container and its anonymous volumes as soon as it exits."
+ },
+ {
+  "id": "q816ad88592c",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command lists all containers, including those that have stopped?",
+  "options": [
+   "docker ps --running",
+   "docker ps -a",
+   "docker container top",
+   "docker images -a"
+  ],
+  "answer": 1,
+  "explanation": "By default docker ps shows only running containers; -a includes stopped ones."
+ },
+ {
+  "id": "q852fa7b98ac",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command removes a stopped container?",
+  "options": [
+   "docker remove <container>",
+   "docker rm <container>",
+   "docker delete <container>",
+   "docker clean <container>"
+  ],
+  "answer": 1,
+  "explanation": "docker rm deletes a container that is not running; docker rm -f also removes a running one."
+ },
+ {
+  "id": "q85759d88594",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command prints the output a container has written to stdout and stderr?",
+  "options": [
+   "docker inspect <container>",
+   "docker top <container>",
+   "docker logs <container>",
+   "docker stats <container>"
+  ],
+  "answer": 2,
+  "explanation": "docker logs shows a container's captured stdout and stderr, and -f follows new output."
+ },
+ {
+  "id": "q8fc0a819317",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "What is a Docker image?",
+  "options": [
+   "A read-only, layered template used to create containers",
+   "A virtual machine with its own kernel",
+   "A Docker network definition",
+   "A running process on the host"
+  ],
+  "answer": 0,
+  "explanation": "An image is a stack of read-only filesystem layers plus metadata; containers are created from it."
+ },
+ {
+  "id": "q90d7523aa06",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command builds an image from the Dockerfile in the current directory and tags it myapp:1.0?",
+  "options": [
+   "docker make -t myapp:1.0 .",
+   "docker image create myapp:1.0 .",
+   "docker run -t myapp:1.0 .",
+   "docker build -t myapp:1.0 ."
+  ],
+  "answer": 3,
+  "explanation": "docker build -t sets the image name and tag, and the trailing dot is the build context."
+ },
+ {
+  "id": "qca2c6234561",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command creates and starts a new container from an image?",
+  "options": [
+   "docker start",
+   "docker run",
+   "docker exec",
+   "docker build"
+  ],
+  "answer": 1,
+  "explanation": "docker run creates a new container from an image and starts it; docker start only restarts an existing container."
+ },
+ {
+  "id": "qf3ee2e38937",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command lists the containers that are currently running?",
+  "options": [
+   "docker images",
+   "docker list",
+   "docker ps",
+   "docker status"
+  ],
+  "answer": 2,
+  "explanation": "docker ps lists running containers; docker ps -a includes stopped ones."
+ }
+]

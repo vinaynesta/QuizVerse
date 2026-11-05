@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qca242ba3d18",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is a cache hit?",
+  "options": [
+   "The cache is full and must evict an entry",
+   "The requested data is found in the cache",
+   "The origin server returns an error response",
+   "The client sends the same request twice"
+  ],
+  "answer": 1,
+  "explanation": "A hit is served from the cache without going to the slower backing store."
+ },
+ {
+  "id": "q12c7747ac5d",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "In REST, which HTTP method retrieves a resource without changing server state?",
+  "options": [
+   "POST",
+   "GET",
+   "DELETE",
+   "PUT"
+  ],
+  "answer": 1,
+  "explanation": "GET is a safe method, meaning it should not modify server state."
+ },
+ {
+  "id": "qc802664e9e7",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is the main tradeoff of adding an index?",
+  "options": [
+   "Faster writes and reads with no added cost",
+   "Faster reads on indexed columns, at the cost of extra storage and slower writes",
+   "Automatic encryption of the indexed columns",
+   "Removal of the need for a primary key"
+  ],
+  "answer": 1,
+  "explanation": "Indexes must be updated on each write and consume additional disk space."
+ },
+ {
+  "id": "q5f83a0334ce",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which header typically tells the server the media type of a request body?",
+  "options": [
+   "Content-Type",
+   "Host",
+   "Cache-Control",
+   "Accept-Language"
+  ],
+  "answer": 0,
+  "explanation": "Content-Type declares the format of the body, such as application/json."
+ },
+ {
+  "id": "q9f027349895",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "What does a CDN do?",
+  "options": [
+   "Caches content on edge servers close to users to reduce latency",
+   "Assigns IP addresses to client devices",
+   "Stores the primary copy of a relational database",
+   "Runs unit tests before each deployment"
+  ],
+  "answer": 0,
+  "explanation": "CDNs serve cacheable content from points of presence near users, offloading the origin."
+ },
+ {
+  "id": "qf7b00dcaab4",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "What does horizontal scaling mean?",
+  "options": [
+   "Adding more machines to share the load",
+   "Upgrading the CPU and RAM of a single machine",
+   "Splitting one codebase into separate deployable services",
+   "Increasing the disk size of a database volume"
+  ],
+  "answer": 0,
+  "explanation": "Horizontal scaling adds nodes; vertical scaling adds resources to a single node."
+ },
+ {
+  "id": "qc47d228ae05",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which status code means the requested resource was not found?",
+  "options": [
+   "408 Request Timeout",
+   "500 Internal Server Error",
+   "401 Unauthorized",
+   "404 Not Found"
+  ],
+  "answer": 3,
+  "explanation": "404 means no resource exists at the given URL; 5xx codes indicate server-side failures."
+ },
+ {
+  "id": "q6f9234d83a1",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "What is the origin in a CDN setup?",
+  "options": [
+   "The DNS resolver the CDN uses to look up hostnames",
+   "The authoritative server the CDN fetches content from on a cache miss",
+   "The browser that first requested the page",
+   "The service that evicts entries from the edge cache"
+  ],
+  "answer": 1,
+  "explanation": "Edge servers fall back to the origin when they do not have a valid cached copy."
+ },
+ {
+  "id": "q94dadb9d5ad",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What does redundancy aim to eliminate?",
+  "options": [
+   "Single points of failure, by duplicating critical components",
+   "Every form of network latency",
+   "The need for logging and monitoring",
+   "The need for backups of any kind"
+  ],
+  "answer": 0,
+  "explanation": "Redundant components let the system keep working when one instance fails."
+ },
+ {
+  "id": "qd44ec58bfc6",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "Which is a typical strength of relational databases?",
+  "options": [
+   "Unlimited horizontal write scaling by default",
+   "Enforcing a schema and supporting joins and multi-row transactions",
+   "Storing only unstructured blobs",
+   "Working without any indexes"
+  ],
+  "answer": 1,
+  "explanation": "Relational databases enforce constraints and relationships; scaling writes horizontally usually needs extra design."
+ }
+]

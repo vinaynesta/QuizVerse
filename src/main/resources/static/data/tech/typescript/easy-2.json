@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8bcf9c86e51",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which construct supports declaration merging when declared twice with the same name?",
+  "options": [
+   "Neither",
+   "type alias",
+   "Both interface and type alias",
+   "interface"
+  ],
+  "answer": 3,
+  "explanation": "Multiple interface declarations with the same name are merged; redeclaring a type alias is an error."
+ },
+ {
+  "id": "qe3197129a9a",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What return type does TypeScript infer for a function that has no return statement?",
+  "options": [
+   "never",
+   "null",
+   "void",
+   "any"
+  ],
+  "answer": 2,
+  "explanation": "A function that completes without returning a value is inferred to return void; never is for functions that never complete."
+ },
+ {
+  "id": "q8d31d0c409a",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "What happens with `let t: [string, number] = [1, \"a\"];`?",
+  "options": [
+   "It compiles and the values are reordered",
+   "It compiles because both types are present",
+   "It compiles but throws at runtime",
+   "A compile error, because tuple element order matters"
+  ],
+  "answer": 3,
+  "explanation": "Each tuple position has its own type, so a number cannot be placed where a string is expected."
+ },
+ {
+  "id": "q98b690e73f5",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What type is inferred for `const arr = [1, \"a\"];`?",
+  "options": [
+   "[number, string]",
+   "(string | number)[]",
+   "readonly [1, \"a\"]",
+   "any[]"
+  ],
+  "answer": 1,
+  "explanation": "Array literals infer an array of the union of element types, not a tuple, unless as const is used."
+ },
+ {
+  "id": "q668ad6d93ef",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "What is the default name of a TypeScript project's configuration file?",
+  "options": [
+   "ts.json",
+   "typescript.json",
+   "tsconfig.json",
+   "tsc.config.js"
+  ],
+  "answer": 2,
+  "explanation": "tsc looks for tsconfig.json to find compiler options and the files in a project."
+ },
+ {
+  "id": "q40c48c28491",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Dir { Up = \"UP\", Down = \"DOWN\" }`, what is the value of `Dir.Up`?",
+  "options": [
+   "\"UP\"",
+   "0",
+   "1",
+   "\"Up\""
+  ],
+  "answer": 0,
+  "explanation": "String enum members take exactly the string value they are initialized with."
+ },
+ {
+  "id": "qd49b5509fe7",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "What happens with `const p: { x: number } = { x: 1, y: 2 };`?",
+  "options": [
+   "It compiles and p has type { x: number; y: number }",
+   "It compiles and y is dropped",
+   "A compile error: object literal may only specify known properties",
+   "It compiles but y becomes undefined"
+  ],
+  "answer": 2,
+  "explanation": "Excess property checking flags extra properties in object literals assigned to a typed target."
+ },
+ {
+  "id": "qb8d933faa61",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Given `let v: unknown = \"hi\";`, which operation compiles without narrowing?",
+  "options": [
+   "v.toUpperCase();",
+   "let a: any = v;",
+   "let s: string = v;",
+   "let n = v + 1;"
+  ],
+  "answer": 1,
+  "explanation": "unknown is only assignable to unknown and any; using it in other ways requires narrowing first."
+ },
+ {
+  "id": "q34d782a54a8",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "In `function greet(name = \"World\") {}`, what type is inferred for `name`?",
+  "options": [
+   "any",
+   "string",
+   "\"World\"",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "A default value lets TypeScript infer the parameter type, widened to string."
+ },
+ {
+  "id": "qf24b30aec0f",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What is the correct annotation for a variable holding true or false?",
+  "options": [
+   "let done: bit",
+   "let done: bool",
+   "let done: flag",
+   "let done: boolean"
+  ],
+  "answer": 3,
+  "explanation": "The primitive type for true/false values is boolean."
+ }
+]

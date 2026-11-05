@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q06445608c5e",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "In the five-state process model, which state means a process is waiting to be assigned the CPU?",
+  "options": [
+   "Waiting",
+   "Ready",
+   "Running",
+   "Terminated"
+  ],
+  "answer": 1,
+  "explanation": "Ready processes can run and are waiting only for the CPU; Waiting processes are blocked on an event such as I/O."
+ },
+ {
+  "id": "q19cd2f78ba0",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "What is a context switch?",
+  "options": [
+   "Moving a page from disk into memory",
+   "Switching from user mode to kernel mode only",
+   "Saving the state of the current process and loading the saved state of another",
+   "Changing the active keyboard layout"
+  ],
+  "answer": 2,
+  "explanation": "A context switch saves the running process's context in its PCB and restores another's; it is pure overhead because no useful work is done during it."
+ },
+ {
+  "id": "q2f7c9bf4ea7",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "What is a process?",
+  "options": [
+   "A single CPU instruction",
+   "A program stored on disk",
+   "A program in execution",
+   "A file descriptor table"
+  ],
+  "answer": 2,
+  "explanation": "A process is an active program in execution with its own state, while a program on disk is a passive entity."
+ },
+ {
+  "id": "q79aeb77df7f",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Which data structure does the OS use to store information about each process, such as its state, registers and scheduling data?",
+  "options": [
+   "Page table",
+   "Process Control Block (PCB)",
+   "Inode",
+   "Interrupt vector"
+  ],
+  "answer": 1,
+  "explanation": "The PCB holds per-process information (state, program counter, registers, scheduling and memory info) that the kernel uses to manage the process."
+ },
+ {
+  "id": "q8dd99b393bb",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "On UNIX/Linux, what happens to a child process whose parent terminates without waiting for it?",
+  "options": [
+   "It stays a zombie forever",
+   "It is immediately killed by the kernel",
+   "It becomes an orphan and is adopted by init (or a subreaper)",
+   "It takes over its parent's PID"
+  ],
+  "answer": 2,
+  "explanation": "Orphaned processes are re-parented to init/systemd (or a designated subreaper), which reaps them when they exit."
+ },
+ {
+  "id": "qa183a0c5b5f",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Which resource do threads of the same process share?",
+  "options": [
+   "Address space (code, data and heap)",
+   "Stack",
+   "Program counter",
+   "Register set"
+  ],
+  "answer": 0,
+  "explanation": "Threads share their process's code, data, heap and open files, but each thread has its own program counter, registers and stack."
+ },
+ {
+  "id": "qa678d4ec918",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "A process that has finished executing but whose parent has not yet called wait() is called a:",
+  "options": [
+   "Orphan process",
+   "Daemon process",
+   "Zombie process",
+   "Idle process"
+  ],
+  "answer": 2,
+  "explanation": "A zombie keeps its process-table entry and exit status until the parent collects it with wait()."
+ }
+]

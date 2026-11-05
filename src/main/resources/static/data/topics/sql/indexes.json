@@ -1,0 +1,257 @@
+[
+ {
+  "id": "q06b52bcac93",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "easy",
+  "question": "Which index type is the default in PostgreSQL and MySQL InnoDB?",
+  "options": [
+   "Hash",
+   "Bitmap",
+   "B-tree",
+   "GIN"
+  ],
+  "answer": 2,
+  "explanation": "B-tree (B+tree in InnoDB) is the default index structure. Hash, bitmap and GIN indexes must be requested explicitly."
+ },
+ {
+  "id": "q07b37b80f17",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "easy",
+  "question": "What is a common cost of adding more indexes to a table?",
+  "options": [
+   "Loss of referential integrity",
+   "Data becomes unsorted",
+   "Slower writes, because each index must be maintained on INSERT, UPDATE and DELETE",
+   "Queries always return NULL"
+  ],
+  "answer": 2,
+  "explanation": "Every index must be updated when rows change, so write operations get slower as indexes are added."
+ },
+ {
+  "id": "q49a797cb7d2",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "easy",
+  "question": "What is the main benefit of an index?",
+  "options": [
+   "Smaller table size on disk",
+   "Automatic data validation",
+   "Prevention of concurrent access",
+   "Faster lookups on the indexed columns"
+  ],
+  "answer": 3,
+  "explanation": "An index lets the database locate matching rows without scanning the whole table, speeding up lookups and some sorts or joins."
+ },
+ {
+  "id": "q71b48cb99bf",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "easy",
+  "question": "Which statement creates an index on the col column of table t?",
+  "options": [
+   "CREATE INDEX idx_name ON t (col);",
+   "INDEX t ADD col;",
+   "CREATE TABLE INDEX idx_name;",
+   "ALTER t INDEX col;"
+  ],
+  "answer": 0,
+  "explanation": "CREATE INDEX name ON table (column) is the standard syntax for creating an index."
+ },
+ {
+  "id": "q08083c14b1e",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "For WHERE a = 5 AND b > 10, which composite index is most suitable?",
+  "options": [
+   "(b, a)",
+   "(a) only, since b can never be indexed",
+   "(a, b)",
+   "A separate index on b only"
+  ],
+  "answer": 2,
+  "explanation": "Put the equality column first and the range column second. The index can then seek to a = 5 and scan the b range within it."
+ },
+ {
+  "id": "q7ed536f9d5f",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "Why does a composite index on (a, b) generally not help a query filtering only on WHERE b = 10?",
+  "options": [
+   "Composite indexes can be used only for ORDER BY",
+   "Column b is not stored in the index at all",
+   "Entries are sorted by a first, so matching b values are scattered across the index",
+   "The database must rebuild the index for each query"
+  ],
+  "answer": 2,
+  "explanation": "A B-tree composite index is usable from its leftmost column; filtering on a later column alone usually cannot seek into it."
+ },
+ {
+  "id": "q863ac28530f",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "Which statement about adding indexes is true?",
+  "options": [
+   "Indexes never affect INSERT speed",
+   "Each additional index adds maintenance work on INSERT, UPDATE and DELETE",
+   "Indexes make UPDATE statements always faster",
+   "Indexes remove the need for table statistics"
+  ],
+  "answer": 1,
+  "explanation": "Every index must be maintained when indexed data changes, so write cost grows with the number of indexes."
+ },
+ {
+  "id": "q8a980ff7733",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "What is a covering index?",
+  "options": [
+   "An index that encrypts column values",
+   "An index that covers only the primary key",
+   "An index that spans multiple tables",
+   "An index containing every column a query needs, so table rows need not be read"
+  ],
+  "answer": 3,
+  "explanation": "When the index holds all referenced columns, the database can answer the query from the index alone, which is an index-only scan in PostgreSQL."
+ },
+ {
+  "id": "qaf92fcc131f",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "In PostgreSQL, what does CREATE INDEX CONCURRENTLY do?",
+  "options": [
+   "Builds the index without blocking concurrent inserts, updates and deletes, at the cost of a slower build",
+   "Creates the index only in memory",
+   "Builds the index using multiple tables at once",
+   "Builds the index while blocking all reads"
+  ],
+  "answer": 0,
+  "explanation": "A plain CREATE INDEX blocks writes to the table; CONCURRENTLY avoids that but cannot run inside a transaction block."
+ },
+ {
+  "id": "qcff0ce0cc8c",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "Why might WHERE LOWER(email) = 'a@b.com' not use a plain B-tree index on email?",
+  "options": [
+   "B-tree indexes cannot store text",
+   "The function is applied to the column, so the index on the raw column cannot be searched directly",
+   "LOWER drops the index automatically at runtime",
+   "LOWER is not allowed inside a WHERE clause"
+  ],
+  "answer": 1,
+  "explanation": "Wrapping an indexed column in a function usually prevents a plain index from being used. A functional index on LOWER(email) solves this."
+ },
+ {
+  "id": "q17124509c05",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "What is a partial index?",
+  "options": [
+   "An index that covers only some of a table's columns",
+   "An index that is rebuilt only during off-peak hours",
+   "An index that stays incomplete until VACUUM runs",
+   "An index built only on rows that satisfy a WHERE predicate"
+  ],
+  "answer": 3,
+  "explanation": "A partial index, such as CREATE INDEX ... WHERE status = 'open', indexes only the matching subset, saving space and write cost."
+ },
+ {
+  "id": "q1ec6096eb14",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "In MySQL InnoDB, what does a secondary index entry store to locate the full row?",
+  "options": [
+   "The physical disk address of the row",
+   "A copy of every column in the row",
+   "The row's primary key value",
+   "A hash of the entire row"
+  ],
+  "answer": 2,
+  "explanation": "InnoDB tables are clustered on the primary key, so secondary lookups go through the primary key index, which is why long primary keys make every secondary index larger."
+ },
+ {
+  "id": "q80ce93e3c43",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "What is required for a PostgreSQL index-only scan to avoid reading heap pages?",
+  "options": [
+   "All referenced columns must be in the index, and the visibility map must mark the relevant heap pages as all-visible",
+   "The query must use DISTINCT",
+   "The table must contain no NULL values",
+   "The index must be UNIQUE"
+  ],
+  "answer": 0,
+  "explanation": "The visibility map lets PostgreSQL skip heap access for pages where all tuples are known visible to everyone. VACUUM keeps the visibility map up to date."
+ },
+ {
+  "id": "qa90ee1de13b",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "Which PostgreSQL index type is generally best for jsonb containment (@>) queries and full-text search?",
+  "options": [
+   "B-tree",
+   "Hash",
+   "GIN",
+   "BRIN"
+  ],
+  "answer": 2,
+  "explanation": "GIN indexes map each element or lexeme to the rows containing it, which suits multi-valued columns."
+ },
+ {
+  "id": "qe58aad95395",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "Why generally can a B-tree index on name not serve WHERE name LIKE '%son'?",
+  "options": [
+   "The pattern has no fixed prefix, so the index cannot locate a starting point in sorted order",
+   "B-tree indexes cannot store text",
+   "LIKE disables all indexes in every database",
+   "B-tree indexes only support equality lookups"
+  ],
+  "answer": 0,
+  "explanation": "A B-tree is sorted by the leading characters, so without a fixed prefix the engine cannot seek to a starting position. A trigram or reverse-string index can help instead."
+ },
+ {
+  "id": "qeaa4a56d711",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "Why is an index on a boolean column that splits rows roughly 50/50 often unhelpful for filtering?",
+  "options": [
+   "Matching about half the rows makes a sequential scan cheaper than many index lookups",
+   "Boolean columns cannot be indexed",
+   "Indexes only support integer columns",
+   "The planner ignores all indexes on boolean columns by rule"
+  ],
+  "answer": 0,
+  "explanation": "When a predicate matches a large fraction of the table, reading the table sequentially is usually cheaper than random index lookups."
+ },
+ {
+  "id": "qf2984e62d09",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "What is a BRIN index best suited for in PostgreSQL?",
+  "options": [
+   "Very large tables where column values correlate with physical row order, such as append-only timestamps",
+   "Exact-match lookups on UUID columns",
+   "Small lookup tables with random primary keys",
+   "Enforcing uniqueness constraints"
+  ],
+  "answer": 0,
+  "explanation": "BRIN stores summaries per block range, so it is tiny but only effective when values are clustered on disk."
+ }
+]
