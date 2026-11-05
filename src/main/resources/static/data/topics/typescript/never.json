@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q9978c7371d3",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "What is the type `string & number`?",
+  "options": [
+   "never",
+   "string | number",
+   "unknown",
+   "object"
+  ],
+  "answer": 0,
+  "explanation": "No value can be both a string and a number, so the intersection reduces to never."
+ },
+ {
+  "id": "qba89a2578e0",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "Which type is assignable to every other type?",
+  "options": [
+   "object",
+   "unknown",
+   "any",
+   "never"
+  ],
+  "answer": 3,
+  "explanation": "never is the bottom type; unknown is the top type that everything is assignable to."
+ },
+ {
+  "id": "qeb413879710",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "Why is `function fail(msg: string): never { throw new Error(msg); }` typed as returning never?",
+  "options": [
+   "It returns an empty object",
+   "never is required on all functions that take parameters",
+   "It never completes normally, so it never produces a value",
+   "It returns undefined"
+  ],
+  "answer": 2,
+  "explanation": "never marks functions that always throw or loop forever."
+ }
+]

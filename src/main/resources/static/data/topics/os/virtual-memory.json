@@ -1,0 +1,317 @@
+[
+ {
+  "id": "q482f17e004f",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "What is virtual memory?",
+  "options": [
+   "Memory located on the GPU",
+   "A technique that lets processes run without being entirely in physical memory, giving each its own large address space",
+   "Cache memory inside the CPU",
+   "Read-only memory"
+  ],
+  "answer": 1,
+  "explanation": "Virtual memory separates logical from physical memory, so programs can be larger than RAM and only needed pages are kept resident."
+ },
+ {
+  "id": "q71011d0fdb4",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "What is swapping?",
+  "options": [
+   "Exchanging the values of two variables",
+   "Switching the CPU between user and kernel mode",
+   "Rotating log files",
+   "Moving a process (or its pages) between main memory and a backing store on disk"
+  ],
+  "answer": 3,
+  "explanation": "Swapping temporarily moves processes or pages out to disk to free memory and brings them back later."
+ },
+ {
+  "id": "qe5201a56ca3",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "What is a page fault?",
+  "options": [
+   "A corrupted page on disk",
+   "An error in the page-table format",
+   "A trap raised when a process accesses a page that is not currently in physical memory",
+   "A failed write to the CPU cache"
+  ],
+  "answer": 2,
+  "explanation": "When the referenced page's valid bit is not set, the MMU traps to the OS, which loads the page from backing store and restarts the instruction."
+ },
+ {
+  "id": "q2b742853b88",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does LRU replacement cause?",
+  "options": [
+   "9",
+   "12",
+   "15",
+   "10"
+  ],
+  "answer": 1,
+  "explanation": "Simulating LRU, which evicts the least recently used page, gives 12 faults, between optimal (9) and FIFO (15) on this string."
+ },
+ {
+  "id": "q81e83396c24",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "In pure demand paging, when is a page brought into memory?",
+  "options": [
+   "All pages are loaded when the process starts",
+   "Only when it is first referenced and causes a page fault",
+   "When the process is swapped out",
+   "At fixed time intervals"
+  ],
+  "answer": 1,
+  "explanation": "A lazy swapper never loads a page until it is needed, so a process starts with no pages resident."
+ },
+ {
+  "id": "q88bd05936d4",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does FIFO replacement cause?",
+  "options": [
+   "15",
+   "12",
+   "20",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "Simulating FIFO gives 15 faults: 3 cold misses plus 12 more, because FIFO keeps evicting pages like 0 that are reused soon."
+ },
+ {
+  "id": "q8cd249f7c49",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "Which page-replacement policy replaces the page that will not be used for the longest period of time in the future?",
+  "options": [
+   "LRU",
+   "FIFO",
+   "Optimal (OPT/MIN)",
+   "Second-chance"
+  ],
+  "answer": 2,
+  "explanation": "OPT gives the lowest possible fault rate but needs future knowledge, so it serves mainly as a benchmark."
+ },
+ {
+  "id": "qffe435c5564",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "What is the purpose of the dirty (modify) bit in a page-table entry?",
+  "options": [
+   "To avoid writing a victim page back to disk if it was not modified",
+   "To track how recently a page was used",
+   "To mark pages that are invalid",
+   "To mark pages shared between processes"
+  ],
+  "answer": 0,
+  "explanation": "If the dirty bit is clear, the disk copy is still current, so the victim frame can be reused without a write-back, roughly halving page-fault I/O."
+ },
+ {
+  "id": "q017d4d04660",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Memory access time is 200 ns and page-fault service time is 8 ms. To keep slowdown under 10% (EAT < 220 ns), the page-fault rate must be below about:",
+  "options": [
+   "1 in 1,000 accesses",
+   "1 in 10,000 accesses",
+   "1 in 400,000 accesses",
+   "1 in 40,000 accesses"
+  ],
+  "answer": 2,
+  "explanation": "220 > 200 + 7,999,800p gives p < 20 / 7,999,800, about 2.5 x 10^-6, which is fewer than 1 fault per 400,000 accesses."
+ },
+ {
+  "id": "q09945a8e022",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Memory access time is 200 ns, page-fault service time is 8 ms, and one access in 1000 causes a page fault. What is the approximate effective access time?",
+  "options": [
+   "200 ns",
+   "8 ms",
+   "8.2 microseconds",
+   "1.2 microseconds"
+  ],
+  "answer": 2,
+  "explanation": "EAT = 0.999 x 200 ns + 0.001 x 8,000,000 ns = 199.8 + 8000 = about 8200 ns, a 40x slowdown."
+ },
+ {
+  "id": "q0ec14fb14b4",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does the working-set model prevent thrashing?",
+  "options": [
+   "It uses FIFO replacement globally",
+   "It increases the page size",
+   "It disables demand paging",
+   "It tracks the pages each process referenced in a recent window and suspends a process if total demand exceeds available frames"
+  ],
+  "answer": 3,
+  "explanation": "If the sum of working-set sizes D exceeds the number of frames m, the OS swaps out a process, keeping multiprogramming as high as possible without thrashing."
+ },
+ {
+  "id": "q0ffe9620a26",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does copy-on-write (COW) make fork() efficient?",
+  "options": [
+   "The child shares the parent's stack permanently",
+   "The child gets a full copy of all parent pages immediately",
+   "Parent and child initially share pages marked read-only; a page is copied only when either process writes to it",
+   "Pages are written to disk before copying"
+  ],
+  "answer": 2,
+  "explanation": "COW defers copying until a write fault occurs, so a fork() followed by exec() copies almost nothing."
+ },
+ {
+  "id": "q24a1ea85b38",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Which page-replacement algorithms are immune to Belady's anomaly?",
+  "options": [
+   "FIFO only",
+   "FIFO and second-chance",
+   "All replacement algorithms",
+   "LRU and Optimal (stack algorithms)"
+  ],
+  "answer": 3,
+  "explanation": "In stack algorithms, the pages held with n frames are always a subset of those held with n + 1 frames, so adding frames can never add faults."
+ },
+ {
+  "id": "q3a00b9f9b2c",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does vfork() differ from fork() with copy-on-write?",
+  "options": [
+   "With vfork() the child uses the parent's address space directly and the parent is suspended until the child calls exec() or exits",
+   "vfork() copies all pages eagerly",
+   "vfork() creates a thread instead of a process",
+   "vfork() works only for kernel processes"
+  ],
+  "answer": 0,
+  "explanation": "vfork() shares the address space without even COW protection, so any change the child makes is visible to the parent; it is meant to be followed by exec() right away."
+ },
+ {
+  "id": "q651c2078b1c",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "What is Belady's anomaly?",
+  "options": [
+   "Page faults increase as the page size shrinks",
+   "LRU always produces more faults than FIFO",
+   "The optimal algorithm cannot be implemented",
+   "Increasing the number of frames increases the number of page faults for some reference strings"
+  ],
+  "answer": 3,
+  "explanation": "Under FIFO, adding frames can increase faults for some reference strings, which runs against the intuition that more memory always helps."
+ },
+ {
+  "id": "q6a59863fb13",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "In the page-fault-frequency (PFF) strategy, what does the OS do when a process's fault rate rises above the upper threshold?",
+  "options": [
+   "Removes a frame from the process",
+   "Terminates the process",
+   "Allocates the process another frame (or suspends it if none are free)",
+   "Switches to the Optimal algorithm"
+  ],
+  "answer": 2,
+  "explanation": "PFF gives frames to processes faulting too often and takes them from processes faulting rarely, controlling thrashing directly."
+ },
+ {
+  "id": "qafd5b816c3b",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does the second-chance (clock) page-replacement algorithm work?",
+  "options": [
+   "It always evicts the most recently used page",
+   "It picks a victim at random",
+   "In FIFO order, a page with reference bit 1 has its bit cleared and is skipped; the first page found with bit 0 is evicted",
+   "It evicts the page with the largest working set"
+  ],
+  "answer": 2,
+  "explanation": "Second-chance approximates LRU cheaply using the hardware reference bit; if every bit is set, it falls back to FIFO."
+ },
+ {
+  "id": "qb501973ea0d",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "For the reference string 1,2,3,4,1,2,5,1,2,3,4,5 with FIFO replacement, how many page faults occur with 3 frames and with 4 frames?",
+  "options": [
+   "9 and 10",
+   "9 and 8",
+   "10 and 9",
+   "12 and 10"
+  ],
+  "answer": 0,
+  "explanation": "FIFO gives 9 faults with 3 frames but 10 with 4 frames; this is the classic example of Belady's anomaly."
+ },
+ {
+  "id": "qd94b02ffec0",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Why can a naive long-term scheduler make thrashing worse?",
+  "options": [
+   "It disables the TLB",
+   "Seeing low CPU utilization, it admits more processes, which take frames from others and cause even more faults",
+   "It gives priority to I/O-bound processes",
+   "It reduces the time quantum"
+  ],
+  "answer": 1,
+  "explanation": "Low CPU utilization caused by paging looks like spare capacity, so raising the degree of multiprogramming feeds the cycle."
+ },
+ {
+  "id": "qdec736f9f39",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does the Optimal algorithm cause?",
+  "options": [
+   "12",
+   "9",
+   "8",
+   "15"
+  ],
+  "answer": 1,
+  "explanation": "OPT evicts the page whose next use is furthest away and gets 9 faults on this string, compared with 12 for LRU and 15 for FIFO."
+ },
+ {
+  "id": "qfa55f89dcd0",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "What is thrashing?",
+  "options": [
+   "A process spends more time paging than executing because it lacks enough frames for its working set",
+   "The CPU switches between too many threads",
+   "Disk fragmentation slows file access",
+   "Two processes repeatedly acquire and release the same lock"
+  ],
+  "answer": 0,
+  "explanation": "When processes keep faulting on pages they need right away, CPU utilization collapses while the paging device stays saturated."
+ }
+]

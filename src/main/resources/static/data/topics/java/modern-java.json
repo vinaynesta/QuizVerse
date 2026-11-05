@@ -60,6 +60,21 @@
   "explanation": "var enables local variable type inference; the variable is still statically typed."
  },
  {
+  "id": "qf5361abf8e9",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "Which method, added by the SequencedCollection interface in Java 21, returns the first element of a List?",
+  "options": [
+   "first()",
+   "getFirst()",
+   "peekHead()",
+   "front()"
+  ],
+  "answer": 1,
+  "explanation": "Java 21 added getFirst() and getLast() to sequenced collections such as List and Deque."
+ },
+ {
   "id": "q4b17a4cd95b",
   "subject": "java",
   "topic": "modern-java",
@@ -105,6 +120,21 @@
   "explanation": "Record components are backed by private final fields, making records shallowly immutable."
  },
  {
+  "id": "qa9b38a5fbfc",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "Given record Point(int x, int y), how do you read the x component of a Point p?",
+  "options": [
+   "p.getX()",
+   "p.x",
+   "p.x()",
+   "p.get(\"x\")"
+  ],
+  "answer": 2,
+  "explanation": "Records generate accessor methods named exactly after their components, and the fields themselves are private."
+ },
+ {
   "id": "qb6d1d21683d",
   "subject": "java",
   "topic": "modern-java",
@@ -118,6 +148,21 @@
   ],
   "answer": 3,
   "explanation": "Pattern matching for instanceof (Java 16) tests the type and binds a typed variable in one step."
+ },
+ {
+  "id": "q06717173726",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "In Java 21, when does case String s when s.isEmpty() -> ... match in a pattern switch?",
+  "options": [
+   "Whenever the selector is a String",
+   "Only when the selector is null",
+   "When the guard is true, regardless of type",
+   "When the selector is a String and the guard s.isEmpty() is true"
+  ],
+  "answer": 3,
+  "explanation": "A guarded pattern requires both the type pattern to match and the when condition to hold."
  },
  {
   "id": "q1ed13b13857",

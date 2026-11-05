@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf338ff27646",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst a = { n: { v: 1 } };\nconst b = { ...a };\nb.n.v = 2;\nconsole.log(a.n.v);",
+  "options": [
+   "1",
+   "undefined",
+   "TypeError",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Object spread makes a shallow copy, so a.n and b.n refer to the same nested object; structuredClone would make a deep copy."
+ },
+ {
+  "id": "qc314c3afef1",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What happens when f() is called?\nfunction f(a = b, b = 1) { return a; }",
+  "options": [
+   "NaN is returned",
+   "undefined is returned",
+   "1 is returned",
+   "ReferenceError is thrown"
+  ],
+  "answer": 3,
+  "explanation": "Parameters are initialized left to right, so b is still in its TDZ when the default for a is evaluated."
+ },
+ {
+  "id": "qcf08f79801c",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nsetTimeout(() => console.log(\"t\"));\nqueueMicrotask(() => console.log(\"m\"));\nconsole.log(\"s\");",
+  "options": [
+   "s m t",
+   "m s t",
+   "t m s",
+   "s t m"
+  ],
+  "answer": 0,
+  "explanation": "queueMicrotask schedules a microtask, which runs after synchronous code but before any timer callback."
+ },
+ {
+  "id": "q283e578de5a",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does Object.getPrototypeOf(Object.create(null)) return?",
+  "options": [
+   "null",
+   "Object.prototype",
+   "undefined",
+   "{}"
+  ],
+  "answer": 0,
+  "explanation": "Object.create(null) creates an object with no prototype, so it does not inherit even toString."
+ },
+ {
+  "id": "q6598ce03f90",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What happens when this runs?\nconst u = new User();\nclass User {}",
+  "options": [
+   "u is an empty User instance",
+   "TypeError: User is not a constructor",
+   "ReferenceError is thrown",
+   "u is undefined"
+  ],
+  "answer": 2,
+  "explanation": "Class declarations are hoisted like let, so using the class before its declaration hits the TDZ."
+ },
+ {
+  "id": "q22b8df17d36",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst o = Object.freeze({ inner: { v: 1 } });\no.inner.v = 2;\nconsole.log(o.inner.v);",
+  "options": [
+   "1",
+   "2",
+   "TypeError",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "Object.freeze is shallow: o's own properties cannot change, but the nested object is still mutable."
+ },
+ {
+  "id": "qd1e368e1a0b",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does true + true + \"1\" evaluate to?",
+  "options": [
+   "\"true true1\"",
+   "\"21\"",
+   "\"111\"",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "Evaluation is left to right: true + true is the number 2, then 2 + \"1\" concatenates to \"21\"."
+ },
+ {
+  "id": "q2cbad7de44a",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [] == false evaluate to?",
+  "options": [
+   "undefined",
+   "false",
+   "TypeError",
+   "true"
+  ],
+  "answer": 3,
+  "explanation": "false becomes 0 and [] becomes \"\" and then 0, so the loose comparison is 0 == 0, even though [] is truthy."
+ },
+ {
+  "id": "q1061f38d828",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does JSON.stringify({ a: undefined, b: () => 1, c: 1 }) return?",
+  "options": [
+   "'{\"a\":null,\"b\":null,\"c\":1}'",
+   "'{\"c\":1}'",
+   "'{\"a\":undefined,\"c\":1}'",
+   "TypeError"
+  ],
+  "answer": 1,
+  "explanation": "Properties whose values are undefined, functions or symbols are omitted from JSON object output."
+ },
+ {
+  "id": "q8f4d2758453",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What does this log?\nconsole.log(typeof foo);\nvar foo = 1;\nfunction foo() {}",
+  "options": [
+   "\"number\"",
+   "\"undefined\"",
+   "\"function\"",
+   "ReferenceError"
+  ],
+  "answer": 2,
+  "explanation": "Function declarations are initialized during hoisting, and the var declaration does not overwrite foo until the assignment executes."
+ }
+]

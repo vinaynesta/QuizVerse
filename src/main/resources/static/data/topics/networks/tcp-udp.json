@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q25dc5647195",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which of these transport protocols is connectionless?",
+  "options": [
+   "DCCP",
+   "TCP",
+   "SCTP",
+   "UDP"
+  ],
+  "answer": 3,
+  "explanation": "UDP sends independent datagrams with no handshake; TCP, SCTP and DCCP all set up connections."
+ },
+ {
+  "id": "q53e26af97ce",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "How large is the UDP header?",
+  "options": [
+   "20 bytes",
+   "16 bytes",
+   "32 bytes",
+   "8 bytes"
+  ],
+  "answer": 3,
+  "explanation": "The UDP header has four 2-byte fields: source port, destination port, length and checksum."
+ },
+ {
+  "id": "q67968f86a03",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which transport protocol provides reliable, ordered delivery of a byte stream?",
+  "options": [
+   "ICMP",
+   "TCP",
+   "UDP",
+   "IP"
+  ],
+  "answer": 1,
+  "explanation": "TCP uses sequence numbers, acknowledgments and retransmission to guarantee ordered, reliable delivery."
+ },
+ {
+  "id": "q85944af161d",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Why is UDP commonly used for live voice and video?",
+  "options": [
+   "It allows much larger packets than TCP",
+   "It encrypts media streams automatically",
+   "It avoids waiting for retransmissions, so late data is simply skipped",
+   "It guarantees delivery of every packet"
+  ],
+  "answer": 2,
+  "explanation": "For real-time media, a retransmitted packet usually arrives too late to be useful, so UDP's low latency wins."
+ },
+ {
+  "id": "qa7235928b03",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "What is the minimum size of a TCP header?",
+  "options": [
+   "20 bytes",
+   "16 bytes",
+   "8 bytes",
+   "40 bytes"
+  ],
+  "answer": 0,
+  "explanation": "A TCP header without options is 20 bytes; options can extend it up to 60 bytes."
+ },
+ {
+  "id": "qbd4fc700680",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which protocol uses sequence numbers so the receiver can reorder data and detect loss?",
+  "options": [
+   "TCP",
+   "ARP",
+   "ICMP",
+   "UDP"
+  ],
+  "answer": 0,
+  "explanation": "TCP numbers every byte so the receiver can reassemble in order and acknowledge what arrived."
+ },
+ {
+  "id": "qcc9aab918e3",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "medium",
+  "question": "What does the TCP receive window field advertise?",
+  "options": [
+   "The measured round-trip time",
+   "The maximum segment size",
+   "How many more bytes the receiver can currently buffer",
+   "The sender's congestion window"
+  ],
+  "answer": 2,
+  "explanation": "The receive window is flow control: it stops a fast sender from overrunning the receiver's buffer."
+ }
+]

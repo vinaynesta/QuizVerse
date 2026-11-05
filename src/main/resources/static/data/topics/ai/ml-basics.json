@@ -60,6 +60,51 @@
   "explanation": "Features are the measurable input attributes fed to a model; the target is what it predicts."
  },
  {
+  "id": "qb2f05918947",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "In supervised learning, what is a label?",
+  "options": [
+   "The known target value the model learns to predict",
+   "A tag marking a row as training or test data",
+   "A name given to each column of the dataset",
+   "The identifier of the trained model version"
+  ],
+  "answer": 0,
+  "explanation": "Labels are the ground-truth outputs paired with inputs, such as spam or not spam for an email."
+ },
+ {
+  "id": "qbe391cb77b6",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "What is underfitting?",
+  "options": [
+   "A model that memorizes noise in the training data",
+   "A model trained for too many epochs",
+   "A model too simple to capture the underlying pattern, so it performs poorly even on training data",
+   "A model whose test set is larger than its training set"
+  ],
+  "answer": 2,
+  "explanation": "An underfit model has high bias: it misses real structure, so both training and test error stay high."
+ },
+ {
+  "id": "q0789c0cf9b6",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "How does k-fold cross-validation work?",
+  "options": [
+   "The data is split into k parts; the model trains on k-1 parts and validates on the remaining one, rotating and averaging the results",
+   "The model is trained k times on the full dataset with different random seeds",
+   "Only the first k rows are used for validation",
+   "The features are split into k groups and one model is trained per group"
+  ],
+  "answer": 0,
+  "explanation": "Every example is used for validation exactly once, giving a more reliable estimate than a single split."
+ },
+ {
   "id": "q2fffcc402bd",
   "subject": "ai",
   "topic": "ml-basics",
@@ -88,6 +133,21 @@
   ],
   "answer": 3,
   "explanation": "A large gap between training and validation performance is the classic sign of overfitting."
+ },
+ {
+  "id": "q8664580b943",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "What is the purpose of one-hot encoding?",
+  "options": [
+   "Representing categorical values as binary vectors without implying an order between them",
+   "Compressing numeric features into a single bit",
+   "Removing outliers from numeric columns",
+   "Scaling features to the range 0 to 1"
+  ],
+  "answer": 0,
+  "explanation": "Encoding categories as integers would suggest a false ordering, so each category gets its own binary column instead."
  },
  {
   "id": "qd243fe68fac",
@@ -150,6 +210,21 @@
   "explanation": "More flexible models fit the training data more closely, lowering bias but becoming more sensitive to the particular sample."
  },
  {
+  "id": "q99709e0cf53",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "What is concept drift in a deployed model?",
+  "options": [
+   "The model's weights slowly change while it serves predictions",
+   "The relationship between inputs and the target changes over time, degrading model performance",
+   "Features are renamed in the database",
+   "The training loss keeps decreasing after deployment"
+  ],
+  "answer": 1,
+  "explanation": "Under concept drift the learned mapping becomes outdated, so monitoring and retraining are needed."
+ },
+ {
   "id": "qa6a8ac6e838",
   "subject": "ai",
   "topic": "ml-basics",
@@ -163,6 +238,21 @@
   ],
   "answer": 3,
   "explanation": "More data constrains a flexible model and reduces overfitting, but cannot fix an underpowered model or useless features."
+ },
+ {
+  "id": "qce0e5c37373",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Why use stratified splitting for an imbalanced classification dataset?",
+  "options": [
+   "It removes the majority class from the test set",
+   "It guarantees that the model will not overfit",
+   "It keeps class proportions consistent across splits so the rare class appears in each one",
+   "It sorts examples by label before training"
+  ],
+  "answer": 2,
+  "explanation": "Random splits can leave a fold with few or no rare examples, making evaluation unstable."
  },
  {
   "id": "qdf2eb4697a1",

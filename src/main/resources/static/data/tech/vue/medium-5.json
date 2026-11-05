@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5b702e60562",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "Which Vue Router hook lets a component react when the route changes but the same component instance is reused?",
+  "options": [
+   "onBeforeRouteLeave",
+   "onBeforeRouteUpdate",
+   "onMounted",
+   "beforeEnter"
+  ],
+  "answer": 1,
+  "explanation": "onBeforeRouteUpdate runs when params change, such as /users/1 to /users/2, while the component stays mounted."
+ },
+ {
+  "id": "q0450a194cac",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "medium",
+  "question": "Which hook runs when the component's reactive state changes, before the DOM is patched?",
+  "options": [
+   "onUpdated",
+   "onBeforeMount",
+   "onBeforeUpdate",
+   "onRenderTracked"
+  ],
+  "answer": 2,
+  "explanation": "onBeforeUpdate is useful to read the DOM state before Vue updates it."
+ },
+ {
+  "id": "q5f50f6d29f7",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "Which v-model modifier removes surrounding whitespace from the input value?",
+  "options": [
+   ".strip",
+   ".trim",
+   ".clean",
+   ".lazy"
+  ],
+  "answer": 1,
+  "explanation": ".trim trims the string before it is assigned to the bound variable."
+ },
+ {
+  "id": "q4260b73a32e",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does isRef(value) tell you?",
+  "options": [
+   "Whether the value is reactive()",
+   "Whether the value is a ref object",
+   "Whether the value is a template ref only",
+   "Whether the value is readonly"
+  ],
+  "answer": 1,
+  "explanation": "isRef checks for a ref, which is useful when a function accepts either refs or plain values."
+ },
+ {
+  "id": "q9ae82b587d0",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "In script setup, how do you declare TypeScript-only props without runtime options?",
+  "options": [
+   "defineProps({ title: String as TS })",
+   "props: Title[]",
+   "defineProps<{ title: string }>()",
+   "useProps<Title>()"
+  ],
+  "answer": 2,
+  "explanation": "Type-based declaration lets the compiler generate the runtime props from the type."
+ },
+ {
+  "id": "q1d85d94ab16",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "What does the Suspense component do with async components or async setup?",
+  "options": [
+   "Runs components in a Web Worker",
+   "Caches components between route changes",
+   "Delays rendering until the user scrolls",
+   "Shows fallback content until all async dependencies in its tree resolve"
+  ],
+  "answer": 3,
+  "explanation": "Suspense is still marked experimental in Vue 3 and coordinates loading state for nested async dependencies."
+ },
+ {
+  "id": "q7d6014df474",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "medium",
+  "question": "How do you stop a watcher created with watch() before the component unmounts?",
+  "options": [
+   "Call watch.off()",
+   "Call the stop function returned by watch()",
+   "Watchers cannot be stopped manually",
+   "Set the source to null"
+  ],
+  "answer": 1,
+  "explanation": "watch and watchEffect return a handle you can call to stop the watcher."
+ },
+ {
+  "id": "q40042b4591e",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "Which v-model modifier converts the input value to a number when possible?",
+  "options": [
+   ".number",
+   ".int",
+   ".parse",
+   ".numeric"
+  ],
+  "answer": 0,
+  "explanation": "v-model.number applies parseFloat and keeps the original string if parsing fails."
+ },
+ {
+  "id": "q7565c564eaa",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "medium",
+  "question": "How do you declare a prop that must be provided by the parent?",
+  "options": [
+   "{ type: String, needed: true }",
+   "{ type: String!, default: null }",
+   "{ mandatory: String }",
+   "{ type: String, required: true }"
+  ],
+  "answer": 3,
+  "explanation": "With required: true Vue warns in development when the parent omits the prop."
+ },
+ {
+  "id": "qf07d3665d4a",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "What does getCurrentInstance() return, and why is it discouraged in app code?",
+  "options": [
+   "The parent component's props",
+   "The root app instance used by plugins",
+   "The internal component instance, which is not a stable public API for application code",
+   "The current router route"
+  ],
+  "answer": 2,
+  "explanation": "Composables should rely on public APIs like inject or useAttrs instead of the internal instance."
+ }
+]

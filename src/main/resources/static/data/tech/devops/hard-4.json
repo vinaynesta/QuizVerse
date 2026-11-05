@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q070db41cfbc",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "What does git cherry-pick <commit> do?",
+  "options": [
+   "Applies the changes introduced by that commit onto the current branch as a new commit",
+   "Moves the branch pointer to that commit",
+   "Deletes that commit from history",
+   "Lists the commits not present in the current branch"
+  ],
+  "answer": 0,
+  "explanation": "Cherry-pick replays a single commit's diff on top of HEAD, producing a new commit with a different hash."
+ },
+ {
+  "id": "q6e664cad760",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "How does Git identify objects in its object database?",
+  "options": [
+   "By sequential integer IDs",
+   "By file modification time",
+   "By the file path",
+   "By a hash of the object's content (SHA-1, or SHA-256 in SHA-256 repositories)"
+  ],
+  "answer": 3,
+  "explanation": "Objects are content-addressed, so identical content always gets the same hash."
+ },
+ {
+  "id": "q98a0caf1c0d",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Which statement about passing a secret through an ARG in a Dockerfile is correct?",
+  "options": [
+   "ARG values are never stored anywhere in the image",
+   "Using --secret mounts is the only way ARG values appear in the image",
+   "BuildKit redacts all ARG values automatically",
+   "ARG values used during a build can be seen in docker history and image metadata"
+  ],
+  "answer": 3,
+  "explanation": "Build arguments are recorded in image history, so secrets should be passed with BuildKit --mount=type=secret instead."
+ },
+ {
+  "id": "q997a98ff5ea",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "A liveness probe checks an endpoint that also depends on a database. If the database goes down, what is a common risk?",
+  "options": [
+   "Pods are scheduled onto fewer nodes",
+   "The database is backed up automatically",
+   "All pods are restarted together, which worsens the outage",
+   "Services switch to ClusterIP type"
+  ],
+  "answer": 2,
+  "explanation": "Liveness should check only the process itself; coupling it to dependencies can cause a restart cascade across all replicas."
+ },
+ {
+  "id": "q6c51b8bc1ea",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "After a lost branch's tip hash is found in the reflog, which command recreates the branch at that commit?",
+  "options": [
+   "git restore-branch",
+   "git checkout --orphan <hash>",
+   "git branch <name> <hash>",
+   "git fetch --undelete"
+  ],
+  "answer": 2,
+  "explanation": "git branch <name> <hash> creates a new branch pointing at the given commit."
+ },
+ {
+  "id": "q0cce7cc896c",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What is a key tradeoff of blue-green deployment compared with a rolling update?",
+  "options": [
+   "It needs no extra capacity",
+   "It has no rollback path",
+   "It needs roughly double capacity during the switch, but rollback is a fast traffic switch back",
+   "It cannot be used with load balancers"
+  ],
+  "answer": 2,
+  "explanation": "Running two full environments costs extra capacity, but reverting is just repointing traffic to the old environment."
+ },
+ {
+  "id": "q0f851952444",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "You ran git reset --hard and lost a commit. Which command helps you find its hash so you can recover it?",
+  "options": [
+   "git stash list",
+   "git show-ref --deleted",
+   "git log --all --diff-filter=D",
+   "git reflog"
+  ],
+  "answer": 3,
+  "explanation": "The reflog records where HEAD and branch tips pointed, so the lost commit's hash is usually still listed there."
+ },
+ {
+  "id": "q5eefc5627e9",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What does initialDelaySeconds set on a probe?",
+  "options": [
+   "The interval between probes",
+   "The time to wait after the container starts before the first probe runs",
+   "The number of failures before action is taken",
+   "The timeout for each probe"
+  ],
+  "answer": 1,
+  "explanation": "initialDelaySeconds is the delay between container start and the first probe; periodSeconds controls the interval."
+ },
+ {
+  "id": "q4a75c9e36e4",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "What does a podAntiAffinity rule with topologyKey kubernetes.io/hostname express?",
+  "options": [
+   "Pods must run on the same node",
+   "Pods should be placed on nodes with the most free CPU",
+   "Pods must share a volume",
+   "Pods should avoid being scheduled onto a node that already runs matching pods"
+  ],
+  "answer": 3,
+  "explanation": "Anti-affinity spreads matching replicas across nodes; the hostname topology key means each node is one topology domain."
+ },
+ {
+  "id": "qba554db37f2",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "What does a BuildKit cache mount such as RUN --mount=type=cache do for a package manager directory?",
+  "options": [
+   "Copies the directory into the final image",
+   "Makes the image immutable",
+   "Persists the directory across builds without storing it in an image layer",
+   "Deletes the cache after the build finishes"
+  ],
+  "answer": 2,
+  "explanation": "Cache mounts speed up repeated builds while keeping the cached data out of the resulting image."
+ }
+]

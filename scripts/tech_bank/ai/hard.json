@@ -478,5 +478,245 @@
     ],
     "answer": 1,
     "explanation": "Models often behave differently on training examples, such as being more confident, which can reveal sensitive membership."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "What is concept drift in a deployed model?",
+    "options": [
+      "The model's weights slowly change while it serves predictions",
+      "The training loss keeps decreasing after deployment",
+      "Features are renamed in the database",
+      "The relationship between inputs and the target changes over time, degrading model performance"
+    ],
+    "answer": 3,
+    "explanation": "Under concept drift the learned mapping becomes outdated, so monitoring and retraining are needed."
+  },
+  {
+    "topic": "ml-basics",
+    "question": "Why use stratified splitting for an imbalanced classification dataset?",
+    "options": [
+      "It removes the majority class from the test set",
+      "It guarantees that the model will not overfit",
+      "It keeps class proportions consistent across splits so the rare class appears in each one",
+      "It sorts examples by label before training"
+    ],
+    "answer": 2,
+    "explanation": "Random splits can leave a fold with few or no rare examples, making evaluation unstable."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "Why are decision trees largely insensitive to monotonic transformations of a feature, such as taking a logarithm?",
+    "options": [
+      "Trees normalize all features automatically before training",
+      "Splits depend only on the ordering of feature values, which monotonic transformations preserve",
+      "Trees ignore numeric features entirely",
+      "Logarithms are applied internally to every feature"
+    ],
+    "answer": 1,
+    "explanation": "A threshold split on x corresponds to an equivalent threshold on log(x), so the tree structure is unchanged."
+  },
+  {
+    "topic": "supervised-learning",
+    "question": "In gradient boosting, what is the usual effect of a smaller learning rate (shrinkage)?",
+    "options": [
+      "Each tree contributes less, so more trees are needed but generalization usually improves",
+      "Fewer trees are needed and the model trains faster",
+      "The individual trees become deeper",
+      "The model switches from boosting to bagging"
+    ],
+    "answer": 0,
+    "explanation": "Shrinkage slows learning so the ensemble takes smaller corrective steps, which acts as regularization."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "Which algorithm is typically used to fit the parameters of a Gaussian mixture model?",
+    "options": [
+      "Backpropagation",
+      "Gradient boosting",
+      "The Apriori algorithm",
+      "Expectation-maximization"
+    ],
+    "answer": 3,
+    "explanation": "EM alternates between computing soft cluster responsibilities and re-estimating means, covariances and weights."
+  },
+  {
+    "topic": "unsupervised-learning",
+    "question": "Why are distances between well-separated clusters in a t-SNE plot unreliable?",
+    "options": [
+      "t-SNE always places clusters at equal distances",
+      "t-SNE only works on two-dimensional input data",
+      "t-SNE preserves local neighborhoods, but global distances and cluster sizes are not meaningfully preserved",
+      "t-SNE uses labels to position clusters"
+    ],
+    "answer": 2,
+    "explanation": "Interpret t-SNE for local grouping; gaps and relative sizes between clusters can be artifacts of the method."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "In multiclass classification, how does macro-averaged F1 differ from micro-averaged F1?",
+    "options": [
+      "Macro uses only the largest class, while micro uses only the smallest",
+      "Macro averages per-class F1 scores equally, while micro pools all counts so frequent classes dominate",
+      "Macro is computed on training data, while micro is computed on test data",
+      "They are always equal for any dataset"
+    ],
+    "answer": 1,
+    "explanation": "Macro-F1 highlights performance on rare classes, while micro-F1 reflects overall per-example performance."
+  },
+  {
+    "topic": "evaluation-metrics",
+    "question": "Which kind of prediction does log loss (cross-entropy) penalize most heavily?",
+    "options": [
+      "A confident prediction that turns out to be wrong",
+      "An uncertain prediction that turns out to be right",
+      "A correct prediction made with 100% confidence",
+      "Any prediction for the majority class"
+    ],
+    "answer": 0,
+    "explanation": "The penalty -log(p) grows without bound as the probability assigned to the true class approaches zero."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "Which technique is commonly used to handle exploding gradients, especially in RNNs?",
+    "options": [
+      "Removing all activation functions",
+      "Increasing the learning rate",
+      "Initializing all weights to zero",
+      "Gradient clipping"
+    ],
+    "answer": 3,
+    "explanation": "Clipping rescales gradients whose norm exceeds a threshold, preventing a single huge update from destabilizing training."
+  },
+  {
+    "topic": "neural-networks",
+    "question": "Why is He (Kaiming) initialization preferred over Xavier initialization for ReLU networks?",
+    "options": [
+      "It initializes all weights to exactly one",
+      "It removes the need for an activation function",
+      "It scales weight variance by 2/fan_in to compensate for ReLU zeroing about half the activations",
+      "It makes every layer output the same value"
+    ],
+    "answer": 2,
+    "explanation": "Keeping activation variance stable across layers helps very deep ReLU networks train without signals vanishing."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "What does a 1x1 convolution do?",
+    "options": [
+      "Doubles the spatial resolution of the feature map",
+      "Mixes information across channels at each spatial position, often to change the number of channels cheaply",
+      "Applies max pooling over a 1x1 window",
+      "Leaves the input completely unchanged"
+    ],
+    "answer": 1,
+    "explanation": "A 1x1 convolution is a per-pixel linear layer over channels, used for bottlenecks and channel projection."
+  },
+  {
+    "topic": "deep-learning-architectures",
+    "question": "How do diffusion models generate new samples?",
+    "options": [
+      "They learn to reverse a gradual noising process and iteratively denoise starting from random noise",
+      "They pit a generator against a discriminator in a single step",
+      "They retrieve the most similar training image",
+      "They copy patches from training images and stitch them together"
+    ],
+    "answer": 0,
+    "explanation": "Training teaches a network to predict and remove noise, so sampling runs many denoising steps starting from pure noise."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "Why do transformers typically use layer normalization rather than batch normalization?",
+    "options": [
+      "Batch normalization cannot be applied to floating-point values",
+      "Layer norm removes the need for attention",
+      "Batch normalization only works with recurrent networks",
+      "Layer norm normalizes across features for each token, so it does not depend on batch statistics or varying sequence lengths"
+    ],
+    "answer": 3,
+    "explanation": "Per-token normalization behaves the same in training and inference and handles padded variable-length sequences well."
+  },
+  {
+    "topic": "nlp-transformers",
+    "question": "What is the KV cache used for in autoregressive transformer inference?",
+    "options": [
+      "Caching full responses to repeated user prompts",
+      "Storing the vocabulary used by the tokenizer",
+      "Storing the keys and values of previous tokens so they are not recomputed at each generation step",
+      "Saving optimizer state between training runs"
+    ],
+    "answer": 2,
+    "explanation": "With a KV cache, each new token computes attention against cached keys and values, trading memory for speed."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "How does direct preference optimization (DPO) differ from RLHF with PPO?",
+    "options": [
+      "It requires no human preference data at all",
+      "It optimizes the model directly on preference pairs with a classification-style loss, without a separate reward model or RL loop",
+      "It trains only the tokenizer",
+      "It replaces pre-training with reinforcement learning from scratch"
+    ],
+    "answer": 1,
+    "explanation": "DPO derives a loss from preferred and rejected responses, simplifying alignment training compared with PPO-based RLHF."
+  },
+  {
+    "topic": "llms-prompting",
+    "question": "What is knowledge distillation?",
+    "options": [
+      "Training a smaller student model to match the outputs of a larger teacher model",
+      "Removing duplicate documents from a training corpus",
+      "Extracting facts from a model into a database",
+      "Merging two models by averaging their weights"
+    ],
+    "answer": 0,
+    "explanation": "The student learns from the teacher's soft probability outputs, often retaining much of its quality at lower cost."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What does the lost-in-the-middle effect describe for long-context LLMs?",
+    "options": [
+      "Models forget the system prompt after the first reply",
+      "Retrieved documents are dropped if the index is too large",
+      "Tokens in the middle of a word are lost during tokenization",
+      "Models tend to use information at the start and end of a long context better than information in the middle"
+    ],
+    "answer": 3,
+    "explanation": "This positional bias is one reason RAG systems limit and order retrieved passages carefully."
+  },
+  {
+    "topic": "rag-agents",
+    "question": "What does reciprocal rank fusion do in hybrid search?",
+    "options": [
+      "Averages the embedding vectors of all retrieved documents",
+      "Keeps only results that appear first in both lists",
+      "Combines ranked result lists by summing 1/(k + rank) per document, so raw scores need not be comparable",
+      "Re-embeds the query until both retrievers agree"
+    ],
+    "answer": 2,
+    "explanation": "Using ranks instead of scores makes it easy to merge keyword and vector results whose score scales differ."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is a data poisoning attack?",
+    "options": [
+      "Sending many requests to overload a model server",
+      "Injecting crafted examples into training data to corrupt a model's behavior or plant a backdoor",
+      "Stealing a model's weights from storage",
+      "Asking a model questions to extract its system prompt"
+    ],
+    "answer": 1,
+    "explanation": "Poisoned samples can cause targeted misbehavior, such as misclassifying inputs that contain a hidden trigger."
+  },
+  {
+    "topic": "ai-ethics-safety",
+    "question": "What is an adversarial example?",
+    "options": [
+      "An input with small, often imperceptible perturbations that cause a model to make a confident mistake",
+      "A training example with an incorrect label added by accident",
+      "A test case written to compare two models",
+      "An example that a model has never seen before"
+    ],
+    "answer": 0,
+    "explanation": "Adversarial examples exploit sensitivity in the model's decision boundary and expose robustness gaps."
   }
 ]

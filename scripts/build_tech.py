@@ -8,6 +8,10 @@ Banks: <tech-bank-dir>/<subject>/{easy,medium,hard}.json, each an array of
 Output: <data-dir>/tech/<subject>/<level>-<n>.json, and a "tech" entry in <data-dir>/index.json
 (replaced if already there, so the script can run again). Quizzes are untimed practice with instant
 feedback, like the Java practice set. Quizzes of one subject and level never share questions.
+
+Grow a bank by appending to the end of its file, never by inserting or reordering. Questions are shuffled in
+blocks of BLOCK, each with its own seed, so existing quizzes keep their questions (and users' best scores keep
+meaning the same quiz) and new questions form new quizzes after them.
 """
 import json
 import random
@@ -29,9 +33,18 @@ SUBJECTS = [
     ("react", "React"),
     ("vue", "Vue.js"),
     ("ai", "Artificial Intelligence"),
+    ("sql", "SQL & Databases"),
+    ("nodejs", "Node.js"),
+    ("devops", "Git & DevOps"),
+    ("system-design", "System Design"),
+    ("javascript", "JavaScript"),
+    ("typescript", "TypeScript"),
+    ("os", "Operating Systems"),
+    ("networks", "Computer Networks"),
 ]
 LEVELS = [("easy", "Easy"), ("medium", "Medium"), ("hard", "Hard")]
 QUESTIONS_PER_QUIZ = 10
+BLOCK = 40  # the original bank size; must stay a multiple of QUESTIONS_PER_QUIZ
 KEYS = {"topic", "question", "options", "answer", "explanation"}
 
 
@@ -63,9 +76,14 @@ def main(bank_dir, data_dir):
             bank = json.loads((banks / subject / f"{level}.json").read_text())
             validate(subject, level, bank)
             key = f"tech/{subject}/{level}"
-            rng = random.Random(key)
-            balance_answers(bank, rng)
-            rng.shuffle(bank)
+            shuffled = []
+            for b in range(0, len(bank), BLOCK):
+                block = bank[b:b + BLOCK]
+                rng = random.Random(key if b == 0 else f"{key}#{b // BLOCK}")
+                balance_answers(block, rng)
+                rng.shuffle(block)
+                shuffled += block
+            bank = shuffled
             quizzes = []
             for n in range(len(bank) // QUESTIONS_PER_QUIZ):
                 chunk = bank[n * QUESTIONS_PER_QUIZ: (n + 1) * QUESTIONS_PER_QUIZ]
@@ -85,8 +103,8 @@ def main(bank_dir, data_dir):
     index["exams"] = [e for e in index["exams"] if e["id"] != "tech"]
     index["exams"].append({
         "id": "tech", "name": "Tech Interview Prep",
-        "description": "DSA, Java, Python, Spring Boot, React, Vue and AI. Untimed practice with an explanation "
-                       "after every answer.",
+        "description": "DSA, Java, Python, JavaScript, TypeScript, Spring Boot, React, Vue, Node.js, SQL, OS, Networks, "
+                       "System Design, DevOps and AI. Untimed practice with an explanation after every answer.",
         "stages": [{"id": "practice", "name": "Practice", "unavailable": [], "sections": sections}],
     })
     index_path.write_text(json.dumps(index, indent=2, ensure_ascii=False) + "\n")

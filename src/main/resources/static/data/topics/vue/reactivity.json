@@ -45,6 +45,36 @@
   "explanation": "reactive() works by creating a Proxy, so it only works with object types, not primitives."
  },
  {
+  "id": "q6866c99262c",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "In the Options API, which option returns the component's reactive state object?",
+  "options": [
+   "data",
+   "props",
+   "state",
+   "setup"
+  ],
+  "answer": 0,
+  "explanation": "The data option is a function returning an object whose properties become reactive and available on this."
+ },
+ {
+  "id": "q81c78ae4319",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "In script setup, how do you update const count = ref(0) to 5?",
+  "options": [
+   "setCount(5)",
+   "count = 5",
+   "count(5)",
+   "count.value = 5"
+  ],
+  "answer": 3,
+  "explanation": "Refs are changed through their .value property in JavaScript code."
+ },
+ {
   "id": "qb31595d0c94",
   "subject": "vue",
   "topic": "reactivity",
@@ -58,6 +88,21 @@
   ],
   "answer": 1,
   "explanation": "Refs expose their inner value through the .value property in JavaScript."
+ },
+ {
+  "id": "q4260b73a32e",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does isRef(value) tell you?",
+  "options": [
+   "Whether the value is reactive()",
+   "Whether the value is a ref object",
+   "Whether the value is a template ref only",
+   "Whether the value is readonly"
+  ],
+  "answer": 1,
+  "explanation": "isRef checks for a ref, which is useful when a function accepts either refs or plain values."
  },
  {
   "id": "q6bee3e9aeb5",
@@ -105,6 +150,21 @@
   "explanation": "readonly() returns a proxy that reflects the original's changes but blocks writes through it."
  },
  {
+  "id": "q8105f36be8a",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "What does toRef(state, 'count') create from const state = reactive({ count: 0 })?",
+  "options": [
+   "A copy of the value that is no longer reactive",
+   "A computed that is read-only",
+   "A ref that stays linked to state.count in both directions",
+   "A new reactive object containing only count"
+  ],
+  "answer": 2,
+  "explanation": "toRef creates a ref that reads and writes the source property, so changes sync both ways."
+ },
+ {
   "id": "qacefe6db577",
   "subject": "vue",
   "topic": "reactivity",
@@ -120,6 +180,36 @@
   "explanation": "reactive() is deep by default, wrapping nested objects in proxies when they are accessed."
  },
  {
+  "id": "qb8f2e891f24",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "medium",
+  "question": "Why is the Map or Set held in reactive() still reactive when you call map.set()?",
+  "options": [
+   "Vue's proxies instrument collection methods like set, add and delete",
+   "Vue polls the collection for changes",
+   "Maps are converted to plain objects",
+   "Only Map is supported, not Set"
+  ],
+  "answer": 0,
+  "explanation": "Vue 3 provides special proxy handlers for Map, Set, WeakMap and WeakSet."
+ },
+ {
+  "id": "q1ef7056da42",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "What does toRaw(proxy) return?",
+  "options": [
+   "A ref wrapping the proxy",
+   "A deep copy of the proxy",
+   "The original object behind a reactive or readonly proxy",
+   "A frozen snapshot of the proxy"
+  ],
+  "answer": 2,
+  "explanation": "toRaw gives the underlying object, which can be read or written without tracking or triggering."
+ },
+ {
   "id": "q50c6a041b2d",
   "subject": "vue",
   "topic": "reactivity",
@@ -133,6 +223,21 @@
   ],
   "answer": 0,
   "explanation": "Destructuring copies a primitive out of the proxy, so the local variable is disconnected from reactivity."
+ },
+ {
+  "id": "q7f304fd5e2b",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "What does markRaw(obj) do?",
+  "options": [
+   "Marks the object so Vue never converts it into a proxy",
+   "Makes the object readonly",
+   "Returns the raw object behind a proxy",
+   "Freezes the object with Object.freeze"
+  ],
+  "answer": 0,
+  "explanation": "markRaw is useful for large third-party instances like map libraries that should not be made reactive."
  },
  {
   "id": "q90181ba5292",
@@ -163,6 +268,21 @@
   ],
   "answer": 3,
   "explanation": "Refs are not unwrapped when accessed as elements of reactive arrays or native collections."
+ },
+ {
+  "id": "qa802bc0e77c",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "Given const a = ref({ n: 1 }), how is a.value treated?",
+  "options": [
+   "It stays a plain object, so nested changes are not tracked",
+   "It is converted with reactive(), so a.value.n changes are tracked deeply",
+   "It becomes a shallowRef automatically",
+   "It becomes readonly"
+  ],
+  "answer": 1,
+  "explanation": "ref() makes object values deeply reactive by passing them to reactive(); use shallowRef to avoid that."
  },
  {
   "id": "qff6986f4c8b",

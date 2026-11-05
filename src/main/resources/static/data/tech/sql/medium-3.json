@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q273bf296fb2",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "How does COUNT(DISTINCT col) treat NULL values?",
+  "options": [
+   "It counts NULL as one distinct value",
+   "It returns an error",
+   "It counts each NULL row separately",
+   "It ignores NULL values"
+  ],
+  "answer": 3,
+  "explanation": "All aggregate functions that take an argument ignore NULL inputs, and that includes the DISTINCT form of COUNT."
+ },
+ {
+  "id": "qc8cc908a75c",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "In PostgreSQL, how many NULL values can a UNIQUE column that is not NOT NULL hold?",
+  "options": [
+   "Only one",
+   "None, because NULLs are rejected",
+   "Exactly two",
+   "As many as needed, because NULLs are not equal to each other"
+  ],
+  "answer": 3,
+  "explanation": "NULLs are treated as distinct for UNIQUE checks in PostgreSQL, so multiple NULL rows are allowed. PostgreSQL 15 and later support NULLS NOT DISTINCT to change this."
+ },
+ {
+  "id": "q76f8baf371e",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "In a LEFT JOIN, what fills the right-side columns when a left row has no match?",
+  "options": [
+   "Zero",
+   "The row is removed",
+   "The left row's own values",
+   "NULL"
+  ],
+  "answer": 3,
+  "explanation": "Unmatched left rows are kept and every right-side column is set to NULL."
+ },
+ {
+  "id": "q44f2fbaecdb",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Why is SELECT * discouraged in production code?",
+  "options": [
+   "It returns duplicate rows",
+   "It is not allowed in PostgreSQL",
+   "It always disables indexes",
+   "It fetches unneeded columns and can break when the table schema changes"
+  ],
+  "answer": 3,
+  "explanation": "Fetching only needed columns reduces I/O and network traffic and makes queries robust to added columns. It can also prevent covering index use."
+ },
+ {
+  "id": "q8a980ff7733",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "What is a covering index?",
+  "options": [
+   "An index that encrypts column values",
+   "An index that covers only the primary key",
+   "An index that spans multiple tables",
+   "An index containing every column a query needs, so table rows need not be read"
+  ],
+  "answer": 3,
+  "explanation": "When the index holds all referenced columns, the database can answer the query from the index alone, which is an index-only scan in PostgreSQL."
+ },
+ {
+  "id": "qd71b4973bc3",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "medium",
+  "question": "Why would a designer intentionally denormalize a schema?",
+  "options": [
+   "To remove all foreign keys",
+   "To speed up frequent reads by reducing joins, accepting some redundancy",
+   "To reduce the number of tables to one",
+   "To eliminate the need for indexes"
+  ],
+  "answer": 1,
+  "explanation": "Denormalization trades write complexity and redundancy for faster reads, often in reporting or read-heavy workloads."
+ },
+ {
+  "id": "q82f198bf437",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "For scores 90, 90, 80, what do RANK() and DENSE_RANK() assign to the score 80?",
+  "options": [
+   "RANK 3, DENSE_RANK 2",
+   "RANK 2, DENSE_RANK 2",
+   "RANK 2, DENSE_RANK 3",
+   "RANK 1, DENSE_RANK 3"
+  ],
+  "answer": 0,
+  "explanation": "RANK leaves a gap after the tie, so 80 gets 3. DENSE_RANK does not leave gaps, so 80 gets 2."
+ },
+ {
+  "id": "q40591e5cd75",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What does SELECT ... FOR UPDATE do in PostgreSQL?",
+  "options": [
+   "Locks the selected rows so other transactions cannot update or delete them until commit",
+   "Locks the entire table for reads",
+   "Creates a snapshot copy of the table",
+   "Prevents the query from being committed"
+  ],
+  "answer": 0,
+  "explanation": "FOR UPDATE takes row-level locks on the rows returned, blocking concurrent modifications until the transaction ends."
+ },
+ {
+  "id": "q863ac28530f",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "Which statement about adding indexes is true?",
+  "options": [
+   "Indexes never affect INSERT speed",
+   "Each additional index adds maintenance work on INSERT, UPDATE and DELETE",
+   "Indexes make UPDATE statements always faster",
+   "Indexes remove the need for table statistics"
+  ],
+  "answer": 1,
+  "explanation": "Every index must be maintained when indexed data changes, so write cost grows with the number of indexes."
+ },
+ {
+  "id": "qc056c364433",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "What does ROW_NUMBER() do with tied ORDER BY values?",
+  "options": [
+   "It assigns distinct sequential numbers and breaks ties arbitrarily",
+   "It gives tied rows the same number",
+   "It skips numbers after each tie",
+   "It returns NULL for tied rows"
+  ],
+  "answer": 0,
+  "explanation": "ROW_NUMBER always produces unique consecutive numbers. Tied rows get different numbers, and their relative order is not guaranteed unless the ORDER BY is unique."
+ }
+]

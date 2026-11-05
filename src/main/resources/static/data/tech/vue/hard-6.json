@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q76130bc7284",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "How does v-model on a <select multiple> bind its value?",
+  "options": [
+   "To a comma-separated string",
+   "To the last selected option only",
+   "To a Set of selected elements",
+   "To an array of the selected option values"
+  ],
+  "answer": 3,
+  "explanation": "For multiple selects, the bound variable should be an array."
+ },
+ {
+  "id": "qb23a7e98a09",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "What does declaring emits: ['click'] on a component change about a native click listener the parent adds?",
+  "options": [
+   "Nothing; native and component listeners always both fire",
+   "The click event is prevented from bubbling",
+   "The listener is treated as a component event and no longer falls through to the root element as a native listener",
+   "The component emits click twice"
+  ],
+  "answer": 2,
+  "explanation": "Declared events are removed from $attrs, so the parent's @click only fires when the child emits it."
+ },
+ {
+  "id": "q24265f316d6",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "Why does a composable call onScopeDispose instead of onUnmounted for cleanup?",
+  "options": [
+   "It also works when the composable is used inside an effectScope outside of a component",
+   "onUnmounted is not allowed in composables",
+   "onScopeDispose runs before every render",
+   "It runs earlier than setup"
+  ],
+  "answer": 0,
+  "explanation": "onScopeDispose cleans up whenever the active effect scope stops, which includes but is not limited to component unmount."
+ },
+ {
+  "id": "q7f304fd5e2b",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "What does markRaw(obj) do?",
+  "options": [
+   "Marks the object so Vue never converts it into a proxy",
+   "Makes the object readonly",
+   "Returns the raw object behind a proxy",
+   "Freezes the object with Object.freeze"
+  ],
+  "answer": 0,
+  "explanation": "markRaw is useful for large third-party instances like map libraries that should not be made reactive."
+ },
+ {
+  "id": "q300393bd35c",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "hard",
+  "question": "In Vue 3.4+, a computed returns the same primitive value after its dependencies change. What happens to effects depending on it?",
+  "options": [
+   "They are not triggered, because the computed value did not change",
+   "They always re-run",
+   "Vue throws a warning",
+   "The computed is recreated"
+  ],
+  "answer": 0,
+  "explanation": "Since 3.4, computed only triggers dependents when its computed value actually changes."
+ },
+ {
+  "id": "q5b6ab1b0bb4",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "In Pinia, how do you react to every change of a store's state?",
+  "options": [
+   "store.$watch(callback)",
+   "store.$subscribe(callback)",
+   "store.on('change', callback)",
+   "store.$listen(callback)"
+  ],
+  "answer": 1,
+  "explanation": "$subscribe calls the callback after state mutations, including $patch, and receives mutation details."
+ },
+ {
+  "id": "qa802bc0e77c",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "Given const a = ref({ n: 1 }), how is a.value treated?",
+  "options": [
+   "It stays a plain object, so nested changes are not tracked",
+   "It is converted with reactive(), so a.value.n changes are tracked deeply",
+   "It becomes a shallowRef automatically",
+   "It becomes readonly"
+  ],
+  "answer": 1,
+  "explanation": "ref() makes object values deeply reactive by passing them to reactive(); use shallowRef to avoid that."
+ },
+ {
+  "id": "q1ef7056da42",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "hard",
+  "question": "What does toRaw(proxy) return?",
+  "options": [
+   "A ref wrapping the proxy",
+   "A deep copy of the proxy",
+   "The original object behind a reactive or readonly proxy",
+   "A frozen snapshot of the proxy"
+  ],
+  "answer": 2,
+  "explanation": "toRaw gives the underlying object, which can be read or written without tracking or triggering."
+ },
+ {
+  "id": "q5d88ce0874b",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "hard",
+  "question": "A child with multiple root nodes receives class=\"big\" from its parent and does not bind $attrs. What happens?",
+  "options": [
+   "The class is silently applied to the parent",
+   "The class goes on the first root node",
+   "The class goes on every root node",
+   "Vue warns that fallthrough attributes could not be applied automatically"
+  ],
+  "answer": 3,
+  "explanation": "With multiple roots there is no single element to receive attributes, so you must bind $attrs explicitly."
+ },
+ {
+  "id": "qfc9ce5aa01f",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "hard",
+  "question": "How does a renderless component typically expose its logic to the parent?",
+  "options": [
+   "By passing state and functions as scoped slot props without rendering markup of its own",
+   "By providing global variables",
+   "By emitting an event on every change",
+   "By using v-html to inject templates"
+  ],
+  "answer": 0,
+  "explanation": "Renderless components render only the default slot with props, leaving all markup to the consumer."
+ }
+]

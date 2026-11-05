@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q17f1e6c87a6",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "With at-least-once delivery, what must a consumer do to avoid double effects?",
+  "options": [
+   "Disable acknowledgements so messages are never redelivered",
+   "Make processing idempotent, for example by deduplicating on a message ID",
+   "Process messages only in one strict global order",
+   "Store messages only in memory"
+  ],
+  "answer": 1,
+  "explanation": "A redelivery can happen after a crash that occurs before the ack, so the same message may arrive twice."
+ },
+ {
+  "id": "q3c79fadad1b",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What is the main benefit of putting a queue between a web server and a slow worker?",
+  "options": [
+   "Requests are acknowledged quickly, and work is processed asynchronously at the worker's pace",
+   "Every request is guaranteed to finish faster",
+   "The worker no longer needs error handling",
+   "Messages are processed in a random order"
+  ],
+  "answer": 0,
+  "explanation": "The queue decouples the services and absorbs traffic spikes."
+ },
+ {
+  "id": "q4eaa3a867da",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "Where does Kafka guarantee ordering of records?",
+  "options": [
+   "Within a single partition",
+   "Across all topics in the cluster",
+   "Across all partitions of a topic",
+   "Across every consumer group independently"
+  ],
+  "answer": 0,
+  "explanation": "Ordering is per partition; there is no global order across partitions."
+ },
+ {
+  "id": "qbc194588073",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What does a Kafka consumer offset represent?",
+  "options": [
+   "The total size of the topic",
+   "The time a message was produced",
+   "The number of consumers in the group",
+   "The position of the next record the consumer group will read in a partition"
+  ],
+  "answer": 3,
+  "explanation": "Committed offsets let a consumer group resume where it left off after a restart."
+ },
+ {
+  "id": "qbcd1b6bc849",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What is the purpose of a dead-letter queue?",
+  "options": [
+   "To keep the primary archive of all messages",
+   "To cache consumer responses for a day",
+   "To replicate messages across regions",
+   "To hold messages that repeatedly fail processing so they do not block the main flow"
+  ],
+  "answer": 3,
+  "explanation": "Failed messages are parked for inspection or replay instead of being retried forever."
+ },
+ {
+  "id": "qd480c539e33",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What is back pressure in a messaging system?",
+  "options": [
+   "Sending messages in reverse order",
+   "Encrypting messages in transit",
+   "Retrying failed messages immediately",
+   "A slow consumer signaling or forcing producers to slow down so queues do not grow without bound"
+  ],
+  "answer": 3,
+  "explanation": "Without back pressure, a fast producer can exhaust memory or queue capacity."
+ },
+ {
+  "id": "qdb76bbc2007",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "In Kafka, what limits the parallelism of a single consumer group reading one topic?",
+  "options": [
+   "The number of brokers in the cluster only",
+   "The number of partitions, since each partition is assigned to at most one consumer in the group",
+   "The retention period in hours",
+   "The topic's replication factor"
+  ],
+  "answer": 1,
+  "explanation": "Consumers beyond the partition count sit idle within the group."
+ },
+ {
+  "id": "qf6b12a116fc",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "Which pattern delivers each message to every subscribing consumer group?",
+  "options": [
+   "Point-to-point queue",
+   "Round-robin load balancing",
+   "Publish/subscribe",
+   "Synchronous request/response RPC"
+  ],
+  "answer": 2,
+  "explanation": "In pub/sub each subscriber receives its own copy, whereas a work queue hands each message to one consumer."
+ }
+]

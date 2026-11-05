@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q14c1104104f",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "What happens with `const o = { a: 1, b: 2 } satisfies { a: number };`?",
+  "options": [
+   "A compile error from excess property checking on b",
+   "It compiles but b is removed at runtime",
+   "It compiles and o has type { a: number; b: number }",
+   "It compiles and o has type { a: number }"
+  ],
+  "answer": 0,
+  "explanation": "satisfies applies excess property checks to object literals just like an annotation does."
+ },
+ {
+  "id": "q4804b8a9359",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "Given `const c = { port: 8080 } satisfies Record<string, number | string>;`, what is the type of `c.port`?",
+  "options": [
+   "8080",
+   "number",
+   "string | number",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "satisfies keeps the inferred type of the object literal, so port stays number."
+ },
+ {
+  "id": "q6360c61d7b6",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "What is the type of `routes` in `const routes = [\"/a\", \"/b\"] as const satisfies readonly string[];`?",
+  "options": [
+   "string[]",
+   "readonly [\"/a\", \"/b\"]",
+   "(\"/a\" | \"/b\")[]",
+   "readonly string[]"
+  ],
+  "answer": 1,
+  "explanation": "as const produces a readonly literal tuple and satisfies checks it without widening."
+ },
+ {
+  "id": "qad6663d8524",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "What does the `satisfies` operator do?",
+  "options": [
+   "Casts the expression to the type, like as",
+   "Widens the expression's type to the given type",
+   "Checks that an expression matches a type while keeping the expression's own inferred type",
+   "Adds a runtime validation check"
+  ],
+  "answer": 2,
+  "explanation": "satisfies (TS 4.9+) validates against a type without changing the inferred type."
+ },
+ {
+  "id": "qfcaca920542",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "Given `const c: Record<string, number | string> = { port: 8080 };`, what is the type of `c.port`?",
+  "options": [
+   "8080",
+   "unknown",
+   "string | number",
+   "number"
+  ],
+  "answer": 2,
+  "explanation": "A type annotation replaces the inferred type, so property access uses the annotated value type."
+ }
+]

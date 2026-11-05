@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa8ededb1107",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "A table has CHECK (price > 0) and you insert a row with price = NULL. What happens?",
+  "options": [
+   "The insert fails because NULL is not greater than 0",
+   "The insert succeeds and price is set to 0",
+   "The insert succeeds, because the check evaluates to UNKNOWN, which does not violate CHECK",
+   "The check is skipped and an error is written to the log"
+  ],
+  "answer": 2,
+  "explanation": "A CHECK constraint fails only when its condition is FALSE. UNKNOWN passes, so add NOT NULL if NULL must be rejected."
+ },
+ {
+  "id": "q77c6d7f2e3f",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "medium",
+  "question": "What is a drawback of over-normalization?",
+  "options": [
+   "Data becomes inconsistent",
+   "Duplicate rows are guaranteed",
+   "Queries often need many joins, which can slow reads",
+   "Primary keys stop working"
+  ],
+  "answer": 2,
+  "explanation": "Highly normalized schemas split data across many tables, so reads require more joins. This is the usual trade-off that motivates selective denormalization."
+ },
+ {
+  "id": "q87956d45c59",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "Adding a condition on a right-table column in the WHERE clause of a LEFT JOIN, such as WHERE o.status = 'paid', has what effect?",
+  "options": [
+   "It removes left rows with no matching paid order, so the result behaves like an inner join",
+   "It turns the query into a CROSS JOIN",
+   "It has no effect on which rows are returned",
+   "It keeps all left rows with NULLs for the right side"
+  ],
+  "answer": 0,
+  "explanation": "NULL is never equal to 'paid', so rows without a match are filtered out. The condition belongs in the ON clause if unmatched left rows should be kept."
+ },
+ {
+  "id": "qfbdcb894f15",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "In PostgreSQL, what happens when you run SELECT dept, name, COUNT(*) FROM emp GROUP BY dept?",
+  "options": [
+   "It returns one row per dept with an arbitrary name",
+   "It returns one row per employee",
+   "It fails with an error that name must appear in GROUP BY or inside an aggregate",
+   "It returns NULL for name in every group"
+  ],
+  "answer": 2,
+  "explanation": "PostgreSQL requires every non-aggregated select column to appear in GROUP BY. MySQL may accept this query only when ONLY_FULL_GROUP_BY is disabled."
+ },
+ {
+  "id": "q79784935031",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "What is the key difference between EXPLAIN and EXPLAIN ANALYZE in PostgreSQL?",
+  "options": [
+   "EXPLAIN runs the query and ANALYZE only prints the plan",
+   "EXPLAIN ANALYZE executes the query and reports actual row counts and timings, while EXPLAIN shows only the estimated plan",
+   "EXPLAIN ANALYZE estimates costs without executing the query",
+   "They are identical except for output formatting"
+  ],
+  "answer": 1,
+  "explanation": "EXPLAIN alone does not run the statement. EXPLAIN ANALYZE runs it, so it has side effects for data-changing statements and should be wrapped in a transaction if needed."
+ },
+ {
+  "id": "q08083c14b1e",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "For WHERE a = 5 AND b > 10, which composite index is most suitable?",
+  "options": [
+   "(b, a)",
+   "(a) only, since b can never be indexed",
+   "(a, b)",
+   "A separate index on b only"
+  ],
+  "answer": 2,
+  "explanation": "Put the equality column first and the range column second. The index can then seek to a = 5 and scan the b range within it."
+ },
+ {
+  "id": "qdd92c8edf66",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "Which anomaly occurs when a repeated range query returns rows that another committed transaction inserted?",
+  "options": [
+   "Dirty read",
+   "Phantom read",
+   "Lost update",
+   "Non-repeatable read"
+  ],
+  "answer": 1,
+  "explanation": "A phantom read involves new rows appearing in a re-run query. A non-repeatable read involves existing rows changing."
+ },
+ {
+  "id": "q2e74ac7d2c5",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "Why is a binary floating-point type such as FLOAT generally avoided for money values?",
+  "options": [
+   "Many decimal fractions, such as 0.1, cannot be represented exactly in binary",
+   "It is too slow to store on any disk",
+   "It cannot hold negative numbers",
+   "It cannot be used in arithmetic"
+  ],
+  "answer": 0,
+  "explanation": "Binary floating point introduces rounding error in decimal values. Use NUMERIC or DECIMAL for exact currency arithmetic."
+ },
+ {
+  "id": "q5e3d9f3991b",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Which PostgreSQL command refreshes the planner's table statistics?",
+  "options": [
+   "REINDEX",
+   "VACUUM FULL",
+   "ANALYZE",
+   "CHECKPOINT"
+  ],
+  "answer": 2,
+  "explanation": "ANALYZE samples table data and updates the statistics the planner uses to estimate row counts and choose plans."
+ },
+ {
+  "id": "qc80c40f818b",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "In PostgreSQL, which index is created automatically when a PRIMARY KEY is declared?",
+  "options": [
+   "A hash index",
+   "No index is created",
+   "A bitmap index",
+   "A unique B-tree index"
+  ],
+  "answer": 3,
+  "explanation": "PostgreSQL implements primary key and unique constraints with a unique B-tree index."
+ }
+]

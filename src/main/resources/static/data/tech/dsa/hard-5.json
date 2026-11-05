@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0fe931d815a",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "What is the time complexity of the standard dynamic programming solution to matrix-chain multiplication for n matrices?",
+  "options": [
+   "O(n^2)",
+   "O(n^3)",
+   "O(2^n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "There are O(n^2) subchains, and each tries O(n) split points."
+ },
+ {
+  "id": "q34ec9a5ca1a",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "Which heap variant provides O(1) amortized decrease-key, giving Dijkstra's algorithm O(E + V log V) time?",
+  "options": [
+   "Binary heap",
+   "Fibonacci heap",
+   "Min-max heap",
+   "d-ary heap with d = 2"
+  ],
+  "answer": 1,
+  "explanation": "Fibonacci heaps defer structural work, making decrease-key constant amortized while extract-min stays O(log n) amortized."
+ },
+ {
+  "id": "q90b32c3b067",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "hard",
+  "question": "By the Master Theorem, what does T(n) = 3T(n/2) + O(n) solve to?",
+  "options": [
+   "O(n log n)",
+   "O(n^2)",
+   "O(n^(log2 3)), about O(n^1.585)",
+   "O(n^3)"
+  ],
+  "answer": 2,
+  "explanation": "Since log2 3 > 1, the leaf work dominates, as in Karatsuba multiplication."
+ },
+ {
+  "id": "q83c566282d4",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "What is the time complexity of the Floyd-Warshall all-pairs shortest path algorithm?",
+  "options": [
+   "O(V^3)",
+   "O(V * E)",
+   "O(E log V)",
+   "O(V^2)"
+  ],
+  "answer": 0,
+  "explanation": "Three nested loops over the vertices relax every pair through every possible intermediate vertex."
+ },
+ {
+  "id": "qea5c2fdd81b",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the expected time complexity of finding the longest consecutive-integer sequence in an unsorted array of n elements using a hash set?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 0,
+  "explanation": "Counting starts only from numbers whose predecessor is absent, so each number is visited a constant number of times."
+ },
+ {
+  "id": "q2e0dac55dba",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "What are the time and extra space of the two-pointer solution to the trapping rain water problem for n bars?",
+  "options": [
+   "O(n) time and O(1) extra space",
+   "O(n log n) time and O(1) extra space",
+   "O(n) time and O(n) extra space",
+   "O(n^2) time and O(1) extra space"
+  ],
+  "answer": 0,
+  "explanation": "Two pointers move inward while tracking the left and right maximums, so no auxiliary arrays are needed."
+ },
+ {
+  "id": "q5ca02fafb67",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "With binary lifting preprocessing, how long does a lowest common ancestor query take on a rooted tree of n nodes?",
+  "options": [
+   "O(1)",
+   "O(n)",
+   "O(sqrt n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "Ancestors are stored at power-of-two distances, so both nodes can jump upward in logarithmically many steps."
+ },
+ {
+  "id": "qf6824bad179",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "Which sorting algorithm is generally best suited to sorting a singly linked list in O(n log n) time?",
+  "options": [
+   "Heapsort",
+   "Quicksort with random-access pivot selection",
+   "Binary insertion sort",
+   "Merge sort"
+  ],
+  "answer": 3,
+  "explanation": "Merge sort needs only sequential access and can merge lists by relinking nodes without extra arrays."
+ },
+ {
+  "id": "qeb9c2ce9710",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "hard",
+  "question": "What is the time complexity of finding the largest rectangle in a histogram of n bars using a monotonic stack?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 0,
+  "explanation": "Each bar is pushed and popped at most once, and its maximal width is determined when it is popped."
+ },
+ {
+  "id": "q90f35932c9a",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "What is the time complexity of a range-sum query and of a point update on a segment tree over n elements?",
+  "options": [
+   "O(n) for each",
+   "O(1) for each",
+   "O(log n) for each",
+   "O(log n) for queries and O(n) for updates"
+  ],
+  "answer": 2,
+  "explanation": "Both operations touch O(log n) nodes along paths of the balanced tree."
+ }
+]

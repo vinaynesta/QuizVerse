@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q01049c95d0d",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "What does DHCP do?",
+  "options": [
+   "Maps IP addresses to MAC addresses",
+   "Resolves hostnames to IP addresses",
+   "Automatically assigns IP configuration to hosts",
+   "Encrypts traffic on the LAN"
+  ],
+  "answer": 2,
+  "explanation": "DHCP leases IP addresses and settings like gateway and DNS servers to clients."
+ },
+ {
+  "id": "q3e65c633ffc",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "Which UDP ports do a DHCPv4 server and client use?",
+  "options": [
+   "Server 67, client 68",
+   "Server 20, client 21",
+   "Server 53, client 53",
+   "Server 80, client 443"
+  ],
+  "answer": 0,
+  "explanation": "DHCPv4 servers listen on UDP 67 and clients on UDP 68."
+ },
+ {
+  "id": "q6b7207acc70",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "What is the correct order of the DHCPv4 lease exchange (DORA)?",
+  "options": [
+   "Request, Offer, Discover, Acknowledge",
+   "Discover, Request, Offer, Acknowledge",
+   "Offer, Discover, Acknowledge, Request",
+   "Discover, Offer, Request, Acknowledge"
+  ],
+  "answer": 3,
+  "explanation": "The client broadcasts Discover, servers Offer, the client Requests one offer and the server Acknowledges."
+ },
+ {
+  "id": "qe95bbd1ada1",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "Besides an IP address, what does DHCP commonly provide to clients?",
+  "options": [
+   "A TCP port number",
+   "Default gateway and DNS server addresses",
+   "A TLS certificate",
+   "The client's MAC address"
+  ],
+  "answer": 1,
+  "explanation": "DHCP options carry settings such as subnet mask, router (gateway) and DNS servers; the MAC is burned into the NIC."
+ }
+]

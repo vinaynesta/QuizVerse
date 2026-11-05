@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q45a04dac611",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What is a backup?",
+  "options": [
+   "A second load balancer",
+   "A copy of data kept separately so it can be restored after loss or corruption",
+   "A cache of recent requests",
+   "A replica that serves read traffic"
+  ],
+  "answer": 1,
+  "explanation": "Backups protect against data loss, including mistakes that replication would copy."
+ },
+ {
+  "id": "q759782b00e7",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What is the main purpose of monitoring and alerting?",
+  "options": [
+   "To speed up database queries",
+   "To detect problems quickly and notify the people who can fix them",
+   "To replace testing",
+   "To reduce storage costs"
+  ],
+  "answer": 1,
+  "explanation": "Monitoring tracks system health, and alerts notify on-call engineers when thresholds are breached."
+ },
+ {
+  "id": "q94dadb9d5ad",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What does redundancy aim to eliminate?",
+  "options": [
+   "Single points of failure, by duplicating critical components",
+   "Every form of network latency",
+   "The need for logging and monitoring",
+   "The need for backups of any kind"
+  ],
+  "answer": 0,
+  "explanation": "Redundant components let the system keep working when one instance fails."
+ },
+ {
+  "id": "qc42d3497cb9",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "How is availability usually expressed?",
+  "options": [
+   "As the percentage of time the system is operational and serving requests, such as 99.9%",
+   "As the average CPU usage across all hosts",
+   "As the number of deployments per day",
+   "As the network bandwidth available to the service"
+  ],
+  "answer": 0,
+  "explanation": "Availability targets like 99.9% define the allowed downtime over a period."
+ },
+ {
+  "id": "qc5b044618bd",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What is failover?",
+  "options": [
+   "Reversing a database schema migration",
+   "Rolling back a code release to the previous version",
+   "Switching work to a standby component when the active one fails",
+   "Encrypting requests that failed validation"
+  ],
+  "answer": 2,
+  "explanation": "Failover moves traffic or responsibility to a standby, such as a replica promoted to primary."
+ },
+ {
+  "id": "q2292266fa46",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "What does the half-open state in a circuit breaker do?",
+  "options": [
+   "Rejects all requests permanently until the process restarts",
+   "Routes every request to a backup region",
+   "Lets a limited number of trial requests through to test whether the dependency has recovered",
+   "Caches all responses for an hour"
+  ],
+  "answer": 2,
+  "explanation": "If the trial calls succeed the breaker closes again; if they fail it reopens."
+ },
+ {
+  "id": "q246e38f4f03",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Which situation makes automatic retries most dangerous?",
+  "options": [
+   "Retrying a GET request to a read-only endpoint",
+   "Retrying a DNS lookup",
+   "Retrying a health check probe",
+   "Retrying a non-idempotent operation, such as charging a card, without a deduplication key"
+  ],
+  "answer": 3,
+  "explanation": "A retry after an ambiguous timeout may repeat the side effect if the first attempt actually succeeded."
+ },
+ {
+  "id": "q2acdf00152c",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "What does a circuit breaker do when it is in the open state?",
+  "options": [
+   "Sends all calls to the dependency",
+   "Fails calls immediately without contacting the failing dependency",
+   "Sends a few trial calls",
+   "Restarts the dependency"
+  ],
+  "answer": 1,
+  "explanation": "Failing fast gives the dependency time to recover and keeps callers from waiting on timeouts."
+ },
+ {
+  "id": "q51f82c140f2",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Which is an example of graceful degradation?",
+  "options": [
+   "Returning HTTP 500 for every request when any dependency fails",
+   "Showing a product page without personalized recommendations when the recommendation service is down",
+   "Disabling checkout whenever a cache miss occurs",
+   "Turning off all logging when a dependency is slow"
+  ],
+  "answer": 1,
+  "explanation": "The core experience keeps working while a non-critical feature is reduced or removed."
+ },
+ {
+  "id": "q823a817ee7d",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Why is random jitter added to retry delays?",
+  "options": [
+   "It guarantees that retries succeed on the first attempt",
+   "It reduces the number of TCP packets sent",
+   "It forces requests to arrive in strict FIFO order",
+   "It spreads retries out so many clients do not hit a recovering service at the same moment"
+  ],
+  "answer": 3,
+  "explanation": "Synchronized retries create spikes that can prevent a recovering service from catching up."
+ },
+ {
+  "id": "qc02f75d026b",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "What does the bulkhead pattern achieve?",
+  "options": [
+   "It isolates resource pools per dependency so one failing dependency cannot exhaust shared capacity",
+   "It duplicates the entire service in every region",
+   "It compresses messages to reduce bandwidth",
+   "It splits a database into shards by row range"
+  ],
+  "answer": 0,
+  "explanation": "Named after ship compartments, bulkheads keep one failure from sinking the whole system."
+ },
+ {
+  "id": "qecef1cf59d5",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Why should every remote call have a timeout?",
+  "options": [
+   "Timeouts make calls faster",
+   "Timeouts are required by HTTP",
+   "Timeouts remove the need for retries",
+   "Without one, a hung dependency can tie up threads and connections indefinitely"
+  ],
+  "answer": 3,
+  "explanation": "Bounded waits free resources so a slow dependency cannot stall the caller."
+ }
+]

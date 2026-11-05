@@ -1,0 +1,272 @@
+[
+ {
+  "id": "q096af2b5285",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which prefix explicitly refers to a built-in core module, as in import fs from '...fs'?",
+  "options": [
+   "node:",
+   "core:",
+   "builtin:",
+   "std:"
+  ],
+  "answer": 0,
+  "explanation": "The node: prefix, such as node:fs, makes it clear a built-in module is meant and cannot be shadowed by an npm package."
+ },
+ {
+  "id": "q10e4145d0e2",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which keyword exports a value from an ES module?",
+  "options": [
+   "module.exports",
+   "exports.default",
+   "export",
+   "provide"
+  ],
+  "answer": 2,
+  "explanation": "ES modules use export and import, while CommonJS uses module.exports and require()."
+ },
+ {
+  "id": "q2d69540a4be",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "What does module.exports hold by default in a new CommonJS file?",
+  "options": [
+   "An empty object {}",
+   "undefined",
+   "null",
+   "The global object"
+  ],
+  "answer": 0,
+  "explanation": "module.exports starts as an empty object, and exports is a shorthand reference to that same object."
+ },
+ {
+  "id": "q3e710e22b5f",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which function loads a CommonJS module in Node.js?",
+  "options": [
+   "load()",
+   "import()",
+   "include()",
+   "require()"
+  ],
+  "answer": 3,
+  "explanation": "require() is the synchronous CommonJS loader; import() is the promise-based dynamic form used with ES modules."
+ },
+ {
+  "id": "qd996facac66",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "In an ES module, which of these is not available by default?",
+  "options": [
+   "__dirname",
+   "Top-level await",
+   "import declarations",
+   "import.meta.url"
+  ],
+  "answer": 0,
+  "explanation": "__dirname and __filename come from the CommonJS module wrapper; ES modules use import.meta.url instead."
+ },
+ {
+  "id": "qe737d6ab424",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "What does require() return when the same module is required a second time in one process?",
+  "options": [
+   "A fresh copy of the module",
+   "An error about duplicate loading",
+   "The cached exports from the first load",
+   "undefined"
+  ],
+  "answer": 2,
+  "explanation": "Modules are cached after their first load, so later require() calls return the same exports object."
+ },
+ {
+  "id": "qeb920b6a4fa",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which field in package.json makes .js files in that package load as ES modules?",
+  "options": [
+   "\"module\": true",
+   "\"esm\": true",
+   "\"language\": \"esm\"",
+   "\"type\": \"module\""
+  ],
+  "answer": 3,
+  "explanation": "Setting \"type\" to \"module\" makes .js files in that package ES modules; \"type\" defaults to \"commonjs\"."
+ },
+ {
+  "id": "qf3acf0abded",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which file extension makes Node.js always treat a file as an ES module, regardless of package.json?",
+  "options": [
+   ".cjs",
+   ".mjs",
+   ".esm",
+   ".jsx"
+  ],
+  "answer": 1,
+  "explanation": ".mjs files are always ES modules and .cjs files are always CommonJS."
+ },
+ {
+  "id": "q2a5dd5dabe2",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What is top-level await?",
+  "options": [
+   "Using await inside any CommonJS file",
+   "Using await at the top level of an ES module, outside any async function",
+   "A way to make require() return a promise",
+   "A flag that makes all functions async"
+  ],
+  "answer": 1,
+  "explanation": "Top-level await is supported only in ES modules, and modules importing it wait until it finishes."
+ },
+ {
+  "id": "q32b85016d2e",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What does require.resolve('lodash') return?",
+  "options": [
+   "The module's exports object",
+   "The version number from its package.json",
+   "The absolute path Node would load for that module",
+   "A boolean telling whether it is installed"
+  ],
+  "answer": 2,
+  "explanation": "require.resolve() returns the resolved file path without loading the module."
+ },
+ {
+  "id": "q50faffc6ac5",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "An ES module runs import pkg from './legacy.cjs'. What is pkg?",
+  "options": [
+   "The whole module wrapper function",
+   "The source text of the file",
+   "Always undefined",
+   "The module.exports value of the CommonJS file"
+  ],
+  "answer": 3,
+  "explanation": "Node provides module.exports as the default export when importing CommonJS from ES modules."
+ },
+ {
+  "id": "q6d7a98e5713",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "When two CommonJS modules require each other, what does the module that loads second receive from the first?",
+  "options": [
+   "The complete exports, because Node loads both at once",
+   "An error, since circular requires are not allowed",
+   "The partially filled exports object as it exists at that moment",
+   "undefined, always"
+  ],
+  "answer": 2,
+  "explanation": "The first module is still executing when the cycle is detected, so its exports may be incomplete."
+ },
+ {
+  "id": "q8f7745d886e",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "How do you get the directory of the current file inside an ES module?",
+  "options": [
+   "Read __dirname, which ES modules define automatically",
+   "Derive it from import.meta.url with fileURLToPath() and path.dirname()",
+   "Use require.main.path",
+   "Use process.cwd()"
+  ],
+  "answer": 1,
+  "explanation": "__dirname is a CommonJS wrapper variable, and process.cwd() is where node was started, not the file's folder."
+ },
+ {
+  "id": "qf31e3b937e9",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What can a dynamic import() expression do inside a CommonJS module?",
+  "options": [
+   "Load an ES module asynchronously, returning a promise for its namespace",
+   "Nothing, because import() is unavailable in CommonJS",
+   "Load only JSON files synchronously",
+   "Convert the current file into an ES module"
+  ],
+  "answer": 0,
+  "explanation": "import() works in both module systems and is the standard way for CommonJS code to load ES modules asynchronously."
+ },
+ {
+  "id": "qc2ab2ea7a07",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "What happens when code requires a deep path of a package that has an \"exports\" field not listing that path?",
+  "options": [
+   "Node loads the file anyway",
+   "Node throws ERR_PACKAGE_PATH_NOT_EXPORTED",
+   "Node falls back to the main field",
+   "Node returns an empty object"
+  ],
+  "answer": 1,
+  "explanation": "The exports field encapsulates a package, so only the listed subpaths can be loaded."
+ },
+ {
+  "id": "qdbf36f98aad",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "Inside a CommonJS file, what is a relative require('./util') path resolved against?",
+  "options": [
+   "The directory of the file that contains the require() call",
+   "The current working directory of the process",
+   "The directory of the entry script only",
+   "The node_modules folder"
+  ],
+  "answer": 0,
+  "explanation": "Relative paths are resolved from the calling file's location, not from where node was started."
+ },
+ {
+  "id": "qed8dd4444ba",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "In a package.json \"exports\" map, what do the \"import\" and \"require\" conditions allow?",
+  "options": [
+   "Restricting the package to ES modules only",
+   "Choosing different dependencies for each environment",
+   "Serving different entry files to ES module imports and CommonJS requires of the same package",
+   "Declaring which packages this package imports"
+  ],
+  "answer": 2,
+  "explanation": "Conditional exports let a dual package point import to an .mjs build and require to a .cjs build."
+ },
+ {
+  "id": "qf3d3122fc7d",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "A package defines both \"main\" and \"exports\" in package.json. Which does require() of the package consult first?",
+  "options": [
+   "main always wins",
+   "exports, when present, takes precedence over main",
+   "Node merges the two fields",
+   "CommonJS ignores exports entirely"
+  ],
+  "answer": 1,
+  "explanation": "The exports field controls which entry points a package exposes and overrides main when it is defined."
+ }
+]

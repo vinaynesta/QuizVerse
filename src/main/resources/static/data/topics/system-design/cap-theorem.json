@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q22b693ea3e5",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "An AP system accepts writes on both sides of a partition. What must it handle later?",
+  "options": [
+   "Permanent loss of every write made during the partition",
+   "A mandatory two-phase commit after healing",
+   "Conflicting concurrent updates that need reconciliation when the partition heals",
+   "Permanent disabling of leader election"
+  ],
+  "answer": 2,
+  "explanation": "Accepting writes on both sides means the same data can diverge, so the system needs conflict detection and resolution."
+ },
+ {
+  "id": "q25a81f24096",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "What does the CAP theorem say about a distributed data store during a network partition?",
+  "options": [
+   "It must trade off between consistency and availability",
+   "It can guarantee both consistency and availability if replicas sit in one region",
+   "Partition tolerance is optional and can be dropped",
+   "It guarantees linearizable reads with no latency cost"
+  ],
+  "answer": 0,
+  "explanation": "Under a partition, a system must either reject or delay some requests to stay consistent, or serve possibly stale data to stay available."
+ },
+ {
+  "id": "q2d72fa7b74e",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "Which statement about CAP is most accurate?",
+  "options": [
+   "Partition tolerance is a feature that can be turned off in production",
+   "A system must always choose two of the three properties at all times",
+   "The consistency and availability tradeoff is forced only while a network partition exists",
+   "Availability means the database is never down for maintenance"
+  ],
+  "answer": 2,
+  "explanation": "Without a partition, a well-built system can provide both consistency and availability; CAP is about behavior during partitions."
+ },
+ {
+  "id": "q3341c3eee48",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "Under PACELC, how is a system classified that favors availability during partitions and low latency otherwise?",
+  "options": [
+   "PC/EC",
+   "PA/EC",
+   "PC/EL",
+   "PA/EL"
+  ],
+  "answer": 3,
+  "explanation": "Dynamo-style stores such as Cassandra are typically described as PA/EL."
+ },
+ {
+  "id": "q508fadd4bc9",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "In PACELC, what does the 'ELC' part describe?",
+  "options": [
+   "The leader election latency after a node crash",
+   "The latency-versus-consistency tradeoff when there is no partition",
+   "The eventual compression ratio of replicated logs",
+   "The end-to-end lag from client to CDN edge"
+  ],
+  "answer": 1,
+  "explanation": "PACELC extends CAP: if Partition, choose availability or consistency; Else, choose latency or consistency."
+ },
+ {
+  "id": "qe1fb202fa03",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "In the CAP theorem, what does availability specifically require?",
+  "options": [
+   "Every request received by a non-failing node gets a non-error response",
+   "The system has 99.99% uptime",
+   "At least a majority of nodes are reachable",
+   "Data is replicated to every region"
+  ],
+  "answer": 0,
+  "explanation": "CAP availability is a strict property: any live node must respond, even if it cannot reach others."
+ },
+ {
+  "id": "qf9e2a623ffa",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "How does a CP system typically behave when a partition isolates a minority of replicas?",
+  "options": [
+   "It serves stale reads from the minority side to stay available",
+   "It rejects or blocks requests on the minority side to preserve consistency",
+   "It accepts writes on both sides and merges them automatically without conflicts",
+   "It shuts down the majority side to prevent divergence"
+  ],
+  "answer": 1,
+  "explanation": "CP systems sacrifice availability on the minority side so that no conflicting state can be committed."
+ }
+]

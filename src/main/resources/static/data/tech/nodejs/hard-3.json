@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8a59cb0007b",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What happens with setTimeout(fn, 2 ** 31)?",
+  "options": [
+   "The callback runs after about 24.8 days as expected",
+   "A RangeError is thrown immediately",
+   "The callback runs after 2^31 seconds",
+   "The delay exceeds the 32-bit limit, so Node sets it to 1 ms and emits a TimeoutOverflowWarning"
+  ],
+  "answer": 3,
+  "explanation": "Timer delays must fit in a signed 32-bit integer; larger values overflow and fire almost immediately."
+ },
+ {
+  "id": "q8f2eb2d2b60",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the main job of the poll phase?",
+  "options": [
+   "Run setImmediate() callbacks",
+   "Retrieve new I/O events and run their callbacks, waiting for I/O only if no timers are due",
+   "Run process.nextTick() callbacks only",
+   "Close handles that have been destroyed"
+  ],
+  "answer": 1,
+  "explanation": "The poll phase is where the loop blocks for I/O when there is nothing else to do, unless a timer is due sooner."
+ },
+ {
+  "id": "qf4f9cea415c",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "hard",
+  "question": "What does AsyncLocalStorage provide?",
+  "options": [
+   "Context values that follow an asynchronous call chain without being passed as arguments",
+   "A promise-based version of localStorage",
+   "A queue that drains before microtasks",
+   "A shared memory buffer between threads"
+  ],
+  "answer": 0,
+  "explanation": "AsyncLocalStorage.run() stores a value that stays visible to callbacks started inside that context."
+ },
+ {
+  "id": "q5e5cddfc032",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "What does a WeakMap hold its keys as?",
+  "options": [
+   "Weak references, so an entry does not keep its key object alive",
+   "Copies of the key strings",
+   "Strong references that are never collected",
+   "Numeric indexes into the heap"
+  ],
+  "answer": 0,
+  "explanation": "Entries can be garbage collected once the key object has no other references."
+ },
+ {
+  "id": "qf3d3122fc7d",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "hard",
+  "question": "A package defines both \"main\" and \"exports\" in package.json. Which does require() of the package consult first?",
+  "options": [
+   "main always wins",
+   "exports, when present, takes precedence over main",
+   "Node merges the two fields",
+   "CommonJS ignores exports entirely"
+  ],
+  "answer": 1,
+  "explanation": "The exports field controls which entry points a package exposes and overrides main when it is defined."
+ },
+ {
+  "id": "q53391621ebb",
+  "subject": "nodejs",
+  "topic": "memory",
+  "level": "hard",
+  "question": "A request handler adds an event listener on every request and never removes it. What is the best fix?",
+  "options": [
+   "Call setMaxListeners(0) so the warning stops",
+   "Wrap the handler in process.nextTick()",
+   "Remove the listener when the request finishes, or attach it once outside the handler",
+   "Call global.gc() after each request"
+  ],
+  "answer": 2,
+  "explanation": "The listener list keeps growing and holds references, so the leak must be fixed at the source; raising the limit only hides the warning."
+ },
+ {
+  "id": "q2f22e96f4e3",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "What does the 'rejectionHandled' process event report?",
+  "options": [
+   "A promise was fulfilled after a timeout",
+   "An uncaught exception was recovered",
+   "A rejection reason was logged to the console",
+   "A promise that was rejected earlier without a handler has since received one"
+  ],
+  "answer": 3,
+  "explanation": "It fires after 'unhandledRejection' when a handler is attached late."
+ },
+ {
+  "id": "q2912a3fa80b",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "hard",
+  "question": "What does writable.uncork() do after several writes were corked?",
+  "options": [
+   "Discards all buffered writes",
+   "Closes the writable stream",
+   "Flushes the buffered writes to the underlying system, combining them where possible",
+   "Doubles the buffer size"
+  ],
+  "answer": 2,
+  "explanation": "cork() holds writes so they can be batched; uncork() releases them."
+ },
+ {
+  "id": "q0783ea95a61",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "In which phase do callbacks such as a socket's 'close' event run after the handle was destroyed?",
+  "options": [
+   "The poll phase",
+   "The timers phase",
+   "The close callbacks phase",
+   "The check phase"
+  ],
+  "answer": 2,
+  "explanation": "Close callbacks run in their own phase at the end of each loop iteration."
+ },
+ {
+  "id": "q0b9055fc887",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Which operation does not use the libuv threadpool?",
+  "options": [
+   "Reading and writing TCP sockets",
+   "fs.readFile()",
+   "dns.lookup()",
+   "Asynchronous zlib compression"
+  ],
+  "answer": 0,
+  "explanation": "Network sockets use non-blocking OS I/O, while file system, dns.lookup and zlib work runs on the threadpool."
+ }
+]

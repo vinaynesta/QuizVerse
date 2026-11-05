@@ -47,7 +47,8 @@ function seededRandom(seedText) {
 }
 
 const DAILY_MIX = { quant: 4, reasoning: 3, english: 3 };
-const TECH_SUBJECTS = ["dsa", "java", "python", "springboot", "react", "vue", "ai"];
+const TECH_SUBJECTS = ["dsa", "java", "python", "springboot", "react", "vue", "ai", "sql", "nodejs", "devops",
+  "system-design", "javascript", "typescript", "os", "networks"];
 const TECH_DAILY_COUNT = 5;
 
 /** Sorted ids of every question in the given subject's topic pools. */

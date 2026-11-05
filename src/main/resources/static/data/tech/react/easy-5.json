@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe6ef1e9aefb",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "How many top-level elements can a single JSX expression return without a wrapper?",
+  "options": [
+   "Any number, separated by commas",
+   "Two at most",
+   "One, so siblings need a parent element or Fragment",
+   "As many as the component has props"
+  ],
+  "answer": 2,
+  "explanation": "JSX compiles to a single function call, so multiple siblings must be wrapped in a parent or a Fragment."
+ },
+ {
+  "id": "q96ed8c0d7f5",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "Which browser API is most commonly used for simple HTTP requests in React apps without extra libraries?",
+  "options": [
+   "XMLHttpRequestUpload",
+   "fetch",
+   "WebSocket only",
+   "localStorage"
+  ],
+  "answer": 1,
+  "explanation": "fetch is built into browsers and returns a promise for the response."
+ },
+ {
+  "id": "q3f3c3858466",
+  "subject": "react",
+  "topic": "hooks",
+  "level": "easy",
+  "question": "What does useState return?",
+  "options": [
+   "Only the current state value",
+   "An array with the current state value and a function to update it",
+   "A promise that resolves to the state",
+   "An object with get and set methods"
+  ],
+  "answer": 1,
+  "explanation": "Destructuring like const [count, setCount] = useState(0) reads the value and the setter from the returned pair."
+ },
+ {
+  "id": "qdfc117aa324",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Which tool lets you see which components rendered and how long they took?",
+  "options": [
+   "The Lighthouse SEO report",
+   "The browser's Application tab",
+   "The npm audit command",
+   "The React Developer Tools Profiler"
+  ],
+  "answer": 3,
+  "explanation": "The Profiler tab in React DevTools records renders and their timings."
+ },
+ {
+  "id": "q2458272754e",
+  "subject": "react",
+  "topic": "rendering-reconciliation",
+  "level": "easy",
+  "question": "Which function from react-dom/client creates a root to render a React 18+ app into a DOM node?",
+  "options": [
+   "ReactDOM.render",
+   "createRoot",
+   "mount",
+   "hydrate"
+  ],
+  "answer": 1,
+  "explanation": "createRoot(container).render(<App />) replaces the legacy ReactDOM.render, which was removed in React 19."
+ },
+ {
+  "id": "q9cb405e1954",
+  "subject": "react",
+  "topic": "forms-events",
+  "level": "easy",
+  "question": "What does e.target.value hold in an input's onChange handler?",
+  "options": [
+   "The input's current text",
+   "The input's name attribute",
+   "The keyboard key code",
+   "The previous text before the change"
+  ],
+  "answer": 0,
+  "explanation": "The event target is the input element, and its value property holds what the user has typed."
+ },
+ {
+  "id": "q9f01511f971",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router v6 and later, which component replaces Switch for grouping route definitions?",
+  "options": [
+   "Router",
+   "Routes",
+   "Switcher",
+   "RouteGroup"
+  ],
+  "answer": 1,
+  "explanation": "v6 introduced <Routes>, which picks the best-matching <Route> among its children."
+ },
+ {
+  "id": "qd6c01facb7c",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "Which kind of data is a typical good fit for React Context?",
+  "options": [
+   "The text of a single input field",
+   "A loop counter inside one function",
+   "The hover state of one button",
+   "App-wide values like the current theme or signed-in user"
+  ],
+  "answer": 3,
+  "explanation": "Context suits data many components at different depths need, while local UI state is better kept in the component."
+ },
+ {
+  "id": "q4547ebac3cc",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "Can a component change the props it receives?",
+  "options": [
+   "Only for props that are objects",
+   "Yes, by assigning to props directly",
+   "Yes, but only inside useEffect",
+   "No, props are read-only for the receiving component"
+  ],
+  "answer": 3,
+  "explanation": "Props should be treated as immutable; a component asks its parent to change them, often via a callback prop."
+ },
+ {
+  "id": "qfda4a3f4bc2",
+  "subject": "react",
+  "topic": "props-state",
+  "level": "easy",
+  "question": "How do you give a prop a default value in a function component?",
+  "options": [
+   "Use a default value when destructuring, like function Button({ size = 'md' })",
+   "Call setDefaultProps() inside the component",
+   "Pass default={...} to the component",
+   "Defaults are impossible in function components"
+  ],
+  "answer": 0,
+  "explanation": "JavaScript default parameter values are the recommended way to define default props."
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q32c1ebb50e6",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "For an outbound packet, which header fields does a NAPT device rewrite?",
+  "options": [
+   "Destination IP address and port",
+   "Only the TTL",
+   "Only the MAC addresses",
+   "Source IP address and source port"
+  ],
+  "answer": 3,
+  "explanation": "NAPT replaces the private source address and port with its public address and a chosen port (and fixes checksums)."
+ },
+ {
+  "id": "q726f8a3804b",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "What is configuring a NAT router to send inbound traffic on a given port to a specific internal host called?",
+  "options": [
+   "NAT64",
+   "DHCP relay",
+   "Proxy ARP",
+   "Port forwarding"
+  ],
+  "answer": 3,
+  "explanation": "Port forwarding is a static NAPT mapping that lets external clients reach an internal server."
+ },
+ {
+  "id": "qbb3fdc1eb85",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "Why can't an external host normally initiate a connection to a host behind NAPT?",
+  "options": [
+   "NAT blocks DNS responses",
+   "NAT drops all UDP traffic",
+   "NAT rewrites the destination MAC to broadcast",
+   "With no existing mapping, the NAT device doesn't know which internal host should receive it"
+  ],
+  "answer": 3,
+  "explanation": "Mappings are created by outbound traffic; unsolicited inbound packets match no entry unless port forwarding is configured."
+ },
+ {
+  "id": "qfef394ef1bb",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "What does NAT overload (PAT/NAPT) do?",
+  "options": [
+   "Encrypts packet headers between sites",
+   "Translates IPv4 addresses into IPv6",
+   "Maps many private hosts to one public IP using distinct source ports",
+   "Maps one private IP to one public IP statically"
+  ],
+  "answer": 2,
+  "explanation": "NAPT tracks connections by translated source port so many internal hosts can share one public address."
+ }
+]

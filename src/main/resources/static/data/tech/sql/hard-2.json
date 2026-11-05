@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5685324b7a1",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In PostgreSQL READ COMMITTED, when is the snapshot for a statement taken?",
+  "options": [
+   "Once, when the transaction starts",
+   "Once at the first read of each table",
+   "At the start of each statement",
+   "At the fetch of each row"
+  ],
+  "answer": 2,
+  "explanation": "Each statement in READ COMMITTED sees data committed before that statement began, which is why two statements in one transaction can see different data."
+ },
+ {
+  "id": "q8d561cc02bd",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "What does SELECT COUNT(*) FROM orders GROUP BY status return when orders is empty?",
+  "options": [
+   "One row with 0",
+   "An error",
+   "One row with NULL",
+   "No rows"
+  ],
+  "answer": 3,
+  "explanation": "Grouping an empty input produces no groups, so no rows are returned. Without GROUP BY, the same query returns a single row with 0."
+ },
+ {
+  "id": "q20cb2dfbcd7",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "What does SELECT COUNT(x), SUM(x) FROM t return when t has no rows?",
+  "options": [
+   "0 and NULL",
+   "0 and 0",
+   "NULL and NULL",
+   "NULL and 0"
+  ],
+  "answer": 0,
+  "explanation": "COUNT over an empty set returns 0, while SUM over an empty set returns NULL. This is a common surprise in reports."
+ },
+ {
+  "id": "qfd9b1e11d57",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "What structure must a recursive CTE have?",
+  "options": [
+   "A non-recursive SELECT followed by a WHERE clause",
+   "An anchor member and a recursive member that references the CTE, combined with UNION or UNION ALL",
+   "A subquery in the HAVING clause only",
+   "A UNION of two independent queries that never reference the CTE name"
+  ],
+  "answer": 1,
+  "explanation": "The anchor provides the starting rows and the recursive member references the CTE itself. The two are combined with UNION or UNION ALL."
+ },
+ {
+  "id": "qe5d07cbfb09",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "How many rows does a CROSS JOIN of a 3-row table with a 4-row table produce?",
+  "options": [
+   "7",
+   "12",
+   "8",
+   "81"
+  ],
+  "answer": 1,
+  "explanation": "A cross join multiplies row counts, so 3 x 4 = 12 rows."
+ },
+ {
+  "id": "q831fecb433a",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "EXPLAIN ANALYZE shows a Seq Scan estimated at 10 rows but returning 1,000,000 rows. What is the most likely cause?",
+  "options": [
+   "The index is corrupted",
+   "Stale or inaccurate planner statistics",
+   "The query contains a LIMIT clause",
+   "The database is running in SERIALIZABLE mode"
+  ],
+  "answer": 1,
+  "explanation": "A large gap between estimated and actual rows points to outdated statistics or skewed data, which can lead to poor join and scan choices. Running ANALYZE is the usual first step."
+ },
+ {
+  "id": "q5680f10e8f5",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "What is a risk of using NATURAL JOIN?",
+  "options": [
+   "It joins on every pair of identically named columns, so adding a column can silently change results",
+   "It always returns duplicate rows",
+   "It requires an explicit ON clause",
+   "It cannot join more than two tables"
+  ],
+  "answer": 0,
+  "explanation": "NATURAL JOIN implicitly matches all same-named columns, so a schema change can alter the join condition without any query change."
+ },
+ {
+  "id": "q2cf2ddb1d93",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT 7 / 2 return?",
+  "options": [
+   "3",
+   "3.5",
+   "4",
+   "An error"
+  ],
+  "answer": 0,
+  "explanation": "Dividing two integers in PostgreSQL performs integer division and truncates toward zero. Cast one operand to NUMERIC or DOUBLE PRECISION to get 3.5."
+ },
+ {
+  "id": "q3d73cf0dd24",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "A column x contains 1, NULL and 3. What does SELECT AVG(x) return?",
+  "options": [
+   "1.33",
+   "2",
+   "4",
+   "NULL"
+  ],
+  "answer": 1,
+  "explanation": "AVG ignores the NULL and averages the two non-NULL values, (1 + 3) / 2 = 2, rather than dividing by three rows."
+ },
+ {
+  "id": "q1a7e57b6748",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "What does FOR UPDATE SKIP LOCKED do in PostgreSQL?",
+  "options": [
+   "Disables locking for the query",
+   "Skips rows that fail a CHECK constraint",
+   "Ignores locks held by the current transaction",
+   "Skips rows that other transactions have locked instead of waiting for them"
+  ],
+  "answer": 3,
+  "explanation": "SKIP LOCKED is commonly used to build job queues, where each worker claims unlocked rows without blocking on others."
+ }
+]

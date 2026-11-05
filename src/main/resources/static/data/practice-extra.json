@@ -1150,21 +1150,6 @@
   "explanation": "Positions: A=1, E=5, J=10, O=15, T=20, Y=25 (the EJOTY trick).\nPosition 8 is H."
  },
  {
-  "id": "q4d0850e2168",
-  "subject": "reasoning",
-  "topic": "ranking",
-  "level": "easy",
-  "question": "In a row of 29 people, P is 12th from the left and Q is 7th from the right. How many people are between them?",
-  "options": [
-   "11",
-   "8",
-   "5",
-   "10"
-  ],
-  "answer": 3,
-  "explanation": "P and everyone to P's left: 12. Q and everyone to Q's right: 7.\nSince 12 + 7 < 29, they don't overlap. Between them: 29 − (12 + 7) = 10."
- },
- {
   "id": "qd271c757e22",
   "subject": "reasoning",
   "topic": "syllogism",
@@ -1306,21 +1291,6 @@
   "explanation": "Draw the statements as Venn diagrams: All stones are rivers. Some rivers are not lamps.\nConclusion I (No rivers is lamps.) fails in at least one possible diagram, so it does not follow.\nConclusion II (Some rivers are not lamps.) is true in every diagram the statements allow, so it follows.\nAnswer: Only conclusion II follows."
  },
  {
-  "id": "q5c058f23fc3",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "easy",
-  "question": "Find the missing number: 3, 10, 24, 45, ?, 108",
-  "options": [
-   "55",
-   "78",
-   "69",
-   "73"
-  ],
-  "answer": 3,
-  "explanation": "The differences grow by 7: 7, 14, 21, 28, 35.\nSo the missing term (position 5) is 73.\nCheck: the full series is 3, 10, 24, 45, 73, 108."
- },
- {
   "id": "qea809b9a943",
   "subject": "reasoning",
   "topic": "alphabet",
@@ -1334,22 +1304,6 @@
   ],
   "answer": 2,
   "explanation": "I is letter 9.\n9 places to the right: 9 + 9 = 18.\nLetter 18 is R."
- },
- {
-  "id": "qf30c5276ea8",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "medium",
-  "question": "Statements: Some trees are not flowers. Some flowers are boxes. No trees is boxes.\nConclusions:\nI. Some flowers are trees.\nII. Some trees are not boxes.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 1,
-  "explanation": "Draw the statements as Venn diagrams: Some trees are not flowers. Some flowers are boxes. No trees is boxes.\nConclusion I (Some flowers are trees.) fails in at least one possible diagram, so it does not follow.\nConclusion II (Some trees are not boxes.) is true in every diagram the statements allow, so it follows.\nAnswer: Only conclusion II follows."
  },
  {
   "id": "q90e71fb42e0",
@@ -1366,21 +1320,6 @@
   ],
   "answer": 1,
   "explanation": "Read the chain Z = L ≤ T = R ≥ H from L to R and from L to R. A mix of > and < (or ≥ and ≤) between two letters breaks the link.\nI: L > R can fail (e.g. L = 0, R = 0 fits every statement), so it does not follow.\nII: L ≤ R always holds in the chain, so it follows.\nAnswer: Only conclusion II follows."
- },
- {
-  "id": "q4124cf7f086",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "medium",
-  "question": "Find the missing number: 2, 5, 13, 26, ?, 67, 95",
-  "options": [
-   "51",
-   "35",
-   "66",
-   "44"
-  ],
-  "answer": 3,
-  "explanation": "Differences: 3, 8, 13, 18, 23, 28; each grows by 5.\nSo the missing term is 44.\nFull series: 2, 5, 13, 26, 44, 67, 95."
  },
  {
   "id": "qe862050a3d0",
@@ -1428,37 +1367,6 @@
   "explanation": "7 students are above, so 50 − 8 = 42 are below.\nRank from the bottom = 42 + 1 = 43."
  },
  {
-  "id": "q63408c2abfb",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "medium",
-  "question": "Statements: All trees are tables. Some tables are not lamps. No lamps is tables.\nConclusions:\nI. Some lamps are not trees.\nII. Some tables are lamps.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw the statements as Venn diagrams: All trees are tables. Some tables are not lamps. No lamps is tables.\nConclusion I (Some lamps are not trees.) fails in at least one possible diagram, so it does not follow.\nConclusion II (Some tables are lamps.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
- },
- {
-  "id": "q2eea89b27e1",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "medium",
-  "question": "Find the missing number: 6, 22, 70, 214, 646, ?, 5830",
-  "options": [
-   "1651",
-   "1554",
-   "1942",
-   "2233"
-  ],
-  "answer": 2,
-  "explanation": "Each term = previous × 3 + 4.\nSo the missing term is 1942.\nFull series: 6, 22, 70, 214, 646, 1942, 5830."
- },
- {
   "id": "q93c8c73dcd2",
   "subject": "reasoning",
   "topic": "syllogism",
@@ -1473,21 +1381,6 @@
   ],
   "answer": 3,
   "explanation": "Draw the statements as Venn diagrams: No pens is tables. All tables are books. All books are tables.\nConclusion I (Some pens are not books.) fails in at least one possible diagram, so it does not follow.\nConclusion II (No tables is books.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
- },
- {
-  "id": "q8082efb0710",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "medium",
-  "question": "In a certain code, NOTE is written as OQWI. How will DEBT be written in that code?",
-  "options": [
-   "CCYP",
-   "EGEX",
-   "FHFY",
-   "TBED"
-  ],
-  "answer": 1,
-  "explanation": "Compare NOTE with OQWI letter by letter: N→O (+1), O→Q (+2), T→W (+3), E→I (+4).\nRule: letters shifted by a fixed rule.\nApply it to DEBT: D→E, E→G, B→E, T→X, giving EGEX."
  },
  {
   "id": "qbf14a0c1e63",
@@ -1536,51 +1429,6 @@
   "explanation": "Use east as +x and north as +y. 7 km West: (-7, 0).\nTurn right to face North, 11 km: (-7, 11).\nTurn right to face East, 8 km: (1, 11).\nTurn right to face South, 8 km: (1, 3).\nNet: 1 km east, 3 km north.\nSo the person is to the North-East of the start."
  },
  {
-  "id": "q681631fdc9e",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "medium",
-  "question": "A person starts walking towards West and covers 8 km, then turns left and walks 4 km, then turns right and walks 7 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "West",
-   "South-West",
-   "North-East",
-   "South-East"
-  ],
-  "answer": 1,
-  "explanation": "Use east as +x and north as +y. 8 km West: (-8, 0).\nTurn left to face South, 4 km: (-8, -4).\nTurn right to face West, 7 km: (-15, -4).\nNet: 15 km west, 4 km south.\nSo the person is to the South-West of the start."
- },
- {
-  "id": "qa70666cd803",
-  "subject": "reasoning",
-  "topic": "direction-sense",
-  "level": "medium",
-  "question": "A person starts walking towards North and covers 5 km, then turns right and walks 6 km, then turns left and walks 6 km. In which direction is the person now with respect to the starting point?",
-  "options": [
-   "North-East",
-   "East",
-   "North-West",
-   "North"
-  ],
-  "answer": 0,
-  "explanation": "Use east as +x and north as +y. 5 km North: (0, 5).\nTurn right to face East, 6 km: (6, 5).\nTurn left to face North, 6 km: (6, 11).\nNet: 6 km east, 11 km north.\nSo the person is to the North-East of the start."
- },
- {
-  "id": "qb2cc814b8d7",
-  "subject": "reasoning",
-  "topic": "ranking",
-  "level": "medium",
-  "question": "In a row of 40 people, P is 10th from the left and Q is 6th from the right. How many people are between them?",
-  "options": [
-   "24",
-   "19",
-   "30",
-   "27"
-  ],
-  "answer": 0,
-  "explanation": "P and everyone to P's left: 10. Q and everyone to Q's right: 6.\nSince 10 + 6 < 40, they don't overlap. Between them: 40 − (10 + 6) = 24."
- },
- {
   "id": "q720b573bf4b",
   "subject": "reasoning",
   "topic": "ranking",
@@ -1596,21 +1444,6 @@
   "explanation": "23 students are above, so 58 − 24 = 34 are below.\nRank from the bottom = 34 + 1 = 35."
  },
  {
-  "id": "q903a03d805e",
-  "subject": "reasoning",
-  "topic": "coding-decoding",
-  "level": "medium",
-  "question": "In a certain code, FUND is written as GWQH. How will CODE be written in that code?",
-  "options": [
-   "BMAA",
-   "DQGI",
-   "ERHJ",
-   "EDOC"
-  ],
-  "answer": 1,
-  "explanation": "Compare FUND with GWQH letter by letter: F→G (+1), U→W (+2), N→Q (+3), D→H (+4).\nRule: letters shifted by a fixed rule.\nApply it to CODE: C→D, O→Q, D→G, E→I, giving DQGI."
- },
- {
   "id": "q831f37bd36d",
   "subject": "reasoning",
   "topic": "coding-decoding",
@@ -1624,37 +1457,6 @@
   ],
   "answer": 3,
   "explanation": "Compare CLERK with DNHVP letter by letter: C→D (+1), L→N (+2), E→H (+3), R→V (+4), K→P (+5).\nRule: letters shifted by a fixed rule.\nApply it to GOLD: G→H, O→Q, L→O, D→H, giving HQOH."
- },
- {
-  "id": "qaccc7ee3f57",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "medium",
-  "question": "5 friends Amit, Bhavna, Lata, Omkar, Tarun sit in a straight row facing north. Lata sits immediately to the left of Tarun. Bhavna and Omkar are not neighbours. Omkar sits at the extreme right end. Bhavna and Amit are not neighbours.\nWho sits exactly in the middle?",
-  "options": [
-   "Lata",
-   "Amit",
-   "Tarun",
-   "Bhavna"
-  ],
-  "answer": 2,
-  "explanation": "Start with the clues that fix a position (ends, 'immediately left of'), then place the rest.\n• Lata sits immediately to the left of Tarun.\n• Bhavna and Omkar are not neighbours.\n• Omkar sits at the extreme right end.\n• Bhavna and Amit are not neighbours.\nOnly one order satisfies every clue, left to right: Bhavna, Lata, Tarun, Amit, Omkar.\nWho sits exactly in the middle? Tarun."
- },
- {
-  "id": "q3f92f22c58c",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "medium",
-  "question": "Statements: No books is trees. All trees are tables. No books is trees.\nConclusions:\nI. Some tables are books.\nII. All tables are books.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw the statements as Venn diagrams: No books is trees. All trees are tables. No books is trees.\nConclusion I (Some tables are books.) fails in at least one possible diagram, so it does not follow.\nConclusion II (All tables are books.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
  },
  {
   "id": "qfb9f241f372",
@@ -1718,22 +1520,6 @@
   "explanation": "Start with the clues that fix a position (ends, 'immediately left of'), then place the rest.\n• Gautam and Yash are not neighbours.\n• Yash sits at one of the extreme ends.\n• Exactly one person sits between Gautam and Hema.\n• Gautam sits somewhere to the left of Yash.\n• Gautam sits somewhere to the left of Zoya.\n• Varun sits at the extreme left end.\n• Yash and Varun are not neighbours.\nOnly one order satisfies every clue, left to right: Varun, Gautam, Zoya, Hema, Yash.\nWho sits immediately to the right of Varun? Gautam."
  },
  {
-  "id": "qa0e554e2664",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "medium",
-  "question": "Statements: No bags is doors. All doors are trees. All trees are doors.\nConclusions:\nI. No bags is trees.\nII. Some bags are not trees.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 0,
-  "explanation": "Draw the statements as Venn diagrams: No bags is doors. All doors are trees. All trees are doors.\nConclusion I (No bags is trees.) is true in every diagram the statements allow, so it follows.\nConclusion II (Some bags are not trees.) fails in at least one possible diagram, so it does not follow.\nAnswer: Only conclusion I follows."
- },
- {
   "id": "qa9c7d7db1ba",
   "subject": "reasoning",
   "topic": "ranking",
@@ -1765,36 +1551,6 @@
   "explanation": "Read the chain A < E = X ≥ P ≥ F from A to P and from F to E. A mix of > and < (or ≥ and ≤) between two letters breaks the link.\nI: A = P can fail (e.g. A = 0, P = 1 fits every statement), so it does not follow.\nII: F ≤ E always holds in the chain, so it follows.\nAnswer: Only conclusion II follows."
  },
  {
-  "id": "q09cd59b0e86",
-  "subject": "reasoning",
-  "topic": "ranking",
-  "level": "medium",
-  "question": "In a row of 34 people, P is 8th from the left and Q is 10th from the right. How many people are between them?",
-  "options": [
-   "16",
-   "6",
-   "14",
-   "13"
-  ],
-  "answer": 0,
-  "explanation": "P and everyone to P's left: 8. Q and everyone to Q's right: 10.\nSince 8 + 10 < 34, they don't overlap. Between them: 34 − (8 + 10) = 16."
- },
- {
-  "id": "qb8d79d4d1d3",
-  "subject": "reasoning",
-  "topic": "ranking",
-  "level": "medium",
-  "question": "Neha ranks 5th from the top and 13th from the bottom in a class. How many students are in the class?",
-  "options": [
-   "19",
-   "14",
-   "17",
-   "20"
-  ],
-  "answer": 2,
-  "explanation": "Counting from the top (5) and from the bottom (13) counts this student twice.\nTotal = 5 + 13 − 1 = 17."
- },
- {
   "id": "q743fe5f883b",
   "subject": "reasoning",
   "topic": "seating-arrangement",
@@ -1823,21 +1579,6 @@
   ],
   "answer": 2,
   "explanation": "Compare CLERK with DJHNP letter by letter: C→D (+1), L→J (−2), E→H (+3), R→N (−4), K→P (+5).\nRule: alternating forward and backward shifts of 1, 2, 3 and so on.\nApply it to FUND: F→G, U→S, N→Q, D→Z, giving GSQZ."
- },
- {
-  "id": "qee3bf9a13d0",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "hard",
-  "question": "6 friends Bhavna, Gautam, Hema, Manoj, Neha, Priya sit in a straight row facing north. Gautam sits somewhere between Bhavna and Neha. Priya and Gautam are not neighbours. Priya sits somewhere to the left of Gautam. Gautam sits somewhere between Priya and Neha. Manoj sits immediately to the left of Gautam. Manoj sits somewhere to the left of Hema. Hema sits immediately to the left of Neha. Manoj sits somewhere between Priya and Hema. Priya and Manoj are not neighbours.\nWho sits second from the left end?",
-  "options": [
-   "Bhavna",
-   "Neha",
-   "Priya",
-   "Gautam"
-  ],
-  "answer": 0,
-  "explanation": "Start with the clues that fix a position (ends, 'immediately left of'), then place the rest.\n• Gautam sits somewhere between Bhavna and Neha.\n• Priya and Gautam are not neighbours.\n• Priya sits somewhere to the left of Gautam.\n• Gautam sits somewhere between Priya and Neha.\n• Manoj sits immediately to the left of Gautam.\n• Manoj sits somewhere to the left of Hema.\n• Hema sits immediately to the left of Neha.\n• Manoj sits somewhere between Priya and Hema.\n• Priya and Manoj are not neighbours.\nOnly one order satisfies every clue, left to right: Priya, Bhavna, Manoj, Gautam, Hema, Neha.\nWho sits second from the left end? Bhavna."
  },
  {
   "id": "q56e88267c42",
@@ -1885,22 +1626,6 @@
   "explanation": "Each term = n³ + 5 for n = 2, 3, …\nSo the missing term is 221.\nFull series: 13, 32, 69, 130, 221, 348, 517."
  },
  {
-  "id": "q770cf7cf799",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some flowers are keys. Some keys are not doors. All doors are trees.\nConclusions:\nI. Some doors are not trees.\nII. All keys are flowers.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw the statements as Venn diagrams: Some flowers are keys. Some keys are not doors. All doors are trees.\nConclusion I (Some doors are not trees.) fails in at least one possible diagram, so it does not follow.\nConclusion II (All keys are flowers.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
- },
- {
   "id": "q8ab6b551f59",
   "subject": "reasoning",
   "topic": "coding-decoding",
@@ -1944,21 +1669,6 @@
   ],
   "answer": 2,
   "explanation": "Compare TABLE with UYEHJ letter by letter: T→U (+1), A→Y (−2), B→E (+3), L→H (−4), E→J (+5).\nRule: alternating forward and backward shifts of 1, 2, 3 and so on.\nApply it to LOAN: L→M, O→M, A→D, N→J, giving MMDJ."
- },
- {
-  "id": "q6899fc128ec",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 5, 25, 105, 425, ?, 6825, 27305",
-  "options": [
-   "1790",
-   "1449",
-   "1705",
-   "1695"
-  ],
-  "answer": 2,
-  "explanation": "Each term = previous × 4 + 5.\nSo the missing term is 1705.\nFull series: 5, 25, 105, 425, 1705, 6825, 27305."
  },
  {
   "id": "qa6f8a789aad",
@@ -2006,38 +1716,6 @@
   "explanation": "Each term = previous × 4 + 6.\nSo the missing term is 1278.\nFull series: 3, 18, 78, 318, 1278, 5118, 20478."
  },
  {
-  "id": "q897fa59b5fe",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some bags are pens. No pens is hills. Some hills are not lamps.\nConclusions:\nI. Some lamps are not pens.\nII. No hills is lamps.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw the statements as Venn diagrams: Some bags are pens. No pens is hills. Some hills are not lamps.\nConclusion I (Some lamps are not pens.) fails in at least one possible diagram, so it does not follow.\nConclusion II (No hills is lamps.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
- },
- {
-  "id": "q5979749f0d2",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: Some stones are cups. Some cups are flowers. Some flowers are not shirts.\nConclusions:\nI. Some cups are not stones.\nII. No shirts is flowers.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw the statements as Venn diagrams: Some stones are cups. Some cups are flowers. Some flowers are not shirts.\nConclusion I (Some cups are not stones.) fails in at least one possible diagram, so it does not follow.\nConclusion II (No shirts is flowers.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
- },
- {
   "id": "q0071012eafd",
   "subject": "reasoning",
   "topic": "inequality",
@@ -2068,21 +1746,6 @@
   ],
   "answer": 0,
   "explanation": "Draw the statements as Venn diagrams: Some flowers are not boxes. All boxes are doors. Some doors are not roads.\nConclusion I (Some doors are not roads.) is true in every diagram the statements allow, so it follows.\nConclusion II (Some roads are not flowers.) fails in at least one possible diagram, so it does not follow.\nAnswer: Only conclusion I follows."
- },
- {
-  "id": "qf9cba7ca9ea",
-  "subject": "reasoning",
-  "topic": "seating-arrangement",
-  "level": "hard",
-  "question": "7 friends Deepa, Gautam, Hema, Manoj, Rahul, Sneha, Varun sit in a straight row facing north. Deepa sits at the extreme left end. Hema sits somewhere between Rahul and Gautam. Exactly one person sits between Sneha and Deepa. Manoj sits somewhere between Hema and Gautam. Rahul sits immediately to the left of Hema. Manoj and Deepa are not neighbours. Deepa sits somewhere to the left of Rahul.\nWho sits second from the left end?",
-  "options": [
-   "Deepa",
-   "Gautam",
-   "Varun",
-   "Sneha"
-  ],
-  "answer": 2,
-  "explanation": "Start with the clues that fix a position (ends, 'immediately left of'), then place the rest.\n• Deepa sits at the extreme left end.\n• Hema sits somewhere between Rahul and Gautam.\n• Exactly one person sits between Sneha and Deepa.\n• Manoj sits somewhere between Hema and Gautam.\n• Rahul sits immediately to the left of Hema.\n• Manoj and Deepa are not neighbours.\n• Deepa sits somewhere to the left of Rahul.\nOnly one order satisfies every clue, left to right: Deepa, Varun, Sneha, Rahul, Hema, Manoj, Gautam.\nWho sits second from the left end? Varun."
  },
  {
   "id": "q6d358cda0ee",
@@ -2133,22 +1796,6 @@
   "explanation": "Draw the statements as Venn diagrams: All tables are chairs. No chairs is birds. Some birds are boxes.\nConclusion I (Some chairs are birds.) fails in at least one possible diagram, so it does not follow.\nConclusion II (Some boxes are tables.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
  },
  {
-  "id": "q15f835353a0",
-  "subject": "reasoning",
-  "topic": "syllogism",
-  "level": "hard",
-  "question": "Statements: All birds are chairs. No chairs is stones. Some stones are shirts.\nConclusions:\nI. Some shirts are not stones.\nII. No birds is chairs.",
-  "options": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Either conclusion I or II follows",
-   "Neither conclusion I nor II follows",
-   "Both conclusions I and II follow"
-  ],
-  "answer": 3,
-  "explanation": "Draw the statements as Venn diagrams: All birds are chairs. No chairs is stones. Some stones are shirts.\nConclusion I (Some shirts are not stones.) fails in at least one possible diagram, so it does not follow.\nConclusion II (No birds is chairs.) fails in at least one possible diagram, so it does not follow.\nAnswer: Neither conclusion I nor II follows."
- },
- {
   "id": "q497fe4d0e07",
   "subject": "reasoning",
   "topic": "inequality",
@@ -2163,21 +1810,6 @@
   ],
   "answer": 4,
   "explanation": "Read the chain A > Q > N > R > C = U from R to A and from U to R. A mix of > and < (or ≥ and ≤) between two letters breaks the link.\nI: R < A always holds in the chain, so it follows.\nII: U < R always holds in the chain, so it follows.\nAnswer: Both conclusions I and II follow."
- },
- {
-  "id": "qc1b857a350f",
-  "subject": "reasoning",
-  "topic": "number-series",
-  "level": "hard",
-  "question": "Find the missing number: 3, 13, 53, 213, 853, ?, 13653",
-  "options": [
-   "2560",
-   "3413",
-   "3423",
-   "3410"
-  ],
-  "answer": 1,
-  "explanation": "Each term = previous × 4 + 1.\nSo the missing term is 3413.\nFull series: 3, 13, 53, 213, 853, 3413, 13653."
  },
  {
   "id": "q61c3eb69f70",

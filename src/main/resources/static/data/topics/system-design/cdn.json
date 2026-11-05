@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q1d4ef7a1265",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "Which content is typically best suited for CDN caching?",
+  "options": [
+   "Per-user bank account balances",
+   "Real-time chat messages between two users",
+   "Static assets such as images, CSS, and JavaScript bundles",
+   "One-time password verification codes"
+  ],
+  "answer": 2,
+  "explanation": "Static, shareable content can be cached widely without per-user correctness risk."
+ },
+ {
+  "id": "q6f9234d83a1",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "What is the origin in a CDN setup?",
+  "options": [
+   "The DNS resolver the CDN uses to look up hostnames",
+   "The authoritative server the CDN fetches content from on a cache miss",
+   "The browser that first requested the page",
+   "The service that evicts entries from the edge cache"
+  ],
+  "answer": 1,
+  "explanation": "Edge servers fall back to the origin when they do not have a valid cached copy."
+ },
+ {
+  "id": "q9f027349895",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "What does a CDN do?",
+  "options": [
+   "Caches content on edge servers close to users to reduce latency",
+   "Assigns IP addresses to client devices",
+   "Stores the primary copy of a relational database",
+   "Runs unit tests before each deployment"
+  ],
+  "answer": 0,
+  "explanation": "CDNs serve cacheable content from points of presence near users, offloading the origin."
+ },
+ {
+  "id": "qaeb9b808672",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "Why do CDNs reduce load on the origin server?",
+  "options": [
+   "Edge servers answer repeated requests for cached content, so fewer requests reach the origin",
+   "They block all dynamic requests",
+   "They compress the origin's database",
+   "They replace the origin entirely"
+  ],
+  "answer": 0,
+  "explanation": "Only misses and uncacheable requests reach the origin."
+ },
+ {
+  "id": "qd5f9995f1de",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "How does a CDN typically direct a user to a nearby edge server?",
+  "options": [
+   "Using DNS-based or anycast routing that considers the user's location",
+   "By asking the user to choose a server manually",
+   "By always sending users to the origin first",
+   "By storing the user's location in a cookie set by the origin"
+  ],
+  "answer": 0,
+  "explanation": "DNS responses or anycast IP routing steer each user to a close, healthy edge location."
+ }
+]

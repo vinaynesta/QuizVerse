@@ -1,0 +1,667 @@
+[
+  {
+    "topic": "joins",
+    "question": "In a LEFT JOIN, what fills the right-side columns when a left row has no match?",
+    "options": ["Zero", "NULL", "The left row's own values", "The row is removed"],
+    "answer": 1,
+    "explanation": "Unmatched left rows are kept and every right-side column is set to NULL."
+  },
+  {
+    "topic": "joins",
+    "question": "Which query returns customers who have placed no orders?",
+    "options": [
+      "SELECT c.* FROM customers c INNER JOIN orders o ON c.id = o.customer_id",
+      "SELECT c.* FROM customers c RIGHT JOIN orders o ON c.id = o.customer_id WHERE c.id IS NULL",
+      "SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.customer_id IS NULL",
+      "SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.customer_id IS NOT NULL"
+    ],
+    "answer": 2,
+    "explanation": "A LEFT JOIN with a WHERE test for NULL on the right side is the anti-join pattern. The RIGHT JOIN variant returns orphaned orders instead."
+  },
+  {
+    "topic": "joins",
+    "question": "Adding a condition on a right-table column in the WHERE clause of a LEFT JOIN, such as WHERE o.status = 'paid', has what effect?",
+    "options": [
+      "It keeps all left rows with NULLs for the right side",
+      "It turns the query into a CROSS JOIN",
+      "It has no effect on which rows are returned",
+      "It removes left rows with no matching paid order, so the result behaves like an inner join"
+    ],
+    "answer": 3,
+    "explanation": "NULL is never equal to 'paid', so rows without a match are filtered out. The condition belongs in the ON clause if unmatched left rows should be kept."
+  },
+  {
+    "topic": "aggregation",
+    "question": "How does AVG treat NULL values in a column in standard SQL?",
+    "options": [
+      "It ignores them and averages the non-NULL values",
+      "It treats them as zero",
+      "It returns NULL if any value is NULL",
+      "It treats them as the largest value"
+    ],
+    "answer": 0,
+    "explanation": "Aggregate functions other than COUNT(*) skip NULL inputs, so AVG divides by the count of non-NULL values."
+  },
+  {
+    "topic": "aggregation",
+    "question": "What is the difference between WHERE and HAVING?",
+    "options": [
+      "WHERE works only with COUNT, while HAVING works with any column",
+      "They are interchangeable in every query",
+      "WHERE runs after GROUP BY, while HAVING runs before it",
+      "WHERE filters rows before grouping, while HAVING filters groups after aggregation"
+    ],
+    "answer": 3,
+    "explanation": "WHERE is evaluated on individual rows before aggregation. HAVING is evaluated on groups and can reference aggregate results."
+  },
+  {
+    "topic": "aggregation",
+    "question": "In PostgreSQL, what happens when you run SELECT dept, name, COUNT(*) FROM emp GROUP BY dept?",
+    "options": [
+      "It returns one row per dept with an arbitrary name",
+      "It fails with an error that name must appear in GROUP BY or inside an aggregate",
+      "It returns one row per employee",
+      "It returns NULL for name in every group"
+    ],
+    "answer": 1,
+    "explanation": "PostgreSQL requires every non-aggregated select column to appear in GROUP BY. MySQL may accept this query only when ONLY_FULL_GROUP_BY is disabled."
+  },
+  {
+    "topic": "aggregation",
+    "question": "How does COUNT(DISTINCT col) treat NULL values?",
+    "options": [
+      "It counts NULL as one distinct value",
+      "It returns an error",
+      "It ignores NULL values",
+      "It counts each NULL row separately"
+    ],
+    "answer": 2,
+    "explanation": "All aggregate functions that take an argument ignore NULL inputs, and that includes the DISTINCT form of COUNT."
+  },
+  {
+    "topic": "subqueries",
+    "question": "Which predicate is generally safer than NOT IN when the subquery column can contain NULL?",
+    "options": ["NOT EXISTS", "NOT LIKE", "NOT BETWEEN", "NOT UNIQUE"],
+    "answer": 0,
+    "explanation": "NOT IN returns no rows if the list contains NULL, because the comparison becomes unknown. NOT EXISTS is not affected by NULL in the subquery."
+  },
+  {
+    "topic": "subqueries",
+    "question": "In a correlated subquery, how often is the inner query typically evaluated?",
+    "options": [
+      "Once, before the outer query starts",
+      "Once for each row of the outer query",
+      "Once per distinct value in the result",
+      "Only when the outer query returns no rows"
+    ],
+    "answer": 1,
+    "explanation": "Because the inner query references outer columns, it must be re-evaluated for each outer row, unless the optimizer rewrites it as a join."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What does WHERE salary = (SELECT MAX(salary) FROM employees) return?",
+    "options": [
+      "Employees in the lowest salary band",
+      "All employees ordered by salary",
+      "Employees earning the overall maximum salary, which may be more than one person",
+      "Exactly one employee, always"
+    ],
+    "answer": 2,
+    "explanation": "The scalar subquery returns the single maximum value, and every employee with that salary matches, so ties give multiple rows."
+  },
+  {
+    "topic": "window-functions",
+    "question": "For scores 90, 90, 80, what do RANK() and DENSE_RANK() assign to the score 80?",
+    "options": [
+      "RANK 2, DENSE_RANK 2",
+      "RANK 3, DENSE_RANK 2",
+      "RANK 2, DENSE_RANK 3",
+      "RANK 1, DENSE_RANK 3"
+    ],
+    "answer": 1,
+    "explanation": "RANK leaves a gap after the tie, so 80 gets 3. DENSE_RANK does not leave gaps, so 80 gets 2."
+  },
+  {
+    "topic": "window-functions",
+    "question": "What does ROW_NUMBER() do with tied ORDER BY values?",
+    "options": [
+      "It assigns distinct sequential numbers and breaks ties arbitrarily",
+      "It gives tied rows the same number",
+      "It skips numbers after each tie",
+      "It returns NULL for tied rows"
+    ],
+    "answer": 0,
+    "explanation": "ROW_NUMBER always produces unique consecutive numbers. Tied rows get different numbers, and their relative order is not guaranteed unless the ORDER BY is unique."
+  },
+  {
+    "topic": "window-functions",
+    "question": "Which clause divides rows into independent groups inside a window function?",
+    "options": ["GROUP BY", "HAVING", "PARTITION BY", "DISTINCT"],
+    "answer": 2,
+    "explanation": "PARTITION BY defines the groups over which the window function is computed, without collapsing rows the way GROUP BY does."
+  },
+  {
+    "topic": "window-functions",
+    "question": "In PostgreSQL, with SUM(amount) OVER (ORDER BY day) and no frame clause, which rows contribute to the sum for each row?",
+    "options": [
+      "Only the current row",
+      "All rows in the table",
+      "Only the previous row and the current row",
+      "All preceding rows, including peers that tie with the current row on day"
+    ],
+    "answer": 3,
+    "explanation": "The default frame is RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW, which includes all rows whose ORDER BY value equals the current row's value."
+  },
+  {
+    "topic": "indexes",
+    "question": "Why might WHERE LOWER(email) = 'a@b.com' not use a plain B-tree index on email?",
+    "options": [
+      "B-tree indexes cannot store text",
+      "LOWER is not allowed inside a WHERE clause",
+      "LOWER drops the index automatically at runtime",
+      "The function is applied to the column, so the index on the raw column cannot be searched directly"
+    ],
+    "answer": 3,
+    "explanation": "Wrapping an indexed column in a function usually prevents a plain index from being used. A functional index on LOWER(email) solves this."
+  },
+  {
+    "topic": "indexes",
+    "question": "For WHERE a = 5 AND b > 10, which composite index is most suitable?",
+    "options": [
+      "(b, a)",
+      "(a, b)",
+      "(a) only, since b can never be indexed",
+      "A separate index on b only"
+    ],
+    "answer": 1,
+    "explanation": "Put the equality column first and the range column second. The index can then seek to a = 5 and scan the b range within it."
+  },
+  {
+    "topic": "indexes",
+    "question": "What is a covering index?",
+    "options": [
+      "An index that encrypts column values",
+      "An index that covers only the primary key",
+      "An index containing every column a query needs, so table rows need not be read",
+      "An index that spans multiple tables"
+    ],
+    "answer": 2,
+    "explanation": "When the index holds all referenced columns, the database can answer the query from the index alone, which is an index-only scan in PostgreSQL."
+  },
+  {
+    "topic": "indexes",
+    "question": "Which statement about adding indexes is true?",
+    "options": [
+      "Indexes never affect INSERT speed",
+      "Each additional index adds maintenance work on INSERT, UPDATE and DELETE",
+      "Indexes make UPDATE statements always faster",
+      "Indexes remove the need for table statistics"
+    ],
+    "answer": 1,
+    "explanation": "Every index must be maintained when indexed data changes, so write cost grows with the number of indexes."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "What is the key difference between EXPLAIN and EXPLAIN ANALYZE in PostgreSQL?",
+    "options": [
+      "EXPLAIN runs the query and ANALYZE only prints the plan",
+      "They are identical except for output formatting",
+      "EXPLAIN ANALYZE estimates costs without executing the query",
+      "EXPLAIN ANALYZE executes the query and reports actual row counts and timings, while EXPLAIN shows only the estimated plan"
+    ],
+    "answer": 3,
+    "explanation": "EXPLAIN alone does not run the statement. EXPLAIN ANALYZE runs it, so it has side effects for data-changing statements and should be wrapped in a transaction if needed."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Why is SELECT * discouraged in production code?",
+    "options": [
+      "It fetches unneeded columns and can break when the table schema changes",
+      "It is not allowed in PostgreSQL",
+      "It always disables indexes",
+      "It returns duplicate rows"
+    ],
+    "answer": 0,
+    "explanation": "Fetching only needed columns reduces I/O and network traffic and makes queries robust to added columns. It can also prevent covering index use."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "In PostgreSQL with the C collation, which LIKE pattern can use a B-tree index on a text column?",
+    "options": ["'%smith'", "'_mith'", "'smith%'", "'%mit%'"],
+    "answer": 2,
+    "explanation": "A pattern with a fixed prefix can be turned into a range search on the index. Patterns that begin with a wildcard cannot."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Compared with UNION ALL, what extra work does UNION perform?",
+    "options": [
+      "It adds a row number to each row",
+      "It removes duplicate rows, which typically requires a sort or hash step",
+      "It sorts the output by the first column",
+      "It locks both source tables"
+    ],
+    "answer": 1,
+    "explanation": "UNION must deduplicate, which costs a sort or hash aggregate. UNION ALL simply concatenates the results and is cheaper when duplicates are acceptable or impossible."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Which PostgreSQL command refreshes the planner's table statistics?",
+    "options": ["ANALYZE", "VACUUM FULL", "REINDEX", "CHECKPOINT"],
+    "answer": 0,
+    "explanation": "ANALYZE samples table data and updates the statistics the planner uses to estimate row counts and choose plans."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "Under READ COMMITTED isolation in PostgreSQL, which anomaly can occur?",
+    "options": [
+      "Dirty read",
+      "No anomaly is possible",
+      "Non-repeatable read",
+      "Only write skew"
+    ],
+    "answer": 2,
+    "explanation": "READ COMMITTED prevents dirty reads, but two reads of the same row in one transaction can return different committed values."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What is a dirty read?",
+    "options": [
+      "Reading a row that was deleted and later re-inserted",
+      "Reading the same row twice and getting different values",
+      "Reading rows that a concurrent transaction inserted into a range",
+      "Reading data written by another transaction that has not yet committed"
+    ],
+    "answer": 3,
+    "explanation": "A dirty read sees uncommitted data, which may be rolled back and so never truly existed."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "Which anomaly occurs when a repeated range query returns rows that another committed transaction inserted?",
+    "options": ["Phantom read", "Dirty read", "Lost update", "Non-repeatable read"],
+    "answer": 0,
+    "explanation": "A phantom read involves new rows appearing in a re-run query. A non-repeatable read involves existing rows changing."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What is the default transaction isolation level in PostgreSQL?",
+    "options": ["SERIALIZABLE", "READ COMMITTED", "REPEATABLE READ", "READ UNCOMMITTED"],
+    "answer": 1,
+    "explanation": "PostgreSQL defaults to READ COMMITTED. Its READ UNCOMMITTED level behaves the same as READ COMMITTED."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What does SAVEPOINT allow inside a transaction?",
+    "options": [
+      "Committing part of the transaction early while keeping the rest open",
+      "Running a second transaction in parallel on the same connection",
+      "Automatically retrying deadlocked statements",
+      "Rolling back to a named point without aborting the whole transaction"
+    ],
+    "answer": 3,
+    "explanation": "ROLLBACK TO SAVEPOINT undoes work since the savepoint and keeps the surrounding transaction active."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "In PostgreSQL, what happens after a statement fails inside an explicit transaction block?",
+    "options": [
+      "The failed statement is retried automatically",
+      "The remaining statements run normally",
+      "The transaction is aborted, and later statements fail until ROLLBACK is issued",
+      "The whole session is closed"
+    ],
+    "answer": 2,
+    "explanation": "PostgreSQL puts the transaction in an aborted state. Only ROLLBACK (or ROLLBACK TO SAVEPOINT) is accepted until the transaction is ended."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What does SELECT ... FOR UPDATE do in PostgreSQL?",
+    "options": [
+      "Locks the selected rows so other transactions cannot update or delete them until commit",
+      "Locks the entire table for reads",
+      "Creates a snapshot copy of the table",
+      "Prevents the query from being committed"
+    ],
+    "answer": 0,
+    "explanation": "FOR UPDATE takes row-level locks on the rows returned, blocking concurrent modifications until the transaction ends."
+  },
+  {
+    "topic": "constraints",
+    "question": "What does ON DELETE CASCADE do on a foreign key?",
+    "options": [
+      "Prevents deleting parent rows that have children",
+      "Sets child foreign key values to NULL",
+      "Marks child rows as deleted without removing them",
+      "Deletes child rows automatically when the referenced parent row is deleted"
+    ],
+    "answer": 3,
+    "explanation": "CASCADE propagates the delete to dependent child rows. SET NULL and RESTRICT or NO ACTION are the alternatives."
+  },
+  {
+    "topic": "constraints",
+    "question": "In PostgreSQL, how many NULL values can a UNIQUE column that is not NOT NULL hold?",
+    "options": [
+      "Only one",
+      "None, because NULLs are rejected",
+      "As many as needed, because NULLs are not equal to each other",
+      "Exactly two"
+    ],
+    "answer": 2,
+    "explanation": "NULLs are treated as distinct for UNIQUE checks in PostgreSQL, so multiple NULL rows are allowed. PostgreSQL 15 and later support NULLS NOT DISTINCT to change this."
+  },
+  {
+    "topic": "constraints",
+    "question": "A table has CHECK (price > 0) and you insert a row with price = NULL. What happens?",
+    "options": [
+      "The insert fails because NULL is not greater than 0",
+      "The insert succeeds, because the check evaluates to UNKNOWN, which does not violate CHECK",
+      "The insert succeeds and price is set to 0",
+      "The check is skipped and an error is written to the log"
+    ],
+    "answer": 1,
+    "explanation": "A CHECK constraint fails only when its condition is FALSE. UNKNOWN passes, so add NOT NULL if NULL must be rejected."
+  },
+  {
+    "topic": "normalization",
+    "question": "What is a drawback of over-normalization?",
+    "options": [
+      "Data becomes inconsistent",
+      "Duplicate rows are guaranteed",
+      "Primary keys stop working",
+      "Queries often need many joins, which can slow reads"
+    ],
+    "answer": 3,
+    "explanation": "Highly normalized schemas split data across many tables, so reads require more joins. This is the usual trade-off that motivates selective denormalization."
+  },
+  {
+    "topic": "normalization",
+    "question": "A table (order_id, product_id, product_name, qty) has key (order_id, product_id), and product_name depends only on product_id. What is the lowest normal form this table fails to satisfy?",
+    "options": ["1NF", "2NF", "4NF", "6NF"],
+    "answer": 1,
+    "explanation": "The table is in 1NF but has a partial dependency on part of the composite key, which violates 2NF."
+  },
+  {
+    "topic": "normalization",
+    "question": "Why would a designer intentionally denormalize a schema?",
+    "options": [
+      "To remove all foreign keys",
+      "To reduce the number of tables to one",
+      "To speed up frequent reads by reducing joins, accepting some redundancy",
+      "To eliminate the need for indexes"
+    ],
+    "answer": 2,
+    "explanation": "Denormalization trades write complexity and redundancy for faster reads, often in reporting or read-heavy workloads."
+  },
+  {
+    "topic": "data-types",
+    "question": "What does NUMERIC(10,2) store?",
+    "options": [
+      "A 10-bit integer with two bytes of padding",
+      "Up to 10 total digits, with exactly 2 digits after the decimal point, stored exactly",
+      "A floating-point number with 10 significant bits",
+      "Ten decimal places, with two digits in total"
+    ],
+    "answer": 1,
+    "explanation": "NUMERIC(precision, scale) stores exact decimal values with up to 10 digits in total, of which 2 are after the decimal point."
+  },
+  {
+    "topic": "data-types",
+    "question": "Why is a binary floating-point type such as FLOAT generally avoided for money values?",
+    "options": [
+      "Many decimal fractions, such as 0.1, cannot be represented exactly in binary",
+      "It is too slow to store on any disk",
+      "It cannot hold negative numbers",
+      "It cannot be used in arithmetic"
+    ],
+    "answer": 0,
+    "explanation": "Binary floating point introduces rounding error in decimal values. Use NUMERIC or DECIMAL for exact currency arithmetic."
+  },
+  {
+    "topic": "data-types",
+    "question": "In PostgreSQL, what is the difference between storing 'abc' in CHAR(5) and in VARCHAR(5)?",
+    "options": [
+      "CHAR stores 3 characters, while VARCHAR pads to 5",
+      "Both store exactly 5 characters",
+      "VARCHAR rejects strings shorter than 5 characters",
+      "CHAR pads the value with spaces to 5 characters, while VARCHAR stores 'abc' without padding"
+    ],
+    "answer": 3,
+    "explanation": "CHAR(n) is blank-padded to n characters, while VARCHAR(n) stores only the characters given. Trailing spaces in CHAR are insignificant in comparisons."
+  },
+  {
+    "topic": "constraints",
+    "question": "In PostgreSQL, which index is created automatically when a PRIMARY KEY is declared?",
+    "options": ["A hash index", "A unique B-tree index", "A bitmap index", "No index is created"],
+    "answer": 1,
+    "explanation": "PostgreSQL implements primary key and unique constraints with a unique B-tree index."
+  },
+  {
+    "topic": "joins",
+    "question": "MySQL does not support FULL OUTER JOIN. How is it usually emulated?",
+    "options": [
+      "A CROSS JOIN filtered with WHERE",
+      "An INNER JOIN with the NATURAL keyword",
+      "A LEFT JOIN combined with a RIGHT JOIN using UNION",
+      "Two INNER JOINs combined with INTERSECT"
+    ],
+    "answer": 2,
+    "explanation": "UNION of the left and right joins returns matched rows plus unmatched rows from each side, removing the duplicated matches."
+  },
+  {
+    "topic": "joins",
+    "question": "What does JOIN orders USING (customer_id) do?",
+    "options": [
+      "Joins on every column the two tables share",
+      "Joins on equality of the identically named customer_id columns and shows that column once in SELECT *",
+      "Joins only rows where customer_id is NULL",
+      "Creates an index on customer_id before joining"
+    ],
+    "answer": 1,
+    "explanation": "USING is shorthand for an equality condition on the listed columns, which are merged into a single output column."
+  },
+  {
+    "topic": "aggregation",
+    "question": "In PostgreSQL, what does COUNT(*) FILTER (WHERE status = 'paid') compute?",
+    "options": [
+      "The number of rows in each group whose status is 'paid'",
+      "The number of distinct status values",
+      "The total row count, ignoring the filter",
+      "The number of groups that contain a paid row"
+    ],
+    "answer": 0,
+    "explanation": "The FILTER clause restricts the rows that feed a single aggregate without affecting other aggregates in the query."
+  },
+  {
+    "topic": "aggregation",
+    "question": "Which PostgreSQL function concatenates values from many rows into one string with a separator?",
+    "options": ["concat_ws", "array_length", "group_concat", "string_agg"],
+    "answer": 3,
+    "explanation": "string_agg(name, ', ') joins values per group; MySQL's equivalent is GROUP_CONCAT."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What is a subquery placed in the FROM clause called?",
+    "options": [
+      "A correlated subquery",
+      "A scalar subquery",
+      "A derived table",
+      "A materialized view"
+    ],
+    "answer": 2,
+    "explanation": "A derived table acts as an inline temporary result set that the outer query can select from and join."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What does WHERE id IN (SELECT customer_id FROM orders WHERE 1 = 0) return?",
+    "options": [
+      "All rows, because the subquery returns nothing to exclude",
+      "No rows, because IN against an empty set is FALSE",
+      "Rows where id is NULL",
+      "An error, because the subquery is empty"
+    ],
+    "answer": 1,
+    "explanation": "IN with an empty list is FALSE for every value, so no outer rows satisfy the predicate."
+  },
+  {
+    "topic": "window-functions",
+    "question": "What does LAG(price) OVER (ORDER BY day) return for each row?",
+    "options": [
+      "The price from the previous row in day order, or NULL for the first row",
+      "The price from the next row in day order",
+      "The lowest price seen so far",
+      "The difference between this row's price and the previous one"
+    ],
+    "answer": 0,
+    "explanation": "LAG reads a value from an earlier row in the window ordering, and LEAD reads from a later row."
+  },
+  {
+    "topic": "window-functions",
+    "question": "How do window functions differ from aggregates used with GROUP BY?",
+    "options": [
+      "They can only be used on numeric columns",
+      "They always collapse the result to one row",
+      "They must be used inside a WHERE clause",
+      "They compute values over related rows while keeping every input row in the output"
+    ],
+    "answer": 3,
+    "explanation": "A window function adds a computed column per row instead of merging rows into one per group."
+  },
+  {
+    "topic": "window-functions",
+    "question": "Which frame computes a 7-row moving average that ends at the current row?",
+    "options": [
+      "AVG(x) OVER (ORDER BY day ROWS BETWEEN 7 PRECEDING AND 7 FOLLOWING)",
+      "AVG(x) OVER (PARTITION BY 7 ORDER BY day)",
+      "AVG(x) OVER (ORDER BY day ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)",
+      "AVG(x) OVER (ORDER BY day ROWS 7 FOLLOWING)"
+    ],
+    "answer": 2,
+    "explanation": "Six preceding rows plus the current row make seven rows in each frame."
+  },
+  {
+    "topic": "cte",
+    "question": "What is a common table expression (CTE)?",
+    "options": [
+      "A permanent table stored in a special schema",
+      "A named temporary result set defined with WITH and usable within a single statement",
+      "An index that spans several tables",
+      "A trigger that runs before each query"
+    ],
+    "answer": 1,
+    "explanation": "CTEs make complex queries more readable by naming intermediate results."
+  },
+  {
+    "topic": "cte",
+    "question": "Can a single non-recursive CTE be referenced more than once in the same query?",
+    "options": [
+      "Yes, the main query can refer to it multiple times",
+      "No, each CTE can be referenced only once",
+      "Only if it is declared RECURSIVE",
+      "Only in the WHERE clause"
+    ],
+    "answer": 0,
+    "explanation": "A CTE is visible to the whole statement that follows WITH, so it can be joined or selected from repeatedly."
+  },
+  {
+    "topic": "indexes",
+    "question": "Why does a composite index on (a, b) generally not help a query filtering only on WHERE b = 10?",
+    "options": [
+      "Composite indexes can be used only for ORDER BY",
+      "Column b is not stored in the index at all",
+      "The database must rebuild the index for each query",
+      "Entries are sorted by a first, so matching b values are scattered across the index"
+    ],
+    "answer": 3,
+    "explanation": "A B-tree composite index is usable from its leftmost column; filtering on a later column alone usually cannot seek into it."
+  },
+  {
+    "topic": "indexes",
+    "question": "In PostgreSQL, what does CREATE INDEX CONCURRENTLY do?",
+    "options": [
+      "Builds the index using multiple tables at once",
+      "Creates the index only in memory",
+      "Builds the index without blocking concurrent inserts, updates and deletes, at the cost of a slower build",
+      "Builds the index while blocking all reads"
+    ],
+    "answer": 2,
+    "explanation": "A plain CREATE INDEX blocks writes to the table; CONCURRENTLY avoids that but cannot run inside a transaction block."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Why does OFFSET-based pagination get slow for deep pages?",
+    "options": [
+      "OFFSET disables the use of every index",
+      "The database still has to produce and discard all the skipped rows",
+      "OFFSET forces a full table lock",
+      "Each page re-sorts the entire database"
+    ],
+    "answer": 1,
+    "explanation": "Keyset pagination, such as WHERE id > last_seen ORDER BY id LIMIT n, avoids scanning skipped rows."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "What is the N+1 query problem?",
+    "options": [
+      "Running one query to fetch a list and then one more query for each item in it",
+      "A query that joins N+1 tables",
+      "A query that returns one more row than expected",
+      "An index with N+1 levels"
+    ],
+    "answer": 0,
+    "explanation": "Batching with a join or a single IN query replaces many round trips with one."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What is a lost update?",
+    "options": [
+      "A transaction reads uncommitted data from another",
+      "A committed change is lost after a server crash",
+      "An UPDATE that matches no rows",
+      "Two transactions read the same value and both write back, so one overwrites the other's change"
+    ],
+    "answer": 3,
+    "explanation": "Lost updates can be prevented with SELECT ... FOR UPDATE, atomic UPDATE expressions or a stricter isolation level."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What is the default transaction isolation level in MySQL InnoDB?",
+    "options": ["READ COMMITTED", "READ UNCOMMITTED", "REPEATABLE READ", "SERIALIZABLE"],
+    "answer": 2,
+    "explanation": "InnoDB defaults to REPEATABLE READ, while PostgreSQL defaults to READ COMMITTED."
+  },
+  {
+    "topic": "constraints",
+    "question": "What does ON DELETE SET NULL do on a foreign key?",
+    "options": [
+      "Deletes the child rows along with the parent",
+      "Sets the child rows' foreign key column to NULL when the referenced parent row is deleted",
+      "Prevents the parent row from being deleted",
+      "Sets the parent row's columns to NULL instead of deleting it"
+    ],
+    "answer": 1,
+    "explanation": "SET NULL keeps child rows but breaks their link to the deleted parent, so the column must be nullable."
+  },
+  {
+    "topic": "data-types",
+    "question": "In PostgreSQL, how does the JSONB type differ from the JSON type?",
+    "options": [
+      "JSONB stores a decomposed binary form that supports indexing, while JSON stores the exact input text",
+      "JSONB can store only arrays, while JSON stores objects",
+      "JSON is faster to query because it is pre-parsed",
+      "JSONB keeps duplicate keys and whitespace exactly as entered"
+    ],
+    "answer": 0,
+    "explanation": "JSONB discards whitespace and duplicate keys, and supports GIN indexes and fast containment operators."
+  },
+  {
+    "topic": "dml",
+    "question": "In PostgreSQL, what does INSERT ... ON CONFLICT (id) DO UPDATE SET ... do?",
+    "options": [
+      "Always updates and never inserts",
+      "Fails the whole statement if a conflict occurs",
+      "Deletes the conflicting row and inserts a new one",
+      "Inserts the row, or updates the existing row when a row with the same id already exists"
+    ],
+    "answer": 3,
+    "explanation": "ON CONFLICT implements an upsert; MySQL offers similar behavior with INSERT ... ON DUPLICATE KEY UPDATE."
+  }
+]

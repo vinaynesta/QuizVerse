@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6866c99262c",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "In the Options API, which option returns the component's reactive state object?",
+  "options": [
+   "data",
+   "props",
+   "state",
+   "setup"
+  ],
+  "answer": 0,
+  "explanation": "The data option is a function returning an object whose properties become reactive and available on this."
+ },
+ {
+  "id": "qc9a2b5e00ab",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which directive provides an alternative block after a v-if when its condition is false?",
+  "options": [
+   "v-otherwise",
+   "v-not",
+   "v-else",
+   "v-unless"
+  ],
+  "answer": 2,
+  "explanation": "v-else must immediately follow an element with v-if or v-else-if."
+ },
+ {
+  "id": "qe80449f8ed4",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "In script setup, which function returns the router instance for navigation?",
+  "options": [
+   "createRouter",
+   "useRoute",
+   "getRouter",
+   "useRouter"
+  ],
+  "answer": 3,
+  "explanation": "useRouter() returns the router, whose push and replace methods navigate, while useRoute() returns the current route."
+ },
+ {
+  "id": "qd38eb5538e8",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which directive renders an element only when an expression is truthy, removing it otherwise?",
+  "options": [
+   "v-if",
+   "v-bind",
+   "v-show",
+   "v-model"
+  ],
+  "answer": 0,
+  "explanation": "v-if conditionally creates and destroys the element and its children."
+ },
+ {
+  "id": "q361ffecad99",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "In the Options API, how does a component emit an event named save?",
+  "options": [
+   "this.emit('save')",
+   "this.$emit('save')",
+   "emit.save()",
+   "this.$dispatch('save')"
+  ],
+  "answer": 1,
+  "explanation": "$emit triggers a custom event that the parent can listen to with @save."
+ },
+ {
+  "id": "qe20c0e94fec",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which Vue Router component creates a link that navigates without a full page reload?",
+  "options": [
+   "RouterView",
+   "RouteAnchor",
+   "RouterLink",
+   "NavLink"
+  ],
+  "answer": 2,
+  "explanation": "<RouterLink to=\"/about\"> renders an anchor and handles navigation on the client."
+ },
+ {
+  "id": "q0c382d7e240",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "In the Options API, what is the Vue 3 name of the hook that runs after a component is unmounted?",
+  "options": [
+   "destroyed",
+   "removed",
+   "detached",
+   "unmounted"
+  ],
+  "answer": 3,
+  "explanation": "Vue 3 renamed destroyed to unmounted, and beforeDestroy to beforeUnmount."
+ },
+ {
+  "id": "qfa2cfbba5d5",
+  "subject": "vue",
+  "topic": "components-props-events",
+  "level": "easy",
+  "question": "How does a parent listen to a child's custom event named close?",
+  "options": [
+   "<Child :close=\"onClose\" />",
+   "<Child #close=\"onClose\" />",
+   "<Child @close=\"onClose\" />",
+   "<Child v-close=\"onClose\" />"
+  ],
+  "answer": 2,
+  "explanation": "@close is shorthand for v-on:close and runs the handler when the child emits close."
+ },
+ {
+  "id": "q81c78ae4319",
+  "subject": "vue",
+  "topic": "reactivity",
+  "level": "easy",
+  "question": "In script setup, how do you update const count = ref(0) to 5?",
+  "options": [
+   "setCount(5)",
+   "count = 5",
+   "count(5)",
+   "count.value = 5"
+  ],
+  "answer": 3,
+  "explanation": "Refs are changed through their .value property in JavaScript code."
+ },
+ {
+  "id": "qe18ab6c0363",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which function creates a Vue 3 application instance?",
+  "options": [
+   "new Vue",
+   "Vue.mount",
+   "createApp",
+   "defineApp"
+  ],
+  "answer": 2,
+  "explanation": "Vue 3 apps start with createApp(App).mount('#app'), replacing the Vue 2 new Vue() constructor."
+ }
+]

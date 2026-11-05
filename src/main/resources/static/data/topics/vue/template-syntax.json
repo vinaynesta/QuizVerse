@@ -1,5 +1,20 @@
 [
  {
+  "id": "q184a36ae0b7",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What is the shorthand syntax for binding an attribute with the same name as a variable in Vue 3.4+, like :id=\"id\"?",
+  "options": [
+   "#id",
+   "@id",
+   "v-id",
+   ":id"
+  ],
+  "answer": 3,
+  "explanation": "Since Vue 3.4, :id with no value binds to a variable named id in scope."
+ },
+ {
   "id": "q411e6ddab80",
   "subject": "vue",
   "topic": "template-syntax",
@@ -30,6 +45,21 @@
   "explanation": "A leading colon is the shorthand for v-bind."
  },
  {
+  "id": "qc9a2b5e00ab",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which directive provides an alternative block after a v-if when its condition is false?",
+  "options": [
+   "v-otherwise",
+   "v-not",
+   "v-else",
+   "v-unless"
+  ],
+  "answer": 2,
+  "explanation": "v-else must immediately follow an element with v-if or v-else-if."
+ },
+ {
   "id": "qd00f06b12b4",
   "subject": "vue",
   "topic": "template-syntax",
@@ -43,6 +73,36 @@
   ],
   "answer": 3,
   "explanation": "The @ symbol is the shorthand for v-on event listeners."
+ },
+ {
+  "id": "qd38eb5538e8",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which directive renders an element only when an expression is truthy, removing it otherwise?",
+  "options": [
+   "v-if",
+   "v-bind",
+   "v-show",
+   "v-model"
+  ],
+  "answer": 0,
+  "explanation": "v-if conditionally creates and destroys the element and its children."
+ },
+ {
+  "id": "qe18ab6c0363",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "Which function creates a Vue 3 application instance?",
+  "options": [
+   "new Vue",
+   "Vue.mount",
+   "createApp",
+   "defineApp"
+  ],
+  "answer": 2,
+  "explanation": "Vue 3 apps start with createApp(App).mount('#app'), replacing the Vue 2 new Vue() constructor."
  },
  {
   "id": "qe722b1180b6",
@@ -60,6 +120,21 @@
   "explanation": "v-html renders raw HTML via innerHTML, so it should never be used with untrusted content."
  },
  {
+  "id": "q5e1dd636b23",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does @keyup.enter=\"submit\" do?",
+  "options": [
+   "Calls submit on any key press",
+   "Prevents the Enter key's default action",
+   "Submits the parent form automatically",
+   "Calls submit only when the Enter key is released"
+  ],
+  "answer": 3,
+  "explanation": "Key modifiers filter keyboard events so the handler runs only for the named key."
+ },
+ {
   "id": "q76fecf85435",
   "subject": "vue",
   "topic": "template-syntax",
@@ -73,6 +148,21 @@
   ],
   "answer": 2,
   "explanation": "The .prevent modifier calls preventDefault() on the event before the handler runs."
+ },
+ {
+  "id": "q962b821e102",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "medium",
+  "question": "What does :style=\"{ fontSize: size + 'px' }\" do?",
+  "options": [
+   "Creates a scoped style block",
+   "Adds a CSS class named fontSize",
+   "Binds an inline font-size style computed from size",
+   "Sets a style only on hover"
+  ],
+  "answer": 2,
+  "explanation": "Object syntax for :style accepts camelCase or quoted kebab-case CSS properties."
  },
  {
   "id": "qefb29838641",
@@ -163,6 +253,36 @@
   ],
   "answer": 1,
   "explanation": "Only top-level refs are unwrapped in templates, so obj.id is still a ref object inside the expression."
+ },
+ {
+  "id": "q3c16770711b",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "How is <MyComp v-bind=\"obj\" title=\"x\" /> resolved when obj also has a title property in Vue 3?",
+  "options": [
+   "The v-bind object always wins",
+   "Individual attributes always win regardless of order",
+   "Order matters, and the later binding wins, so title=\"x\" overrides obj.title",
+   "Vue throws a duplicate attribute error"
+  ],
+  "answer": 2,
+  "explanation": "Vue 3 merges bindings in the order they appear, unlike Vue 2 where individual attributes always won."
+ },
+ {
+  "id": "q3e441ff82c3",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "hard",
+  "question": "What is the result of v-on=\"{ mousedown: onDown, mouseup: onUp }\" on an element?",
+  "options": [
+   "Only the first listener is attached",
+   "A compile error, because v-on requires an argument",
+   "The object is passed as a single event name",
+   "Both listeners are attached, as object syntax binds multiple events"
+  ],
+  "answer": 3,
+  "explanation": "v-on without an argument accepts an object of event-to-handler pairs, but modifiers are not supported in that form."
  },
  {
   "id": "q8c1fc695866",

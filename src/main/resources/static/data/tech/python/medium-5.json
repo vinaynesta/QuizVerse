@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q14da8a3b2cc",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does list(enumerate('ab', start=1)) return?",
+  "options": [
+   "[(1, 'a'), (2, 'b')]",
+   "[(0, 'a'), (1, 'b')]",
+   "[('a', 1), ('b', 2)]",
+   "{1: 'a', 2: 'b'}"
+  ],
+  "answer": 0,
+  "explanation": "enumerate pairs each item with a counter beginning at start."
+ },
+ {
+  "id": "q542cb4ddcba",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which special method is called by the built-in len(obj)?",
+  "options": [
+   "__length__",
+   "__size__",
+   "__len__",
+   "__count__"
+  ],
+  "answer": 2,
+  "explanation": "len() calls type(obj).__len__ and requires a non-negative int result."
+ },
+ {
+  "id": "qd8528a6f893",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does {**{'a': 1}, **{'a': 2, 'b': 3}} evaluate to?",
+  "options": [
+   "{'a': 2, 'b': 3}",
+   "{'a': 1, 'b': 3}",
+   "It raises KeyError",
+   "{'a': [1, 2], 'b': 3}"
+  ],
+  "answer": 0,
+  "explanation": "Later unpacked mappings override earlier keys."
+ },
+ {
+  "id": "qaf8ea77f63a",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "medium",
+  "question": "What does 'Python'[1:4] return?",
+  "options": [
+   "'yth'",
+   "'Pyt'",
+   "'ytho'",
+   "'yt'"
+  ],
+  "answer": 0,
+  "explanation": "The slice takes indexes 1, 2, and 3."
+ },
+ {
+  "id": "qc9523854e6a",
+  "subject": "python",
+  "topic": "decorators-context-managers",
+  "level": "medium",
+  "question": "Which contextlib helper ignores specified exception types raised inside a with block?",
+  "options": [
+   "contextlib.nullcontext",
+   "contextlib.ignore",
+   "contextlib.closing",
+   "contextlib.suppress"
+  ],
+  "answer": 3,
+  "explanation": "with suppress(FileNotFoundError): silently swallows that exception type and continues after the block."
+ },
+ {
+  "id": "q21cd23f2ab3",
+  "subject": "python",
+  "topic": "modules-packages",
+  "level": "medium",
+  "question": "What does a virtual environment created with python -m venv provide?",
+  "options": [
+   "A sandbox that blocks network and file access",
+   "A compiled executable of your project",
+   "An isolated environment with its own interpreter link and site-packages",
+   "A copy of the operating system's libraries"
+  ],
+  "answer": 2,
+  "explanation": "Packages installed while a venv is active go into its own site-packages, separate from the system Python."
+ },
+ {
+  "id": "q90ae68aeb1d",
+  "subject": "python",
+  "topic": "async-concurrency",
+  "level": "medium",
+  "question": "Which concurrent.futures class runs callables in separate worker processes?",
+  "options": [
+   "ThreadPoolExecutor",
+   "AsyncExecutor",
+   "ProcessPoolExecutor",
+   "MultiprocessExecutor"
+  ],
+  "answer": 2,
+  "explanation": "ProcessPoolExecutor sidesteps the GIL for CPU-bound work by using multiple processes."
+ },
+ {
+  "id": "qa66cf1b6ca6",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "medium",
+  "question": "What does collections.Counter('banana').most_common(1) return?",
+  "options": [
+   "('a', 3)",
+   "{'a': 3}",
+   "[('n', 2)]",
+   "[('a', 3)]"
+  ],
+  "answer": 3,
+  "explanation": "most_common(n) returns a list of the n most frequent (element, count) pairs, and 'a' appears 3 times."
+ },
+ {
+  "id": "q3d3a932fcfa",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does {x % 3 for x in range(6)} evaluate to?",
+  "options": [
+   "{0, 1, 2, 0, 1, 2}",
+   "{0, 1, 2}",
+   "[0, 1, 2, 0, 1, 2]",
+   "{0: 0, 1: 1, 2: 2}"
+  ],
+  "answer": 1,
+  "explanation": "A set comprehension removes duplicate remainders."
+ },
+ {
+  "id": "q582e31cae79",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "What implicit first argument does a method decorated with @staticmethod receive?",
+  "options": [
+   "The instance",
+   "None; it receives no implicit argument",
+   "The class",
+   "The module"
+  ],
+  "answer": 1,
+  "explanation": "A static method behaves like a plain function stored in the class namespace."
+ }
+]

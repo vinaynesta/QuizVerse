@@ -1,0 +1,287 @@
+[
+ {
+  "id": "q248f3fcb341",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "Which semaphore operation decrements the semaphore and may block the caller?",
+  "options": [
+   "signal() / V()",
+   "wait() / P()",
+   "init()",
+   "fork()"
+  ],
+  "answer": 1,
+  "explanation": "wait() (P) decrements the semaphore and blocks if no units are available; signal() (V) increments it and may wake a waiter."
+ },
+ {
+  "id": "q603f30c2879",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a critical section?",
+  "options": [
+   "A code segment that accesses shared resources and must not be executed by more than one process at a time",
+   "A region of memory reserved for the OS",
+   "A part of the kernel that handles errors",
+   "The first instruction executed at boot"
+  ],
+  "answer": 0,
+  "explanation": "A critical section touches shared data, so concurrent execution of it by multiple processes must be prevented."
+ },
+ {
+  "id": "q98fca070b40",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a race condition?",
+  "options": [
+   "Two processes competing for the highest priority",
+   "A situation where the outcome depends on the unpredictable order in which concurrent threads access shared data",
+   "A deadlock between two threads",
+   "A type of scheduling algorithm"
+  ],
+  "answer": 1,
+  "explanation": "Race conditions arise when unsynchronized threads interleave operations on shared data, producing timing-dependent results."
+ },
+ {
+  "id": "qfe80dd2af97",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a mutex lock primarily used for?",
+  "options": [
+   "Ensuring mutual exclusion so only one thread holds the lock at a time",
+   "Counting available disk blocks",
+   "Translating virtual addresses",
+   "Scheduling I/O requests"
+  ],
+  "answer": 0,
+  "explanation": "A thread acquires the mutex before entering a critical section and releases it on exit, so only one thread is inside at a time."
+ },
+ {
+  "id": "q034c82c7c19",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "A counting semaphore controls access to a pool of 5 identical printers. What should its initial value be?",
+  "options": [
+   "0",
+   "5",
+   "-5",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "A counting semaphore starts at the number of available instances; each wait() takes one and blocks when the count reaches 0."
+ },
+ {
+  "id": "q4dee9faaf68",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "In the semaphore-based bounded-buffer (producer-consumer) solution with n slots, what are the initial values of empty, full and mutex?",
+  "options": [
+   "empty = 0, full = n, mutex = 1",
+   "empty = 1, full = 1, mutex = n",
+   "empty = n, full = n, mutex = 0",
+   "empty = n, full = 0, mutex = 1"
+  ],
+  "answer": 3,
+  "explanation": "Initially all n slots are empty and none are full, and mutex = 1 allows one process at a time to touch the buffer."
+ },
+ {
+  "id": "q58810d206e6",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What happens when signal() is called on a monitor condition variable that has no waiting threads?",
+  "options": [
+   "The signal is saved for the next thread that waits",
+   "Nothing; the signal has no effect",
+   "An exception is raised",
+   "The calling thread blocks"
+  ],
+  "answer": 1,
+  "explanation": "Unlike a semaphore's signal(), which always increments the count, a condition variable's signal() is lost if nobody is waiting."
+ },
+ {
+  "id": "q6f4206a54d7",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Which of the following is NOT one of the three requirements of a correct critical-section solution?",
+  "options": [
+   "Mutual exclusion",
+   "Preemption of the process in the critical section",
+   "Progress",
+   "Bounded waiting"
+  ],
+  "answer": 1,
+  "explanation": "A correct solution must provide mutual exclusion, progress and bounded waiting; preempting the lock holder is not a requirement."
+ },
+ {
+  "id": "qa0fdc05435d",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Peterson's solution to the critical-section problem uses which shared variables?",
+  "options": [
+   "A single semaphore",
+   "A boolean flag array and an integer turn",
+   "A test_and_set lock",
+   "A monitor and a condition variable"
+  ],
+  "answer": 1,
+  "explanation": "In Peterson's two-process solution, flag[i] signals intent to enter and turn decides who goes first when both want in."
+ },
+ {
+  "id": "qa2eb3a4086e",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What property of the test_and_set() hardware instruction makes it usable for building locks?",
+  "options": [
+   "It disables all interrupts permanently",
+   "It runs only in user mode",
+   "It executes atomically",
+   "It is faster than a regular load"
+  ],
+  "answer": 2,
+  "explanation": "test_and_set reads the old value and sets the word to true as one indivisible step, so only one thread can see false and take the lock."
+ },
+ {
+  "id": "qb560a5aace4",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What is the key conceptual difference between a mutex and a binary semaphore?",
+  "options": [
+   "A mutex can count above 1",
+   "A binary semaphore can only be used in kernel mode",
+   "A mutex has ownership: only the thread that locked it should unlock it",
+   "A mutex cannot block threads"
+  ],
+  "answer": 2,
+  "explanation": "A mutex is owned by the locking thread, while any thread can signal a binary semaphore, which also makes semaphores useful for signaling between threads."
+ },
+ {
+  "id": "qd23c2deddc6",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "When is a spinlock most appropriate?",
+  "options": [
+   "On a single-CPU system with long critical sections",
+   "When the lock will be held for several seconds",
+   "When the waiting thread must sleep",
+   "On a multiprocessor when the lock is held only for a very short time"
+  ],
+  "answer": 3,
+  "explanation": "Spinning avoids the cost of two context switches, which pays off only when the lock holder, running on another CPU, will release it very soon."
+ },
+ {
+  "id": "qd8fca7bcbc8",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "A counting semaphore S is initialized to 10. Then 6 wait (P) and 4 signal (V) operations are performed. What is the final value of S?",
+  "options": [
+   "12",
+   "0",
+   "8",
+   "4"
+  ],
+  "answer": 2,
+  "explanation": "Each P decrements and each V increments, so S = 10 - 6 + 4 = 8 (the value never reaches 0, so nothing blocks)."
+ },
+ {
+  "id": "qf9fec248d4b",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What guarantee does a monitor provide?",
+  "options": [
+   "Only one thread can be active inside the monitor at a time",
+   "All threads run in parallel inside it",
+   "Deadlock can never occur",
+   "Condition variables keep a count of signals"
+  ],
+  "answer": 0,
+  "explanation": "A monitor enforces mutual exclusion on its procedures automatically; condition variables then let threads wait inside it for specific conditions."
+ },
+ {
+  "id": "q132fe21d3be",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "In the first readers-writers solution (readers have priority), what problem can occur?",
+  "options": [
+   "Readers can starve",
+   "Two writers can write at the same time",
+   "Readers and writers can access the data at the same time",
+   "Writers can starve if readers keep arriving"
+  ],
+  "answer": 3,
+  "explanation": "As long as at least one reader is active, new readers get in right away, so a steady stream of readers can keep a writer waiting forever."
+ },
+ {
+  "id": "q3108f227b2a",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "What is priority inversion?",
+  "options": [
+   "A low-priority process permanently gets a higher priority",
+   "The scheduler reverses its priority queue",
+   "Two processes swap priorities at each context switch",
+   "A high-priority task waits on a lock held by a low-priority task, which is preempted by medium-priority tasks"
+  ],
+  "answer": 3,
+  "explanation": "The high-priority task is effectively delayed by unrelated medium-priority work, because the low-priority lock holder cannot run."
+ },
+ {
+  "id": "q53fc395f6ef",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "What is the standard solution to priority inversion?",
+  "options": [
+   "Priority inheritance: the lock holder temporarily inherits the priority of the highest-priority waiter",
+   "Aging",
+   "Increasing the time quantum",
+   "Using spinlocks instead of mutexes"
+  ],
+  "answer": 0,
+  "explanation": "With inherited priority, medium-priority tasks cannot preempt the lock holder, so it finishes quickly, releases the lock and drops back to its original priority."
+ },
+ {
+  "id": "qa8bc1fbdfdf",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "Which real-world incident is the textbook example of priority inversion?",
+  "options": [
+   "The Mars Pathfinder lander's repeated system resets",
+   "The Therac-25 accidents",
+   "The Y2K bug",
+   "The Ariane 5 launch failure"
+  ],
+  "answer": 0,
+  "explanation": "On Pathfinder, a low-priority task holding a bus mutex blocked a high-priority task, which triggered watchdog resets; enabling priority inheritance in VxWorks fixed it."
+ },
+ {
+  "id": "qb8a988e2623",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "In the naive dining-philosophers solution where each philosopher picks up the left chopstick then the right, what can happen?",
+  "options": [
+   "All philosophers pick up their left chopstick at once and deadlock",
+   "Chopsticks are duplicated",
+   "Starvation is impossible",
+   "Two neighbors eat at the same time"
+  ],
+  "answer": 0,
+  "explanation": "Each philosopher holds one chopstick and waits for the next one, forming a circular wait; asymmetric pick-up order or allowing at most 4 at the table avoids it."
+ }
+]

@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q13481b20f05",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What can happen during failover with asynchronous leader-follower replication?",
+  "options": [
+   "The old leader rejoins with its writes merged automatically",
+   "The new leader permanently rejects all reads",
+   "Writes acknowledged by the old leader but not yet replicated can be lost",
+   "The replication factor drops to zero"
+  ],
+  "answer": 2,
+  "explanation": "The new leader only has what was replicated before the failure, so unreplicated acknowledged writes are gone."
+ },
+ {
+  "id": "q1a51bda9504",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "Why is replication alone not a substitute for backups?",
+  "options": [
+   "Replication faithfully propagates logical errors such as accidental deletes, so replicas lose the data too",
+   "Replication copies only indexes, not rows",
+   "Backups must legally be stored on tape",
+   "Replicas cannot store encrypted data"
+  ],
+  "answer": 0,
+  "explanation": "Replicas mirror every change, including destructive ones, so point-in-time backups are needed to recover from logical mistakes."
+ },
+ {
+  "id": "q59a9b79312c",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What does semi-synchronous replication guarantee?",
+  "options": [
+   "All replicas acknowledge every write",
+   "No replica receives writes until a backup completes",
+   "At least one replica has received a write before the primary acknowledges it to the client",
+   "Writes are acknowledged before they reach the primary's disk"
+  ],
+  "answer": 2,
+  "explanation": "It bounds data loss on failover without waiting on every replica."
+ },
+ {
+  "id": "q62243c1d40e",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What is the main tradeoff of synchronous replication to a standby?",
+  "options": [
+   "Faster writes but guaranteed data loss",
+   "Linearizable reads automatically, without a leader",
+   "No need for backups",
+   "Lower risk of losing acknowledged writes on failover, at the cost of higher write latency and reduced availability"
+  ],
+  "answer": 3,
+  "explanation": "Waiting for the standby protects acknowledged writes, but a slow or unreachable standby slows or blocks commits."
+ },
+ {
+  "id": "q7a45aaf68b1",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What is change data capture (CDC)?",
+  "options": [
+   "Streaming row-level changes from a database's write-ahead or replication log to other systems",
+   "Comparing two databases row by row",
+   "Caching database query results",
+   "Copying an entire database nightly"
+  ],
+  "answer": 0,
+  "explanation": "CDC tools such as Debezium tail the log and publish each insert, update, and delete as an event."
+ },
+ {
+  "id": "qf1d5c3d32b0",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What is the core difficulty in multi-leader replication?",
+  "options": [
+   "Only one leader can accept writes at a time, so scaling is impossible",
+   "All leaders must share a single disk",
+   "Followers cannot read data at all",
+   "Concurrent writes to the same data on different leaders produce conflicts that must be detected and resolved"
+  ],
+  "answer": 3,
+  "explanation": "Because writes can be accepted independently in several regions, conflicting updates are inevitable and need a resolution strategy."
+ },
+ {
+  "id": "qf5f02fc7a58",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "In chain replication, where are reads typically served?",
+  "options": [
+   "At the head, which receives all writes first",
+   "At a random node chosen by the client",
+   "At the tail, which holds only fully replicated writes",
+   "Only from a separate read-only cache"
+  ],
+  "answer": 2,
+  "explanation": "Writes flow from head to tail, so the tail only exposes writes that every replica in the chain has stored."
+ }
+]

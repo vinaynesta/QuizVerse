@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qd05a04b81da",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "medium",
+  "question": "What is a common table expression (CTE)?",
+  "options": [
+   "A permanent table stored in a special schema",
+   "A named temporary result set defined with WITH and usable within a single statement",
+   "An index that spans several tables",
+   "A trigger that runs before each query"
+  ],
+  "answer": 1,
+  "explanation": "CTEs make complex queries more readable by naming intermediate results."
+ },
+ {
+  "id": "q7770e721c5b",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "What does JOIN orders USING (customer_id) do?",
+  "options": [
+   "Joins on equality of the identically named customer_id columns and shows that column once in SELECT *",
+   "Joins on every column the two tables share",
+   "Joins only rows where customer_id is NULL",
+   "Creates an index on customer_id before joining"
+  ],
+  "answer": 0,
+  "explanation": "USING is shorthand for an equality condition on the listed columns, which are merged into a single output column."
+ },
+ {
+  "id": "q5258bd8916b",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Why does OFFSET-based pagination get slow for deep pages?",
+  "options": [
+   "OFFSET disables the use of every index",
+   "The database still has to produce and discard all the skipped rows",
+   "OFFSET forces a full table lock",
+   "Each page re-sorts the entire database"
+  ],
+  "answer": 1,
+  "explanation": "Keyset pagination, such as WHERE id > last_seen ORDER BY id LIMIT n, avoids scanning skipped rows."
+ },
+ {
+  "id": "q8cbc388655d",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "What does WHERE id IN (SELECT customer_id FROM orders WHERE 1 = 0) return?",
+  "options": [
+   "All rows, because the subquery returns nothing to exclude",
+   "No rows, because IN against an empty set is FALSE",
+   "Rows where id is NULL",
+   "An error, because the subquery is empty"
+  ],
+  "answer": 1,
+  "explanation": "IN with an empty list is FALSE for every value, so no outer rows satisfy the predicate."
+ },
+ {
+  "id": "q0c595551f34",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "medium",
+  "question": "In PostgreSQL, what does INSERT ... ON CONFLICT (id) DO UPDATE SET ... do?",
+  "options": [
+   "Always updates and never inserts",
+   "Fails the whole statement if a conflict occurs",
+   "Deletes the conflicting row and inserts a new one",
+   "Inserts the row, or updates the existing row when a row with the same id already exists"
+  ],
+  "answer": 3,
+  "explanation": "ON CONFLICT implements an upsert; MySQL offers similar behavior with INSERT ... ON DUPLICATE KEY UPDATE."
+ },
+ {
+  "id": "q2419182f3de",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "What does ON DELETE SET NULL do on a foreign key?",
+  "options": [
+   "Deletes the child rows along with the parent",
+   "Sets the parent row's columns to NULL instead of deleting it",
+   "Prevents the parent row from being deleted",
+   "Sets the child rows' foreign key column to NULL when the referenced parent row is deleted"
+  ],
+  "answer": 3,
+  "explanation": "SET NULL keeps child rows but breaks their link to the deleted parent, so the column must be nullable."
+ },
+ {
+  "id": "q07030fac665",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "What is the N+1 query problem?",
+  "options": [
+   "Running one query to fetch a list and then one more query for each item in it",
+   "A query that joins N+1 tables",
+   "A query that returns one more row than expected",
+   "An index with N+1 levels"
+  ],
+  "answer": 0,
+  "explanation": "Batching with a join or a single IN query replaces many round trips with one."
+ },
+ {
+  "id": "qaf92fcc131f",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "In PostgreSQL, what does CREATE INDEX CONCURRENTLY do?",
+  "options": [
+   "Builds the index without blocking concurrent inserts, updates and deletes, at the cost of a slower build",
+   "Creates the index only in memory",
+   "Builds the index using multiple tables at once",
+   "Builds the index while blocking all reads"
+  ],
+  "answer": 0,
+  "explanation": "A plain CREATE INDEX blocks writes to the table; CONCURRENTLY avoids that but cannot run inside a transaction block."
+ },
+ {
+  "id": "qc4152c86c8f",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "How do window functions differ from aggregates used with GROUP BY?",
+  "options": [
+   "They can only be used on numeric columns",
+   "They always collapse the result to one row",
+   "They compute values over related rows while keeping every input row in the output",
+   "They must be used inside a WHERE clause"
+  ],
+  "answer": 2,
+  "explanation": "A window function adds a computed column per row instead of merging rows into one per group."
+ },
+ {
+  "id": "qa7e0ce9e439",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "Which frame computes a 7-row moving average that ends at the current row?",
+  "options": [
+   "AVG(x) OVER (ORDER BY day ROWS BETWEEN 7 PRECEDING AND 7 FOLLOWING)",
+   "AVG(x) OVER (PARTITION BY 7 ORDER BY day)",
+   "AVG(x) OVER (ORDER BY day ROWS 7 FOLLOWING)",
+   "AVG(x) OVER (ORDER BY day ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)"
+  ],
+  "answer": 3,
+  "explanation": "Six preceding rows plus the current row make seven rows in each frame."
+ }
+]

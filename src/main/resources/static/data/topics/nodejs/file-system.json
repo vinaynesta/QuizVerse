@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q6568fd9901a",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which module provides file system operations in Node.js?",
+  "options": [
+   "file",
+   "fs",
+   "filesystem",
+   "disk"
+  ],
+  "answer": 1,
+  "explanation": "The built-in fs module offers synchronous, callback, and promise-based file operations."
+ },
+ {
+  "id": "q6b9fd71c7a0",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which path module function returns the extension of a file path, such as '.js'?",
+  "options": [
+   "path.extension()",
+   "path.ext()",
+   "path.extname()",
+   "path.getExt()"
+  ],
+  "answer": 2,
+  "explanation": "path.extname('app.js') returns '.js'; the module has no extension() or ext() function."
+ },
+ {
+  "id": "q8d2913726eb",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which fs/promises function writes data to a file, replacing the file if it already exists?",
+  "options": [
+   "writeFile",
+   "appendFile",
+   "createFile",
+   "saveFile"
+  ],
+  "answer": 0,
+  "explanation": "writeFile overwrites the target file by default, whereas appendFile adds to the end of it."
+ },
+ {
+  "id": "q95777b84801",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which fs/promises function creates a directory, including missing parent directories when { recursive: true } is passed?",
+  "options": [
+   "mkdir",
+   "createDir",
+   "touch",
+   "makedir"
+  ],
+  "answer": 0,
+  "explanation": "With recursive: true, mkdir creates the whole path and does not fail if the directory already exists."
+ },
+ {
+  "id": "qa4a6abe58ae",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which WHATWG-standard class parses URLs in Node.js?",
+  "options": [
+   "URL",
+   "Location",
+   "UrlParser",
+   "Link"
+  ],
+  "answer": 0,
+  "explanation": "The global URL class (also available from the url module) implements the WHATWG URL standard."
+ },
+ {
+  "id": "qbd2668ee048",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which function synchronously checks whether a path exists?",
+  "options": [
+   "fs.fileExists()",
+   "fs.checkFile()",
+   "fs.existsSync()",
+   "fs.hasFile()"
+  ],
+  "answer": 2,
+  "explanation": "fs.existsSync() returns a boolean; the callback-based fs.exists() is deprecated."
+ },
+ {
+  "id": "qc089c190027",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which function from fs/promises reads an entire file asynchronously?",
+  "options": [
+   "readFile",
+   "loadFile",
+   "readFileSync",
+   "streamFile"
+  ],
+  "answer": 0,
+  "explanation": "fs/promises exports readFile(), which returns a promise resolving with the file contents."
+ },
+ {
+  "id": "qcee69aa9b53",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "What does path.join('a', '..', 'b', 'c.txt') return on POSIX systems?",
+  "options": [
+   "a/b/c.txt",
+   "a/../b/c.txt",
+   "b/c.txt",
+   "/a/b/c.txt"
+  ],
+  "answer": 2,
+  "explanation": "path.join() joins the segments and normalizes them, so a/.. cancels out and the result is b/c.txt."
+ },
+ {
+  "id": "qdd62528b999",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "What does path.basename('/home/user/notes.txt') return?",
+  "options": [
+   "'/home/user'",
+   "'notes'",
+   "'.txt'",
+   "'notes.txt'"
+  ],
+  "answer": 3,
+  "explanation": "basename returns the last portion of a path; path.dirname returns '/home/user'."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4335551c04a",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command removes an installed package and its entry in package.json?",
+  "options": [
+   "npm delete <pkg>",
+   "npm remove-dep <pkg>",
+   "npm clean <pkg>",
+   "npm uninstall <pkg>"
+  ],
+  "answer": 3,
+  "explanation": "npm uninstall (alias npm rm) deletes the package from node_modules and updates package.json and the lock file."
+ },
+ {
+  "id": "qdd62528b999",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "What does path.basename('/home/user/notes.txt') return?",
+  "options": [
+   "'/home/user'",
+   "'notes'",
+   "'.txt'",
+   "'notes.txt'"
+  ],
+  "answer": 3,
+  "explanation": "basename returns the last portion of a path; path.dirname returns '/home/user'."
+ },
+ {
+  "id": "q87cea909de0",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which object lets a Node.js program read the user's environment variables?",
+  "options": [
+   "process.vars",
+   "process.env",
+   "global.environment",
+   "os.env"
+  ],
+  "answer": 1,
+  "explanation": "process.env is an object whose properties are the environment variables of the process."
+ },
+ {
+  "id": "q096af2b5285",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which prefix explicitly refers to a built-in core module, as in import fs from '...fs'?",
+  "options": [
+   "node:",
+   "core:",
+   "builtin:",
+   "std:"
+  ],
+  "answer": 0,
+  "explanation": "The node: prefix, such as node:fs, makes it clear a built-in module is meant and cannot be shadowed by an npm package."
+ },
+ {
+  "id": "q10e4145d0e2",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "easy",
+  "question": "Which keyword exports a value from an ES module?",
+  "options": [
+   "module.exports",
+   "exports.default",
+   "export",
+   "provide"
+  ],
+  "answer": 2,
+  "explanation": "ES modules use export and import, while CommonJS uses module.exports and require()."
+ },
+ {
+  "id": "q6019b3e38ab",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "By convention, what is the first argument passed to a Node.js-style callback?",
+  "options": [
+   "The result of the operation",
+   "The name of the function that was called",
+   "An error object, or null if the operation succeeded",
+   "A timestamp of when the operation finished"
+  ],
+  "answer": 2,
+  "explanation": "Error-first callbacks, like (err, data) => {}, make it easy to check for failures before using the result."
+ },
+ {
+  "id": "q8d2913726eb",
+  "subject": "nodejs",
+  "topic": "file-system",
+  "level": "easy",
+  "question": "Which fs/promises function writes data to a file, replacing the file if it already exists?",
+  "options": [
+   "writeFile",
+   "appendFile",
+   "createFile",
+   "saveFile"
+  ],
+  "answer": 0,
+  "explanation": "writeFile overwrites the target file by default, whereas appendFile adds to the end of it."
+ },
+ {
+  "id": "qab482277155",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "easy",
+  "question": "Which keyword pauses an async function until a promise settles?",
+  "options": [
+   "yield",
+   "defer",
+   "await",
+   "wait"
+  ],
+  "answer": 2,
+  "explanation": "await suspends the async function until the promise fulfills or rejects without blocking the event loop."
+ },
+ {
+  "id": "qa6095e25da5",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command creates a new package.json with default values without asking questions?",
+  "options": [
+   "npm start --init",
+   "npm new",
+   "npm create package",
+   "npm init -y"
+  ],
+  "answer": 3,
+  "explanation": "npm init asks a series of questions, and the -y flag accepts the defaults for all of them."
+ },
+ {
+  "id": "qf25d5a977b4",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "easy",
+  "question": "Which function creates a readable stream for reading a file in chunks?",
+  "options": [
+   "fs.openStream()",
+   "fs.createReadStream()",
+   "fs.readStream()",
+   "fs.streamFile()"
+  ],
+  "answer": 1,
+  "explanation": "Streaming a large file in chunks keeps memory usage low compared with reading it all at once."
+ }
+]

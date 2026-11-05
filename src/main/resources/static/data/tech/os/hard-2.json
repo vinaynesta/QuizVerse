@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa8bc1fbdfdf",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "Which real-world incident is the textbook example of priority inversion?",
+  "options": [
+   "The Mars Pathfinder lander's repeated system resets",
+   "The Therac-25 accidents",
+   "The Y2K bug",
+   "The Ariane 5 launch failure"
+  ],
+  "answer": 0,
+  "explanation": "On Pathfinder, a low-priority task holding a bus mutex blocked a high-priority task, which triggered watchdog resets; enabling priority inheritance in VxWorks fixed it."
+ },
+ {
+  "id": "q3f599a95615",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "What problem does a journaling (log-structured metadata) file system mainly solve?",
+  "options": [
+   "External fragmentation of free space",
+   "Leaving metadata inconsistent after a crash, which would otherwise need a full fsck scan",
+   "Slow sequential reads",
+   "Limits on file name length"
+  ],
+  "answer": 1,
+  "explanation": "Metadata updates are first written to a log as transactions, so after a crash only committed but unapplied transactions need replaying."
+ },
+ {
+  "id": "q54d4dfd73e0",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "With a two-level page table and no TLB, how many physical memory accesses does one data reference need?",
+  "options": [
+   "3",
+   "2",
+   "1",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "The CPU reads the outer page table, then the inner page table, then the data itself, which is 3 memory accesses."
+ },
+ {
+  "id": "q0bec6d85948",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "In the many-to-one threading model, what happens when one user thread makes a blocking system call?",
+  "options": [
+   "Only that thread blocks",
+   "The entire process blocks, because all user threads map to a single kernel thread",
+   "The kernel creates a new kernel thread",
+   "The system call is silently converted to non-blocking"
+  ],
+  "answer": 1,
+  "explanation": "The kernel sees only one schedulable entity, so a blocking call stalls every thread, and the threads cannot run in parallel on multicore CPUs."
+ },
+ {
+  "id": "q0ffe9620a26",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does copy-on-write (COW) make fork() efficient?",
+  "options": [
+   "The child shares the parent's stack permanently",
+   "The child gets a full copy of all parent pages immediately",
+   "Parent and child initially share pages marked read-only; a page is copied only when either process writes to it",
+   "Pages are written to disk before copying"
+  ],
+  "answer": 2,
+  "explanation": "COW defers copying until a write fault occurs, so a fork() followed by exec() copies almost nothing."
+ },
+ {
+  "id": "qfae7dce40c2",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "Why should a thread call wait() on a condition variable inside a while loop rather than an if statement?",
+  "options": [
+   "To avoid a context switch",
+   "Because if statements are not allowed inside monitors",
+   "To keep the lock held while waiting",
+   "Because of spurious wakeups and because another thread may change the condition before the woken thread reacquires the lock"
+  ],
+  "answer": 3,
+  "explanation": "Under Mesa-style semantics, a signaled thread only becomes runnable, so it must recheck the predicate once it gets the lock back."
+ },
+ {
+  "id": "q963ba9ce00d",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Three processes share a resource type, and each needs at most 2 instances. What is the minimum number of instances that guarantees no deadlock?",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "In the worst case each process holds 1 instance (3 total); one more instance lets some process finish, so n(m - 1) + 1 = 3 x 1 + 1 = 4."
+ },
+ {
+  "id": "q3108f227b2a",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "What is priority inversion?",
+  "options": [
+   "A low-priority process permanently gets a higher priority",
+   "The scheduler reverses its priority queue",
+   "Two processes swap priorities at each context switch",
+   "A high-priority task waits on a lock held by a low-priority task, which is preempted by medium-priority tasks"
+  ],
+  "answer": 3,
+  "explanation": "The high-priority task is effectively delayed by unrelated medium-priority work, because the low-priority lock holder cannot run."
+ },
+ {
+  "id": "qafd5b816c3b",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does the second-chance (clock) page-replacement algorithm work?",
+  "options": [
+   "It always evicts the most recently used page",
+   "It picks a victim at random",
+   "In FIFO order, a page with reference bit 1 has its bit cleared and is skipped; the first page found with bit 0 is evicted",
+   "It evicts the page with the largest working set"
+  ],
+  "answer": 2,
+  "explanation": "Second-chance approximates LRU cheaply using the hardware reference bit; if every bit is set, it falls back to FIFO."
+ },
+ {
+  "id": "q9bd78d34678",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "Periodic tasks P1 (period 50, burst 25) and P2 (period 80, burst 35) have total utilization of about 94%. Which statement is correct?",
+  "options": [
+   "Neither rate-monotonic nor EDF can schedule them",
+   "Rate-monotonic can schedule them but EDF cannot",
+   "EDF can schedule them, but rate-monotonic misses a deadline",
+   "Both always meet all deadlines because utilization is below 100%"
+  ],
+  "answer": 2,
+  "explanation": "Utilization 25/50 + 35/80 = 0.9375 is at most 1, so EDF works; under RM, P1 preempts P2 at t = 50, so P2 has run only 30 of its 35 ms by its deadline at t = 80."
+ }
+]

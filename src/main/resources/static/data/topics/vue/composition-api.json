@@ -30,6 +30,21 @@
   "explanation": "setup() is the entry point for the Composition API in components without script setup."
  },
  {
+  "id": "q63f1f724cd5",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "In the Options API, which option holds functions that can be called from the template, like event handlers?",
+  "options": [
+   "computed",
+   "methods",
+   "watch",
+   "actions"
+  ],
+  "answer": 1,
+  "explanation": "Functions in methods are bound to the component instance and can be used in templates and other options."
+ },
+ {
   "id": "qbfbd6e9bd66",
   "subject": "vue",
   "topic": "composition-api",
@@ -58,6 +73,21 @@
   ],
   "answer": 0,
   "explanation": "By convention composable functions are named in camelCase starting with use."
+ },
+ {
+  "id": "qeccbac67073",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "Which three blocks can a Vue single-file component contain at top level?",
+  "options": [
+   "html, js and css",
+   "template, script and style",
+   "view, model and controller",
+   "header, body and footer"
+  ],
+  "answer": 1,
+  "explanation": "An SFC combines the template, script and style for one component in a .vue file."
  },
  {
   "id": "q5b9d1354064",
@@ -90,6 +120,21 @@
   "explanation": "A ref declared with the same name as the ref attribute is populated after the component mounts."
  },
  {
+  "id": "q9ae82b587d0",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "In script setup, how do you declare TypeScript-only props without runtime options?",
+  "options": [
+   "defineProps({ title: String as TS })",
+   "props: Title[]",
+   "defineProps<{ title: string }>()",
+   "useProps<Title>()"
+  ],
+  "answer": 2,
+  "explanation": "Type-based declaration lets the compiler generate the runtime props from the type."
+ },
+ {
   "id": "q9b9c822827e",
   "subject": "vue",
   "topic": "composition-api",
@@ -118,6 +163,36 @@
   ],
   "answer": 1,
   "explanation": "defineModel() declares the modelValue prop and update event and returns a ref that emits on assignment."
+ },
+ {
+  "id": "qf07d3665d4a",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "medium",
+  "question": "What does getCurrentInstance() return, and why is it discouraged in app code?",
+  "options": [
+   "The parent component's props",
+   "The root app instance used by plugins",
+   "The internal component instance, which is not a stable public API for application code",
+   "The current router route"
+  ],
+  "answer": 2,
+  "explanation": "Composables should rely on public APIs like inject or useAttrs instead of the internal instance."
+ },
+ {
+  "id": "q24265f316d6",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "Why does a composable call onScopeDispose instead of onUnmounted for cleanup?",
+  "options": [
+   "It also works when the composable is used inside an effectScope outside of a component",
+   "onUnmounted is not allowed in composables",
+   "onScopeDispose runs before every render",
+   "It runs earlier than setup"
+  ],
+  "answer": 0,
+  "explanation": "onScopeDispose cleans up whenever the active effect scope stops, which includes but is not limited to component unmount."
  },
  {
   "id": "q3ecc1ae534b",
@@ -150,6 +225,21 @@
   "explanation": "toRefs() converts each property into a ref linked to the source, so destructured values stay reactive."
  },
  {
+  "id": "q6940c49827b",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "What does effectScope() let a composable do?",
+  "options": [
+   "Run effects in a separate thread",
+   "Collect reactive effects like computed and watchers so they can all be stopped together",
+   "Share effects between apps",
+   "Delay effects until mount"
+  ],
+  "answer": 1,
+  "explanation": "Effects created inside scope.run() are captured and disposed with scope.stop()."
+ },
+ {
   "id": "qc08a271d2d0",
   "subject": "vue",
   "topic": "composition-api",
@@ -178,5 +268,20 @@
   ],
   "answer": 3,
   "explanation": "toValue() unwraps refs, calls getters and returns plain values unchanged, letting composables accept any of them."
+ },
+ {
+  "id": "qe659269c448",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "hard",
+  "question": "In Vue 3.5+, what does useTemplateRef('input') return?",
+  "options": [
+   "The DOM element synchronously during setup",
+   "A reactive copy of the element's attributes",
+   "A function to query the DOM",
+   "A shallow ref that is filled with the element or component whose ref attribute is 'input' after mount"
+  ],
+  "answer": 3,
+  "explanation": "useTemplateRef matches by the ref attribute string and avoids needing a variable with the same name."
  }
 ]

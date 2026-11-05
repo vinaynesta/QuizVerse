@@ -15,6 +15,21 @@
   "explanation": "LLMs are pre-trained on large text corpora with a next-token prediction objective."
  },
  {
+  "id": "q440527f0e50",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is a prompt in the context of LLMs?",
+  "options": [
+   "The error message shown when a request fails",
+   "The model's internal weights",
+   "The input text given to the model to instruct it or provide context",
+   "The hardware the model runs on"
+  ],
+  "answer": 2,
+  "explanation": "The prompt is everything the model reads before generating, including instructions, context and examples."
+ },
+ {
   "id": "q5cd85f5fcaf",
   "subject": "ai",
   "topic": "llms-prompting",
@@ -43,6 +58,21 @@
   ],
   "answer": 0,
   "explanation": "The context window bounds how much prompt plus generated text the model can attend to in one call."
+ },
+ {
+  "id": "qad4cfa3e2b8",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is zero-shot prompting?",
+  "options": [
+   "Asking a model to perform a task without giving any examples in the prompt",
+   "Training a model from scratch with no data",
+   "Sending an empty prompt to the model",
+   "Setting the model's temperature to zero"
+  ],
+  "answer": 0,
+  "explanation": "In zero-shot prompting the model relies only on the instruction and its pre-trained knowledge."
  },
  {
   "id": "qbbd77ae78d9",
@@ -90,6 +120,21 @@
   "explanation": "Eliciting intermediate reasoning steps often improves performance on multi-step problems."
  },
  {
+  "id": "q928515b94bb",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is a stop sequence in LLM generation?",
+  "options": [
+   "A list of words the model is forbidden to use",
+   "A string that ends generation when the model produces it",
+   "The maximum number of requests per minute",
+   "A token that marks the start of the system prompt"
+  ],
+  "answer": 1,
+  "explanation": "Stop sequences let applications cut off output at a known delimiter, such as the end of a structured answer."
+ },
+ {
   "id": "qb85065a64a4",
   "subject": "ai",
   "topic": "llms-prompting",
@@ -118,6 +163,36 @@
   ],
   "answer": 2,
   "explanation": "The system prompt frames the model's behavior across all user turns in a conversation."
+ },
+ {
+  "id": "qebe1e4cfe1a",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is LoRA (low-rank adaptation) used for?",
+  "options": [
+   "Compressing a dataset before training",
+   "Increasing a model's context window",
+   "Parameter-efficient fine-tuning that trains small low-rank matrices added to frozen model weights",
+   "Removing toxic content from training data"
+  ],
+  "answer": 2,
+  "explanation": "LoRA updates only a small number of added parameters, making fine-tuning cheaper in memory and storage."
+ },
+ {
+  "id": "q1aad56b0cf6",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "What is knowledge distillation?",
+  "options": [
+   "Training a smaller student model to match the outputs of a larger teacher model",
+   "Removing duplicate documents from a training corpus",
+   "Extracting facts from a model into a database",
+   "Merging two models by averaging their weights"
+  ],
+  "answer": 0,
+  "explanation": "The student learns from the teacher's soft probability outputs, often retaining much of its quality at lower cost."
  },
  {
   "id": "q2613d564c33",
@@ -178,5 +253,20 @@
   ],
   "answer": 1,
   "explanation": "A word may be a single token, so its character-level makeup is not directly visible to the model."
+ },
+ {
+  "id": "qf1d8aaeff59",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "How does direct preference optimization (DPO) differ from RLHF with PPO?",
+  "options": [
+   "It requires no human preference data at all",
+   "It replaces pre-training with reinforcement learning from scratch",
+   "It trains only the tokenizer",
+   "It optimizes the model directly on preference pairs with a classification-style loss, without a separate reward model or RL loop"
+  ],
+  "answer": 3,
+  "explanation": "DPO derives a loss from preferred and rejected responses, simplifying alignment training compared with PPO-based RLHF."
  }
 ]

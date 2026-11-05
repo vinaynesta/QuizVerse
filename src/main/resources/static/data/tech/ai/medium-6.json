@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6c71da1d9df",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What does momentum add to gradient descent?",
+  "options": [
+   "A larger batch size at each step",
+   "A random restart whenever the loss increases",
+   "A penalty on large weights",
+   "A running velocity from past gradients that speeds progress along consistent directions and dampens oscillation"
+  ],
+  "answer": 3,
+  "explanation": "Momentum accumulates past updates, helping the optimizer move through ravines and flat regions faster."
+ },
+ {
+  "id": "q429bd71275f",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is red teaming for AI systems?",
+  "options": [
+   "Deliberately probing a model adversarially to uncover harmful behaviors or vulnerabilities before deployment",
+   "Monitoring server uptime in production",
+   "Labeling training data with colored tags",
+   "Choosing the color scheme of a chatbot interface"
+  ],
+  "answer": 0,
+  "explanation": "Red teams simulate attackers and misuse so problems can be fixed before real users encounter them."
+ },
+ {
+  "id": "q8664580b943",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "medium",
+  "question": "What is the purpose of one-hot encoding?",
+  "options": [
+   "Representing categorical values as binary vectors without implying an order between them",
+   "Compressing numeric features into a single bit",
+   "Removing outliers from numeric columns",
+   "Scaling features to the range 0 to 1"
+  ],
+  "answer": 0,
+  "explanation": "Encoding categories as integers would suggest a false ordering, so each category gets its own binary column instead."
+ },
+ {
+  "id": "q56ff00daee4",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What does TF-IDF weighting do?",
+  "options": [
+   "Counts only the first occurrence of each word",
+   "Weights a term by its frequency in a document, reduced by how many documents contain it",
+   "Ranks words by their length",
+   "Replaces each word with its dictionary definition"
+  ],
+  "answer": 1,
+  "explanation": "Terms common across all documents get low weight, while terms distinctive to a document get high weight."
+ },
+ {
+  "id": "q007e3193331",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "Why should the same embedding model be used to index documents and to embed queries?",
+  "options": [
+   "Different models produce vectors in incompatible spaces, so similarity scores between them would be meaningless",
+   "Using two models doubles storage costs but gives the same results",
+   "Query embeddings must be longer than document embeddings",
+   "The vector database only accepts one model name"
+  ],
+  "answer": 0,
+  "explanation": "Similarity search only works when queries and documents are mapped into the same embedding space."
+ },
+ {
+  "id": "q7dcbf30711e",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "In PCA, what does the first principal component represent?",
+  "options": [
+   "The feature with the largest mean value",
+   "The direction along which the data has the greatest variance",
+   "The direction with the least variance",
+   "The first column of the original dataset"
+  ],
+  "answer": 1,
+  "explanation": "Principal components are ordered by explained variance, and the first captures the most."
+ },
+ {
+  "id": "q91c77a7a687",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "In attention, how are the query, key and value vectors used?",
+  "options": [
+   "Queries are compared with keys to compute weights, which are used to mix the values",
+   "Keys are added to values and queries are discarded",
+   "Values are compared with queries to choose one key",
+   "All three are concatenated and passed to a softmax"
+  ],
+  "answer": 0,
+  "explanation": "Attention weights come from query-key similarity, and the output is the weighted sum of value vectors."
+ },
+ {
+  "id": "q928515b94bb",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is a stop sequence in LLM generation?",
+  "options": [
+   "A list of words the model is forbidden to use",
+   "A string that ends generation when the model produces it",
+   "The maximum number of requests per minute",
+   "A token that marks the start of the system prompt"
+  ],
+  "answer": 1,
+  "explanation": "Stop sequences let applications cut off output at a known delimiter, such as the end of a structured answer."
+ },
+ {
+  "id": "q11dd630826d",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "How does agglomerative hierarchical clustering work?",
+  "options": [
+   "It starts with one cluster and randomly splits it until k clusters remain",
+   "It starts with every point as its own cluster and repeatedly merges the closest clusters",
+   "It assigns points to k fixed centroids chosen in advance",
+   "It labels points as core, border or noise based on density"
+  ],
+  "answer": 1,
+  "explanation": "The sequence of merges forms a dendrogram that can be cut at any level to get a chosen number of clusters."
+ },
+ {
+  "id": "qebe1e4cfe1a",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "medium",
+  "question": "What is LoRA (low-rank adaptation) used for?",
+  "options": [
+   "Compressing a dataset before training",
+   "Increasing a model's context window",
+   "Parameter-efficient fine-tuning that trains small low-rank matrices added to frozen model weights",
+   "Removing toxic content from training data"
+  ],
+  "answer": 2,
+  "explanation": "LoRA updates only a small number of added parameters, making fine-tuning cheaper in memory and storage."
+ }
+]

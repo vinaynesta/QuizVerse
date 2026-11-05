@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc5e4e123426",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "In Raft, a candidate becomes leader after receiving votes from:",
+  "options": [
+   "Any single follower",
+   "Every node in the cluster",
+   "A majority of the cluster",
+   "Exactly half of the nodes plus the client"
+  ],
+  "answer": 2,
+  "explanation": "A majority quorum ensures at most one leader can be elected per term."
+ },
+ {
+  "id": "qe66fd098a43",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why must saga participants handle duplicate step or compensation messages?",
+  "options": [
+   "Compensations are always executed exactly twice by design",
+   "Only the coordinator is allowed to retry failed steps",
+   "Duplicates indicate a partitioning bug in the broker",
+   "Messages can be redelivered after failures, so each step and compensation must be idempotent"
+  ],
+  "answer": 3,
+  "explanation": "Retries after ambiguous failures are normal, so repeated execution must not change the outcome."
+ },
+ {
+  "id": "qf1d5c3d32b0",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What is the core difficulty in multi-leader replication?",
+  "options": [
+   "Only one leader can accept writes at a time, so scaling is impossible",
+   "All leaders must share a single disk",
+   "Followers cannot read data at all",
+   "Concurrent writes to the same data on different leaders produce conflicts that must be detected and resolved"
+  ],
+  "answer": 3,
+  "explanation": "Because writes can be accepted independently in several regions, conflicting updates are inevitable and need a resolution strategy."
+ },
+ {
+  "id": "q2d72fa7b74e",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "Which statement about CAP is most accurate?",
+  "options": [
+   "Partition tolerance is a feature that can be turned off in production",
+   "A system must always choose two of the three properties at all times",
+   "The consistency and availability tradeoff is forced only while a network partition exists",
+   "Availability means the database is never down for maintenance"
+  ],
+  "answer": 2,
+  "explanation": "Without a partition, a well-built system can provide both consistency and availability; CAP is about behavior during partitions."
+ },
+ {
+  "id": "q33465f3992c",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What is a gray failure?",
+  "options": [
+   "A failure where logs are written in grayscale",
+   "A permanent failure that requires hardware replacement",
+   "A network outage affecting only IPv6 traffic",
+   "A component looks healthy to some observers but is degraded for others, so simple health checks may miss it"
+  ],
+  "answer": 3,
+  "explanation": "Gray failures evade binary health checks because the component still answers some probes while failing real traffic."
+ },
+ {
+  "id": "q28c44189140",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "In two-phase commit, what happens if the coordinator crashes after participants vote yes but before sending the decision?",
+  "options": [
+   "Participants automatically commit after a timeout",
+   "Participants may block, holding locks, until the coordinator recovers or the decision is learned",
+   "The transaction is split into independent sub-transactions that commit separately",
+   "Participants automatically roll back with no risk of inconsistency"
+  ],
+  "answer": 1,
+  "explanation": "Blocking is the well-known weakness of 2PC; prepared participants cannot safely decide alone."
+ },
+ {
+  "id": "qdeb4e46a3d8",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "With N=5 replicas, W=3 and R=3, what property holds?",
+  "options": [
+   "R + W equals N, which guarantees overlap and is the minimum",
+   "Overlap is impossible because 3 + 3 exceeds N",
+   "R + W is greater than N, so every read quorum overlaps every write quorum",
+   "Writes never need acknowledgement from a majority"
+  ],
+  "answer": 2,
+  "explanation": "Since 3 + 3 = 6 > 5, any read set and write set must share at least one replica, which holds the latest committed value."
+ },
+ {
+  "id": "qf09da2cb612",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "What is the main purpose of three-phase commit compared with two-phase commit?",
+  "options": [
+   "To avoid indefinite blocking when the coordinator fails, under stated timing assumptions",
+   "To allow commits without any votes from participants",
+   "To remove the need for a coordinator altogether",
+   "To reduce the number of network round trips below two"
+  ],
+  "answer": 0,
+  "explanation": "3PC adds a pre-commit phase so participants can make progress after a coordinator failure, but it assumes bounded network delays."
+ },
+ {
+  "id": "q3890fb6cc59",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why do sagas need countermeasures for isolation?",
+  "options": [
+   "Primary keys are duplicated across services",
+   "Intermediate saga states are visible to other transactions, so dirty reads and conflicting updates can occur",
+   "Clocks on the coordinator and participants drift apart",
+   "Compensating messages cannot be sent over HTTP"
+  ],
+  "answer": 1,
+  "explanation": "Because each step commits early, other transactions can observe partial work; techniques such as semantic locks address this."
+ },
+ {
+  "id": "qf9e2a623ffa",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "How does a CP system typically behave when a partition isolates a minority of replicas?",
+  "options": [
+   "It serves stale reads from the minority side to stay available",
+   "It rejects or blocks requests on the minority side to preserve consistency",
+   "It accepts writes on both sides and merges them automatically without conflicts",
+   "It shuts down the majority side to prevent divergence"
+  ],
+  "answer": 1,
+  "explanation": "CP systems sacrifice availability on the minority side so that no conflicting state can be committed."
+ }
+]

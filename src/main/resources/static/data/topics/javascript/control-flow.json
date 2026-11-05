@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q31213c2ba43",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "Which loop iterates over the values of an array such as [\"x\", \"y\"]?",
+  "options": [
+   "for...in",
+   "for...of",
+   "for...each",
+   "while...in"
+  ],
+  "answer": 1,
+  "explanation": "for...of iterates values of iterables; for...in iterates enumerable property keys."
+ },
+ {
+  "id": "q410d17b7c57",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "Which value is truthy?",
+  "options": [
+   "\"0\"",
+   "0",
+   "\"\"",
+   "NaN"
+  ],
+  "answer": 0,
+  "explanation": "Any non-empty string is truthy, including \"0\"; 0, empty string and NaN are falsy."
+ },
+ {
+  "id": "q45d2584ba90",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "What does the expression age >= 18 ? \"adult\" : \"minor\" return when age is 20?",
+  "options": [
+   "\"minor\"",
+   "\"adult\"",
+   "undefined",
+   "true"
+  ],
+  "answer": 1,
+  "explanation": "The conditional operator returns the second operand when the condition is truthy."
+ },
+ {
+  "id": "q67cb431e4f6",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "In a switch statement, what happens if a matching case has no break?",
+  "options": [
+   "A SyntaxError is thrown",
+   "Execution falls through to the next case",
+   "The switch restarts",
+   "Only that case runs anyway"
+  ],
+  "answer": 1,
+  "explanation": "Without break, execution continues into the following case bodies."
+ }
+]

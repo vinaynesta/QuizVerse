@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6eb00eb873a",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "What is the minimum possible height, in edges, of a binary tree with 15 nodes?",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "14"
+  ],
+  "answer": 2,
+  "explanation": "A perfect binary tree of height 3 holds exactly 2^4 - 1 = 15 nodes."
+ },
+ {
+  "id": "qe9ee1b593ce",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "In a queue implemented as a circular array of capacity n, how is the next rear index usually computed?",
+  "options": [
+   "(rear - 1) % n",
+   "rear + 1",
+   "(rear + 1) % n",
+   "rear * 2 % n"
+  ],
+  "answer": 2,
+  "explanation": "The modulo wraps the index back to 0 after the last slot."
+ },
+ {
+  "id": "qd3671741bd6",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "How many nodes does a perfect binary tree of height h have, counting height in edges with the root at height 0?",
+  "options": [
+   "2^(h+1) - 1",
+   "2^h",
+   "2^h - 1",
+   "2h + 1"
+  ],
+  "answer": 0,
+  "explanation": "Level k holds 2^k nodes, and summing levels 0 through h gives 2^(h+1) - 1."
+ },
+ {
+  "id": "q44980577c4a",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "What is the time complexity of checking whether two strings of length n are anagrams using a fixed-size character count array?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(1)"
+  ],
+  "answer": 1,
+  "explanation": "Each character is counted once for each string, then the fixed-size count array is compared."
+ },
+ {
+  "id": "q34cb12c4ddf",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of inserting an element into a binary heap of n elements?",
+  "options": [
+   "O(n log n)",
+   "O(1)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "The new element is sifted up along a single root-to-leaf path of logarithmic height."
+ },
+ {
+  "id": "q399893c13d5",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "What is the average-case time complexity of quickselect for finding the k-th smallest element of n elements?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Each partition step recurses into only one side, so the expected work is n + n/2 + n/4 + ..., which is linear."
+ },
+ {
+  "id": "q8d0460aaea9",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "medium",
+  "question": "After building a prefix-sum array, what is the time to compute the sum of any subarray a[i..j]?",
+  "options": [
+   "O(log n)",
+   "O(j - i)",
+   "O(n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "The sum is prefix[j + 1] - prefix[i], a single subtraction."
+ },
+ {
+  "id": "qceca5688297",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "Moving only right or down, how many distinct paths lead from the top-left cell to the bottom-right cell of a 3x3 grid?",
+  "options": [
+   "6",
+   "9",
+   "8",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Each path is 2 rights and 2 downs in some order, giving C(4, 2) = 6."
+ },
+ {
+  "id": "qdc582fe15d8",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "When a hash table grows its bucket array after exceeding its load factor, what must happen to the existing entries?",
+  "options": [
+   "They are sorted by key",
+   "They stay in their old bucket indexes",
+   "They are discarded",
+   "They are rehashed into the new buckets"
+  ],
+  "answer": 3,
+  "explanation": "Bucket indexes depend on the table size, so each entry's position must be recomputed."
+ },
+ {
+  "id": "q2dd71a01cbb",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "What is the time complexity of merging two sorted linked lists of lengths m and n into one sorted list?",
+  "options": [
+   "O(m * n)",
+   "O((m + n) log(m + n))",
+   "O(m + n)",
+   "O(max(m, n)^2)"
+  ],
+  "answer": 2,
+  "explanation": "Each step moves one node into the result, so the work is linear in the total length."
+ }
+]

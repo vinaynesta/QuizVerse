@@ -1,0 +1,17 @@
+[
+ {
+  "id": "q25f864837d6",
+  "subject": "sql",
+  "topic": "set-operations",
+  "level": "easy",
+  "question": "Which set operator returns only the rows that appear in the results of both queries?",
+  "options": [
+   "UNION",
+   "INTERSECT",
+   "EXCEPT",
+   "UNION ALL"
+  ],
+  "answer": 1,
+  "explanation": "INTERSECT keeps rows present in both result sets, while EXCEPT keeps rows in the first but not the second."
+ }
+]

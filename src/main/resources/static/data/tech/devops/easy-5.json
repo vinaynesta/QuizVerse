@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qd2f1b4ca1e4",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command merges the branch feature into the branch you currently have checked out?",
+  "options": [
+   "git merge feature",
+   "git merge main feature --into",
+   "git pull feature",
+   "git rebase --merge feature"
+  ],
+  "answer": 0,
+  "explanation": "git merge <branch> integrates the named branch's history into the current branch."
+ },
+ {
+  "id": "q0b6369606ed",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command lists the configured remotes together with their URLs?",
+  "options": [
+   "git remote -v",
+   "git branch -r",
+   "git config remotes",
+   "git remote list"
+  ],
+  "answer": 0,
+  "explanation": "git remote -v shows each remote's fetch and push URLs."
+ },
+ {
+  "id": "q7cbc3aa71c1",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which docker run flag removes the container automatically when it exits?",
+  "options": [
+   "--rm",
+   "--restart",
+   "--detach",
+   "--init"
+  ],
+  "answer": 0,
+  "explanation": "--rm deletes the container and its anonymous volumes as soon as it exits."
+ },
+ {
+  "id": "q7dac2520a08",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command shows the commit history with each commit on a single line?",
+  "options": [
+   "git status --short",
+   "git log --oneline",
+   "git show --brief",
+   "git diff --oneline"
+  ],
+  "answer": 1,
+  "explanation": "git log --oneline prints the abbreviated hash and subject line of each commit."
+ },
+ {
+  "id": "q5e04f67e044",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which command uploads a tagged local image to a registry?",
+  "options": [
+   "docker save",
+   "docker commit",
+   "docker push",
+   "docker export"
+  ],
+  "answer": 2,
+  "explanation": "docker push sends the image's layers to the registry named in its tag."
+ },
+ {
+  "id": "q50812bc3c88",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "easy",
+  "question": "Which command shows the logs of the services in a Compose project?",
+  "options": [
+   "docker compose ps",
+   "docker compose build",
+   "docker compose top",
+   "docker compose logs"
+  ],
+  "answer": 3,
+  "explanation": "docker compose logs prints the combined output of the project's service containers."
+ },
+ {
+  "id": "q5c92438e11a",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command lets you change the message of your most recent commit, if it has not been pushed yet?",
+  "options": [
+   "git revert --message",
+   "git log --edit",
+   "git reset --message",
+   "git commit --amend"
+  ],
+  "answer": 3,
+  "explanation": "git commit --amend replaces the last commit with a new one, letting you edit the message and add staged changes."
+ },
+ {
+  "id": "q816ad88592c",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command lists all containers, including those that have stopped?",
+  "options": [
+   "docker ps --running",
+   "docker ps -a",
+   "docker container top",
+   "docker images -a"
+  ],
+  "answer": 1,
+  "explanation": "By default docker ps shows only running containers; -a includes stopped ones."
+ },
+ {
+  "id": "q5465eae4457",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command renames the current branch to main?",
+  "options": [
+   "git branch -m main",
+   "git switch --name main",
+   "git rename main",
+   "git checkout -r main"
+  ],
+  "answer": 0,
+  "explanation": "git branch -m (move) renames a branch; with one argument it renames the current branch."
+ },
+ {
+  "id": "q8131fb51fa7",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command fetches from the upstream remote and then integrates the changes into the current branch?",
+  "options": [
+   "git clone",
+   "git fetch",
+   "git pull",
+   "git push"
+  ],
+  "answer": 2,
+  "explanation": "git pull is a git fetch followed by a merge (or rebase, if configured) of the upstream branch."
+ }
+]

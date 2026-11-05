@@ -1,0 +1,62 @@
+[
+ {
+  "id": "q8bab6d14ad5",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What is the scope of a variable declared with var inside a function?",
+  "options": [
+   "Function scope",
+   "Global scope always",
+   "Module scope",
+   "Block scope"
+  ],
+  "answer": 0,
+  "explanation": "var declarations are scoped to the enclosing function, not to blocks."
+ },
+ {
+  "id": "qba006c5ac78",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "Which declaration creates a block-scoped variable that cannot be reassigned?",
+  "options": [
+   "var",
+   "let",
+   "const",
+   "static"
+  ],
+  "answer": 2,
+  "explanation": "const is block-scoped and its binding cannot be reassigned after initialization."
+ },
+ {
+  "id": "qd38d2a0d59e",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "Given const obj = { a: 1 }; which statement is allowed?",
+  "options": [
+   "obj = { a: 2 };",
+   "const obj = {};",
+   "obj.a = 2;",
+   "delete obj;"
+  ],
+  "answer": 2,
+  "explanation": "const prevents rebinding the variable, but the object it references can still be mutated."
+ },
+ {
+  "id": "qf44a82ca5f9",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What is the value of a variable declared with let but not assigned?",
+  "options": [
+   "\"\"",
+   "null",
+   "0",
+   "undefined"
+  ],
+  "answer": 3,
+  "explanation": "A declared but unassigned let variable is initialized to undefined."
+ }
+]

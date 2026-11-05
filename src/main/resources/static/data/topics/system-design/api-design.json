@@ -1,0 +1,272 @@
+[
+ {
+  "id": "q0c60597abab",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "What does a 400 Bad Request status mean?",
+  "options": [
+   "The request is malformed or invalid, so the server will not process it",
+   "The resource has moved",
+   "The server is overloaded",
+   "The client must authenticate"
+  ],
+  "answer": 0,
+  "explanation": "400 is a client error, for example invalid JSON or a missing required field."
+ },
+ {
+  "id": "q12c7747ac5d",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "In REST, which HTTP method retrieves a resource without changing server state?",
+  "options": [
+   "POST",
+   "GET",
+   "DELETE",
+   "PUT"
+  ],
+  "answer": 1,
+  "explanation": "GET is a safe method, meaning it should not modify server state."
+ },
+ {
+  "id": "q13ee527e439",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP method is typically used to delete a resource?",
+  "options": [
+   "DELETE",
+   "POST",
+   "GET",
+   "HEAD"
+  ],
+  "answer": 0,
+  "explanation": "DELETE removes the resource identified by the URL and is idempotent."
+ },
+ {
+  "id": "q1704fd442e0",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which data format do most web APIs use for request and response bodies today?",
+  "options": [
+   "CSV",
+   "JSON",
+   "Binary executables",
+   "Plain HTML pages"
+  ],
+  "answer": 1,
+  "explanation": "JSON is lightweight, human-readable, and supported by nearly every language."
+ },
+ {
+  "id": "q2c86014146e",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "What is URI-based API versioning, such as /v1/users?",
+  "options": [
+   "Sending the version in a custom request header",
+   "Putting the version number in the URL path",
+   "Negotiating the media type with the Accept header",
+   "Hashing the response body to produce a version"
+  ],
+  "answer": 1,
+  "explanation": "The version is part of the resource address, so it is visible in every request URL."
+ },
+ {
+  "id": "q4a50de1c2e2",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which statement correctly distinguishes 401 from 403?",
+  "options": [
+   "401 means rate limited; 403 means the request body is malformed",
+   "401 means not found; 403 means the server crashed",
+   "401 means authentication is missing or invalid; 403 means the client is authenticated but not allowed",
+   "They are interchangeable names for the same condition"
+  ],
+  "answer": 2,
+  "explanation": "401 is about who the caller is; 403 is about what an authenticated caller may do."
+ },
+ {
+  "id": "q4f92449a500",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP status code indicates an unexpected error on the server?",
+  "options": [
+   "400 Bad Request",
+   "301 Moved Permanently",
+   "500 Internal Server Error",
+   "404 Not Found"
+  ],
+  "answer": 2,
+  "explanation": "5xx codes signal server-side failures, while 4xx codes signal client errors."
+ },
+ {
+  "id": "q5f83a0334ce",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which header typically tells the server the media type of a request body?",
+  "options": [
+   "Content-Type",
+   "Host",
+   "Cache-Control",
+   "Accept-Language"
+  ],
+  "answer": 0,
+  "explanation": "Content-Type declares the format of the body, such as application/json."
+ },
+ {
+  "id": "q6185da2f6ba",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP status code indicates that a resource was successfully created?",
+  "options": [
+   "200 OK",
+   "201 Created",
+   "204 No Content",
+   "301 Moved Permanently"
+  ],
+  "answer": 1,
+  "explanation": "201 signals a new resource was created, usually with a Location header; 200 is a generic success."
+ },
+ {
+  "id": "qc47d228ae05",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which status code means the requested resource was not found?",
+  "options": [
+   "408 Request Timeout",
+   "500 Internal Server Error",
+   "401 Unauthorized",
+   "404 Not Found"
+  ],
+  "answer": 3,
+  "explanation": "404 means no resource exists at the given URL; 5xx codes indicate server-side failures."
+ },
+ {
+  "id": "qcfc52f54377",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP method is idempotent and typically used to replace a resource at a known URL?",
+  "options": [
+   "POST",
+   "PATCH",
+   "SEND",
+   "PUT"
+  ],
+  "answer": 3,
+  "explanation": "Repeating a PUT with the same body leaves the resource in the same state; POST and PATCH are not guaranteed idempotent."
+ },
+ {
+  "id": "q2316d8f4edc",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Why do payment APIs accept an Idempotency-Key header on POST requests?",
+  "options": [
+   "To compress the request body before transmission",
+   "To authenticate the caller's identity",
+   "So retries after a timeout do not create duplicate charges",
+   "To route the request to the nearest data center"
+  ],
+  "answer": 2,
+  "explanation": "The server stores the key and result so a repeated request returns the original outcome instead of executing again."
+ },
+ {
+  "id": "q5e826ddd972",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "What is a key advantage of gRPC over REST with JSON for internal service-to-service calls?",
+  "options": [
+   "It works directly in every browser without a proxy",
+   "Compact binary Protocol Buffers over HTTP/2, with generated typed clients",
+   "It needs no schema",
+   "It always uses UDP"
+  ],
+  "answer": 1,
+  "explanation": "Protobuf messages are smaller and faster to parse than JSON, and the schema generates client code."
+ },
+ {
+  "id": "q61e514a8305",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "What is an API gateway?",
+  "options": [
+   "A database that stores API keys",
+   "A single entry point that routes requests to backend services and handles concerns such as authentication and rate limiting",
+   "A library that generates API documentation",
+   "A load balancer that only works at Layer 4"
+  ],
+  "answer": 1,
+  "explanation": "Gateways centralize cross-cutting concerns so each service need not implement them."
+ },
+ {
+  "id": "q702abb3cbad",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "What problem does GraphQL mainly address compared with fixed REST endpoints?",
+  "options": [
+   "Over-fetching and under-fetching, by letting clients request exactly the fields they need",
+   "Encrypting API traffic",
+   "Rate limiting clients",
+   "Server-side caching of responses"
+  ],
+  "answer": 0,
+  "explanation": "A single GraphQL query can fetch nested data that might take several REST calls."
+ },
+ {
+  "id": "qc2a27e73c62",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Which HTTP method best fits updating only the email field of a user resource?",
+  "options": [
+   "PATCH",
+   "PUT, because it updates only the fields that are provided",
+   "DELETE followed by POST",
+   "GET with a JSON request body"
+  ],
+  "answer": 0,
+  "explanation": "PATCH applies a partial modification; PUT is defined as replacing the whole resource."
+ },
+ {
+  "id": "qd714d07c988",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Which API change is most likely to break existing clients?",
+  "options": [
+   "Renaming a field in a response",
+   "Adding a new endpoint",
+   "Adding a new optional field to a response",
+   "Adding an optional query parameter with a default value"
+  ],
+  "answer": 0,
+  "explanation": "Clients that read the old field name fail when it disappears, while additive changes are generally safe."
+ },
+ {
+  "id": "qfd58c1bb606",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Why is cursor-based pagination often preferred over offset pagination for large, changing datasets?",
+  "options": [
+   "Offsets cannot be sorted by any column",
+   "Offsets can skip or repeat items when rows are inserted or deleted between pages",
+   "Cursors remove the need for an index",
+   "Cursors always return the full dataset in one response"
+  ],
+  "answer": 1,
+  "explanation": "A cursor anchors to a position such as the last seen key, so concurrent inserts do not shift the window."
+ }
+]

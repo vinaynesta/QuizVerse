@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qfa55f89dcd0",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "What is thrashing?",
+  "options": [
+   "A process spends more time paging than executing because it lacks enough frames for its working set",
+   "The CPU switches between too many threads",
+   "Disk fragmentation slows file access",
+   "Two processes repeatedly acquire and release the same lock"
+  ],
+  "answer": 0,
+  "explanation": "When processes keep faulting on pages they need right away, CPU utilization collapses while the paging device stays saturated."
+ },
+ {
+  "id": "q9453ce10f4d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "By Little's formula, if on average 7 processes arrive per second and each spends 2 seconds in the queue, what is the average queue length?",
+  "options": [
+   "14",
+   "9",
+   "5",
+   "3.5"
+  ],
+  "answer": 0,
+  "explanation": "Little's formula n = lambda x W gives 7 x 2 = 14 processes in the queue on average."
+ },
+ {
+  "id": "qbcd16a311e8",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "What is the time complexity of the banker's safety algorithm for n processes and m resource types?",
+  "options": [
+   "O(n + m)",
+   "O(m x n^2)",
+   "O(n log m)",
+   "O(2^n)"
+  ],
+  "answer": 1,
+  "explanation": "Up to n passes, each scanning n processes and comparing m-element vectors, gives O(m x n^2)."
+ },
+ {
+  "id": "qdec736f9f39",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does the Optimal algorithm cause?",
+  "options": [
+   "12",
+   "9",
+   "8",
+   "15"
+  ],
+  "answer": 1,
+  "explanation": "OPT evicts the page whose next use is furthest away and gets 9 faults on this string, compared with 12 for LRU and 15 for FIFO."
+ },
+ {
+  "id": "q8b9bc3d739a",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "What is the defining characteristic of an inverted page table?",
+  "options": [
+   "It has one entry per physical frame rather than one per virtual page",
+   "It has one entry per virtual page for each process",
+   "It is stored entirely in the TLB",
+   "It maps physical addresses to disk blocks"
+  ],
+  "answer": 0,
+  "explanation": "An inverted table has one entry per frame, storing <pid, page>; this saves memory but makes lookups slower, so a hash table is usually added."
+ },
+ {
+  "id": "q8ff257f815e",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "In the banker's algorithm, how is the Need matrix computed?",
+  "options": [
+   "Need = Available - Allocation",
+   "Need = Max - Allocation",
+   "Need = Max + Allocation",
+   "Need = Allocation - Available"
+  ],
+  "answer": 1,
+  "explanation": "Need[i][j] is the number of additional instances of resource j that process i may still request before finishing."
+ },
+ {
+  "id": "q0ec14fb14b4",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does the working-set model prevent thrashing?",
+  "options": [
+   "It uses FIFO replacement globally",
+   "It increases the page size",
+   "It disables demand paging",
+   "It tracks the pages each process referenced in a recent window and suspends a process if total demand exceeds available frames"
+  ],
+  "answer": 3,
+  "explanation": "If the sum of working-set sizes D exceeds the number of frames m, the OS swaps out a process, keeping multiprogramming as high as possible without thrashing."
+ },
+ {
+  "id": "qd991f274552",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "A file has two hard links. What happens when one of them is deleted with unlink()?",
+  "options": [
+   "The file's data is freed immediately",
+   "The other link becomes dangling",
+   "The inode's link count drops to 1 and the data stays reachable through the other name",
+   "The remaining link is turned into a symbolic link"
+  ],
+  "answer": 2,
+  "explanation": "The inode and its blocks are freed only when the link count reaches 0 and no process still has the file open."
+ },
+ {
+  "id": "qb501973ea0d",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "For the reference string 1,2,3,4,1,2,5,1,2,3,4,5 with FIFO replacement, how many page faults occur with 3 frames and with 4 frames?",
+  "options": [
+   "9 and 10",
+   "9 and 8",
+   "10 and 9",
+   "12 and 10"
+  ],
+  "answer": 0,
+  "explanation": "FIFO gives 9 faults with 3 frames but 10 with 4 frames; this is the classic example of Belady's anomaly."
+ },
+ {
+  "id": "qb8a988e2623",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "In the naive dining-philosophers solution where each philosopher picks up the left chopstick then the right, what can happen?",
+  "options": [
+   "All philosophers pick up their left chopstick at once and deadlock",
+   "Chopsticks are duplicated",
+   "Starvation is impossible",
+   "Two neighbors eat at the same time"
+  ],
+  "answer": 0,
+  "explanation": "Each philosopher holds one chopstick and waits for the next one, forming a circular wait; asymmetric pick-up order or allowing at most 4 at the table avoids it."
+ }
+]

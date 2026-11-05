@@ -15,6 +15,21 @@
   "explanation": "Optimal substructure means an optimal solution can be built from optimal solutions to subproblems."
  },
  {
+  "id": "q976bd560b12",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "easy",
+  "question": "With F(0) = 0 and F(1) = 1, what is the Fibonacci number F(7)?",
+  "options": [
+   "8",
+   "13",
+   "11",
+   "21"
+  ],
+  "answer": 1,
+  "explanation": "The sequence runs 0, 1, 1, 2, 3, 5, 8, 13, so F(7) is 13."
+ },
+ {
   "id": "qa930cff1e6a",
   "subject": "dsa",
   "topic": "dynamic-programming",
@@ -90,6 +105,21 @@
   "explanation": "The table has one cell per item and capacity value, each filled in O(1)."
  },
  {
+  "id": "qceca5688297",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "medium",
+  "question": "Moving only right or down, how many distinct paths lead from the top-left cell to the bottom-right cell of a 3x3 grid?",
+  "options": [
+   "6",
+   "9",
+   "8",
+   "4"
+  ],
+  "answer": 0,
+  "explanation": "Each path is 2 rights and 2 downs in some order, giving C(4, 2) = 6."
+ },
+ {
   "id": "qd37f67a5e45",
   "subject": "dsa",
   "topic": "dynamic-programming",
@@ -118,6 +148,36 @@
   ],
   "answer": 1,
   "explanation": "3 + 3 uses two coins; greedy 4 + 1 + 1 uses three, which is why DP is needed."
+ },
+ {
+  "id": "q0fe931d815a",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "What is the time complexity of the standard dynamic programming solution to matrix-chain multiplication for n matrices?",
+  "options": [
+   "O(n^2)",
+   "O(n^3)",
+   "O(2^n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "There are O(n^2) subchains, and each tries O(n) split points."
+ },
+ {
+  "id": "qbff79acefb2",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "Using coins {1, 2, 5} with unlimited supply, in how many ways can you make 5 if order does not matter?",
+  "options": [
+   "3",
+   "5",
+   "6",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "The combinations are 5, 2+2+1, 2+1+1+1, and 1+1+1+1+1."
  },
  {
   "id": "qfe99f702520",

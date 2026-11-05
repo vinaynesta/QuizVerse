@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbc605747950",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command uploads your local commits to a branch on a remote?",
+  "options": [
+   "git upload",
+   "git send",
+   "git push",
+   "git publish"
+  ],
+  "answer": 2,
+  "explanation": "git push sends local commits to the remote and updates the matching remote branch."
+ },
+ {
+  "id": "q2af18a2a400",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "What does git clone do?",
+  "options": [
+   "Creates an empty repository on a server",
+   "Creates a local copy of a remote repository, including its history",
+   "Deletes a remote branch",
+   "Merges two remote repositories"
+  ],
+  "answer": 1,
+  "explanation": "git clone downloads a repository and its full history and sets up a working copy with a default remote."
+ },
+ {
+  "id": "q3eaa651a0a7",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command shows changes in the working tree that have not yet been staged?",
+  "options": [
+   "git diff --cached",
+   "git log -p",
+   "git show HEAD",
+   "git diff"
+  ],
+  "answer": 3,
+  "explanation": "git diff with no arguments compares the working tree with the index; --cached compares the index with HEAD."
+ },
+ {
+  "id": "q7920da66b57",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "What does HEAD point to in a normal Git repository?",
+  "options": [
+   "The remote origin URL",
+   "The first commit ever made",
+   "The staging area",
+   "The currently checked-out branch (or commit)"
+  ],
+  "answer": 3,
+  "explanation": "HEAD is a reference to the current branch, or directly to a commit when in detached HEAD state."
+ },
+ {
+  "id": "q5bc37440533",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command creates a new, empty Git repository in the current directory?",
+  "options": [
+   "git init",
+   "git create",
+   "git new",
+   "git start"
+  ],
+  "answer": 0,
+  "explanation": "git init creates the .git directory that turns the current directory into a repository."
+ },
+ {
+  "id": "qb55252cfc0c",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "easy",
+  "question": "Which command starts all services defined in docker-compose.yml in the background?",
+  "options": [
+   "docker compose run --all",
+   "docker compose up -d",
+   "docker compose start --bg",
+   "docker start --all"
+  ],
+  "answer": 1,
+  "explanation": "docker compose up creates and starts the services, and the -d flag runs them detached."
+ },
+ {
+  "id": "q4888436035c",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command displays the commit history of the current branch?",
+  "options": [
+   "git history",
+   "git log",
+   "git commits",
+   "git trail"
+  ],
+  "answer": 1,
+  "explanation": "git log lists commits reachable from HEAD, newest first, with hashes, authors, and messages."
+ },
+ {
+  "id": "q3b0cfb4fbd9",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which flag maps host port 80 to container port 8080?",
+  "options": [
+   "-p 8080:80",
+   "-e 80:8080",
+   "--expose 80",
+   "-p 80:8080"
+  ],
+  "answer": 3,
+  "explanation": "The -p flag takes hostPort:containerPort, so -p 80:8080 exposes container port 8080 on host port 80."
+ },
+ {
+  "id": "qb065f3ef362",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command temporarily sets aside uncommitted changes so you can switch branches?",
+  "options": [
+   "git shelve",
+   "git park",
+   "git hide",
+   "git stash"
+  ],
+  "answer": 3,
+  "explanation": "git stash saves modified tracked files and staged changes on a stack and restores a clean working tree."
+ },
+ {
+  "id": "q58891f5e859",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which file contains the instructions Docker uses to build an image?",
+  "options": [
+   "docker.yml",
+   "image.json",
+   "Dockerfile",
+   "build.toml"
+  ],
+  "answer": 2,
+  "explanation": "A Dockerfile is a plain text file of instructions such as FROM, COPY, and RUN that docker build executes."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1bce2240361",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With strictFunctionTypes enabled, how are function-type parameters compared during assignability?",
+  "options": [
+   "Contravariantly",
+   "Bivariantly",
+   "They are not compared",
+   "Covariantly"
+  ],
+  "answer": 0,
+  "explanation": "A function accepting a wider parameter type can safely stand in for one accepting a narrower type, but not vice versa."
+ },
+ {
+  "id": "q869e9997477",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "How do you prevent a conditional type from distributing over a union type argument?",
+  "options": [
+   "Declare T with a default of never",
+   "Wrap both sides in brackets: [T] extends [U] ? X : Y",
+   "Use T extends U ?? X : Y",
+   "Add the readonly modifier to T"
+  ],
+  "answer": 1,
+  "explanation": "Distribution only applies when the checked type is a naked type parameter; wrapping it in a tuple disables that."
+ },
+ {
+  "id": "qbd9132738d7",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type F<T> = [T] extends [string] ? \"s\" : \"o\";`, what is `F<string | number>`?",
+  "options": [
+   "never",
+   "\"o\"",
+   "\"s\" | \"o\"",
+   "\"s\""
+  ],
+  "answer": 1,
+  "explanation": "The tuple wrapper prevents distribution, and string | number as a whole is not assignable to string."
+ },
+ {
+  "id": "qfcaca920542",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "Given `const c: Record<string, number | string> = { port: 8080 };`, what is the type of `c.port`?",
+  "options": [
+   "8080",
+   "unknown",
+   "string | number",
+   "number"
+  ],
+  "answer": 2,
+  "explanation": "A type annotation replaces the inferred type, so property access uses the annotated value type."
+ },
+ {
+  "id": "qaff4b8f66d0",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "What does strictPropertyInitialization report?",
+  "options": [
+   "Constructors that call super twice",
+   "Class properties that are declared but not definitely assigned in the constructor",
+   "Variables used before declaration",
+   "Properties initialized with any"
+  ],
+  "answer": 1,
+  "explanation": "With strictNullChecks, it requires non-optional properties to be initialized or marked with !."
+ },
+ {
+  "id": "qf6e0aeefa70",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "In a homomorphic mapped type like `{ [K in keyof T]: T[K] }`, what happens to T's readonly and optional modifiers?",
+  "options": [
+   "They are preserved",
+   "Only readonly is preserved",
+   "Only optional is preserved",
+   "They are always removed"
+  ],
+  "answer": 0,
+  "explanation": "Mapped types over keyof T copy the original property modifiers unless + or - is used."
+ },
+ {
+  "id": "q3b16836ae23",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "What is `Uppercase<\"abc\">`?",
+  "options": [
+   "\"ABC\"",
+   "\"abc\"",
+   "string",
+   "\"Abc\""
+  ],
+  "answer": 0,
+  "explanation": "Uppercase is an intrinsic string manipulation type applied to literal types."
+ },
+ {
+  "id": "q4f4ab6f5c28",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "What does `{ -readonly [K in keyof T]: T[K] }` do?",
+  "options": [
+   "Adds readonly to every property of T",
+   "Makes every property optional",
+   "Removes the readonly modifier from every property of T",
+   "Removes every readonly property from T"
+  ],
+  "answer": 2,
+  "explanation": "The - prefix removes a modifier in a mapped type; + (or no prefix) adds it."
+ },
+ {
+  "id": "q714b9567b0a",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "What does `out` mean in `interface Producer<out T> { get(): T }`?",
+  "options": [
+   "T is declared covariant",
+   "T can only be used as a parameter",
+   "T is declared invariant",
+   "T is declared contravariant"
+  ],
+  "answer": 0,
+  "explanation": "Variance annotations (TS 4.7+) declare out for covariant and in for contravariant type parameters."
+ },
+ {
+  "id": "q2767428c521",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "What is `type T = boolean extends true ? 1 : 0;`?",
+  "options": [
+   "never",
+   "0",
+   "1",
+   "0 | 1"
+  ],
+  "answer": 1,
+  "explanation": "There is no type parameter, so nothing distributes; boolean (true | false) is not assignable to true."
+ }
+]

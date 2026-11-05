@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc02f75d026b",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "What does the bulkhead pattern achieve?",
+  "options": [
+   "It isolates resource pools per dependency so one failing dependency cannot exhaust shared capacity",
+   "It duplicates the entire service in every region",
+   "It compresses messages to reduce bandwidth",
+   "It splits a database into shards by row range"
+  ],
+  "answer": 0,
+  "explanation": "Named after ship compartments, bulkheads keep one failure from sinking the whole system."
+ },
+ {
+  "id": "qc2a27e73c62",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Which HTTP method best fits updating only the email field of a user resource?",
+  "options": [
+   "PATCH",
+   "PUT, because it updates only the fields that are provided",
+   "DELETE followed by POST",
+   "GET with a JSON request body"
+  ],
+  "answer": 0,
+  "explanation": "PATCH applies a partial modification; PUT is defined as replacing the whole resource."
+ },
+ {
+  "id": "qf14192391eb",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "What is a cache stampede (thundering herd)?",
+  "options": [
+   "Two services writing conflicting values to the same key",
+   "A cache growing beyond its memory limit without evicting entries",
+   "Many concurrent requests miss on the same expired key and overload the backing store",
+   "Clients repeatedly receiving 304 Not Modified responses"
+  ],
+  "answer": 2,
+  "explanation": "Mitigations include request coalescing, locking during regeneration, and refreshing hot keys before they expire."
+ },
+ {
+  "id": "q94d6b799c12",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "Which rate-limiting algorithm allows short bursts while enforcing a long-run average rate?",
+  "options": [
+   "Fixed window counter",
+   "Token bucket",
+   "Consistent hashing",
+   "Round-robin scheduling"
+  ],
+  "answer": 1,
+  "explanation": "Tokens accumulate up to the bucket capacity, so bursts up to that size pass while the refill rate sets the average."
+ },
+ {
+  "id": "qfccbf5d1ac1",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "What is the main risk of last-write-wins conflict resolution?",
+  "options": [
+   "Concurrent updates can silently overwrite each other, and clock skew can pick the wrong winner",
+   "It requires a global lock on every write",
+   "It makes reads impossible during replication",
+   "It requires all writes to go through a single leader"
+  ],
+  "answer": 0,
+  "explanation": "LWW keeps one value and discards the others, so a legitimate concurrent update can be lost."
+ },
+ {
+  "id": "q2f5e8bfdb98",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "Which technique sends users to the nearest regional deployment based on their location?",
+  "options": [
+   "Two-phase commit across regions",
+   "Round-robin TCP port mapping",
+   "Sticky cookie injection at the database",
+   "GeoDNS or latency-based DNS routing"
+  ],
+  "answer": 3,
+  "explanation": "DNS resolvers return different addresses depending on the query's origin or the lowest-latency region."
+ },
+ {
+  "id": "q5c848e25e4a",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "In an eventually consistent system, what is guaranteed if no new writes occur?",
+  "options": [
+   "All replicas eventually converge to the same value",
+   "Writes are rejected while replicas synchronize",
+   "Replicas never diverge, even while writes are in flight",
+   "Every read immediately returns the latest write"
+  ],
+  "answer": 0,
+  "explanation": "Eventual consistency promises convergence over time, not immediate agreement on every read."
+ },
+ {
+  "id": "qf6b12a116fc",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "Which pattern delivers each message to every subscribing consumer group?",
+  "options": [
+   "Point-to-point queue",
+   "Round-robin load balancing",
+   "Publish/subscribe",
+   "Synchronous request/response RPC"
+  ],
+  "answer": 2,
+  "explanation": "In pub/sub each subscriber receives its own copy, whereas a work queue hands each message to one consumer."
+ },
+ {
+  "id": "q5eb8757f379",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "How does an ETag or version field prevent lost updates?",
+  "options": [
+   "The update succeeds only if the version still matches what the client last read",
+   "It forces every read to hit the primary",
+   "It encrypts the record so only one client can read it",
+   "It deletes the old record after each update"
+  ],
+  "answer": 0,
+  "explanation": "This is optimistic concurrency control; a mismatch returns a conflict so the client can re-read and retry."
+ },
+ {
+  "id": "q77ee6b37245",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What is the power of two random choices load-balancing strategy?",
+  "options": [
+   "Send each request to two servers at once and keep the first response",
+   "Alternate between two data centers every hour",
+   "Sample two servers at random and send the request to the less loaded one",
+   "Split each request into two halves for parallel processing"
+  ],
+  "answer": 2,
+  "explanation": "Comparing just two random candidates captures most of the benefit of checking every server, at much lower cost."
+ }
+]

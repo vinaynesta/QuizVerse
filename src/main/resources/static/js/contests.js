@@ -150,7 +150,8 @@ async function openPaper() {
     const setup = q.group && (n === 0 || !paper.questions[n - 1].group || paper.questions[n - 1].group.id !== q.group.id)
       ? groupSetupHtml(q) : "";
     return `${head}<li class="contest-q" data-n="${n}">
-        ${setup}<p><b>${n + 1}.</b> ${escapeHtml(q.question)}</p>
+        ${setup}<p><b>${n + 1}.</b> ${escapeHtml(q.question)}${q.needsReview
+          ? ' <span class="badge needs-review" title="New content, still being checked">Draft</span>' : ""}</p>
         <div class="options">${q.options.map((o, k) =>
           `<div class="option${chosen[n] === k ? " selected" : ""}" data-k="${k}" role="button" tabindex="0">${escapeHtml(o)}</div>`).join("")}</div>
       </li>`;

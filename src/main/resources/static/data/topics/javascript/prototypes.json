@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q283e578de5a",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does Object.getPrototypeOf(Object.create(null)) return?",
+  "options": [
+   "null",
+   "Object.prototype",
+   "undefined",
+   "{}"
+  ],
+  "answer": 0,
+  "explanation": "Object.create(null) creates an object with no prototype, so it does not inherit even toString."
+ },
+ {
+  "id": "q2e6eaa0d9aa",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nconst parent = { x: 1 };\nconst child = Object.create(parent);\nchild.x = 2;\nconsole.log(parent.x);",
+  "options": [
+   "2",
+   "undefined",
+   "TypeError",
+   "1"
+  ],
+  "answer": 3,
+  "explanation": "Assigning to child.x creates an own property on child that shadows the inherited one; parent is unchanged."
+ },
+ {
+  "id": "q5b2bc992340",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() {}\nF.prototype.greet = () => \"hi\";\nconst f = new F();\nF.prototype.greet = () => \"bye\";\nconsole.log(f.greet());",
+  "options": [
+   "\"hi\"",
+   "undefined",
+   "\"bye\"",
+   "TypeError"
+  ],
+  "answer": 2,
+  "explanation": "f looks up greet on F.prototype at call time, so it sees the updated method."
+ },
+ {
+  "id": "q8656c7321ab",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() {}\nconst f = new F();\nF.prototype = { tag: \"new\" };\nconsole.log(f.tag);",
+  "options": [
+   "\"new\"",
+   "null",
+   "undefined",
+   "TypeError"
+  ],
+  "answer": 2,
+  "explanation": "f's prototype was fixed at creation to the original F.prototype object; replacing F.prototype afterwards does not affect it."
+ },
+ {
+  "id": "qaa9b2a3cd5b",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does obj instanceof Ctor actually check?",
+  "options": [
+   "Whether obj was created by calling Ctor directly",
+   "Whether obj.constructor === Ctor",
+   "Whether Ctor.prototype appears anywhere in obj's prototype chain",
+   "Whether obj has all properties of Ctor"
+  ],
+  "answer": 2,
+  "explanation": "instanceof walks the prototype chain of obj looking for Ctor.prototype (unless Symbol.hasInstance is customized)."
+ },
+ {
+  "id": "qb5d519badaa",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "Given const c = Object.create({ a: 1 }); what are \"a\" in c and Object.hasOwn(c, \"a\")?",
+  "options": [
+   "false and false",
+   "true and false",
+   "true and true",
+   "false and true"
+  ],
+  "answer": 1,
+  "explanation": "The in operator checks the whole prototype chain, while Object.hasOwn checks only own properties."
+ },
+ {
+  "id": "qd5c27392be0",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "Given class A {} and class B extends A {}, what does Object.getPrototypeOf(B) === A return?",
+  "options": [
+   "TypeError",
+   "false",
+   "undefined",
+   "true"
+  ],
+  "answer": 3,
+  "explanation": "extends links both chains: B.prototype inherits from A.prototype and the constructor B itself inherits from A, enabling static inheritance."
+ }
+]

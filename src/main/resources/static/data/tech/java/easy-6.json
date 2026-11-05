@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q40e25473928",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "How many bits does a Java int occupy?",
+  "options": [
+   "It depends on the platform",
+   "16",
+   "64",
+   "32"
+  ],
+  "answer": 3,
+  "explanation": "Java fixes int at 32 bits on every platform."
+ },
+ {
+  "id": "qbd55b3886a7",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "What exception does Integer.parseInt(\"abc\") throw?",
+  "options": [
+   "NumberFormatException",
+   "ClassCastException",
+   "ArithmeticException",
+   "NullPointerException"
+  ],
+  "answer": 0,
+  "explanation": "parseInt throws NumberFormatException when the string is not a valid integer."
+ },
+ {
+  "id": "qa4f2ff28b15",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword does a class use to declare that it implements an interface?",
+  "options": [
+   "uses",
+   "extends",
+   "inherits",
+   "implements"
+  ],
+  "answer": 3,
+  "explanation": "A class extends at most one class but can implement any number of interfaces."
+ },
+ {
+  "id": "qbd9679aa9e4",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "Which keyword makes a method acquire a monitor lock before it runs?",
+  "options": [
+   "synchronized",
+   "volatile",
+   "transient",
+   "static"
+  ],
+  "answer": 0,
+  "explanation": "A synchronized instance method locks on this, and a static one locks on the Class object."
+ },
+ {
+  "id": "q8e21d83484a",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "What is method overloading?",
+  "options": [
+   "Redefining a superclass method in a subclass with the same signature",
+   "Calling a method from inside itself",
+   "Defining methods with the same name but different parameter lists",
+   "Declaring a method in an interface without a body"
+  ],
+  "answer": 2,
+  "explanation": "The compiler chooses among overloads based on the argument types at the call site."
+ },
+ {
+  "id": "qf5361abf8e9",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "easy",
+  "question": "Which method, added by the SequencedCollection interface in Java 21, returns the first element of a List?",
+  "options": [
+   "first()",
+   "getFirst()",
+   "peekHead()",
+   "front()"
+  ],
+  "answer": 1,
+  "explanation": "Java 21 added getFirst() and getLast() to sequenced collections such as List and Deque."
+ },
+ {
+  "id": "qd903e47e5fb",
+  "subject": "java",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword calls a superclass constructor from a subclass constructor?",
+  "options": [
+   "super",
+   "extends",
+   "this",
+   "parent"
+  ],
+  "answer": 0,
+  "explanation": "super(...) must be the first statement of the constructor and invokes the superclass constructor."
+ },
+ {
+  "id": "q2e77e4f3ed2",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which block handles an exception thrown inside a try block?",
+  "options": [
+   "finally",
+   "throw",
+   "catch",
+   "throws"
+  ],
+  "answer": 2,
+  "explanation": "A matching catch block receives and handles the thrown exception."
+ },
+ {
+  "id": "q58f49d196e6",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"Hello\".length() return?",
+  "options": [
+   "4",
+   "6",
+   "5",
+   "It does not compile"
+  ],
+  "answer": 2,
+  "explanation": "length() returns the number of UTF-16 code units, and \"Hello\" has five."
+ },
+ {
+  "id": "q5a5bfb8dd4c",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "easy",
+  "question": "What does calling t.join() on a Thread t do?",
+  "options": [
+   "Starts thread t",
+   "Merges t into the current thread",
+   "Stops thread t immediately",
+   "Waits until thread t finishes"
+  ],
+  "answer": 3,
+  "explanation": "join blocks the calling thread until the target thread terminates."
+ }
+]

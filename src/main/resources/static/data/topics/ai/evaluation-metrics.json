@@ -15,6 +15,21 @@
   "explanation": "Precision answers: of everything predicted positive, how much was actually positive."
  },
  {
+  "id": "qa96c6211851",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "Which metric is commonly used to evaluate a regression model?",
+  "options": [
+   "F1 score",
+   "Precision",
+   "Recall",
+   "Mean squared error"
+  ],
+  "answer": 3,
+  "explanation": "Mean squared error averages squared differences between predicted and actual values; the others are classification metrics."
+ },
+ {
   "id": "qbab70caaa43",
   "subject": "ai",
   "topic": "evaluation-metrics",
@@ -28,6 +43,21 @@
   ],
   "answer": 0,
   "explanation": "Accuracy is the number of correct predictions divided by the total number of predictions."
+ },
+ {
+  "id": "qc9e591600b7",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "In binary classification, what is a false positive?",
+  "options": [
+   "Predicting the negative class when the actual class is positive",
+   "Correctly predicting the negative class",
+   "Correctly predicting the positive class",
+   "Predicting the positive class when the actual class is negative"
+  ],
+  "answer": 3,
+  "explanation": "A false positive is a false alarm, such as flagging a legitimate email as spam."
  },
  {
   "id": "qcd5c0c4824c",
@@ -105,6 +135,36 @@
   "explanation": "F1 uses the harmonic mean, so it is high only when both precision and recall are high."
  },
  {
+  "id": "qbf17e7831b9",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What does a ROC curve plot?",
+  "options": [
+   "Precision against recall at a single threshold",
+   "Training loss against the number of epochs",
+   "True positive rate against false positive rate across decision thresholds",
+   "Accuracy against dataset size"
+  ],
+  "answer": 2,
+  "explanation": "Sweeping the threshold traces the trade-off between catching positives and raising false alarms."
+ },
+ {
+  "id": "qc22bd6842f9",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "medium",
+  "question": "What does R-squared measure for a regression model?",
+  "options": [
+   "The average absolute prediction error",
+   "The proportion of the target's variance explained by the model",
+   "The number of features in the model",
+   "The correlation between two input features"
+  ],
+  "answer": 1,
+  "explanation": "An R-squared of 1 means a perfect fit, while 0 means the model does no better than predicting the mean."
+ },
+ {
   "id": "qf6493f08e35",
   "subject": "ai",
   "topic": "evaluation-metrics",
@@ -135,6 +195,21 @@
   "explanation": "False positive rate barely moves when negatives are abundant, while precision directly exposes the cost of false positives."
  },
  {
+  "id": "q5451d68fe57",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "Which kind of prediction does log loss (cross-entropy) penalize most heavily?",
+  "options": [
+   "A confident prediction that turns out to be wrong",
+   "An uncertain prediction that turns out to be right",
+   "A correct prediction made with 100% confidence",
+   "Any prediction for the majority class"
+  ],
+  "answer": 0,
+  "explanation": "The penalty -log(p) grows without bound as the probability assigned to the true class approaches zero."
+ },
+ {
   "id": "q6e501e5c567",
   "subject": "ai",
   "topic": "evaluation-metrics",
@@ -148,6 +223,21 @@
   ],
   "answer": 1,
   "explanation": "Calibration concerns whether probabilities can be trusted as probabilities, which is separate from ranking quality."
+ },
+ {
+  "id": "q7e0ca61880c",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "In multiclass classification, how does macro-averaged F1 differ from micro-averaged F1?",
+  "options": [
+   "Macro uses only the largest class, while micro uses only the smallest",
+   "They are always equal for any dataset",
+   "Macro is computed on training data, while micro is computed on test data",
+   "Macro averages per-class F1 scores equally, while micro pools all counts so frequent classes dominate"
+  ],
+  "answer": 3,
+  "explanation": "Macro-F1 highlights performance on rare classes, while micro-F1 reflects overall per-example performance."
  },
  {
   "id": "q82be29405ec",

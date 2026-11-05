@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q6c798094c39",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "What does chmod 640 file do?",
+  "options": [
+   "Gives the owner read and write, the group read, and others no access",
+   "Gives everyone read and write access",
+   "Gives the owner read, write and execute, the group read, and others write",
+   "Makes the file executable by all users"
+  ],
+  "answer": 0,
+  "explanation": "The octal digits map to owner (6 = rw-), group (4 = r--), and others (0 = ---)."
+ },
+ {
+  "id": "q74017a4ad09",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "In command > out.log 2>&1, what does 2>&1 do?",
+  "options": [
+   "Runs the command twice",
+   "Redirects stderr to wherever stdout currently points, so both go to out.log",
+   "Appends to out.log instead of overwriting it",
+   "Sends stdout to stderr"
+  ],
+  "answer": 1,
+  "explanation": "File descriptor 2 (stderr) is duplicated from descriptor 1 (stdout) after stdout was redirected to the file."
+ },
+ {
+  "id": "q9cc1bae172d",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "Which command finds all files under /var/log whose names end in .log?",
+  "options": [
+   "grep -r '*.log' /var/log",
+   "find /var/log -name '*.log'",
+   "ls /var/log/*.log --recursive",
+   "which *.log /var/log"
+  ],
+  "answer": 1,
+  "explanation": "find walks the directory tree and -name matches file names against the glob pattern."
+ },
+ {
+  "id": "qb646e47d69e",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "Which command shows the last 20 lines of a log file and keeps printing new lines as they are written?",
+  "options": [
+   "tail -n 20 -f log",
+   "cat -f log",
+   "less --follow log",
+   "head -20 -f log"
+  ],
+  "answer": 0,
+  "explanation": "tail -n 20 -f prints the last 20 lines and follows the file as it grows."
+ },
+ {
+  "id": "qc15b9260e00",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "What does the pipe operator | do in a shell?",
+  "options": [
+   "Sends the standard output of one command to the standard input of the next",
+   "Runs commands in the background",
+   "Redirects error messages to a file",
+   "Creates a symbolic link"
+  ],
+  "answer": 0,
+  "explanation": "A pipe connects stdout of the left command to stdin of the right command."
+ },
+ {
+  "id": "qd421a0d7a52",
+  "subject": "devops",
+  "topic": "linux-shell",
+  "level": "medium",
+  "question": "Which bash variable holds the exit status of the last command that ran in the foreground?",
+  "options": [
+   "$?",
+   "$!",
+   "$#",
+   "$@"
+  ],
+  "answer": 0,
+  "explanation": "$? expands to the exit status of the most recent foreground command, where 0 means success."
+ }
+]

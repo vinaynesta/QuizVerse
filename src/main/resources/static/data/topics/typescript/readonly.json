@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q2126d723f54",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `const o: Readonly<{ tags: string[] }> = { tags: [] };`, what happens with `o.tags.push(\"a\")`?",
+  "options": [
+   "Compile error, because push does not exist on string[]",
+   "Compile error, because tags is deeply readonly",
+   "It compiles, because Readonly is shallow",
+   "Runtime TypeError, because the object is frozen"
+  ],
+  "answer": 2,
+  "explanation": "Readonly only prevents reassigning o.tags itself; the nested array remains mutable."
+ },
+ {
+  "id": "q58150d99b55",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "What is the difference between `const` and `readonly`?",
+  "options": [
+   "They are interchangeable in every position",
+   "const applies to variables; readonly applies to properties",
+   "const applies to properties; readonly applies to variables",
+   "readonly is enforced at runtime, const is not"
+  ],
+  "answer": 1,
+  "explanation": "Use const for bindings and readonly for properties, index signatures and array types."
+ },
+ {
+  "id": "q9cafad72a30",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "What type is inferred for `const p = { x: 1 } as const;`?",
+  "options": [
+   "{ readonly x: number }",
+   "{ x: 1 }",
+   "{ readonly x: 1 }",
+   "{ x: number }"
+  ],
+  "answer": 2,
+  "explanation": "as const makes properties readonly and keeps literal types."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q36ad3235cd2",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "hard",
+  "question": "How many distinct strings of 4 pairs of balanced parentheses are there?",
+  "options": [
+   "8",
+   "12",
+   "14",
+   "16"
+  ],
+  "answer": 2,
+  "explanation": "The count is the 4th Catalan number, C(8, 4) / 5 = 14."
+ },
+ {
+  "id": "qbff79acefb2",
+  "subject": "dsa",
+  "topic": "dynamic-programming",
+  "level": "hard",
+  "question": "Using coins {1, 2, 5} with unlimited supply, in how many ways can you make 5 if order does not matter?",
+  "options": [
+   "3",
+   "5",
+   "6",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "The combinations are 5, 2+2+1, 2+1+1+1, and 1+1+1+1+1."
+ },
+ {
+  "id": "q7522d563e32",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "hard",
+  "question": "What is the time complexity of Manacher's algorithm for finding the longest palindromic substring of a string of length n?",
+  "options": [
+   "O(n log n)",
+   "O(n^2)",
+   "O(n)",
+   "O(n^3)"
+  ],
+  "answer": 2,
+  "explanation": "Manacher's algorithm reuses mirrored palindrome radii so the right boundary only moves forward."
+ },
+ {
+  "id": "q81e36f4f03b",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the time complexity of LSD radix sort on n integers with d digits in base b?",
+  "options": [
+   "O(n log n)",
+   "O(n * b^d)",
+   "O(d * (n + b))",
+   "O(d * n * log b)"
+  ],
+  "answer": 2,
+  "explanation": "Each of the d passes is a stable counting sort costing O(n + b)."
+ },
+ {
+  "id": "q9bda6dfef30",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "Which algorithm finds all strongly connected components in O(V + E) using a single DFS with low-link values?",
+  "options": [
+   "Floyd-Warshall algorithm",
+   "Prim's algorithm",
+   "Kahn's algorithm",
+   "Tarjan's algorithm"
+  ],
+  "answer": 3,
+  "explanation": "Tarjan's algorithm pops a component off its stack when a vertex's low-link equals its discovery index."
+ },
+ {
+  "id": "qc7f0f46f711",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "hard",
+  "question": "How can you find the intersection node of two singly linked lists in O(m + n) time and O(1) extra space?",
+  "options": [
+   "Advance two pointers and redirect each to the other list's head when it reaches the end",
+   "Store every node of one list in a hash set",
+   "Reverse both lists and compare their heads",
+   "Compare every node of one list with every node of the other"
+  ],
+  "answer": 0,
+  "explanation": "After switching, both pointers travel m + n nodes in total and meet at the intersection, or at null if there is none."
+ },
+ {
+  "id": "q8c7bb4a7935",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "How does Kahn's topological sort algorithm detect that a directed graph contains a cycle?",
+  "options": [
+   "A vertex is dequeued twice",
+   "Fewer than V vertices are output when the queue empties",
+   "Some vertex has an in-degree greater than 1",
+   "The queue never becomes empty"
+  ],
+  "answer": 1,
+  "explanation": "Vertices on a cycle never reach in-degree zero, so they are never added to the output."
+ },
+ {
+  "id": "q0d849de42e4",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the worst-case time complexity of the median-of-medians selection algorithm on n elements?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "Choosing the median of group medians as pivot guarantees a constant-fraction split, giving linear time even in the worst case."
+ },
+ {
+  "id": "q19b528fd3f3",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "hard",
+  "question": "What is the worst-case lookup time in cuckoo hashing?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(sqrt n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "A key can only reside in one of a fixed number of candidate positions, so a lookup checks a constant number of slots."
+ },
+ {
+  "id": "q37b4e346784",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "What is the time complexity of inserting a word of length L into a trie?",
+  "options": [
+   "O(L log L)",
+   "O(L)",
+   "O(n), where n is the number of stored words",
+   "O(1)"
+  ],
+  "answer": 1,
+  "explanation": "Insertion follows or creates one node per character, independent of the number of stored words."
+ }
+]

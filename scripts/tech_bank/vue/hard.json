@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "shallowRef only tracks .value assignment, so in-place mutation needs a new array or triggerRef(list)."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What is the result of v-on=\"{ mousedown: onDown, mouseup: onUp }\" on an element?",
+    "options": [
+      "Only the first listener is attached",
+      "A compile error, because v-on requires an argument",
+      "The object is passed as a single event name",
+      "Both listeners are attached, as object syntax binds multiple events"
+    ],
+    "answer": 3,
+    "explanation": "v-on without an argument accepts an object of event-to-handler pairs, but modifiers are not supported in that form."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "How is <MyComp v-bind=\"obj\" title=\"x\" /> resolved when obj also has a title property in Vue 3?",
+    "options": [
+      "The v-bind object always wins",
+      "Individual attributes always win regardless of order",
+      "Vue throws a duplicate attribute error",
+      "Order matters, and the later binding wins, so title=\"x\" overrides obj.title"
+    ],
+    "answer": 3,
+    "explanation": "Vue 3 merges bindings in the order they appear, unlike Vue 2 where individual attributes always won."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What does markRaw(obj) do?",
+    "options": [
+      "Marks the object so Vue never converts it into a proxy",
+      "Makes the object readonly",
+      "Returns the raw object behind a proxy",
+      "Freezes the object with Object.freeze"
+    ],
+    "answer": 0,
+    "explanation": "markRaw is useful for large third-party instances like map libraries that should not be made reactive."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What does toRaw(proxy) return?",
+    "options": [
+      "The original object behind a reactive or readonly proxy",
+      "A deep copy of the proxy",
+      "A ref wrapping the proxy",
+      "A frozen snapshot of the proxy"
+    ],
+    "answer": 0,
+    "explanation": "toRaw gives the underlying object, which can be read or written without tracking or triggering."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Given const a = ref({ n: 1 }), how is a.value treated?",
+    "options": [
+      "It stays a plain object, so nested changes are not tracked",
+      "It is converted with reactive(), so a.value.n changes are tracked deeply",
+      "It becomes a shallowRef automatically",
+      "It becomes readonly"
+    ],
+    "answer": 1,
+    "explanation": "ref() makes object values deeply reactive by passing them to reactive(); use shallowRef to avoid that."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What does effectScope() let a composable do?",
+    "options": [
+      "Run effects in a separate thread",
+      "Share effects between apps",
+      "Collect reactive effects like computed and watchers so they can all be stopped together",
+      "Delay effects until mount"
+    ],
+    "answer": 2,
+    "explanation": "Effects created inside scope.run() are captured and disposed with scope.stop()."
+  },
+  {
+    "topic": "composition-api",
+    "question": "Why does a composable call onScopeDispose instead of onUnmounted for cleanup?",
+    "options": [
+      "It also works when the composable is used inside an effectScope outside of a component",
+      "onUnmounted is not allowed in composables",
+      "onScopeDispose runs before every render",
+      "It runs earlier than setup"
+    ],
+    "answer": 0,
+    "explanation": "onScopeDispose cleans up whenever the active effect scope stops, which includes but is not limited to component unmount."
+  },
+  {
+    "topic": "composition-api",
+    "question": "In Vue 3.5+, what does useTemplateRef('input') return?",
+    "options": [
+      "The DOM element synchronously during setup",
+      "A reactive copy of the element's attributes",
+      "A function to query the DOM",
+      "A shallow ref that is filled with the element or component whose ref attribute is 'input' after mount"
+    ],
+    "answer": 3,
+    "explanation": "useTemplateRef matches by the ref attribute string and avoids needing a variable with the same name."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "What does declaring emits: ['click'] on a component change about a native click listener the parent adds?",
+    "options": [
+      "Nothing; native and component listeners always both fire",
+      "The click event is prevented from bubbling",
+      "The listener is treated as a component event and no longer falls through to the root element as a native listener",
+      "The component emits click twice"
+    ],
+    "answer": 2,
+    "explanation": "Declared events are removed from $attrs, so the parent's @click only fires when the child emits it."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "A child with multiple root nodes receives class=\"big\" from its parent and does not bind $attrs. What happens?",
+    "options": [
+      "Vue warns that fallthrough attributes could not be applied automatically",
+      "The class goes on the first root node",
+      "The class goes on every root node",
+      "The class is silently applied to the parent"
+    ],
+    "answer": 0,
+    "explanation": "With multiple roots there is no single element to receive attributes, so you must bind $attrs explicitly."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "What does the once: true option do for watch in Vue 3.4+?",
+    "options": [
+      "The source is read only once at creation",
+      "The callback runs once immediately and then on every change",
+      "Duplicate changes in one tick are ignored forever",
+      "The callback runs only for the first change and the watcher then stops"
+    ],
+    "answer": 3,
+    "explanation": "once: true makes the watcher stop itself after its callback has fired a single time."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "In Vue 3.4+, a computed returns the same primitive value after its dependencies change. What happens to effects depending on it?",
+    "options": [
+      "They are not triggered, because the computed value did not change",
+      "They always re-run",
+      "Vue throws a warning",
+      "The computed is recreated"
+    ],
+    "answer": 0,
+    "explanation": "Since 3.4, computed only triggers dependents when its computed value actually changes."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "In which order do onBeforeUnmount and onUnmounted run for a parent and its child when the parent unmounts?",
+    "options": [
+      "Child onBeforeUnmount first, then parent onBeforeUnmount, then parent onUnmounted, then child onUnmounted",
+      "Parent onBeforeUnmount, child onBeforeUnmount, child onUnmounted, parent onUnmounted",
+      "Parent onUnmounted before any child hook",
+      "Only the parent hooks run"
+    ],
+    "answer": 1,
+    "explanation": "Before-hooks run top-down, and the unmounted hooks complete bottom-up, as children finish before parents."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "What is onRenderTriggered used for?",
+    "options": [
+      "Running code after each SSR render",
+      "Debugging which reactive dependency caused a component to re-render, in development",
+      "Forcing a re-render manually",
+      "Measuring network requests"
+    ],
+    "answer": 1,
+    "explanation": "onRenderTriggered and onRenderTracked are development-only debug hooks that receive a dependency event."
+  },
+  {
+    "topic": "directives",
+    "question": "Which hook of a custom directive object runs when the element is inserted into the DOM?",
+    "options": [
+      "inserted",
+      "bind",
+      "created only",
+      "mounted"
+    ],
+    "answer": 3,
+    "explanation": "Vue 3 directive hooks mirror component lifecycle names, so Vue 2's inserted became mounted."
+  },
+  {
+    "topic": "directives",
+    "question": "How does v-model on a <select multiple> bind its value?",
+    "options": [
+      "To a comma-separated string",
+      "To the last selected option only",
+      "To an array of the selected option values",
+      "To a Set of selected elements"
+    ],
+    "answer": 2,
+    "explanation": "For multiple selects, the bound variable should be an array."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "How does a renderless component typically expose its logic to the parent?",
+    "options": [
+      "By emitting an event on every change",
+      "By providing global variables",
+      "By passing state and functions as scoped slot props without rendering markup of its own",
+      "By using v-html to inject templates"
+    ],
+    "answer": 2,
+    "explanation": "Renderless components render only the default slot with props, leaving all markup to the consumer."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "In Pinia, how do you react to every change of a store's state?",
+    "options": [
+      "store.$watch(callback)",
+      "store.$subscribe(callback)",
+      "store.on('change', callback)",
+      "store.$listen(callback)"
+    ],
+    "answer": 1,
+    "explanation": "$subscribe calls the callback after state mutations, including $patch, and receives mutation details."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "What does Vue Router's scrollBehavior option control?",
+    "options": [
+      "The scrollbar style",
+      "Whether the router can be scrolled by keyboard",
+      "Where the page scrolls after navigation, such as the top or a saved position",
+      "Lazy loading of routes when scrolling"
+    ],
+    "answer": 2,
+    "explanation": "scrollBehavior returns a position, such as savedPosition for back navigation or a hash target."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "What does defineAsyncComponent's loadingComponent and delay option combination achieve?",
+    "options": [
+      "The component loads after the delay even if ready",
+      "The loading component is shown only if loading takes longer than the delay, avoiding flicker",
+      "The loading component replaces the async component permanently",
+      "Errors are retried after the delay"
+    ],
+    "answer": 1,
+    "explanation": "delay defaults to 200 ms so fast loads do not briefly flash a spinner."
   }
 ]

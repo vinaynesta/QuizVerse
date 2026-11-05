@@ -45,6 +45,36 @@
   "explanation": "RouterView is the outlet that displays the matched route component."
  },
  {
+  "id": "qe20c0e94fec",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "Which Vue Router component creates a link that navigates without a full page reload?",
+  "options": [
+   "RouterView",
+   "RouteAnchor",
+   "RouterLink",
+   "NavLink"
+  ],
+  "answer": 2,
+  "explanation": "<RouterLink to=\"/about\"> renders an anchor and handles navigation on the client."
+ },
+ {
+  "id": "qe80449f8ed4",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "easy",
+  "question": "In script setup, which function returns the router instance for navigation?",
+  "options": [
+   "createRouter",
+   "useRoute",
+   "getRouter",
+   "useRouter"
+  ],
+  "answer": 3,
+  "explanation": "useRouter() returns the router, whose push and replace methods navigate, while useRoute() returns the current route."
+ },
+ {
   "id": "qef0bdb510d8",
   "subject": "vue",
   "topic": "router-pinia",
@@ -73,6 +103,36 @@
   ],
   "answer": 1,
   "explanation": "Getters derive values from state and are cached like computed properties."
+ },
+ {
+  "id": "q5b702e60562",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "Which Vue Router hook lets a component react when the route changes but the same component instance is reused?",
+  "options": [
+   "onBeforeRouteLeave",
+   "onBeforeRouteUpdate",
+   "onMounted",
+   "beforeEnter"
+  ],
+  "answer": 1,
+  "explanation": "onBeforeRouteUpdate runs when params change, such as /users/1 to /users/2, while the component stays mounted."
+ },
+ {
+  "id": "qaf3dcc6ac3b",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "medium",
+  "question": "How do you change several Pinia state properties in a single patch?",
+  "options": [
+   "store.setState({ a: 1, b: 2 })",
+   "store.commit('a', 1)",
+   "store.$update(a, b)",
+   "store.$patch({ a: 1, b: 2 })"
+  ],
+  "answer": 3,
+  "explanation": "$patch applies a partial object or a mutation function as a single change entry for devtools."
  },
  {
   "id": "qba92aab4547",
@@ -150,6 +210,21 @@
   "explanation": "Unreturned state is private and breaks devtools, SSR and plugins, so all state must be returned."
  },
  {
+  "id": "q5b6ab1b0bb4",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "In Pinia, how do you react to every change of a store's state?",
+  "options": [
+   "store.$watch(callback)",
+   "store.$subscribe(callback)",
+   "store.on('change', callback)",
+   "store.$listen(callback)"
+  ],
+  "answer": 1,
+  "explanation": "$subscribe calls the callback after state mutations, including $patch, and receives mutation details."
+ },
+ {
   "id": "q7fdef425084",
   "subject": "vue",
   "topic": "router-pinia",
@@ -178,5 +253,20 @@
   ],
   "answer": 2,
   "explanation": "Returning false from a navigation guard aborts the navigation."
+ },
+ {
+  "id": "q83990a8c431",
+  "subject": "vue",
+  "topic": "router-pinia",
+  "level": "hard",
+  "question": "What does Vue Router's scrollBehavior option control?",
+  "options": [
+   "The scrollbar style",
+   "Whether the router can be scrolled by keyboard",
+   "Where the page scrolls after navigation, such as the top or a saved position",
+   "Lazy loading of routes when scrolling"
+  ],
+  "answer": 2,
+  "explanation": "scrollBehavior returns a position, such as savedPosition for back navigation or a hash target."
  }
 ]

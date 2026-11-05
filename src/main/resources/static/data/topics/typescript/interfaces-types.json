@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q1c4df5e6909",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which keyword declares an interface in TypeScript?",
+  "options": [
+   "struct",
+   "interface",
+   "shape",
+   "protocol"
+  ],
+  "answer": 1,
+  "explanation": "Object shapes are declared with the interface keyword (or with a type alias)."
+ },
+ {
+  "id": "q3b491fb7e06",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "What does the type `A & B` represent?",
+  "options": [
+   "A type that excludes members of B from A",
+   "Only the members A and B share",
+   "A type that has all members of both A and B",
+   "A type that has members of either A or B"
+  ],
+  "answer": 2,
+  "explanation": "& creates an intersection, combining the requirements of both types."
+ },
+ {
+  "id": "q7c9b01dbb00",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How does interface `B` inherit the members of interface `A`?",
+  "options": [
+   "interface B : A {}",
+   "interface B extends A {}",
+   "interface B implements A {}",
+   "interface B inherits A {}"
+  ],
+  "answer": 1,
+  "explanation": "Interfaces use extends to inherit members; implements is used by classes."
+ },
+ {
+  "id": "q8bcf9c86e51",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which construct supports declaration merging when declared twice with the same name?",
+  "options": [
+   "Neither",
+   "type alias",
+   "Both interface and type alias",
+   "interface"
+  ],
+  "answer": 3,
+  "explanation": "Multiple interface declarations with the same name are merged; redeclaring a type alias is an error."
+ },
+ {
+  "id": "qc9d24dae0c7",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Given `interface User { readonly id: number }`, what happens with `user.id = 5;`?",
+  "options": [
+   "It works but logs a warning",
+   "It silently does nothing",
+   "A compile-time error, because id is readonly",
+   "It throws a TypeError at runtime"
+  ],
+  "answer": 2,
+  "explanation": "readonly is a compile-time check that prevents reassignment after initialization."
+ },
+ {
+  "id": "qd49b5509fe7",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "What happens with `const p: { x: number } = { x: 1, y: 2 };`?",
+  "options": [
+   "It compiles and p has type { x: number; y: number }",
+   "It compiles and y is dropped",
+   "A compile error: object literal may only specify known properties",
+   "It compiles but y becomes undefined"
+  ],
+  "answer": 2,
+  "explanation": "Excess property checking flags extra properties in object literals assigned to a typed target."
+ },
+ {
+  "id": "qe898f89b7c3",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How do you mark the property `age` as optional in an interface?",
+  "options": [
+   "age?: number;",
+   "optional age: number;",
+   "age: number?;",
+   "age: number | optional;"
+  ],
+  "answer": 0,
+  "explanation": "A ? after the property name makes it optional, so its type effectively includes undefined."
+ },
+ {
+  "id": "qeb5523364de",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which of these can a type alias express directly that an interface cannot?",
+  "options": [
+   "An object with optional properties",
+   "An object with methods",
+   "An object with readonly properties",
+   "A union such as `string | number`"
+  ],
+  "answer": 3,
+  "explanation": "Interfaces describe object shapes only, while type aliases can name unions, primitives, tuples and more."
+ }
+]

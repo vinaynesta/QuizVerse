@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q0e2ee8dc835",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "What is an inode in UNIX file systems?",
+  "options": [
+   "A device driver",
+   "The file's name in a directory",
+   "A data structure storing a file's metadata and pointers to its data blocks",
+   "A network socket"
+  ],
+  "answer": 2,
+  "explanation": "An inode holds owner, permissions, size, timestamps and block pointers; the file name lives in the directory entry, not the inode."
+ },
+ {
+  "id": "q43954038c70",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "Which type of link is a separate file containing a path to the target and breaks if the target is deleted?",
+  "options": [
+   "Hard link",
+   "Symbolic (soft) link",
+   "Inode link",
+   "Mount link"
+  ],
+  "answer": 1,
+  "explanation": "A symbolic link stores a path name, so it dangles if the target is removed; a hard link is another directory entry for the same inode."
+ },
+ {
+  "id": "qff2a135c553",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "What does a file descriptor represent in UNIX?",
+  "options": [
+   "The file's size",
+   "The file's permission string",
+   "A small integer handle referring to an entry in the process's open-file table",
+   "The disk partition number"
+  ],
+  "answer": 2,
+  "explanation": "open() returns a small integer (e.g. 0, 1, 2 for stdin/stdout/stderr) that indexes the per-process open-file table."
+ },
+ {
+  "id": "q3f599a95615",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "What problem does a journaling (log-structured metadata) file system mainly solve?",
+  "options": [
+   "External fragmentation of free space",
+   "Leaving metadata inconsistent after a crash, which would otherwise need a full fsck scan",
+   "Slow sequential reads",
+   "Limits on file name length"
+  ],
+  "answer": 1,
+  "explanation": "Metadata updates are first written to a log as transactions, so after a crash only committed but unapplied transactions need replaying."
+ },
+ {
+  "id": "qd991f274552",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "A file has two hard links. What happens when one of them is deleted with unlink()?",
+  "options": [
+   "The file's data is freed immediately",
+   "The other link becomes dangling",
+   "The inode's link count drops to 1 and the data stays reachable through the other name",
+   "The remaining link is turned into a symbolic link"
+  ],
+  "answer": 2,
+  "explanation": "The inode and its blocks are freed only when the link count reaches 0 and no process still has the file open."
+ },
+ {
+  "id": "qda05cdaea4a",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "An inode has 12 direct pointers and 1 single-indirect pointer, with 4 KB blocks and 4-byte block pointers. What is the largest file size these pointers can address?",
+  "options": [
+   "48 KB",
+   "4144 KB",
+   "4096 KB",
+   "4 MB + 4 KB"
+  ],
+  "answer": 1,
+  "explanation": "An indirect block holds 4096 / 4 = 1024 pointers, so the maximum is (12 + 1024) x 4 KB = 4144 KB."
+ }
+]

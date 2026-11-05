@@ -15,6 +15,21 @@
   "explanation": "v-once renders the element and its children a single time and treats them as static afterwards."
  },
  {
+  "id": "q860dc19b7b3",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive is placed after v-if to add another condition?",
+  "options": [
+   "v-elif",
+   "v-else-if",
+   "v-if-else",
+   "v-or"
+  ],
+  "answer": 1,
+  "explanation": "v-else-if chains another condition and must follow a v-if or another v-else-if."
+ },
+ {
   "id": "q9b45130d801",
   "subject": "vue",
   "topic": "directives",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "v-for renders an element or block once for each item in a source."
+ },
+ {
+  "id": "qa09aaf5cd3e",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive's contents are skipped entirely during compilation so mustache syntax shows literally?",
+  "options": [
+   "v-pre",
+   "v-cloak",
+   "v-once",
+   "v-text"
+  ],
+  "answer": 0,
+  "explanation": "v-pre skips compilation for the element and its children, which is useful for showing raw template syntax."
  },
  {
   "id": "qdb146f73b83",
@@ -58,6 +88,36 @@
   ],
   "answer": 1,
   "explanation": "v-show always renders the element and toggles display, while v-if conditionally creates and destroys it."
+ },
+ {
+  "id": "q40042b4591e",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "Which v-model modifier converts the input value to a number when possible?",
+  "options": [
+   ".number",
+   ".int",
+   ".parse",
+   ".numeric"
+  ],
+  "answer": 0,
+  "explanation": "v-model.number applies parseFloat and keeps the original string if parsing fails."
+ },
+ {
+  "id": "q5f50f6d29f7",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "medium",
+  "question": "Which v-model modifier removes surrounding whitespace from the input value?",
+  "options": [
+   ".strip",
+   ".trim",
+   ".clean",
+   ".lazy"
+  ],
+  "answer": 1,
+  "explanation": ".trim trims the string before it is assigned to the bound variable."
  },
  {
   "id": "q6b67aac6c56",
@@ -150,6 +210,21 @@
   "explanation": "The argument follows the colon, the modifiers follow dots, and binding.value holds the evaluated expression."
  },
  {
+  "id": "q76130bc7284",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "How does v-model on a <select multiple> bind its value?",
+  "options": [
+   "To a comma-separated string",
+   "To the last selected option only",
+   "To a Set of selected elements",
+   "To an array of the selected option values"
+  ],
+  "answer": 3,
+  "explanation": "For multiple selects, the bound variable should be an array."
+ },
+ {
   "id": "qd5e41394f06",
   "subject": "vue",
   "topic": "directives",
@@ -163,6 +238,21 @@
   ],
   "answer": 1,
   "explanation": "v-show toggles display on a real element, so it cannot be used with template."
+ },
+ {
+  "id": "qf18649fe84f",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "hard",
+  "question": "Which hook of a custom directive object runs when the element is inserted into the DOM?",
+  "options": [
+   "inserted",
+   "bind",
+   "mounted",
+   "created only"
+  ],
+  "answer": 2,
+  "explanation": "Vue 3 directive hooks mirror component lifecycle names, so Vue 2's inserted became mounted."
  },
  {
   "id": "qf6999cbf019",

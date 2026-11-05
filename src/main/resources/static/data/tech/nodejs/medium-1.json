@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8f7745d886e",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "How do you get the directory of the current file inside an ES module?",
+  "options": [
+   "Read __dirname, which ES modules define automatically",
+   "Derive it from import.meta.url with fileURLToPath() and path.dirname()",
+   "Use require.main.path",
+   "Use process.cwd()"
+  ],
+  "answer": 1,
+  "explanation": "__dirname is a CommonJS wrapper variable, and process.cwd() is where node was started, not the file's folder."
+ },
+ {
+  "id": "q7dd1b27a0e7",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "Which version range does \"^1.4.2\" allow?",
+  "options": [
+   ">=1.4.2 <1.5.0",
+   ">=1.4.2 <2.0.0",
+   ">=1.0.0 <2.0.0",
+   "Any version"
+  ],
+  "answer": 1,
+  "explanation": "A caret range allows changes that do not modify the leftmost non-zero version component."
+ },
+ {
+  "id": "q50faffc6ac5",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "An ES module runs import pkg from './legacy.cjs'. What is pkg?",
+  "options": [
+   "The whole module wrapper function",
+   "The source text of the file",
+   "Always undefined",
+   "The module.exports value of the CommonJS file"
+  ],
+  "answer": 3,
+  "explanation": "Node provides module.exports as the default export when importing CommonJS from ES modules."
+ },
+ {
+  "id": "qe9f0a1de1ed",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "In Express 4, what happens when an async route handler rejects its promise and nothing catches it?",
+  "options": [
+   "Express automatically sends the rejection to the error middleware",
+   "The process always exits with code 1",
+   "Express retries the handler once",
+   "The request can hang, because Express 4 does not forward the rejection to error middleware"
+  ],
+  "answer": 3,
+  "explanation": "Express 4 only handles synchronous throws and errors passed to next(); Express 5 forwards rejected promises to error middleware."
+ },
+ {
+  "id": "q0e6e01c7c48",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Why is fs.readFileSync() usually a poor choice inside an HTTP request handler?",
+  "options": [
+   "It cannot read binary files",
+   "It blocks the event loop, so other requests wait until the read finishes",
+   "It closes the HTTP server",
+   "It starts a new Node.js process"
+  ],
+  "answer": 1,
+  "explanation": "A synchronous read holds the single thread until the file is fully read; fs.promises.readFile() avoids that."
+ },
+ {
+  "id": "qca02434e5bd",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "What is the default highWaterMark for an object-mode Readable?",
+  "options": [
+   "16 KiB",
+   "1 object",
+   "16 objects",
+   "64 KiB"
+  ],
+  "answer": 2,
+  "explanation": "In object mode the highWaterMark counts objects rather than bytes, and the default is 16."
+ },
+ {
+  "id": "q79f00dc2ac5",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "By default, what does the engines field in package.json do when the installed Node.js version does not match?",
+  "options": [
+   "npm prints a warning but still installs, unless engine-strict is enabled",
+   "npm switches to the listed Node.js version automatically",
+   "npm removes the package from the lock file",
+   "npm refuses to install and exits"
+  ],
+  "answer": 0,
+  "explanation": "engines is advisory by default; engine-strict turns mismatches into install errors."
+ },
+ {
+  "id": "q27dd0c1318f",
+  "subject": "nodejs",
+  "topic": "events",
+  "level": "medium",
+  "question": "If a listener adds another listener for the same event while that event is being emitted, when does the new listener run?",
+  "options": [
+   "Immediately after the current listener returns",
+   "Not during the current emit; only on later emits",
+   "It throws an error and the emit stops",
+   "It replaces the listener that is currently running"
+  ],
+  "answer": 1,
+  "explanation": "emit() works from a copy of the listener array taken when it starts, so new listeners miss the current emit."
+ },
+ {
+  "id": "q18a4f4ed365",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "A POST route reads req.body as undefined even though the client sends JSON. What is the most likely cause?",
+  "options": [
+   "The route was declared with app.get() to receive a POST request",
+   "The response was never sent back to the client",
+   "The server is listening on the wrong port",
+   "express.json() is registered after the route that reads req.body"
+  ],
+  "answer": 3,
+  "explanation": "Middleware runs in registration order, so the body parser must be added before any route that needs the parsed body."
+ },
+ {
+  "id": "qd93e6b21007",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "medium",
+  "question": "What happens if res.writeHead() is called after the response headers have already been sent?",
+  "options": [
+   "Node throws ERR_HTTP_HEADERS_SENT",
+   "It silently replaces the status code",
+   "It restarts the response from the beginning",
+   "It closes the socket without any error"
+  ],
+  "answer": 0,
+  "explanation": "Once headers are sent they cannot change, and Node reports the attempt with an error."
+ }
+]

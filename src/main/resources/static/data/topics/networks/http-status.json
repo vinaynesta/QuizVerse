@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q0390baf5281",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code indicates that a resource has moved permanently?",
+  "options": [
+   "307",
+   "301",
+   "304",
+   "302"
+  ],
+  "answer": 1,
+  "explanation": "301 Moved Permanently (and 308) are permanent; 302 and 307 are temporary redirects."
+ },
+ {
+  "id": "q14f92da7eae",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "What does HTTP status 429 mean?",
+  "options": [
+   "Too Many Requests",
+   "Conflict",
+   "Request Timeout",
+   "Content Too Large"
+  ],
+  "answer": 0,
+  "explanation": "429 signals rate limiting and may include a Retry-After header; 408 is Request Timeout, 409 Conflict, 413 Content Too Large."
+ },
+ {
+  "id": "q60eb365c6a1",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code fits a client that is authenticated but not allowed to access the resource?",
+  "options": [
+   "405 Method Not Allowed",
+   "404 Not Found",
+   "401 Unauthorized",
+   "403 Forbidden"
+  ],
+  "answer": 3,
+  "explanation": "403 means the server understood who you are but refuses access; re-authenticating will not help."
+ },
+ {
+  "id": "q6a91c226d63",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code means a gateway or proxy received an invalid response from the upstream server?",
+  "options": [
+   "500 Internal Server Error",
+   "504 Gateway Timeout",
+   "502 Bad Gateway",
+   "503 Service Unavailable"
+  ],
+  "answer": 2,
+  "explanation": "502 is an invalid upstream response; 504 is when the upstream did not respond in time."
+ },
+ {
+  "id": "q6da9e80ae52",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code does an origin server return when a request lacks valid authentication credentials?",
+  "options": [
+   "400 Bad Request",
+   "401 Unauthorized",
+   "407 Proxy Authentication Required",
+   "403 Forbidden"
+  ],
+  "answer": 1,
+  "explanation": "401 means authenticate and retry, with a WWW-Authenticate header; 407 is the proxy equivalent."
+ },
+ {
+  "id": "qdf0dce72848",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "What does 304 Not Modified mean in response to a conditional request?",
+  "options": [
+   "The client's cached copy is still valid",
+   "The resource was deleted",
+   "The resource moved to a new URL",
+   "The server hit an internal error"
+  ],
+  "answer": 0,
+  "explanation": "For If-None-Match or If-Modified-Since requests, 304 tells the client to reuse its cached representation."
+ }
+]

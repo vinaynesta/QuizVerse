@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qfef394ef1bb",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "What does NAT overload (PAT/NAPT) do?",
+  "options": [
+   "Encrypts packet headers between sites",
+   "Translates IPv4 addresses into IPv6",
+   "Maps many private hosts to one public IP using distinct source ports",
+   "Maps one private IP to one public IP statically"
+  ],
+  "answer": 2,
+  "explanation": "NAPT tracks connections by translated source port so many internal hosts can share one public address."
+ },
+ {
+  "id": "q738867ae8c8",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /30 subnet provide in classic subnetting?",
+  "options": [
+   "6",
+   "4",
+   "2",
+   "0"
+  ],
+  "answer": 2,
+  "explanation": "2^2 = 4 addresses minus network and broadcast leaves 2, which is why /30 is used for point-to-point links."
+ },
+ {
+  "id": "q60eb365c6a1",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code fits a client that is authenticated but not allowed to access the resource?",
+  "options": [
+   "405 Method Not Allowed",
+   "404 Not Found",
+   "401 Unauthorized",
+   "403 Forbidden"
+  ],
+  "answer": 3,
+  "explanation": "403 means the server understood who you are but refuses access; re-authenticating will not help."
+ },
+ {
+  "id": "qf071081b8ec",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /24 IPv4 subnet provide?",
+  "options": [
+   "256",
+   "252",
+   "254",
+   "255"
+  ],
+  "answer": 2,
+  "explanation": "2^(32-24) = 256 addresses, minus the network and broadcast addresses, leaves 254."
+ },
+ {
+  "id": "q484bc46c37a",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "Which mechanism replaces ARP in IPv6?",
+  "options": [
+   "RARP",
+   "DHCPv6",
+   "IGMP",
+   "Neighbor Discovery Protocol (ICMPv6)"
+  ],
+  "answer": 3,
+  "explanation": "IPv6 uses ICMPv6 Neighbor Solicitation and Advertisement messages, sent to solicited-node multicast addresses."
+ },
+ {
+  "id": "qdf0dce72848",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "What does 304 Not Modified mean in response to a conditional request?",
+  "options": [
+   "The client's cached copy is still valid",
+   "The resource was deleted",
+   "The resource moved to a new URL",
+   "The server hit an internal error"
+  ],
+  "answer": 0,
+  "explanation": "For If-None-Match or If-Modified-Since requests, 304 tells the client to reuse its cached representation."
+ },
+ {
+  "id": "q3a02f59d54b",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /27 IPv4 subnet provide?",
+  "options": [
+   "30",
+   "32",
+   "62",
+   "28"
+  ],
+  "answer": 0,
+  "explanation": "2^(32-27) = 32 addresses, minus network and broadcast, gives 30 usable hosts."
+ },
+ {
+  "id": "q9e2c6012b3e",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the network address of host 192.168.10.77/26?",
+  "options": [
+   "192.168.10.76",
+   "192.168.10.64",
+   "192.168.10.72",
+   "192.168.10.0"
+  ],
+  "answer": 1,
+  "explanation": "/26 blocks are 64 addresses (0, 64, 128, 192); 77 falls in the 64-127 block, so the network is .64."
+ },
+ {
+  "id": "q539614a4a60",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "What is the correct order of segments in the TCP three-way handshake?",
+  "options": [
+   "SYN, SYN-ACK, ACK",
+   "ACK, SYN, SYN-ACK",
+   "SYN, ACK, SYN-ACK",
+   "SYN, SYN, ACK"
+  ],
+  "answer": 0,
+  "explanation": "The client sends SYN, the server replies SYN-ACK, and the client confirms with ACK."
+ },
+ {
+  "id": "q1c1f3300444",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "Which CIDR prefix length corresponds to the mask 255.255.240.0?",
+  "options": [
+   "/19",
+   "/21",
+   "/22",
+   "/20"
+  ],
+  "answer": 3,
+  "explanation": "240 = 11110000 adds 4 bits to the 16 from the first two octets: 16 + 4 = 20."
+ }
+]

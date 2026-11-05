@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q482e27d6075",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "easy",
+  "question": "What does a router consult to decide where to forward an IP packet?",
+  "options": [
+   "Its DNS cache",
+   "Its MAC address table",
+   "Its ARP cache",
+   "Its routing table"
+  ],
+  "answer": 3,
+  "explanation": "Routers look up the destination IP in the routing table to choose the next hop and interface."
+ },
+ {
+  "id": "q8a37581fa20",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "easy",
+  "question": "Which protocol does the ping utility use?",
+  "options": [
+   "TCP",
+   "ARP",
+   "UDP",
+   "ICMP"
+  ],
+  "answer": 3,
+  "explanation": "ping sends ICMP Echo Request messages and waits for Echo Replies."
+ },
+ {
+  "id": "q638b012241e",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "How does eBGP prevent routing loops between autonomous systems?",
+  "options": [
+   "Packets have a TTL limit",
+   "Spanning Tree Protocol blocks redundant links",
+   "Split horizon between neighbors",
+   "A router rejects routes whose AS_PATH already contains its own AS number"
+  ],
+  "answer": 3,
+  "explanation": "The AS_PATH records every AS a route traversed, so seeing your own ASN means the route has looped back."
+ },
+ {
+  "id": "qa85f23b7737",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "How does OSPF compute its routes?",
+  "options": [
+   "It runs Dijkstra's shortest-path-first algorithm over a link-state database",
+   "It selects routes by AS_PATH length and policy",
+   "It uses hop count with a 15-hop maximum",
+   "It runs Bellman-Ford on neighbors' distance vectors"
+  ],
+  "answer": 0,
+  "explanation": "Each OSPF router floods LSAs to build an identical topology map, then computes a shortest-path tree."
+ },
+ {
+  "id": "qabffb4a5c68",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "Which transport and port does BGP use?",
+  "options": [
+   "UDP port 179",
+   "UDP port 520",
+   "TCP port 179",
+   "IP protocol 89"
+  ],
+  "answer": 2,
+  "explanation": "BGP sessions run over TCP 179; UDP 520 is RIP and IP protocol 89 is OSPF."
+ },
+ {
+  "id": "qaf789c9c827",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "A router has routes for 10.0.0.0/8 and 10.1.0.0/16. Which route is used for a packet to 10.1.2.3?",
+  "options": [
+   "Both equally, via ECMP",
+   "The /8 route, because it is more general",
+   "The /16 route, by longest prefix match",
+   "Whichever route was learned first"
+  ],
+  "answer": 2,
+  "explanation": "IP forwarding picks the most specific matching prefix; administrative distance only breaks ties between identical prefixes."
+ },
+ {
+  "id": "qd7a1baed0e7",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "What kind of routing protocol is BGP?",
+  "options": [
+   "A path-vector protocol used between autonomous systems",
+   "A link-state interior gateway protocol",
+   "A flooding protocol for a single LAN",
+   "A distance-vector protocol limited to 15 hops"
+  ],
+  "answer": 0,
+  "explanation": "BGP exchanges reachability with the full AS path attached and is the Internet's inter-domain (EGP) protocol."
+ }
+]

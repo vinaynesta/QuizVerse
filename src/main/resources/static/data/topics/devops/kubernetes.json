@@ -1,0 +1,167 @@
+[
+ {
+  "id": "q0456de74bed",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What does a Kubernetes Service provide?",
+  "options": [
+   "A stable network endpoint and load balancing for pods selected by labels",
+   "A way to schedule pods to specific nodes only",
+   "A container image registry",
+   "Persistent storage for pods"
+  ],
+  "answer": 0,
+  "explanation": "A Service gives a stable virtual IP and DNS name and routes traffic to the healthy pods that match its selector."
+ },
+ {
+  "id": "q17f875d6892",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which kubectl command shows a pod's detailed state together with its recent events?",
+  "options": [
+   "kubectl get pod <name> --events",
+   "kubectl describe pod <name>",
+   "kubectl logs <name>",
+   "kubectl top pod <name>"
+  ],
+  "answer": 1,
+  "explanation": "kubectl describe shows conditions, container states, and related events such as scheduling or image pull failures."
+ },
+ {
+  "id": "q203a18a7b69",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which object provides declarative updates and rollback for a set of pods by managing ReplicaSets?",
+  "options": [
+   "Service",
+   "ConfigMap",
+   "Deployment",
+   "Namespace"
+  ],
+  "answer": 2,
+  "explanation": "A Deployment creates and manages ReplicaSets, rolling out new versions and keeping revision history for rollback."
+ },
+ {
+  "id": "q28852497e1a",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which Kubernetes object runs a copy of a pod on every eligible node, for example a log collector?",
+  "options": [
+   "StatefulSet",
+   "Deployment",
+   "DaemonSet",
+   "ReplicaSet"
+  ],
+  "answer": 2,
+  "explanation": "A DaemonSet schedules one pod per matching node and adds pods as nodes join."
+ },
+ {
+  "id": "q301cbc0af11",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What is the default type of a Kubernetes Service when none is specified?",
+  "options": [
+   "NodePort",
+   "ClusterIP",
+   "LoadBalancer",
+   "ExternalName"
+  ],
+  "answer": 1,
+  "explanation": "ClusterIP exposes the Service on an internal cluster IP reachable only from inside the cluster."
+ },
+ {
+  "id": "q52ba0db1fd9",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which command rolls the Deployment web back to its previous revision?",
+  "options": [
+   "kubectl rollout undo deployment/web",
+   "kubectl apply --undo deployment/web",
+   "kubectl scale deployment/web --revision=-1",
+   "kubectl delete deployment web --previous"
+  ],
+  "answer": 0,
+  "explanation": "kubectl rollout undo reverts to the previous ReplicaSet revision unless --to-revision is given."
+ },
+ {
+  "id": "q567d1e8f2ce",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What is a Kubernetes Job used for?",
+  "options": [
+   "Running a long-lived web server",
+   "Running pods to completion, such as batch tasks",
+   "Keeping a stable network identity for pods",
+   "Storing secrets"
+  ],
+  "answer": 1,
+  "explanation": "A Job runs one or more pods until they complete successfully, which suits batch work such as migrations."
+ },
+ {
+  "id": "q82d4d6a58a9",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which Kubernetes object routes external HTTP(S) traffic to Services inside the cluster, using a controller that implements it?",
+  "options": [
+   "ConfigMap",
+   "PersistentVolume",
+   "Ingress",
+   "Job"
+  ],
+  "answer": 2,
+  "explanation": "An Ingress defines host and path routing rules, and an Ingress controller implements them."
+ },
+ {
+  "id": "qb5e9bb6e4f6",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which Kubernetes object gives each pod a stable name and its own persistent volume, as databases often need?",
+  "options": [
+   "Deployment",
+   "DaemonSet",
+   "StatefulSet",
+   "CronJob"
+  ],
+  "answer": 2,
+  "explanation": "StatefulSet pods get ordinal names like db-0 and per-pod PersistentVolumeClaims from volumeClaimTemplates."
+ },
+ {
+  "id": "qc7872e5f15a",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which object stores non-confidential configuration data as key-value pairs that pods can consume?",
+  "options": [
+   "ConfigMap",
+   "Secret",
+   "Ingress",
+   "StatefulSet"
+  ],
+  "answer": 0,
+  "explanation": "ConfigMaps hold plain configuration data; sensitive values belong in Secrets."
+ },
+ {
+  "id": "qdbbdbcf2090",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What is the purpose of a PersistentVolumeClaim?",
+  "options": [
+   "A ConfigMap of secrets",
+   "A node-level log file",
+   "A request for storage that binds to a PersistentVolume",
+   "A network policy"
+  ],
+  "answer": 2,
+  "explanation": "A PVC asks for storage with a size and access mode, and Kubernetes binds it to a matching PersistentVolume."
+ }
+]

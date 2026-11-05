@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1c1f3300444",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "Which CIDR prefix length corresponds to the mask 255.255.240.0?",
+  "options": [
+   "/19",
+   "/21",
+   "/22",
+   "/20"
+  ],
+  "answer": 3,
+  "explanation": "240 = 11110000 adds 4 bits to the 16 from the first two octets: 16 + 4 = 20."
+ },
+ {
+  "id": "q25bec4ffd34",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the broadcast address of host 10.0.5.130/25?",
+  "options": [
+   "10.0.5.127",
+   "10.0.255.255",
+   "10.0.5.254",
+   "10.0.5.255"
+  ],
+  "answer": 3,
+  "explanation": "/25 splits the last octet into 0-127 and 128-255; 130 is in the upper half, whose broadcast is .255."
+ },
+ {
+  "id": "q3a02f59d54b",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /27 IPv4 subnet provide?",
+  "options": [
+   "30",
+   "32",
+   "62",
+   "28"
+  ],
+  "answer": 0,
+  "explanation": "2^(32-27) = 32 addresses, minus network and broadcast, gives 30 usable hosts."
+ },
+ {
+  "id": "q44dc35ab2bc",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the longest prefix (smallest subnet) that still provides at least 100 usable IPv4 hosts?",
+  "options": [
+   "/25",
+   "/27",
+   "/26",
+   "/24"
+  ],
+  "answer": 0,
+  "explanation": "/25 gives 128 - 2 = 126 hosts; /26 gives only 64 - 2 = 62."
+ },
+ {
+  "id": "q738867ae8c8",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /30 subnet provide in classic subnetting?",
+  "options": [
+   "6",
+   "4",
+   "2",
+   "0"
+  ],
+  "answer": 2,
+  "explanation": "2^2 = 4 addresses minus network and broadcast leaves 2, which is why /30 is used for point-to-point links."
+ },
+ {
+  "id": "q9e2c6012b3e",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the network address of host 192.168.10.77/26?",
+  "options": [
+   "192.168.10.76",
+   "192.168.10.64",
+   "192.168.10.72",
+   "192.168.10.0"
+  ],
+  "answer": 1,
+  "explanation": "/26 blocks are 64 addresses (0, 64, 128, 192); 77 falls in the 64-127 block, so the network is .64."
+ },
+ {
+  "id": "qba21411de54",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the dotted-decimal subnet mask for a /26 prefix?",
+  "options": [
+   "255.255.255.192",
+   "255.255.255.128",
+   "255.255.255.224",
+   "255.255.255.240"
+  ],
+  "answer": 0,
+  "explanation": "/26 sets 2 bits in the last octet: 128 + 64 = 192."
+ },
+ {
+  "id": "qbe9564575d0",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What address range does 172.16.32.0/20 cover?",
+  "options": [
+   "172.16.32.0 - 172.16.35.255",
+   "172.16.32.0 - 172.16.47.255",
+   "172.16.32.0 - 172.16.63.255",
+   "172.16.0.0 - 172.16.47.255"
+  ],
+  "answer": 1,
+  "explanation": "/20 leaves 12 host bits = 4096 addresses = 16 values of the third octet, so 32 through 47."
+ },
+ {
+  "id": "qe298e3ee9fc",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many /26 subnets fit into a single /24?",
+  "options": [
+   "8",
+   "2",
+   "6",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Borrowing 2 bits (26 - 24) yields 2^2 = 4 subnets of 64 addresses each."
+ },
+ {
+  "id": "qf071081b8ec",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /24 IPv4 subnet provide?",
+  "options": [
+   "256",
+   "252",
+   "254",
+   "255"
+  ],
+  "answer": 2,
+  "explanation": "2^(32-24) = 256 addresses, minus the network and broadcast addresses, leaves 254."
+ }
+]

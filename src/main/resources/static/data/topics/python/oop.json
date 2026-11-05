@@ -15,6 +15,21 @@
   "explanation": "By convention the instance is passed as the first parameter named self; cls is used for class methods."
  },
  {
+  "id": "q387617abdfa",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which built-in lets a subclass method call the parent class's version of a method?",
+  "options": [
+   "super()",
+   "parent()",
+   "base()",
+   "self.parent"
+  ],
+  "answer": 0,
+  "explanation": "super() returns a proxy that delegates to the next class in the method resolution order."
+ },
+ {
   "id": "q3f1c8692c77",
   "subject": "python",
   "topic": "oop",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "str() calls __str__; __repr__ is the developer-facing representation used as a fallback."
+ },
+ {
+  "id": "q5d2220af5f1",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword defines a class?",
+  "options": [
+   "def",
+   "struct",
+   "class",
+   "object"
+  ],
+  "answer": 2,
+  "explanation": "A class statement starts with the class keyword followed by the class name."
  },
  {
   "id": "q60a385b2fbe",
@@ -90,6 +120,36 @@
   "explanation": "Every Python 3 class implicitly inherits from object."
  },
  {
+  "id": "q542cb4ddcba",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which special method is called by the built-in len(obj)?",
+  "options": [
+   "__length__",
+   "__size__",
+   "__len__",
+   "__count__"
+  ],
+  "answer": 2,
+  "explanation": "len() calls type(obj).__len__ and requires a non-negative int result."
+ },
+ {
+  "id": "q582e31cae79",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "What implicit first argument does a method decorated with @staticmethod receive?",
+  "options": [
+   "The instance",
+   "None; it receives no implicit argument",
+   "The class",
+   "The module"
+  ],
+  "answer": 1,
+  "explanation": "A static method behaves like a plain function stored in the class namespace."
+ },
+ {
   "id": "q5d8df63563d",
   "subject": "python",
   "topic": "oop",
@@ -118,6 +178,66 @@
   ],
   "answer": 1,
   "explanation": "A classmethod is bound to the class, conventionally received as cls."
+ },
+ {
+  "id": "qbe49454b081",
+  "subject": "python",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which special method should return an unambiguous, developer-oriented representation and is used by the interactive REPL?",
+  "options": [
+   "__str__",
+   "__format__",
+   "__doc__",
+   "__repr__"
+  ],
+  "answer": 3,
+  "explanation": "The REPL and repr() use __repr__, and str() falls back to it when __str__ is not defined."
+ },
+ {
+  "id": "q0d5833b46fd",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "How does __getattr__ differ from __getattribute__?",
+  "options": [
+   "__getattr__ is called on every attribute access",
+   "__getattr__ only works on class attributes",
+   "They are aliases for the same hook",
+   "__getattr__ is called only when normal attribute lookup fails"
+  ],
+  "answer": 3,
+  "explanation": "__getattribute__ intercepts every lookup, while __getattr__ is a fallback for missing attributes."
+ },
+ {
+  "id": "q43faecbaca2",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "What is a descriptor in Python?",
+  "options": [
+   "Any docstring attached to a class",
+   "A metaclass that validates types",
+   "A module-level variable describing a class",
+   "An object defining __get__, __set__, or __delete__ that customizes attribute access when stored as a class attribute"
+  ],
+  "answer": 3,
+  "explanation": "property, classmethod, and functions acting as methods all rely on the descriptor protocol."
+ },
+ {
+  "id": "qae58028caa0",
+  "subject": "python",
+  "topic": "oop",
+  "level": "hard",
+  "question": "Which special method actually creates a new instance before __init__ runs?",
+  "options": [
+   "__alloc__",
+   "__create__",
+   "__call__",
+   "__new__"
+  ],
+  "answer": 3,
+  "explanation": "__new__ is a static method that returns the instance, which is then passed to __init__."
  },
  {
   "id": "qc6850911488",

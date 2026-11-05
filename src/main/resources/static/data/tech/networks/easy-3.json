@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc9ec4fb7060",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port is used by default for DNS queries?",
+  "options": [
+   "161",
+   "67",
+   "53",
+   "123"
+  ],
+  "answer": 2,
+  "explanation": "DNS uses port 53 over UDP (and TCP); 67 is DHCP, 123 NTP, 161 SNMP."
+ },
+ {
+  "id": "q4ddc5b4c5be",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "What is the IPv6 loopback address?",
+  "options": [
+   "ff02::1",
+   "fe80::1",
+   "::",
+   "::1"
+  ],
+  "answer": 3,
+  "explanation": "::1 is loopback; :: is unspecified, fe80::/10 is link-local and ff02::1 is all-nodes multicast."
+ },
+ {
+  "id": "q457b42f4a6e",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "What is the primary purpose of DNS?",
+  "options": [
+   "Translating domain names into IP addresses",
+   "Encrypting web traffic",
+   "Assigning IP addresses to hosts",
+   "Forwarding packets between networks"
+  ],
+  "answer": 0,
+  "explanation": "DNS is a distributed directory that resolves human-readable names to addresses and other records."
+ },
+ {
+  "id": "q9cff5b329ec",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "Which device operates at the physical layer and repeats incoming signals out of all other ports?",
+  "options": [
+   "Switch",
+   "Router",
+   "Bridge",
+   "Hub"
+  ],
+  "answer": 3,
+  "explanation": "A hub is a multiport repeater with no address awareness; switches and bridges are Layer 2."
+ },
+ {
+  "id": "q01049c95d0d",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "What does DHCP do?",
+  "options": [
+   "Maps IP addresses to MAC addresses",
+   "Resolves hostnames to IP addresses",
+   "Automatically assigns IP configuration to hosts",
+   "Encrypts traffic on the LAN"
+  ],
+  "answer": 2,
+  "explanation": "DHCP leases IP addresses and settings like gateway and DNS servers to clients."
+ },
+ {
+  "id": "q920b23be9f2",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "What is the protocol data unit called at the transport layer when TCP is used?",
+  "options": [
+   "Frame",
+   "Segment",
+   "Bit",
+   "Packet"
+  ],
+  "answer": 1,
+  "explanation": "TCP data units are segments; packets are Layer 3 and frames are Layer 2."
+ },
+ {
+  "id": "qcc0bb7ca107",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type maps a hostname to an IPv4 address?",
+  "options": [
+   "A",
+   "AAAA",
+   "CNAME",
+   "MX"
+  ],
+  "answer": 0,
+  "explanation": "An A record holds a 32-bit IPv4 address; AAAA holds an IPv6 address."
+ },
+ {
+  "id": "q482e27d6075",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "easy",
+  "question": "What does a router consult to decide where to forward an IP packet?",
+  "options": [
+   "Its DNS cache",
+   "Its MAC address table",
+   "Its ARP cache",
+   "Its routing table"
+  ],
+  "answer": 3,
+  "explanation": "Routers look up the destination IP in the routing table to choose the next hop and interface."
+ },
+ {
+  "id": "q8a37581fa20",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "easy",
+  "question": "Which protocol does the ping utility use?",
+  "options": [
+   "TCP",
+   "ARP",
+   "UDP",
+   "ICMP"
+  ],
+  "answer": 3,
+  "explanation": "ping sends ICMP Echo Request messages and waits for Echo Replies."
+ },
+ {
+  "id": "qa9daa3da8b0",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type specifies the mail servers for a domain?",
+  "options": [
+   "PTR",
+   "TXT",
+   "MX",
+   "NS"
+  ],
+  "answer": 2,
+  "explanation": "MX (mail exchanger) records list mail servers with preference values."
+ }
+]

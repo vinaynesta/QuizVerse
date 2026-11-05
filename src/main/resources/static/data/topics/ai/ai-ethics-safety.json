@@ -1,5 +1,20 @@
 [
  {
+  "id": "q09e69f0c580",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "Why is data privacy a concern when training AI models on personal data?",
+  "options": [
+   "Personal data cannot be stored in digital form",
+   "Personal data makes models train more slowly",
+   "Models can memorize and later reveal personal information from their training data",
+   "Models trained on personal data cannot be deployed"
+  ],
+  "answer": 2,
+  "explanation": "Sensitive details in training data can leak through model outputs, so data handling and consent matter."
+ },
+ {
   "id": "q5bacf87fe80",
   "subject": "ai",
   "topic": "ai-ethics-safety",
@@ -28,6 +43,21 @@
   ],
   "answer": 1,
   "explanation": "Models learn patterns present in their data, including skewed representation and past discriminatory decisions."
+ },
+ {
+  "id": "qb1bb507a2d0",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What is a deepfake?",
+  "options": [
+   "A neural network with an unusually large number of layers",
+   "Synthetic media created with AI that realistically imitates a real person",
+   "A dataset containing fake labels",
+   "A model that refuses to answer questions"
+  ],
+  "answer": 1,
+  "explanation": "Deepfakes use generative models to fabricate realistic images, audio or video of real people, raising misuse concerns."
  },
  {
   "id": "qf7f88b53979",
@@ -105,6 +135,36 @@
   "explanation": "Differential privacy gives a mathematical bound on how much any single record can affect the result, unlike simple anonymization."
  },
  {
+  "id": "q429bd71275f",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is red teaming for AI systems?",
+  "options": [
+   "Deliberately probing a model adversarially to uncover harmful behaviors or vulnerabilities before deployment",
+   "Monitoring server uptime in production",
+   "Labeling training data with colored tags",
+   "Choosing the color scheme of a chatbot interface"
+  ],
+  "answer": 0,
+  "explanation": "Red teams simulate attackers and misuse so problems can be fixed before real users encounter them."
+ },
+ {
+  "id": "qb382dd59a8b",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "medium",
+  "question": "What is a jailbreak in the context of LLMs?",
+  "options": [
+   "Running a model on unauthorized hardware",
+   "Copying a model's weights from a server",
+   "Fine-tuning a model on a new language",
+   "A crafted prompt designed to make a model bypass its safety guidelines"
+  ],
+  "answer": 3,
+  "explanation": "Jailbreaks use role-play, obfuscation or other tricks to elicit content the model is meant to refuse."
+ },
+ {
   "id": "qefa3fb0e670",
   "subject": "ai",
   "topic": "ai-ethics-safety",
@@ -135,6 +195,21 @@
   "explanation": "Models often behave differently on training examples, such as being more confident, which can reveal sensitive membership."
  },
  {
+  "id": "q3da030df753",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is an adversarial example?",
+  "options": [
+   "An input with small, often imperceptible perturbations that cause a model to make a confident mistake",
+   "A training example with an incorrect label added by accident",
+   "A test case written to compare two models",
+   "An example that a model has never seen before"
+  ],
+  "answer": 0,
+  "explanation": "Adversarial examples exploit sensitivity in the model's decision boundary and expose robustness gaps."
+ },
+ {
   "id": "q87936e82aed",
   "subject": "ai",
   "topic": "ai-ethics-safety",
@@ -163,6 +238,21 @@
   ],
   "answer": 0,
   "explanation": "Agents and RAG systems ingest untrusted text, and instructions embedded there can redirect the model without the user's knowledge."
+ },
+ {
+  "id": "qe4836ac7d74",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is a data poisoning attack?",
+  "options": [
+   "Sending many requests to overload a model server",
+   "Stealing a model's weights from storage",
+   "Injecting crafted examples into training data to corrupt a model's behavior or plant a backdoor",
+   "Asking a model questions to extract its system prompt"
+  ],
+  "answer": 2,
+  "explanation": "Poisoned samples can cause targeted misbehavior, such as misclassifying inputs that contain a hidden trigger."
  },
  {
   "id": "qf3337bd1016",

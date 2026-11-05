@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q02c58e34769",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "Which algorithm is typically used to fit the parameters of a Gaussian mixture model?",
+  "options": [
+   "Backpropagation",
+   "Expectation-maximization",
+   "The Apriori algorithm",
+   "Gradient boosting"
+  ],
+  "answer": 1,
+  "explanation": "EM alternates between computing soft cluster responsibilities and re-estimating means, covariances and weights."
+ },
+ {
+  "id": "q6a84960c24f",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "hard",
+  "question": "In gradient boosting, what is the usual effect of a smaller learning rate (shrinkage)?",
+  "options": [
+   "The individual trees become deeper",
+   "Fewer trees are needed and the model trains faster",
+   "Each tree contributes less, so more trees are needed but generalization usually improves",
+   "The model switches from boosting to bagging"
+  ],
+  "answer": 2,
+  "explanation": "Shrinkage slows learning so the ensemble takes smaller corrective steps, which acts as regularization."
+ },
+ {
+  "id": "qd1eb6c11b15",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What does the lost-in-the-middle effect describe for long-context LLMs?",
+  "options": [
+   "Models forget the system prompt after the first reply",
+   "Retrieved documents are dropped if the index is too large",
+   "Models tend to use information at the start and end of a long context better than information in the middle",
+   "Tokens in the middle of a word are lost during tokenization"
+  ],
+  "answer": 2,
+  "explanation": "This positional bias is one reason RAG systems limit and order retrieved passages carefully."
+ },
+ {
+  "id": "q1aad56b0cf6",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "What is knowledge distillation?",
+  "options": [
+   "Training a smaller student model to match the outputs of a larger teacher model",
+   "Removing duplicate documents from a training corpus",
+   "Extracting facts from a model into a database",
+   "Merging two models by averaging their weights"
+  ],
+  "answer": 0,
+  "explanation": "The student learns from the teacher's soft probability outputs, often retaining much of its quality at lower cost."
+ },
+ {
+  "id": "qc5d84460188",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "What is the KV cache used for in autoregressive transformer inference?",
+  "options": [
+   "Storing the keys and values of previous tokens so they are not recomputed at each generation step",
+   "Storing the vocabulary used by the tokenizer",
+   "Caching full responses to repeated user prompts",
+   "Saving optimizer state between training runs"
+  ],
+  "answer": 0,
+  "explanation": "With a KV cache, each new token computes attention against cached keys and values, trading memory for speed."
+ },
+ {
+  "id": "q27768c1452e",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why do transformers typically use layer normalization rather than batch normalization?",
+  "options": [
+   "Batch normalization cannot be applied to floating-point values",
+   "Layer norm normalizes across features for each token, so it does not depend on batch statistics or varying sequence lengths",
+   "Batch normalization only works with recurrent networks",
+   "Layer norm removes the need for attention"
+  ],
+  "answer": 1,
+  "explanation": "Per-token normalization behaves the same in training and inference and handles padded variable-length sequences well."
+ },
+ {
+  "id": "q7e0ca61880c",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "In multiclass classification, how does macro-averaged F1 differ from micro-averaged F1?",
+  "options": [
+   "Macro uses only the largest class, while micro uses only the smallest",
+   "They are always equal for any dataset",
+   "Macro is computed on training data, while micro is computed on test data",
+   "Macro averages per-class F1 scores equally, while micro pools all counts so frequent classes dominate"
+  ],
+  "answer": 3,
+  "explanation": "Macro-F1 highlights performance on rare classes, while micro-F1 reflects overall per-example performance."
+ },
+ {
+  "id": "qe4836ac7d74",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is a data poisoning attack?",
+  "options": [
+   "Sending many requests to overload a model server",
+   "Stealing a model's weights from storage",
+   "Injecting crafted examples into training data to corrupt a model's behavior or plant a backdoor",
+   "Asking a model questions to extract its system prompt"
+  ],
+  "answer": 2,
+  "explanation": "Poisoned samples can cause targeted misbehavior, such as misclassifying inputs that contain a hidden trigger."
+ },
+ {
+  "id": "qce0e5c37373",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "Why use stratified splitting for an imbalanced classification dataset?",
+  "options": [
+   "It removes the majority class from the test set",
+   "It guarantees that the model will not overfit",
+   "It keeps class proportions consistent across splits so the rare class appears in each one",
+   "It sorts examples by label before training"
+  ],
+  "answer": 2,
+  "explanation": "Random splits can leave a fold with few or no rare examples, making evaluation unstable."
+ },
+ {
+  "id": "q4ccd55272ef",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "Why are distances between well-separated clusters in a t-SNE plot unreliable?",
+  "options": [
+   "t-SNE always places clusters at equal distances",
+   "t-SNE only works on two-dimensional input data",
+   "t-SNE preserves local neighborhoods, but global distances and cluster sizes are not meaningfully preserved",
+   "t-SNE uses labels to position clusters"
+  ],
+  "answer": 2,
+  "explanation": "Interpret t-SNE for local grouping; gaps and relative sizes between clusters can be artifacts of the method."
+ }
+]

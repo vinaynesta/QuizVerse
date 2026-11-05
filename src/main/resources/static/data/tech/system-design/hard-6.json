@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2233f7d7a86",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "Why do Raft and Paxos clusters usually have an odd number of nodes?",
+  "options": [
+   "Even sizes cannot elect a leader",
+   "Even sizes lose data",
+   "Odd sizes avoid network partitions",
+   "Adding a node to make an even count raises the majority size without tolerating any extra failures"
+  ],
+  "answer": 3,
+  "explanation": "Both 3 and 4 nodes tolerate one failure, so the fourth node adds cost without fault tolerance."
+ },
+ {
+  "id": "q59a9b79312c",
+  "subject": "system-design",
+  "topic": "replication",
+  "level": "hard",
+  "question": "What does semi-synchronous replication guarantee?",
+  "options": [
+   "All replicas acknowledge every write",
+   "No replica receives writes until a backup completes",
+   "At least one replica has received a write before the primary acknowledges it to the client",
+   "Writes are acknowledged before they reach the primary's disk"
+  ],
+  "answer": 2,
+  "explanation": "It bounds data loss on failover without waiting on every replica."
+ },
+ {
+  "id": "qa8111d995b2",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What is a phantom read?",
+  "options": [
+   "Reading a row that was deleted long ago",
+   "Reading data from an uncommitted transaction",
+   "Re-running a range query in the same transaction and getting a different set of rows because another transaction inserted or deleted rows",
+   "Two transactions overwriting each other's update"
+  ],
+  "answer": 2,
+  "explanation": "Phantoms involve rows matching a predicate appearing or disappearing, not changes to an already-read row."
+ },
+ {
+  "id": "q07d689422cd",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "In Raft, what triggers a follower to start an election?",
+  "options": [
+   "A client request",
+   "The leader reaching its log size limit",
+   "A configuration change",
+   "Not hearing from a leader within its randomized election timeout"
+  ],
+  "answer": 3,
+  "explanation": "Randomized timeouts reduce the chance of split votes."
+ },
+ {
+  "id": "q01fb5f599bd",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "In a system with N=5, what is the smallest W that ensures any two write quorums overlap?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "Two write quorums overlap when 2W > N, so W must be at least 3."
+ },
+ {
+  "id": "qac6565f78c5",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What do vector clocks let a system determine about two versions of a value?",
+  "options": [
+   "Which version is larger in bytes",
+   "Their exact wall-clock write times",
+   "Which replica stores them",
+   "Whether one causally precedes the other or they are concurrent"
+  ],
+  "answer": 3,
+  "explanation": "Comparing per-node counters shows happens-before or concurrency, so true conflicts can be detected."
+ },
+ {
+  "id": "q3341c3eee48",
+  "subject": "system-design",
+  "topic": "cap-theorem",
+  "level": "hard",
+  "question": "Under PACELC, how is a system classified that favors availability during partitions and low latency otherwise?",
+  "options": [
+   "PC/EC",
+   "PA/EC",
+   "PC/EL",
+   "PA/EL"
+  ],
+  "answer": 3,
+  "explanation": "Dynamo-style stores such as Cassandra are typically described as PA/EL."
+ },
+ {
+  "id": "q723d241726c",
+  "subject": "system-design",
+  "topic": "consensus",
+  "level": "hard",
+  "question": "How does Raft ensure that an elected leader has all committed entries?",
+  "options": [
+   "The leader copies logs from every follower after election",
+   "A voter refuses candidates whose log is less up to date than its own",
+   "Committed entries are stored only on the leader",
+   "Clients resend all committed entries"
+  ],
+  "answer": 1,
+  "explanation": "Since committed entries are on a majority, any winning candidate must hold them."
+ },
+ {
+  "id": "q159089b5df5",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "What does two-phase locking (2PL) guarantee?",
+  "options": [
+   "Freedom from deadlocks",
+   "Atomic commit across services",
+   "Eventual consistency",
+   "Serializability, since a transaction acquires all its locks before releasing any"
+  ],
+  "answer": 3,
+  "explanation": "2PL guarantees serializable schedules but can deadlock, so deadlock detection or timeouts are still needed."
+ },
+ {
+  "id": "qfbb55fd8f09",
+  "subject": "system-design",
+  "topic": "failure-modes",
+  "level": "hard",
+  "question": "What is a poison pill message?",
+  "options": [
+   "A message intentionally sent to shut down a cluster",
+   "A message encrypted with an invalid key",
+   "A message that consistently crashes or fails its consumer, blocking progress if it is retried forever",
+   "A message with a high priority"
+  ],
+  "answer": 2,
+  "explanation": "Limiting retries and routing such messages to a dead-letter queue keeps the consumer moving."
+ }
+]

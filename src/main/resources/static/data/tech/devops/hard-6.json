@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe776205bd18",
+  "subject": "devops",
+  "topic": "kubernetes-probes",
+  "level": "hard",
+  "question": "What does the CrashLoopBackOff status indicate?",
+  "options": [
+   "The container keeps crashing, and the kubelet restarts it with an increasing back-off delay",
+   "The image could not be pulled",
+   "The pod is waiting for a node with enough memory",
+   "The readiness probe is failing but the container is running"
+  ],
+  "answer": 0,
+  "explanation": "Restart delays grow exponentially up to a cap of five minutes while the container keeps exiting."
+ },
+ {
+  "id": "q2145a67639c",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "hard",
+  "question": "What does OIDC federation between a CI system and a cloud provider achieve?",
+  "options": [
+   "It encrypts build logs",
+   "Jobs exchange a short-lived signed identity token for temporary cloud credentials, avoiding long-lived stored keys",
+   "It replaces the need for code review",
+   "It lets CI jobs run on the cloud provider's hardware"
+  ],
+  "answer": 1,
+  "explanation": "The cloud trusts tokens from the CI issuer, scoped by claims such as repository and branch."
+ },
+ {
+  "id": "qe412317d861",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "What does git reset --soft HEAD~1 do?",
+  "options": [
+   "Deletes the last commit and discards its changes",
+   "Moves the branch to the parent commit and keeps the undone commit's changes staged",
+   "Creates a new commit that reverses the last one",
+   "Unstages all files but keeps the branch where it is"
+  ],
+  "answer": 1,
+  "explanation": "--soft moves only the branch pointer, leaving the index and working tree untouched."
+ },
+ {
+  "id": "q1b001e8ca29",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "How does requiredDuringSchedulingIgnoredDuringExecution node affinity differ from preferredDuringSchedulingIgnoredDuringExecution?",
+  "options": [
+   "Required rules are re-checked and evict running pods; preferred rules are not",
+   "Preferred rules apply only to DaemonSets",
+   "Required is a hard rule the scheduler must satisfy; preferred is a weighted soft preference",
+   "Required rules apply only after the pod starts"
+  ],
+  "answer": 2,
+  "explanation": "IgnoredDuringExecution means neither kind evicts pods that are already running if labels change."
+ },
+ {
+  "id": "qa472f09e474",
+  "subject": "devops",
+  "topic": "git-internals",
+  "level": "hard",
+  "question": "How is a lightweight tag stored, compared with an annotated tag?",
+  "options": [
+   "As a tag object with a message and tagger",
+   "As a ref under refs/tags that points directly at a commit, with no tag object",
+   "As an entry in .git/config",
+   "As a special commit with no parents"
+  ],
+  "answer": 1,
+  "explanation": "Annotated tags create a tag object holding a message and tagger; lightweight tags are just refs."
+ },
+ {
+  "id": "q541fa9ab36a",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "How can a BuildKit build use a private token without leaving it in any image layer?",
+  "options": [
+   "Mount it with RUN --mount=type=secret so it is available only during that step",
+   "Store it in ENV and delete it in the final stage",
+   "Copy it in and remove it with RUN rm",
+   "Pass it with ARG and unset it in the next instruction"
+  ],
+  "answer": 0,
+  "explanation": "Secret mounts are exposed to a single RUN step and are never written to the image or its cache."
+ },
+ {
+  "id": "q9f813933ef5",
+  "subject": "devops",
+  "topic": "kubernetes-scheduling",
+  "level": "hard",
+  "question": "Which QoS class does a pod get when every container sets CPU and memory requests equal to its limits?",
+  "options": [
+   "BestEffort",
+   "Guaranteed",
+   "Burstable",
+   "Critical"
+  ],
+  "answer": 1,
+  "explanation": "Guaranteed pods have requests equal to limits for both resources in every container."
+ },
+ {
+  "id": "q2e3d1ca9f17",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "What does docker buildx build --platform linux/amd64,linux/arm64 produce?",
+  "options": [
+   "Two unrelated images with different tags",
+   "A build that fails unless the host has both CPU types",
+   "A single image that emulates both architectures at runtime",
+   "A multi-platform image whose index points to one variant per architecture"
+  ],
+  "answer": 3,
+  "explanation": "The image index lets each client pull the variant matching its platform."
+ },
+ {
+  "id": "q70c8f3acadc",
+  "subject": "devops",
+  "topic": "docker-builds",
+  "level": "hard",
+  "question": "Why run a container with an init process such as tini (docker run --init) as PID 1?",
+  "options": [
+   "It makes the image smaller",
+   "It reaps zombie processes and forwards signals, which an application running as PID 1 may not do",
+   "It enables the container to use the host network",
+   "It replaces the need for health checks"
+  ],
+  "answer": 1,
+  "explanation": "PID 1 has special signal and child-reaping duties in Linux that most applications do not implement."
+ },
+ {
+  "id": "q195d697ad89",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What does the Recreate strategy in a Kubernetes Deployment do?",
+  "options": [
+   "Creates new pods before deleting old ones",
+   "Shifts traffic gradually by percentage",
+   "Runs both versions permanently",
+   "Terminates all old pods before creating new ones, causing downtime"
+  ],
+  "answer": 3,
+  "explanation": "Recreate avoids running two versions at once, at the cost of a gap in availability."
+ }
+]

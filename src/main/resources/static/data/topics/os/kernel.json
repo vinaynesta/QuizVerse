@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q2e32f4b85cd",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "What is the purpose of the mode bit in the CPU?",
+  "options": [
+   "To select between 32-bit and 64-bit execution",
+   "To distinguish user mode from kernel mode",
+   "To indicate that the cache is dirty",
+   "To enable floating-point instructions"
+  ],
+  "answer": 1,
+  "explanation": "The mode bit lets hardware tell whether code runs in user or kernel mode, so privileged instructions can only execute in kernel mode."
+ },
+ {
+  "id": "qdb3aecfa0bd",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "Which kernel design keeps only minimal functions in the kernel and runs services such as file systems and drivers in user space?",
+  "options": [
+   "Monolithic kernel",
+   "Batch kernel",
+   "Bootloader kernel",
+   "Microkernel"
+  ],
+  "answer": 3,
+  "explanation": "A microkernel provides only essentials like IPC, scheduling and basic memory management, moving other services to user-space processes."
+ },
+ {
+  "id": "qff9b437af98",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "What is the kernel?",
+  "options": [
+   "The core part of the OS that runs in privileged mode and manages hardware resources",
+   "The graphical shell users interact with",
+   "A compiler that builds the OS",
+   "The bootloader stored in firmware"
+  ],
+  "answer": 0,
+  "explanation": "The kernel is the always-running core of the OS that manages CPU, memory and devices in kernel (privileged) mode."
+ }
+]

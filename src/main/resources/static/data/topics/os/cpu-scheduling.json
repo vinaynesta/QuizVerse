@@ -1,0 +1,272 @@
+[
+ {
+  "id": "q15bb4ea8adb",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "Which CPU scheduling algorithm runs processes strictly in order of arrival?",
+  "options": [
+   "Shortest Job First",
+   "Round Robin",
+   "First-Come, First-Served (FCFS)",
+   "Priority scheduling"
+  ],
+  "answer": 2,
+  "explanation": "FCFS serves processes in the order they enter the ready queue, using a simple FIFO queue."
+ },
+ {
+  "id": "q3024188d80d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "In preemptive scheduling, what can happen to a running process?",
+  "options": [
+   "The OS can take the CPU away from it before its burst finishes",
+   "It always runs until its CPU burst finishes",
+   "It is never allowed to perform I/O",
+   "It is moved permanently to disk"
+  ],
+  "answer": 0,
+  "explanation": "Preemptive schedulers can interrupt a running process (e.g. on a timer or a higher-priority arrival) and give the CPU to another."
+ },
+ {
+  "id": "q66ccc5d3969",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "What is turnaround time in CPU scheduling?",
+  "options": [
+   "Time spent waiting for I/O",
+   "Time spent only executing on the CPU",
+   "Time from submission to the first response",
+   "Time from process submission to completion"
+  ],
+  "answer": 3,
+  "explanation": "Turnaround time = completion time - arrival time, covering waiting, executing and I/O time."
+ },
+ {
+  "id": "q783611dbb54",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "What is the time quantum in Round Robin scheduling?",
+  "options": [
+   "The maximum CPU time slice a process gets before it is preempted",
+   "The time taken to perform a context switch",
+   "The total CPU time a process needs",
+   "The time a process spends in the ready queue"
+  ],
+  "answer": 0,
+  "explanation": "In Round Robin each process runs for at most one quantum, then is preempted and placed at the back of the ready queue."
+ },
+ {
+  "id": "qb177d4d44aa",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "Which OS component selects a process from the ready queue and allocates the CPU to it?",
+  "options": [
+   "CPU scheduler (short-term scheduler)",
+   "Loader",
+   "Spooler",
+   "Linker"
+  ],
+  "answer": 0,
+  "explanation": "The short-term (CPU) scheduler picks the next ready process, and the dispatcher then gives it control of the CPU."
+ },
+ {
+  "id": "q1f06b91e35d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Which scheduling algorithm is provably optimal for minimizing average waiting time for a given set of processes?",
+  "options": [
+   "Round Robin",
+   "First-Come, First-Served",
+   "Shortest Job First (SJF)",
+   "Highest Priority First with random priorities"
+  ],
+  "answer": 2,
+  "explanation": "Moving a short job before a long one lowers the short job's wait more than it raises the long job's wait, so SJF minimizes the average; its catch is that burst lengths must be predicted."
+ },
+ {
+  "id": "q20069afd62a",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "If the time quantum in Round Robin is made extremely large, the algorithm behaves like:",
+  "options": [
+   "SJF",
+   "Priority scheduling",
+   "Lottery scheduling",
+   "FCFS"
+  ],
+  "answer": 3,
+  "explanation": "With a quantum longer than every burst no process is ever preempted, so processes simply run in arrival order, which is FCFS."
+ },
+ {
+  "id": "q3d02637bef2",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "The convoy effect, where short processes wait behind one long CPU-bound process, is most associated with which algorithm?",
+  "options": [
+   "Round Robin",
+   "SRTF",
+   "FCFS",
+   "Multilevel feedback queue"
+  ],
+  "answer": 2,
+  "explanation": "FCFS is non-preemptive, so a long CPU burst at the head of the queue holds up every short process behind it."
+ },
+ {
+  "id": "q560e2cb0d6d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Which technique prevents starvation in priority scheduling?",
+  "options": [
+   "Reducing the time quantum",
+   "Using FCFS within each priority",
+   "Aging, which gradually raises the priority of long-waiting processes",
+   "Making scheduling non-preemptive"
+  ],
+  "answer": 2,
+  "explanation": "Aging raises a waiting process's priority over time, so eventually it gets the CPU."
+ },
+ {
+  "id": "q5c43595fece",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Processes P1, P2, P3 arrive at time 0 in that order with CPU bursts 24, 3 and 3 ms. What is the average waiting time under FCFS?",
+  "options": [
+   "5.67 ms",
+   "3 ms",
+   "10 ms",
+   "17 ms"
+  ],
+  "answer": 3,
+  "explanation": "Waiting times are P1 = 0, P2 = 24, P3 = 27, so the average is (0 + 24 + 27) / 3 = 17 ms."
+ },
+ {
+  "id": "q5d3207e2fbe",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Processes P1, P2, P3 arrive at time 0 in that order with bursts 24, 3 and 3 ms. With Round Robin and a 4 ms quantum, what is the average waiting time?",
+  "options": [
+   "17 ms",
+   "5.67 ms",
+   "3 ms",
+   "7.33 ms"
+  ],
+  "answer": 1,
+  "explanation": "The schedule is P1 0-4, P2 4-7, P3 7-10, then P1 10-30, so waits are P1 = 10 - 4 = 6, P2 = 4, P3 = 7; average 17 / 3 = 5.67 ms."
+ },
+ {
+  "id": "q7307c94422f",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "What distinguishes a multilevel feedback queue from a plain multilevel queue scheduler?",
+  "options": [
+   "It has only one queue",
+   "Processes can move between queues based on their CPU-burst behavior",
+   "It never preempts processes",
+   "Each queue must use FCFS"
+  ],
+  "answer": 1,
+  "explanation": "In a feedback queue a process that uses too much CPU is demoted and one that waits too long can be promoted; plain multilevel queues fix each process to one queue."
+ },
+ {
+  "id": "q91eb5a5e135",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "What is dispatch latency?",
+  "options": [
+   "The time a process waits in the ready queue",
+   "The length of the time quantum",
+   "The time between I/O request and completion",
+   "The time the dispatcher takes to stop one process and start another"
+  ],
+  "answer": 3,
+  "explanation": "Dispatch latency is the dispatcher's overhead: switching context, switching to user mode and jumping to the right place in the new program."
+ },
+ {
+  "id": "qbc091c0218d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Under preemptive SJF (SRTF), processes arrive as P1 (t=0, burst 8), P2 (t=1, burst 4), P3 (t=2, burst 9), P4 (t=3, burst 5). What is the average waiting time?",
+  "options": [
+   "6.5 ms",
+   "5.25 ms",
+   "8 ms",
+   "7.75 ms"
+  ],
+  "answer": 0,
+  "explanation": "The schedule is P1 0-1, P2 1-5, P4 5-10, P1 10-17, P3 17-26, giving waits 9, 0, 15 and 2; (9 + 0 + 15 + 2) / 4 = 6.5 ms."
+ },
+ {
+  "id": "qcc74cba5b39",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Processes P1, P2, P3 arrive at time 0 with CPU bursts 24, 3 and 3 ms. What is the average waiting time under non-preemptive SJF?",
+  "options": [
+   "17 ms",
+   "9 ms",
+   "6 ms",
+   "3 ms"
+  ],
+  "answer": 3,
+  "explanation": "SJF runs the 3 ms jobs first, so waiting times are 0, 3 and 6; the average is (0 + 3 + 6) / 3 = 3 ms."
+ },
+ {
+  "id": "q9453ce10f4d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "By Little's formula, if on average 7 processes arrive per second and each spends 2 seconds in the queue, what is the average queue length?",
+  "options": [
+   "14",
+   "9",
+   "5",
+   "3.5"
+  ],
+  "answer": 0,
+  "explanation": "Little's formula n = lambda x W gives 7 x 2 = 14 processes in the queue on average."
+ },
+ {
+  "id": "q9bd78d34678",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "Periodic tasks P1 (period 50, burst 25) and P2 (period 80, burst 35) have total utilization of about 94%. Which statement is correct?",
+  "options": [
+   "Neither rate-monotonic nor EDF can schedule them",
+   "Rate-monotonic can schedule them but EDF cannot",
+   "EDF can schedule them, but rate-monotonic misses a deadline",
+   "Both always meet all deadlines because utilization is below 100%"
+  ],
+  "answer": 2,
+  "explanation": "Utilization 25/50 + 35/80 = 0.9375 is at most 1, so EDF works; under RM, P1 preempts P2 at t = 50, so P2 has run only 30 of its 35 ms by its deadline at t = 80."
+ },
+ {
+  "id": "qee2f413ccde",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "Under rate-monotonic scheduling, what is the worst-case CPU utilization bound that guarantees two periodic tasks can be scheduled?",
+  "options": [
+   "100%",
+   "50%",
+   "About 69.3%",
+   "About 82.8%"
+  ],
+  "answer": 3,
+  "explanation": "The bound is n(2^(1/n) - 1), and for n = 2 that is 2(sqrt(2) - 1), about 0.828; it approaches ln 2 (about 69.3%) as n grows."
+ }
+]

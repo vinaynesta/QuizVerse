@@ -1,0 +1,167 @@
+[
+ {
+  "id": "q627b2d9eea9",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a DEFAULT clause on a column do?",
+  "options": [
+   "Prevents the column from being updated",
+   "Rejects any value other than the default",
+   "Makes the column the primary key",
+   "Supplies a value when an INSERT does not provide one for that column"
+  ],
+  "answer": 3,
+  "explanation": "DEFAULT fills in a predefined value, such as 0 or CURRENT_TIMESTAMP, when the column is omitted."
+ },
+ {
+  "id": "q6899baa431d",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "Which constraint validates that a value satisfies a given condition?",
+  "options": [
+   "CHECK",
+   "INDEX",
+   "PRIMARY KEY",
+   "REFERENCES"
+  ],
+  "answer": 0,
+  "explanation": "CHECK defines a boolean condition that each row must satisfy, for example CHECK (price > 0)."
+ },
+ {
+  "id": "q7931757df20",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a UNIQUE constraint enforce?",
+  "options": [
+   "The column can never contain NULL",
+   "The column must reference another table",
+   "The column value must be greater than zero",
+   "No two rows can have the same non-NULL value in the constrained column"
+  ],
+  "answer": 3,
+  "explanation": "UNIQUE prevents duplicate values, while NOT NULL and CHECK enforce other rules."
+ },
+ {
+  "id": "q945a1377bf8",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a PRIMARY KEY constraint enforce?",
+  "options": [
+   "Duplicate values allowed but no NULLs",
+   "NULLs allowed but ordered values",
+   "Uniqueness and no NULL values",
+   "Only text values"
+  ],
+  "answer": 2,
+  "explanation": "A primary key requires each value to be unique and not NULL for the key columns."
+ },
+ {
+  "id": "qb6338266e33",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a FOREIGN KEY constraint guarantee?",
+  "options": [
+   "Values are unique across all tables in the database",
+   "A value in the column exists in the referenced table's key column",
+   "A copy of the referenced row is stored in the child table",
+   "The parent table cannot be updated"
+  ],
+  "answer": 1,
+  "explanation": "A foreign key enforces referential integrity: each non-NULL value must match an existing key in the referenced table."
+ },
+ {
+  "id": "qcfd00c6d54a",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "Which constraint ensures that a column value is never NULL?",
+  "options": [
+   "UNIQUE",
+   "DEFAULT",
+   "NOT NULL",
+   "CHECK"
+  ],
+  "answer": 2,
+  "explanation": "NOT NULL rejects NULL values in the column. UNIQUE and CHECK do not prevent NULL in the way NOT NULL does."
+ },
+ {
+  "id": "q2419182f3de",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "What does ON DELETE SET NULL do on a foreign key?",
+  "options": [
+   "Deletes the child rows along with the parent",
+   "Sets the parent row's columns to NULL instead of deleting it",
+   "Prevents the parent row from being deleted",
+   "Sets the child rows' foreign key column to NULL when the referenced parent row is deleted"
+  ],
+  "answer": 3,
+  "explanation": "SET NULL keeps child rows but breaks their link to the deleted parent, so the column must be nullable."
+ },
+ {
+  "id": "q6bbdcb76ddd",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "What does ON DELETE CASCADE do on a foreign key?",
+  "options": [
+   "Prevents deleting parent rows that have children",
+   "Sets child foreign key values to NULL",
+   "Marks child rows as deleted without removing them",
+   "Deletes child rows automatically when the referenced parent row is deleted"
+  ],
+  "answer": 3,
+  "explanation": "CASCADE propagates the delete to dependent child rows. SET NULL and RESTRICT or NO ACTION are the alternatives."
+ },
+ {
+  "id": "qa8ededb1107",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "A table has CHECK (price > 0) and you insert a row with price = NULL. What happens?",
+  "options": [
+   "The insert fails because NULL is not greater than 0",
+   "The insert succeeds and price is set to 0",
+   "The insert succeeds, because the check evaluates to UNKNOWN, which does not violate CHECK",
+   "The check is skipped and an error is written to the log"
+  ],
+  "answer": 2,
+  "explanation": "A CHECK constraint fails only when its condition is FALSE. UNKNOWN passes, so add NOT NULL if NULL must be rejected."
+ },
+ {
+  "id": "qc80c40f818b",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "In PostgreSQL, which index is created automatically when a PRIMARY KEY is declared?",
+  "options": [
+   "A hash index",
+   "No index is created",
+   "A bitmap index",
+   "A unique B-tree index"
+  ],
+  "answer": 3,
+  "explanation": "PostgreSQL implements primary key and unique constraints with a unique B-tree index."
+ },
+ {
+  "id": "qc8cc908a75c",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "In PostgreSQL, how many NULL values can a UNIQUE column that is not NOT NULL hold?",
+  "options": [
+   "Only one",
+   "None, because NULLs are rejected",
+   "Exactly two",
+   "As many as needed, because NULLs are not equal to each other"
+  ],
+  "answer": 3,
+  "explanation": "NULLs are treated as distinct for UNIQUE checks in PostgreSQL, so multiple NULL rows are allowed. PostgreSQL 15 and later support NULLS NOT DISTINCT to change this."
+ }
+]

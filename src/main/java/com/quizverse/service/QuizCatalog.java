@@ -21,9 +21,12 @@ import java.util.Map;
 @Service
 public class QuizCatalog {
 
-    /** One section of a quiz: its questions, answers and marks. A mock has one part per section. */
+    /**
+     * One section of a quiz: its questions, answers and marks. A mock has one part per section. {@code negativeMarking}
+     * is the fraction of a question's marks a wrong answer costs: the exam's own value (APPSC 1/3) or the default.
+     */
     public record Part(String name, double marks, int minutes, String file, List<String> ids, List<Integer> answers,
-                       List<String> explanations, List<String> hiExplanations) {}
+                       List<String> explanations, List<String> hiExplanations, double negativeMarking) {}
 
     public record Quiz(String key, String title, List<Part> parts) {
         public int questionCount() { return parts.stream().mapToInt(p -> p.ids().size()).sum(); }
@@ -42,6 +45,7 @@ public class QuizCatalog {
         this.negativeMarking = keys.path("negativeMarking").asDouble(0.25);
         JsonNode files = keys.path("quizzes");
         for (JsonNode exam : index.path("exams")) {
+            double examNegative = exam.path("negativeMarking").asDouble(negativeMarking);
             for (JsonNode stage : exam.path("stages")) {
                 Map<String, List<Part>> mockParts = new HashMap<>();
                 boolean mockable = stage.path("sections").size() > 1;
@@ -56,7 +60,7 @@ public class QuizCatalog {
                             Part part = new Part(section.path("name").asText(), section.path("marks").asDouble(),
                                     minutes, list.get(n).path("file").asText(), strings(key.path("ids")), ints(key.path("answers")),
                                     strings(key.path("explanations")), hiStrings(key.path("hiExplanations"),
-                                    key.path("ids").size()));
+                                    key.path("ids").size()), examNegative);
                             String id = String.join("/", exam.path("id").asText(), stage.path("id").asText(),
                                     section.path("id").asText(), level.path("id").asText(), String.valueOf(n));
                             String title = String.join(" - ", exam.path("name").asText(), stage.path("name").asText(),
@@ -80,10 +84,11 @@ public class QuizCatalog {
 
     /**
      * A question as published (text and options, no answer). {@code group} is the shared DI table, puzzle or
-     * passage of a grouped question (the same on every question of the set), or null.
+     * passage of a grouped question (the same on every question of the set), or null. {@code needsReview} marks
+     * hand-written content not yet fact-checked, shown with a Draft badge.
      */
     public record Question(String id, String subject, String topic, String section, String question, List<String> options,
-                           JsonNode group) {}
+                           JsonNode group, boolean needsReview) {}
 
     /** The quiz's questions in order, read from its public files (which have no answers). */
     public List<Question> questions(Quiz quiz) throws IOException {
@@ -91,7 +96,8 @@ public class QuizCatalog {
         for (Part p : quiz.parts()) {
             for (JsonNode q : read(json, "static/data/" + p.file())) {
                 out.add(new Question(q.path("id").asText(), q.path("subject").asText(), q.path("topic").asText(),
-                        p.name(), q.path("question").asText(), strings(q.path("options")), q.get("group")));
+                        p.name(), q.path("question").asText(), strings(q.path("options")), q.get("group"),
+                        q.path("needsReview").asBoolean(false)));
             }
         }
         return out;
@@ -120,7 +126,7 @@ public class QuizCatalog {
     public record Score(double score, double maxMarks, int correct, int wrong, int skipped, List<PartScore> parts,
                         List<Boolean> correctness) {}
 
-    /** Same rules as quiz.js: marks split evenly per section, a wrong answer costs negativeMarking of a question. */
+    /** Same rules as quiz.js: marks split evenly per section, a wrong answer costs the part's negativeMarking. */
     public Score score(Quiz quiz, List<Integer> chosen) {
         List<PartScore> parts = new ArrayList<>();
         List<Boolean> correctness = new ArrayList<>();
@@ -135,7 +141,7 @@ public class QuizCatalog {
                 if (c == null) continue;
                 if (ok) right++; else wrong++;
             }
-            double s = right * perQuestion - wrong * perQuestion * negativeMarking;
+            double s = right * perQuestion - wrong * perQuestion * p.negativeMarking();
             parts.add(new PartScore(p.name(), p.marks(), right, wrong, p.ids().size() - right - wrong, round(s)));
         }
         return new Score(round(parts.stream().mapToDouble(PartScore::score).sum()), quiz.maxMarks(),

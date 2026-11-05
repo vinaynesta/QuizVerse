@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe0344c9680d",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is spooling?",
+  "options": [
+   "Buffering output (e.g. print jobs) on disk so a slow device can process jobs one at a time",
+   "Encrypting I/O traffic",
+   "Rotating disk platters",
+   "Polling a device in a loop"
+  ],
+  "answer": 0,
+  "explanation": "A spool holds output for devices like printers that cannot interleave jobs, so each job is queued and printed in turn."
+ },
+ {
+  "id": "qfd3fc9fa941",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "In the child process, what value does a successful fork() return?",
+  "options": [
+   "0",
+   "The child's PID",
+   "The parent's PID",
+   "-1"
+  ],
+  "answer": 0,
+  "explanation": "fork() returns 0 in the child and the child's PID in the parent; -1 indicates failure."
+ },
+ {
+  "id": "q482f17e004f",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "What is virtual memory?",
+  "options": [
+   "Memory located on the GPU",
+   "A technique that lets processes run without being entirely in physical memory, giving each its own large address space",
+   "Cache memory inside the CPU",
+   "Read-only memory"
+  ],
+  "answer": 1,
+  "explanation": "Virtual memory separates logical from physical memory, so programs can be larger than RAM and only needed pages are kept resident."
+ },
+ {
+  "id": "q3024188d80d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "In preemptive scheduling, what can happen to a running process?",
+  "options": [
+   "The OS can take the CPU away from it before its burst finishes",
+   "It always runs until its CPU burst finishes",
+   "It is never allowed to perform I/O",
+   "It is moved permanently to disk"
+  ],
+  "answer": 0,
+  "explanation": "Preemptive schedulers can interrupt a running process (e.g. on a timer or a higher-priority arrival) and give the CPU to another."
+ },
+ {
+  "id": "qa183a0c5b5f",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Which resource do threads of the same process share?",
+  "options": [
+   "Address space (code, data and heap)",
+   "Stack",
+   "Program counter",
+   "Register set"
+  ],
+  "answer": 0,
+  "explanation": "Threads share their process's code, data, heap and open files, but each thread has its own program counter, registers and stack."
+ },
+ {
+  "id": "qdb3aecfa0bd",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "Which kernel design keeps only minimal functions in the kernel and runs services such as file systems and drivers in user space?",
+  "options": [
+   "Monolithic kernel",
+   "Batch kernel",
+   "Bootloader kernel",
+   "Microkernel"
+  ],
+  "answer": 3,
+  "explanation": "A microkernel provides only essentials like IPC, scheduling and basic memory management, moving other services to user-space processes."
+ },
+ {
+  "id": "qb05a2dee9f5",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "Which graph is commonly used to model resource allocation and detect deadlocks?",
+  "options": [
+   "Dependency-injection graph",
+   "Control-flow graph",
+   "Call graph",
+   "Resource-allocation graph"
+  ],
+  "answer": 3,
+  "explanation": "A resource-allocation graph has request and assignment edges between processes and resources; cycles indicate possible deadlock."
+ },
+ {
+  "id": "q79aeb77df7f",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Which data structure does the OS use to store information about each process, such as its state, registers and scheduling data?",
+  "options": [
+   "Page table",
+   "Process Control Block (PCB)",
+   "Inode",
+   "Interrupt vector"
+  ],
+  "answer": 1,
+  "explanation": "The PCB holds per-process information (state, program counter, registers, scheduling and memory info) that the kernel uses to manage the process."
+ },
+ {
+  "id": "qff9b437af98",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "What is the kernel?",
+  "options": [
+   "The core part of the OS that runs in privileged mode and manages hardware resources",
+   "The graphical shell users interact with",
+   "A compiler that builds the OS",
+   "The bootloader stored in firmware"
+  ],
+  "answer": 0,
+  "explanation": "The kernel is the always-running core of the OS that manages CPU, memory and devices in kernel (privileged) mode."
+ },
+ {
+  "id": "q15bb4ea8adb",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "Which CPU scheduling algorithm runs processes strictly in order of arrival?",
+  "options": [
+   "Shortest Job First",
+   "Round Robin",
+   "First-Come, First-Served (FCFS)",
+   "Priority scheduling"
+  ],
+  "answer": 2,
+  "explanation": "FCFS serves processes in the order they enter the ready queue, using a simple FIFO queue."
+ }
+]

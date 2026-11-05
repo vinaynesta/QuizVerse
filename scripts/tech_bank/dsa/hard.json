@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "Sorting the edges dominates, since union-find operations are nearly constant amortized."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What is the time complexity of Manacher's algorithm for finding the longest palindromic substring of a string of length n?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(n^3)"
+    ],
+    "answer": 1,
+    "explanation": "Manacher's algorithm reuses mirrored palindrome radii so the right boundary only moves forward."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What are the time and extra space of the two-pointer solution to the trapping rain water problem for n bars?",
+    "options": [
+      "O(n) time and O(1) extra space",
+      "O(n log n) time and O(1) extra space",
+      "O(n) time and O(n) extra space",
+      "O(n^2) time and O(1) extra space"
+    ],
+    "answer": 0,
+    "explanation": "Two pointers move inward while tracking the left and right maximums, so no auxiliary arrays are needed."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "Which sorting algorithm is generally best suited to sorting a singly linked list in O(n log n) time?",
+    "options": [
+      "Heapsort",
+      "Quicksort with random-access pivot selection",
+      "Binary insertion sort",
+      "Merge sort"
+    ],
+    "answer": 3,
+    "explanation": "Merge sort needs only sequential access and can merge lists by relinking nodes without extra arrays."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "How can you find the intersection node of two singly linked lists in O(m + n) time and O(1) extra space?",
+    "options": [
+      "Reverse both lists and compare their heads",
+      "Store every node of one list in a hash set",
+      "Advance two pointers and redirect each to the other list's head when it reaches the end",
+      "Compare every node of one list with every node of the other"
+    ],
+    "answer": 2,
+    "explanation": "After switching, both pointers travel m + n nodes in total and meet at the intersection, or at null if there is none."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "What is the time complexity of finding the largest rectangle in a histogram of n bars using a monotonic stack?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "answer": 1,
+    "explanation": "Each bar is pushed and popped at most once, and its maximal width is determined when it is popped."
+  },
+  {
+    "topic": "hashing",
+    "question": "What is the expected time complexity of finding the longest consecutive-integer sequence in an unsorted array of n elements using a hash set?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "answer": 1,
+    "explanation": "Counting starts only from numbers whose predecessor is absent, so each number is visited a constant number of times."
+  },
+  {
+    "topic": "hashing",
+    "question": "What is the worst-case lookup time in cuckoo hashing?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(sqrt n)"
+    ],
+    "answer": 2,
+    "explanation": "A key can only reside in one of a fixed number of candidate positions, so a lookup checks a constant number of slots."
+  },
+  {
+    "topic": "trees",
+    "question": "What is the time complexity of a range-sum query and of a point update on a segment tree over n elements?",
+    "options": [
+      "O(log n) for each",
+      "O(1) for each",
+      "O(n) for each",
+      "O(log n) for queries and O(n) for updates"
+    ],
+    "answer": 0,
+    "explanation": "Both operations touch O(log n) nodes along paths of the balanced tree."
+  },
+  {
+    "topic": "trees",
+    "question": "What is the time complexity of inserting a word of length L into a trie?",
+    "options": [
+      "O(L)",
+      "O(L log L)",
+      "O(n), where n is the number of stored words",
+      "O(1)"
+    ],
+    "answer": 0,
+    "explanation": "Insertion follows or creates one node per character, independent of the number of stored words."
+  },
+  {
+    "topic": "trees",
+    "question": "With binary lifting preprocessing, how long does a lowest common ancestor query take on a rooted tree of n nodes?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(sqrt n)"
+    ],
+    "answer": 2,
+    "explanation": "Ancestors are stored at power-of-two distances, so both nodes can jump upward in logarithmically many steps."
+  },
+  {
+    "topic": "heaps",
+    "question": "Which heap variant provides O(1) amortized decrease-key, giving Dijkstra's algorithm O(E + V log V) time?",
+    "options": [
+      "Binary heap",
+      "Min-max heap",
+      "Fibonacci heap",
+      "d-ary heap with d = 2"
+    ],
+    "answer": 2,
+    "explanation": "Fibonacci heaps defer structural work, making decrease-key constant amortized while extract-min stays O(log n) amortized."
+  },
+  {
+    "topic": "graphs",
+    "question": "What is the time complexity of the Floyd-Warshall all-pairs shortest path algorithm?",
+    "options": [
+      "O(V^2)",
+      "O(V * E)",
+      "O(E log V)",
+      "O(V^3)"
+    ],
+    "answer": 3,
+    "explanation": "Three nested loops over the vertices relax every pair through every possible intermediate vertex."
+  },
+  {
+    "topic": "graphs",
+    "question": "Which algorithm finds all strongly connected components in O(V + E) using a single DFS with low-link values?",
+    "options": [
+      "Tarjan's algorithm",
+      "Prim's algorithm",
+      "Kahn's algorithm",
+      "Floyd-Warshall algorithm"
+    ],
+    "answer": 0,
+    "explanation": "Tarjan's algorithm pops a component off its stack when a vertex's low-link equals its discovery index."
+  },
+  {
+    "topic": "graphs",
+    "question": "How does Kahn's topological sort algorithm detect that a directed graph contains a cycle?",
+    "options": [
+      "A vertex is dequeued twice",
+      "The queue never becomes empty",
+      "Some vertex has an in-degree greater than 1",
+      "Fewer than V vertices are output when the queue empties"
+    ],
+    "answer": 3,
+    "explanation": "Vertices on a cycle never reach in-degree zero, so they are never added to the output."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the worst-case time complexity of the median-of-medians selection algorithm on n elements?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "answer": 1,
+    "explanation": "Choosing the median of group medians as pivot guarantees a constant-fraction split, giving linear time even in the worst case."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the time complexity of LSD radix sort on n integers with d digits in base b?",
+    "options": [
+      "O(n log n)",
+      "O(d * (n + b))",
+      "O(n * b^d)",
+      "O(d * n * log b)"
+    ],
+    "answer": 1,
+    "explanation": "Each of the d passes is a stable counting sort costing O(n + b)."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "What is the time complexity of the standard dynamic programming solution to matrix-chain multiplication for n matrices?",
+    "options": [
+      "O(n^3)",
+      "O(n^2)",
+      "O(2^n)",
+      "O(n log n)"
+    ],
+    "answer": 0,
+    "explanation": "There are O(n^2) subchains, and each tries O(n) split points."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "Using coins {1, 2, 5} with unlimited supply, in how many ways can you make 5 if order does not matter?",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "6"
+    ],
+    "answer": 2,
+    "explanation": "The combinations are 5, 2+2+1, 2+1+1+1, and 1+1+1+1+1."
+  },
+  {
+    "topic": "complexity",
+    "question": "By the Master Theorem, what does T(n) = 3T(n/2) + O(n) solve to?",
+    "options": [
+      "O(n log n)",
+      "O(n^2)",
+      "O(n^3)",
+      "O(n^(log2 3)), about O(n^1.585)"
+    ],
+    "answer": 3,
+    "explanation": "Since log2 3 > 1, the leaf work dominates, as in Karatsuba multiplication."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "How many distinct strings of 4 pairs of balanced parentheses are there?",
+    "options": [
+      "8",
+      "12",
+      "16",
+      "14"
+    ],
+    "answer": 3,
+    "explanation": "The count is the 4th Catalan number, C(8, 4) / 5 = 14."
   }
 ]

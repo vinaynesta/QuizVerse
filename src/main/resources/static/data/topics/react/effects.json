@@ -30,6 +30,21 @@
   "explanation": "Effects let a component stay in sync with things outside React, such as network connections, timers, or browser APIs."
  },
  {
+  "id": "q849f886d09a",
+  "subject": "react",
+  "topic": "effects",
+  "level": "easy",
+  "question": "Which hook is a good place to subscribe to a browser event like window resize?",
+  "options": [
+   "useEffect",
+   "useState",
+   "useId",
+   "useMemo"
+  ],
+  "answer": 0,
+  "explanation": "Subscriptions to external systems belong in an effect, with an unsubscribe in its cleanup."
+ },
+ {
   "id": "qb02712263b3",
   "subject": "react",
   "topic": "effects",
@@ -73,6 +88,36 @@
   ],
   "answer": 1,
   "explanation": "Values derivable from existing props or state should be calculated during render, avoiding an extra state and re-render."
+ },
+ {
+  "id": "q38db99d099d",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "An effect reads props.userId and state.filter. What should its dependency array contain?",
+  "options": [
+   "[props], the whole props object is enough",
+   "[], so it runs once",
+   "Only the values you expect to change",
+   "[props.userId, state.filter], every reactive value it reads"
+  ],
+  "answer": 3,
+  "explanation": "All reactive values used in the effect must be listed, as the exhaustive-deps lint rule enforces."
+ },
+ {
+  "id": "q9e57146a6b4",
+  "subject": "react",
+  "topic": "effects",
+  "level": "medium",
+  "question": "A Buy button should send a POST request when clicked. Where should that request go according to the React docs?",
+  "options": [
+   "In the click event handler",
+   "In an effect that watches a clicked state flag",
+   "In the component body during render",
+   "In a useMemo callback"
+  ],
+  "answer": 0,
+  "explanation": "Logic caused by a specific user interaction belongs in event handlers, not in effects."
  },
  {
   "id": "q9f1b7650043",
@@ -135,6 +180,21 @@
   "explanation": "Omitted dependencies mean the effect keeps values from the render it was created in; restructure the code instead of suppressing the rule."
  },
  {
+  "id": "q2fb8b2b6050",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "An effect subscribes to a chat room using roomId, and roomId changes from 'a' to 'b'. In what order does React run code?",
+  "options": [
+   "The cleanup with roomId 'a' runs, then the effect with roomId 'b'",
+   "Only the effect for 'b' runs",
+   "The effect for 'b' runs, then the cleanup for 'a'",
+   "The cleanup runs only on unmount"
+  ],
+  "answer": 0,
+  "explanation": "Before re-running an effect, React runs the previous cleanup with the values captured from the previous render."
+ },
+ {
   "id": "q461ae125d38",
   "subject": "react",
   "topic": "effects",
@@ -163,6 +223,21 @@
   ],
   "answer": 3,
   "explanation": "Object.is sees a new reference each time; create the object inside the effect or depend on roomId directly."
+ },
+ {
+  "id": "qcc835c88c3a",
+  "subject": "react",
+  "topic": "effects",
+  "level": "hard",
+  "question": "In React 19, what happens if a ref callback returns a function?",
+  "options": [
+   "React ignores the returned value",
+   "React calls the function on every render",
+   "React calls that function as cleanup when the element is detached, instead of calling the ref with null",
+   "React throws because ref callbacks must return undefined"
+  ],
+  "answer": 2,
+  "explanation": "Ref callbacks can now return a cleanup function, similar to effects."
  },
  {
   "id": "qe3540ef011a",

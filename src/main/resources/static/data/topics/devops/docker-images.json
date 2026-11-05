@@ -1,0 +1,197 @@
+[
+ {
+  "id": "q00423585e9c",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which command downloads an image from a registry without starting a container?",
+  "options": [
+   "docker pull",
+   "docker run",
+   "docker fetch",
+   "docker get"
+  ],
+  "answer": 0,
+  "explanation": "docker pull downloads an image from a registry; docker run would pull it implicitly and also start a container."
+ },
+ {
+  "id": "q3b5218f8ce6",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which Dockerfile instruction sets the default command that runs when a container starts, unless arguments override it?",
+  "options": [
+   "RUN",
+   "WORKDIR",
+   "FROM",
+   "CMD"
+  ],
+  "answer": 3,
+  "explanation": "CMD provides the default command; RUN executes at build time, not when the container starts."
+ },
+ {
+  "id": "q5e04f67e044",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which command uploads a tagged local image to a registry?",
+  "options": [
+   "docker save",
+   "docker commit",
+   "docker push",
+   "docker export"
+  ],
+  "answer": 2,
+  "explanation": "docker push sends the image's layers to the registry named in its tag."
+ },
+ {
+  "id": "q8f715fe97de",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which Dockerfile instruction sets the base image for a build?",
+  "options": [
+   "BASE",
+   "START",
+   "FROM",
+   "IMAGE"
+  ],
+  "answer": 2,
+  "explanation": "FROM must be the first instruction (aside from ARG) and names the image the build starts from."
+ },
+ {
+  "id": "qda17eb8625a",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which command lists the images stored locally on your machine?",
+  "options": [
+   "docker list images",
+   "docker ps -i",
+   "docker images",
+   "docker image show"
+  ],
+  "answer": 2,
+  "explanation": "docker images lists local images with repository, tag, ID, and size."
+ },
+ {
+  "id": "qe019ba54978",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "What is the purpose of a .dockerignore file?",
+  "options": [
+   "It sets environment variables for containers",
+   "It excludes matching files from the build context sent to the daemon",
+   "It defines the container's startup command",
+   "It lists ports to publish"
+  ],
+  "answer": 1,
+  "explanation": "Files matched by .dockerignore are not sent with the build context, which keeps builds faster and images cleaner."
+ },
+ {
+  "id": "qe9830cbf44b",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which Dockerfile instruction sets the directory that later RUN, CMD, COPY, and similar instructions use as their working directory?",
+  "options": [
+   "WORKDIR",
+   "PATH",
+   "CD",
+   "VOLUME"
+  ],
+  "answer": 0,
+  "explanation": "WORKDIR sets, and creates if needed, the working directory for subsequent instructions and the container."
+ },
+ {
+  "id": "q04d548d8fc6",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "When a Dockerfile defines both ENTRYPOINT and CMD in exec form, how are they combined?",
+  "options": [
+   "ENTRYPOINT sets the executable, and CMD supplies default arguments that docker run arguments can replace",
+   "Only the instruction written last takes effect",
+   "CMD runs first, then ENTRYPOINT",
+   "ENTRYPOINT runs at build time and CMD runs at start time"
+  ],
+  "answer": 0,
+  "explanation": "Arguments passed to docker run replace CMD and are appended to the ENTRYPOINT."
+ },
+ {
+  "id": "q690a85b2565",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Which command shows the layers that make up an image, along with their sizes and the commands that created them?",
+  "options": [
+   "docker ls --layers",
+   "docker history <image>",
+   "docker stats <image>",
+   "docker layers <image>"
+  ],
+  "answer": 1,
+  "explanation": "docker history lists each layer of an image with the instruction that produced it and its size."
+ },
+ {
+  "id": "qcadbf63e431",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Why is the exec form CMD [\"node\", \"server.js\"] usually preferred over the shell form CMD node server.js?",
+  "options": [
+   "The process runs directly as PID 1 and receives signals such as SIGTERM, instead of being wrapped in /bin/sh -c",
+   "Shell form cannot read environment variables",
+   "Exec form makes the build cache more effective",
+   "Exec form produces smaller images"
+  ],
+  "answer": 0,
+  "explanation": "With shell form, the shell becomes PID 1 and may not forward stop signals to the app."
+ },
+ {
+  "id": "qd34cc7537f4",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Which practice keeps apt package lists out of a Debian-based image?",
+  "options": [
+   "Install packages in one RUN and delete apt lists in a later RUN",
+   "Use COPY instead of RUN to install packages",
+   "Install and remove apt lists within the same RUN instruction",
+   "Set ENV APT_CACHE=0 at the top of the file"
+  ],
+  "answer": 2,
+  "explanation": "Files deleted in a later layer still exist in the earlier layer, so cleanup must happen in the same RUN that created them."
+ },
+ {
+  "id": "qded84e65d6e",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Why copy package.json and run npm install before copying the rest of the application source in a Node Dockerfile?",
+  "options": [
+   "Dependencies are reinstalled on every source change",
+   "The dependency layer can be cached until package.json changes",
+   "Source files are excluded from the image",
+   "It makes the final image smaller"
+  ],
+  "answer": 1,
+  "explanation": "Source edits invalidate only the layers after the COPY of the source, so the slow npm install layer stays cached."
+ },
+ {
+  "id": "qf15c9db9604",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Why does Docker reuse cached layers during a build?",
+  "options": [
+   "Layers are compressed into a single file on every build",
+   "Docker caches all layers globally across machines by default",
+   "Each instruction that is unchanged, along with its inputs, produces the same layer, so it is reused",
+   "The cache is used only for the base image"
+  ],
+  "answer": 2,
+  "explanation": "If an instruction and its inputs have not changed, Docker reuses the layer it produced last time; a change invalidates that layer and every layer after it."
+ }
+]

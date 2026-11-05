@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "event-loop",
+    "question": "In which event loop phase do setImmediate() callbacks run?",
+    "options": [
+      "The check phase, which runs right after the poll phase",
+      "The timers phase",
+      "The close callbacks phase",
+      "The pending callbacks phase"
+    ],
+    "answer": 0,
+    "explanation": "setImmediate() callbacks run in the check phase; timers run in the timers phase at the start of each loop iteration."
+  },
+  {
+    "topic": "event-loop",
+    "question": "Inside an I/O callback, which runs first: setTimeout(fn, 0) or setImmediate(fn)?",
+    "options": [
+      "setTimeout, because timers always run before I/O",
+      "setImmediate, because the check phase comes before the next timers phase",
+      "They run in the same phase in the order they were scheduled",
+      "It depends on the disk speed"
+    ],
+    "answer": 1,
+    "explanation": "After the poll phase finishes the I/O callback, the loop reaches the check phase before wrapping around to timers."
+  },
+  {
+    "topic": "event-loop",
+    "question": "In the main module, outside any I/O callback, what is the order of setTimeout(fn, 0) and setImmediate(fn)?",
+    "options": [
+      "setTimeout always runs first",
+      "setImmediate always runs first",
+      "It is not deterministic; it depends on whether 1 ms has elapsed when the loop starts",
+      "They always run in the order written"
+    ],
+    "answer": 2,
+    "explanation": "The timer may or may not be due when the loop enters the timers phase, so the order can vary between runs."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "After a timer callback finishes, what runs before the next timer or I/O callback?",
+    "options": [
+      "Only the next timer callback",
+      "The poll phase starts from scratch",
+      "Nothing; microtasks wait for the next loop iteration",
+      "All process.nextTick callbacks, then all promise microtasks, repeating until both queues are empty"
+    ],
+    "answer": 3,
+    "explanation": "Node drains the nextTick queue and then the promise microtask queue between callbacks, repeating until both are empty."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does this print? setTimeout(() => console.log('A')); Promise.resolve().then(() => console.log('B')); console.log('C');",
+    "options": [
+      "C, B, A",
+      "A, B, C",
+      "B, C, A",
+      "C, A, B"
+    ],
+    "answer": 0,
+    "explanation": "Synchronous code runs first, then the promise microtask, and the timer callback runs last in a later phase."
+  },
+  {
+    "topic": "event-loop",
+    "question": "What is the main job of the poll phase?",
+    "options": [
+      "Run setImmediate() callbacks",
+      "Retrieve new I/O events and run their callbacks, waiting for I/O only if no timers are due",
+      "Run process.nextTick() callbacks only",
+      "Close handles that have been destroyed"
+    ],
+    "answer": 1,
+    "explanation": "The poll phase is where the loop blocks for I/O when there is nothing else to do, unless a timer is due sooner."
+  },
+  {
+    "topic": "event-loop",
+    "question": "In which phase do callbacks such as a socket's 'close' event run after the handle was destroyed?",
+    "options": [
+      "The poll phase",
+      "The timers phase",
+      "The close callbacks phase",
+      "The check phase"
+    ],
+    "answer": 2,
+    "explanation": "Close callbacks run in their own phase at the end of each loop iteration."
+  },
+  {
+    "topic": "event-loop",
+    "question": "What is the risk of calling process.nextTick() recursively in a loop?",
+    "options": [
+      "It makes timers fire more accurately",
+      "It automatically turns callbacks into promises",
+      "It has no effect on the event loop",
+      "It can starve I/O and timers, because the nextTick queue is drained before the loop moves on"
+    ],
+    "answer": 3,
+    "explanation": "Because the nextTick queue is fully drained before the loop continues, a self-scheduling callback can block I/O indefinitely."
+  },
+  {
+    "topic": "event-loop",
+    "question": "What is the default size of the libuv threadpool used for file system and DNS lookup work?",
+    "options": [
+      "4 threads",
+      "1 thread",
+      "8 threads",
+      "One thread per CPU core"
+    ],
+    "answer": 0,
+    "explanation": "UV_THREADPOOL_SIZE changes the size, up to a maximum of 1024."
+  },
+  {
+    "topic": "event-loop",
+    "question": "Which operation does not use the libuv threadpool?",
+    "options": [
+      "fs.readFile()",
+      "Reading and writing TCP sockets",
+      "dns.lookup()",
+      "Asynchronous zlib compression"
+    ],
+    "answer": 1,
+    "explanation": "Network sockets use non-blocking OS I/O, while file system, dns.lookup and zlib work runs on the threadpool."
+  },
+  {
+    "topic": "memory",
+    "question": "What does a WeakMap hold its keys as?",
+    "options": [
+      "Strong references that are never collected",
+      "Copies of the key strings",
+      "Weak references, so an entry does not keep its key object alive",
+      "Numeric indexes into the heap"
+    ],
+    "answer": 2,
+    "explanation": "Entries can be garbage collected once the key object has no other references."
+  },
+  {
+    "topic": "memory",
+    "question": "Which API reports rss, heapUsed and external memory for the current process?",
+    "options": [
+      "os.freemem()",
+      "buffer.memoryStats()",
+      "gc.stats()",
+      "process.memoryUsage()"
+    ],
+    "answer": 3,
+    "explanation": "os.freemem() reports system-wide free memory, not the memory used by this process."
+  },
+  {
+    "topic": "memory",
+    "question": "What does the --expose-gc flag enable?",
+    "options": [
+      "A global gc() function for triggering garbage collection manually",
+      "Automatic heap snapshots on exit",
+      "Garbage collection logs for every allocation",
+      "A smaller Buffer pool allocation size"
+    ],
+    "answer": 0,
+    "explanation": "With the flag set, code can call global.gc() to request a collection; it is mainly useful for diagnostics."
+  },
+  {
+    "topic": "memory",
+    "question": "Why can two small Buffers from Buffer.allocUnsafe() share one underlying ArrayBuffer?",
+    "options": [
+      "Pools are used only for Buffers over 1 MiB",
+      "Node slices small allocations out of a preallocated 8 KiB pool to reduce allocation overhead",
+      "Pooled buffers are stored in the disk cache",
+      "The pool holds compiled JavaScript code"
+    ],
+    "answer": 1,
+    "explanation": "Small allocations are carved from a shared pool, which is why Buffers can share memory."
+  },
+  {
+    "topic": "memory",
+    "question": "A request handler adds an event listener on every request and never removes it. What is the best fix?",
+    "options": [
+      "Call setMaxListeners(0) so the warning stops",
+      "Wrap the handler in process.nextTick()",
+      "Remove the listener when the request finishes, or attach it once outside the handler",
+      "Call global.gc() after each request"
+    ],
+    "answer": 2,
+    "explanation": "The listener list keeps growing and holds references, so the leak must be fixed at the source; raising the limit only hides the warning."
+  },
+  {
+    "topic": "memory",
+    "question": "What does the --max-old-space-size flag control?",
+    "options": [
+      "The maximum call stack depth",
+      "The number of worker threads",
+      "The size of the Buffer pool",
+      "The maximum size of V8's old-generation heap, in megabytes"
+    ],
+    "answer": 3,
+    "explanation": "It caps the old-generation heap V8 may use; Buffer contents live outside the heap and are not limited by it."
+  },
+  {
+    "topic": "clustering",
+    "question": "With the default scheduling policy on Linux, how does the cluster primary distribute incoming connections to workers?",
+    "options": [
+      "The primary accepts connections and hands them to workers in round-robin order",
+      "Connections always go to the first worker that started",
+      "The client chooses a worker through a cookie",
+      "Each request is copied to every worker"
+    ],
+    "answer": 0,
+    "explanation": "The default policy (SCHED_RR) is used on all platforms except Windows, where the OS distributes connections."
+  },
+  {
+    "topic": "clustering",
+    "question": "Why does in-memory session state break when requests are spread across cluster workers?",
+    "options": [
+      "Workers cannot read HTTP cookies",
+      "Each worker has its own memory, so a later request may reach a worker that lacks the session",
+      "The cluster module disables the http module",
+      "Cluster workers cannot parse JSON request bodies"
+    ],
+    "answer": 1,
+    "explanation": "Workers are separate processes, so sessions must live in a shared store or use sticky routing."
+  },
+  {
+    "topic": "clustering",
+    "question": "Which mechanism lets worker threads share the same memory without copying it?",
+    "options": [
+      "process.send()",
+      "structuredClone()",
+      "SharedArrayBuffer",
+      "postMessage() with a plain object"
+    ],
+    "answer": 2,
+    "explanation": "SharedArrayBuffer is shared between threads, usually coordinated with Atomics; the other options copy data."
+  },
+  {
+    "topic": "clustering",
+    "question": "What happens to a plain object sent with postMessage() to a worker thread when no transfer list is given?",
+    "options": [
+      "The worker receives a live reference to the same object",
+      "It is serialized to a JSON string",
+      "The sender's copy is detached and unusable",
+      "It is copied with the structured clone algorithm, so the worker gets its own copy"
+    ],
+    "answer": 3,
+    "explanation": "Only transferable objects listed in the transfer list move ownership; ordinary objects are cloned."
+  },
+  {
+    "topic": "modules",
+    "question": "A package defines both \"main\" and \"exports\" in package.json. Which does require() of the package consult first?",
+    "options": [
+      "exports, when present, takes precedence over main",
+      "main always wins",
+      "Node merges the two fields",
+      "CommonJS ignores exports entirely"
+    ],
+    "answer": 0,
+    "explanation": "The exports field controls which entry points a package exposes and overrides main when it is defined."
+  },
+  {
+    "topic": "modules",
+    "question": "Inside a CommonJS file, what is a relative require('./util') path resolved against?",
+    "options": [
+      "The current working directory of the process",
+      "The directory of the file that contains the require() call",
+      "The directory of the entry script only",
+      "The node_modules folder"
+    ],
+    "answer": 1,
+    "explanation": "Relative paths are resolved from the calling file's location, not from where node was started."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What happens with setTimeout(fn, 2 ** 31)?",
+    "options": [
+      "The callback runs after about 24.8 days as expected",
+      "A RangeError is thrown immediately",
+      "The delay exceeds the 32-bit limit, so Node sets it to 1 ms and emits a TimeoutOverflowWarning",
+      "The callback runs after 2^31 seconds"
+    ],
+    "answer": 2,
+    "explanation": "Timer delays must fit in a signed 32-bit integer; larger values overflow and fire almost immediately."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What is 'this' inside a regular (non-arrow) function passed to setTimeout() in Node.js?",
+    "options": [
+      "The global object",
+      "undefined",
+      "The process object",
+      "The Timeout object returned by setTimeout()"
+    ],
+    "answer": 3,
+    "explanation": "In Node.js the callback's this is the Timeout object; in browsers it is window."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does timeout.unref() do?",
+    "options": [
+      "Lets the process exit even if this timer is still pending",
+      "Cancels the timer",
+      "Runs the callback immediately",
+      "Doubles the delay"
+    ],
+    "answer": 0,
+    "explanation": "An unref'd timer does not keep the event loop alive, so it will not block process exit."
+  },
+  {
+    "topic": "process",
+    "question": "Why can process.exit() cut off output written to stdout when stdout is a pipe?",
+    "options": [
+      "Pipes cannot carry strings",
+      "Writes to pipes are asynchronous on POSIX, so pending data may not be flushed before exit",
+      "process.exit() closes stdout before writing anything",
+      "Pipes are always buffered in a file first"
+    ],
+    "answer": 1,
+    "explanation": "Pipe writes can complete later, so calling process.exit() immediately can drop queued output."
+  },
+  {
+    "topic": "process",
+    "question": "What does process.kill(process.pid, 0) do?",
+    "options": [
+      "Kills the current process",
+      "Pauses the event loop",
+      "Checks whether the process exists without sending a signal",
+      "Sends SIGTERM to the parent"
+    ],
+    "answer": 2,
+    "explanation": "Signal 0 performs only the permission and existence check."
+  },
+  {
+    "topic": "error-handling",
+    "question": "What does the 'rejectionHandled' process event report?",
+    "options": [
+      "A promise was fulfilled after a timeout",
+      "An uncaught exception was recovered",
+      "A rejection reason was logged to the console",
+      "A promise that was rejected earlier without a handler has since received one"
+    ],
+    "answer": 3,
+    "explanation": "It fires after 'unhandledRejection' when a handler is attached late."
+  },
+  {
+    "topic": "error-handling",
+    "question": "Why is it advised to exit after logging a process 'uncaughtException'?",
+    "options": [
+      "The process may be in an inconsistent state after an unexpected error, so continuing is unsafe",
+      "Node stops processing new events after the handler runs",
+      "The handler cannot read the error object",
+      "The handler works only once and then disables itself"
+    ],
+    "answer": 0,
+    "explanation": "Uncaught exceptions mean the program's invariants may be broken, so a clean restart is the safer recovery."
+  },
+  {
+    "topic": "streams",
+    "question": "What does readable.resume() do?",
+    "options": [
+      "Rewinds the stream to its beginning",
+      "Switches a paused Readable into flowing mode so its data is emitted",
+      "Doubles the highWaterMark",
+      "Closes the stream and releases its resources"
+    ],
+    "answer": 1,
+    "explanation": "resume() starts data flow for a stream that is paused, such as one with no data listener."
+  },
+  {
+    "topic": "streams",
+    "question": "What does writable.uncork() do after several writes were corked?",
+    "options": [
+      "Discards all buffered writes",
+      "Closes the writable stream",
+      "Flushes the buffered writes to the underlying system, combining them where possible",
+      "Doubles the buffer size"
+    ],
+    "answer": 2,
+    "explanation": "cork() holds writes so they can be batched; uncork() releases them."
+  },
+  {
+    "topic": "error-handling",
+    "question": "Which EventEmitter constructor option makes rejected promises returned by async listeners emit 'error' instead of going unhandled?",
+    "options": [
+      "asyncMode: true",
+      "promises: true",
+      "autoAsync: true",
+      "captureRejections: true"
+    ],
+    "answer": 3,
+    "explanation": "captureRejections was added in Node.js 13.4 and 12.16 and routes async listener rejections to the 'error' event."
+  },
+  {
+    "topic": "npm",
+    "question": "What does the integrity field in package-lock.json protect against?",
+    "options": [
+      "A tampered or corrupted package tarball, by checking a hash when it is installed",
+      "Peer dependency version conflicts",
+      "Accidental deletion of node_modules",
+      "Use of an outdated Node.js version"
+    ],
+    "answer": 0,
+    "explanation": "The integrity value is a subresource-integrity hash that npm verifies against the downloaded tarball."
+  },
+  {
+    "topic": "npm",
+    "question": "What does npm 7+ do when two packages require incompatible versions of the same peer dependency?",
+    "options": [
+      "It installs both versions silently",
+      "It fails with an ERESOLVE error unless the conflict is resolved, for example with --legacy-peer-deps or overrides",
+      "It picks the oldest version and ignores the other package",
+      "It skips all peer dependencies without a warning"
+    ],
+    "answer": 1,
+    "explanation": "Strict peer dependency resolution is the default in npm 7 and later."
+  },
+  {
+    "topic": "npm",
+    "question": "Which package.json field forces a transitive dependency to a specific version in npm?",
+    "options": [
+      "forced",
+      "resolutions in .npmrc",
+      "overrides",
+      "pins"
+    ],
+    "answer": 2,
+    "explanation": "The overrides field lets you replace the version of nested dependencies; resolutions is a Yarn feature."
+  },
+  {
+    "topic": "http",
+    "question": "What does server.keepAliveTimeout control?",
+    "options": [
+      "The maximum size of a request body",
+      "The interval between ping frames",
+      "How long the server waits before restarting",
+      "How long an idle keep-alive connection stays open waiting for another request"
+    ],
+    "answer": 3,
+    "explanation": "Idle keep-alive sockets are closed after this many milliseconds with no new request."
+  },
+  {
+    "topic": "http",
+    "question": "What is the default maximum size of HTTP request headers in Node.js 20 and 22?",
+    "options": [
+      "16 KiB",
+      "1 MiB",
+      "8 KiB",
+      "There is no limit"
+    ],
+    "answer": 0,
+    "explanation": "The default maxHeaderSize is 16384 bytes and can be changed with the --max-http-header-size flag."
+  },
+  {
+    "topic": "process",
+    "question": "Which Node.js crypto API derives a key synchronously, blocking the event loop while it runs?",
+    "options": [
+      "crypto.pbkdf2() with a callback",
+      "crypto.pbkdf2Sync()",
+      "crypto.scrypt() with a callback",
+      "crypto.randomBytes() with a callback"
+    ],
+    "answer": 1,
+    "explanation": "The Sync variant blocks the thread; the callback forms run on the libuv threadpool."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What happens if one of the promises passed to Promise.all() rejects?",
+    "options": [
+      "Promise.all() waits for all and returns the errors as an array",
+      "Promise.all() resolves with undefined for that entry",
+      "Promise.all() rejects immediately with that reason, while the other promises keep running",
+      "Promise.all() retries the rejected promise once"
+    ],
+    "answer": 2,
+    "explanation": "Promise.all() settles on the first rejection; the other operations are not cancelled."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does AsyncLocalStorage provide?",
+    "options": [
+      "A shared memory buffer between threads",
+      "A promise-based version of localStorage",
+      "A queue that drains before microtasks",
+      "Context values that follow an asynchronous call chain without being passed as arguments"
+    ],
+    "answer": 3,
+    "explanation": "AsyncLocalStorage.run() stores a value that stays visible to callbacks started inside that context."
+  },
+  {
+    "topic": "event-loop",
+    "question": "When does a process.nextTick() callback scheduled inside a promise .then() callback run?",
+    "options": [
+      "Before the .then() callback that scheduled it returns",
+      "In the next timers phase",
+      "Only after all I/O callbacks in the poll phase",
+      "After the current microtask finishes; Node drains the remaining promise microtasks, then the nextTick queue, before the event loop continues"
+    ],
+    "answer": 3,
+    "explanation": "Node alternates draining the nextTick and promise queues until both are empty, so it runs before the loop moves to the next phase."
+  },
+  {
+    "topic": "event-loop",
+    "question": "What does queueMicrotask(fn) do?",
+    "options": [
+      "Schedules fn for the check phase",
+      "Adds fn to the libuv threadpool",
+      "Queues fn on the same microtask queue used by promise callbacks",
+      "Runs fn synchronously before returning"
+    ],
+    "answer": 2,
+    "explanation": "queueMicrotask is the standard way to schedule a microtask without creating a promise; it runs after process.nextTick callbacks."
+  },
+  {
+    "topic": "event-loop",
+    "question": "Which environment variable changes the size of the libuv threadpool?",
+    "options": [
+      "NODE_THREADS",
+      "UV_THREADPOOL_SIZE",
+      "LIBUV_WORKERS",
+      "NODE_OPTIONS=--threads"
+    ],
+    "answer": 1,
+    "explanation": "It must be set before the threadpool is first used, typically before the process starts."
+  },
+  {
+    "topic": "event-loop",
+    "question": "Which API measures how much the event loop is delayed, for example by long synchronous work?",
+    "options": [
+      "perf_hooks.monitorEventLoopDelay()",
+      "process.hrtime.loopDelay()",
+      "os.loadavg()",
+      "util.inspect.loopLag()"
+    ],
+    "answer": 0,
+    "explanation": "monitorEventLoopDelay() samples loop delay into a histogram with percentiles such as p99."
+  },
+  {
+    "topic": "memory",
+    "question": "What is the purpose of FinalizationRegistry?",
+    "options": [
+      "Guaranteeing that cleanup runs before an object is collected",
+      "Forcing garbage collection of an object",
+      "Preventing an object from being collected",
+      "Registering a callback that may run after a registered object has been garbage collected"
+    ],
+    "answer": 3,
+    "explanation": "Finalizers run at an unspecified time or not at all, so they must not be relied on for essential cleanup."
+  },
+  {
+    "topic": "memory",
+    "question": "What does a heap snapshot from v8.writeHeapSnapshot() help diagnose?",
+    "options": [
+      "Which functions use the most CPU time",
+      "How long each HTTP request took",
+      "Which objects are retaining memory and why, for finding leaks",
+      "Which npm packages are outdated"
+    ],
+    "answer": 2,
+    "explanation": "Comparing snapshots taken over time reveals growing object types and their retainer chains."
+  },
+  {
+    "topic": "memory",
+    "question": "Why can a closure stored in a long-lived object cause a memory leak?",
+    "options": [
+      "Closures are never garbage collected",
+      "It keeps alive the variables it captures, which can reference large objects",
+      "Closures copy the entire heap",
+      "Closures disable the garbage collector for their module"
+    ],
+    "answer": 1,
+    "explanation": "As long as the closure is reachable, everything it references from its scope stays reachable too."
+  },
+  {
+    "topic": "clustering",
+    "question": "How does a worker thread differ from a cluster worker?",
+    "options": [
+      "Worker threads run in the same process with separate V8 isolates, while cluster workers are separate processes",
+      "Worker threads share all JavaScript objects with the main thread",
+      "Cluster workers run on the libuv threadpool",
+      "They are the same thing with different names"
+    ],
+    "answer": 0,
+    "explanation": "Worker threads are suited to CPU-bound tasks, while cluster scales servers across processes that share a port."
+  },
+  {
+    "topic": "clustering",
+    "question": "What happens to an ArrayBuffer listed in the transfer list of postMessage() to a worker?",
+    "options": [
+      "It is copied, and both sides keep usable copies",
+      "It becomes shared, and both sides can write to it",
+      "It is serialized to JSON first",
+      "Ownership moves to the worker, and the sender's ArrayBuffer becomes detached with zero length"
+    ],
+    "answer": 3,
+    "explanation": "Transferring avoids copying large buffers, but the sender can no longer use them."
+  },
+  {
+    "topic": "clustering",
+    "question": "Which object provides atomic operations and wait/notify on a SharedArrayBuffer between threads?",
+    "options": [
+      "Mutex",
+      "Lock",
+      "Atomics",
+      "SharedMemory"
+    ],
+    "answer": 2,
+    "explanation": "Atomics.add, Atomics.wait and Atomics.notify allow race-free coordination over shared memory."
+  },
+  {
+    "topic": "streams",
+    "question": "In stream.pipeline(), what should be used to transform data with an async generator?",
+    "options": [
+      "A synchronous array map callback",
+      "An async generator function that takes the source iterable and yields transformed chunks",
+      "A Promise passed in place of a stream",
+      "An EventEmitter with a 'transform' event"
+    ],
+    "answer": 1,
+    "explanation": "pipeline accepts async generator functions as stages, which receive the previous stage as an async iterable."
+  },
+  {
+    "topic": "streams",
+    "question": "What happens when a Transform stream's transform callback is called with an error?",
+    "options": [
+      "The stream is destroyed and emits 'error'",
+      "The chunk is skipped and processing continues",
+      "The error is silently ignored",
+      "The stream pauses until resume() is called"
+    ],
+    "answer": 0,
+    "explanation": "Passing an error to the callback destroys the stream, and pipeline() propagates it to its completion callback."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does util.promisify.custom allow?",
+    "options": [
+      "Converting promises back into callbacks",
+      "Promisifying every function in a module at once",
+      "Running promises on a worker thread",
+      "A function to specify exactly which promise-returning version util.promisify() should use"
+    ],
+    "answer": 3,
+    "explanation": "Functions whose callbacks do not follow the (err, value) pattern can define this symbol to promisify correctly."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does events.on(emitter, 'data') return?",
+    "options": [
+      "A promise that resolves on the first event",
+      "An array of all past events",
+      "An async iterator that yields the arguments of each emitted 'data' event",
+      "A new EventEmitter that mirrors the original"
+    ],
+    "answer": 2,
+    "explanation": "It lets you consume events with for await, and passing an AbortSignal can stop iteration."
+  },
+  {
+    "topic": "modules",
+    "question": "In a package.json \"exports\" map, what do the \"import\" and \"require\" conditions allow?",
+    "options": [
+      "Restricting the package to ES modules only",
+      "Serving different entry files to ES module imports and CommonJS requires of the same package",
+      "Choosing different dependencies for each environment",
+      "Declaring which packages this package imports"
+    ],
+    "answer": 1,
+    "explanation": "Conditional exports let a dual package point import to an .mjs build and require to a .cjs build."
+  },
+  {
+    "topic": "modules",
+    "question": "What happens when code requires a deep path of a package that has an \"exports\" field not listing that path?",
+    "options": [
+      "Node throws ERR_PACKAGE_PATH_NOT_EXPORTED",
+      "Node loads the file anyway",
+      "Node falls back to the main field",
+      "Node returns an empty object"
+    ],
+    "answer": 0,
+    "explanation": "The exports field encapsulates a package, so only the listed subpaths can be loaded."
+  },
+  {
+    "topic": "process",
+    "question": "What does the --watch flag do in Node.js 22?",
+    "options": [
+      "Prints every function call to the console",
+      "Monitors memory usage and exits if it grows",
+      "Watches environment variables for changes",
+      "Restarts the process automatically when the entry file or its imported files change"
+    ],
+    "answer": 3,
+    "explanation": "Built-in watch mode removes the need for tools like nodemon in many development setups."
+  },
+  {
+    "topic": "http",
+    "question": "What is the default value of server.requestTimeout in Node.js 20 and 22?",
+    "options": [
+      "0, meaning no timeout",
+      "120000 ms (2 minutes)",
+      "300000 ms (5 minutes)",
+      "5000 ms (5 seconds)"
+    ],
+    "answer": 2,
+    "explanation": "Since Node.js 18 the server aborts requests that take longer than five minutes to be fully received, which limits slow-request attacks."
+  },
+  {
+    "topic": "error-handling",
+    "question": "What does the AbortSignal.any() static method do?",
+    "options": [
+      "Aborts every pending operation in the process",
+      "Returns a signal that aborts when any of the given signals aborts",
+      "Returns true if any signal has aborted",
+      "Creates a signal that never aborts"
+    ],
+    "answer": 1,
+    "explanation": "It is useful for combining a user cancellation signal with a timeout signal, such as AbortSignal.timeout()."
+  },
+  {
+    "topic": "npm",
+    "question": "What does running npm install with the --ignore-scripts flag do?",
+    "options": [
+      "Prevents lifecycle scripts such as preinstall and postinstall from running",
+      "Skips installing devDependencies",
+      "Ignores the package-lock.json file",
+      "Installs packages without verifying their integrity"
+    ],
+    "answer": 0,
+    "explanation": "Install scripts run arbitrary code from dependencies, so disabling them reduces supply chain risk."
+  }
+]

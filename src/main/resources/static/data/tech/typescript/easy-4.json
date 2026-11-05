@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0eed328a8f0",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "What is distinctive about a `const enum`?",
+  "options": [
+   "Member references are inlined as values and no enum object is emitted by default",
+   "Its members can be reassigned at runtime",
+   "It can only contain string members",
+   "It is emitted as a frozen object with extra runtime checks"
+  ],
+  "answer": 0,
+  "explanation": "const enums are erased at compile time and their usages are replaced with literal values."
+ },
+ {
+  "id": "q72800db2c81",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What happens with `let x = 5; x = \"five\";`?",
+  "options": [
+   "It compiles because x has type any",
+   "It compiles; x becomes string | number",
+   "It compiles but throws at runtime",
+   "A compile error, because x was inferred as number"
+  ],
+  "answer": 3,
+  "explanation": "Inference fixes the variable's type at declaration, so later assignments must match it."
+ },
+ {
+  "id": "q1c4df5e6909",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which keyword declares an interface in TypeScript?",
+  "options": [
+   "struct",
+   "interface",
+   "shape",
+   "protocol"
+  ],
+  "answer": 1,
+  "explanation": "Object shapes are declared with the interface keyword (or with a type alias)."
+ },
+ {
+  "id": "qe35fa636a37",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What does `let id: string | number;` allow?",
+  "options": [
+   "id can hold either a string or a number",
+   "id must be both a string and a number at once",
+   "id can only hold the literal values \"string\" or \"number\"",
+   "id is an array of strings and numbers"
+  ],
+  "answer": 0,
+  "explanation": "The | operator creates a union type, meaning the value may be any one of the listed types."
+ },
+ {
+  "id": "q7f584741137",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which signature accepts any number of numeric arguments?",
+  "options": [
+   "function sum(nums: ...number) {}",
+   "function sum(nums...: number) {}",
+   "function sum(...nums: number[]) {}",
+   "function sum(*nums: number) {}"
+  ],
+  "answer": 2,
+  "explanation": "Rest parameters use ... before the name and are typed as an array."
+ },
+ {
+  "id": "q5c30e6fd15d",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Which snippet safely calls a string method on `v: unknown`?",
+  "options": [
+   "v.toUpperCase();",
+   "if (v !== null) { v.toUpperCase(); }",
+   "if (v) { v.toUpperCase(); }",
+   "if (typeof v === \"string\") { v.toUpperCase(); }"
+  ],
+  "answer": 3,
+  "explanation": "A typeof check narrows unknown to string inside the block; truthiness or null checks do not establish it is a string."
+ },
+ {
+  "id": "q683ab45571f",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which declares a type for functions that take a number and return a string?",
+  "options": [
+   "type Fn = (n: number) => string;",
+   "type Fn = function(number): string;",
+   "type Fn = Function<number, string>;",
+   "type Fn = (number) -> string;"
+  ],
+  "answer": 0,
+  "explanation": "Function types use arrow syntax with named parameters: (params) => ReturnType."
+ },
+ {
+  "id": "qd5e2b6839b2",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which signature correctly annotates both parameters and the return type?",
+  "options": [
+   "function add(a: number, b: number) => number",
+   "function add(a: number, b: number): number",
+   "function add(a, b): number(a, b)",
+   "function add(number a, number b): number"
+  ],
+  "answer": 1,
+  "explanation": "Parameters are annotated as name: Type and the return type follows the parameter list after a colon."
+ },
+ {
+  "id": "q186bfc51f3b",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Which compiler option reports an error when a parameter's type would implicitly be `any`?",
+  "options": [
+   "noImplicitAny",
+   "strictAny",
+   "noAny",
+   "implicitAnyCheck"
+  ],
+  "answer": 0,
+  "explanation": "noImplicitAny (included in strict) flags declarations whose type silently falls back to any."
+ },
+ {
+  "id": "qb336c847366",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which TypeScript type covers both integer and floating-point values?",
+  "options": [
+   "double",
+   "int",
+   "float",
+   "number"
+  ],
+  "answer": 3,
+  "explanation": "TypeScript has a single number type (IEEE 754 doubles); bigint is separate for arbitrary-precision integers."
+ }
+]

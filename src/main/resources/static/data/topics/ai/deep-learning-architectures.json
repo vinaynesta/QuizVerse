@@ -1,5 +1,20 @@
 [
  {
+  "id": "q14e6fb1dc47",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What does a convolutional filter do in a CNN?",
+  "options": [
+   "Randomly removes pixels from the image",
+   "Slides over the input computing weighted sums to detect local patterns such as edges",
+   "Converts the image to grayscale",
+   "Sorts the pixels by brightness"
+  ],
+  "answer": 1,
+  "explanation": "Each filter's learned weights respond to a particular local pattern wherever it appears in the input."
+ },
+ {
   "id": "q4250c91b724",
   "subject": "ai",
   "topic": "deep-learning-architectures",
@@ -30,6 +45,21 @@
   "explanation": "Convolutions exploit local spatial structure, which is why CNNs excel on images."
  },
  {
+  "id": "q80471f6450b",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What does the word deep refer to in deep learning?",
+  "options": [
+   "Training that runs for a very long time",
+   "Models trained on very large hard drives",
+   "Algorithms that search deep decision trees",
+   "Neural networks with many stacked layers"
+  ],
+  "answer": 3,
+  "explanation": "Depth means many layers, which let networks learn increasingly abstract features."
+ },
+ {
   "id": "qd1625171333",
   "subject": "ai",
   "topic": "deep-learning-architectures",
@@ -58,6 +88,21 @@
   ],
   "answer": 1,
   "explanation": "Pooling, such as max pooling, summarizes local regions, reducing computation and adding some translation robustness."
+ },
+ {
+  "id": "q2abd29ace9c",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What is data augmentation in image models?",
+  "options": [
+   "Adding more layers to the network",
+   "Collecting a separate test set",
+   "Increasing image resolution at inference time",
+   "Creating modified copies of training images, such as flips and crops, to improve generalization"
+  ],
+  "answer": 3,
+  "explanation": "Augmentation exposes the model to plausible variations, reducing overfitting without new labeled data."
  },
  {
   "id": "q3e515b70999",
@@ -105,6 +150,21 @@
   "explanation": "Pre-trained representations give a strong starting point, so the new task needs less data and compute."
  },
  {
+  "id": "q76a02489dad",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "medium",
+  "question": "What does the stride of a convolutional layer control?",
+  "options": [
+   "The number of filters in the layer",
+   "The number of color channels in the input",
+   "How many positions the filter moves at each step, which affects the output size",
+   "The activation function applied after convolution"
+  ],
+  "answer": 2,
+  "explanation": "A stride of 2 skips every other position, roughly halving each spatial dimension of the output."
+ },
+ {
   "id": "q7c869ed39d2",
   "subject": "ai",
   "topic": "deep-learning-architectures",
@@ -118,6 +178,36 @@
   ],
   "answer": 2,
   "explanation": "The generator and discriminator are trained against each other until generated samples become hard to distinguish."
+ },
+ {
+  "id": "q1a93074732c",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "How do diffusion models generate new samples?",
+  "options": [
+   "They pit a generator against a discriminator in a single step",
+   "They learn to reverse a gradual noising process and iteratively denoise starting from random noise",
+   "They retrieve the most similar training image",
+   "They copy patches from training images and stitch them together"
+  ],
+  "answer": 1,
+  "explanation": "Training teaches a network to predict and remove noise, so sampling runs many denoising steps starting from pure noise."
+ },
+ {
+  "id": "q44ef4437e6f",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What does a 1x1 convolution do?",
+  "options": [
+   "Mixes information across channels at each spatial position, often to change the number of channels cheaply",
+   "Doubles the spatial resolution of the feature map",
+   "Applies max pooling over a 1x1 window",
+   "Leaves the input completely unchanged"
+  ],
+  "answer": 0,
+  "explanation": "A 1x1 convolution is a per-pixel linear layer over channels, used for bottlenecks and channel projection."
  },
  {
   "id": "q53f6592a656",

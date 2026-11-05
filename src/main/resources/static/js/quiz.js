@@ -194,7 +194,7 @@ async function init() {
         showStartError("Mock test not found");
         return;
       }
-      negativeMarking = index.negativeMarking;
+      negativeMarking = exam.negativeMarking ?? index.negativeMarking;
     } else {
       index = await (await fetch("data/index.json")).json();
       exam = index.exams.find((e) => e.id === examId);
@@ -205,7 +205,7 @@ async function init() {
         showStartError("Quiz not found");
         return;
       }
-      negativeMarking = index.negativeMarking;
+      negativeMarking = exam.negativeMarking ?? index.negativeMarking;
     }
     renderStart();
   } catch (error) {
@@ -339,6 +339,8 @@ async function loadTechDaily() {
 }
 
 let negativeMarking = 0.25;
+/** "1/3" reads better than 0.333; quarters stay as 0.25. */
+const penaltyText = () => (Math.abs(negativeMarking - 1 / 3) < 1e-9 ? "1/3" : String(negativeMarking));
 
 function quizTitle() {
   if (practice) return practice.title;
@@ -363,15 +365,15 @@ function renderStart() {
     const sum = (k) => secs.reduce((n, x) => n + x[k], 0);
     const missing = stage.unavailable.map((u) => u.name);
     info = `${sum("questions")} questions, ${sum("marks")} marks, ${sum("minutes")} minutes in ${secs.length} sections: ${
-      secs.map((x) => `${x.name} (${x.minutes} min)`).join(", ")}. Each section has its own timer and locks when its time is up or you submit it. Each wrong answer costs ${negativeMarking} of the question's marks.${
+      secs.map((x) => `${x.name} (${x.minutes} min)`).join(", ")}. Each section has its own timer and locks when its time is up or you submit it. Each wrong answer costs ${penaltyText()} of the question's marks.${
       missing.length ? ` ${missing.join(" and ")} ${missing.length > 1 ? "have" : "has"} no questions yet and ${missing.length > 1 ? "are" : "is"} left out.` : ""}`;
   } else if (practice) {
     info = timed()
-      ? `${practice.description} ${practice.minutes} minutes, ${negativeMarking} negative marking per wrong answer.`
+      ? `${practice.description} ${practice.minutes} minutes, ${penaltyText()} negative marking per wrong answer.`
       : `${practice.description}`;
   } else {
     info = timed()
-      ? `${section.questions} questions, ${section.marks} marks, ${section.minutes} minutes. Each wrong answer costs ${negativeMarking} of the question's marks.`
+      ? `${section.questions} questions, ${section.marks} marks, ${section.minutes} minutes. Each wrong answer costs ${penaltyText()} of the question's marks.`
       : "Untimed practice. You see the answer after each question.";
   }
   $("start-info").textContent = info;

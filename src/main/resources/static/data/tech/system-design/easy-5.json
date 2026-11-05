@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q20c04a41897",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "Which data is usually a poor fit for caching?",
+  "options": [
+   "Product images that rarely change",
+   "A popular news article",
+   "Data that changes on almost every read and must always be exact, such as a live account balance",
+   "Configuration that changes once a day"
+  ],
+  "answer": 2,
+  "explanation": "If data changes constantly and staleness is unacceptable, cached copies are rarely valid."
+ },
+ {
+  "id": "q45a04dac611",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What is a backup?",
+  "options": [
+   "A second load balancer",
+   "A copy of data kept separately so it can be restored after loss or corruption",
+   "A cache of recent requests",
+   "A replica that serves read traffic"
+  ],
+  "answer": 1,
+  "explanation": "Backups protect against data loss, including mistakes that replication would copy."
+ },
+ {
+  "id": "q0c60597abab",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "What does a 400 Bad Request status mean?",
+  "options": [
+   "The request is malformed or invalid, so the server will not process it",
+   "The resource has moved",
+   "The server is overloaded",
+   "The client must authenticate"
+  ],
+  "answer": 0,
+  "explanation": "400 is a client error, for example invalid JSON or a missing required field."
+ },
+ {
+  "id": "q4f92449a500",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP status code indicates an unexpected error on the server?",
+  "options": [
+   "400 Bad Request",
+   "301 Moved Permanently",
+   "500 Internal Server Error",
+   "404 Not Found"
+  ],
+  "answer": 2,
+  "explanation": "5xx codes signal server-side failures, while 4xx codes signal client errors."
+ },
+ {
+  "id": "qd5f9995f1de",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "How does a CDN typically direct a user to a nearby edge server?",
+  "options": [
+   "Using DNS-based or anycast routing that considers the user's location",
+   "By asking the user to choose a server manually",
+   "By always sending users to the origin first",
+   "By storing the user's location in a cookie set by the origin"
+  ],
+  "answer": 0,
+  "explanation": "DNS responses or anycast IP routing steer each user to a close, healthy edge location."
+ },
+ {
+  "id": "q2863e911dbf",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Why is reading from memory generally faster than reading from disk?",
+  "options": [
+   "Memory stores less data per byte",
+   "Disks can only be read by one process",
+   "Memory is always located on another machine",
+   "RAM access takes nanoseconds, while disk access takes microseconds to milliseconds"
+  ],
+  "answer": 3,
+  "explanation": "This large gap is why caches keep hot data in memory."
+ },
+ {
+  "id": "q44cb43c5c72",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What does the 'D' in ACID stand for?",
+  "options": [
+   "Distribution",
+   "Durability",
+   "Denormalization",
+   "Determinism"
+  ],
+  "answer": 1,
+  "explanation": "Durability means that once a transaction commits, it survives crashes."
+ },
+ {
+  "id": "q63b3e999117",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is a foreign key?",
+  "options": [
+   "A key used to encrypt the database",
+   "A column that uniquely identifies each row in its own table",
+   "A key stored outside the database",
+   "A column that references the primary key of another table"
+  ],
+  "answer": 3,
+  "explanation": "Foreign keys enforce referential integrity between related tables."
+ },
+ {
+  "id": "qaeb9b808672",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "Why do CDNs reduce load on the origin server?",
+  "options": [
+   "Edge servers answer repeated requests for cached content, so fewer requests reach the origin",
+   "They block all dynamic requests",
+   "They compress the origin's database",
+   "They replace the origin entirely"
+  ],
+  "answer": 0,
+  "explanation": "Only misses and uncacheable requests reach the origin."
+ },
+ {
+  "id": "q8a43ce78c5d",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is bandwidth?",
+  "options": [
+   "The maximum amount of data that can be transferred per unit of time",
+   "The number of servers in a data center",
+   "The time a single packet takes to reach its destination",
+   "The percentage of requests that fail"
+  ],
+  "answer": 0,
+  "explanation": "Bandwidth is capacity, such as megabits per second, while latency is delay."
+ }
+]

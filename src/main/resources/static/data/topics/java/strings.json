@@ -30,6 +30,36 @@
   "explanation": "strip() (Java 11) removes leading and trailing whitespace; stripLeading and stripTrailing remove only one side."
  },
  {
+  "id": "q58f49d196e6",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"Hello\".length() return?",
+  "options": [
+   "4",
+   "6",
+   "5",
+   "It does not compile"
+  ],
+  "answer": 2,
+  "explanation": "length() returns the number of UTF-16 code units, and \"Hello\" has five."
+ },
+ {
+  "id": "q74dfb49338d",
+  "subject": "java",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Which method should you use to check whether two String objects have the same characters?",
+  "options": [
+   "==",
+   "compare()",
+   "equals()",
+   "same()"
+  ],
+  "answer": 2,
+  "explanation": "== compares references, while equals() compares contents."
+ },
+ {
   "id": "qec40617d9d0",
   "subject": "java",
   "topic": "strings",
@@ -90,6 +120,21 @@
   "explanation": "String.join places the delimiter only between elements."
  },
  {
+  "id": "qdf907d317d8",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "What does \"a-b-c\".replace(\"-\", \"\") return?",
+  "options": [
+   "\"a-b-c\"",
+   "\"ab-c\"",
+   "\"abc\"",
+   "\"-\""
+  ],
+  "answer": 2,
+  "explanation": "replace substitutes every occurrence of the target sequence."
+ },
+ {
   "id": "qf3d33b67bc3",
   "subject": "java",
   "topic": "strings",
@@ -148,6 +193,21 @@
   ],
   "answer": 0,
   "explanation": "a is a constant variable, so a + \"b\" is a compile-time constant that is interned like the literal \"ab\"."
+ },
+ {
+  "id": "q4a9fba37325",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "What does \"\\u00DF\".toUpperCase() (the German sharp s) return?",
+  "options": [
+   "\"\\u00DF\" unchanged",
+   "\"SS\"",
+   "\"S\"",
+   "\"B\""
+  ],
+  "answer": 1,
+  "explanation": "Unicode case mapping uppercases the sharp s to two characters, so the string length changes."
  },
  {
   "id": "q9393ff61c96",

@@ -1,0 +1,32 @@
+[
+ {
+  "id": "q0613254278d",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "What is ``type E = `on${\"click\" | \"focus\"}`;``?",
+  "options": [
+   "string",
+   "`on${string}`",
+   "\"onclick|focus\"",
+   "\"onclick\" | \"onfocus\""
+  ],
+  "answer": 3,
+  "explanation": "Template literal types distribute over unions in their placeholders."
+ },
+ {
+  "id": "q3b16836ae23",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "What is `Uppercase<\"abc\">`?",
+  "options": [
+   "\"ABC\"",
+   "\"abc\"",
+   "string",
+   "\"Abc\""
+  ],
+  "answer": 0,
+  "explanation": "Uppercase is an intrinsic string manipulation type applied to literal types."
+ }
+]

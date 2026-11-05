@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q070db41cfbc",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "What does git cherry-pick <commit> do?",
+  "options": [
+   "Applies the changes introduced by that commit onto the current branch as a new commit",
+   "Moves the branch pointer to that commit",
+   "Deletes that commit from history",
+   "Lists the commits not present in the current branch"
+  ],
+  "answer": 0,
+  "explanation": "Cherry-pick replays a single commit's diff on top of HEAD, producing a new commit with a different hash."
+ },
+ {
+  "id": "q0f851952444",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "You ran git reset --hard and lost a commit. Which command helps you find its hash so you can recover it?",
+  "options": [
+   "git stash list",
+   "git show-ref --deleted",
+   "git log --all --diff-filter=D",
+   "git reflog"
+  ],
+  "answer": 3,
+  "explanation": "The reflog records where HEAD and branch tips pointed, so the lost commit's hash is usually still listed there."
+ },
+ {
+  "id": "q43236fa0287",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "You are in detached HEAD state and have made commits you want to keep. What is the safest first step?",
+  "options": [
+   "git reset --hard origin/main",
+   "git branch <name> to create a branch at the current commit",
+   "git checkout -- . to discard the changes",
+   "git gc --prune=now"
+  ],
+  "answer": 1,
+  "explanation": "Creating a branch gives the commits a reference, so they are not left unreachable when you switch away."
+ },
+ {
+  "id": "q62caf5e1045",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "A lost commit no longer appears in any reflog, but it has not been pruned yet. Which command can still locate it?",
+  "options": [
+   "git log --all",
+   "git reflog --expire",
+   "git branch --contains",
+   "git fsck --lost-found"
+  ],
+  "answer": 3,
+  "explanation": "git fsck finds dangling objects in the object database, and --lost-found writes them to .git/lost-found."
+ },
+ {
+  "id": "q665a57c7596",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "Where does Git store the reflog data for HEAD and each branch?",
+  "options": [
+   "In the .gitignore file",
+   "In the index file only",
+   "In .git/logs/ for HEAD and each ref",
+   "In the packfiles"
+  ],
+  "answer": 2,
+  "explanation": "Reflogs are plain files under .git/logs, one per reference, and are local to your clone."
+ },
+ {
+  "id": "q676f7ac0fc8",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "A secret was committed and pushed to a shared remote. Besides rewriting history to remove it, what is essential?",
+  "options": [
+   "Running git gc on your local clone",
+   "Deleting the local branch",
+   "Revoking and rotating the secret, since it may already have been copied",
+   "Adding the file to .gitignore"
+  ],
+  "answer": 2,
+  "explanation": "Clones, forks, and caches may already contain the secret, so removing it from history does not make it safe."
+ },
+ {
+  "id": "q6c51b8bc1ea",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "After a lost branch's tip hash is found in the reflog, which command recreates the branch at that commit?",
+  "options": [
+   "git restore-branch",
+   "git checkout --orphan <hash>",
+   "git branch <name> <hash>",
+   "git fetch --undelete"
+  ],
+  "answer": 2,
+  "explanation": "git branch <name> <hash> creates a new branch pointing at the given commit."
+ },
+ {
+  "id": "qe412317d861",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "What does git reset --soft HEAD~1 do?",
+  "options": [
+   "Deletes the last commit and discards its changes",
+   "Moves the branch to the parent commit and keeps the undone commit's changes staged",
+   "Creates a new commit that reverses the last one",
+   "Unstages all files but keeps the branch where it is"
+  ],
+  "answer": 1,
+  "explanation": "--soft moves only the branch pointer, leaving the index and working tree untouched."
+ },
+ {
+  "id": "qf9e0edef141",
+  "subject": "devops",
+  "topic": "git-recovery",
+  "level": "hard",
+  "question": "What is the default expiry for reflog entries that are no longer reachable from any branch or tag?",
+  "options": [
+   "Immediately after the reset",
+   "One hour",
+   "90 days",
+   "30 days"
+  ],
+  "answer": 3,
+  "explanation": "gc.reflogExpireUnreachable defaults to 30 days, while reachable entries default to 90 days (gc.reflogExpire)."
+ }
+]

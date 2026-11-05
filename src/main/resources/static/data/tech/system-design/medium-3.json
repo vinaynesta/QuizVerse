@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q933a913f4e2",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "How should a client react to repeated 429 responses?",
+  "options": [
+   "Send the same request from many threads in parallel",
+   "Retry immediately in a tight loop until the call succeeds",
+   "Retry with exponential backoff and random jitter, honoring Retry-After when present",
+   "Switch to HTTP/1.0 and resend the request"
+  ],
+  "answer": 2,
+  "explanation": "Backoff with jitter reduces synchronized retry spikes that would keep the service overloaded."
+ },
+ {
+  "id": "qd57a99de562",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "Why can a deep health check that verifies a shared database be risky?",
+  "options": [
+   "Health checks permanently consume the database's write capacity",
+   "Load balancers ignore any health check that touches a dependency",
+   "Health checks disable TLS on every connection",
+   "A brief database blip can mark every instance unhealthy at once, causing a full outage"
+  ],
+  "answer": 3,
+  "explanation": "Shallow checks report whether the instance itself is alive, so a shared dependency failure does not remove all capacity."
+ },
+ {
+  "id": "q2292266fa46",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "What does the half-open state in a circuit breaker do?",
+  "options": [
+   "Rejects all requests permanently until the process restarts",
+   "Routes every request to a backup region",
+   "Lets a limited number of trial requests through to test whether the dependency has recovered",
+   "Caches all responses for an hour"
+  ],
+  "answer": 2,
+  "explanation": "If the trial calls succeed the breaker closes again; if they fail it reopens."
+ },
+ {
+  "id": "q2316d8f4edc",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Why do payment APIs accept an Idempotency-Key header on POST requests?",
+  "options": [
+   "To compress the request body before transmission",
+   "To authenticate the caller's identity",
+   "So retries after a timeout do not create duplicate charges",
+   "To route the request to the nearest data center"
+  ],
+  "answer": 2,
+  "explanation": "The server stores the key and result so a repeated request returns the original outcome instead of executing again."
+ },
+ {
+  "id": "qb7e8592bfd5",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "What weakness does a fixed-window counter rate limiter have?",
+  "options": [
+   "It cannot count requests per individual user",
+   "It needs a sorted set and cannot scale horizontally",
+   "A burst straddling a window boundary can let through up to twice the intended limit",
+   "It drops every request when the window resets"
+  ],
+  "answer": 2,
+  "explanation": "Requests at the end of one window and the start of the next are counted in different windows, so they can double up."
+ },
+ {
+  "id": "q17f1e6c87a6",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "With at-least-once delivery, what must a consumer do to avoid double effects?",
+  "options": [
+   "Disable acknowledgements so messages are never redelivered",
+   "Make processing idempotent, for example by deduplicating on a message ID",
+   "Process messages only in one strict global order",
+   "Store messages only in memory"
+  ],
+  "answer": 1,
+  "explanation": "A redelivery can happen after a crash that occurs before the ack, so the same message may arrive twice."
+ },
+ {
+  "id": "qf9d6b1eff3c",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "Why is sharding by a monotonically increasing timestamp a common mistake?",
+  "options": [
+   "Reads can no longer be routed to any shard",
+   "Replication lag drops to zero",
+   "Primary keys stop being unique across shards",
+   "All new writes concentrate on the newest shard, creating a write hotspot"
+  ],
+  "answer": 3,
+  "explanation": "Sequential keys send nearly every insert to the same key range, so one shard takes most of the write load."
+ },
+ {
+  "id": "qffeafaacda3",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "Which consistency model is weaker than linearizability but still preserves cause-and-effect ordering?",
+  "options": [
+   "Serializability without any ordering",
+   "Causal consistency",
+   "Exactly-once processing",
+   "Read uncommitted"
+  ],
+  "answer": 1,
+  "explanation": "Causal consistency keeps causally related operations in order, while concurrent operations may be seen in different orders."
+ },
+ {
+  "id": "q138c25e0961",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What is a drawback of sticky sessions (session affinity)?",
+  "options": [
+   "Load can become uneven, and losing the pinned server loses that user's in-memory session",
+   "Health checks stop working",
+   "Requests can no longer be encrypted",
+   "The load balancer must store the full database"
+  ],
+  "answer": 0,
+  "explanation": "Pinning clients to servers reduces balancing flexibility and ties session state to a specific instance."
+ },
+ {
+  "id": "qd714d07c988",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "Which API change is most likely to break existing clients?",
+  "options": [
+   "Renaming a field in a response",
+   "Adding a new endpoint",
+   "Adding a new optional field to a response",
+   "Adding an optional query parameter with a default value"
+  ],
+  "answer": 0,
+  "explanation": "Clients that read the old field name fail when it disappears, while additive changes are generally safe."
+ }
+]

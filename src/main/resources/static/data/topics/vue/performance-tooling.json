@@ -15,6 +15,21 @@
   "explanation": "Vue DevTools shows components, props, state, Pinia stores and routing information."
  },
  {
+  "id": "q465781adab2",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which built-in component caches inactive component instances instead of destroying them?",
+  "options": [
+   "KeepAlive",
+   "Teleport",
+   "Transition",
+   "Suspense"
+  ],
+  "answer": 0,
+  "explanation": "Wrapping dynamic components in <KeepAlive> preserves their state when switching away."
+ },
+ {
   "id": "q6117bf8c89d",
   "subject": "vue",
   "topic": "performance-tooling",
@@ -58,6 +73,36 @@
   ],
   "answer": 2,
   "explanation": "defineAsyncComponent() accepts a loader returning a Promise, enabling code splitting."
+ },
+ {
+  "id": "q9810f050eb9",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which built-in component renders part of a component's template into a different DOM location, such as body?",
+  "options": [
+   "Teleport",
+   "Portal",
+   "KeepAlive",
+   "Transfer"
+  ],
+  "answer": 0,
+  "explanation": "<Teleport to=\"body\"> is useful for modals and overlays that should escape their parent's styling."
+ },
+ {
+  "id": "q1d85d94ab16",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "medium",
+  "question": "What does the Suspense component do with async components or async setup?",
+  "options": [
+   "Runs components in a Web Worker",
+   "Caches components between route changes",
+   "Delays rendering until the user scrolls",
+   "Shows fallback content until all async dependencies in its tree resolve"
+  ],
+  "answer": 3,
+  "explanation": "Suspense is still marked experimental in Vue 3 and coordinates loading state for nested async dependencies."
  },
  {
   "id": "q8a25ffa8bdf",
@@ -163,6 +208,21 @@
   ],
   "answer": 1,
   "explanation": "Compile-time hints let the renderer skip static nodes and only check the dynamic parts."
+ },
+ {
+  "id": "qbf04428b81d",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "hard",
+  "question": "What does defineAsyncComponent's loadingComponent and delay option combination achieve?",
+  "options": [
+   "The component loads after the delay even if ready",
+   "The loading component is shown only if loading takes longer than the delay, avoiding flicker",
+   "The loading component replaces the async component permanently",
+   "Errors are retried after the delay"
+  ],
+  "answer": 1,
+  "explanation": "delay defaults to 200 ms so fast loads do not briefly flash a spinner."
  },
  {
   "id": "qf124043322b",

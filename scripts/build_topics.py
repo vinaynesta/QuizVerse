@@ -7,8 +7,8 @@ Usage: python3 -I scripts/build_topics.py <data-dir> <answer-keys.json> [<ga-ban
 Reads <data-dir>/index.json and the quiz files it lists. Exam quiz files have no answers (see build_exams.py),
 so their answers and explanations come from <answer-keys.json>: practice keeps instant feedback and offline use.
 <data-dir>/practice-extra.json (bank questions no quiz uses, from build_exams.py) joins the pools too, and so do
-the Computer Knowledge and Banking Awareness starter questions in <ga-bank-dir>/{computer,banking}.json (practice
-only until there are enough for exam sections; each is marked "needsReview" until someone checks its facts). Writes
+every Computer Knowledge and Banking/General Awareness question in <ga-bank-dir>/{computer,banking}/*.json (exam
+sections use some of them; each is marked "needsReview" until someone checks its facts). Writes
 <data-dir>/topics/<subject>/<topic>.json (each question once, with its level) and
 <data-dir>/topics.json (subjects, topics, display names and question counts per level) and
 <data-dir>/question-topics.json (question id -> "subject/topic", to find a saved question's file).
@@ -21,13 +21,19 @@ from pathlib import Path
 
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_exams import edited, with_answer  # noqa: E402
+from build_exams import GA_SUBJECTS, edited, load_ga_bank, with_answer  # noqa: E402
 
 SUBJECTS = {"english": "English Language", "quant": "Quantitative Aptitude",
-            "reasoning": "Reasoning Ability", "computer": "Computer Knowledge", "banking": "Banking Awareness",
+            "reasoning": "Reasoning Ability", "computer": "Computer Knowledge", "banking": "Banking & General Awareness",
+            "history": "History & Culture", "polity": "Polity & Governance", "economy": "Economy (India & AP)",
+            "geography": "Geography", "science-tech": "Science & Technology",
+            "admin-psych": "Administrative & Psychological Abilities",
             "dsa": "Data Structures & Algorithms", "java": "Java",
             "python": "Python", "springboot": "Spring Boot", "react": "React", "vue": "Vue.js",
-            "ai": "Artificial Intelligence"}
+            "ai": "Artificial Intelligence", "sql": "SQL & Databases", "nodejs": "Node.js",
+            "devops": "Git & DevOps", "system-design": "System Design",
+            "javascript": "JavaScript", "typescript": "TypeScript", "os": "Operating Systems",
+            "networks": "Computer Networks"}
 LEVEL_ORDER = ["easy", "medium", "hard", "very-hard", "mixed"]
 NAMES = {
     "lcm-hcf": "LCM & HCF", "speed-time-distance": "Speed, Time & Distance", "time-work": "Time & Work",
@@ -57,6 +63,12 @@ NAMES = {
     "ai-ethics-safety": "AI Ethics & Safety", "ms-office": "MS Office", "memory-units": "Memory Units",
     "rbi": "RBI & Monetary Policy", "banking-terms": "Banking Terms", "payments": "Payment Systems",
     "data-interpretation": "Data Interpretation", "reading-comprehension": "Reading Comprehension",
+    "ict": "ICT", "ap-economy": "AP Economy", "ap-agriculture": "AP Agriculture", "ap-irrigation": "AP Irrigation",
+    "ap-industry": "AP Industry", "ap-reorganisation": "AP Reorganisation", "ap-physiography": "AP Physiography",
+    "ap-rivers": "AP Rivers", "ap-climate-soils": "AP Climate & Soils", "ap-forests-wildlife": "AP Forests & Wildlife",
+    "ap-minerals": "AP Minerals", "ap-cultural-geography": "AP Cultural Geography", "andhra-ancient": "Ancient Andhra",
+    "andhra-medieval": "Medieval Andhra", "andhra-modern": "Modern Andhra", "andhra-movement": "Andhra Movement",
+    "art-culture": "Art & Culture", "poverty-unemployment": "Poverty & Unemployment",
 }
 
 
@@ -65,11 +77,11 @@ def display_name(topic):
 
 
 def load_ga(ga_dir):
-    """Hand-written Computer Knowledge and Banking Awareness questions, published as practice questions."""
+    """Every hand-written question (Computer, Banking/General Awareness, the APPSC subjects), for the practice pools. Exam
+    quizzes use only some of them (each section needs a fixed count), so the rest join practice from here."""
     out = []
-    for subject in ("computer", "banking"):
-        path = Path(ga_dir) / f"{subject}.json"
-        for q in json.loads(path.read_text()) if path.exists() else []:
+    for subject in GA_SUBJECTS:
+        for q in load_ga_bank(subject, ga_dir):
             q = edited(subject, q)
             if q.get("hidden"):
                 continue

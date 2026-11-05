@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4db275e7bfb",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "Free memory holes are 100, 500, 200, 300 and 600 KB (in that order). Which hole does best-fit choose for a 212 KB request?",
+  "options": [
+   "300 KB",
+   "500 KB",
+   "600 KB",
+   "200 KB"
+  ],
+  "answer": 0,
+  "explanation": "Best fit picks the smallest hole that is big enough; 200 KB is too small, so 300 KB is chosen (first fit would pick 500 KB, worst fit 600 KB)."
+ },
+ {
+  "id": "q3d02637bef2",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "The convoy effect, where short processes wait behind one long CPU-bound process, is most associated with which algorithm?",
+  "options": [
+   "Round Robin",
+   "SRTF",
+   "FCFS",
+   "Multilevel feedback queue"
+  ],
+  "answer": 2,
+  "explanation": "FCFS is non-preemptive, so a long CPU burst at the head of the queue holds up every short process behind it."
+ },
+ {
+  "id": "qbc091c0218d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Under preemptive SJF (SRTF), processes arrive as P1 (t=0, burst 8), P2 (t=1, burst 4), P3 (t=2, burst 9), P4 (t=3, burst 5). What is the average waiting time?",
+  "options": [
+   "6.5 ms",
+   "5.25 ms",
+   "8 ms",
+   "7.75 ms"
+  ],
+  "answer": 0,
+  "explanation": "The schedule is P1 0-1, P2 1-5, P4 5-10, P1 10-17, P3 17-26, giving waits 9, 0, 15 and 2; (9 + 0 + 15 + 2) / 4 = 6.5 ms."
+ },
+ {
+  "id": "q6f4206a54d7",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Which of the following is NOT one of the three requirements of a correct critical-section solution?",
+  "options": [
+   "Mutual exclusion",
+   "Preemption of the process in the critical section",
+   "Progress",
+   "Bounded waiting"
+  ],
+  "answer": 1,
+  "explanation": "A correct solution must provide mutual exclusion, progress and bounded waiting; preempting the lock holder is not a requirement."
+ },
+ {
+  "id": "qcc74cba5b39",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Processes P1, P2, P3 arrive at time 0 with CPU bursts 24, 3 and 3 ms. What is the average waiting time under non-preemptive SJF?",
+  "options": [
+   "17 ms",
+   "9 ms",
+   "6 ms",
+   "3 ms"
+  ],
+  "answer": 3,
+  "explanation": "SJF runs the 3 ms jobs first, so waiting times are 0, 3 and 6; the average is (0 + 3 + 6) / 3 = 3 ms."
+ },
+ {
+  "id": "qe99ce5f0817",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "What is the purpose of a Translation Lookaside Buffer (TLB)?",
+  "options": [
+   "To cache recent page-table entries and speed up address translation",
+   "To buffer disk writes",
+   "To hold the free-frame list",
+   "To store swapped-out pages"
+  ],
+  "answer": 0,
+  "explanation": "A TLB hit gives the frame number without an extra memory access to read the page table."
+ },
+ {
+  "id": "q91eb5a5e135",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "What is dispatch latency?",
+  "options": [
+   "The time a process waits in the ready queue",
+   "The length of the time quantum",
+   "The time between I/O request and completion",
+   "The time the dispatcher takes to stop one process and start another"
+  ],
+  "answer": 3,
+  "explanation": "Dispatch latency is the dispatcher's overhead: switching context, switching to user mode and jumping to the right place in the new program."
+ },
+ {
+  "id": "q7307c94422f",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "What distinguishes a multilevel feedback queue from a plain multilevel queue scheduler?",
+  "options": [
+   "It has only one queue",
+   "Processes can move between queues based on their CPU-burst behavior",
+   "It never preempts processes",
+   "Each queue must use FCFS"
+  ],
+  "answer": 1,
+  "explanation": "In a feedback queue a process that uses too much CPU is demoted and one that waits too long can be promoted; plain multilevel queues fix each process to one queue."
+ },
+ {
+  "id": "q812b237888c",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "With 4 KB pages, logical address 8200 is in page 2, which the page table maps to frame 5. What is the physical address?",
+  "options": [
+   "8200",
+   "20488",
+   "16392",
+   "20480"
+  ],
+  "answer": 1,
+  "explanation": "8200 = 2 x 4096 + 8, so the offset is 8 and the physical address is 5 x 4096 + 8 = 20488."
+ },
+ {
+  "id": "qd23c2deddc6",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "When is a spinlock most appropriate?",
+  "options": [
+   "On a single-CPU system with long critical sections",
+   "When the lock will be held for several seconds",
+   "When the waiting thread must sleep",
+   "On a multiprocessor when the lock is held only for a very short time"
+  ],
+  "answer": 3,
+  "explanation": "Spinning avoids the cost of two context switches, which pays off only when the lock holder, running on another CPU, will release it very soon."
+ }
+]

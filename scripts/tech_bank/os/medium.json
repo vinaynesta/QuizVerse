@@ -1,0 +1,282 @@
+[
+  {
+    "topic": "cpu-scheduling",
+    "question": "Processes P1, P2, P3 arrive at time 0 in that order with CPU bursts 24, 3 and 3 ms. What is the average waiting time under FCFS?",
+    "options": ["17 ms", "3 ms", "10 ms", "5.67 ms"],
+    "answer": 0,
+    "explanation": "Waiting times are P1 = 0, P2 = 24, P3 = 27, so the average is (0 + 24 + 27) / 3 = 17 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Processes P1, P2, P3 arrive at time 0 with CPU bursts 24, 3 and 3 ms. What is the average waiting time under non-preemptive SJF?",
+    "options": ["17 ms", "3 ms", "6 ms", "9 ms"],
+    "answer": 1,
+    "explanation": "SJF runs the 3 ms jobs first, so waiting times are 0, 3 and 6; the average is (0 + 3 + 6) / 3 = 3 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Processes P1, P2, P3 arrive at time 0 in that order with bursts 24, 3 and 3 ms. With Round Robin and a 4 ms quantum, what is the average waiting time?",
+    "options": ["17 ms", "3 ms", "5.67 ms", "7.33 ms"],
+    "answer": 2,
+    "explanation": "The schedule is P1 0-4, P2 4-7, P3 7-10, then P1 10-30, so waits are P1 = 10 - 4 = 6, P2 = 4, P3 = 7; average 17 / 3 = 5.67 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Under preemptive SJF (SRTF), processes arrive as P1 (t=0, burst 8), P2 (t=1, burst 4), P3 (t=2, burst 9), P4 (t=3, burst 5). What is the average waiting time?",
+    "options": ["7.75 ms", "5.25 ms", "8 ms", "6.5 ms"],
+    "answer": 3,
+    "explanation": "The schedule is P1 0-1, P2 1-5, P4 5-10, P1 10-17, P3 17-26, giving waits 9, 0, 15 and 2; (9 + 0 + 15 + 2) / 4 = 6.5 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Which scheduling algorithm is provably optimal for minimizing average waiting time for a given set of processes?",
+    "options": ["Shortest Job First (SJF)", "First-Come, First-Served", "Round Robin", "Highest Priority First with random priorities"],
+    "answer": 0,
+    "explanation": "Moving a short job before a long one lowers the short job's wait more than it raises the long job's wait, so SJF minimizes the average; its catch is that burst lengths must be predicted."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "The convoy effect, where short processes wait behind one long CPU-bound process, is most associated with which algorithm?",
+    "options": ["Round Robin", "FCFS", "SRTF", "Multilevel feedback queue"],
+    "answer": 1,
+    "explanation": "FCFS is non-preemptive, so a long CPU burst at the head of the queue holds up every short process behind it."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Which technique prevents starvation in priority scheduling?",
+    "options": ["Reducing the time quantum", "Using FCFS within each priority", "Aging, which gradually raises the priority of long-waiting processes", "Making scheduling non-preemptive"],
+    "answer": 2,
+    "explanation": "Aging raises a waiting process's priority over time, so eventually it gets the CPU."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "If the time quantum in Round Robin is made extremely large, the algorithm behaves like:",
+    "options": ["SJF", "Priority scheduling", "Lottery scheduling", "FCFS"],
+    "answer": 3,
+    "explanation": "With a quantum longer than every burst no process is ever preempted, so processes simply run in arrival order, which is FCFS."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "What distinguishes a multilevel feedback queue from a plain multilevel queue scheduler?",
+    "options": ["Processes can move between queues based on their CPU-burst behavior", "It has only one queue", "It never preempts processes", "Each queue must use FCFS"],
+    "answer": 0,
+    "explanation": "In a feedback queue a process that uses too much CPU is demoted and one that waits too long can be promoted; plain multilevel queues fix each process to one queue."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "What is dispatch latency?",
+    "options": ["The time a process waits in the ready queue", "The time the dispatcher takes to stop one process and start another", "The time between I/O request and completion", "The length of the time quantum"],
+    "answer": 1,
+    "explanation": "Dispatch latency is the dispatcher's overhead: switching context, switching to user mode and jumping to the right place in the new program."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Which of the following is NOT one of the three requirements of a correct critical-section solution?",
+    "options": ["Mutual exclusion", "Progress", "Preemption of the process in the critical section", "Bounded waiting"],
+    "answer": 2,
+    "explanation": "A correct solution must provide mutual exclusion, progress and bounded waiting; preempting the lock holder is not a requirement."
+  },
+  {
+    "topic": "synchronization",
+    "question": "A counting semaphore controls access to a pool of 5 identical printers. What should its initial value be?",
+    "options": ["0", "1", "-5", "5"],
+    "answer": 3,
+    "explanation": "A counting semaphore starts at the number of available instances; each wait() takes one and blocks when the count reaches 0."
+  },
+  {
+    "topic": "synchronization",
+    "question": "A counting semaphore S is initialized to 10. Then 6 wait (P) and 4 signal (V) operations are performed. What is the final value of S?",
+    "options": ["8", "0", "12", "4"],
+    "answer": 0,
+    "explanation": "Each P decrements and each V increments, so S = 10 - 6 + 4 = 8 (the value never reaches 0, so nothing blocks)."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is the key conceptual difference between a mutex and a binary semaphore?",
+    "options": ["A mutex can count above 1", "A mutex has ownership: only the thread that locked it should unlock it", "A binary semaphore can only be used in kernel mode", "A mutex cannot block threads"],
+    "answer": 1,
+    "explanation": "A mutex is owned by the locking thread, while any thread can signal a binary semaphore, which also makes semaphores useful for signaling between threads."
+  },
+  {
+    "topic": "synchronization",
+    "question": "When is a spinlock most appropriate?",
+    "options": ["On a single-CPU system with long critical sections", "When the lock will be held for several seconds", "On a multiprocessor when the lock is held only for a very short time", "When the waiting thread must sleep"],
+    "answer": 2,
+    "explanation": "Spinning avoids the cost of two context switches, which pays off only when the lock holder, running on another CPU, will release it very soon."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Peterson's solution to the critical-section problem uses which shared variables?",
+    "options": ["A single semaphore", "A monitor and a condition variable", "A test_and_set lock", "A boolean flag array and an integer turn"],
+    "answer": 3,
+    "explanation": "In Peterson's two-process solution, flag[i] signals intent to enter and turn decides who goes first when both want in."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What property of the test_and_set() hardware instruction makes it usable for building locks?",
+    "options": ["It executes atomically", "It runs only in user mode", "It disables all interrupts permanently", "It is faster than a regular load"],
+    "answer": 0,
+    "explanation": "test_and_set reads the old value and sets the word to true as one indivisible step, so only one thread can see false and take the lock."
+  },
+  {
+    "topic": "synchronization",
+    "question": "In the semaphore-based bounded-buffer (producer-consumer) solution with n slots, what are the initial values of empty, full and mutex?",
+    "options": ["empty = 0, full = n, mutex = 1", "empty = n, full = 0, mutex = 1", "empty = n, full = n, mutex = 0", "empty = 1, full = 1, mutex = n"],
+    "answer": 1,
+    "explanation": "Initially all n slots are empty and none are full, and mutex = 1 allows one process at a time to touch the buffer."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What guarantee does a monitor provide?",
+    "options": ["Deadlock can never occur", "All threads run in parallel inside it", "Only one thread can be active inside the monitor at a time", "Condition variables keep a count of signals"],
+    "answer": 2,
+    "explanation": "A monitor enforces mutual exclusion on its procedures automatically; condition variables then let threads wait inside it for specific conditions."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What happens when signal() is called on a monitor condition variable that has no waiting threads?",
+    "options": ["The signal is saved for the next thread that waits", "The calling thread blocks", "An exception is raised", "Nothing; the signal has no effect"],
+    "answer": 3,
+    "explanation": "Unlike a semaphore's signal(), which always increments the count, a condition variable's signal() is lost if nobody is waiting."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Which of the following is NOT one of the four necessary (Coffman) conditions for deadlock?",
+    "options": ["Starvation", "Mutual exclusion", "Hold and wait", "No preemption"],
+    "answer": 0,
+    "explanation": "The four conditions are mutual exclusion, hold and wait, no preemption and circular wait; starvation is a separate problem."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Imposing a total ordering on resource types and requiring processes to request them in increasing order prevents which deadlock condition?",
+    "options": ["Mutual exclusion", "Circular wait", "No preemption", "Hold and wait"],
+    "answer": 1,
+    "explanation": "If every process acquires resources in the same global order, no cycle of waiting processes can form."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "In a resource-allocation graph where every resource type has exactly one instance, a cycle means:",
+    "options": ["Deadlock may or may not exist", "The system is in a safe state", "A deadlock exists", "Starvation has occurred but not deadlock"],
+    "answer": 2,
+    "explanation": "With single-instance resources a cycle is both necessary and sufficient for deadlock."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "In a resource-allocation graph where some resource types have multiple instances, a cycle means:",
+    "options": ["A deadlock definitely exists", "The system is definitely safe", "Every process in the cycle has terminated", "A deadlock may exist, but not necessarily"],
+    "answer": 3,
+    "explanation": "With multiple instances, a process outside the cycle may release an instance and break it, so a cycle is necessary but not sufficient."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Requiring each process to request and be allocated all its resources before it begins executing prevents which condition?",
+    "options": ["Hold and wait", "Mutual exclusion", "Circular wait", "No preemption"],
+    "answer": 0,
+    "explanation": "A process can never hold some resources while waiting for others, though this lowers resource utilization and can cause starvation."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "In deadlock avoidance, when is a system in a safe state?",
+    "options": ["When no process is currently waiting", "When there exists some ordering of processes in which each can obtain its maximum need and finish", "When all resources are free", "When there is no cycle in the wait-for graph at the moment"],
+    "answer": 1,
+    "explanation": "A safe state has at least one safe sequence where each process's remaining needs can be met by available resources plus those released by earlier processes."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Which statement about unsafe states is correct?",
+    "options": ["Every unsafe state is a deadlock", "An unsafe state can never lead to deadlock", "An unsafe state may lead to deadlock, but is not necessarily deadlocked", "Unsafe states only occur with single-instance resources"],
+    "answer": 2,
+    "explanation": "Deadlocked states are a subset of unsafe states; in an unsafe state the OS can no longer guarantee that deadlock will be avoided."
+  },
+  {
+    "topic": "memory-management",
+    "question": "With 4 KB pages, logical address 8200 is in page 2, which the page table maps to frame 5. What is the physical address?",
+    "options": ["8200", "20480", "16392", "20488"],
+    "answer": 3,
+    "explanation": "8200 = 2 x 4096 + 8, so the offset is 8 and the physical address is 5 x 4096 + 8 = 20488."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A system has 32-bit logical addresses and 4 KB pages. How many entries does a single-level page table have?",
+    "options": ["2^20", "2^12", "2^32", "2^22"],
+    "answer": 0,
+    "explanation": "A 4 KB page needs a 12-bit offset, leaving 32 - 12 = 20 bits for the page number, so 2^20 entries."
+  },
+  {
+    "topic": "memory-management",
+    "question": "With a page size of 1 KB, how many bits of a logical address are used for the page offset?",
+    "options": ["8", "10", "12", "16"],
+    "answer": 1,
+    "explanation": "1 KB = 2^10 bytes, so 10 offset bits are needed to address every byte within a page."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Which type of fragmentation does paging eliminate?",
+    "options": ["Internal fragmentation", "Both internal and external fragmentation", "External fragmentation", "Neither"],
+    "answer": 2,
+    "explanation": "Any free frame can hold any page, so there are no unusable holes between allocations, though the last page of a process may still waste space internally."
+  },
+  {
+    "topic": "memory-management",
+    "question": "What is the purpose of a Translation Lookaside Buffer (TLB)?",
+    "options": ["To store swapped-out pages", "To buffer disk writes", "To hold the free-frame list", "To cache recent page-table entries and speed up address translation"],
+    "answer": 3,
+    "explanation": "A TLB hit gives the frame number without an extra memory access to read the page table."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Under segmentation, segment 2 has base 4300 and limit 400. What physical address does logical address (segment 2, offset 53) map to?",
+    "options": ["4353", "453", "4700", "Trap: addressing error"],
+    "answer": 0,
+    "explanation": "Offset 53 is less than limit 400, so it is valid and maps to base + offset = 4300 + 53 = 4353."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Free memory holes are 100, 500, 200, 300 and 600 KB (in that order). Which hole does best-fit choose for a 212 KB request?",
+    "options": ["500 KB", "300 KB", "600 KB", "200 KB"],
+    "answer": 1,
+    "explanation": "Best fit picks the smallest hole that is big enough; 200 KB is too small, so 300 KB is chosen (first fit would pick 500 KB, worst fit 600 KB)."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What is the purpose of the dirty (modify) bit in a page-table entry?",
+    "options": ["To mark pages that are invalid", "To track how recently a page was used", "To avoid writing a victim page back to disk if it was not modified", "To mark pages shared between processes"],
+    "answer": 2,
+    "explanation": "If the dirty bit is clear, the disk copy is still current, so the victim frame can be reused without a write-back, roughly halving page-fault I/O."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does FIFO replacement cause?",
+    "options": ["9", "12", "20", "15"],
+    "answer": 3,
+    "explanation": "Simulating FIFO gives 15 faults: 3 cold misses plus 12 more, because FIFO keeps evicting pages like 0 that are reused soon."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does LRU replacement cause?",
+    "options": ["12", "9", "15", "10"],
+    "answer": 0,
+    "explanation": "Simulating LRU, which evicts the least recently used page, gives 12 faults, between optimal (9) and FIFO (15) on this string."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "In pure demand paging, when is a page brought into memory?",
+    "options": ["All pages are loaded when the process starts", "Only when it is first referenced and causes a page fault", "When the process is swapped out", "At fixed time intervals"],
+    "answer": 1,
+    "explanation": "A lazy swapper never loads a page until it is needed, so a process starts with no pages resident."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Which page-replacement policy replaces the page that will not be used for the longest period of time in the future?",
+    "options": ["LRU", "FIFO", "Optimal (OPT/MIN)", "Second-chance"],
+    "answer": 2,
+    "explanation": "OPT gives the lowest possible fault rate but needs future knowledge, so it serves mainly as a benchmark."
+  },
+  {
+    "topic": "io-systems",
+    "question": "The disk head is at cylinder 53 and the queue holds 98, 183, 37, 122, 14, 124, 65, 67. What is the total head movement under FCFS disk scheduling?",
+    "options": ["236 cylinders", "208 cylinders", "331 cylinders", "640 cylinders"],
+    "answer": 3,
+    "explanation": "Summing |differences| in order: 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640 cylinders."
+  }
+]

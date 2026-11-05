@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q0cce7cc896c",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What is a key tradeoff of blue-green deployment compared with a rolling update?",
+  "options": [
+   "It needs no extra capacity",
+   "It has no rollback path",
+   "It needs roughly double capacity during the switch, but rollback is a fast traffic switch back",
+   "It cannot be used with load balancers"
+  ],
+  "answer": 2,
+  "explanation": "Running two full environments costs extra capacity, but reverting is just repointing traffic to the old environment."
+ },
+ {
+  "id": "q171ee7db5ab",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What does a canary deployment do?",
+  "options": [
+   "Routes a small share of traffic to the new version and increases it while metrics stay healthy",
+   "Deploys to all regions at once",
+   "Runs the new version only in staging",
+   "Keeps the old version off the network permanently"
+  ],
+  "answer": 0,
+  "explanation": "A canary exposes a small slice of real traffic to the new version and expands the rollout if error rates and latency look good."
+ },
+ {
+  "id": "q195d697ad89",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What does the Recreate strategy in a Kubernetes Deployment do?",
+  "options": [
+   "Creates new pods before deleting old ones",
+   "Shifts traffic gradually by percentage",
+   "Runs both versions permanently",
+   "Terminates all old pods before creating new ones, causing downtime"
+  ],
+  "answer": 3,
+  "explanation": "Recreate avoids running two versions at once, at the cost of a gap in availability."
+ },
+ {
+  "id": "q328a8cf8581",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "A rolling update runs old and new versions at the same time. What is the main risk this creates?",
+  "options": [
+   "No rollback is possible",
+   "Clients may hit both versions, so APIs and database schemas must be backward compatible",
+   "Traffic cannot be load balanced",
+   "Downtime for all users"
+  ],
+  "answer": 1,
+  "explanation": "During the rollout, requests can reach either version, so changes must be compatible with the version before them."
+ },
+ {
+  "id": "q40347613c86",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What is traffic mirroring (shadowing) used for when releasing a new version?",
+  "options": [
+   "Keeping a full copy of the database in another region",
+   "Sending all users to the new version at once",
+   "Copying live requests to the new version and discarding its responses, to test it under real load without affecting users",
+   "Rolling back by replaying old requests"
+  ],
+  "answer": 2,
+  "explanation": "Users still get responses from the current version, so problems in the shadow version have no user impact."
+ },
+ {
+  "id": "q88bdd93db0c",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "Why are blue-green and canary releases often paired with feature flags?",
+  "options": [
+   "Feature flags replace the need for tests",
+   "Feature flags compile the code faster",
+   "Feature flags remove the need for a load balancer",
+   "Feature flags separate code deployment from feature release, so code can ship dark and be enabled later"
+  ],
+  "answer": 3,
+  "explanation": "Feature flags let you deploy code safely and turn a feature on, or off, without another deployment."
+ },
+ {
+  "id": "qcbbca26e76a",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "In a Kubernetes Deployment's rolling update strategy, what do maxSurge and maxUnavailable control?",
+  "options": [
+   "How many pods can be created above the desired count, and how many can be unavailable, during the update",
+   "The number of replicas per node",
+   "The CPU limits of each pod",
+   "The timeout for probes"
+  ],
+  "answer": 0,
+  "explanation": "maxSurge sets the extra pods allowed above replicas, and maxUnavailable sets how many can be down during the rollout."
+ },
+ {
+  "id": "qd083114a41f",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "In a blue-green deployment, what happens at cutover?",
+  "options": [
+   "Pods are replaced one at a time",
+   "Traffic is switched from the blue environment to the fully running green environment",
+   "The blue environment is deleted before the green one starts",
+   "The database schema is rolled back"
+  ],
+  "answer": 1,
+  "explanation": "Both environments run side by side, and the router or load balancer switches traffic to green in one step."
+ },
+ {
+  "id": "qf42ff949b4c",
+  "subject": "devops",
+  "topic": "deployment-strategies",
+  "level": "hard",
+  "question": "What is the expand-and-contract (parallel change) approach to database migrations during zero-downtime deploys?",
+  "options": [
+   "Lock the database while every service is upgraded at once",
+   "Restore a backup into a new schema on each release",
+   "Add the new schema alongside the old one, migrate readers and writers, then remove the old schema in a later release",
+   "Run migrations only during rollback"
+  ],
+  "answer": 2,
+  "explanation": "Each step stays compatible with both old and new application versions running at the same time."
+ }
+]

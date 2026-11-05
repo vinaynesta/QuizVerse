@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q79a6f93f5ff",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "medium",
+  "question": "A table (order_id, product_id, product_name, qty) has key (order_id, product_id), and product_name depends only on product_id. What is the lowest normal form this table fails to satisfy?",
+  "options": [
+   "1NF",
+   "4NF",
+   "2NF",
+   "6NF"
+  ],
+  "answer": 2,
+  "explanation": "The table is in 1NF but has a partial dependency on part of the composite key, which violates 2NF."
+ },
+ {
+  "id": "q8e46219697c",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "Which clause divides rows into independent groups inside a window function?",
+  "options": [
+   "GROUP BY",
+   "HAVING",
+   "PARTITION BY",
+   "DISTINCT"
+  ],
+  "answer": 2,
+  "explanation": "PARTITION BY defines the groups over which the window function is computed, without collapsing rows the way GROUP BY does."
+ },
+ {
+  "id": "q697a657567c",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "Under READ COMMITTED isolation in PostgreSQL, which anomaly can occur?",
+  "options": [
+   "Dirty read",
+   "Non-repeatable read",
+   "No anomaly is possible",
+   "Only write skew"
+  ],
+  "answer": 1,
+  "explanation": "READ COMMITTED prevents dirty reads, but two reads of the same row in one transaction can return different committed values."
+ },
+ {
+  "id": "q75922c717e5",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What does SAVEPOINT allow inside a transaction?",
+  "options": [
+   "Rolling back to a named point without aborting the whole transaction",
+   "Running a second transaction in parallel on the same connection",
+   "Automatically retrying deadlocked statements",
+   "Committing part of the transaction early while keeping the rest open"
+  ],
+  "answer": 0,
+  "explanation": "ROLLBACK TO SAVEPOINT undoes work since the savepoint and keeps the surrounding transaction active."
+ },
+ {
+  "id": "qe4c7d5a95f7",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "medium",
+  "question": "In PostgreSQL, with SUM(amount) OVER (ORDER BY day) and no frame clause, which rows contribute to the sum for each row?",
+  "options": [
+   "Only the current row",
+   "All rows in the table",
+   "All preceding rows, including peers that tie with the current row on day",
+   "Only the previous row and the current row"
+  ],
+  "answer": 2,
+  "explanation": "The default frame is RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW, which includes all rows whose ORDER BY value equals the current row's value."
+ },
+ {
+  "id": "qcff0ce0cc8c",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "medium",
+  "question": "Why might WHERE LOWER(email) = 'a@b.com' not use a plain B-tree index on email?",
+  "options": [
+   "B-tree indexes cannot store text",
+   "The function is applied to the column, so the index on the raw column cannot be searched directly",
+   "LOWER drops the index automatically at runtime",
+   "LOWER is not allowed inside a WHERE clause"
+  ],
+  "answer": 1,
+  "explanation": "Wrapping an indexed column in a function usually prevents a plain index from being used. A functional index on LOWER(email) solves this."
+ },
+ {
+  "id": "qbcc4cd668f8",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "In PostgreSQL with the C collation, which LIKE pattern can use a B-tree index on a text column?",
+  "options": [
+   "'smith%'",
+   "'_mith'",
+   "'%smith'",
+   "'%mit%'"
+  ],
+  "answer": 0,
+  "explanation": "A pattern with a fixed prefix can be turned into a range search on the index. Patterns that begin with a wildcard cannot."
+ },
+ {
+  "id": "q8e725f068e8",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is the default transaction isolation level in PostgreSQL?",
+  "options": [
+   "SERIALIZABLE",
+   "READ UNCOMMITTED",
+   "REPEATABLE READ",
+   "READ COMMITTED"
+  ],
+  "answer": 3,
+  "explanation": "PostgreSQL defaults to READ COMMITTED. Its READ UNCOMMITTED level behaves the same as READ COMMITTED."
+ },
+ {
+  "id": "q01b0c555281",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "Which predicate is generally safer than NOT IN when the subquery column can contain NULL?",
+  "options": [
+   "NOT LIKE",
+   "NOT EXISTS",
+   "NOT BETWEEN",
+   "NOT UNIQUE"
+  ],
+  "answer": 1,
+  "explanation": "NOT IN returns no rows if the list contains NULL, because the comparison becomes unknown. NOT EXISTS is not affected by NULL in the subquery."
+ },
+ {
+  "id": "q89311f3d081",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "In a correlated subquery, how often is the inner query typically evaluated?",
+  "options": [
+   "Once, before the outer query starts",
+   "Once for each row of the outer query",
+   "Once per distinct value in the result",
+   "Only when the outer query returns no rows"
+  ],
+  "answer": 1,
+  "explanation": "Because the inner query references outer columns, it must be re-evaluated for each outer row, unless the optimizer rewrites it as a join."
+ }
+]

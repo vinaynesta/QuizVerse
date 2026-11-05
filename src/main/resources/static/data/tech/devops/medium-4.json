@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf13b0573576",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "By default, what does depends_on in a Compose file guarantee?",
+  "options": [
+   "Containers share the same filesystem",
+   "The dependency is healthy before starting",
+   "Dependencies are scaled to one replica",
+   "Start order only; it does not wait for the service to be ready"
+  ],
+  "answer": 3,
+  "explanation": "Without a condition, depends_on only controls startup order; readiness requires a healthcheck condition."
+ },
+ {
+  "id": "qd057f461c5b",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "In a typical CI pipeline, which stage normally runs first on each commit?",
+  "options": [
+   "Build and test on each commit",
+   "Monitor",
+   "Deploy to production",
+   "Approve release"
+  ],
+  "answer": 0,
+  "explanation": "Pipelines start by building and testing the commit so that broken changes are caught before anything is deployed."
+ },
+ {
+  "id": "qe6ca050aeb0",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "medium",
+  "question": "Which Compose setting makes a service wait until another service passes its healthcheck?",
+  "options": [
+   "links: [db]",
+   "network_mode: host",
+   "restart: always",
+   "depends_on with condition: service_healthy"
+  ],
+  "answer": 3,
+  "explanation": "depends_on with condition: service_healthy delays the dependent service until the dependency's healthcheck reports healthy."
+ },
+ {
+  "id": "q4f691bb884a",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "What does idempotent mean for an infrastructure-as-code run?",
+  "options": [
+   "It always deletes and recreates resources",
+   "Each run creates new resources with new names",
+   "It can only be run once per environment",
+   "Running it again with the same configuration makes no further changes once the desired state is reached"
+  ],
+  "answer": 3,
+  "explanation": "An idempotent apply converges on the declared state, so repeating it with no config changes results in no changes."
+ },
+ {
+  "id": "qded84e65d6e",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "medium",
+  "question": "Why copy package.json and run npm install before copying the rest of the application source in a Node Dockerfile?",
+  "options": [
+   "Dependencies are reinstalled on every source change",
+   "The dependency layer can be cached until package.json changes",
+   "Source files are excluded from the image",
+   "It makes the final image smaller"
+  ],
+  "answer": 1,
+  "explanation": "Source edits invalidate only the layers after the COPY of the source, so the slow npm install layer stays cached."
+ },
+ {
+  "id": "q2e9c125ca68",
+  "subject": "devops",
+  "topic": "monitoring",
+  "level": "medium",
+  "question": "Which Prometheus metric type buckets observations such as request latency so percentiles can be estimated with histogram_quantile?",
+  "options": [
+   "Histogram",
+   "Counter",
+   "Gauge",
+   "Info"
+  ],
+  "answer": 0,
+  "explanation": "Histograms store cumulative bucket counts, and histogram_quantile estimates quantiles from them."
+ },
+ {
+  "id": "q2504459c237",
+  "subject": "devops",
+  "topic": "infrastructure-as-code",
+  "level": "medium",
+  "question": "What does terraform plan do?",
+  "options": [
+   "Applies changes to the real infrastructure",
+   "Shows the changes Terraform would make to reach the desired configuration, without applying them",
+   "Destroys all resources in the state file",
+   "Formats the .tf files"
+  ],
+  "answer": 1,
+  "explanation": "terraform plan computes and displays an execution plan; terraform apply is what makes the changes."
+ },
+ {
+  "id": "qc7872e5f15a",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "Which object stores non-confidential configuration data as key-value pairs that pods can consume?",
+  "options": [
+   "ConfigMap",
+   "Secret",
+   "Ingress",
+   "StatefulSet"
+  ],
+  "answer": 0,
+  "explanation": "ConfigMaps hold plain configuration data; sensitive values belong in Secrets."
+ },
+ {
+  "id": "q0bf03cd3644",
+  "subject": "devops",
+  "topic": "ci-cd",
+  "level": "medium",
+  "question": "What is continuous delivery?",
+  "options": [
+   "Tests run only once per night",
+   "Every change is deployed to production automatically with no gate",
+   "Deployments happen only on weekends",
+   "Every change that passes the pipeline is kept releasable, with production deployment usually behind a manual approval"
+  ],
+  "answer": 3,
+  "explanation": "Continuous delivery keeps software in a releasable state at all times; continuous deployment removes the manual approval step."
+ },
+ {
+  "id": "qdbbdbcf2090",
+  "subject": "devops",
+  "topic": "kubernetes",
+  "level": "medium",
+  "question": "What is the purpose of a PersistentVolumeClaim?",
+  "options": [
+   "A ConfigMap of secrets",
+   "A node-level log file",
+   "A request for storage that binds to a PersistentVolume",
+   "A network policy"
+  ],
+  "answer": 2,
+  "explanation": "A PVC asks for storage with a size and access mode, and Kubernetes binds it to a matching PersistentVolume."
+ }
+]

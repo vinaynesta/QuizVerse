@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q227b8460e2d",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "How do you explicitly supply a type argument when calling `function parse<T>(s: string): T`?",
+  "options": [
+   "parse[User](s)",
+   "parse(s)<User>",
+   "parse(s) as<User>",
+   "parse<User>(s)"
+  ],
+  "answer": 3,
+  "explanation": "Explicit type arguments go in angle brackets between the function name and the argument list."
+ },
+ {
+  "id": "qc66e06d359b",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Why is `function first<T>(arr: T[]): T` better than `function first(arr: any[]): any`?",
+  "options": [
+   "It preserves the relationship between the input element type and the return type",
+   "It runs faster at runtime",
+   "It prevents passing empty arrays",
+   "It forces callers to pass explicit type arguments"
+  ],
+  "answer": 0,
+  "explanation": "Generics carry the caller's type through, so first([1, 2]) returns number instead of any."
+ },
+ {
+  "id": "q17d99830f9a",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `NonNullable<string | null | undefined>`?",
+  "options": [
+   "string | undefined",
+   "string",
+   "string | null",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "NonNullable removes null and undefined from a type."
+ },
+ {
+  "id": "qe7985ffd9da",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Record<string, number>` describe?",
+  "options": [
+   "An array that alternates strings and numbers",
+   "A tuple of a string and a number",
+   "An object whose keys are strings and whose values are numbers",
+   "A Map instance from string to number"
+  ],
+  "answer": 2,
+  "explanation": "Record<K, V> builds an object type with keys of type K and values of type V."
+ },
+ {
+  "id": "q5d35925ed5a",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What happens with `new Shape()` when `Shape` is declared as `abstract class Shape {}`?",
+  "options": [
+   "It instantiates the first subclass found",
+   "It works but warns at runtime",
+   "A compile error, because abstract classes cannot be instantiated",
+   "It creates an instance with no methods"
+  ],
+  "answer": 2,
+  "explanation": "Abstract classes are meant to be extended; only concrete subclasses can be instantiated."
+ },
+ {
+  "id": "q49dfd88e949",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "Given `class Counter { static count = 0; }`, how is count accessed?",
+  "options": [
+   "Counter.count",
+   "Counter.prototype.count",
+   "new Counter().count",
+   "this.count from outside the class"
+  ],
+  "answer": 0,
+  "explanation": "Static members belong to the class constructor itself, not to instances."
+ },
+ {
+  "id": "q6144752c464",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "When `K extends keyof T`, what does the type `T[K]` represent?",
+  "options": [
+   "The key names of T as strings",
+   "An array of T with length K",
+   "A tuple of T and K",
+   "The type of the property K on T"
+  ],
+  "answer": 3,
+  "explanation": "T[K] is an indexed access type that looks up property types."
+ },
+ {
+  "id": "qfcde867284c",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "Inside `catch (err: unknown) { if (err instanceof Error) { /* here */ } }`, what is err's type at `here`?",
+  "options": [
+   "Error",
+   "any",
+   "Error | unknown",
+   "unknown"
+  ],
+  "answer": 0,
+  "explanation": "instanceof narrows to the class's instance type."
+ },
+ {
+  "id": "q2f91720926d",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "What does `if (\"swim\" in animal)` do when `animal: Fish | Bird` and only Fish has swim?",
+  "options": [
+   "Narrows animal to Bird inside the block",
+   "Causes a compile error because in is not allowed on unions",
+   "Narrows animal to Fish inside the block",
+   "Has no effect on the type"
+  ],
+  "answer": 2,
+  "explanation": "The in operator narrows to union members that declare the property."
+ },
+ {
+  "id": "qcb7ac6e74ee",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "Given `const config = { port: 80, host: \"x\" };`, what does `type C = typeof config;` produce?",
+  "options": [
+   "{ port: 80; host: \"x\" }",
+   "\"object\"",
+   "object",
+   "{ port: number; host: string }"
+  ],
+  "answer": 3,
+  "explanation": "typeof in a type position captures the inferred type of a value, with widened literals for mutable properties."
+ }
+]

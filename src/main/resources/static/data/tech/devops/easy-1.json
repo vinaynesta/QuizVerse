@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8fc0a819317",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "What is a Docker image?",
+  "options": [
+   "A read-only, layered template used to create containers",
+   "A virtual machine with its own kernel",
+   "A Docker network definition",
+   "A running process on the host"
+  ],
+  "answer": 0,
+  "explanation": "An image is a stack of read-only filesystem layers plus metadata; containers are created from it."
+ },
+ {
+  "id": "q46391534fe3",
+  "subject": "devops",
+  "topic": "docker-volumes",
+  "level": "easy",
+  "question": "Which mechanism stores container data so that it survives after the container is removed?",
+  "options": [
+   "The container's writable layer",
+   "A Docker volume",
+   "An environment variable",
+   "The /tmp directory"
+  ],
+  "answer": 1,
+  "explanation": "Volumes live outside the container's writable layer, which is deleted along with the container."
+ },
+ {
+  "id": "q90d7523aa06",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command builds an image from the Dockerfile in the current directory and tags it myapp:1.0?",
+  "options": [
+   "docker make -t myapp:1.0 .",
+   "docker image create myapp:1.0 .",
+   "docker run -t myapp:1.0 .",
+   "docker build -t myapp:1.0 ."
+  ],
+  "answer": 3,
+  "explanation": "docker build -t sets the image name and tag, and the trailing dot is the build context."
+ },
+ {
+  "id": "qc15a3912992",
+  "subject": "devops",
+  "topic": "docker-volumes",
+  "level": "easy",
+  "question": "Which command lists the Docker volumes on the host?",
+  "options": [
+   "docker volumes list",
+   "docker vol show",
+   "docker volume ls",
+   "docker ls volumes"
+  ],
+  "answer": 2,
+  "explanation": "docker volume ls (or docker volume list) shows the named volumes known to the Docker daemon."
+ },
+ {
+  "id": "q0a92389af2d",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command stages a file so that it is included in the next commit?",
+  "options": [
+   "git add <file>",
+   "git commit <file>",
+   "git push <file>",
+   "git track <file>"
+  ],
+  "answer": 0,
+  "explanation": "git add moves changes from the working tree into the staging area (index)."
+ },
+ {
+  "id": "q63b93a24461",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "Which command stops a running container gracefully by sending SIGTERM and then SIGKILL after a timeout?",
+  "options": [
+   "docker stop",
+   "docker kill",
+   "docker pause",
+   "docker halt"
+  ],
+  "answer": 0,
+  "explanation": "docker stop sends SIGTERM, waits a grace period (10 seconds by default), then sends SIGKILL."
+ },
+ {
+  "id": "q46a377b4674",
+  "subject": "devops",
+  "topic": "docker-networking",
+  "level": "easy",
+  "question": "By default, which network driver does a container attach to when started without a --network flag?",
+  "options": [
+   "host",
+   "none",
+   "bridge",
+   "overlay"
+  ],
+  "answer": 2,
+  "explanation": "Containers attach to the default bridge network unless you choose another network."
+ },
+ {
+  "id": "q00423585e9c",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which command downloads an image from a registry without starting a container?",
+  "options": [
+   "docker pull",
+   "docker run",
+   "docker fetch",
+   "docker get"
+  ],
+  "answer": 0,
+  "explanation": "docker pull downloads an image from a registry; docker run would pull it implicitly and also start a container."
+ },
+ {
+  "id": "qbc200d54129",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "What is the default name Git gives to the remote created by git clone?",
+  "options": [
+   "upstream",
+   "origin",
+   "remote",
+   "main"
+  ],
+  "answer": 1,
+  "explanation": "git clone names the source remote origin unless you pass a different name with --origin."
+ },
+ {
+  "id": "qf294886a805",
+  "subject": "devops",
+  "topic": "docker-compose",
+  "level": "easy",
+  "question": "Which command stops and removes the containers and default network created by docker compose up?",
+  "options": [
+   "docker compose down",
+   "docker compose stop",
+   "docker compose rm --all",
+   "docker compose kill"
+  ],
+  "answer": 0,
+  "explanation": "docker compose down stops and removes the project's containers and networks; stop only pauses them."
+ }
+]

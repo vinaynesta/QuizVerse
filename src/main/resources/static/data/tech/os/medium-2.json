@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa0fdc05435d",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Peterson's solution to the critical-section problem uses which shared variables?",
+  "options": [
+   "A single semaphore",
+   "A boolean flag array and an integer turn",
+   "A test_and_set lock",
+   "A monitor and a condition variable"
+  ],
+  "answer": 1,
+  "explanation": "In Peterson's two-process solution, flag[i] signals intent to enter and turn decides who goes first when both want in."
+ },
+ {
+  "id": "qbd24dc7dc58",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "medium",
+  "question": "The disk head is at cylinder 53 and the queue holds 98, 183, 37, 122, 14, 124, 65, 67. What is the total head movement under FCFS disk scheduling?",
+  "options": [
+   "640 cylinders",
+   "208 cylinders",
+   "331 cylinders",
+   "236 cylinders"
+  ],
+  "answer": 0,
+  "explanation": "Summing |differences| in order: 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640 cylinders."
+ },
+ {
+  "id": "q1f06b91e35d",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Which scheduling algorithm is provably optimal for minimizing average waiting time for a given set of processes?",
+  "options": [
+   "Round Robin",
+   "First-Come, First-Served",
+   "Shortest Job First (SJF)",
+   "Highest Priority First with random priorities"
+  ],
+  "answer": 2,
+  "explanation": "Moving a short job before a long one lowers the short job's wait more than it raises the long job's wait, so SJF minimizes the average; its catch is that burst lengths must be predicted."
+ },
+ {
+  "id": "qad2374acb09",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "With a page size of 1 KB, how many bits of a logical address are used for the page offset?",
+  "options": [
+   "10",
+   "8",
+   "12",
+   "16"
+  ],
+  "answer": 0,
+  "explanation": "1 KB = 2^10 bytes, so 10 offset bits are needed to address every byte within a page."
+ },
+ {
+  "id": "q88bd05936d4",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does FIFO replacement cause?",
+  "options": [
+   "15",
+   "12",
+   "20",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "Simulating FIFO gives 15 faults: 3 cold misses plus 12 more, because FIFO keeps evicting pages like 0 that are reused soon."
+ },
+ {
+  "id": "qffe435c5564",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "What is the purpose of the dirty (modify) bit in a page-table entry?",
+  "options": [
+   "To avoid writing a victim page back to disk if it was not modified",
+   "To track how recently a page was used",
+   "To mark pages that are invalid",
+   "To mark pages shared between processes"
+  ],
+  "answer": 0,
+  "explanation": "If the dirty bit is clear, the disk copy is still current, so the victim frame can be reused without a write-back, roughly halving page-fault I/O."
+ },
+ {
+  "id": "qb560a5aace4",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What is the key conceptual difference between a mutex and a binary semaphore?",
+  "options": [
+   "A mutex can count above 1",
+   "A binary semaphore can only be used in kernel mode",
+   "A mutex has ownership: only the thread that locked it should unlock it",
+   "A mutex cannot block threads"
+  ],
+  "answer": 2,
+  "explanation": "A mutex is owned by the locking thread, while any thread can signal a binary semaphore, which also makes semaphores useful for signaling between threads."
+ },
+ {
+  "id": "q20069afd62a",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "If the time quantum in Round Robin is made extremely large, the algorithm behaves like:",
+  "options": [
+   "SJF",
+   "Priority scheduling",
+   "Lottery scheduling",
+   "FCFS"
+  ],
+  "answer": 3,
+  "explanation": "With a quantum longer than every burst no process is ever preempted, so processes simply run in arrival order, which is FCFS."
+ },
+ {
+  "id": "qf103e2c89af",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "In deadlock avoidance, when is a system in a safe state?",
+  "options": [
+   "When there exists some ordering of processes in which each can obtain its maximum need and finish",
+   "When no process is currently waiting",
+   "When all resources are free",
+   "When there is no cycle in the wait-for graph at the moment"
+  ],
+  "answer": 0,
+  "explanation": "A safe state has at least one safe sequence where each process's remaining needs can be met by available resources plus those released by earlier processes."
+ },
+ {
+  "id": "q5c43595fece",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Processes P1, P2, P3 arrive at time 0 in that order with CPU bursts 24, 3 and 3 ms. What is the average waiting time under FCFS?",
+  "options": [
+   "5.67 ms",
+   "3 ms",
+   "10 ms",
+   "17 ms"
+  ],
+  "answer": 3,
+  "explanation": "Waiting times are P1 = 0, P2 = 24, P3 = 27, so the average is (0 + 24 + 27) / 3 = 17 ms."
+ }
+]

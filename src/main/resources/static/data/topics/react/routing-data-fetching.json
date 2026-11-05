@@ -60,6 +60,36 @@
   "explanation": "For a route like /users/:id, useParams returns an object such as { id: '42' }."
  },
  {
+  "id": "q96ed8c0d7f5",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "Which browser API is most commonly used for simple HTTP requests in React apps without extra libraries?",
+  "options": [
+   "XMLHttpRequestUpload",
+   "fetch",
+   "WebSocket only",
+   "localStorage"
+  ],
+  "answer": 1,
+  "explanation": "fetch is built into browsers and returns a promise for the response."
+ },
+ {
+  "id": "q9f01511f971",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "easy",
+  "question": "In React Router v6 and later, which component replaces Switch for grouping route definitions?",
+  "options": [
+   "Router",
+   "Routes",
+   "Switcher",
+   "RouteGroup"
+  ],
+  "answer": 1,
+  "explanation": "v6 introduced <Routes>, which picks the best-matching <Route> among its children."
+ },
+ {
   "id": "q211c651d98d",
   "subject": "react",
   "topic": "routing-data-fetching",
@@ -120,6 +150,21 @@
   "explanation": "Nested routes render inside the parent's Outlet, which enables shared layouts."
  },
  {
+  "id": "q53b4b6320fe",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "medium",
+  "question": "In React Router v6+, how do you declare a route that matches any URL not matched by other routes?",
+  "options": [
+   "<Route default element={<NotFound />} />",
+   "<Route exact={false} />",
+   "<Route path=\"404\" />",
+   "<Route path=\"*\" element={<NotFound />} />"
+  ],
+  "answer": 3,
+  "explanation": "A path of * is a splat route that matches anything, and more specific routes still rank higher."
+ },
+ {
   "id": "q17808c080ba",
   "subject": "react",
   "topic": "routing-data-fetching",
@@ -163,6 +208,36 @@
   ],
   "answer": 1,
   "explanation": "Promises should be cached or created outside render, such as in a Server Component or a data library."
+ },
+ {
+  "id": "qa318c351096",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "What happens when a promise read with use() rejects?",
+  "options": [
+   "The nearest error boundary catches it and shows its fallback",
+   "use() returns undefined",
+   "Suspense keeps showing the fallback forever",
+   "The rejection is silently ignored"
+  ],
+  "answer": 0,
+  "explanation": "A rejected promise read with use() throws during render, which an error boundary can catch."
+ },
+ {
+  "id": "qbad194f3959",
+  "subject": "react",
+  "topic": "routing-data-fetching",
+  "level": "hard",
+  "question": "Why does nesting Suspense boundaries help a page that loads several independent data sources?",
+  "options": [
+   "It disables waterfalls in effects",
+   "Nested boundaries run fetches in parallel automatically",
+   "React requires one boundary per component",
+   "Each boundary can reveal its content as its data arrives instead of waiting for everything"
+  ],
+  "answer": 3,
+  "explanation": "Suspense shows the closest boundary's fallback, so finer-grained boundaries allow progressive reveal."
  },
  {
   "id": "qe5b4c6513e9",

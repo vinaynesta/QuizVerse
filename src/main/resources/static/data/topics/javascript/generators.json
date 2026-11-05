@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q68a289b18ac",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "Given function* g() { yield 1; yield 2; } and const it = g(); it.next(); what does it.return(9) return?",
+  "options": [
+   "{ value: 9, done: true }",
+   "{ value: 9, done: false }",
+   "{ value: 2, done: false }",
+   "undefined"
+  ],
+  "answer": 0,
+  "explanation": "return finishes the generator early and produces the given value with done: true."
+ },
+ {
+  "id": "q7f614b3895d",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does the third call return?\nfunction* g() { yield 1; yield 2; }\nconst it = g();\nit.next(); it.next();\nit.next();",
+  "options": [
+   "{ value: 2, done: true }",
+   "{ value: undefined, done: true }",
+   "undefined",
+   "{ value: 3, done: false }"
+  ],
+  "answer": 1,
+  "explanation": "After the last yield, the generator finishes and next returns done: true with the return value, which is undefined here."
+ },
+ {
+  "id": "q8bb9e66e5ab",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What makes an object usable in a for...of loop?",
+  "options": [
+   "Having a [Symbol.iterator] method that returns an iterator",
+   "Having numeric keys",
+   "Extending Array",
+   "Having a length property"
+  ],
+  "answer": 0,
+  "explanation": "for...of uses the iteration protocol: it calls obj[Symbol.iterator]() and repeatedly calls next on the result."
+ },
+ {
+  "id": "q951b2885b76",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does [...g()] return?\nfunction* g() { yield 1; return 2; }",
+  "options": [
+   "[1, 2]",
+   "[2]",
+   "[]",
+   "[1]"
+  ],
+  "answer": 3,
+  "explanation": "Spread and for...of stop when done is true and ignore the value from return."
+ },
+ {
+  "id": "qa609effbfa0",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does the last line log?\nfunction* g() { const x = yield 1; yield x * 2; }\nconst it = g();\nit.next();\nconsole.log(it.next(5).value);",
+  "options": [
+   "NaN",
+   "2",
+   "10",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "The value passed to next becomes the result of the paused yield expression, so x is 5 and the next yield produces 10."
+ },
+ {
+  "id": "qf0d7cdfec26",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does [...b()] return?\nfunction* a() { yield 1; yield 2; }\nfunction* b() { yield 0; yield* a(); yield 3; }",
+  "options": [
+   "[0, 1, 2, 3]",
+   "[0, [1, 2], 3]",
+   "[0, 3]",
+   "[0, a, 3]"
+  ],
+  "answer": 0,
+  "explanation": "yield* delegates to another iterable and yields each of its values in turn."
+ }
+]

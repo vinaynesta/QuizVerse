@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q6f3e2ff101c",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "Which object provides atomic operations and wait/notify on a SharedArrayBuffer between threads?",
+  "options": [
+   "Atomics",
+   "Lock",
+   "Mutex",
+   "SharedMemory"
+  ],
+  "answer": 0,
+  "explanation": "Atomics.add, Atomics.wait and Atomics.notify allow race-free coordination over shared memory."
+ },
+ {
+  "id": "qad6da9ce3b0",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "What happens to a plain object sent with postMessage() to a worker thread when no transfer list is given?",
+  "options": [
+   "It is copied with the structured clone algorithm, so the worker gets its own copy",
+   "It is serialized to a JSON string",
+   "The sender's copy is detached and unusable",
+   "The worker receives a live reference to the same object"
+  ],
+  "answer": 0,
+  "explanation": "Only transferable objects listed in the transfer list move ownership; ordinary objects are cloned."
+ },
+ {
+  "id": "qcb0a648cd85",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "Which mechanism lets worker threads share the same memory without copying it?",
+  "options": [
+   "SharedArrayBuffer",
+   "structuredClone()",
+   "process.send()",
+   "postMessage() with a plain object"
+  ],
+  "answer": 0,
+  "explanation": "SharedArrayBuffer is shared between threads, usually coordinated with Atomics; the other options copy data."
+ },
+ {
+  "id": "qcf473e7b1d2",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "Why does in-memory session state break when requests are spread across cluster workers?",
+  "options": [
+   "Workers cannot read HTTP cookies",
+   "Each worker has its own memory, so a later request may reach a worker that lacks the session",
+   "The cluster module disables the http module",
+   "Cluster workers cannot parse JSON request bodies"
+  ],
+  "answer": 1,
+  "explanation": "Workers are separate processes, so sessions must live in a shared store or use sticky routing."
+ },
+ {
+  "id": "qe523837d490",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "What happens to an ArrayBuffer listed in the transfer list of postMessage() to a worker?",
+  "options": [
+   "It is copied, and both sides keep usable copies",
+   "It becomes shared, and both sides can write to it",
+   "Ownership moves to the worker, and the sender's ArrayBuffer becomes detached with zero length",
+   "It is serialized to JSON first"
+  ],
+  "answer": 2,
+  "explanation": "Transferring avoids copying large buffers, but the sender can no longer use them."
+ },
+ {
+  "id": "qe800ff3d2e8",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "With the default scheduling policy on Linux, how does the cluster primary distribute incoming connections to workers?",
+  "options": [
+   "Each request is copied to every worker",
+   "Connections always go to the first worker that started",
+   "The client chooses a worker through a cookie",
+   "The primary accepts connections and hands them to workers in round-robin order"
+  ],
+  "answer": 3,
+  "explanation": "The default policy (SCHED_RR) is used on all platforms except Windows, where the OS distributes connections."
+ },
+ {
+  "id": "qf67a56e59fc",
+  "subject": "nodejs",
+  "topic": "clustering",
+  "level": "hard",
+  "question": "How does a worker thread differ from a cluster worker?",
+  "options": [
+   "They are the same thing with different names",
+   "Worker threads share all JavaScript objects with the main thread",
+   "Cluster workers run on the libuv threadpool",
+   "Worker threads run in the same process with separate V8 isolates, while cluster workers are separate processes"
+  ],
+  "answer": 3,
+  "explanation": "Worker threads are suited to CPU-bound tasks, while cluster scales servers across processes that share a port."
+ }
+]

@@ -1,0 +1,272 @@
+[
+ {
+  "id": "q72b0b453146",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which core module lets a Node.js program run shell commands as child processes?",
+  "options": [
+   "os",
+   "child_process",
+   "vm",
+   "cluster"
+  ],
+  "answer": 1,
+  "explanation": "The child_process module provides spawn, exec, and execFile for starting external programs."
+ },
+ {
+  "id": "q7a53eb29d9e",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which property of process holds the array of command-line arguments?",
+  "options": [
+   "process.args",
+   "process.env.ARGS",
+   "process.argv",
+   "process.cmd"
+  ],
+  "answer": 2,
+  "explanation": "process.argv contains the node executable path, the script path, and any extra arguments."
+ },
+ {
+  "id": "q87cea909de0",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which object lets a Node.js program read the user's environment variables?",
+  "options": [
+   "process.vars",
+   "process.env",
+   "global.environment",
+   "os.env"
+  ],
+  "answer": 1,
+  "explanation": "process.env is an object whose properties are the environment variables of the process."
+ },
+ {
+  "id": "qb0f8cc7e9f6",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "What does setting process.exitCode do?",
+  "options": [
+   "It counts the number of open handles",
+   "It sets the memory limit for the process",
+   "It changes the scheduling priority of the process",
+   "It sets the exit status used when the process exits naturally, without stopping it immediately"
+  ],
+  "answer": 3,
+  "explanation": "process.exitCode is a soft exit status that Node uses if the event loop drains normally, unlike process.exit() which stops immediately."
+ },
+ {
+  "id": "qda6ec9e83c9",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which method returns the current working directory of the Node.js process?",
+  "options": [
+   "process.dir",
+   "__filename",
+   "process.cwd()",
+   "process.home"
+  ],
+  "answer": 2,
+  "explanation": "process.cwd() returns the directory the process was started from or later changed to, which can differ from the script's location."
+ },
+ {
+  "id": "qf68e5b7d1d9",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which method immediately terminates the Node.js process with a given exit code?",
+  "options": [
+   "process.end()",
+   "process.stop()",
+   "process.halt()",
+   "process.exit()"
+  ],
+  "answer": 3,
+  "explanation": "process.exit(code) stops the process right away, so pending asynchronous work may be abandoned."
+ },
+ {
+  "id": "qf6c96b5912e",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which property holds the version string of the running Node.js, such as 'v22.11.0'?",
+  "options": [
+   "process.engine",
+   "process.release",
+   "process.version",
+   "node.version"
+  ],
+  "answer": 2,
+  "explanation": "process.version gives the Node.js version, and process.versions lists versions of its components such as V8."
+ },
+ {
+  "id": "qf85ce595ec7",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "easy",
+  "question": "Which environment variable is conventionally used by many libraries to select production behavior?",
+  "options": [
+   "NODE_MODE",
+   "PROD_ENV",
+   "NODE_ENV",
+   "NODE_STAGE"
+  ],
+  "answer": 2,
+  "explanation": "NODE_ENV is the widely used convention, and Express and many other libraries read it to switch between development and production modes."
+ },
+ {
+  "id": "q3af2dbd68cd",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "Which property of process holds the absolute path of the node executable running the script?",
+  "options": [
+   "process.argv[1]",
+   "process.cwd()",
+   "process.execPath[1]",
+   "process.argv[0]"
+  ],
+  "answer": 3,
+  "explanation": "argv[0] is the node executable and argv[1] is the script path; process.execPath also holds the executable path."
+ },
+ {
+  "id": "q8eaced3d861",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "Which method of the os module returns the number of logical CPU cores?",
+  "options": [
+   "os.cores()",
+   "process.cpuCount",
+   "os.cpus().length",
+   "os.threads()"
+  ],
+  "answer": 2,
+  "explanation": "os.cpus() returns one entry per logical core; os.availableParallelism() is a newer alternative."
+ },
+ {
+  "id": "qa6f192e556e",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "What JavaScript type do values from process.env always have?",
+  "options": [
+   "Whatever type was set in the shell",
+   "Number when the value looks numeric",
+   "Boolean for 'true' and 'false'",
+   "String"
+  ],
+  "answer": 3,
+  "explanation": "Environment variables are always strings; convert them with Number() or a parser when needed."
+ },
+ {
+  "id": "qac7536c9180",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "What is the usual pattern for a graceful shutdown of an HTTP server on SIGTERM?",
+  "options": [
+   "Call process.abort() right away",
+   "Send SIGKILL to the process ID",
+   "Ignore the signal because SIGTERM cannot be caught",
+   "Call server.close() and let in-flight requests finish before exiting"
+  ],
+  "answer": 3,
+  "explanation": "SIGTERM can be handled with process.on('SIGTERM'), which lets the server drain before the process exits."
+ },
+ {
+  "id": "qccb9a99c783",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "How does child_process.fork() differ from spawn()?",
+  "options": [
+   "fork() runs the code in the same process on a new thread",
+   "fork() can run only shell commands",
+   "fork() starts a new Node.js process with a built-in IPC channel for send() and 'message' events",
+   "spawn() always waits for the child process to exit"
+  ],
+  "answer": 2,
+  "explanation": "fork() is a special case of spawn() for Node.js scripts that adds a message channel between parent and child."
+ },
+ {
+  "id": "qee2ed339648",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "Why is exec('ls ' + userInput) riskier than spawn('ls', [userInput])?",
+  "options": [
+   "spawn cannot accept user input at all",
+   "exec always runs as root",
+   "exec runs the string through a shell, so shell metacharacters in the input can inject commands",
+   "spawn blocks the event loop while the child runs"
+  ],
+  "answer": 2,
+  "explanation": "With an argument array and no shell, spawn passes the input as a single literal argument."
+ },
+ {
+  "id": "q021ddba8996",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "Which Node.js crypto API derives a key synchronously, blocking the event loop while it runs?",
+  "options": [
+   "crypto.pbkdf2() with a callback",
+   "crypto.scrypt() with a callback",
+   "crypto.pbkdf2Sync()",
+   "crypto.randomBytes() with a callback"
+  ],
+  "answer": 2,
+  "explanation": "The Sync variant blocks the thread; the callback forms run on the libuv threadpool."
+ },
+ {
+  "id": "q5c12bfe1510",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "Why can process.exit() cut off output written to stdout when stdout is a pipe?",
+  "options": [
+   "Pipes cannot carry strings",
+   "process.exit() closes stdout before writing anything",
+   "Writes to pipes are asynchronous on POSIX, so pending data may not be flushed before exit",
+   "Pipes are always buffered in a file first"
+  ],
+  "answer": 2,
+  "explanation": "Pipe writes can complete later, so calling process.exit() immediately can drop queued output."
+ },
+ {
+  "id": "q82d67331352",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "What does the --watch flag do in Node.js 22?",
+  "options": [
+   "Prints every function call to the console",
+   "Restarts the process automatically when the entry file or its imported files change",
+   "Watches environment variables for changes",
+   "Monitors memory usage and exits if it grows"
+  ],
+  "answer": 1,
+  "explanation": "Built-in watch mode removes the need for tools like nodemon in many development setups."
+ },
+ {
+  "id": "qa932a91f94c",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "hard",
+  "question": "What does process.kill(process.pid, 0) do?",
+  "options": [
+   "Kills the current process",
+   "Checks whether the process exists without sending a signal",
+   "Pauses the event loop",
+   "Sends SIGTERM to the parent"
+  ],
+  "answer": 1,
+  "explanation": "Signal 0 performs only the permission and existence check."
+ }
+]

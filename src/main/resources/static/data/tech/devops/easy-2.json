@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6a53cc95626",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command adds a remote named origin pointing to a URL?",
+  "options": [
+   "git remote create origin <url>",
+   "git add remote origin <url>",
+   "git origin add <url>",
+   "git remote add origin <url>"
+  ],
+  "answer": 3,
+  "explanation": "git remote add <name> <url> registers a new remote under the given name."
+ },
+ {
+  "id": "q6e0b3117ccc",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command removes a file from the staging area but keeps it in the working directory?",
+  "options": [
+   "git checkout --cached <file>",
+   "git reset --hard <file>",
+   "git rm --cached <file>",
+   "git unstage --keep <file>"
+  ],
+  "answer": 2,
+  "explanation": "git rm --cached untracks the file in the index while leaving the file on disk."
+ },
+ {
+  "id": "qecae1a06f62",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which option to git commit stages all modified tracked files before committing?",
+  "options": [
+   "-s",
+   "-f",
+   "-a",
+   "-x"
+  ],
+  "answer": 2,
+  "explanation": "The -a (--all) option stages changes to already-tracked files; untracked files are still not added."
+ },
+ {
+  "id": "q0afe83b6650",
+  "subject": "devops",
+  "topic": "undoing-changes",
+  "level": "easy",
+  "question": "Which command discards uncommitted changes to a tracked file in the working directory (Git 2.23 and later)?",
+  "options": [
+   "git restore <file>",
+   "git revert <file>",
+   "git undo <file>",
+   "git clean <file>"
+  ],
+  "answer": 0,
+  "explanation": "git restore copies the file back from the index or a commit, discarding unstaged edits."
+ },
+ {
+  "id": "q75f3be5c1c7",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command lists the local branches in the repository?",
+  "options": [
+   "git branches",
+   "git branch",
+   "git list branch",
+   "git ref --heads"
+  ],
+  "answer": 1,
+  "explanation": "Running git branch with no arguments lists local branches and marks the current one with an asterisk."
+ },
+ {
+  "id": "q8f715fe97de",
+  "subject": "devops",
+  "topic": "docker-images",
+  "level": "easy",
+  "question": "Which Dockerfile instruction sets the base image for a build?",
+  "options": [
+   "BASE",
+   "START",
+   "FROM",
+   "IMAGE"
+  ],
+  "answer": 2,
+  "explanation": "FROM must be the first instruction (aside from ARG) and names the image the build starts from."
+ },
+ {
+  "id": "q286d7cfe7d1",
+  "subject": "devops",
+  "topic": "docker-basics",
+  "level": "easy",
+  "question": "What is a Docker container?",
+  "options": [
+   "A type of Docker volume",
+   "A registry that stores images",
+   "A file that lists build steps",
+   "A runnable instance of an image with its own writable layer"
+  ],
+  "answer": 3,
+  "explanation": "A container is a running (or stopped) instance of an image, with a thin writable layer on top of the image layers."
+ },
+ {
+  "id": "q050b3adea6a",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command creates a new branch named feature and switches to it?",
+  "options": [
+   "git branch feature --switch",
+   "git checkout feature",
+   "git switch -c feature",
+   "git new feature"
+  ],
+  "answer": 2,
+  "explanation": "git switch -c creates the branch and checks it out; git checkout -b does the same."
+ },
+ {
+  "id": "q7b83caff6a1",
+  "subject": "devops",
+  "topic": "git-basics",
+  "level": "easy",
+  "question": "Which command shows the current branch and which files are staged, modified, or untracked?",
+  "options": [
+   "git status",
+   "git show",
+   "git diff",
+   "git log"
+  ],
+  "answer": 0,
+  "explanation": "git status reports the branch, staged changes, unstaged changes, and untracked files."
+ },
+ {
+  "id": "q437acf3efcd",
+  "subject": "devops",
+  "topic": "branching",
+  "level": "easy",
+  "question": "Which command deletes the local branch old-feature only if it has already been merged?",
+  "options": [
+   "git branch -D old-feature",
+   "git rm old-feature",
+   "git remove branch old-feature",
+   "git branch -d old-feature"
+  ],
+  "answer": 3,
+  "explanation": "The lowercase -d flag refuses to delete a branch with unmerged commits; -D forces deletion."
+ }
+]

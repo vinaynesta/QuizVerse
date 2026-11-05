@@ -1,0 +1,257 @@
+[
+ {
+  "id": "q1f9e09c0387",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is a cache?",
+  "options": [
+   "A log of every user action",
+   "The permanent primary copy of the data",
+   "A faster, usually smaller store kept close to where data is needed",
+   "A type of DNS record"
+  ],
+  "answer": 2,
+  "explanation": "Caches trade capacity and freshness for lower read latency and reduced load on the backing store."
+ },
+ {
+  "id": "q20c04a41897",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "Which data is usually a poor fit for caching?",
+  "options": [
+   "Product images that rarely change",
+   "A popular news article",
+   "Data that changes on almost every read and must always be exact, such as a live account balance",
+   "Configuration that changes once a day"
+  ],
+  "answer": 2,
+  "explanation": "If data changes constantly and staleness is unacceptable, cached copies are rarely valid."
+ },
+ {
+  "id": "q34fd6b9012b",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What typically happens on a cache miss?",
+  "options": [
+   "The request fails immediately with an error",
+   "The entire cache is cleared",
+   "The response is returned with an empty body",
+   "The data is fetched from the backing store, and often written into the cache"
+  ],
+  "answer": 3,
+  "explanation": "A miss falls through to the source of truth; whether the result is cached depends on the policy."
+ },
+ {
+  "id": "q725d6ea02d0",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is the main risk of a long TTL on data that changes often?",
+  "options": [
+   "The cache will delete the origin data",
+   "Writes will be blocked until the TTL expires",
+   "Requests will be routed to the wrong region",
+   "Clients may keep receiving stale values for the length of the TTL"
+  ],
+  "answer": 3,
+  "explanation": "A long TTL trades freshness for fewer origin requests; stale data persists until expiry or invalidation."
+ },
+ {
+  "id": "q76ae1139f45",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What does a TTL (time to live) on a cache entry define?",
+  "options": [
+   "The maximum size of a single cache entry",
+   "How long the entry may be served before it is considered expired",
+   "The number of cache nodes in a cluster",
+   "The timeout for a database connection"
+  ],
+  "answer": 1,
+  "explanation": "After the TTL elapses, the entry is treated as stale and must be refreshed."
+ },
+ {
+  "id": "q93b8c2e503b",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "Which eviction policy removes the least recently used entry first?",
+  "options": [
+   "FIFO (first in, first out)",
+   "LFU (least frequently used)",
+   "Random eviction",
+   "LRU (least recently used)"
+  ],
+  "answer": 3,
+  "explanation": "LRU assumes entries not accessed recently are less likely to be needed again."
+ },
+ {
+  "id": "qc72f1655675",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "Where does browser caching store responses?",
+  "options": [
+   "On the origin server's disk",
+   "On the user's device, controlled by HTTP headers such as Cache-Control",
+   "In the database's buffer pool",
+   "In the load balancer's routing table"
+  ],
+  "answer": 1,
+  "explanation": "The browser reuses cached responses for repeat visits until they expire or must be revalidated."
+ },
+ {
+  "id": "qca242ba3d18",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is a cache hit?",
+  "options": [
+   "The cache is full and must evict an entry",
+   "The requested data is found in the cache",
+   "The origin server returns an error response",
+   "The client sends the same request twice"
+  ],
+  "answer": 1,
+  "explanation": "A hit is served from the cache without going to the slower backing store."
+ },
+ {
+  "id": "qfe3fb7141fa",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is an in-memory key-value store commonly used as a shared application cache?",
+  "options": [
+   "Elasticsearch",
+   "PostgreSQL",
+   "Apache Kafka",
+   "Redis"
+  ],
+  "answer": 3,
+  "explanation": "Redis keeps data in memory and supports key-based reads and writes with expiration."
+ },
+ {
+  "id": "q47622d4e6b9",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "Which description matches the cache-aside pattern?",
+  "options": [
+   "The cache automatically pulls every row from the database on each write",
+   "The application checks the cache first, loads from the database on a miss, and then populates the cache",
+   "The database pushes every change into the cache as the only read path",
+   "Clients write only to the cache, which flushes to the database nightly"
+  ],
+  "answer": 1,
+  "explanation": "In cache-aside the application controls population and invalidation of the cache."
+ },
+ {
+  "id": "q5114b35d268",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "Which technique helps prevent a cache stampede when a hot key expires?",
+  "options": [
+   "Letting only one request recompute the value, using a lock or request coalescing, while others wait or get the stale value",
+   "Disabling the cache for that key",
+   "Lowering the TTL of the key",
+   "Sending every miss to a different database replica"
+  ],
+  "answer": 0,
+  "explanation": "Single-flight recomputation keeps one expiry from triggering many identical backend queries."
+ },
+ {
+  "id": "q6f5a7edd7e5",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "In a write-through cache, when is a write acknowledged to the client?",
+  "options": [
+   "After it has been written to both the cache and the backing store",
+   "After it is written only to the cache, before the store is updated",
+   "Only after the entry is evicted from the cache",
+   "After the next read of the same key"
+  ],
+  "answer": 0,
+  "explanation": "Write-through trades higher write latency for the guarantee that the cache and store agree."
+ },
+ {
+  "id": "q883d1051124",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "What is the main risk of a write-back (write-behind) cache?",
+  "options": [
+   "Reads always return data that is older than the database",
+   "Acknowledged writes can be lost if the cache fails before the data reaches the database",
+   "Writes cannot proceed while the cache is warming up",
+   "Every read must bypass the cache to stay correct"
+  ],
+  "answer": 1,
+  "explanation": "Write-back acknowledges writes early and flushes later, so unflushed data exists only in the cache."
+ },
+ {
+  "id": "qa88da081ff1",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "What is negative caching?",
+  "options": [
+   "Caching the fact that a lookup found nothing, so repeated misses do not hit the database",
+   "Evicting the most popular entries first",
+   "Storing only deleted records",
+   "Disabling the cache during high load"
+  ],
+  "answer": 0,
+  "explanation": "Short-lived entries for not-found results protect the backing store from repeated lookups for missing keys."
+ },
+ {
+  "id": "qd86f29abd96",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "In a write-around cache, what happens on a write?",
+  "options": [
+   "The data is written to the cache and the database together",
+   "The write is rejected until the cache is cleared",
+   "The data is written only to the cache",
+   "The data goes directly to the database, bypassing the cache"
+  ],
+  "answer": 3,
+  "explanation": "Write-around avoids filling the cache with data that may never be read."
+ },
+ {
+  "id": "qe661b65fc09",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "Which approach avoids explicit invalidation when content changes?",
+  "options": [
+   "Lowering the TTL to one millisecond for every key",
+   "Disabling the cache during every write",
+   "Storing each entry twice on the same cache node",
+   "Embedding a content version or hash in the cache key so changed content gets a new key"
+  ],
+  "answer": 3,
+  "explanation": "Old keys simply stop being requested and age out, so no delete is needed."
+ },
+ {
+  "id": "qf14192391eb",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "What is a cache stampede (thundering herd)?",
+  "options": [
+   "Two services writing conflicting values to the same key",
+   "A cache growing beyond its memory limit without evicting entries",
+   "Many concurrent requests miss on the same expired key and overload the backing store",
+   "Clients repeatedly receiving 304 Not Modified responses"
+  ],
+  "answer": 2,
+  "explanation": "Mitigations include request coalescing, locking during regeneration, and refreshing hot keys before they expire."
+ }
+]

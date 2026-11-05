@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qbee72b75160",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What does a covering index allow a database to do?",
+  "options": [
+   "Store a table in multiple regions",
+   "Lock fewer rows during writes",
+   "Skip writing to the transaction log",
+   "Answer a query entirely from the index without reading the table rows"
+  ],
+  "answer": 3,
+  "explanation": "If the index contains every column a query needs, the extra lookup into the table is avoided."
+ },
+ {
+  "id": "q5e826ddd972",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "What is a key advantage of gRPC over REST with JSON for internal service-to-service calls?",
+  "options": [
+   "It works directly in every browser without a proxy",
+   "Compact binary Protocol Buffers over HTTP/2, with generated typed clients",
+   "It needs no schema",
+   "It always uses UDP"
+  ],
+  "answer": 1,
+  "explanation": "Protobuf messages are smaller and faster to parse than JSON, and the schema generates client code."
+ },
+ {
+  "id": "q3dff1ab6f31",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is denormalization?",
+  "options": [
+   "Storing redundant copies of data to avoid expensive joins on reads",
+   "Removing all indexes",
+   "Encrypting duplicated columns",
+   "Splitting tables into smaller normalized tables"
+  ],
+  "answer": 0,
+  "explanation": "Denormalization trades extra storage and harder writes for faster reads."
+ },
+ {
+  "id": "q793a35e8f19",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "How does the leaky bucket algorithm shape traffic?",
+  "options": [
+   "It allows unlimited bursts",
+   "It resets the counter at fixed window boundaries",
+   "It processes requests at a constant outflow rate, queuing or dropping excess",
+   "It blocks clients permanently after one violation"
+  ],
+  "answer": 2,
+  "explanation": "The bucket drains at a fixed rate, smoothing bursts into a steady stream."
+ },
+ {
+  "id": "q3c79fadad1b",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What is the main benefit of putting a queue between a web server and a slow worker?",
+  "options": [
+   "Requests are acknowledged quickly, and work is processed asynchronously at the worker's pace",
+   "Every request is guaranteed to finish faster",
+   "The worker no longer needs error handling",
+   "Messages are processed in a random order"
+  ],
+  "answer": 0,
+  "explanation": "The queue decouples the services and absorbs traffic spikes."
+ },
+ {
+  "id": "q0f1d9f8de4b",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is a hot partition (hot shard)?",
+  "options": [
+   "A shard that stores only cached data",
+   "A shard receiving a disproportionate share of traffic, often due to a skewed key",
+   "A shard that was recently added",
+   "A shard located in the hottest data center"
+  ],
+  "answer": 1,
+  "explanation": "Skewed keys, such as a celebrity's user ID, concentrate load on one shard."
+ },
+ {
+  "id": "q5114b35d268",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "Which technique helps prevent a cache stampede when a hot key expires?",
+  "options": [
+   "Letting only one request recompute the value, using a lock or request coalescing, while others wait or get the stale value",
+   "Disabling the cache for that key",
+   "Lowering the TTL of the key",
+   "Sending every miss to a different database replica"
+  ],
+  "answer": 0,
+  "explanation": "Single-flight recomputation keeps one expiry from triggering many identical backend queries."
+ },
+ {
+  "id": "q71f7e901d57",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "How does a sliding window counter rate limiter estimate the request count?",
+  "options": [
+   "It stores a timestamp for every request",
+   "It counts only the current fixed window",
+   "It weights the previous window's count by its overlap with the sliding window and adds the current window's count",
+   "It uses a random sample of requests"
+  ],
+  "answer": 2,
+  "explanation": "This approximation smooths boundary bursts using just two counters per key."
+ },
+ {
+  "id": "q1e1e67f9e22",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "medium",
+  "question": "What is connection draining (deregistration delay)?",
+  "options": [
+   "Closing all connections at once when a server fails",
+   "Letting in-flight requests finish on a server being removed, while sending it no new requests",
+   "Limiting connections per client",
+   "Moving connections between data centers"
+  ],
+  "answer": 1,
+  "explanation": "Draining lets instances leave rotation during deploys or scale-in without dropping requests."
+ },
+ {
+  "id": "qd480c539e33",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What is back pressure in a messaging system?",
+  "options": [
+   "Sending messages in reverse order",
+   "Encrypting messages in transit",
+   "Retrying failed messages immediately",
+   "A slow consumer signaling or forcing producers to slow down so queues do not grow without bound"
+  ],
+  "answer": 3,
+  "explanation": "Without back pressure, a fast producer can exhaust memory or queue capacity."
+ }
+]

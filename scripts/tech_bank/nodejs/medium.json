@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "express",
+    "question": "In an Express route, what does calling next('route') do?",
+    "options": [
+      "It skips the remaining handlers for the current route and continues to the next matching route",
+      "It ends the response with a 404 status",
+      "It restarts the middleware stack from the first app.use()",
+      "It throws an error to the error-handling middleware"
+    ],
+    "answer": 0,
+    "explanation": "Passing the string 'route' to next() jumps out of the current route's handler stack; any other argument is treated as an error."
+  },
+  {
+    "topic": "express",
+    "question": "How many parameters must an Express error-handling middleware function declare for Express to recognize it?",
+    "options": [
+      "Two: (err, res)",
+      "Four: (err, req, res, next)",
+      "Three: (err, req, res)",
+      "One: (err)"
+    ],
+    "answer": 1,
+    "explanation": "Express identifies error middleware by its arity, so it needs exactly four parameters even when next is unused."
+  },
+  {
+    "topic": "express",
+    "question": "A POST route reads req.body as undefined even though the client sends JSON. What is the most likely cause?",
+    "options": [
+      "The route was declared with app.get() to receive a POST request",
+      "The response was never sent back to the client",
+      "express.json() is registered after the route that reads req.body",
+      "The server is listening on the wrong port"
+    ],
+    "answer": 2,
+    "explanation": "Middleware runs in registration order, so the body parser must be added before any route that needs the parsed body."
+  },
+  {
+    "topic": "express",
+    "question": "In Express 4, what happens when an async route handler rejects its promise and nothing catches it?",
+    "options": [
+      "Express automatically sends the rejection to the error middleware",
+      "The process always exits with code 1",
+      "Express retries the handler once",
+      "The request can hang, because Express 4 does not forward the rejection to error middleware"
+    ],
+    "answer": 3,
+    "explanation": "Express 4 only handles synchronous throws and errors passed to next(); Express 5 forwards rejected promises to error middleware."
+  },
+  {
+    "topic": "streams",
+    "question": "What does a false return value from writable.write() signal?",
+    "options": [
+      "The internal buffer has reached highWaterMark, so the producer should pause until 'drain' is emitted",
+      "The chunk was rejected and will never be written",
+      "The stream has ended and cannot be reused",
+      "The data has already been flushed to disk"
+    ],
+    "answer": 0,
+    "explanation": "A false return is backpressure: the writable is holding enough unflushed data that the producer should wait for 'drain'."
+  },
+  {
+    "topic": "streams",
+    "question": "What advantage does stream.pipeline() have over chaining .pipe() calls?",
+    "options": [
+      "It buffers the whole input in memory before writing",
+      "It forwards errors to one callback and destroys every stream in the chain when one fails",
+      "It disables backpressure so writes are faster",
+      "It runs each stream on its own thread"
+    ],
+    "answer": 1,
+    "explanation": "pipe() does not propagate errors or clean up the other streams automatically, which can leak resources."
+  },
+  {
+    "topic": "streams",
+    "question": "Which kind of stream is meant to change data as it passes through, such as a gzip compressor?",
+    "options": [
+      "Readable",
+      "Writable",
+      "Transform",
+      "Server"
+    ],
+    "answer": 2,
+    "explanation": "A Transform is a Duplex stream whose output is computed from its input."
+  },
+  {
+    "topic": "streams",
+    "question": "A multi-byte UTF-8 character is split across two chunks of a Readable. What avoids corrupting it when the chunks become text?",
+    "options": [
+      "Call chunk.toString() on each chunk separately",
+      "Set highWaterMark to 1 byte",
+      "Call Buffer.byteLength() on every chunk",
+      "Call readable.setEncoding('utf8') so Node decodes characters across chunk boundaries"
+    ],
+    "answer": 3,
+    "explanation": "With setEncoding, Node uses a StringDecoder that keeps partial bytes until the character is complete."
+  },
+  {
+    "topic": "streams",
+    "question": "What is the default highWaterMark for an object-mode Readable?",
+    "options": [
+      "16 objects",
+      "1 object",
+      "16 KiB",
+      "64 KiB"
+    ],
+    "answer": 0,
+    "explanation": "In object mode the highWaterMark counts objects rather than bytes, and the default is 16."
+  },
+  {
+    "topic": "streams",
+    "question": "Which event on a writable stream fires after end() has been called and all pending data has been flushed?",
+    "options": [
+      "'close'",
+      "'finish'",
+      "'end'",
+      "'drain'"
+    ],
+    "answer": 1,
+    "explanation": "'finish' signals that all data has been handed to the underlying system; 'end' is a readable-side event."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Which Promise combinator waits for every promise to settle and reports each outcome, whether fulfilled or rejected?",
+    "options": [
+      "Promise.all()",
+      "Promise.race()",
+      "Promise.allSettled()",
+      "Promise.any()"
+    ],
+    "answer": 2,
+    "explanation": "allSettled() resolves once all inputs settle, with a status and value or reason for each one."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does Promise.any() reject with when every input promise rejects?",
+    "options": [
+      "Only the first rejection reason",
+      "undefined",
+      "An array of the fulfilled values",
+      "An AggregateError containing all the rejection reasons"
+    ],
+    "answer": 3,
+    "explanation": "If no input fulfills, any() rejects with an AggregateError whose errors property lists every reason."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Why does this code not wait for each save() to finish before logging 'done'? items.forEach(async (item) => { await save(item); }); console.log('done');",
+    "options": [
+      "forEach ignores the promises returned by its callbacks, so the loop does not wait",
+      "save() must return a value synchronously",
+      "await cannot be used inside arrow functions",
+      "console.log always runs before any promise settles"
+    ],
+    "answer": 0,
+    "explanation": "Use a for...of loop with await, or Promise.all() over items.map(), to wait for all the saves."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Two independent 100 ms operations are awaited one after the other. Roughly how long does the pair take?",
+    "options": [
+      "About 100 ms",
+      "About 200 ms",
+      "About 50 ms",
+      "About 0 ms"
+    ],
+    "answer": 1,
+    "explanation": "Sequential awaits add their durations; running them concurrently with Promise.all() would take about 100 ms."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What is the effective minimum delay for setTimeout(fn, 0) in Node.js?",
+    "options": [
+      "0 ms, so the callback runs synchronously",
+      "4 ms, as in browsers",
+      "About 1 ms",
+      "10 ms"
+    ],
+    "answer": 2,
+    "explanation": "Delays below 1 are coerced to 1, so setTimeout(fn, 0) behaves like a 1 ms timer."
+  },
+  {
+    "topic": "events",
+    "question": "If a listener adds another listener for the same event while that event is being emitted, when does the new listener run?",
+    "options": [
+      "Immediately after the current listener returns",
+      "It replaces the listener that is currently running",
+      "It throws an error and the emit stops",
+      "Not during the current emit; only on later emits"
+    ],
+    "answer": 3,
+    "explanation": "emit() works from a copy of the listener array taken when it starts, so new listeners miss the current emit."
+  },
+  {
+    "topic": "events",
+    "question": "Which helper returns a promise that resolves the next time a given event is emitted on an EventEmitter?",
+    "options": [
+      "events.once()",
+      "events.promise()",
+      "emitter.toPromise()",
+      "util.waitFor()"
+    ],
+    "answer": 0,
+    "explanation": "events.once(emitter, name) resolves with the emitted arguments and rejects if an 'error' event fires first."
+  },
+  {
+    "topic": "events",
+    "question": "What causes Node.js to print a possible memory leak warning for an EventEmitter?",
+    "options": [
+      "Calling emit() more than 10 times",
+      "More than the configured maximum number of listeners (10 by default) on one event",
+      "Registering more than 10 different event names",
+      "A listener that declares more than 10 parameters"
+    ],
+    "answer": 1,
+    "explanation": "setMaxListeners() changes the limit for a single emitter; the warning is a hint, not proof of a leak."
+  },
+  {
+    "topic": "buffers",
+    "question": "Why should a Buffer from Buffer.allocUnsafe() be overwritten before its contents are used?",
+    "options": [
+      "It is read-only until it is filled",
+      "It is stored as UTF-16 by default",
+      "It can contain leftover bytes from memory that was used earlier",
+      "It has zero length until it is written"
+    ],
+    "answer": 2,
+    "explanation": "allocUnsafe() skips zero-filling for speed, so unwritten bytes can expose old data."
+  },
+  {
+    "topic": "buffers",
+    "question": "Which call correctly joins an array of Buffer chunks into one Buffer?",
+    "options": [
+      "chunks.join('')",
+      "Buffer.merge(chunks)",
+      "new Buffer(chunks)",
+      "Buffer.concat(chunks)"
+    ],
+    "answer": 3,
+    "explanation": "join() converts each chunk to a string, which can corrupt binary data; new Buffer() is deprecated."
+  },
+  {
+    "topic": "buffers",
+    "question": "What does Buffer.byteLength('café') return?",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "answer": 0,
+    "explanation": "The é takes two bytes in UTF-8, so the string is 5 bytes even though it has 4 characters."
+  },
+  {
+    "topic": "modules",
+    "question": "When two CommonJS modules require each other, what does the module that loads second receive from the first?",
+    "options": [
+      "The complete exports, because Node loads both at once",
+      "The partially filled exports object as it exists at that moment",
+      "An error, since circular requires are not allowed",
+      "undefined, always"
+    ],
+    "answer": 1,
+    "explanation": "The first module is still executing when the cycle is detected, so its exports may be incomplete."
+  },
+  {
+    "topic": "modules",
+    "question": "An ES module runs import pkg from './legacy.cjs'. What is pkg?",
+    "options": [
+      "The whole module wrapper function",
+      "The source text of the file",
+      "The module.exports value of the CommonJS file",
+      "Always undefined"
+    ],
+    "answer": 2,
+    "explanation": "Node provides module.exports as the default export when importing CommonJS from ES modules."
+  },
+  {
+    "topic": "modules",
+    "question": "How do you get the directory of the current file inside an ES module?",
+    "options": [
+      "Read __dirname, which ES modules define automatically",
+      "Use process.cwd()",
+      "Use require.main.path",
+      "Derive it from import.meta.url with fileURLToPath() and path.dirname()"
+    ],
+    "answer": 3,
+    "explanation": "__dirname is a CommonJS wrapper variable, and process.cwd() is where node was started, not the file's folder."
+  },
+  {
+    "topic": "npm",
+    "question": "Which version range does \"^1.4.2\" allow?",
+    "options": [
+      ">=1.4.2 <2.0.0",
+      ">=1.4.2 <1.5.0",
+      ">=1.0.0 <2.0.0",
+      "Any version"
+    ],
+    "answer": 0,
+    "explanation": "A caret range allows changes that do not modify the leftmost non-zero version component."
+  },
+  {
+    "topic": "npm",
+    "question": "Which version range does \"~1.4.2\" allow?",
+    "options": [
+      ">=1.4.2 <2.0.0",
+      ">=1.4.2 <1.5.0",
+      "Exactly 1.4.2",
+      ">=1.4.0 <3.0.0"
+    ],
+    "answer": 1,
+    "explanation": "A tilde range allows patch updates only; a caret range also allows minor updates."
+  },
+  {
+    "topic": "npm",
+    "question": "Which command installs only production dependencies with npm 7 and later?",
+    "options": [
+      "npm install --skip-dev",
+      "npm install --only=prod-only",
+      "npm install --omit=dev",
+      "npm prune --dev"
+    ],
+    "answer": 2,
+    "explanation": "--omit=dev is the current flag; the older --production flag still works but is deprecated."
+  },
+  {
+    "topic": "npm",
+    "question": "By default, what does the engines field in package.json do when the installed Node.js version does not match?",
+    "options": [
+      "npm refuses to install and exits",
+      "npm switches to the listed Node.js version automatically",
+      "npm removes the package from the lock file",
+      "npm prints a warning but still installs, unless engine-strict is enabled"
+    ],
+    "answer": 3,
+    "explanation": "engines is advisory by default; engine-strict turns mismatches into install errors."
+  },
+  {
+    "topic": "process",
+    "question": "What JavaScript type do values from process.env always have?",
+    "options": [
+      "String",
+      "Number when the value looks numeric",
+      "Boolean for 'true' and 'false'",
+      "Whatever type was set in the shell"
+    ],
+    "answer": 0,
+    "explanation": "Environment variables are always strings; convert them with Number() or a parser when needed."
+  },
+  {
+    "topic": "process",
+    "question": "What is the usual pattern for a graceful shutdown of an HTTP server on SIGTERM?",
+    "options": [
+      "Call process.abort() right away",
+      "Call server.close() and let in-flight requests finish before exiting",
+      "Ignore the signal because SIGTERM cannot be caught",
+      "Send SIGKILL to the process ID"
+    ],
+    "answer": 1,
+    "explanation": "SIGTERM can be handled with process.on('SIGTERM'), which lets the server drain before the process exits."
+  },
+  {
+    "topic": "process",
+    "question": "Why is exec('ls ' + userInput) riskier than spawn('ls', [userInput])?",
+    "options": [
+      "spawn cannot accept user input at all",
+      "exec always runs as root",
+      "exec runs the string through a shell, so shell metacharacters in the input can inject commands",
+      "spawn blocks the event loop while the child runs"
+    ],
+    "answer": 2,
+    "explanation": "With an argument array and no shell, spawn passes the input as a single literal argument."
+  },
+  {
+    "topic": "process",
+    "question": "Which property of process holds the absolute path of the node executable running the script?",
+    "options": [
+      "process.argv[1]",
+      "process.cwd()",
+      "process.execPath[1]",
+      "process.argv[0]"
+    ],
+    "answer": 3,
+    "explanation": "argv[0] is the node executable and argv[1] is the script path; process.execPath also holds the executable path."
+  },
+  {
+    "topic": "http",
+    "question": "What happens if res.writeHead() is called after the response headers have already been sent?",
+    "options": [
+      "Node throws ERR_HTTP_HEADERS_SENT",
+      "It silently replaces the status code",
+      "It restarts the response from the beginning",
+      "It closes the socket without any error"
+    ],
+    "answer": 0,
+    "explanation": "Once headers are sent they cannot change, and Node reports the attempt with an error."
+  },
+  {
+    "topic": "http",
+    "question": "What does new URL('https://x.io/p?a=1&a=2').searchParams.get('a') return?",
+    "options": [
+      "'2'",
+      "'1'",
+      "['1', '2']",
+      "null"
+    ],
+    "answer": 1,
+    "explanation": "get() returns the first value for a key; getAll() returns every value."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "Why is fs.readFileSync() usually a poor choice inside an HTTP request handler?",
+    "options": [
+      "It cannot read binary files",
+      "It closes the HTTP server",
+      "It blocks the event loop, so other requests wait until the read finishes",
+      "It starts a new Node.js process"
+    ],
+    "answer": 2,
+    "explanation": "A synchronous read holds the single thread until the file is fully read; fs.promises.readFile() avoids that."
+  },
+  {
+    "topic": "error-handling",
+    "question": "What is the default behavior for an unhandled promise rejection in Node.js 15 and later?",
+    "options": [
+      "It prints a warning and keeps running",
+      "It is silently ignored",
+      "The promise is retried automatically",
+      "It is raised as an uncaught exception, which terminates the process by default"
+    ],
+    "answer": 3,
+    "explanation": "Since Node 15 the default unhandled-rejections mode is 'throw', which behaves like an uncaught exception."
+  },
+  {
+    "topic": "error-handling",
+    "question": "Which Error constructor option stores an underlying error so it can be wrapped and inspected later?",
+    "options": [
+      "{ cause }",
+      "{ inner }",
+      "{ parent }",
+      "{ source }"
+    ],
+    "answer": 0,
+    "explanation": "new Error(message, { cause }) is available since Node.js 16.9 and is read back from error.cause."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does Promise.race() settle with?",
+    "options": [
+      "The first fulfilled value only",
+      "The outcome of the first promise to settle, whether fulfilled or rejected",
+      "An array of every result",
+      "The value of the slowest promise"
+    ],
+    "answer": 1,
+    "explanation": "race() follows whichever input settles first, including by rejection."
+  },
+  {
+    "topic": "express",
+    "question": "What is express.Router() best described as?",
+    "options": [
+      "A function that validates request bodies against a schema",
+      "A class that stores session data between requests",
+      "A mini-application with its own middleware and routes, which can be mounted on a path",
+      "A cache of compiled view templates"
+    ],
+    "answer": 2,
+    "explanation": "A router is middleware-like: app.use('/api', router) mounts its routes under that path prefix."
+  },
+  {
+    "topic": "modules",
+    "question": "What does require.resolve('lodash') return?",
+    "options": [
+      "The module's exports object",
+      "The version number from its package.json",
+      "A boolean telling whether it is installed",
+      "The absolute path Node would load for that module"
+    ],
+    "answer": 3,
+    "explanation": "require.resolve() returns the resolved file path without loading the module."
+  },
+  {
+    "topic": "express",
+    "question": "In Express, what does req.params contain for the route /users/:id when the request path is /users/42?",
+    "options": [
+      "{ id: 42 }",
+      "{ id: '42' }",
+      "{ users: '42' }",
+      "An empty object, because params come from the query string"
+    ],
+    "answer": 1,
+    "explanation": "Route parameters are captured from the path as strings, so the value is '42', not a number."
+  },
+  {
+    "topic": "express",
+    "question": "In Express, how does req.query differ from req.params?",
+    "options": [
+      "req.query holds parsed query-string values, while req.params holds named route segments",
+      "req.query holds the request body",
+      "They are aliases for the same object",
+      "req.params holds headers and req.query holds cookies"
+    ],
+    "answer": 0,
+    "explanation": "For /users/42?sort=name, req.params.id is '42' and req.query.sort is 'name'."
+  },
+  {
+    "topic": "express",
+    "question": "What does app.use('/api', router) do in Express?",
+    "options": [
+      "Handles only requests whose path is exactly /api",
+      "Registers the router for GET requests only",
+      "Replaces all previously registered middleware",
+      "Mounts the router so it handles requests whose path starts with /api"
+    ],
+    "answer": 3,
+    "explanation": "Inside the router, paths are relative to the mount point, so a router route /users matches /api/users."
+  },
+  {
+    "topic": "express",
+    "question": "What does res.json({ ok: true }) do in Express?",
+    "options": [
+      "Parses the request body as JSON",
+      "Stores the object in the session",
+      "Serializes the object to JSON, sets the Content-Type to application/json and sends the response",
+      "Writes the object to a JSON file on disk"
+    ],
+    "answer": 2,
+    "explanation": "res.json is a convenience over res.send that handles serialization and the content type header."
+  },
+  {
+    "topic": "streams",
+    "question": "What does stream.Readable.from() create?",
+    "options": [
+      "A Readable stream from a file path",
+      "A Readable stream from an iterable or async iterable",
+      "A Writable stream that collects data into an array",
+      "A copy of an existing Readable stream"
+    ],
+    "answer": 1,
+    "explanation": "Readable.from(['a', 'b']) or Readable.from(asyncGenerator()) is an easy way to turn iterables into streams."
+  },
+  {
+    "topic": "streams",
+    "question": "How can you consume a Readable stream with async iteration?",
+    "options": [
+      "for await (const chunk of readable) { ... }",
+      "for (const chunk in readable) { ... }",
+      "readable.forEachSync(chunk => { ... })",
+      "await readable.readAll()"
+    ],
+    "answer": 0,
+    "explanation": "Readable streams implement Symbol.asyncIterator, and async iteration also respects backpressure."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "What does the promise-based setTimeout from 'timers/promises' let you write?",
+    "options": [
+      "setTimeout calls that run synchronously",
+      "Timers that keep the process alive forever",
+      "Timers that run in a worker thread",
+      "await setTimeout(1000) to pause an async function for about one second"
+    ],
+    "answer": 3,
+    "explanation": "timers/promises exports promise versions of setTimeout, setImmediate and setInterval."
+  },
+  {
+    "topic": "async-patterns",
+    "question": "How can a long-running fetch() call in Node.js be cancelled after 5 seconds?",
+    "options": [
+      "Call fetch.cancel(5000)",
+      "Wrap fetch() in setTimeout()",
+      "Pass { signal: AbortSignal.timeout(5000) } to fetch()",
+      "Set process.env.FETCH_TIMEOUT to 5000"
+    ],
+    "answer": 2,
+    "explanation": "When the signal aborts, fetch rejects with an AbortError or TimeoutError and the request is cancelled."
+  },
+  {
+    "topic": "events",
+    "question": "In what order are multiple listeners for the same event called by default?",
+    "options": [
+      "In reverse registration order",
+      "In the order they were registered",
+      "In random order",
+      "Concurrently on separate threads"
+    ],
+    "answer": 1,
+    "explanation": "Listeners run synchronously in registration order, and prependListener() can add one to the front."
+  },
+  {
+    "topic": "buffers",
+    "question": "What does buf.subarray(0, 4) return for a Buffer buf?",
+    "options": [
+      "A new Buffer that shares memory with buf, so changes to it affect the original",
+      "An independent copy of the first 4 bytes",
+      "A string with the first 4 characters",
+      "The number 4"
+    ],
+    "answer": 0,
+    "explanation": "subarray (and the deprecated slice) creates a view over the same memory, unlike Buffer.from(buf), which copies."
+  },
+  {
+    "topic": "buffers",
+    "question": "Which call reads a 32-bit unsigned big-endian integer from the start of a Buffer?",
+    "options": [
+      "buf.readInt16LE(0)",
+      "buf.toString('uint32')",
+      "Number(buf.subarray(0, 4))",
+      "buf.readUInt32BE(0)"
+    ],
+    "answer": 3,
+    "explanation": "Buffer provides typed read and write methods with explicit endianness for parsing binary formats."
+  },
+  {
+    "topic": "modules",
+    "question": "What can a dynamic import() expression do inside a CommonJS module?",
+    "options": [
+      "Load only JSON files synchronously",
+      "Nothing, because import() is unavailable in CommonJS",
+      "Load an ES module asynchronously, returning a promise for its namespace",
+      "Convert the current file into an ES module"
+    ],
+    "answer": 2,
+    "explanation": "import() works in both module systems and is the standard way for CommonJS code to load ES modules asynchronously."
+  },
+  {
+    "topic": "modules",
+    "question": "What is top-level await?",
+    "options": [
+      "Using await inside any CommonJS file",
+      "Using await at the top level of an ES module, outside any async function",
+      "A way to make require() return a promise",
+      "A flag that makes all functions async"
+    ],
+    "answer": 1,
+    "explanation": "Top-level await is supported only in ES modules, and modules importing it wait until it finishes."
+  },
+  {
+    "topic": "npm",
+    "question": "What does a package.json dependency version written as \"*\" allow?",
+    "options": [
+      "Any version of the package",
+      "Only the latest major version",
+      "Only pre-release versions",
+      "Only the version currently installed"
+    ],
+    "answer": 0,
+    "explanation": "A star range matches all versions, which makes installs unpredictable and is best avoided."
+  },
+  {
+    "topic": "npm",
+    "question": "What does npm audit do?",
+    "options": [
+      "Measures the startup time of each package",
+      "Lints the project's JavaScript code",
+      "Verifies that every dependency is used in the code",
+      "Checks installed dependencies against a database of known security vulnerabilities"
+    ],
+    "answer": 3,
+    "explanation": "npm audit reports known advisories, and npm audit fix attempts compatible upgrades."
+  },
+  {
+    "topic": "process",
+    "question": "Which method of the os module returns the number of logical CPU cores?",
+    "options": [
+      "os.cores()",
+      "process.cpuCount",
+      "os.cpus().length",
+      "os.threads()"
+    ],
+    "answer": 2,
+    "explanation": "os.cpus() returns one entry per logical core; os.availableParallelism() is a newer alternative."
+  },
+  {
+    "topic": "process",
+    "question": "How does child_process.fork() differ from spawn()?",
+    "options": [
+      "fork() runs the code in the same process on a new thread",
+      "fork() starts a new Node.js process with a built-in IPC channel for send() and 'message' events",
+      "fork() can run only shell commands",
+      "spawn() always waits for the child process to exit"
+    ],
+    "answer": 1,
+    "explanation": "fork() is a special case of spawn() for Node.js scripts that adds a message channel between parent and child."
+  },
+  {
+    "topic": "http",
+    "question": "Which status code does an HTTP redirect with res.writeHead(301, { Location: '/new' }) indicate?",
+    "options": [
+      "Moved Permanently",
+      "Found (temporary redirect)",
+      "Not Modified",
+      "Bad Request"
+    ],
+    "answer": 0,
+    "explanation": "301 tells clients and caches that the resource has a new permanent URL, while 302 and 307 are temporary."
+  },
+  {
+    "topic": "error-handling",
+    "question": "Why is it better to throw an Error object than a plain string such as throw 'failed'?",
+    "options": [
+      "A thrown string crashes the process even inside try/catch",
+      "Error objects are caught faster by the V8 engine",
+      "Strings cannot be thrown in strict mode",
+      "An Error object captures a stack trace and works with instanceof checks, while a thrown string carries neither"
+    ],
+    "answer": 3,
+    "explanation": "Throwing Error instances, or subclasses, keeps stack traces and lets handlers distinguish error types."
+  },
+  {
+    "topic": "error-handling",
+    "question": "What is the conventional property on Node.js system errors that identifies the error type, such as 'ENOENT'?",
+    "options": [
+      "error.status",
+      "error.type",
+      "error.code",
+      "error.reason"
+    ],
+    "answer": 2,
+    "explanation": "Checking err.code === 'ENOENT' is more reliable than matching the message text, which can change."
+  }
+]

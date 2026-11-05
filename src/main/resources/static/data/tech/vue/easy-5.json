@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q184a36ae0b7",
+  "subject": "vue",
+  "topic": "template-syntax",
+  "level": "easy",
+  "question": "What is the shorthand syntax for binding an attribute with the same name as a variable in Vue 3.4+, like :id=\"id\"?",
+  "options": [
+   "#id",
+   "@id",
+   "v-id",
+   ":id"
+  ],
+  "answer": 3,
+  "explanation": "Since Vue 3.4, :id with no value binds to a variable named id in scope."
+ },
+ {
+  "id": "q95688abb1b1",
+  "subject": "vue",
+  "topic": "lifecycle",
+  "level": "easy",
+  "question": "Which Composition API hook runs before the component is mounted to the DOM?",
+  "options": [
+   "onMounted",
+   "onBeforeMount",
+   "onCreated",
+   "onBeforeUpdate"
+  ],
+  "answer": 1,
+  "explanation": "onBeforeMount runs after setup and before the initial DOM is rendered."
+ },
+ {
+  "id": "qeccbac67073",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "Which three blocks can a Vue single-file component contain at top level?",
+  "options": [
+   "html, js and css",
+   "template, script and style",
+   "view, model and controller",
+   "header, body and footer"
+  ],
+  "answer": 1,
+  "explanation": "An SFC combines the template, script and style for one component in a .vue file."
+ },
+ {
+  "id": "q97e634c69fb",
+  "subject": "vue",
+  "topic": "slots-provide-inject",
+  "level": "easy",
+  "question": "What are named slots used for?",
+  "options": [
+   "Giving a slot a CSS class",
+   "Importing slots from another file",
+   "Naming the component itself",
+   "Letting a component expose several distinct places for parent content"
+  ],
+  "answer": 3,
+  "explanation": "A component can define <slot name=\"header\"> and other slots, and the parent fills each by name."
+ },
+ {
+  "id": "q9810f050eb9",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which built-in component renders part of a component's template into a different DOM location, such as body?",
+  "options": [
+   "Teleport",
+   "Portal",
+   "KeepAlive",
+   "Transfer"
+  ],
+  "answer": 0,
+  "explanation": "<Teleport to=\"body\"> is useful for modals and overlays that should escape their parent's styling."
+ },
+ {
+  "id": "q465781adab2",
+  "subject": "vue",
+  "topic": "performance-tooling",
+  "level": "easy",
+  "question": "Which built-in component caches inactive component instances instead of destroying them?",
+  "options": [
+   "KeepAlive",
+   "Teleport",
+   "Transition",
+   "Suspense"
+  ],
+  "answer": 0,
+  "explanation": "Wrapping dynamic components in <KeepAlive> preserves their state when switching away."
+ },
+ {
+  "id": "qecdc030aa31",
+  "subject": "vue",
+  "topic": "computed-watchers",
+  "level": "easy",
+  "question": "In the Options API, which option defines cached derived values?",
+  "options": [
+   "methods",
+   "watch",
+   "computed",
+   "data"
+  ],
+  "answer": 2,
+  "explanation": "Properties in the computed option are cached and recalculated only when their reactive dependencies change."
+ },
+ {
+  "id": "qa09aaf5cd3e",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive's contents are skipped entirely during compilation so mustache syntax shows literally?",
+  "options": [
+   "v-pre",
+   "v-cloak",
+   "v-once",
+   "v-text"
+  ],
+  "answer": 0,
+  "explanation": "v-pre skips compilation for the element and its children, which is useful for showing raw template syntax."
+ },
+ {
+  "id": "q860dc19b7b3",
+  "subject": "vue",
+  "topic": "directives",
+  "level": "easy",
+  "question": "Which directive is placed after v-if to add another condition?",
+  "options": [
+   "v-elif",
+   "v-else-if",
+   "v-if-else",
+   "v-or"
+  ],
+  "answer": 1,
+  "explanation": "v-else-if chains another condition and must follow a v-if or another v-else-if."
+ },
+ {
+  "id": "q63f1f724cd5",
+  "subject": "vue",
+  "topic": "composition-api",
+  "level": "easy",
+  "question": "In the Options API, which option holds functions that can be called from the template, like event handlers?",
+  "options": [
+   "computed",
+   "methods",
+   "watch",
+   "actions"
+  ],
+  "answer": 1,
+  "explanation": "Functions in methods are bound to the component instance and can be used in templates and other options."
+ }
+]

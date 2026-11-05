@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q61f80b6c31c",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "Which predicate is equivalent to x IN (SELECT y FROM t)?",
+  "options": [
+   "x = ALL (SELECT y FROM t)",
+   "x > ANY (SELECT y FROM t)",
+   "x = ANY (SELECT y FROM t)",
+   "EXISTS (SELECT y FROM t)"
+  ],
+  "answer": 2,
+  "explanation": "= ANY is TRUE when x equals at least one returned value, which is exactly what IN tests."
+ },
+ {
+  "id": "qb0bbaa58ce8",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In standard SQL three-valued logic, what does NULL AND FALSE evaluate to?",
+  "options": [
+   "An error",
+   "NULL",
+   "TRUE",
+   "FALSE"
+  ],
+  "answer": 3,
+  "explanation": "FALSE AND anything is FALSE, so the unknown operand does not matter; NULL AND TRUE would be NULL."
+ },
+ {
+  "id": "q8f9e67a89da",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "In PostgreSQL, can a DELETE ... RETURNING statement be used inside a WITH clause?",
+  "options": [
+   "No, CTEs may contain only SELECT statements",
+   "Only if the CTE is declared RECURSIVE",
+   "Only when the main query is also a DELETE",
+   "Yes, and its returned rows can feed the main query, such as inserting them into an archive table"
+  ],
+  "answer": 3,
+  "explanation": "Data-modifying CTEs let one statement move rows atomically, for example deleting from one table and inserting into another."
+ },
+ {
+  "id": "q7cdc8139344",
+  "subject": "sql",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "Why must PostgreSQL VACUUM, usually via autovacuum, periodically freeze old rows?",
+  "options": [
+   "To prevent 32-bit transaction ID wraparound, which would make old rows appear to be in the future",
+   "To rebuild every index from scratch",
+   "To compress rows into a smaller format",
+   "To release locks held by committed transactions"
+  ],
+  "answer": 0,
+  "explanation": "Freezing marks old rows as visible to all transactions, so their transaction IDs can be safely reused."
+ },
+ {
+  "id": "q99841ad69c3",
+  "subject": "sql",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "How does PostgreSQL's MVCC handle an UPDATE?",
+  "options": [
+   "It overwrites the row in place and logs the old value",
+   "It writes a new row version and marks the old version dead, to be reclaimed later by VACUUM",
+   "It moves the old version to a separate undo tablespace that readers query",
+   "It locks the whole table until commit"
+  ],
+  "answer": 1,
+  "explanation": "Readers keep seeing the old version until they take a snapshot that includes the update, so reads do not block writes."
+ },
+ {
+  "id": "qc3b3f31f48b",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In PostgreSQL, where do NULLs appear with ORDER BY x ASC by default?",
+  "options": [
+   "Last, because NULLs sort as if larger than every other value",
+   "They are excluded from the result",
+   "In random positions",
+   "First, because NULLs sort as smallest"
+  ],
+  "answer": 0,
+  "explanation": "PostgreSQL places NULLs last for ASC and first for DESC unless NULLS FIRST or NULLS LAST is given; MySQL sorts NULLs first for ASC."
+ },
+ {
+  "id": "qf2984e62d09",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "What is a BRIN index best suited for in PostgreSQL?",
+  "options": [
+   "Very large tables where column values correlate with physical row order, such as append-only timestamps",
+   "Exact-match lookups on UUID columns",
+   "Small lookup tables with random primary keys",
+   "Enforcing uniqueness constraints"
+  ],
+  "answer": 0,
+  "explanation": "BRIN stores summaries per block range, so it is tiny but only effective when values are clustered on disk."
+ },
+ {
+  "id": "q3b71086e222",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "In MySQL, why can WHERE phone = 5551234 skip an index on a VARCHAR phone column?",
+  "options": [
+   "MySQL never indexes VARCHAR columns",
+   "Comparing a string column with a number converts the column values to numbers, so the index cannot be searched",
+   "Numeric literals disable all indexes in a query",
+   "The index is used, but only for sorting"
+  ],
+  "answer": 1,
+  "explanation": "Quoting the literal, WHERE phone = '5551234', keeps the comparison on strings so the index applies."
+ },
+ {
+  "id": "q1ec6096eb14",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "In MySQL InnoDB, what does a secondary index entry store to locate the full row?",
+  "options": [
+   "The physical disk address of the row",
+   "A copy of every column in the row",
+   "The row's primary key value",
+   "A hash of the entire row"
+  ],
+  "answer": 2,
+  "explanation": "InnoDB tables are clustered on the primary key, so secondary lookups go through the primary key index, which is why long primary keys make every secondary index larger."
+ },
+ {
+  "id": "q2e95a00ce7f",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "How can a recursive CTE using UNION ALL avoid infinite recursion when traversing a graph that contains cycles?",
+  "options": [
+   "Add ORDER BY to the anchor member",
+   "Replace UNION ALL with INTERSECT",
+   "Declare the CTE as MATERIALIZED",
+   "Track the visited path in a column and exclude nodes already on it"
+  ],
+  "answer": 3,
+  "explanation": "Without cycle detection the recursive member keeps finding new rows; PostgreSQL 14+ also offers a CYCLE clause for this."
+ }
+]

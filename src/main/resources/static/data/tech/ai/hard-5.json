@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q7ca214bc777",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "hard",
+  "question": "Why are decision trees largely insensitive to monotonic transformations of a feature, such as taking a logarithm?",
+  "options": [
+   "Trees normalize all features automatically before training",
+   "Logarithms are applied internally to every feature",
+   "Trees ignore numeric features entirely",
+   "Splits depend only on the ordering of feature values, which monotonic transformations preserve"
+  ],
+  "answer": 3,
+  "explanation": "A threshold split on x corresponds to an equivalent threshold on log(x), so the tree structure is unchanged."
+ },
+ {
+  "id": "q99709e0cf53",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "hard",
+  "question": "What is concept drift in a deployed model?",
+  "options": [
+   "The model's weights slowly change while it serves predictions",
+   "The relationship between inputs and the target changes over time, degrading model performance",
+   "Features are renamed in the database",
+   "The training loss keeps decreasing after deployment"
+  ],
+  "answer": 1,
+  "explanation": "Under concept drift the learned mapping becomes outdated, so monitoring and retraining are needed."
+ },
+ {
+  "id": "q44ef4437e6f",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "What does a 1x1 convolution do?",
+  "options": [
+   "Mixes information across channels at each spatial position, often to change the number of channels cheaply",
+   "Doubles the spatial resolution of the feature map",
+   "Applies max pooling over a 1x1 window",
+   "Leaves the input completely unchanged"
+  ],
+  "answer": 0,
+  "explanation": "A 1x1 convolution is a per-pixel linear layer over channels, used for bottlenecks and channel projection."
+ },
+ {
+  "id": "q3da030df753",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "hard",
+  "question": "What is an adversarial example?",
+  "options": [
+   "An input with small, often imperceptible perturbations that cause a model to make a confident mistake",
+   "A training example with an incorrect label added by accident",
+   "A test case written to compare two models",
+   "An example that a model has never seen before"
+  ],
+  "answer": 0,
+  "explanation": "Adversarial examples exploit sensitivity in the model's decision boundary and expose robustness gaps."
+ },
+ {
+  "id": "q59eb7ec6a20",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What does reciprocal rank fusion do in hybrid search?",
+  "options": [
+   "Averages the embedding vectors of all retrieved documents",
+   "Keeps only results that appear first in both lists",
+   "Re-embeds the query until both retrievers agree",
+   "Combines ranked result lists by summing 1/(k + rank) per document, so raw scores need not be comparable"
+  ],
+  "answer": 3,
+  "explanation": "Using ranks instead of scores makes it easy to merge keyword and vector results whose score scales differ."
+ },
+ {
+  "id": "q05cfd9d4ef0",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "Why is He (Kaiming) initialization preferred over Xavier initialization for ReLU networks?",
+  "options": [
+   "It initializes all weights to exactly one",
+   "It removes the need for an activation function",
+   "It makes every layer output the same value",
+   "It scales weight variance by 2/fan_in to compensate for ReLU zeroing about half the activations"
+  ],
+  "answer": 3,
+  "explanation": "Keeping activation variance stable across layers helps very deep ReLU networks train without signals vanishing."
+ },
+ {
+  "id": "q1a93074732c",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "hard",
+  "question": "How do diffusion models generate new samples?",
+  "options": [
+   "They pit a generator against a discriminator in a single step",
+   "They learn to reverse a gradual noising process and iteratively denoise starting from random noise",
+   "They retrieve the most similar training image",
+   "They copy patches from training images and stitch them together"
+  ],
+  "answer": 1,
+  "explanation": "Training teaches a network to predict and remove noise, so sampling runs many denoising steps starting from pure noise."
+ },
+ {
+  "id": "q5451d68fe57",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "hard",
+  "question": "Which kind of prediction does log loss (cross-entropy) penalize most heavily?",
+  "options": [
+   "A confident prediction that turns out to be wrong",
+   "An uncertain prediction that turns out to be right",
+   "A correct prediction made with 100% confidence",
+   "Any prediction for the majority class"
+  ],
+  "answer": 0,
+  "explanation": "The penalty -log(p) grows without bound as the probability assigned to the true class approaches zero."
+ },
+ {
+  "id": "qf1d8aaeff59",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "hard",
+  "question": "How does direct preference optimization (DPO) differ from RLHF with PPO?",
+  "options": [
+   "It requires no human preference data at all",
+   "It replaces pre-training with reinforcement learning from scratch",
+   "It trains only the tokenizer",
+   "It optimizes the model directly on preference pairs with a classification-style loss, without a separate reward model or RL loop"
+  ],
+  "answer": 3,
+  "explanation": "DPO derives a loss from preferred and rejected responses, simplifying alignment training compared with PPO-based RLHF."
+ },
+ {
+  "id": "q723ae70c13e",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "Which technique is commonly used to handle exploding gradients, especially in RNNs?",
+  "options": [
+   "Removing all activation functions",
+   "Gradient clipping",
+   "Initializing all weights to zero",
+   "Increasing the learning rate"
+  ],
+  "answer": 1,
+  "explanation": "Clipping rescales gradients whose norm exceeds a threshold, preventing a single huge update from destabilizing training."
+ }
+]

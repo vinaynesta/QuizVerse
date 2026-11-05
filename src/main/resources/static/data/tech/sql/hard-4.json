@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qfbf5d612d67",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "If both inputs contain two rows with key 5, how many rows does an inner equi-join on that key produce for key 5?",
+  "options": [
+   "2",
+   "4",
+   "1",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Each of the two left rows pairs with each of the two right rows, giving 2 x 2 = 4 output rows."
+ },
+ {
+  "id": "q4ae2f268c70",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "What happens with SELECT ... FOR UPDATE NOWAIT in PostgreSQL when a selected row is locked by another transaction?",
+  "options": [
+   "The query waits indefinitely and then times out",
+   "The locked rows are returned with NULL values",
+   "The table is locked without waiting",
+   "An error is raised immediately"
+  ],
+  "answer": 3,
+  "explanation": "NOWAIT makes the statement fail at once with a lock-not-available error instead of blocking, so the application can handle the conflict."
+ },
+ {
+  "id": "q65cede92c90",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "Which anomaly can occur under PostgreSQL REPEATABLE READ but is prevented by SERIALIZABLE?",
+  "options": [
+   "Dirty read",
+   "Write skew",
+   "Non-repeatable read",
+   "Phantom read"
+  ],
+  "answer": 1,
+  "explanation": "PostgreSQL's REPEATABLE READ is snapshot isolation, which already prevents dirty, non-repeatable and phantom reads but still allows write skew."
+ },
+ {
+  "id": "q1729e3718df",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "Which statement about EXISTS is true?",
+  "options": [
+   "It is FALSE if any selected column is NULL",
+   "It compares values with NULL using =",
+   "It returns the number of matching rows",
+   "It is TRUE if the subquery returns at least one row, even when every selected column is NULL"
+  ],
+  "answer": 3,
+  "explanation": "EXISTS only checks whether a row is produced. The values in the select list, including NULLs, do not affect the result."
+ },
+ {
+  "id": "q595220ed8dd",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "A VARCHAR column holds the values '9' and '10'. With a typical locale collation, what order does ORDER BY col ASC produce?",
+  "options": [
+   "'10' then '9'",
+   "The order is undefined",
+   "The same as numeric order",
+   "'9' then '10'"
+  ],
+  "answer": 0,
+  "explanation": "Text sorts character by character, so '1' comes before '9' and '10' sorts first. Store numbers in numeric columns to sort them numerically."
+ },
+ {
+  "id": "q04b55944148",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "A query returns the 10 newest orders with ORDER BY created_at DESC LIMIT 10 on a large table. Which index helps most?",
+  "options": [
+   "A hash index on id",
+   "An index on created_at, so the database can read rows in order and stop early",
+   "A unique index on customer_name",
+   "A bitmap index on status"
+  ],
+  "answer": 1,
+  "explanation": "A B-tree on created_at can be scanned backwards and stopped after ten rows, avoiding a full sort of the table."
+ },
+ {
+  "id": "q72d566c0817",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "In PostgreSQL 12 and later, how is a non-recursive CTE that is referenced once treated by default?",
+  "options": [
+   "It is always materialized into a temporary table",
+   "It is executed twice",
+   "It is inlined into the main query, unless MATERIALIZED is specified",
+   "It is converted into a view"
+  ],
+  "answer": 2,
+  "explanation": "Since PostgreSQL 12, such CTEs are inlined by default. WITH ... AS MATERIALIZED forces the old behaviour of computing the CTE once."
+ },
+ {
+  "id": "q80ce93e3c43",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "What is required for a PostgreSQL index-only scan to avoid reading heap pages?",
+  "options": [
+   "All referenced columns must be in the index, and the visibility map must mark the relevant heap pages as all-visible",
+   "The query must use DISTINCT",
+   "The table must contain no NULL values",
+   "The index must be UNIQUE"
+  ],
+  "answer": 0,
+  "explanation": "The visibility map lets PostgreSQL skip heap access for pages where all tuples are known visible to everyone. VACUUM keeps the visibility map up to date."
+ },
+ {
+  "id": "q79d44ebfe9c",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "Can a window function appear directly in a WHERE clause?",
+  "options": [
+   "No, it must be computed in a subquery or CTE and then filtered outside it",
+   "Yes, but only together with PARTITION BY",
+   "Yes, in every SQL dialect",
+   "Only in MySQL"
+  ],
+  "answer": 0,
+  "explanation": "Window functions are evaluated after WHERE, so filtering on them requires wrapping the query in a subquery or CTE."
+ },
+ {
+  "id": "q325f964954a",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT 0.1::float8 + 0.2::float8 = 0.3::float8 return?",
+  "options": [
+   "TRUE",
+   "An error",
+   "FALSE",
+   "NULL"
+  ],
+  "answer": 2,
+  "explanation": "Binary double-precision values cannot represent 0.1, 0.2 and 0.3 exactly, so the sum differs from 0.3 in the last bits."
+ }
+]

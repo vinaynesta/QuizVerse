@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe1db2ab2634",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "What is the topmost node of a tree, the one with no parent, called?",
+  "options": [
+   "Leaf",
+   "Sibling",
+   "Root",
+   "Descendant"
+  ],
+  "answer": 2,
+  "explanation": "Every tree has exactly one root, from which all other nodes descend."
+ },
+ {
+  "id": "qdd4a848bd65",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "What is the time complexity of reading, without removing, the minimum element of a binary min-heap?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n log n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "The minimum is always at the root, so it can be read directly."
+ },
+ {
+  "id": "q01c5535d911",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "In an undirected graph without self-loops, what is the degree of a vertex?",
+  "options": [
+   "The number of edges incident to it",
+   "Its distance from the starting vertex",
+   "The total weight of the graph",
+   "The number of vertices in the graph"
+  ],
+  "answer": 0,
+  "explanation": "Degree counts how many edges touch the vertex."
+ },
+ {
+  "id": "qf9a3ed4691f",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What are two strings called when they contain the same characters with the same frequencies, such as 'listen' and 'silent'?",
+  "options": [
+   "Anagrams",
+   "Palindromes",
+   "Substrings",
+   "Prefixes"
+  ],
+  "answer": 0,
+  "explanation": "Anagrams are rearrangements of the same multiset of characters."
+ },
+ {
+  "id": "qc12c9e1dda9",
+  "subject": "dsa",
+  "topic": "recursion-backtracking",
+  "level": "easy",
+  "question": "What does a correct recursive factorial function return for factorial(4)?",
+  "options": [
+   "10",
+   "24",
+   "16",
+   "12"
+  ],
+  "answer": 1,
+  "explanation": "factorial(4) = 4 * 3 * 2 * 1 = 24."
+ },
+ {
+  "id": "qbbe82cb852b",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "Which sorting algorithm repeatedly finds the smallest remaining element and moves it to the front of the unsorted part?",
+  "options": [
+   "Merge sort",
+   "Bubble sort",
+   "Selection sort",
+   "Insertion sort"
+  ],
+  "answer": 2,
+  "explanation": "Selection sort selects the minimum of the unsorted portion and swaps it into place on each pass."
+ },
+ {
+  "id": "q96cbcb3decb",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "easy",
+  "question": "Making 30 cents greedily from coins of 25, 10, 5, and 1 cents, how many coins are used?",
+  "options": [
+   "3",
+   "4",
+   "6",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Greedy takes a 25 and then a 5, for two coins in total."
+ },
+ {
+  "id": "qf5a165b14b3",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "easy",
+  "question": "Which list orders these complexities from slowest-growing to fastest-growing?",
+  "options": [
+   "O(n), O(log n), O(1), O(n^2)",
+   "O(log n), O(1), O(n), O(n^2)",
+   "O(1), O(n), O(log n), O(n^2)",
+   "O(1), O(log n), O(n), O(n^2)"
+  ],
+  "answer": 3,
+  "explanation": "Constant time grows slowest, followed by logarithmic, linear, and quadratic."
+ },
+ {
+  "id": "q44ab7c30765",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "easy",
+  "question": "In a doubly linked list, what does each node store besides its data?",
+  "options": [
+   "References to both the next and the previous node",
+   "Only a reference to the head node",
+   "Only a reference to the next node",
+   "The index of the node in the list"
+  ],
+  "answer": 0,
+  "explanation": "The extra previous pointer allows traversal in both directions."
+ },
+ {
+  "id": "q6de4d407371",
+  "subject": "dsa",
+  "topic": "arrays-strings",
+  "level": "easy",
+  "question": "What is the time complexity of finding the maximum element in an unsorted array of n elements?",
+  "options": [
+   "O(1)",
+   "O(log n)",
+   "O(n)",
+   "O(n log n)"
+  ],
+  "answer": 2,
+  "explanation": "Every element must be examined once, since any unchecked element could be the maximum."
+ }
+]

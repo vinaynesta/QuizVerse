@@ -30,6 +30,21 @@
   "explanation": "jakarta.persistence.Id designates the entity's identifier property."
  },
  {
+  "id": "q451f5773536",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which connection pool does Spring Boot use by default when it is on the classpath?",
+  "options": [
+   "C3P0",
+   "Apache Commons DBCP2",
+   "HikariCP",
+   "Tomcat JDBC Pool"
+  ],
+  "answer": 2,
+  "explanation": "HikariCP is preferred by Spring Boot and is included transitively by the JDBC and JPA starters."
+ },
+ {
   "id": "q4727f8b9708",
   "subject": "springboot",
   "topic": "data-jpa",
@@ -43,6 +58,21 @@
   ],
   "answer": 0,
   "explanation": "Spring Data parses the method name into a query using the email and active properties."
+ },
+ {
+  "id": "q82bdb3ff780",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which JPA annotation asks the persistence provider to generate a value for the primary key?",
+  "options": [
+   "@Column",
+   "@Version",
+   "@Transient",
+   "@GeneratedValue"
+  ],
+  "answer": 3,
+  "explanation": "@GeneratedValue on an @Id field lets the provider or database generate keys using a strategy such as IDENTITY or SEQUENCE."
  },
  {
   "id": "qce89b5bbabe",
@@ -60,6 +90,21 @@
   "explanation": "Spring Boot 3 moved to Jakarta EE 9+, so JPA annotations live in the jakarta.persistence namespace."
  },
  {
+  "id": "qf7b3e500955",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "easy",
+  "question": "Which property sets the JDBC URL of Spring Boot's auto-configured DataSource?",
+  "options": [
+   "spring.jpa.url",
+   "spring.jdbc.connection",
+   "server.datasource.url",
+   "spring.datasource.url"
+  ],
+  "answer": 3,
+  "explanation": "spring.datasource.url, together with username and password properties, configures the default DataSource."
+ },
+ {
   "id": "q005a8772bbf",
   "subject": "springboot",
   "topic": "data-jpa",
@@ -75,6 +120,21 @@
   "explanation": "@Modifying tells Spring Data to execute the query as an update via executeUpdate instead of expecting a result set."
  },
  {
+  "id": "q10bd72e37d7",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "What does a @Version field on a JPA entity enable?",
+  "options": [
+   "Automatic audit timestamps",
+   "Keeping historical versions of every row",
+   "Optimistic locking with a version check on update",
+   "Schema versioning for migrations"
+  ],
+  "answer": 2,
+  "explanation": "The provider increments the version on update and fails with an optimistic locking exception if another transaction changed the row first."
+ },
+ {
   "id": "q15540d27685",
   "subject": "springboot",
   "topic": "data-jpa",
@@ -88,6 +148,36 @@
   ],
   "answer": 0,
   "explanation": "Open Session in View is enabled by default, and Boot warns because it keeps a database connection open during view rendering."
+ },
+ {
+  "id": "q22369157939",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "How do Spring Data repository methods support pagination?",
+  "options": [
+   "Adding LIMIT manually to the method name",
+   "Accepting a Pageable parameter and returning Page<T> or Slice<T>",
+   "Annotating the method with @Paginate",
+   "Returning a Stream and skipping elements"
+  ],
+  "answer": 1,
+  "explanation": "Passing PageRequest.of(page, size) as a Pageable makes Spring Data apply limit and offset, and Page also includes the total count."
+ },
+ {
+  "id": "q7815eddf8a1",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "Which database migration tools does Spring Boot auto-configure when found on the classpath?",
+  "options": [
+   "Flyway and Liquibase",
+   "DbUnit and Testcontainers",
+   "Ant and Gradle",
+   "Hibernate Envers and jOOQ"
+  ],
+  "answer": 0,
+  "explanation": "Spring Boot runs Flyway or Liquibase migrations at startup when their libraries are present."
  },
  {
   "id": "q874d15dd0ab",
@@ -118,6 +208,36 @@
   ],
   "answer": 3,
   "explanation": "Fetch joins and entity graphs load the association in the same query instead of one query per parent."
+ },
+ {
+  "id": "q0cdea8563a3",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "Inside a @Transactional method, you load a managed entity and change a field but never call save(). What happens at commit?",
+  "options": [
+   "Nothing, because save() was not called",
+   "Hibernate dirty checking flushes an UPDATE for the change",
+   "The change is rolled back",
+   "An exception says the entity is detached"
+  ],
+  "answer": 1,
+  "explanation": "Managed entities are tracked in the persistence context and changes are flushed automatically at commit."
+ },
+ {
+  "id": "q204ce301ab8",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "How does a derived Spring Data JPA method like deleteByStatus(String status) run by default?",
+  "options": [
+   "It issues a single bulk DELETE statement",
+   "It marks the rows as soft-deleted",
+   "It loads the matching entities and removes each one, so lifecycle callbacks and cascades apply",
+   "It truncates the table"
+  ],
+  "answer": 2,
+  "explanation": "Derived delete queries go through EntityManager.remove for each entity and need an active transaction."
  },
  {
   "id": "q214c3d1794a",
@@ -163,6 +283,21 @@
   ],
   "answer": 0,
   "explanation": "Lazy proxies need an open persistence context; outside the transaction they cannot load data."
+ },
+ {
+  "id": "qa454f10fda0",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "Why can't Spring Data optimize the SQL for an open interface projection that uses @Value(\"#{target.firstName + ' ' + target.lastName}\")?",
+  "options": [
+   "SpEL projections are run in the database",
+   "Open projections are only supported for native queries",
+   "The SpEL expression may use any property of the target, so the whole entity must be loaded",
+   "The projection is evaluated before the query runs"
+  ],
+  "answer": 2,
+  "explanation": "Closed projections let Spring Data select only the needed columns, while open projections need the full entity."
  },
  {
   "id": "qae0958c264f",

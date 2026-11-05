@@ -30,6 +30,21 @@
   "explanation": "Anomaly detection flags rare or unusual observations, such as fraudulent transactions or faulty sensor readings."
  },
  {
+  "id": "q5cff570c433",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "In k-means, what is a cluster centroid?",
+  "options": [
+   "The data point farthest from all others",
+   "The first point chosen from the dataset",
+   "The mean position of all points assigned to that cluster",
+   "The boundary line between two clusters"
+  ],
+  "answer": 2,
+  "explanation": "K-means repeatedly assigns points to the nearest centroid and recomputes each centroid as the mean of its points."
+ },
+ {
   "id": "q95defcd1e6f",
   "subject": "ai",
   "topic": "unsupervised-learning",
@@ -45,6 +60,21 @@
   "explanation": "PCA projects data onto orthogonal directions of maximum variance, allowing fewer dimensions to retain most information."
  },
  {
+  "id": "qca77d9031e7",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What is clustering?",
+  "options": [
+   "Predicting a numeric value from labeled examples",
+   "Removing duplicate rows from a dataset",
+   "Sorting data points by a single feature",
+   "Grouping similar data points together without using labels"
+  ],
+  "answer": 3,
+  "explanation": "Clustering is an unsupervised task that discovers groups of similar points on its own."
+ },
+ {
   "id": "qe67b83d656e",
   "subject": "ai",
   "topic": "unsupervised-learning",
@@ -58,6 +88,21 @@
   ],
   "answer": 1,
   "explanation": "k-means iteratively assigns points to the nearest centroid and recomputes centroids to minimize within-cluster squared distance."
+ },
+ {
+  "id": "q11dd630826d",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "How does agglomerative hierarchical clustering work?",
+  "options": [
+   "It starts with one cluster and randomly splits it until k clusters remain",
+   "It starts with every point as its own cluster and repeatedly merges the closest clusters",
+   "It assigns points to k fixed centroids chosen in advance",
+   "It labels points as core, border or noise based on density"
+  ],
+  "answer": 1,
+  "explanation": "The sequence of merges forms a dendrogram that can be cut at any level to get a chosen number of clusters."
  },
  {
   "id": "q3abde2465ec",
@@ -90,6 +135,21 @@
   "explanation": "DBSCAN grows clusters from dense regions and marks points in low-density areas as noise."
  },
  {
+  "id": "q7dcbf30711e",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "medium",
+  "question": "In PCA, what does the first principal component represent?",
+  "options": [
+   "The feature with the largest mean value",
+   "The direction along which the data has the greatest variance",
+   "The direction with the least variance",
+   "The first column of the original dataset"
+  ],
+  "answer": 1,
+  "explanation": "Principal components are ordered by explained variance, and the first captures the most."
+ },
+ {
   "id": "qdcdaa1aaeb7",
   "subject": "ai",
   "topic": "unsupervised-learning",
@@ -120,6 +180,21 @@
   "explanation": "Plotting within-cluster variance against k often shows a bend where extra clusters give diminishing returns."
  },
  {
+  "id": "q02c58e34769",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "Which algorithm is typically used to fit the parameters of a Gaussian mixture model?",
+  "options": [
+   "Backpropagation",
+   "Expectation-maximization",
+   "The Apriori algorithm",
+   "Gradient boosting"
+  ],
+  "answer": 1,
+  "explanation": "EM alternates between computing soft cluster responsibilities and re-estimating means, covariances and weights."
+ },
+ {
   "id": "q3251e34a1fb",
   "subject": "ai",
   "topic": "unsupervised-learning",
@@ -133,6 +208,21 @@
   ],
   "answer": 1,
   "explanation": "In high dimensions nearest and farthest neighbors end up at similar distances, weakening distance-based grouping."
+ },
+ {
+  "id": "q4ccd55272ef",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "hard",
+  "question": "Why are distances between well-separated clusters in a t-SNE plot unreliable?",
+  "options": [
+   "t-SNE always places clusters at equal distances",
+   "t-SNE only works on two-dimensional input data",
+   "t-SNE preserves local neighborhoods, but global distances and cluster sizes are not meaningfully preserved",
+   "t-SNE uses labels to position clusters"
+  ],
+  "answer": 2,
+  "explanation": "Interpret t-SNE for local grouping; gaps and relative sizes between clusters can be artifacts of the method."
  },
  {
   "id": "q795d11eb9be",

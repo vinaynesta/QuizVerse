@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q1bce2240361",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With strictFunctionTypes enabled, how are function-type parameters compared during assignability?",
+  "options": [
+   "Contravariantly",
+   "Bivariantly",
+   "They are not compared",
+   "Covariantly"
+  ],
+  "answer": 0,
+  "explanation": "A function accepting a wider parameter type can safely stand in for one accepting a narrower type, but not vice versa."
+ },
+ {
+  "id": "q382cf1ad649",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "Which declaration form is exempt from strictFunctionTypes and keeps bivariant parameter checking?",
+  "options": [
+   "Property with a function type, e.g. `interface I { m: (x: Dog) => void }`",
+   "Arrow functions assigned to const",
+   "Method shorthand, e.g. `interface I { m(x: Dog): void }`",
+   "Standalone function type aliases"
+  ],
+  "answer": 2,
+  "explanation": "strictFunctionTypes applies to function type syntax but deliberately not to method declarations."
+ },
+ {
+  "id": "q4f5b5f9ed2c",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With `Dog` extending `Animal` and strictFunctionTypes on, is `(x: Animal) => void` assignable to `(x: Dog) => void`?",
+  "options": [
+   "No, because Dog is narrower than Animal",
+   "Only when strictFunctionTypes is disabled",
+   "Only if Animal is an interface",
+   "Yes"
+  ],
+  "answer": 3,
+  "explanation": "Parameters are contravariant: a function handling any Animal can safely receive a Dog."
+ },
+ {
+  "id": "q714b9567b0a",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "What does `out` mean in `interface Producer<out T> { get(): T }`?",
+  "options": [
+   "T is declared covariant",
+   "T can only be used as a parameter",
+   "T is declared invariant",
+   "T is declared contravariant"
+  ],
+  "answer": 0,
+  "explanation": "Variance annotations (TS 4.7+) declare out for covariant and in for contravariant type parameters."
+ },
+ {
+  "id": "qa1542192515",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With `Dog` extending `Animal`, what happens with `const dogs: Dog[] = []; const animals: Animal[] = dogs;`?",
+  "options": [
+   "It compiles only with an explicit cast",
+   "Compile error, because arrays are invariant",
+   "It compiles, because arrays are treated covariantly",
+   "Compile error, because arrays are contravariant"
+  ],
+  "answer": 2,
+  "explanation": "TypeScript treats mutable arrays covariantly for convenience, even though this is technically unsound."
+ }
+]

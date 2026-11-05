@@ -15,6 +15,21 @@
   "explanation": "Spring Boot 3 and Spring Framework 6 require Java 17 as a baseline."
  },
  {
+  "id": "q75cc67b8628",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which Gradle task, added by the Spring Boot plugin, builds an executable jar?",
+  "options": [
+   "shadowJar",
+   "bootJar",
+   "fatJar",
+   "assembleBoot"
+  ],
+  "answer": 1,
+  "explanation": "The Spring Boot Gradle plugin adds bootJar, which packages the application and its dependencies into an executable jar."
+ },
+ {
   "id": "q7a46bb99bd5",
   "subject": "springboot",
   "topic": "deployment-build",
@@ -45,6 +60,21 @@
   "explanation": "The spring-boot:run goal compiles and starts the application in place."
  },
  {
+  "id": "qc306fc19408",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which web tool generates a new Spring Boot project with chosen dependencies?",
+  "options": [
+   "Spring Initializr at start.spring.io",
+   "Spring Cloud Config Server",
+   "JHipster Registry",
+   "Maven Central search"
+  ],
+  "answer": 0,
+  "explanation": "Spring Initializr generates a ready-to-build Maven or Gradle project, and IDEs integrate with it."
+ },
+ {
   "id": "qdaf40b1ede7",
   "subject": "springboot",
   "topic": "deployment-build",
@@ -58,6 +88,21 @@
   ],
   "answer": 3,
   "explanation": "repackage rewrites the jar into an executable fat jar runnable with java -jar."
+ },
+ {
+  "id": "q11e243211d7",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "What does the spring-boot-docker-compose module do in Spring Boot 3.1+?",
+  "options": [
+   "Starts services from a compose file on startup and creates service connections to them",
+   "Builds a Docker image during mvn package",
+   "Generates a compose file from your beans",
+   "Deploys the app to Docker Swarm"
+  ],
+  "answer": 0,
+  "explanation": "During development it runs docker compose up and auto-configures connection details for recognised containers."
  },
  {
   "id": "q154fd363a42",
@@ -163,6 +208,21 @@
   ],
   "answer": 1,
   "explanation": "The parent manages versions through properties, so redefining one changes the version used."
+ },
+ {
+  "id": "qf5fb942d5d5",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "hard",
+  "question": "What does running a Spring Boot jar on the JVM with -Dspring.aot.enabled=true do?",
+  "options": [
+   "Compiles the app into a native image at startup",
+   "Uses the AOT-generated bean definitions and initialization code produced at build time",
+   "Enables the JIT's tiered compilation",
+   "Turns on lazy initialization"
+  ],
+  "answer": 1,
+  "explanation": "After the process-aot build step, this flag makes the JVM app use the pre-generated code instead of runtime configuration processing."
  },
  {
   "id": "qff2715f189f",

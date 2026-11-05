@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q638b012241e",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "How does eBGP prevent routing loops between autonomous systems?",
+  "options": [
+   "Packets have a TTL limit",
+   "Spanning Tree Protocol blocks redundant links",
+   "Split horizon between neighbors",
+   "A router rejects routes whose AS_PATH already contains its own AS number"
+  ],
+  "answer": 3,
+  "explanation": "The AS_PATH records every AS a route traversed, so seeing your own ASN means the route has looped back."
+ },
+ {
+  "id": "qf73296eca5c",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What is the bandwidth-delay product of a 100 Mbps path with an 80 ms RTT?",
+  "options": [
+   "8 MB",
+   "125 KB",
+   "10 MB",
+   "1 MB (8 Mbit)"
+  ],
+  "answer": 3,
+  "explanation": "100,000,000 b/s * 0.08 s = 8,000,000 bits = 1,000,000 bytes that must be in flight to fill the pipe."
+ },
+ {
+  "id": "qf19ae374bfa",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "In TLS 1.3, how is the server's Certificate message sent?",
+  "options": [
+   "As a hash only, never the full chain",
+   "Encrypted under the handshake traffic keys",
+   "Only inside 0-RTT early data",
+   "In plaintext, as in TLS 1.2"
+  ],
+  "answer": 1,
+  "explanation": "Everything after ServerHello, including EncryptedExtensions, Certificate and CertificateVerify, is encrypted in TLS 1.3."
+ },
+ {
+  "id": "qd3dd35f8966",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What does TCP BBR primarily base its sending rate on?",
+  "options": [
+   "ECN marks only",
+   "Packet loss events only",
+   "Estimates of bottleneck bandwidth and minimum RTT",
+   "The receiver's queue length"
+  ],
+  "answer": 2,
+  "explanation": "BBR models the path's delivery rate and propagation delay instead of treating loss as the main congestion signal."
+ },
+ {
+  "id": "qfb7bcbd87c6",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What is the purpose of the key_share extension in a TLS 1.3 ClientHello?",
+  "options": [
+   "It carries a session ticket for resumption",
+   "It carries the server hostname",
+   "It carries the client's ephemeral (EC)DHE public values so a shared secret can be computed in one round trip",
+   "It lists the supported cipher suites"
+  ],
+  "answer": 2,
+  "explanation": "Sending key shares up front lets the server reply with its share and derive handshake keys immediately."
+ },
+ {
+  "id": "qf5cb9490a94",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Why do long fat networks need the TCP window scale option (RFC 7323)?",
+  "options": [
+   "The 16-bit window field otherwise caps the window at 65,535 bytes",
+   "It is required to enable SACK",
+   "It turns on ECN",
+   "It negotiates the MSS"
+  ],
+  "answer": 0,
+  "explanation": "Without scaling, throughput is limited to 65,535 bytes per RTT; the option shifts the window by up to 14 bits."
+ },
+ {
+  "id": "qabffb4a5c68",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "Which transport and port does BGP use?",
+  "options": [
+   "UDP port 179",
+   "UDP port 520",
+   "TCP port 179",
+   "IP protocol 89"
+  ],
+  "answer": 2,
+  "explanation": "BGP sessions run over TCP 179; UDP 520 is RIP and IP protocol 89 is OSPF."
+ },
+ {
+  "id": "q72e3eec57a3",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Which side of a TCP connection enters the TIME_WAIT state?",
+  "options": [
+   "The side that performs the active close (sends the first FIN)",
+   "Both sides, always",
+   "Only the server",
+   "The passive closer"
+  ],
+  "answer": 0,
+  "explanation": "The active closer passes through FIN_WAIT states and then waits in TIME_WAIT after ACKing the peer's FIN."
+ },
+ {
+  "id": "qa85f23b7737",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "How does OSPF compute its routes?",
+  "options": [
+   "It runs Dijkstra's shortest-path-first algorithm over a link-state database",
+   "It selects routes by AS_PATH length and policy",
+   "It uses hop count with a 15-hop maximum",
+   "It runs Bellman-Ford on neighbors' distance vectors"
+  ],
+  "answer": 0,
+  "explanation": "Each OSPF router floods LSAs to build an identical topology map, then computes a shortest-path tree."
+ },
+ {
+  "id": "qddb1bdc0b3a",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does the ALPN extension do?",
+  "options": [
+   "Pins the server certificate",
+   "Negotiates the application protocol (e.g. h2 or http/1.1) during the TLS handshake",
+   "Compresses TLS records",
+   "Enables session resumption"
+  ],
+  "answer": 1,
+  "explanation": "ALPN lets client and server agree on HTTP/2 or HTTP/1.1 without an extra round trip."
+ }
+]

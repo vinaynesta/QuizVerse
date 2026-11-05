@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q05dfdbf27be",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What property lets CRDTs converge without coordination?",
+  "options": [
+   "A global lock acquired before every update",
+   "Synchronized clocks with bounded drift under one millisecond",
+   "A single leader that serializes all writes",
+   "Merge operations that are commutative, associative, and idempotent"
+  ],
+  "answer": 3,
+  "explanation": "Because merges are order-independent and idempotent, replicas that have seen the same updates reach the same state regardless of delivery order."
+ },
+ {
+  "id": "q195ded1d947",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "Sequential consistency differs from linearizability because it does not require which of the following?",
+  "options": [
+   "A single global order of all operations",
+   "Respecting real-time order of operations across different clients",
+   "Each client's operations appearing in program order",
+   "Writes being applied in the same order on all replicas"
+  ],
+  "answer": 1,
+  "explanation": "Sequential consistency needs one global order that respects each client's program order, but not the real-time order between clients."
+ },
+ {
+  "id": "q288f6ed2b2b",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "A client reads version 7 from one replica, then reads version 5 from another. Which session guarantee is violated?",
+  "options": [
+   "Monotonic reads",
+   "Writes follow reads",
+   "Monotonic writes",
+   "Exactly-once processing"
+  ],
+  "answer": 0,
+  "explanation": "Monotonic reads means a client never sees an older version after seeing a newer one."
+ },
+ {
+  "id": "q75f97ec0211",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "Which property does linearizability add beyond sequential consistency?",
+  "options": [
+   "Operations may be reordered arbitrarily within a single client",
+   "Operations must respect real-time ordering across clients",
+   "Reads may return values older than the latest completed write",
+   "Each replica may apply writes in a different order"
+  ],
+  "answer": 1,
+  "explanation": "Linearizability requires each operation to appear to take effect between its invocation and response, consistent with real time."
+ },
+ {
+  "id": "qa29b3b14512",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What does serializability guarantee for concurrent transactions?",
+  "options": [
+   "Each transaction sees every write committed after it started",
+   "Every read returns the most recently committed value in real time",
+   "Their outcome is equivalent to some serial execution of those transactions",
+   "Transactions never block one another"
+  ],
+  "answer": 2,
+  "explanation": "Serializability is about transaction isolation and equivalence to a serial order, not real-time recency."
+ },
+ {
+  "id": "qa8111d995b2",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What is a phantom read?",
+  "options": [
+   "Reading a row that was deleted long ago",
+   "Reading data from an uncommitted transaction",
+   "Re-running a range query in the same transaction and getting a different set of rows because another transaction inserted or deleted rows",
+   "Two transactions overwriting each other's update"
+  ],
+  "answer": 2,
+  "explanation": "Phantoms involve rows matching a predicate appearing or disappearing, not changes to an already-read row."
+ },
+ {
+  "id": "qa87d105f69d",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "Which anomaly occurs when a transaction reads a value written by another transaction that has not committed yet?",
+  "options": [
+   "Dirty read",
+   "Write skew",
+   "Phantom read",
+   "Lost update"
+  ],
+  "answer": 0,
+  "explanation": "Dirty reads are allowed at read uncommitted and prevented at read committed and above."
+ },
+ {
+  "id": "qac6565f78c5",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What do vector clocks let a system determine about two versions of a value?",
+  "options": [
+   "Which version is larger in bytes",
+   "Their exact wall-clock write times",
+   "Which replica stores them",
+   "Whether one causally precedes the other or they are concurrent"
+  ],
+  "answer": 3,
+  "explanation": "Comparing per-node counters shows happens-before or concurrency, so true conflicts can be detected."
+ },
+ {
+  "id": "qc1ee556d272",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "What is the key limitation of Lamport timestamps?",
+  "options": [
+   "If a has a smaller timestamp than b, it does not follow that a happened before b",
+   "They require synchronized physical clocks",
+   "They cannot order events on the same process",
+   "They grow with the number of nodes"
+  ],
+  "answer": 0,
+  "explanation": "Lamport clocks are consistent with causality but cannot distinguish concurrent events from ordered ones."
+ },
+ {
+  "id": "qebbb538b361",
+  "subject": "system-design",
+  "topic": "consistency-models",
+  "level": "hard",
+  "question": "Which anomaly can snapshot isolation permit that serializable isolation does not?",
+  "options": [
+   "Lost updates on the same row",
+   "Dirty reads of uncommitted data",
+   "Write skew, where two transactions read overlapping data and update disjoint rows",
+   "Reads that never see their own writes"
+  ],
+  "answer": 2,
+  "explanation": "Snapshot isolation prevents dirty reads and same-row lost updates, but two transactions can each make a decision based on stale reads and write different rows."
+ }
+]

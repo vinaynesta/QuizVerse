@@ -1,5 +1,20 @@
 [
  {
+  "id": "q2e77e4f3ed2",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which block handles an exception thrown inside a try block?",
+  "options": [
+   "finally",
+   "throw",
+   "catch",
+   "throws"
+  ],
+  "answer": 2,
+  "explanation": "A matching catch block receives and handles the thrown exception."
+ },
+ {
   "id": "q89cf87294c9",
   "subject": "java",
   "topic": "exceptions",
@@ -28,6 +43,21 @@
   ],
   "answer": 0,
   "explanation": "throws appears in the method declaration; throw is the statement that actually throws an exception."
+ },
+ {
+  "id": "qbd55b3886a7",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "What exception does Integer.parseInt(\"abc\") throw?",
+  "options": [
+   "NumberFormatException",
+   "ClassCastException",
+   "ArithmeticException",
+   "NullPointerException"
+  ],
+  "answer": 0,
+  "explanation": "parseInt throws NumberFormatException when the string is not a valid integer."
  },
  {
   "id": "qc2157f0052f",
@@ -60,6 +90,21 @@
   "explanation": "Accessing index -1 or length or beyond throws ArrayIndexOutOfBoundsException."
  },
  {
+  "id": "q4276e1cbf66",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "What does Iterator.next() throw when there are no more elements?",
+  "options": [
+   "NoSuchElementException",
+   "NullPointerException",
+   "IllegalStateException",
+   "IndexOutOfBoundsException"
+  ],
+  "answer": 0,
+  "explanation": "Callers should check hasNext() first, or next() throws NoSuchElementException."
+ },
+ {
   "id": "q50472af5bf7",
   "subject": "java",
   "topic": "exceptions",
@@ -90,6 +135,21 @@
   "explanation": "Any AutoCloseable (including its subinterface Closeable) can be declared in try-with-resources."
  },
  {
+  "id": "qcb5e594ca74",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "What happens if you write catch (IOException e) for a try block whose code cannot throw IOException?",
+  "options": [
+   "It compiles and the catch is simply never used",
+   "It is a compile error",
+   "It compiles with only a warning",
+   "It throws an IOException at runtime"
+  ],
+  "answer": 1,
+  "explanation": "The compiler rejects catch clauses for checked exceptions that the try block can never throw."
+ },
+ {
   "id": "qe2fc4dc3aa5",
   "subject": "java",
   "topic": "exceptions",
@@ -118,6 +178,36 @@
   ],
   "answer": 2,
   "explanation": "The original exception propagates and close() failures are available through getSuppressed()."
+ },
+ {
+  "id": "q33e980adc42",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Can a lambda implementing java.util.function.Function throw a checked IOException without catching it?",
+  "options": [
+   "No, because Function.apply declares no checked exceptions",
+   "Yes, lambdas are exempt from checked exception rules",
+   "Yes, if the enclosing method declares throws IOException",
+   "Only inside a parallel stream"
+  ],
+  "answer": 0,
+  "explanation": "A lambda body may only throw the checked exceptions declared by its functional interface's method."
+ },
+ {
+  "id": "q38ebc472bf7",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What is thrown when a static initializer throws an unchecked exception during class initialization?",
+  "options": [
+   "ClassNotFoundException",
+   "ExceptionInInitializerError",
+   "NoSuchMethodError",
+   "The original exception, unwrapped"
+  ],
+  "answer": 1,
+  "explanation": "The exception is wrapped, and later attempts to use the class get NoClassDefFoundError."
  },
  {
   "id": "q50357ef8cb6",

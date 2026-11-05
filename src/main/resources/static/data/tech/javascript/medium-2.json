@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe22bf34f2a2",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What is the main difference between a Map and a plain object for key-value storage?",
+  "options": [
+   "Map keys must be strings",
+   "Maps cannot be iterated",
+   "Objects preserve insertion order and Maps do not",
+   "Map keys can be any value, including objects"
+  ],
+  "answer": 3,
+  "explanation": "Map accepts any value as a key and has a size property and direct iteration."
+ },
+ {
+  "id": "q79b6b3eddf2",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "Which are the three states of a Promise?",
+  "options": [
+   "started, running, done",
+   "pending, fulfilled, rejected",
+   "open, closed, failed",
+   "waiting, success, error"
+  ],
+  "answer": 1,
+  "explanation": "A Promise starts pending and is settled once, either fulfilled with a value or rejected with a reason."
+ },
+ {
+  "id": "qa3c8ea623b6",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [1, 2, 3].some(n => n > 2) return?",
+  "options": [
+   "true",
+   "3",
+   "false",
+   "[3]"
+  ],
+  "answer": 0,
+  "explanation": "some returns true if at least one element satisfies the predicate."
+ },
+ {
+  "id": "q207560b82d3",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [1, 2, 3].map(x => x * 2) return?",
+  "options": [
+   "[1, 2, 3]",
+   "[2, 4, 6]",
+   "12",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "map returns a new array with the callback result for each element."
+ },
+ {
+  "id": "q80003d30fde",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "What does Function.prototype.bind return?",
+  "options": [
+   "The result of calling the function",
+   "A Promise resolving to the function result",
+   "The original function with this changed in place",
+   "A new function with this permanently set to the given value"
+  ],
+  "answer": 3,
+  "explanation": "bind creates a new bound function and does not invoke the original."
+ },
+ {
+  "id": "q3c43b65eaac",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What does new Set([1, 2, 2, 3]).size return?",
+  "options": [
+   "4",
+   "3",
+   "1",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "A Set stores unique values, so the duplicate 2 is kept only once."
+ },
+ {
+  "id": "q5ccdc23aa6b",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "How does an arrow function determine its this value?",
+  "options": [
+   "Lexically, from the enclosing scope where it is defined",
+   "It is always the global object",
+   "From the object it is called on",
+   "From the first argument passed to it"
+  ],
+  "answer": 0,
+  "explanation": "Arrow functions do not have their own this; they use the this of the surrounding scope."
+ },
+ {
+  "id": "q8f85bc858d9",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "What is event delegation?",
+  "options": [
+   "Attaching one listener to a parent and using event.target to handle events from its children",
+   "Dispatching custom events from a worker",
+   "Passing an event to setTimeout",
+   "Calling listeners in reverse order"
+  ],
+  "answer": 0,
+  "explanation": "Because events bubble, a single parent listener can handle events from many current and future child elements."
+ },
+ {
+  "id": "q8212c1fe508",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does the # prefix mean on a class field like #count?",
+  "options": [
+   "It is a computed property",
+   "It is a static field",
+   "It is a private field accessible only inside the class body",
+   "It is a read-only getter"
+  ],
+  "answer": 2,
+  "explanation": "Fields prefixed with # are truly private and cannot be accessed from outside the class."
+ },
+ {
+  "id": "qc5bb0d0dd28",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [10, 1, 2].sort() return?",
+  "options": [
+   "[1, 10, 2]",
+   "[10, 2, 1]",
+   "[1, 2, 10]",
+   "[2, 1, 10]"
+  ],
+  "answer": 0,
+  "explanation": "Without a comparator, sort converts elements to strings and compares them, so \"10\" sorts before \"2\"."
+ }
+]

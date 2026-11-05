@@ -1,5 +1,20 @@
 [
  {
+  "id": "q34e3fd27e23",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which logging implementation does Spring Boot use by default with the starters?",
+  "options": [
+   "Log4j 2",
+   "java.util.logging",
+   "Tinylog",
+   "Logback"
+  ],
+  "answer": 3,
+  "explanation": "spring-boot-starter-logging brings in Logback, with SLF4J as the logging API."
+ },
+ {
   "id": "q38765072aec",
   "subject": "springboot",
   "topic": "actuator-observability",
@@ -58,6 +73,21 @@
   ],
   "answer": 2,
   "explanation": "Since Boot 2.5 only the health endpoint is exposed over the web by default; others must be included explicitly."
+ },
+ {
+  "id": "q521e3a37fed",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "How can /actuator/info show the build version and artifact from Maven?",
+  "options": [
+   "Annotate the main class with @BuildInfo",
+   "Set management.info.version=true only",
+   "Run the spring-boot-maven-plugin build-info goal to generate META-INF/build-info.properties",
+   "Expose the /actuator/build endpoint"
+  ],
+  "answer": 2,
+  "explanation": "When build-info.properties is present, Spring Boot auto-configures a BuildProperties bean used by the info endpoint."
  },
  {
   "id": "q67de11454b5",
@@ -120,6 +150,21 @@
   "explanation": "Liveness and readiness groups are enabled automatically on Kubernetes and can be turned on elsewhere via management.endpoint.health.probes.enabled."
  },
  {
+  "id": "q316ba86a7cf",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "Why is it usually a mistake to include a database health check in the Kubernetes liveness probe?",
+  "options": [
+   "Liveness probes cannot call databases",
+   "The database check makes the probe return 404",
+   "Liveness is checked only once at startup",
+   "A database outage would make Kubernetes restart every pod even though restarting cannot fix it"
+  ],
+  "answer": 3,
+  "explanation": "Liveness should reflect whether the app itself is broken; external dependencies belong in readiness, if anywhere."
+ },
+ {
   "id": "q4566d7f147a",
   "subject": "springboot",
   "topic": "actuator-observability",
@@ -178,5 +223,20 @@
   ],
   "answer": 2,
   "explanation": "By default only the aggregate status is shown, without component details."
+ },
+ {
+  "id": "qcb8a9db0c76",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "Which API in Spring Boot 3 lets you instrument a block of code once and get both metrics and traces?",
+  "options": [
+   "The Micrometer Observation API via ObservationRegistry",
+   "The Actuator /metrics endpoint",
+   "Spring Cloud Sleuth's Tracer",
+   "java.util.logging handlers"
+  ],
+  "answer": 0,
+  "explanation": "An Observation is handled by registered handlers, which can produce timers and spans from a single instrumentation point."
  }
 ]

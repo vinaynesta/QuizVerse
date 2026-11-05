@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q09af84d0312",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does `class Dog implements Animal` do?",
+  "options": [
+   "Checks at compile time that Dog satisfies the Animal interface",
+   "Automatically adds Animal's properties to Dog",
+   "Copies Animal's method implementations into Dog",
+   "Makes Dog a subclass of Animal at runtime"
+  ],
+  "answer": 0,
+  "explanation": "implements is only a compile-time shape check; it adds no code or members."
+ },
+ {
+  "id": "q2a44c852a21",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does `constructor(private name: string) {}` do?",
+  "options": [
+   "Is a syntax error in TypeScript",
+   "Creates a getter for name only",
+   "Declares a parameter that is hidden from callers",
+   "Declares a private property name and assigns the argument to it"
+  ],
+  "answer": 3,
+  "explanation": "Parameter properties declare and initialize a class member in one step."
+ },
+ {
+  "id": "q49dfd88e949",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "Given `class Counter { static count = 0; }`, how is count accessed?",
+  "options": [
+   "Counter.count",
+   "Counter.prototype.count",
+   "new Counter().count",
+   "this.count from outside the class"
+  ],
+  "answer": 0,
+  "explanation": "Static members belong to the class constructor itself, not to instances."
+ },
+ {
+  "id": "q5d35925ed5a",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What happens with `new Shape()` when `Shape` is declared as `abstract class Shape {}`?",
+  "options": [
+   "It instantiates the first subclass found",
+   "It works but warns at runtime",
+   "A compile error, because abstract classes cannot be instantiated",
+   "It creates an instance with no methods"
+  ],
+  "answer": 2,
+  "explanation": "Abstract classes are meant to be extended; only concrete subclasses can be instantiated."
+ },
+ {
+  "id": "q830f5a7546d",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "Where can a `protected` member be accessed?",
+  "options": [
+   "Anywhere, but only for reading",
+   "Only inside the declaring class",
+   "Inside the class and its subclasses",
+   "Anywhere in the same file"
+  ],
+  "answer": 2,
+  "explanation": "protected is like private but also visible in derived classes."
+ },
+ {
+  "id": "qc90befbaacc",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "How do ECMAScript `#private` fields differ from TypeScript's `private` modifier?",
+  "options": [
+   "#private fields can be accessed by subclasses",
+   "#private is enforced at runtime, while private is only a compile-time check",
+   "There is no difference",
+   "private is enforced at runtime, while #private is only a compile-time check"
+  ],
+  "answer": 1,
+  "explanation": "TypeScript's private is erased in output, whereas #fields are true JavaScript private fields."
+ }
+]

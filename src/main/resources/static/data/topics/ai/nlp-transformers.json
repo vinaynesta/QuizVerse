@@ -1,5 +1,20 @@
 [
  {
+  "id": "q06495a46824",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What is sentiment analysis?",
+  "options": [
+   "Translating text from one language to another",
+   "Counting how many words a document contains",
+   "Determining whether text expresses a positive, negative or neutral opinion",
+   "Correcting spelling mistakes in text"
+  ],
+  "answer": 2,
+  "explanation": "Sentiment analysis classifies the emotional tone or opinion expressed in text, such as product reviews."
+ },
+ {
   "id": "q4a5253e5146",
   "subject": "ai",
   "topic": "nlp-transformers",
@@ -45,6 +60,21 @@
   "explanation": "Embeddings place words in a vector space where semantically similar words lie close together."
  },
  {
+  "id": "qefb4811f814",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What does named entity recognition do?",
+  "options": [
+   "Finds and classifies names of people, organizations and places in text",
+   "Generates new names for products",
+   "Assigns a unique id to every word in the vocabulary",
+   "Checks whether a sentence is grammatically correct"
+  ],
+  "answer": 0,
+  "explanation": "Named entity recognition labels spans of text with entity types such as PERSON, ORG or LOCATION."
+ },
+ {
   "id": "qf5132a2ec89",
   "subject": "ai",
   "topic": "nlp-transformers",
@@ -75,6 +105,21 @@
   "explanation": "Subword vocabularies keep size manageable while still representing any word as a sequence of known units."
  },
  {
+  "id": "q56ff00daee4",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "What does TF-IDF weighting do?",
+  "options": [
+   "Counts only the first occurrence of each word",
+   "Weights a term by its frequency in a document, reduced by how many documents contain it",
+   "Ranks words by their length",
+   "Replaces each word with its dictionary definition"
+  ],
+  "answer": 1,
+  "explanation": "Terms common across all documents get low weight, while terms distinctive to a document get high weight."
+ },
+ {
   "id": "q5ab83927aae",
   "subject": "ai",
   "topic": "nlp-transformers",
@@ -88,6 +133,21 @@
   ],
   "answer": 3,
   "explanation": "Each head has its own projections, so different heads can specialize in different patterns such as syntax or coreference."
+ },
+ {
+  "id": "q91c77a7a687",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "medium",
+  "question": "In attention, how are the query, key and value vectors used?",
+  "options": [
+   "Queries are compared with keys to compute weights, which are used to mix the values",
+   "Keys are added to values and queries are discarded",
+   "Values are compared with queries to choose one key",
+   "All three are concatenated and passed to a softmax"
+  ],
+  "answer": 0,
+  "explanation": "Attention weights come from query-key similarity, and the output is the weighted sum of value vectors."
  },
  {
   "id": "q91d3e6f1f90",
@@ -118,6 +178,21 @@
   ],
   "answer": 0,
   "explanation": "Each token's query is compared to every key, and the resulting weights mix the value vectors into a context-aware representation."
+ },
+ {
+  "id": "q27768c1452e",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "Why do transformers typically use layer normalization rather than batch normalization?",
+  "options": [
+   "Batch normalization cannot be applied to floating-point values",
+   "Layer norm normalizes across features for each token, so it does not depend on batch statistics or varying sequence lengths",
+   "Batch normalization only works with recurrent networks",
+   "Layer norm removes the need for attention"
+  ],
+  "answer": 1,
+  "explanation": "Per-token normalization behaves the same in training and inference and handles padded variable-length sequences well."
  },
  {
   "id": "q2a50d24c730",
@@ -178,5 +253,20 @@
   ],
   "answer": 0,
   "explanation": "Without position information, attention treats the input as an unordered set of tokens."
+ },
+ {
+  "id": "qc5d84460188",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "hard",
+  "question": "What is the KV cache used for in autoregressive transformer inference?",
+  "options": [
+   "Storing the keys and values of previous tokens so they are not recomputed at each generation step",
+   "Storing the vocabulary used by the tokenizer",
+   "Caching full responses to repeated user prompts",
+   "Saving optimizer state between training runs"
+  ],
+  "answer": 0,
+  "explanation": "With a KV cache, each new token computes attention against cached keys and values, trading memory for speed."
  }
 ]

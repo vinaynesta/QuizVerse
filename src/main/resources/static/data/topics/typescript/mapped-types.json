@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q095554675f0",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Given ``type Getters<T> = { [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K] };``, what is `Getters<{ name: string }>`?",
+  "options": [
+   "{ getname: () => string }",
+   "{ getName: string }",
+   "{ name: () => string }",
+   "{ getName: () => string }"
+  ],
+  "answer": 3,
+  "explanation": "The as clause remaps each key through the template literal, and Capitalize uppercases the first letter."
+ },
+ {
+  "id": "q15e18ae7b18",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Which mapped type is equivalent to `Partial<T>`?",
+  "options": [
+   "{ readonly [K in keyof T]: T[K] }",
+   "{ [K in T]: K }",
+   "{ [K in keyof T]?: T[K] }",
+   "{ [K in keyof T]-?: T[K] }"
+  ],
+  "answer": 2,
+  "explanation": "Adding ? to each mapped key makes every property optional, which is how Partial is defined."
+ },
+ {
+  "id": "q381275fb37a",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "What does `{ [K in keyof T as T[K] extends Function ? never : K]: T[K] }` produce?",
+  "options": [
+   "T without its function-typed properties",
+   "T with every property typed as never",
+   "T with only its function-typed properties",
+   "A compile error, because never cannot be a key"
+  ],
+  "answer": 0,
+  "explanation": "Remapping a key to never removes it from the resulting type."
+ },
+ {
+  "id": "q4f4ab6f5c28",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "What does `{ -readonly [K in keyof T]: T[K] }` do?",
+  "options": [
+   "Adds readonly to every property of T",
+   "Makes every property optional",
+   "Removes the readonly modifier from every property of T",
+   "Removes every readonly property from T"
+  ],
+  "answer": 2,
+  "explanation": "The - prefix removes a modifier in a mapped type; + (or no prefix) adds it."
+ },
+ {
+  "id": "qbfd8c622172",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Which mapped type is equivalent to `Required<T>`?",
+  "options": [
+   "{ [K in keyof T]?: T[K] }",
+   "{ [K in keyof T]-?: T[K] }",
+   "{ +readonly [K in keyof T]: T[K] }",
+   "{ [K in keyof T]: NonNullable<K> }"
+  ],
+  "answer": 1,
+  "explanation": "-? strips the optional modifier from each property."
+ },
+ {
+  "id": "qf6e0aeefa70",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "In a homomorphic mapped type like `{ [K in keyof T]: T[K] }`, what happens to T's readonly and optional modifiers?",
+  "options": [
+   "They are preserved",
+   "Only readonly is preserved",
+   "Only optional is preserved",
+   "They are always removed"
+  ],
+  "answer": 0,
+  "explanation": "Mapped types over keyof T copy the original property modifiers unless + or - is used."
+ }
+]

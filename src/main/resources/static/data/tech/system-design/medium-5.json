@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qecef1cf59d5",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Why should every remote call have a timeout?",
+  "options": [
+   "Timeouts make calls faster",
+   "Timeouts are required by HTTP",
+   "Timeouts remove the need for retries",
+   "Without one, a hung dependency can tie up threads and connections indefinitely"
+  ],
+  "answer": 3,
+  "explanation": "Bounded waits free resources so a slow dependency cannot stall the caller."
+ },
+ {
+  "id": "q6c3712cc528",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "What is optimistic concurrency control?",
+  "options": [
+   "Locking every row before reading it",
+   "Allowing all writes and keeping the first one",
+   "Proceeding without locks and checking for conflicts at commit, retrying if data changed",
+   "Running transactions one at a time"
+  ],
+  "answer": 2,
+  "explanation": "It works well when conflicts are rare, since no locks are held while work is done."
+ },
+ {
+  "id": "qd86f29abd96",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "In a write-around cache, what happens on a write?",
+  "options": [
+   "The data is written to the cache and the database together",
+   "The write is rejected until the cache is cleared",
+   "The data is written only to the cache",
+   "The data goes directly to the database, bypassing the cache"
+  ],
+  "answer": 3,
+  "explanation": "Write-around avoids filling the cache with data that may never be read."
+ },
+ {
+  "id": "qfd99f08f59a",
+  "subject": "system-design",
+  "topic": "consistency",
+  "level": "medium",
+  "question": "What does strong consistency guarantee for reads?",
+  "options": [
+   "Reads are always served from a local cache",
+   "Reads may return any previously written value",
+   "Every read returns the most recent committed write",
+   "Reads never fail during a network partition"
+  ],
+  "answer": 2,
+  "explanation": "Strongly consistent systems behave as if there were a single up-to-date copy, often at a cost in latency or availability."
+ },
+ {
+  "id": "qbc194588073",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "What does a Kafka consumer offset represent?",
+  "options": [
+   "The total size of the topic",
+   "The time a message was produced",
+   "The number of consumers in the group",
+   "The position of the next record the consumer group will read in a partition"
+  ],
+  "answer": 3,
+  "explanation": "Committed offsets let a consumer group resume where it left off after a restart."
+ },
+ {
+  "id": "qa88da081ff1",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "What is negative caching?",
+  "options": [
+   "Caching the fact that a lookup found nothing, so repeated misses do not hit the database",
+   "Evicting the most popular entries first",
+   "Storing only deleted records",
+   "Disabling the cache during high load"
+  ],
+  "answer": 0,
+  "explanation": "Short-lived entries for not-found results protect the backing store from repeated lookups for missing keys."
+ },
+ {
+  "id": "q2acdf00152c",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "What does a circuit breaker do when it is in the open state?",
+  "options": [
+   "Sends all calls to the dependency",
+   "Fails calls immediately without contacting the failing dependency",
+   "Sends a few trial calls",
+   "Restarts the dependency"
+  ],
+  "answer": 1,
+  "explanation": "Failing fast gives the dependency time to recover and keeps callers from waiting on timeouts."
+ },
+ {
+  "id": "q20fb4061834",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is connection pooling?",
+  "options": [
+   "Sharding a table across connections",
+   "Combining several databases into one",
+   "Reusing a set of open database connections across requests instead of opening a new one each time",
+   "Caching query results in the client"
+  ],
+  "answer": 2,
+  "explanation": "Opening connections is expensive, and pools also cap how many connections hit the database."
+ },
+ {
+  "id": "q702abb3cbad",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "What problem does GraphQL mainly address compared with fixed REST endpoints?",
+  "options": [
+   "Over-fetching and under-fetching, by letting clients request exactly the fields they need",
+   "Encrypting API traffic",
+   "Rate limiting clients",
+   "Server-side caching of responses"
+  ],
+  "answer": 0,
+  "explanation": "A single GraphQL query can fetch nested data that might take several REST calls."
+ },
+ {
+  "id": "q61e514a8305",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "medium",
+  "question": "What is an API gateway?",
+  "options": [
+   "A database that stores API keys",
+   "A single entry point that routes requests to backend services and handles concerns such as authentication and rate limiting",
+   "A library that generates API documentation",
+   "A load balancer that only works at Layer 4"
+  ],
+  "answer": 1,
+  "explanation": "Gateways centralize cross-cutting concerns so each service need not implement them."
+ }
+]

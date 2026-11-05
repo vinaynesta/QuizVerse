@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qeeb49e54ed2",
+  "subject": "dsa",
+  "topic": "linked-lists",
+  "level": "medium",
+  "question": "Given a direct reference to a node in a doubly linked list, how long does deleting that node take?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(n log n)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "The node's previous and next pointers allow its neighbors to be relinked without a traversal."
+ },
+ {
+  "id": "q7a8a40a98c3",
+  "subject": "dsa",
+  "topic": "greedy",
+  "level": "medium",
+  "question": "In the jump game problem (decide whether the last index is reachable), what does the O(n) greedy solution track?",
+  "options": [
+   "The farthest index reachable so far",
+   "The shortest jump seen so far",
+   "The number of zeros in the array",
+   "Every possible path in a list"
+  ],
+  "answer": 0,
+  "explanation": "If the current index ever exceeds the farthest reachable index, the end cannot be reached."
+ },
+ {
+  "id": "q618a5086af1",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "Which of these sorting algorithms is typically fastest on an array that is already nearly sorted?",
+  "options": [
+   "Selection sort",
+   "Heapsort",
+   "Insertion sort",
+   "Quicksort with the first element as pivot"
+  ],
+  "answer": 2,
+  "explanation": "Insertion sort runs in O(n + d) time, where d is the number of inversions, which is small for nearly sorted input."
+ },
+ {
+  "id": "qf632a8099bb",
+  "subject": "dsa",
+  "topic": "stacks-queues",
+  "level": "medium",
+  "question": "What does the prefix expression * + 2 3 4 evaluate to?",
+  "options": [
+   "14",
+   "24",
+   "10",
+   "20"
+  ],
+  "answer": 3,
+  "explanation": "It means (2 + 3) * 4, which is 20."
+ },
+ {
+  "id": "q56f02fb68ad",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "How many edges does a tree with n vertices have?",
+  "options": [
+   "n",
+   "n(n - 1) / 2",
+   "n + 1",
+   "n - 1"
+  ],
+  "answer": 3,
+  "explanation": "A tree is connected and acyclic, which requires exactly n - 1 edges."
+ },
+ {
+  "id": "qb206847d5f1",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "In a 0-indexed array representation of a binary heap, at which index is the parent of the node at index i (i > 0)?",
+  "options": [
+   "2i + 1",
+   "floor(i / 2)",
+   "floor((i - 1) / 2)",
+   "i - 1"
+  ],
+  "answer": 2,
+  "explanation": "Children of index p are at 2p + 1 and 2p + 2, which inverts to floor((i - 1) / 2)."
+ },
+ {
+  "id": "q5f10cea8322",
+  "subject": "dsa",
+  "topic": "hashing",
+  "level": "medium",
+  "question": "What is the expected time complexity of solving two-sum on an unsorted array of n elements with a hash map?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 0,
+  "explanation": "For each element, the complement is looked up in expected O(1) time before the element is inserted."
+ },
+ {
+  "id": "q4fcb15ba4c2",
+  "subject": "dsa",
+  "topic": "complexity",
+  "level": "medium",
+  "question": "What is the time complexity of the nested loops for (i = 0; i < n; i++) for (j = i; j < n; j++)?",
+  "options": [
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)",
+   "O(n^3)"
+  ],
+  "answer": 1,
+  "explanation": "The inner loop runs n + (n - 1) + ... + 1 = n(n + 1)/2 times in total."
+ },
+ {
+  "id": "qdfcf9b84df6",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "Which operations does a union-find (disjoint set) data structure support efficiently?",
+  "options": [
+   "Sorting elements and binary searching them",
+   "Merging two sets and finding which set an element belongs to",
+   "Inserting into and removing the minimum of a priority queue",
+   "Finding shortest paths between vertices"
+  ],
+  "answer": 1,
+  "explanation": "Union and find run in nearly constant amortized time with path compression and union by rank."
+ },
+ {
+  "id": "qe1ee4ec8935",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "In a BST, where is the inorder successor of a node that has a right subtree?",
+  "options": [
+   "The leftmost node of its right subtree",
+   "Its parent",
+   "The rightmost node of its left subtree",
+   "The root of the tree"
+  ],
+  "answer": 0,
+  "explanation": "The smallest key greater than the node lies at the far left of its right subtree."
+ }
+]

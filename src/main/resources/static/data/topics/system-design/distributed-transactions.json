@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q028bf7e653c",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why does exactly-once delivery over an unreliable network usually reduce to at-least-once delivery plus idempotent processing?",
+  "options": [
+   "A sender cannot distinguish a lost message from a lost acknowledgment, so it must retry, and duplicates must be deduplicated",
+   "Networks never duplicate messages",
+   "Idempotency makes delivery faster",
+   "Exactly-once is guaranteed by TCP across process restarts"
+  ],
+  "answer": 0,
+  "explanation": "Effectively-once semantics come from retries combined with deduplication or transactional processing."
+ },
+ {
+  "id": "q159089b5df5",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "What does two-phase locking (2PL) guarantee?",
+  "options": [
+   "Freedom from deadlocks",
+   "Atomic commit across services",
+   "Eventual consistency",
+   "Serializability, since a transaction acquires all its locks before releasing any"
+  ],
+  "answer": 3,
+  "explanation": "2PL guarantees serializable schedules but can deadlock, so deadlock detection or timeouts are still needed."
+ },
+ {
+  "id": "q25f507c5842",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why are compensating actions insufficient for some side effects, such as sending an email?",
+  "options": [
+   "Email servers reject all compensating messages",
+   "Once delivered, the effect cannot be truly undone, so a compensation can only be a follow-up such as a correction message",
+   "Compensations must run inside the same database transaction",
+   "Compensations are only permitted for read operations"
+  ],
+  "answer": 1,
+  "explanation": "Some actions are irreversible in the outside world, so sagas must model them as forward-only steps with corrective follow-ups."
+ },
+ {
+  "id": "q28c44189140",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "In two-phase commit, what happens if the coordinator crashes after participants vote yes but before sending the decision?",
+  "options": [
+   "Participants automatically commit after a timeout",
+   "Participants may block, holding locks, until the coordinator recovers or the decision is learned",
+   "The transaction is split into independent sub-transactions that commit separately",
+   "Participants automatically roll back with no risk of inconsistency"
+  ],
+  "answer": 1,
+  "explanation": "Blocking is the well-known weakness of 2PC; prepared participants cannot safely decide alone."
+ },
+ {
+  "id": "q37ca012b3f4",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "What problem does the transactional outbox pattern solve?",
+  "options": [
+   "Atomically updating a database and publishing an event, so one cannot succeed while the other fails",
+   "Encrypting events at rest without a key service",
+   "Removing the need for consumers to be idempotent",
+   "Making reads faster by caching query results in a queue"
+  ],
+  "answer": 0,
+  "explanation": "The event is written to an outbox table in the same local transaction as the state change, then relayed to the broker."
+ },
+ {
+  "id": "q3890fb6cc59",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why do sagas need countermeasures for isolation?",
+  "options": [
+   "Primary keys are duplicated across services",
+   "Intermediate saga states are visible to other transactions, so dirty reads and conflicting updates can occur",
+   "Clocks on the coordinator and participants drift apart",
+   "Compensating messages cannot be sent over HTTP"
+  ],
+  "answer": 1,
+  "explanation": "Because each step commits early, other transactions can observe partial work; techniques such as semantic locks address this."
+ },
+ {
+  "id": "q41b18bf9df1",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "How does a saga maintain atomicity across services without two-phase commit?",
+  "options": [
+   "It runs a sequence of local transactions, each with a compensating action that undoes it if a later step fails",
+   "It locks all rows across services until every step finishes",
+   "It replicates the entire database to every service before writing",
+   "It commits all steps in a single database transaction after validation"
+  ],
+  "answer": 0,
+  "explanation": "Sagas trade isolation for availability: each step commits locally and failures are handled by compensation."
+ },
+ {
+  "id": "q551d370cf60",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "How does an orchestrated saga differ from a choreographed saga?",
+  "options": [
+   "Orchestrated sagas use two-phase commit",
+   "A central orchestrator tells each participant what to do next, instead of participants reacting to each other's events",
+   "Orchestrated sagas need no messaging",
+   "Choreographed sagas cannot compensate"
+  ],
+  "answer": 1,
+  "explanation": "Orchestration centralizes the flow logic, while choreography spreads it across event subscribers."
+ },
+ {
+  "id": "qe66fd098a43",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "Why must saga participants handle duplicate step or compensation messages?",
+  "options": [
+   "Compensations are always executed exactly twice by design",
+   "Only the coordinator is allowed to retry failed steps",
+   "Duplicates indicate a partitioning bug in the broker",
+   "Messages can be redelivered after failures, so each step and compensation must be idempotent"
+  ],
+  "answer": 3,
+  "explanation": "Retries after ambiguous failures are normal, so repeated execution must not change the outcome."
+ },
+ {
+  "id": "qf09da2cb612",
+  "subject": "system-design",
+  "topic": "distributed-transactions",
+  "level": "hard",
+  "question": "What is the main purpose of three-phase commit compared with two-phase commit?",
+  "options": [
+   "To avoid indefinite blocking when the coordinator fails, under stated timing assumptions",
+   "To allow commits without any votes from participants",
+   "To remove the need for a coordinator altogether",
+   "To reduce the number of network round trips below two"
+  ],
+  "answer": 0,
+  "explanation": "3PC adds a pre-commit phase so participants can make progress after a coordinator failure, but it assumes bounded network delays."
+ }
+]

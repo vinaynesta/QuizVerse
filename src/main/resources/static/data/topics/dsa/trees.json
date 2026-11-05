@@ -45,6 +45,21 @@
   "explanation": "Inorder is left-root-right, which yields sorted order for a BST."
  },
  {
+  "id": "q957b20aa5b8",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "If height is counted in edges, what is the height of a tree consisting of a single node?",
+  "options": [
+   "0",
+   "1",
+   "-1",
+   "2"
+  ],
+  "answer": 0,
+  "explanation": "With no edges below the root, the longest root-to-leaf path has zero edges."
+ },
+ {
   "id": "q9b2b81e8702",
   "subject": "dsa",
   "topic": "trees",
@@ -58,6 +73,36 @@
   ],
   "answer": 3,
   "explanation": "Leaves are the terminal nodes of a tree with no children."
+ },
+ {
+  "id": "q9c6677f97e2",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "In what order does a postorder traversal visit the nodes of a binary tree?",
+  "options": [
+   "Root, left subtree, then right subtree",
+   "Left subtree, right subtree, then root",
+   "Left subtree, root, then right subtree",
+   "Level by level from top to bottom"
+  ],
+  "answer": 1,
+  "explanation": "Postorder processes both children before the node itself."
+ },
+ {
+  "id": "qe1db2ab2634",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "easy",
+  "question": "What is the topmost node of a tree, the one with no parent, called?",
+  "options": [
+   "Leaf",
+   "Sibling",
+   "Root",
+   "Descendant"
+  ],
+  "answer": 2,
+  "explanation": "Every tree has exactly one root, from which all other nodes descend."
  },
  {
   "id": "q25c9ecd8815",
@@ -75,6 +120,21 @@
   "explanation": "Balancing keeps both subtrees similar in size, so the height grows logarithmically."
  },
  {
+  "id": "q6eb00eb873a",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "What is the minimum possible height, in edges, of a binary tree with 15 nodes?",
+  "options": [
+   "4",
+   "2",
+   "3",
+   "14"
+  ],
+  "answer": 2,
+  "explanation": "A perfect binary tree of height 3 holds exactly 2^4 - 1 = 15 nodes."
+ },
+ {
   "id": "q9107ad2f20a",
   "subject": "dsa",
   "topic": "trees",
@@ -88,6 +148,36 @@
   ],
   "answer": 3,
   "explanation": "Preorder visits root, then left subtree, then right subtree."
+ },
+ {
+  "id": "qd3671741bd6",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "How many nodes does a perfect binary tree of height h have, counting height in edges with the root at height 0?",
+  "options": [
+   "2^(h+1) - 1",
+   "2^h",
+   "2^h - 1",
+   "2h + 1"
+  ],
+  "answer": 0,
+  "explanation": "Level k holds 2^k nodes, and summing levels 0 through h gives 2^(h+1) - 1."
+ },
+ {
+  "id": "qe1ee4ec8935",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "medium",
+  "question": "In a BST, where is the inorder successor of a node that has a right subtree?",
+  "options": [
+   "The leftmost node of its right subtree",
+   "Its parent",
+   "The rightmost node of its left subtree",
+   "The root of the tree"
+  ],
+  "answer": 0,
+  "explanation": "The smallest key greater than the node lies at the far left of its right subtree."
  },
  {
   "id": "qff660eb16a3",
@@ -133,6 +223,51 @@
   ],
   "answer": 2,
   "explanation": "AVL height stays near 1.44 log n versus about 2 log n for red-black trees, at the cost of more rebalancing."
+ },
+ {
+  "id": "q37b4e346784",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "What is the time complexity of inserting a word of length L into a trie?",
+  "options": [
+   "O(L log L)",
+   "O(L)",
+   "O(n), where n is the number of stored words",
+   "O(1)"
+  ],
+  "answer": 1,
+  "explanation": "Insertion follows or creates one node per character, independent of the number of stored words."
+ },
+ {
+  "id": "q5ca02fafb67",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "With binary lifting preprocessing, how long does a lowest common ancestor query take on a rooted tree of n nodes?",
+  "options": [
+   "O(1)",
+   "O(n)",
+   "O(sqrt n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "Ancestors are stored at power-of-two distances, so both nodes can jump upward in logarithmically many steps."
+ },
+ {
+  "id": "q90f35932c9a",
+  "subject": "dsa",
+  "topic": "trees",
+  "level": "hard",
+  "question": "What is the time complexity of a range-sum query and of a point update on a segment tree over n elements?",
+  "options": [
+   "O(n) for each",
+   "O(1) for each",
+   "O(log n) for each",
+   "O(log n) for queries and O(n) for updates"
+  ],
+  "answer": 2,
+  "explanation": "Both operations touch O(log n) nodes along paths of the balanced tree."
  },
  {
   "id": "qff8f6cf889d",

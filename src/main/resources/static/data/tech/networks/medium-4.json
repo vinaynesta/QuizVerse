@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q49409ec2cb7",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "What controls how long a resolver may cache a DNS record?",
+  "options": [
+   "The SOA serial number",
+   "The record's TTL",
+   "The MX preference value",
+   "The number of NS records"
+  ],
+  "answer": 1,
+  "explanation": "Each resource record carries a TTL in seconds that bounds how long it can be cached."
+ },
+ {
+  "id": "qb05f1d035c9",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method returns the same headers as GET but no response body?",
+  "options": [
+   "TRACE",
+   "HEAD",
+   "CONNECT",
+   "OPTIONS"
+  ],
+  "answer": 1,
+  "explanation": "HEAD is used to check metadata such as Content-Length or Last-Modified without downloading the body."
+ },
+ {
+  "id": "qa07f66c2254",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method is idempotent but not safe?",
+  "options": [
+   "HEAD",
+   "PUT",
+   "POST",
+   "GET"
+  ],
+  "answer": 1,
+  "explanation": "PUT replaces a resource, so repeating it yields the same state (idempotent) but it modifies data (not safe); GET and HEAD are safe, POST is neither."
+ },
+ {
+  "id": "q726f8a3804b",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "What is configuring a NAT router to send inbound traffic on a given port to a specific internal host called?",
+  "options": [
+   "NAT64",
+   "DHCP relay",
+   "Proxy ARP",
+   "Port forwarding"
+  ],
+  "answer": 3,
+  "explanation": "Port forwarding is a static NAPT mapping that lets external clients reach an internal server."
+ },
+ {
+  "id": "q5093fe19da4",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "How much sequence-number space does a TCP SYN flag consume?",
+  "options": [
+   "One MSS worth",
+   "One sequence number",
+   "None",
+   "Two sequence numbers"
+  ],
+  "answer": 1,
+  "explanation": "SYN and FIN each consume one sequence number even though they carry no data, so they can be acknowledged."
+ },
+ {
+  "id": "q44dc35ab2bc",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the longest prefix (smallest subnet) that still provides at least 100 usable IPv4 hosts?",
+  "options": [
+   "/25",
+   "/27",
+   "/26",
+   "/24"
+  ],
+  "answer": 0,
+  "explanation": "/25 gives 128 - 2 = 126 hosts; /26 gives only 64 - 2 = 62."
+ },
+ {
+  "id": "qc7a0cd5cced",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "In a TCP close where each side sends its own FIN and no ACK is piggybacked, how many segments are exchanged?",
+  "options": [
+   "3",
+   "4",
+   "1",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Each direction is closed with a FIN and its ACK: FIN, ACK, FIN, ACK; it can drop to 3 if an ACK and FIN are combined."
+ },
+ {
+  "id": "q3095f59bea7",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method is defined (RFC 5789) for applying partial modifications to a resource?",
+  "options": [
+   "TRACE",
+   "PUT",
+   "PATCH",
+   "OPTIONS"
+  ],
+  "answer": 2,
+  "explanation": "PATCH sends a set of changes; PUT sends a complete replacement representation."
+ },
+ {
+  "id": "qab7d35ec1d1",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "What does a TCP segment with the RST flag indicate?",
+  "options": [
+   "A graceful close of the connection",
+   "A keepalive probe",
+   "The connection is being aborted immediately",
+   "A receive window update"
+  ],
+  "answer": 2,
+  "explanation": "RST resets the connection abruptly, e.g. for a closed port or an error, without the FIN handshake."
+ },
+ {
+  "id": "q1a84a7a054d",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which HTTP method asks a proxy to open a tunnel, as used for HTTPS through a forward proxy?",
+  "options": [
+   "TRACE",
+   "POST",
+   "CONNECT",
+   "OPTIONS"
+  ],
+  "answer": 2,
+  "explanation": "CONNECT tells the proxy to establish a TCP tunnel to the target host:port, over which TLS then runs."
+ }
+]

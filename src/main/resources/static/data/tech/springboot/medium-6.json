@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q11e243211d7",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "medium",
+  "question": "What does the spring-boot-docker-compose module do in Spring Boot 3.1+?",
+  "options": [
+   "Starts services from a compose file on startup and creates service connections to them",
+   "Builds a Docker image during mvn package",
+   "Generates a compose file from your beans",
+   "Deploys the app to Docker Swarm"
+  ],
+  "answer": 0,
+  "explanation": "During development it runs docker compose up and auto-configures connection details for recognised containers."
+ },
+ {
+  "id": "q011f7f99ca1",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "medium",
+  "question": "Which location takes precedence if both define the same property: classpath:application.properties or classpath:config/application.properties?",
+  "options": [
+   "classpath:application.properties",
+   "classpath:config/application.properties",
+   "Neither; startup fails on a conflict",
+   "Whichever file was modified most recently"
+  ],
+  "answer": 1,
+  "explanation": "Spring Boot loads the classpath root first and then classpath:/config/, so the later config/ location overrides it."
+ },
+ {
+  "id": "qf052f5700aa",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "medium",
+  "question": "What does the @JsonTest slice set up?",
+  "options": [
+   "An embedded HTTP server for JSON endpoints",
+   "Jackson serialization support, including JacksonTester, without the full context",
+   "Contract tests for JSON schemas",
+   "A JSON-based in-memory database"
+  ],
+  "answer": 1,
+  "explanation": "@JsonTest auto-configures the ObjectMapper and JSON testers so you can test serialization in isolation."
+ },
+ {
+  "id": "q521e3a37fed",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "medium",
+  "question": "How can /actuator/info show the build version and artifact from Maven?",
+  "options": [
+   "Annotate the main class with @BuildInfo",
+   "Set management.info.version=true only",
+   "Run the spring-boot-maven-plugin build-info goal to generate META-INF/build-info.properties",
+   "Expose the /actuator/build endpoint"
+  ],
+  "answer": 2,
+  "explanation": "When build-info.properties is present, Spring Boot auto-configures a BuildProperties bean used by the info endpoint."
+ },
+ {
+  "id": "q8ac044f3d53",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "medium",
+  "question": "What isolation level does @Transactional use when none is specified?",
+  "options": [
+   "SERIALIZABLE",
+   "REPEATABLE_READ in all databases",
+   "READ_UNCOMMITTED",
+   "Isolation.DEFAULT, meaning the underlying datastore's default"
+  ],
+  "answer": 3,
+  "explanation": "Isolation.DEFAULT defers to the database, for example READ COMMITTED on PostgreSQL."
+ },
+ {
+  "id": "q22369157939",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "How do Spring Data repository methods support pagination?",
+  "options": [
+   "Adding LIMIT manually to the method name",
+   "Accepting a Pageable parameter and returning Page<T> or Slice<T>",
+   "Annotating the method with @Paginate",
+   "Returning a Stream and skipping elements"
+  ],
+  "answer": 1,
+  "explanation": "Passing PageRequest.of(page, size) as a Pageable makes Spring Data apply limit and offset, and Page also includes the total count."
+ },
+ {
+  "id": "qa7c57c1d72b",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "medium",
+  "question": "Which annotation binds an HTTP request header to a controller method parameter?",
+  "options": [
+   "@RequestHeader",
+   "@RequestParam",
+   "@CookieValue",
+   "@RequestAttribute"
+  ],
+  "answer": 0,
+  "explanation": "@RequestHeader(\"X-Request-Id\") reads that header value and can convert it to the parameter type."
+ },
+ {
+  "id": "q0fd3185d2e4",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "medium",
+  "question": "What does @ConditionalOnBean(CacheManager.class) on a @Bean method do?",
+  "options": [
+   "Registers the bean only if a CacheManager bean is already defined",
+   "Creates a CacheManager if none exists",
+   "Makes the bean depend on CacheManager's lifecycle",
+   "Registers the bean only if the CacheManager class is on the classpath"
+  ],
+  "answer": 0,
+  "explanation": "@ConditionalOnBean checks the bean definitions registered so far, which is why it is mainly used in auto-configurations with careful ordering."
+ },
+ {
+  "id": "q7815eddf8a1",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "medium",
+  "question": "Which database migration tools does Spring Boot auto-configure when found on the classpath?",
+  "options": [
+   "Flyway and Liquibase",
+   "DbUnit and Testcontainers",
+   "Ant and Gradle",
+   "Hibernate Envers and jOOQ"
+  ],
+  "answer": 0,
+  "explanation": "Spring Boot runs Flyway or Liquibase migrations at startup when their libraries are present."
+ },
+ {
+  "id": "q193ba28b04d",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "medium",
+  "question": "Since Spring Boot 2.6, what happens by default when two beans depend on each other in a cycle?",
+  "options": [
+   "Spring resolves the cycle silently with proxies",
+   "Startup fails because circular references are prohibited by default",
+   "The second bean is injected as null",
+   "Spring retries creation until it succeeds"
+  ],
+  "answer": 1,
+  "explanation": "spring.main.allow-circular-references defaults to false, so cycles cause a startup failure unless you opt back in."
+ }
+]

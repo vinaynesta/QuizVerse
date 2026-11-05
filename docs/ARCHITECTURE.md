@@ -707,7 +707,7 @@ flowchart LR
     subgraph maven["Java CI with Maven (maven.yml)"]
         maven_build["<b>build</b><br/>• Set up JDK 21<br/>• Set up Python<br/>• Check question data is up to date<br/>• Build and test"]
     dev -->|push / pull request to main| maven_build
-        maven_deploy["<b>deploy</b><br/>• Install Railway CLI<br/>• Deploy to Railway"]
+        maven_deploy["<b>deploy</b><br/>• Install Railway CLI"]
         maven_build -->|main only| maven_deploy
     end
     maven_deploy --> railway
@@ -742,21 +742,23 @@ flowchart LR
 | Exam / track | Stage | Sections | Quizzes | Questions |
 |---|---|---|---|---|
 | IBPS Clerk | Prelims | English Language, Numerical Ability, Reasoning Ability | 45 | 1500 |
-| IBPS Clerk | Mains | Reasoning Ability, English Language, Quantitative Aptitude | 45 | 1800 |
+| IBPS Clerk | Mains | Reasoning Ability, English Language, Quantitative Aptitude, General/Financial Awareness | 60 | 2400 |
 | SBI Clerk | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
-| SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability | 45 | 2100 |
+| SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability, General/Financial Awareness | 60 | 2850 |
 | IBPS RRB Clerk | Prelims | Reasoning Ability, Numerical Ability | 30 | 1200 |
-| IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability | 45 | 1800 |
+| IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability, Computer Knowledge, General Awareness | 75 | 3000 |
 | IBPS PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
-| IBPS PO | Mains | Reasoning & Computer Aptitude, English Language, Data Analysis & Interpretation | 45 | 1725 |
+| IBPS PO | Mains | Reasoning & Computer Aptitude, English Language, Data Analysis & Interpretation, General/Economy/Banking Awareness | 60 | 2325 |
 | SBI PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
-| SBI PO | Mains | Reasoning & Computer Aptitude, Data Analysis & Interpretation, English Language | 45 | 1575 |
+| SBI PO | Mains | Reasoning & Computer Aptitude, Data Analysis & Interpretation, English Language, General/Economy/Banking Awareness | 60 | 2325 |
 | RBI Assistant | Prelims | English Language, Numerical Ability, Reasoning Ability | 45 | 1500 |
-| RBI Assistant | Mains | Reasoning, English Language, Numerical Ability | 45 | 1800 |
+| RBI Assistant | Mains | Reasoning, English Language, Numerical Ability, General Awareness, Computer Knowledge | 75 | 3000 |
+| APPSC Group 1 | Prelims Paper I | History and Culture, Constitution, Polity, Social Justice & International Relations, Indian and Andhra Pradesh Economy and Planning, Geography | 36 | 1080 |
+| APPSC Group 1 | Prelims Paper II | General Mental Ability, Administrative and Psychological Abilities, Science and Technology | 27 | 810 |
 | Java Practice | Practice | Java | 9 | 142 |
-| Tech Interview Prep | Practice | Data Structures & Algorithms, Java, Python, Spring Boot, React, Vue.js, Artificial Intelligence | 84 | 840 |
+| Tech Interview Prep | Practice | Data Structures & Algorithms, Java, Python, Spring Boot, React, Vue.js, Artificial Intelligence, SQL & Databases, Node.js, Git & DevOps, System Design, JavaScript, TypeScript, Operating Systems, Computer Networks | 246 | 2460 |
 
-Quiz slots can reuse a question (the same bank feeds several exams): 10235 unique questions in 12 subjects.
+Quiz slots can reuse a question (the same bank feeds several exams): 14981 unique questions in 26 subjects.
 <!-- END GENERATED: content -->
 
 ### Daily features
@@ -764,7 +766,7 @@ Quiz slots can reuse a question (the same bank feeds several exams): 10235 uniqu
 All three are picked in the browser from the IST date with a seeded random generator (`questions.js`), so everyone gets the same questions without any server work:
 
 - **Daily quiz:** 10 bank-exam questions (4 quant, 3 reasoning, 3 English), 10 minutes. Saved as kind `daily`.
-- **Daily tech challenge:** 5 questions from 5 of the 7 tech subjects, 5 minutes. Saved as kind `tech-daily`.
+- **Daily tech challenge:** 5 questions from 5 of the 15 tech subjects, 5 minutes. Saved as kind `tech-daily`.
 - **Question of the day:** one tech question answered on the home page, never one from today's tech challenge. The answer is kept in the browser for that day only; it isn't saved to the account.
 
 `GET /api/me/streak` reports `dailyDone` and `techDailyDone`, and both count towards the day streak like any finished quiz.

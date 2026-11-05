@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "cap-theorem",
+    "question": "What does the CAP theorem say about a distributed data store during a network partition?",
+    "options": [
+      "It must trade off between consistency and availability",
+      "It can guarantee both consistency and availability if replicas sit in one region",
+      "Partition tolerance is optional and can be dropped",
+      "It guarantees linearizable reads with no latency cost"
+    ],
+    "answer": 0,
+    "explanation": "Under a partition, a system must either reject or delay some requests to stay consistent, or serve possibly stale data to stay available."
+  },
+  {
+    "topic": "cap-theorem",
+    "question": "In PACELC, what does the 'ELC' part describe?",
+    "options": [
+      "The leader election latency after a node crash",
+      "The latency-versus-consistency tradeoff when there is no partition",
+      "The eventual compression ratio of replicated logs",
+      "The end-to-end lag from client to CDN edge"
+    ],
+    "answer": 1,
+    "explanation": "PACELC extends CAP: if Partition, choose availability or consistency; Else, choose latency or consistency."
+  },
+  {
+    "topic": "cap-theorem",
+    "question": "How does a CP system typically behave when a partition isolates a minority of replicas?",
+    "options": [
+      "It serves stale reads from the minority side to stay available",
+      "It accepts writes on both sides and merges them automatically without conflicts",
+      "It rejects or blocks requests on the minority side to preserve consistency",
+      "It shuts down the majority side to prevent divergence"
+    ],
+    "answer": 2,
+    "explanation": "CP systems sacrifice availability on the minority side so that no conflicting state can be committed."
+  },
+  {
+    "topic": "cap-theorem",
+    "question": "An AP system accepts writes on both sides of a partition. What must it handle later?",
+    "options": [
+      "Permanent loss of every write made during the partition",
+      "A mandatory two-phase commit after healing",
+      "Permanent disabling of leader election",
+      "Conflicting concurrent updates that need reconciliation when the partition heals"
+    ],
+    "answer": 3,
+    "explanation": "Accepting writes on both sides means the same data can diverge, so the system needs conflict detection and resolution."
+  },
+  {
+    "topic": "cap-theorem",
+    "question": "Which statement about CAP is most accurate?",
+    "options": [
+      "The consistency and availability tradeoff is forced only while a network partition exists",
+      "A system must always choose two of the three properties at all times",
+      "Partition tolerance is a feature that can be turned off in production",
+      "Availability means the database is never down for maintenance"
+    ],
+    "answer": 0,
+    "explanation": "Without a partition, a well-built system can provide both consistency and availability; CAP is about behavior during partitions."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "Which property does linearizability add beyond sequential consistency?",
+    "options": [
+      "Operations may be reordered arbitrarily within a single client",
+      "Operations must respect real-time ordering across clients",
+      "Reads may return values older than the latest completed write",
+      "Each replica may apply writes in a different order"
+    ],
+    "answer": 1,
+    "explanation": "Linearizability requires each operation to appear to take effect between its invocation and response, consistent with real time."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "Sequential consistency differs from linearizability because it does not require which of the following?",
+    "options": [
+      "A single global order of all operations",
+      "Each client's operations appearing in program order",
+      "Respecting real-time order of operations across different clients",
+      "Writes being applied in the same order on all replicas"
+    ],
+    "answer": 2,
+    "explanation": "Sequential consistency needs one global order that respects each client's program order, but not the real-time order between clients."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "What does serializability guarantee for concurrent transactions?",
+    "options": [
+      "Each transaction sees every write committed after it started",
+      "Every read returns the most recently committed value in real time",
+      "Transactions never block one another",
+      "Their outcome is equivalent to some serial execution of those transactions"
+    ],
+    "answer": 3,
+    "explanation": "Serializability is about transaction isolation and equivalence to a serial order, not real-time recency."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "Which anomaly can snapshot isolation permit that serializable isolation does not?",
+    "options": [
+      "Write skew, where two transactions read overlapping data and update disjoint rows",
+      "Dirty reads of uncommitted data",
+      "Lost updates on the same row",
+      "Reads that never see their own writes"
+    ],
+    "answer": 0,
+    "explanation": "Snapshot isolation prevents dirty reads and same-row lost updates, but two transactions can each make a decision based on stale reads and write different rows."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "A client reads version 7 from one replica, then reads version 5 from another. Which session guarantee is violated?",
+    "options": [
+      "Writes follow reads",
+      "Monotonic reads",
+      "Monotonic writes",
+      "Exactly-once processing"
+    ],
+    "answer": 1,
+    "explanation": "Monotonic reads means a client never sees an older version after seeing a newer one."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "What property lets CRDTs converge without coordination?",
+    "options": [
+      "A global lock acquired before every update",
+      "Synchronized clocks with bounded drift under one millisecond",
+      "Merge operations that are commutative, associative, and idempotent",
+      "A single leader that serializes all writes"
+    ],
+    "answer": 2,
+    "explanation": "Because merges are order-independent and idempotent, replicas that have seen the same updates reach the same state regardless of delivery order."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "In two-phase commit, what happens if the coordinator crashes after participants vote yes but before sending the decision?",
+    "options": [
+      "Participants automatically commit after a timeout",
+      "Participants automatically roll back with no risk of inconsistency",
+      "The transaction is split into independent sub-transactions that commit separately",
+      "Participants may block, holding locks, until the coordinator recovers or the decision is learned"
+    ],
+    "answer": 3,
+    "explanation": "Blocking is the well-known weakness of 2PC; prepared participants cannot safely decide alone."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "How does a saga maintain atomicity across services without two-phase commit?",
+    "options": [
+      "It runs a sequence of local transactions, each with a compensating action that undoes it if a later step fails",
+      "It locks all rows across services until every step finishes",
+      "It replicates the entire database to every service before writing",
+      "It commits all steps in a single database transaction after validation"
+    ],
+    "answer": 0,
+    "explanation": "Sagas trade isolation for availability: each step commits locally and failures are handled by compensation."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "Why do sagas need countermeasures for isolation?",
+    "options": [
+      "Primary keys are duplicated across services",
+      "Intermediate saga states are visible to other transactions, so dirty reads and conflicting updates can occur",
+      "Clocks on the coordinator and participants drift apart",
+      "Compensating messages cannot be sent over HTTP"
+    ],
+    "answer": 1,
+    "explanation": "Because each step commits early, other transactions can observe partial work; techniques such as semantic locks address this."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "Why are compensating actions insufficient for some side effects, such as sending an email?",
+    "options": [
+      "Email servers reject all compensating messages",
+      "Compensations must run inside the same database transaction",
+      "Once delivered, the effect cannot be truly undone, so a compensation can only be a follow-up such as a correction message",
+      "Compensations are only permitted for read operations"
+    ],
+    "answer": 2,
+    "explanation": "Some actions are irreversible in the outside world, so sagas must model them as forward-only steps with corrective follow-ups."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "What problem does the transactional outbox pattern solve?",
+    "options": [
+      "Making reads faster by caching query results in a queue",
+      "Encrypting events at rest without a key service",
+      "Removing the need for consumers to be idempotent",
+      "Atomically updating a database and publishing an event, so one cannot succeed while the other fails"
+    ],
+    "answer": 3,
+    "explanation": "The event is written to an outbox table in the same local transaction as the state change, then relayed to the broker."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "What is the main purpose of three-phase commit compared with two-phase commit?",
+    "options": [
+      "To avoid indefinite blocking when the coordinator fails, under stated timing assumptions",
+      "To allow commits without any votes from participants",
+      "To remove the need for a coordinator altogether",
+      "To reduce the number of network round trips below two"
+    ],
+    "answer": 0,
+    "explanation": "3PC adds a pre-commit phase so participants can make progress after a coordinator failure, but it assumes bounded network delays."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "Why must saga participants handle duplicate step or compensation messages?",
+    "options": [
+      "Compensations are always executed exactly twice by design",
+      "Messages can be redelivered after failures, so each step and compensation must be idempotent",
+      "Duplicates indicate a partitioning bug in the broker",
+      "Only the coordinator is allowed to retry failed steps"
+    ],
+    "answer": 1,
+    "explanation": "Retries after ambiguous failures are normal, so repeated execution must not change the outcome."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "With N=5 replicas, W=3 and R=3, what property holds?",
+    "options": [
+      "R + W equals N, which guarantees overlap and is the minimum",
+      "Overlap is impossible because 3 + 3 exceeds N",
+      "R + W is greater than N, so every read quorum overlaps every write quorum",
+      "Writes never need acknowledgement from a majority"
+    ],
+    "answer": 2,
+    "explanation": "Since 3 + 3 = 6 > 5, any read set and write set must share at least one replica, which holds the latest committed value."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "With N=3, W=2 and R=2, how many replica failures can the system tolerate while still serving both reads and writes?",
+    "options": [
+      "Zero",
+      "Two",
+      "Three",
+      "One"
+    ],
+    "answer": 3,
+    "explanation": "With one replica down, two remain, which satisfies both W=2 and R=2; with two down, only one remains and quorums cannot be formed."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "What is a sloppy quorum?",
+    "options": [
+      "A write quorum that can accept writes on nodes outside the key's home replicas, weakening the overlap guarantee",
+      "A quorum that requires all N replicas to acknowledge every write",
+      "A quorum that ignores write timestamps entirely",
+      "A read-only quorum used only during backups"
+    ],
+    "answer": 0,
+    "explanation": "Dynamo-style systems use sloppy quorums with hinted handoff for availability, so R + W > N no longer guarantees seeing the latest write."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "With N=3, W=1 and R=1, what is the main consequence?",
+    "options": [
+      "Writes become linearizable while reads do not",
+      "Reads may return stale values because read and write sets are not guaranteed to overlap",
+      "Every read is guaranteed to return the latest committed value",
+      "The cluster cannot tolerate any node failure"
+    ],
+    "answer": 1,
+    "explanation": "Since R + W = 2 is not greater than N = 3, a read may hit only replicas that missed the latest write."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "Why does requiring a strict majority of votes help prevent split brain?",
+    "options": [
+      "A majority always holds the most recent clock reading",
+      "Majorities let every node read from disk instead of memory",
+      "Two disjoint groups cannot both contain a majority of the same cluster, so at most one side can make progress",
+      "Majority voting removes the need for replication"
+    ],
+    "answer": 2,
+    "explanation": "Any two majorities of the same membership intersect, so at most one partition side can win an election or commit."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "What is read repair in a Dynamo-style store?",
+    "options": [
+      "Rebuilding an entire node's data from a snapshot on startup",
+      "Deleting tombstones older than the gc_grace period",
+      "Changing the replication factor during a read",
+      "Fixing stale replicas by writing the newest value back to them when a read detects divergence"
+    ],
+    "answer": 3,
+    "explanation": "Read repair opportunistically heals replicas found to hold older versions; anti-entropy handles the rest in the background."
+  },
+  {
+    "topic": "consensus",
+    "question": "In Raft, a candidate becomes leader after receiving votes from:",
+    "options": [
+      "A majority of the cluster",
+      "Every node in the cluster",
+      "Any single follower",
+      "Exactly half of the nodes plus the client"
+    ],
+    "answer": 0,
+    "explanation": "A majority quorum ensures at most one leader can be elected per term."
+  },
+  {
+    "topic": "consensus",
+    "question": "In Raft, when is a log entry considered committed?",
+    "options": [
+      "When the leader writes it to its own disk",
+      "When the leader has replicated it to a majority of servers",
+      "When every follower acknowledges it",
+      "When a client reads it back"
+    ],
+    "answer": 1,
+    "explanation": "Committing on majority replication means the entry survives any minority failure and will be seen by future leaders."
+  },
+  {
+    "topic": "consensus",
+    "question": "What is the purpose of the term number in Raft?",
+    "options": [
+      "It is the wall-clock time of the last heartbeat",
+      "It sets the size of log segments on disk",
+      "It acts as a logical clock so stale leaders and messages can be detected and rejected",
+      "It identifies the client that issued the request"
+    ],
+    "answer": 2,
+    "explanation": "Terms order leadership epochs, so a node that sees a higher term steps down and ignores lower-term messages."
+  },
+  {
+    "topic": "consensus",
+    "question": "What does the FLP impossibility result state?",
+    "options": [
+      "Consensus requires synchronized atomic clocks in every node",
+      "Consensus cannot tolerate any message loss at all",
+      "Consensus is impossible for clusters with more than three nodes",
+      "In an asynchronous system, no deterministic consensus algorithm can guarantee termination if even one process may crash"
+    ],
+    "answer": 3,
+    "explanation": "Practical protocols such as Raft and Paxos get around FLP with timeouts and partial synchrony assumptions, sacrificing guaranteed termination in some cases."
+  },
+  {
+    "topic": "consensus",
+    "question": "How many total replicas are needed to tolerate f Byzantine (arbitrary) faults in a protocol such as PBFT?",
+    "options": [
+      "3f + 1",
+      "2f + 1",
+      "f + 1",
+      "2f"
+    ],
+    "answer": 0,
+    "explanation": "Byzantine faults require 3f + 1 replicas; 2f + 1 is sufficient only for crash faults."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "What is split brain in a replicated system?",
+    "options": [
+      "A node stops answering heartbeats but keeps its lock forever",
+      "Two or more nodes each believe they are the active leader, leading to conflicting writes",
+      "The database automatically splits one table into two shards",
+      "Clients are routed to a DNS name that points nowhere"
+    ],
+    "answer": 1,
+    "explanation": "Split brain typically follows a network partition when leader election is not guarded by a quorum or fencing."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "What is a gray failure?",
+    "options": [
+      "A failure where logs are written in grayscale",
+      "A permanent failure that requires hardware replacement",
+      "A component looks healthy to some observers but is degraded for others, so simple health checks may miss it",
+      "A network outage affecting only IPv6 traffic"
+    ],
+    "answer": 2,
+    "explanation": "Gray failures evade binary health checks because the component still answers some probes while failing real traffic."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "Which is a common cause of cascading failure?",
+    "options": [
+      "Using UUIDs as primary keys",
+      "Enabling TLS 1.3 on all endpoints",
+      "Compressing responses with gzip",
+      "Retry amplification, where clients retry aggressively against an already overloaded service"
+    ],
+    "answer": 3,
+    "explanation": "Extra retries add load exactly when the service has the least capacity, pushing dependent services over their limits too."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "What characterizes a metastable failure?",
+    "options": [
+      "The system stays degraded after the original trigger is gone, sustained by a feedback loop such as retries or cache refill storms",
+      "A failure that resolves itself within one heartbeat interval",
+      "A failure confined to a single availability zone",
+      "A failure caused only by disk corruption"
+    ],
+    "answer": 0,
+    "explanation": "Metastable failures persist because the recovery mechanisms themselves keep demand above capacity."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "Why is using wall-clock timestamps for last-write-wins conflict resolution risky?",
+    "options": [
+      "Wall clocks cannot be read by application code",
+      "Clock skew between nodes can make a causally older write appear newer and win",
+      "Timestamps overflow a 32-bit integer within a day",
+      "Every CPU core must have an identical clock or the write fails"
+    ],
+    "answer": 1,
+    "explanation": "Clocks on different machines are not perfectly synchronized, so the 'latest' timestamp may belong to the earlier event."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "Why does a request fanning out to 100 parallel sub-calls, each slow 1% of the time, end up slow so often?",
+    "options": [
+      "Parallel calls always serialize on the network card",
+      "Each parallel call doubles the request payload size",
+      "Tail latency compounds: about 63% of such requests hit at least one slow sub-call",
+      "Fan-out disables connection pooling so every call pays a handshake"
+    ],
+    "answer": 2,
+    "explanation": "The chance that all 100 calls are fast is 0.99^100, roughly 37%, so about 63% of fan-out requests see at least one slow call."
+  },
+  {
+    "topic": "replication",
+    "question": "What is the main tradeoff of synchronous replication to a standby?",
+    "options": [
+      "Faster writes but guaranteed data loss",
+      "Linearizable reads automatically, without a leader",
+      "No need for backups",
+      "Lower risk of losing acknowledged writes on failover, at the cost of higher write latency and reduced availability"
+    ],
+    "answer": 3,
+    "explanation": "Waiting for the standby protects acknowledged writes, but a slow or unreachable standby slows or blocks commits."
+  },
+  {
+    "topic": "replication",
+    "question": "What can happen during failover with asynchronous leader-follower replication?",
+    "options": [
+      "Writes acknowledged by the old leader but not yet replicated can be lost",
+      "The new leader permanently rejects all reads",
+      "The old leader rejoins with its writes merged automatically",
+      "The replication factor drops to zero"
+    ],
+    "answer": 0,
+    "explanation": "The new leader only has what was replicated before the failure, so unreplicated acknowledged writes are gone."
+  },
+  {
+    "topic": "replication",
+    "question": "What is the core difficulty in multi-leader replication?",
+    "options": [
+      "Only one leader can accept writes at a time, so scaling is impossible",
+      "Concurrent writes to the same data on different leaders produce conflicts that must be detected and resolved",
+      "Followers cannot read data at all",
+      "All leaders must share a single disk"
+    ],
+    "answer": 1,
+    "explanation": "Because writes can be accepted independently in several regions, conflicting updates are inevitable and need a resolution strategy."
+  },
+  {
+    "topic": "replication",
+    "question": "In chain replication, where are reads typically served?",
+    "options": [
+      "At the head, which receives all writes first",
+      "At a random node chosen by the client",
+      "At the tail, which holds only fully replicated writes",
+      "Only from a separate read-only cache"
+    ],
+    "answer": 2,
+    "explanation": "Writes flow from head to tail, so the tail only exposes writes that every replica in the chain has stored."
+  },
+  {
+    "topic": "replication",
+    "question": "Why is replication alone not a substitute for backups?",
+    "options": [
+      "Replicas cannot store encrypted data",
+      "Replication copies only indexes, not rows",
+      "Backups must legally be stored on tape",
+      "Replication faithfully propagates logical errors such as accidental deletes, so replicas lose the data too"
+    ],
+    "answer": 3,
+    "explanation": "Replicas mirror every change, including destructive ones, so point-in-time backups are needed to recover from logical mistakes."
+  },
+  {
+    "topic": "cap-theorem",
+    "question": "In the CAP theorem, what does availability specifically require?",
+    "options": [
+      "Every request received by a non-failing node gets a non-error response",
+      "The system has 99.99% uptime",
+      "At least a majority of nodes are reachable",
+      "Data is replicated to every region"
+    ],
+    "answer": 0,
+    "explanation": "CAP availability is a strict property: any live node must respond, even if it cannot reach others."
+  },
+  {
+    "topic": "cap-theorem",
+    "question": "Under PACELC, how is a system classified that favors availability during partitions and low latency otherwise?",
+    "options": [
+      "PC/EC",
+      "PA/EL",
+      "PC/EL",
+      "PA/EC"
+    ],
+    "answer": 1,
+    "explanation": "Dynamo-style stores such as Cassandra are typically described as PA/EL."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "Which anomaly occurs when a transaction reads a value written by another transaction that has not committed yet?",
+    "options": [
+      "Phantom read",
+      "Write skew",
+      "Dirty read",
+      "Lost update"
+    ],
+    "answer": 2,
+    "explanation": "Dirty reads are allowed at read uncommitted and prevented at read committed and above."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "What is a phantom read?",
+    "options": [
+      "Reading a row that was deleted long ago",
+      "Reading data from an uncommitted transaction",
+      "Two transactions overwriting each other's update",
+      "Re-running a range query in the same transaction and getting a different set of rows because another transaction inserted or deleted rows"
+    ],
+    "answer": 3,
+    "explanation": "Phantoms involve rows matching a predicate appearing or disappearing, not changes to an already-read row."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "What do vector clocks let a system determine about two versions of a value?",
+    "options": [
+      "Whether one causally precedes the other or they are concurrent",
+      "Their exact wall-clock write times",
+      "Which replica stores them",
+      "Which version is larger in bytes"
+    ],
+    "answer": 0,
+    "explanation": "Comparing per-node counters shows happens-before or concurrency, so true conflicts can be detected."
+  },
+  {
+    "topic": "consistency-models",
+    "question": "What is the key limitation of Lamport timestamps?",
+    "options": [
+      "They require synchronized physical clocks",
+      "If a has a smaller timestamp than b, it does not follow that a happened before b",
+      "They cannot order events on the same process",
+      "They grow with the number of nodes"
+    ],
+    "answer": 1,
+    "explanation": "Lamport clocks are consistent with causality but cannot distinguish concurrent events from ordered ones."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "What does two-phase locking (2PL) guarantee?",
+    "options": [
+      "Freedom from deadlocks",
+      "Atomic commit across services",
+      "Serializability, since a transaction acquires all its locks before releasing any",
+      "Eventual consistency"
+    ],
+    "answer": 2,
+    "explanation": "2PL guarantees serializable schedules but can deadlock, so deadlock detection or timeouts are still needed."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "How does an orchestrated saga differ from a choreographed saga?",
+    "options": [
+      "Orchestrated sagas use two-phase commit",
+      "Choreographed sagas cannot compensate",
+      "Orchestrated sagas need no messaging",
+      "A central orchestrator tells each participant what to do next, instead of participants reacting to each other's events"
+    ],
+    "answer": 3,
+    "explanation": "Orchestration centralizes the flow logic, while choreography spreads it across event subscribers."
+  },
+  {
+    "topic": "distributed-transactions",
+    "question": "Why does exactly-once delivery over an unreliable network usually reduce to at-least-once delivery plus idempotent processing?",
+    "options": [
+      "A sender cannot distinguish a lost message from a lost acknowledgment, so it must retry, and duplicates must be deduplicated",
+      "Networks never duplicate messages",
+      "Idempotency makes delivery faster",
+      "Exactly-once is guaranteed by TCP across process restarts"
+    ],
+    "answer": 0,
+    "explanation": "Effectively-once semantics come from retries combined with deduplication or transactional processing."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "What is hinted handoff?",
+    "options": [
+      "Forwarding reads to the fastest replica",
+      "A temporary node storing writes meant for an unavailable replica and delivering them when it recovers",
+      "Transferring leadership to a follower",
+      "Splitting a partition across two nodes"
+    ],
+    "answer": 1,
+    "explanation": "It keeps writes available during transient failures and is often paired with sloppy quorums."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "What is anti-entropy with Merkle trees used for?",
+    "options": [
+      "Encrypting replicated data",
+      "Electing a leader",
+      "Efficiently finding and repairing divergent data between replicas by comparing hashes of key ranges",
+      "Ordering writes globally"
+    ],
+    "answer": 2,
+    "explanation": "Comparing tree hashes top-down quickly narrows mismatches to the key ranges that differ."
+  },
+  {
+    "topic": "quorum-replication",
+    "question": "In a system with N=5, what is the smallest W that ensures any two write quorums overlap?",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "3"
+    ],
+    "answer": 3,
+    "explanation": "Two write quorums overlap when 2W > N, so W must be at least 3."
+  },
+  {
+    "topic": "consensus",
+    "question": "What problem do leader leases with fencing tokens address?",
+    "options": [
+      "A deposed leader that is paused or partitioned continuing to act as leader",
+      "Slow disk writes on followers",
+      "Uneven sharding of keys",
+      "High read latency"
+    ],
+    "answer": 0,
+    "explanation": "Storage rejects requests carrying a fencing token lower than the latest one issued."
+  },
+  {
+    "topic": "consensus",
+    "question": "How does Raft ensure that an elected leader has all committed entries?",
+    "options": [
+      "The leader copies logs from every follower after election",
+      "A voter refuses candidates whose log is less up to date than its own",
+      "Committed entries are stored only on the leader",
+      "Clients resend all committed entries"
+    ],
+    "answer": 1,
+    "explanation": "Since committed entries are on a majority, any winning candidate must hold them."
+  },
+  {
+    "topic": "consensus",
+    "question": "Why do Raft and Paxos clusters usually have an odd number of nodes?",
+    "options": [
+      "Even sizes cannot elect a leader",
+      "Even sizes lose data",
+      "Adding a node to make an even count raises the majority size without tolerating any extra failures",
+      "Odd sizes avoid network partitions"
+    ],
+    "answer": 2,
+    "explanation": "Both 3 and 4 nodes tolerate one failure, so the fourth node adds cost without fault tolerance."
+  },
+  {
+    "topic": "consensus",
+    "question": "In Raft, what triggers a follower to start an election?",
+    "options": [
+      "A client request",
+      "The leader reaching its log size limit",
+      "A configuration change",
+      "Not hearing from a leader within its randomized election timeout"
+    ],
+    "answer": 3,
+    "explanation": "Randomized timeouts reduce the chance of split votes."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "What is a poison pill message?",
+    "options": [
+      "A message that consistently crashes or fails its consumer, blocking progress if it is retried forever",
+      "A message encrypted with an invalid key",
+      "A message intentionally sent to shut down a cluster",
+      "A message with a high priority"
+    ],
+    "answer": 0,
+    "explanation": "Limiting retries and routing such messages to a dead-letter queue keeps the consumer moving."
+  },
+  {
+    "topic": "failure-modes",
+    "question": "Why can a long garbage collection pause make a healthy node behave like a failed one?",
+    "options": [
+      "It deletes the node's data",
+      "While paused, it misses heartbeats and lease renewals, so peers may declare it dead and it may act on stale assumptions when it resumes",
+      "It changes the node's IP address",
+      "It permanently corrupts its log"
+    ],
+    "answer": 1,
+    "explanation": "Process pauses are a key reason distributed systems cannot rely on timing or leases without fencing."
+  },
+  {
+    "topic": "replication",
+    "question": "What does semi-synchronous replication guarantee?",
+    "options": [
+      "All replicas acknowledge every write",
+      "No replica receives writes until a backup completes",
+      "At least one replica has received a write before the primary acknowledges it to the client",
+      "Writes are acknowledged before they reach the primary's disk"
+    ],
+    "answer": 2,
+    "explanation": "It bounds data loss on failover without waiting on every replica."
+  },
+  {
+    "topic": "replication",
+    "question": "What is change data capture (CDC)?",
+    "options": [
+      "Copying an entire database nightly",
+      "Comparing two databases row by row",
+      "Caching database query results",
+      "Streaming row-level changes from a database's write-ahead or replication log to other systems"
+    ],
+    "answer": 3,
+    "explanation": "CDC tools such as Debezium tail the log and publish each insert, update, and delete as an event."
+  }
+]

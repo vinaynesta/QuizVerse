@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc06f31d927f",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "How do you call a static method greet defined on class User?",
+  "options": [
+   "User.greet()",
+   "new User().greet()",
+   "User.prototype.greet()",
+   "this.greet() from anywhere"
+  ],
+  "answer": 0,
+  "explanation": "Static methods belong to the class constructor itself, not to instances."
+ },
+ {
+  "id": "qb0579d35eca",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What is the key difference between toSorted() and sort()?",
+  "options": [
+   "toSorted sorts numerically by default",
+   "toSorted only works on strings",
+   "sort returns a new array",
+   "toSorted returns a new array and leaves the original unchanged"
+  ],
+  "answer": 3,
+  "explanation": "ES2023 added toSorted, toReversed and toSpliced as non-mutating counterparts of sort, reverse and splice."
+ },
+ {
+  "id": "q5b4b800fa6d",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does this log?\nPromise.resolve(1).then(x => x + 1).then(x => console.log(x));",
+  "options": [
+   "A Promise object",
+   "1",
+   "undefined",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Each then receives the value returned by the previous handler, so 1 becomes 2."
+ },
+ {
+  "id": "qccde56e2f55",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does an async function always return?",
+  "options": [
+   "The raw return value",
+   "A Promise",
+   "undefined",
+   "A generator object"
+  ],
+  "answer": 1,
+  "explanation": "async functions wrap their return value in a Promise, and thrown errors become rejections."
+ },
+ {
+  "id": "qa9ce42bf0d3",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "Which keyword calls the parent class constructor in a subclass?",
+  "options": [
+   "super()",
+   "this.parent()",
+   "base()",
+   "parent()"
+  ],
+  "answer": 0,
+  "explanation": "A derived class constructor must call super() before using this."
+ },
+ {
+  "id": "q38d4f6a21d0",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [1, 2, 3].at(-1) return?",
+  "options": [
+   "1",
+   "3",
+   "undefined",
+   "-1"
+  ],
+  "answer": 1,
+  "explanation": "at accepts negative indices that count back from the end of the array."
+ },
+ {
+  "id": "qc4e35145617",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "What does event.preventDefault() do?",
+  "options": [
+   "Removes the event listener",
+   "Stops the event from bubbling",
+   "Cancels the browser's default action for the event",
+   "Prevents other listeners on the same element"
+  ],
+  "answer": 2,
+  "explanation": "preventDefault stops default behaviour like form submission; stopPropagation is what stops bubbling."
+ },
+ {
+  "id": "q2e87352a642",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [1, 2, 3, 4].filter(n => n % 2 === 0) return?",
+  "options": [
+   "[2, 4]",
+   "true",
+   "2",
+   "[1, 3]"
+  ],
+  "answer": 0,
+  "explanation": "filter keeps the elements for which the callback returns truthy."
+ },
+ {
+  "id": "qac03cdeb8df",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "Which method resolves with the first promise that fulfills, ignoring rejections unless all reject?",
+  "options": [
+   "Promise.race",
+   "Promise.all",
+   "Promise.any",
+   "Promise.allSettled"
+  ],
+  "answer": 2,
+  "explanation": "Promise.any fulfills with the first fulfilled value and rejects with an AggregateError only if all reject."
+ },
+ {
+  "id": "q02f98829a02",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "What does this log?\nconst obj = { name: \"A\", greet() { return this.name; } };\nconsole.log(obj.greet());",
+  "options": [
+   "undefined",
+   "\"\"",
+   "\"A\"",
+   "TypeError"
+  ],
+  "answer": 2,
+  "explanation": "When a function is called as a method, this refers to the object before the dot."
+ }
+]

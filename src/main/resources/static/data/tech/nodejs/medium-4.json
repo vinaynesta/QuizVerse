@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q6d9238117d5",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What is the default behavior for an unhandled promise rejection in Node.js 15 and later?",
+  "options": [
+   "It is raised as an uncaught exception, which terminates the process by default",
+   "It is silently ignored",
+   "The promise is retried automatically",
+   "It prints a warning and keeps running"
+  ],
+  "answer": 0,
+  "explanation": "Since Node 15 the default unhandled-rejections mode is 'throw', which behaves like an uncaught exception."
+ },
+ {
+  "id": "q3af2dbd68cd",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "Which property of process holds the absolute path of the node executable running the script?",
+  "options": [
+   "process.argv[1]",
+   "process.cwd()",
+   "process.execPath[1]",
+   "process.argv[0]"
+  ],
+  "answer": 3,
+  "explanation": "argv[0] is the node executable and argv[1] is the script path; process.execPath also holds the executable path."
+ },
+ {
+  "id": "q64e3b92dbda",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "A multi-byte UTF-8 character is split across two chunks of a Readable. What avoids corrupting it when the chunks become text?",
+  "options": [
+   "Call chunk.toString() on each chunk separately",
+   "Set highWaterMark to 1 byte",
+   "Call Buffer.byteLength() on every chunk",
+   "Call readable.setEncoding('utf8') so Node decodes characters across chunk boundaries"
+  ],
+  "answer": 3,
+  "explanation": "With setEncoding, Node uses a StringDecoder that keeps partial bytes until the character is complete."
+ },
+ {
+  "id": "qfc46463c4cc",
+  "subject": "nodejs",
+  "topic": "buffers",
+  "level": "medium",
+  "question": "Which call correctly joins an array of Buffer chunks into one Buffer?",
+  "options": [
+   "chunks.join('')",
+   "Buffer.merge(chunks)",
+   "Buffer.concat(chunks)",
+   "new Buffer(chunks)"
+  ],
+  "answer": 2,
+  "explanation": "join() converts each chunk to a string, which can corrupt binary data; new Buffer() is deprecated."
+ },
+ {
+  "id": "qe6df24fe21a",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Which Promise combinator waits for every promise to settle and reports each outcome, whether fulfilled or rejected?",
+  "options": [
+   "Promise.all()",
+   "Promise.race()",
+   "Promise.any()",
+   "Promise.allSettled()"
+  ],
+  "answer": 3,
+  "explanation": "allSettled() resolves once all inputs settle, with a status and value or reason for each one."
+ },
+ {
+  "id": "q4d8a4465f79",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What does Promise.any() reject with when every input promise rejects?",
+  "options": [
+   "Only the first rejection reason",
+   "An AggregateError containing all the rejection reasons",
+   "An array of the fulfilled values",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "If no input fulfills, any() rejects with an AggregateError whose errors property lists every reason."
+ },
+ {
+  "id": "q8be6bcfa0b9",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What is the effective minimum delay for setTimeout(fn, 0) in Node.js?",
+  "options": [
+   "0 ms, so the callback runs synchronously",
+   "About 1 ms",
+   "4 ms, as in browsers",
+   "10 ms"
+  ],
+  "answer": 1,
+  "explanation": "Delays below 1 are coerced to 1, so setTimeout(fn, 0) behaves like a 1 ms timer."
+ },
+ {
+  "id": "qf6926e57b0c",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "Which command installs only production dependencies with npm 7 and later?",
+  "options": [
+   "npm install --skip-dev",
+   "npm install --only=prod-only",
+   "npm install --omit=dev",
+   "npm prune --dev"
+  ],
+  "answer": 2,
+  "explanation": "--omit=dev is the current flag; the older --production flag still works but is deprecated."
+ },
+ {
+  "id": "q70d8c1aac46",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What does Promise.race() settle with?",
+  "options": [
+   "The first fulfilled value only",
+   "The outcome of the first promise to settle, whether fulfilled or rejected",
+   "An array of every result",
+   "The value of the slowest promise"
+  ],
+  "answer": 1,
+  "explanation": "race() follows whichever input settles first, including by rejection."
+ },
+ {
+  "id": "q05ac99a5d08",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "Two independent 100 ms operations are awaited one after the other. Roughly how long does the pair take?",
+  "options": [
+   "About 200 ms",
+   "About 100 ms",
+   "About 50 ms",
+   "About 0 ms"
+  ],
+  "answer": 0,
+  "explanation": "Sequential awaits add their durations; running them concurrently with Promise.all() would take about 100 ms."
+ }
+]

@@ -1,0 +1,167 @@
+[
+ {
+  "id": "q1afabb56f92",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "What does AS do in SELECT price * qty AS total FROM items?",
+  "options": [
+   "Creates a new column named total in the items table",
+   "Sorts the result by total",
+   "Filters rows where total is not NULL",
+   "Gives the computed column the alias total in the result"
+  ],
+  "answer": 3,
+  "explanation": "AS assigns an alias to a column or expression in the result set without changing the table."
+ },
+ {
+  "id": "q65348f6e24c",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which clause restricts how many rows a query returns in PostgreSQL and MySQL?",
+  "options": [
+   "WHERE ROWCOUNT",
+   "MAX_ROWS",
+   "LIMIT",
+   "TAKE"
+  ],
+  "answer": 2,
+  "explanation": "LIMIT caps the number of rows returned in both PostgreSQL and MySQL."
+ },
+ {
+  "id": "q6598ebce56a",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which operator checks whether a value matches any value in a given list?",
+  "options": [
+   "LIKE",
+   "BETWEEN",
+   "IN",
+   "EXISTS"
+  ],
+  "answer": 2,
+  "explanation": "IN tests membership in a list of values. LIKE matches text patterns, BETWEEN tests a range, and EXISTS tests for any returned row."
+ },
+ {
+  "id": "q9402b72fc15",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which clause filters individual rows before any grouping takes place?",
+  "options": [
+   "HAVING",
+   "WHERE",
+   "ORDER BY",
+   "SELECT"
+  ],
+  "answer": 1,
+  "explanation": "WHERE is applied to individual rows before GROUP BY; HAVING filters groups after aggregation."
+ },
+ {
+  "id": "q989cd27b218",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "When ORDER BY is written without a direction keyword, which direction is used?",
+  "options": [
+   "DESC",
+   "ASC",
+   "RANDOM",
+   "NONE"
+  ],
+  "answer": 1,
+  "explanation": "The default sort direction in standard SQL, PostgreSQL and MySQL is ascending (ASC)."
+ },
+ {
+  "id": "qc526cc1eb35",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "In a LIKE pattern, which wildcard matches exactly one character?",
+  "options": [
+   "%",
+   "_",
+   "*",
+   "#"
+  ],
+  "answer": 1,
+  "explanation": "The underscore matches a single character, so 'c_t' matches cat and cut but not cart."
+ },
+ {
+  "id": "qdbb41f75613",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "In a LIKE pattern, which wildcard matches any sequence of zero or more characters?",
+  "options": [
+   "_",
+   "*",
+   "%",
+   "?"
+  ],
+  "answer": 2,
+  "explanation": "% matches any run of characters, including none, so 'a%' matches every string that starts with a."
+ },
+ {
+  "id": "qde7fd62ac8f",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which keyword removes duplicate rows from a query result?",
+  "options": [
+   "UNIQUE",
+   "ONLY",
+   "SINGLE",
+   "DISTINCT"
+  ],
+  "answer": 3,
+  "explanation": "SELECT DISTINCT returns each distinct row once. UNIQUE is a constraint keyword, not a query modifier in standard SQL."
+ },
+ {
+  "id": "qeb93ea97fc0",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which operator selects values within an inclusive range, such as prices from 10 to 20?",
+  "options": [
+   "BETWEEN",
+   "IN",
+   "LIKE",
+   "EXISTS"
+  ],
+  "answer": 0,
+  "explanation": "x BETWEEN 10 AND 20 is equivalent to x >= 10 AND x <= 20, so both endpoints are included."
+ },
+ {
+  "id": "qf3d1d2e9a9b",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "What does SELECT * return?",
+  "options": [
+   "All columns of the tables in the FROM clause",
+   "Only primary key columns",
+   "Only numeric columns",
+   "Only the first column"
+  ],
+  "answer": 0,
+  "explanation": "The asterisk is shorthand for every column of the table or tables named in FROM."
+ },
+ {
+  "id": "qfe4e843b293",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "What is a view?",
+  "options": [
+   "A physical copy of a table stored on disk",
+   "A stored query that presents its results as a virtual table",
+   "A type of index spanning two tables",
+   "A trigger that runs on insert"
+  ],
+  "answer": 1,
+  "explanation": "A view is a named, stored query. Its rows are computed from the underlying tables when the view is queried."
+ }
+]

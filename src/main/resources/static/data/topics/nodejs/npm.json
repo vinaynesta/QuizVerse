@@ -1,0 +1,287 @@
+[
+ {
+  "id": "q133aa0678bb",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "What does npx do?",
+  "options": [
+   "Runs a package's executable, downloading it temporarily if it is not installed locally",
+   "Removes unused packages from node_modules",
+   "Upgrades npm to the latest version",
+   "Publishes a package to the npm registry"
+  ],
+  "answer": 0,
+  "explanation": "npx is handy for one-off tools, such as scaffolding commands, without installing them globally."
+ },
+ {
+  "id": "q4335551c04a",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command removes an installed package and its entry in package.json?",
+  "options": [
+   "npm delete <pkg>",
+   "npm remove-dep <pkg>",
+   "npm clean <pkg>",
+   "npm uninstall <pkg>"
+  ],
+  "answer": 3,
+  "explanation": "npm uninstall (alias npm rm) deletes the package from node_modules and updates package.json and the lock file."
+ },
+ {
+  "id": "q518a4ff1907",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "How does npm ci differ from npm install?",
+  "options": [
+   "It ignores the lock file and resolves fresh versions",
+   "It installs only global packages",
+   "It installs exactly what package-lock.json specifies and fails if the lock file is out of sync",
+   "It upgrades every dependency to its latest version"
+  ],
+  "answer": 2,
+  "explanation": "npm ci is built for clean, reproducible installs: it requires a lock file and removes any existing node_modules first."
+ },
+ {
+  "id": "q5299f684e5f",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which file records the exact resolved versions of all installed dependencies?",
+  "options": [
+   ".npmrc",
+   "package.json",
+   "node_modules/.cache",
+   "package-lock.json"
+  ],
+  "answer": 3,
+  "explanation": "package-lock.json stores the exact resolved version and integrity hash of every installed package."
+ },
+ {
+  "id": "q74c68361f56",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command installs a package as a devDependency?",
+  "options": [
+   "npm install --global <pkg>",
+   "npm publish --dev <pkg>",
+   "npm install --save-prod <pkg>",
+   "npm install --save-dev <pkg>"
+  ],
+  "answer": 3,
+  "explanation": "The --save-dev (or -D) flag records the package under devDependencies in package.json."
+ },
+ {
+  "id": "qa6095e25da5",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command creates a new package.json with default values without asking questions?",
+  "options": [
+   "npm start --init",
+   "npm new",
+   "npm create package",
+   "npm init -y"
+  ],
+  "answer": 3,
+  "explanation": "npm init asks a series of questions, and the -y flag accepts the defaults for all of them."
+ },
+ {
+  "id": "qa89b525fd87",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Where are npm scripts such as start and test defined?",
+  "options": [
+   "The main field of package.json",
+   "The engines field of package.json",
+   "The .npmrc file",
+   "The scripts field of package.json"
+  ],
+  "answer": 3,
+  "explanation": "npm reads runnable commands from the scripts object in package.json."
+ },
+ {
+  "id": "qddd5d6ae23d",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which command runs the script named test defined in package.json?",
+  "options": [
+   "npm task test",
+   "npm run test",
+   "npm script test",
+   "npm execute test"
+  ],
+  "answer": 1,
+  "explanation": "npm run <script> executes a named entry from the scripts field; npm test is a shortcut for the same thing."
+ },
+ {
+  "id": "qe68ce122cb3",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "easy",
+  "question": "Which field in package.json defines the entry point loaded when another file calls require() on the package?",
+  "options": [
+   "entry",
+   "main",
+   "start",
+   "index"
+  ],
+  "answer": 1,
+  "explanation": "The main field names the file that require() loads for the package; scripts.start is a different thing."
+ },
+ {
+  "id": "q79f00dc2ac5",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "By default, what does the engines field in package.json do when the installed Node.js version does not match?",
+  "options": [
+   "npm prints a warning but still installs, unless engine-strict is enabled",
+   "npm switches to the listed Node.js version automatically",
+   "npm removes the package from the lock file",
+   "npm refuses to install and exits"
+  ],
+  "answer": 0,
+  "explanation": "engines is advisory by default; engine-strict turns mismatches into install errors."
+ },
+ {
+  "id": "q7dd1b27a0e7",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "Which version range does \"^1.4.2\" allow?",
+  "options": [
+   ">=1.4.2 <1.5.0",
+   ">=1.4.2 <2.0.0",
+   ">=1.0.0 <2.0.0",
+   "Any version"
+  ],
+  "answer": 1,
+  "explanation": "A caret range allows changes that do not modify the leftmost non-zero version component."
+ },
+ {
+  "id": "q8d4b3ee518f",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "Which version range does \"~1.4.2\" allow?",
+  "options": [
+   ">=1.4.2 <2.0.0",
+   "Exactly 1.4.2",
+   ">=1.4.2 <1.5.0",
+   ">=1.4.0 <3.0.0"
+  ],
+  "answer": 2,
+  "explanation": "A tilde range allows patch updates only; a caret range also allows minor updates."
+ },
+ {
+  "id": "qa8af3f4f8fa",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "What does npm audit do?",
+  "options": [
+   "Measures the startup time of each package",
+   "Checks installed dependencies against a database of known security vulnerabilities",
+   "Verifies that every dependency is used in the code",
+   "Lints the project's JavaScript code"
+  ],
+  "answer": 1,
+  "explanation": "npm audit reports known advisories, and npm audit fix attempts compatible upgrades."
+ },
+ {
+  "id": "qb96e59640cb",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "What does a package.json dependency version written as \"*\" allow?",
+  "options": [
+   "Only the version currently installed",
+   "Only the latest major version",
+   "Only pre-release versions",
+   "Any version of the package"
+  ],
+  "answer": 3,
+  "explanation": "A star range matches all versions, which makes installs unpredictable and is best avoided."
+ },
+ {
+  "id": "qf6926e57b0c",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "Which command installs only production dependencies with npm 7 and later?",
+  "options": [
+   "npm install --skip-dev",
+   "npm install --only=prod-only",
+   "npm install --omit=dev",
+   "npm prune --dev"
+  ],
+  "answer": 2,
+  "explanation": "--omit=dev is the current flag; the older --production flag still works but is deprecated."
+ },
+ {
+  "id": "q0d5d0c38804",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "What does running npm install with the --ignore-scripts flag do?",
+  "options": [
+   "Prevents lifecycle scripts such as preinstall and postinstall from running",
+   "Skips installing devDependencies",
+   "Ignores the package-lock.json file",
+   "Installs packages without verifying their integrity"
+  ],
+  "answer": 0,
+  "explanation": "Install scripts run arbitrary code from dependencies, so disabling them reduces supply chain risk."
+ },
+ {
+  "id": "q44c0ab709f0",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "What does the integrity field in package-lock.json protect against?",
+  "options": [
+   "A tampered or corrupted package tarball, by checking a hash when it is installed",
+   "Peer dependency version conflicts",
+   "Accidental deletion of node_modules",
+   "Use of an outdated Node.js version"
+  ],
+  "answer": 0,
+  "explanation": "The integrity value is a subresource-integrity hash that npm verifies against the downloaded tarball."
+ },
+ {
+  "id": "q956b46ba7ba",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "Which package.json field forces a transitive dependency to a specific version in npm?",
+  "options": [
+   "forced",
+   "resolutions in .npmrc",
+   "overrides",
+   "pins"
+  ],
+  "answer": 2,
+  "explanation": "The overrides field lets you replace the version of nested dependencies; resolutions is a Yarn feature."
+ },
+ {
+  "id": "qde7291ce29e",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "hard",
+  "question": "What does npm 7+ do when two packages require incompatible versions of the same peer dependency?",
+  "options": [
+   "It installs both versions silently",
+   "It skips all peer dependencies without a warning",
+   "It picks the oldest version and ignores the other package",
+   "It fails with an ERESOLVE error unless the conflict is resolved, for example with --legacy-peer-deps or overrides"
+  ],
+  "answer": 3,
+  "explanation": "Strict peer dependency resolution is the default in npm 7 and later."
+ }
+]

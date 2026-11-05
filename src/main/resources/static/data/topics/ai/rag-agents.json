@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0ac63138014",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "In an LLM agent, what is a tool?",
+  "options": [
+   "An external function or API the model can request to call, such as a calculator or web search",
+   "A prompt template stored on disk",
+   "A hardware accelerator used to run the model",
+   "A library used to train the model"
+  ],
+  "answer": 0,
+  "explanation": "Tools let an agent act beyond text generation by having the application execute calls and return results."
+ },
+ {
   "id": "q149250206b8",
   "subject": "ai",
   "topic": "rag-agents",
@@ -45,6 +60,21 @@
   "explanation": "Vector databases index embeddings for fast similarity search, which powers semantic retrieval."
  },
  {
+  "id": "qc26c94ccb9b",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is semantic search?",
+  "options": [
+   "Searching only within document titles",
+   "Finding results by meaning rather than by exact keyword matches",
+   "Searching for exact strings with regular expressions",
+   "Sorting results alphabetically"
+  ],
+  "answer": 1,
+  "explanation": "Semantic search compares embeddings, so a query can match relevant text that uses different words."
+ },
+ {
   "id": "qcf013c24c81",
   "subject": "ai",
   "topic": "rag-agents",
@@ -58,6 +88,36 @@
   ],
   "answer": 0,
   "explanation": "RAG fetches relevant external content and adds it to the prompt so answers rely on up-to-date or private sources."
+ },
+ {
+  "id": "q007e3193331",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "Why should the same embedding model be used to index documents and to embed queries?",
+  "options": [
+   "Different models produce vectors in incompatible spaces, so similarity scores between them would be meaningless",
+   "Using two models doubles storage costs but gives the same results",
+   "Query embeddings must be longer than document embeddings",
+   "The vector database only accepts one model name"
+  ],
+  "answer": 0,
+  "explanation": "Similarity search only works when queries and documents are mapped into the same embedding space."
+ },
+ {
+  "id": "q1a4625a700f",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "medium",
+  "question": "What is the ReAct pattern for LLM agents?",
+  "options": [
+   "Training the agent with reinforcement learning only",
+   "Running several models in parallel and voting",
+   "Reacting to user input with predefined canned responses",
+   "Interleaving reasoning steps with actions such as tool calls and the observations they return"
+  ],
+  "answer": 3,
+  "explanation": "ReAct alternates thinking and acting so each observation can inform the next decision."
  },
  {
   "id": "q48919eae4a9",
@@ -165,6 +225,21 @@
   "explanation": "Chunk size balances embedding specificity against having enough surrounding context to answer the question."
  },
  {
+  "id": "q59eb7ec6a20",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What does reciprocal rank fusion do in hybrid search?",
+  "options": [
+   "Averages the embedding vectors of all retrieved documents",
+   "Keeps only results that appear first in both lists",
+   "Re-embeds the query until both retrievers agree",
+   "Combines ranked result lists by summing 1/(k + rank) per document, so raw scores need not be comparable"
+  ],
+  "answer": 3,
+  "explanation": "Using ranks instead of scores makes it easy to merge keyword and vector results whose score scales differ."
+ },
+ {
   "id": "q59f85dc6f18",
   "subject": "ai",
   "topic": "rag-agents",
@@ -178,5 +253,20 @@
   ],
   "answer": 1,
   "explanation": "If each step succeeds with probability p, a chain of n dependent steps succeeds with roughly p to the power n."
+ },
+ {
+  "id": "qd1eb6c11b15",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "hard",
+  "question": "What does the lost-in-the-middle effect describe for long-context LLMs?",
+  "options": [
+   "Models forget the system prompt after the first reply",
+   "Retrieved documents are dropped if the index is too large",
+   "Models tend to use information at the start and end of a long context better than information in the middle",
+   "Tokens in the middle of a word are lost during tokenization"
+  ],
+  "answer": 2,
+  "explanation": "This positional bias is one reason RAG systems limit and order retrieved passages carefully."
  }
 ]

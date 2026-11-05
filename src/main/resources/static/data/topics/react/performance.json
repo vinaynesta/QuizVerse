@@ -30,6 +30,21 @@
   "explanation": "memo makes React skip re-rendering the component when its props are shallowly equal to the previous ones."
  },
  {
+  "id": "q567f7ad323d",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Which component shows a fallback while a lazy component is loading?",
+  "options": [
+   "ErrorBoundary",
+   "Suspense",
+   "Fragment",
+   "Profiler"
+  ],
+  "answer": 1,
+  "explanation": "Wrap lazy components in <Suspense fallback={...}> to show a placeholder until the code arrives."
+ },
+ {
   "id": "q7cba70bf16c",
   "subject": "react",
   "topic": "performance",
@@ -58,6 +73,36 @@
   ],
   "answer": 3,
   "explanation": "lazy takes a function that dynamically imports a component, so its code is fetched only when needed, usually inside Suspense."
+ },
+ {
+  "id": "qdfc117aa324",
+  "subject": "react",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Which tool lets you see which components rendered and how long they took?",
+  "options": [
+   "The Lighthouse SEO report",
+   "The browser's Application tab",
+   "The npm audit command",
+   "The React Developer Tools Profiler"
+  ],
+  "answer": 3,
+  "explanation": "The Profiler tab in React DevTools records renders and their timings."
+ },
+ {
+  "id": "q50c6e4f89b2",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "When is wrapping a calculation in useMemo usually worthwhile?",
+  "options": [
+   "Always, for every value",
+   "Only for string concatenation",
+   "When the calculation is noticeably expensive or its result is passed to memoized children",
+   "Never, as it slows every render"
+  ],
+  "answer": 2,
+  "explanation": "useMemo adds overhead, so it pays off for slow calculations or to keep referential equality for memoized children."
  },
  {
   "id": "q9a6c59a1897",
@@ -105,6 +150,21 @@
   "explanation": "Transition updates can be interrupted by more urgent updates, keeping input responsive during expensive renders."
  },
  {
+  "id": "qde16cc912af",
+  "subject": "react",
+  "topic": "performance",
+  "level": "medium",
+  "question": "What does the second argument to memo(Component, arePropsEqual) do?",
+  "options": [
+   "Provides a custom comparison that returns true when a re-render can be skipped",
+   "Lists the props that should trigger renders",
+   "Sets a cache timeout",
+   "Marks props as required"
+  ],
+  "answer": 0,
+  "explanation": "By default memo compares props shallowly; the custom function replaces that comparison."
+ },
+ {
   "id": "qf27dd2dbaa1",
   "subject": "react",
   "topic": "performance",
@@ -135,6 +195,21 @@
   "explanation": "Memoization depends on stable inputs; if the parent recreates list every render, the cache never hits."
  },
  {
+  "id": "q4227756140c",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "Why does moving frequently changing state down into a small child component often improve performance?",
+  "options": [
+   "Only that child and its descendants re-render when the state changes, not its former siblings",
+   "It turns the state into a ref",
+   "React skips rendering children of stateful components",
+   "It enables server rendering for the parent"
+  ],
+  "answer": 0,
+  "explanation": "State updates re-render the owning component's subtree, so keeping state close to where it is used shrinks that subtree."
+ },
+ {
   "id": "q5611ed490d6",
   "subject": "react",
   "topic": "performance",
@@ -148,6 +223,21 @@
   ],
   "answer": 0,
   "explanation": "Transition renders are interruptible, so urgent input updates are not blocked by the expensive list render."
+ },
+ {
+  "id": "qab31e95e3f8",
+  "subject": "react",
+  "topic": "performance",
+  "level": "hard",
+  "question": "What information does the onRender callback of the <Profiler> component receive?",
+  "options": [
+   "The list of props that changed",
+   "The JavaScript heap size",
+   "Timing details such as the profiler id, the phase and actualDuration for each commit",
+   "The network requests made during render"
+  ],
+  "answer": 2,
+  "explanation": "Profiler measures how often a subtree renders and how long rendering takes."
  },
  {
   "id": "qce74f4b7eab",

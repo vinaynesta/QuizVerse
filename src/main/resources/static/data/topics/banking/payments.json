@@ -1,5 +1,133 @@
 [
  {
+  "id": "q15330fd0ab3",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "Which body regulates payment and settlement systems in India?",
+  "options": [
+   "SEBI",
+   "Ministry of Finance",
+   "IRDAI",
+   "Reserve Bank of India"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The RBI regulates and supervises payment systems under the Payment and Settlement Systems Act, 2007."
+ },
+ {
+  "id": "q168aeb67fc5",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "Which NPCI service allows instant interbank fund transfer round the clock through mobile, internet banking and ATMs?",
+  "options": [
+   "IMPS",
+   "CTS",
+   "NACH",
+   "ECS"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "IMPS provides instant, 24x7 interbank electronic fund transfer through multiple channels."
+ },
+ {
+  "id": "q2c6a2d94ddd",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'IMPS' stand for?",
+  "options": [
+   "Instant Money Processing System",
+   "Interbank Mobile Payment Scheme",
+   "Immediate Payment Service",
+   "Integrated Monetary Payment Service"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "IMPS is the Immediate Payment Service run by NPCI for instant interbank transfers."
+ },
+ {
+  "id": "q3342dbc62ca",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "FASTag is mainly used for:",
+  "options": [
+   "Paying electricity bills",
+   "Electronic toll collection on highways",
+   "Clearing cheques",
+   "Withdrawing cash at ATMs"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "FASTag enables automatic deduction of toll charges as a vehicle passes a toll plaza."
+ },
+ {
+  "id": "q3ad3c6c2643",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'RTGS' stand for?",
+  "options": [
+   "Rapid Transfer Gross System",
+   "Real Time General Settlement",
+   "Real Time Gross Settlement",
+   "Real Transfer Guaranteed Settlement"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "RTGS stands for Real Time Gross Settlement, where each transaction is settled individually as it occurs."
+ },
+ {
+  "id": "q476defc326b",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'BBPS' stand for?",
+  "options": [
+   "Bharat Bill Payment System",
+   "Bharat Banking Payment Scheme",
+   "Bank Bill Processing Service",
+   "Basic Bill Payment Switch"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "BBPS is the Bharat Bill Payment System, an interoperable platform for paying recurring bills."
+ },
+ {
+  "id": "q49e55be977b",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "In UPI, what does 'VPA' stand for?",
+  "options": [
+   "Virtual Payment Address",
+   "Verified Personal Account",
+   "Virtual Private Access",
+   "Valid Payment Authorisation"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A Virtual Payment Address (UPI ID) lets users send and receive money without sharing account details."
+ },
+ {
+  "id": "q5c1fd708afe",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'AePS' stand for?",
+  "options": [
+   "Aadhaar Enabled Payment System",
+   "Automated Electronic Payment Service",
+   "Aadhaar Electronic Pension Scheme",
+   "Account Enabled Payment Switch"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "AePS is the Aadhaar Enabled Payment System, which lets customers transact using Aadhaar and biometrics."
+ },
+ {
   "id": "q61c258d8482",
   "subject": "banking",
   "topic": "payments",
@@ -11,9 +139,9 @@
    "National Easy Funds Transfer",
    "Net Electronic Fund Transaction"
   ],
+  "needsReview": true,
   "answer": 0,
-  "explanation": "NEFT is National Electronic Funds Transfer, run by the RBI.",
-  "needsReview": true
+  "explanation": "NEFT is National Electronic Funds Transfer, run by the RBI."
  },
  {
   "id": "q6840941ca88",
@@ -23,13 +151,413 @@
   "question": "Which payment system is meant for large-value transfers settled one by one in real time?",
   "options": [
    "NEFT",
-   "RTGS",
    "Cheque clearing",
+   "RTGS",
    "ECS"
   ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "RTGS (Real Time Gross Settlement) settles each transfer individually, in real time; it is meant for ₹2 lakh and above."
+ },
+ {
+  "id": "q686201d0461",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "BHIM, the payments app, is based on which platform?",
+  "options": [
+   "UPI",
+   "RTGS",
+   "CTS",
+   "NEFT"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "BHIM (Bharat Interface for Money) is NPCI's app built on the UPI platform."
+ },
+ {
+  "id": "q8353fb92bab",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'NPCI' stand for?",
+  "options": [
+   "National Payment Clearing Institute",
+   "National Payments Corporation of India",
+   "National Processing Corporation of India",
+   "National Public Credit Institution"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "RTGS (Real Time Gross Settlement) settles each transfer individually, in real time; it is meant for ₹2 lakh and above.",
-  "needsReview": true
+  "explanation": "NPCI is the National Payments Corporation of India, the umbrella organisation for retail payments."
+ },
+ {
+  "id": "q85ab5e305ac",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'UPI' stand for?",
+  "options": [
+   "Universal Payment Instrument",
+   "Unified Payments Interface",
+   "United Payments Infrastructure",
+   "Unified Processing Interface"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "UPI stands for Unified Payments Interface, NPCI's mobile-based instant payment system."
+ },
+ {
+  "id": "q9d6e1c774ce",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "RuPay is:",
+  "options": [
+   "A mobile wallet run by RBI",
+   "A government pension scheme",
+   "A cheque clearing system",
+   "India's domestic card payment network"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "RuPay is the indigenous card payment network developed by NPCI."
+ },
+ {
+  "id": "qa1d31a44b8d",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "In the Cheque Truncation System, what is sent to the drawee bank instead of the physical cheque?",
+  "options": [
+   "An electronic image of the cheque with its data",
+   "A demand draft",
+   "An SMS from the customer",
+   "A photocopy sent by courier"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "CTS stops the physical cheque at the presenting bank and transmits its electronic image and data for clearing."
+ },
+ {
+  "id": "qc3f5be9ecfa",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "Under the Cheque Truncation System, what is sent to the clearing house instead of the physical cheque?",
+  "options": [
+   "A demand draft for the same amount",
+   "A photocopy sent by courier",
+   "Only the account holder's signature",
+   "An electronic image of the cheque with its MICR data"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "CTS truncates the paper cheque at the presenting bank and sends its image and MICR data electronically."
+ },
+ {
+  "id": "qd395961f93a",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "Which technology does FASTag use?",
+  "options": [
+   "Near Field Communication between two phones",
+   "Magnetic stripe",
+   "Radio Frequency Identification (RFID)",
+   "Optical character recognition"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "FASTag is an RFID tag fixed on the vehicle's windscreen and read by toll plaza readers."
+ },
+ {
+  "id": "qe3fd3bf352e",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "Visa and Mastercard are examples of:",
+  "options": [
+   "Credit rating agencies",
+   "Payment banks",
+   "Card payment networks",
+   "Stock exchanges"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Visa and Mastercard are international card networks that connect issuing and acquiring banks."
+ },
+ {
+  "id": "qe9b6a6a8c5d",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "Which payment system is used for bulk recurring payments such as salaries, pensions and dividends?",
+  "options": [
+   "RTGS",
+   "NACH",
+   "CTS",
+   "AePS"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "NACH handles high-volume, repetitive credit and debit transactions like salaries, pensions and EMIs."
+ },
+ {
+  "id": "qf3bdc264cff",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'NACH' stand for?",
+  "options": [
+   "National Advanced Credit House",
+   "National Account Clearing Hub",
+   "Networked Automatic Cheque Handling",
+   "National Automated Clearing House"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "NACH is the National Automated Clearing House, used for bulk and repetitive payments."
+ },
+ {
+  "id": "qf44d98997ac",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "easy",
+  "question": "What does 'CCIL' stand for?",
+  "options": [
+   "Central Clearing Institute of India Ltd",
+   "Clearing Corporation of India Ltd",
+   "Capital Clearing and Investment Ltd",
+   "Credit Corporation of India Ltd"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "CCIL is the Clearing Corporation of India Ltd, which clears government securities, forex and money market deals."
+ },
+ {
+  "id": "q0a9f39a2439",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "Which organisation, through a subsidiary, operates BBPS?",
+  "options": [
+   "RBI",
+   "SEBI",
+   "NPCI",
+   "CCIL"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "BBPS is run by NPCI through its subsidiary NPCI Bharat BillPay Ltd."
+ },
+ {
+  "id": "q221657cebc1",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "NPCI is incorporated as a:",
+  "options": [
+   "Statutory body under the RBI Act",
+   "Not-for-profit company",
+   "Public sector bank",
+   "Cooperative society"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "NPCI is a not-for-profit company owned by a consortium of banks."
+ },
+ {
+  "id": "q284d45e23e6",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "The name 'RuPay' is derived from:",
+  "options": [
+   "Rupee and Payment",
+   "Rural and Payment",
+   "Rupee and Paytm",
+   "Reserve and Pay"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "RuPay combines the words 'Rupee' and 'Payment'."
+ },
+ {
+  "id": "q2fc2a3b1366",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "CCIL primarily provides clearing and settlement for:",
+  "options": [
+   "Retail UPI payments",
+   "Toll payments",
+   "Cheque clearing",
+   "Government securities, forex and money market transactions"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "CCIL clears and settles trades in government securities, foreign exchange and money market instruments."
+ },
+ {
+  "id": "q46834d7d5cc",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "In which year was the RuPay card network launched?",
+  "options": [
+   "2016",
+   "2008",
+   "2010",
+   "2012"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "NPCI launched RuPay in 2012 as India's domestic card scheme."
+ },
+ {
+  "id": "q4be04ca0798",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "A lender collecting monthly EMIs from a borrower's account through a mandate typically uses:",
+  "options": [
+   "NACH Credit",
+   "CTS",
+   "RTGS",
+   "NACH Debit"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "NACH Debit lets institutions collect recurring payments such as EMIs and premiums under a customer mandate."
+ },
+ {
+  "id": "q587157551bc",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "How many digits does an MICR code on a cheque have?",
+  "options": [
+   "9",
+   "6",
+   "11",
+   "12"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The 9-digit MICR code identifies the city, bank and branch."
+ },
+ {
+  "id": "q72c9a6056c0",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "NACH replaced which earlier clearing system?",
+  "options": [
+   "RTGS",
+   "Electronic Clearing Service (ECS)",
+   "SWIFT",
+   "IMPS"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "NACH was introduced to replace the multiple ECS systems with a centralised platform."
+ },
+ {
+  "id": "q7ef3dada1f6",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "The 'CTS-2010' standard relates to:",
+  "options": [
+   "Minimum security features and standards for cheque leaves",
+   "ATM installation norms",
+   "Interest rates on savings accounts",
+   "Limits for UPI transfers"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "CTS-2010 prescribes uniform security features and design standards for cheques used in image-based clearing."
+ },
+ {
+  "id": "q9056f3ed8c5",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "Settlement in RTGS is:",
+  "options": [
+   "Net, in hourly batches",
+   "Net, at the end of the day",
+   "Gross, transaction by transaction, and final",
+   "Gross, but reversible by the sender"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "RTGS settles each transaction individually and continuously, and settlement is final and irrevocable."
+ },
+ {
+  "id": "q99b9ca71cef",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "A handheld device used by business correspondents to offer banking services, such as AePS, is called a:",
+  "options": [
+   "White-label ATM",
+   "Cash recycler",
+   "Coin vending machine",
+   "Micro-ATM"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Micro-ATMs are portable PoS-like devices that BCs use for basic banking transactions."
+ },
+ {
+  "id": "q9c0f620392a",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "In India, the Cheque Truncation System is operated by:",
+  "options": [
+   "CCIL",
+   "SEBI",
+   "NPCI",
+   "IDRBT"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "NPCI operates the CTS grids for image-based cheque clearing."
+ },
+ {
+  "id": "qa7b92c55068",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "In which year was NPCI incorporated?",
+  "options": [
+   "2004",
+   "2012",
+   "2008",
+   "2016"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "NPCI was incorporated in December 2008."
+ },
+ {
+  "id": "qb4a6e9971e1",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "In UPI, banks that provide the interface for customers to connect to UPI are called:",
+  "options": [
+   "Clearing Corporations",
+   "Primary Dealers",
+   "Lead Banks",
+   "Payment Service Providers (PSPs)"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "PSP banks connect users and third-party apps to the UPI platform."
  },
  {
   "id": "qb5869210f91",
@@ -43,8 +571,648 @@
    "NPCI",
    "SEBI"
   ],
+  "needsReview": true,
   "answer": 2,
-  "explanation": "The National Payments Corporation of India (NPCI) built and runs UPI, IMPS and RuPay.",
-  "needsReview": true
+  "explanation": "The National Payments Corporation of India (NPCI) built and runs UPI, IMPS and RuPay."
+ },
+ {
+  "id": "qc12036e20f2",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "On a cheque, 'MICR' stands for:",
+  "options": [
+   "Machine Integrated Cheque Reader",
+   "Magnetic Ink Character Recognition",
+   "Magnetic Identification Code Register",
+   "Micro Ink Code Recognition"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "MICR is the magnetic ink code line printed on cheques for machine reading."
+ },
+ {
+  "id": "qc750efbafba",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "FASTag works under which NPCI programme?",
+  "options": [
+   "National Financial Switch (NFS)",
+   "National Electronic Toll Collection (NETC)",
+   "Bharat Bill Payment System (BBPS)",
+   "Aadhaar Payment Bridge System (APBS)"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "FASTag-based toll payments run on NPCI's NETC programme."
+ },
+ {
+  "id": "qc8ef65b63ca",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "Who operates NEFT and RTGS in India?",
+  "options": [
+   "Reserve Bank of India",
+   "CCIL",
+   "NPCI",
+   "State Bank of India"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Both NEFT and RTGS are owned and operated by the RBI."
+ },
+ {
+  "id": "qd338e2ef815",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "AePS allows a customer to do basic banking transactions using:",
+  "options": [
+   "Only a cheque book",
+   "Aadhaar number and biometric authentication",
+   "A credit card and PIN",
+   "A demand draft"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "AePS uses Aadhaar authentication at micro-ATMs or BC points for cash withdrawal, deposit and balance enquiry."
+ },
+ {
+  "id": "qd4647e21ae8",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "NPCI was set up as an initiative of RBI and:",
+  "options": [
+   "Indian Banks' Association (IBA)",
+   "SEBI",
+   "NABARD",
+   "IRDAI"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "NPCI was promoted by RBI and the Indian Banks' Association under the PSS Act, 2007."
+ },
+ {
+  "id": "qddb544bf25a",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "NEFT transactions are settled:",
+  "options": [
+   "Once a week",
+   "Individually in real time",
+   "In half-hourly batches on a deferred net basis",
+   "Only at the end of each month"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "NEFT is a deferred net settlement system that settles transactions in half-hourly batches."
+ },
+ {
+  "id": "qde35ccc48dd",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "An IFSC code consists of how many characters?",
+  "options": [
+   "9",
+   "8",
+   "11",
+   "12"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The IFSC is an 11-character alphanumeric code: 4 letters for the bank, a 0, and 6 characters for the branch."
+ },
+ {
+  "id": "qe149457951d",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "The Payment and Settlement Systems Act was enacted in which year?",
+  "options": [
+   "2002",
+   "1999",
+   "2007",
+   "2012"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The PSS Act was enacted in 2007 to regulate payment systems in India."
+ },
+ {
+  "id": "qf334fe36448",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "In which year was UPI launched?",
+  "options": [
+   "2016",
+   "2014",
+   "2019",
+   "2012"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "UPI was launched by NPCI in 2016."
+ },
+ {
+  "id": "qf48ae13f60b",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "medium",
+  "question": "Which of these payment systems is operated by RBI rather than NPCI?",
+  "options": [
+   "IMPS",
+   "UPI",
+   "NACH",
+   "RTGS"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "RTGS is run by RBI, while IMPS, UPI and NACH are NPCI systems."
+ },
+ {
+  "id": "q008c46ac8f3",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "IMPS was launched by NPCI in which year?",
+  "options": [
+   "2010",
+   "2012",
+   "2008",
+   "2014"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "IMPS was launched in November 2010."
+ },
+ {
+  "id": "q08639a3840d",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Under the PSS Act, 2007, RBI regulates payment systems through the:",
+  "options": [
+   "Board for Financial Supervision (BFS)",
+   "Board for Regulation and Supervision of Payment and Settlement Systems (BPSS)",
+   "Financial Stability and Development Council",
+   "Monetary Policy Committee"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The BPSS, a committee of RBI's Central Board, oversees payment and settlement systems."
+ },
+ {
+  "id": "q0a0889219e5",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Card tokenisation replaces actual card details with:",
+  "options": [
+   "A unique alternate code called a token",
+   "The cardholder's Aadhaar number",
+   "A new physical card",
+   "The merchant's account number"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Tokenisation substitutes card data with a token so merchants need not store actual card details."
+ },
+ {
+  "id": "q0f7bf592256",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "UPI transactions are processed over which existing NPCI infrastructure?",
+  "options": [
+   "NEFT",
+   "IMPS",
+   "CTS",
+   "NACH"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "UPI was built on top of the IMPS platform for real-time fund transfer."
+ },
+ {
+  "id": "q1897b4cfd42",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In a card transaction, the 'interchange fee' is typically paid by:",
+  "options": [
+   "The issuing bank to the cardholder",
+   "The acquiring bank to the issuing bank",
+   "RBI to the card network",
+   "The cardholder to RBI"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Interchange is paid by the merchant's acquiring bank to the card-issuing bank."
+ },
+ {
+  "id": "q1c22a017d48",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In IMPS, what does 'MMID' stand for?",
+  "options": [
+   "Merchant Mobile ID",
+   "Mobile Money Identifier",
+   "Mobile Message Identification",
+   "Money Mobility Index"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "MMID is a 7-digit number that, with a mobile number, identifies an account for IMPS."
+ },
+ {
+  "id": "q20c613671d6",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "RuPay's international acceptance was enabled through partnerships with networks such as:",
+  "options": [
+   "NYSE and NASDAQ",
+   "SWIFT and CHIPS",
+   "Discover and JCB",
+   "IMF and World Bank"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "NPCI tied up with Discover (including Diners Club) and JCB to extend RuPay acceptance abroad."
+ },
+ {
+  "id": "q2bdd4cf4fb1",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "A key feature of the PSS Act, 2007 is legal recognition of:",
+  "options": [
+   "Fixed deposit interest rates",
+   "Netting and settlement finality",
+   "Priority sector lending targets",
+   "Bank nationalisation"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The PSS Act gives legal backing to multilateral netting and makes settlement final and irrevocable."
+ },
+ {
+  "id": "q305aa6f47eb",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "NDS-OM, for which CCIL provides settlement, is an electronic platform for:",
+  "options": [
+   "Retail UPI payments",
+   "Secondary market trading in government securities",
+   "Equity trading",
+   "Cheque clearing"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "NDS-OM is RBI's anonymous order-matching system for trading government securities."
+ },
+ {
+  "id": "q322bf705c23",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Legal recognition of truncated cheques and cheques in electronic form came through an amendment of:",
+  "options": [
+   "Banking Regulation Act, 1949",
+   "RBI Act, 1934",
+   "Information Technology Act, 2000",
+   "Negotiable Instruments Act, 1881"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The NI Act was amended in 2002 to define truncated cheques and cheques in electronic form."
+ },
+ {
+  "id": "q340edf5659a",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In card payments, the bank that signs up a merchant and processes card payments on its behalf is the:",
+  "options": [
+   "Issuing bank",
+   "Acquiring bank",
+   "Sponsor bank for ATMs",
+   "Clearing bank of RBI"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The acquirer provides POS or payment acceptance to merchants; the issuer gives cards to customers."
+ },
+ {
+  "id": "q4008b67d20a",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In RTGS, final settlement takes place in banks':",
+  "options": [
+   "Current accounts with RBI",
+   "Savings accounts with SBI",
+   "Accounts with NPCI",
+   "Nostro accounts abroad"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "RTGS settles in central bank money, in participants' current accounts maintained with RBI."
+ },
+ {
+  "id": "q47686695664",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Bharat QR, an interoperable QR code standard, was developed jointly by NPCI and:",
+  "options": [
+   "SEBI and IRDAI",
+   "The World Bank",
+   "State governments",
+   "International card networks such as Visa, Mastercard and American Express"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Bharat QR was developed by NPCI along with international card networks for interoperable QR payments."
+ },
+ {
+  "id": "q5f1f2f486f2",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In BBPS, the single authorised entity that sets standards and handles clearing and settlement is the:",
+  "options": [
+   "Bharat Bill Payment Central Unit (BBPCU)",
+   "Bharat Bill Payment Operating Unit (BBPOU)",
+   "National Financial Switch",
+   "CCIL"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "BBPS has a two-tier structure: one central unit (BBPCU) and multiple operating units (BBPOUs)."
+ },
+ {
+  "id": "q6429b9ba27f",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Compared with RTGS, a deferred net settlement system such as NEFT exposes participants to more:",
+  "options": [
+   "Interest rate risk on deposits",
+   "Liquidity strain, since every payment needs full funding",
+   "Currency exchange risk",
+   "Settlement risk, since obligations are settled only at batch intervals"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "In deferred net settlement, exposures build up until the batch settles, so settlement risk is higher than in real-time gross settlement."
+ },
+ {
+  "id": "q6d3829fbeef",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "To smooth RTGS settlements during the day, RBI provides banks with:",
+  "options": [
+   "Intraday Liquidity (IDL) against eligible securities",
+   "Unsecured interbank loans",
+   "Refinance through NABARD",
+   "Marginal Standing Facility only overnight"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "IDL is collateralised intraday credit from RBI that helps banks avoid payment gridlock in RTGS."
+ },
+ {
+  "id": "q6da090cdf90",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Third-party UPI apps (TPAPs) connect to the UPI platform through:",
+  "options": [
+   "Directly to RBI",
+   "State governments",
+   "PSP banks",
+   "Stock exchanges"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "TPAPs must partner with Payment Service Provider banks to access UPI."
+ },
+ {
+  "id": "q8afce6ae010",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "RTGS was introduced in India in which year?",
+  "options": [
+   "2001",
+   "1998",
+   "2004",
+   "2008"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "RBI introduced RTGS in March 2004."
+ },
+ {
+  "id": "q9947f018d32",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "NEFT was introduced in India in which year?",
+  "options": [
+   "2000",
+   "2003",
+   "2005",
+   "2009"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "NEFT was launched by RBI in November 2005."
+ },
+ {
+  "id": "qa85bc147aab",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In AePS, the customer's bank is identified by:",
+  "options": [
+   "IIN (Issuer Identification Number)",
+   "IFSC",
+   "MICR code",
+   "SWIFT code"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "An AePS transaction needs the Aadhaar number, the bank's IIN and biometric authentication."
+ },
+ {
+  "id": "qaff00f4a8d2",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Under the PSS Act, 2007, no person other than RBI may start or operate a payment system without:",
+  "options": [
+   "Registration with NPCI",
+   "Approval from SEBI",
+   "A licence from the Ministry of Finance",
+   "Authorisation from RBI"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Section 4 of the PSS Act requires RBI authorisation to operate a payment system."
+ },
+ {
+  "id": "qc3833b42028",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Which NPCI system is used to credit DBT benefits to Aadhaar-seeded bank accounts?",
+  "options": [
+   "National Financial Switch",
+   "Cheque Truncation System",
+   "Bharat QR",
+   "Aadhaar Payment Bridge System (APBS)"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "APBS uses the Aadhaar number as the financial address to route government benefit payments."
+ },
+ {
+  "id": "qc5cc823589a",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "CCIL acting as a 'central counterparty' means that it:",
+  "options": [
+   "Only records trades without guaranteeing them",
+   "Sets interest rates for the market",
+   "Becomes the buyer to every seller and the seller to every buyer",
+   "Issues government securities"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "As a CCP, CCIL interposes itself between trading parties and guarantees settlement."
+ },
+ {
+  "id": "qcad64e2e042",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "The Positive Pay System for cheques is a mechanism to:",
+  "options": [
+   "Pay interest on current accounts",
+   "Re-confirm key details of a cheque before payment to prevent fraud",
+   "Allow cheques to be paid in cash only",
+   "Convert cheques into demand drafts"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Under Positive Pay, the issuer shares key cheque details in advance so they can be matched at clearing."
+ },
+ {
+  "id": "qcc42e0a54fa",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "The main drawback of a gross settlement system compared with a net settlement system is:",
+  "options": [
+   "Higher settlement risk",
+   "Slower final settlement",
+   "Lack of legal finality",
+   "Higher liquidity requirement for participants"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Gross settlement reduces settlement risk but requires banks to fund each payment in full."
+ },
+ {
+  "id": "qd1fd8ad5bed",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "In a UPI 'collect request', who initiates the transaction?",
+  "options": [
+   "The payee",
+   "The payer",
+   "NPCI",
+   "The RBI"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "In a collect (pull) request, the payee requests money and the payer approves it with the UPI PIN."
+ },
+ {
+  "id": "qd54e437f070",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "Entities that let e-commerce merchants accept payments by pooling customer funds and passing them on to merchants are regulated by RBI as:",
+  "options": [
+   "Asset Reconstruction Companies",
+   "Payment Aggregators",
+   "Credit Information Companies",
+   "Primary Dealers"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Payment Aggregators collect funds from customers and settle them to merchants under RBI regulation."
+ },
+ {
+  "id": "qddbb8593757",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "The Cheque Truncation System was first implemented in India in:",
+  "options": [
+   "Mumbai",
+   "Kolkata",
+   "Chennai",
+   "National Capital Region (New Delhi)"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "CTS was first implemented in the NCR in 2008."
+ },
+ {
+  "id": "qf4d9296668b",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "SFMS, used as a messaging backbone for RTGS and NEFT, was developed by:",
+  "options": [
+   "NPCI",
+   "CCIL",
+   "SEBI",
+   "IDRBT"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The Structured Financial Messaging System was developed by the Institute for Development and Research in Banking Technology."
+ },
+ {
+  "id": "qfd0721553a9",
+  "subject": "banking",
+  "topic": "payments",
+  "level": "hard",
+  "question": "The definition of 'payment system' in the PSS Act, 2007 explicitly excludes:",
+  "options": [
+   "A card network",
+   "A stock exchange",
+   "A clearing house for cheques",
+   "A prepaid instrument issuer"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Act defines payment system to exclude stock exchanges, which are regulated separately."
  }
 ]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9212be9d47f",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"JavaScript\".toUpperCase() return?",
+  "options": [
+   "\"JAVASCRIPT\"",
+   "\"Javascript\"",
+   "\"javascript\"",
+   "\"JavaScript\""
+  ],
+  "answer": 0,
+  "explanation": "toUpperCase returns a new string with all characters converted to upper case."
+ },
+ {
+  "id": "q410d17b7c57",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "Which value is truthy?",
+  "options": [
+   "\"0\"",
+   "0",
+   "\"\"",
+   "NaN"
+  ],
+  "answer": 0,
+  "explanation": "Any non-empty string is truthy, including \"0\"; 0, empty string and NaN are falsy."
+ },
+ {
+  "id": "q8acb5bec339",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof \"hello\" return?",
+  "options": [
+   "\"char\"",
+   "\"text\"",
+   "\"object\"",
+   "\"string\""
+  ],
+  "answer": 3,
+  "explanation": "String primitives report \"string\" from the typeof operator."
+ },
+ {
+  "id": "q34f4af41b32",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "Which method checks whether a value is an array?",
+  "options": [
+   "typeof value === \"array\"",
+   "value.isArray()",
+   "Array.isArray(value)",
+   "Object.isArray(value)"
+  ],
+  "answer": 2,
+  "explanation": "Array.isArray is the reliable check; typeof returns \"object\" for arrays."
+ },
+ {
+  "id": "qec0ca34f9ed",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What is the value of 1 + \"2\"?",
+  "options": [
+   "\"12\"",
+   "NaN",
+   "TypeError",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "When either operand of + is a string, the other is converted to a string and they are concatenated."
+ },
+ {
+  "id": "qd0d64a13f46",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does 0 || \"fallback\" evaluate to?",
+  "options": [
+   "0",
+   "true",
+   "\"fallback\"",
+   "false"
+  ],
+  "answer": 2,
+  "explanation": "|| returns the first truthy operand, and 0 is falsy."
+ },
+ {
+  "id": "qc2951a0d5c4",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 7 % 3?",
+  "options": [
+   "2.33",
+   "1",
+   "0",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "The remainder operator returns what is left after dividing 7 by 3, which is 1."
+ },
+ {
+  "id": "q3ac6957c046",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What is the result of 2 ** 3?",
+  "options": [
+   "8",
+   "9",
+   "5",
+   "6"
+  ],
+  "answer": 0,
+  "explanation": "** is the exponentiation operator, so 2 ** 3 is 2 raised to the power 3."
+ },
+ {
+  "id": "q1cde6942a13",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does null ?? \"default\" evaluate to?",
+  "options": [
+   "undefined",
+   "null",
+   "\"default\"",
+   "false"
+  ],
+  "answer": 2,
+  "explanation": "The nullish coalescing operator returns its right operand when the left is null or undefined."
+ },
+ {
+  "id": "q8923a8300ff",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "Strings in JavaScript are best described as:",
+  "options": [
+   "Mutable character arrays",
+   "Mutable objects",
+   "Linked lists of characters",
+   "Immutable primitive values"
+  ],
+  "answer": 3,
+  "explanation": "String methods always return new strings; the original string value is never changed."
+ }
+]

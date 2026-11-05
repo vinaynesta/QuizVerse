@@ -30,6 +30,21 @@
   "explanation": "Curly braces open a window from JSX back into JavaScript, so any expression inside them is evaluated."
  },
  {
+  "id": "q376cab41014",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "How do you write a comment inside JSX markup?",
+  "options": [
+   "<!-- comment -->",
+   "// comment on its own line",
+   "{/* comment */}",
+   "# comment"
+  ],
+  "answer": 2,
+  "explanation": "Inside JSX, comments must be JavaScript comments wrapped in curly braces."
+ },
+ {
   "id": "q637d589dc8a",
   "subject": "react",
   "topic": "jsx-components",
@@ -43,6 +58,51 @@
   ],
   "answer": 1,
   "explanation": "Fragments let a component return multiple sibling elements without wrapping them in an extra element like a div."
+ },
+ {
+  "id": "qdab2d7463b9",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "What must a component return when it should render nothing?",
+  "options": [
+   "null",
+   "The number 0",
+   "An empty div is required",
+   "The string \"none\""
+  ],
+  "answer": 0,
+  "explanation": "Returning null tells React to render nothing for that component."
+ },
+ {
+  "id": "qe3078534751",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "Which attribute name is used for a label's for attribute in JSX?",
+  "options": [
+   "for",
+   "labelFor",
+   "forId",
+   "htmlFor"
+  ],
+  "answer": 3,
+  "explanation": "Because for is a reserved word in JavaScript, React uses htmlFor."
+ },
+ {
+  "id": "qe6ef1e9aefb",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "easy",
+  "question": "How many top-level elements can a single JSX expression return without a wrapper?",
+  "options": [
+   "Any number, separated by commas",
+   "Two at most",
+   "One, so siblings need a parent element or Fragment",
+   "As many as the component has props"
+  ],
+  "answer": 2,
+  "explanation": "JSX compiles to a single function call, so multiple siblings must be wrapped in a parent or a Fragment."
  },
  {
   "id": "qf5f48de8715",
@@ -75,6 +135,21 @@
   "explanation": "React sees a different component type on every render, so it tears down and recreates the inner subtree each time."
  },
  {
+  "id": "q75b9e27a8ed",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "How do you render a component whose type is chosen at runtime, such as const Icon = icons[name]?",
+  "options": [
+   "Wrap the name in a string, like <'Icon' />",
+   "Render <icons[name] /> directly",
+   "Call React.render(icons[name])",
+   "Assign it to a capitalized variable and render <Icon />"
+  ],
+  "answer": 3,
+  "explanation": "JSX requires a capitalized identifier for component types, so put the dynamic type in a capitalized variable first."
+ },
+ {
   "id": "qcc7cf44227b",
   "subject": "react",
   "topic": "jsx-components",
@@ -105,6 +180,21 @@
   "explanation": "0 && x evaluates to 0, and React renders numbers, so a literal 0 appears; use count > 0 && ... instead."
  },
  {
+  "id": "qeabd886c544",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "What does dangerouslySetInnerHTML={{ __html: html }} do?",
+  "options": [
+   "Renders the HTML as escaped text",
+   "Sanitizes the HTML before inserting it",
+   "Converts the HTML into React elements safely",
+   "Inserts the raw HTML string without escaping it, risking XSS"
+  ],
+  "answer": 3,
+  "explanation": "React normally escapes text, and this prop bypasses that, so the HTML must come from a trusted or sanitized source."
+ },
+ {
   "id": "qf19a7ea94d4",
   "subject": "react",
   "topic": "jsx-components",
@@ -120,6 +210,36 @@
   "explanation": "The style prop takes an object with camelCase property names, hence the double braces."
  },
  {
+  "id": "qf34c38eae86",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "medium",
+  "question": "Where must the key go when mapping items to Fragments that each render two elements?",
+  "options": [
+   "On the first child inside the short <></> syntax",
+   "On both children",
+   "On the Fragment, using the explicit <Fragment key={id}> syntax",
+   "Keys are not needed for Fragments"
+  ],
+  "answer": 2,
+  "explanation": "The short <></> syntax cannot take a key, so use <Fragment key={...}> when the Fragment is the list item."
+ },
+ {
+  "id": "q2a8b122db1c",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Why can returning a component definition from a hook, such as const Comp = useMemo(() => () => <div />, [dep]), cause state loss?",
+  "options": [
+   "useMemo cannot return functions",
+   "Whenever dep changes a new component type is created, so React unmounts the old subtree and mounts a fresh one",
+   "Hooks cannot return JSX",
+   "React caches component types globally"
+  ],
+  "answer": 1,
+  "explanation": "React compares component types by reference, and a new function means a different type at that position."
+ },
+ {
   "id": "q50dd938a039",
   "subject": "react",
   "topic": "jsx-components",
@@ -133,6 +253,21 @@
   ],
   "answer": 1,
   "explanation": "Missing keys behave like index keys, so inserting at the top makes each Row's state follow its position rather than its item."
+ },
+ {
+  "id": "q6beb68b619d",
+  "subject": "react",
+  "topic": "jsx-components",
+  "level": "hard",
+  "question": "Why does a component written as const Item = memo(function Item(props) {...}) still show as Item in React DevTools?",
+  "options": [
+   "memo copies the variable name at runtime",
+   "React reads the file name",
+   "DevTools reads the name of the inner named function",
+   "DevTools always shows Memo instead"
+  ],
+  "answer": 2,
+  "explanation": "Naming the function passed to memo or forwardRef gives the component a useful display name in DevTools and error stacks."
  },
  {
   "id": "q9250f46d2b3",

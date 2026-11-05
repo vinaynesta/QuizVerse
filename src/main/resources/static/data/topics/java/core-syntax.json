@@ -15,6 +15,36 @@
   "explanation": "% is the remainder operator, e.g. 7 % 3 is 1."
  },
  {
+  "id": "q2e45183924a",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "What does the expression 10 == 10.0 evaluate to?",
+  "options": [
+   "false",
+   "true",
+   "It throws an exception",
+   "It does not compile"
+  ],
+  "answer": 1,
+  "explanation": "The int is widened to double before comparison, and 10.0 equals 10.0."
+ },
+ {
+  "id": "q40e25473928",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "How many bits does a Java int occupy?",
+  "options": [
+   "It depends on the platform",
+   "16",
+   "64",
+   "32"
+  ],
+  "answer": 3,
+  "explanation": "Java fixes int at 32 bits on every platform."
+ },
+ {
   "id": "q4470a7b4ba9",
   "subject": "java",
   "topic": "core-syntax",
@@ -43,6 +73,36 @@
   ],
   "answer": 3,
   "explanation": "Instance and static fields get default values; for int that is 0. Only local variables must be assigned before use."
+ },
+ {
+  "id": "q6e9191041a4",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "Which method signature is the standard entry point of a standalone Java application?",
+  "options": [
+   "static int main(String args)",
+   "public void main()",
+   "public static void main(String[] args)",
+   "public static void start(String[] args)"
+  ],
+  "answer": 2,
+  "explanation": "The java launcher looks for this signature in the class it is asked to run."
+ },
+ {
+  "id": "q97ad75414f9",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "easy",
+  "question": "Which primitive type holds a single 16-bit UTF-16 code unit?",
+  "options": [
+   "byte",
+   "char",
+   "short",
+   "String"
+  ],
+  "answer": 1,
+  "explanation": "A Java char is an unsigned 16-bit value representing a UTF-16 code unit."
  },
  {
   "id": "qcc744f361eb",
@@ -75,6 +135,36 @@
   "explanation": "Compound assignment includes an implicit cast, so x = (int)(5 + 3.7), which truncates to 8."
  },
  {
+  "id": "q0873f216f7d",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "What does (int) 3.99 evaluate to?",
+  "options": [
+   "3",
+   "4",
+   "3.99",
+   "It does not compile"
+  ],
+  "answer": 0,
+  "explanation": "Casting a double to int truncates toward zero."
+ },
+ {
+  "id": "q61d5fdcc7d5",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "After int i = 5; int j = i++ + ++i;, what is j?",
+  "options": [
+   "11",
+   "10",
+   "13",
+   "12"
+  ],
+  "answer": 3,
+  "explanation": "i++ yields 5 and makes i 6, then ++i makes i 7 and yields 7, so j = 5 + 7 = 12."
+ },
+ {
   "id": "q8f52b3d4f78",
   "subject": "java",
   "topic": "core-syntax",
@@ -88,6 +178,21 @@
   ],
   "answer": 3,
   "explanation": "Evaluation is left to right: 1 + 2 is 3, then 3 + \"3\" is string concatenation giving 33."
+ },
+ {
+  "id": "qad70add160a",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "medium",
+  "question": "What does System.out.println('a' + 1) print?",
+  "options": [
+   "98",
+   "a1",
+   "b",
+   "97"
+  ],
+  "answer": 0,
+  "explanation": "The char is promoted to int 97 before addition, and println(int) prints 98."
  },
  {
   "id": "qb1684d6de66",
@@ -118,6 +223,21 @@
   ],
   "answer": 0,
   "explanation": "Right-shifting 101 in binary by one bit gives 10, which is 2."
+ },
+ {
+  "id": "q02532ad9f72",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does Integer.MAX_VALUE + 1 evaluate to?",
+  "options": [
+   "2147483648",
+   "It throws ArithmeticException",
+   "Integer.MAX_VALUE",
+   "Integer.MIN_VALUE (-2147483648)"
+  ],
+  "answer": 3,
+  "explanation": "int arithmetic silently overflows by wrapping around in two's complement."
  },
  {
   "id": "q37c98e7a92f",
@@ -165,6 +285,21 @@
   "explanation": "Autoboxing uses Integer.valueOf, which caches only -128 to 127 by default, so 128 produces two distinct objects."
  },
  {
+  "id": "q937bc8620e4",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does System.out.println((byte) 200) print?",
+  "options": [
+   "200",
+   "56",
+   "-56",
+   "-128"
+  ],
+  "answer": 2,
+  "explanation": "The cast keeps the low 8 bits, and 200 - 256 = -56 in two's complement."
+ },
+ {
   "id": "qc4b096aa5ee",
   "subject": "java",
   "topic": "core-syntax",
@@ -178,5 +313,20 @@
   ],
   "answer": 3,
   "explanation": "The positive value does not fit in an int, so the negation overflows back to MIN_VALUE; Math.absExact would throw instead."
+ },
+ {
+  "id": "qd58416f52b7",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does -7 % 3 evaluate to in Java?",
+  "options": [
+   "-2",
+   "2",
+   "1",
+   "-1"
+  ],
+  "answer": 3,
+  "explanation": "The result of % takes the sign of the dividend, and -7 = 3 * (-2) + (-1)."
  }
 ]

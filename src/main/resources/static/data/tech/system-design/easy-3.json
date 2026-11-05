@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q76ae1139f45",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What does a TTL (time to live) on a cache entry define?",
+  "options": [
+   "The maximum size of a single cache entry",
+   "How long the entry may be served before it is considered expired",
+   "The number of cache nodes in a cluster",
+   "The timeout for a database connection"
+  ],
+  "answer": 1,
+  "explanation": "After the TTL elapses, the entry is treated as stale and must be refreshed."
+ },
+ {
+  "id": "qf0228500d9b",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "Which best describes vertical scaling?",
+  "options": [
+   "Adding more servers behind a load balancer",
+   "Partitioning data across several regions",
+   "Caching responses at edge locations",
+   "Adding CPU, memory, or disk to an existing server"
+  ],
+  "answer": 3,
+  "explanation": "Vertical scaling (scale up) increases the capacity of one node; horizontal scaling adds nodes."
+ },
+ {
+  "id": "qc42d3497cb9",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "How is availability usually expressed?",
+  "options": [
+   "As the percentage of time the system is operational and serving requests, such as 99.9%",
+   "As the average CPU usage across all hosts",
+   "As the number of deployments per day",
+   "As the network bandwidth available to the service"
+  ],
+  "answer": 0,
+  "explanation": "Availability targets like 99.9% define the allowed downtime over a period."
+ },
+ {
+  "id": "qf99f710d072",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What is the main purpose of a load balancer?",
+  "options": [
+   "Distributing incoming requests across multiple backend servers",
+   "Compiling source code during deployment",
+   "Replacing the primary database",
+   "Storing user sessions permanently on disk"
+  ],
+  "answer": 0,
+  "explanation": "A load balancer spreads traffic so no single backend is overwhelmed."
+ },
+ {
+  "id": "q664daaa4549",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What is the purpose of health checks in a load balancer?",
+  "options": [
+   "Removing unhealthy backends from rotation until they recover",
+   "Caching static files at the edge",
+   "Encrypting traffic between clients and servers",
+   "Increasing the number of database replicas"
+  ],
+  "answer": 0,
+  "explanation": "The balancer probes backends and stops sending traffic to any that fail the check."
+ },
+ {
+  "id": "q2c86014146e",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "What is URI-based API versioning, such as /v1/users?",
+  "options": [
+   "Sending the version in a custom request header",
+   "Putting the version number in the URL path",
+   "Negotiating the media type with the Accept header",
+   "Hashing the response body to produce a version"
+  ],
+  "answer": 1,
+  "explanation": "The version is part of the resource address, so it is visible in every request URL."
+ },
+ {
+  "id": "qc5b044618bd",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "easy",
+  "question": "What is failover?",
+  "options": [
+   "Reversing a database schema migration",
+   "Rolling back a code release to the previous version",
+   "Switching work to a standby component when the active one fails",
+   "Encrypting requests that failed validation"
+  ],
+  "answer": 2,
+  "explanation": "Failover moves traffic or responsibility to a standby, such as a replica promoted to primary."
+ },
+ {
+  "id": "q31bc21ed9af",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "Which algorithm sends each new request to the next server in a fixed rotation?",
+  "options": [
+   "IP hash",
+   "Least connections",
+   "Round robin",
+   "Geographic routing"
+  ],
+  "answer": 2,
+  "explanation": "Round robin cycles through backends in order, which is simple but ignores differences in server load."
+ },
+ {
+  "id": "q0e7c2aa9fd4",
+  "subject": "system-design",
+  "topic": "scalability",
+  "level": "easy",
+  "question": "Which is a main drawback of vertical scaling?",
+  "options": [
+   "It cannot be done without rewriting the database",
+   "It always increases network latency between services",
+   "It has a hard ceiling set by the largest machine available",
+   "It requires a load balancer in front of the server"
+  ],
+  "answer": 2,
+  "explanation": "A single machine can only grow so far, and one node remains a single point of failure."
+ },
+ {
+  "id": "q34fd6b9012b",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What typically happens on a cache miss?",
+  "options": [
+   "The request fails immediately with an error",
+   "The entire cache is cleared",
+   "The response is returned with an empty body",
+   "The data is fetched from the backing store, and often written into the cache"
+  ],
+  "answer": 3,
+  "explanation": "A miss falls through to the source of truth; whether the result is cached depends on the policy."
+ }
+]

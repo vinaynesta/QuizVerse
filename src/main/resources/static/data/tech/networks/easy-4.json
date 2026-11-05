@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q85944af161d",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Why is UDP commonly used for live voice and video?",
+  "options": [
+   "It allows much larger packets than TCP",
+   "It encrypts media streams automatically",
+   "It avoids waiting for retransmissions, so late data is simply skipped",
+   "It guarantees delivery of every packet"
+  ],
+  "answer": 2,
+  "explanation": "For real-time media, a retransmitted packet usually arrives too late to be useful, so UDP's low latency wins."
+ },
+ {
+  "id": "q67968f86a03",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which transport protocol provides reliable, ordered delivery of a byte stream?",
+  "options": [
+   "ICMP",
+   "TCP",
+   "UDP",
+   "IP"
+  ],
+  "answer": 1,
+  "explanation": "TCP uses sequence numbers, acknowledgments and retransmission to guarantee ordered, reliable delivery."
+ },
+ {
+  "id": "qbd4fc700680",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which protocol uses sequence numbers so the receiver can reorder data and detect loss?",
+  "options": [
+   "TCP",
+   "ARP",
+   "ICMP",
+   "UDP"
+  ],
+  "answer": 0,
+  "explanation": "TCP numbers every byte so the receiver can reassemble in order and acknowledge what arrived."
+ },
+ {
+  "id": "qf363f4bb4a4",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "Which OSI layer is responsible for logical addressing and routing packets between networks?",
+  "options": [
+   "Data Link layer",
+   "Transport layer",
+   "Network layer",
+   "Session layer"
+  ],
+  "answer": 2,
+  "explanation": "The Network layer (Layer 3) handles IP addressing and path selection between networks."
+ },
+ {
+  "id": "qb2324d5f53d",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "What is the Ethernet broadcast MAC address?",
+  "options": [
+   "01:00:5E:00:00:01",
+   "00:00:00:00:00:00",
+   "7F:FF:FF:FF:FF:FF",
+   "FF:FF:FF:FF:FF:FF"
+  ],
+  "answer": 3,
+  "explanation": "All-ones is the broadcast address; 01:00:5E prefixes are IPv4 multicast."
+ },
+ {
+  "id": "qf69c6f92daa",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type maps a hostname to an IPv6 address?",
+  "options": [
+   "PTR",
+   "AAAA",
+   "A",
+   "SRV"
+  ],
+  "answer": 1,
+  "explanation": "AAAA records hold 128-bit IPv6 addresses."
+ },
+ {
+  "id": "q25dc5647195",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which of these transport protocols is connectionless?",
+  "options": [
+   "DCCP",
+   "TCP",
+   "SCTP",
+   "UDP"
+  ],
+  "answer": 3,
+  "explanation": "UDP sends independent datagrams with no handshake; TCP, SCTP and DCCP all set up connections."
+ },
+ {
+  "id": "qa7235928b03",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "What is the minimum size of a TCP header?",
+  "options": [
+   "20 bytes",
+   "16 bytes",
+   "8 bytes",
+   "40 bytes"
+  ],
+  "answer": 0,
+  "explanation": "A TCP header without options is 20 bytes; options can extend it up to 60 bytes."
+ },
+ {
+  "id": "qa859984b1de",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "Which HTTP status code indicates a successful request?",
+  "options": [
+   "200",
+   "301",
+   "404",
+   "500"
+  ],
+  "answer": 0,
+  "explanation": "200 OK means success; 404 is Not Found, 500 a server error and 301 a permanent redirect."
+ },
+ {
+  "id": "qe95bbd1ada1",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "Besides an IP address, what does DHCP commonly provide to clients?",
+  "options": [
+   "A TCP port number",
+   "Default gateway and DNS server addresses",
+   "A TLS certificate",
+   "The client's MAC address"
+  ],
+  "answer": 1,
+  "explanation": "DHCP options carry settings such as subnet mask, router (gateway) and DNS servers; the MAC is burned into the NIC."
+ }
+]

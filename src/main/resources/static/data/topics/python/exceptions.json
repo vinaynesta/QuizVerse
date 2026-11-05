@@ -15,6 +15,36 @@
   "explanation": "The argument is the right type (str) but has an invalid value for conversion, so ValueError is raised."
  },
  {
+  "id": "q6ccd9994aa6",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which exception is raised when you access a list index that is out of range?",
+  "options": [
+   "KeyError",
+   "RangeError",
+   "ValueError",
+   "IndexError"
+  ],
+  "answer": 3,
+  "explanation": "Sequences raise IndexError for invalid positions, while mappings raise KeyError for missing keys."
+ },
+ {
+  "id": "q99fae281a20",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which exception does 1 / 0 raise?",
+  "options": [
+   "ValueError",
+   "ZeroDivisionError",
+   "ArithmeticWarning",
+   "It returns inf"
+  ],
+  "answer": 1,
+  "explanation": "Dividing a number by zero raises ZeroDivisionError."
+ },
+ {
   "id": "qa4bd4ff7d63",
   "subject": "python",
   "topic": "exceptions",
@@ -120,6 +150,21 @@
   "explanation": "A bare except catches BaseException, swallowing exits and Ctrl+C along with real errors."
  },
  {
+  "id": "qe2dff666457",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "When x is -1, what does assert x > 0, 'must be positive' do (with assertions enabled)?",
+  "options": [
+   "Raises ValueError with message 'must be positive'",
+   "Prints 'must be positive' and continues",
+   "Raises AssertionError with message 'must be positive'",
+   "Returns False"
+  ],
+  "answer": 2,
+  "explanation": "A failing assert raises AssertionError with the given message; python -O disables asserts."
+ },
+ {
   "id": "q1ada044792d",
   "subject": "python",
   "topic": "exceptions",
@@ -135,6 +180,21 @@
   "explanation": "finally runs before the function actually returns, and its own return overrides the pending one."
  },
  {
+  "id": "q2b68b692d61",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "When a new exception is raised inside an except block without using from, what is the new exception's __context__ set to?",
+  "options": [
+   "None",
+   "The exception that was being handled",
+   "The new exception itself",
+   "The first exception raised in the program"
+  ],
+  "answer": 1,
+  "explanation": "This implicit chaining produces the 'During handling of the above exception' message in tracebacks."
+ },
+ {
   "id": "q2fb32c6eb5d",
   "subject": "python",
   "topic": "exceptions",
@@ -148,6 +208,21 @@
   ],
   "answer": 2,
   "explanation": "An ExceptionGroup bundles multiple exceptions, and except* handles the matching subgroups, e.g. from concurrent tasks."
+ },
+ {
+  "id": "q9d387792762",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What does exc.add_note('extra info') do in Python 3.11+?",
+  "options": [
+   "Appends the string to exc.__notes__ so it is shown in the traceback",
+   "Logs the note to stderr immediately",
+   "Converts the exception into a warning",
+   "Changes the exception's message"
+  ],
+  "answer": 0,
+  "explanation": "Notes let code add context to an exception without wrapping or re-raising it as a different type."
  },
  {
   "id": "q9f2ea587500",

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9e283c1ffce",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "How long is an Ethernet MAC address?",
+  "options": [
+   "48 bits",
+   "128 bits",
+   "64 bits",
+   "32 bits"
+  ],
+  "answer": 0,
+  "explanation": "A MAC-48 address is 6 bytes, written as six hex pairs."
+ },
+ {
+  "id": "qdc3f053b946",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "What is the default port for HTTPS?",
+  "options": [
+   "443",
+   "22",
+   "80",
+   "8080"
+  ],
+  "answer": 0,
+  "explanation": "HTTPS (HTTP over TLS) uses TCP port 443 by default; 80 is plain HTTP."
+ },
+ {
+  "id": "q1c048cfe52e",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "How many bits are in an IPv6 address?",
+  "options": [
+   "64",
+   "128",
+   "32",
+   "256"
+  ],
+  "answer": 1,
+  "explanation": "IPv6 addresses are 128 bits, written as eight groups of four hex digits."
+ },
+ {
+  "id": "q3e65c633ffc",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "Which UDP ports do a DHCPv4 server and client use?",
+  "options": [
+   "Server 67, client 68",
+   "Server 20, client 21",
+   "Server 53, client 53",
+   "Server 80, client 443"
+  ],
+  "answer": 0,
+  "explanation": "DHCPv4 servers listen on UDP 67 and clients on UDP 68."
+ },
+ {
+  "id": "q8b67e638862",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "What does HTTPS add on top of HTTP?",
+  "options": [
+   "Automatic caching",
+   "Encryption and server authentication via TLS",
+   "Response compression",
+   "Faster DNS resolution"
+  ],
+  "answer": 1,
+  "explanation": "HTTPS runs HTTP over TLS, which encrypts traffic and authenticates the server with a certificate."
+ },
+ {
+  "id": "qce9fecabe56",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "At which OSI layer do traditional Ethernet switches primarily operate?",
+  "options": [
+   "Transport (Layer 4)",
+   "Data Link (Layer 2)",
+   "Network (Layer 3)",
+   "Physical (Layer 1)"
+  ],
+  "answer": 1,
+  "explanation": "Switches forward frames using MAC addresses, which are Layer 2 identifiers."
+ },
+ {
+  "id": "q6b7207acc70",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "What is the correct order of the DHCPv4 lease exchange (DORA)?",
+  "options": [
+   "Request, Offer, Discover, Acknowledge",
+   "Discover, Request, Offer, Acknowledge",
+   "Offer, Discover, Acknowledge, Request",
+   "Discover, Offer, Request, Acknowledge"
+  ],
+  "answer": 3,
+  "explanation": "The client broadcasts Discover, servers Offer, the client Requests one offer and the server Acknowledges."
+ },
+ {
+  "id": "q20fa52b7e8e",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "In the TCP/IP model, which layer does HTTP belong to?",
+  "options": [
+   "Link",
+   "Application",
+   "Internet",
+   "Transport"
+  ],
+  "answer": 1,
+  "explanation": "HTTP is an application-layer protocol that runs on top of a transport protocol such as TCP."
+ },
+ {
+  "id": "q5c6ab3e289c",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "What is the default port for plain HTTP?",
+  "options": [
+   "443",
+   "21",
+   "80",
+   "8443"
+  ],
+  "answer": 2,
+  "explanation": "Unencrypted HTTP uses TCP port 80 by default."
+ },
+ {
+  "id": "qd3cf5d16a67",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "How many layers does the OSI reference model have?",
+  "options": [
+   "5",
+   "4",
+   "7",
+   "6"
+  ],
+  "answer": 2,
+  "explanation": "OSI has seven layers: Physical, Data Link, Network, Transport, Session, Presentation, Application."
+ }
+]

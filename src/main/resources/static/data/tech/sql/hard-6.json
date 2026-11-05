@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q8ab2be93f19",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT DATE '2024-01-31' + INTERVAL '1 month' return?",
+  "options": [
+   "2024-02-29 00:00:00",
+   "2024-03-01 00:00:00",
+   "2024-03-02 00:00:00",
+   "An error, because February has no 31st day"
+  ],
+  "answer": 0,
+  "explanation": "Adding months clamps to the last valid day of the target month, and date plus interval yields a timestamp."
+ },
+ {
+  "id": "qb8dff6eca84",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "When is a nested loop join with an index on the inner table usually the best plan?",
+  "options": [
+   "When the join condition is an inequality on unindexed columns",
+   "When both inputs are huge and unsorted",
+   "When the outer input is small, so only a few index lookups are needed",
+   "When there is no index on either table"
+  ],
+  "answer": 2,
+  "explanation": "Each outer row triggers an index lookup, which is cheap for few rows but expensive for millions."
+ },
+ {
+  "id": "q72d987e76f5",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "In PostgreSQL, what does GROUP BY ROLLUP (region, city) add beyond GROUP BY region, city?",
+  "options": [
+   "A row for every possible region and city combination, including absent ones",
+   "Subtotal rows for each region and a grand total row",
+   "Only the grand total, replacing the detail rows",
+   "Running totals ordered by city"
+  ],
+  "answer": 1,
+  "explanation": "ROLLUP produces grouping sets (region, city), (region) and (), with NULLs in rolled-up columns."
+ },
+ {
+  "id": "q491d0568cc5",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "What does a LATERAL subquery in a PostgreSQL FROM clause allow?",
+  "options": [
+   "The subquery can reference columns from FROM items that appear before it, such as fetching the top 3 orders per customer",
+   "The subquery runs once and its result is cached for the whole query",
+   "The join ignores NULL values in both tables",
+   "Columns are matched by position instead of name"
+  ],
+  "answer": 0,
+  "explanation": "LATERAL evaluates the subquery for each row of the preceding items, much like a correlated subquery in FROM; MySQL 8.0.14+ also supports it."
+ },
+ {
+  "id": "q5a892ac5d60",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "Why can WHERE a = 1 OR b = 2 be harder to optimize than an AND condition, even with separate indexes on a and b?",
+  "options": [
+   "OR conditions can never use any index",
+   "Each index covers only one branch, so the planner must combine two index scans or fall back to a sequential scan",
+   "The database evaluates OR conditions only after sorting",
+   "OR forces the query to run under SERIALIZABLE isolation"
+  ],
+  "answer": 1,
+  "explanation": "PostgreSQL can use a BitmapOr of two index scans, and rewriting as UNION is another option, but neither single index alone suffices."
+ },
+ {
+  "id": "q7acf796f326",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "What does PERCENT_RANK() return for the first row of each partition?",
+  "options": [
+   "1 divided by the partition size",
+   "1",
+   "NULL",
+   "0"
+  ],
+  "answer": 3,
+  "explanation": "PERCENT_RANK is (rank - 1) / (rows in partition - 1), so the first-ranked row always gets 0."
+ },
+ {
+  "id": "qa90ee1de13b",
+  "subject": "sql",
+  "topic": "indexes",
+  "level": "hard",
+  "question": "Which PostgreSQL index type is generally best for jsonb containment (@>) queries and full-text search?",
+  "options": [
+   "B-tree",
+   "Hash",
+   "GIN",
+   "BRIN"
+  ],
+  "answer": 2,
+  "explanation": "GIN indexes map each element or lexeme to the rows containing it, which suits multi-valued columns."
+ },
+ {
+  "id": "q4e9f2dd91dc",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In MySQL InnoDB at REPEATABLE READ, what do gap locks taken by locking reads prevent?",
+  "options": [
+   "Dirty reads of uncommitted data",
+   "Other transactions reading any row in the table",
+   "The current transaction from updating its own rows",
+   "Other transactions inserting rows into the locked range between index records"
+  ],
+  "answer": 3,
+  "explanation": "Gap and next-key locks block inserts into scanned ranges, which prevents phantom rows for locking reads."
+ },
+ {
+  "id": "q1e3ddcb4288",
+  "subject": "sql",
+  "topic": "window-functions",
+  "level": "hard",
+  "question": "In a window frame with tied ORDER BY values, how does RANGE differ from ROWS?",
+  "options": [
+   "ROWS includes peers and RANGE does not",
+   "RANGE works only on text columns",
+   "RANGE includes all peer rows that share the current row's ORDER BY value, while ROWS counts physical rows",
+   "They always produce identical results"
+  ],
+  "answer": 2,
+  "explanation": "With ties, a RANGE frame ending at CURRENT ROW extends through all peers, while a ROWS frame stops at the current physical row."
+ },
+ {
+  "id": "q92ac8f51643",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In PostgreSQL, what does SELECT 'abc' || NULL return?",
+  "options": [
+   "'abc'",
+   "NULL",
+   "'abcNULL'",
+   "An error"
+  ],
+  "answer": 1,
+  "explanation": "The || operator returns NULL if any operand is NULL; concat() treats NULL as an empty string instead."
+ }
+]

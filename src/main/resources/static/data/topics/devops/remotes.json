@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q0b6369606ed",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command lists the configured remotes together with their URLs?",
+  "options": [
+   "git remote -v",
+   "git branch -r",
+   "git config remotes",
+   "git remote list"
+  ],
+  "answer": 0,
+  "explanation": "git remote -v shows each remote's fetch and push URLs."
+ },
+ {
+  "id": "q395c4b84a19",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command pushes the local branch feature to origin and sets it as the upstream for future git push and git pull?",
+  "options": [
+   "git push origin --all",
+   "git fetch -u origin feature",
+   "git remote add feature origin",
+   "git push -u origin feature"
+  ],
+  "answer": 3,
+  "explanation": "The -u (--set-upstream) flag records origin/feature as the tracking branch."
+ },
+ {
+  "id": "q6a53cc95626",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command adds a remote named origin pointing to a URL?",
+  "options": [
+   "git remote create origin <url>",
+   "git add remote origin <url>",
+   "git origin add <url>",
+   "git remote add origin <url>"
+  ],
+  "answer": 3,
+  "explanation": "git remote add <name> <url> registers a new remote under the given name."
+ },
+ {
+  "id": "q779461f574d",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command downloads new commits from a remote without merging them into your current branch?",
+  "options": [
+   "git pull",
+   "git fetch",
+   "git push",
+   "git clone"
+  ],
+  "answer": 1,
+  "explanation": "git fetch updates remote-tracking branches only; git pull is fetch followed by a merge or rebase."
+ },
+ {
+  "id": "q8131fb51fa7",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command fetches from the upstream remote and then integrates the changes into the current branch?",
+  "options": [
+   "git clone",
+   "git fetch",
+   "git pull",
+   "git push"
+  ],
+  "answer": 2,
+  "explanation": "git pull is a git fetch followed by a merge (or rebase, if configured) of the upstream branch."
+ },
+ {
+  "id": "qbc200d54129",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "What is the default name Git gives to the remote created by git clone?",
+  "options": [
+   "upstream",
+   "origin",
+   "remote",
+   "main"
+  ],
+  "answer": 1,
+  "explanation": "git clone names the source remote origin unless you pass a different name with --origin."
+ },
+ {
+  "id": "qbc605747950",
+  "subject": "devops",
+  "topic": "remotes",
+  "level": "easy",
+  "question": "Which command uploads your local commits to a branch on a remote?",
+  "options": [
+   "git upload",
+   "git send",
+   "git push",
+   "git publish"
+  ],
+  "answer": 2,
+  "explanation": "git push sends local commits to the remote and updates the matching remote branch."
+ }
+]

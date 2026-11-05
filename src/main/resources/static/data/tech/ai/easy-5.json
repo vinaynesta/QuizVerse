@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qefb4811f814",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What does named entity recognition do?",
+  "options": [
+   "Finds and classifies names of people, organizations and places in text",
+   "Generates new names for products",
+   "Assigns a unique id to every word in the vocabulary",
+   "Checks whether a sentence is grammatically correct"
+  ],
+  "answer": 0,
+  "explanation": "Named entity recognition labels spans of text with entity types such as PERSON, ORG or LOCATION."
+ },
+ {
+  "id": "qc26c94ccb9b",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "What is semantic search?",
+  "options": [
+   "Searching only within document titles",
+   "Finding results by meaning rather than by exact keyword matches",
+   "Searching for exact strings with regular expressions",
+   "Sorting results alphabetically"
+  ],
+  "answer": 1,
+  "explanation": "Semantic search compares embeddings, so a query can match relevant text that uses different words."
+ },
+ {
+  "id": "q5cff570c433",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "In k-means, what is a cluster centroid?",
+  "options": [
+   "The data point farthest from all others",
+   "The first point chosen from the dataset",
+   "The mean position of all points assigned to that cluster",
+   "The boundary line between two clusters"
+  ],
+  "answer": 2,
+  "explanation": "K-means repeatedly assigns points to the nearest centroid and recomputes each centroid as the mean of its points."
+ },
+ {
+  "id": "qad4cfa3e2b8",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is zero-shot prompting?",
+  "options": [
+   "Asking a model to perform a task without giving any examples in the prompt",
+   "Training a model from scratch with no data",
+   "Sending an empty prompt to the model",
+   "Setting the model's temperature to zero"
+  ],
+  "answer": 0,
+  "explanation": "In zero-shot prompting the model relies only on the instruction and its pre-trained knowledge."
+ },
+ {
+  "id": "q14e6fb1dc47",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What does a convolutional filter do in a CNN?",
+  "options": [
+   "Randomly removes pixels from the image",
+   "Slides over the input computing weighted sums to detect local patterns such as edges",
+   "Converts the image to grayscale",
+   "Sorts the pixels by brightness"
+  ],
+  "answer": 1,
+  "explanation": "Each filter's learned weights respond to a particular local pattern wherever it appears in the input."
+ },
+ {
+  "id": "q80471f6450b",
+  "subject": "ai",
+  "topic": "deep-learning-architectures",
+  "level": "easy",
+  "question": "What does the word deep refer to in deep learning?",
+  "options": [
+   "Training that runs for a very long time",
+   "Models trained on very large hard drives",
+   "Algorithms that search deep decision trees",
+   "Neural networks with many stacked layers"
+  ],
+  "answer": 3,
+  "explanation": "Depth means many layers, which let networks learn increasingly abstract features."
+ },
+ {
+  "id": "qe42ac4caeae",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What is a weight in a neural network?",
+  "options": [
+   "A learnable parameter that scales how much an input contributes to a neuron",
+   "The size of the training dataset",
+   "A fixed constant chosen before training and never changed",
+   "The number of layers in the network"
+  ],
+  "answer": 0,
+  "explanation": "Weights are adjusted during training so the network's outputs better match the targets."
+ },
+ {
+  "id": "q440527f0e50",
+  "subject": "ai",
+  "topic": "llms-prompting",
+  "level": "easy",
+  "question": "What is a prompt in the context of LLMs?",
+  "options": [
+   "The error message shown when a request fails",
+   "The model's internal weights",
+   "The input text given to the model to instruct it or provide context",
+   "The hardware the model runs on"
+  ],
+  "answer": 2,
+  "explanation": "The prompt is everything the model reads before generating, including instructions, context and examples."
+ },
+ {
+  "id": "qb1bb507a2d0",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "What is a deepfake?",
+  "options": [
+   "A neural network with an unusually large number of layers",
+   "Synthetic media created with AI that realistically imitates a real person",
+   "A dataset containing fake labels",
+   "A model that refuses to answer questions"
+  ],
+  "answer": 1,
+  "explanation": "Deepfakes use generative models to fabricate realistic images, audio or video of real people, raising misuse concerns."
+ },
+ {
+  "id": "q004c091595e",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "What happens at each internal node of a decision tree?",
+  "options": [
+   "All features are averaged into one value",
+   "A neural network layer is applied to the input",
+   "The final class prediction is output",
+   "The data is split based on a test of a feature value"
+  ],
+  "answer": 3,
+  "explanation": "Internal nodes route examples by feature tests, such as age > 30, and leaves hold the predictions."
+ }
+]

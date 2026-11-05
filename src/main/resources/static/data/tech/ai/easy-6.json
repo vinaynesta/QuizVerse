@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0ac63138014",
+  "subject": "ai",
+  "topic": "rag-agents",
+  "level": "easy",
+  "question": "In an LLM agent, what is a tool?",
+  "options": [
+   "An external function or API the model can request to call, such as a calculator or web search",
+   "A prompt template stored on disk",
+   "A hardware accelerator used to run the model",
+   "A library used to train the model"
+  ],
+  "answer": 0,
+  "explanation": "Tools let an agent act beyond text generation by having the application execute calls and return results."
+ },
+ {
+  "id": "q202940e02a8",
+  "subject": "ai",
+  "topic": "supervised-learning",
+  "level": "easy",
+  "question": "What does linear regression model?",
+  "options": [
+   "A tree of yes or no decisions over the features",
+   "A linear relationship between input features and a continuous target value",
+   "The probability that a point belongs to each cluster",
+   "A sequence of words generated one at a time"
+  ],
+  "answer": 1,
+  "explanation": "Linear regression fits a weighted sum of features plus an intercept, usually by minimizing squared error."
+ },
+ {
+  "id": "q06495a46824",
+  "subject": "ai",
+  "topic": "nlp-transformers",
+  "level": "easy",
+  "question": "What is sentiment analysis?",
+  "options": [
+   "Translating text from one language to another",
+   "Counting how many words a document contains",
+   "Determining whether text expresses a positive, negative or neutral opinion",
+   "Correcting spelling mistakes in text"
+  ],
+  "answer": 2,
+  "explanation": "Sentiment analysis classifies the emotional tone or opinion expressed in text, such as product reviews."
+ },
+ {
+  "id": "qbe391cb77b6",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "What is underfitting?",
+  "options": [
+   "A model that memorizes noise in the training data",
+   "A model trained for too many epochs",
+   "A model too simple to capture the underlying pattern, so it performs poorly even on training data",
+   "A model whose test set is larger than its training set"
+  ],
+  "answer": 2,
+  "explanation": "An underfit model has high bias: it misses real structure, so both training and test error stay high."
+ },
+ {
+  "id": "qca77d9031e7",
+  "subject": "ai",
+  "topic": "unsupervised-learning",
+  "level": "easy",
+  "question": "What is clustering?",
+  "options": [
+   "Predicting a numeric value from labeled examples",
+   "Removing duplicate rows from a dataset",
+   "Sorting data points by a single feature",
+   "Grouping similar data points together without using labels"
+  ],
+  "answer": 3,
+  "explanation": "Clustering is an unsupervised task that discovers groups of similar points on its own."
+ },
+ {
+  "id": "qb2f05918947",
+  "subject": "ai",
+  "topic": "ml-basics",
+  "level": "easy",
+  "question": "In supervised learning, what is a label?",
+  "options": [
+   "The known target value the model learns to predict",
+   "A tag marking a row as training or test data",
+   "A name given to each column of the dataset",
+   "The identifier of the trained model version"
+  ],
+  "answer": 0,
+  "explanation": "Labels are the ground-truth outputs paired with inputs, such as spam or not spam for an email."
+ },
+ {
+  "id": "qc181cfa58ec",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What does a loss function measure during training?",
+  "options": [
+   "How many parameters the model has",
+   "How far the model's predictions are from the target values",
+   "How long each training step takes",
+   "How much memory the model uses"
+  ],
+  "answer": 1,
+  "explanation": "Training minimizes the loss, so it defines what counts as a good prediction."
+ },
+ {
+  "id": "qa96c6211851",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "Which metric is commonly used to evaluate a regression model?",
+  "options": [
+   "F1 score",
+   "Precision",
+   "Recall",
+   "Mean squared error"
+  ],
+  "answer": 3,
+  "explanation": "Mean squared error averages squared differences between predicted and actual values; the others are classification metrics."
+ },
+ {
+  "id": "q09e69f0c580",
+  "subject": "ai",
+  "topic": "ai-ethics-safety",
+  "level": "easy",
+  "question": "Why is data privacy a concern when training AI models on personal data?",
+  "options": [
+   "Personal data cannot be stored in digital form",
+   "Personal data makes models train more slowly",
+   "Models can memorize and later reveal personal information from their training data",
+   "Models trained on personal data cannot be deployed"
+  ],
+  "answer": 2,
+  "explanation": "Sensitive details in training data can leak through model outputs, so data handling and consent matter."
+ },
+ {
+  "id": "qc9e591600b7",
+  "subject": "ai",
+  "topic": "evaluation-metrics",
+  "level": "easy",
+  "question": "In binary classification, what is a false positive?",
+  "options": [
+   "Predicting the negative class when the actual class is positive",
+   "Correctly predicting the negative class",
+   "Correctly predicting the positive class",
+   "Predicting the positive class when the actual class is negative"
+  ],
+  "answer": 3,
+  "explanation": "A false positive is a false alarm, such as flagging a legitimate email as spam."
+ }
+]

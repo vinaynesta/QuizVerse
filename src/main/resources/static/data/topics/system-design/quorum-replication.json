@@ -1,0 +1,137 @@
+[
+ {
+  "id": "q01fb5f599bd",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "In a system with N=5, what is the smallest W that ensures any two write quorums overlap?",
+  "options": [
+   "1",
+   "2",
+   "3",
+   "5"
+  ],
+  "answer": 2,
+  "explanation": "Two write quorums overlap when 2W > N, so W must be at least 3."
+ },
+ {
+  "id": "q17a212d01f0",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "With N=3, W=1 and R=1, what is the main consequence?",
+  "options": [
+   "Reads may return stale values because read and write sets are not guaranteed to overlap",
+   "Writes become linearizable while reads do not",
+   "Every read is guaranteed to return the latest committed value",
+   "The cluster cannot tolerate any node failure"
+  ],
+  "answer": 0,
+  "explanation": "Since R + W = 2 is not greater than N = 3, a read may hit only replicas that missed the latest write."
+ },
+ {
+  "id": "q2a1b5f3843c",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is anti-entropy with Merkle trees used for?",
+  "options": [
+   "Encrypting replicated data",
+   "Electing a leader",
+   "Efficiently finding and repairing divergent data between replicas by comparing hashes of key ranges",
+   "Ordering writes globally"
+  ],
+  "answer": 2,
+  "explanation": "Comparing tree hashes top-down quickly narrows mismatches to the key ranges that differ."
+ },
+ {
+  "id": "q4b0903edf86",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "Why does requiring a strict majority of votes help prevent split brain?",
+  "options": [
+   "A majority always holds the most recent clock reading",
+   "Two disjoint groups cannot both contain a majority of the same cluster, so at most one side can make progress",
+   "Majorities let every node read from disk instead of memory",
+   "Majority voting removes the need for replication"
+  ],
+  "answer": 1,
+  "explanation": "Any two majorities of the same membership intersect, so at most one partition side can win an election or commit."
+ },
+ {
+  "id": "q5412a7a4ace",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is a sloppy quorum?",
+  "options": [
+   "A write quorum that can accept writes on nodes outside the key's home replicas, weakening the overlap guarantee",
+   "A quorum that requires all N replicas to acknowledge every write",
+   "A quorum that ignores write timestamps entirely",
+   "A read-only quorum used only during backups"
+  ],
+  "answer": 0,
+  "explanation": "Dynamo-style systems use sloppy quorums with hinted handoff for availability, so R + W > N no longer guarantees seeing the latest write."
+ },
+ {
+  "id": "q5c8a473850a",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is hinted handoff?",
+  "options": [
+   "Forwarding reads to the fastest replica",
+   "A temporary node storing writes meant for an unavailable replica and delivering them when it recovers",
+   "Transferring leadership to a follower",
+   "Splitting a partition across two nodes"
+  ],
+  "answer": 1,
+  "explanation": "It keeps writes available during transient failures and is often paired with sloppy quorums."
+ },
+ {
+  "id": "qa97943c61b5",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "With N=3, W=2 and R=2, how many replica failures can the system tolerate while still serving both reads and writes?",
+  "options": [
+   "Zero",
+   "One",
+   "Three",
+   "Two"
+  ],
+  "answer": 1,
+  "explanation": "With one replica down, two remain, which satisfies both W=2 and R=2; with two down, only one remains and quorums cannot be formed."
+ },
+ {
+  "id": "qdeb4e46a3d8",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "With N=5 replicas, W=3 and R=3, what property holds?",
+  "options": [
+   "R + W equals N, which guarantees overlap and is the minimum",
+   "Overlap is impossible because 3 + 3 exceeds N",
+   "R + W is greater than N, so every read quorum overlaps every write quorum",
+   "Writes never need acknowledgement from a majority"
+  ],
+  "answer": 2,
+  "explanation": "Since 3 + 3 = 6 > 5, any read set and write set must share at least one replica, which holds the latest committed value."
+ },
+ {
+  "id": "qf64872070f0",
+  "subject": "system-design",
+  "topic": "quorum-replication",
+  "level": "hard",
+  "question": "What is read repair in a Dynamo-style store?",
+  "options": [
+   "Rebuilding an entire node's data from a snapshot on startup",
+   "Fixing stale replicas by writing the newest value back to them when a read detects divergence",
+   "Changing the replication factor during a read",
+   "Deleting tombstones older than the gc_grace period"
+  ],
+  "answer": 1,
+  "explanation": "Read repair opportunistically heals replicas found to hold older versions; anti-entropy handles the rest in the background."
+ }
+]

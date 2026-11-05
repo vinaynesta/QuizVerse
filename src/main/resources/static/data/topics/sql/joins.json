@@ -1,0 +1,257 @@
+[
+ {
+  "id": "q30f318e913c",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What is a self join?",
+  "options": [
+   "Joining two different databases",
+   "Joining a table to itself, using table aliases to distinguish the two roles",
+   "Joining a table with a copy of a different table",
+   "Joining a view with a table"
+  ],
+  "answer": 1,
+  "explanation": "A self join references the same table twice, usually with aliases, for example to match employees with their managers."
+ },
+ {
+  "id": "q705caeb71e8",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a RIGHT JOIN keep?",
+  "options": [
+   "All rows from the right table, with NULLs where there is no match on the left",
+   "Only unmatched rows from both tables",
+   "All rows from the left table",
+   "Rows from either table with duplicates removed"
+  ],
+  "answer": 0,
+  "explanation": "RIGHT (OUTER) JOIN is the mirror of LEFT JOIN: every right-table row is kept, and left columns are NULL when unmatched."
+ },
+ {
+  "id": "q8da7f027162",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a FULL OUTER JOIN return?",
+  "options": [
+   "Only rows that match in both tables",
+   "Only rows from the left table",
+   "All rows from both tables, with NULLs where a row has no match on the other side",
+   "Every combination of rows from both tables"
+  ],
+  "answer": 2,
+  "explanation": "A full outer join combines the effects of a left join and a right join."
+ },
+ {
+  "id": "q94f87d8f279",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does an INNER JOIN return?",
+  "options": [
+   "All rows from the left table",
+   "All rows from both tables",
+   "Rows that match in both tables",
+   "Every combination of rows"
+  ],
+  "answer": 2,
+  "explanation": "INNER JOIN keeps only pairs of rows whose join condition is true, so non-matching rows from either side are dropped."
+ },
+ {
+  "id": "qe8ac11b2e52",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a CROSS JOIN produce?",
+  "options": [
+   "Rows matching on a key",
+   "The union of two tables",
+   "Only rows with NULL keys",
+   "Every combination of rows from both tables"
+  ],
+  "answer": 3,
+  "explanation": "A CROSS JOIN produces the Cartesian product: every row of the first table paired with every row of the second."
+ },
+ {
+  "id": "qffc3866df4f",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "easy",
+  "question": "What does a LEFT JOIN return?",
+  "options": [
+   "All rows from the left table, with NULLs where there is no match on the right",
+   "Only rows matching in both tables",
+   "Only unmatched rows from the right table",
+   "Every combination of rows"
+  ],
+  "answer": 0,
+  "explanation": "LEFT (OUTER) JOIN preserves every row of the left table and fills right-side columns with NULL when no match exists."
+ },
+ {
+  "id": "q76f8baf371e",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "In a LEFT JOIN, what fills the right-side columns when a left row has no match?",
+  "options": [
+   "Zero",
+   "The row is removed",
+   "The left row's own values",
+   "NULL"
+  ],
+  "answer": 3,
+  "explanation": "Unmatched left rows are kept and every right-side column is set to NULL."
+ },
+ {
+  "id": "q7770e721c5b",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "What does JOIN orders USING (customer_id) do?",
+  "options": [
+   "Joins on equality of the identically named customer_id columns and shows that column once in SELECT *",
+   "Joins on every column the two tables share",
+   "Joins only rows where customer_id is NULL",
+   "Creates an index on customer_id before joining"
+  ],
+  "answer": 0,
+  "explanation": "USING is shorthand for an equality condition on the listed columns, which are merged into a single output column."
+ },
+ {
+  "id": "q87956d45c59",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "Adding a condition on a right-table column in the WHERE clause of a LEFT JOIN, such as WHERE o.status = 'paid', has what effect?",
+  "options": [
+   "It removes left rows with no matching paid order, so the result behaves like an inner join",
+   "It turns the query into a CROSS JOIN",
+   "It has no effect on which rows are returned",
+   "It keeps all left rows with NULLs for the right side"
+  ],
+  "answer": 0,
+  "explanation": "NULL is never equal to 'paid', so rows without a match are filtered out. The condition belongs in the ON clause if unmatched left rows should be kept."
+ },
+ {
+  "id": "qa31d2c87f03",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "Which query returns customers who have placed no orders?",
+  "options": [
+   "SELECT c.* FROM customers c INNER JOIN orders o ON c.id = o.customer_id",
+   "SELECT c.* FROM customers c RIGHT JOIN orders o ON c.id = o.customer_id WHERE c.id IS NULL",
+   "SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.customer_id IS NULL",
+   "SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.customer_id IS NOT NULL"
+  ],
+  "answer": 2,
+  "explanation": "A LEFT JOIN with a WHERE test for NULL on the right side is the anti-join pattern. The RIGHT JOIN variant returns orphaned orders instead."
+ },
+ {
+  "id": "qa7d77a28239",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "MySQL does not support FULL OUTER JOIN. How is it usually emulated?",
+  "options": [
+   "A CROSS JOIN filtered with WHERE",
+   "A LEFT JOIN combined with a RIGHT JOIN using UNION",
+   "An INNER JOIN with the NATURAL keyword",
+   "Two INNER JOINs combined with INTERSECT"
+  ],
+  "answer": 1,
+  "explanation": "UNION of the left and right joins returns matched rows plus unmatched rows from each side, removing the duplicated matches."
+ },
+ {
+  "id": "q18260d1a4b7",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "For a LEFT JOIN, what is the difference between a right-table condition placed in ON and the same condition placed in WHERE?",
+  "options": [
+   "There is no difference in any case",
+   "ON removes left rows, while WHERE keeps them",
+   "ON filters the result after the join, while WHERE filters during the join",
+   "With ON, unmatched left rows are kept with NULLs; with WHERE, the condition can remove them"
+  ],
+  "answer": 3,
+  "explanation": "A condition in ON only decides which right rows match. A condition in WHERE runs after the join, where NULL-extended rows fail the test and disappear."
+ },
+ {
+  "id": "q491d0568cc5",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "What does a LATERAL subquery in a PostgreSQL FROM clause allow?",
+  "options": [
+   "The subquery can reference columns from FROM items that appear before it, such as fetching the top 3 orders per customer",
+   "The subquery runs once and its result is cached for the whole query",
+   "The join ignores NULL values in both tables",
+   "Columns are matched by position instead of name"
+  ],
+  "answer": 0,
+  "explanation": "LATERAL evaluates the subquery for each row of the preceding items, much like a correlated subquery in FROM; MySQL 8.0.14+ also supports it."
+ },
+ {
+  "id": "q5680f10e8f5",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "What is a risk of using NATURAL JOIN?",
+  "options": [
+   "It joins on every pair of identically named columns, so adding a column can silently change results",
+   "It always returns duplicate rows",
+   "It requires an explicit ON clause",
+   "It cannot join more than two tables"
+  ],
+  "answer": 0,
+  "explanation": "NATURAL JOIN implicitly matches all same-named columns, so a schema change can alter the join condition without any query change."
+ },
+ {
+  "id": "qb8dff6eca84",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "When is a nested loop join with an index on the inner table usually the best plan?",
+  "options": [
+   "When the join condition is an inequality on unindexed columns",
+   "When both inputs are huge and unsorted",
+   "When the outer input is small, so only a few index lookups are needed",
+   "When there is no index on either table"
+  ],
+  "answer": 2,
+  "explanation": "Each outer row triggers an index lookup, which is cheap for few rows but expensive for millions."
+ },
+ {
+  "id": "qe5d07cbfb09",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "How many rows does a CROSS JOIN of a 3-row table with a 4-row table produce?",
+  "options": [
+   "7",
+   "12",
+   "8",
+   "81"
+  ],
+  "answer": 1,
+  "explanation": "A cross join multiplies row counts, so 3 x 4 = 12 rows."
+ },
+ {
+  "id": "qfbf5d612d67",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "If both inputs contain two rows with key 5, how many rows does an inner equi-join on that key produce for key 5?",
+  "options": [
+   "2",
+   "4",
+   "1",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Each of the two left rows pairs with each of the two right rows, giving 2 x 2 = 4 output rows."
+ }
+]

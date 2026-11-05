@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q53fc395f6ef",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "What is the standard solution to priority inversion?",
+  "options": [
+   "Priority inheritance: the lock holder temporarily inherits the priority of the highest-priority waiter",
+   "Aging",
+   "Increasing the time quantum",
+   "Using spinlocks instead of mutexes"
+  ],
+  "answer": 0,
+  "explanation": "With inherited priority, medium-priority tasks cannot preempt the lock holder, so it finishes quickly, releases the lock and drops back to its original priority."
+ },
+ {
+  "id": "q2e9d21000a3",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "hard",
+  "question": "The disk head is at cylinder 53 and the queue holds 98, 183, 37, 122, 14, 124, 65, 67. What is the total head movement under SSTF scheduling?",
+  "options": [
+   "640 cylinders",
+   "236 cylinders",
+   "299 cylinders",
+   "208 cylinders"
+  ],
+  "answer": 1,
+  "explanation": "SSTF serves 65, 67, 37, 14, 98, 122, 124, 183, moving 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236 cylinders."
+ },
+ {
+  "id": "q3739242b15d",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "A buddy-system allocator manages a 256 KB segment. How much memory is actually allocated for a 21 KB request?",
+  "options": [
+   "21 KB",
+   "64 KB",
+   "32 KB",
+   "24 KB"
+  ],
+  "answer": 2,
+  "explanation": "The buddy system rounds requests up to a power of two, so it splits 256 into 128, 64 and then 32 KB and allocates 32 KB, wasting 11 KB internally."
+ },
+ {
+  "id": "q017d4d04660",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Memory access time is 200 ns and page-fault service time is 8 ms. To keep slowdown under 10% (EAT < 220 ns), the page-fault rate must be below about:",
+  "options": [
+   "1 in 1,000 accesses",
+   "1 in 10,000 accesses",
+   "1 in 400,000 accesses",
+   "1 in 40,000 accesses"
+  ],
+  "answer": 2,
+  "explanation": "220 > 200 + 7,999,800p gives p < 20 / 7,999,800, about 2.5 x 10^-6, which is fewer than 1 fault per 400,000 accesses."
+ },
+ {
+  "id": "qee2f413ccde",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "Under rate-monotonic scheduling, what is the worst-case CPU utilization bound that guarantees two periodic tasks can be scheduled?",
+  "options": [
+   "100%",
+   "50%",
+   "About 69.3%",
+   "About 82.8%"
+  ],
+  "answer": 3,
+  "explanation": "The bound is n(2^(1/n) - 1), and for n = 2 that is 2(sqrt(2) - 1), about 0.828; it approaches ln 2 (about 69.3%) as n grows."
+ },
+ {
+  "id": "q4c64b11d411",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "For single-instance resources, deadlock detection builds a wait-for graph from the resource-allocation graph. What does it do to get it?",
+  "options": [
+   "It adds an edge from every resource to every process",
+   "It removes the resource nodes and collapses edges so that Pi -> Pj means Pi waits for a resource held by Pj",
+   "It reverses all assignment edges",
+   "It keeps only the resource nodes"
+  ],
+  "answer": 1,
+  "explanation": "A deadlock exists exactly when the wait-for graph has a cycle, which can be found in O(n^2) time."
+ },
+ {
+  "id": "q132fe21d3be",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "In the first readers-writers solution (readers have priority), what problem can occur?",
+  "options": [
+   "Readers can starve",
+   "Two writers can write at the same time",
+   "Readers and writers can access the data at the same time",
+   "Writers can starve if readers keep arriving"
+  ],
+  "answer": 3,
+  "explanation": "As long as at least one reader is active, new readers get in right away, so a steady stream of readers can keep a writer waiting forever."
+ },
+ {
+  "id": "q315a2ceafe7",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "When does the banker's algorithm grant a resource request that does not exceed Need or Available?",
+  "options": [
+   "Always, immediately",
+   "Only if pretending to grant it leaves the system in a safe state",
+   "Only if no other process is waiting",
+   "Only if the request is for a single instance"
+  ],
+  "answer": 1,
+  "explanation": "The resource-request algorithm tentatively allocates, runs the safety algorithm and rolls back (making the process wait) if the result is unsafe."
+ },
+ {
+  "id": "q3a00b9f9b2c",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "How does vfork() differ from fork() with copy-on-write?",
+  "options": [
+   "With vfork() the child uses the parent's address space directly and the parent is suspended until the child calls exec() or exits",
+   "vfork() copies all pages eagerly",
+   "vfork() creates a thread instead of a process",
+   "vfork() works only for kernel processes"
+  ],
+  "answer": 0,
+  "explanation": "vfork() shares the address space without even COW protection, so any change the child makes is visible to the parent; it is meant to be followed by exec() right away."
+ },
+ {
+  "id": "q072dfb1ccaa",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "TLB lookup takes 20 ns, a memory access takes 100 ns, and the TLB hit ratio is 99% with a single-level page table. What is the effective memory access time?",
+  "options": [
+   "120 ns",
+   "140 ns",
+   "119 ns",
+   "121 ns"
+  ],
+  "answer": 3,
+  "explanation": "EAT = 0.99 x (20 + 100) + 0.01 x (20 + 200) = 118.8 + 2.2 = 121 ns."
+ }
+]

@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q895f5d5c97a",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "easy",
+  "question": "Which normal form removes transitive dependencies between non-key attributes?",
+  "options": [
+   "3NF",
+   "2NF",
+   "5NF",
+   "1NF"
+  ],
+  "answer": 0,
+  "explanation": "Third normal form requires non-key attributes to depend only on the primary key, not on other non-key attributes."
+ },
+ {
+  "id": "q9445501924e",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "easy",
+  "question": "Which normal form removes partial dependencies on part of a composite key?",
+  "options": [
+   "1NF",
+   "Denormalization",
+   "4NF",
+   "2NF"
+  ],
+  "answer": 3,
+  "explanation": "Second normal form requires non-key attributes to depend on the whole composite key, not just a part of it."
+ },
+ {
+  "id": "qde9d7fdfab0",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "easy",
+  "question": "Which anomaly occurs when deleting one fact also removes unrelated data?",
+  "options": [
+   "Insertion anomaly",
+   "Join anomaly",
+   "Update anomaly",
+   "Deletion anomaly"
+  ],
+  "answer": 3,
+  "explanation": "A deletion anomaly happens when removing a row also erases facts that should have survived, usually because of poor table design."
+ },
+ {
+  "id": "qe6a34d536a9",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "easy",
+  "question": "Which normal form requires that every attribute hold atomic (single) values?",
+  "options": [
+   "1NF",
+   "2NF",
+   "5NF",
+   "3NF"
+  ],
+  "answer": 0,
+  "explanation": "First normal form requires atomic values and no repeating groups. Higher normal forms build on this."
+ },
+ {
+  "id": "q77c6d7f2e3f",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "medium",
+  "question": "What is a drawback of over-normalization?",
+  "options": [
+   "Data becomes inconsistent",
+   "Duplicate rows are guaranteed",
+   "Queries often need many joins, which can slow reads",
+   "Primary keys stop working"
+  ],
+  "answer": 2,
+  "explanation": "Highly normalized schemas split data across many tables, so reads require more joins. This is the usual trade-off that motivates selective denormalization."
+ },
+ {
+  "id": "q79a6f93f5ff",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "medium",
+  "question": "A table (order_id, product_id, product_name, qty) has key (order_id, product_id), and product_name depends only on product_id. What is the lowest normal form this table fails to satisfy?",
+  "options": [
+   "1NF",
+   "4NF",
+   "2NF",
+   "6NF"
+  ],
+  "answer": 2,
+  "explanation": "The table is in 1NF but has a partial dependency on part of the composite key, which violates 2NF."
+ },
+ {
+  "id": "qd71b4973bc3",
+  "subject": "sql",
+  "topic": "normalization",
+  "level": "medium",
+  "question": "Why would a designer intentionally denormalize a schema?",
+  "options": [
+   "To remove all foreign keys",
+   "To speed up frequent reads by reducing joins, accepting some redundancy",
+   "To reduce the number of tables to one",
+   "To eliminate the need for indexes"
+  ],
+  "answer": 1,
+  "explanation": "Denormalization trades write complexity and redundancy for faster reads, often in reporting or read-heavy workloads."
+ }
+]

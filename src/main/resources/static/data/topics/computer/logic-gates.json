@@ -1,0 +1,162 @@
+[
+ {
+  "id": "q15c72c54b03",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "easy",
+  "question": "A two-input OR gate gives output 0 when:",
+  "options": [
+   "Both inputs are 1",
+   "Any one input is 1",
+   "Both inputs are 0",
+   "Exactly one input is 1"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "An OR gate outputs 1 if any input is 1, so its output is 0 only when all inputs are 0."
+ },
+ {
+  "id": "q4d9bcd8054e",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "easy",
+  "question": "Which logic gate gives output 1 only when all its inputs are 1?",
+  "options": [
+   "AND",
+   "OR",
+   "NOT",
+   "XOR"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "An AND gate outputs 1 only when every input is 1."
+ },
+ {
+  "id": "q81d89657c42",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "easy",
+  "question": "The NOT gate is also called a/an:",
+  "options": [
+   "Buffer",
+   "Adder",
+   "Inverter",
+   "Multiplexer"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A NOT gate inverts its input (0 to 1, 1 to 0), so it is called an inverter."
+ },
+ {
+  "id": "qcfe7cbeaf85",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "easy",
+  "question": "Which logic gate has only one input?",
+  "options": [
+   "AND",
+   "NOT",
+   "OR",
+   "NAND"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The NOT gate takes a single input and inverts it."
+ },
+ {
+  "id": "q4ab8ba09737",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "medium",
+  "question": "Which logic gates are known as universal gates?",
+  "options": [
+   "AND and OR",
+   "XOR and XNOR",
+   "NAND and NOR",
+   "NOT and AND"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Any logic circuit can be built using only NAND gates or only NOR gates, so they are universal gates."
+ },
+ {
+  "id": "q7589e4f10c6",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "medium",
+  "question": "A two-input XOR gate gives output 1 when:",
+  "options": [
+   "Both inputs are 1",
+   "Both inputs are 0",
+   "The inputs are the same",
+   "The inputs are different"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "XOR (exclusive OR) outputs 1 only when exactly one input is 1, i.e. the inputs differ."
+ },
+ {
+  "id": "q4095f94a4df",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "hard",
+  "question": "An XNOR gate gives output 1 when:",
+  "options": [
+   "Both inputs are the same",
+   "The inputs are different",
+   "Only the first input is 1",
+   "Both inputs are 0 only"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "XNOR is the complement of XOR, so it outputs 1 when both inputs are equal (00 or 11)."
+ },
+ {
+  "id": "q62882c38fa9",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "hard",
+  "question": "According to De Morgan's theorem, (A.B)' is equal to:",
+  "options": [
+   "A' . B'",
+   "A + B",
+   "A' + B'",
+   "(A + B)'"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "De Morgan's theorem states that the complement of a product equals the sum of the complements: (A.B)' = A' + B'."
+ },
+ {
+  "id": "q734be19dc57",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "hard",
+  "question": "A half adder produces its Sum and Carry outputs using which gates respectively?",
+  "options": [
+   "XOR and AND",
+   "OR and XOR",
+   "AND and OR",
+   "NAND and NOR"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "In a half adder, Sum = A XOR B and Carry = A AND B."
+ },
+ {
+  "id": "qb046b4b0433",
+  "subject": "computer",
+  "topic": "logic-gates",
+  "level": "hard",
+  "question": "What is the minimum number of 2-input NAND gates needed to build an XOR gate?",
+  "options": [
+   "3",
+   "5",
+   "4",
+   "2"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "An XOR gate can be built with a minimum of four 2-input NAND gates."
+ }
+]

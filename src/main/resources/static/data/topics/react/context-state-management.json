@@ -60,6 +60,21 @@
   "explanation": "useReducer(reducer, initialState) returns the current state and a dispatch function for sending actions."
  },
  {
+  "id": "qd6c01facb7c",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "easy",
+  "question": "Which kind of data is a typical good fit for React Context?",
+  "options": [
+   "The text of a single input field",
+   "A loop counter inside one function",
+   "The hover state of one button",
+   "App-wide values like the current theme or signed-in user"
+  ],
+  "answer": 3,
+  "explanation": "Context suits data many components at different depths need, while local UI state is better kept in the component."
+ },
+ {
   "id": "q0909add00ed",
   "subject": "react",
   "topic": "context-state-management",
@@ -105,6 +120,36 @@
   "explanation": "React 19 lets you render the context itself as a provider; ThemeContext.Provider still works but is the older form."
  },
  {
+  "id": "q9620bcc401f",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "Why do components often combine useReducer with context?",
+  "options": [
+   "Because useReducer cannot work without context",
+   "To make state persist across page reloads",
+   "To keep complex state in one place and let deep components read it and dispatch actions without prop drilling",
+   "To avoid re-renders entirely"
+  ],
+  "answer": 2,
+  "explanation": "The reducer centralizes update logic while context makes state and dispatch available anywhere below the provider."
+ },
+ {
+  "id": "qce21471c9b5",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "medium",
+  "question": "Why is it common to wrap useContext(AuthContext) in a custom hook such as useAuth()?",
+  "options": [
+   "It makes the context value immutable",
+   "It hides the context object and can throw a clear error when used outside the provider",
+   "It stops consumers from re-rendering",
+   "Custom hooks are the only way to read context"
+  ],
+  "answer": 1,
+  "explanation": "A small custom hook gives callers one import and a place to check that the provider is present."
+ },
+ {
   "id": "qfef757a57e4",
   "subject": "react",
   "topic": "context-state-management",
@@ -133,6 +178,36 @@
   ],
   "answer": 3,
   "explanation": "Splitting contexts means components reading only settings do not re-render when the cursor moves."
+ },
+ {
+  "id": "q2724dc15ba8",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "Why might splitting state and dispatch into two separate contexts improve performance?",
+  "options": [
+   "It removes the need for a reducer",
+   "dispatch changes on every render",
+   "React allows only one value per context",
+   "Components that only dispatch do not re-render when the state changes, because dispatch is stable"
+  ],
+  "answer": 3,
+  "explanation": "dispatch from useReducer has a stable identity, so a context holding only dispatch never triggers re-renders."
+ },
+ {
+  "id": "q3a091111115",
+  "subject": "react",
+  "topic": "context-state-management",
+  "level": "hard",
+  "question": "A component renders <Ctx.Provider value=\"inner\"> in its own JSX and also calls useContext(Ctx). Which value does it read?",
+  "options": [
+   "The Provider it renders",
+   "Both values merged",
+   "The nearest Provider above it, not one it renders in its own output",
+   "The default value always"
+  ],
+  "answer": 2,
+  "explanation": "useContext looks upward from the calling component, so providers in its own returned JSX do not affect it."
  },
  {
   "id": "q3baad5490ee",

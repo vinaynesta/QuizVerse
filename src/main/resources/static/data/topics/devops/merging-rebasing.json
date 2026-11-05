@@ -1,0 +1,167 @@
+[
+ {
+  "id": "q1998219472c",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What is a three-way merge based on?",
+  "options": [
+   "Three remotes",
+   "The last three commits on each branch",
+   "Two branch tips and their latest common ancestor",
+   "The working tree, index and HEAD only"
+  ],
+  "answer": 2,
+  "explanation": "Git compares both branch tips against their merge base (the common ancestor) to combine the changes."
+ },
+ {
+  "id": "q37c47893c58",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "During a conflicted merge, which command marks a file as resolved after you edit it?",
+  "options": [
+   "git checkout --ours",
+   "git commit --resolve",
+   "git mark <file>",
+   "git add <file>"
+  ],
+  "answer": 3,
+  "explanation": "Staging the edited file records the resolution; the merge is completed with git commit afterwards."
+ },
+ {
+  "id": "q57984f27baf",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What does git merge --no-ff do?",
+  "options": [
+   "Rebases the branch before merging it",
+   "Refuses to merge if any conflicts are found",
+   "Always creates a merge commit, even when a fast-forward would be possible",
+   "Merges without updating the working tree"
+  ],
+  "answer": 2,
+  "explanation": "--no-ff forces a merge commit so the branch's existence is preserved in history."
+ },
+ {
+  "id": "q68b0e78f9c8",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Which option makes a force push refuse to overwrite remote commits you have not fetched?",
+  "options": [
+   "--force",
+   "--force-with-lease",
+   "--mirror",
+   "--prune"
+  ],
+  "answer": 1,
+  "explanation": "--force-with-lease aborts if the remote branch has moved since your last fetch, protecting others' work."
+ },
+ {
+  "id": "qbd0ce127268",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Why should you avoid rebasing commits that have already been pushed to a shared branch?",
+  "options": [
+   "Rebase cannot run on remote branches",
+   "It automatically force-pushes the branch",
+   "Rebase deletes the remote's reflog",
+   "Rebasing rewrites commit hashes, so collaborators' histories diverge from yours"
+  ],
+  "answer": 3,
+  "explanation": "Rewritten commits have new hashes, so anyone who based work on the old commits must reconcile two divergent histories."
+ },
+ {
+  "id": "qbd58e01cb7d",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "During a rebase you resolve a conflict and stage the file. Which command resumes the rebase?",
+  "options": [
+   "git commit --rebase",
+   "git merge --continue-rebase",
+   "git rebase --continue",
+   "git rebase --skip"
+  ],
+  "answer": 2,
+  "explanation": "git rebase --continue applies the resolved commit and moves on to the remaining ones; --skip would drop the commit."
+ },
+ {
+  "id": "qcc7489c25f6",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What is the main benefit of squash merging a feature branch?",
+  "options": [
+   "It keeps every intermediate commit with its original hash",
+   "It preserves a merge commit with two parents",
+   "It rebases the target branch onto the feature branch",
+   "It collapses the feature's commits into one commit on the target branch"
+  ],
+  "answer": 3,
+  "explanation": "A squash merge produces a single commit on the target branch, which keeps the main history tidy."
+ },
+ {
+  "id": "qd35237aac55",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Which command abandons a conflicted merge in progress and restores the pre-merge state?",
+  "options": [
+   "git merge --abort",
+   "git stash",
+   "git reset --soft",
+   "git revert --merge"
+  ],
+  "answer": 0,
+  "explanation": "git merge --abort tries to reconstruct the state from before the merge started."
+ },
+ {
+  "id": "qd3613213281",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "Which statement best describes git rebase?",
+  "options": [
+   "It replays commits from the current branch onto a new base, creating new commit objects",
+   "It creates a merge commit joining two histories",
+   "It copies a whole repository into a new directory",
+   "It deletes commits that are not on the remote"
+  ],
+  "answer": 0,
+  "explanation": "Rebase reapplies each commit on top of a new base; the rewritten commits get new hashes."
+ },
+ {
+  "id": "qd985a479dd5",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What does git rebase -i (interactive rebase) allow you to do?",
+  "options": [
+   "Only view the commit graph",
+   "Merge two repositories interactively",
+   "Reorder, squash, edit, or drop commits in a range",
+   "Stage individual hunks only"
+  ],
+  "answer": 2,
+  "explanation": "Interactive rebase opens a todo list where you pick, reword, squash, reorder, or drop commits."
+ },
+ {
+  "id": "qfabf20c0033",
+  "subject": "devops",
+  "topic": "merging-rebasing",
+  "level": "medium",
+  "question": "What does a fast-forward merge do?",
+  "options": [
+   "Discards the target branch",
+   "Creates a merge commit with two parents every time",
+   "Rewrites history by replaying commits onto a new base",
+   "Moves the branch pointer forward to the target commit without creating a merge commit"
+  ],
+  "answer": 3,
+  "explanation": "When the target branch is a direct descendant of the current one, Git just advances the pointer, so no merge commit is needed."
+ }
+]

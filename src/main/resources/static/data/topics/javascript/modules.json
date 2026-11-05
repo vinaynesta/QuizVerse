@@ -1,0 +1,32 @@
+[
+ {
+  "id": "q451ba695f9b",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What does import(\"./mod.js\") return?",
+  "options": [
+   "The module namespace object synchronously",
+   "A Promise that resolves to the module namespace object",
+   "A string path",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "Dynamic import loads modules on demand and returns a Promise for the module namespace."
+ },
+ {
+  "id": "q8f496317bf3",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "How many default exports can an ES module have?",
+  "options": [
+   "Unlimited",
+   "Two",
+   "At most one",
+   "None; default exports are CommonJS only"
+  ],
+  "answer": 2,
+  "explanation": "A module can have many named exports but at most one default export."
+ }
+]

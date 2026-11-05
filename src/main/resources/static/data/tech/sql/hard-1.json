@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q81fb022648b",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "In MySQL InnoDB at REPEATABLE READ, when is the read snapshot for consistent non-locking reads established?",
+  "options": [
+   "At every statement",
+   "When the connection opens",
+   "At the first consistent read in the transaction",
+   "At COMMIT"
+  ],
+  "answer": 2,
+  "explanation": "InnoDB creates the read view at the first consistent read, and later consistent reads in the same transaction reuse it."
+ },
+ {
+  "id": "qbf5e7b5f257",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "Given rows with x = 1, 2 and 3, what does SELECT * FROM t WHERE x NOT IN (1, NULL) return?",
+  "options": [
+   "Rows with x = 2 and x = 3",
+   "The row with x = 1",
+   "No rows",
+   "All three rows"
+  ],
+  "answer": 2,
+  "explanation": "x NOT IN (1, NULL) is equivalent to x <> 1 AND x <> NULL. The second term is always UNKNOWN, so no row is ever TRUE."
+ },
+ {
+  "id": "qd7271d263b8",
+  "subject": "sql",
+  "topic": "cte",
+  "level": "hard",
+  "question": "What causes a recursive CTE to stop producing rows?",
+  "options": [
+   "Any UNION automatically limits recursion to 100 rows",
+   "The CTE is referenced in the outer query",
+   "The anchor member returns only NULL values",
+   "The recursive member produces no new rows"
+  ],
+  "answer": 3,
+  "explanation": "Recursion ends when an iteration of the recursive member returns no rows. Without a termination condition, a cycle can recurse indefinitely, so use UNION to deduplicate or a depth limit."
+ },
+ {
+  "id": "qe9186d1be94",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "What happens when a scalar subquery in a SELECT list returns more than one row?",
+  "options": [
+   "Only the first row is used silently",
+   "The rows are returned as a set",
+   "The extra rows become NULL",
+   "A runtime error is raised"
+  ],
+  "answer": 3,
+  "explanation": "PostgreSQL raises an error such as 'more than one row returned by a subquery used as an expression'. Use LIMIT 1, an aggregate, or a join to make it deterministic."
+ },
+ {
+  "id": "qe8d265ba00c",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "hard",
+  "question": "Which predicate can use a B-tree index on created_at efficiently?",
+  "options": [
+   "WHERE created_at >= '2024-01-01' AND created_at < '2025-01-01'",
+   "WHERE YEAR(created_at) = 2024",
+   "WHERE created_at::text LIKE '2024%'",
+   "WHERE created_at + INTERVAL '0 days' = '2024-06-01'"
+  ],
+  "answer": 0,
+  "explanation": "A range predicate on the bare column is sargable. Wrapping the column in a function or cast, as in the other options, usually prevents index use."
+ },
+ {
+  "id": "qa414bbeded8",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "hard",
+  "question": "What does SELECT ... FOR SHARE do in PostgreSQL?",
+  "options": [
+   "Locks the whole table exclusively",
+   "Takes a shared row lock that blocks updates and deletes of those rows but allows other shared locks",
+   "Makes the rows read-only for all sessions permanently",
+   "Copies the rows into a temporary table"
+  ],
+  "answer": 1,
+  "explanation": "FOR SHARE prevents concurrent UPDATE, DELETE and FOR UPDATE on the selected rows while still letting other transactions take FOR SHARE locks."
+ },
+ {
+  "id": "qb591cf5beda",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "hard",
+  "question": "What does x > ALL (SELECT y FROM empty_table) evaluate to?",
+  "options": [
+   "NULL",
+   "FALSE",
+   "TRUE",
+   "An error"
+  ],
+  "answer": 2,
+  "explanation": "ALL over an empty set is vacuously TRUE, while ANY over an empty set is FALSE."
+ },
+ {
+  "id": "q18260d1a4b7",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "hard",
+  "question": "For a LEFT JOIN, what is the difference between a right-table condition placed in ON and the same condition placed in WHERE?",
+  "options": [
+   "There is no difference in any case",
+   "ON removes left rows, while WHERE keeps them",
+   "ON filters the result after the join, while WHERE filters during the join",
+   "With ON, unmatched left rows are kept with NULLs; with WHERE, the condition can remove them"
+  ],
+  "answer": 3,
+  "explanation": "A condition in ON only decides which right rows match. A condition in WHERE runs after the join, where NULL-extended rows fail the test and disappear."
+ },
+ {
+  "id": "q5f5ace6568d",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "hard",
+  "question": "In PostgreSQL, what does NULL IS NOT DISTINCT FROM NULL evaluate to?",
+  "options": [
+   "An error",
+   "FALSE",
+   "NULL",
+   "TRUE"
+  ],
+  "answer": 3,
+  "explanation": "IS NOT DISTINCT FROM treats two NULLs as equal, which gives TRUE. It is the null-safe equality operator."
+ },
+ {
+  "id": "qe425eb1219f",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "hard",
+  "question": "A query LEFT JOINs departments to employees and computes COUNT(e.id) per department. What does a department with no employees show?",
+  "options": [
+   "1",
+   "NULL",
+   "0",
+   "No row for that department"
+  ],
+  "answer": 2,
+  "explanation": "The unmatched department row has NULL for e.id, and COUNT(e.id) skips NULLs, giving 0. COUNT(*) would give 1 for the same department."
+ }
+]

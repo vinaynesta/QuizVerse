@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q2e82f96582d",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "Which is a typical strength of NoSQL document databases?",
+  "options": [
+   "A fixed schema enforced on every write",
+   "Mandatory joins across many tables",
+   "Flexible schemas that store nested, varying records",
+   "Built-in support only for SQL queries"
+  ],
+  "answer": 2,
+  "explanation": "Document stores such as MongoDB let each record have its own shape."
+ },
+ {
+  "id": "q44cb43c5c72",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What does the 'D' in ACID stand for?",
+  "options": [
+   "Distribution",
+   "Durability",
+   "Denormalization",
+   "Determinism"
+  ],
+  "answer": 1,
+  "explanation": "Durability means that once a transaction commits, it survives crashes."
+ },
+ {
+  "id": "q4d78f785588",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is a primary key?",
+  "options": [
+   "A cache of the most recent queries",
+   "A copy of another table's data kept for backups",
+   "A column or set of columns that uniquely identifies each row in a table",
+   "An index that speeds up every write"
+  ],
+  "answer": 2,
+  "explanation": "Primary keys enforce uniqueness and give each row a stable identifier."
+ },
+ {
+  "id": "q4f32b189ba0",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What does the 'A' in ACID stand for?",
+  "options": [
+   "Atomicity",
+   "Authorization",
+   "Availability",
+   "Asynchrony"
+  ],
+  "answer": 0,
+  "explanation": "Atomicity means a transaction either fully applies or not at all."
+ },
+ {
+  "id": "q63b3e999117",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is a foreign key?",
+  "options": [
+   "A key used to encrypt the database",
+   "A column that uniquely identifies each row in its own table",
+   "A key stored outside the database",
+   "A column that references the primary key of another table"
+  ],
+  "answer": 3,
+  "explanation": "Foreign keys enforce referential integrity between related tables."
+ },
+ {
+  "id": "qc802664e9e7",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is the main tradeoff of adding an index?",
+  "options": [
+   "Faster writes and reads with no added cost",
+   "Faster reads on indexed columns, at the cost of extra storage and slower writes",
+   "Automatic encryption of the indexed columns",
+   "Removal of the need for a primary key"
+  ],
+  "answer": 1,
+  "explanation": "Indexes must be updated on each write and consume additional disk space."
+ },
+ {
+  "id": "qd44ec58bfc6",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "Which is a typical strength of relational databases?",
+  "options": [
+   "Unlimited horizontal write scaling by default",
+   "Enforcing a schema and supporting joins and multi-row transactions",
+   "Storing only unstructured blobs",
+   "Working without any indexes"
+  ],
+  "answer": 1,
+  "explanation": "Relational databases enforce constraints and relationships; scaling writes horizontally usually needs extra design."
+ },
+ {
+  "id": "qe9ea389b417",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is a read replica?",
+  "options": [
+   "A database that accepts writes independently of the primary",
+   "A backup that cannot be queried until restored",
+   "A copy of a database that serves read queries, usually updated from the primary",
+   "A client-side cache stored only in memory"
+  ],
+  "answer": 2,
+  "explanation": "Read replicas offload read traffic from the primary; with asynchronous replication they may lag slightly."
+ }
+]

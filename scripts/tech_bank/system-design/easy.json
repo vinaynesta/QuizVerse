@@ -1,0 +1,722 @@
+[
+  {
+    "topic": "scalability",
+    "question": "What does horizontal scaling mean?",
+    "options": [
+      "Adding more machines to share the load",
+      "Upgrading the CPU and RAM of a single machine",
+      "Splitting one codebase into separate deployable services",
+      "Increasing the disk size of a database volume"
+    ],
+    "answer": 0,
+    "explanation": "Horizontal scaling adds nodes; vertical scaling adds resources to a single node."
+  },
+  {
+    "topic": "scalability",
+    "question": "Which is a main drawback of vertical scaling?",
+    "options": [
+      "It cannot be done without rewriting the database",
+      "It has a hard ceiling set by the largest machine available",
+      "It always increases network latency between services",
+      "It requires a load balancer in front of the server"
+    ],
+    "answer": 1,
+    "explanation": "A single machine can only grow so far, and one node remains a single point of failure."
+  },
+  {
+    "topic": "scalability",
+    "question": "Which best describes vertical scaling?",
+    "options": [
+      "Adding more servers behind a load balancer",
+      "Partitioning data across several regions",
+      "Adding CPU, memory, or disk to an existing server",
+      "Caching responses at edge locations"
+    ],
+    "answer": 2,
+    "explanation": "Vertical scaling (scale up) increases the capacity of one node; horizontal scaling adds nodes."
+  },
+  {
+    "topic": "scalability",
+    "question": "Why are stateless web servers easy to scale horizontally?",
+    "options": [
+      "Stateless servers never need a network connection",
+      "They remove the need for a database entirely",
+      "They automatically encrypt all traffic",
+      "Any instance can serve any request because no session data lives on the instance"
+    ],
+    "answer": 3,
+    "explanation": "Because no per-client state is stored locally, requests can be routed to any instance."
+  },
+  {
+    "topic": "scalability",
+    "question": "What is elasticity in cloud systems?",
+    "options": [
+      "Automatically adding or removing capacity as demand changes",
+      "Storing data in multiple formats for compatibility",
+      "Compressing HTTP responses to save bandwidth",
+      "Retrying failed requests with a fixed delay"
+    ],
+    "answer": 0,
+    "explanation": "Elastic systems scale out and in with load, usually driven by metrics or schedules."
+  },
+  {
+    "topic": "performance",
+    "question": "What is latency?",
+    "options": [
+      "The number of requests processed per second",
+      "The time taken to complete a single request",
+      "The percentage of requests that succeed",
+      "The number of concurrent connections open"
+    ],
+    "answer": 1,
+    "explanation": "Latency measures how long one operation takes, usually in milliseconds."
+  },
+  {
+    "topic": "performance",
+    "question": "What is throughput?",
+    "options": [
+      "The time taken by one request from start to finish",
+      "The delay between a DNS lookup and a TCP connect",
+      "The amount of work completed per unit of time",
+      "The largest message size a server accepts"
+    ],
+    "answer": 2,
+    "explanation": "Throughput is a rate, such as requests or megabytes processed per second."
+  },
+  {
+    "topic": "performance",
+    "question": "What is the typical effect of batching many requests together?",
+    "options": [
+      "Lower latency and lower throughput at the same time",
+      "Lower latency, but throughput drops to zero",
+      "No effect on either latency or throughput",
+      "Higher throughput, but each individual request may wait longer"
+    ],
+    "answer": 3,
+    "explanation": "Batching amortizes per-request overhead, but each request may wait for the batch to fill."
+  },
+  {
+    "topic": "performance",
+    "question": "What does a p99 latency of 200 ms mean?",
+    "options": [
+      "99% of requests complete within 200 ms",
+      "The average request takes 99 ms",
+      "The server handles 200 requests per second",
+      "1% of requests failed with a timeout"
+    ],
+    "answer": 0,
+    "explanation": "Percentile latency describes the tail of the distribution, which often matters more than the average."
+  },
+  {
+    "topic": "performance",
+    "question": "Why does physical distance between a user and a data center affect latency?",
+    "options": [
+      "Longer distances cause packets to be compressed",
+      "Signals take time to travel the distance, adding round-trip delay",
+      "Distant servers always have slower CPUs",
+      "Physical distance changes the database schema"
+    ],
+    "answer": 1,
+    "explanation": "Propagation delay is bounded by the speed of light in fiber, so distance sets a floor on round-trip time."
+  },
+  {
+    "topic": "performance",
+    "question": "Which change most directly reduces latency for users far from the origin server?",
+    "options": [
+      "Adding more log lines to every request",
+      "Increasing the number of automatic retries",
+      "Serving content from a location closer to those users",
+      "Removing all caching from the request path"
+    ],
+    "answer": 2,
+    "explanation": "Moving data closer to users cuts propagation distance, which dominates for distant clients."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What is the main purpose of a load balancer?",
+    "options": [
+      "Storing user sessions permanently on disk",
+      "Compiling source code during deployment",
+      "Replacing the primary database",
+      "Distributing incoming requests across multiple backend servers"
+    ],
+    "answer": 3,
+    "explanation": "A load balancer spreads traffic so no single backend is overwhelmed."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "Which algorithm sends each new request to the next server in a fixed rotation?",
+    "options": [
+      "Round robin",
+      "Least connections",
+      "IP hash",
+      "Geographic routing"
+    ],
+    "answer": 0,
+    "explanation": "Round robin cycles through backends in order, which is simple but ignores differences in server load."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "Which strategy routes new requests to the server with the fewest active connections?",
+    "options": [
+      "Round robin",
+      "Least connections",
+      "Random selection with no state",
+      "Source port hashing"
+    ],
+    "answer": 1,
+    "explanation": "Least connections adapts better than round robin when request durations vary."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What is the purpose of health checks in a load balancer?",
+    "options": [
+      "Encrypting traffic between clients and servers",
+      "Caching static files at the edge",
+      "Removing unhealthy backends from rotation until they recover",
+      "Increasing the number of database replicas"
+    ],
+    "answer": 2,
+    "explanation": "The balancer probes backends and stops sending traffic to any that fail the check."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What can a Layer 7 (application-layer) load balancer do that a Layer 4 balancer typically cannot?",
+    "options": [
+      "Operate on MAC addresses inside the local network",
+      "Store database rows for faster reads",
+      "Route only UDP traffic",
+      "Route requests based on HTTP details such as the URL path or headers"
+    ],
+    "answer": 3,
+    "explanation": "Layer 7 balancers parse application protocols, so they can route by content; Layer 4 works on IP and port."
+  },
+  {
+    "topic": "caching",
+    "question": "What is a cache?",
+    "options": [
+      "A faster, usually smaller store kept close to where data is needed",
+      "The permanent primary copy of the data",
+      "A log of every user action",
+      "A type of DNS record"
+    ],
+    "answer": 0,
+    "explanation": "Caches trade capacity and freshness for lower read latency and reduced load on the backing store."
+  },
+  {
+    "topic": "caching",
+    "question": "What is a cache hit?",
+    "options": [
+      "The cache is full and must evict an entry",
+      "The requested data is found in the cache",
+      "The origin server returns an error response",
+      "The client sends the same request twice"
+    ],
+    "answer": 1,
+    "explanation": "A hit is served from the cache without going to the slower backing store."
+  },
+  {
+    "topic": "caching",
+    "question": "What typically happens on a cache miss?",
+    "options": [
+      "The request fails immediately with an error",
+      "The entire cache is cleared",
+      "The data is fetched from the backing store, and often written into the cache",
+      "The response is returned with an empty body"
+    ],
+    "answer": 2,
+    "explanation": "A miss falls through to the source of truth; whether the result is cached depends on the policy."
+  },
+  {
+    "topic": "caching",
+    "question": "Which eviction policy removes the least recently used entry first?",
+    "options": [
+      "FIFO (first in, first out)",
+      "LFU (least frequently used)",
+      "Random eviction",
+      "LRU (least recently used)"
+    ],
+    "answer": 3,
+    "explanation": "LRU assumes entries not accessed recently are less likely to be needed again."
+  },
+  {
+    "topic": "caching",
+    "question": "What does a TTL (time to live) on a cache entry define?",
+    "options": [
+      "How long the entry may be served before it is considered expired",
+      "The maximum size of a single cache entry",
+      "The number of cache nodes in a cluster",
+      "The timeout for a database connection"
+    ],
+    "answer": 0,
+    "explanation": "After the TTL elapses, the entry is treated as stale and must be refreshed."
+  },
+  {
+    "topic": "caching",
+    "question": "What is the main risk of a long TTL on data that changes often?",
+    "options": [
+      "The cache will delete the origin data",
+      "Clients may keep receiving stale values for the length of the TTL",
+      "Requests will be routed to the wrong region",
+      "Writes will be blocked until the TTL expires"
+    ],
+    "answer": 1,
+    "explanation": "A long TTL trades freshness for fewer origin requests; stale data persists until expiry or invalidation."
+  },
+  {
+    "topic": "cdn",
+    "question": "What does a CDN do?",
+    "options": [
+      "Stores the primary copy of a relational database",
+      "Assigns IP addresses to client devices",
+      "Caches content on edge servers close to users to reduce latency",
+      "Runs unit tests before each deployment"
+    ],
+    "answer": 2,
+    "explanation": "CDNs serve cacheable content from points of presence near users, offloading the origin."
+  },
+  {
+    "topic": "cdn",
+    "question": "Which content is typically best suited for CDN caching?",
+    "options": [
+      "Per-user bank account balances",
+      "Real-time chat messages between two users",
+      "One-time password verification codes",
+      "Static assets such as images, CSS, and JavaScript bundles"
+    ],
+    "answer": 3,
+    "explanation": "Static, shareable content can be cached widely without per-user correctness risk."
+  },
+  {
+    "topic": "cdn",
+    "question": "What is the origin in a CDN setup?",
+    "options": [
+      "The authoritative server the CDN fetches content from on a cache miss",
+      "The DNS resolver the CDN uses to look up hostnames",
+      "The browser that first requested the page",
+      "The service that evicts entries from the edge cache"
+    ],
+    "answer": 0,
+    "explanation": "Edge servers fall back to the origin when they do not have a valid cached copy."
+  },
+  {
+    "topic": "api-design",
+    "question": "In REST, which HTTP method retrieves a resource without changing server state?",
+    "options": [
+      "POST",
+      "GET",
+      "DELETE",
+      "PUT"
+    ],
+    "answer": 1,
+    "explanation": "GET is a safe method, meaning it should not modify server state."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which HTTP status code indicates that a resource was successfully created?",
+    "options": [
+      "200 OK",
+      "204 No Content",
+      "201 Created",
+      "301 Moved Permanently"
+    ],
+    "answer": 2,
+    "explanation": "201 signals a new resource was created, usually with a Location header; 200 is a generic success."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which HTTP method is idempotent and typically used to replace a resource at a known URL?",
+    "options": [
+      "POST",
+      "PATCH",
+      "SEND",
+      "PUT"
+    ],
+    "answer": 3,
+    "explanation": "Repeating a PUT with the same body leaves the resource in the same state; POST and PATCH are not guaranteed idempotent."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which status code means the requested resource was not found?",
+    "options": [
+      "404 Not Found",
+      "500 Internal Server Error",
+      "401 Unauthorized",
+      "408 Request Timeout"
+    ],
+    "answer": 0,
+    "explanation": "404 means no resource exists at the given URL; 5xx codes indicate server-side failures."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which statement correctly distinguishes 401 from 403?",
+    "options": [
+      "401 means rate limited; 403 means the request body is malformed",
+      "401 means authentication is missing or invalid; 403 means the client is authenticated but not allowed",
+      "401 means not found; 403 means the server crashed",
+      "They are interchangeable names for the same condition"
+    ],
+    "answer": 1,
+    "explanation": "401 is about who the caller is; 403 is about what an authenticated caller may do."
+  },
+  {
+    "topic": "api-design",
+    "question": "What is URI-based API versioning, such as /v1/users?",
+    "options": [
+      "Sending the version in a custom request header",
+      "Negotiating the media type with the Accept header",
+      "Putting the version number in the URL path",
+      "Hashing the response body to produce a version"
+    ],
+    "answer": 2,
+    "explanation": "The version is part of the resource address, so it is visible in every request URL."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which header typically tells the server the media type of a request body?",
+    "options": [
+      "Accept-Language",
+      "Host",
+      "Cache-Control",
+      "Content-Type"
+    ],
+    "answer": 3,
+    "explanation": "Content-Type declares the format of the body, such as application/json."
+  },
+  {
+    "topic": "databases",
+    "question": "What is a primary key?",
+    "options": [
+      "A column or set of columns that uniquely identifies each row in a table",
+      "A copy of another table's data kept for backups",
+      "A cache of the most recent queries",
+      "An index that speeds up every write"
+    ],
+    "answer": 0,
+    "explanation": "Primary keys enforce uniqueness and give each row a stable identifier."
+  },
+  {
+    "topic": "databases",
+    "question": "What is the main tradeoff of adding an index?",
+    "options": [
+      "Faster writes and reads with no added cost",
+      "Faster reads on indexed columns, at the cost of extra storage and slower writes",
+      "Automatic encryption of the indexed columns",
+      "Removal of the need for a primary key"
+    ],
+    "answer": 1,
+    "explanation": "Indexes must be updated on each write and consume additional disk space."
+  },
+  {
+    "topic": "databases",
+    "question": "What does the 'A' in ACID stand for?",
+    "options": [
+      "Availability",
+      "Authorization",
+      "Atomicity",
+      "Asynchrony"
+    ],
+    "answer": 2,
+    "explanation": "Atomicity means a transaction either fully applies or not at all."
+  },
+  {
+    "topic": "databases",
+    "question": "What is a read replica?",
+    "options": [
+      "A database that accepts writes independently of the primary",
+      "A backup that cannot be queried until restored",
+      "A client-side cache stored only in memory",
+      "A copy of a database that serves read queries, usually updated from the primary"
+    ],
+    "answer": 3,
+    "explanation": "Read replicas offload read traffic from the primary; with asynchronous replication they may lag slightly."
+  },
+  {
+    "topic": "databases",
+    "question": "Which is a typical strength of relational databases?",
+    "options": [
+      "Enforcing a schema and supporting joins and multi-row transactions",
+      "Unlimited horizontal write scaling by default",
+      "Storing only unstructured blobs",
+      "Working without any indexes"
+    ],
+    "answer": 0,
+    "explanation": "Relational databases enforce constraints and relationships; scaling writes horizontally usually needs extra design."
+  },
+  {
+    "topic": "reliability",
+    "question": "How is availability usually expressed?",
+    "options": [
+      "As the average CPU usage across all hosts",
+      "As the percentage of time the system is operational and serving requests, such as 99.9%",
+      "As the number of deployments per day",
+      "As the network bandwidth available to the service"
+    ],
+    "answer": 1,
+    "explanation": "Availability targets like 99.9% define the allowed downtime over a period."
+  },
+  {
+    "topic": "reliability",
+    "question": "What does redundancy aim to eliminate?",
+    "options": [
+      "The need for logging and monitoring",
+      "Every form of network latency",
+      "Single points of failure, by duplicating critical components",
+      "The need for backups of any kind"
+    ],
+    "answer": 2,
+    "explanation": "Redundant components let the system keep working when one instance fails."
+  },
+  {
+    "topic": "reliability",
+    "question": "What is failover?",
+    "options": [
+      "Reversing a database schema migration",
+      "Rolling back a code release to the previous version",
+      "Encrypting requests that failed validation",
+      "Switching work to a standby component when the active one fails"
+    ],
+    "answer": 3,
+    "explanation": "Failover moves traffic or responsibility to a standby, such as a replica promoted to primary."
+  },
+  {
+    "topic": "scalability",
+    "question": "What is a microservices architecture?",
+    "options": [
+      "An application built as small services that can be deployed and scaled independently",
+      "A single application deployed as one unit",
+      "A database split into many tables",
+      "A server with many CPU cores"
+    ],
+    "answer": 0,
+    "explanation": "Each service owns one capability and can be released and scaled on its own, at the cost of more network calls."
+  },
+  {
+    "topic": "scalability",
+    "question": "What does auto-scaling usually react to when adding or removing instances?",
+    "options": [
+      "The number of developers on the team",
+      "Metrics such as CPU usage, request rate, or queue length",
+      "The size of the codebase",
+      "The time since the last deployment only"
+    ],
+    "answer": 1,
+    "explanation": "Auto-scaling policies compare load metrics against thresholds or targets to adjust capacity."
+  },
+  {
+    "topic": "performance",
+    "question": "What is bandwidth?",
+    "options": [
+      "The time a single packet takes to reach its destination",
+      "The number of servers in a data center",
+      "The maximum amount of data that can be transferred per unit of time",
+      "The percentage of requests that fail"
+    ],
+    "answer": 2,
+    "explanation": "Bandwidth is capacity, such as megabits per second, while latency is delay."
+  },
+  {
+    "topic": "performance",
+    "question": "Why is reading from memory generally faster than reading from disk?",
+    "options": [
+      "Memory stores less data per byte",
+      "Disks can only be read by one process",
+      "Memory is always located on another machine",
+      "RAM access takes nanoseconds, while disk access takes microseconds to milliseconds"
+    ],
+    "answer": 3,
+    "explanation": "This large gap is why caches keep hot data in memory."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What is a reverse proxy?",
+    "options": [
+      "A server that sits in front of backend servers and forwards client requests to them",
+      "A proxy that clients configure to reach any website",
+      "A database that reverses query results",
+      "A firewall that blocks outgoing traffic"
+    ],
+    "answer": 0,
+    "explanation": "Reverse proxies such as Nginx can handle load balancing, TLS termination, and caching for backends."
+  },
+  {
+    "topic": "load-balancing",
+    "question": "What does weighted round robin allow?",
+    "options": [
+      "Sending all traffic to the fastest server",
+      "Sending proportionally more requests to servers with higher capacity",
+      "Routing by the client's IP address",
+      "Removing unhealthy servers"
+    ],
+    "answer": 1,
+    "explanation": "Each server gets a weight, and the rotation sends traffic in proportion to it."
+  },
+  {
+    "topic": "caching",
+    "question": "Where does browser caching store responses?",
+    "options": [
+      "On the origin server's disk",
+      "In the database's buffer pool",
+      "On the user's device, controlled by HTTP headers such as Cache-Control",
+      "In the load balancer's routing table"
+    ],
+    "answer": 2,
+    "explanation": "The browser reuses cached responses for repeat visits until they expire or must be revalidated."
+  },
+  {
+    "topic": "caching",
+    "question": "Which data is usually a poor fit for caching?",
+    "options": [
+      "Product images that rarely change",
+      "A popular news article",
+      "Configuration that changes once a day",
+      "Data that changes on almost every read and must always be exact, such as a live account balance"
+    ],
+    "answer": 3,
+    "explanation": "If data changes constantly and staleness is unacceptable, cached copies are rarely valid."
+  },
+  {
+    "topic": "caching",
+    "question": "What is an in-memory key-value store commonly used as a shared application cache?",
+    "options": [
+      "Redis",
+      "PostgreSQL",
+      "Apache Kafka",
+      "Elasticsearch"
+    ],
+    "answer": 0,
+    "explanation": "Redis keeps data in memory and supports key-based reads and writes with expiration."
+  },
+  {
+    "topic": "cdn",
+    "question": "How does a CDN typically direct a user to a nearby edge server?",
+    "options": [
+      "By asking the user to choose a server manually",
+      "Using DNS-based or anycast routing that considers the user's location",
+      "By always sending users to the origin first",
+      "By storing the user's location in a cookie set by the origin"
+    ],
+    "answer": 1,
+    "explanation": "DNS responses or anycast IP routing steer each user to a close, healthy edge location."
+  },
+  {
+    "topic": "cdn",
+    "question": "Why do CDNs reduce load on the origin server?",
+    "options": [
+      "They compress the origin's database",
+      "They block all dynamic requests",
+      "Edge servers answer repeated requests for cached content, so fewer requests reach the origin",
+      "They replace the origin entirely"
+    ],
+    "answer": 2,
+    "explanation": "Only misses and uncacheable requests reach the origin."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which HTTP status code indicates an unexpected error on the server?",
+    "options": [
+      "400 Bad Request",
+      "301 Moved Permanently",
+      "404 Not Found",
+      "500 Internal Server Error"
+    ],
+    "answer": 3,
+    "explanation": "5xx codes signal server-side failures, while 4xx codes signal client errors."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which HTTP method is typically used to delete a resource?",
+    "options": [
+      "DELETE",
+      "POST",
+      "GET",
+      "HEAD"
+    ],
+    "answer": 0,
+    "explanation": "DELETE removes the resource identified by the URL and is idempotent."
+  },
+  {
+    "topic": "api-design",
+    "question": "Which data format do most web APIs use for request and response bodies today?",
+    "options": [
+      "CSV",
+      "JSON",
+      "Binary executables",
+      "Plain HTML pages"
+    ],
+    "answer": 1,
+    "explanation": "JSON is lightweight, human-readable, and supported by nearly every language."
+  },
+  {
+    "topic": "api-design",
+    "question": "What does a 400 Bad Request status mean?",
+    "options": [
+      "The server is overloaded",
+      "The resource has moved",
+      "The request is malformed or invalid, so the server will not process it",
+      "The client must authenticate"
+    ],
+    "answer": 2,
+    "explanation": "400 is a client error, for example invalid JSON or a missing required field."
+  },
+  {
+    "topic": "databases",
+    "question": "What is a foreign key?",
+    "options": [
+      "A key used to encrypt the database",
+      "A column that uniquely identifies each row in its own table",
+      "A key stored outside the database",
+      "A column that references the primary key of another table"
+    ],
+    "answer": 3,
+    "explanation": "Foreign keys enforce referential integrity between related tables."
+  },
+  {
+    "topic": "databases",
+    "question": "Which is a typical strength of NoSQL document databases?",
+    "options": [
+      "Flexible schemas that store nested, varying records",
+      "Mandatory joins across many tables",
+      "A fixed schema enforced on every write",
+      "Built-in support only for SQL queries"
+    ],
+    "answer": 0,
+    "explanation": "Document stores such as MongoDB let each record have its own shape."
+  },
+  {
+    "topic": "databases",
+    "question": "What does the 'D' in ACID stand for?",
+    "options": [
+      "Distribution",
+      "Durability",
+      "Denormalization",
+      "Determinism"
+    ],
+    "answer": 1,
+    "explanation": "Durability means that once a transaction commits, it survives crashes."
+  },
+  {
+    "topic": "reliability",
+    "question": "What is a backup?",
+    "options": [
+      "A second load balancer",
+      "A cache of recent requests",
+      "A copy of data kept separately so it can be restored after loss or corruption",
+      "A replica that serves read traffic"
+    ],
+    "answer": 2,
+    "explanation": "Backups protect against data loss, including mistakes that replication would copy."
+  },
+  {
+    "topic": "reliability",
+    "question": "What is the main purpose of monitoring and alerting?",
+    "options": [
+      "To speed up database queries",
+      "To reduce storage costs",
+      "To replace testing",
+      "To detect problems quickly and notify the people who can fix them"
+    ],
+    "answer": 3,
+    "explanation": "Monitoring tracks system health, and alerts notify on-call engineers when thresholds are breached."
+  }
+]

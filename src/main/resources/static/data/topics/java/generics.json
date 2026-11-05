@@ -15,6 +15,21 @@
   "explanation": "Generics work with reference types; primitives are boxed into wrapper types like Integer."
  },
  {
+  "id": "q4d7d3749041",
+  "subject": "java",
+  "topic": "generics",
+  "level": "easy",
+  "question": "Which of these is a valid generic method declaration?",
+  "options": [
+   "public void <T> print(T item)",
+   "public void print<T>(T item)",
+   "public T<> void print(T item)",
+   "public <T> void print(T item)"
+  ],
+  "answer": 3,
+  "explanation": "The type parameter list goes between the modifiers and the return type."
+ },
+ {
   "id": "q7349e8336ec",
   "subject": "java",
   "topic": "generics",
@@ -73,6 +88,21 @@
   ],
   "answer": 3,
   "explanation": "extends in a type bound covers interfaces too, so T must implement Comparable<T>."
+ },
+ {
+  "id": "q46bf26cb9a0",
+  "subject": "java",
+  "topic": "generics",
+  "level": "medium",
+  "question": "What is type erasure in Java generics?",
+  "options": [
+   "The JVM deletes unused generic classes at runtime",
+   "Generic types are converted into separate classes for each type argument",
+   "Type parameters are inferred at runtime from the actual objects",
+   "The compiler removes type arguments and replaces type parameters with their bounds or Object"
+  ],
+  "answer": 3,
+  "explanation": "Erasure keeps generics compatible with pre-generics bytecode, so type arguments are mostly unavailable at runtime."
  },
  {
   "id": "q4d1cd278e73",
@@ -150,6 +180,21 @@
   "explanation": "Reified arrays plus erased generics would make array store checks unsound, so generic array creation is forbidden."
  },
  {
+  "id": "q9e56d077299",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "Why does declaring static T value; inside class Box<T> fail to compile?",
+  "options": [
+   "T must be bounded before it can be used in a field",
+   "Static fields must be primitives",
+   "Static members are shared across all parameterizations, so they cannot use the class type parameter",
+   "Generic classes cannot have static members"
+  ],
+  "answer": 2,
+  "explanation": "There is only one static field for Box<String>, Box<Integer>, and so on, so no single T applies."
+ },
+ {
   "id": "qb961d045de8",
   "subject": "java",
   "topic": "generics",
@@ -163,6 +208,21 @@
   ],
   "answer": 1,
   "explanation": "After erasure the JVM does not know T; a common workaround is passing a Supplier<T> or Class<T>."
+ },
+ {
+  "id": "qc98b60f641d",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "For a variable of type List<? super Integer>, what can you add, and what type do you get when reading?",
+  "options": [
+   "You can add any Number, and reads return Integer",
+   "You can add nothing, and reads return Integer",
+   "You can add Integer values, and reads return Object",
+   "You can add Object values, and reads return Number"
+  ],
+  "answer": 2,
+  "explanation": "A super-bounded wildcard is a consumer: it safely accepts Integer, but the element type is only known to be some supertype."
  },
  {
   "id": "qd99eb0bff93",

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2ac734bfcb1",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Stream.of(3, 1, 2).sorted().findFirst().get() return?",
+  "options": [
+   "3",
+   "1",
+   "2",
+   "An empty Optional"
+  ],
+  "answer": 1,
+  "explanation": "sorted() orders the elements as 1, 2, 3, and findFirst returns the first."
+ },
+ {
+  "id": "q4276e1cbf66",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "What does Iterator.next() throw when there are no more elements?",
+  "options": [
+   "NoSuchElementException",
+   "NullPointerException",
+   "IllegalStateException",
+   "IndexOutOfBoundsException"
+  ],
+  "answer": 0,
+  "explanation": "Callers should check hasNext() first, or next() throws NoSuchElementException."
+ },
+ {
+  "id": "q89c2d5641c1",
+  "subject": "java",
+  "topic": "concurrency",
+  "level": "medium",
+  "question": "What does ExecutorService.shutdown() do?",
+  "options": [
+   "Interrupts all running tasks immediately",
+   "Blocks until every task completes",
+   "Discards all queued tasks",
+   "Stops accepting new tasks while letting already submitted tasks finish"
+  ],
+  "answer": 3,
+  "explanation": "shutdown() is an orderly shutdown; use awaitTermination to wait and shutdownNow to interrupt."
+ },
+ {
+  "id": "q2a96dd1522b",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Can a constructor be declared final?",
+  "options": [
+   "Yes, to prevent subclass constructors",
+   "Yes, but only in abstract classes",
+   "No, it is a compile error",
+   "Yes, and it makes the class immutable"
+  ],
+  "answer": 2,
+  "explanation": "Constructors are not inherited or overridden, so final is not a legal modifier for them."
+ },
+ {
+  "id": "q7bb320f31dc",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "To sort a List with Collections.sort(list) and no Comparator, what must its elements implement?",
+  "options": [
+   "Comparator",
+   "Iterable",
+   "Cloneable",
+   "Comparable"
+  ],
+  "answer": 3,
+  "explanation": "Without a Comparator, sorting uses each element's natural ordering via compareTo."
+ },
+ {
+  "id": "qa9b38a5fbfc",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "medium",
+  "question": "Given record Point(int x, int y), how do you read the x component of a Point p?",
+  "options": [
+   "p.getX()",
+   "p.x",
+   "p.x()",
+   "p.get(\"x\")"
+  ],
+  "answer": 2,
+  "explanation": "Records generate accessor methods named exactly after their components, and the fields themselves are private."
+ },
+ {
+  "id": "qdf907d317d8",
+  "subject": "java",
+  "topic": "strings",
+  "level": "medium",
+  "question": "What does \"a-b-c\".replace(\"-\", \"\") return?",
+  "options": [
+   "\"a-b-c\"",
+   "\"ab-c\"",
+   "\"abc\"",
+   "\"-\""
+  ],
+  "answer": 2,
+  "explanation": "replace substitutes every occurrence of the target sequence."
+ },
+ {
+  "id": "qcb5e594ca74",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "medium",
+  "question": "What happens if you write catch (IOException e) for a try block whose code cannot throw IOException?",
+  "options": [
+   "It compiles and the catch is simply never used",
+   "It is a compile error",
+   "It compiles with only a warning",
+   "It throws an IOException at runtime"
+  ],
+  "answer": 1,
+  "explanation": "The compiler rejects catch clauses for checked exceptions that the try block can never throw."
+ },
+ {
+  "id": "qb27a02705f5",
+  "subject": "java",
+  "topic": "oop",
+  "level": "medium",
+  "question": "Which code can access a protected member of a class?",
+  "options": [
+   "Only code in the same class",
+   "Code in the same package and subclasses",
+   "Any code anywhere",
+   "Only subclasses in the same package"
+  ],
+  "answer": 1,
+  "explanation": "protected adds subclass access on top of package-private visibility."
+ },
+ {
+  "id": "q266fb170a68",
+  "subject": "java",
+  "topic": "streams-lambdas",
+  "level": "medium",
+  "question": "What does Optional.ofNullable(null).orElse(\"x\") return?",
+  "options": [
+   "null",
+   "\"x\"",
+   "An empty Optional",
+   "It throws NullPointerException"
+  ],
+  "answer": 1,
+  "explanation": "ofNullable(null) creates an empty Optional, so orElse returns the fallback."
+ }
+]

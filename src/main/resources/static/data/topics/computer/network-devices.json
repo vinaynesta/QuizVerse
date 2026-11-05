@@ -1,0 +1,210 @@
+[
+ {
+  "id": "q11229c49435",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "Which device converts digital signals to analog signals and back so data can travel over telephone lines?",
+  "options": [
+   "Router",
+   "Hub",
+   "Modem",
+   "Switch"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A modem modulates digital data into analog signals and demodulates them back at the other end."
+ },
+ {
+  "id": "q18d06c6bff1",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "The word 'modem' is short for:",
+  "options": [
+   "Modulator-Demodulator",
+   "Modern Data Machine",
+   "Mobile Device Emulator",
+   "Monitor-Demonitor"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Modem stands for Modulator-Demodulator, describing its two functions."
+ },
+ {
+  "id": "q3766c3df982",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "What does 'NIC' stand for in networking?",
+  "options": [
+   "Network Internal Cable",
+   "Network Interface Card",
+   "New Internet Connection",
+   "Network Information Centre"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A Network Interface Card lets a computer connect to a network."
+ },
+ {
+  "id": "qd41777dc489",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "Which device forwards data packets between different networks, such as a home network and the Internet?",
+  "options": [
+   "Monitor",
+   "Scanner",
+   "Repeater",
+   "Router"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A router chooses paths and forwards packets from one network to another."
+ },
+ {
+  "id": "q3013f388506",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "Which device sends incoming data out to all of its ports, regardless of the destination?",
+  "options": [
+   "Switch",
+   "Hub",
+   "Router",
+   "Gateway"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A hub simply broadcasts data to every connected device, unlike a switch."
+ },
+ {
+  "id": "q416067e3815",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "Which device regenerates a weak signal so that it can travel a longer distance?",
+  "options": [
+   "Gateway",
+   "Bridge",
+   "Repeater",
+   "Router"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A repeater amplifies or regenerates signals to extend the range of a network."
+ },
+ {
+  "id": "q5f70919586b",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "Which device joins two LAN segments and filters traffic between them using MAC addresses?",
+  "options": [
+   "Repeater",
+   "Hub",
+   "Modem",
+   "Bridge"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A bridge connects LAN segments and forwards frames based on MAC addresses."
+ },
+ {
+  "id": "qab8fdf3210a",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "A router works mainly at which layer of the OSI model?",
+  "options": [
+   "Network layer",
+   "Physical layer",
+   "Session layer",
+   "Presentation layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Routers use IP addresses to forward packets, which is a Network layer (layer 3) function."
+ },
+ {
+  "id": "qb71b1750ad1",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "Which device connects two networks that use different protocols by translating between them?",
+  "options": [
+   "Hub",
+   "Repeater",
+   "Modem",
+   "Gateway"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A gateway acts as a protocol converter between dissimilar networks."
+ },
+ {
+  "id": "qf6f18b2d515",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "A switch delivers a frame only to the destination port by reading which address?",
+  "options": [
+   "IP address",
+   "MAC address",
+   "Email address",
+   "URL"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A switch keeps a table of MAC addresses and forwards frames only to the matching port."
+ },
+ {
+  "id": "q1f647ab18c4",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "hard",
+  "question": "How many bits long is a MAC address?",
+  "options": [
+   "32",
+   "64",
+   "48",
+   "128"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A MAC address is 48 bits, usually written as six pairs of hexadecimal digits."
+ },
+ {
+  "id": "q4dffc8a0898",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "hard",
+  "question": "A hub operates at which layer of the OSI model?",
+  "options": [
+   "Physical layer",
+   "Network layer",
+   "Data Link layer",
+   "Transport layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A hub only repeats electrical signals, a layer 1 (Physical) function."
+ },
+ {
+  "id": "qc63a1d9edc7",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "hard",
+  "question": "A basic network switch operates at which layer of the OSI model?",
+  "options": [
+   "Data Link layer",
+   "Network layer",
+   "Application layer",
+   "Physical layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A standard switch forwards frames using MAC addresses, a layer 2 (Data Link) function."
+ }
+]

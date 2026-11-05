@@ -45,6 +45,21 @@
   "explanation": "Backpropagation propagates error derivatives backward through the layers so an optimizer can update the weights."
  },
  {
+  "id": "qc181cfa58ec",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What does a loss function measure during training?",
+  "options": [
+   "How many parameters the model has",
+   "How far the model's predictions are from the target values",
+   "How long each training step takes",
+   "How much memory the model uses"
+  ],
+  "answer": 1,
+  "explanation": "Training minimizes the loss, so it defines what counts as a good prediction."
+ },
+ {
   "id": "qcefe4c6bf9a",
   "subject": "ai",
   "topic": "neural-networks",
@@ -60,6 +75,21 @@
   "explanation": "Without non-linear activations, stacked layers collapse into a single linear transformation."
  },
  {
+  "id": "qe42ac4caeae",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "easy",
+  "question": "What is a weight in a neural network?",
+  "options": [
+   "A learnable parameter that scales how much an input contributes to a neuron",
+   "The size of the training dataset",
+   "A fixed constant chosen before training and never changed",
+   "The number of layers in the network"
+  ],
+  "answer": 0,
+  "explanation": "Weights are adjusted during training so the network's outputs better match the targets."
+ },
+ {
   "id": "q294a7c79548",
   "subject": "ai",
   "topic": "neural-networks",
@@ -73,6 +103,21 @@
   ],
   "answer": 1,
   "explanation": "By randomly disabling units, dropout forces the network to learn redundant, more robust features."
+ },
+ {
+  "id": "q6c71da1d9df",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What does momentum add to gradient descent?",
+  "options": [
+   "A larger batch size at each step",
+   "A random restart whenever the loss increases",
+   "A penalty on large weights",
+   "A running velocity from past gradients that speeds progress along consistent directions and dampens oscillation"
+  ],
+  "answer": 3,
+  "explanation": "Momentum accumulates past updates, helping the optimizer move through ravines and flat regions faster."
  },
  {
   "id": "q6f577126f6a",
@@ -105,6 +150,21 @@
   "explanation": "Overly large steps overshoot minima, causing unstable or exploding loss."
  },
  {
+  "id": "qe4d5af9107d",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "medium",
+  "question": "What is the softmax function typically used for in a classifier?",
+  "options": [
+   "Introducing sparsity by zeroing negative values",
+   "Normalizing input features before training",
+   "Converting raw output scores into a probability distribution over classes",
+   "Reducing the learning rate during training"
+  ],
+  "answer": 2,
+  "explanation": "Softmax exponentiates and normalizes scores so outputs are positive and sum to 1."
+ },
+ {
   "id": "qebec77bc8fa",
   "subject": "ai",
   "topic": "neural-networks",
@@ -118,6 +178,21 @@
   ],
   "answer": 3,
   "explanation": "Early stopping acts as regularization by keeping the weights from before the model starts to overfit."
+ },
+ {
+  "id": "q05cfd9d4ef0",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "Why is He (Kaiming) initialization preferred over Xavier initialization for ReLU networks?",
+  "options": [
+   "It initializes all weights to exactly one",
+   "It removes the need for an activation function",
+   "It makes every layer output the same value",
+   "It scales weight variance by 2/fan_in to compensate for ReLU zeroing about half the activations"
+  ],
+  "answer": 3,
+  "explanation": "Keeping activation variance stable across layers helps very deep ReLU networks train without signals vanishing."
  },
  {
   "id": "q06c343cb0d6",
@@ -148,6 +223,21 @@
   ],
   "answer": 1,
   "explanation": "Normalizing intermediate activations with learned scale and shift allows higher learning rates and smoother optimization."
+ },
+ {
+  "id": "q723ae70c13e",
+  "subject": "ai",
+  "topic": "neural-networks",
+  "level": "hard",
+  "question": "Which technique is commonly used to handle exploding gradients, especially in RNNs?",
+  "options": [
+   "Removing all activation functions",
+   "Gradient clipping",
+   "Initializing all weights to zero",
+   "Increasing the learning rate"
+  ],
+  "answer": 1,
+  "explanation": "Clipping rescales gradients whose norm exceeds a threshold, preventing a single huge update from destabilizing training."
  },
  {
   "id": "q7caeb6adc8f",

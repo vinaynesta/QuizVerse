@@ -45,6 +45,36 @@
   "explanation": "The max-heap property makes every parent at least as large as its children, so the root is the maximum."
  },
  {
+  "id": "qdd4a848bd65",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "easy",
+  "question": "What is the time complexity of reading, without removing, the minimum element of a binary min-heap?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n log n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "The minimum is always at the root, so it can be read directly."
+ },
+ {
+  "id": "q34cb12c4ddf",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "What is the time complexity of inserting an element into a binary heap of n elements?",
+  "options": [
+   "O(n log n)",
+   "O(1)",
+   "O(n)",
+   "O(log n)"
+  ],
+  "answer": 3,
+  "explanation": "The new element is sifted up along a single root-to-leaf path of logarithmic height."
+ },
+ {
   "id": "q56717be6036",
   "subject": "dsa",
   "topic": "heaps",
@@ -75,6 +105,21 @@
   "explanation": "Most nodes are near the bottom and sift down only a short distance, summing to linear time."
  },
  {
+  "id": "qb206847d5f1",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "medium",
+  "question": "In a 0-indexed array representation of a binary heap, at which index is the parent of the node at index i (i > 0)?",
+  "options": [
+   "2i + 1",
+   "floor(i / 2)",
+   "floor((i - 1) / 2)",
+   "i - 1"
+  ],
+  "answer": 2,
+  "explanation": "Children of index p are at 2p + 1 and 2p + 2, which inverts to floor((i - 1) / 2)."
+ },
+ {
   "id": "qc0f95778aa0",
   "subject": "dsa",
   "topic": "heaps",
@@ -103,6 +148,21 @@
   ],
   "answer": 2,
   "explanation": "Balancing the two heaps keeps the median at one or both of their tops."
+ },
+ {
+  "id": "q34ec9a5ca1a",
+  "subject": "dsa",
+  "topic": "heaps",
+  "level": "hard",
+  "question": "Which heap variant provides O(1) amortized decrease-key, giving Dijkstra's algorithm O(E + V log V) time?",
+  "options": [
+   "Binary heap",
+   "Fibonacci heap",
+   "Min-max heap",
+   "d-ary heap with d = 2"
+  ],
+  "answer": 1,
+  "explanation": "Fibonacci heaps defer structural work, making decrease-key constant amortized while extract-min stays O(log n) amortized."
  },
  {
   "id": "qa563f3e15a7",

@@ -1,5 +1,20 @@
 [
  {
+  "id": "q15565db4599",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "easy",
+  "question": "In Spring Security terms, what is authentication?",
+  "options": [
+   "Verifying who a user is",
+   "Deciding what a user is allowed to do",
+   "Encrypting HTTP traffic",
+   "Logging security events"
+  ],
+  "answer": 0,
+  "explanation": "Authentication establishes identity, while authorization decides access for that identity."
+ },
+ {
   "id": "q5c978d80d98",
   "subject": "springboot",
   "topic": "security",
@@ -75,6 +90,21 @@
   "explanation": "@EnableMethodSecurity replaces the deprecated @EnableGlobalMethodSecurity and enables pre/post annotations by default."
  },
  {
+  "id": "q19f50ae1f8c",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "Which starter configures an app to validate JWT bearer tokens as an OAuth2 resource server?",
+  "options": [
+   "spring-boot-starter-oauth2-client",
+   "spring-boot-starter-jwt",
+   "spring-boot-starter-security-oidc",
+   "spring-boot-starter-oauth2-resource-server"
+  ],
+  "answer": 3,
+  "explanation": "The resource server starter plus a property like spring.security.oauth2.resourceserver.jwt.issuer-uri enables JWT validation."
+ },
+ {
   "id": "q247914999cd",
   "subject": "springboot",
   "topic": "security",
@@ -88,6 +118,21 @@
   ],
   "answer": 3,
   "explanation": "CSRF exploits credentials that browsers send automatically, such as cookies; a manually added header is not sent cross-site."
+ },
+ {
+  "id": "q5fb3a93a4a9",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "medium",
+  "question": "What does sessionCreationPolicy(SessionCreationPolicy.STATELESS) do in Spring Security 6?",
+  "options": [
+   "Every request gets a new session",
+   "Sessions are stored in a database instead of memory",
+   "Spring Security never creates an HttpSession or uses it to obtain the SecurityContext",
+   "CSRF tokens are stored in cookies"
+  ],
+  "answer": 2,
+  "explanation": "STATELESS suits token-based APIs where each request carries its own credentials."
  },
  {
   "id": "q8bee7f8cd9e",
@@ -118,6 +163,21 @@
   ],
   "answer": 2,
   "explanation": "antMatchers and mvcMatchers were removed in Spring Security 6; requestMatchers inside authorizeHttpRequests is the replacement."
+ },
+ {
+  "id": "q6c9a13a077e",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "In authorizeHttpRequests, rules for anyRequest().authenticated() are declared before requestMatchers(\"/public/**\").permitAll(). What is the result?",
+  "options": [
+   "/public/** is still public because specific rules always win",
+   "Both rules are merged",
+   "Configuration fails, since anyRequest() must be the last rule",
+   "Only /public/** requires authentication"
+  ],
+  "answer": 2,
+  "explanation": "Rules are matched in order, and Spring Security 6 rejects adding matchers after anyRequest()."
  },
  {
   "id": "q9c7ae08f441",
@@ -178,5 +238,20 @@
   ],
   "answer": 3,
   "explanation": "Method security uses proxies, and internal calls never pass through them."
+ },
+ {
+  "id": "qf771d39729f",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "With Spring Security's default DelegatingPasswordEncoder, what does a stored password hash look like?",
+  "options": [
+   "A prefix naming the algorithm, like {bcrypt}, followed by the hash",
+   "A plain bcrypt hash without any prefix",
+   "The password Base64-encoded",
+   "An encrypted value that can be decrypted with a key"
+  ],
+  "answer": 0,
+  "explanation": "The {id} prefix lets the encoder choose the right algorithm and lets you migrate algorithms over time."
  }
 ]

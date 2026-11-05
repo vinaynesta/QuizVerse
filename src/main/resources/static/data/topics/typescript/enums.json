@@ -1,0 +1,47 @@
+[
+ {
+  "id": "q0eed328a8f0",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "What is distinctive about a `const enum`?",
+  "options": [
+   "Member references are inlined as values and no enum object is emitted by default",
+   "Its members can be reassigned at runtime",
+   "It can only contain string members",
+   "It is emitted as a frozen object with extra runtime checks"
+  ],
+  "answer": 0,
+  "explanation": "const enums are erased at compile time and their usages are replaced with literal values."
+ },
+ {
+  "id": "q40c48c28491",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Dir { Up = \"UP\", Down = \"DOWN\" }`, what is the value of `Dir.Up`?",
+  "options": [
+   "\"UP\"",
+   "0",
+   "1",
+   "\"Up\""
+  ],
+  "answer": 0,
+  "explanation": "String enum members take exactly the string value they are initialized with."
+ },
+ {
+  "id": "q4c8381de746",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Color { Red, Green, Blue }`, what is the value of `Color.Green`?",
+  "options": [
+   "\"Green\"",
+   "1",
+   "0",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Numeric enum members are auto-numbered starting at 0, so Green is 1."
+ }
+]

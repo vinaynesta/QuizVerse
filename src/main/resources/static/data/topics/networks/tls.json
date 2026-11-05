@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q34010a7429b",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does a TLS 1.3 server send if it supports one of the client's groups but the ClientHello has no key share for it?",
+  "options": [
+   "A handshake_failure alert",
+   "ChangeCipherSpec",
+   "HelloRetryRequest",
+   "ServerHelloDone"
+  ],
+  "answer": 2,
+  "explanation": "HelloRetryRequest names the group to use, and the client resends ClientHello with that key share, costing an extra RTT."
+ },
+ {
+  "id": "q5e3896225c3",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "Which key exchange method is NOT permitted in TLS 1.3?",
+  "options": [
+   "ECDHE",
+   "FFDHE (finite-field ephemeral DH)",
+   "Static RSA key transport",
+   "PSK with (EC)DHE"
+  ],
+  "answer": 2,
+  "explanation": "TLS 1.3 (RFC 8446) removed static RSA and static DH, so every full handshake has forward secrecy."
+ },
+ {
+  "id": "q73685a6d7e0",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "How many round trips does a full TLS 1.3 handshake take before the client can send application data (not counting TCP)?",
+  "options": [
+   "2 RTT",
+   "0 RTT",
+   "3 RTT",
+   "1 RTT"
+  ],
+  "answer": 3,
+  "explanation": "The client sends key shares in ClientHello, so after the server's flight it can send Finished and data; TLS 1.2 needed 2 RTT."
+ },
+ {
+  "id": "qb453137f6f6",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "Which TLS extension carries the hostname so a server hosting many sites can choose the right certificate?",
+  "options": [
+   "OCSP stapling (status_request)",
+   "SNI (Server Name Indication)",
+   "key_share",
+   "ALPN"
+  ],
+  "answer": 1,
+  "explanation": "SNI puts the requested hostname in ClientHello; Encrypted Client Hello can hide it."
+ },
+ {
+  "id": "qddb1bdc0b3a",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does the ALPN extension do?",
+  "options": [
+   "Pins the server certificate",
+   "Negotiates the application protocol (e.g. h2 or http/1.1) during the TLS handshake",
+   "Compresses TLS records",
+   "Enables session resumption"
+  ],
+  "answer": 1,
+  "explanation": "ALPN lets client and server agree on HTTP/2 or HTTP/1.1 without an extra round trip."
+ },
+ {
+  "id": "qf19ae374bfa",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "In TLS 1.3, how is the server's Certificate message sent?",
+  "options": [
+   "As a hash only, never the full chain",
+   "Encrypted under the handshake traffic keys",
+   "Only inside 0-RTT early data",
+   "In plaintext, as in TLS 1.2"
+  ],
+  "answer": 1,
+  "explanation": "Everything after ServerHello, including EncryptedExtensions, Certificate and CertificateVerify, is encrypted in TLS 1.3."
+ },
+ {
+  "id": "qf9d0b079b4f",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What is the main security risk of TLS 1.3 0-RTT early data?",
+  "options": [
+   "It forces a downgrade to SSL 3.0",
+   "It can be replayed by an attacker",
+   "It prevents certificate validation",
+   "It is sent in plaintext"
+  ],
+  "answer": 1,
+  "explanation": "Early data has no protection against replay across connections, so it should only carry idempotent requests."
+ },
+ {
+  "id": "qfb7bcbd87c6",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What is the purpose of the key_share extension in a TLS 1.3 ClientHello?",
+  "options": [
+   "It carries a session ticket for resumption",
+   "It carries the server hostname",
+   "It carries the client's ephemeral (EC)DHE public values so a shared secret can be computed in one round trip",
+   "It lists the supported cipher suites"
+  ],
+  "answer": 2,
+  "explanation": "Sending key shares up front lets the server reply with its share and derive handshake keys immediately."
+ }
+]

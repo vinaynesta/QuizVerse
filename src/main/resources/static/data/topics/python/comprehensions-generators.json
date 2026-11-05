@@ -30,6 +30,21 @@
   "explanation": "range(3) yields 0, 1, 2 and each is doubled."
  },
  {
+  "id": "q37c7c29022c",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does list(range(2, 5)) return?",
+  "options": [
+   "[2, 3, 4]",
+   "[3, 4, 5]",
+   "[2, 3, 4, 5]",
+   "[2, 5]"
+  ],
+  "answer": 0,
+  "explanation": "range includes the start and excludes the stop."
+ },
+ {
   "id": "q3a3aca7eab6",
   "subject": "python",
   "topic": "comprehensions-generators",
@@ -60,6 +75,21 @@
   "explanation": "Any function containing yield returns a generator object when called."
  },
  {
+  "id": "qec2d1e0689b",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does [x for x in range(6) if x % 2 == 0] evaluate to?",
+  "options": [
+   "[2, 4, 6]",
+   "[1, 3, 5]",
+   "[0, 2, 4, 6]",
+   "[0, 2, 4]"
+  ],
+  "answer": 3,
+  "explanation": "range(6) yields 0 through 5, and the condition keeps the even numbers."
+ },
+ {
   "id": "q13eb384816b",
   "subject": "python",
   "topic": "comprehensions-generators",
@@ -75,6 +105,21 @@
   "explanation": "A generator is exhausted after one full pass, so a second list() gets no items."
  },
  {
+  "id": "q14da8a3b2cc",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does list(enumerate('ab', start=1)) return?",
+  "options": [
+   "[(1, 'a'), (2, 'b')]",
+   "[(0, 'a'), (1, 'b')]",
+   "[('a', 1), ('b', 2)]",
+   "{1: 'a', 2: 'b'}"
+  ],
+  "answer": 0,
+  "explanation": "enumerate pairs each item with a counter beginning at start."
+ },
+ {
   "id": "q39023bd91ca",
   "subject": "python",
   "topic": "comprehensions-generators",
@@ -88,6 +133,21 @@
   ],
   "answer": 3,
   "explanation": "The for clauses nest left to right, and the filter keeps only pairs with different values."
+ },
+ {
+  "id": "q3d3a932fcfa",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "medium",
+  "question": "What does {x % 3 for x in range(6)} evaluate to?",
+  "options": [
+   "{0, 1, 2, 0, 1, 2}",
+   "{0, 1, 2}",
+   "[0, 1, 2, 0, 1, 2]",
+   "{0: 0, 1: 1, 2: 2}"
+  ],
+  "answer": 1,
+  "explanation": "A set comprehension removes duplicate remainders."
  },
  {
   "id": "q6ec12b541a1",
@@ -150,6 +210,21 @@
   "explanation": "yield from delegates to the inner iterable, yielding each of its items before continuing."
  },
  {
+  "id": "q565911d6828",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "What does list(zip(*[(1, 'a'), (2, 'b')])) return?",
+  "options": [
+   "[(1, 'a'), (2, 'b')]",
+   "[1, 2, 'a', 'b']",
+   "[(1, 2), ('a', 'b')]",
+   "[[1, 'a'], [2, 'b']]"
+  ],
+  "answer": 2,
+  "explanation": "Unpacking the pairs into zip transposes them."
+ },
+ {
   "id": "q800d26ab464",
   "subject": "python",
   "topic": "comprehensions-generators",
@@ -163,6 +238,21 @@
   ],
   "answer": 1,
   "explanation": "A generator's return value is carried by StopIteration.value and is the result of a yield from expression."
+ },
+ {
+  "id": "q9312251dd5c",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "hard",
+  "question": "What does calling close() on a suspended generator do?",
+  "options": [
+   "Resets the generator to its start",
+   "Returns the generator's next value",
+   "Raises GeneratorExit at the paused yield so the generator can clean up",
+   "Deletes the generator function"
+  ],
+  "answer": 2,
+  "explanation": "If the generator catches GeneratorExit and yields again, close() raises RuntimeError."
  },
  {
   "id": "qffe3df8713c",

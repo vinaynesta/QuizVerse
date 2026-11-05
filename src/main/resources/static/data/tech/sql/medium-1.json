@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q2705418cf1f",
+  "subject": "sql",
+  "topic": "query-optimization",
+  "level": "medium",
+  "question": "Compared with UNION ALL, what extra work does UNION perform?",
+  "options": [
+   "It removes duplicate rows, which typically requires a sort or hash step",
+   "It adds a row number to each row",
+   "It sorts the output by the first column",
+   "It locks both source tables"
+  ],
+  "answer": 0,
+  "explanation": "UNION must deduplicate, which costs a sort or hash aggregate. UNION ALL simply concatenates the results and is cheaper when duplicates are acceptable or impossible."
+ },
+ {
+  "id": "q41b6a638bec",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "What does NUMERIC(10,2) store?",
+  "options": [
+   "A 10-bit integer with two bytes of padding",
+   "Up to 10 total digits, with exactly 2 digits after the decimal point, stored exactly",
+   "A floating-point number with 10 significant bits",
+   "Ten decimal places, with two digits in total"
+  ],
+  "answer": 1,
+  "explanation": "NUMERIC(precision, scale) stores exact decimal values with up to 10 digits in total, of which 2 are after the decimal point."
+ },
+ {
+  "id": "qf6cc28421f1",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "What is a dirty read?",
+  "options": [
+   "Reading a row that was deleted and later re-inserted",
+   "Reading the same row twice and getting different values",
+   "Reading rows that a concurrent transaction inserted into a range",
+   "Reading data written by another transaction that has not yet committed"
+  ],
+  "answer": 3,
+  "explanation": "A dirty read sees uncommitted data, which may be rolled back and so never truly existed."
+ },
+ {
+  "id": "qa31d2c87f03",
+  "subject": "sql",
+  "topic": "joins",
+  "level": "medium",
+  "question": "Which query returns customers who have placed no orders?",
+  "options": [
+   "SELECT c.* FROM customers c INNER JOIN orders o ON c.id = o.customer_id",
+   "SELECT c.* FROM customers c RIGHT JOIN orders o ON c.id = o.customer_id WHERE c.id IS NULL",
+   "SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.customer_id IS NULL",
+   "SELECT c.* FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.customer_id IS NOT NULL"
+  ],
+  "answer": 2,
+  "explanation": "A LEFT JOIN with a WHERE test for NULL on the right side is the anti-join pattern. The RIGHT JOIN variant returns orphaned orders instead."
+ },
+ {
+  "id": "q05d24ace592",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "What is the difference between WHERE and HAVING?",
+  "options": [
+   "WHERE filters rows before grouping, while HAVING filters groups after aggregation",
+   "They are interchangeable in every query",
+   "WHERE runs after GROUP BY, while HAVING runs before it",
+   "WHERE works only with COUNT, while HAVING works with any column"
+  ],
+  "answer": 0,
+  "explanation": "WHERE is evaluated on individual rows before aggregation. HAVING is evaluated on groups and can reference aggregate results."
+ },
+ {
+  "id": "q3303971b3cc",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "medium",
+  "question": "In PostgreSQL, what is the difference between storing 'abc' in CHAR(5) and in VARCHAR(5)?",
+  "options": [
+   "CHAR stores 3 characters, while VARCHAR pads to 5",
+   "Both store exactly 5 characters",
+   "VARCHAR rejects strings shorter than 5 characters",
+   "CHAR pads the value with spaces to 5 characters, while VARCHAR stores 'abc' without padding"
+  ],
+  "answer": 3,
+  "explanation": "CHAR(n) is blank-padded to n characters, while VARCHAR(n) stores only the characters given. Trailing spaces in CHAR are insignificant in comparisons."
+ },
+ {
+  "id": "qc0cd4476136",
+  "subject": "sql",
+  "topic": "subqueries",
+  "level": "medium",
+  "question": "What does WHERE salary = (SELECT MAX(salary) FROM employees) return?",
+  "options": [
+   "Employees in the lowest salary band",
+   "All employees ordered by salary",
+   "Employees earning the overall maximum salary, which may be more than one person",
+   "Exactly one employee, always"
+  ],
+  "answer": 2,
+  "explanation": "The scalar subquery returns the single maximum value, and every employee with that salary matches, so ties give multiple rows."
+ },
+ {
+  "id": "q1b529641763",
+  "subject": "sql",
+  "topic": "isolation-levels",
+  "level": "medium",
+  "question": "In PostgreSQL, what happens after a statement fails inside an explicit transaction block?",
+  "options": [
+   "The transaction is aborted, and later statements fail until ROLLBACK is issued",
+   "The remaining statements run normally",
+   "The failed statement is retried automatically",
+   "The whole session is closed"
+  ],
+  "answer": 0,
+  "explanation": "PostgreSQL puts the transaction in an aborted state. Only ROLLBACK (or ROLLBACK TO SAVEPOINT) is accepted until the transaction is ended."
+ },
+ {
+  "id": "q6bbdcb76ddd",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "medium",
+  "question": "What does ON DELETE CASCADE do on a foreign key?",
+  "options": [
+   "Prevents deleting parent rows that have children",
+   "Sets child foreign key values to NULL",
+   "Marks child rows as deleted without removing them",
+   "Deletes child rows automatically when the referenced parent row is deleted"
+  ],
+  "answer": 3,
+  "explanation": "CASCADE propagates the delete to dependent child rows. SET NULL and RESTRICT or NO ACTION are the alternatives."
+ },
+ {
+  "id": "qd95f727e9f1",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "medium",
+  "question": "How does AVG treat NULL values in a column in standard SQL?",
+  "options": [
+   "It treats them as zero",
+   "It ignores them and averages the non-NULL values",
+   "It returns NULL if any value is NULL",
+   "It treats them as the largest value"
+  ],
+  "answer": 1,
+  "explanation": "Aggregate functions other than COUNT(*) skip NULL inputs, so AVG divides by the count of non-NULL values."
+ }
+]

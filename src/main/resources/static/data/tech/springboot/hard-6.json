@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf771d39729f",
+  "subject": "springboot",
+  "topic": "security",
+  "level": "hard",
+  "question": "With Spring Security's default DelegatingPasswordEncoder, what does a stored password hash look like?",
+  "options": [
+   "A prefix naming the algorithm, like {bcrypt}, followed by the hash",
+   "A plain bcrypt hash without any prefix",
+   "The password Base64-encoded",
+   "An encrypted value that can be decrypted with a key"
+  ],
+  "answer": 0,
+  "explanation": "The {id} prefix lets the encoder choose the right algorithm and lets you migrate algorithms over time."
+ },
+ {
+  "id": "q0fb0a2e7ba0",
+  "subject": "springboot",
+  "topic": "testing",
+  "level": "hard",
+  "question": "Why can heavy use of @DirtiesContext make a test suite much slower?",
+  "options": [
+   "It closes the context and removes it from the cache, forcing the next tests to build a new one",
+   "It disables lazy initialization",
+   "It forces the use of a real HTTP server",
+   "It runs every test twice"
+  ],
+  "answer": 0,
+  "explanation": "The TestContext framework normally reuses cached contexts, and @DirtiesContext throws that reuse away."
+ },
+ {
+  "id": "q172051e37f6",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "What happens when a Spring MVC handler returns a CompletableFuture<User>?",
+  "options": [
+   "The client receives the future serialized as JSON",
+   "The servlet thread blocks on get() before returning",
+   "Spring MVC rejects the return type",
+   "The request is processed asynchronously and the servlet thread is released until the future completes"
+  ],
+  "answer": 3,
+  "explanation": "Spring MVC uses Servlet async support and writes the response when the future completes."
+ },
+ {
+  "id": "q2973b211ee7",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "hard",
+  "question": "Which environment variable binds to the list element my.servers[0] through relaxed binding?",
+  "options": [
+   "MY_SERVERS[0]",
+   "MY_SERVERS_0",
+   "MY.SERVERS.0",
+   "MYSERVERS_ZERO"
+  ],
+  "answer": 1,
+  "explanation": "Relaxed binding maps environment variables by replacing dots with underscores and writing indexes as underscore-separated numbers."
+ },
+ {
+  "id": "qcb8a9db0c76",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "hard",
+  "question": "Which API in Spring Boot 3 lets you instrument a block of code once and get both metrics and traces?",
+  "options": [
+   "The Micrometer Observation API via ObservationRegistry",
+   "The Actuator /metrics endpoint",
+   "Spring Cloud Sleuth's Tracer",
+   "java.util.logging handlers"
+  ],
+  "answer": 0,
+  "explanation": "An Observation is handled by registered handlers, which can produce timers and spans from a single instrumentation point."
+ },
+ {
+  "id": "q0078fbea86b",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "hard",
+  "question": "In Spring Boot 3, what is the default for server.error.include-message?",
+  "options": [
+   "always",
+   "on-param",
+   "never, so the exception message is left out of the default error response",
+   "on-trace-param"
+  ],
+  "answer": 2,
+  "explanation": "The message is hidden by default to avoid leaking internal details, and can be enabled per property."
+ },
+ {
+  "id": "q417a92e3052",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "hard",
+  "question": "When does @ConditionalOnSingleCandidate(DataSource.class) match?",
+  "options": [
+   "When no DataSource bean exists",
+   "When at least one DataSource bean exists",
+   "When exactly one DataSource bean exists, or several exist and one is primary",
+   "When the DataSource class is on the classpath"
+  ],
+  "answer": 2,
+  "explanation": "It is used by auto-configurations that need one unambiguous bean to wire into, such as JdbcTemplate."
+ },
+ {
+  "id": "q76d7f20bdb5",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "hard",
+  "question": "A @Transactional(readOnly = true) service method calls a default @Transactional method on another bean that writes data. What happens?",
+  "options": [
+   "The inner method starts a new read-write transaction",
+   "The writes always succeed and commit normally",
+   "The inner method joins the outer read-only transaction, so its own settings are ignored and Hibernate may not flush the writes",
+   "Spring throws an exception before the call"
+  ],
+  "answer": 2,
+  "explanation": "With REQUIRED propagation, the inner method takes part in the existing transaction and its characteristics, including readOnly."
+ },
+ {
+  "id": "qaf0e87b5a20",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "hard",
+  "question": "Why should a @Bean method returning a BeanFactoryPostProcessor be declared static?",
+  "options": [
+   "So Spring can call it without instantiating the configuration class early, which would skip @Autowired and @Value processing on it",
+   "So the bean becomes prototype-scoped",
+   "Because static methods are proxied by CGLIB",
+   "Because non-static @Bean methods cannot return interfaces"
+  ],
+  "answer": 0,
+  "explanation": "BeanFactoryPostProcessors are created very early, so a non-static method forces premature creation of its enclosing configuration bean."
+ },
+ {
+  "id": "qa454f10fda0",
+  "subject": "springboot",
+  "topic": "data-jpa",
+  "level": "hard",
+  "question": "Why can't Spring Data optimize the SQL for an open interface projection that uses @Value(\"#{target.firstName + ' ' + target.lastName}\")?",
+  "options": [
+   "SpEL projections are run in the database",
+   "Open projections are only supported for native queries",
+   "The SpEL expression may use any property of the target, so the whole entity must be loaded",
+   "The projection is evaluated before the query runs"
+  ],
+  "answer": 2,
+  "explanation": "Closed projections let Spring Data select only the needed columns, while open projections need the full entity."
+ }
+]

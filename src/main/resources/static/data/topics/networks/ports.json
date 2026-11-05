@@ -1,0 +1,77 @@
+[
+ {
+  "id": "q5c6ab3e289c",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "What is the default port for plain HTTP?",
+  "options": [
+   "443",
+   "21",
+   "80",
+   "8443"
+  ],
+  "answer": 2,
+  "explanation": "Unencrypted HTTP uses TCP port 80 by default."
+ },
+ {
+  "id": "q7b259d2a63c",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port is traditionally used for SMTP mail relay between mail servers?",
+  "options": [
+   "110",
+   "25",
+   "143",
+   "993"
+  ],
+  "answer": 1,
+  "explanation": "Server-to-server SMTP uses TCP 25; 110 is POP3, 143 IMAP and 993 IMAPS."
+ },
+ {
+  "id": "qc9ec4fb7060",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port is used by default for DNS queries?",
+  "options": [
+   "161",
+   "67",
+   "53",
+   "123"
+  ],
+  "answer": 2,
+  "explanation": "DNS uses port 53 over UDP (and TCP); 67 is DHCP, 123 NTP, 161 SNMP."
+ },
+ {
+  "id": "qd8888b8166e",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "What is the default port for SSH?",
+  "options": [
+   "21",
+   "23",
+   "25",
+   "22"
+  ],
+  "answer": 3,
+  "explanation": "SSH listens on TCP 22; 21 is FTP control, 23 is Telnet and 25 is SMTP."
+ },
+ {
+  "id": "qdc3f053b946",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "What is the default port for HTTPS?",
+  "options": [
+   "443",
+   "22",
+   "80",
+   "8080"
+  ],
+  "answer": 0,
+  "explanation": "HTTPS (HTTP over TLS) uses TCP port 443 by default; 80 is plain HTTP."
+ }
+]

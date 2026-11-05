@@ -1,5 +1,213 @@
 [
  {
+  "id": "q240fa0f1636",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "Which SQL command is used to retrieve data from a table?",
+  "options": [
+   "DROP",
+   "GRANT",
+   "SELECT",
+   "COMMIT"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "SELECT fetches rows and columns from one or more tables."
+ },
+ {
+  "id": "q38b39dc068d",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "Which of the following is a database management system?",
+  "options": [
+   "Google Chrome",
+   "MS Paint",
+   "MySQL",
+   "Windows Media Player"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "MySQL is a popular open-source relational DBMS; the others are an image editor, a browser and a media player."
+ },
+ {
+  "id": "q5a47f9507ad",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In a database table, a single row is also called a:",
+  "options": [
+   "Attribute",
+   "Field",
+   "Record",
+   "Domain"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A row holds all the data about one item and is called a record or tuple."
+ },
+ {
+  "id": "q5effb3f6b6f",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In a database table, a column is also called a:",
+  "options": [
+   "Record",
+   "Field",
+   "Row",
+   "Tuple"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A column stores one kind of data for every record and is called a field or attribute."
+ },
+ {
+  "id": "q879b4ba55b5",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In a relational database, data is stored in the form of:",
+  "options": [
+   "Slides",
+   "Paragraphs",
+   "Tables",
+   "Pixels"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A relational database organises data into tables (relations) made up of rows and columns."
+ },
+ {
+  "id": "qb5ff97d03b5",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "What does DBMS stand for?",
+  "options": [
+   "Data Backup Management Software",
+   "Digital Base Memory System",
+   "Database Management System",
+   "Data Bank Managing Server"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A DBMS (Database Management System) is software used to create, store, manage and retrieve data in databases."
+ },
+ {
+  "id": "qdc65ddc2e23",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "What does SQL stand for?",
+  "options": [
+   "Structured Query Language",
+   "Sequential Question Logic",
+   "Simple Query Language",
+   "Standard Query List"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "SQL (Structured Query Language) is the standard language for working with relational databases."
+ },
+ {
+  "id": "q0ce64402674",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "In DBMS, what does DDL stand for?",
+  "options": [
+   "Data Display Language",
+   "Dynamic Data Link",
+   "Data Driven Logic",
+   "Data Definition Language"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "DDL commands such as CREATE, ALTER and DROP define the structure of database objects."
+ },
+ {
+  "id": "q2bbafc97c1d",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "The number of attributes (columns) in a relation is called its:",
+  "options": [
+   "Cardinality",
+   "Domain",
+   "Tuple",
+   "Degree"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Degree is the number of columns; cardinality is the number of rows."
+ },
+ {
+  "id": "q5aaed778074",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "The SQL command CREATE belongs to which category?",
+  "options": [
+   "DDL",
+   "DML",
+   "DCL",
+   "TCL"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "CREATE defines new database objects such as tables, so it is a Data Definition Language command."
+ },
+ {
+  "id": "q60ad54f2eca",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which is an advantage of a DBMS over a traditional file system?",
+  "options": [
+   "No way to control access",
+   "Increased data duplication",
+   "No support for multiple users",
+   "Reduced data redundancy and inconsistency"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A DBMS stores data centrally, reducing duplication and providing security, sharing and integrity controls."
+ },
+ {
+  "id": "q6d37447944d",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "In DBMS, what does DML stand for?",
+  "options": [
+   "Data Modelling Logic",
+   "Digital Media Language",
+   "Data Manipulation Language",
+   "Database Main Link"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "DML commands such as SELECT, INSERT, UPDATE and DELETE work with the data stored in tables."
+ },
+ {
+  "id": "q6fa65be9eb0",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL command removes an entire table, including its structure, from the database?",
+  "options": [
+   "SELECT",
+   "INSERT",
+   "UPDATE",
+   "DROP"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "DROP TABLE deletes the table definition and all its data permanently."
+ },
+ {
   "id": "q7e8cfc079b9",
   "subject": "computer",
   "topic": "database",
@@ -14,5 +222,309 @@
   "answer": 1,
   "explanation": "A primary key is unique for every row and cannot be empty.",
   "needsReview": true
+ },
+ {
+  "id": "q8b8445e05a7",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "MS Access is an example of:",
+  "options": [
+   "A database management system",
+   "A web browser",
+   "An operating system",
+   "A spreadsheet program"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Microsoft Access is a relational DBMS included in some editions of Microsoft Office."
+ },
+ {
+  "id": "q9dc9e5970ee",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "The set of all allowed values for an attribute is called its:",
+  "options": [
+   "Degree",
+   "Domain",
+   "Tuple",
+   "Schema"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A domain defines the permitted values for a column, for example ages from 0 to 120."
+ },
+ {
+  "id": "qaf314f41858",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL command is used to add new rows to a table?",
+  "options": [
+   "SELECT",
+   "DROP",
+   "INSERT",
+   "GRANT"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "INSERT INTO adds one or more new records to a table."
+ },
+ {
+  "id": "qd31e77b5640",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "The process of organising data in a database to reduce redundancy is called:",
+  "options": [
+   "Normalization",
+   "Compilation",
+   "Indexing",
+   "Fragmentation"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Normalization splits data into well-structured tables to remove duplication and update anomalies."
+ },
+ {
+  "id": "qec77281c710",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL command is used to change existing data in a table?",
+  "options": [
+   "SELECT",
+   "CREATE",
+   "UPDATE",
+   "GRANT"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "UPDATE modifies values in existing rows, usually with a WHERE clause to choose the rows."
+ },
+ {
+  "id": "qffe837aa469",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "A foreign key is a field in one table that:",
+  "options": [
+   "Is always NULL",
+   "Refers to the primary key of another table",
+   "Must be the first column of the table",
+   "Stores only images"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Foreign keys link tables together and help maintain referential integrity."
+ },
+ {
+  "id": "q06f2ca6ee80",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which statement about a primary key is true?",
+  "options": [
+   "It can contain duplicate values",
+   "Its values must be unique and cannot be NULL",
+   "A table can have several primary keys",
+   "It can be NULL in many rows"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A table has only one primary key, and its values must be unique and non-null."
+ },
+ {
+  "id": "q1223b06e552",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which normal form requires that every column contain only atomic (indivisible) values?",
+  "options": [
+   "Second Normal Form (2NF)",
+   "Third Normal Form (3NF)",
+   "Boyce-Codd Normal Form (BCNF)",
+   "First Normal Form (1NF)"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1NF removes repeating groups so that each cell holds a single value."
+ },
+ {
+  "id": "q1e4237ab405",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "The relational model of databases was proposed by:",
+  "options": [
+   "Charles Babbage",
+   "Tim Berners-Lee",
+   "Dennis Ritchie",
+   "E. F. Codd"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Edgar F. Codd of IBM proposed the relational model in 1970."
+ },
+ {
+  "id": "q3320aceedbd",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In an E-R diagram, an entity set is represented by a:",
+  "options": [
+   "Rectangle",
+   "Ellipse",
+   "Diamond",
+   "Double line"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "In standard E-R notation, rectangles show entities, ellipses show attributes and diamonds show relationships."
+ },
+ {
+  "id": "q49887982c84",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Any set of one or more attributes that can uniquely identify a record, even if it contains extra attributes, is called a:",
+  "options": [
+   "Foreign key",
+   "Super key",
+   "Alternate key",
+   "Secondary key"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A super key may contain unnecessary attributes; a minimal super key is a candidate key."
+ },
+ {
+  "id": "q79394148b09",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which SQL clause is used to filter rows based on a condition?",
+  "options": [
+   "FROM",
+   "ORDER BY",
+   "WHERE",
+   "AS"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "WHERE keeps only the rows that satisfy the given condition; ORDER BY only sorts the result."
+ },
+ {
+  "id": "q8489dcd3098",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "A table in 2NF is converted to 3NF by removing:",
+  "options": [
+   "Transitive dependencies",
+   "Partial dependencies",
+   "Atomic values",
+   "Candidate keys"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "In 3NF no non-key attribute depends on another non-key attribute."
+ },
+ {
+  "id": "q93cdaf960a2",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Candidate keys that are not chosen as the primary key are called:",
+  "options": [
+   "Foreign keys",
+   "Composite keys",
+   "Alternate keys",
+   "Super keys"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A table may have several candidate keys; one becomes the primary key and the rest are alternate keys."
+ },
+ {
+  "id": "q96a4e3e1359",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "The SQL commands COMMIT and ROLLBACK belong to which category?",
+  "options": [
+   "DCL (Data Control Language)",
+   "DDL (Data Definition Language)",
+   "TCL (Transaction Control Language)",
+   "DML (Data Manipulation Language)"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "TCL commands manage transactions: COMMIT saves changes and ROLLBACK undoes them."
+ },
+ {
+  "id": "q9c113915f27",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "The SQL commands GRANT and REVOKE belong to which category?",
+  "options": [
+   "TCL (Transaction Control Language)",
+   "DDL (Data Definition Language)",
+   "DML (Data Manipulation Language)",
+   "DCL (Data Control Language)"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "DCL commands give or take away user permissions on database objects."
+ },
+ {
+  "id": "qabd4662ed94",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In the ACID properties of database transactions, 'A' stands for:",
+  "options": [
+   "Availability",
+   "Authentication",
+   "Accuracy",
+   "Atomicity"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Atomicity means a transaction is all or nothing; ACID stands for Atomicity, Consistency, Isolation and Durability."
+ },
+ {
+  "id": "qacc091c0516",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "A table in 1NF is converted to 2NF by removing:",
+  "options": [
+   "Partial dependencies",
+   "Primary keys",
+   "Transitive dependencies",
+   "All foreign keys"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "In 2NF every non-key attribute must depend on the whole primary key, not just part of it."
+ },
+ {
+  "id": "qf07ad98fc21",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "A key made up of two or more attributes that together uniquely identify a record is called a:",
+  "options": [
+   "Foreign key",
+   "Alternate key",
+   "Composite key",
+   "Secondary key"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A composite key is used when no single column is unique on its own."
  }
 ]

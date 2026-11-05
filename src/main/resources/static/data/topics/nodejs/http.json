@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q162916e29ca",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which method on the response object sends the remaining data and signals that the response is complete?",
+  "options": [
+   "res.close()",
+   "res.end()",
+   "res.finish()",
+   "res.send()"
+  ],
+  "answer": 1,
+  "explanation": "res.end() finishes the response; res.send() is an Express helper, not part of the core http module."
+ },
+ {
+  "id": "q20b8b78991d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which method starts an http server accepting connections on a given port?",
+  "options": [
+   "server.listen()",
+   "server.start()",
+   "server.open()",
+   "server.run()"
+  ],
+  "answer": 0,
+  "explanation": "server.listen(3000) binds the server to the port and begins accepting connections."
+ },
+ {
+  "id": "q4881ad04261",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which core module is used to create a basic HTTP server?",
+  "options": [
+   "net",
+   "url",
+   "stream",
+   "http"
+  ],
+  "answer": 3,
+  "explanation": "http.createServer() builds an HTTP server; net provides lower-level TCP sockets."
+ },
+ {
+  "id": "qcdc474f1d44",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "easy",
+  "question": "Which method sets the status code and headers of a Node.js http response in one call?",
+  "options": [
+   "res.status()",
+   "res.begin()",
+   "res.setHeaders()",
+   "res.writeHead()"
+  ],
+  "answer": 3,
+  "explanation": "res.writeHead(200, { 'Content-Type': 'text/plain' }) sends the status line and headers; res.status() is an Express helper."
+ },
+ {
+  "id": "q1d8f05c8f9d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "medium",
+  "question": "Which status code does an HTTP redirect with res.writeHead(301, { Location: '/new' }) indicate?",
+  "options": [
+   "Found (temporary redirect)",
+   "Moved Permanently",
+   "Not Modified",
+   "Bad Request"
+  ],
+  "answer": 1,
+  "explanation": "301 tells clients and caches that the resource has a new permanent URL, while 302 and 307 are temporary."
+ },
+ {
+  "id": "qa88d3a4a595",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "medium",
+  "question": "What does new URL('https://x.io/p?a=1&a=2').searchParams.get('a') return?",
+  "options": [
+   "'2'",
+   "['1', '2']",
+   "'1'",
+   "null"
+  ],
+  "answer": 2,
+  "explanation": "get() returns the first value for a key; getAll() returns every value."
+ },
+ {
+  "id": "qd93e6b21007",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "medium",
+  "question": "What happens if res.writeHead() is called after the response headers have already been sent?",
+  "options": [
+   "Node throws ERR_HTTP_HEADERS_SENT",
+   "It silently replaces the status code",
+   "It restarts the response from the beginning",
+   "It closes the socket without any error"
+  ],
+  "answer": 0,
+  "explanation": "Once headers are sent they cannot change, and Node reports the attempt with an error."
+ },
+ {
+  "id": "q1dfbed87b6d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "hard",
+  "question": "What is the default value of server.requestTimeout in Node.js 20 and 22?",
+  "options": [
+   "0, meaning no timeout",
+   "120000 ms (2 minutes)",
+   "5000 ms (5 seconds)",
+   "300000 ms (5 minutes)"
+  ],
+  "answer": 3,
+  "explanation": "Since Node.js 18 the server aborts requests that take longer than five minutes to be fully received, which limits slow-request attacks."
+ },
+ {
+  "id": "qa5dd2e8bb45",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "hard",
+  "question": "What does server.keepAliveTimeout control?",
+  "options": [
+   "The maximum size of a request body",
+   "How long an idle keep-alive connection stays open waiting for another request",
+   "How long the server waits before restarting",
+   "The interval between ping frames"
+  ],
+  "answer": 1,
+  "explanation": "Idle keep-alive sockets are closed after this many milliseconds with no new request."
+ },
+ {
+  "id": "qc211a3e592d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "hard",
+  "question": "What is the default maximum size of HTTP request headers in Node.js 20 and 22?",
+  "options": [
+   "There is no limit",
+   "1 MiB",
+   "8 KiB",
+   "16 KiB"
+  ],
+  "answer": 3,
+  "explanation": "The default maxHeaderSize is 16384 bytes and can be changed with the --max-http-header-size flag."
+ }
+]

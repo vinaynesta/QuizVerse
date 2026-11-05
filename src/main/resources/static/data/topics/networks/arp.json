@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q2178ee7a8d3",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "A host wants to send a packet to an IP on a different subnet. Whose MAC address does it resolve with ARP?",
+  "options": [
+   "The DNS server's",
+   "The remote destination host's",
+   "The subnet broadcast address's",
+   "Its default gateway's"
+  ],
+  "answer": 3,
+  "explanation": "Off-subnet traffic is framed to the next-hop router, so the host ARPs for the gateway's IP."
+ },
+ {
+  "id": "q2867596b88e",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What does ARP do?",
+  "options": [
+   "Resolves an IPv4 address to a MAC address on the local link",
+   "Assigns IP addresses to hosts",
+   "Routes packets between subnets",
+   "Resolves domain names to IP addresses"
+  ],
+  "answer": 0,
+  "explanation": "ARP finds the link-layer address for a next-hop IPv4 address on the same broadcast domain."
+ },
+ {
+  "id": "q484bc46c37a",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "Which mechanism replaces ARP in IPv6?",
+  "options": [
+   "RARP",
+   "DHCPv6",
+   "IGMP",
+   "Neighbor Discovery Protocol (ICMPv6)"
+  ],
+  "answer": 3,
+  "explanation": "IPv6 uses ICMPv6 Neighbor Solicitation and Advertisement messages, sent to solicited-node multicast addresses."
+ },
+ {
+  "id": "q540ff1f8026",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What happens in an ARP spoofing attack?",
+  "options": [
+   "An attacker sends forged ARP replies linking its MAC to another host's IP",
+   "An attacker exhausts the DHCP address pool",
+   "An attacker overloads the switch's CPU with pings",
+   "An attacker floods DNS servers with queries"
+  ],
+  "answer": 0,
+  "explanation": "Poisoned ARP caches send victims' traffic to the attacker, enabling man-in-the-middle interception."
+ },
+ {
+  "id": "q6f0e23df3eb",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What is a gratuitous ARP?",
+  "options": [
+   "An ARP reply sent by a proxy on behalf of another subnet",
+   "An ARP request for an unknown remote host",
+   "An unsolicited ARP announcing a host's own IP-to-MAC mapping",
+   "A Reverse ARP lookup of an IP from a MAC"
+  ],
+  "answer": 2,
+  "explanation": "Gratuitous ARP updates neighbors' caches (e.g. after failover) and helps detect duplicate IPs."
+ },
+ {
+  "id": "q754381fae50",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "How is an ARP request normally sent?",
+  "options": [
+   "As a multicast to 224.0.0.1",
+   "As a broadcast frame on the local segment",
+   "As a unicast to the DNS server",
+   "As a unicast to the default gateway"
+  ],
+  "answer": 1,
+  "explanation": "The requester doesn't know the target MAC yet, so it broadcasts to FF:FF:FF:FF:FF:FF; the reply is unicast."
+ }
+]

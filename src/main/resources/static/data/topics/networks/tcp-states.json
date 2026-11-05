@@ -1,0 +1,92 @@
+[
+ {
+  "id": "q3e446776de7",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Which state does the passive closer enter after receiving the peer's FIN and acknowledging it?",
+  "options": [
+   "CLOSE_WAIT",
+   "CLOSING",
+   "FIN_WAIT_2",
+   "LAST_ACK"
+  ],
+  "answer": 0,
+  "explanation": "It stays in CLOSE_WAIT until its application calls close(), which sends a FIN and moves it to LAST_ACK."
+ },
+ {
+  "id": "q72e3eec57a3",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Which side of a TCP connection enters the TIME_WAIT state?",
+  "options": [
+   "The side that performs the active close (sends the first FIN)",
+   "Both sides, always",
+   "Only the server",
+   "The passive closer"
+  ],
+  "answer": 0,
+  "explanation": "The active closer passes through FIN_WAIT states and then waits in TIME_WAIT after ACKing the peer's FIN."
+ },
+ {
+  "id": "q773ce88ad97",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Why does TCP keep a connection in TIME_WAIT after closing?",
+  "options": [
+   "To let the congestion window reset",
+   "To keep the TLS session resumable",
+   "To wait for DNS caches to expire",
+   "To retransmit the final ACK if it is lost and let old duplicates expire before the 4-tuple is reused"
+  ],
+  "answer": 3,
+  "explanation": "If the last ACK is lost the peer resends its FIN; the wait also stops delayed segments from corrupting a new incarnation."
+ },
+ {
+  "id": "qa681da54d03",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "A server shows thousands of sockets stuck in CLOSE_WAIT. What is the most likely cause?",
+  "options": [
+   "An ongoing SYN flood",
+   "The application is not calling close() after the peer closed",
+   "Heavy packet loss on the network",
+   "TIME_WAIT timers set too high"
+  ],
+  "answer": 1,
+  "explanation": "CLOSE_WAIT persists until the local app closes the socket, so a leak indicates a missing close in application code."
+ },
+ {
+  "id": "qc8f4e125845",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "How long does a TCP endpoint remain in TIME_WAIT per the TCP specification?",
+  "options": [
+   "Until the application closes the socket",
+   "One retransmission timeout",
+   "One RTT",
+   "2 x MSL (maximum segment lifetime)"
+  ],
+  "answer": 3,
+  "explanation": "RFC 9293 specifies waiting twice the maximum segment lifetime so stray segments in both directions can expire."
+ },
+ {
+  "id": "qde620dec743",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "What attack are TCP SYN cookies designed to mitigate?",
+  "options": [
+   "SYN floods that exhaust the half-open connection backlog",
+   "DNS amplification",
+   "Slowloris slow-header attacks",
+   "ARP spoofing"
+  ],
+  "answer": 0,
+  "explanation": "SYN cookies encode connection state in the server's ISN so no backlog entry is needed until the final ACK arrives."
+ }
+]

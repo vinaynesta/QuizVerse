@@ -1,0 +1,107 @@
+[
+ {
+  "id": "q357e73116ba",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "How do you handle a rejected awaited promise inside an async function?",
+  "options": [
+   "Using if (await p === error)",
+   "Using .finally only",
+   "Wrapping the await in try/catch",
+   "Rejections cannot be handled with await"
+  ],
+  "answer": 2,
+  "explanation": "An awaited rejection throws at the await expression, so it can be caught with try/catch."
+ },
+ {
+  "id": "q5b4b800fa6d",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does this log?\nPromise.resolve(1).then(x => x + 1).then(x => console.log(x));",
+  "options": [
+   "A Promise object",
+   "1",
+   "undefined",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "Each then receives the value returned by the previous handler, so 1 becomes 2."
+ },
+ {
+  "id": "q79b6b3eddf2",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "Which are the three states of a Promise?",
+  "options": [
+   "started, running, done",
+   "pending, fulfilled, rejected",
+   "open, closed, failed",
+   "waiting, success, error"
+  ],
+  "answer": 1,
+  "explanation": "A Promise starts pending and is settled once, either fulfilled with a value or rejected with a reason."
+ },
+ {
+  "id": "qa330bcc2cb3",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does Promise.all do if one of the input promises rejects?",
+  "options": [
+   "Rejects immediately with that rejection reason",
+   "Waits for all and returns only fulfilled values",
+   "Ignores the rejection",
+   "Retries the rejected promise"
+  ],
+  "answer": 0,
+  "explanation": "Promise.all rejects as soon as any input rejects; use Promise.allSettled to wait for every outcome."
+ },
+ {
+  "id": "qac03cdeb8df",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "Which method resolves with the first promise that fulfills, ignoring rejections unless all reject?",
+  "options": [
+   "Promise.race",
+   "Promise.all",
+   "Promise.any",
+   "Promise.allSettled"
+  ],
+  "answer": 2,
+  "explanation": "Promise.any fulfills with the first fulfilled value and rejects with an AggregateError only if all reject."
+ },
+ {
+  "id": "qccde56e2f55",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does an async function always return?",
+  "options": [
+   "The raw return value",
+   "A Promise",
+   "undefined",
+   "A generator object"
+  ],
+  "answer": 1,
+  "explanation": "async functions wrap their return value in a Promise, and thrown errors become rejections."
+ },
+ {
+  "id": "qd7ead3cac9e",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does Promise.allSettled resolve with?",
+  "options": [
+   "Only the fulfilled values",
+   "An array of objects with status and value or reason for each input",
+   "The first settled value",
+   "A boolean indicating whether all fulfilled"
+  ],
+  "answer": 1,
+  "explanation": "allSettled waits for every input and reports each as {status: \"fulfilled\", value} or {status: \"rejected\", reason}."
+ }
+]

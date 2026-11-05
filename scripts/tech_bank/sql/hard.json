@@ -1,0 +1,627 @@
+[
+  {
+    "topic": "null-handling",
+    "question": "Given rows with x = 1, 2 and 3, what does SELECT * FROM t WHERE x NOT IN (1, NULL) return?",
+    "options": ["Rows with x = 2 and x = 3", "The row with x = 1", "No rows", "All three rows"],
+    "answer": 2,
+    "explanation": "x NOT IN (1, NULL) is equivalent to x <> 1 AND x <> NULL. The second term is always UNKNOWN, so no row is ever TRUE."
+  },
+  {
+    "topic": "null-handling",
+    "question": "In PostgreSQL, what does NULL IS NOT DISTINCT FROM NULL evaluate to?",
+    "options": ["TRUE", "FALSE", "NULL", "An error"],
+    "answer": 0,
+    "explanation": "IS NOT DISTINCT FROM treats two NULLs as equal, which gives TRUE. It is the null-safe equality operator."
+  },
+  {
+    "topic": "aggregation",
+    "question": "What does SELECT COUNT(x), SUM(x) FROM t return when t has no rows?",
+    "options": ["NULL and NULL", "0 and 0", "0 and NULL", "NULL and 0"],
+    "answer": 2,
+    "explanation": "COUNT over an empty set returns 0, while SUM over an empty set returns NULL. This is a common surprise in reports."
+  },
+  {
+    "topic": "aggregation",
+    "question": "A column x contains 1, NULL and 3. What does SELECT AVG(x) return?",
+    "options": ["1.33", "2", "4", "NULL"],
+    "answer": 1,
+    "explanation": "AVG ignores the NULL and averages the two non-NULL values, (1 + 3) / 2 = 2, rather than dividing by three rows."
+  },
+  {
+    "topic": "aggregation",
+    "question": "A query LEFT JOINs departments to employees and computes COUNT(e.id) per department. What does a department with no employees show?",
+    "options": ["1", "NULL", "No row for that department", "0"],
+    "answer": 3,
+    "explanation": "The unmatched department row has NULL for e.id, and COUNT(e.id) skips NULLs, giving 0. COUNT(*) would give 1 for the same department."
+  },
+  {
+    "topic": "window-functions",
+    "question": "Why does LAST_VALUE(x) OVER (ORDER BY ts) often return the current row's value in PostgreSQL?",
+    "options": [
+      "Because LAST_VALUE ignores the ORDER BY clause",
+      "Because the default frame ends at the current row",
+      "Because LAST_VALUE always returns the first row of the partition",
+      "Because window functions are evaluated before ORDER BY"
+    ],
+    "answer": 1,
+    "explanation": "With ORDER BY and no frame clause the frame runs up to the current row, so the last value in the frame is the current row. Use ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING to see the true last row."
+  },
+  {
+    "topic": "window-functions",
+    "question": "Can a window function appear directly in a WHERE clause?",
+    "options": [
+      "Yes, in every SQL dialect",
+      "Yes, but only together with PARTITION BY",
+      "No, it must be computed in a subquery or CTE and then filtered outside it",
+      "Only in MySQL"
+    ],
+    "answer": 2,
+    "explanation": "Window functions are evaluated after WHERE, so filtering on them requires wrapping the query in a subquery or CTE."
+  },
+  {
+    "topic": "window-functions",
+    "question": "What does NTILE(4) OVER (ORDER BY score) produce?",
+    "options": [
+      "A bucket number from 1 to 4, with rows split into groups of nearly equal size",
+      "The fourth row of the ordered partition",
+      "The top four rows by score",
+      "The score divided by four"
+    ],
+    "answer": 0,
+    "explanation": "NTILE(n) assigns each row to one of n buckets, numbered 1 to n, with bucket sizes differing by at most one row."
+  },
+  {
+    "topic": "cte",
+    "question": "What structure must a recursive CTE have?",
+    "options": [
+      "A non-recursive SELECT followed by a WHERE clause",
+      "A UNION of two independent queries that never reference the CTE name",
+      "A subquery in the HAVING clause only",
+      "An anchor member and a recursive member that references the CTE, combined with UNION or UNION ALL"
+    ],
+    "answer": 3,
+    "explanation": "The anchor provides the starting rows and the recursive member references the CTE itself. The two are combined with UNION or UNION ALL."
+  },
+  {
+    "topic": "cte",
+    "question": "In PostgreSQL 12 and later, how is a non-recursive CTE that is referenced once treated by default?",
+    "options": [
+      "It is always materialized into a temporary table",
+      "It is inlined into the main query, unless MATERIALIZED is specified",
+      "It is executed twice",
+      "It is converted into a view"
+    ],
+    "answer": 1,
+    "explanation": "Since PostgreSQL 12, such CTEs are inlined by default. WITH ... AS MATERIALIZED forces the old behaviour of computing the CTE once."
+  },
+  {
+    "topic": "cte",
+    "question": "What causes a recursive CTE to stop producing rows?",
+    "options": [
+      "The recursive member produces no new rows",
+      "The CTE is referenced in the outer query",
+      "The anchor member returns only NULL values",
+      "Any UNION automatically limits recursion to 100 rows"
+    ],
+    "answer": 0,
+    "explanation": "Recursion ends when an iteration of the recursive member returns no rows. Without a termination condition, a cycle can recurse indefinitely, so use UNION to deduplicate or a depth limit."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Which predicate can use a B-tree index on created_at efficiently?",
+    "options": [
+      "WHERE YEAR(created_at) = 2024",
+      "WHERE created_at >= '2024-01-01' AND created_at < '2025-01-01'",
+      "WHERE created_at::text LIKE '2024%'",
+      "WHERE created_at + INTERVAL '0 days' = '2024-06-01'"
+    ],
+    "answer": 1,
+    "explanation": "A range predicate on the bare column is sargable. Wrapping the column in a function or cast, as in the other options, usually prevents index use."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "EXPLAIN ANALYZE shows a Seq Scan estimated at 10 rows but returning 1,000,000 rows. What is the most likely cause?",
+    "options": [
+      "The index is corrupted",
+      "The query contains a LIMIT clause",
+      "Stale or inaccurate planner statistics",
+      "The database is running in SERIALIZABLE mode"
+    ],
+    "answer": 2,
+    "explanation": "A large gap between estimated and actual rows points to outdated statistics or skewed data, which can lead to poor join and scan choices. Running ANALYZE is the usual first step."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Which join algorithm does PostgreSQL typically choose for two large unsorted inputs joined on equality when no useful index exists?",
+    "options": ["Nested loop join", "Hash join", "Cartesian product", "Index-only join"],
+    "answer": 1,
+    "explanation": "A hash join builds a hash table on the smaller input and probes it with the other, which is efficient for large unsorted equality joins."
+  },
+  {
+    "topic": "indexes",
+    "question": "What is required for a PostgreSQL index-only scan to avoid reading heap pages?",
+    "options": [
+      "The index must be UNIQUE",
+      "The query must use DISTINCT",
+      "The table must contain no NULL values",
+      "All referenced columns must be in the index, and the visibility map must mark the relevant heap pages as all-visible"
+    ],
+    "answer": 3,
+    "explanation": "The visibility map lets PostgreSQL skip heap access for pages where all tuples are known visible to everyone. VACUUM keeps the visibility map up to date."
+  },
+  {
+    "topic": "indexes",
+    "question": "Why generally can a B-tree index on name not serve WHERE name LIKE '%son'?",
+    "options": [
+      "The pattern has no fixed prefix, so the index cannot locate a starting point in sorted order",
+      "B-tree indexes cannot store text",
+      "LIKE disables all indexes in every database",
+      "B-tree indexes only support equality lookups"
+    ],
+    "answer": 0,
+    "explanation": "A B-tree is sorted by the leading characters, so without a fixed prefix the engine cannot seek to a starting position. A trigram or reverse-string index can help instead."
+  },
+  {
+    "topic": "indexes",
+    "question": "What is a partial index?",
+    "options": [
+      "An index that covers only some of a table's columns",
+      "An index that is rebuilt only during off-peak hours",
+      "An index built only on rows that satisfy a WHERE predicate",
+      "An index that stays incomplete until VACUUM runs"
+    ],
+    "answer": 2,
+    "explanation": "A partial index, such as CREATE INDEX ... WHERE status = 'open', indexes only the matching subset, saving space and write cost."
+  },
+  {
+    "topic": "indexes",
+    "question": "Why is an index on a boolean column that splits rows roughly 50/50 often unhelpful for filtering?",
+    "options": [
+      "Boolean columns cannot be indexed",
+      "Matching about half the rows makes a sequential scan cheaper than many index lookups",
+      "Indexes only support integer columns",
+      "The planner ignores all indexes on boolean columns by rule"
+    ],
+    "answer": 1,
+    "explanation": "When a predicate matches a large fraction of the table, reading the table sequentially is usually cheaper than random index lookups."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "In PostgreSQL SERIALIZABLE isolation, what should the application do when a serialization failure (SQLSTATE 40001) occurs?",
+    "options": [
+      "Ignore the error and continue",
+      "Commit the transaction anyway",
+      "Lower the isolation level to READ UNCOMMITTED",
+      "Retry the whole transaction"
+    ],
+    "answer": 3,
+    "explanation": "Serializable snapshot isolation can abort transactions that would produce a non-serializable result. The standard response is to retry the entire transaction."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "Which anomaly can occur under PostgreSQL REPEATABLE READ but is prevented by SERIALIZABLE?",
+    "options": ["Write skew", "Dirty read", "Non-repeatable read", "Phantom read"],
+    "answer": 0,
+    "explanation": "PostgreSQL's REPEATABLE READ is snapshot isolation, which already prevents dirty, non-repeatable and phantom reads but still allows write skew."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "In PostgreSQL READ COMMITTED, when is the snapshot for a statement taken?",
+    "options": [
+      "Once, when the transaction starts",
+      "Once at the first read of each table",
+      "At the start of each statement",
+      "At the fetch of each row"
+    ],
+    "answer": 2,
+    "explanation": "Each statement in READ COMMITTED sees data committed before that statement began, which is why two statements in one transaction can see different data."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What does SELECT ... FOR SHARE do in PostgreSQL?",
+    "options": [
+      "Locks the whole table exclusively",
+      "Takes a shared row lock that blocks updates and deletes of those rows but allows other shared locks",
+      "Makes the rows read-only for all sessions permanently",
+      "Copies the rows into a temporary table"
+    ],
+    "answer": 1,
+    "explanation": "FOR SHARE prevents concurrent UPDATE, DELETE and FOR UPDATE on the selected rows while still letting other transactions take FOR SHARE locks."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What does FOR UPDATE SKIP LOCKED do in PostgreSQL?",
+    "options": [
+      "Skips rows that other transactions have locked instead of waiting for them",
+      "Skips rows that fail a CHECK constraint",
+      "Ignores locks held by the current transaction",
+      "Disables locking for the query"
+    ],
+    "answer": 0,
+    "explanation": "SKIP LOCKED is commonly used to build job queues, where each worker claims unlocked rows without blocking on others."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "In MySQL InnoDB at REPEATABLE READ, when is the read snapshot for consistent non-locking reads established?",
+    "options": [
+      "At every statement",
+      "When the connection opens",
+      "At the first consistent read in the transaction",
+      "At COMMIT"
+    ],
+    "answer": 2,
+    "explanation": "InnoDB creates the read view at the first consistent read, and later consistent reads in the same transaction reuse it."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "What happens with SELECT ... FOR UPDATE NOWAIT in PostgreSQL when a selected row is locked by another transaction?",
+    "options": [
+      "The query waits indefinitely and then times out",
+      "The locked rows are returned with NULL values",
+      "The table is locked without waiting",
+      "An error is raised immediately"
+    ],
+    "answer": 3,
+    "explanation": "NOWAIT makes the statement fail at once with a lock-not-available error instead of blocking, so the application can handle the conflict."
+  },
+  {
+    "topic": "joins",
+    "question": "How many rows does a CROSS JOIN of a 3-row table with a 4-row table produce?",
+    "options": ["7", "8", "12", "81"],
+    "answer": 2,
+    "explanation": "A cross join multiplies row counts, so 3 x 4 = 12 rows."
+  },
+  {
+    "topic": "joins",
+    "question": "For a LEFT JOIN, what is the difference between a right-table condition placed in ON and the same condition placed in WHERE?",
+    "options": [
+      "There is no difference in any case",
+      "ON removes left rows, while WHERE keeps them",
+      "ON filters the result after the join, while WHERE filters during the join",
+      "With ON, unmatched left rows are kept with NULLs; with WHERE, the condition can remove them"
+    ],
+    "answer": 3,
+    "explanation": "A condition in ON only decides which right rows match. A condition in WHERE runs after the join, where NULL-extended rows fail the test and disappear."
+  },
+  {
+    "topic": "joins",
+    "question": "If both inputs contain two rows with key 5, how many rows does an inner equi-join on that key produce for key 5?",
+    "options": ["4", "2", "1", "8"],
+    "answer": 0,
+    "explanation": "Each of the two left rows pairs with each of the two right rows, giving 2 x 2 = 4 output rows."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What happens when a scalar subquery in a SELECT list returns more than one row?",
+    "options": [
+      "Only the first row is used silently",
+      "A runtime error is raised",
+      "The extra rows become NULL",
+      "The rows are returned as a set"
+    ],
+    "answer": 1,
+    "explanation": "PostgreSQL raises an error such as 'more than one row returned by a subquery used as an expression'. Use LIMIT 1, an aggregate, or a join to make it deterministic."
+  },
+  {
+    "topic": "subqueries",
+    "question": "Which statement about EXISTS is true?",
+    "options": [
+      "It is FALSE if any selected column is NULL",
+      "It compares values with NULL using =",
+      "It is TRUE if the subquery returns at least one row, even when every selected column is NULL",
+      "It returns the number of matching rows"
+    ],
+    "answer": 2,
+    "explanation": "EXISTS only checks whether a row is produced. The values in the select list, including NULLs, do not affect the result."
+  },
+  {
+    "topic": "subqueries",
+    "question": "What does x > ALL (SELECT y FROM empty_table) evaluate to?",
+    "options": ["TRUE", "FALSE", "NULL", "An error"],
+    "answer": 0,
+    "explanation": "ALL over an empty set is vacuously TRUE, while ANY over an empty set is FALSE."
+  },
+  {
+    "topic": "data-types",
+    "question": "In PostgreSQL, what does SELECT 7 / 2 return?",
+    "options": ["3.5", "3", "4", "An error"],
+    "answer": 1,
+    "explanation": "Dividing two integers in PostgreSQL performs integer division and truncates toward zero. Cast one operand to NUMERIC or DOUBLE PRECISION to get 3.5."
+  },
+  {
+    "topic": "data-types",
+    "question": "A VARCHAR column holds the values '9' and '10'. With a typical locale collation, what order does ORDER BY col ASC produce?",
+    "options": ["'9' then '10'", "The order is undefined", "The same as numeric order", "'10' then '9'"],
+    "answer": 3,
+    "explanation": "Text sorts character by character, so '1' comes before '9' and '10' sorts first. Store numbers in numeric columns to sort them numerically."
+  },
+  {
+    "topic": "data-types",
+    "question": "In PostgreSQL, what does SELECT 0.1::float8 + 0.2::float8 = 0.3::float8 return?",
+    "options": ["TRUE", "An error", "FALSE", "NULL"],
+    "answer": 2,
+    "explanation": "Binary double-precision values cannot represent 0.1, 0.2 and 0.3 exactly, so the sum differs from 0.3 in the last bits."
+  },
+  {
+    "topic": "data-types",
+    "question": "What does TIMESTAMP WITHOUT TIME ZONE store in PostgreSQL?",
+    "options": [
+      "A date and time with no time zone conversion applied on storage",
+      "A date and time converted to UTC",
+      "A date and time plus the name of the time zone",
+      "Only the time of day"
+    ],
+    "answer": 0,
+    "explanation": "The value is stored exactly as given, with no offset. Use TIMESTAMP WITH TIME ZONE when instants must be compared across zones."
+  },
+  {
+    "topic": "aggregation",
+    "question": "Which PostgreSQL expression computes the median of column x?",
+    "options": ["MEDIAN(x)", "AVG(x) MEDIAN", "PERCENTILE(x, 0.5)", "percentile_cont(0.5) WITHIN GROUP (ORDER BY x)"],
+    "answer": 3,
+    "explanation": "percentile_cont is an ordered-set aggregate. Its 0.5 fraction gives the median, interpolating between values when needed."
+  },
+  {
+    "topic": "null-handling",
+    "question": "How does GROUP BY treat multiple NULL values in the grouping column?",
+    "options": [
+      "Each NULL forms its own group",
+      "Rows with NULL are dropped",
+      "All NULLs fall into one group",
+      "NULL groups cause an error"
+    ],
+    "answer": 2,
+    "explanation": "GROUP BY treats NULLs as not distinct from each other, so they form a single group. This differs from comparison operators, which never match NULL."
+  },
+  {
+    "topic": "aggregation",
+    "question": "What does SELECT COUNT(*) FROM orders GROUP BY status return when orders is empty?",
+    "options": ["One row with 0", "No rows", "One row with NULL", "An error"],
+    "answer": 1,
+    "explanation": "Grouping an empty input produces no groups, so no rows are returned. Without GROUP BY, the same query returns a single row with 0."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "A query returns the 10 newest orders with ORDER BY created_at DESC LIMIT 10 on a large table. Which index helps most?",
+    "options": [
+      "A hash index on id",
+      "A bitmap index on status",
+      "A unique index on customer_name",
+      "An index on created_at, so the database can read rows in order and stop early"
+    ],
+    "answer": 3,
+    "explanation": "A B-tree on created_at can be scanned backwards and stopped after ten rows, avoiding a full sort of the table."
+  },
+  {
+    "topic": "joins",
+    "question": "What is a risk of using NATURAL JOIN?",
+    "options": [
+      "It always returns duplicate rows",
+      "It joins on every pair of identically named columns, so adding a column can silently change results",
+      "It requires an explicit ON clause",
+      "It cannot join more than two tables"
+    ],
+    "answer": 1,
+    "explanation": "NATURAL JOIN implicitly matches all same-named columns, so a schema change can alter the join condition without any query change."
+  },
+  {
+    "topic": "null-handling",
+    "question": "In standard SQL three-valued logic, what does NULL AND FALSE evaluate to?",
+    "options": ["FALSE", "NULL", "TRUE", "An error"],
+    "answer": 0,
+    "explanation": "FALSE AND anything is FALSE, so the unknown operand does not matter; NULL AND TRUE would be NULL."
+  },
+  {
+    "topic": "null-handling",
+    "question": "In PostgreSQL, where do NULLs appear with ORDER BY x ASC by default?",
+    "options": [
+      "First, because NULLs sort as smallest",
+      "They are excluded from the result",
+      "In random positions",
+      "Last, because NULLs sort as if larger than every other value"
+    ],
+    "answer": 3,
+    "explanation": "PostgreSQL places NULLs last for ASC and first for DESC unless NULLS FIRST or NULLS LAST is given; MySQL sorts NULLs first for ASC."
+  },
+  {
+    "topic": "null-handling",
+    "question": "In PostgreSQL, what does SELECT 'abc' || NULL return?",
+    "options": ["'abc'", "'abcNULL'", "NULL", "An error"],
+    "answer": 2,
+    "explanation": "The || operator returns NULL if any operand is NULL; concat() treats NULL as an empty string instead."
+  },
+  {
+    "topic": "window-functions",
+    "question": "In a window frame with tied ORDER BY values, how does RANGE differ from ROWS?",
+    "options": [
+      "ROWS includes peers and RANGE does not",
+      "RANGE includes all peer rows that share the current row's ORDER BY value, while ROWS counts physical rows",
+      "RANGE works only on text columns",
+      "They always produce identical results"
+    ],
+    "answer": 1,
+    "explanation": "With ties, a RANGE frame ending at CURRENT ROW extends through all peers, while a ROWS frame stops at the current physical row."
+  },
+  {
+    "topic": "window-functions",
+    "question": "What does PERCENT_RANK() return for the first row of each partition?",
+    "options": ["0", "1", "NULL", "1 divided by the partition size"],
+    "answer": 0,
+    "explanation": "PERCENT_RANK is (rank - 1) / (rows in partition - 1), so the first-ranked row always gets 0."
+  },
+  {
+    "topic": "cte",
+    "question": "How can a recursive CTE using UNION ALL avoid infinite recursion when traversing a graph that contains cycles?",
+    "options": [
+      "Add ORDER BY to the anchor member",
+      "Replace UNION ALL with INTERSECT",
+      "Declare the CTE as MATERIALIZED",
+      "Track the visited path in a column and exclude nodes already on it"
+    ],
+    "answer": 3,
+    "explanation": "Without cycle detection the recursive member keeps finding new rows; PostgreSQL 14+ also offers a CYCLE clause for this."
+  },
+  {
+    "topic": "cte",
+    "question": "In PostgreSQL, can a DELETE ... RETURNING statement be used inside a WITH clause?",
+    "options": [
+      "No, CTEs may contain only SELECT statements",
+      "Only if the CTE is declared RECURSIVE",
+      "Yes, and its returned rows can feed the main query, such as inserting them into an archive table",
+      "Only when the main query is also a DELETE"
+    ],
+    "answer": 2,
+    "explanation": "Data-modifying CTEs let one statement move rows atomically, for example deleting from one table and inserting into another."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "Why can WHERE a = 1 OR b = 2 be harder to optimize than an AND condition, even with separate indexes on a and b?",
+    "options": [
+      "OR conditions can never use any index",
+      "Each index covers only one branch, so the planner must combine two index scans or fall back to a sequential scan",
+      "The database evaluates OR conditions only after sorting",
+      "OR forces the query to run under SERIALIZABLE isolation"
+    ],
+    "answer": 1,
+    "explanation": "PostgreSQL can use a BitmapOr of two index scans, and rewriting as UNION is another option, but neither single index alone suffices."
+  },
+  {
+    "topic": "query-optimization",
+    "question": "In MySQL, why can WHERE phone = 5551234 skip an index on a VARCHAR phone column?",
+    "options": [
+      "Comparing a string column with a number converts the column values to numbers, so the index cannot be searched",
+      "MySQL never indexes VARCHAR columns",
+      "Numeric literals disable all indexes in a query",
+      "The index is used, but only for sorting"
+    ],
+    "answer": 0,
+    "explanation": "Quoting the literal, WHERE phone = '5551234', keeps the comparison on strings so the index applies."
+  },
+  {
+    "topic": "indexes",
+    "question": "Which PostgreSQL index type is generally best for jsonb containment (@>) queries and full-text search?",
+    "options": ["B-tree", "Hash", "BRIN", "GIN"],
+    "answer": 3,
+    "explanation": "GIN indexes map each element or lexeme to the rows containing it, which suits multi-valued columns."
+  },
+  {
+    "topic": "indexes",
+    "question": "What is a BRIN index best suited for in PostgreSQL?",
+    "options": [
+      "Small lookup tables with random primary keys",
+      "Exact-match lookups on UUID columns",
+      "Very large tables where column values correlate with physical row order, such as append-only timestamps",
+      "Enforcing uniqueness constraints"
+    ],
+    "answer": 2,
+    "explanation": "BRIN stores summaries per block range, so it is tiny but only effective when values are clustered on disk."
+  },
+  {
+    "topic": "indexes",
+    "question": "In MySQL InnoDB, what does a secondary index entry store to locate the full row?",
+    "options": [
+      "The physical disk address of the row",
+      "The row's primary key value",
+      "A copy of every column in the row",
+      "A hash of the entire row"
+    ],
+    "answer": 1,
+    "explanation": "InnoDB tables are clustered on the primary key, so secondary lookups go through the primary key index, which is why long primary keys make every secondary index larger."
+  },
+  {
+    "topic": "isolation-levels",
+    "question": "In MySQL InnoDB at REPEATABLE READ, what do gap locks taken by locking reads prevent?",
+    "options": [
+      "Other transactions inserting rows into the locked range between index records",
+      "Other transactions reading any row in the table",
+      "The current transaction from updating its own rows",
+      "Dirty reads of uncommitted data"
+    ],
+    "answer": 0,
+    "explanation": "Gap and next-key locks block inserts into scanned ranges, which prevents phantom rows for locking reads."
+  },
+  {
+    "topic": "transactions",
+    "question": "How does PostgreSQL's MVCC handle an UPDATE?",
+    "options": [
+      "It overwrites the row in place and logs the old value",
+      "It locks the whole table until commit",
+      "It moves the old version to a separate undo tablespace that readers query",
+      "It writes a new row version and marks the old version dead, to be reclaimed later by VACUUM"
+    ],
+    "answer": 3,
+    "explanation": "Readers keep seeing the old version until they take a snapshot that includes the update, so reads do not block writes."
+  },
+  {
+    "topic": "transactions",
+    "question": "Why must PostgreSQL VACUUM, usually via autovacuum, periodically freeze old rows?",
+    "options": [
+      "To compress rows into a smaller format",
+      "To rebuild every index from scratch",
+      "To prevent 32-bit transaction ID wraparound, which would make old rows appear to be in the future",
+      "To release locks held by committed transactions"
+    ],
+    "answer": 2,
+    "explanation": "Freezing marks old rows as visible to all transactions, so their transaction IDs can be safely reused."
+  },
+  {
+    "topic": "joins",
+    "question": "What does a LATERAL subquery in a PostgreSQL FROM clause allow?",
+    "options": [
+      "The subquery runs once and its result is cached for the whole query",
+      "The subquery can reference columns from FROM items that appear before it, such as fetching the top 3 orders per customer",
+      "The join ignores NULL values in both tables",
+      "Columns are matched by position instead of name"
+    ],
+    "answer": 1,
+    "explanation": "LATERAL evaluates the subquery for each row of the preceding items, much like a correlated subquery in FROM; MySQL 8.0.14+ also supports it."
+  },
+  {
+    "topic": "joins",
+    "question": "When is a nested loop join with an index on the inner table usually the best plan?",
+    "options": [
+      "When the outer input is small, so only a few index lookups are needed",
+      "When both inputs are huge and unsorted",
+      "When the join condition is an inequality on unindexed columns",
+      "When there is no index on either table"
+    ],
+    "answer": 0,
+    "explanation": "Each outer row triggers an index lookup, which is cheap for few rows but expensive for millions."
+  },
+  {
+    "topic": "aggregation",
+    "question": "In PostgreSQL, what does GROUP BY ROLLUP (region, city) add beyond GROUP BY region, city?",
+    "options": [
+      "A row for every possible region and city combination, including absent ones",
+      "Running totals ordered by city",
+      "Only the grand total, replacing the detail rows",
+      "Subtotal rows for each region and a grand total row"
+    ],
+    "answer": 3,
+    "explanation": "ROLLUP produces grouping sets (region, city), (region) and (), with NULLs in rolled-up columns."
+  },
+  {
+    "topic": "data-types",
+    "question": "In PostgreSQL, what does SELECT DATE '2024-01-31' + INTERVAL '1 month' return?",
+    "options": [
+      "2024-03-02 00:00:00",
+      "2024-03-01 00:00:00",
+      "2024-02-29 00:00:00",
+      "An error, because February has no 31st day"
+    ],
+    "answer": 2,
+    "explanation": "Adding months clamps to the last valid day of the target month, and date plus interval yields a timestamp."
+  },
+  {
+    "topic": "subqueries",
+    "question": "Which predicate is equivalent to x IN (SELECT y FROM t)?",
+    "options": [
+      "x = ALL (SELECT y FROM t)",
+      "x = ANY (SELECT y FROM t)",
+      "x > ANY (SELECT y FROM t)",
+      "EXISTS (SELECT y FROM t)"
+    ],
+    "answer": 1,
+    "explanation": "= ANY is TRUE when x equals at least one returned value, which is exactly what IN tests."
+  }
+]

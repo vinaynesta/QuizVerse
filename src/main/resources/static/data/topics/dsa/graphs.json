@@ -1,5 +1,20 @@
 [
  {
+  "id": "q01c5535d911",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "In an undirected graph without self-loops, what is the degree of a vertex?",
+  "options": [
+   "The number of edges incident to it",
+   "Its distance from the starting vertex",
+   "The total weight of the graph",
+   "The number of vertices in the graph"
+  ],
+  "answer": 0,
+  "explanation": "Degree counts how many edges touch the vertex."
+ },
+ {
   "id": "q353be7304a0",
   "subject": "dsa",
   "topic": "graphs",
@@ -43,6 +58,36 @@
   ],
   "answer": 1,
   "explanation": "BFS processes vertices in FIFO order, exploring all neighbors at one distance before going deeper."
+ },
+ {
+  "id": "qa4421894b9f",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "easy",
+  "question": "Which data structure does an iterative depth-first search typically use to track vertices to visit?",
+  "options": [
+   "Queue",
+   "Stack",
+   "Priority queue",
+   "Hash map only"
+  ],
+  "answer": 1,
+  "explanation": "A stack makes DFS explore the most recently discovered vertex first, going deep before backtracking."
+ },
+ {
+  "id": "q56f02fb68ad",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "How many edges does a tree with n vertices have?",
+  "options": [
+   "n",
+   "n(n - 1) / 2",
+   "n + 1",
+   "n - 1"
+  ],
+  "answer": 3,
+  "explanation": "A tree is connected and acyclic, which requires exactly n - 1 edges."
  },
  {
   "id": "q5ced031ad29",
@@ -105,6 +150,21 @@
   "explanation": "BFS explores vertices in order of distance, giving shortest paths in O(V + E)."
  },
  {
+  "id": "qdfcf9b84df6",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "medium",
+  "question": "Which operations does a union-find (disjoint set) data structure support efficiently?",
+  "options": [
+   "Sorting elements and binary searching them",
+   "Merging two sets and finding which set an element belongs to",
+   "Inserting into and removing the minimum of a priority queue",
+   "Finding shortest paths between vertices"
+  ],
+  "answer": 1,
+  "explanation": "Union and find run in nearly constant amortized time with path compression and union by rank."
+ },
+ {
   "id": "q4050398a396",
   "subject": "dsa",
   "topic": "graphs",
@@ -120,6 +180,21 @@
   "explanation": "A back edge to an in-progress (gray) vertex closes a directed cycle; edges to finished vertices do not."
  },
  {
+  "id": "q83c566282d4",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "What is the time complexity of the Floyd-Warshall all-pairs shortest path algorithm?",
+  "options": [
+   "O(V^3)",
+   "O(V * E)",
+   "O(E log V)",
+   "O(V^2)"
+  ],
+  "answer": 0,
+  "explanation": "Three nested loops over the vertices relax every pair through every possible intermediate vertex."
+ },
+ {
   "id": "q875bc0985b6",
   "subject": "dsa",
   "topic": "graphs",
@@ -133,6 +208,36 @@
   ],
   "answer": 0,
   "explanation": "It relaxes all edges V - 1 times, and any further improvement indicates a negative cycle."
+ },
+ {
+  "id": "q8c7bb4a7935",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "How does Kahn's topological sort algorithm detect that a directed graph contains a cycle?",
+  "options": [
+   "A vertex is dequeued twice",
+   "Fewer than V vertices are output when the queue empties",
+   "Some vertex has an in-degree greater than 1",
+   "The queue never becomes empty"
+  ],
+  "answer": 1,
+  "explanation": "Vertices on a cycle never reach in-degree zero, so they are never added to the output."
+ },
+ {
+  "id": "q9bda6dfef30",
+  "subject": "dsa",
+  "topic": "graphs",
+  "level": "hard",
+  "question": "Which algorithm finds all strongly connected components in O(V + E) using a single DFS with low-link values?",
+  "options": [
+   "Floyd-Warshall algorithm",
+   "Prim's algorithm",
+   "Kahn's algorithm",
+   "Tarjan's algorithm"
+  ],
+  "answer": 3,
+  "explanation": "Tarjan's algorithm pops a component off its stack when a vertex's low-link equals its discovery index."
  },
  {
   "id": "qbe7bb8e7938",

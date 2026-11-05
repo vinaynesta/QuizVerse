@@ -1,0 +1,122 @@
+[
+ {
+  "id": "q2863e911dbf",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Why is reading from memory generally faster than reading from disk?",
+  "options": [
+   "Memory stores less data per byte",
+   "Disks can only be read by one process",
+   "Memory is always located on another machine",
+   "RAM access takes nanoseconds, while disk access takes microseconds to milliseconds"
+  ],
+  "answer": 3,
+  "explanation": "This large gap is why caches keep hot data in memory."
+ },
+ {
+  "id": "q36c6148bee0",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is latency?",
+  "options": [
+   "The time taken to complete a single request",
+   "The number of requests processed per second",
+   "The percentage of requests that succeed",
+   "The number of concurrent connections open"
+  ],
+  "answer": 0,
+  "explanation": "Latency measures how long one operation takes, usually in milliseconds."
+ },
+ {
+  "id": "q3964af4926c",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is throughput?",
+  "options": [
+   "The time taken by one request from start to finish",
+   "The delay between a DNS lookup and a TCP connect",
+   "The largest message size a server accepts",
+   "The amount of work completed per unit of time"
+  ],
+  "answer": 3,
+  "explanation": "Throughput is a rate, such as requests or megabytes processed per second."
+ },
+ {
+  "id": "q7b0c4b3590a",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What does a p99 latency of 200 ms mean?",
+  "options": [
+   "The server handles 200 requests per second",
+   "The average request takes 99 ms",
+   "99% of requests complete within 200 ms",
+   "1% of requests failed with a timeout"
+  ],
+  "answer": 2,
+  "explanation": "Percentile latency describes the tail of the distribution, which often matters more than the average."
+ },
+ {
+  "id": "q8a43ce78c5d",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is bandwidth?",
+  "options": [
+   "The maximum amount of data that can be transferred per unit of time",
+   "The number of servers in a data center",
+   "The time a single packet takes to reach its destination",
+   "The percentage of requests that fail"
+  ],
+  "answer": 0,
+  "explanation": "Bandwidth is capacity, such as megabits per second, while latency is delay."
+ },
+ {
+  "id": "qc326f9ff648",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is the typical effect of batching many requests together?",
+  "options": [
+   "Lower latency and lower throughput at the same time",
+   "Lower latency, but throughput drops to zero",
+   "Higher throughput, but each individual request may wait longer",
+   "No effect on either latency or throughput"
+  ],
+  "answer": 2,
+  "explanation": "Batching amortizes per-request overhead, but each request may wait for the batch to fill."
+ },
+ {
+  "id": "qc39d8763f02",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Why does physical distance between a user and a data center affect latency?",
+  "options": [
+   "Longer distances cause packets to be compressed",
+   "Signals take time to travel the distance, adding round-trip delay",
+   "Distant servers always have slower CPUs",
+   "Physical distance changes the database schema"
+  ],
+  "answer": 1,
+  "explanation": "Propagation delay is bounded by the speed of light in fiber, so distance sets a floor on round-trip time."
+ },
+ {
+  "id": "qf55e6ef5205",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Which change most directly reduces latency for users far from the origin server?",
+  "options": [
+   "Adding more log lines to every request",
+   "Serving content from a location closer to those users",
+   "Increasing the number of automatic retries",
+   "Removing all caching from the request path"
+  ],
+  "answer": 1,
+  "explanation": "Moving data closer to users cuts propagation distance, which dominates for distant clients."
+ }
+]

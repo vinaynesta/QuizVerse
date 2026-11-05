@@ -1,0 +1,182 @@
+[
+ {
+  "id": "q0783ea95a61",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "In which phase do callbacks such as a socket's 'close' event run after the handle was destroyed?",
+  "options": [
+   "The poll phase",
+   "The timers phase",
+   "The close callbacks phase",
+   "The check phase"
+  ],
+  "answer": 2,
+  "explanation": "Close callbacks run in their own phase at the end of each loop iteration."
+ },
+ {
+  "id": "q0b9055fc887",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Which operation does not use the libuv threadpool?",
+  "options": [
+   "Reading and writing TCP sockets",
+   "fs.readFile()",
+   "dns.lookup()",
+   "Asynchronous zlib compression"
+  ],
+  "answer": 0,
+  "explanation": "Network sockets use non-blocking OS I/O, while file system, dns.lookup and zlib work runs on the threadpool."
+ },
+ {
+  "id": "q0e8672b62f7",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Inside an I/O callback, which runs first: setTimeout(fn, 0) or setImmediate(fn)?",
+  "options": [
+   "setTimeout, because timers always run before I/O",
+   "setImmediate, because the check phase comes before the next timers phase",
+   "They run in the same phase in the order they were scheduled",
+   "It depends on the disk speed"
+  ],
+  "answer": 1,
+  "explanation": "After the poll phase finishes the I/O callback, the loop reaches the check phase before wrapping around to timers."
+ },
+ {
+  "id": "q1a6f0ecaf55",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "In which event loop phase do setImmediate() callbacks run?",
+  "options": [
+   "The pending callbacks phase",
+   "The timers phase",
+   "The close callbacks phase",
+   "The check phase, which runs right after the poll phase"
+  ],
+  "answer": 3,
+  "explanation": "setImmediate() callbacks run in the check phase; timers run in the timers phase at the start of each loop iteration."
+ },
+ {
+  "id": "q1c3ebcfcad5",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the default size of the libuv threadpool used for file system and DNS lookup work?",
+  "options": [
+   "1 thread",
+   "4 threads",
+   "8 threads",
+   "One thread per CPU core"
+  ],
+  "answer": 1,
+  "explanation": "UV_THREADPOOL_SIZE changes the size, up to a maximum of 1024."
+ },
+ {
+  "id": "q20c8c4beb54",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What does queueMicrotask(fn) do?",
+  "options": [
+   "Schedules fn for the check phase",
+   "Adds fn to the libuv threadpool",
+   "Queues fn on the same microtask queue used by promise callbacks",
+   "Runs fn synchronously before returning"
+  ],
+  "answer": 2,
+  "explanation": "queueMicrotask is the standard way to schedule a microtask without creating a promise; it runs after process.nextTick callbacks."
+ },
+ {
+  "id": "q820b7866568",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "When does a process.nextTick() callback scheduled inside a promise .then() callback run?",
+  "options": [
+   "Before the .then() callback that scheduled it returns",
+   "In the next timers phase",
+   "Only after all I/O callbacks in the poll phase",
+   "After the current microtask finishes; Node drains the remaining promise microtasks, then the nextTick queue, before the event loop continues"
+  ],
+  "answer": 3,
+  "explanation": "Node alternates draining the nextTick and promise queues until both are empty, so it runs before the loop moves to the next phase."
+ },
+ {
+  "id": "q85af3d75655",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Which API measures how much the event loop is delayed, for example by long synchronous work?",
+  "options": [
+   "util.inspect.loopLag()",
+   "process.hrtime.loopDelay()",
+   "os.loadavg()",
+   "perf_hooks.monitorEventLoopDelay()"
+  ],
+  "answer": 3,
+  "explanation": "monitorEventLoopDelay() samples loop delay into a histogram with percentiles such as p99."
+ },
+ {
+  "id": "q8f2eb2d2b60",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the main job of the poll phase?",
+  "options": [
+   "Run setImmediate() callbacks",
+   "Retrieve new I/O events and run their callbacks, waiting for I/O only if no timers are due",
+   "Run process.nextTick() callbacks only",
+   "Close handles that have been destroyed"
+  ],
+  "answer": 1,
+  "explanation": "The poll phase is where the loop blocks for I/O when there is nothing else to do, unless a timer is due sooner."
+ },
+ {
+  "id": "q958af14009e",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "Which environment variable changes the size of the libuv threadpool?",
+  "options": [
+   "NODE_THREADS",
+   "UV_THREADPOOL_SIZE",
+   "LIBUV_WORKERS",
+   "NODE_OPTIONS=--threads"
+  ],
+  "answer": 1,
+  "explanation": "It must be set before the threadpool is first used, typically before the process starts."
+ },
+ {
+  "id": "qb5f9432ae22",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the risk of calling process.nextTick() recursively in a loop?",
+  "options": [
+   "It makes timers fire more accurately",
+   "It automatically turns callbacks into promises",
+   "It has no effect on the event loop",
+   "It can starve I/O and timers, because the nextTick queue is drained before the loop moves on"
+  ],
+  "answer": 3,
+  "explanation": "Because the nextTick queue is fully drained before the loop continues, a self-scheduling callback can block I/O indefinitely."
+ },
+ {
+  "id": "qdf2f6d67f7c",
+  "subject": "nodejs",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "In the main module, outside any I/O callback, what is the order of setTimeout(fn, 0) and setImmediate(fn)?",
+  "options": [
+   "setTimeout always runs first",
+   "setImmediate always runs first",
+   "It is not deterministic; it depends on whether 1 ms has elapsed when the loop starts",
+   "They always run in the order written"
+  ],
+  "answer": 2,
+  "explanation": "The timer may or may not be due when the loop enters the timers phase, so the order can vary between runs."
+ }
+]

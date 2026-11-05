@@ -15,6 +15,36 @@
   "explanation": "Each comparison halves the remaining search range."
  },
  {
+  "id": "q6a1a1966c8a",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "What is the best-case time complexity of insertion sort on n elements?",
+  "options": [
+   "O(n)",
+   "O(n log n)",
+   "O(1)",
+   "O(n^2)"
+  ],
+  "answer": 0,
+  "explanation": "On an already sorted array each element is compared once with its predecessor and no shifts occur."
+ },
+ {
+  "id": "qbbe82cb852b",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "easy",
+  "question": "Which sorting algorithm repeatedly finds the smallest remaining element and moves it to the front of the unsorted part?",
+  "options": [
+   "Merge sort",
+   "Bubble sort",
+   "Selection sort",
+   "Insertion sort"
+  ],
+  "answer": 2,
+  "explanation": "Selection sort selects the minimum of the unsorted portion and swaps it into place on each pass."
+ },
+ {
   "id": "qdb8ba1209f3",
   "subject": "dsa",
   "topic": "sorting-searching",
@@ -60,6 +90,21 @@
   "explanation": "In the worst case every element is checked once."
  },
  {
+  "id": "q399893c13d5",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "What is the average-case time complexity of quickselect for finding the k-th smallest element of n elements?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Each partition step recurses into only one side, so the expected work is n + n/2 + n/4 + ..., which is linear."
+ },
+ {
   "id": "q5e11fe4d816",
   "subject": "dsa",
   "topic": "sorting-searching",
@@ -90,6 +135,21 @@
   "explanation": "If the pivot is always the smallest or largest element, partitions are maximally unbalanced."
  },
  {
+  "id": "q618a5086af1",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "medium",
+  "question": "Which of these sorting algorithms is typically fastest on an array that is already nearly sorted?",
+  "options": [
+   "Selection sort",
+   "Heapsort",
+   "Insertion sort",
+   "Quicksort with the first element as pivot"
+  ],
+  "answer": 2,
+  "explanation": "Insertion sort runs in O(n + d) time, where d is the number of inversions, which is small for nearly sorted input."
+ },
+ {
   "id": "qc72684f2d22",
   "subject": "dsa",
   "topic": "sorting-searching",
@@ -103,6 +163,21 @@
   ],
   "answer": 2,
   "explanation": "Merge sort preserves the relative order of equal elements by taking from the left half on ties."
+ },
+ {
+  "id": "q0d849de42e4",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the worst-case time complexity of the median-of-medians selection algorithm on n elements?",
+  "options": [
+   "O(n log n)",
+   "O(n)",
+   "O(n^2)",
+   "O(log n)"
+  ],
+  "answer": 1,
+  "explanation": "Choosing the median of group medians as pivot guarantees a constant-fraction split, giving linear time even in the worst case."
  },
  {
   "id": "q5c2da092ddd",
@@ -133,6 +208,21 @@
   ],
   "answer": 2,
   "explanation": "A modified binary search can always tell which half is sorted and discard the other."
+ },
+ {
+  "id": "q81e36f4f03b",
+  "subject": "dsa",
+  "topic": "sorting-searching",
+  "level": "hard",
+  "question": "What is the time complexity of LSD radix sort on n integers with d digits in base b?",
+  "options": [
+   "O(n log n)",
+   "O(n * b^d)",
+   "O(d * (n + b))",
+   "O(d * n * log b)"
+  ],
+  "answer": 2,
+  "explanation": "Each of the d passes is a stable counting sort costing O(n + b)."
  },
  {
   "id": "qe3c3c5d5643",

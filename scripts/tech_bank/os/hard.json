@@ -1,0 +1,282 @@
+[
+  {
+    "topic": "virtual-memory",
+    "question": "What is Belady's anomaly?",
+    "options": ["Increasing the number of frames increases the number of page faults for some reference strings", "LRU always produces more faults than FIFO", "The optimal algorithm cannot be implemented", "Page faults increase as the page size shrinks"],
+    "answer": 0,
+    "explanation": "Under FIFO, adding frames can increase faults for some reference strings, which runs against the intuition that more memory always helps."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "For the reference string 1,2,3,4,1,2,5,1,2,3,4,5 with FIFO replacement, how many page faults occur with 3 frames and with 4 frames?",
+    "options": ["9 and 8", "9 and 10", "10 and 9", "12 and 10"],
+    "answer": 1,
+    "explanation": "FIFO gives 9 faults with 3 frames but 10 with 4 frames; this is the classic example of Belady's anomaly."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Which page-replacement algorithms are immune to Belady's anomaly?",
+    "options": ["FIFO only", "FIFO and second-chance", "LRU and Optimal (stack algorithms)", "All replacement algorithms"],
+    "answer": 2,
+    "explanation": "In stack algorithms, the pages held with n frames are always a subset of those held with n + 1 frames, so adding frames can never add faults."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With 3 frames (initially empty) and the reference string 7,0,1,2,0,3,0,4,2,3,0,3,2,1,2,0,1,7,0,1, how many page faults does the Optimal algorithm cause?",
+    "options": ["12", "15", "8", "9"],
+    "answer": 3,
+    "explanation": "OPT evicts the page whose next use is furthest away and gets 9 faults on this string, compared with 12 for LRU and 15 for FIFO."
+  },
+  {
+    "topic": "memory-management",
+    "question": "TLB lookup takes 20 ns, a memory access takes 100 ns, and the TLB hit ratio is 80% with a single-level page table. What is the effective memory access time?",
+    "options": ["140 ns", "120 ns", "116 ns", "220 ns"],
+    "answer": 0,
+    "explanation": "A hit costs 20 + 100 = 120 ns and a miss costs 20 + 100 + 100 = 220 ns, so EAT = 0.8 x 120 + 0.2 x 220 = 96 + 44 = 140 ns."
+  },
+  {
+    "topic": "memory-management",
+    "question": "TLB lookup takes 20 ns, a memory access takes 100 ns, and the TLB hit ratio is 99% with a single-level page table. What is the effective memory access time?",
+    "options": ["120 ns", "121 ns", "119 ns", "140 ns"],
+    "answer": 1,
+    "explanation": "EAT = 0.99 x (20 + 100) + 0.01 x (20 + 200) = 118.8 + 2.2 = 121 ns."
+  },
+  {
+    "topic": "memory-management",
+    "question": "With a two-level page table and no TLB, how many physical memory accesses does one data reference need?",
+    "options": ["1", "2", "3", "4"],
+    "answer": 2,
+    "explanation": "The CPU reads the outer page table, then the inner page table, then the data itself, which is 3 memory accesses."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A 32-bit system uses 4 KB pages and 4-byte page-table entries. How large is a single-level page table for one process that uses its whole address space?",
+    "options": ["4 KB", "1 MB", "16 MB", "4 MB"],
+    "answer": 3,
+    "explanation": "There are 2^32 / 2^12 = 2^20 pages, and 2^20 x 4 bytes = 4 MB per process, which is why hierarchical page tables are used."
+  },
+  {
+    "topic": "memory-management",
+    "question": "What is the defining characteristic of an inverted page table?",
+    "options": ["It has one entry per physical frame rather than one per virtual page", "It has one entry per virtual page for each process", "It is stored entirely in the TLB", "It maps physical addresses to disk blocks"],
+    "answer": 0,
+    "explanation": "An inverted table has one entry per frame, storing <pid, page>; this saves memory but makes lookups slower, so a hash table is usually added."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A buddy-system allocator manages a 256 KB segment. How much memory is actually allocated for a 21 KB request?",
+    "options": ["21 KB", "32 KB", "64 KB", "24 KB"],
+    "answer": 1,
+    "explanation": "The buddy system rounds requests up to a power of two, so it splits 256 into 128, 64 and then 32 KB and allocates 32 KB, wasting 11 KB internally."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Memory access time is 200 ns, page-fault service time is 8 ms, and one access in 1000 causes a page fault. What is the approximate effective access time?",
+    "options": ["200 ns", "8 ms", "8.2 microseconds", "1.2 microseconds"],
+    "answer": 2,
+    "explanation": "EAT = 0.999 x 200 ns + 0.001 x 8,000,000 ns = 199.8 + 8000 = about 8200 ns, a 40x slowdown."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Memory access time is 200 ns and page-fault service time is 8 ms. To keep slowdown under 10% (EAT < 220 ns), the page-fault rate must be below about:",
+    "options": ["1 in 1,000 accesses", "1 in 10,000 accesses", "1 in 40,000 accesses", "1 in 400,000 accesses"],
+    "answer": 3,
+    "explanation": "220 > 200 + 7,999,800p gives p < 20 / 7,999,800, about 2.5 x 10^-6, which is fewer than 1 fault per 400,000 accesses."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What is thrashing?",
+    "options": ["A process spends more time paging than executing because it lacks enough frames for its working set", "The CPU switches between too many threads", "Disk fragmentation slows file access", "Two processes repeatedly acquire and release the same lock"],
+    "answer": 0,
+    "explanation": "When processes keep faulting on pages they need right away, CPU utilization collapses while the paging device stays saturated."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Why can a naive long-term scheduler make thrashing worse?",
+    "options": ["It disables the TLB", "Seeing low CPU utilization, it admits more processes, which take frames from others and cause even more faults", "It gives priority to I/O-bound processes", "It reduces the time quantum"],
+    "answer": 1,
+    "explanation": "Low CPU utilization caused by paging looks like spare capacity, so raising the degree of multiprogramming feeds the cycle."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "How does the working-set model prevent thrashing?",
+    "options": ["It uses FIFO replacement globally", "It increases the page size", "It tracks the pages each process referenced in a recent window and suspends a process if total demand exceeds available frames", "It disables demand paging"],
+    "answer": 2,
+    "explanation": "If the sum of working-set sizes D exceeds the number of frames m, the OS swaps out a process, keeping multiprogramming as high as possible without thrashing."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "In the page-fault-frequency (PFF) strategy, what does the OS do when a process's fault rate rises above the upper threshold?",
+    "options": ["Removes a frame from the process", "Terminates the process", "Switches to the Optimal algorithm", "Allocates the process another frame (or suspends it if none are free)"],
+    "answer": 3,
+    "explanation": "PFF gives frames to processes faulting too often and takes them from processes faulting rarely, controlling thrashing directly."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "How does copy-on-write (COW) make fork() efficient?",
+    "options": ["Parent and child initially share pages marked read-only; a page is copied only when either process writes to it", "The child gets a full copy of all parent pages immediately", "The child shares the parent's stack permanently", "Pages are written to disk before copying"],
+    "answer": 0,
+    "explanation": "COW defers copying until a write fault occurs, so a fork() followed by exec() copies almost nothing."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "How does vfork() differ from fork() with copy-on-write?",
+    "options": ["vfork() copies all pages eagerly", "With vfork() the child uses the parent's address space directly and the parent is suspended until the child calls exec() or exits", "vfork() creates a thread instead of a process", "vfork() works only for kernel processes"],
+    "answer": 1,
+    "explanation": "vfork() shares the address space without even COW protection, so any change the child makes is visible to the parent; it is meant to be followed by exec() right away."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "How does the second-chance (clock) page-replacement algorithm work?",
+    "options": ["It always evicts the most recently used page", "It picks a victim at random", "In FIFO order, a page with reference bit 1 has its bit cleared and is skipped; the first page found with bit 0 is evicted", "It evicts the page with the largest working set"],
+    "answer": 2,
+    "explanation": "Second-chance approximates LRU cheaply using the hardware reference bit; if every bit is set, it falls back to FIFO."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is priority inversion?",
+    "options": ["A low-priority process permanently gets a higher priority", "The scheduler reverses its priority queue", "Two processes swap priorities at each context switch", "A high-priority task waits on a lock held by a low-priority task, which is preempted by medium-priority tasks"],
+    "answer": 3,
+    "explanation": "The high-priority task is effectively delayed by unrelated medium-priority work, because the low-priority lock holder cannot run."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is the standard solution to priority inversion?",
+    "options": ["Priority inheritance: the lock holder temporarily inherits the priority of the highest-priority waiter", "Aging", "Increasing the time quantum", "Using spinlocks instead of mutexes"],
+    "answer": 0,
+    "explanation": "With inherited priority, medium-priority tasks cannot preempt the lock holder, so it finishes quickly, releases the lock and drops back to its original priority."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Which real-world incident is the textbook example of priority inversion?",
+    "options": ["The Therac-25 accidents", "The Mars Pathfinder lander's repeated system resets", "The Y2K bug", "The Ariane 5 launch failure"],
+    "answer": 1,
+    "explanation": "On Pathfinder, a low-priority task holding a bus mutex blocked a high-priority task, which triggered watchdog resets; enabling priority inheritance in VxWorks fixed it."
+  },
+  {
+    "topic": "synchronization",
+    "question": "In the first readers-writers solution (readers have priority), what problem can occur?",
+    "options": ["Readers can starve", "Two writers can write at the same time", "Writers can starve if readers keep arriving", "Readers and writers can access the data at the same time"],
+    "answer": 2,
+    "explanation": "As long as at least one reader is active, new readers get in right away, so a steady stream of readers can keep a writer waiting forever."
+  },
+  {
+    "topic": "synchronization",
+    "question": "In the naive dining-philosophers solution where each philosopher picks up the left chopstick then the right, what can happen?",
+    "options": ["Two neighbors eat at the same time", "Chopsticks are duplicated", "Starvation is impossible", "All philosophers pick up their left chopstick at once and deadlock"],
+    "answer": 3,
+    "explanation": "Each philosopher holds one chopstick and waits for the next one, forming a circular wait; asymmetric pick-up order or allowing at most 4 at the table avoids it."
+  },
+  {
+    "topic": "concurrency",
+    "question": "Why should a thread call wait() on a condition variable inside a while loop rather than an if statement?",
+    "options": ["Because of spurious wakeups and because another thread may change the condition before the woken thread reacquires the lock", "Because if statements are not allowed inside monitors", "To keep the lock held while waiting", "To avoid a context switch"],
+    "answer": 0,
+    "explanation": "Under Mesa-style semantics, a signaled thread only becomes runnable, so it must recheck the predicate once it gets the lock back."
+  },
+  {
+    "topic": "concurrency",
+    "question": "By Amdahl's law, what is the maximum speedup on 4 cores for a program that is 75% parallelizable?",
+    "options": ["4.0", "About 2.29", "3.0", "About 1.75"],
+    "answer": 1,
+    "explanation": "Speedup = 1 / (S + (1 - S) / N) = 1 / (0.25 + 0.75 / 4) = 1 / 0.4375, about 2.29."
+  },
+  {
+    "topic": "concurrency",
+    "question": "In the many-to-one threading model, what happens when one user thread makes a blocking system call?",
+    "options": ["Only that thread blocks", "The kernel creates a new kernel thread", "The entire process blocks, because all user threads map to a single kernel thread", "The system call is silently converted to non-blocking"],
+    "answer": 2,
+    "explanation": "The kernel sees only one schedulable entity, so a blocking call stalls every thread, and the threads cannot run in parallel on multicore CPUs."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Banker's algorithm: Available = (3,3,2). Allocation: P0 (0,1,0), P1 (2,0,0), P2 (3,0,2), P3 (2,1,1), P4 (0,0,2). Max: P0 (7,5,3), P1 (3,2,2), P2 (9,0,2), P3 (2,2,2), P4 (4,3,3). Which is a safe sequence?",
+    "options": ["<P0, P1, P2, P3, P4>", "<P2, P1, P3, P4, P0>", "<P4, P1, P3, P0, P2>", "<P1, P3, P4, P0, P2>"],
+    "answer": 3,
+    "explanation": "Need = Max - Allocation; P1 (need 1,2,2) can run, raising Available to (5,3,2), then P3 to (7,4,3), P4 to (7,4,5), P0 to (7,5,5) and P2 to (10,5,7); P0, P2 and P4 cannot run first."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "In the banker's algorithm, how is the Need matrix computed?",
+    "options": ["Need = Max - Allocation", "Need = Available - Allocation", "Need = Max + Allocation", "Need = Allocation - Available"],
+    "answer": 0,
+    "explanation": "Need[i][j] is the number of additional instances of resource j that process i may still request before finishing."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "When does the banker's algorithm grant a resource request that does not exceed Need or Available?",
+    "options": ["Always, immediately", "Only if pretending to grant it leaves the system in a safe state", "Only if no other process is waiting", "Only if the request is for a single instance"],
+    "answer": 1,
+    "explanation": "The resource-request algorithm tentatively allocates, runs the safety algorithm and rolls back (making the process wait) if the result is unsafe."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "What is the time complexity of the banker's safety algorithm for n processes and m resource types?",
+    "options": ["O(n + m)", "O(n log m)", "O(m x n^2)", "O(2^n)"],
+    "answer": 2,
+    "explanation": "Up to n passes, each scanning n processes and comparing m-element vectors, gives O(m x n^2)."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Three processes share a resource type, and each needs at most 2 instances. What is the minimum number of instances that guarantees no deadlock?",
+    "options": ["2", "3", "6", "4"],
+    "answer": 3,
+    "explanation": "In the worst case each process holds 1 instance (3 total); one more instance lets some process finish, so n(m - 1) + 1 = 3 x 1 + 1 = 4."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "For single-instance resources, deadlock detection builds a wait-for graph from the resource-allocation graph. What does it do to get it?",
+    "options": ["It removes the resource nodes and collapses edges so that Pi -> Pj means Pi waits for a resource held by Pj", "It adds an edge from every resource to every process", "It reverses all assignment edges", "It keeps only the resource nodes"],
+    "answer": 0,
+    "explanation": "A deadlock exists exactly when the wait-for graph has a cycle, which can be found in O(n^2) time."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Under rate-monotonic scheduling, what is the worst-case CPU utilization bound that guarantees two periodic tasks can be scheduled?",
+    "options": ["100%", "About 82.8%", "About 69.3%", "50%"],
+    "answer": 1,
+    "explanation": "The bound is n(2^(1/n) - 1), and for n = 2 that is 2(sqrt(2) - 1), about 0.828; it approaches ln 2 (about 69.3%) as n grows."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Periodic tasks P1 (period 50, burst 25) and P2 (period 80, burst 35) have total utilization of about 94%. Which statement is correct?",
+    "options": ["Neither rate-monotonic nor EDF can schedule them", "Rate-monotonic can schedule them but EDF cannot", "EDF can schedule them, but rate-monotonic misses a deadline", "Both always meet all deadlines because utilization is below 100%"],
+    "answer": 2,
+    "explanation": "Utilization 25/50 + 35/80 = 0.9375 is at most 1, so EDF works; under RM, P1 preempts P2 at t = 50, so P2 has run only 30 of its 35 ms by its deadline at t = 80."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "By Little's formula, if on average 7 processes arrive per second and each spends 2 seconds in the queue, what is the average queue length?",
+    "options": ["3.5", "9", "5", "14"],
+    "answer": 3,
+    "explanation": "Little's formula n = lambda x W gives 7 x 2 = 14 processes in the queue on average."
+  },
+  {
+    "topic": "file-systems",
+    "question": "An inode has 12 direct pointers and 1 single-indirect pointer, with 4 KB blocks and 4-byte block pointers. What is the largest file size these pointers can address?",
+    "options": ["4144 KB", "48 KB", "4096 KB", "4 MB + 4 KB"],
+    "answer": 0,
+    "explanation": "An indirect block holds 4096 / 4 = 1024 pointers, so the maximum is (12 + 1024) x 4 KB = 4144 KB."
+  },
+  {
+    "topic": "file-systems",
+    "question": "What problem does a journaling (log-structured metadata) file system mainly solve?",
+    "options": ["External fragmentation of free space", "Leaving metadata inconsistent after a crash, which would otherwise need a full fsck scan", "Slow sequential reads", "Limits on file name length"],
+    "answer": 1,
+    "explanation": "Metadata updates are first written to a log as transactions, so after a crash only committed but unapplied transactions need replaying."
+  },
+  {
+    "topic": "file-systems",
+    "question": "A file has two hard links. What happens when one of them is deleted with unlink()?",
+    "options": ["The file's data is freed immediately", "The other link becomes dangling", "The inode's link count drops to 1 and the data stays reachable through the other name", "The remaining link is turned into a symbolic link"],
+    "answer": 2,
+    "explanation": "The inode and its blocks are freed only when the link count reaches 0 and no process still has the file open."
+  },
+  {
+    "topic": "io-systems",
+    "question": "The disk head is at cylinder 53 and the queue holds 98, 183, 37, 122, 14, 124, 65, 67. What is the total head movement under SSTF scheduling?",
+    "options": ["640 cylinders", "208 cylinders", "299 cylinders", "236 cylinders"],
+    "answer": 3,
+    "explanation": "SSTF serves 65, 67, 37, 14, 98, 122, 124, 183, moving 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236 cylinders."
+  }
+]

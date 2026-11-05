@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4a9fba37325",
+  "subject": "java",
+  "topic": "strings",
+  "level": "hard",
+  "question": "What does \"\\u00DF\".toUpperCase() (the German sharp s) return?",
+  "options": [
+   "\"\\u00DF\" unchanged",
+   "\"SS\"",
+   "\"S\"",
+   "\"B\""
+  ],
+  "answer": 1,
+  "explanation": "Unicode case mapping uppercases the sharp s to two characters, so the string length changes."
+ },
+ {
+  "id": "qd58416f52b7",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does -7 % 3 evaluate to in Java?",
+  "options": [
+   "-2",
+   "2",
+   "1",
+   "-1"
+  ],
+  "answer": 3,
+  "explanation": "The result of % takes the sign of the dividend, and -7 = 3 * (-2) + (-1)."
+ },
+ {
+  "id": "q02532ad9f72",
+  "subject": "java",
+  "topic": "core-syntax",
+  "level": "hard",
+  "question": "What does Integer.MAX_VALUE + 1 evaluate to?",
+  "options": [
+   "2147483648",
+   "It throws ArithmeticException",
+   "Integer.MAX_VALUE",
+   "Integer.MIN_VALUE (-2147483648)"
+  ],
+  "answer": 3,
+  "explanation": "int arithmetic silently overflows by wrapping around in two's complement."
+ },
+ {
+  "id": "q9e56d077299",
+  "subject": "java",
+  "topic": "generics",
+  "level": "hard",
+  "question": "Why does declaring static T value; inside class Box<T> fail to compile?",
+  "options": [
+   "T must be bounded before it can be used in a field",
+   "Static fields must be primitives",
+   "Static members are shared across all parameterizations, so they cannot use the class type parameter",
+   "Generic classes cannot have static members"
+  ],
+  "answer": 2,
+  "explanation": "There is only one static field for Box<String>, Box<Integer>, and so on, so no single T applies."
+ },
+ {
+  "id": "q4f9e459f798",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "Which java.lang.ref reference type lets its referent be reclaimed only when the JVM is running low on memory, making it suitable for caches?",
+  "options": [
+   "SoftReference",
+   "PhantomReference",
+   "WeakReference",
+   "StrongReference"
+  ],
+  "answer": 0,
+  "explanation": "Softly reachable objects are cleared before an OutOfMemoryError is thrown, while weak references are cleared at the next collection."
+ },
+ {
+  "id": "q30ba4e8691f",
+  "subject": "java",
+  "topic": "jvm-memory",
+  "level": "hard",
+  "question": "What does java.lang.OutOfMemoryError: Metaspace usually indicate?",
+  "options": [
+   "Too much class metadata, often from a class loader leak",
+   "A thread's call stack is too deep",
+   "The heap is full of ordinary objects",
+   "Too many threads were created"
+  ],
+  "answer": 0,
+  "explanation": "Metaspace holds class metadata, so it fills up when classes are loaded but their class loaders are never released."
+ },
+ {
+  "id": "q0c991b547d0",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "What happens when you put a null key or null value into a ConcurrentHashMap?",
+  "options": [
+   "It throws NullPointerException",
+   "It stores the null like HashMap does",
+   "It silently ignores the call",
+   "It stores the entry in a special null bucket"
+  ],
+  "answer": 0,
+  "explanation": "ConcurrentHashMap forbids nulls so that a null result from get() always means the key is absent."
+ },
+ {
+  "id": "q33e980adc42",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "Can a lambda implementing java.util.function.Function throw a checked IOException without catching it?",
+  "options": [
+   "No, because Function.apply declares no checked exceptions",
+   "Yes, lambdas are exempt from checked exception rules",
+   "Yes, if the enclosing method declares throws IOException",
+   "Only inside a parallel stream"
+  ],
+  "answer": 0,
+  "explanation": "A lambda body may only throw the checked exceptions declared by its functional interface's method."
+ },
+ {
+  "id": "q06717173726",
+  "subject": "java",
+  "topic": "modern-java",
+  "level": "hard",
+  "question": "In Java 21, when does case String s when s.isEmpty() -> ... match in a pattern switch?",
+  "options": [
+   "Whenever the selector is a String",
+   "Only when the selector is null",
+   "When the guard is true, regardless of type",
+   "When the selector is a String and the guard s.isEmpty() is true"
+  ],
+  "answer": 3,
+  "explanation": "A guarded pattern requires both the type pattern to match and the when condition to hold."
+ },
+ {
+  "id": "q38ebc472bf7",
+  "subject": "java",
+  "topic": "exceptions",
+  "level": "hard",
+  "question": "What is thrown when a static initializer throws an unchecked exception during class initialization?",
+  "options": [
+   "ClassNotFoundException",
+   "ExceptionInInitializerError",
+   "NoSuchMethodError",
+   "The original exception, unwrapped"
+  ],
+  "answer": 1,
+  "explanation": "The exception is wrapped, and later attempts to use the class get NoClassDefFoundError."
+ }
+]

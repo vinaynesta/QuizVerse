@@ -1,0 +1,32 @@
+[
+ {
+  "id": "q7e533ede35a",
+  "subject": "sql",
+  "topic": "ddl",
+  "level": "easy",
+  "question": "Which statement removes a table together with its definition and all of its data?",
+  "options": [
+   "DELETE TABLE",
+   "REMOVE TABLE",
+   "DROP TABLE",
+   "CLEAR TABLE"
+  ],
+  "answer": 2,
+  "explanation": "DROP TABLE deletes the table object itself, whereas DELETE only removes rows."
+ },
+ {
+  "id": "qb4ac19ea731",
+  "subject": "sql",
+  "topic": "ddl",
+  "level": "easy",
+  "question": "Which statement adds a new column to an existing table?",
+  "options": [
+   "UPDATE TABLE t ADD c INTEGER;",
+   "INSERT COLUMN c INTO t;",
+   "CREATE COLUMN c ON t;",
+   "ALTER TABLE t ADD COLUMN c INTEGER;"
+  ],
+  "answer": 3,
+  "explanation": "ALTER TABLE changes a table's structure, including adding, dropping or modifying columns."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf9c08006def",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is the core challenge of a transaction that spans multiple shards?",
+  "options": [
+   "Each shard requires a different SQL dialect",
+   "Shards are not allowed to store more than one table",
+   "Coordinating an atomic commit across shards, typically with 2PC or saga-style compensation",
+   "Transactions are disabled by default on every shard"
+  ],
+  "answer": 2,
+  "explanation": "Atomicity across independent databases needs a coordination protocol, which adds latency and failure modes."
+ },
+ {
+  "id": "qdeaa49df1dc",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "What is the main tradeoff of hash-based sharding compared with range-based sharding?",
+  "options": [
+   "Range queries become faster while writes concentrate on one shard",
+   "Keys spread evenly, but range scans must query many shards",
+   "Adding shards never requires moving any data",
+   "Joins become local to a single shard automatically"
+  ],
+  "answer": 1,
+  "explanation": "Hashing destroys key ordering, so range queries touch many shards, while range sharding risks hotspots."
+ },
+ {
+  "id": "q823a817ee7d",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Why is random jitter added to retry delays?",
+  "options": [
+   "It guarantees that retries succeed on the first attempt",
+   "It reduces the number of TCP packets sent",
+   "It forces requests to arrive in strict FIFO order",
+   "It spreads retries out so many clients do not hit a recovering service at the same moment"
+  ],
+  "answer": 3,
+  "explanation": "Synchronized retries create spikes that can prevent a recovering service from catching up."
+ },
+ {
+  "id": "q69a52c7c4de",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "Why does consistent hashing reduce data movement compared with hash(key) mod N?",
+  "options": [
+   "It guarantees strict global ordering of keys across nodes",
+   "Adding or removing a node remaps only a small fraction of keys instead of nearly all of them",
+   "It places every key on every node",
+   "It eliminates the need for replication"
+  ],
+  "answer": 1,
+  "explanation": "With mod N, changing N reshuffles most keys; on a hash ring only keys adjacent to the changed node move."
+ },
+ {
+  "id": "q51f82c140f2",
+  "subject": "system-design",
+  "topic": "reliability",
+  "level": "medium",
+  "question": "Which is an example of graceful degradation?",
+  "options": [
+   "Returning HTTP 500 for every request when any dependency fails",
+   "Showing a product page without personalized recommendations when the recommendation service is down",
+   "Disabling checkout whenever a cache miss occurs",
+   "Turning off all logging when a dependency is slow"
+  ],
+  "answer": 1,
+  "explanation": "The core experience keeps working while a non-critical feature is reduced or removed."
+ },
+ {
+  "id": "qe661b65fc09",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "Which approach avoids explicit invalidation when content changes?",
+  "options": [
+   "Lowering the TTL to one millisecond for every key",
+   "Disabling the cache during every write",
+   "Storing each entry twice on the same cache node",
+   "Embedding a content version or hash in the cache key so changed content gets a new key"
+  ],
+  "answer": 3,
+  "explanation": "Old keys simply stop being requested and age out, so no delete is needed."
+ },
+ {
+  "id": "q6f5a7edd7e5",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "medium",
+  "question": "In a write-through cache, when is a write acknowledged to the client?",
+  "options": [
+   "After it has been written to both the cache and the backing store",
+   "After it is written only to the cache, before the store is updated",
+   "Only after the entry is evicted from the cache",
+   "After the next read of the same key"
+  ],
+  "answer": 0,
+  "explanation": "Write-through trades higher write latency for the guarantee that the cache and store agree."
+ },
+ {
+  "id": "qfc628bae470",
+  "subject": "system-design",
+  "topic": "rate-limiting",
+  "level": "medium",
+  "question": "Which response best tells a client to back off and retry later?",
+  "options": [
+   "429 Too Many Requests with a Retry-After header",
+   "401 Unauthorized with a WWW-Authenticate header",
+   "404 Not Found with a Location header",
+   "400 Bad Request with a Retry-After header"
+  ],
+  "answer": 0,
+  "explanation": "429 signals rate limiting, and Retry-After indicates how long to wait before retrying."
+ },
+ {
+  "id": "q8fbb9ab5eae",
+  "subject": "system-design",
+  "topic": "databases-scaling",
+  "level": "medium",
+  "question": "A user saves a profile change, then immediately reads from a replica and sees the old value. What anomaly is this?",
+  "options": [
+   "Split brain",
+   "Write skew",
+   "A read-your-writes violation caused by replication lag",
+   "Cache penetration"
+  ],
+  "answer": 2,
+  "explanation": "The primary acknowledged the write, but the lagging replica has not yet applied it."
+ },
+ {
+  "id": "q4eaa3a867da",
+  "subject": "system-design",
+  "topic": "messaging",
+  "level": "medium",
+  "question": "Where does Kafka guarantee ordering of records?",
+  "options": [
+   "Within a single partition",
+   "Across all topics in the cluster",
+   "Across all partitions of a topic",
+   "Across every consumer group independently"
+  ],
+  "answer": 0,
+  "explanation": "Ordering is per partition; there is no global order across partitions."
+ }
+]

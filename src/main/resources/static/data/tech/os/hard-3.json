@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q13cb5c3a102",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "TLB lookup takes 20 ns, a memory access takes 100 ns, and the TLB hit ratio is 80% with a single-level page table. What is the effective memory access time?",
+  "options": [
+   "220 ns",
+   "120 ns",
+   "116 ns",
+   "140 ns"
+  ],
+  "answer": 3,
+  "explanation": "A hit costs 20 + 100 = 120 ns and a miss costs 20 + 100 + 100 = 220 ns, so EAT = 0.8 x 120 + 0.2 x 220 = 96 + 44 = 140 ns."
+ },
+ {
+  "id": "qda05cdaea4a",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "An inode has 12 direct pointers and 1 single-indirect pointer, with 4 KB blocks and 4-byte block pointers. What is the largest file size these pointers can address?",
+  "options": [
+   "48 KB",
+   "4144 KB",
+   "4096 KB",
+   "4 MB + 4 KB"
+  ],
+  "answer": 1,
+  "explanation": "An indirect block holds 4096 / 4 = 1024 pointers, so the maximum is (12 + 1024) x 4 KB = 4144 KB."
+ },
+ {
+  "id": "q3a644c5028c",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "A 32-bit system uses 4 KB pages and 4-byte page-table entries. How large is a single-level page table for one process that uses its whole address space?",
+  "options": [
+   "4 KB",
+   "1 MB",
+   "4 MB",
+   "16 MB"
+  ],
+  "answer": 2,
+  "explanation": "There are 2^32 / 2^12 = 2^20 pages, and 2^20 x 4 bytes = 4 MB per process, which is why hierarchical page tables are used."
+ },
+ {
+  "id": "q97f8983c6c2",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Banker's algorithm: Available = (3,3,2). Allocation: P0 (0,1,0), P1 (2,0,0), P2 (3,0,2), P3 (2,1,1), P4 (0,0,2). Max: P0 (7,5,3), P1 (3,2,2), P2 (9,0,2), P3 (2,2,2), P4 (4,3,3). Which is a safe sequence?",
+  "options": [
+   "<P0, P1, P2, P3, P4>",
+   "<P2, P1, P3, P4, P0>",
+   "<P1, P3, P4, P0, P2>",
+   "<P4, P1, P3, P0, P2>"
+  ],
+  "answer": 2,
+  "explanation": "Need = Max - Allocation; P1 (need 1,2,2) can run, raising Available to (5,3,2), then P3 to (7,4,3), P4 to (7,4,5), P0 to (7,5,5) and P2 to (10,5,7); P0, P2 and P4 cannot run first."
+ },
+ {
+  "id": "qd94b02ffec0",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Why can a naive long-term scheduler make thrashing worse?",
+  "options": [
+   "It disables the TLB",
+   "Seeing low CPU utilization, it admits more processes, which take frames from others and cause even more faults",
+   "It gives priority to I/O-bound processes",
+   "It reduces the time quantum"
+  ],
+  "answer": 1,
+  "explanation": "Low CPU utilization caused by paging looks like spare capacity, so raising the degree of multiprogramming feeds the cycle."
+ },
+ {
+  "id": "q6a59863fb13",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "In the page-fault-frequency (PFF) strategy, what does the OS do when a process's fault rate rises above the upper threshold?",
+  "options": [
+   "Removes a frame from the process",
+   "Terminates the process",
+   "Allocates the process another frame (or suspends it if none are free)",
+   "Switches to the Optimal algorithm"
+  ],
+  "answer": 2,
+  "explanation": "PFF gives frames to processes faulting too often and takes them from processes faulting rarely, controlling thrashing directly."
+ },
+ {
+  "id": "q651c2078b1c",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "What is Belady's anomaly?",
+  "options": [
+   "Page faults increase as the page size shrinks",
+   "LRU always produces more faults than FIFO",
+   "The optimal algorithm cannot be implemented",
+   "Increasing the number of frames increases the number of page faults for some reference strings"
+  ],
+  "answer": 3,
+  "explanation": "Under FIFO, adding frames can increase faults for some reference strings, which runs against the intuition that more memory always helps."
+ },
+ {
+  "id": "q09945a8e022",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Memory access time is 200 ns, page-fault service time is 8 ms, and one access in 1000 causes a page fault. What is the approximate effective access time?",
+  "options": [
+   "200 ns",
+   "8 ms",
+   "8.2 microseconds",
+   "1.2 microseconds"
+  ],
+  "answer": 2,
+  "explanation": "EAT = 0.999 x 200 ns + 0.001 x 8,000,000 ns = 199.8 + 8000 = about 8200 ns, a 40x slowdown."
+ },
+ {
+  "id": "q24a1ea85b38",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "Which page-replacement algorithms are immune to Belady's anomaly?",
+  "options": [
+   "FIFO only",
+   "FIFO and second-chance",
+   "All replacement algorithms",
+   "LRU and Optimal (stack algorithms)"
+  ],
+  "answer": 3,
+  "explanation": "In stack algorithms, the pages held with n frames are always a subset of those held with n + 1 frames, so adding frames can never add faults."
+ },
+ {
+  "id": "q67598f0e0be",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "By Amdahl's law, what is the maximum speedup on 4 cores for a program that is 75% parallelizable?",
+  "options": [
+   "About 2.29",
+   "4.0",
+   "3.0",
+   "About 1.75"
+  ],
+  "answer": 0,
+  "explanation": "Speedup = 1 / (S + (1 - S) / N) = 1 / (0.25 + 0.75 / 4) = 1 / 0.4375, about 2.29."
+ }
+]

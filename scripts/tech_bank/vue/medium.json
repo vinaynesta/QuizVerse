@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "Scoped CSS uses PostCSS to add a data-v attribute to elements and rewrite selectors to match it."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What does :style=\"{ fontSize: size + 'px' }\" do?",
+    "options": [
+      "Binds an inline font-size style computed from size",
+      "Adds a CSS class named fontSize",
+      "Creates a scoped style block",
+      "Sets a style only on hover"
+    ],
+    "answer": 0,
+    "explanation": "Object syntax for :style accepts camelCase or quoted kebab-case CSS properties."
+  },
+  {
+    "topic": "template-syntax",
+    "question": "What does @keyup.enter=\"submit\" do?",
+    "options": [
+      "Calls submit on any key press",
+      "Prevents the Enter key's default action",
+      "Calls submit only when the Enter key is released",
+      "Submits the parent form automatically"
+    ],
+    "answer": 2,
+    "explanation": "Key modifiers filter keyboard events so the handler runs only for the named key."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What does isRef(value) tell you?",
+    "options": [
+      "Whether the value is reactive()",
+      "Whether the value is a ref object",
+      "Whether the value is a template ref only",
+      "Whether the value is readonly"
+    ],
+    "answer": 1,
+    "explanation": "isRef checks for a ref, which is useful when a function accepts either refs or plain values."
+  },
+  {
+    "topic": "reactivity",
+    "question": "What does toRef(state, 'count') create from const state = reactive({ count: 0 })?",
+    "options": [
+      "A copy of the value that is no longer reactive",
+      "A computed that is read-only",
+      "A new reactive object containing only count",
+      "A ref that stays linked to state.count in both directions"
+    ],
+    "answer": 3,
+    "explanation": "toRef creates a ref that reads and writes the source property, so changes sync both ways."
+  },
+  {
+    "topic": "reactivity",
+    "question": "Why is the Map or Set held in reactive() still reactive when you call map.set()?",
+    "options": [
+      "Vue polls the collection for changes",
+      "Vue's proxies instrument collection methods like set, add and delete",
+      "Maps are converted to plain objects",
+      "Only Map is supported, not Set"
+    ],
+    "answer": 1,
+    "explanation": "Vue 3 provides special proxy handlers for Map, Set, WeakMap and WeakSet."
+  },
+  {
+    "topic": "composition-api",
+    "question": "In script setup, how do you declare TypeScript-only props without runtime options?",
+    "options": [
+      "defineProps({ title: String as TS })",
+      "props: Title[]",
+      "useProps<Title>()",
+      "defineProps<{ title: string }>()"
+    ],
+    "answer": 3,
+    "explanation": "Type-based declaration lets the compiler generate the runtime props from the type."
+  },
+  {
+    "topic": "composition-api",
+    "question": "What does getCurrentInstance() return, and why is it discouraged in app code?",
+    "options": [
+      "The parent component's props",
+      "The internal component instance, which is not a stable public API for application code",
+      "The root app instance used by plugins",
+      "The current router route"
+    ],
+    "answer": 1,
+    "explanation": "Composables should rely on public APIs like inject or useAttrs instead of the internal instance."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "Which compiler macro sets component options like name or inheritAttrs from inside script setup?",
+    "options": [
+      "defineComponent",
+      "defineConfig",
+      "defineOptions",
+      "useOptions"
+    ],
+    "answer": 2,
+    "explanation": "defineOptions, available since Vue 3.3, removes the need for a separate script block to set options."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "How do you declare a prop that must be provided by the parent?",
+    "options": [
+      "{ type: String, needed: true }",
+      "{ type: String!, default: null }",
+      "{ mandatory: String }",
+      "{ type: String, required: true }"
+    ],
+    "answer": 3,
+    "explanation": "With required: true Vue warns in development when the parent omits the prop."
+  },
+  {
+    "topic": "components-props-events",
+    "question": "Why must an object or array default for a prop be written as a factory, like default: () => []?",
+    "options": [
+      "Because Vue cannot store arrays in props",
+      "So each component instance gets its own fresh object instead of sharing one",
+      "To make the prop reactive",
+      "To make the prop required"
+    ],
+    "answer": 1,
+    "explanation": "A shared default object would be mutated by all instances that use it."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "What does the deep option do for watch?",
+    "options": [
+      "Triggers the callback on nested property mutations of the watched source",
+      "Watches all components in the tree",
+      "Makes the callback run before the DOM update",
+      "Debounces the callback"
+    ],
+    "answer": 0,
+    "explanation": "deep: true traverses the source so nested changes trigger it, which is implicit when watching a reactive object directly."
+  },
+  {
+    "topic": "computed-watchers",
+    "question": "How do you stop a watcher created with watch() before the component unmounts?",
+    "options": [
+      "Call watch.off()",
+      "Set the source to null",
+      "Watchers cannot be stopped manually",
+      "Call the stop function returned by watch()"
+    ],
+    "answer": 3,
+    "explanation": "watch and watchEffect return a handle you can call to stop the watcher."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "In the Options API, in which hook is the component's DOM first available through this.$el?",
+    "options": [
+      "created",
+      "beforeMount",
+      "mounted",
+      "beforeCreate"
+    ],
+    "answer": 2,
+    "explanation": "In created the instance and data exist but nothing has been rendered yet; the DOM is available in mounted."
+  },
+  {
+    "topic": "lifecycle",
+    "question": "Which hook runs when the component's reactive state changes, before the DOM is patched?",
+    "options": [
+      "onUpdated",
+      "onBeforeUpdate",
+      "onBeforeMount",
+      "onRenderTracked"
+    ],
+    "answer": 1,
+    "explanation": "onBeforeUpdate is useful to read the DOM state before Vue updates it."
+  },
+  {
+    "topic": "directives",
+    "question": "Which v-model modifier converts the input value to a number when possible?",
+    "options": [
+      ".number",
+      ".int",
+      ".parse",
+      ".numeric"
+    ],
+    "answer": 0,
+    "explanation": "v-model.number applies parseFloat and keeps the original string if parsing fails."
+  },
+  {
+    "topic": "directives",
+    "question": "Which v-model modifier removes surrounding whitespace from the input value?",
+    "options": [
+      ".strip",
+      ".clean",
+      ".trim",
+      ".lazy"
+    ],
+    "answer": 2,
+    "explanation": ".trim trims the string before it is assigned to the bound variable."
+  },
+  {
+    "topic": "slots-provide-inject",
+    "question": "Which API exposes the slots a component received in script setup?",
+    "options": [
+      "useSlots()",
+      "defineSlots() only",
+      "this.$slots",
+      "getSlots()"
+    ],
+    "answer": 0,
+    "explanation": "useSlots() returns the same object as $slots, while defineSlots() is a type-only macro for slot types."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "Which Vue Router hook lets a component react when the route changes but the same component instance is reused?",
+    "options": [
+      "onBeforeRouteLeave",
+      "beforeEnter",
+      "onMounted",
+      "onBeforeRouteUpdate"
+    ],
+    "answer": 3,
+    "explanation": "onBeforeRouteUpdate runs when params change, such as /users/1 to /users/2, while the component stays mounted."
+  },
+  {
+    "topic": "router-pinia",
+    "question": "How do you change several Pinia state properties in a single patch?",
+    "options": [
+      "store.setState({ a: 1, b: 2 })",
+      "store.commit('a', 1)",
+      "store.$patch({ a: 1, b: 2 })",
+      "store.$update(a, b)"
+    ],
+    "answer": 2,
+    "explanation": "$patch applies a partial object or a mutation function as a single change entry for devtools."
+  },
+  {
+    "topic": "performance-tooling",
+    "question": "What does the Suspense component do with async components or async setup?",
+    "options": [
+      "Shows fallback content until all async dependencies in its tree resolve",
+      "Caches components between route changes",
+      "Delays rendering until the user scrolls",
+      "Runs components in a Web Worker"
+    ],
+    "answer": 0,
+    "explanation": "Suspense is still marked experimental in Vue 3 and coordinates loading state for nested async dependencies."
   }
 ]

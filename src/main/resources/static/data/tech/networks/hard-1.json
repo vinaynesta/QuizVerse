@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc8f4e125845",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "How long does a TCP endpoint remain in TIME_WAIT per the TCP specification?",
+  "options": [
+   "Until the application closes the socket",
+   "One retransmission timeout",
+   "One RTT",
+   "2 x MSL (maximum segment lifetime)"
+  ],
+  "answer": 3,
+  "explanation": "RFC 9293 specifies waiting twice the maximum segment lifetime so stray segments in both directions can expire."
+ },
+ {
+  "id": "qb453137f6f6",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "Which TLS extension carries the hostname so a server hosting many sites can choose the right certificate?",
+  "options": [
+   "OCSP stapling (status_request)",
+   "SNI (Server Name Indication)",
+   "key_share",
+   "ALPN"
+  ],
+  "answer": 1,
+  "explanation": "SNI puts the requested hostname in ClientHello; Encrypted Client Hello can hide it."
+ },
+ {
+  "id": "q773ce88ad97",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Why does TCP keep a connection in TIME_WAIT after closing?",
+  "options": [
+   "To let the congestion window reset",
+   "To keep the TLS session resumable",
+   "To wait for DNS caches to expire",
+   "To retransmit the final ACK if it is lost and let old duplicates expire before the 4-tuple is reused"
+  ],
+  "answer": 3,
+  "explanation": "If the last ACK is lost the peer resends its FIN; the wait also stops delayed segments from corrupting a new incarnation."
+ },
+ {
+  "id": "q5fff6b82c92",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "How does a browser typically learn that a server supports HTTP/3?",
+  "options": [
+   "An ICMP probe to UDP port 443",
+   "An Alt-Svc header or HTTPS DNS record advertising h3",
+   "The SNI value in the certificate",
+   "An Upgrade: h3 request header"
+  ],
+  "answer": 1,
+  "explanation": "Since HTTP/3 uses a different transport, clients discover it via Alt-Svc or SVCB/HTTPS records rather than an in-band Upgrade."
+ },
+ {
+  "id": "q7ed25fa4272",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What does Explicit Congestion Notification (ECN) allow routers to do?",
+  "options": [
+   "Mark packets to signal congestion instead of dropping them",
+   "Reorder packets by priority",
+   "Drop packets earlier than normal",
+   "Fragment packets under load"
+  ],
+  "answer": 0,
+  "explanation": "ECN-capable routers set the CE codepoint, the receiver echoes it, and the sender reduces cwnd without a loss."
+ },
+ {
+  "id": "qaddc83a72fa",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Which header compression scheme does HTTP/3 use?",
+  "options": [
+   "QPACK",
+   "Brotli",
+   "HPACK",
+   "gzip"
+  ],
+  "answer": 0,
+  "explanation": "QPACK (RFC 9204) adapts HPACK so out-of-order delivery across QUIC streams doesn't cause head-of-line blocking."
+ },
+ {
+  "id": "q95acbd6fd69",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "What does IPv4 Path MTU Discovery (RFC 1191) rely on?",
+  "options": [
+   "Setting the DF bit and receiving ICMP 'Fragmentation Needed' messages",
+   "DNS records advertising the MTU",
+   "TCP RST segments from routers",
+   "ARP replies carrying the link MTU"
+  ],
+  "answer": 0,
+  "explanation": "Routers that can't forward a DF packet return ICMP type 3 code 4 with the next-hop MTU; filtering that ICMP causes PMTUD black holes."
+ },
+ {
+  "id": "qb8503b9bd70",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Per RFC 5681, what does TCP do when the retransmission timer (RTO) expires?",
+  "options": [
+   "Sets ssthresh = max(FlightSize/2, 2*SMSS), cwnd = 1 SMSS, and re-enters slow start",
+   "Leaves cwnd and ssthresh unchanged",
+   "Doubles cwnd to drain the queue faster",
+   "Halves cwnd and stays in congestion avoidance"
+  ],
+  "answer": 0,
+  "explanation": "A timeout suggests severe congestion, so cwnd drops to the loss window of one segment before slow start resumes."
+ },
+ {
+  "id": "qaf789c9c827",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "A router has routes for 10.0.0.0/8 and 10.1.0.0/16. Which route is used for a packet to 10.1.2.3?",
+  "options": [
+   "Both equally, via ECMP",
+   "The /8 route, because it is more general",
+   "The /16 route, by longest prefix match",
+   "Whichever route was learned first"
+  ],
+  "answer": 2,
+  "explanation": "IP forwarding picks the most specific matching prefix; administrative distance only breaks ties between identical prefixes."
+ },
+ {
+  "id": "q3e446776de7",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Which state does the passive closer enter after receiving the peer's FIN and acknowledging it?",
+  "options": [
+   "CLOSE_WAIT",
+   "CLOSING",
+   "FIN_WAIT_2",
+   "LAST_ACK"
+  ],
+  "answer": 0,
+  "explanation": "It stays in CLOSE_WAIT until its application calls close(), which sends a FIN and moves it to LAST_ACK."
+ }
+]

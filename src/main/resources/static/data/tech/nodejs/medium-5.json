@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q87080ff776b",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "What does the promise-based setTimeout from 'timers/promises' let you write?",
+  "options": [
+   "await setTimeout(1000) to pause an async function for about one second",
+   "Timers that keep the process alive forever",
+   "Timers that run in a worker thread",
+   "setTimeout calls that run synchronously"
+  ],
+  "answer": 0,
+  "explanation": "timers/promises exports promise versions of setTimeout, setImmediate and setInterval."
+ },
+ {
+  "id": "qf31e3b937e9",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What can a dynamic import() expression do inside a CommonJS module?",
+  "options": [
+   "Load an ES module asynchronously, returning a promise for its namespace",
+   "Nothing, because import() is unavailable in CommonJS",
+   "Load only JSON files synchronously",
+   "Convert the current file into an ES module"
+  ],
+  "answer": 0,
+  "explanation": "import() works in both module systems and is the standard way for CommonJS code to load ES modules asynchronously."
+ },
+ {
+  "id": "qff641c39d8a",
+  "subject": "nodejs",
+  "topic": "async-patterns",
+  "level": "medium",
+  "question": "How can a long-running fetch() call in Node.js be cancelled after 5 seconds?",
+  "options": [
+   "Call fetch.cancel(5000)",
+   "Pass { signal: AbortSignal.timeout(5000) } to fetch()",
+   "Wrap fetch() in setTimeout()",
+   "Set process.env.FETCH_TIMEOUT to 5000"
+  ],
+  "answer": 1,
+  "explanation": "When the signal aborts, fetch rejects with an AbortError or TimeoutError and the request is cancelled."
+ },
+ {
+  "id": "q2a5dd5dabe2",
+  "subject": "nodejs",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What is top-level await?",
+  "options": [
+   "Using await inside any CommonJS file",
+   "Using await at the top level of an ES module, outside any async function",
+   "A way to make require() return a promise",
+   "A flag that makes all functions async"
+  ],
+  "answer": 1,
+  "explanation": "Top-level await is supported only in ES modules, and modules importing it wait until it finishes."
+ },
+ {
+  "id": "qbc831e7c1ea",
+  "subject": "nodejs",
+  "topic": "express",
+  "level": "medium",
+  "question": "What does res.json({ ok: true }) do in Express?",
+  "options": [
+   "Parses the request body as JSON",
+   "Stores the object in the session",
+   "Serializes the object to JSON, sets the Content-Type to application/json and sends the response",
+   "Writes the object to a JSON file on disk"
+  ],
+  "answer": 2,
+  "explanation": "res.json is a convenience over res.send that handles serialization and the content type header."
+ },
+ {
+  "id": "qef4f6bba0fd",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What is the conventional property on Node.js system errors that identifies the error type, such as 'ENOENT'?",
+  "options": [
+   "error.status",
+   "error.type",
+   "error.reason",
+   "error.code"
+  ],
+  "answer": 3,
+  "explanation": "Checking err.code === 'ENOENT' is more reliable than matching the message text, which can change."
+ },
+ {
+  "id": "q1d8f05c8f9d",
+  "subject": "nodejs",
+  "topic": "http",
+  "level": "medium",
+  "question": "Which status code does an HTTP redirect with res.writeHead(301, { Location: '/new' }) indicate?",
+  "options": [
+   "Found (temporary redirect)",
+   "Moved Permanently",
+   "Not Modified",
+   "Bad Request"
+  ],
+  "answer": 1,
+  "explanation": "301 tells clients and caches that the resource has a new permanent URL, while 302 and 307 are temporary."
+ },
+ {
+  "id": "qa8af3f4f8fa",
+  "subject": "nodejs",
+  "topic": "npm",
+  "level": "medium",
+  "question": "What does npm audit do?",
+  "options": [
+   "Measures the startup time of each package",
+   "Checks installed dependencies against a database of known security vulnerabilities",
+   "Verifies that every dependency is used in the code",
+   "Lints the project's JavaScript code"
+  ],
+  "answer": 1,
+  "explanation": "npm audit reports known advisories, and npm audit fix attempts compatible upgrades."
+ },
+ {
+  "id": "qccb9a99c783",
+  "subject": "nodejs",
+  "topic": "process",
+  "level": "medium",
+  "question": "How does child_process.fork() differ from spawn()?",
+  "options": [
+   "fork() runs the code in the same process on a new thread",
+   "fork() can run only shell commands",
+   "fork() starts a new Node.js process with a built-in IPC channel for send() and 'message' events",
+   "spawn() always waits for the child process to exit"
+  ],
+  "answer": 2,
+  "explanation": "fork() is a special case of spawn() for Node.js scripts that adds a message channel between parent and child."
+ },
+ {
+  "id": "q44b088f084d",
+  "subject": "nodejs",
+  "topic": "streams",
+  "level": "medium",
+  "question": "How can you consume a Readable stream with async iteration?",
+  "options": [
+   "await readable.readAll()",
+   "for (const chunk in readable) { ... }",
+   "readable.forEachSync(chunk => { ... })",
+   "for await (const chunk of readable) { ... }"
+  ],
+  "answer": 3,
+  "explanation": "Readable streams implement Symbol.asyncIterator, and async iteration also respects backpressure."
+ }
+]

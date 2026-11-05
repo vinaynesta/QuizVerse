@@ -1,0 +1,167 @@
+[
+ {
+  "id": "qa14d7c7cbf2",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "easy",
+  "question": "What does a try/catch block around synchronous code do when an error is thrown inside it?",
+  "options": [
+   "The error is ignored and execution continues on the next line",
+   "Control jumps to the catch block, which receives the error",
+   "The process always exits immediately",
+   "The error is logged and then rethrown automatically"
+  ],
+  "answer": 1,
+  "explanation": "catch handles errors thrown synchronously in the try block; errors in callbacks that run later are not caught."
+ },
+ {
+  "id": "qbb973d9b5bd",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "easy",
+  "question": "Which process event is emitted when an exception is thrown and not caught?",
+  "options": [
+   "uncaughtException",
+   "unhandledError",
+   "crash",
+   "fatal"
+  ],
+  "answer": 0,
+  "explanation": "process.on('uncaughtException') receives errors that escaped every try/catch; it is a last-resort hook, not a recovery mechanism."
+ },
+ {
+  "id": "qdb9a9841bbd",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "easy",
+  "question": "Which property of an Error object usually contains the stack trace string?",
+  "options": [
+   "trace",
+   "stack",
+   "callstack",
+   "frames"
+  ],
+  "answer": 1,
+  "explanation": "The stack property holds the formatted stack trace, which V8 generates when the Error is created."
+ },
+ {
+  "id": "q390afca0e74",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "Which Error constructor option stores an underlying error so it can be wrapped and inspected later?",
+  "options": [
+   "{ inner }",
+   "{ cause }",
+   "{ parent }",
+   "{ source }"
+  ],
+  "answer": 1,
+  "explanation": "new Error(message, { cause }) is available since Node.js 16.9 and is read back from error.cause."
+ },
+ {
+  "id": "q60967dbbc2d",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "Why is it better to throw an Error object than a plain string such as throw 'failed'?",
+  "options": [
+   "An Error object captures a stack trace and works with instanceof checks, while a thrown string carries neither",
+   "Error objects are caught faster by the V8 engine",
+   "Strings cannot be thrown in strict mode",
+   "A thrown string crashes the process even inside try/catch"
+  ],
+  "answer": 0,
+  "explanation": "Throwing Error instances, or subclasses, keeps stack traces and lets handlers distinguish error types."
+ },
+ {
+  "id": "q6d9238117d5",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What is the default behavior for an unhandled promise rejection in Node.js 15 and later?",
+  "options": [
+   "It is raised as an uncaught exception, which terminates the process by default",
+   "It is silently ignored",
+   "The promise is retried automatically",
+   "It prints a warning and keeps running"
+  ],
+  "answer": 0,
+  "explanation": "Since Node 15 the default unhandled-rejections mode is 'throw', which behaves like an uncaught exception."
+ },
+ {
+  "id": "qef4f6bba0fd",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What is the conventional property on Node.js system errors that identifies the error type, such as 'ENOENT'?",
+  "options": [
+   "error.status",
+   "error.type",
+   "error.reason",
+   "error.code"
+  ],
+  "answer": 3,
+  "explanation": "Checking err.code === 'ENOENT' is more reliable than matching the message text, which can change."
+ },
+ {
+  "id": "q2f22e96f4e3",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "What does the 'rejectionHandled' process event report?",
+  "options": [
+   "A promise was fulfilled after a timeout",
+   "An uncaught exception was recovered",
+   "A rejection reason was logged to the console",
+   "A promise that was rejected earlier without a handler has since received one"
+  ],
+  "answer": 3,
+  "explanation": "It fires after 'unhandledRejection' when a handler is attached late."
+ },
+ {
+  "id": "q8a29ad2c074",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "What does the AbortSignal.any() static method do?",
+  "options": [
+   "Returns a signal that aborts when any of the given signals aborts",
+   "Aborts every pending operation in the process",
+   "Returns true if any signal has aborted",
+   "Creates a signal that never aborts"
+  ],
+  "answer": 0,
+  "explanation": "It is useful for combining a user cancellation signal with a timeout signal, such as AbortSignal.timeout()."
+ },
+ {
+  "id": "q9b6e66c47f9",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "Why is it advised to exit after logging a process 'uncaughtException'?",
+  "options": [
+   "The handler works only once and then disables itself",
+   "Node stops processing new events after the handler runs",
+   "The handler cannot read the error object",
+   "The process may be in an inconsistent state after an unexpected error, so continuing is unsafe"
+  ],
+  "answer": 3,
+  "explanation": "Uncaught exceptions mean the program's invariants may be broken, so a clean restart is the safer recovery."
+ },
+ {
+  "id": "qed3b91f5c48",
+  "subject": "nodejs",
+  "topic": "error-handling",
+  "level": "hard",
+  "question": "Which EventEmitter constructor option makes rejected promises returned by async listeners emit 'error' instead of going unhandled?",
+  "options": [
+   "asyncMode: true",
+   "promises: true",
+   "captureRejections: true",
+   "autoAsync: true"
+  ],
+  "answer": 2,
+  "explanation": "captureRejections was added in Node.js 13.4 and 12.16 and routes async listener rejections to the 'error' event."
+ }
+]

@@ -1,5 +1,20 @@
 [
  {
+  "id": "q14e99e75675",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does [1, 2, 3][-1] return?",
+  "options": [
+   "1",
+   "3",
+   "It raises IndexError",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Negative indexes count from the end, so -1 is the last element."
+ },
+ {
   "id": "q248845e199c",
   "subject": "python",
   "topic": "data-structures",
@@ -13,6 +28,36 @@
   ],
   "answer": 3,
   "explanation": "A set stores only unique elements, so the duplicate 1 is kept once."
+ },
+ {
+  "id": "q65edce09591",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does [0, 1, 2, 3, 4][1:3] return?",
+  "options": [
+   "[1, 2, 3]",
+   "[0, 1, 2]",
+   "[2, 3]",
+   "[1, 2]"
+  ],
+  "answer": 3,
+  "explanation": "A slice includes the start index and excludes the stop index."
+ },
+ {
+  "id": "qa46b4cce057",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "Which list method removes and returns the last item when called without arguments?",
+  "options": [
+   "remove()",
+   "del()",
+   "popleft()",
+   "pop()"
+  ],
+  "answer": 3,
+  "explanation": "list.pop() defaults to the last index."
  },
  {
   "id": "qa5d25adf4d1",
@@ -60,6 +105,21 @@
   "explanation": "{} creates an empty dict, so an empty set must be written as set()."
  },
  {
+  "id": "qe7ad4aadc15",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "How do you write a tuple containing only the integer 5?",
+  "options": [
+   "(5,)",
+   "[5]",
+   "tuple 5",
+   "(5)"
+  ],
+  "answer": 0,
+  "explanation": "The trailing comma makes the tuple; (5) is just the integer 5 in parentheses."
+ },
+ {
   "id": "q429fc02e1d9",
   "subject": "python",
   "topic": "data-structures",
@@ -73,6 +133,21 @@
   ],
   "answer": 1,
   "explanation": "Iterating a dict yields its keys, and sorted always returns a list."
+ },
+ {
+  "id": "q4ab305e7a66",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does [3, 1, 2].sort() return?",
+  "options": [
+   "[1, 2, 3]",
+   "[3, 2, 1]",
+   "A sorted iterator",
+   "None"
+  ],
+  "answer": 3,
+  "explanation": "list.sort() sorts in place and returns None; sorted() returns a new list."
  },
  {
   "id": "q8dc478d6140",
@@ -105,6 +180,21 @@
   "explanation": "zip stops at the shortest iterable by default, so the 3 is dropped."
  },
  {
+  "id": "qd8528a6f893",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does {**{'a': 1}, **{'a': 2, 'b': 3}} evaluate to?",
+  "options": [
+   "{'a': 2, 'b': 3}",
+   "{'a': 1, 'b': 3}",
+   "It raises KeyError",
+   "{'a': [1, 2], 'b': 3}"
+  ],
+  "answer": 0,
+  "explanation": "Later unpacked mappings override earlier keys."
+ },
+ {
   "id": "qdeb0672d4bc",
   "subject": "python",
   "topic": "data-structures",
@@ -118,6 +208,21 @@
   ],
   "answer": 1,
   "explanation": "& on sets is intersection, keeping elements present in both."
+ },
+ {
+  "id": "qf95e35f6fe0",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "medium",
+  "question": "What does dict.fromkeys(['a', 'b'], 0) return?",
+  "options": [
+   "{'a': 'b'}",
+   "{0: ['a', 'b']}",
+   "[('a', 0), ('b', 0)]",
+   "{'a': 0, 'b': 0}"
+  ],
+  "answer": 3,
+  "explanation": "fromkeys creates a dict mapping each given key to the same value."
  },
  {
   "id": "q0c83cc34367",
@@ -150,6 +255,21 @@
   "explanation": "Changing a dict's size during iteration raises RuntimeError: dictionary changed size during iteration."
  },
  {
+  "id": "q2b173fdf4a8",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "What happens when you append to a collections.deque(maxlen=3) that already holds 3 items?",
+  "options": [
+   "The item at the opposite (left) end is discarded",
+   "The deque grows to 4 items",
+   "The new item is ignored",
+   "It raises IndexError"
+  ],
+  "answer": 0,
+  "explanation": "A bounded deque drops items from the opposite end to stay within maxlen."
+ },
+ {
   "id": "q3bc574d827c",
   "subject": "python",
   "topic": "data-structures",
@@ -165,6 +285,21 @@
   "explanation": "The list is extended in place first, then the item assignment to the tuple raises TypeError, so the mutation sticks."
  },
  {
+  "id": "q738ca5c0b53",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After d = {'a': 1, 'b': 2}; d['a'] = 3, what does list(d) return?",
+  "options": [
+   "[3, 2]",
+   "['b', 'a']",
+   "['a', 'b']",
+   "[('a', 3), ('b', 2)]"
+  ],
+  "answer": 2,
+  "explanation": "Updating the value of an existing key keeps its original insertion position."
+ },
+ {
   "id": "qd8b8fdb0974",
   "subject": "python",
   "topic": "data-structures",
@@ -178,5 +313,20 @@
   ],
   "answer": 3,
   "explanation": "1, True and 1.0 are equal with equal hashes, so they are one key; the first key object is kept and the last value wins."
+ },
+ {
+  "id": "qe24659c778d",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "hard",
+  "question": "After a = [1, 2, 3]; a[1:2] = [7, 8, 9], what is a?",
+  "options": [
+   "[1, [7, 8, 9], 3]",
+   "[1, 7, 3]",
+   "It raises ValueError",
+   "[1, 7, 8, 9, 3]"
+  ],
+  "answer": 3,
+  "explanation": "Slice assignment replaces the slice with the elements of the iterable and can change the list's length."
  }
 ]

@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "Kruskal's repeatedly adds the cheapest edge that does not create a cycle."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What is the time complexity of finding the maximum element in an unsorted array of n elements?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n log n)",
+      "O(n)"
+    ],
+    "answer": 3,
+    "explanation": "Every element must be examined once, since any unchecked element could be the maximum."
+  },
+  {
+    "topic": "arrays-strings",
+    "question": "What are two strings called when they contain the same characters with the same frequencies, such as 'listen' and 'silent'?",
+    "options": [
+      "Palindromes",
+      "Anagrams",
+      "Substrings",
+      "Prefixes"
+    ],
+    "answer": 1,
+    "explanation": "Anagrams are rearrangements of the same multiset of characters."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "In a doubly linked list, what does each node store besides its data?",
+    "options": [
+      "Only a reference to the next node",
+      "Only a reference to the head node",
+      "References to both the next and the previous node",
+      "The index of the node in the list"
+    ],
+    "answer": 2,
+    "explanation": "The extra previous pointer allows traversal in both directions."
+  },
+  {
+    "topic": "linked-lists",
+    "question": "In a non-circular singly linked list, what does the next pointer of the last node hold?",
+    "options": [
+      "null",
+      "A reference to the head",
+      "A reference to itself",
+      "A reference to the second-to-last node"
+    ],
+    "answer": 0,
+    "explanation": "A null next pointer marks the end of the list."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "Which stack operation returns the top element without removing it?",
+    "options": [
+      "pop",
+      "peek",
+      "push",
+      "enqueue"
+    ],
+    "answer": 1,
+    "explanation": "peek inspects the top element while leaving the stack unchanged."
+  },
+  {
+    "topic": "stacks-queues",
+    "question": "Which data structure most naturally implements the undo feature of a text editor?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Hash table",
+      "Binary search tree"
+    ],
+    "answer": 1,
+    "explanation": "Undo reverses the most recent action first, which is last-in, first-out behavior."
+  },
+  {
+    "topic": "hashing",
+    "question": "What does a hash function do in a hash table?",
+    "options": [
+      "Sorts the keys in ascending order",
+      "Encrypts the stored values",
+      "Counts how many keys are stored",
+      "Maps a key to a bucket index"
+    ],
+    "answer": 3,
+    "explanation": "The hash function converts a key into an index that determines where the entry is stored."
+  },
+  {
+    "topic": "hashing",
+    "question": "What happens when you insert a value that is already present into a hash set?",
+    "options": [
+      "The value is stored a second time",
+      "An error is always raised",
+      "The set remains unchanged",
+      "The existing value is deleted"
+    ],
+    "answer": 2,
+    "explanation": "A set stores each distinct element at most once, so adding a duplicate has no effect."
+  },
+  {
+    "topic": "trees",
+    "question": "What is the topmost node of a tree, the one with no parent, called?",
+    "options": [
+      "Leaf",
+      "Sibling",
+      "Root",
+      "Descendant"
+    ],
+    "answer": 2,
+    "explanation": "Every tree has exactly one root, from which all other nodes descend."
+  },
+  {
+    "topic": "trees",
+    "question": "If height is counted in edges, what is the height of a tree consisting of a single node?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "2"
+    ],
+    "answer": 0,
+    "explanation": "With no edges below the root, the longest root-to-leaf path has zero edges."
+  },
+  {
+    "topic": "trees",
+    "question": "In what order does a postorder traversal visit the nodes of a binary tree?",
+    "options": [
+      "Root, left subtree, then right subtree",
+      "Left subtree, right subtree, then root",
+      "Left subtree, root, then right subtree",
+      "Level by level from top to bottom"
+    ],
+    "answer": 1,
+    "explanation": "Postorder processes both children before the node itself."
+  },
+  {
+    "topic": "heaps",
+    "question": "What is the time complexity of reading, without removing, the minimum element of a binary min-heap?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "answer": 2,
+    "explanation": "The minimum is always at the root, so it can be read directly."
+  },
+  {
+    "topic": "graphs",
+    "question": "Which data structure does an iterative depth-first search typically use to track vertices to visit?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Priority queue",
+      "Hash map only"
+    ],
+    "answer": 1,
+    "explanation": "A stack makes DFS explore the most recently discovered vertex first, going deep before backtracking."
+  },
+  {
+    "topic": "graphs",
+    "question": "In an undirected graph without self-loops, what is the degree of a vertex?",
+    "options": [
+      "The number of vertices in the graph",
+      "Its distance from the starting vertex",
+      "The total weight of the graph",
+      "The number of edges incident to it"
+    ],
+    "answer": 3,
+    "explanation": "Degree counts how many edges touch the vertex."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "What is the best-case time complexity of insertion sort on n elements?",
+    "options": [
+      "O(1)",
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "answer": 2,
+    "explanation": "On an already sorted array each element is compared once with its predecessor and no shifts occur."
+  },
+  {
+    "topic": "sorting-searching",
+    "question": "Which sorting algorithm repeatedly finds the smallest remaining element and moves it to the front of the unsorted part?",
+    "options": [
+      "Selection sort",
+      "Bubble sort",
+      "Merge sort",
+      "Insertion sort"
+    ],
+    "answer": 0,
+    "explanation": "Selection sort selects the minimum of the unsorted portion and swaps it into place on each pass."
+  },
+  {
+    "topic": "dynamic-programming",
+    "question": "With F(0) = 0 and F(1) = 1, what is the Fibonacci number F(7)?",
+    "options": [
+      "8",
+      "21",
+      "11",
+      "13"
+    ],
+    "answer": 3,
+    "explanation": "The sequence runs 0, 1, 1, 2, 3, 5, 8, 13, so F(7) is 13."
+  },
+  {
+    "topic": "complexity",
+    "question": "Which list orders these complexities from slowest-growing to fastest-growing?",
+    "options": [
+      "O(1), O(log n), O(n), O(n^2)",
+      "O(log n), O(1), O(n), O(n^2)",
+      "O(1), O(n), O(log n), O(n^2)",
+      "O(n), O(log n), O(1), O(n^2)"
+    ],
+    "answer": 0,
+    "explanation": "Constant time grows slowest, followed by logarithmic, linear, and quadratic."
+  },
+  {
+    "topic": "recursion-backtracking",
+    "question": "What does a correct recursive factorial function return for factorial(4)?",
+    "options": [
+      "24",
+      "10",
+      "16",
+      "12"
+    ],
+    "answer": 0,
+    "explanation": "factorial(4) = 4 * 3 * 2 * 1 = 24."
+  },
+  {
+    "topic": "greedy",
+    "question": "Making 30 cents greedily from coins of 25, 10, 5, and 1 cents, how many coins are used?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "2"
+    ],
+    "answer": 3,
+    "explanation": "Greedy takes a 25 and then a 5, for two coins in total."
   }
 ]

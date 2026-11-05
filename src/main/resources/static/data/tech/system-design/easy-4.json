@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1d4ef7a1265",
+  "subject": "system-design",
+  "topic": "cdn",
+  "level": "easy",
+  "question": "Which content is typically best suited for CDN caching?",
+  "options": [
+   "Per-user bank account balances",
+   "Real-time chat messages between two users",
+   "Static assets such as images, CSS, and JavaScript bundles",
+   "One-time password verification codes"
+  ],
+  "answer": 2,
+  "explanation": "Static, shareable content can be cached widely without per-user correctness risk."
+ },
+ {
+  "id": "q93b8c2e503b",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "Which eviction policy removes the least recently used entry first?",
+  "options": [
+   "FIFO (first in, first out)",
+   "LFU (least frequently used)",
+   "Random eviction",
+   "LRU (least recently used)"
+  ],
+  "answer": 3,
+  "explanation": "LRU assumes entries not accessed recently are less likely to be needed again."
+ },
+ {
+  "id": "qcfc52f54377",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP method is idempotent and typically used to replace a resource at a known URL?",
+  "options": [
+   "POST",
+   "PATCH",
+   "SEND",
+   "PUT"
+  ],
+  "answer": 3,
+  "explanation": "Repeating a PUT with the same body leaves the resource in the same state; POST and PATCH are not guaranteed idempotent."
+ },
+ {
+  "id": "q4d78f785588",
+  "subject": "system-design",
+  "topic": "databases",
+  "level": "easy",
+  "question": "What is a primary key?",
+  "options": [
+   "A cache of the most recent queries",
+   "A copy of another table's data kept for backups",
+   "A column or set of columns that uniquely identifies each row in a table",
+   "An index that speeds up every write"
+  ],
+  "answer": 2,
+  "explanation": "Primary keys enforce uniqueness and give each row a stable identifier."
+ },
+ {
+  "id": "qa0efce49245",
+  "subject": "system-design",
+  "topic": "load-balancing",
+  "level": "easy",
+  "question": "What can a Layer 7 (application-layer) load balancer do that a Layer 4 balancer typically cannot?",
+  "options": [
+   "Operate on MAC addresses inside the local network",
+   "Store database rows for faster reads",
+   "Route only UDP traffic",
+   "Route requests based on HTTP details such as the URL path or headers"
+  ],
+  "answer": 3,
+  "explanation": "Layer 7 balancers parse application protocols, so they can route by content; Layer 4 works on IP and port."
+ },
+ {
+  "id": "qc39d8763f02",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "Why does physical distance between a user and a data center affect latency?",
+  "options": [
+   "Longer distances cause packets to be compressed",
+   "Signals take time to travel the distance, adding round-trip delay",
+   "Distant servers always have slower CPUs",
+   "Physical distance changes the database schema"
+  ],
+  "answer": 1,
+  "explanation": "Propagation delay is bounded by the speed of light in fiber, so distance sets a floor on round-trip time."
+ },
+ {
+  "id": "qc326f9ff648",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What is the typical effect of batching many requests together?",
+  "options": [
+   "Lower latency and lower throughput at the same time",
+   "Lower latency, but throughput drops to zero",
+   "Higher throughput, but each individual request may wait longer",
+   "No effect on either latency or throughput"
+  ],
+  "answer": 2,
+  "explanation": "Batching amortizes per-request overhead, but each request may wait for the batch to fill."
+ },
+ {
+  "id": "q6185da2f6ba",
+  "subject": "system-design",
+  "topic": "api-design",
+  "level": "easy",
+  "question": "Which HTTP status code indicates that a resource was successfully created?",
+  "options": [
+   "200 OK",
+   "201 Created",
+   "204 No Content",
+   "301 Moved Permanently"
+  ],
+  "answer": 1,
+  "explanation": "201 signals a new resource was created, usually with a Location header; 200 is a generic success."
+ },
+ {
+  "id": "q7b0c4b3590a",
+  "subject": "system-design",
+  "topic": "performance",
+  "level": "easy",
+  "question": "What does a p99 latency of 200 ms mean?",
+  "options": [
+   "The server handles 200 requests per second",
+   "The average request takes 99 ms",
+   "99% of requests complete within 200 ms",
+   "1% of requests failed with a timeout"
+  ],
+  "answer": 2,
+  "explanation": "Percentile latency describes the tail of the distribution, which often matters more than the average."
+ },
+ {
+  "id": "q1f9e09c0387",
+  "subject": "system-design",
+  "topic": "caching",
+  "level": "easy",
+  "question": "What is a cache?",
+  "options": [
+   "A log of every user action",
+   "The permanent primary copy of the data",
+   "A faster, usually smaller store kept close to where data is needed",
+   "A type of DNS record"
+  ],
+  "answer": 2,
+  "explanation": "Caches trade capacity and freshness for lower read latency and reduced load on the backing store."
+ }
+]

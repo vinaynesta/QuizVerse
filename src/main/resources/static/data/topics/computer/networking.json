@@ -1,19 +1,195 @@
 [
  {
+  "id": "q05dedde3669",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "In which topology are all computers connected to a central hub or switch?",
+  "options": [
+   "Star",
+   "Bus",
+   "Ring",
+   "Mesh"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "In a star topology every device has its own cable to a central hub or switch."
+ },
+ {
+  "id": "q167addb8bc3",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "Which type of network typically connects computers within a single building or campus?",
+  "options": [
+   "Local Area Network",
+   "Wide Area Network",
+   "Metropolitan Area Network",
+   "Global Area Network"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A LAN covers a small area such as an office, building or campus."
+ },
+ {
+  "id": "q1a95a014232",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "Which of these is a wired (guided) transmission medium?",
+  "options": [
+   "Radio waves",
+   "Microwaves",
+   "Twisted pair cable",
+   "Infrared"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Twisted pair cable is a physical wire, while the other three are wireless (unguided) media."
+ },
+ {
+  "id": "q1ed17972faf",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "Wi-Fi is an example of which kind of network connection?",
+  "options": [
+   "Wireless",
+   "Wired",
+   "Optical fibre",
+   "Coaxial"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Wi-Fi uses radio waves, so it is a wireless connection."
+ },
+ {
   "id": "q33f5611b59a",
   "subject": "computer",
   "topic": "networking",
   "level": "easy",
   "question": "What does 'LAN' stand for?",
   "options": [
-   "Large Area Network",
    "Local Area Network",
+   "Large Area Network",
    "Long Access Network",
    "Linked Area Node"
   ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A LAN connects computers in a small area such as an office or building."
+ },
+ {
+  "id": "q42d3b954017",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "In which topology do all devices share a single main cable called the backbone?",
+  "options": [
+   "Star",
+   "Bus",
+   "Ring",
+   "Tree"
+  ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "A LAN connects computers in a small area such as an office or building.",
-  "needsReview": true
+  "explanation": "A bus topology uses one common backbone cable to which all devices are attached."
+ },
+ {
+  "id": "q4cd8a121fb1",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "What does 'WAN' stand for?",
+  "options": [
+   "Web Area Network",
+   "Wireless Access Network",
+   "Wide Area Network",
+   "Wired Advanced Network"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "WAN stands for Wide Area Network, which covers large geographical areas."
+ },
+ {
+  "id": "q51d3fc82493",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "A network formed between a mobile phone and a wireless earphone close to one person is a:",
+  "options": [
+   "MAN",
+   "WAN",
+   "LAN",
+   "PAN"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A Personal Area Network (PAN) connects devices around a single person, usually within a few metres."
+ },
+ {
+  "id": "q723c57942b1",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "In which topology is each device connected to exactly two neighbours, forming a closed loop?",
+  "options": [
+   "Bus",
+   "Star",
+   "Mesh",
+   "Ring"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "In a ring topology data travels around a circular chain of devices."
+ },
+ {
+  "id": "qaf91b797808",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "The Internet is the largest example of which type of network?",
+  "options": [
+   "LAN",
+   "MAN",
+   "WAN",
+   "PAN"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The Internet links networks across countries, making it the largest Wide Area Network."
+ },
+ {
+  "id": "qc91acb8e831",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "easy",
+  "question": "A network that spreads over an entire city is called a:",
+  "options": [
+   "LAN",
+   "MAN",
+   "PAN",
+   "SAN"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A Metropolitan Area Network (MAN) covers a city or a large town."
+ },
+ {
+  "id": "q014100357f2",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "Which is the lowest (first) layer of the OSI model?",
+  "options": [
+   "Physical layer",
+   "Network layer",
+   "Application layer",
+   "Transport layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The Physical layer is layer 1 and deals with cables, signals and bits."
  },
  {
   "id": "q02625581b24",
@@ -27,9 +203,9 @@
    "Bcc",
    "Subject"
   ],
+  "needsReview": true,
   "answer": 2,
-  "explanation": "Bcc (blind carbon copy) recipients are not shown to others.",
-  "needsReview": true
+  "explanation": "Bcc (blind carbon copy) recipients are not shown to others."
  },
  {
   "id": "q04c30ea4bbe",
@@ -43,9 +219,73 @@
    "HTTPS",
    "SMTP"
   ],
+  "needsReview": true,
   "answer": 2,
-  "explanation": "HTTPS is HTTP over an encrypted (TLS) connection.",
-  "needsReview": true
+  "explanation": "HTTPS is HTTP over an encrypted (TLS) connection."
+ },
+ {
+  "id": "q138655f1420",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "A topology that combines two or more different topologies is called:",
+  "options": [
+   "Ring topology",
+   "Hybrid topology",
+   "Bus topology",
+   "Point-to-point topology"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A hybrid topology mixes types, such as star and bus, in one network."
+ },
+ {
+  "id": "q14ee938a5ca",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "Which transmission medium carries data as pulses of light and offers very high bandwidth?",
+  "options": [
+   "Twisted pair cable",
+   "Optical fibre",
+   "Telephone wire",
+   "Coaxial cable"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Optical fibre cables transmit data as light, giving very high speed and bandwidth."
+ },
+ {
+  "id": "q28d0a3565d1",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "The speed of data transmission in a network is commonly measured in:",
+  "options": [
+   "Hertz",
+   "Bits per second (bps)",
+   "Pixels per inch",
+   "Dots per inch"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Data rate is measured in bits per second, such as Mbps or Gbps."
+ },
+ {
+  "id": "q2cb58cbfba4",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "Which is the topmost layer of the OSI model, closest to the user?",
+  "options": [
+   "Session layer",
+   "Application layer",
+   "Data Link layer",
+   "Physical layer"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Application layer (layer 7) provides network services such as email and web access to users."
  },
  {
   "id": "q59707ed7c22",
@@ -59,8 +299,360 @@
    "HTTP",
    "DHCP"
   ],
+  "needsReview": true,
   "answer": 0,
-  "explanation": "SMTP (Simple Mail Transfer Protocol) sends email; POP3 and IMAP are used to receive it.",
-  "needsReview": true
+  "explanation": "SMTP (Simple Mail Transfer Protocol) sends email; POP3 and IMAP are used to receive it."
+ },
+ {
+  "id": "q8990d20e09d",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "A telephone call, where both people can speak at the same time, is an example of which mode?",
+  "options": [
+   "Full duplex",
+   "Half duplex",
+   "Broadcast",
+   "Simplex"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Full duplex allows data to flow in both directions simultaneously."
+ },
+ {
+  "id": "q8c527a2b475",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "In which topology is every device directly connected to every other device?",
+  "options": [
+   "Star",
+   "Mesh",
+   "Bus",
+   "Ring"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A full mesh topology has a dedicated link between every pair of devices."
+ },
+ {
+  "id": "q9bd53cd7c30",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "Which topology has a hierarchical, parent-child structure with a root node?",
+  "options": [
+   "Tree",
+   "Ring",
+   "Mesh",
+   "Bus"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A tree topology arranges star networks in a hierarchy connected to a root."
+ },
+ {
+  "id": "qa789c41efcf",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "Data flowing in only one direction, as in a television broadcast, uses which transmission mode?",
+  "options": [
+   "Full duplex",
+   "Half duplex",
+   "Simplex",
+   "Duplex"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Simplex mode allows communication in one direction only."
+ },
+ {
+  "id": "qa9cd213c01a",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "How many layers are there in the OSI reference model?",
+  "options": [
+   "7",
+   "5",
+   "4",
+   "6"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The OSI model has seven layers, from Physical to Application."
+ },
+ {
+  "id": "qaa4ee118025",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "A walkie-talkie, where both sides can talk but only one at a time, uses which transmission mode?",
+  "options": [
+   "Simplex",
+   "Full duplex",
+   "Half duplex",
+   "Multiplex"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Half duplex allows two-way communication, but only one direction at a time."
+ },
+ {
+  "id": "qaae733a2ae2",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "Which cable, with a central copper conductor surrounded by shielding, is commonly used for cable TV?",
+  "options": [
+   "Coaxial cable",
+   "Optical fibre",
+   "Twisted pair cable",
+   "Ribbon cable"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Coaxial cable has a central conductor, insulation and a metal shield, and is widely used for cable TV."
+ },
+ {
+  "id": "qf702e00b1a3",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "What does 'OSI' stand for in the OSI model?",
+  "options": [
+   "Open Systems Interconnection",
+   "Operating System Interface",
+   "Open Software Integration",
+   "Online Systems Interconnection"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "OSI stands for Open Systems Interconnection, a model published by ISO."
+ },
+ {
+  "id": "qfcdc9f36fd5",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "medium",
+  "question": "In which topology does the failure of the central device bring down the whole network?",
+  "options": [
+   "Mesh",
+   "Ring",
+   "Bus",
+   "Star"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "In a star topology all traffic passes through the central hub or switch, so its failure stops the network."
+ },
+ {
+  "id": "q02ca83ddde7",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which connector is commonly used for telephone lines?",
+  "options": [
+   "RJ-45",
+   "HDMI",
+   "VGA",
+   "RJ-11"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "RJ-11 is the smaller connector used for telephone cables."
+ },
+ {
+  "id": "q044c6971eb5",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which OSI layer is responsible for framing and physical (MAC) addressing?",
+  "options": [
+   "Network layer",
+   "Data Link layer",
+   "Presentation layer",
+   "Physical layer"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Data Link layer (layer 2) packs bits into frames and uses MAC addresses."
+ },
+ {
+  "id": "q241cf340819",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which OSI layer establishes, manages and terminates communication sessions between applications?",
+  "options": [
+   "Session layer",
+   "Presentation layer",
+   "Transport layer",
+   "Network layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The Session layer (layer 5) controls dialogues (sessions) between computers."
+ },
+ {
+  "id": "q2cc8dc3dce4",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which connector is commonly used with twisted pair cables for Ethernet LAN connections?",
+  "options": [
+   "RJ-11",
+   "RJ-45",
+   "BNC",
+   "USB-C"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "RJ-45 is the 8-pin connector used for Ethernet cables."
+ },
+ {
+  "id": "q2d7c571e4f9",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which OSI layer provides end-to-end delivery and error recovery, using protocols such as TCP and UDP?",
+  "options": [
+   "Session layer",
+   "Network layer",
+   "Transport layer",
+   "Application layer"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The Transport layer (layer 4) ensures reliable end-to-end delivery between hosts."
+ },
+ {
+  "id": "q32ea8252a57",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "In a bus topology, what device is placed at each end of the backbone cable to absorb signals?",
+  "options": [
+   "Terminator",
+   "Repeater",
+   "Transceiver",
+   "Hub"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Terminators stop signals from bouncing back along the bus cable."
+ },
+ {
+  "id": "q3860cc2d437",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which OSI layer handles logical (IP) addressing and routing of packets?",
+  "options": [
+   "Data Link layer",
+   "Network layer",
+   "Transport layer",
+   "Session layer"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Network layer (layer 3) decides the route and uses logical addresses such as IP addresses."
+ },
+ {
+  "id": "q3d22d0b816b",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "What is the unit of data at the Network layer of the OSI model called?",
+  "options": [
+   "Packet",
+   "Bit",
+   "Segment",
+   "Frame"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Data at the Network layer is called a packet."
+ },
+ {
+  "id": "q59c398ed7e3",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "What is the unit of data at the Data Link layer of the OSI model called?",
+  "options": [
+   "Frame",
+   "Packet",
+   "Segment",
+   "Message"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Data at the Data Link layer is called a frame."
+ },
+ {
+  "id": "q8076b57e75b",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which transmission medium is immune to electromagnetic interference?",
+  "options": [
+   "Coaxial cable",
+   "Unshielded twisted pair",
+   "Optical fibre",
+   "Shielded twisted pair"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Optical fibre carries light, not electricity, so it is not affected by electromagnetic interference."
+ },
+ {
+  "id": "q8e0ef6e1758",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "How many links are needed to connect n devices in a full mesh topology?",
+  "options": [
+   "n-1",
+   "n(n-1)/2",
+   "2n",
+   "n"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "In a full mesh each pair of devices has one link, giving n(n-1)/2 links."
+ },
+ {
+  "id": "qdb774168846",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Which OSI layer is responsible for encryption, compression and translation of data formats?",
+  "options": [
+   "Presentation layer",
+   "Session layer",
+   "Application layer",
+   "Transport layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The Presentation layer (layer 6) translates, encrypts and compresses data."
+ },
+ {
+  "id": "qebf8022bcf7",
+  "subject": "computer",
+  "topic": "networking",
+  "level": "hard",
+  "question": "Wi-Fi wireless LANs are based on which IEEE standard family?",
+  "options": [
+   "IEEE 802.11",
+   "IEEE 802.3",
+   "IEEE 802.15",
+   "IEEE 802.5"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Wi-Fi follows the IEEE 802.11 family; 802.3 is Ethernet."
  }
 ]

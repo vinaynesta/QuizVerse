@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qa4fa3fb460e",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "What does setting `\"strict\": true` in tsconfig.json do?",
+  "options": [
+   "Enables a family of strict type-checking options at once",
+   "Makes the emitted JavaScript use \"use strict\" only",
+   "Turns all warnings into runtime errors",
+   "Disables the any type entirely"
+  ],
+  "answer": 0,
+  "explanation": "strict turns on options such as strictNullChecks, noImplicitAny and strictFunctionTypes together."
+ },
+ {
+  "id": "q2f69dd105c6",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "Which compiler option sets the directory for emitted JavaScript files?",
+  "options": [
+   "emitPath",
+   "rootDir",
+   "outDir",
+   "distDir"
+  ],
+  "answer": 2,
+  "explanation": "outDir controls where compiled output is written; rootDir describes where the source lives."
+ },
+ {
+  "id": "q66da6fd86bb",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "With strictNullChecks enabled, what happens with `let s: string = null;`?",
+  "options": [
+   "It compiles but throws at runtime",
+   "A compile-time error, because null is not assignable to string",
+   "It compiles because null is assignable to every type",
+   "It compiles and s becomes undefined"
+  ],
+  "answer": 1,
+  "explanation": "Under strictNullChecks, null and undefined are distinct types and must be included explicitly, e.g. string | null."
+ },
+ {
+  "id": "qc9fc81c2dd7",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which primitive type annotation is used for text values in TypeScript?",
+  "options": [
+   "char",
+   "text",
+   "str",
+   "string"
+  ],
+  "answer": 3,
+  "explanation": "TypeScript uses the lowercase string type for all text; there is no separate char type."
+ },
+ {
+  "id": "qd95efcd2334",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What type does TypeScript infer for `x` in `let x = 5;`?",
+  "options": [
+   "number",
+   "int",
+   "5",
+   "any"
+  ],
+  "answer": 0,
+  "explanation": "let declarations are widened from the literal 5 to number because they can be reassigned."
+ },
+ {
+  "id": "q900dad5c3b4",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "Which type is equivalent to `number[]`?",
+  "options": [
+   "List<number>",
+   "Array<number>",
+   "[number]",
+   "number<>"
+  ],
+  "answer": 1,
+  "explanation": "T[] and Array<T> are the same type; [number] is a one-element tuple."
+ },
+ {
+  "id": "q0431a6798d3",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What type does TypeScript infer for `y` in `const y = \"hello\";`?",
+  "options": [
+   "string",
+   "any",
+   "The literal type \"hello\"",
+   "String"
+  ],
+  "answer": 2,
+  "explanation": "const bindings cannot be reassigned, so the narrow literal type is kept."
+ },
+ {
+  "id": "q4c8381de746",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Color { Red, Green, Blue }`, what is the value of `Color.Green`?",
+  "options": [
+   "\"Green\"",
+   "1",
+   "0",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Numeric enum members are auto-numbered starting at 0, so Green is 1."
+ },
+ {
+  "id": "q783c95d002d",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "Given `const xs: readonly string[] = [\"a\"];`, which operation is a compile error?",
+  "options": [
+   "xs.map(s => s.toUpperCase());",
+   "xs[0];",
+   "xs.length;",
+   "xs.push(\"b\");"
+  ],
+  "answer": 3,
+  "explanation": "readonly arrays remove mutating methods like push, while reading and non-mutating methods remain available."
+ },
+ {
+  "id": "qe898f89b7c3",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How do you mark the property `age` as optional in an interface?",
+  "options": [
+   "age?: number;",
+   "optional age: number;",
+   "age: number?;",
+   "age: number | optional;"
+  ],
+  "answer": 0,
+  "explanation": "A ? after the property name makes it optional, so its type effectively includes undefined."
+ }
+]

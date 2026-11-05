@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q89bf72eb6b5",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation maps HTTP GET requests to a controller method?",
+  "options": [
+   "@PostMapping",
+   "@ResponseBody",
+   "@GetMapping",
+   "@RequestHeader"
+  ],
+  "answer": 2,
+  "explanation": "@GetMapping is a shortcut for @RequestMapping(method = RequestMethod.GET)."
+ },
+ {
+  "id": "q0f6b89d75f1",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "Which annotation combines @Configuration, @EnableAutoConfiguration and @ComponentScan?",
+  "options": [
+   "@SpringBootConfiguration",
+   "@EnableWebMvc",
+   "@SpringBootApplication",
+   "@AutoConfiguration"
+  ],
+  "answer": 2,
+  "explanation": "@SpringBootApplication is a convenience meta-annotation that bundles these three annotations on the main class."
+ },
+ {
+  "id": "qfc48e5c3f35",
+  "subject": "springboot",
+  "topic": "auto-configuration",
+  "level": "easy",
+  "question": "By default, which packages does component scanning from @SpringBootApplication cover?",
+  "options": [
+   "The package of the annotated class and all its subpackages",
+   "Every package on the classpath",
+   "Only packages listed in application.properties",
+   "Only the root default package"
+  ],
+  "answer": 0,
+  "explanation": "Scanning starts at the main class's package, which is why that class is usually placed in a root package."
+ },
+ {
+  "id": "q0582caf297e",
+  "subject": "springboot",
+  "topic": "core-di",
+  "level": "easy",
+  "question": "Which annotation marks a class as a Spring-managed component that component scanning can discover?",
+  "options": [
+   "@Configurable",
+   "@Entity",
+   "@Component",
+   "@Value"
+  ],
+  "answer": 2,
+  "explanation": "@Component (and stereotypes like @Service and @Repository) registers the class as a bean when it is found by component scanning."
+ },
+ {
+  "id": "q4d286ee9c4f",
+  "subject": "springboot",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "Which interface is Spring's central abstraction for imperative transaction management?",
+  "options": [
+   "TransactionTemplate",
+   "DataSource",
+   "EntityManager",
+   "PlatformTransactionManager"
+  ],
+  "answer": 3,
+  "explanation": "Implementations such as JpaTransactionManager and DataSourceTransactionManager implement PlatformTransactionManager."
+ },
+ {
+  "id": "qc306fc19408",
+  "subject": "springboot",
+  "topic": "deployment-build",
+  "level": "easy",
+  "question": "Which web tool generates a new Spring Boot project with chosen dependencies?",
+  "options": [
+   "Spring Initializr at start.spring.io",
+   "Spring Cloud Config Server",
+   "JHipster Registry",
+   "Maven Central search"
+  ],
+  "answer": 0,
+  "explanation": "Spring Initializr generates a ready-to-build Maven or Gradle project, and IDEs integrate with it."
+ },
+ {
+  "id": "q34e3fd27e23",
+  "subject": "springboot",
+  "topic": "actuator-observability",
+  "level": "easy",
+  "question": "Which logging implementation does Spring Boot use by default with the starters?",
+  "options": [
+   "Log4j 2",
+   "java.util.logging",
+   "Tinylog",
+   "Logback"
+  ],
+  "answer": 3,
+  "explanation": "spring-boot-starter-logging brings in Logback, with SLF4J as the logging API."
+ },
+ {
+  "id": "qe7614f1b3d1",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which library does spring-boot-starter-web use by default to convert objects to and from JSON?",
+  "options": [
+   "Gson",
+   "Jackson",
+   "JSON-B (Yasson)",
+   "org.json"
+  ],
+  "answer": 1,
+  "explanation": "The web starter pulls in spring-boot-starter-json, which auto-configures a Jackson ObjectMapper."
+ },
+ {
+  "id": "q7281e6a43e2",
+  "subject": "springboot",
+  "topic": "web-rest",
+  "level": "easy",
+  "question": "Which annotation tells Spring MVC to deserialize the HTTP request body into a method parameter?",
+  "options": [
+   "@ResponseBody",
+   "@RequestBody",
+   "@RequestAttribute",
+   "@RequestPart"
+  ],
+  "answer": 1,
+  "explanation": "@RequestBody uses an HttpMessageConverter, such as the Jackson one, to convert the body into the parameter type."
+ },
+ {
+  "id": "qdf161570140",
+  "subject": "springboot",
+  "topic": "configuration-profiles",
+  "level": "easy",
+  "question": "Besides application.properties, which configuration file format does Spring Boot support out of the box?",
+  "options": [
+   "TOML, as application.toml",
+   "YAML, as application.yml",
+   "XML, as application.xml",
+   "INI, as application.ini"
+  ],
+  "answer": 1,
+  "explanation": "Spring Boot loads application.yml (or .yaml) using SnakeYAML, which the starters include."
+ }
+]

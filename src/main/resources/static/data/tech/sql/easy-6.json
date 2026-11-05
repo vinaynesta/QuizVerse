@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q11a7f193c40",
+  "subject": "sql",
+  "topic": "null-handling",
+  "level": "easy",
+  "question": "What is the result of the expression 5 + NULL in standard SQL?",
+  "options": [
+   "5",
+   "0",
+   "An error",
+   "NULL"
+  ],
+  "answer": 3,
+  "explanation": "Arithmetic with NULL yields NULL, because the unknown value makes the whole result unknown."
+ },
+ {
+  "id": "q80dacd51907",
+  "subject": "sql",
+  "topic": "data-types",
+  "level": "easy",
+  "question": "Which PostgreSQL data type stores true or false values?",
+  "options": [
+   "BIT STRING",
+   "BOOLEAN",
+   "CHAR(1)",
+   "BINARY"
+  ],
+  "answer": 1,
+  "explanation": "PostgreSQL's BOOLEAN type holds TRUE, FALSE or NULL."
+ },
+ {
+  "id": "q25f864837d6",
+  "subject": "sql",
+  "topic": "set-operations",
+  "level": "easy",
+  "question": "Which set operator returns only the rows that appear in the results of both queries?",
+  "options": [
+   "UNION",
+   "INTERSECT",
+   "EXCEPT",
+   "UNION ALL"
+  ],
+  "answer": 1,
+  "explanation": "INTERSECT keeps rows present in both result sets, while EXCEPT keeps rows in the first but not the second."
+ },
+ {
+  "id": "q627b2d9eea9",
+  "subject": "sql",
+  "topic": "constraints",
+  "level": "easy",
+  "question": "What does a DEFAULT clause on a column do?",
+  "options": [
+   "Prevents the column from being updated",
+   "Rejects any value other than the default",
+   "Makes the column the primary key",
+   "Supplies a value when an INSERT does not provide one for that column"
+  ],
+  "answer": 3,
+  "explanation": "DEFAULT fills in a predefined value, such as 0 or CURRENT_TIMESTAMP, when the column is omitted."
+ },
+ {
+  "id": "qee16e691449",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "easy",
+  "question": "What happens when an UPDATE statement has no WHERE clause?",
+  "options": [
+   "Every row in the table is updated",
+   "Only the first row is updated",
+   "No rows are updated",
+   "The statement fails with a syntax error"
+  ],
+  "answer": 0,
+  "explanation": "Without WHERE, UPDATE applies the change to all rows, which is a common and costly mistake."
+ },
+ {
+  "id": "q48e67423c75",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "What does GROUP BY dept do in a query that also uses COUNT(*)?",
+  "options": [
+   "Sorts the rows by dept without combining them",
+   "Removes the dept column from the result",
+   "Collects rows with the same dept into groups so COUNT(*) is computed per department",
+   "Counts the number of distinct columns in the table"
+  ],
+  "answer": 2,
+  "explanation": "GROUP BY combines rows sharing the grouping value, and aggregates then produce one result per group."
+ },
+ {
+  "id": "q8056faa9a92",
+  "subject": "sql",
+  "topic": "aggregation",
+  "level": "easy",
+  "question": "Which aggregate function returns the largest value in a column?",
+  "options": [
+   "MAX",
+   "TOP",
+   "SUM",
+   "GREATEST_ROW"
+  ],
+  "answer": 0,
+  "explanation": "MAX returns the highest non-NULL value in the group, and MIN returns the lowest."
+ },
+ {
+  "id": "qeb93ea97fc0",
+  "subject": "sql",
+  "topic": "select-basics",
+  "level": "easy",
+  "question": "Which operator selects values within an inclusive range, such as prices from 10 to 20?",
+  "options": [
+   "BETWEEN",
+   "IN",
+   "LIKE",
+   "EXISTS"
+  ],
+  "answer": 0,
+  "explanation": "x BETWEEN 10 AND 20 is equivalent to x >= 10 AND x <= 20, so both endpoints are included."
+ },
+ {
+  "id": "q9834bb66aa0",
+  "subject": "sql",
+  "topic": "transactions",
+  "level": "easy",
+  "question": "Which statement makes all changes in the current transaction permanent?",
+  "options": [
+   "COMMIT",
+   "SAVE",
+   "ROLLBACK",
+   "END CHANGES"
+  ],
+  "answer": 0,
+  "explanation": "COMMIT ends the transaction and makes its changes durable and visible to other sessions."
+ },
+ {
+  "id": "q2a9fe3cddfc",
+  "subject": "sql",
+  "topic": "dml",
+  "level": "easy",
+  "question": "Which statement removes rows that match a condition from a table?",
+  "options": [
+   "DROP FROM t WHERE ...",
+   "DELETE FROM t WHERE ...",
+   "REMOVE FROM t WHERE ...",
+   "TRUNCATE t WHERE ..."
+  ],
+  "answer": 1,
+  "explanation": "DELETE removes the rows that satisfy its WHERE clause and leaves the table structure in place."
+ }
+]

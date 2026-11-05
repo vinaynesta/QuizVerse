@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q4d7cbd9d75c",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "What is the difference between call and apply?",
+  "options": [
+   "call returns a new function, apply invokes immediately",
+   "call takes arguments individually, apply takes them as an array",
+   "apply only works on arrow functions",
+   "There is no difference; they are aliases"
+  ],
+  "answer": 1,
+  "explanation": "Both invoke the function with a given this; call takes a comma-separated argument list and apply takes an array-like."
+ },
+ {
+  "id": "q17eef30b930",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What does this log?\nfor (let i = 0; i < 3; i++) { setTimeout(() => console.log(i)); }",
+  "options": [
+   "3 3 3",
+   "0 1 2",
+   "2 2 2",
+   "undefined undefined undefined"
+  ],
+  "answer": 1,
+  "explanation": "let creates a fresh binding of i for each loop iteration, so each callback captures its own value."
+ },
+ {
+  "id": "q35f469634ca",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What happens if you call a class like a function, e.g. User() without new?",
+  "options": [
+   "It returns undefined",
+   "It creates an instance anyway",
+   "It returns the class itself",
+   "A TypeError is thrown"
+  ],
+  "answer": 3,
+  "explanation": "Class constructors cannot be invoked without new; doing so throws a TypeError."
+ },
+ {
+  "id": "q451ba695f9b",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What does import(\"./mod.js\") return?",
+  "options": [
+   "The module namespace object synchronously",
+   "A Promise that resolves to the module namespace object",
+   "A string path",
+   "undefined"
+  ],
+  "answer": 1,
+  "explanation": "Dynamic import loads modules on demand and returns a Promise for the module namespace."
+ },
+ {
+  "id": "q19d31d6afb2",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [[1, 2], [3, [4]]].flat() return?",
+  "options": [
+   "[1, [2], 3, 4]",
+   "[1, 2, 3, 4]",
+   "[[1, 2], [3, [4]]]",
+   "[1, 2, 3, [4]]"
+  ],
+  "answer": 3,
+  "explanation": "flat defaults to a depth of 1, so only one level of nesting is removed."
+ },
+ {
+  "id": "q2233a3cdfdc",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "In strict mode, what is this inside a plain function call like f()?",
+  "options": [
+   "undefined",
+   "The function itself",
+   "null",
+   "The global object"
+  ],
+  "answer": 0,
+  "explanation": "In strict mode, an unbound function call receives undefined as this rather than the global object."
+ },
+ {
+  "id": "qd7ead3cac9e",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does Promise.allSettled resolve with?",
+  "options": [
+   "Only the fulfilled values",
+   "An array of objects with status and value or reason for each input",
+   "The first settled value",
+   "A boolean indicating whether all fulfilled"
+  ],
+  "answer": 1,
+  "explanation": "allSettled waits for every input and reports each as {status: \"fulfilled\", value} or {status: \"rejected\", reason}."
+ },
+ {
+  "id": "q56b8e844cb8",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "Which is the recommended way to throw an error?",
+  "options": [
+   "console.error(\"message\")",
+   "throw \"message\"",
+   "return Error(\"message\")",
+   "throw new Error(\"message\")"
+  ],
+  "answer": 3,
+  "explanation": "Throwing Error objects provides a message and a stack trace; throwing strings loses that information."
+ },
+ {
+  "id": "q8ef7b06fd3a",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "When does the finally block of a try statement run?",
+  "options": [
+   "Only if no error is thrown",
+   "Only if an error is caught",
+   "Only if the try block returns",
+   "Always, whether or not an error occurred"
+  ],
+  "answer": 3,
+  "explanation": "finally runs after try and catch regardless of the outcome, even if they return."
+ },
+ {
+  "id": "q8f496317bf3",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "How many default exports can an ES module have?",
+  "options": [
+   "Unlimited",
+   "Two",
+   "At most one",
+   "None; default exports are CommonJS only"
+  ],
+  "answer": 2,
+  "explanation": "A module can have many named exports but at most one default export."
+ }
+]

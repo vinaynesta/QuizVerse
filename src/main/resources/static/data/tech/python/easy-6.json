@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q65edce09591",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does [0, 1, 2, 3, 4][1:3] return?",
+  "options": [
+   "[1, 2, 3]",
+   "[0, 1, 2]",
+   "[2, 3]",
+   "[1, 2]"
+  ],
+  "answer": 3,
+  "explanation": "A slice includes the start index and excludes the stop index."
+ },
+ {
+  "id": "q2023613b345",
+  "subject": "python",
+  "topic": "standard-library",
+  "level": "easy",
+  "question": "Which standard module exposes command-line arguments as a list named argv?",
+  "options": [
+   "os",
+   "sys",
+   "argparse",
+   "shutil"
+  ],
+  "answer": 1,
+  "explanation": "sys.argv holds the script name followed by its arguments."
+ },
+ {
+  "id": "q99fae281a20",
+  "subject": "python",
+  "topic": "exceptions",
+  "level": "easy",
+  "question": "Which exception does 1 / 0 raise?",
+  "options": [
+   "ValueError",
+   "ZeroDivisionError",
+   "ArithmeticWarning",
+   "It returns inf"
+  ],
+  "answer": 1,
+  "explanation": "Dividing a number by zero raises ZeroDivisionError."
+ },
+ {
+  "id": "q14e99e75675",
+  "subject": "python",
+  "topic": "data-structures",
+  "level": "easy",
+  "question": "What does [1, 2, 3][-1] return?",
+  "options": [
+   "1",
+   "3",
+   "It raises IndexError",
+   "2"
+  ],
+  "answer": 1,
+  "explanation": "Negative indexes count from the end, so -1 is the last element."
+ },
+ {
+  "id": "q61ab0f00aca",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Which keyword exits a function and sends a value back to the caller?",
+  "options": [
+   "yield",
+   "return",
+   "break",
+   "exit"
+  ],
+  "answer": 1,
+  "explanation": "return ends the function call and gives its value to the caller."
+ },
+ {
+  "id": "qec2d1e0689b",
+  "subject": "python",
+  "topic": "comprehensions-generators",
+  "level": "easy",
+  "question": "What does [x for x in range(6) if x % 2 == 0] evaluate to?",
+  "options": [
+   "[2, 4, 6]",
+   "[1, 3, 5]",
+   "[0, 2, 4, 6]",
+   "[0, 2, 4]"
+  ],
+  "answer": 3,
+  "explanation": "range(6) yields 0 through 5, and the condition keeps the even numbers."
+ },
+ {
+  "id": "q5d2220af5f1",
+  "subject": "python",
+  "topic": "oop",
+  "level": "easy",
+  "question": "Which keyword defines a class?",
+  "options": [
+   "def",
+   "struct",
+   "class",
+   "object"
+  ],
+  "answer": 2,
+  "explanation": "A class statement starts with the class keyword followed by the class name."
+ },
+ {
+  "id": "q761ada617f2",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does int(3.9) return?",
+  "options": [
+   "4",
+   "3",
+   "3.9",
+   "It raises ValueError"
+  ],
+  "answer": 1,
+  "explanation": "int() truncates a float toward zero."
+ },
+ {
+  "id": "qc9233002475",
+  "subject": "python",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Given def greet(name='World'), what is name when greet() is called with no arguments?",
+  "options": [
+   "'World'",
+   "None",
+   "''",
+   "It raises TypeError"
+  ],
+  "answer": 0,
+  "explanation": "Parameters with default values take that default when no argument is passed."
+ },
+ {
+  "id": "q668731ce07b",
+  "subject": "python",
+  "topic": "basics-types",
+  "level": "easy",
+  "question": "What does 'ab' * 3 evaluate to?",
+  "options": [
+   "'ab3'",
+   "It raises TypeError",
+   "'ababab'",
+   "['ab', 'ab', 'ab']"
+  ],
+  "answer": 2,
+  "explanation": "Multiplying a string by an int repeats it."
+ }
+]

@@ -1,5 +1,20 @@
 [
  {
+  "id": "q24a79b729fa",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which List implementation is backed by a resizable array?",
+  "options": [
+   "ArrayList",
+   "LinkedList",
+   "TreeSet",
+   "HashMap"
+  ],
+  "answer": 0,
+  "explanation": "ArrayList stores its elements in an internal array that grows as needed."
+ },
+ {
   "id": "q5379fd7e883",
   "subject": "java",
   "topic": "collections",
@@ -13,6 +28,21 @@
   ],
   "answer": 2,
   "explanation": "Map stores key-value pairs; it does not extend Collection."
+ },
+ {
+  "id": "q6b1777a07c5",
+  "subject": "java",
+  "topic": "collections",
+  "level": "easy",
+  "question": "Which method returns the number of elements in an ArrayList?",
+  "options": [
+   "size()",
+   "count()",
+   "length",
+   "length()"
+  ],
+  "answer": 0,
+  "explanation": "Collections use size(), while arrays use the length field and strings use length()."
  },
  {
   "id": "qe76d8298f5b",
@@ -60,6 +90,21 @@
   "explanation": "TreeMap is a red-black tree sorted by natural ordering or a Comparator; LinkedHashMap keeps insertion order."
  },
  {
+  "id": "q15f7e820605",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "Which class is the recommended general-purpose stack or FIFO queue implementation in modern Java?",
+  "options": [
+   "Stack",
+   "Vector",
+   "ArrayDeque",
+   "Hashtable"
+  ],
+  "answer": 2,
+  "explanation": "ArrayDeque is faster than the legacy synchronized Stack and supports both stack and queue operations."
+ },
+ {
   "id": "q1a61743fe65",
   "subject": "java",
   "topic": "collections",
@@ -105,6 +150,21 @@
   "explanation": "Equal objects must have equal hash codes, or HashMap may fail to find keys that are equal."
  },
  {
+  "id": "q7bb320f31dc",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "To sort a List with Collections.sort(list) and no Comparator, what must its elements implement?",
+  "options": [
+   "Comparator",
+   "Iterable",
+   "Cloneable",
+   "Comparable"
+  ],
+  "answer": 3,
+  "explanation": "Without a Comparator, sorting uses each element's natural ordering via compareTo."
+ },
+ {
   "id": "q9e9a81b5540",
   "subject": "java",
   "topic": "collections",
@@ -118,6 +178,36 @@
   ],
   "answer": 2,
   "explanation": "Arrays.asList wraps the array: set() works and changes the array, but add and remove throw UnsupportedOperationException."
+ },
+ {
+  "id": "qe324a406c3e",
+  "subject": "java",
+  "topic": "collections",
+  "level": "medium",
+  "question": "What does Collections.unmodifiableList(list) return?",
+  "options": [
+   "The same list with its elements frozen",
+   "An independent immutable copy",
+   "A synchronized copy",
+   "A read-only view that reflects later changes to the original list"
+  ],
+  "answer": 3,
+  "explanation": "The view blocks modification through itself but still sees changes made through the backing list."
+ },
+ {
+  "id": "q0c991b547d0",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "What happens when you put a null key or null value into a ConcurrentHashMap?",
+  "options": [
+   "It throws NullPointerException",
+   "It stores the null like HashMap does",
+   "It silently ignores the call",
+   "It stores the entry in a special null bucket"
+  ],
+  "answer": 0,
+  "explanation": "ConcurrentHashMap forbids nulls so that a null result from get() always means the key is absent."
  },
  {
   "id": "q142c98d0b2e",
@@ -178,5 +268,35 @@
   ],
   "answer": 2,
   "explanation": "Treeification (threshold 8, once the table has at least 64 buckets) bounds worst-case lookup at O(log n)."
+ },
+ {
+  "id": "qeec078d4dda",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "How do iterators of a CopyOnWriteArrayList behave if the list is modified during iteration?",
+  "options": [
+   "They throw ConcurrentModificationException",
+   "They immediately reflect every modification",
+   "They iterate over a snapshot and never throw ConcurrentModificationException",
+   "They block until the modification finishes"
+  ],
+  "answer": 2,
+  "explanation": "Every write copies the backing array, so existing iterators keep reading the old array."
+ },
+ {
+  "id": "qf259e02a2d0",
+  "subject": "java",
+  "topic": "collections",
+  "level": "hard",
+  "question": "What does Arrays.asList(new int[]{1, 2, 3}).size() return?",
+  "options": [
+   "3",
+   "0",
+   "It does not compile",
+   "1"
+  ],
+  "answer": 3,
+  "explanation": "int[] is not boxed into Integer elements, so the varargs list holds a single int[] element."
  }
 ]

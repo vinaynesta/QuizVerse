@@ -1,0 +1,92 @@
+[
+ {
+  "id": "qa5fd56f4913",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is an interrupt?",
+  "options": [
+   "A signal from hardware (or software) that makes the CPU suspend its current work and run a handler",
+   "A user-level exception handler",
+   "A type of disk block",
+   "A system call that ends a process"
+  ],
+  "answer": 0,
+  "explanation": "On an interrupt the CPU saves its state and jumps to the handler found via the interrupt vector, then resumes the interrupted work."
+ },
+ {
+  "id": "qda83f42a096",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is a device driver?",
+  "options": [
+   "A hardware chip on a device",
+   "A bus protocol",
+   "A user application",
+   "Kernel software that provides a uniform interface for controlling a specific hardware device"
+  ],
+  "answer": 3,
+  "explanation": "Device drivers hide device-specific details from the rest of the kernel behind a standard interface."
+ },
+ {
+  "id": "qe0344c9680d",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is spooling?",
+  "options": [
+   "Buffering output (e.g. print jobs) on disk so a slow device can process jobs one at a time",
+   "Encrypting I/O traffic",
+   "Rotating disk platters",
+   "Polling a device in a loop"
+  ],
+  "answer": 0,
+  "explanation": "A spool holds output for devices like printers that cannot interleave jobs, so each job is queued and printed in turn."
+ },
+ {
+  "id": "qf24135adacf",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What does DMA (Direct Memory Access) allow?",
+  "options": [
+   "Processes to share memory",
+   "User programs to access kernel memory",
+   "The CPU to bypass its cache",
+   "A device controller to transfer data directly to or from memory without the CPU handling each byte"
+  ],
+  "answer": 3,
+  "explanation": "With DMA the CPU sets up a transfer and the controller moves the whole block, interrupting the CPU only when it is done."
+ },
+ {
+  "id": "qbd24dc7dc58",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "medium",
+  "question": "The disk head is at cylinder 53 and the queue holds 98, 183, 37, 122, 14, 124, 65, 67. What is the total head movement under FCFS disk scheduling?",
+  "options": [
+   "640 cylinders",
+   "208 cylinders",
+   "331 cylinders",
+   "236 cylinders"
+  ],
+  "answer": 0,
+  "explanation": "Summing |differences| in order: 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640 cylinders."
+ },
+ {
+  "id": "q2e9d21000a3",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "hard",
+  "question": "The disk head is at cylinder 53 and the queue holds 98, 183, 37, 122, 14, 124, 65, 67. What is the total head movement under SSTF scheduling?",
+  "options": [
+   "640 cylinders",
+   "236 cylinders",
+   "299 cylinders",
+   "208 cylinders"
+  ],
+  "answer": 1,
+  "explanation": "SSTF serves 65, 67, 37, 14, 98, 122, 124, 183, moving 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236 cylinders."
+ }
+]

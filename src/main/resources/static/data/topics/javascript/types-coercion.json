@@ -1,0 +1,242 @@
+[
+ {
+  "id": "q0ceed080ef4",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof null return?",
+  "options": [
+   "\"object\"",
+   "\"null\"",
+   "\"undefined\"",
+   "\"symbol\""
+  ],
+  "answer": 0,
+  "explanation": "typeof null returns \"object\", a long-standing quirk kept for backward compatibility."
+ },
+ {
+  "id": "q1a5252f3fb8",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof undefined return?",
+  "options": [
+   "\"object\"",
+   "\"null\"",
+   "\"undefined\"",
+   "\"void\""
+  ],
+  "answer": 2,
+  "explanation": "The undefined value has its own type and typeof reports \"undefined\"."
+ },
+ {
+  "id": "q34f4af41b32",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "Which method checks whether a value is an array?",
+  "options": [
+   "typeof value === \"array\"",
+   "value.isArray()",
+   "Array.isArray(value)",
+   "Object.isArray(value)"
+  ],
+  "answer": 2,
+  "explanation": "Array.isArray is the reliable check; typeof returns \"object\" for arrays."
+ },
+ {
+  "id": "q481820b5740",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "Which of these is NOT a primitive type in JavaScript?",
+  "options": [
+   "bigint",
+   "symbol",
+   "boolean",
+   "array"
+  ],
+  "answer": 3,
+  "explanation": "Arrays are objects; the primitives are string, number, bigint, boolean, undefined, symbol and null."
+ },
+ {
+  "id": "q8acb5bec339",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof \"hello\" return?",
+  "options": [
+   "\"char\"",
+   "\"text\"",
+   "\"object\"",
+   "\"string\""
+  ],
+  "answer": 3,
+  "explanation": "String primitives report \"string\" from the typeof operator."
+ },
+ {
+  "id": "qec0ca34f9ed",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What is the value of 1 + \"2\"?",
+  "options": [
+   "\"12\"",
+   "NaN",
+   "TypeError",
+   "3"
+  ],
+  "answer": 0,
+  "explanation": "When either operand of + is a string, the other is converted to a string and they are concatenated."
+ },
+ {
+  "id": "q24dcce99ac9",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What are the results of NaN === NaN and Object.is(NaN, NaN)?",
+  "options": [
+   "true and true",
+   "true and false",
+   "false and false",
+   "false and true"
+  ],
+  "answer": 3,
+  "explanation": "NaN is not equal to itself under === but Object.is uses SameValue, which treats NaN as equal to NaN."
+ },
+ {
+  "id": "q26fc6d308dc",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What are the results of null == 0 and null >= 0?",
+  "options": [
+   "true and true",
+   "false and false",
+   "false and true",
+   "true and false"
+  ],
+  "answer": 2,
+  "explanation": "Loose equality treats null as equal only to undefined, but relational comparison converts null to the number 0."
+ },
+ {
+  "id": "q2cbad7de44a",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [] == false evaluate to?",
+  "options": [
+   "undefined",
+   "false",
+   "TypeError",
+   "true"
+  ],
+  "answer": 3,
+  "explanation": "false becomes 0 and [] becomes \"\" and then 0, so the loose comparison is 0 == 0, even though [] is truthy."
+ },
+ {
+  "id": "q3c494014632",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [] + [] evaluate to?",
+  "options": [
+   "[]",
+   "\"\" (empty string)",
+   "undefined",
+   "0"
+  ],
+  "answer": 1,
+  "explanation": "Both arrays convert to primitives via toString, giving empty strings that concatenate to an empty string."
+ },
+ {
+  "id": "q70ea305446a",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [] + {} evaluate to?",
+  "options": [
+   "NaN",
+   "0",
+   "\"{}\"",
+   "\"[object Object]\""
+  ],
+  "answer": 3,
+  "explanation": "[] becomes \"\" and {} becomes \"[object Object]\", and + concatenates the strings."
+ },
+ {
+  "id": "q80cb0323a3e",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does 0.1 + 0.2 === 0.3 evaluate to?",
+  "options": [
+   "true",
+   "false",
+   "NaN",
+   "TypeError"
+  ],
+  "answer": 1,
+  "explanation": "IEEE 754 doubles cannot represent these decimals exactly, so the sum is 0.30000000000000004."
+ },
+ {
+  "id": "q89507c72c2b",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does 1n + 1 evaluate to?",
+  "options": [
+   "TypeError: cannot mix BigInt and other types",
+   "2n",
+   "2",
+   "\"11\""
+  ],
+  "answer": 0,
+  "explanation": "Arithmetic operators do not implicitly mix BigInt and Number; one side must be converted explicitly."
+ },
+ {
+  "id": "qd1e368e1a0b",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does true + true + \"1\" evaluate to?",
+  "options": [
+   "\"true true1\"",
+   "\"21\"",
+   "\"111\"",
+   "3"
+  ],
+  "answer": 1,
+  "explanation": "Evaluation is left to right: true + true is the number 2, then 2 + \"1\" concatenates to \"21\"."
+ },
+ {
+  "id": "qe21f5ea0a11",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What are the results of 0 === -0 and Object.is(0, -0)?",
+  "options": [
+   "false and false",
+   "true and false",
+   "false and true",
+   "true and true"
+  ],
+  "answer": 1,
+  "explanation": "Strict equality treats +0 and -0 as equal, but Object.is distinguishes them."
+ },
+ {
+  "id": "qe4f43f233c7",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What do \"5\" - 2 and \"5\" + 2 evaluate to?",
+  "options": [
+   "3 and 7",
+   "\"3\" and \"52\"",
+   "NaN and \"52\"",
+   "3 and \"52\""
+  ],
+  "answer": 3,
+  "explanation": "The - operator only works on numbers so the string is converted, while + concatenates when either operand is a string."
+ }
+]
