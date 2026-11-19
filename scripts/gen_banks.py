@@ -21,6 +21,11 @@ PER_LEVEL = 200
 QUANT_PER_LEVEL = 250  # numerical + reasoning banks: SBI Mains needs 50 questions x 5 quizzes
 EXAM_POOLS = 6  # one slice per exam in build_exams.py EXAMS; keep in step with it
 BANK_SIZE = QUANT_PER_LEVEL * EXAM_POOLS
+# Second banks (<name>_<level>_2.json) for exams with more quizzes: "extraPool" in build_exams.py EXAMS picks a
+# slice (the three clerk exams use Quant and Reasoning, APPSC Mental Ability uses Reasoning). The quant generators
+# give about 775 new medium questions from MORE_GENERATED, so Quant has room for 3 slices, not more.
+MORE_POOLS = {"quant": 3, "reasoning": 4}
+MORE_GENERATED = 1400
 NAMES = ["Amit", "Bhavna", "Chetan", "Deepa", "Eshan", "Farah", "Gautam", "Hema",
          "Imran", "Jaya", "Kiran", "Lata", "Manoj", "Neha", "Omkar", "Priya",
          "Rahul", "Sneha", "Tarun", "Usha", "Varun", "Wasim", "Yash", "Zoya"]
@@ -1213,6 +1218,20 @@ def build_bank(fn, level, i):
     return bank
 
 
+def build_more(fn, level, i, base, pools):
+    """A second bank, <name>_<level>_2.json: `pools` more slices of QUANT_PER_LEVEL from a third seed, none repeating
+    the main bank. build_exams.py turns them into quizzes after the existing ones, so those never change."""
+    seen = {near_key(q) for q in base}
+    more = []
+    for q in fn(level, 3000 + i, MORE_GENERATED):
+        if len(more) == pools * QUANT_PER_LEVEL:
+            break
+        if near_key(q) not in seen:
+            seen.add(near_key(q))
+            more.append(q)
+    return more
+
+
 def near_key(q):
     """Questions that differ only in case, spacing or punctuation count as the same question."""
     return " ".join("".join(c for c in q["question"].lower() if c.isalnum() or c.isspace()).split())
@@ -1236,3 +1255,7 @@ if __name__ == "__main__":
             (out / f"{name}_{level}.json").write_text(json.dumps(bank, indent=1, ensure_ascii=False) + "\n")
             dist = [sum(1 for q in bank if q["answer"] == k) for k in range(5)]
             print(f"{name}_{level}: {len(bank)} questions, answer positions {dist}")
+            more = build_more(fn, level, i, bank, MORE_POOLS[name])
+            validate(more, f"{name}/{level} second bank", MORE_POOLS[name] * QUANT_PER_LEVEL)
+            (out / f"{name}_{level}_2.json").write_text(json.dumps(more, indent=1, ensure_ascii=False) + "\n")
+            print(f"{name}_{level}_2: {len(more)} questions")

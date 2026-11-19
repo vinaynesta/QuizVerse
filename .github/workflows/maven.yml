@@ -39,6 +39,22 @@ jobs:
         git add -A --intent-to-add
         git diff --stat --exit-code || { echo "::error::Generated data differs from the scripts. Run the build scripts and commit the output."; exit 1; }
 
+    # The wrapper downloads Maven itself from Maven Central, which isn't covered by setup-java's cache (that's
+    # ~/.m2/repository). Cache the download and retry it, so a network blip on the runner doesn't fail the build.
+    - name: Cache the Maven distribution
+      uses: actions/cache@v4
+      with:
+        path: ~/.m2/wrapper
+        key: maven-wrapper-${{ hashFiles('.mvn/wrapper/maven-wrapper.properties') }}
+    - name: Download Maven
+      run: |
+        for attempt in 1 2 3; do
+          ./mvnw -B -q --version && exit 0
+          echo "Maven download failed (attempt $attempt), retrying in 20 seconds"
+          sleep 20
+        done
+        exit 1
+
     - name: Build and test
       run: ./mvnw -B package
 
