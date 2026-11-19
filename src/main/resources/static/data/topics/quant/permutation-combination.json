@@ -300,6 +300,21 @@
   "explanation": "SUCCESS has 7 letters: 7! = 5040 if all were different.\nRepeated letters: C ×2, S ×3.\nDivide by each repeat's factorial: 5040 / 2! × 3! = 420."
  },
  {
+  "id": "q68e7c0daa77",
+  "subject": "quant",
+  "topic": "permutation-combination",
+  "level": "hard",
+  "question": "A committee of 3 is chosen from 4 men and 6 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "103",
+   "100",
+   "120",
+   "80"
+  ],
+  "answer": 1,
+  "explanation": "All committees: C(10,3) = 120.\nCommittees with no man (all women): C(6,3) = 20.\nAt least one man = 120 − 20 = 100."
+ },
+ {
   "id": "q6934cdaec30",
   "subject": "quant",
   "topic": "permutation-combination",
@@ -373,6 +388,21 @@
   ],
   "answer": 1,
   "explanation": "All committees: C(11,5) = 462.\nCommittees with no man (all women): C(3,5) = 0.\nAt least one man = 462 − 0 = 462."
+ },
+ {
+  "id": "q75204615fc4",
+  "subject": "quant",
+  "topic": "permutation-combination",
+  "level": "hard",
+  "question": "A committee of 4 is chosen from 4 men and 4 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "69",
+   "64",
+   "66",
+   "83"
+  ],
+  "answer": 0,
+  "explanation": "All committees: C(8,4) = 70.\nCommittees with no man (all women): C(4,4) = 1.\nAt least one man = 70 − 1 = 69."
  },
  {
   "id": "q79be9548708",
@@ -705,6 +735,21 @@
   "explanation": "All committees: C(10,5) = 252.\nCommittees with no man (all women): C(5,5) = 1.\nAt least one man = 252 − 1 = 251."
  },
  {
+  "id": "qcf2eaef7b38",
+  "subject": "quant",
+  "topic": "permutation-combination",
+  "level": "hard",
+  "question": "A committee of 3 is chosen from 4 men and 5 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "59",
+   "74",
+   "72",
+   "92"
+  ],
+  "answer": 1,
+  "explanation": "All committees: C(9,3) = 84.\nCommittees with no man (all women): C(5,3) = 10.\nAt least one man = 84 − 10 = 74."
+ },
+ {
   "id": "qd1e019237fc",
   "subject": "quant",
   "topic": "permutation-combination",
@@ -718,6 +763,21 @@
   ],
   "answer": 1,
   "explanation": "All committees: C(10,3) = 120.\nCommittees with no man (all women): C(4,3) = 4.\nAt least one man = 120 − 4 = 116."
+ },
+ {
+  "id": "qd44ca0465b4",
+  "subject": "quant",
+  "topic": "permutation-combination",
+  "level": "hard",
+  "question": "A committee of 4 is chosen from 6 men and 3 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "126",
+   "124",
+   "158",
+   "129"
+  ],
+  "answer": 0,
+  "explanation": "All committees: C(9,4) = 126.\nCommittees with no man (all women): C(3,4) = 0.\nAt least one man = 126 − 0 = 126."
  },
  {
   "id": "qd4dbbb96abd",

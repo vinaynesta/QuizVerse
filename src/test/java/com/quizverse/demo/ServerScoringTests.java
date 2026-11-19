@@ -258,6 +258,28 @@ class ServerScoringTests {
 	}
 
 	@Test
+	void clerkExamsHaveTenQuantAndReasoningQuizzesPerLevel() throws Exception {
+		for (String exam : List.of("ibps-clerk", "sbi-clerk", "rrb-clerk")) {
+			QuizCatalog.Quiz tenth = catalog.find(exam + "/prelims/reasoning/hard/9");
+			assertNotNull(tenth, exam + " reasoning quiz 10");
+			assertEquals(catalog.questions(catalog.find(exam + "/prelims/reasoning/hard/0")).size(),
+					catalog.questions(tenth).size());
+			assertEquals(null, catalog.find(exam + "/prelims/reasoning/hard/10"));
+		}
+		// The new quizzes repeat no question of the first five.
+		java.util.Set<String> first = new java.util.HashSet<>();
+		for (int n = 0; n < 5; n++) first.addAll(catalog.ids(catalog.find("rrb-clerk/prelims/numerical-ability/medium/" + n)));
+		for (int n = 5; n < 10; n++) {
+			assertTrue(java.util.Collections.disjoint(first,
+					catalog.ids(catalog.find("rrb-clerk/prelims/numerical-ability/medium/" + n))));
+		}
+		// RRB Clerk Prelims is all Reasoning and Quant, so it gets full mocks 6 to 10 as well.
+		assertNotNull(catalog.find("rrb-clerk/prelims/mock/easy/9"));
+		// PO exams are unchanged.
+		assertEquals(null, catalog.find("ibps-po/prelims/reasoning/easy/5"));
+	}
+
+	@Test
 	void appscGroupOnePapersUseOneThirdNegativeMarking() throws Exception {
 		QuizCatalog.Quiz paper1 = catalog.find("appsc-group-1/paper-1/mock/medium/2");
 		assertNotNull(paper1, "Paper I full mock");
@@ -273,6 +295,10 @@ class ServerScoringTests {
 		chosen.set(0, key.get(0));
 		chosen.set(1, (key.get(1) + 1) % 4);
 		assertEquals(0.67, catalog.score(section, chosen).score(), 0.001);
+
+		// Mental Ability has two more quizzes per level from the second Reasoning bank.
+		assertNotNull(catalog.find("appsc-group-1/paper-2/mental-ability/easy/4"));
+		assertEquals(null, catalog.find("appsc-group-1/paper-2/mental-ability/easy/5"));
 
 		// Bank exams keep their 1/4.
 		QuizCatalog.Quiz bank = catalog.find("ibps-clerk/prelims/english/easy/0");

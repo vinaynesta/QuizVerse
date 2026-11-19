@@ -36,6 +36,8 @@ LEVELS = [("easy", "Easy"), ("medium", "Medium"), ("hard", "Hard")]
 QUIZZES_PER_LEVEL = 5
 GROUP_SIZE = 5  # questions per DI table / puzzle in scripts/gen_groups.py
 POOL_SIZE = 250  # QUANT_PER_LEVEL in scripts/gen_banks.py: one exam's slice of a Quant or Reasoning bank
+MORE_BANKS = ("quant", "reasoning")  # second banks, <name>_<level>_2.json, MORE_POOLS slices in gen_banks.py
+# English has one shared second bank, <english-bank-dir>/more/<level>.json, used by every exam with "moreQuizzes".
 GA_SUBJECTS = ("computer", "banking", "history", "polity", "economy", "geography", "science-tech",
                "admin-psych")  # hand-written banks in <ga-bank-dir>/<subject>/*.json
 GA_DIR = Path(__file__).resolve().parent / "ga_bank"
@@ -48,7 +50,7 @@ def sec(id_, name, bank, q, marks, minutes, note=None):
 # From the exam-pattern table supplied by the user (IBPS / SBI / IBPS RRB 2026 patterns).
 EXAMS = [
     {
-        "id": "ibps-clerk", "name": "IBPS Clerk",
+        "id": "ibps-clerk", "name": "IBPS Clerk", "extraPool": 0, "moreQuizzes": 5,
         "description": "Customer Service Associate. Prelims 100 questions in 60 minutes; Mains 160 questions in 125 minutes.",
         "stages": [
             {"id": "prelims", "name": "Prelims", "sections": [
@@ -65,7 +67,7 @@ EXAMS = [
         ],
     },
     {
-        "id": "sbi-clerk", "name": "SBI Clerk",
+        "id": "sbi-clerk", "name": "SBI Clerk", "extraPool": 1, "moreQuizzes": 5,
         "description": "Junior Associate. Prelims 100 questions in 60 minutes; Mains 190 questions in 160 minutes.",
         "stages": [
             {"id": "prelims", "name": "Prelims", "sections": [
@@ -83,7 +85,7 @@ EXAMS = [
         ],
     },
     {
-        "id": "rrb-clerk", "name": "IBPS RRB Clerk",
+        "id": "rrb-clerk", "name": "IBPS RRB Clerk", "extraPool": 2, "moreQuizzes": 5,
         "description": "Office Assistant (Multipurpose). Prelims 80 questions in 45 minutes; Mains 200 questions in 120 minutes.",
         "stages": [
             {"id": "prelims", "name": "Prelims", "sections": [
@@ -101,7 +103,7 @@ EXAMS = [
     },    # Added Oct 2026 (#17) from the last notified patterns; check each new notification, these change often.
     # PO Mains also has a descriptive paper (letter and essay) that a quiz can't mark, so it's left out.
     {
-        "id": "ibps-po", "name": "IBPS PO",
+        "id": "ibps-po", "name": "IBPS PO", "moreQuizzes": 5,
         "description": "Probationary Officer. Prelims 100 questions in 60 minutes; Mains 155 questions in 180 minutes, "
                        "plus a descriptive paper.",
         "stages": [
@@ -120,7 +122,7 @@ EXAMS = [
         ],
     },
     {
-        "id": "sbi-po", "name": "SBI PO",
+        "id": "sbi-po", "name": "SBI PO", "moreQuizzes": 5,
         "description": "Probationary Officer. Prelims 100 questions in 60 minutes; Mains 155 questions in 180 minutes, "
                        "plus a descriptive paper.",
         "stages": [
@@ -139,7 +141,7 @@ EXAMS = [
         ],
     },
     {
-        "id": "rbi-assistant", "name": "RBI Assistant",
+        "id": "rbi-assistant", "name": "RBI Assistant", "moreQuizzes": 5,
         "description": "Assistant, Reserve Bank of India. Prelims 100 questions in 60 minutes; Mains 200 questions in "
                        "135 minutes.",
         "stages": [
@@ -166,7 +168,7 @@ EXAMS = [
         "id": "appsc-group-1", "name": "APPSC Group 1",
         "description": "Andhra Pradesh Public Service Commission Group 1 Prelims (screening test): Paper I General "
                        "Studies and Paper II General Aptitude, 120 questions in 120 minutes each.",
-        "negativeMarking": 1 / 3, "quizzesPerLevel": 3, "pool": 0,
+        "negativeMarking": 1 / 3, "quizzesPerLevel": 3, "pool": 0, "extraPool": 3, "moreQuizzes": 2,
         "stages": [
             {"id": "paper-1", "name": "Prelims Paper I", "sections": [
                 sec("history-culture", "History and Culture", "history", 30, 30, 30),
@@ -314,6 +316,18 @@ def load_ga_bank(subject, ga_dir=None):
     return out
 
 
+def load_more(name, level, banks_dir, extra_pool, english_dir=None):
+    """The second English bank, the exam's slice of a second Quant/Reasoning bank, or [] when there is none."""
+    if name == "english":
+        path = Path(english_dir) / "more" / f"{level}.json" if english_dir else None
+        return json.loads(path.read_text()) if path and path.exists() else []
+    path = Path(banks_dir) / f"{name}_{level}_2.json"
+    if name not in MORE_BANKS or extra_pool is None or not path.exists():
+        return []
+    bank = json.loads(path.read_text())
+    return bank[extra_pool * POOL_SIZE:(extra_pool + 1) * POOL_SIZE]
+
+
 def load_bank(name, level, banks_dir, english_dir, pool=0, ga_dir=None):
     """The whole English, Computer or Banking bank, or the exam's slice of a generated bank."""
     if name == "english":
@@ -376,6 +390,43 @@ def meta(s):
             "minutes": s["minutes"], "note": s["note"]}
 
 
+def make_quizzes(s, level, level_name, key, seed, bank, all_sets, count, first, out, keys, used, required=False):
+    """`count` quizzes of section `s` from `bank`, numbered from `first`, shuffled with `seed`. Writes the public
+    files and their answer keys; returns the index entries and the group sets used. Without enough questions it
+    stops the build (required) or returns no quizzes (an optional second bank)."""
+    rng = random.Random(seed)
+    sets = rng.sample(all_sets, count) if len(all_sets) >= count else []
+    single = s["questions"] - (GROUP_SIZE if sets else 0)
+    need = single * count
+    if len(bank) < need:
+        if required:
+            sys.exit(f"{key}: need {need}, bank has {len(bank)}")
+        return [], set()
+    balance_answers(bank, rng)
+    rng.shuffle(bank)
+    quizzes = []
+    for k in range(count):
+        n = first + k
+        chunk = [(edited(s["bank"], q), None) for q in bank[k * single:(k + 1) * single]]
+        if sets:
+            g = group_meta(s["bank"], sets[k])
+            chunk += [(edited(s["bank"], q, g), g) for q in sets[k]["questions"]]
+        rel = f"{key}-{n}.json"
+        qs = [published(s["bank"], level, q, g) for q, g in chunk]
+        used.update(q["id"] for q in qs)
+        keys[rel] = {"ids": [q["id"] for q in qs], "answers": [q["answer"] for q, _ in chunk],
+                     "explanations": [with_tip(s["bank"], q) for q, _ in chunk]}
+        hidden = [i for i, (q, _) in enumerate(chunk) if q.get("hidden")]
+        if hidden:  # still in the paper (the section needs its count), left out of practice pools
+            keys[rel]["hidden"] = hidden
+        if any(q.get("hi") for q, _ in chunk):
+            keys[rel]["hiExplanations"] = [hi_explanation(q) for q, _ in chunk]
+        (out / rel).parent.mkdir(parents=True, exist_ok=True)
+        (out / rel).write_text(json.dumps(qs, indent=1, ensure_ascii=False) + "\n")
+        quizzes.append({"id": f"{level}-{n}", "title": f"{level_name} Quiz {n}", "file": rel})
+    return quizzes, {g["id"] for g in sets}
+
+
 def main(banks_dir, english_dir, data_dir, keys_path, ga_dir=None):
     out = Path(data_dir)
     keys = {}
@@ -405,34 +456,17 @@ def main(banks_dir, english_dir, data_dir, keys_path, ga_dir=None):
                 for level, level_name in LEVELS:
                     bank = load_bank(s["bank"], level, banks_dir, english_dir, pool, ga_dir)
                     key = f"{exam['id']}/{stage['id']}/{s['id']}/{level}"
-                    rng = random.Random(key)
-                    sets = load_groups(s["bank"], level, banks_dir, english_dir)
-                    sets = rng.sample(sets, per_level) if len(sets) >= per_level else []
-                    single = s["questions"] - (GROUP_SIZE if sets else 0)
-                    need = single * per_level
-                    if len(bank) < need:
-                        sys.exit(f"{exam['id']}/{stage['id']}/{s['id']}/{level}: need {need}, bank has {len(bank)}")
-                    balance_answers(bank, rng)
-                    rng.shuffle(bank)
-                    quizzes = []
-                    for n in range(1, per_level + 1):
-                        chunk = [(edited(s["bank"], q), None) for q in bank[(n - 1) * single: n * single]]
-                        if sets:
-                            g = group_meta(s["bank"], sets[n - 1])
-                            chunk += [(edited(s["bank"], q, g), g) for q in sets[n - 1]["questions"]]
-                        rel = f"{key}-{n}.json"
-                        qs = [published(s["bank"], level, q, g) for q, g in chunk]
-                        used.update(q["id"] for q in qs)
-                        keys[rel] = {"ids": [q["id"] for q in qs], "answers": [q["answer"] for q, _ in chunk],
-                                     "explanations": [with_tip(s["bank"], q) for q, _ in chunk]}
-                        hidden = [i for i, (q, _) in enumerate(chunk) if q.get("hidden")]
-                        if hidden:  # still in the paper (the section needs its count), left out of practice pools
-                            keys[rel]["hidden"] = hidden
-                        if any(q.get("hi") for q, _ in chunk):
-                            keys[rel]["hiExplanations"] = [hi_explanation(q) for q, _ in chunk]
-                        (out / rel).parent.mkdir(parents=True, exist_ok=True)
-                        (out / rel).write_text(json.dumps(qs, indent=1, ensure_ascii=False) + "\n")
-                        quizzes.append({"id": f"{level}-{n}", "title": f"{level_name} Quiz {n}", "file": rel})
+                    all_sets = load_groups(s["bank"], level, banks_dir, english_dir)
+                    # Block 1 is the original bank, exactly as before; block 2 (a second bank) adds quizzes after
+                    # it with its own seed, so earlier quizzes, mocks and saved scores never change.
+                    quizzes, taken = make_quizzes(s, level, level_name, key, key, bank, all_sets, per_level, 1,
+                                                  out, keys, used, required=True)
+                    more = load_more(s["bank"], level, banks_dir, exam.get("extraPool"), english_dir)
+                    if more and exam.get("moreQuizzes"):
+                        spare = [g for g in all_sets if g["id"] not in taken]
+                        extra, _ = make_quizzes(s, level, level_name, key, f"{key}#2", more, spare,
+                                                exam["moreQuizzes"], per_level + 1, out, keys, used)
+                        quizzes += extra
                     s_entry["levels"].append({"id": level, "name": level_name, "quizzes": quizzes})
                 st["sections"].append(s_entry)
             entry["stages"].append(st)
@@ -476,6 +510,13 @@ def write_extra(out, used, banks_dir, english_dir):
                 if p["id"] not in used and not q.get("hidden"):
                     used.add(p["id"])
                     extra.append(with_answer(p, q["answer"], with_tip(subject, q), hi_explanation(q)))
+    for level, _ in LEVELS:
+        for q in load_more("english", level, banks_dir, None, english_dir):
+            q = edited("english", q)
+            p = published("english", level, q)
+            if p["id"] not in used and not q.get("hidden"):
+                used.add(p["id"])
+                extra.append(with_answer(p, q["answer"], with_tip("english", q), hi_explanation(q)))
     (out / "practice-extra.json").write_text(json.dumps(extra, indent=1, ensure_ascii=False) + "\n")
 
 

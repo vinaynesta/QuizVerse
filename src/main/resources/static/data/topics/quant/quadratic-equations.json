@@ -15,6 +15,36 @@
   "explanation": "I factorises to (x + 1)(x − 8) = 0, so x = -1 or 8.\nII factorises to (y + 8)(y − 9) = 0, so y = -8 or 9.\nCompare every pair: -1 vs -8, -1 vs 9, 8 vs -8, 8 vs 9.\nResult: No relation can be established."
  },
  {
+  "id": "q0146d9f1b69",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 4x − 32 = 0\nII. y² − 11y + 30 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≥ y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 8)(x − 4) = 0, so x = -8 or 4.\nII factorises to (y − 5)(y − 6) = 0, so y = 5 or 6.\nCompare every pair: -8 vs 5, -8 vs 6, 4 vs 5, 4 vs 6.\nResult: x < y."
+ },
+ {
+  "id": "q01bd900fa28",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 24 = 0\nII. y² − 4 = 0",
+  "options": [
+   "x > y",
+   "x ≥ y",
+   "x = y",
+   "No relation can be established"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 6)(x − 4) = 0, so x = 6 or 4.\nII factorises to (y + 2)(y − 2) = 0, so y = -2 or 2.\nCompare every pair: 6 vs -2, 6 vs 2, 4 vs -2, 4 vs 2.\nResult: x > y."
+ },
+ {
   "id": "q0310583f192",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -105,6 +135,81 @@
   "explanation": "I factorises to (x − 9)(x + 2) = 0, so x = 9 or -2.\nII factorises to (y − 5)(y + 5) = 0, so y = 5 or -5.\nCompare every pair: 9 vs 5, 9 vs -5, -2 vs 5, -2 vs -5.\nResult: No relation can be established."
  },
  {
+  "id": "q06c715a01a5",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x − 6 = 0\nII. y² − 9y + 14 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x + 1) = 0, so x = 6 or -1.\nII factorises to (y − 2)(y − 7) = 0, so y = 2 or 7.\nCompare every pair: 6 vs 2, 6 vs 7, -1 vs 2, -1 vs 7.\nResult: No relation can be established."
+ },
+ {
+  "id": "q06e39765be1",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 24 = 0\nII. y² + 6y + 5 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x − 6) = 0, so x = -4 or 6.\nII factorises to (y + 5)(y + 1) = 0, so y = -5 or -1.\nCompare every pair: -4 vs -5, -4 vs -1, 6 vs -5, 6 vs -1.\nResult: No relation can be established."
+ },
+ {
+  "id": "q071e501703e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 7 = 0\nII. y² − 5y − 14 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 7)(x − 1) = 0, so x = -7 or 1.\nII factorises to (y − 7)(y + 2) = 0, so y = 7 or -2.\nCompare every pair: -7 vs 7, -7 vs -2, 1 vs 7, 1 vs -2.\nResult: No relation can be established."
+ },
+ {
+  "id": "q0826588176a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 7x + 10 = 0\nII. y² − y − 42 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x = y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 2)(x − 5) = 0, so x = 2 or 5.\nII factorises to (y − 7)(y + 6) = 0, so y = 7 or -6.\nCompare every pair: 2 vs 7, 2 vs -6, 5 vs 7, 5 vs -6.\nResult: No relation can be established."
+ },
+ {
+  "id": "q089813285ae",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 21 = 0\nII. y² + 6y + 9 = 0",
+  "options": [
+   "x ≤ y",
+   "x = y",
+   "x > y",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 7)(x − 3) = 0, so x = 7 or 3.\nII factorises to (y + 3)(y + 3) = 0, so y = -3 or -3.\nCompare every pair: 7 vs -3, 7 vs -3, 3 vs -3, 3 vs -3.\nResult: x > y."
+ },
+ {
   "id": "q09127041c20",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -150,6 +255,36 @@
   "explanation": "I factorises to (x + 7)(x − 1) = 0, so x = -7 or 1.\nII factorises to (y + 1)(y + 8) = 0, so y = -1 or -8.\nCompare every pair: -7 vs -1, -7 vs -8, 1 vs -1, 1 vs -8.\nResult: No relation can be established."
  },
  {
+  "id": "q0c47d0b5f1e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + x − 42 = 0\nII. y² + 3y − 18 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x > y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 7)(x − 6) = 0, so x = -7 or 6.\nII factorises to (y − 3)(y + 6) = 0, so y = 3 or -6.\nCompare every pair: -7 vs 3, -7 vs -6, 6 vs 3, 6 vs -6.\nResult: No relation can be established."
+ },
+ {
+  "id": "q0e02ea0a4cf",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 24 = 0\nII. y² + 11y + 18 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 6)(x + 4) = 0, so x = -6 or -4.\nII factorises to (y + 9)(y + 2) = 0, so y = -9 or -2.\nCompare every pair: -6 vs -9, -6 vs -2, -4 vs -9, -4 vs -2.\nResult: No relation can be established."
+ },
+ {
   "id": "q0e3c9319325",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -165,6 +300,21 @@
   "explanation": "I factorises to (x − 9)(x − 6) = 0, so x = 9 or 6.\nII factorises to (y + 5)(y + 6) = 0, so y = -5 or -6.\nCompare every pair: 9 vs -5, 9 vs -6, 6 vs -5, 6 vs -6.\nResult: x > y."
  },
  {
+  "id": "q0e4e42dbeaa",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 18x + 81 = 0\nII. y² + 6y − 27 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "x = y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 9)(x − 9) = 0, so x = 9 or 9.\nII factorises to (y + 9)(y − 3) = 0, so y = -9 or 3.\nCompare every pair: 9 vs -9, 9 vs 3, 9 vs -9, 9 vs 3.\nResult: x > y."
+ },
+ {
   "id": "q0e6e2941785",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -178,6 +328,51 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x + 1)(x + 1) = 0, so x = -1 or -1.\nII factorises to (y − 9)(y − 7) = 0, so y = 9 or 7.\nCompare every pair: -1 vs 9, -1 vs 7, -1 vs 9, -1 vs 7.\nResult: x < y."
+ },
+ {
+  "id": "q0fbc21205aa",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 13x + 36 = 0\nII. y² + 8y − 9 = 0",
+  "options": [
+   "x ≤ y",
+   "x ≥ y",
+   "No relation can be established",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 4)(x − 9) = 0, so x = 4 or 9.\nII factorises to (y − 1)(y + 9) = 0, so y = 1 or -9.\nCompare every pair: 4 vs 1, 4 vs -9, 9 vs 1, 9 vs -9.\nResult: x > y."
+ },
+ {
+  "id": "q1029427ea41",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + x − 72 = 0\nII. y² + y − 30 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 8)(x + 9) = 0, so x = 8 or -9.\nII factorises to (y + 6)(y − 5) = 0, so y = -6 or 5.\nCompare every pair: 8 vs -6, 8 vs 5, -9 vs -6, -9 vs 5.\nResult: No relation can be established."
+ },
+ {
+  "id": "q103352e5aa3",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x + 6 = 0\nII. y² − 10y + 9 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x > y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 3)(x − 2) = 0, so x = 3 or 2.\nII factorises to (y − 9)(y − 1) = 0, so y = 9 or 1.\nCompare every pair: 3 vs 9, 3 vs 1, 2 vs 9, 2 vs 1.\nResult: No relation can be established."
  },
  {
   "id": "q1077151e446",
@@ -255,6 +450,21 @@
   "explanation": "I factorises to (x + 1)(x + 6) = 0, so x = -1 or -6.\nII factorises to (y − 5)(y − 6) = 0, so y = 5 or 6.\nCompare every pair: -1 vs 5, -1 vs 6, -6 vs 5, -6 vs 6.\nResult: x < y."
  },
  {
+  "id": "q1314855a262",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 27 = 0\nII. y² − 8y + 12 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 3)(x + 9) = 0, so x = -3 or -9.\nII factorises to (y − 6)(y − 2) = 0, so y = 6 or 2.\nCompare every pair: -3 vs 6, -3 vs 2, -9 vs 6, -9 vs 2.\nResult: x < y."
+ },
+ {
   "id": "q132d830813a",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -270,6 +480,36 @@
   "explanation": "I factorises to (x − 7)(x + 4) = 0, so x = 7 or -4.\nII factorises to (y − 4)(y − 3) = 0, so y = 4 or 3.\nCompare every pair: 7 vs 4, 7 vs 3, -4 vs 4, -4 vs 3.\nResult: No relation can be established."
  },
  {
+  "id": "q133274380f0",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x − 7 = 0\nII. y² + 8y + 12 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 1)(x − 7) = 0, so x = -1 or 7.\nII factorises to (y + 2)(y + 6) = 0, so y = -2 or -6.\nCompare every pair: -1 vs -2, -1 vs -6, 7 vs -2, 7 vs -6.\nResult: x > y."
+ },
+ {
+  "id": "q16c53e2853d",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 30 = 0\nII. y² − 9y + 18 = 0",
+  "options": [
+   "x ≤ y",
+   "x = y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x + 5) = 0, so x = 6 or -5.\nII factorises to (y − 6)(y − 3) = 0, so y = 6 or 3.\nCompare every pair: 6 vs 6, 6 vs 3, -5 vs 6, -5 vs 3.\nResult: No relation can be established."
+ },
+ {
   "id": "q1772f8588b9",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -283,6 +523,21 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x + 5)(x − 4) = 0, so x = -5 or 4.\nII factorises to (y − 2)(y − 7) = 0, so y = 2 or 7.\nCompare every pair: -5 vs 2, -5 vs 7, 4 vs 2, 4 vs 7.\nResult: No relation can be established."
+ },
+ {
+  "id": "q1a7ac92edb4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x − 24 = 0\nII. y² + 2y − 35 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 3)(x + 8) = 0, so x = 3 or -8.\nII factorises to (y + 7)(y − 5) = 0, so y = -7 or 5.\nCompare every pair: 3 vs -7, 3 vs 5, -8 vs -7, -8 vs 5.\nResult: No relation can be established."
  },
  {
   "id": "q1c70193b2e3",
@@ -315,6 +570,66 @@
   "explanation": "I factorises to (x − 6)(x + 5) = 0, so x = 6 or -5.\nII factorises to (y + 9)(y + 5) = 0, so y = -9 or -5.\nCompare every pair: 6 vs -9, 6 vs -5, -5 vs -9, -5 vs -5.\nResult: x ≥ y."
  },
  {
+  "id": "q1df7ed4b4bc",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 24 = 0\nII. y² − 5y − 24 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 6)(x + 4) = 0, so x = -6 or -4.\nII factorises to (y + 3)(y − 8) = 0, so y = -3 or 8.\nCompare every pair: -6 vs -3, -6 vs 8, -4 vs -3, -4 vs 8.\nResult: x < y."
+ },
+ {
+  "id": "q1e2305b1c9d",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 81 = 0\nII. y² + 8y + 15 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≥ y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 9)(x + 9) = 0, so x = 9 or -9.\nII factorises to (y + 5)(y + 3) = 0, so y = -5 or -3.\nCompare every pair: 9 vs -5, 9 vs -3, -9 vs -5, -9 vs -3.\nResult: No relation can be established."
+ },
+ {
+  "id": "q1f3ee6db937",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9 = 0\nII. y² − 3y − 10 = 0",
+  "options": [
+   "x ≤ y",
+   "x ≥ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 3)(x − 3) = 0, so x = -3 or 3.\nII factorises to (y + 2)(y − 5) = 0, so y = -2 or 5.\nCompare every pair: -3 vs -2, -3 vs 5, 3 vs -2, 3 vs 5.\nResult: No relation can be established."
+ },
+ {
+  "id": "q1f935793656",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 35 = 0\nII. y² − 14y + 48 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 5)(x + 7) = 0, so x = -5 or -7.\nII factorises to (y − 6)(y − 8) = 0, so y = 6 or 8.\nCompare every pair: -5 vs 6, -5 vs 8, -7 vs 6, -7 vs 8.\nResult: x < y."
+ },
+ {
   "id": "q2049538474d",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -328,6 +643,36 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x + 3)(x + 3) = 0, so x = -3 or -3.\nII factorises to (y + 6)(y − 1) = 0, so y = -6 or 1.\nCompare every pair: -3 vs -6, -3 vs 1, -3 vs -6, -3 vs 1.\nResult: No relation can be established."
+ },
+ {
+  "id": "q22bbc4a9898",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 8x + 12 = 0\nII. y² − 18y + 81 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 2)(x − 6) = 0, so x = 2 or 6.\nII factorises to (y − 9)(y − 9) = 0, so y = 9 or 9.\nCompare every pair: 2 vs 9, 2 vs 9, 6 vs 9, 6 vs 9.\nResult: x < y."
+ },
+ {
+  "id": "q234e24d2798",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 20 = 0\nII. y² + 5y − 14 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 4)(x − 5) = 0, so x = -4 or 5.\nII factorises to (y − 2)(y + 7) = 0, so y = 2 or -7.\nCompare every pair: -4 vs 2, -4 vs -7, 5 vs 2, 5 vs -7.\nResult: No relation can be established."
  },
  {
   "id": "q240d806fca3",
@@ -345,6 +690,21 @@
   "explanation": "I factorises to (x − 6)(x − 3) = 0, so x = 6 or 3.\nII factorises to (y − 8)(y − 3) = 0, so y = 8 or 3.\nCompare every pair: 6 vs 8, 6 vs 3, 3 vs 8, 3 vs 3.\nResult: No relation can be established."
  },
  {
+  "id": "q2464de7fd38",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x − 40 = 0\nII. y² + y − 20 = 0",
+  "options": [
+   "x < y",
+   "x = y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 8)(x + 5) = 0, so x = 8 or -5.\nII factorises to (y + 5)(y − 4) = 0, so y = -5 or 4.\nCompare every pair: 8 vs -5, 8 vs 4, -5 vs -5, -5 vs 4.\nResult: No relation can be established."
+ },
+ {
   "id": "q24e2203a950",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -358,6 +718,36 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x + 6)(x + 4) = 0, so x = -6 or -4.\nII factorises to (y − 6)(y + 3) = 0, so y = 6 or -3.\nCompare every pair: -6 vs 6, -6 vs -3, -4 vs 6, -4 vs -3.\nResult: x < y."
+ },
+ {
+  "id": "q263de180ac4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 20 = 0\nII. y² − 11y + 28 = 0",
+  "options": [
+   "x = y",
+   "x < y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 5)(x + 4) = 0, so x = 5 or -4.\nII factorises to (y − 7)(y − 4) = 0, so y = 7 or 4.\nCompare every pair: 5 vs 7, 5 vs 4, -4 vs 7, -4 vs 4.\nResult: No relation can be established."
+ },
+ {
+  "id": "q2692d2334e1",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 14 = 0\nII. y² + 12y + 27 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≤ y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 2)(x + 7) = 0, so x = -2 or -7.\nII factorises to (y + 3)(y + 9) = 0, so y = -3 or -9.\nCompare every pair: -2 vs -3, -2 vs -9, -7 vs -3, -7 vs -9.\nResult: No relation can be established."
  },
  {
   "id": "q272e3d47618",
@@ -390,6 +780,36 @@
   "explanation": "I factorises to (x + 2)(x + 2) = 0, so x = -2 or -2.\nII factorises to (y − 1)(y − 6) = 0, so y = 1 or 6.\nCompare every pair: -2 vs 1, -2 vs 6, -2 vs 1, -2 vs 6.\nResult: x < y."
  },
  {
+  "id": "q28ab540846d",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 9 = 0\nII. y² − 5y − 14 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 9)(x − 1) = 0, so x = 9 or 1.\nII factorises to (y − 7)(y + 2) = 0, so y = 7 or -2.\nCompare every pair: 9 vs 7, 9 vs -2, 1 vs 7, 1 vs -2.\nResult: No relation can be established."
+ },
+ {
+  "id": "q28f52dbaa7c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 16 = 0\nII. y² − 11y + 24 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x = y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 8)(x − 2) = 0, so x = 8 or 2.\nII factorises to (y − 8)(y − 3) = 0, so y = 8 or 3.\nCompare every pair: 8 vs 8, 8 vs 3, 2 vs 8, 2 vs 3.\nResult: No relation can be established."
+ },
+ {
   "id": "q2910cd282b9",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -403,6 +823,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x + 9)(x − 1) = 0, so x = -9 or 1.\nII factorises to (y + 1)(y − 4) = 0, so y = -1 or 4.\nCompare every pair: -9 vs -1, -9 vs 4, 1 vs -1, 1 vs 4.\nResult: No relation can be established."
+ },
+ {
+  "id": "q29ee415763b",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 7x + 6 = 0\nII. y² − 5y + 4 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 1)(x + 6) = 0, so x = -1 or -6.\nII factorises to (y − 4)(y − 1) = 0, so y = 4 or 1.\nCompare every pair: -1 vs 4, -1 vs 1, -6 vs 4, -6 vs 1.\nResult: x < y."
  },
  {
   "id": "q2a4d6a742e2",
@@ -435,6 +870,21 @@
   "explanation": "I factorises to (x + 5)(x + 5) = 0, so x = -5 or -5.\nII factorises to (y + 5)(y − 5) = 0, so y = -5 or 5.\nCompare every pair: -5 vs -5, -5 vs 5, -5 vs -5, -5 vs 5.\nResult: x ≤ y."
  },
  {
+  "id": "q2a8ce2a09e1",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 9 = 0\nII. y² + 7y + 10 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 1)(x + 9) = 0, so x = -1 or -9.\nII factorises to (y + 2)(y + 5) = 0, so y = -2 or -5.\nCompare every pair: -1 vs -2, -1 vs -5, -9 vs -2, -9 vs -5.\nResult: No relation can be established."
+ },
+ {
   "id": "q2c8df3c4d7a",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -450,6 +900,21 @@
   "explanation": "I factorises to (x − 4)(x − 5) = 0, so x = 4 or 5.\nII factorises to (y + 4)(y + 6) = 0, so y = -4 or -6.\nCompare every pair: 4 vs -4, 4 vs -6, 5 vs -4, 5 vs -6.\nResult: x > y."
  },
  {
+  "id": "q2d3d13664cf",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 2 = 0\nII. y² − y − 20 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≥ y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 2)(x + 1) = 0, so x = 2 or -1.\nII factorises to (y + 4)(y − 5) = 0, so y = -4 or 5.\nCompare every pair: 2 vs -4, 2 vs 5, -1 vs -4, -1 vs 5.\nResult: No relation can be established."
+ },
+ {
   "id": "q2ee2a552622",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -463,6 +928,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x + 4)(x + 3) = 0, so x = -4 or -3.\nII factorises to (y − 5)(y + 5) = 0, so y = 5 or -5.\nCompare every pair: -4 vs 5, -4 vs -5, -3 vs 5, -3 vs -5.\nResult: No relation can be established."
+ },
+ {
+  "id": "q2f5fc9644fb",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9 = 0\nII. y² + y − 20 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x ≥ y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x − 3) = 0, so x = -3 or 3.\nII factorises to (y + 5)(y − 4) = 0, so y = -5 or 4.\nCompare every pair: -3 vs -5, -3 vs 4, 3 vs -5, 3 vs 4.\nResult: No relation can be established."
  },
  {
   "id": "q30807a495c2",
@@ -508,6 +988,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x + 4)(x + 9) = 0, so x = -4 or -9.\nII factorises to (y − 8)(y − 6) = 0, so y = 8 or 6.\nCompare every pair: -4 vs 8, -4 vs 6, -9 vs 8, -9 vs 6.\nResult: x < y."
+ },
+ {
+  "id": "q30eb2ada6aa",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 25 = 0\nII. y² − 81 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 5)(x + 5) = 0, so x = -5 or -5.\nII factorises to (y + 9)(y − 9) = 0, so y = -9 or 9.\nCompare every pair: -5 vs -9, -5 vs 9, -5 vs -9, -5 vs 9.\nResult: No relation can be established."
  },
  {
   "id": "q31954ac2f54",
@@ -585,6 +1080,21 @@
   "explanation": "I factorises to (x − 9)(x − 4) = 0, so x = 9 or 4.\nII factorises to (y + 1)(y + 1) = 0, so y = -1 or -1.\nCompare every pair: 9 vs -1, 9 vs -1, 4 vs -1, 4 vs -1.\nResult: x > y."
  },
  {
+  "id": "q36662b0a93d",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x + 8 = 0\nII. y² + y − 2 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x ≤ y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 4)(x − 2) = 0, so x = 4 or 2.\nII factorises to (y + 2)(y − 1) = 0, so y = -2 or 1.\nCompare every pair: 4 vs -2, 4 vs 1, 2 vs -2, 2 vs 1.\nResult: x > y."
+ },
+ {
   "id": "q36f895c9ba1",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -598,6 +1108,21 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x − 5)(x + 8) = 0, so x = 5 or -8.\nII factorises to (y − 1)(y + 9) = 0, so y = 1 or -9.\nCompare every pair: 5 vs 1, 5 vs -9, -8 vs 1, -8 vs -9.\nResult: No relation can be established."
+ },
+ {
+  "id": "q379b8d88980",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x − 16 = 0\nII. y² − 3y − 40 = 0",
+  "options": [
+   "x ≤ y",
+   "x < y",
+   "No relation can be established",
+   "x ≥ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 2)(x − 8) = 0, so x = -2 or 8.\nII factorises to (y − 8)(y + 5) = 0, so y = 8 or -5.\nCompare every pair: -2 vs 8, -2 vs -5, 8 vs 8, 8 vs -5.\nResult: No relation can be established."
  },
  {
   "id": "q380c503acdc",
@@ -675,6 +1200,51 @@
   "explanation": "I factorises to (x + 2)(x − 6) = 0, so x = -2 or 6.\nII factorises to (y + 8)(y − 2) = 0, so y = -8 or 2.\nCompare every pair: -2 vs -8, -2 vs 2, 6 vs -8, 6 vs 2.\nResult: No relation can be established."
  },
  {
+  "id": "q3c63c3f8229",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 16x + 64 = 0\nII. y² + 9y + 14 = 0",
+  "options": [
+   "x < y",
+   "x = y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 8)(x − 8) = 0, so x = 8 or 8.\nII factorises to (y + 2)(y + 7) = 0, so y = -2 or -7.\nCompare every pair: 8 vs -2, 8 vs -7, 8 vs -2, 8 vs -7.\nResult: x > y."
+ },
+ {
+  "id": "q3da280b4b16",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 6 = 0\nII. y² − 7y + 6 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 3)(x + 2) = 0, so x = 3 or -2.\nII factorises to (y − 6)(y − 1) = 0, so y = 6 or 1.\nCompare every pair: 3 vs 6, 3 vs 1, -2 vs 6, -2 vs 1.\nResult: No relation can be established."
+ },
+ {
+  "id": "q3f9409e84eb",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 11x + 28 = 0\nII. y² + 7y + 12 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 7)(x + 4) = 0, so x = -7 or -4.\nII factorises to (y + 4)(y + 3) = 0, so y = -4 or -3.\nCompare every pair: -7 vs -4, -7 vs -3, -4 vs -4, -4 vs -3.\nResult: x ≤ y."
+ },
+ {
   "id": "q4010bdf57c9",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -735,6 +1305,36 @@
   "explanation": "I factorises to (x + 8)(x + 8) = 0, so x = -8 or -8.\nII factorises to (y − 2)(y − 4) = 0, so y = 2 or 4.\nCompare every pair: -8 vs 2, -8 vs 4, -8 vs 2, -8 vs 4.\nResult: x < y."
  },
  {
+  "id": "q43a76741a31",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x + 9 = 0\nII. y² − y − 20 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x ≤ y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x + 3) = 0, so x = -3 or -3.\nII factorises to (y − 5)(y + 4) = 0, so y = 5 or -4.\nCompare every pair: -3 vs 5, -3 vs -4, -3 vs 5, -3 vs -4.\nResult: No relation can be established."
+ },
+ {
+  "id": "q44062f43921",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 16x + 64 = 0\nII. y² − 13y + 42 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x > y",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 8)(x − 8) = 0, so x = 8 or 8.\nII factorises to (y − 7)(y − 6) = 0, so y = 7 or 6.\nCompare every pair: 8 vs 7, 8 vs 6, 8 vs 7, 8 vs 6.\nResult: x > y."
+ },
+ {
   "id": "q44ad94c3eae",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -748,6 +1348,21 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x − 1)(x + 1) = 0, so x = 1 or -1.\nII factorises to (y + 2)(y + 8) = 0, so y = -2 or -8.\nCompare every pair: 1 vs -2, 1 vs -8, -1 vs -2, -1 vs -8.\nResult: x > y."
+ },
+ {
+  "id": "q4511da40e6f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 13x + 40 = 0\nII. y² − 2y + 1 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 8)(x − 5) = 0, so x = 8 or 5.\nII factorises to (y − 1)(y − 1) = 0, so y = 1 or 1.\nCompare every pair: 8 vs 1, 8 vs 1, 5 vs 1, 5 vs 1.\nResult: x > y."
  },
  {
   "id": "q466647e27c5",
@@ -795,6 +1410,21 @@
   "explanation": "I factorises to (x − 9)(x + 5) = 0, so x = 9 or -5.\nII factorises to (y − 7)(y + 3) = 0, so y = 7 or -3.\nCompare every pair: 9 vs 7, 9 vs -3, -5 vs 7, -5 vs -3.\nResult: No relation can be established."
  },
  {
+  "id": "q48145ee7f7c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 4x − 45 = 0\nII. y² + 10y + 9 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 5)(x + 9) = 0, so x = 5 or -9.\nII factorises to (y + 1)(y + 9) = 0, so y = -1 or -9.\nCompare every pair: 5 vs -1, 5 vs -9, -9 vs -1, -9 vs -9.\nResult: No relation can be established."
+ },
+ {
   "id": "q493b4897e0c",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -840,6 +1470,21 @@
   "explanation": "I factorises to (x − 8)(x + 5) = 0, so x = 8 or -5.\nII factorises to (y − 8)(y + 4) = 0, so y = 8 or -4.\nCompare every pair: 8 vs 8, 8 vs -4, -5 vs 8, -5 vs -4.\nResult: No relation can be established."
  },
  {
+  "id": "q4a5442aae6c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 14x + 48 = 0\nII. y² + 4y − 21 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x < y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 8)(x + 6) = 0, so x = -8 or -6.\nII factorises to (y − 3)(y + 7) = 0, so y = 3 or -7.\nCompare every pair: -8 vs 3, -8 vs -7, -6 vs 3, -6 vs -7.\nResult: No relation can be established."
+ },
+ {
   "id": "q4a911631a00",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -868,6 +1513,51 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x − 8)(x − 1) = 0, so x = 8 or 1.\nII factorises to (y + 9)(y + 6) = 0, so y = -9 or -6.\nCompare every pair: 8 vs -9, 8 vs -6, 1 vs -9, 1 vs -6.\nResult: x > y."
+ },
+ {
+  "id": "q4b515d1eba4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x − 36 = 0\nII. y² − 16y + 64 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 4)(x − 9) = 0, so x = -4 or 9.\nII factorises to (y − 8)(y − 8) = 0, so y = 8 or 8.\nCompare every pair: -4 vs 8, -4 vs 8, 9 vs 8, 9 vs 8.\nResult: No relation can be established."
+ },
+ {
+  "id": "q4d13aa8a34c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 36 = 0\nII. y² − 3y − 54 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "x > y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 6)(x + 6) = 0, so x = -6 or -6.\nII factorises to (y − 9)(y + 6) = 0, so y = 9 or -6.\nCompare every pair: -6 vs 9, -6 vs -6, -6 vs 9, -6 vs -6.\nResult: x ≤ y."
+ },
+ {
+  "id": "q4d6b89f2660",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 13x + 42 = 0\nII. y² − 11y + 24 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≥ y",
+   "x < y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 6)(x − 7) = 0, so x = 6 or 7.\nII factorises to (y − 8)(y − 3) = 0, so y = 8 or 3.\nCompare every pair: 6 vs 8, 6 vs 3, 7 vs 8, 7 vs 3.\nResult: No relation can be established."
  },
  {
   "id": "q4d71c6b8f18",
@@ -913,6 +1603,51 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x − 7)(x + 2) = 0, so x = 7 or -2.\nII factorises to (y + 9)(y − 5) = 0, so y = -9 or 5.\nCompare every pair: 7 vs -9, 7 vs 5, -2 vs -9, -2 vs 5.\nResult: No relation can be established."
+ },
+ {
+  "id": "q4fdd0cd2da9",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 4x + 4 = 0\nII. y² + 11y + 24 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x < y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 2)(x + 2) = 0, so x = -2 or -2.\nII factorises to (y + 3)(y + 8) = 0, so y = -3 or -8.\nCompare every pair: -2 vs -3, -2 vs -8, -2 vs -3, -2 vs -8.\nResult: x > y."
+ },
+ {
+  "id": "q5105ce52a58",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + x − 30 = 0\nII. y² − 2y − 15 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x ≥ y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 5)(x + 6) = 0, so x = 5 or -6.\nII factorises to (y − 5)(y + 3) = 0, so y = 5 or -3.\nCompare every pair: 5 vs 5, 5 vs -3, -6 vs 5, -6 vs -3.\nResult: No relation can be established."
+ },
+ {
+  "id": "q53be6757dfa",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 1 = 0\nII. y² + 2y − 48 = 0",
+  "options": [
+   "x ≤ y",
+   "x ≥ y",
+   "No relation can be established",
+   "x > y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 1)(x + 1) = 0, so x = 1 or -1.\nII factorises to (y + 8)(y − 6) = 0, so y = -8 or 6.\nCompare every pair: 1 vs -8, 1 vs 6, -1 vs -8, -1 vs 6.\nResult: No relation can be established."
  },
  {
   "id": "q53e110c75a7",
@@ -1005,6 +1740,36 @@
   "explanation": "I factorises to (x − 3)(x + 8) = 0, so x = 3 or -8.\nII factorises to (y − 3)(y + 1) = 0, so y = 3 or -1.\nCompare every pair: 3 vs 3, 3 vs -1, -8 vs 3, -8 vs -1.\nResult: No relation can be established."
  },
  {
+  "id": "q55247ae6ff2",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x − 4 = 0\nII. y² − 4y − 45 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 1)(x − 4) = 0, so x = -1 or 4.\nII factorises to (y + 5)(y − 9) = 0, so y = -5 or 9.\nCompare every pair: -1 vs -5, -1 vs 9, 4 vs -5, 4 vs 9.\nResult: No relation can be established."
+ },
+ {
+  "id": "q55cff82c7e4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x + 8 = 0\nII. y² + 13y + 40 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x < y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 4)(x + 2) = 0, so x = -4 or -2.\nII factorises to (y + 5)(y + 8) = 0, so y = -5 or -8.\nCompare every pair: -4 vs -5, -4 vs -8, -2 vs -5, -2 vs -8.\nResult: x > y."
+ },
+ {
   "id": "q56756c87c69",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1018,6 +1783,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x − 4)(x − 4) = 0, so x = 4 or 4.\nII factorises to (y + 8)(y − 4) = 0, so y = -8 or 4.\nCompare every pair: 4 vs -8, 4 vs 4, 4 vs -8, 4 vs 4.\nResult: x ≥ y."
+ },
+ {
+  "id": "q56b6f22d49c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 14x + 45 = 0\nII. y² − 8y + 12 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 5)(x + 9) = 0, so x = -5 or -9.\nII factorises to (y − 6)(y − 2) = 0, so y = 6 or 2.\nCompare every pair: -5 vs 6, -5 vs 2, -9 vs 6, -9 vs 2.\nResult: x < y."
  },
  {
   "id": "q58b6d0c78ff",
@@ -1065,6 +1845,36 @@
   "explanation": "I factorises to (x + 7)(x − 2) = 0, so x = -7 or 2.\nII factorises to (y − 4)(y + 4) = 0, so y = 4 or -4.\nCompare every pair: -7 vs 4, -7 vs -4, 2 vs 4, 2 vs -4.\nResult: No relation can be established."
  },
  {
+  "id": "q597d4ff7a8b",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 8x + 7 = 0\nII. y² − 5y + 4 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x = y",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 1)(x + 7) = 0, so x = -1 or -7.\nII factorises to (y − 4)(y − 1) = 0, so y = 4 or 1.\nCompare every pair: -1 vs 4, -1 vs 1, -7 vs 4, -7 vs 1.\nResult: x < y."
+ },
+ {
+  "id": "q5aa6cf53355",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 12x + 32 = 0\nII. y² + 15y + 56 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "No relation can be established",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 8)(x − 4) = 0, so x = 8 or 4.\nII factorises to (y + 8)(y + 7) = 0, so y = -8 or -7.\nCompare every pair: 8 vs -8, 8 vs -7, 4 vs -8, 4 vs -7.\nResult: x > y."
+ },
+ {
   "id": "q5bc639d9514",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1095,6 +1905,21 @@
   "explanation": "I factorises to (x + 2)(x + 8) = 0, so x = -2 or -8.\nII factorises to (y − 6)(y − 4) = 0, so y = 6 or 4.\nCompare every pair: -2 vs 6, -2 vs 4, -8 vs 6, -8 vs 4.\nResult: x < y."
  },
  {
+  "id": "q5eaba795feb",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 13x + 42 = 0\nII. y² + 10y + 24 = 0",
+  "options": [
+   "x > y",
+   "x ≤ y",
+   "No relation can be established",
+   "x ≥ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 7)(x − 6) = 0, so x = 7 or 6.\nII factorises to (y + 6)(y + 4) = 0, so y = -6 or -4.\nCompare every pair: 7 vs -6, 7 vs -4, 6 vs -6, 6 vs -4.\nResult: x > y."
+ },
+ {
   "id": "q606b69447d2",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1110,6 +1935,21 @@
   "explanation": "I factorises to (x − 3)(x − 3) = 0, so x = 3 or 3.\nII factorises to (y − 9)(y − 1) = 0, so y = 9 or 1.\nCompare every pair: 3 vs 9, 3 vs 1, 3 vs 9, 3 vs 1.\nResult: No relation can be established."
  },
  {
+  "id": "q62884688502",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 21 = 0\nII. y² + 4y + 4 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 7)(x − 3) = 0, so x = 7 or 3.\nII factorises to (y + 2)(y + 2) = 0, so y = -2 or -2.\nCompare every pair: 7 vs -2, 7 vs -2, 3 vs -2, 3 vs -2.\nResult: x > y."
+ },
+ {
   "id": "q62b4e45d0a7",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1123,6 +1963,51 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x + 6)(x − 3) = 0, so x = -6 or 3.\nII factorises to (y − 3)(y + 9) = 0, so y = 3 or -9.\nCompare every pair: -6 vs 3, -6 vs -9, 3 vs 3, 3 vs -9.\nResult: No relation can be established."
+ },
+ {
+  "id": "q634f3af2bde",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x − 10 = 0\nII. y² − y − 20 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x < y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 2)(x − 5) = 0, so x = -2 or 5.\nII factorises to (y − 5)(y + 4) = 0, so y = 5 or -4.\nCompare every pair: -2 vs 5, -2 vs -4, 5 vs 5, 5 vs -4.\nResult: No relation can be established."
+ },
+ {
+  "id": "q63f98b30b65",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x + 4 = 0\nII. y² + 6y + 5 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x < y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 1)(x + 4) = 0, so x = -1 or -4.\nII factorises to (y + 1)(y + 5) = 0, so y = -1 or -5.\nCompare every pair: -1 vs -1, -1 vs -5, -4 vs -1, -4 vs -5.\nResult: No relation can be established."
+ },
+ {
+  "id": "q63ff0b00439",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 16 = 0\nII. y² + 7y + 6 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x − 4) = 0, so x = -4 or 4.\nII factorises to (y + 6)(y + 1) = 0, so y = -6 or -1.\nCompare every pair: -4 vs -6, -4 vs -1, 4 vs -6, 4 vs -1.\nResult: No relation can be established."
  },
  {
   "id": "q64a0a3b8959",
@@ -1215,6 +2100,21 @@
   "explanation": "I factorises to (x + 5)(x + 8) = 0, so x = -5 or -8.\nII factorises to (y + 8)(y − 5) = 0, so y = -8 or 5.\nCompare every pair: -5 vs -8, -5 vs 5, -8 vs -8, -8 vs 5.\nResult: No relation can be established."
  },
  {
+  "id": "q65ed6d54cc6",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 30 = 0\nII. y² − 6y + 9 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x + 5) = 0, so x = 6 or -5.\nII factorises to (y − 3)(y − 3) = 0, so y = 3 or 3.\nCompare every pair: 6 vs 3, 6 vs 3, -5 vs 3, -5 vs 3.\nResult: No relation can be established."
+ },
+ {
   "id": "q662116db32f",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1228,6 +2128,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x − 6)(x − 6) = 0, so x = 6 or 6.\nII factorises to (y + 5)(y − 7) = 0, so y = -5 or 7.\nCompare every pair: 6 vs -5, 6 vs 7, 6 vs -5, 6 vs 7.\nResult: No relation can be established."
+ },
+ {
+  "id": "q66c666050f7",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x + 6 = 0\nII. y² + 2y − 35 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 2)(x − 3) = 0, so x = 2 or 3.\nII factorises to (y − 5)(y + 7) = 0, so y = 5 or -7.\nCompare every pair: 2 vs 5, 2 vs -7, 3 vs 5, 3 vs -7.\nResult: No relation can be established."
  },
  {
   "id": "q66d46ba7470",
@@ -1245,6 +2160,36 @@
   "explanation": "I factorises to (x + 5)(x + 1) = 0, so x = -5 or -1.\nII factorises to (y + 2)(y + 1) = 0, so y = -2 or -1.\nCompare every pair: -5 vs -2, -5 vs -1, -1 vs -2, -1 vs -1.\nResult: No relation can be established."
  },
  {
+  "id": "q67fa7c6873a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x − 6 = 0\nII. y² + 3y − 28 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x > y",
+   "x ≥ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 1)(x − 6) = 0, so x = -1 or 6.\nII factorises to (y − 4)(y + 7) = 0, so y = 4 or -7.\nCompare every pair: -1 vs 4, -1 vs -7, 6 vs 4, 6 vs -7.\nResult: No relation can be established."
+ },
+ {
+  "id": "q6823041064c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 8x + 7 = 0\nII. y² − y − 30 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x ≤ y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 7)(x − 1) = 0, so x = 7 or 1.\nII factorises to (y + 5)(y − 6) = 0, so y = -5 or 6.\nCompare every pair: 7 vs -5, 7 vs 6, 1 vs -5, 1 vs 6.\nResult: No relation can be established."
+ },
+ {
   "id": "q6847a0676f7",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1258,6 +2203,36 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x − 4)(x + 7) = 0, so x = 4 or -7.\nII factorises to (y + 6)(y + 9) = 0, so y = -6 or -9.\nCompare every pair: 4 vs -6, 4 vs -9, -7 vs -6, -7 vs -9.\nResult: No relation can be established."
+ },
+ {
+  "id": "q689e772ec1f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9x + 8 = 0\nII. y² − 7y − 18 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 1)(x − 8) = 0, so x = 1 or 8.\nII factorises to (y − 9)(y + 2) = 0, so y = 9 or -2.\nCompare every pair: 1 vs 9, 1 vs -2, 8 vs 9, 8 vs -2.\nResult: No relation can be established."
+ },
+ {
+  "id": "q68af179f79e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 16 = 0\nII. y² + y − 2 = 0",
+  "options": [
+   "x > y",
+   "x ≥ y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 8)(x + 2) = 0, so x = -8 or -2.\nII factorises to (y − 1)(y + 2) = 0, so y = 1 or -2.\nCompare every pair: -8 vs 1, -8 vs -2, -2 vs 1, -2 vs -2.\nResult: x ≤ y."
  },
  {
   "id": "q68e1f7c12fc",
@@ -1350,6 +2325,36 @@
   "explanation": "I factorises to (x − 1)(x + 7) = 0, so x = 1 or -7.\nII factorises to (y − 7)(y − 8) = 0, so y = 7 or 8.\nCompare every pair: 1 vs 7, 1 vs 8, -7 vs 7, -7 vs 8.\nResult: x < y."
  },
  {
+  "id": "q6d51ebd2255",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 63 = 0\nII. y² − y − 30 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 7)(x + 9) = 0, so x = 7 or -9.\nII factorises to (y − 6)(y + 5) = 0, so y = 6 or -5.\nCompare every pair: 7 vs 6, 7 vs -5, -9 vs 6, -9 vs -5.\nResult: No relation can be established."
+ },
+ {
+  "id": "q6d66379534f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x + 5 = 0\nII. y² + 2y − 48 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 5)(x − 1) = 0, so x = 5 or 1.\nII factorises to (y + 8)(y − 6) = 0, so y = -8 or 6.\nCompare every pair: 5 vs -8, 5 vs 6, 1 vs -8, 1 vs 6.\nResult: No relation can be established."
+ },
+ {
   "id": "q6da0d07ba85",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1365,6 +2370,21 @@
   "explanation": "I factorises to (x − 9)(x − 7) = 0, so x = 9 or 7.\nII factorises to (y + 1)(y + 6) = 0, so y = -1 or -6.\nCompare every pair: 9 vs -1, 9 vs -6, 7 vs -1, 7 vs -6.\nResult: x > y."
  },
  {
+  "id": "q6e62c1d4f29",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 14x + 45 = 0\nII. y² + 3y − 10 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "x = y",
+   "No relation can be established"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 5)(x + 9) = 0, so x = -5 or -9.\nII factorises to (y − 2)(y + 5) = 0, so y = 2 or -5.\nCompare every pair: -5 vs 2, -5 vs -5, -9 vs 2, -9 vs -5.\nResult: x ≤ y."
+ },
+ {
   "id": "q6e89e65e174",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1378,6 +2398,21 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x − 3)(x + 6) = 0, so x = 3 or -6.\nII factorises to (y + 5)(y − 4) = 0, so y = -5 or 4.\nCompare every pair: 3 vs -5, 3 vs 4, -6 vs -5, -6 vs 4.\nResult: No relation can be established."
+ },
+ {
+  "id": "q6ea10523076",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 11x + 18 = 0\nII. y² + y − 12 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x < y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 2)(x − 9) = 0, so x = 2 or 9.\nII factorises to (y + 4)(y − 3) = 0, so y = -4 or 3.\nCompare every pair: 2 vs -4, 2 vs 3, 9 vs -4, 9 vs 3.\nResult: No relation can be established."
  },
  {
   "id": "q6eb3e8c43b0",
@@ -1410,6 +2445,51 @@
   "explanation": "I factorises to (x + 1)(x + 9) = 0, so x = -1 or -9.\nII factorises to (y + 5)(y − 2) = 0, so y = -5 or 2.\nCompare every pair: -1 vs -5, -1 vs 2, -9 vs -5, -9 vs 2.\nResult: No relation can be established."
  },
  {
+  "id": "q6ee7e6a87ad",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x − 18 = 0\nII. y² − 2y − 24 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x < y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x − 6) = 0, so x = -3 or 6.\nII factorises to (y − 6)(y + 4) = 0, so y = 6 or -4.\nCompare every pair: -3 vs 6, -3 vs -4, 6 vs 6, 6 vs -4.\nResult: No relation can be established."
+ },
+ {
+  "id": "q6f2065e04ee",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 27 = 0\nII. y² − 14y + 45 = 0",
+  "options": [
+   "x > y",
+   "x ≥ y",
+   "x = y",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 9)(x − 3) = 0, so x = -9 or 3.\nII factorises to (y − 5)(y − 9) = 0, so y = 5 or 9.\nCompare every pair: -9 vs 5, -9 vs 9, 3 vs 5, 3 vs 9.\nResult: x < y."
+ },
+ {
+  "id": "q70d6ab6f006",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4x − 21 = 0\nII. y² + 8y − 9 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 3)(x − 7) = 0, so x = -3 or 7.\nII factorises to (y − 1)(y + 9) = 0, so y = 1 or -9.\nCompare every pair: -3 vs 1, -3 vs -9, 7 vs 1, 7 vs -9.\nResult: No relation can be established."
+ },
+ {
   "id": "q70e09f68c93",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1423,6 +2503,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x − 1)(x + 2) = 0, so x = 1 or -2.\nII factorises to (y − 4)(y − 8) = 0, so y = 4 or 8.\nCompare every pair: 1 vs 4, 1 vs 8, -2 vs 4, -2 vs 8.\nResult: x < y."
+ },
+ {
+  "id": "q733e792b892",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 7x + 6 = 0\nII. y² + 18y + 81 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x ≥ y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x − 1) = 0, so x = 6 or 1.\nII factorises to (y + 9)(y + 9) = 0, so y = -9 or -9.\nCompare every pair: 6 vs -9, 6 vs -9, 1 vs -9, 1 vs -9.\nResult: x > y."
  },
  {
   "id": "q735f0b3f0ee",
@@ -1485,6 +2580,36 @@
   "explanation": "I factorises to (x − 5)(x + 6) = 0, so x = 5 or -6.\nII factorises to (y − 1)(y + 3) = 0, so y = 1 or -3.\nCompare every pair: 5 vs 1, 5 vs -3, -6 vs 1, -6 vs -3.\nResult: No relation can be established."
  },
  {
+  "id": "q7497b76efd4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 9 = 0\nII. y² + 2y − 35 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x = y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 1)(x + 9) = 0, so x = -1 or -9.\nII factorises to (y − 5)(y + 7) = 0, so y = 5 or -7.\nCompare every pair: -1 vs 5, -1 vs -7, -9 vs 5, -9 vs -7.\nResult: No relation can be established."
+ },
+ {
+  "id": "q74e6e82dd79",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 14x + 45 = 0\nII. y² + 11y + 18 = 0",
+  "options": [
+   "x < y",
+   "x ≥ y",
+   "No relation can be established",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 9)(x − 5) = 0, so x = 9 or 5.\nII factorises to (y + 9)(y + 2) = 0, so y = -9 or -2.\nCompare every pair: 9 vs -9, 9 vs -2, 5 vs -9, 5 vs -2.\nResult: x > y."
+ },
+ {
   "id": "q752541a5bfb",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1545,6 +2670,36 @@
   "explanation": "I factorises to (x + 4)(x − 5) = 0, so x = -4 or 5.\nII factorises to (y − 3)(y + 8) = 0, so y = 3 or -8.\nCompare every pair: -4 vs 3, -4 vs -8, 5 vs 3, 5 vs -8.\nResult: No relation can be established."
  },
  {
+  "id": "q789d22da5f8",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 8x + 12 = 0\nII. y² − 12y + 27 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 2)(x − 6) = 0, so x = 2 or 6.\nII factorises to (y − 9)(y − 3) = 0, so y = 9 or 3.\nCompare every pair: 2 vs 9, 2 vs 3, 6 vs 9, 6 vs 3.\nResult: No relation can be established."
+ },
+ {
+  "id": "q78e3ecfbf42",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 9 = 0\nII. y² + 7y − 8 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "x ≥ y",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 1)(x − 9) = 0, so x = 1 or 9.\nII factorises to (y + 8)(y − 1) = 0, so y = -8 or 1.\nCompare every pair: 1 vs -8, 1 vs 1, 9 vs -8, 9 vs 1.\nResult: x ≥ y."
+ },
+ {
   "id": "q791a83f9f2a",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1573,6 +2728,21 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x + 2)(x − 2) = 0, so x = -2 or 2.\nII factorises to (y − 9)(y − 6) = 0, so y = 9 or 6.\nCompare every pair: -2 vs 9, -2 vs 6, 2 vs 9, 2 vs 6.\nResult: x < y."
+ },
+ {
+  "id": "q79b8b42400c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x − 14 = 0\nII. y² − 4y − 21 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 7)(x − 2) = 0, so x = -7 or 2.\nII factorises to (y + 3)(y − 7) = 0, so y = -3 or 7.\nCompare every pair: -7 vs -3, -7 vs 7, 2 vs -3, 2 vs 7.\nResult: No relation can be established."
  },
  {
   "id": "q7d56af422ba",
@@ -1620,6 +2790,36 @@
   "explanation": "I factorises to (x + 2)(x + 2) = 0, so x = -2 or -2.\nII factorises to (y + 7)(y − 4) = 0, so y = -7 or 4.\nCompare every pair: -2 vs -7, -2 vs 4, -2 vs -7, -2 vs 4.\nResult: No relation can be established."
  },
  {
+  "id": "q7de249a129d",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9x + 14 = 0\nII. y² − 10y + 16 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x = y",
+   "x > y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 7)(x − 2) = 0, so x = 7 or 2.\nII factorises to (y − 2)(y − 8) = 0, so y = 2 or 8.\nCompare every pair: 7 vs 2, 7 vs 8, 2 vs 2, 2 vs 8.\nResult: No relation can be established."
+ },
+ {
+  "id": "q7de5be661cc",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 13x + 42 = 0\nII. y² + 13y + 36 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x = y",
+   "x ≥ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 7)(x − 6) = 0, so x = 7 or 6.\nII factorises to (y + 9)(y + 4) = 0, so y = -9 or -4.\nCompare every pair: 7 vs -9, 7 vs -4, 6 vs -9, 6 vs -4.\nResult: x > y."
+ },
+ {
   "id": "q7e3a3723485",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1635,6 +2835,66 @@
   "explanation": "I factorises to (x − 4)(x − 2) = 0, so x = 4 or 2.\nII factorises to (y − 1)(y + 8) = 0, so y = 1 or -8.\nCompare every pair: 4 vs 1, 4 vs -8, 2 vs 1, 2 vs -8.\nResult: x > y."
  },
  {
+  "id": "q7e5b3edb116",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 3 = 0\nII. y² − 12y + 35 = 0",
+  "options": [
+   "x ≥ y",
+   "x = y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 1)(x + 3) = 0, so x = 1 or -3.\nII factorises to (y − 5)(y − 7) = 0, so y = 5 or 7.\nCompare every pair: 1 vs 5, 1 vs 7, -3 vs 5, -3 vs 7.\nResult: x < y."
+ },
+ {
+  "id": "q7f20ff4ef32",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 16 = 0\nII. y² − 13y + 42 = 0",
+  "options": [
+   "x = y",
+   "x < y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x − 4) = 0, so x = -4 or 4.\nII factorises to (y − 7)(y − 6) = 0, so y = 7 or 6.\nCompare every pair: -4 vs 7, -4 vs 6, 4 vs 7, 4 vs 6.\nResult: x < y."
+ },
+ {
+  "id": "q808f31c7211",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 24 = 0\nII. y² + 15y + 54 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≥ y",
+   "x ≤ y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x + 6) = 0, so x = -4 or -6.\nII factorises to (y + 6)(y + 9) = 0, so y = -6 or -9.\nCompare every pair: -4 vs -6, -4 vs -9, -6 vs -6, -6 vs -9.\nResult: x ≥ y."
+ },
+ {
+  "id": "q81cd4658a64",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 24 = 0\nII. y² + 2y − 35 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x = y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 6)(x − 4) = 0, so x = 6 or 4.\nII factorises to (y + 7)(y − 5) = 0, so y = -7 or 5.\nCompare every pair: 6 vs -7, 6 vs 5, 4 vs -7, 4 vs 5.\nResult: No relation can be established."
+ },
+ {
   "id": "q827463faa89",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1648,6 +2908,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x + 7)(x − 1) = 0, so x = -7 or 1.\nII factorises to (y + 3)(y − 1) = 0, so y = -3 or 1.\nCompare every pair: -7 vs -3, -7 vs 1, 1 vs -3, 1 vs 1.\nResult: No relation can be established."
+ },
+ {
+  "id": "q83d93e66eb7",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x + 8 = 0\nII. y² + 6y − 7 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 4)(x − 2) = 0, so x = 4 or 2.\nII factorises to (y − 1)(y + 7) = 0, so y = 1 or -7.\nCompare every pair: 4 vs 1, 4 vs -7, 2 vs 1, 2 vs -7.\nResult: x > y."
  },
  {
   "id": "q874f44f9804",
@@ -1725,6 +3000,36 @@
   "explanation": "I factorises to (x − 8)(x + 1) = 0, so x = 8 or -1.\nII factorises to (y + 8)(y − 5) = 0, so y = -8 or 5.\nCompare every pair: 8 vs -8, 8 vs 5, -1 vs -8, -1 vs 5.\nResult: No relation can be established."
  },
  {
+  "id": "q8a36fde9bda",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 10x + 21 = 0\nII. y² − 5y + 4 = 0",
+  "options": [
+   "x > y",
+   "x < y",
+   "x = y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 7)(x + 3) = 0, so x = -7 or -3.\nII factorises to (y − 1)(y − 4) = 0, so y = 1 or 4.\nCompare every pair: -7 vs 1, -7 vs 4, -3 vs 1, -3 vs 4.\nResult: x < y."
+ },
+ {
+  "id": "q8a88ee7de57",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 24 = 0\nII. y² − 16 = 0",
+  "options": [
+   "x = y",
+   "x ≤ y",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 4)(x − 6) = 0, so x = 4 or 6.\nII factorises to (y + 4)(y − 4) = 0, so y = -4 or 4.\nCompare every pair: 4 vs -4, 4 vs 4, 6 vs -4, 6 vs 4.\nResult: x ≥ y."
+ },
+ {
   "id": "q8b332af64da",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1800,6 +3105,66 @@
   "explanation": "I factorises to (x − 2)(x + 4) = 0, so x = 2 or -4.\nII factorises to (y + 9)(y + 1) = 0, so y = -9 or -1.\nCompare every pair: 2 vs -9, 2 vs -1, -4 vs -9, -4 vs -1.\nResult: No relation can be established."
  },
  {
+  "id": "q8f0b5edda6a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 11x + 28 = 0\nII. y² − 1 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 7)(x + 4) = 0, so x = -7 or -4.\nII factorises to (y + 1)(y − 1) = 0, so y = -1 or 1.\nCompare every pair: -7 vs -1, -7 vs 1, -4 vs -1, -4 vs 1.\nResult: x < y."
+ },
+ {
+  "id": "q908371103ec",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 6x + 8 = 0\nII. y² + 17y + 72 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≥ y",
+   "x = y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 2)(x − 4) = 0, so x = 2 or 4.\nII factorises to (y + 8)(y + 9) = 0, so y = -8 or -9.\nCompare every pair: 2 vs -8, 2 vs -9, 4 vs -8, 4 vs -9.\nResult: x > y."
+ },
+ {
+  "id": "q919b9247b5a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 12x + 27 = 0\nII. y² − 5y − 24 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 9)(x − 3) = 0, so x = 9 or 3.\nII factorises to (y − 8)(y + 3) = 0, so y = 8 or -3.\nCompare every pair: 9 vs 8, 9 vs -3, 3 vs 8, 3 vs -3.\nResult: No relation can be established."
+ },
+ {
+  "id": "q93bb595cf32",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + x − 12 = 0\nII. y² + y − 6 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 4)(x − 3) = 0, so x = -4 or 3.\nII factorises to (y + 3)(y − 2) = 0, so y = -3 or 2.\nCompare every pair: -4 vs -3, -4 vs 2, 3 vs -3, 3 vs 2.\nResult: No relation can be established."
+ },
+ {
   "id": "q9531b8dbb1d",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1813,6 +3178,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x − 1)(x + 5) = 0, so x = 1 or -5.\nII factorises to (y + 5)(y − 2) = 0, so y = -5 or 2.\nCompare every pair: 1 vs -5, 1 vs 2, -5 vs -5, -5 vs 2.\nResult: No relation can be established."
+ },
+ {
+  "id": "q966ffa034a0",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4x − 45 = 0\nII. y² + 5y − 36 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 5)(x − 9) = 0, so x = -5 or 9.\nII factorises to (y + 9)(y − 4) = 0, so y = -9 or 4.\nCompare every pair: -5 vs -9, -5 vs 4, 9 vs -9, 9 vs 4.\nResult: No relation can be established."
  },
  {
   "id": "q96f48f05798",
@@ -1845,6 +3225,21 @@
   "explanation": "I factorises to (x + 5)(x + 4) = 0, so x = -5 or -4.\nII factorises to (y − 3)(y + 5) = 0, so y = 3 or -5.\nCompare every pair: -5 vs 3, -5 vs -5, -4 vs 3, -4 vs -5.\nResult: No relation can be established."
  },
  {
+  "id": "q97b749f3645",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x − 24 = 0\nII. y² + 9y + 18 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x − 8) = 0, so x = -3 or 8.\nII factorises to (y + 6)(y + 3) = 0, so y = -6 or -3.\nCompare every pair: -3 vs -6, -3 vs -3, 8 vs -6, 8 vs -3.\nResult: x ≥ y."
+ },
+ {
   "id": "q97bd153e51f",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1858,6 +3253,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x + 9)(x + 4) = 0, so x = -9 or -4.\nII factorises to (y + 3)(y + 6) = 0, so y = -3 or -6.\nCompare every pair: -9 vs -3, -9 vs -6, -4 vs -3, -4 vs -6.\nResult: No relation can be established."
+ },
+ {
+  "id": "q98f5f4dccff",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 4x − 21 = 0\nII. y² + 13y + 40 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x = y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 7)(x − 3) = 0, so x = -7 or 3.\nII factorises to (y + 5)(y + 8) = 0, so y = -5 or -8.\nCompare every pair: -7 vs -5, -7 vs -8, 3 vs -5, 3 vs -8.\nResult: No relation can be established."
  },
  {
   "id": "q999c8ac09e2",
@@ -1905,6 +3315,51 @@
   "explanation": "I factorises to (x − 9)(x + 8) = 0, so x = 9 or -8.\nII factorises to (y − 7)(y + 8) = 0, so y = 7 or -8.\nCompare every pair: 9 vs 7, 9 vs -8, -8 vs 7, -8 vs -8.\nResult: No relation can be established."
  },
  {
+  "id": "q9a7dc29fb9e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 16x + 64 = 0\nII. y² + 7y + 6 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "x = y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 8)(x − 8) = 0, so x = 8 or 8.\nII factorises to (y + 1)(y + 6) = 0, so y = -1 or -6.\nCompare every pair: 8 vs -1, 8 vs -6, 8 vs -1, 8 vs -6.\nResult: x > y."
+ },
+ {
+  "id": "q9c36dcd31fd",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 7 = 0\nII. y² − y − 72 = 0",
+  "options": [
+   "x ≥ y",
+   "x ≤ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 7)(x − 1) = 0, so x = -7 or 1.\nII factorises to (y + 8)(y − 9) = 0, so y = -8 or 9.\nCompare every pair: -7 vs -8, -7 vs 9, 1 vs -8, 1 vs 9.\nResult: No relation can be established."
+ },
+ {
+  "id": "q9d08991e099",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x − 4 = 0\nII. y² − 14y + 45 = 0",
+  "options": [
+   "x < y",
+   "x > y",
+   "x ≥ y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 4)(x + 1) = 0, so x = 4 or -1.\nII factorises to (y − 9)(y − 5) = 0, so y = 9 or 5.\nCompare every pair: 4 vs 9, 4 vs 5, -1 vs 9, -1 vs 5.\nResult: x < y."
+ },
+ {
   "id": "q9d63134cc78",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1950,6 +3405,21 @@
   "explanation": "I factorises to (x + 5)(x + 2) = 0, so x = -5 or -2.\nII factorises to (y − 1)(y + 4) = 0, so y = 1 or -4.\nCompare every pair: -5 vs 1, -5 vs -4, -2 vs 1, -2 vs -4.\nResult: No relation can be established."
  },
  {
+  "id": "q9f2b566fa34",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 4x − 5 = 0\nII. y² − 9y + 20 = 0",
+  "options": [
+   "x < y",
+   "x ≥ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 5)(x − 1) = 0, so x = -5 or 1.\nII factorises to (y − 4)(y − 5) = 0, so y = 4 or 5.\nCompare every pair: -5 vs 4, -5 vs 5, 1 vs 4, 1 vs 5.\nResult: x < y."
+ },
+ {
   "id": "q9fa3d89874c",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1965,6 +3435,51 @@
   "explanation": "I factorises to (x + 6)(x + 2) = 0, so x = -6 or -2.\nII factorises to (y − 1)(y − 3) = 0, so y = 1 or 3.\nCompare every pair: -6 vs 1, -6 vs 3, -2 vs 1, -2 vs 3.\nResult: x < y."
  },
  {
+  "id": "qa2a7e0f8a83",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 11x + 24 = 0\nII. y² + 4y − 12 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 8)(x + 3) = 0, so x = -8 or -3.\nII factorises to (y − 2)(y + 6) = 0, so y = 2 or -6.\nCompare every pair: -8 vs 2, -8 vs -6, -3 vs 2, -3 vs -6.\nResult: No relation can be established."
+ },
+ {
+  "id": "qa2c25f44bbc",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 8x + 15 = 0\nII. y² + 13y + 40 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x = y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 3)(x + 5) = 0, so x = -3 or -5.\nII factorises to (y + 8)(y + 5) = 0, so y = -8 or -5.\nCompare every pair: -3 vs -8, -3 vs -5, -5 vs -8, -5 vs -5.\nResult: x ≥ y."
+ },
+ {
+  "id": "qa4cfb2cd02c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 13x + 40 = 0\nII. y² + 5y + 6 = 0",
+  "options": [
+   "No relation can be established",
+   "x < y",
+   "x ≥ y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 8)(x + 5) = 0, so x = -8 or -5.\nII factorises to (y + 3)(y + 2) = 0, so y = -3 or -2.\nCompare every pair: -8 vs -3, -8 vs -2, -5 vs -3, -5 vs -2.\nResult: x < y."
+ },
+ {
   "id": "qa5f2467ba63",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -1978,6 +3493,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x − 3)(x + 5) = 0, so x = 3 or -5.\nII factorises to (y + 1)(y + 2) = 0, so y = -1 or -2.\nCompare every pair: 3 vs -1, 3 vs -2, -5 vs -1, -5 vs -2.\nResult: No relation can be established."
+ },
+ {
+  "id": "qa62a9e6e51e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 11x + 18 = 0\nII. y² − 6y + 8 = 0",
+  "options": [
+   "No relation can be established",
+   "x < y",
+   "x = y",
+   "x > y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 9)(x − 2) = 0, so x = 9 or 2.\nII factorises to (y − 2)(y − 4) = 0, so y = 2 or 4.\nCompare every pair: 9 vs 2, 9 vs 4, 2 vs 2, 2 vs 4.\nResult: No relation can be established."
  },
  {
   "id": "qa62b1e35f0d",
@@ -2010,6 +3540,21 @@
   "explanation": "I factorises to (x + 3)(x + 4) = 0, so x = -3 or -4.\nII factorises to (y − 7)(y − 6) = 0, so y = 7 or 6.\nCompare every pair: -3 vs 7, -3 vs 6, -4 vs 7, -4 vs 6.\nResult: x < y."
  },
  {
+  "id": "qa8c508105ed",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 15x + 54 = 0\nII. y² − 13y + 36 = 0",
+  "options": [
+   "x < y",
+   "No relation can be established",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 9)(x + 6) = 0, so x = -9 or -6.\nII factorises to (y − 4)(y − 9) = 0, so y = 4 or 9.\nCompare every pair: -9 vs 4, -9 vs 9, -6 vs 4, -6 vs 9.\nResult: x < y."
+ },
+ {
   "id": "qa963103f649",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2040,6 +3585,21 @@
   "explanation": "I factorises to (x − 8)(x + 4) = 0, so x = 8 or -4.\nII factorises to (y − 6)(y − 1) = 0, so y = 6 or 1.\nCompare every pair: 8 vs 6, 8 vs 1, -4 vs 6, -4 vs 1.\nResult: No relation can be established."
  },
  {
+  "id": "qab25a3f4a73",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 64 = 0\nII. y² + 17y + 72 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "No relation can be established",
+   "x ≥ y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 8)(x + 8) = 0, so x = 8 or -8.\nII factorises to (y + 9)(y + 8) = 0, so y = -9 or -8.\nCompare every pair: 8 vs -9, 8 vs -8, -8 vs -9, -8 vs -8.\nResult: x ≥ y."
+ },
+ {
   "id": "qab90e4df698",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2053,6 +3613,36 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x − 3)(x − 4) = 0, so x = 3 or 4.\nII factorises to (y − 6)(y − 1) = 0, so y = 6 or 1.\nCompare every pair: 3 vs 6, 3 vs 1, 4 vs 6, 4 vs 1.\nResult: No relation can be established."
+ },
+ {
+  "id": "qac177643b96",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 27 = 0\nII. y² − 3y − 18 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "x ≤ y",
+   "x ≥ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 3)(x + 9) = 0, so x = -3 or -9.\nII factorises to (y − 6)(y + 3) = 0, so y = 6 or -3.\nCompare every pair: -3 vs 6, -3 vs -3, -9 vs 6, -9 vs -3.\nResult: x ≤ y."
+ },
+ {
+  "id": "qac62f43de92",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 16 = 0\nII. y² − 14y + 48 = 0",
+  "options": [
+   "x < y",
+   "x ≤ y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 8)(x − 2) = 0, so x = -8 or 2.\nII factorises to (y − 6)(y − 8) = 0, so y = 6 or 8.\nCompare every pair: -8 vs 6, -8 vs 8, 2 vs 6, 2 vs 8.\nResult: x < y."
  },
  {
   "id": "qacb0150fa6f",
@@ -2130,6 +3720,36 @@
   "explanation": "I factorises to (x − 8)(x − 1) = 0, so x = 8 or 1.\nII factorises to (y + 4)(y − 7) = 0, so y = -4 or 7.\nCompare every pair: 8 vs -4, 8 vs 7, 1 vs -4, 1 vs 7.\nResult: No relation can be established."
  },
  {
+  "id": "qb068de28f79",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 36 = 0\nII. y² − y − 42 = 0",
+  "options": [
+   "No relation can be established",
+   "x < y",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 6)(x + 6) = 0, so x = -6 or -6.\nII factorises to (y + 6)(y − 7) = 0, so y = -6 or 7.\nCompare every pair: -6 vs -6, -6 vs 7, -6 vs -6, -6 vs 7.\nResult: x ≤ y."
+ },
+ {
+  "id": "qb15c11addba",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4x − 21 = 0\nII. y² − 15y + 54 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x < y",
+   "x > y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x − 7) = 0, so x = -3 or 7.\nII factorises to (y − 9)(y − 6) = 0, so y = 9 or 6.\nCompare every pair: -3 vs 9, -3 vs 6, 7 vs 9, 7 vs 6.\nResult: No relation can be established."
+ },
+ {
   "id": "qb2784a71867",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2158,6 +3778,36 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x − 9)(x + 2) = 0, so x = 9 or -2.\nII factorises to (y + 4)(y + 5) = 0, so y = -4 or -5.\nCompare every pair: 9 vs -4, 9 vs -5, -2 vs -4, -2 vs -5.\nResult: x > y."
+ },
+ {
+  "id": "qb2a45a9a674",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 14x + 49 = 0\nII. y² + 13y + 40 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 7)(x − 7) = 0, so x = 7 or 7.\nII factorises to (y + 5)(y + 8) = 0, so y = -5 or -8.\nCompare every pair: 7 vs -5, 7 vs -8, 7 vs -5, 7 vs -8.\nResult: x > y."
+ },
+ {
+  "id": "qb2c6426f494",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x + 2 = 0\nII. y² + 4y − 21 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 1)(x − 2) = 0, so x = 1 or 2.\nII factorises to (y + 7)(y − 3) = 0, so y = -7 or 3.\nCompare every pair: 1 vs -7, 1 vs 3, 2 vs -7, 2 vs 3.\nResult: No relation can be established."
  },
  {
   "id": "qb2ca9c27c02",
@@ -2190,6 +3840,21 @@
   "explanation": "I factorises to (x + 3)(x − 6) = 0, so x = -3 or 6.\nII factorises to (y + 2)(y − 2) = 0, so y = -2 or 2.\nCompare every pair: -3 vs -2, -3 vs 2, 6 vs -2, 6 vs 2.\nResult: No relation can be established."
  },
  {
+  "id": "qb32f1074e4c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 32 = 0\nII. y² + y − 42 = 0",
+  "options": [
+   "x < y",
+   "x ≥ y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 4)(x + 8) = 0, so x = -4 or -8.\nII factorises to (y + 7)(y − 6) = 0, so y = -7 or 6.\nCompare every pair: -4 vs -7, -4 vs 6, -8 vs -7, -8 vs 6.\nResult: No relation can be established."
+ },
+ {
   "id": "qb3c95b3fcb3",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2218,6 +3883,21 @@
   ],
   "answer": 2,
   "explanation": "I factorises to (x − 9)(x − 6) = 0, so x = 9 or 6.\nII factorises to (y − 4)(y − 5) = 0, so y = 4 or 5.\nCompare every pair: 9 vs 4, 9 vs 5, 6 vs 4, 6 vs 5.\nResult: x > y."
+ },
+ {
+  "id": "qb45cb0df11a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 48 = 0\nII. y² − y − 30 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 6)(x − 8) = 0, so x = -6 or 8.\nII factorises to (y − 6)(y + 5) = 0, so y = 6 or -5.\nCompare every pair: -6 vs 6, -6 vs -5, 8 vs 6, 8 vs -5.\nResult: No relation can be established."
  },
  {
   "id": "qb5bc536e81f",
@@ -2250,6 +3930,51 @@
   "explanation": "I factorises to (x − 8)(x − 4) = 0, so x = 8 or 4.\nII factorises to (y + 4)(y − 7) = 0, so y = -4 or 7.\nCompare every pair: 8 vs -4, 8 vs 7, 4 vs -4, 4 vs 7.\nResult: No relation can be established."
  },
  {
+  "id": "qb6676b247e4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 24 = 0\nII. y² − 3y + 2 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 4)(x − 6) = 0, so x = -4 or 6.\nII factorises to (y − 1)(y − 2) = 0, so y = 1 or 2.\nCompare every pair: -4 vs 1, -4 vs 2, 6 vs 1, 6 vs 2.\nResult: No relation can be established."
+ },
+ {
+  "id": "qb66ef8a2ed0",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x − 6 = 0\nII. y² − 5y + 6 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x ≥ y",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 6)(x − 1) = 0, so x = -6 or 1.\nII factorises to (y − 2)(y − 3) = 0, so y = 2 or 3.\nCompare every pair: -6 vs 2, -6 vs 3, 1 vs 2, 1 vs 3.\nResult: x < y."
+ },
+ {
+  "id": "qb69608d94fe",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 3 = 0\nII. y² − y − 20 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x > y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x − 1) = 0, so x = -3 or 1.\nII factorises to (y + 4)(y − 5) = 0, so y = -4 or 5.\nCompare every pair: -3 vs -4, -3 vs 5, 1 vs -4, 1 vs 5.\nResult: No relation can be established."
+ },
+ {
   "id": "qb9459eec64f",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2263,6 +3988,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x + 8)(x − 1) = 0, so x = -8 or 1.\nII factorises to (y − 1)(y − 9) = 0, so y = 1 or 9.\nCompare every pair: -8 vs 1, -8 vs 9, 1 vs 1, 1 vs 9.\nResult: x ≤ y."
+ },
+ {
+  "id": "qb95b0030edc",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4 = 0\nII. y² − 9y + 8 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x = y",
+   "x > y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 2)(x + 2) = 0, so x = 2 or -2.\nII factorises to (y − 8)(y − 1) = 0, so y = 8 or 1.\nCompare every pair: 2 vs 8, 2 vs 1, -2 vs 8, -2 vs 1.\nResult: No relation can be established."
  },
  {
   "id": "qb98f10f8a9a",
@@ -2295,6 +4035,21 @@
   "explanation": "I factorises to (x − 1)(x + 7) = 0, so x = 1 or -7.\nII factorises to (y − 2)(y + 1) = 0, so y = 2 or -1.\nCompare every pair: 1 vs 2, 1 vs -1, -7 vs 2, -7 vs -1.\nResult: No relation can be established."
  },
  {
+  "id": "qbb97d32e9d8",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 11x + 18 = 0\nII. y² + 14y + 45 = 0",
+  "options": [
+   "No relation can be established",
+   "x > y",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 2)(x − 9) = 0, so x = 2 or 9.\nII factorises to (y + 9)(y + 5) = 0, so y = -9 or -5.\nCompare every pair: 2 vs -9, 2 vs -5, 9 vs -9, 9 vs -5.\nResult: x > y."
+ },
+ {
   "id": "qbbe7d025c6a",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2310,6 +4065,81 @@
   "explanation": "I factorises to (x − 1)(x + 8) = 0, so x = 1 or -8.\nII factorises to (y + 1)(y − 4) = 0, so y = -1 or 4.\nCompare every pair: 1 vs -1, 1 vs 4, -8 vs -1, -8 vs 4.\nResult: No relation can be established."
  },
  {
+  "id": "qbd2327b0e2f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 56 = 0\nII. y² + 15y + 56 = 0",
+  "options": [
+   "x ≥ y",
+   "x ≤ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 8)(x + 7) = 0, so x = 8 or -7.\nII factorises to (y + 8)(y + 7) = 0, so y = -8 or -7.\nCompare every pair: 8 vs -8, 8 vs -7, -7 vs -8, -7 vs -7.\nResult: x ≥ y."
+ },
+ {
+  "id": "qbd73053385e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 48 = 0\nII. y² − 4y − 5 = 0",
+  "options": [
+   "x ≤ y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x + 8) = 0, so x = 6 or -8.\nII factorises to (y + 1)(y − 5) = 0, so y = -1 or 5.\nCompare every pair: 6 vs -1, 6 vs 5, -8 vs -1, -8 vs 5.\nResult: No relation can be established."
+ },
+ {
+  "id": "qc07fb53bfad",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 14x + 45 = 0\nII. y² + 2y − 15 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x < y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 5)(x − 9) = 0, so x = 5 or 9.\nII factorises to (y + 5)(y − 3) = 0, so y = -5 or 3.\nCompare every pair: 5 vs -5, 5 vs 3, 9 vs -5, 9 vs 3.\nResult: x > y."
+ },
+ {
+  "id": "qc168fe99daa",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 49 = 0\nII. y² − 2y − 35 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 7)(x − 7) = 0, so x = -7 or 7.\nII factorises to (y + 5)(y − 7) = 0, so y = -5 or 7.\nCompare every pair: -7 vs -5, -7 vs 7, 7 vs -5, 7 vs 7.\nResult: No relation can be established."
+ },
+ {
+  "id": "qc214f5bc89a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 24 = 0\nII. y² − 2y − 15 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 6)(x − 4) = 0, so x = -6 or 4.\nII factorises to (y + 3)(y − 5) = 0, so y = -3 or 5.\nCompare every pair: -6 vs -3, -6 vs 5, 4 vs -3, 4 vs 5.\nResult: No relation can be established."
+ },
+ {
   "id": "qc33f2d730a9",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2323,6 +4153,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x + 7)(x − 9) = 0, so x = -7 or 9.\nII factorises to (y + 9)(y + 4) = 0, so y = -9 or -4.\nCompare every pair: -7 vs -9, -7 vs -4, 9 vs -9, 9 vs -4.\nResult: No relation can be established."
+ },
+ {
+  "id": "qc3a28c2e8d7",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − x − 56 = 0\nII. y² + 13y + 42 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 7)(x − 8) = 0, so x = -7 or 8.\nII factorises to (y + 6)(y + 7) = 0, so y = -6 or -7.\nCompare every pair: -7 vs -6, -7 vs -7, 8 vs -6, 8 vs -7.\nResult: No relation can be established."
  },
  {
   "id": "qc3b526e09a0",
@@ -2385,6 +4230,21 @@
   "explanation": "I factorises to (x + 7)(x + 7) = 0, so x = -7 or -7.\nII factorises to (y + 3)(y + 4) = 0, so y = -3 or -4.\nCompare every pair: -7 vs -3, -7 vs -4, -7 vs -3, -7 vs -4.\nResult: x < y."
  },
  {
+  "id": "qc5b5ef7a0cb",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 8 = 0\nII. y² − 2y − 48 = 0",
+  "options": [
+   "x ≥ y",
+   "x ≤ y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 1)(x + 8) = 0, so x = -1 or -8.\nII factorises to (y − 8)(y + 6) = 0, so y = 8 or -6.\nCompare every pair: -1 vs 8, -1 vs -6, -8 vs 8, -8 vs -6.\nResult: No relation can be established."
+ },
+ {
   "id": "qc5b75b61707",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2430,6 +4290,36 @@
   "explanation": "I factorises to (x − 2)(x − 8) = 0, so x = 2 or 8.\nII factorises to (y − 8)(y + 8) = 0, so y = 8 or -8.\nCompare every pair: 2 vs 8, 2 vs -8, 8 vs 8, 8 vs -8.\nResult: No relation can be established."
  },
  {
+  "id": "qc6958dd7313",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 3x − 40 = 0\nII. y² + 9y + 20 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "No relation can be established",
+   "x ≤ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 5)(x − 8) = 0, so x = -5 or 8.\nII factorises to (y + 5)(y + 4) = 0, so y = -5 or -4.\nCompare every pair: -5 vs -5, -5 vs -4, 8 vs -5, 8 vs -4.\nResult: No relation can be established."
+ },
+ {
+  "id": "qc71bd398702",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 27 = 0\nII. y² + 2y − 15 = 0",
+  "options": [
+   "x > y",
+   "x ≤ y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 9)(x + 3) = 0, so x = -9 or -3.\nII factorises to (y − 3)(y + 5) = 0, so y = 3 or -5.\nCompare every pair: -9 vs 3, -9 vs -5, -3 vs 3, -3 vs -5.\nResult: No relation can be established."
+ },
+ {
   "id": "qc7e3f2012a5",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2460,6 +4350,36 @@
   "explanation": "I factorises to (x + 9)(x + 5) = 0, so x = -9 or -5.\nII factorises to (y + 3)(y + 6) = 0, so y = -3 or -6.\nCompare every pair: -9 vs -3, -9 vs -6, -5 vs -3, -5 vs -6.\nResult: No relation can be established."
  },
  {
+  "id": "qc8c36fd6c13",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 1 = 0\nII. y² − 13y + 36 = 0",
+  "options": [
+   "x > y",
+   "No relation can be established",
+   "x ≥ y",
+   "x < y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 1)(x − 1) = 0, so x = -1 or 1.\nII factorises to (y − 4)(y − 9) = 0, so y = 4 or 9.\nCompare every pair: -1 vs 4, -1 vs 9, 1 vs 4, 1 vs 9.\nResult: x < y."
+ },
+ {
+  "id": "qc8efbe3534f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 20 = 0\nII. y² − 15y + 54 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x + 5) = 0, so x = -4 or -5.\nII factorises to (y − 6)(y − 9) = 0, so y = 6 or 9.\nCompare every pair: -4 vs 6, -4 vs 9, -5 vs 6, -5 vs 9.\nResult: x < y."
+ },
+ {
   "id": "qc8f4a25ff04",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2488,6 +4408,21 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x − 5)(x − 3) = 0, so x = 5 or 3.\nII factorises to (y − 9)(y + 4) = 0, so y = 9 or -4.\nCompare every pair: 5 vs 9, 5 vs -4, 3 vs 9, 3 vs -4.\nResult: No relation can be established."
+ },
+ {
+  "id": "qca104efcf6e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 11x + 18 = 0\nII. y² + 5y + 4 = 0",
+  "options": [
+   "x ≥ y",
+   "x = y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 2)(x + 9) = 0, so x = -2 or -9.\nII factorises to (y + 1)(y + 4) = 0, so y = -1 or -4.\nCompare every pair: -2 vs -1, -2 vs -4, -9 vs -1, -9 vs -4.\nResult: No relation can be established."
  },
  {
   "id": "qcea75a4a683",
@@ -2535,6 +4470,21 @@
   "explanation": "I factorises to (x − 1)(x − 8) = 0, so x = 1 or 8.\nII factorises to (y + 8)(y + 9) = 0, so y = -8 or -9.\nCompare every pair: 1 vs -8, 1 vs -9, 8 vs -8, 8 vs -9.\nResult: x > y."
  },
  {
+  "id": "qd026dcfea2a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 3x − 28 = 0\nII. y² + 3y − 54 = 0",
+  "options": [
+   "x ≥ y",
+   "x ≤ y",
+   "No relation can be established",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 4)(x + 7) = 0, so x = 4 or -7.\nII factorises to (y − 6)(y + 9) = 0, so y = 6 or -9.\nCompare every pair: 4 vs 6, 4 vs -9, -7 vs 6, -7 vs -9.\nResult: No relation can be established."
+ },
+ {
   "id": "qd02a9ecc24a",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2550,6 +4500,21 @@
   "explanation": "I factorises to (x + 1)(x + 5) = 0, so x = -1 or -5.\nII factorises to (y − 4)(y + 6) = 0, so y = 4 or -6.\nCompare every pair: -1 vs 4, -1 vs -6, -5 vs 4, -5 vs -6.\nResult: No relation can be established."
  },
  {
+  "id": "qd06e793c019",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 3x − 4 = 0\nII. y² + 16y + 64 = 0",
+  "options": [
+   "x < y",
+   "x ≥ y",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 4)(x − 1) = 0, so x = -4 or 1.\nII factorises to (y + 8)(y + 8) = 0, so y = -8 or -8.\nCompare every pair: -4 vs -8, -4 vs -8, 1 vs -8, 1 vs -8.\nResult: x > y."
+ },
+ {
   "id": "qd1f2fc3c53f",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2563,6 +4528,36 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x + 8)(x − 8) = 0, so x = -8 or 8.\nII factorises to (y − 3)(y + 6) = 0, so y = 3 or -6.\nCompare every pair: -8 vs 3, -8 vs -6, 8 vs 3, 8 vs -6.\nResult: No relation can be established."
+ },
+ {
+  "id": "qd2b3d5e4736",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 4x − 21 = 0\nII. y² + 6y − 7 = 0",
+  "options": [
+   "x = y",
+   "x ≥ y",
+   "No relation can be established",
+   "x < y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 3)(x + 7) = 0, so x = 3 or -7.\nII factorises to (y − 1)(y + 7) = 0, so y = 1 or -7.\nCompare every pair: 3 vs 1, 3 vs -7, -7 vs 1, -7 vs -7.\nResult: No relation can be established."
+ },
+ {
+  "id": "qd3eb3e0b62c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 7x + 12 = 0\nII. y² + 4y − 12 = 0",
+  "options": [
+   "x ≤ y",
+   "x = y",
+   "x > y",
+   "No relation can be established"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 3)(x − 4) = 0, so x = 3 or 4.\nII factorises to (y + 6)(y − 2) = 0, so y = -6 or 2.\nCompare every pair: 3 vs -6, 3 vs 2, 4 vs -6, 4 vs 2.\nResult: x > y."
  },
  {
   "id": "qd50e7220b14",
@@ -2595,6 +4590,21 @@
   "explanation": "I factorises to (x − 6)(x + 8) = 0, so x = 6 or -8.\nII factorises to (y − 8)(y − 5) = 0, so y = 8 or 5.\nCompare every pair: 6 vs 8, 6 vs 5, -8 vs 8, -8 vs 5.\nResult: No relation can be established."
  },
  {
+  "id": "qd5ac097dd70",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 8 = 0\nII. y² + 13y + 36 = 0",
+  "options": [
+   "x > y",
+   "x ≥ y",
+   "x = y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x − 2) = 0, so x = -4 or 2.\nII factorises to (y + 9)(y + 4) = 0, so y = -9 or -4.\nCompare every pair: -4 vs -9, -4 vs -4, 2 vs -9, 2 vs -4.\nResult: x ≥ y."
+ },
+ {
   "id": "qd61d7351504",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2625,6 +4635,21 @@
   "explanation": "I factorises to (x − 5)(x − 8) = 0, so x = 5 or 8.\nII factorises to (y + 3)(y + 3) = 0, so y = -3 or -3.\nCompare every pair: 5 vs -3, 5 vs -3, 8 vs -3, 8 vs -3.\nResult: x > y."
  },
  {
+  "id": "qd71c318322a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 11x + 30 = 0\nII. y² − 11y + 30 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x < y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 6)(x − 5) = 0, so x = 6 or 5.\nII factorises to (y − 6)(y − 5) = 0, so y = 6 or 5.\nCompare every pair: 6 vs 6, 6 vs 5, 5 vs 6, 5 vs 5.\nResult: No relation can be established."
+ },
+ {
   "id": "qd794a11094e",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2638,6 +4663,21 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x − 3)(x + 5) = 0, so x = 3 or -5.\nII factorises to (y + 5)(y + 8) = 0, so y = -5 or -8.\nCompare every pair: 3 vs -5, 3 vs -8, -5 vs -5, -5 vs -8.\nResult: x ≥ y."
+ },
+ {
+  "id": "qd9942e2efc4",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9x + 18 = 0\nII. y² − 10y + 21 = 0",
+  "options": [
+   "x = y",
+   "x > y",
+   "x ≥ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x − 3) = 0, so x = 6 or 3.\nII factorises to (y − 7)(y − 3) = 0, so y = 7 or 3.\nCompare every pair: 6 vs 7, 6 vs 3, 3 vs 7, 3 vs 3.\nResult: No relation can be established."
  },
  {
   "id": "qdba9678f9f3",
@@ -2715,6 +4755,51 @@
   "explanation": "I factorises to (x + 4)(x − 2) = 0, so x = -4 or 2.\nII factorises to (y − 3)(y − 7) = 0, so y = 3 or 7.\nCompare every pair: -4 vs 3, -4 vs 7, 2 vs 3, 2 vs 7.\nResult: x < y."
  },
  {
+  "id": "qdfc24d42b57",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + x − 12 = 0\nII. y² + 13y + 40 = 0",
+  "options": [
+   "x < y",
+   "x ≥ y",
+   "x ≤ y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 4)(x − 3) = 0, so x = -4 or 3.\nII factorises to (y + 5)(y + 8) = 0, so y = -5 or -8.\nCompare every pair: -4 vs -5, -4 vs -8, 3 vs -5, 3 vs -8.\nResult: x > y."
+ },
+ {
+  "id": "qdfeecbce377",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 8x + 15 = 0\nII. y² + 15y + 56 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 3)(x + 5) = 0, so x = -3 or -5.\nII factorises to (y + 7)(y + 8) = 0, so y = -7 or -8.\nCompare every pair: -3 vs -7, -3 vs -8, -5 vs -7, -5 vs -8.\nResult: x > y."
+ },
+ {
+  "id": "qe03985e9ef9",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 17x + 72 = 0\nII. y² + 4y − 32 = 0",
+  "options": [
+   "x ≤ y",
+   "x = y",
+   "x < y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 9)(x − 8) = 0, so x = 9 or 8.\nII factorises to (y + 8)(y − 4) = 0, so y = -8 or 4.\nCompare every pair: 9 vs -8, 9 vs 4, 8 vs -8, 8 vs 4.\nResult: x > y."
+ },
+ {
   "id": "qe13647bfd2f",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2773,6 +4858,21 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x − 5)(x + 9) = 0, so x = 5 or -9.\nII factorises to (y + 1)(y − 8) = 0, so y = -1 or 8.\nCompare every pair: 5 vs -1, 5 vs 8, -9 vs -1, -9 vs 8.\nResult: No relation can be established."
+ },
+ {
+  "id": "qe45f616eecf",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 27 = 0\nII. y² + 15y + 54 = 0",
+  "options": [
+   "No relation can be established",
+   "x = y",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 3)(x + 9) = 0, so x = -3 or -9.\nII factorises to (y + 6)(y + 9) = 0, so y = -6 or -9.\nCompare every pair: -3 vs -6, -3 vs -9, -9 vs -6, -9 vs -9.\nResult: No relation can be established."
  },
  {
   "id": "qe522820b7e1",
@@ -2835,6 +4935,66 @@
   "explanation": "I factorises to (x + 4)(x + 1) = 0, so x = -4 or -1.\nII factorises to (y + 3)(y + 3) = 0, so y = -3 or -3.\nCompare every pair: -4 vs -3, -4 vs -3, -1 vs -3, -1 vs -3.\nResult: No relation can be established."
  },
  {
+  "id": "qe88c255222b",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 12x + 32 = 0\nII. y² − 6y + 5 = 0",
+  "options": [
+   "x ≤ y",
+   "x < y",
+   "x > y",
+   "x ≥ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 4)(x + 8) = 0, so x = -4 or -8.\nII factorises to (y − 5)(y − 1) = 0, so y = 5 or 1.\nCompare every pair: -4 vs 5, -4 vs 1, -8 vs 5, -8 vs 1.\nResult: x < y."
+ },
+ {
+  "id": "qe8f71aef504",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 24 = 0\nII. y² + 6y + 9 = 0",
+  "options": [
+   "No relation can be established",
+   "x = y",
+   "x ≥ y",
+   "x > y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 4)(x − 6) = 0, so x = -4 or 6.\nII factorises to (y + 3)(y + 3) = 0, so y = -3 or -3.\nCompare every pair: -4 vs -3, -4 vs -3, 6 vs -3, 6 vs -3.\nResult: No relation can be established."
+ },
+ {
+  "id": "qe93f247d74a",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 3 = 0\nII. y² + 13y + 42 = 0",
+  "options": [
+   "x ≥ y",
+   "x ≤ y",
+   "x = y",
+   "x > y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 3)(x + 1) = 0, so x = 3 or -1.\nII factorises to (y + 6)(y + 7) = 0, so y = -6 or -7.\nCompare every pair: 3 vs -6, 3 vs -7, -1 vs -6, -1 vs -7.\nResult: x > y."
+ },
+ {
+  "id": "qe9bb10cd76f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 9 = 0\nII. y² + 12y + 32 = 0",
+  "options": [
+   "x ≥ y",
+   "x < y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 1)(x − 9) = 0, so x = 1 or 9.\nII factorises to (y + 8)(y + 4) = 0, so y = -8 or -4.\nCompare every pair: 1 vs -8, 1 vs -4, 9 vs -8, 9 vs -4.\nResult: x > y."
+ },
+ {
   "id": "qeab947e7df2",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2848,6 +5008,21 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x − 3)(x + 5) = 0, so x = 3 or -5.\nII factorises to (y − 9)(y − 7) = 0, so y = 9 or 7.\nCompare every pair: 3 vs 9, 3 vs 7, -5 vs 9, -5 vs 7.\nResult: x < y."
+ },
+ {
+  "id": "qeb7c3981d5c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 64 = 0\nII. y² − 3y − 40 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x ≤ y",
+   "x < y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x − 8)(x + 8) = 0, so x = 8 or -8.\nII factorises to (y + 5)(y − 8) = 0, so y = -5 or 8.\nCompare every pair: 8 vs -5, 8 vs 8, -8 vs -5, -8 vs 8.\nResult: No relation can be established."
  },
  {
   "id": "qed06e257375",
@@ -2895,6 +5070,36 @@
   "explanation": "I factorises to (x − 4)(x + 7) = 0, so x = 4 or -7.\nII factorises to (y + 7)(y + 1) = 0, so y = -7 or -1.\nCompare every pair: 4 vs -7, 4 vs -1, -7 vs -7, -7 vs -1.\nResult: No relation can be established."
  },
  {
+  "id": "qee4bde02041",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 2x − 3 = 0\nII. y² + 3y + 2 = 0",
+  "options": [
+   "x = y",
+   "No relation can be established",
+   "x < y",
+   "x ≤ y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 3)(x − 1) = 0, so x = -3 or 1.\nII factorises to (y + 2)(y + 1) = 0, so y = -2 or -1.\nCompare every pair: -3 vs -2, -3 vs -1, 1 vs -2, 1 vs -1.\nResult: No relation can be established."
+ },
+ {
+  "id": "qeea06b5666e",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 9x + 18 = 0\nII. y² − 6y + 8 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≤ y",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 6)(x − 3) = 0, so x = 6 or 3.\nII factorises to (y − 2)(y − 4) = 0, so y = 2 or 4.\nCompare every pair: 6 vs 2, 6 vs 4, 3 vs 2, 3 vs 4.\nResult: No relation can be established."
+ },
+ {
   "id": "qefe7dcfab2f",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2908,6 +5113,51 @@
   ],
   "answer": 3,
   "explanation": "I factorises to (x + 1)(x − 1) = 0, so x = -1 or 1.\nII factorises to (y + 1)(y − 4) = 0, so y = -1 or 4.\nCompare every pair: -1 vs -1, -1 vs 4, 1 vs -1, 1 vs 4.\nResult: No relation can be established."
+ },
+ {
+  "id": "qf26eb4448d8",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 4x − 45 = 0\nII. y² − 81 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x > y",
+   "x = y"
+  ],
+  "answer": 1,
+  "explanation": "I factorises to (x + 5)(x − 9) = 0, so x = -5 or 9.\nII factorises to (y − 9)(y + 9) = 0, so y = 9 or -9.\nCompare every pair: -5 vs 9, -5 vs -9, 9 vs 9, 9 vs -9.\nResult: No relation can be established."
+ },
+ {
+  "id": "qf2ab287bb9c",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 13x + 36 = 0\nII. y² − y − 30 = 0",
+  "options": [
+   "x = y",
+   "x < y",
+   "No relation can be established",
+   "x ≥ y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x − 9)(x − 4) = 0, so x = 9 or 4.\nII factorises to (y − 6)(y + 5) = 0, so y = 6 or -5.\nCompare every pair: 9 vs 6, 9 vs -5, 4 vs 6, 4 vs -5.\nResult: No relation can be established."
+ },
+ {
+  "id": "qf2ac9ae33a8",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 10x + 9 = 0\nII. y² − 6y − 16 = 0",
+  "options": [
+   "No relation can be established",
+   "x ≥ y",
+   "x = y",
+   "x < y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 9)(x − 1) = 0, so x = 9 or 1.\nII factorises to (y − 8)(y + 2) = 0, so y = 8 or -2.\nCompare every pair: 9 vs 8, 9 vs -2, 1 vs 8, 1 vs -2.\nResult: No relation can be established."
  },
  {
   "id": "qf40e3012e7a",
@@ -2925,6 +5175,21 @@
   "explanation": "I factorises to (x + 7)(x − 7) = 0, so x = -7 or 7.\nII factorises to (y − 4)(y + 3) = 0, so y = 4 or -3.\nCompare every pair: -7 vs 4, -7 vs -3, 7 vs 4, 7 vs -3.\nResult: No relation can be established."
  },
  {
+  "id": "qf4bdf9cbc0f",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 2x − 24 = 0\nII. y² − y − 42 = 0",
+  "options": [
+   "x < y",
+   "x = y",
+   "x ≤ y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 6)(x + 4) = 0, so x = 6 or -4.\nII factorises to (y − 7)(y + 6) = 0, so y = 7 or -6.\nCompare every pair: 6 vs 7, 6 vs -6, -4 vs 7, -4 vs -6.\nResult: No relation can be established."
+ },
+ {
   "id": "qf4df3b4e3d6",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2938,6 +5203,21 @@
   ],
   "answer": 0,
   "explanation": "I factorises to (x + 9)(x − 7) = 0, so x = -9 or 7.\nII factorises to (y + 1)(y + 3) = 0, so y = -1 or -3.\nCompare every pair: -9 vs -1, -9 vs -3, 7 vs -1, 7 vs -3.\nResult: No relation can be established."
+ },
+ {
+  "id": "qf83d07ea541",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² − 5x − 36 = 0\nII. y² + 2y − 3 = 0",
+  "options": [
+   "No relation can be established",
+   "x = y",
+   "x > y",
+   "x < y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x − 9)(x + 4) = 0, so x = 9 or -4.\nII factorises to (y + 3)(y − 1) = 0, so y = -3 or 1.\nCompare every pair: 9 vs -3, 9 vs 1, -4 vs -3, -4 vs 1.\nResult: No relation can be established."
  },
  {
   "id": "qf869051ea92",
@@ -2955,6 +5235,36 @@
   "explanation": "I factorises to (x − 2)(x − 7) = 0, so x = 2 or 7.\nII factorises to (y − 7)(y + 4) = 0, so y = 7 or -4.\nCompare every pair: 2 vs 7, 2 vs -4, 7 vs 7, 7 vs -4.\nResult: No relation can be established."
  },
  {
+  "id": "qfb0d0cf3aec",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 9x + 14 = 0\nII. y² + 2y − 35 = 0",
+  "options": [
+   "No relation can be established",
+   "x = y",
+   "x < y",
+   "x ≥ y"
+  ],
+  "answer": 0,
+  "explanation": "I factorises to (x + 7)(x + 2) = 0, so x = -7 or -2.\nII factorises to (y + 7)(y − 5) = 0, so y = -7 or 5.\nCompare every pair: -7 vs -7, -7 vs 5, -2 vs -7, -2 vs 5.\nResult: No relation can be established."
+ },
+ {
+  "id": "qfb7d993a6df",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 6x − 7 = 0\nII. y² − 10y + 9 = 0",
+  "options": [
+   "x ≥ y",
+   "No relation can be established",
+   "x > y",
+   "x ≤ y"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x − 1)(x + 7) = 0, so x = 1 or -7.\nII factorises to (y − 9)(y − 1) = 0, so y = 9 or 1.\nCompare every pair: 1 vs 9, 1 vs 1, -7 vs 9, -7 vs 1.\nResult: x ≤ y."
+ },
+ {
   "id": "qfb8cf3d2987",
   "subject": "quant",
   "topic": "quadratic-equations",
@@ -2968,6 +5278,36 @@
   ],
   "answer": 1,
   "explanation": "I factorises to (x + 9)(x + 5) = 0, so x = -9 or -5.\nII factorises to (y − 8)(y + 9) = 0, so y = 8 or -9.\nCompare every pair: -9 vs 8, -9 vs -9, -5 vs 8, -5 vs -9.\nResult: No relation can be established."
+ },
+ {
+  "id": "qfbb65cab266",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 5x − 6 = 0\nII. y² + 11y + 28 = 0",
+  "options": [
+   "x > y",
+   "x = y",
+   "x < y",
+   "No relation can be established"
+  ],
+  "answer": 3,
+  "explanation": "I factorises to (x + 6)(x − 1) = 0, so x = -6 or 1.\nII factorises to (y + 4)(y + 7) = 0, so y = -4 or -7.\nCompare every pair: -6 vs -4, -6 vs -7, 1 vs -4, 1 vs -7.\nResult: No relation can be established."
+ },
+ {
+  "id": "qfdeb73e7db1",
+  "subject": "quant",
+  "topic": "quadratic-equations",
+  "level": "hard",
+  "question": "Solve both equations and compare x and y.\nI. x² + 8x + 15 = 0\nII. y² − 7y + 6 = 0",
+  "options": [
+   "x ≤ y",
+   "No relation can be established",
+   "x < y",
+   "x > y"
+  ],
+  "answer": 2,
+  "explanation": "I factorises to (x + 3)(x + 5) = 0, so x = -3 or -5.\nII factorises to (y − 1)(y − 6) = 0, so y = 1 or 6.\nCompare every pair: -3 vs 1, -3 vs 6, -5 vs 1, -5 vs 6.\nResult: x < y."
  },
  {
   "id": "qffc9aa6be86",

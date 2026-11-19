@@ -705,7 +705,7 @@ Environment variables the app reads. Real values live in Railway (or your shell)
 flowchart LR
     dev(["git push / pull request"])
     subgraph maven["Java CI with Maven (maven.yml)"]
-        maven_build["<b>build</b><br/>• Set up JDK 21<br/>• Set up Python<br/>• Check question data is up to date<br/>• Build and test"]
+        maven_build["<b>build</b><br/>• Set up JDK 21<br/>• Set up Python<br/>• Check question data is up to date<br/>• Cache the Maven distribution<br/>• Download Maven<br/>• Build and test"]
     dev -->|push / pull request to main| maven_build
         maven_deploy["<b>deploy</b><br/>• Install Railway CLI"]
         maven_build -->|main only| maven_deploy
@@ -741,12 +741,12 @@ flowchart LR
 <!-- BEGIN GENERATED: content -->
 | Exam / track | Stage | Sections | Quizzes | Questions |
 |---|---|---|---|---|
-| IBPS Clerk | Prelims | English Language, Numerical Ability, Reasoning Ability | 45 | 1500 |
-| IBPS Clerk | Mains | Reasoning Ability, English Language, Quantitative Aptitude, General/Financial Awareness | 60 | 2400 |
-| SBI Clerk | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
-| SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability, General/Financial Awareness | 60 | 2850 |
-| IBPS RRB Clerk | Prelims | Reasoning Ability, Numerical Ability | 30 | 1200 |
-| IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability, Computer Knowledge, General Awareness | 75 | 3000 |
+| IBPS Clerk | Prelims | English Language, Numerical Ability, Reasoning Ability | 75 | 2550 |
+| IBPS Clerk | Mains | Reasoning Ability, English Language, Quantitative Aptitude, General/Financial Awareness | 90 | 3600 |
+| SBI Clerk | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 75 | 2550 |
+| SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability, General/Financial Awareness | 90 | 4350 |
+| IBPS RRB Clerk | Prelims | Reasoning Ability, Numerical Ability | 60 | 2400 |
+| IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability, Computer Knowledge, General Awareness | 105 | 4200 |
 | IBPS PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
 | IBPS PO | Mains | Reasoning & Computer Aptitude, English Language, Data Analysis & Interpretation, General/Economy/Banking Awareness | 60 | 2325 |
 | SBI PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
@@ -754,11 +754,11 @@ flowchart LR
 | RBI Assistant | Prelims | English Language, Numerical Ability, Reasoning Ability | 45 | 1500 |
 | RBI Assistant | Mains | Reasoning, English Language, Numerical Ability, General Awareness, Computer Knowledge | 75 | 3000 |
 | APPSC Group 1 | Prelims Paper I | History and Culture, Constitution, Polity, Social Justice & International Relations, Indian and Andhra Pradesh Economy and Planning, Geography | 36 | 1080 |
-| APPSC Group 1 | Prelims Paper II | General Mental Ability, Administrative and Psychological Abilities, Science and Technology | 27 | 810 |
+| APPSC Group 1 | Prelims Paper II | General Mental Ability, Administrative and Psychological Abilities, Science and Technology | 33 | 990 |
 | Java Practice | Practice | Java | 9 | 142 |
 | Tech Interview Prep | Practice | Data Structures & Algorithms, Java, Python, Spring Boot, React, Vue.js, Artificial Intelligence, SQL & Databases, Node.js, Git & DevOps, System Design, JavaScript, TypeScript, Operating Systems, Computer Networks | 246 | 2460 |
 
-Quiz slots can reuse a question (the same bank feeds several exams): 14981 unique questions in 26 subjects.
+Quiz slots can reuse a question (the same bank feeds several exams): 19332 unique questions in 26 subjects.
 <!-- END GENERATED: content -->
 
 ### Daily features
