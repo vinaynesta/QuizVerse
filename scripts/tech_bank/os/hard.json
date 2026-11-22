@@ -278,5 +278,145 @@
     "options": ["640 cylinders", "208 cylinders", "299 cylinders", "236 cylinders"],
     "answer": 3,
     "explanation": "SSTF serves 65, 67, 37, 14, 98, 122, 124, 183, moving 12 + 2 + 30 + 23 + 84 + 24 + 2 + 59 = 236 cylinders."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A TLB lookup takes 10 ns, a memory access takes 100 ns, the TLB hit ratio is 90%, and the system uses a two-level page table. What is the effective memory access time?",
+    "options": ["120 ns", "140 ns", "130 ns", "210 ns"],
+    "answer": 2,
+    "explanation": "A hit costs 10 + 100 = 110 ns and a miss costs 10 + 2x100 + 100 = 310 ns, so EAT = 0.9x110 + 0.1x310 = 130 ns."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A 32-bit virtual address with 4 KB pages uses a two-level page table whose outer and inner tables each fit in one page with 4-byte entries. How is the address split?",
+    "options": ["12-bit outer index, 8-bit inner index, 12-bit offset", "8-bit outer index, 12-bit inner index, 12-bit offset", "10-bit outer index, 10-bit inner index, 12-bit offset", "16-bit outer index, 4-bit inner index, 12-bit offset"],
+    "answer": 2,
+    "explanation": "A 4 KB page holds 4096/4 = 1024 = 2^10 entries, so the remaining 32 - 12 = 20 bits split into 10 + 10."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A system has 48-bit virtual addresses, 4 KB pages and 8-byte page-table entries, and each page-table level must fit in one page. How many levels of page table are needed?",
+    "options": ["2", "3", "5", "4"],
+    "answer": 3,
+    "explanation": "Each level indexes 4096/8 = 512 = 2^9 entries, and (48 - 12)/9 = 4 levels cover the 36 page-number bits."
+  },
+  {
+    "topic": "memory-management",
+    "question": "What is the reach of a TLB with 64 entries when the page size is 4 KB?",
+    "options": ["64 KB", "256 KB", "4 MB", "16 KB"],
+    "answer": 1,
+    "explanation": "TLB reach is entries times page size: 64 x 4 KB = 256 KB, which is why large pages can greatly improve TLB coverage."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With 3 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does the Optimal algorithm cause?",
+    "options": ["9", "10", "12", "11"],
+    "answer": 3,
+    "explanation": "Simulating OPT, which evicts the page whose next use is farthest away, gives 3 compulsory faults plus 8 replacements = 11 faults."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What is a key drawback of global page replacement compared with local replacement?",
+    "options": ["A process can never get more frames than its initial allocation", "It cannot be combined with LRU approximations", "It always causes Belady's anomaly", "A process's page-fault rate depends on the paging behavior of other processes"],
+    "answer": 3,
+    "explanation": "Global replacement lets a process take frames from others, improving throughput but making each process's performance less predictable."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "In the enhanced second-chance algorithm, pages are classified by (reference bit, modify bit). Which class is the best candidate for eviction?",
+    "options": ["(0, 0): not recently used and not modified", "(0, 1): not recently used but modified", "(1, 0): recently used but clean", "(1, 1): recently used and modified"],
+    "answer": 0,
+    "explanation": "A (0, 0) page is unlikely to be needed soon and need not be written back to disk, so evicting it is cheapest."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With a working-set window of 10 references, the last 10 references of a process are 2, 6, 1, 5, 7, 7, 7, 7, 5, 1. What is the working-set size?",
+    "options": ["4", "6", "5", "10"],
+    "answer": 2,
+    "explanation": "The working set is the set of distinct pages in the window, {1, 2, 5, 6, 7}, which has 5 pages."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is the ABA problem in lock-free algorithms that use compare-and-swap?",
+    "options": ["A location changes from A to B and back to A, so a CAS wrongly succeeds as if nothing changed", "Two threads acquire locks A and B in opposite orders and deadlock", "A thread reads stale data A from its cache instead of B from memory", "A spinlock holder is preempted while others spin on it"],
+    "answer": 0,
+    "explanation": "CAS compares only the value, so it cannot see intermediate changes; tagged pointers or version counters are common fixes."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Under Mesa (signal-and-continue) monitor semantics, what happens when a thread signals a condition variable that has a waiter?",
+    "options": ["The signaler keeps running and the waiter is moved to the ready queue, so it must recheck the condition when it runs", "The signaler is suspended and the waiter runs immediately inside the monitor", "Both threads run inside the monitor simultaneously", "The signal is queued until the waiter calls wait() again"],
+    "answer": 0,
+    "explanation": "Because other threads may run before the woken waiter reacquires the monitor, Mesa semantics require waiting inside a loop."
+  },
+  {
+    "topic": "concurrency",
+    "question": "By Amdahl's law, what is the maximum speedup achievable with an unlimited number of cores for a program that is 90% parallelizable?",
+    "options": ["9", "90", "10", "Unbounded"],
+    "answer": 2,
+    "explanation": "As the core count grows the parallel term vanishes, leaving speedup = 1 / (serial fraction) = 1 / 0.1 = 10."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What is the purpose of a memory barrier (fence) instruction?",
+    "options": ["It prevents other processes from reading a page", "It forces memory operations before it to become visible before those after it, preventing harmful reordering", "It flushes the TLB on a context switch", "It locks a memory bus for the rest of the program"],
+    "answer": 1,
+    "explanation": "Modern CPUs and compilers reorder loads and stores, so barriers are needed to make lock-free code and lock implementations correct."
+  },
+  {
+    "topic": "concurrency",
+    "question": "What is false sharing on a multicore system?",
+    "options": ["Two threads share a variable without a lock and corrupt it", "A process shares pages with its child after fork()", "Threads on different cores modify different variables that sit on the same cache line, causing needless coherence traffic", "The OS reports a lock as free when it is held"],
+    "answer": 2,
+    "explanation": "The cache line bounces between cores even though no data is logically shared; padding or aligning hot variables avoids it."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Banker's algorithm with two resource types: Available = (3,2). Allocation: P0 (1,0), P1 (2,1), P2 (1,1). Max: P0 (4,2), P1 (3,3), P2 (6,2). P2 requests (2,1). What should the system do?",
+    "options": ["Grant it, because the request does not exceed Available", "Deny it for now, because granting it leaves an unsafe state", "Grant it, because the request does not exceed P2's Need", "Terminate P2, because its request exceeds its Max"],
+    "answer": 1,
+    "explanation": "After granting, Available would be (1,1) while the Needs are P0 (3,2), P1 (1,2) and P2 (3,0), so no process can finish and the state is unsafe."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Why is the banker's algorithm rarely used in general-purpose operating systems?",
+    "options": ["It cannot detect circular wait", "It only works for single-instance resources", "It requires disabling all interrupts while running", "Processes must declare their maximum resource needs in advance, and the number of processes and resources keeps changing"],
+    "answer": 3,
+    "explanation": "Real workloads rarely know their maximum needs and processes come and go, so avoidance algorithms are mostly of theoretical or niche use."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "As the number of periodic tasks n grows very large, what value does the rate-monotonic utilization bound n(2^(1/n) - 1) approach?",
+    "options": ["About 69.3% (ln 2)", "About 82.8%", "100%", "50%"],
+    "answer": 0,
+    "explanation": "The limit of n(2^(1/n) - 1) as n goes to infinity is ln 2 = 0.693, so any task set below about 69% utilization is RM-schedulable."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "How does the Linux Completely Fair Scheduler (CFS) pick the next task to run?",
+    "options": ["It picks the task with the highest static priority from a FIFO queue", "It picks the runnable task with the smallest virtual runtime, kept in a red-black tree", "It picks tasks in strict round-robin order with a fixed 100 ms quantum", "It picks the task with the shortest predicted next CPU burst"],
+    "answer": 1,
+    "explanation": "CFS tracks weighted CPU time as vruntime and always runs the leftmost (smallest vruntime) node, approximating ideal fair sharing."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Why does an SMP scheduler try to keep a thread on the same processor (processor affinity)?",
+    "options": ["Threads cannot be migrated between processors", "Its data is likely still in that processor's cache, avoiding costly cache invalidation and refilling", "It guarantees that the thread will never be preempted", "It reduces the number of system calls the thread makes"],
+    "answer": 1,
+    "explanation": "Migrating a thread forces the new core to reload its working set and invalidates the old cache, so soft or hard affinity is preferred."
+  },
+  {
+    "topic": "file-systems",
+    "question": "An inode has 12 direct pointers, one single-indirect and one double-indirect pointer, with 4 KB blocks and 4-byte pointers. With the inode already in memory, how many disk reads are needed to read the byte at offset 5 MB?",
+    "options": ["1", "2", "4", "3"],
+    "answer": 3,
+    "explanation": "Direct blocks cover the first 48 KB and the single-indirect block reaches 48 + 1024x4 = 4144 KB, so 5120 KB needs the double-indirect block, a single-indirect block and the data block."
+  },
+  {
+    "topic": "io-systems",
+    "question": "A RAID 5 array is built from five 2 TB disks. What is its usable capacity?",
+    "options": ["8 TB", "10 TB", "6 TB", "5 TB"],
+    "answer": 0,
+    "explanation": "RAID 5 spends one disk's worth of space on distributed parity, so usable capacity is (5 - 1) x 2 TB = 8 TB."
   }
 ]

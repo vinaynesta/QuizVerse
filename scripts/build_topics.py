@@ -81,7 +81,7 @@ def load_ga(ga_dir):
     quizzes use only some of them (each section needs a fixed count), so the rest join practice from here."""
     out = []
     for subject in GA_SUBJECTS:
-        for q in load_ga_bank(subject, ga_dir):
+        for q in load_ga_bank(subject, ga_dir) + load_ga_bank(subject, ga_dir, more=True):
             q = edited(subject, q)
             if q.get("hidden"):
                 continue

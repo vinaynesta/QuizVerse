@@ -1,5 +1,20 @@
 [
  {
+  "id": "q33f0c64f16e",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port does POP3 use by default for unencrypted mail retrieval?",
+  "options": [
+   "143",
+   "110",
+   "25",
+   "995"
+  ],
+  "answer": 1,
+  "explanation": "POP3 uses TCP 110 (995 with TLS), while IMAP uses 143."
+ },
+ {
   "id": "q5c6ab3e289c",
   "subject": "networks",
   "topic": "ports",
@@ -13,6 +28,21 @@
   ],
   "answer": 2,
   "explanation": "Unencrypted HTTP uses TCP port 80 by default."
+ },
+ {
+  "id": "q71e1e577faa",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port does FTP use for its control connection by default?",
+  "options": [
+   "20",
+   "69",
+   "22",
+   "21"
+  ],
+  "answer": 3,
+  "explanation": "FTP sends commands over TCP port 21, while active-mode data transfers traditionally use port 20."
  },
  {
   "id": "q7b259d2a63c",
@@ -73,5 +103,20 @@
   ],
   "answer": 0,
   "explanation": "HTTPS (HTTP over TLS) uses TCP port 443 by default; 80 is plain HTTP."
+ },
+ {
+  "id": "qe93cf2a1eed",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "What is the default port for Microsoft Remote Desktop Protocol (RDP)?",
+  "options": [
+   "3306",
+   "5900",
+   "3389",
+   "8080"
+  ],
+  "answer": 2,
+  "explanation": "RDP listens on TCP (and UDP) port 3389 by default."
  }
 ]

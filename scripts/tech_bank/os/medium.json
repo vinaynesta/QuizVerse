@@ -278,5 +278,145 @@
     "options": ["236 cylinders", "208 cylinders", "331 cylinders", "640 cylinders"],
     "answer": 3,
     "explanation": "Summing |differences| in order: 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640 cylinders."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Five processes arrive at time 0 with (burst, priority): P1 (10, 3), P2 (1, 1), P3 (2, 4), P4 (1, 5), P5 (5, 2). Using non-preemptive priority scheduling where a lower number means higher priority, what is the average waiting time?",
+    "options": ["8.2 ms", "6.2 ms", "9.6 ms", "12 ms"],
+    "answer": 0,
+    "explanation": "The order is P2, P5, P1, P3, P4, giving waits 0, 1, 6, 16 and 18; (0+1+6+16+18)/5 = 8.2 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "P1, P2 and P3 arrive at time 0 in that order with bursts 5, 3 and 1 ms. With Round Robin and a 2 ms quantum, what is the average turnaround time?",
+    "options": ["6 ms", "8.67 ms", "9 ms", "7.33 ms"],
+    "answer": 3,
+    "explanation": "The schedule P1 0-2, P2 2-4, P3 4-5, P1 5-7, P2 7-8, P1 8-9 gives completions 9, 8 and 5; (9+8+5)/3 = 7.33 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Under FCFS, processes arrive as P1 (t=0, burst 5), P2 (t=1, burst 3), P3 (t=2, burst 8), P4 (t=3, burst 6). What is the average waiting time?",
+    "options": ["4.5 ms", "6.25 ms", "7 ms", "5.75 ms"],
+    "answer": 3,
+    "explanation": "Start times are 0, 5, 8 and 16, so waits are 0, 4, 6 and 13; 23/4 = 5.75 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Under non-preemptive SJF, processes arrive as P1 (t=0, burst 7), P2 (t=2, burst 4), P3 (t=4, burst 1), P4 (t=5, burst 4). What is the average waiting time?",
+    "options": ["3 ms", "4 ms", "5.25 ms", "6 ms"],
+    "answer": 1,
+    "explanation": "P1 runs 0-7, then P3 7-8, P2 8-12 and P4 12-16, giving waits 0, 3, 6 and 7; 16/4 = 4 ms."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "Why do many schedulers give higher priority to I/O-bound processes than to CPU-bound ones?",
+    "options": ["I/O-bound processes always have the longest CPU bursts", "CPU-bound processes cannot be preempted", "I/O-bound processes use the CPU briefly and then block, so favoring them keeps devices busy and improves responsiveness", "I/O-bound processes never need the CPU"],
+    "answer": 2,
+    "explanation": "Short CPU bursts from I/O-bound jobs finish quickly and overlap their I/O with CPU-bound work, raising overall utilization."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Which critical-section requirement guarantees a limit on how many times other processes may enter their critical sections after a process has requested entry?",
+    "options": ["Mutual exclusion", "Bounded waiting", "Progress", "Atomicity"],
+    "answer": 1,
+    "explanation": "Bounded waiting prevents a requesting process from being postponed indefinitely by others repeatedly entering first."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What does the atomic compare_and_swap(value, expected, new) instruction do?",
+    "options": ["Always swaps value with new and returns nothing", "Sets value to new only if it currently equals expected, and returns the original value", "Compares two locks and releases the smaller one", "Disables interrupts until the next context switch"],
+    "answer": 1,
+    "explanation": "Because the compare and the update happen atomically, CAS can be used to build locks and lock-free data structures."
+  },
+  {
+    "topic": "synchronization",
+    "question": "Two threads each increment a shared integer counter 1000 times with no synchronization, starting from 0. What can the final value be?",
+    "options": ["It is always exactly 2000", "It is always exactly 1000", "It is always greater than 2000", "Some value less than 2000 is possible"],
+    "answer": 3,
+    "explanation": "counter++ is a load-add-store sequence, so interleaved updates can overwrite each other and lose increments."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Once a deadlock has been detected, what are the two general approaches to recovering from it?",
+    "options": ["Terminating one or more processes, or preempting resources from them", "Adding more CPUs or increasing RAM", "Running the banker's algorithm or using aging", "Disabling interrupts or flushing the TLB"],
+    "answer": 0,
+    "explanation": "Recovery either aborts processes to break the cycle or takes resources away (with rollback) from chosen victims."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "If the OS may take away resources held by a process that is waiting for another resource, which deadlock condition is negated?",
+    "options": ["No preemption", "Mutual exclusion", "Hold and wait", "Circular wait"],
+    "answer": 0,
+    "explanation": "Allowing resources to be preempted removes the no-preemption condition, though it only works for resources whose state can be saved and restored."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Why is denying the mutual-exclusion condition usually not a practical way to prevent deadlock?",
+    "options": ["Mutual exclusion is not one of the deadlock conditions", "Some resources, such as mutex locks or printers, are intrinsically non-sharable", "It would require ordering all resource types", "It makes every process request all resources up front"],
+    "answer": 1,
+    "explanation": "Sharable resources such as read-only files never cause deadlock, but many resources simply cannot be shared."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A system has 16-bit logical addresses and 256-byte pages. For the logical address 0x1A3F, what are the page number and offset?",
+    "options": ["Page 63, offset 26", "Page 6, offset 703", "Page 26, offset 3F0", "Page 26, offset 63"],
+    "answer": 3,
+    "explanation": "With 256-byte pages the low 8 bits are the offset: page = 0x1A = 26 and offset = 0x3F = 63."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Which technique fights external fragmentation by shuffling allocated memory blocks together to form one large free block?",
+    "options": ["Compaction", "Swapping", "Thrashing", "Paging out the kernel"],
+    "answer": 0,
+    "explanation": "Compaction relocates processes so free space becomes contiguous, but it requires dynamic run-time relocation and is costly."
+  },
+  {
+    "topic": "memory-management",
+    "question": "A machine has 36-bit physical addresses and 4 KB frames. How many physical frames are there?",
+    "options": ["2^12", "2^20", "2^24", "2^36"],
+    "answer": 2,
+    "explanation": "A 4 KB frame needs 12 offset bits, leaving 36 - 12 = 24 bits for the frame number, so there are 2^24 frames."
+  },
+  {
+    "topic": "memory-management",
+    "question": "What happens on a TLB miss in a system with a hardware-walked page table?",
+    "options": ["The page table in memory is consulted for the frame number and the entry is loaded into the TLB", "The process is immediately terminated", "A page fault always occurs and the page is read from disk", "The CPU retries the TLB until it hits"],
+    "answer": 0,
+    "explanation": "A TLB miss only costs extra memory accesses to walk the page table; a page fault occurs only if the page is not in memory."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With 3 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does FIFO replacement cause?",
+    "options": ["12", "14", "16", "15"],
+    "answer": 2,
+    "explanation": "Simulating FIFO with 3 frames gives hits only on the 5th, 11th, 15th and 18th references, so 20 - 4 = 16 faults."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "With 4 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does LRU replacement cause?",
+    "options": ["8", "12", "14", "10"],
+    "answer": 3,
+    "explanation": "Simulating LRU with 4 frames gives 10 faults: 4 compulsory faults to fill memory plus 6 replacements (5, 6, 3, 7, 6, 1)."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Why do page-replacement schemes that approximate LRU rely on a hardware reference bit?",
+    "options": ["It records the exact time of every memory access", "The bit is set when a page is accessed, letting the OS cheaply tell recently used pages from unused ones", "It marks pages that have been written and must be saved", "It marks pages that belong to the kernel"],
+    "answer": 1,
+    "explanation": "True LRU needs a timestamp or stack update on every access, which is too expensive; reference bits give a cheap approximation."
+  },
+  {
+    "topic": "io-systems",
+    "question": "The disk head is at cylinder 50, moving toward higher cylinders, and the queue holds 82, 170, 43, 140, 24, 16, 190. What is the total head movement under LOOK scheduling?",
+    "options": ["240 cylinders", "332 cylinders", "314 cylinders", "341 cylinders"],
+    "answer": 2,
+    "explanation": "LOOK goes up only as far as the last request and then reverses: (190 - 50) + (190 - 16) = 140 + 174 = 314 cylinders."
+  },
+  {
+    "topic": "io-systems",
+    "question": "How does a nonblocking I/O call differ from a blocking one?",
+    "options": ["It suspends the caller until all requested data arrives", "It can only be used for disk devices", "It returns immediately with whatever data is available instead of suspending the caller", "It always transfers data using polling"],
+    "answer": 2,
+    "explanation": "Nonblocking calls let a program continue working, for example a UI thread reading input, while blocking calls put the caller to sleep."
   }
 ]

@@ -15,6 +15,36 @@
   "explanation": "The kernel sees only one schedulable entity, so a blocking call stalls every thread, and the threads cannot run in parallel on multicore CPUs."
  },
  {
+  "id": "q2039f56d0ca",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What is false sharing on a multicore system?",
+  "options": [
+   "Two threads share a variable without a lock and corrupt it",
+   "Threads on different cores modify different variables that sit on the same cache line, causing needless coherence traffic",
+   "A process shares pages with its child after fork()",
+   "The OS reports a lock as free when it is held"
+  ],
+  "answer": 1,
+  "explanation": "The cache line bounces between cores even though no data is logically shared; padding or aligning hot variables avoids it."
+ },
+ {
+  "id": "q533dc22d3ee",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "By Amdahl's law, what is the maximum speedup achievable with an unlimited number of cores for a program that is 90% parallelizable?",
+  "options": [
+   "9",
+   "10",
+   "90",
+   "Unbounded"
+  ],
+  "answer": 1,
+  "explanation": "As the core count grows the parallel term vanishes, leaving speedup = 1 / (serial fraction) = 1 / 0.1 = 10."
+ },
+ {
   "id": "q67598f0e0be",
   "subject": "os",
   "topic": "concurrency",
@@ -28,6 +58,21 @@
   ],
   "answer": 0,
   "explanation": "Speedup = 1 / (S + (1 - S) / N) = 1 / (0.25 + 0.75 / 4) = 1 / 0.4375, about 2.29."
+ },
+ {
+  "id": "qf4d2409db80",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What is the purpose of a memory barrier (fence) instruction?",
+  "options": [
+   "It prevents other processes from reading a page",
+   "It locks a memory bus for the rest of the program",
+   "It flushes the TLB on a context switch",
+   "It forces memory operations before it to become visible before those after it, preventing harmful reordering"
+  ],
+  "answer": 3,
+  "explanation": "Modern CPUs and compilers reorder loads and stores, so barriers are needed to make lock-free code and lock implementations correct."
  },
  {
   "id": "qfae7dce40c2",

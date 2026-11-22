@@ -15,6 +15,21 @@
   "explanation": "The nullish coalescing operator returns its right operand when the left is null or undefined."
  },
  {
+  "id": "q1f9f6c45e51",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does \"10\" * 2 evaluate to?",
+  "options": [
+   "\"102\"",
+   "20",
+   "\"1010\"",
+   "NaN"
+  ],
+  "answer": 1,
+  "explanation": "The * operator converts the string \"10\" to the number 10 before multiplying."
+ },
+ {
   "id": "q3ac6957c046",
   "subject": "javascript",
   "topic": "operators",
@@ -75,6 +90,21 @@
   "explanation": "The remainder operator returns what is left after dividing 7 by 3, which is 1."
  },
  {
+  "id": "qcd1511c2ec9",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does !true evaluate to?",
+  "options": [
+   "true",
+   "0",
+   "false",
+   "undefined"
+  ],
+  "answer": 2,
+  "explanation": "The logical NOT operator flips a boolean, so !true is false."
+ },
+ {
   "id": "qd0d64a13f46",
   "subject": "javascript",
   "topic": "operators",
@@ -88,5 +118,20 @@
   ],
   "answer": 2,
   "explanation": "|| returns the first truthy operand, and 0 is falsy."
+ },
+ {
+  "id": "qfdf0fc9492b",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does true && \"yes\" evaluate to?",
+  "options": [
+   "true",
+   "false",
+   "\"yes\"",
+   "1"
+  ],
+  "answer": 2,
+  "explanation": "&& returns its right operand when the left one is truthy."
  }
 ]

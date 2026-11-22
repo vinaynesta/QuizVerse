@@ -1,5 +1,20 @@
 [
  {
+  "id": "q345689d6f6b",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "How does Promise.race settle?",
+  "options": [
+   "With the first promise to fulfill, ignoring rejections",
+   "Only after every input promise has settled",
+   "With the outcome of the first input promise to settle, whether fulfilled or rejected",
+   "With an array of all the fulfilled values"
+  ],
+  "answer": 2,
+  "explanation": "Promise.race mirrors whichever input settles first; Promise.any is the one that ignores rejections."
+ },
+ {
   "id": "q357e73116ba",
   "subject": "javascript",
   "topic": "promises-async",
@@ -43,6 +58,21 @@
   ],
   "answer": 1,
   "explanation": "A Promise starts pending and is settled once, either fulfilled with a value or rejected with a reason."
+ },
+ {
+  "id": "q7a5db8aebe3",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does this log?\nPromise.reject(new Error(\"x\")).catch(e => e.message).then(m => console.log(m));",
+  "options": [
+   "Error: x",
+   "Nothing, the rejection is unhandled",
+   "undefined",
+   "x"
+  ],
+  "answer": 3,
+  "explanation": "catch handles the rejection and returns e.message, which the next then receives."
  },
  {
   "id": "qa330bcc2cb3",
@@ -103,5 +133,20 @@
   ],
   "answer": 1,
   "explanation": "allSettled waits for every input and reports each as {status: \"fulfilled\", value} or {status: \"rejected\", reason}."
+ },
+ {
+  "id": "qf2570551ec3",
+  "subject": "javascript",
+  "topic": "promises-async",
+  "level": "medium",
+  "question": "What does this log?\nasync function f() { return 5; }\nf().then(v => console.log(v));",
+  "options": [
+   "Promise { 5 }",
+   "undefined",
+   "5",
+   "[object Promise]"
+  ],
+  "answer": 2,
+  "explanation": "An async function wraps its return value in a fulfilled promise, so then receives 5."
  }
 ]

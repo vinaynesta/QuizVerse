@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qcabe4c4a147",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Given `let a: any = 1;`, what happens at compile time with `a.foo.bar();`?",
+  "options": [
+   "A compile error, because foo does not exist on number",
+   "A compile error, because any cannot be called",
+   "It compiles without error, though it may fail at runtime",
+   "The compiler converts a to an object"
+  ],
+  "answer": 2,
+  "explanation": "any disables type checking, so any property access or call is allowed by the compiler."
+ },
+ {
+  "id": "qacf40ef1d13",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Given `let u: unknown = \"x\";`, what happens with `let s: string = u;`?",
+  "options": [
+   "It compiles, because the value is a string",
+   "It compiles with a warning only",
+   "It compiles, but s has type unknown",
+   "A compile error, because unknown is not assignable to string"
+  ],
+  "answer": 3,
+  "explanation": "unknown can only be assigned to unknown or any until it is narrowed."
+ },
+ {
+  "id": "qd6186433148",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Level { Low = 1, Mid, High }`, what is the value of `Level.High`?",
+  "options": [
+   "undefined",
+   "2",
+   "1",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Numeric enum members auto-increment from the previous member's value."
+ },
+ {
+  "id": "q321f5929be3",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "In `[1, 2, 3].map(n => n.toFixed())`, what type is inferred for `n`?",
+  "options": [
+   "any",
+   "number",
+   "number[]",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "Contextual typing gives the callback parameter the array's element type."
+ },
+ {
+  "id": "qdaebd953d7f",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which type annotation is used for large integer values written like `10n`?",
+  "options": [
+   "bigint",
+   "long",
+   "BigNumber",
+   "number"
+  ],
+  "answer": 0,
+  "explanation": "Literals with the n suffix are BigInt values, typed as bigint in TypeScript."
+ },
+ {
+  "id": "qd1fe60e0b14",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What are function overloads in TypeScript?",
+  "options": [
+   "Multiple functions with the same name in different files",
+   "Functions that accept more arguments than declared",
+   "Functions that call themselves recursively",
+   "Several call signatures declared for one function implementation"
+  ],
+  "answer": 3,
+  "explanation": "Overload signatures describe the valid ways to call a function, followed by a single compatible implementation."
+ },
+ {
+  "id": "q3e8d88b8e1d",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How do you declare an object type that allows any string key with number values?",
+  "options": [
+   "{ string: number }",
+   "{ [key: string]: number }",
+   "{ key: string; value: number }",
+   "Map<string, number>[]"
+  ],
+  "answer": 1,
+  "explanation": "An index signature describes objects with arbitrary keys of a given type and values of another."
+ },
+ {
+  "id": "qe418f9e4e3d",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which syntax tells the compiler to treat `el` as an `HTMLInputElement`?",
+  "options": [
+   "el is HTMLInputElement",
+   "el as HTMLInputElement",
+   "el: HTMLInputElement",
+   "cast<HTMLInputElement>(el)"
+  ],
+  "answer": 1,
+  "explanation": "The as keyword is a type assertion that changes the compile-time type without any runtime conversion."
+ },
+ {
+  "id": "qf0979719b19",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "Which tsconfig option sets the ECMAScript version of the emitted JavaScript?",
+  "options": [
+   "module",
+   "lib",
+   "target",
+   "version"
+  ],
+  "answer": 2,
+  "explanation": "target controls which syntax is downleveled, such as converting classes for older runtimes."
+ },
+ {
+  "id": "q28b1fb1bca4",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What return type is inferred for `function double(n: number) { return n * 2; }`?",
+  "options": [
+   "number",
+   "any",
+   "void",
+   "unknown"
+  ],
+  "answer": 0,
+  "explanation": "TypeScript infers the return type from the returned expression, which is a number."
+ }
+]

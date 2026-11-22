@@ -30,6 +30,36 @@
   "explanation": "System calls are the interface through which user programs request kernel services such as I/O or process creation, trapping into kernel mode."
  },
  {
+  "id": "qb4dc7d9fc6d",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "What happens to the CPU's privilege mode when a user program makes a system call?",
+  "options": [
+   "It stays in user mode the whole time",
+   "It switches from user mode to kernel mode through a trap",
+   "It switches from kernel mode to user mode",
+   "The CPU is powered down until the call completes"
+  ],
+  "answer": 1,
+  "explanation": "A system call executes a trap instruction that raises the CPU to kernel mode so the kernel can perform the privileged service."
+ },
+ {
+  "id": "qf373a7caf69",
+  "subject": "os",
+  "topic": "system-calls",
+  "level": "easy",
+  "question": "Which UNIX system call does a parent process use to pause until one of its children terminates?",
+  "options": [
+   "exec()",
+   "kill()",
+   "wait()",
+   "pipe()"
+  ],
+  "answer": 2,
+  "explanation": "wait() blocks the parent until a child exits and collects the child's exit status, which also removes the zombie entry."
+ },
+ {
   "id": "qfac6881a0a9",
   "subject": "os",
   "topic": "system-calls",

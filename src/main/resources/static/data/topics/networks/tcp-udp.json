@@ -45,6 +45,36 @@
   "explanation": "TCP uses sequence numbers, acknowledgments and retransmission to guarantee ordered, reliable delivery."
  },
  {
+  "id": "q713b6d453c2",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which of these applications typically uses UDP for its normal traffic?",
+  "options": [
+   "Web browsing over HTTP/1.1",
+   "SSH remote login",
+   "DNS lookups",
+   "Sending email with SMTP"
+  ],
+  "answer": 2,
+  "explanation": "Most DNS queries are small single request-response exchanges, so they use UDP to avoid connection setup overhead."
+ },
+ {
+  "id": "q784cb428e37",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "TCP is described as connection-oriented. What does that mean?",
+  "options": [
+   "Every packet takes the same physical path",
+   "The two endpoints establish a connection before exchanging data",
+   "It requires a dedicated circuit like a phone line",
+   "It can only connect two hosts on the same LAN"
+  ],
+  "answer": 1,
+  "explanation": "TCP performs a handshake to set up connection state at both ends before sending data, then tears it down afterward."
+ },
+ {
   "id": "q85944af161d",
   "subject": "networks",
   "topic": "tcp-udp",
@@ -88,6 +118,36 @@
   ],
   "answer": 0,
   "explanation": "TCP numbers every byte so the receiver can reassemble in order and acknowledge what arrived."
+ },
+ {
+  "id": "q1f48e0ff131",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "medium",
+  "question": "What does Nagle's algorithm do?",
+  "options": [
+   "Holds back small segments while earlier data is still unacknowledged, combining them into fewer packets",
+   "Doubles the congestion window every round trip",
+   "Retransmits a segment after three duplicate ACKs",
+   "Closes idle connections after two hours"
+  ],
+  "answer": 0,
+  "explanation": "Nagle reduces tinygram overhead but can add latency for interactive traffic, so TCP_NODELAY disables it."
+ },
+ {
+  "id": "q8690866d0a0",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "medium",
+  "question": "A TCP receiver sends a segment with acknowledgment number 5001. What does it mean?",
+  "options": [
+   "Exactly 5001 segments have been received",
+   "All bytes up to 5000 have been received and the next expected byte is 5001",
+   "Byte 5001 was received but earlier bytes are missing",
+   "The receiver's window is 5001 bytes"
+  ],
+  "answer": 1,
+  "explanation": "TCP acknowledgments are cumulative and name the next sequence number the receiver expects."
  },
  {
   "id": "qcc9aab918e3",

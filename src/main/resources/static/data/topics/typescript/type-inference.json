@@ -15,6 +15,36 @@
   "explanation": "const bindings cannot be reassigned, so the narrow literal type is kept."
  },
  {
+  "id": "q28b1fb1bca4",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "What return type is inferred for `function double(n: number) { return n * 2; }`?",
+  "options": [
+   "number",
+   "any",
+   "void",
+   "unknown"
+  ],
+  "answer": 0,
+  "explanation": "TypeScript infers the return type from the returned expression, which is a number."
+ },
+ {
+  "id": "q321f5929be3",
+  "subject": "typescript",
+  "topic": "type-inference",
+  "level": "easy",
+  "question": "In `[1, 2, 3].map(n => n.toFixed())`, what type is inferred for `n`?",
+  "options": [
+   "any",
+   "number",
+   "number[]",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "Contextual typing gives the callback parameter the array's element type."
+ },
+ {
   "id": "q72800db2c81",
   "subject": "typescript",
   "topic": "type-inference",

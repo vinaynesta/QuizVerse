@@ -15,6 +15,21 @@
   "explanation": "Class constructors cannot be invoked without new; doing so throws a TypeError."
  },
  {
+  "id": "q39c23759f45",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does a static initialization block, static { ... }, inside a class do?",
+  "options": [
+   "Runs every time a new instance is created",
+   "Runs once when the class is evaluated, to set up static state",
+   "Prevents the class from being subclassed",
+   "Runs whenever a static method is called"
+  ],
+  "answer": 1,
+  "explanation": "Static blocks execute once during class definition and can initialize static fields with arbitrary logic."
+ },
+ {
   "id": "q8212c1fe508",
   "subject": "javascript",
   "topic": "classes",

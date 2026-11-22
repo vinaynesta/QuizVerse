@@ -30,6 +30,36 @@
   "explanation": "Parameter properties declare and initialize a class member in one step."
  },
  {
+  "id": "q44411a717a3",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does the `override` modifier on a subclass method do?",
+  "options": [
+   "Prevents subclasses from overriding it further",
+   "Makes the method static",
+   "Calls the base method automatically",
+   "Marks it as overriding a base member, giving an error if the base class has no such member"
+  ],
+  "answer": 3,
+  "explanation": "override catches typos and removed base methods; noImplicitOverride makes it required."
+ },
+ {
+  "id": "q44bac18db88",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does declaring `abstract area(): number;` in an abstract class require?",
+  "options": [
+   "Subclasses cannot override area",
+   "The method body is inherited from Object",
+   "The method can only be called statically",
+   "Every concrete subclass must implement area"
+  ],
+  "answer": 3,
+  "explanation": "Abstract methods have no implementation, so non-abstract subclasses must provide one."
+ },
+ {
   "id": "q49dfd88e949",
   "subject": "typescript",
   "topic": "classes",
@@ -73,6 +103,21 @@
   ],
   "answer": 2,
   "explanation": "protected is like private but also visible in derived classes."
+ },
+ {
+  "id": "q9aa627edf30",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What is the accessibility of a class member declared with no modifier?",
+  "options": [
+   "private",
+   "protected",
+   "public",
+   "internal"
+  ],
+  "answer": 2,
+  "explanation": "Class members are public by default in TypeScript."
  },
  {
   "id": "qc90befbaacc",

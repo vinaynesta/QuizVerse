@@ -1,5 +1,20 @@
 [
  {
+  "id": "q155a463ff6b",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What is the standard way to define a custom error type?",
+  "options": [
+   "class ValidationError extends Error {}",
+   "Error.register(\"ValidationError\");",
+   "const ValidationError = new Error.Type(\"Validation\");",
+   "class ValidationError implements Throwable {}"
+  ],
+  "answer": 0,
+  "explanation": "Extending Error gives the custom type a message, a stack trace and correct instanceof checks."
+ },
+ {
   "id": "q46e41e6fe1a",
   "subject": "javascript",
   "topic": "error-handling",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "Throwing Error objects provides a message and a stack trace; throwing strings loses that information."
+ },
+ {
+  "id": "q5740e8f1160",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What does this log?\ntry { null.x; } catch (e) { console.log(e instanceof TypeError); }",
+  "options": [
+   "false",
+   "true",
+   "undefined",
+   "Nothing, the error is not caught"
+  ],
+  "answer": 1,
+  "explanation": "Reading a property of null throws a TypeError, which the catch block receives."
  },
  {
   "id": "q8ef7b06fd3a",

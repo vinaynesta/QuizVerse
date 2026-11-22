@@ -478,5 +478,145 @@
     ],
     "answer": 0,
     "explanation": "A hub is a multiport repeater with no address awareness; switches and bridges are Layer 2."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "Which OSI layer is responsible for data formatting, translation and encryption?",
+    "options": ["Session layer", "Transport layer", "Data Link layer", "Presentation layer"],
+    "answer": 3,
+    "explanation": "The presentation layer (Layer 6) handles data representation such as encoding, compression and encryption."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "Which OSI layer transmits raw bits over the physical medium?",
+    "options": ["Physical layer", "Data Link layer", "Network layer", "Session layer"],
+    "answer": 0,
+    "explanation": "Layer 1 defines electrical, optical and radio signaling, connectors and bit timing."
+  },
+  {
+    "topic": "osi-tcp-ip",
+    "question": "What is the protocol data unit called at the Data Link layer?",
+    "options": ["Packet", "Segment", "Frame", "Message"],
+    "answer": 2,
+    "explanation": "Layer 2 encapsulates network-layer packets into frames with headers and trailers such as MAC addresses and an FCS."
+  },
+  {
+    "topic": "ports",
+    "question": "Which port does FTP use for its control connection by default?",
+    "options": ["20", "21", "22", "69"],
+    "answer": 1,
+    "explanation": "FTP sends commands over TCP port 21, while active-mode data transfers traditionally use port 20."
+  },
+  {
+    "topic": "ports",
+    "question": "What is the default port for Microsoft Remote Desktop Protocol (RDP)?",
+    "options": ["3306", "3389", "5900", "8080"],
+    "answer": 1,
+    "explanation": "RDP listens on TCP (and UDP) port 3389 by default."
+  },
+  {
+    "topic": "ports",
+    "question": "Which port does POP3 use by default for unencrypted mail retrieval?",
+    "options": ["110", "143", "25", "995"],
+    "answer": 0,
+    "explanation": "POP3 uses TCP 110 (995 with TLS), while IMAP uses 143."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "TCP is described as connection-oriented. What does that mean?",
+    "options": ["The two endpoints establish a connection before exchanging data", "Every packet takes the same physical path", "It requires a dedicated circuit like a phone line", "It can only connect two hosts on the same LAN"],
+    "answer": 0,
+    "explanation": "TCP performs a handshake to set up connection state at both ends before sending data, then tears it down afterward."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "Which of these applications typically uses UDP for its normal traffic?",
+    "options": ["DNS lookups", "SSH remote login", "Web browsing over HTTP/1.1", "Sending email with SMTP"],
+    "answer": 0,
+    "explanation": "Most DNS queries are small single request-response exchanges, so they use UDP to avoid connection setup overhead."
+  },
+  {
+    "topic": "dns",
+    "question": "In the name www.example.com, what is 'com'?",
+    "options": ["The hostname", "The top-level domain (TLD)", "The root zone", "The subdomain"],
+    "answer": 1,
+    "explanation": "DNS names are read right to left from the root: com is the TLD, example is the second-level domain and www is a host or subdomain."
+  },
+  {
+    "topic": "dns",
+    "question": "Which DNS record type is used for reverse lookups that map an IP address to a hostname?",
+    "options": ["A", "SRV", "TXT", "PTR"],
+    "answer": 3,
+    "explanation": "Reverse lookups query PTR records under special zones such as in-addr.arpa for IPv4."
+  },
+  {
+    "topic": "dhcp",
+    "question": "What is a DHCP lease?",
+    "options": ["A paid contract with an ISP for a static IP", "The list of all addresses in a DHCP pool", "The MAC address reserved for the DHCP server", "The period of time a client is allowed to use an assigned IP address"],
+    "answer": 3,
+    "explanation": "Clients must renew a lease before it expires or the address returns to the pool for reuse."
+  },
+  {
+    "topic": "dhcp",
+    "question": "A Windows host gets no reply from any DHCP server. Which address range does it typically assign itself?",
+    "options": ["10.0.0.0/8", "169.254.0.0/16 (APIPA link-local)", "127.0.0.0/8", "192.168.0.0/16"],
+    "answer": 1,
+    "explanation": "Automatic Private IP Addressing picks a 169.254.x.x link-local address, which only works on the local segment."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "What is the default subnet mask of a classful Class C network?",
+    "options": ["255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255"],
+    "answer": 2,
+    "explanation": "Classful Class C networks used a /24 mask, leaving 8 bits for hosts."
+  },
+  {
+    "topic": "ip-addressing",
+    "question": "What is the notation 192.168.1.0/24, which writes an address with its prefix length, called?",
+    "options": ["Dotted-hex notation", "CIDR notation", "EUI-64 notation", "Classful notation"],
+    "answer": 1,
+    "explanation": "Classless Inter-Domain Routing notation appends the number of network bits after a slash."
+  },
+  {
+    "topic": "http-https",
+    "question": "Which HTTP method is normally used to submit HTML form data that creates a new resource on the server?",
+    "options": ["GET", "HEAD", "TRACE", "POST"],
+    "answer": 3,
+    "explanation": "POST sends data in the request body for the server to process, such as creating a record."
+  },
+  {
+    "topic": "http-https",
+    "question": "Which class of HTTP status codes indicates a server-side error?",
+    "options": ["5xx", "2xx", "3xx", "4xx"],
+    "answer": 0,
+    "explanation": "5xx codes such as 500 or 503 mean the server failed to fulfil a valid request, while 4xx codes are client errors."
+  },
+  {
+    "topic": "link-layer",
+    "question": "Which protocol prevents loops in a switched Ethernet network with redundant links?",
+    "options": ["Address Resolution Protocol (ARP)", "Open Shortest Path First (OSPF)", "Internet Control Message Protocol (ICMP)", "Spanning Tree Protocol (STP)"],
+    "answer": 3,
+    "explanation": "STP blocks redundant switch ports to form a loop-free tree, preventing broadcast storms."
+  },
+  {
+    "topic": "link-layer",
+    "question": "Which media-access method did classic half-duplex Ethernet use to share the wire?",
+    "options": ["CSMA/CA", "Token passing", "CSMA/CD", "TDMA"],
+    "answer": 2,
+    "explanation": "Carrier Sense Multiple Access with Collision Detection listens before sending and backs off after detecting a collision."
+  },
+  {
+    "topic": "routing",
+    "question": "What is a host's default gateway?",
+    "options": ["The DNS server that resolves its names", "The switch port it is plugged into", "The router to which the host sends traffic destined for other networks", "The DHCP server that gave it an address"],
+    "answer": 2,
+    "explanation": "When a destination is not on the local subnet, the host forwards the packet to its default gateway router."
+  },
+  {
+    "topic": "routing",
+    "question": "What does the TTL field in the IPv4 header prevent?",
+    "options": ["Packets being delivered out of order", "Packets being read by unauthorized hosts", "Packets circulating forever in a routing loop", "Packets exceeding the link MTU"],
+    "answer": 2,
+    "explanation": "Each router decrements TTL and discards the packet when it reaches 0, sending an ICMP Time Exceeded message."
   }
 ]

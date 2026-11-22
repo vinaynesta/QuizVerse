@@ -278,5 +278,145 @@
     "options": ["Rotating disk platters", "Encrypting I/O traffic", "Buffering output (e.g. print jobs) on disk so a slow device can process jobs one at a time", "Polling a device in a loop"],
     "answer": 2,
     "explanation": "A spool holds output for devices like printers that cannot interleave jobs, so each job is queued and printed in turn."
+  },
+  {
+    "topic": "kernel",
+    "question": "What characterizes a monolithic kernel?",
+    "options": ["Each OS service runs as a separate user-space server", "The kernel runs entirely in user mode", "There is no distinction between kernel and applications", "Most OS services such as drivers, file systems and scheduling run together in kernel space"],
+    "answer": 3,
+    "explanation": "A monolithic kernel places most services in one large privileged address space, which is fast but less isolated than a microkernel."
+  },
+  {
+    "topic": "kernel",
+    "question": "What is the main job of a bootloader?",
+    "options": ["To schedule user processes on the CPU", "To translate virtual addresses to physical addresses", "To format the disk before each boot", "To load the OS kernel into memory and start it when the machine powers on"],
+    "answer": 3,
+    "explanation": "Firmware runs the bootloader, which locates the kernel image, loads it into memory and transfers control to it."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "Which term describes the basic unit of CPU utilization that has its own program counter, registers and stack within a process?",
+    "options": ["Page", "Segment", "Inode", "Thread"],
+    "answer": 3,
+    "explanation": "A thread is the unit the CPU schedules; several threads can exist inside one process and share its address space."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "In the five-state process model, which state is a process in while it waits for an I/O operation to complete?",
+    "options": ["Waiting (blocked)", "Ready", "Running", "Terminated"],
+    "answer": 0,
+    "explanation": "A process waiting for an event such as I/O completion is blocked and moves back to Ready once the event occurs."
+  },
+  {
+    "topic": "processes-threads",
+    "question": "Pipes, message queues and shared memory are all mechanisms for:",
+    "options": ["Disk scheduling", "Page replacement", "Inter-process communication (IPC)", "Interrupt masking"],
+    "answer": 2,
+    "explanation": "IPC mechanisms let separate processes exchange data and coordinate with each other."
+  },
+  {
+    "topic": "system-calls",
+    "question": "Which UNIX system call does a parent process use to pause until one of its children terminates?",
+    "options": ["exec()", "kill()", "pipe()", "wait()"],
+    "answer": 3,
+    "explanation": "wait() blocks the parent until a child exits and collects the child's exit status, which also removes the zombie entry."
+  },
+  {
+    "topic": "system-calls",
+    "question": "What happens to the CPU's privilege mode when a user program makes a system call?",
+    "options": ["It stays in user mode the whole time", "It switches from user mode to kernel mode through a trap", "It switches from kernel mode to user mode", "The CPU is powered down until the call completes"],
+    "answer": 1,
+    "explanation": "A system call executes a trap instruction that raises the CPU to kernel mode so the kernel can perform the privileged service."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "In CPU scheduling, what is waiting time?",
+    "options": ["The time spent executing on the CPU", "The total time a process spends in the ready queue", "The time from submission to completion", "The time spent performing I/O"],
+    "answer": 1,
+    "explanation": "Waiting time counts only the time a process is ready but not running; turnaround time also includes execution and I/O."
+  },
+  {
+    "topic": "cpu-scheduling",
+    "question": "What is response time in CPU scheduling?",
+    "options": ["The total time a process spends in the ready queue", "The time from submission until the process completes", "The time from submission of a request until the first response is produced", "The time the dispatcher takes to switch processes"],
+    "answer": 2,
+    "explanation": "Response time matters for interactive systems because it measures how quickly a process starts responding, not when it finishes."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is a binary semaphore?",
+    "options": ["A semaphore that can count any number of resources", "A semaphore whose value can only be 0 or 1", "A semaphore that stores binary data", "A semaphore shared only between two processes"],
+    "answer": 1,
+    "explanation": "A binary semaphore behaves much like a mutex lock, allowing at most one holder at a time."
+  },
+  {
+    "topic": "synchronization",
+    "question": "What is busy waiting?",
+    "options": ["Blocking in the kernel until an event occurs", "Repeatedly checking a condition in a loop while waiting, which wastes CPU cycles", "Waiting for a disk transfer to finish via DMA", "Sleeping for a fixed time before retrying"],
+    "answer": 1,
+    "explanation": "A spinning thread consumes CPU time while it waits, which is why blocking primitives are preferred for long waits."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "How do most general-purpose operating systems such as Linux and Windows handle deadlocks?",
+    "options": ["They largely ignore the problem and leave it to applications (the ostrich approach)", "They run the banker's algorithm on every request", "They prevent all four Coffman conditions", "They reboot automatically when a deadlock occurs"],
+    "answer": 0,
+    "explanation": "Deadlocks are rare and prevention or avoidance is expensive, so general-purpose kernels usually ignore them and rely on developers."
+  },
+  {
+    "topic": "deadlocks",
+    "question": "Which deadlock condition says that a resource can be held by only one process at a time?",
+    "options": ["Hold and wait", "No preemption", "Mutual exclusion", "Circular wait"],
+    "answer": 2,
+    "explanation": "Mutual exclusion means a resource is non-sharable, so other requesters must wait until it is released."
+  },
+  {
+    "topic": "memory-management",
+    "question": "What does a page table store?",
+    "options": ["The mapping from a process's page numbers to physical frame numbers", "The list of open files of a process", "The order in which processes will be scheduled", "The contents of each page on disk"],
+    "answer": 0,
+    "explanation": "During address translation the page number indexes the page table to find the frame that holds the page."
+  },
+  {
+    "topic": "memory-management",
+    "question": "Which contiguous allocation strategy places a process in the first free hole that is large enough?",
+    "options": ["Best fit", "Worst fit", "Next fit from the largest hole", "First fit"],
+    "answer": 3,
+    "explanation": "First fit stops searching as soon as it finds a hole big enough, making it fast and simple."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "What does the valid-invalid bit in a page-table entry indicate?",
+    "options": ["Whether the page is a legal part of the process's address space and currently in memory", "Whether the page has been modified", "Whether the page is shared with another process", "Whether the page belongs to the kernel"],
+    "answer": 0,
+    "explanation": "Accessing a page marked invalid traps to the OS, which either loads the page (page fault) or terminates the process for an illegal access."
+  },
+  {
+    "topic": "virtual-memory",
+    "question": "Which page-replacement algorithm evicts the page that has been in memory the longest?",
+    "options": ["LRU", "FIFO", "Optimal", "LFU"],
+    "answer": 1,
+    "explanation": "FIFO replaces the oldest loaded page regardless of how recently or often it has been used."
+  },
+  {
+    "topic": "file-systems",
+    "question": "What is a directory in a file system?",
+    "options": ["A hardware device that stores files", "A list of running processes", "A special file that maps file names to the files (e.g. inodes) they refer to", "A region of RAM reserved for file caching"],
+    "answer": 2,
+    "explanation": "Directories organize files by holding name-to-file entries, which allows hierarchical path names."
+  },
+  {
+    "topic": "file-systems",
+    "question": "Which file-allocation method stores each file as a chain of disk blocks, with each block pointing to the next?",
+    "options": ["Contiguous allocation", "Indexed allocation", "Linked allocation", "Hashed allocation"],
+    "answer": 2,
+    "explanation": "Linked allocation avoids external fragmentation but makes random access slow because the chain must be followed from the start."
+  },
+  {
+    "topic": "io-systems",
+    "question": "What is polling in I/O?",
+    "options": ["The CPU repeatedly reads a device's status register to see whether it is ready", "The device signals the CPU with an interrupt when it is ready", "A controller copies data to memory without the CPU", "Output is queued on disk for a slow device"],
+    "answer": 0,
+    "explanation": "Polling is simple but wastes CPU cycles when the device is slow, which is why interrupts are often used instead."
   }
 ]

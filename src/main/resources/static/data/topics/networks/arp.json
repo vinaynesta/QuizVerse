@@ -88,5 +88,35 @@
   ],
   "answer": 1,
   "explanation": "The requester doesn't know the target MAC yet, so it broadcasts to FF:FF:FF:FF:FF:FF; the reply is unicast."
+ },
+ {
+  "id": "qb98986402ea",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What is proxy ARP?",
+  "options": [
+   "A host caching ARP replies for its neighbors",
+   "A router answering ARP requests on behalf of hosts on another network so traffic is sent to it",
+   "Encrypting ARP messages between switches",
+   "An ARP request sent through an HTTP proxy"
+  ],
+  "answer": 1,
+  "explanation": "With proxy ARP, a host can reach an off-subnet address without a gateway configured because the router replies with its own MAC."
+ },
+ {
+  "id": "qce38298b157",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "Why do entries in a host's ARP cache expire after a while?",
+  "options": [
+   "So the switch can relearn its MAC table",
+   "To free the IP address for DHCP reuse",
+   "Because ARP replies are encrypted with a short-lived key",
+   "So that stale IP-to-MAC mappings are refreshed when hosts change addresses or network cards"
+  ],
+  "answer": 3,
+  "explanation": "Timing out entries forces a fresh ARP request, which keeps the cache correct after hardware or address changes."
  }
 ]

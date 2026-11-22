@@ -478,5 +478,145 @@
     ],
     "answer": 0,
     "explanation": "The receive window is flow control: it stops a fast sender from overrunning the receiver's buffer."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the network address of host 172.16.45.200/21?",
+    "options": ["172.16.32.0", "172.16.40.0", "172.16.44.0", "172.16.45.0"],
+    "answer": 1,
+    "explanation": "A /21 has a block size of 8 in the third octet, and 45 falls in the 40-47 block, so the network is 172.16.40.0."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the broadcast address of host 192.168.5.100/28?",
+    "options": ["192.168.5.103", "192.168.5.127", "192.168.5.111", "192.168.5.255"],
+    "answer": 2,
+    "explanation": "A /28 has 16-address blocks; 100 is in 96-111, so the broadcast address is 192.168.5.111."
+  },
+  {
+    "topic": "subnetting",
+    "question": "How many usable host addresses does a /22 IPv4 subnet provide?",
+    "options": ["510", "1024", "2046", "1022"],
+    "answer": 3,
+    "explanation": "A /22 leaves 32 - 22 = 10 host bits: 2^10 - 2 = 1022 usable addresses."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the dotted-decimal subnet mask for a /19 prefix?",
+    "options": ["255.255.224.0", "255.255.192.0", "255.255.240.0", "255.255.248.0"],
+    "answer": 0,
+    "explanation": "A /19 uses 8 + 8 + 3 network bits, and three 1-bits in the third octet give 128 + 64 + 32 = 224."
+  },
+  {
+    "topic": "subnetting",
+    "question": "What is the smallest single route that summarizes the networks 192.168.16.0/24 through 192.168.23.0/24?",
+    "options": ["192.168.16.0/21", "192.168.16.0/20", "192.168.16.0/22", "192.168.0.0/19"],
+    "answer": 0,
+    "explanation": "The eight /24s from 16 to 23 share the first 21 bits (16 = 00010000), so they aggregate exactly into 192.168.16.0/21."
+  },
+  {
+    "topic": "subnetting",
+    "question": "Are hosts 10.1.1.10/27 and 10.1.1.40/27 on the same subnet?",
+    "options": ["Yes; both are in 10.1.1.0/27", "No; they are in 10.1.1.0/27 and 10.1.1.32/27", "Yes; both are in 10.1.1.0/24", "No; they are in 10.1.1.0/28 and 10.1.1.32/28"],
+    "answer": 1,
+    "explanation": "A /27 has 32-address blocks, so .10 falls in .0-.31 and .40 falls in .32-.63."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "In the sockets API, which client call causes TCP to send the initial SYN?",
+    "options": ["listen()", "connect()", "accept()", "bind()"],
+    "answer": 1,
+    "explanation": "connect() starts the active open; the server side must already have called listen(), and accept() returns completed connections."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "What does a host normally do when it receives a TCP SYN for a port with no listening socket?",
+    "options": ["It replies with a SYN-ACK and waits", "It replies with a RST segment", "It silently queues the SYN until a socket opens", "It replies with an ICMP Echo Reply"],
+    "answer": 1,
+    "explanation": "With no listener, the TCP stack resets the attempt, which the client sees as connection refused."
+  },
+  {
+    "topic": "tcp-handshake",
+    "question": "Which TCP option, sent only in SYN segments, advertises the largest segment payload a host is willing to receive?",
+    "options": ["Window Scale", "Selective Acknowledgment (SACK)", "Timestamps", "Maximum Segment Size (MSS)"],
+    "answer": 3,
+    "explanation": "Each side announces its MSS during the handshake so the peer avoids sending segments that are too large."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "A TCP receiver sends a segment with acknowledgment number 5001. What does it mean?",
+    "options": ["Exactly 5001 segments have been received", "All bytes up to 5000 have been received and the next expected byte is 5001", "Byte 5001 was received but earlier bytes are missing", "The receiver's window is 5001 bytes"],
+    "answer": 1,
+    "explanation": "TCP acknowledgments are cumulative and name the next sequence number the receiver expects."
+  },
+  {
+    "topic": "tcp-udp",
+    "question": "What does Nagle's algorithm do?",
+    "options": ["Holds back small segments while earlier data is still unacknowledged, combining them into fewer packets", "Doubles the congestion window every round trip", "Retransmits a segment after three duplicate ACKs", "Closes idle connections after two hours"],
+    "answer": 0,
+    "explanation": "Nagle reduces tinygram overhead but can add latency for interactive traffic, so TCP_NODELAY disables it."
+  },
+  {
+    "topic": "http-methods",
+    "question": "Which of these HTTP methods is NOT idempotent according to RFC 9110?",
+    "options": ["PUT", "DELETE", "POST", "GET"],
+    "answer": 2,
+    "explanation": "Repeating a POST may create additional resources or side effects, whereas repeating PUT, DELETE or GET leaves the same intended state."
+  },
+  {
+    "topic": "http-methods",
+    "question": "What does the HTTP TRACE method do?",
+    "options": ["Lists the methods a resource supports", "Opens a tunnel through a proxy", "Asks the server to echo back the received request, for diagnostic loop-back testing", "Returns only the headers of a resource"],
+    "answer": 2,
+    "explanation": "TRACE reflects the request as received, which is why it is usually disabled for security reasons such as cross-site tracing."
+  },
+  {
+    "topic": "http-status",
+    "question": "What does HTTP status 201 Created indicate?",
+    "options": ["The request was accepted but not yet processed", "The resource has moved temporarily", "The request succeeded but there is no content to return", "The request succeeded and a new resource was created, often identified by a Location header"],
+    "answer": 3,
+    "explanation": "201 is typically returned by POST or PUT when a new resource is created; 202 means accepted and 204 means no content."
+  },
+  {
+    "topic": "http-status",
+    "question": "Which status code means the server is temporarily unable to handle the request, for example due to overload or maintenance?",
+    "options": ["500 Internal Server Error", "504 Gateway Timeout", "501 Not Implemented", "503 Service Unavailable"],
+    "answer": 3,
+    "explanation": "503 signals a temporary condition and may include a Retry-After header telling clients when to try again."
+  },
+  {
+    "topic": "http-status",
+    "question": "How does 307 Temporary Redirect differ from 302 Found?",
+    "options": ["307 is permanent while 302 is temporary", "307 can only be used for GET requests", "307 requires the client to repeat the request with the same method and body, while clients often change a 302 POST into a GET", "307 tells the client to use a cached copy"],
+    "answer": 2,
+    "explanation": "307 was introduced to remove the method-change ambiguity of 302; 308 is its permanent counterpart."
+  },
+  {
+    "topic": "arp",
+    "question": "Why do entries in a host's ARP cache expire after a while?",
+    "options": ["So that stale IP-to-MAC mappings are refreshed when hosts change addresses or network cards", "To free the IP address for DHCP reuse", "Because ARP replies are encrypted with a short-lived key", "So the switch can relearn its MAC table"],
+    "answer": 0,
+    "explanation": "Timing out entries forces a fresh ARP request, which keeps the cache correct after hardware or address changes."
+  },
+  {
+    "topic": "arp",
+    "question": "What is proxy ARP?",
+    "options": ["A host caching ARP replies for its neighbors", "An ARP request sent through an HTTP proxy", "Encrypting ARP messages between switches", "A router answering ARP requests on behalf of hosts on another network so traffic is sent to it"],
+    "answer": 3,
+    "explanation": "With proxy ARP, a host can reach an off-subnet address without a gateway configured because the router replies with its own MAC."
+  },
+  {
+    "topic": "nat",
+    "question": "How does static NAT differ from dynamic NAT?",
+    "options": ["Static NAT maps many hosts to one address using ports", "Static NAT only works for IPv6", "Static NAT is a fixed one-to-one mapping between a private and a public address, while dynamic NAT assigns public addresses from a pool as needed", "Dynamic NAT never changes the source address"],
+    "answer": 2,
+    "explanation": "Static mappings are used for servers that must be reachable at a known public address; dynamic mappings are temporary."
+  },
+  {
+    "topic": "dns",
+    "question": "Which DNS record type lists the authoritative name servers for a zone?",
+    "options": ["NS", "SOA", "MX", "PTR"],
+    "answer": 0,
+    "explanation": "NS records delegate a zone to its authoritative servers, and the parent zone holds matching NS records to point resolvers there."
   }
 ]

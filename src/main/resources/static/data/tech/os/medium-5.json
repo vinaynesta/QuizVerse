@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qcec14da87c8",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Two threads each increment a shared integer counter 1000 times with no synchronization, starting from 0. What can the final value be?",
+  "options": [
+   "It is always exactly 2000",
+   "It is always exactly 1000",
+   "Some value less than 2000 is possible",
+   "It is always greater than 2000"
+  ],
+  "answer": 2,
+  "explanation": "counter++ is a load-add-store sequence, so interleaved updates can overwrite each other and lose increments."
+ },
+ {
+  "id": "qa8d44eef5d2",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "P1, P2 and P3 arrive at time 0 in that order with bursts 5, 3 and 1 ms. With Round Robin and a 2 ms quantum, what is the average turnaround time?",
+  "options": [
+   "7.33 ms",
+   "8.67 ms",
+   "9 ms",
+   "6 ms"
+  ],
+  "answer": 0,
+  "explanation": "The schedule P1 0-2, P2 2-4, P3 4-5, P1 5-7, P2 7-8, P1 8-9 gives completions 9, 8 and 5; (9+8+5)/3 = 7.33 ms."
+ },
+ {
+  "id": "qefa8862b398",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Once a deadlock has been detected, what are the two general approaches to recovering from it?",
+  "options": [
+   "Running the banker's algorithm or using aging",
+   "Adding more CPUs or increasing RAM",
+   "Terminating one or more processes, or preempting resources from them",
+   "Disabling interrupts or flushing the TLB"
+  ],
+  "answer": 2,
+  "explanation": "Recovery either aborts processes to break the cycle or takes resources away (with rollback) from chosen victims."
+ },
+ {
+  "id": "q73c7a4cc62f",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 3 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does FIFO replacement cause?",
+  "options": [
+   "16",
+   "14",
+   "12",
+   "15"
+  ],
+  "answer": 0,
+  "explanation": "Simulating FIFO with 3 frames gives hits only on the 5th, 11th, 15th and 18th references, so 20 - 4 = 16 faults."
+ },
+ {
+  "id": "q5a5839992d1",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What does the atomic compare_and_swap(value, expected, new) instruction do?",
+  "options": [
+   "Always swaps value with new and returns nothing",
+   "Sets value to new only if it currently equals expected, and returns the original value",
+   "Compares two locks and releases the smaller one",
+   "Disables interrupts until the next context switch"
+  ],
+  "answer": 1,
+  "explanation": "Because the compare and the update happen atomically, CAS can be used to build locks and lock-free data structures."
+ },
+ {
+  "id": "qc51a12ce91a",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Under non-preemptive SJF, processes arrive as P1 (t=0, burst 7), P2 (t=2, burst 4), P3 (t=4, burst 1), P4 (t=5, burst 4). What is the average waiting time?",
+  "options": [
+   "4 ms",
+   "3 ms",
+   "5.25 ms",
+   "6 ms"
+  ],
+  "answer": 0,
+  "explanation": "P1 runs 0-7, then P3 7-8, P2 8-12 and P4 12-16, giving waits 0, 3, 6 and 7; 16/4 = 4 ms."
+ },
+ {
+  "id": "q53e82c72fcd",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Which critical-section requirement guarantees a limit on how many times other processes may enter their critical sections after a process has requested entry?",
+  "options": [
+   "Mutual exclusion",
+   "Progress",
+   "Bounded waiting",
+   "Atomicity"
+  ],
+  "answer": 2,
+  "explanation": "Bounded waiting prevents a requesting process from being postponed indefinitely by others repeatedly entering first."
+ },
+ {
+  "id": "qd65cbde8e50",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Five processes arrive at time 0 with (burst, priority): P1 (10, 3), P2 (1, 1), P3 (2, 4), P4 (1, 5), P5 (5, 2). Using non-preemptive priority scheduling where a lower number means higher priority, what is the average waiting time?",
+  "options": [
+   "9.6 ms",
+   "6.2 ms",
+   "8.2 ms",
+   "12 ms"
+  ],
+  "answer": 2,
+  "explanation": "The order is P2, P5, P1, P3, P4, giving waits 0, 1, 6, 16 and 18; (0+1+6+16+18)/5 = 8.2 ms."
+ },
+ {
+  "id": "qbd18ca65dcf",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Under FCFS, processes arrive as P1 (t=0, burst 5), P2 (t=1, burst 3), P3 (t=2, burst 8), P4 (t=3, burst 6). What is the average waiting time?",
+  "options": [
+   "4.5 ms",
+   "6.25 ms",
+   "7 ms",
+   "5.75 ms"
+  ],
+  "answer": 3,
+  "explanation": "Start times are 0, 5, 8 and 16, so waits are 0, 4, 6 and 13; 23/4 = 5.75 ms."
+ },
+ {
+  "id": "qfbb8f4bb458",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Why do many schedulers give higher priority to I/O-bound processes than to CPU-bound ones?",
+  "options": [
+   "I/O-bound processes use the CPU briefly and then block, so favoring them keeps devices busy and improves responsiveness",
+   "CPU-bound processes cannot be preempted",
+   "I/O-bound processes always have the longest CPU bursts",
+   "I/O-bound processes never need the CPU"
+  ],
+  "answer": 0,
+  "explanation": "Short CPU bursts from I/O-bound jobs finish quickly and overlap their I/O with CPU-bound work, raising overall utilization."
+ }
+]

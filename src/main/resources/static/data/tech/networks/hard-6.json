@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9e0b4164824",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What does Random Early Detection (RED) do in a router queue?",
+  "options": [
+   "Drops or marks packets probabilistically as the average queue length grows, before the queue is full",
+   "Drops packets only when the buffer is completely full",
+   "Gives strict priority to TCP over UDP",
+   "Reorders packets to put small ones first"
+  ],
+  "answer": 0,
+  "explanation": "Early random signals make different flows back off at different times, avoiding global synchronization and long standing queues."
+ },
+ {
+  "id": "q6e49ee2e57f",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does mutual TLS (mTLS) add to a standard TLS handshake?",
+  "options": [
+   "The handshake is performed twice for extra security",
+   "Both sides share a single static symmetric key",
+   "The server encrypts the certificate with the client's password",
+   "The client also presents a certificate so the server can authenticate it"
+  ],
+  "answer": 3,
+  "explanation": "In mTLS the server sends a CertificateRequest and verifies the client certificate, which is common for service-to-service authentication."
+ },
+ {
+  "id": "q6bc694f72e0",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "Which technique helps prevent the count-to-infinity problem in distance-vector routing?",
+  "options": [
+   "Longest prefix match",
+   "Equal-cost multipath",
+   "Flooding link-state advertisements",
+   "Split horizon with poison reverse"
+  ],
+  "answer": 3,
+  "explanation": "Advertising a route back to the neighbor it was learned from with an infinite metric stops two routers from bouncing a dead route between them."
+ },
+ {
+  "id": "q404120763c3",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does forward secrecy provide in TLS?",
+  "options": [
+   "Compromise of the server's long-term private key does not reveal the keys of past sessions",
+   "Session keys are reused securely across many connections",
+   "Encrypted data can be forwarded through proxies without decryption",
+   "The client can verify the server's certificate chain offline"
+  ],
+  "answer": 0,
+  "explanation": "Ephemeral (EC)DHE key exchange derives per-session keys that are discarded, so recorded traffic stays safe if the long-term key leaks later."
+ },
+ {
+  "id": "q275fc324f68",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What is OCSP stapling?",
+  "options": [
+   "The client caches the server certificate for future sessions",
+   "The server attaches a recent, CA-signed OCSP response about its own certificate to the TLS handshake",
+   "The CA embeds the full revocation list into every certificate",
+   "The browser contacts the CA for every page load"
+  ],
+  "answer": 1,
+  "explanation": "Stapling avoids a separate client lookup to the CA, improving privacy and latency while still proving the certificate is not revoked."
+ },
+ {
+  "id": "q83df871bb4f",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Per RFC 6298, if SRTT = 100 ms and RTTVAR = 20 ms (with negligible clock granularity), what is the retransmission timeout, ignoring the recommended 1-second minimum?",
+  "options": [
+   "120 ms",
+   "180 ms",
+   "140 ms",
+   "200 ms"
+  ],
+  "answer": 1,
+  "explanation": "RTO = SRTT + max(G, 4 x RTTVAR) = 100 + 4 x 20 = 180 ms."
+ },
+ {
+  "id": "q5231f77a43a",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "At which levels does HTTP/2 apply flow control?",
+  "options": [
+   "Only for the connection as a whole",
+   "Both per stream and for the connection as a whole",
+   "Only per stream",
+   "HTTP/2 has no flow control and relies on TCP alone"
+  ],
+  "answer": 1,
+  "explanation": "WINDOW_UPDATE frames adjust credit for individual streams and for the entire connection, so one stream cannot hog the receiver's buffers."
+ },
+ {
+  "id": "qf73a90e3039",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "A TCP sender starts slow start with cwnd = 1 MSS and ssthresh = 32 MSS. With no losses and every segment acknowledged, how many RTTs until cwnd reaches 32 MSS?",
+  "options": [
+   "4",
+   "5",
+   "6",
+   "32"
+  ],
+  "answer": 1,
+  "explanation": "cwnd doubles each RTT: 1, 2, 4, 8, 16, 32, so it takes log2(32) = 5 RTTs."
+ },
+ {
+  "id": "q3843470c669",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Why does QUIC encrypt most of its transport header, including packet numbers?",
+  "options": [
+   "Because TLS 1.3 forbids plaintext headers",
+   "Because UDP checksums are too weak",
+   "To make packets smaller than TCP segments",
+   "To stop middleboxes from depending on header fields, which would hinder protocol evolution, and to limit tracking"
+  ],
+  "answer": 3,
+  "explanation": "TCP's visible headers led middleboxes to ossify its behavior; QUIC exposes only minimal fields so it can evolve freely."
+ },
+ {
+  "id": "q7317a4e81f5",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Using the Mathis approximation throughput = (MSS/RTT) x 1.22/sqrt(p), what is the throughput of a Reno flow with a 1460-byte MSS, 100 ms RTT and 0.01% loss rate?",
+  "options": [
+   "About 1.4 Mbps",
+   "About 117 Mbps",
+   "About 14 Mbps",
+   "About 5.2 Mbps"
+  ],
+  "answer": 2,
+  "explanation": "MSS/RTT = 11680 bit / 0.1 s = 116.8 kbit/s, and 1.22/sqrt(0.0001) = 122, giving about 14.2 Mbps."
+ }
+]

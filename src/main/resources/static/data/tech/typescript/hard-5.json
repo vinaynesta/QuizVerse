@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qe093f949a59",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "What is `{ [K in \"a\" | \"b\"]: K }`?",
+  "options": [
+   "{ a: string; b: string }",
+   "{ K: \"a\" | \"b\" }",
+   "\"a\" | \"b\"",
+   "{ a: \"a\"; b: \"b\" }"
+  ],
+  "answer": 3,
+  "explanation": "The mapped type creates one property per key, and each value is that key's literal type."
+ },
+ {
+  "id": "qe11a0fd6180",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "What is `type T = never extends string ? 1 : 0;`?",
+  "options": [
+   "1",
+   "never",
+   "1 | 0",
+   "0"
+  ],
+  "answer": 0,
+  "explanation": "Outside a generic type parameter there is no distribution, and never is assignable to every type."
+ },
+ {
+  "id": "q5b89611ca6c",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type IsAny<T> = 0 extends 1 & T ? true : false;`, what are `IsAny<any>` and `IsAny<unknown>`?",
+  "options": [
+   "false and false",
+   "true and true",
+   "true and false",
+   "false and true"
+  ],
+  "answer": 2,
+  "explanation": "1 & any collapses to any, which 0 extends, while 1 & unknown is just 1."
+ },
+ {
+  "id": "qbbd6f981880",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "Given ``type Px = `${number}px`;``, which assignment compiles?",
+  "options": [
+   "const a: Px = \"tenpx\";",
+   "const a: Px = \"px10\";",
+   "const a: Px = 10;",
+   "const a: Px = \"10px\";"
+  ],
+  "answer": 3,
+  "explanation": "The ${number} placeholder accepts any string that parses as a number, followed by px."
+ },
+ {
+  "id": "qae37c80effc",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "What is `Capitalize<\"hello world\">`?",
+  "options": [
+   "\"Hello World\"",
+   "\"HELLO WORLD\"",
+   "\"Hello world\"",
+   "\"helloWorld\""
+  ],
+  "answer": 2,
+  "explanation": "Capitalize uppercases only the first character of the string literal."
+ },
+ {
+  "id": "qc3c2c6b8b42",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Given `type Keys<T> = { [K in keyof T]: K }[keyof T];`, what is `Keys<{ x: 1; y: 2 }>`?",
+  "options": [
+   "1 | 2",
+   "\"x\" | \"y\"",
+   "{ x: \"x\"; y: \"y\" }",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "Indexing the mapped type by all its keys produces the union of its property value types, which are the key names."
+ },
+ {
+  "id": "q6650d847d96",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Which definition matches the built-in `Exclude<T, U>`?",
+  "options": [
+   "T extends U ? never : T",
+   "[T] extends [U] ? never : T",
+   "T extends U ? T : never",
+   "U extends T ? never : U"
+  ],
+  "answer": 0,
+  "explanation": "Exclude distributes over the union T and drops each member assignable to U."
+ },
+ {
+  "id": "q0456da6ab35",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "What is `keyof never`?",
+  "options": [
+   "never",
+   "string | number | symbol",
+   "string",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "never is the empty set, which is assignable to every type, so it is treated as having every possible key."
+ },
+ {
+  "id": "q3cc1a08535e",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Args<T> = T extends (...a: infer A) => any ? A : never;`, what is `Args<(x: string, y?: number) => void>`?",
+  "options": [
+   "[x: string, y?: number]",
+   "[string, number]",
+   "string | number",
+   "(string | undefined)[]"
+  ],
+  "answer": 0,
+  "explanation": "Inferring from a rest parameter produces the labeled parameter tuple, keeping optional elements."
+ },
+ {
+  "id": "q9f6a0a73d53",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "Given ``type S<T> = T extends `${infer H}-${infer R}` ? [H, R] : never;``, what is `S<\"a-b-c\">`?",
+  "options": [
+   "[\"a\", \"b-c\"]",
+   "[\"a\", \"b\", \"c\"]",
+   "[\"a-b\", \"c\"]",
+   "never"
+  ],
+  "answer": 0,
+  "explanation": "The first infer placeholder matches as little as possible, stopping at the first hyphen."
+ }
+]

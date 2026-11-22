@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0d9868c5839",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nconsole.log(Object.getPrototypeOf(Object.getPrototypeOf({})));",
+  "options": [
+   "Object.prototype",
+   "undefined",
+   "{}",
+   "null"
+  ],
+  "answer": 3,
+  "explanation": "A plain object's prototype is Object.prototype, whose own prototype is null, the end of the chain."
+ },
+ {
   "id": "q283e578de5a",
   "subject": "javascript",
   "topic": "prototypes",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "Assigning to child.x creates an own property on child that shadows the inherited one; parent is unchanged."
+ },
+ {
+  "id": "q50f1a009fb8",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() { this.x = 1; }\nF.prototype.x = 2;\nconst f = new F();\ndelete f.x;\nconsole.log(f.x);",
+  "options": [
+   "2",
+   "1",
+   "undefined",
+   "A TypeError is thrown"
+  ],
+  "answer": 0,
+  "explanation": "delete removes only the own property, so the lookup falls through to the prototype's x."
  },
  {
   "id": "q5b2bc992340",
@@ -103,5 +133,20 @@
   ],
   "answer": 3,
   "explanation": "extends links both chains: B.prototype inherits from A.prototype and the constructor B itself inherits from A, enabling static inheritance."
+ },
+ {
+  "id": "qe6f1abc0e01",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() { return { a: 1 }; }\nF.prototype.b = 2;\nconst f = new F();\nconsole.log(f.b, f instanceof F);",
+  "options": [
+   "2 false",
+   "2 true",
+   "undefined false",
+   "undefined true"
+  ],
+  "answer": 2,
+  "explanation": "When a constructor returns an object, new yields that object instead of the newly created instance linked to F.prototype."
  }
 ]

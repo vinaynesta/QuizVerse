@@ -30,6 +30,21 @@
   "explanation": "Use const for bindings and readonly for properties, index signatures and array types."
  },
  {
+  "id": "q607e3ed3bcf",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `const ro: readonly string[] = [];`, what happens with `const mu: string[] = ro;`?",
+  "options": [
+   "It compiles, because both hold strings",
+   "It compiles and makes ro mutable",
+   "A compile error, because a readonly array is not assignable to a mutable one",
+   "It compiles but mu becomes readonly"
+  ],
+  "answer": 2,
+  "explanation": "A mutable array can be assigned to a readonly type, but not the other way around, since that would allow mutation."
+ },
+ {
   "id": "q9cafad72a30",
   "subject": "typescript",
   "topic": "readonly",
@@ -43,5 +58,35 @@
   ],
   "answer": 2,
   "explanation": "as const makes properties readonly and keeps literal types."
+ },
+ {
+  "id": "qbf4e3d7db5e",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `const xs: ReadonlyArray<number> = [1];`, which operation is allowed?",
+  "options": [
+   "xs.map(n => n * 2)",
+   "xs[0] = 5",
+   "xs.push(2)",
+   "xs.sort()"
+  ],
+  "answer": 0,
+  "explanation": "ReadonlyArray removes mutating methods and index assignment but keeps non-mutating ones like map."
+ },
+ {
+  "id": "qe3e77a21cce",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `class P { readonly x: number; }`, where can `x` be assigned?",
+  "options": [
+   "Anywhere inside the class",
+   "Only from outside the class",
+   "Nowhere, it must stay undefined",
+   "Only in its declaration or in the constructor"
+  ],
+  "answer": 3,
+  "explanation": "readonly properties can be initialized at declaration or in the constructor, but not reassigned afterwards."
  }
 ]

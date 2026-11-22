@@ -32,6 +32,22 @@
   "explanation": "AVERAGE returns the arithmetic mean of its arguments."
  },
  {
+  "id": "q420a733f366",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "In MS Excel, a group of adjacent cells such as A1:C5 is called a:",
+  "options": [
+   "Range",
+   "Sheet",
+   "Field",
+   "Table"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A range is a rectangular block of cells identified by its first and last cell references."
+ },
+ {
   "id": "q4d57fad41f6",
   "subject": "computer",
   "topic": "ms-excel",
@@ -48,6 +64,38 @@
   "explanation": "Columns are labelled with letters (A, B, C...), while rows are numbered."
  },
  {
+  "id": "q4fbce985547",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "What is the result of =SUM(2,3,5) in MS Excel?",
+  "options": [
+   "235",
+   "30",
+   "10",
+   "8"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "SUM adds its arguments: 2 + 3 + 5 = 10."
+ },
+ {
+  "id": "q502a807dc91",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "What is the result of =10/4 in MS Excel?",
+  "options": [
+   "2.5",
+   "2",
+   "3",
+   "0.4"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The / operator performs ordinary division, so 10 / 4 = 2.5."
+ },
+ {
   "id": "q64e047822a6",
   "subject": "computer",
   "topic": "ms-excel",
@@ -62,6 +110,38 @@
   "needsReview": true,
   "answer": 2,
   "explanation": "Excel 2007 and later save workbooks with the .xlsx extension by default."
+ },
+ {
+  "id": "q69214b4996a",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "What is the default name of the first worksheet in a new MS Excel workbook?",
+  "options": [
+   "Sheet1",
+   "Book1",
+   "Page1",
+   "Tab1"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "New worksheets are named Sheet1, Sheet2 and so on; Book1 is the default name of the workbook itself."
+ },
+ {
+  "id": "q6c2c19e1512",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "In MS Excel, the bar used to view and edit the contents of the active cell is the:",
+  "options": [
+   "Formula bar",
+   "Title bar",
+   "Status bar",
+   "Task bar"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The formula bar displays the actual formula or value stored in the selected cell."
  },
  {
   "id": "q782afcd9c3d",
@@ -94,6 +174,22 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "The SUM function returns the total of the given numbers or range."
+ },
+ {
+  "id": "q9a957783cd4",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "In MS Excel, the box at the left of the formula bar that shows the address of the active cell is the:",
+  "options": [
+   "Address Bar",
+   "Cell Box",
+   "Name Box",
+   "Title Box"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The Name Box shows the active cell's reference, such as B4, and can be used to jump to a cell."
  },
  {
   "id": "q9c36526a18f",
@@ -160,6 +256,38 @@
   "explanation": "An Excel file is a workbook made up of one or more worksheets."
  },
  {
+  "id": "qe9f16bea56d",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "easy",
+  "question": "In MS Excel, which symbol is used for multiplication in a formula?",
+  "options": [
+   "x",
+   "#",
+   "^",
+   "*"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The asterisk (*) is the multiplication operator, e.g. =A1*B1; ^ is used for powers."
+ },
+ {
+  "id": "q083e0fe05b8",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =AVERAGE(4,8,12) in MS Excel?",
+  "options": [
+   "8",
+   "24",
+   "12",
+   "6"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "(4 + 8 + 12) / 3 = 24 / 3 = 8."
+ },
+ {
   "id": "q1b8ae9e95c0",
   "subject": "computer",
   "topic": "ms-excel",
@@ -208,6 +336,22 @@
   "explanation": "The ^ operator raises to a power: 2 cubed is 8."
  },
  {
+  "id": "q25498caf764",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =PROPER(\"state bank\") in MS Excel?",
+  "options": [
+   "STATE BANK",
+   "State bank",
+   "State Bank",
+   "state Bank"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "PROPER capitalises the first letter of each word and makes the rest lowercase."
+ },
+ {
   "id": "q2a1ef66243d",
   "subject": "computer",
   "topic": "ms-excel",
@@ -222,6 +366,22 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "ROUND rounds 3.567 to two decimal places, giving 3.57."
+ },
+ {
+  "id": "q31ef62af112",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =LEN(\"SBI PO\") in MS Excel?",
+  "options": [
+   "6",
+   "5",
+   "4",
+   "7"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "LEN counts every character including the space: S, B, I, space, P, O = 6."
  },
  {
   "id": "q346a52421fd",
@@ -288,6 +448,22 @@
   "explanation": "#NAME? appears when Excel does not recognise text in a formula, such as a misspelled function name."
  },
  {
+  "id": "q4f6d1910ef8",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =CONCATENATE(\"Bank\",\"ing\") in MS Excel?",
+  "options": [
+   "Bank ing",
+   "Bank,ing",
+   "Banking",
+   "ingBank"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "CONCATENATE joins text strings exactly as given, without adding spaces."
+ },
+ {
   "id": "q58b6f6b5e56",
   "subject": "computer",
   "topic": "ms-excel",
@@ -318,6 +494,38 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "Freeze Panes locks selected rows or columns in place while the rest scrolls."
+ },
+ {
+  "id": "q6b971b2f04d",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "Which MS Excel feature changes a cell's colour or font automatically when its value meets a condition?",
+  "options": [
+   "Data Validation",
+   "Goal Seek",
+   "Format Painter",
+   "Conditional Formatting"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Conditional Formatting applies formats such as colour scales when cells meet set rules."
+ },
+ {
+  "id": "q6f351d2266c",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =LEN(TRIM(\"  RBI  \")) in MS Excel, where the text has two spaces before and after RBI?",
+  "options": [
+   "5",
+   "7",
+   "3",
+   "#VALUE!"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "TRIM removes the leading and trailing spaces, leaving \"RBI\", and LEN of that is 3 (without TRIM it would be 2 + 3 + 2 = 7)."
  },
  {
   "id": "q779fa5f8af5",
@@ -368,6 +576,22 @@
   "explanation": "A mixed reference locks either the row or the column but not both."
  },
  {
+  "id": "qa06535cc8fe",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "Which MS Excel chart type is best suited to show a trend over time, such as monthly sales?",
+  "options": [
+   "Pie chart",
+   "Doughnut chart",
+   "Radar chart",
+   "Line chart"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Line charts connect data points in order, making changes over time easy to see."
+ },
+ {
   "id": "qa2151c938c5",
   "subject": "computer",
   "topic": "ms-excel",
@@ -414,6 +638,38 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "SUM adds 5 + 10 + 15 = 30."
+ },
+ {
+  "id": "qbb131faa4b9",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =10-2*3 in MS Excel?",
+  "options": [
+   "24",
+   "4",
+   "18",
+   "-4"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Multiplication is done before subtraction: 2 x 3 = 6, then 10 - 6 = 4."
+ },
+ {
+  "id": "qe481b8a631e",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "medium",
+  "question": "What is the result of =RIGHT(\"INDIA\",3) in MS Excel?",
+  "options": [
+   "IND",
+   "DIA",
+   "NDI",
+   "AID"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "RIGHT returns the given number of characters from the end of the text, so the last 3 of INDIA are DIA."
  },
  {
   "id": "q0c13f3d7ccd",
@@ -544,6 +800,22 @@
   "explanation": "OR returns TRUE if at least one condition is true; 5>3 is true."
  },
  {
+  "id": "q4795685e6f3",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "What is the result of =TRUNC(-5.8) in MS Excel?",
+  "options": [
+   "-6",
+   "-5.8",
+   "5",
+   "-5"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "TRUNC removes the decimal part without rounding, giving -5 (whereas INT(-5.8) gives -6)."
+ },
+ {
   "id": "q6c629a782b4",
   "subject": "computer",
   "topic": "ms-excel",
@@ -558,6 +830,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Data Validation limits cell entries to rules you define."
+ },
+ {
+  "id": "q6d688d0cf91",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "What is the result of =IFERROR(10/0,\"Error\") in MS Excel?",
+  "options": [
+   "#DIV/0!",
+   "0",
+   "10",
+   "Error"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "10/0 produces #DIV/0!, so IFERROR returns its second argument, 'Error'."
  },
  {
   "id": "q742bbe13cef",
@@ -576,6 +864,22 @@
   "explanation": "MOD returns the remainder: 17 = 5 x 3 + 2, so the result is 2."
  },
  {
+  "id": "q7e18d97bb84",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "A1:A5 contain 10, the text Bank, an empty cell, 5 and the logical value TRUE. What is the result of =COUNT(A1:A5)?",
+  "options": [
+   "3",
+   "4",
+   "2",
+   "5"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "COUNT counts only numeric cells in a range, so only 10 and 5 are counted."
+ },
+ {
   "id": "q80bc103fe07",
   "subject": "computer",
   "topic": "ms-excel",
@@ -590,6 +894,22 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "Goal Seek works backward from a target result to find the required input."
+ },
+ {
+  "id": "q87576d97154",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "How many columns does a worksheet have in MS Excel 2007 and later?",
+  "options": [
+   "256",
+   "65,536",
+   "16,384",
+   "1,048,576"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Columns run from A to XFD, a total of 16,384."
  },
  {
   "id": "q8b9c6e5f57f",
@@ -688,6 +1008,22 @@
   "explanation": "A circular reference makes a formula depend on its own result, and Excel warns about it."
  },
  {
+  "id": "qabb133a0de0",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "A1:A3 contain 2, 3, 4 and B1:B3 contain 5, 6, 7. What is the result of =SUMPRODUCT(A1:A3,B1:B3)?",
+  "options": [
+   "210",
+   "27",
+   "56",
+   "45"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "2x5 + 3x6 + 4x7 = 10 + 18 + 28 = 56."
+ },
+ {
   "id": "qbc5e214b5e6",
   "subject": "computer",
   "topic": "ms-excel",
@@ -702,6 +1038,54 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Moving one column right and one row down: $A1 keeps column A but row becomes 2; B$1 keeps row 1 but column becomes C."
+ },
+ {
+  "id": "qc676b20acad",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "What is the result of =MEDIAN(3,9,5,1) in MS Excel?",
+  "options": [
+   "5",
+   "4",
+   "3",
+   "4.5"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Sorted values are 1, 3, 5, 9; with an even count, the median is (3 + 5) / 2 = 4."
+ },
+ {
+  "id": "qc7f7b27760a",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "Cells A1:A4 contain 4, 8, 6 and 2. What is the result of =LARGE(A1:A4,2)?",
+  "options": [
+   "8",
+   "4",
+   "6",
+   "2"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "LARGE returns the k-th largest value; sorted descending the values are 8, 6, 4, 2, so the 2nd largest is 6."
+ },
+ {
+  "id": "qd14261587d2",
+  "subject": "computer",
+  "topic": "ms-excel",
+  "level": "hard",
+  "question": "What is the result of =ROUNDUP(4.231,1) in MS Excel?",
+  "options": [
+   "4.3",
+   "4.2",
+   "4.24",
+   "5"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "ROUNDUP always rounds away from zero, so 4.231 to 1 decimal place becomes 4.3."
  },
  {
   "id": "qd4e007666f7",

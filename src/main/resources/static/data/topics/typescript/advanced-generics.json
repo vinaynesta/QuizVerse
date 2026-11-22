@@ -1,5 +1,35 @@
 [
  {
+  "id": "q285d781556c",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "Given `function pick<T, K extends keyof T>(o: T, ...keys: K[]): Pick<T, K>`, what is the type of `pick({ a: 1, b: \"x\", c: true }, \"a\", \"c\")`?",
+  "options": [
+   "{ a: number; b: string; c: boolean }",
+   "{ a: number; c: boolean }",
+   "Pick<object, string>",
+   "{ a: 1; c: true }"
+  ],
+  "answer": 1,
+  "explanation": "K is inferred as the union \"a\" | \"c\" from the rest arguments, and object property types are widened."
+ },
+ {
+  "id": "q93118e02d85",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "What does `type DeepReadonly<T> = { readonly [K in keyof T]: DeepReadonly<T[K]> };` do?",
+  "options": [
+   "Recursively marks properties readonly at every nesting level",
+   "Freezes the object at runtime",
+   "Marks only top-level properties readonly",
+   "Causes an infinite type error"
+  ],
+  "answer": 0,
+  "explanation": "The type references itself for each property, so readonly is applied to nested objects too."
+ },
+ {
   "id": "qe3b58dd2a9b",
   "subject": "typescript",
   "topic": "advanced-generics",

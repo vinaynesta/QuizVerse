@@ -48,6 +48,38 @@
   "explanation": "Ctrl+I applies or removes italic formatting."
  },
  {
+  "id": "q1d4d8d4e8cd",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Which Windows shortcut locks the computer?",
+  "options": [
+   "Alt+L",
+   "Windows+E",
+   "Ctrl+L",
+   "Windows+L"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Windows+L locks the screen so a password or PIN is needed to continue."
+ },
+ {
+  "id": "q21ef2a37ccc",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Pressing Ctrl+Alt+Delete in Windows:",
+  "options": [
+   "Deletes the selected file",
+   "Shuts down instantly",
+   "Empties the Recycle Bin",
+   "Opens the security options screen"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Ctrl+Alt+Del shows options such as Lock, Switch user, Sign out and Task Manager."
+ },
+ {
   "id": "q2afdfd01787",
   "subject": "computer",
   "topic": "shortcuts",
@@ -71,13 +103,29 @@
   "question": "Which shortcut cuts the selected text in MS Office?",
   "options": [
    "Ctrl+C",
-   "Ctrl+T",
+   "Ctrl+X",
    "Ctrl+K",
-   "Ctrl+X"
+   "Ctrl+T"
   ],
   "needsReview": true,
-  "answer": 3,
+  "answer": 1,
   "explanation": "Ctrl+X removes the selection and places it on the clipboard."
+ },
+ {
+  "id": "q3c522125c51",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Which shortcut closes the current document window in MS Word without exiting Word?",
+  "options": [
+   "Ctrl+Q",
+   "Alt+F4",
+   "Ctrl+W",
+   "Ctrl+E"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Ctrl+W (or Ctrl+F4) closes the active document while keeping Word open."
  },
  {
   "id": "q44abbb71e9f",
@@ -94,6 +142,70 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Ctrl+Home jumps to the start of the document; Home alone goes to the start of the line."
+ },
+ {
+  "id": "q4e007d5d659",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Which Windows shortcut opens the Run dialog box?",
+  "options": [
+   "Windows+E",
+   "Windows+D",
+   "Windows+L",
+   "Windows+R"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Windows+R opens Run, where you can type a program or command name to launch it."
+ },
+ {
+  "id": "q628866a2408",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Which Windows shortcut opens File Explorer?",
+  "options": [
+   "Windows+E",
+   "Windows+L",
+   "Windows+R",
+   "Windows+D"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Windows+E opens File Explorer; Windows+D shows the desktop and Windows+R opens the Run box."
+ },
+ {
+  "id": "q651f1385db1",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "In File Explorer and web browsers, which function key refreshes the current view?",
+  "options": [
+   "F5",
+   "F4",
+   "F7",
+   "F9"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "F5 reloads the current folder view or web page."
+ },
+ {
+  "id": "q65859009ad7",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Which function key renames a selected file or folder in Windows?",
+  "options": [
+   "F3",
+   "F5",
+   "F2",
+   "F6"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Pressing F2 on a selected file or folder lets you type a new name."
  },
  {
   "id": "q7080849533b",
@@ -151,12 +263,12 @@
   "question": "Which shortcut makes the selected text bold in MS Word?",
   "options": [
    "Ctrl+D",
+   "Ctrl+B",
    "Ctrl+G",
-   "Ctrl+L",
-   "Ctrl+B"
+   "Ctrl+L"
   ],
   "needsReview": true,
-  "answer": 3,
+  "answer": 1,
   "explanation": "Ctrl+B applies or removes bold formatting."
  },
  {
@@ -214,13 +326,13 @@
   "level": "easy",
   "question": "Which shortcut saves the current file in MS Office applications?",
   "options": [
-   "Ctrl+S",
    "Ctrl+A",
    "Ctrl+F",
+   "Ctrl+S",
    "Ctrl+E"
   ],
   "needsReview": true,
-  "answer": 0,
+  "answer": 2,
   "explanation": "Ctrl+S saves the active document."
  },
  {
@@ -286,6 +398,22 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "Ctrl+N opens a new blank document."
+ },
+ {
+  "id": "qb601bd16d4e",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "easy",
+  "question": "Which key copies an image of the entire screen to the clipboard in Windows?",
+  "options": [
+   "Scroll Lock",
+   "Print Screen",
+   "Pause/Break",
+   "Insert"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The Print Screen (PrtScn) key copies a screenshot of the full screen to the clipboard."
  },
  {
   "id": "qbe244738227",
@@ -358,14 +486,30 @@
   "level": "easy",
   "question": "Which function key opens Help in most Windows and Office programs?",
   "options": [
-   "F1",
-   "F10",
    "F2",
+   "F10",
+   "F1",
    "F12"
   ],
   "needsReview": true,
-  "answer": 0,
+  "answer": 2,
   "explanation": "F1 is the standard Help key in Windows applications."
+ },
+ {
+  "id": "q1974bbfb03b",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In Windows File Explorer, which shortcut creates a new folder?",
+  "options": [
+   "Ctrl+Shift+N",
+   "Ctrl+N",
+   "Ctrl+Shift+F",
+   "Alt+N"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Ctrl+Shift+N creates a new folder in the current location; Ctrl+N opens a new window."
  },
  {
   "id": "q2a407b6d362",
@@ -448,6 +592,22 @@
   "explanation": "F2 puts the active cell into edit mode."
  },
  {
+  "id": "q612a5a1a692",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In MS Excel, which shortcut inserts a new worksheet?",
+  "options": [
+   "F11",
+   "Ctrl+N",
+   "Shift+F11",
+   "Alt+F11"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Shift+F11 inserts a new worksheet; F11 creates a chart sheet, Ctrl+N a new workbook and Alt+F11 opens the VBA editor."
+ },
+ {
   "id": "q6862344397f",
   "subject": "computer",
   "topic": "shortcuts",
@@ -462,6 +622,38 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "F4 toggles a reference among A1, $A$1, A$1 and $A1."
+ },
+ {
+  "id": "q6f0cc5126dd",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In MS Word, which shortcut opens the Go To tab of the Find and Replace dialog?",
+  "options": [
+   "Ctrl+G",
+   "Ctrl+T",
+   "Ctrl+Q",
+   "Ctrl+J"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Ctrl+G (or F5) lets you jump to a specific page, section or bookmark."
+ },
+ {
+  "id": "q70651c7d755",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In MS Word, which shortcut applies superscript formatting, as in x²?",
+  "options": [
+   "Ctrl+=",
+   "Ctrl+Shift+=",
+   "Ctrl+Shift+-",
+   "Alt+="
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Ctrl+Shift+= applies superscript, while Ctrl+= applies subscript."
  },
  {
   "id": "q880c43abda1",
@@ -544,6 +736,22 @@
   "explanation": "Ctrl+= applies subscript; Ctrl+Shift+= applies superscript."
  },
  {
+  "id": "qb26302d7489",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In MS Excel, which shortcut selects the entire column of the active cell?",
+  "options": [
+   "Shift+Space",
+   "Alt+Space",
+   "Ctrl+Space",
+   "Ctrl+Shift+C"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Ctrl+Space selects the whole column; Shift+Space selects the whole row."
+ },
+ {
   "id": "qbc15df49a00",
   "subject": "computer",
   "topic": "shortcuts",
@@ -574,6 +782,38 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Alt+Tab cycles through open application windows."
+ },
+ {
+  "id": "qe61d60a2558",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In MS Word, which shortcut deletes the whole word to the left of the cursor?",
+  "options": [
+   "Ctrl+Delete",
+   "Shift+Backspace",
+   "Alt+Backspace",
+   "Ctrl+Backspace"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Ctrl+Backspace deletes the previous word; Ctrl+Delete deletes the next word."
+ },
+ {
+  "id": "qebc024eab63",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "medium",
+  "question": "In MS Word, which shortcut increases the font size of the selected text?",
+  "options": [
+   "Ctrl+Shift+<",
+   "Ctrl+Shift+A",
+   "Ctrl+Shift+>",
+   "Ctrl+Shift+N"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Ctrl+Shift+> grows the font to the next size; Ctrl+Shift+< shrinks it."
  },
  {
   "id": "qf6dab98bfe5",
@@ -624,6 +864,22 @@
   "explanation": "F11 creates a default chart of the selected data on a new chart sheet."
  },
  {
+  "id": "q79dd5bc8187",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "hard",
+  "question": "In MS Excel, which shortcut converts the selected data range into a formatted Table?",
+  "options": [
+   "Ctrl+Shift+T",
+   "Ctrl+M",
+   "Ctrl+T",
+   "Alt+T"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Ctrl+T (or Ctrl+L) opens the Create Table dialog."
+ },
+ {
   "id": "q7b6923eeced",
   "subject": "computer",
   "topic": "shortcuts",
@@ -640,6 +896,22 @@
   "explanation": "Alt+Enter inserts a line break inside a cell."
  },
  {
+  "id": "q8aacc490df0",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "hard",
+  "question": "In MS Word, which shortcut applies 1.5 line spacing to the selected paragraph?",
+  "options": [
+   "Ctrl+1",
+   "Ctrl+2",
+   "Ctrl+5",
+   "Ctrl+15"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Ctrl+1 gives single, Ctrl+5 gives 1.5 and Ctrl+2 gives double line spacing."
+ },
+ {
   "id": "qa7ab596fb99",
   "subject": "computer",
   "topic": "shortcuts",
@@ -654,6 +926,70 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "In Word, F4 repeats the last action, like Ctrl+Y."
+ },
+ {
+  "id": "qb4ca625743c",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "hard",
+  "question": "In MS Word, which shortcut opens the Thesaurus for the selected word?",
+  "options": [
+   "Alt+F7",
+   "Shift+F3",
+   "Ctrl+F7",
+   "Shift+F7"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Shift+F7 opens the Thesaurus; F7 alone runs the spelling and grammar check."
+ },
+ {
+  "id": "qb6c4805b223",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "hard",
+  "question": "In MS Excel, which shortcut toggles between showing formulas and their results in the worksheet?",
+  "options": [
+   "Ctrl+F2",
+   "Ctrl+` (grave accent)",
+   "Shift+F3",
+   "Alt+F11"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Ctrl+` switches Show Formulas on and off; Alt+F11 opens the VBA editor and Shift+F3 opens Insert Function."
+ },
+ {
+  "id": "qbc93bc5a76f",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "hard",
+  "question": "In MS Word, which shortcut inserts a line break without starting a new paragraph?",
+  "options": [
+   "Ctrl+Shift+Enter",
+   "Ctrl+Enter",
+   "Alt+Enter",
+   "Shift+Enter"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Shift+Enter inserts a manual line break; Ctrl+Enter inserts a page break."
+ },
+ {
+  "id": "qc16d5acfe9c",
+  "subject": "computer",
+  "topic": "shortcuts",
+  "level": "hard",
+  "question": "In MS Office, which shortcut opens the Visual Basic for Applications (VBA) editor?",
+  "options": [
+   "Ctrl+F11",
+   "Alt+F11",
+   "Shift+F11",
+   "Alt+F8"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Alt+F11 opens the VBA editor; Alt+F8 opens the Macros dialog."
  },
  {
   "id": "qc26c1e949cf",

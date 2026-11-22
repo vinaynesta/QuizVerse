@@ -1,5 +1,21 @@
 [
  {
+  "id": "q0a433a46b08",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "In an email, which field usually contains a short description of the message's topic?",
+  "options": [
+   "To",
+   "Bcc",
+   "Subject",
+   "Signature"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The Subject line briefly states what the email is about and is shown in the recipient's inbox list."
+ },
+ {
   "id": "q14260ac2a84",
   "subject": "computer",
   "topic": "email",
@@ -14,6 +30,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Spam is unsolicited bulk email sent to many people."
+ },
+ {
+  "id": "q1a4e6ccffcc",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "In the email address ravi@sbi.co.in, the part after the @ symbol is the:",
+  "options": [
+   "User name",
+   "Subject",
+   "Protocol",
+   "Domain name"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The part after @ identifies the mail domain; the part before it is the user name."
  },
  {
   "id": "q2f1450d4c83",
@@ -48,6 +80,22 @@
   "explanation": "An email address has the form username@domain, with @ separating the two parts."
  },
  {
+  "id": "q3d319df501a",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Which email folder stores copies of messages you have already sent?",
+  "options": [
+   "Drafts",
+   "Junk",
+   "Sent Items",
+   "Inbox"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A copy of every message sent successfully is saved in the Sent Items (Sent) folder."
+ },
+ {
   "id": "q80e49807b1b",
   "subject": "computer",
   "topic": "email",
@@ -62,6 +110,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Gmail is Google's web-based email service accessed through a browser or app."
+ },
+ {
+  "id": "q8274a14dbe0",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "The Outlook.com email service is provided by:",
+  "options": [
+   "Google",
+   "Apple",
+   "Yahoo",
+   "Microsoft"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Outlook.com (formerly Hotmail) is Microsoft's web-based email service."
  },
  {
   "id": "q855745b29f9",
@@ -80,6 +144,118 @@
   "explanation": "CC means Carbon Copy; recipients in this field get a copy and are visible to others."
  },
  {
+  "id": "q8c48fd68c91",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Emails you delete are usually moved first to which folder, from where they can still be recovered?",
+  "options": [
+   "Trash",
+   "Sent",
+   "Drafts",
+   "Outbox"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Deleted mail goes to Trash (Deleted Items) and is removed permanently only when that folder is emptied."
+ },
+ {
+  "id": "q969ad11fae8",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Which email field contains the address of the main recipient of the message?",
+  "options": [
+   "BCC",
+   "Subject",
+   "CC",
+   "To"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The To field holds the primary recipients; CC and BCC hold copy recipients."
+ },
+ {
+  "id": "qbd60e130606",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "The main text of an email, where the actual message is written, is called the:",
+  "options": [
+   "Body",
+   "Header",
+   "Subject",
+   "Signature"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The body contains the message content, while the header holds sender, recipient and subject details."
+ },
+ {
+  "id": "qbda146956c5",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Emails that you start writing and save to finish later are kept in which folder?",
+  "options": [
+   "Inbox",
+   "Drafts",
+   "Spam",
+   "Trash"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Unfinished messages that have been saved but not sent are stored in the Drafts folder."
+ },
+ {
+  "id": "qc1292967a67",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Which of these is written in the correct format of an email address?",
+  "options": [
+   "user@example.com",
+   "www.user.example",
+   "user@@example",
+   "user.example.com"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "An email address has a user name, one @ symbol and a domain name."
+ },
+ {
+  "id": "qe5a62b89911",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Which email option sends your response to the sender and all other recipients of the message?",
+  "options": [
+   "Reply",
+   "Reply All",
+   "Forward",
+   "Bcc"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Reply All addresses the response to the original sender and everyone in the To and Cc fields."
+ },
+ {
+  "id": "qf2c471938c5",
+  "subject": "computer",
+  "topic": "email",
+  "level": "easy",
+  "question": "Messages that are waiting to be sent, for example while you are offline, are kept in the:",
+  "options": [
+   "Archive",
+   "Sent Items",
+   "Inbox",
+   "Outbox"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The Outbox holds composed messages until they are actually transmitted to the mail server."
+ },
+ {
   "id": "qf6a2e3e9d69",
   "subject": "computer",
   "topic": "email",
@@ -94,6 +270,38 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "New incoming messages arrive in the Inbox."
+ },
+ {
+  "id": "q3552d2faecb",
+  "subject": "computer",
+  "topic": "email",
+  "level": "medium",
+  "question": "In email, what does 'BCC' stand for?",
+  "options": [
+   "Block Carbon Copy",
+   "Basic Carbon Copy",
+   "Blank Copy Count",
+   "Blind Carbon Copy"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "BCC (Blind Carbon Copy) sends a copy to recipients whose addresses are hidden from the others."
+ },
+ {
+  "id": "q53aff3dfd04",
+  "subject": "computer",
+  "topic": "email",
+  "level": "medium",
+  "question": "Which email feature automatically sends a preset reply while you are on leave?",
+  "options": [
+   "Out-of-office reply",
+   "Auto-archive",
+   "Auto-forward",
+   "Mail merge"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "An out-of-office (vacation) reply informs senders that you are unavailable."
  },
  {
   "id": "q7076ec36516",
@@ -128,6 +336,38 @@
   "explanation": "Forward sends a copy of a received message, including its attachments, to someone else."
  },
  {
+  "id": "q7fc92431724",
+  "subject": "computer",
+  "topic": "email",
+  "level": "medium",
+  "question": "An email that returns to the sender because the address was wrong or the mailbox was full is said to have:",
+  "options": [
+   "Archived",
+   "Flagged",
+   "Bounced",
+   "Spoofed"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A bounced email comes back with a delivery failure notice."
+ },
+ {
+  "id": "q8016c82e2e7",
+  "subject": "computer",
+  "topic": "email",
+  "level": "medium",
+  "question": "Which part of an email holds details such as sender, recipient, date and subject?",
+  "options": [
+   "Attachment",
+   "Footer",
+   "Header",
+   "Body"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The header carries routing and descriptive information about the message."
+ },
+ {
   "id": "qa5ebeea2796",
   "subject": "computer",
   "topic": "email",
@@ -144,6 +384,38 @@
   "explanation": "POP3 (Post Office Protocol version 3) typically downloads messages and deletes them from the server."
  },
  {
+  "id": "qbf682da13e9",
+  "subject": "computer",
+  "topic": "email",
+  "level": "medium",
+  "question": "Forging the sender address of an email so it appears to come from someone else is called:",
+  "options": [
+   "Email spoofing",
+   "Email flooding",
+   "Email threading",
+   "Email bouncing"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Spoofing fakes the From address and is common in phishing."
+ },
+ {
+  "id": "qcb5318d5aba",
+  "subject": "computer",
+  "topic": "email",
+  "level": "medium",
+  "question": "Text added automatically at the end of every outgoing email, such as your name and designation, is called the:",
+  "options": [
+   "Subject",
+   "Header",
+   "Attachment",
+   "Signature"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "An email signature is a saved block of text appended to the bottom of messages you send."
+ },
+ {
   "id": "q402e5ec852d",
   "subject": "computer",
   "topic": "email",
@@ -158,5 +430,21 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "MIME extends email to support non-text content and attachments."
+ },
+ {
+  "id": "q91b3c06aaa9",
+  "subject": "computer",
+  "topic": "email",
+  "level": "hard",
+  "question": "What is the default port number for IMAP over SSL/TLS (IMAPS)?",
+  "options": [
+   "995",
+   "993",
+   "143",
+   "587"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Secure IMAP uses port 993; plain IMAP uses 143 and secure POP3 uses 995."
  }
 ]

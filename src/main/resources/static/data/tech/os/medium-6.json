@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q9cf82329ca1",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 4 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does LRU replacement cause?",
+  "options": [
+   "8",
+   "12",
+   "14",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "Simulating LRU with 4 frames gives 10 faults: 4 compulsory faults to fill memory plus 6 replacements (5, 6, 3, 7, 6, 1)."
+ },
+ {
+  "id": "q4da6f925dde",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "Which technique fights external fragmentation by shuffling allocated memory blocks together to form one large free block?",
+  "options": [
+   "Swapping",
+   "Compaction",
+   "Thrashing",
+   "Paging out the kernel"
+  ],
+  "answer": 1,
+  "explanation": "Compaction relocates processes so free space becomes contiguous, but it requires dynamic run-time relocation and is costly."
+ },
+ {
+  "id": "qc292b8b04d7",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "A machine has 36-bit physical addresses and 4 KB frames. How many physical frames are there?",
+  "options": [
+   "2^12",
+   "2^24",
+   "2^20",
+   "2^36"
+  ],
+  "answer": 1,
+  "explanation": "A 4 KB frame needs 12 offset bits, leaving 36 - 12 = 24 bits for the frame number, so there are 2^24 frames."
+ },
+ {
+  "id": "q33e49f678f9",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "What happens on a TLB miss in a system with a hardware-walked page table?",
+  "options": [
+   "The process is immediately terminated",
+   "The page table in memory is consulted for the frame number and the entry is loaded into the TLB",
+   "A page fault always occurs and the page is read from disk",
+   "The CPU retries the TLB until it hits"
+  ],
+  "answer": 1,
+  "explanation": "A TLB miss only costs extra memory accesses to walk the page table; a page fault occurs only if the page is not in memory."
+ },
+ {
+  "id": "qb4124c9ee70",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "medium",
+  "question": "The disk head is at cylinder 50, moving toward higher cylinders, and the queue holds 82, 170, 43, 140, 24, 16, 190. What is the total head movement under LOOK scheduling?",
+  "options": [
+   "240 cylinders",
+   "314 cylinders",
+   "332 cylinders",
+   "341 cylinders"
+  ],
+  "answer": 1,
+  "explanation": "LOOK goes up only as far as the last request and then reverses: (190 - 50) + (190 - 16) = 140 + 174 = 314 cylinders."
+ },
+ {
+  "id": "q966c31afeb6",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "Why do page-replacement schemes that approximate LRU rely on a hardware reference bit?",
+  "options": [
+   "It records the exact time of every memory access",
+   "It marks pages that belong to the kernel",
+   "It marks pages that have been written and must be saved",
+   "The bit is set when a page is accessed, letting the OS cheaply tell recently used pages from unused ones"
+  ],
+  "answer": 3,
+  "explanation": "True LRU needs a timestamp or stack update on every access, which is too expensive; reference bits give a cheap approximation."
+ },
+ {
+  "id": "qbd358de6dd6",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "medium",
+  "question": "A system has 16-bit logical addresses and 256-byte pages. For the logical address 0x1A3F, what are the page number and offset?",
+  "options": [
+   "Page 63, offset 26",
+   "Page 6, offset 703",
+   "Page 26, offset 3F0",
+   "Page 26, offset 63"
+  ],
+  "answer": 3,
+  "explanation": "With 256-byte pages the low 8 bits are the offset: page = 0x1A = 26 and offset = 0x3F = 63."
+ },
+ {
+  "id": "q90543664907",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "If the OS may take away resources held by a process that is waiting for another resource, which deadlock condition is negated?",
+  "options": [
+   "Hold and wait",
+   "Mutual exclusion",
+   "No preemption",
+   "Circular wait"
+  ],
+  "answer": 2,
+  "explanation": "Allowing resources to be preempted removes the no-preemption condition, though it only works for resources whose state can be saved and restored."
+ },
+ {
+  "id": "qd013ace8fd4",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Why is denying the mutual-exclusion condition usually not a practical way to prevent deadlock?",
+  "options": [
+   "Some resources, such as mutex locks or printers, are intrinsically non-sharable",
+   "Mutual exclusion is not one of the deadlock conditions",
+   "It would require ordering all resource types",
+   "It makes every process request all resources up front"
+  ],
+  "answer": 0,
+  "explanation": "Sharable resources such as read-only files never cause deadlock, but many resources simply cannot be shared."
+ },
+ {
+  "id": "qe962b8f57b8",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "medium",
+  "question": "How does a nonblocking I/O call differ from a blocking one?",
+  "options": [
+   "It suspends the caller until all requested data arrives",
+   "It can only be used for disk devices",
+   "It always transfers data using polling",
+   "It returns immediately with whatever data is available instead of suspending the caller"
+  ],
+  "answer": 3,
+  "explanation": "Nonblocking calls let a program continue working, for example a UI thread reading input, while blocking calls put the caller to sleep."
+ }
+]

@@ -30,6 +30,21 @@
   "explanation": "Adding ? to each mapped key makes every property optional, which is how Partial is defined."
  },
  {
+  "id": "q22cb1f89e4b",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Given `type Box<T> = { [K in keyof T]: { v: T[K] } };`, what is `Box<[string, number]>`?",
+  "options": [
+   "{ 0: { v: string }; 1: { v: number } }",
+   "{ v: [string, number] }",
+   "{ v: string | number }[]",
+   "[{ v: string }, { v: number }]"
+  ],
+  "answer": 3,
+  "explanation": "Homomorphic mapped types applied to a tuple produce a tuple, mapping only the element types."
+ },
+ {
   "id": "q381275fb37a",
   "subject": "typescript",
   "topic": "mapped-types",
@@ -73,6 +88,36 @@
   ],
   "answer": 1,
   "explanation": "-? strips the optional modifier from each property."
+ },
+ {
+  "id": "qc3c2c6b8b42",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Given `type Keys<T> = { [K in keyof T]: K }[keyof T];`, what is `Keys<{ x: 1; y: 2 }>`?",
+  "options": [
+   "1 | 2",
+   "\"x\" | \"y\"",
+   "{ x: \"x\"; y: \"y\" }",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "Indexing the mapped type by all its keys produces the union of its property value types, which are the key names."
+ },
+ {
+  "id": "qe093f949a59",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "What is `{ [K in \"a\" | \"b\"]: K }`?",
+  "options": [
+   "{ a: string; b: string }",
+   "{ K: \"a\" | \"b\" }",
+   "\"a\" | \"b\"",
+   "{ a: \"a\"; b: \"b\" }"
+  ],
+  "answer": 3,
+  "explanation": "The mapped type creates one property per key, and each value is that key's literal type."
  },
  {
   "id": "qf6e0aeefa70",

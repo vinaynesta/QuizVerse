@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qb7ab21b8444",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `type Box<T> = { value: T }`, what is the type of `b.value` for `const b: Box<string[]> = { value: [] };`?",
+  "options": [
+   "string",
+   "unknown",
+   "never[]",
+   "string[]"
+  ],
+  "answer": 3,
+  "explanation": "Box<string[]> substitutes string[] for T, so value is typed as string[]."
+ },
+ {
+  "id": "q8974a5aaffc",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `function wrap<T>(x: T) { return [x]; }`, what is the type of `wrap(\"a\" as string)`?",
+  "options": [
+   "string",
+   "[string]",
+   "string[]",
+   "unknown[]"
+  ],
+  "answer": 2,
+  "explanation": "T is inferred as string and the array literal [x] is inferred as T[]."
+ },
+ {
+  "id": "qe7dd0636d6b",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "What is `keyof { [key: string]: boolean }`?",
+  "options": [
+   "string | number",
+   "boolean",
+   "string",
+   "never"
+  ],
+  "answer": 0,
+  "explanation": "With a string index signature, keyof includes number too, because numeric keys are converted to strings in JavaScript."
+ },
+ {
+  "id": "qc9e8429153e",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `interface Pair<K, V> { key: K; value: V }`, which value is a valid `Pair<string, number>`?",
+  "options": [
+   "[\"a\", 1]",
+   "{ key: 1, value: \"a\" }",
+   "{ key: \"a\", value: 1 }",
+   "{ K: \"a\", V: 1 }"
+  ],
+  "answer": 2,
+  "explanation": "The type arguments fill K with string and V with number, so key must be a string and value a number."
+ },
+ {
+  "id": "q607e3ed3bcf",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `const ro: readonly string[] = [];`, what happens with `const mu: string[] = ro;`?",
+  "options": [
+   "It compiles, because both hold strings",
+   "It compiles and makes ro mutable",
+   "A compile error, because a readonly array is not assignable to a mutable one",
+   "It compiles but mu becomes readonly"
+  ],
+  "answer": 2,
+  "explanation": "A mutable array can be assigned to a readonly type, but not the other way around, since that would allow mutation."
+ },
+ {
+  "id": "q44411a717a3",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does the `override` modifier on a subclass method do?",
+  "options": [
+   "Prevents subclasses from overriding it further",
+   "Makes the method static",
+   "Calls the base method automatically",
+   "Marks it as overriding a base member, giving an error if the base class has no such member"
+  ],
+  "answer": 3,
+  "explanation": "override catches typos and removed base methods; noImplicitOverride makes it required."
+ },
+ {
+  "id": "q240746f0861",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(x: string[] | string) { if (Array.isArray(x)) { /* here */ } }`, what is x's type at `here`?",
+  "options": [
+   "string[]",
+   "string",
+   "string[] | string",
+   "any[]"
+  ],
+  "answer": 0,
+  "explanation": "Array.isArray acts as a type guard that narrows the union to its array member."
+ },
+ {
+  "id": "q80b2931f1b0",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `ReturnType<() => Promise<number>>`?",
+  "options": [
+   "number",
+   "Promise<number>",
+   "Awaited<number>",
+   "void"
+  ],
+  "answer": 1,
+  "explanation": "ReturnType gives the declared return type as is; it does not unwrap promises like Awaited does."
+ },
+ {
+  "id": "q3716fd5eec0",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(x: number | null) { if (x === null) return; /* here */ }`, what is x's type at `here`?",
+  "options": [
+   "number",
+   "null",
+   "unknown",
+   "number | null"
+  ],
+  "answer": 0,
+  "explanation": "Control-flow analysis knows the null case returned early, so only number remains."
+ },
+ {
+  "id": "qae1a5ed243e",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "Given `x: string | number | boolean`, what is x's type in the else branch of `if (typeof x === \"number\")`?",
+  "options": [
+   "number",
+   "string | boolean",
+   "string",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "The else branch removes the member that the typeof check matched."
+ }
+]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1b718918181",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does Number(\"42\") return?",
+  "options": [
+   "\"42\"",
+   "NaN",
+   "undefined",
+   "42"
+  ],
+  "answer": 3,
+  "explanation": "Number() converts a numeric string into the corresponding number value."
+ },
+ {
+  "id": "qef2670097fb",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"JavaScript\".slice(0, 4) return?",
+  "options": [
+   "\"Java\"",
+   "\"Scri\"",
+   "\"avaS\"",
+   "\"JavaS\""
+  ],
+  "answer": 0,
+  "explanation": "slice(start, end) returns characters from start up to but not including end."
+ },
+ {
+  "id": "q2c5bd882b1b",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What happens when this runs?\nconst x = 1;\nx = 2;",
+  "options": [
+   "x becomes 2",
+   "A TypeError is thrown",
+   "x stays 1 silently",
+   "A new variable x is created"
+  ],
+  "answer": 1,
+  "explanation": "A const binding cannot be reassigned, so the assignment throws a TypeError at runtime."
+ },
+ {
+  "id": "q293a5b17584",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "Which loop always executes its body at least once?",
+  "options": [
+   "while",
+   "do...while",
+   "for",
+   "for...in"
+  ],
+  "answer": 1,
+  "explanation": "do...while checks its condition after each iteration, so the body runs at least once."
+ },
+ {
+  "id": "q9b54ffa74bc",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What is a callback function?",
+  "options": [
+   "A function that calls itself",
+   "A function passed as an argument to another function to be called later",
+   "A function that returns another function",
+   "A function with no parameters"
+  ],
+  "answer": 1,
+  "explanation": "Callbacks are functions handed to other code, which invokes them at the appropriate time."
+ },
+ {
+  "id": "q92b941cb5a9",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does the template literal `${1 + 1}` evaluate to?",
+  "options": [
+   "\"2\"",
+   "\"1 + 1\"",
+   "\"11\"",
+   "2 as a number"
+  ],
+  "answer": 0,
+  "explanation": "Expressions inside ${} are evaluated and the result is converted to a string."
+ },
+ {
+  "id": "q651d95b8847",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does (() => 5)() return?",
+  "options": [
+   "undefined",
+   "NaN",
+   "A function",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "The arrow function is invoked immediately and its concise body returns 5."
+ },
+ {
+  "id": "qa4bc58cc488",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof function() {} return?",
+  "options": [
+   "\"object\"",
+   "\"method\"",
+   "\"function\"",
+   "\"undefined\""
+  ],
+  "answer": 2,
+  "explanation": "Functions are objects, but typeof reports them specially as \"function\"."
+ },
+ {
+  "id": "q1f9f6c45e51",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does \"10\" * 2 evaluate to?",
+  "options": [
+   "\"102\"",
+   "20",
+   "\"1010\"",
+   "NaN"
+  ],
+  "answer": 1,
+  "explanation": "The * operator converts the string \"10\" to the number 10 before multiplying."
+ },
+ {
+  "id": "qf9dbcf48a46",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Given const user = { name: \"Ana\" }; how do you add an age property with value 30?",
+  "options": [
+   "user.age = 30;",
+   "user.push({ age: 30 });",
+   "user.add(\"age\", 30);",
+   "user[age] = 30;"
+  ],
+  "answer": 0,
+  "explanation": "Assigning to a new property name with dot notation creates that property; user[age] would use a variable named age."
+ }
+]

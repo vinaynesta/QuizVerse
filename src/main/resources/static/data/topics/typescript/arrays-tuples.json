@@ -15,6 +15,36 @@
   "explanation": "Tuples have a fixed type per position, so index 1 has type number."
  },
  {
+  "id": "q183325d7a9f",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "How do you declare a tuple whose third element is optional?",
+  "options": [
+   "[string, number, ?boolean]",
+   "[string, number, boolean | optional]",
+   "[string, number, boolean?]",
+   "[string, number, ...boolean]"
+  ],
+  "answer": 2,
+  "explanation": "A question mark after an element type marks that tuple element as optional."
+ },
+ {
+  "id": "q441541db426",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "Given `let t: [string, number];`, what is the type of `t.length`?",
+  "options": [
+   "number",
+   "string",
+   "2",
+   "2 | 0"
+  ],
+  "answer": 2,
+  "explanation": "Fixed-length tuples have a literal length type equal to their number of elements."
+ },
+ {
   "id": "q783c95d002d",
   "subject": "typescript",
   "topic": "arrays-tuples",
@@ -28,6 +58,21 @@
   ],
   "answer": 3,
   "explanation": "readonly arrays remove mutating methods like push, while reading and non-mutating methods remain available."
+ },
+ {
+  "id": "q7b50ea46c88",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "What do the labels in a tuple type like `[name: string, age: number]` change?",
+  "options": [
+   "They let you access elements as t.name and t.age",
+   "They make the tuple readonly",
+   "They turn the tuple into an object type",
+   "Only readability and tooling hints; the type is the same as [string, number]"
+  ],
+  "answer": 3,
+  "explanation": "Tuple labels document element meaning but do not affect type compatibility or runtime access."
  },
  {
   "id": "q8d31d0c409a",

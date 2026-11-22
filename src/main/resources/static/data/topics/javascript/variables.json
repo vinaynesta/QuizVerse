@@ -1,5 +1,20 @@
 [
  {
+  "id": "q2c5bd882b1b",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What happens when this runs?\nconst x = 1;\nx = 2;",
+  "options": [
+   "x becomes 2",
+   "A TypeError is thrown",
+   "x stays 1 silently",
+   "A new variable x is created"
+  ],
+  "answer": 1,
+  "explanation": "A const binding cannot be reassigned, so the assignment throws a TypeError at runtime."
+ },
+ {
   "id": "q8bab6d14ad5",
   "subject": "javascript",
   "topic": "variables",
@@ -43,6 +58,21 @@
   ],
   "answer": 2,
   "explanation": "const prevents rebinding the variable, but the object it references can still be mutated."
+ },
+ {
+  "id": "qe717b18cc87",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What happens if you write let a = 1; let a = 2; in the same scope?",
+  "options": [
+   "a becomes 2",
+   "a stays 1",
+   "Two separate variables named a exist",
+   "A SyntaxError is reported"
+  ],
+  "answer": 3,
+  "explanation": "let does not allow redeclaring the same name in the same scope, unlike var."
  },
  {
   "id": "qf44a82ca5f9",

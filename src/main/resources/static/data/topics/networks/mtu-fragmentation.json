@@ -45,6 +45,21 @@
   "explanation": "Routers that can't forward a DF packet return ICMP type 3 code 4 with the next-hop MTU; filtering that ICMP causes PMTUD black holes."
  },
  {
+  "id": "qab1cc29510e",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "A 2400-byte IPv4 datagram (20-byte header, 2380 bytes of data) crosses a link with a 1000-byte MTU. How many fragments result, and what is the last one?",
+  "options": [
+   "3 fragments; the last carries 428 data bytes at Fragment Offset 244",
+   "2 fragments; the last carries 1400 data bytes at Fragment Offset 122",
+   "3 fragments; the last carries 420 data bytes at Fragment Offset 245",
+   "3 fragments; the last carries 428 data bytes at Fragment Offset 1952"
+  ],
+  "answer": 0,
+  "explanation": "Each fragment carries at most 976 data bytes (980 rounded down to a multiple of 8), so 976 + 976 + 428 = 2380, and the offset is 1952/8 = 244."
+ },
+ {
   "id": "qccb67b5c1bb",
   "subject": "networks",
   "topic": "mtu-fragmentation",

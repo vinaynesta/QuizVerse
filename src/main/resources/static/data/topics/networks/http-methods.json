@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0aa21260dc3",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which of these HTTP methods is NOT idempotent according to RFC 9110?",
+  "options": [
+   "PUT",
+   "DELETE",
+   "POST",
+   "GET"
+  ],
+  "answer": 2,
+  "explanation": "Repeating a POST may create additional resources or side effects, whereas repeating PUT, DELETE or GET leaves the same intended state."
+ },
+ {
   "id": "q1a84a7a054d",
   "subject": "networks",
   "topic": "http-methods",
@@ -73,5 +88,20 @@
   ],
   "answer": 1,
   "explanation": "HEAD is used to check metadata such as Content-Length or Last-Modified without downloading the body."
+ },
+ {
+  "id": "qf09f5ccf636",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "What does the HTTP TRACE method do?",
+  "options": [
+   "Lists the methods a resource supports",
+   "Opens a tunnel through a proxy",
+   "Returns only the headers of a resource",
+   "Asks the server to echo back the received request, for diagnostic loop-back testing"
+  ],
+  "answer": 3,
+  "explanation": "TRACE reflects the request as received, which is why it is usually disabled for security reasons such as cross-site tracing."
  }
 ]

@@ -45,6 +45,36 @@
   "explanation": "Race conditions arise when unsynchronized threads interleave operations on shared data, producing timing-dependent results."
  },
  {
+  "id": "q9a680eb373e",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a binary semaphore?",
+  "options": [
+   "A semaphore whose value can only be 0 or 1",
+   "A semaphore that can count any number of resources",
+   "A semaphore that stores binary data",
+   "A semaphore shared only between two processes"
+  ],
+  "answer": 0,
+  "explanation": "A binary semaphore behaves much like a mutex lock, allowing at most one holder at a time."
+ },
+ {
+  "id": "qf572914825d",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is busy waiting?",
+  "options": [
+   "Blocking in the kernel until an event occurs",
+   "Sleeping for a fixed time before retrying",
+   "Waiting for a disk transfer to finish via DMA",
+   "Repeatedly checking a condition in a loop while waiting, which wastes CPU cycles"
+  ],
+  "answer": 3,
+  "explanation": "A spinning thread consumes CPU time while it waits, which is why blocking primitives are preferred for long waits."
+ },
+ {
   "id": "qfe80dd2af97",
   "subject": "os",
   "topic": "synchronization",
@@ -90,6 +120,21 @@
   "explanation": "Initially all n slots are empty and none are full, and mutex = 1 allows one process at a time to touch the buffer."
  },
  {
+  "id": "q53e82c72fcd",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Which critical-section requirement guarantees a limit on how many times other processes may enter their critical sections after a process has requested entry?",
+  "options": [
+   "Mutual exclusion",
+   "Progress",
+   "Bounded waiting",
+   "Atomicity"
+  ],
+  "answer": 2,
+  "explanation": "Bounded waiting prevents a requesting process from being postponed indefinitely by others repeatedly entering first."
+ },
+ {
   "id": "q58810d206e6",
   "subject": "os",
   "topic": "synchronization",
@@ -103,6 +148,21 @@
   ],
   "answer": 1,
   "explanation": "Unlike a semaphore's signal(), which always increments the count, a condition variable's signal() is lost if nobody is waiting."
+ },
+ {
+  "id": "q5a5839992d1",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "What does the atomic compare_and_swap(value, expected, new) instruction do?",
+  "options": [
+   "Always swaps value with new and returns nothing",
+   "Sets value to new only if it currently equals expected, and returns the original value",
+   "Compares two locks and releases the smaller one",
+   "Disables interrupts until the next context switch"
+  ],
+  "answer": 1,
+  "explanation": "Because the compare and the update happen atomically, CAS can be used to build locks and lock-free data structures."
  },
  {
   "id": "q6f4206a54d7",
@@ -163,6 +223,21 @@
   ],
   "answer": 2,
   "explanation": "A mutex is owned by the locking thread, while any thread can signal a binary semaphore, which also makes semaphores useful for signaling between threads."
+ },
+ {
+  "id": "qcec14da87c8",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "medium",
+  "question": "Two threads each increment a shared integer counter 1000 times with no synchronization, starting from 0. What can the final value be?",
+  "options": [
+   "It is always exactly 2000",
+   "It is always exactly 1000",
+   "Some value less than 2000 is possible",
+   "It is always greater than 2000"
+  ],
+  "answer": 2,
+  "explanation": "counter++ is a load-add-store sequence, so interleaved updates can overwrite each other and lose increments."
  },
  {
   "id": "qd23c2deddc6",
@@ -240,6 +315,21 @@
   "explanation": "The high-priority task is effectively delayed by unrelated medium-priority work, because the low-priority lock holder cannot run."
  },
  {
+  "id": "q4952747f36f",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "What is the ABA problem in lock-free algorithms that use compare-and-swap?",
+  "options": [
+   "A thread reads stale data A from its cache instead of B from memory",
+   "Two threads acquire locks A and B in opposite orders and deadlock",
+   "A location changes from A to B and back to A, so a CAS wrongly succeeds as if nothing changed",
+   "A spinlock holder is preempted while others spin on it"
+  ],
+  "answer": 2,
+  "explanation": "CAS compares only the value, so it cannot see intermediate changes; tagged pointers or version counters are common fixes."
+ },
+ {
   "id": "q53fc395f6ef",
   "subject": "os",
   "topic": "synchronization",
@@ -283,5 +373,20 @@
   ],
   "answer": 0,
   "explanation": "Each philosopher holds one chopstick and waits for the next one, forming a circular wait; asymmetric pick-up order or allowing at most 4 at the table avoids it."
+ },
+ {
+  "id": "qe201b220bb1",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "Under Mesa (signal-and-continue) monitor semantics, what happens when a thread signals a condition variable that has a waiter?",
+  "options": [
+   "The signaler keeps running and the waiter is moved to the ready queue, so it must recheck the condition when it runs",
+   "The signaler is suspended and the waiter runs immediately inside the monitor",
+   "Both threads run inside the monitor simultaneously",
+   "The signal is queued until the waiter calls wait() again"
+  ],
+  "answer": 0,
+  "explanation": "Because other threads may run before the woken waiter reacquires the monitor, Mesa semantics require waiting inside a loop."
  }
 ]

@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qcc5608c8ddb",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "A system has 48-bit virtual addresses, 4 KB pages and 8-byte page-table entries, and each page-table level must fit in one page. How many levels of page table are needed?",
+  "options": [
+   "2",
+   "3",
+   "5",
+   "4"
+  ],
+  "answer": 3,
+  "explanation": "Each level indexes 4096/8 = 512 = 2^9 entries, and (48 - 12)/9 = 4 levels cover the 36 page-number bits."
+ },
+ {
+  "id": "q192a56d1620",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "hard",
+  "question": "A RAID 5 array is built from five 2 TB disks. What is its usable capacity?",
+  "options": [
+   "6 TB",
+   "10 TB",
+   "8 TB",
+   "5 TB"
+  ],
+  "answer": 2,
+  "explanation": "RAID 5 spends one disk's worth of space on distributed parity, so usable capacity is (5 - 1) x 2 TB = 8 TB."
+ },
+ {
+  "id": "q59cf826a8a4",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "What is the reach of a TLB with 64 entries when the page size is 4 KB?",
+  "options": [
+   "64 KB",
+   "256 KB",
+   "4 MB",
+   "16 KB"
+  ],
+  "answer": 1,
+  "explanation": "TLB reach is entries times page size: 64 x 4 KB = 256 KB, which is why large pages can greatly improve TLB coverage."
+ },
+ {
+  "id": "qe201b220bb1",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "Under Mesa (signal-and-continue) monitor semantics, what happens when a thread signals a condition variable that has a waiter?",
+  "options": [
+   "The signaler keeps running and the waiter is moved to the ready queue, so it must recheck the condition when it runs",
+   "The signaler is suspended and the waiter runs immediately inside the monitor",
+   "Both threads run inside the monitor simultaneously",
+   "The signal is queued until the waiter calls wait() again"
+  ],
+  "answer": 0,
+  "explanation": "Because other threads may run before the woken waiter reacquires the monitor, Mesa semantics require waiting inside a loop."
+ },
+ {
+  "id": "q5a5a97377c3",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "An inode has 12 direct pointers, one single-indirect and one double-indirect pointer, with 4 KB blocks and 4-byte pointers. With the inode already in memory, how many disk reads are needed to read the byte at offset 5 MB?",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Direct blocks cover the first 48 KB and the single-indirect block reaches 48 + 1024x4 = 4144 KB, so 5120 KB needs the double-indirect block, a single-indirect block and the data block."
+ },
+ {
+  "id": "q300571d80cb",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Banker's algorithm with two resource types: Available = (3,2). Allocation: P0 (1,0), P1 (2,1), P2 (1,1). Max: P0 (4,2), P1 (3,3), P2 (6,2). P2 requests (2,1). What should the system do?",
+  "options": [
+   "Deny it for now, because granting it leaves an unsafe state",
+   "Grant it, because the request does not exceed Available",
+   "Grant it, because the request does not exceed P2's Need",
+   "Terminate P2, because its request exceeds its Max"
+  ],
+  "answer": 0,
+  "explanation": "After granting, Available would be (1,1) while the Needs are P0 (3,2), P1 (1,2) and P2 (3,0), so no process can finish and the state is unsafe."
+ },
+ {
+  "id": "q533dc22d3ee",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "By Amdahl's law, what is the maximum speedup achievable with an unlimited number of cores for a program that is 90% parallelizable?",
+  "options": [
+   "9",
+   "10",
+   "90",
+   "Unbounded"
+  ],
+  "answer": 1,
+  "explanation": "As the core count grows the parallel term vanishes, leaving speedup = 1 / (serial fraction) = 1 / 0.1 = 10."
+ },
+ {
+  "id": "q25cffb060a8",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "What is a key drawback of global page replacement compared with local replacement?",
+  "options": [
+   "A process's page-fault rate depends on the paging behavior of other processes",
+   "It cannot be combined with LRU approximations",
+   "It always causes Belady's anomaly",
+   "A process can never get more frames than its initial allocation"
+  ],
+  "answer": 0,
+  "explanation": "Global replacement lets a process take frames from others, improving throughput but making each process's performance less predictable."
+ },
+ {
+  "id": "q5b3ac8a5920",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "Why does an SMP scheduler try to keep a thread on the same processor (processor affinity)?",
+  "options": [
+   "Threads cannot be migrated between processors",
+   "It guarantees that the thread will never be preempted",
+   "Its data is likely still in that processor's cache, avoiding costly cache invalidation and refilling",
+   "It reduces the number of system calls the thread makes"
+  ],
+  "answer": 2,
+  "explanation": "Migrating a thread forces the new core to reload its working set and invalidates the old cache, so soft or hard affinity is preferred."
+ },
+ {
+  "id": "qccc757519cd",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "How does the Linux Completely Fair Scheduler (CFS) pick the next task to run?",
+  "options": [
+   "It picks the task with the highest static priority from a FIFO queue",
+   "It picks the runnable task with the smallest virtual runtime, kept in a red-black tree",
+   "It picks tasks in strict round-robin order with a fixed 100 ms quantum",
+   "It picks the task with the shortest predicted next CPU burst"
+  ],
+  "answer": 1,
+  "explanation": "CFS tracks weighted CPU time as vruntime and always runs the leftmost (smallest vruntime) node, approximating ideal fair sharing."
+ }
+]

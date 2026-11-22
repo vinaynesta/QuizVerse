@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q5b258fa14b2",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does an HTTP Strict-Transport-Security (HSTS) header instruct a browser to do?",
+  "options": [
+   "Pin the server's public key permanently",
+   "Send client certificates on every request",
+   "Disable TLS session resumption",
+   "Use only HTTPS for that host for the specified max-age, refusing plain HTTP"
+  ],
+  "answer": 3,
+  "explanation": "HSTS prevents SSL-stripping downgrade attacks by making the browser upgrade every future request to HTTPS."
+ },
+ {
+  "id": "qd9ed794f391",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "On routers that learn the same prefix from several routing sources (e.g. static, OSPF, RIP), what does administrative distance decide?",
+  "options": [
+   "How many hops a packet may travel before being dropped",
+   "Which of several equal routes has the shortest hop count",
+   "Which source's route is trusted and installed; the lower distance wins",
+   "The physical cable length between routers"
+  ],
+  "answer": 2,
+  "explanation": "Administrative distance ranks route sources by trustworthiness before metrics are compared, e.g. static routes beat OSPF which beats RIP by default."
+ },
+ {
+  "id": "qab1cc29510e",
+  "subject": "networks",
+  "topic": "mtu-fragmentation",
+  "level": "hard",
+  "question": "A 2400-byte IPv4 datagram (20-byte header, 2380 bytes of data) crosses a link with a 1000-byte MTU. How many fragments result, and what is the last one?",
+  "options": [
+   "3 fragments; the last carries 428 data bytes at Fragment Offset 244",
+   "2 fragments; the last carries 1400 data bytes at Fragment Offset 122",
+   "3 fragments; the last carries 420 data bytes at Fragment Offset 245",
+   "3 fragments; the last carries 428 data bytes at Fragment Offset 1952"
+  ],
+  "answer": 0,
+  "explanation": "Each fragment carries at most 976 data bytes (980 rounded down to a multiple of 8), so 976 + 976 + 428 = 2380, and the offset is 1952/8 = 244."
+ },
+ {
+  "id": "q8f09e364eaa",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "In HTTP/2, what is the smallest unit of communication carried on a connection?",
+  "options": [
+   "A complete TCP segment",
+   "A plain-text request line",
+   "A binary frame belonging to a stream",
+   "A QUIC packet"
+  ],
+  "answer": 2,
+  "explanation": "HTTP/2 splits messages into binary frames such as HEADERS and DATA, and frames from different streams can be interleaved."
+ },
+ {
+  "id": "q0791735df06",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "What does the BGP LOCAL_PREF attribute influence?",
+  "options": [
+   "Which exit point an AS uses for outbound traffic; a higher value is preferred",
+   "The TTL of BGP keepalive messages",
+   "The order in which prefixes are advertised",
+   "How other ASes route traffic into this AS"
+  ],
+  "answer": 0,
+  "explanation": "LOCAL_PREF is shared among iBGP peers inside one AS and is evaluated early in best-path selection."
+ },
+ {
+  "id": "q800c483acd9",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "What does setting the SO_REUSEADDR socket option typically allow a server to do?",
+  "options": [
+   "Skip the three-way handshake for returning clients",
+   "Bind its listening port even while old connections on that port are still in TIME_WAIT",
+   "Share one TCP connection among multiple processes without fork()",
+   "Disable TIME_WAIT for every connection on the host"
+  ],
+  "answer": 1,
+  "explanation": "Without it, restarting a server can fail with 'address already in use' until the old TIME_WAIT connections expire."
+ },
+ {
+  "id": "q047708cc3d4",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Both ends of a TCP connection send a FIN at the same time (simultaneous close). Which state does each side pass through after FIN_WAIT_1?",
+  "options": [
+   "CLOSE_WAIT",
+   "LAST_ACK",
+   "SYN_RECEIVED",
+   "CLOSING"
+  ],
+  "answer": 3,
+  "explanation": "Receiving the peer's FIN while in FIN_WAIT_1 moves a side to CLOSING, and the ACK of its own FIN then moves it to TIME_WAIT."
+ },
+ {
+  "id": "qe49369400b5",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What is bufferbloat?",
+  "options": [
+   "Packets growing in size as headers are added",
+   "Excessively large network buffers that fill up and cause high latency and jitter under load",
+   "A router running out of memory for its routing table",
+   "TCP windows growing beyond 65,535 bytes"
+  ],
+  "answer": 1,
+  "explanation": "Loss-based congestion control keeps oversized buffers full, so queuing delay grows; AQM schemes such as CoDel address it."
+ },
+ {
+  "id": "qdf82c06406b",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "An active closer is in FIN_WAIT_1 and receives an ACK for its FIN, but no FIN from the peer yet. Which state does it enter?",
+  "options": [
+   "TIME_WAIT",
+   "CLOSING",
+   "FIN_WAIT_2",
+   "CLOSE_WAIT"
+  ],
+  "answer": 2,
+  "explanation": "In FIN_WAIT_2 it has finished sending and waits for the peer's FIN, after which it ACKs and enters TIME_WAIT."
+ },
+ {
+  "id": "qaab835d4660",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What TCP window size is needed to keep a 1 Gbps path with a 40 ms RTT fully utilized?",
+  "options": [
+   "5 MB (40 Mbit)",
+   "40 MB (320 Mbit)",
+   "64 KB",
+   "500 KB (4 Mbit)"
+  ],
+  "answer": 0,
+  "explanation": "The window must cover the bandwidth-delay product: 1e9 bit/s x 0.04 s = 40 Mbit = 5 MB."
+ }
+]

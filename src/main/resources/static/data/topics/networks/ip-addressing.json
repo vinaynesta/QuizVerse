@@ -30,6 +30,21 @@
   "explanation": "RFC 1918 reserves 10.0.0.0/8, 172.16.0.0/12 (172.16-172.31) and 192.168.0.0/16; 172.32.0.1 is outside the /12."
  },
  {
+  "id": "q3636faa51a9",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "What is the notation 192.168.1.0/24, which writes an address with its prefix length, called?",
+  "options": [
+   "Dotted-hex notation",
+   "Classful notation",
+   "EUI-64 notation",
+   "CIDR notation"
+  ],
+  "answer": 3,
+  "explanation": "Classless Inter-Domain Routing notation appends the number of network bits after a slash."
+ },
+ {
   "id": "q3d1d68817a9",
   "subject": "networks",
   "topic": "ip-addressing",
@@ -58,6 +73,21 @@
   ],
   "answer": 3,
   "explanation": "::1 is loopback; :: is unspecified, fe80::/10 is link-local and ff02::1 is all-nodes multicast."
+ },
+ {
+  "id": "q9ccc7eac5a7",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "What is the default subnet mask of a classful Class C network?",
+  "options": [
+   "255.255.255.0",
+   "255.255.0.0",
+   "255.0.0.0",
+   "255.255.255.255"
+  ],
+  "answer": 0,
+  "explanation": "Classful Class C networks used a /24 mask, leaving 8 bits for hosts."
  },
  {
   "id": "qbed1110b87d",

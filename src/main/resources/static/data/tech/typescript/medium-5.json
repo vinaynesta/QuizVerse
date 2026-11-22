@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q0f1051ae02e",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `Extract<\"a\" | \"b\" | 1, string>`?",
+  "options": [
+   "1",
+   "\"a\" | \"b\"",
+   "string",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "Extract keeps only the union members assignable to the second type argument."
+ },
+ {
+  "id": "q9aa627edf30",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What is the accessibility of a class member declared with no modifier?",
+  "options": [
+   "private",
+   "protected",
+   "public",
+   "internal"
+  ],
+  "answer": 2,
+  "explanation": "Class members are public by default in TypeScript."
+ },
+ {
+  "id": "q151f1ba9829",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Record<\"a\" | \"b\", boolean>` produce?",
+  "options": [
+   "{ [key: string]: boolean }",
+   "{ a: boolean; b: boolean }",
+   "{ a?: boolean; b?: boolean }",
+   "boolean[]"
+  ],
+  "answer": 1,
+  "explanation": "With a union of literal keys, Record creates one required property per key."
+ },
+ {
+  "id": "qc54c3e1122a",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `InstanceType<typeof Date>`?",
+  "options": [
+   "typeof Date",
+   "Date",
+   "object",
+   "DateConstructor"
+  ],
+  "answer": 1,
+  "explanation": "InstanceType returns the type produced by calling a constructor type with new."
+ },
+ {
+  "id": "qe3e77a21cce",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `class P { readonly x: number; }`, where can `x` be assigned?",
+  "options": [
+   "Anywhere inside the class",
+   "Only from outside the class",
+   "Nowhere, it must stay undefined",
+   "Only in its declaration or in the constructor"
+  ],
+  "answer": 3,
+  "explanation": "readonly properties can be initialized at declaration or in the constructor, but not reassigned afterwards."
+ },
+ {
+  "id": "q4a90a69d72a",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "How does `typeof` in `type T = typeof x;` differ from `typeof x` in an expression?",
+  "options": [
+   "The expression form gives the static type",
+   "They are identical and both return a string",
+   "The type form only works with classes",
+   "In a type position it gives x's static type; in an expression it is the runtime operator returning a string"
+  ],
+  "answer": 3,
+  "explanation": "TypeScript reuses the keyword: in types it is a type query, while in values it is JavaScript's typeof operator."
+ },
+ {
+  "id": "q50ecd7348f5",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(a: string | number, b: string | boolean) { if (a === b) { /* here */ } }`, what is a's type at `here`?",
+  "options": [
+   "string | number | boolean",
+   "string | number",
+   "string",
+   "never"
+  ],
+  "answer": 2,
+  "explanation": "Strict equality narrows both operands to their common type, which is string."
+ },
+ {
+  "id": "qbf4e3d7db5e",
+  "subject": "typescript",
+  "topic": "readonly",
+  "level": "medium",
+  "question": "Given `const xs: ReadonlyArray<number> = [1];`, which operation is allowed?",
+  "options": [
+   "xs.map(n => n * 2)",
+   "xs[0] = 5",
+   "xs.push(2)",
+   "xs.sort()"
+  ],
+  "answer": 0,
+  "explanation": "ReadonlyArray removes mutating methods and index assignment but keeps non-mutating ones like map."
+ },
+ {
+  "id": "q44bac18db88",
+  "subject": "typescript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does declaring `abstract area(): number;` in an abstract class require?",
+  "options": [
+   "Subclasses cannot override area",
+   "The method body is inherited from Object",
+   "The method can only be called statically",
+   "Every concrete subclass must implement area"
+  ],
+  "answer": 3,
+  "explanation": "Abstract methods have no implementation, so non-abstract subclasses must provide one."
+ },
+ {
+  "id": "qf89326cfec1",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "Given `const arr = [\"a\", \"b\"] as const;`, what is `typeof arr[number]`?",
+  "options": [
+   "\"a\" | \"b\"",
+   "string[]",
+   "readonly [\"a\", \"b\"]",
+   "string"
+  ],
+  "answer": 0,
+  "explanation": "Indexing the readonly tuple type with number gives the union of its element literal types."
+ }
+]

@@ -88,5 +88,35 @@
   ],
   "answer": 3,
   "explanation": "bind creates a new bound function and does not invoke the original."
+ },
+ {
+  "id": "qcc16fa6e55b",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "What does this log?\nfunction show() { return this.v; }\nconsole.log(show.call({ v: 7 }));",
+  "options": [
+   "undefined",
+   "A TypeError is thrown",
+   "7",
+   "null"
+  ],
+  "answer": 2,
+  "explanation": "call invokes the function with this set to its first argument, the object { v: 7 }."
+ },
+ {
+  "id": "qda06ebc2195",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "What does this log?\nconst obj = { name: \"A\", greet() { return [1].map(() => this.name)[0]; } };\nconsole.log(obj.greet());",
+  "options": [
+   "undefined",
+   "A",
+   "A TypeError is thrown",
+   "1"
+  ],
+  "answer": 1,
+  "explanation": "The arrow callback takes this lexically from greet, where this is obj."
  }
 ]

@@ -1,5 +1,35 @@
 [
  {
+  "id": "q0456da6ab35",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "What is `keyof never`?",
+  "options": [
+   "never",
+   "string | number | symbol",
+   "string",
+   "unknown"
+  ],
+  "answer": 1,
+  "explanation": "never is the empty set, which is assignable to every type, so it is treated as having every possible key."
+ },
+ {
+  "id": "q25956d5dbcf",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "What is the type `string | never`?",
+  "options": [
+   "unknown",
+   "never",
+   "string | never",
+   "string"
+  ],
+  "answer": 3,
+  "explanation": "never is the empty union, so it vanishes when unioned with any other type."
+ },
+ {
   "id": "q9978c7371d3",
   "subject": "typescript",
   "topic": "never",

@@ -30,6 +30,21 @@
   "explanation": "The executor runs synchronously, and resolve does not stop it; the then callback is a microtask that runs after the script."
  },
  {
+  "id": "q74177e0478a",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nconst p = new Promise(r => setTimeout(() => r(\"x\")));\np.then(v => console.log(v));\nPromise.resolve().then(() => console.log(\"y\"));\nconsole.log(\"z\");",
+  "options": [
+   "z y x",
+   "x y z",
+   "y z x",
+   "z x y"
+  ],
+  "answer": 0,
+  "explanation": "p is only resolved inside a timer, so its then callback runs after the microtask that logs y."
+ },
+ {
   "id": "qabc926d00d6",
   "subject": "javascript",
   "topic": "event-loop",
@@ -103,5 +118,35 @@
   ],
   "answer": 1,
   "explanation": "The microtask queue is drained completely, including microtasks added during draining, before the next macrotask runs."
+ },
+ {
+  "id": "qf08e4d539dd",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nsetTimeout(() => console.log(\"a\"), 0);\nPromise.resolve().then(() => console.log(\"b\")).then(() => console.log(\"c\"));\nqueueMicrotask(() => console.log(\"d\"));",
+  "options": [
+   "b c d a",
+   "a b d c",
+   "b d c a",
+   "d b c a"
+  ],
+  "answer": 2,
+  "explanation": "b and d are queued as microtasks first; c is queued only after b runs, and the timer runs after all microtasks."
+ },
+ {
+  "id": "qfae4baec6d9",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nasync function f() { try { await Promise.reject(1); } finally { console.log(\"f\"); } }\nf().catch(() => console.log(\"c\"));\nconsole.log(\"s\");",
+  "options": [
+   "f s c",
+   "s f c",
+   "f c s",
+   "s c f"
+  ],
+  "answer": 1,
+  "explanation": "The await suspends f, so s logs first; then finally runs and the rejection propagates to catch."
  }
 ]

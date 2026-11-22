@@ -30,6 +30,21 @@
   "explanation": "/25 splits the last octet into 0-127 and 128-255; 130 is in the upper half, whose broadcast is .255."
  },
  {
+  "id": "q3764f53795a",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /22 IPv4 subnet provide?",
+  "options": [
+   "510",
+   "1024",
+   "1022",
+   "2046"
+  ],
+  "answer": 2,
+  "explanation": "A /22 leaves 32 - 22 = 10 host bits: 2^10 - 2 = 1022 usable addresses."
+ },
+ {
   "id": "q3a02f59d54b",
   "subject": "networks",
   "topic": "subnetting",
@@ -60,6 +75,21 @@
   "explanation": "/25 gives 128 - 2 = 126 hosts; /26 gives only 64 - 2 = 62."
  },
  {
+  "id": "q4c52d99be2b",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the broadcast address of host 192.168.5.100/28?",
+  "options": [
+   "192.168.5.103",
+   "192.168.5.127",
+   "192.168.5.111",
+   "192.168.5.255"
+  ],
+  "answer": 2,
+  "explanation": "A /28 has 16-address blocks; 100 is in 96-111, so the broadcast address is 192.168.5.111."
+ },
+ {
   "id": "q738867ae8c8",
   "subject": "networks",
   "topic": "subnetting",
@@ -73,6 +103,21 @@
   ],
   "answer": 2,
   "explanation": "2^2 = 4 addresses minus network and broadcast leaves 2, which is why /30 is used for point-to-point links."
+ },
+ {
+  "id": "q907616e8183",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "Are hosts 10.1.1.10/27 and 10.1.1.40/27 on the same subnet?",
+  "options": [
+   "Yes; both are in 10.1.1.0/27",
+   "No; they are in 10.1.1.0/28 and 10.1.1.32/28",
+   "Yes; both are in 10.1.1.0/24",
+   "No; they are in 10.1.1.0/27 and 10.1.1.32/27"
+  ],
+  "answer": 3,
+  "explanation": "A /27 has 32-address blocks, so .10 falls in .0-.31 and .40 falls in .32-.63."
  },
  {
   "id": "q9e2c6012b3e",
@@ -90,6 +135,21 @@
   "explanation": "/26 blocks are 64 addresses (0, 64, 128, 192); 77 falls in the 64-127 block, so the network is .64."
  },
  {
+  "id": "qabaae189851",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the network address of host 172.16.45.200/21?",
+  "options": [
+   "172.16.40.0",
+   "172.16.32.0",
+   "172.16.44.0",
+   "172.16.45.0"
+  ],
+  "answer": 0,
+  "explanation": "A /21 has a block size of 8 in the third octet, and 45 falls in the 40-47 block, so the network is 172.16.40.0."
+ },
+ {
   "id": "qba21411de54",
   "subject": "networks",
   "topic": "subnetting",
@@ -105,6 +165,21 @@
   "explanation": "/26 sets 2 bits in the last octet: 128 + 64 = 192."
  },
  {
+  "id": "qbbd5580ac1c",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the dotted-decimal subnet mask for a /19 prefix?",
+  "options": [
+   "255.255.248.0",
+   "255.255.192.0",
+   "255.255.240.0",
+   "255.255.224.0"
+  ],
+  "answer": 3,
+  "explanation": "A /19 uses 8 + 8 + 3 network bits, and three 1-bits in the third octet give 128 + 64 + 32 = 224."
+ },
+ {
   "id": "qbe9564575d0",
   "subject": "networks",
   "topic": "subnetting",
@@ -118,6 +193,21 @@
   ],
   "answer": 1,
   "explanation": "/20 leaves 12 host bits = 4096 addresses = 16 values of the third octet, so 32 through 47."
+ },
+ {
+  "id": "qdda6c95bd08",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the smallest single route that summarizes the networks 192.168.16.0/24 through 192.168.23.0/24?",
+  "options": [
+   "192.168.16.0/20",
+   "192.168.16.0/21",
+   "192.168.16.0/22",
+   "192.168.0.0/19"
+  ],
+  "answer": 1,
+  "explanation": "The eight /24s from 16 to 23 share the first 21 bits (16 = 00010000), so they aggregate exactly into 192.168.16.0/21."
  },
  {
   "id": "qe298e3ee9fc",

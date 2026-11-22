@@ -30,6 +30,21 @@
   "explanation": "The undefined value has its own type and typeof reports \"undefined\"."
  },
  {
+  "id": "q1b718918181",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does Number(\"42\") return?",
+  "options": [
+   "\"42\"",
+   "NaN",
+   "undefined",
+   "42"
+  ],
+  "answer": 3,
+  "explanation": "Number() converts a numeric string into the corresponding number value."
+ },
+ {
   "id": "q34f4af41b32",
   "subject": "javascript",
   "topic": "types-coercion",
@@ -75,6 +90,36 @@
   "explanation": "String primitives report \"string\" from the typeof operator."
  },
  {
+  "id": "qa4bc58cc488",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof function() {} return?",
+  "options": [
+   "\"object\"",
+   "\"method\"",
+   "\"function\"",
+   "\"undefined\""
+  ],
+  "answer": 2,
+  "explanation": "Functions are objects, but typeof reports them specially as \"function\"."
+ },
+ {
+  "id": "qdaf6b003700",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof 42 return?",
+  "options": [
+   "\"integer\"",
+   "\"numeric\"",
+   "\"float\"",
+   "\"number\""
+  ],
+  "answer": 3,
+  "explanation": "All JavaScript numbers, integers and decimals alike, report \"number\" from typeof."
+ },
+ {
   "id": "qec0ca34f9ed",
   "subject": "javascript",
   "topic": "types-coercion",
@@ -105,6 +150,21 @@
   "explanation": "NaN is not equal to itself under === but Object.is uses SameValue, which treats NaN as equal to NaN."
  },
  {
+  "id": "q26c6dc2df36",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What do +[] and +{} evaluate to?",
+  "options": [
+   "NaN and NaN",
+   "0 and NaN",
+   "NaN and 0",
+   "0 and 0"
+  ],
+  "answer": 1,
+  "explanation": "[] converts to \"\" which becomes 0, while {} converts to \"[object Object]\" which becomes NaN."
+ },
+ {
   "id": "q26fc6d308dc",
   "subject": "javascript",
   "topic": "types-coercion",
@@ -133,6 +193,21 @@
   ],
   "answer": 3,
   "explanation": "false becomes 0 and [] becomes \"\" and then 0, so the loose comparison is 0 == 0, even though [] is truthy."
+ },
+ {
+  "id": "q378a4c53f95",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does parseInt(0.0000005) return?",
+  "options": [
+   "0",
+   "5",
+   "NaN",
+   "0.0000005"
+  ],
+  "answer": 1,
+  "explanation": "parseInt first converts its argument to the string \"5e-7\" and parses the leading digits, giving 5."
  },
  {
   "id": "q3c494014632",
@@ -193,6 +268,36 @@
   ],
   "answer": 0,
   "explanation": "Arithmetic operators do not implicitly mix BigInt and Number; one side must be converted explicitly."
+ },
+ {
+  "id": "qac5e691c737",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does \"b\" + \"a\" + +\"a\" + \"a\" evaluate to?",
+  "options": [
+   "\"baNaNa\"",
+   "\"ba0a\"",
+   "NaN",
+   "\"baaa\""
+  ],
+  "answer": 0,
+  "explanation": "The unary + turns \"a\" into NaN, which is then concatenated as the string \"NaN\"."
+ },
+ {
+  "id": "qc869d8af5c8",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [1, 2] + [3] evaluate to?",
+  "options": [
+   "[1, 2, 3]",
+   "\"1,23\"",
+   "\"1,2,3\"",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "Both arrays are converted to strings, \"1,2\" and \"3\", and then concatenated."
  },
  {
   "id": "qd1e368e1a0b",

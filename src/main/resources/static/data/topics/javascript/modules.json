@@ -1,5 +1,20 @@
 [
  {
+  "id": "q3cfcf9d0169",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What is true about top-level await?",
+  "options": [
+   "It is allowed in ES modules and delays the module's evaluation until the awaited promise settles",
+   "It is allowed in any script, including classic non-module scripts",
+   "It runs the awaited promise synchronously",
+   "It is only allowed inside async functions"
+  ],
+  "answer": 0,
+  "explanation": "Top-level await works in modules, and modules that import it wait for it to finish."
+ },
+ {
   "id": "q451ba695f9b",
   "subject": "javascript",
   "topic": "modules",
@@ -28,5 +43,20 @@
   ],
   "answer": 2,
   "explanation": "A module can have many named exports but at most one default export."
+ },
+ {
+  "id": "qd86df949156",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "How do you import a named export add from \"./math.js\"?",
+  "options": [
+   "import { add } from \"./math.js\";",
+   "const add = import(\"./math.js\").add;",
+   "import * as add from \"./math.js\";",
+   "import add from \"./math.js\";"
+  ],
+  "answer": 0,
+  "explanation": "Named exports are imported with braces; without braces you get the default export."
  }
 ]

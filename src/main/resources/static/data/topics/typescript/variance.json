@@ -30,6 +30,21 @@
   "explanation": "strictFunctionTypes applies to function type syntax but deliberately not to method declarations."
  },
  {
+  "id": "q490dbc2e399",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "What does `in out` declare in `interface State<in out T> { get(): T; set(v: T): void }`?",
+  "options": [
+   "T is covariant",
+   "T is contravariant",
+   "T is invariant",
+   "T is bivariant"
+  ],
+  "answer": 2,
+  "explanation": "Marking a type parameter both in and out means only identical type arguments are mutually assignable."
+ },
+ {
   "id": "q4f5b5f9ed2c",
   "subject": "typescript",
   "topic": "variance",
@@ -43,6 +58,21 @@
   ],
   "answer": 3,
   "explanation": "Parameters are contravariant: a function handling any Animal can safely receive a Dog."
+ },
+ {
+  "id": "q69d6fab5d1a",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With `Dog` extending `Animal`, is `() => Dog` assignable to `() => Animal`?",
+  "options": [
+   "Only if Dog has no extra members",
+   "No, because return types are compared contravariantly",
+   "Only with strictFunctionTypes disabled",
+   "Yes, because return types are compared covariantly"
+  ],
+  "answer": 3,
+  "explanation": "A function returning a Dog can safely be used wherever a function returning an Animal is expected."
  },
  {
   "id": "q714b9567b0a",

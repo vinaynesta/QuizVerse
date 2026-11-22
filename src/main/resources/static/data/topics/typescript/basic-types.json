@@ -30,6 +30,21 @@
   "explanation": "TypeScript has a single number type (IEEE 754 doubles); bigint is separate for arbitrary-precision integers."
  },
  {
+  "id": "qb3a23869be5",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What does the lowercase `object` type represent?",
+  "options": [
+   "Any value at all, including primitives",
+   "Only plain object literals",
+   "Any non-primitive value",
+   "Only values created with new Object()"
+  ],
+  "answer": 2,
+  "explanation": "object excludes primitives such as string, number and boolean, but allows arrays, functions and other objects."
+ },
+ {
   "id": "qc9fc81c2dd7",
   "subject": "typescript",
   "topic": "basic-types",
@@ -43,6 +58,21 @@
   ],
   "answer": 3,
   "explanation": "TypeScript uses the lowercase string type for all text; there is no separate char type."
+ },
+ {
+  "id": "qdaebd953d7f",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which type annotation is used for large integer values written like `10n`?",
+  "options": [
+   "bigint",
+   "long",
+   "BigNumber",
+   "number"
+  ],
+  "answer": 0,
+  "explanation": "Literals with the n suffix are BigInt values, typed as bigint in TypeScript."
  },
  {
   "id": "qe3197129a9a",
@@ -73,6 +103,21 @@
   ],
   "answer": 0,
   "explanation": "The | operator creates a union type, meaning the value may be any one of the listed types."
+ },
+ {
+  "id": "qe418f9e4e3d",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "Which syntax tells the compiler to treat `el` as an `HTMLInputElement`?",
+  "options": [
+   "el is HTMLInputElement",
+   "el as HTMLInputElement",
+   "el: HTMLInputElement",
+   "cast<HTMLInputElement>(el)"
+  ],
+  "answer": 1,
+  "explanation": "The as keyword is a type assertion that changes the compile-time type without any runtime conversion."
  },
  {
   "id": "qf24b30aec0f",

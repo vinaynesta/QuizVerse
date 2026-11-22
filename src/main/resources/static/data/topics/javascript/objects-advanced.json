@@ -30,6 +30,21 @@
   "explanation": "Object.freeze is shallow: o's own properties cannot change, but the nested object is still mutable."
  },
  {
+  "id": "q40618287a80",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst o = { a: 1, get b() { return this.a + 1; } };\nconst c = { ...o, a: 10 };\nconsole.log(c.b);",
+  "options": [
+   "undefined",
+   "11",
+   "2",
+   "NaN"
+  ],
+  "answer": 2,
+  "explanation": "Spread invokes the getter and copies its current value, 2, as a plain data property."
+ },
+ {
   "id": "q412b8f419a1",
   "subject": "javascript",
   "topic": "objects-advanced",
@@ -43,6 +58,51 @@
   ],
   "answer": 0,
   "explanation": "Integer-like keys come first in ascending order, followed by string keys in insertion order."
+ },
+ {
+  "id": "q4b185006e41",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst k1 = {}, k2 = {};\nconst o = {};\no[k1] = 1;\no[k2] = 2;\nconsole.log(o[k1]);",
+  "options": [
+   "1",
+   "undefined",
+   "2",
+   "A TypeError is thrown"
+  ],
+  "answer": 2,
+  "explanation": "Object keys are converted to strings, and both objects become \"[object Object]\", so the second write overwrites the first."
+ },
+ {
+  "id": "qa295a0a41eb",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "In non-strict code, what does this log?\nconst o = {};\nObject.defineProperty(o, \"x\", { value: 1 });\no.x = 2;\nconsole.log(o.x, Object.keys(o).length);",
+  "options": [
+   "2 1",
+   "2 0",
+   "1 1",
+   "1 0"
+  ],
+  "answer": 3,
+  "explanation": "defineProperty defaults to non-writable and non-enumerable, so the assignment is silently ignored and x is not listed by Object.keys."
+ },
+ {
+  "id": "qc42bbf5aef6",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst a = { n: { v: 1 } };\nconst b = structuredClone(a);\nb.n.v = 2;\nconsole.log(a.n.v);",
+  "options": [
+   "1",
+   "2",
+   "undefined",
+   "A TypeError is thrown"
+  ],
+  "answer": 0,
+  "explanation": "structuredClone makes a deep copy, so changing the nested object in b does not affect a."
  },
  {
   "id": "qf338ff27646",

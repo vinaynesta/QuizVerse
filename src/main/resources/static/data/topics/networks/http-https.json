@@ -1,5 +1,20 @@
 [
  {
+  "id": "q1314baecde8",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "Which HTTP method is normally used to submit HTML form data that creates a new resource on the server?",
+  "options": [
+   "GET",
+   "HEAD",
+   "TRACE",
+   "POST"
+  ],
+  "answer": 3,
+  "explanation": "POST sends data in the request body for the server to process, such as creating a record."
+ },
+ {
   "id": "q5e0288ac680",
   "subject": "networks",
   "topic": "http-https",
@@ -13,6 +28,21 @@
   ],
   "answer": 2,
   "explanation": "HTTP itself does not remember prior requests; state is added with cookies, tokens or server-side sessions."
+ },
+ {
+  "id": "q6e673ee1903",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "Which class of HTTP status codes indicates a server-side error?",
+  "options": [
+   "3xx",
+   "2xx",
+   "5xx",
+   "4xx"
+  ],
+  "answer": 2,
+  "explanation": "5xx codes such as 500 or 503 mean the server failed to fulfil a valid request, while 4xx codes are client errors."
  },
  {
   "id": "q8b67e638862",

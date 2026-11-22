@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qc869d8af5c8",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "hard",
+  "question": "What does [1, 2] + [3] evaluate to?",
+  "options": [
+   "[1, 2, 3]",
+   "\"1,23\"",
+   "\"1,2,3\"",
+   "6"
+  ],
+  "answer": 1,
+  "explanation": "Both arrays are converted to strings, \"1,2\" and \"3\", and then concatenated."
+ },
+ {
+  "id": "q74177e0478a",
+  "subject": "javascript",
+  "topic": "event-loop",
+  "level": "hard",
+  "question": "What is the output order?\nconst p = new Promise(r => setTimeout(() => r(\"x\")));\np.then(v => console.log(v));\nPromise.resolve().then(() => console.log(\"y\"));\nconsole.log(\"z\");",
+  "options": [
+   "z y x",
+   "x y z",
+   "y z x",
+   "z x y"
+  ],
+  "answer": 0,
+  "explanation": "p is only resolved inside a timer, so its then callback runs after the microtask that logs y."
+ },
+ {
+  "id": "qb02040e422f",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does the last line log?\nfunction* g() { try { yield 1; } catch { yield \"caught\"; } }\nconst it = g();\nit.next();\nconsole.log(it.throw(new Error()).value);",
+  "options": [
+   "undefined",
+   "1",
+   "caught",
+   "The Error is thrown out of it.throw"
+  ],
+  "answer": 2,
+  "explanation": "throw() raises the error at the paused yield, the generator's catch handles it and yields \"caught\"."
+ },
+ {
+  "id": "q21ec1fa6723",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What happens when this runs?\nconsole.log(typeof x);\nlet x = 1;",
+  "options": [
+   "It logs \"undefined\"",
+   "A ReferenceError is thrown",
+   "It logs \"number\"",
+   "It logs \"object\""
+  ],
+  "answer": 1,
+  "explanation": "typeof is not safe for let bindings in the temporal dead zone, so accessing x throws."
+ },
+ {
+  "id": "qc42bbf5aef6",
+  "subject": "javascript",
+  "topic": "objects-advanced",
+  "level": "hard",
+  "question": "What does this log?\nconst a = { n: { v: 1 } };\nconst b = structuredClone(a);\nb.n.v = 2;\nconsole.log(a.n.v);",
+  "options": [
+   "1",
+   "2",
+   "undefined",
+   "A TypeError is thrown"
+  ],
+  "answer": 0,
+  "explanation": "structuredClone makes a deep copy, so changing the nested object in b does not affect a."
+ },
+ {
+  "id": "q0d9868c5839",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nconsole.log(Object.getPrototypeOf(Object.getPrototypeOf({})));",
+  "options": [
+   "Object.prototype",
+   "undefined",
+   "{}",
+   "null"
+  ],
+  "answer": 3,
+  "explanation": "A plain object's prototype is Object.prototype, whose own prototype is null, the end of the chain."
+ },
+ {
+  "id": "q50f1a009fb8",
+  "subject": "javascript",
+  "topic": "prototypes",
+  "level": "hard",
+  "question": "What does this log?\nfunction F() { this.x = 1; }\nF.prototype.x = 2;\nconst f = new F();\ndelete f.x;\nconsole.log(f.x);",
+  "options": [
+   "2",
+   "1",
+   "undefined",
+   "A TypeError is thrown"
+  ],
+  "answer": 0,
+  "explanation": "delete removes only the own property, so the lookup falls through to the prototype's x."
+ },
+ {
+  "id": "q28a502b5685",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does this log?\nfunction* g() { try { yield 1; } finally { console.log(\"cleanup\"); } }\nfor (const v of g()) { break; }",
+  "options": [
+   "Nothing",
+   "1 cleanup",
+   "1",
+   "cleanup"
+  ],
+  "answer": 3,
+  "explanation": "Breaking out of for...of calls the iterator's return method, which runs the generator's finally block."
+ },
+ {
+  "id": "q4c5e7eda318",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does this log?\nfunction* g() { let i = 0; while (true) yield i++; }\nconst [a, , b] = g();\nconsole.log(a, b);",
+  "options": [
+   "0 2",
+   "1 3",
+   "It never finishes",
+   "0 1"
+  ],
+  "answer": 0,
+  "explanation": "Array destructuring pulls only as many values as needed (three here) and then closes the infinite iterator."
+ },
+ {
+  "id": "q6fae51b3dfe",
+  "subject": "javascript",
+  "topic": "tdz-hoisting",
+  "level": "hard",
+  "question": "What happens when this runs?\nf();\nvar f = function () { console.log(\"x\"); };",
+  "options": [
+   "It logs x",
+   "A ReferenceError is thrown",
+   "Nothing happens",
+   "A TypeError is thrown because f is undefined"
+  ],
+  "answer": 3,
+  "explanation": "Only the var declaration is hoisted, so f is undefined when called; the function expression is assigned later."
+ }
+]

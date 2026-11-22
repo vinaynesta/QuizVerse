@@ -28,5 +28,50 @@
   ],
   "answer": 0,
   "explanation": "Uppercase is an intrinsic string manipulation type applied to literal types."
+ },
+ {
+  "id": "q9f6a0a73d53",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "Given ``type S<T> = T extends `${infer H}-${infer R}` ? [H, R] : never;``, what is `S<\"a-b-c\">`?",
+  "options": [
+   "[\"a\", \"b-c\"]",
+   "[\"a\", \"b\", \"c\"]",
+   "[\"a-b\", \"c\"]",
+   "never"
+  ],
+  "answer": 0,
+  "explanation": "The first infer placeholder matches as little as possible, stopping at the first hyphen."
+ },
+ {
+  "id": "qae37c80effc",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "What is `Capitalize<\"hello world\">`?",
+  "options": [
+   "\"Hello World\"",
+   "\"HELLO WORLD\"",
+   "\"Hello world\"",
+   "\"helloWorld\""
+  ],
+  "answer": 2,
+  "explanation": "Capitalize uppercases only the first character of the string literal."
+ },
+ {
+  "id": "qbbd6f981880",
+  "subject": "typescript",
+  "topic": "template-literal-types",
+  "level": "hard",
+  "question": "Given ``type Px = `${number}px`;``, which assignment compiles?",
+  "options": [
+   "const a: Px = \"tenpx\";",
+   "const a: Px = \"px10\";",
+   "const a: Px = 10;",
+   "const a: Px = \"10px\";"
+  ],
+  "answer": 3,
+  "explanation": "The ${number} placeholder accepts any string that parses as a number, followed by px."
  }
 ]

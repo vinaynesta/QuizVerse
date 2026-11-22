@@ -1,5 +1,20 @@
 [
  {
+  "id": "q275fc324f68",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What is OCSP stapling?",
+  "options": [
+   "The client caches the server certificate for future sessions",
+   "The server attaches a recent, CA-signed OCSP response about its own certificate to the TLS handshake",
+   "The CA embeds the full revocation list into every certificate",
+   "The browser contacts the CA for every page load"
+  ],
+  "answer": 1,
+  "explanation": "Stapling avoids a separate client lookup to the CA, improving privacy and latency while still proving the certificate is not revoked."
+ },
+ {
   "id": "q34010a7429b",
   "subject": "networks",
   "topic": "tls",
@@ -15,6 +30,36 @@
   "explanation": "HelloRetryRequest names the group to use, and the client resends ClientHello with that key share, costing an extra RTT."
  },
  {
+  "id": "q404120763c3",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does forward secrecy provide in TLS?",
+  "options": [
+   "Compromise of the server's long-term private key does not reveal the keys of past sessions",
+   "Session keys are reused securely across many connections",
+   "Encrypted data can be forwarded through proxies without decryption",
+   "The client can verify the server's certificate chain offline"
+  ],
+  "answer": 0,
+  "explanation": "Ephemeral (EC)DHE key exchange derives per-session keys that are discarded, so recorded traffic stays safe if the long-term key leaks later."
+ },
+ {
+  "id": "q5b258fa14b2",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does an HTTP Strict-Transport-Security (HSTS) header instruct a browser to do?",
+  "options": [
+   "Pin the server's public key permanently",
+   "Send client certificates on every request",
+   "Disable TLS session resumption",
+   "Use only HTTPS for that host for the specified max-age, refusing plain HTTP"
+  ],
+  "answer": 3,
+  "explanation": "HSTS prevents SSL-stripping downgrade attacks by making the browser upgrade every future request to HTTPS."
+ },
+ {
   "id": "q5e3896225c3",
   "subject": "networks",
   "topic": "tls",
@@ -28,6 +73,21 @@
   ],
   "answer": 2,
   "explanation": "TLS 1.3 (RFC 8446) removed static RSA and static DH, so every full handshake has forward secrecy."
+ },
+ {
+  "id": "q6e49ee2e57f",
+  "subject": "networks",
+  "topic": "tls",
+  "level": "hard",
+  "question": "What does mutual TLS (mTLS) add to a standard TLS handshake?",
+  "options": [
+   "The handshake is performed twice for extra security",
+   "Both sides share a single static symmetric key",
+   "The server encrypts the certificate with the client's password",
+   "The client also presents a certificate so the server can authenticate it"
+  ],
+  "answer": 3,
+  "explanation": "In mTLS the server sends a CertificateRequest and verifies the client certificate, which is common for service-to-service authentication."
  },
  {
   "id": "q73685a6d7e0",

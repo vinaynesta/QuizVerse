@@ -1,5 +1,21 @@
 [
  {
+  "id": "q1fc2ead1101",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "An organised collection of related data that can be easily accessed and managed is called a:",
+  "options": [
+   "Browser",
+   "Database",
+   "Compiler",
+   "Protocol"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A database stores related data in an organised way, usually managed by a DBMS."
+ },
+ {
   "id": "q240fa0f1636",
   "subject": "computer",
   "topic": "database",
@@ -38,13 +54,13 @@
   "level": "easy",
   "question": "In a database table, a single row is also called a:",
   "options": [
-   "Attribute",
+   "Domain",
    "Field",
-   "Record",
-   "Domain"
+   "Attribute",
+   "Record"
   ],
   "needsReview": true,
-  "answer": 2,
+  "answer": 3,
   "explanation": "A row holds all the data about one item and is called a record or tuple."
  },
  {
@@ -80,6 +96,38 @@
   "explanation": "A relational database organises data into tables (relations) made up of rows and columns."
  },
  {
+  "id": "q88c96f5f254",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "Which SQL command is used to remove specific rows from a table?",
+  "options": [
+   "ERASE",
+   "DROP",
+   "DELETE",
+   "REMOVE"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "DELETE removes rows, optionally filtered by WHERE; DROP removes the whole table."
+ },
+ {
+  "id": "qa52c5e321f1",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In MS Access, which object is used to enter or view data one record at a time in a user-friendly layout?",
+  "options": [
+   "Table",
+   "Form",
+   "Module",
+   "Query"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Forms provide a convenient screen for data entry and viewing records."
+ },
+ {
   "id": "qb5ff97d03b5",
   "subject": "computer",
   "topic": "database",
@@ -94,6 +142,22 @@
   "needsReview": true,
   "answer": 2,
   "explanation": "A DBMS (Database Management System) is software used to create, store, manage and retrieve data in databases."
+ },
+ {
+  "id": "qc76d9d95ed3",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In MS Access, which object presents data in a formatted layout suitable for printing?",
+  "options": [
+   "Report",
+   "Table",
+   "Query",
+   "Form"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Reports in MS Access format and summarise data for printing or viewing."
  },
  {
   "id": "qdc65ddc2e23",
@@ -112,6 +176,54 @@
   "explanation": "SQL (Structured Query Language) is the standard language for working with relational databases."
  },
  {
+  "id": "qe4088bb5e11",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In a database table, a field that has been left empty with no value is said to contain:",
+  "options": [
+   "BLANK",
+   "VOID",
+   "Zero",
+   "NULL"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "NULL means a missing or unknown value, which is different from zero or a space."
+ },
+ {
+  "id": "qe72a136a3d1",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "In MS Access, which object is used to find specific data, such as all customers from Delhi?",
+  "options": [
+   "Macro",
+   "Query",
+   "Form",
+   "Report"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A query retrieves records that meet given criteria from one or more tables."
+ },
+ {
+  "id": "qf1d41e8f3a0",
+  "subject": "computer",
+  "topic": "database",
+  "level": "easy",
+  "question": "Which SQL clause is used to sort the result of a query in ascending or descending order?",
+  "options": [
+   "ORDER BY",
+   "GROUP BY",
+   "ARRANGE BY",
+   "SORT BY"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "ORDER BY sorts rows, ascending by default or descending with DESC."
+ },
+ {
   "id": "q0ce64402674",
   "subject": "computer",
   "topic": "database",
@@ -126,6 +238,38 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "DDL commands such as CREATE, ALTER and DROP define the structure of database objects."
+ },
+ {
+  "id": "q1dba652796e",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "A large central store of integrated historical data used for analysis and reporting is called a:",
+  "options": [
+   "Data dictionary",
+   "Data mart",
+   "Data warehouse",
+   "Data packet"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A data warehouse combines data from many sources to support decision making."
+ },
+ {
+  "id": "q2ae8d7a0865",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "The number of rows (tuples) in a relation is called its:",
+  "options": [
+   "Degree",
+   "Domain",
+   "Cardinality",
+   "Schema"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Cardinality is the number of tuples (rows); degree is the number of attributes (columns)."
  },
  {
   "id": "q2bbafc97c1d",
@@ -144,6 +288,38 @@
   "explanation": "Degree is the number of columns; cardinality is the number of rows."
  },
  {
+  "id": "q2e243a3fbf0",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Finding hidden patterns and relationships in large sets of data is called:",
+  "options": [
+   "Data cleaning",
+   "Data mining",
+   "Data backup",
+   "Data entry"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Data mining uses statistical and machine-learning methods to discover patterns."
+ },
+ {
+  "id": "q4ea4c963abd",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL keyword removes duplicate rows from the result of a SELECT query?",
+  "options": [
+   "DISTINCT",
+   "ONLY",
+   "DIFFERENT",
+   "SEPARATE"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "SELECT DISTINCT returns only unique rows."
+ },
+ {
   "id": "q5aaed778074",
   "subject": "computer",
   "topic": "database",
@@ -160,6 +336,22 @@
   "explanation": "CREATE defines new database objects such as tables, so it is a Data Definition Language command."
  },
  {
+  "id": "q5b23bf2373d",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL command changes the structure of an existing table, such as adding a new column?",
+  "options": [
+   "ALTER",
+   "CHANGE",
+   "MODIFY",
+   "UPDATE"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "ALTER TABLE is a DDL command that changes a table's structure."
+ },
+ {
   "id": "q60ad54f2eca",
   "subject": "computer",
   "topic": "database",
@@ -174,6 +366,22 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "A DBMS stores data centrally, reducing duplication and providing security, sharing and integrity controls."
+ },
+ {
+  "id": "q6532ef39739",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Data that describes other data, such as table names and column types, is called:",
+  "options": [
+   "Raw data",
+   "Big data",
+   "Microdata",
+   "Metadata"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Metadata means 'data about data'."
  },
  {
   "id": "q6d37447944d",
@@ -219,9 +427,9 @@
    "Index key",
    "Sort key"
   ],
+  "needsReview": true,
   "answer": 1,
-  "explanation": "A primary key is unique for every row and cannot be empty.",
-  "needsReview": true
+  "explanation": "A primary key is unique for every row and cannot be empty."
  },
  {
   "id": "q8b8445e05a7",
@@ -238,6 +446,54 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "Microsoft Access is a relational DBMS included in some editions of Microsoft Office."
+ },
+ {
+  "id": "q8f0ff5aa1f2",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "In an E-R diagram, a relationship between entities is shown by a:",
+  "options": [
+   "Rectangle",
+   "Ellipse",
+   "Circle",
+   "Diamond"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Diamonds represent relationships, rectangles entities and ellipses attributes."
+ },
+ {
+  "id": "q8f74e002d62",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL operator is used for pattern matching with wildcards such as % and _?",
+  "options": [
+   "IN",
+   "EXISTS",
+   "LIKE",
+   "BETWEEN"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "LIKE compares text against patterns, where % matches any string of characters."
+ },
+ {
+  "id": "q9377d9d5b67",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "A virtual table based on the result of a query, which does not store data of its own, is called a:",
+  "options": [
+   "Trigger",
+   "Index",
+   "Schema",
+   "View"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A view is a stored query that behaves like a table when used."
  },
  {
   "id": "q9dc9e5970ee",
@@ -288,6 +544,22 @@
   "explanation": "Normalization splits data into well-structured tables to remove duplication and update anomalies."
  },
  {
+  "id": "qe28c97f595a",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL command removes all rows from a table but keeps the table's structure?",
+  "options": [
+   "DROP",
+   "TRUNCATE",
+   "ALTER",
+   "CREATE"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "TRUNCATE empties the table while its definition remains; DROP removes the table structure too."
+ },
+ {
   "id": "qec77281c710",
   "subject": "computer",
   "topic": "database",
@@ -304,6 +576,22 @@
   "explanation": "UPDATE modifies values in existing rows, usually with a WHERE clause to choose the rows."
  },
  {
+  "id": "qeebf8095747",
+  "subject": "computer",
+  "topic": "database",
+  "level": "medium",
+  "question": "Which SQL aggregate function returns the number of rows that match a condition?",
+  "options": [
+   "SUM()",
+   "TOTAL()",
+   "NUM()",
+   "COUNT()"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "COUNT() returns the number of rows; SUM() adds numeric values."
+ },
+ {
   "id": "qffe837aa469",
   "subject": "computer",
   "topic": "database",
@@ -318,6 +606,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Foreign keys link tables together and help maintain referential integrity."
+ },
+ {
+  "id": "q023cd7438fe",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "A stored procedure that runs automatically when an INSERT, UPDATE or DELETE occurs on a table is a:",
+  "options": [
+   "Trigger",
+   "Cursor",
+   "View",
+   "Sequence"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Triggers enforce rules or keep audit logs automatically."
  },
  {
   "id": "q06f2ca6ee80",
@@ -368,6 +672,54 @@
   "explanation": "Edgar F. Codd of IBM proposed the relational model in 1970."
  },
  {
+  "id": "q2705ebd16f3",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which ACID property ensures that transactions running at the same time do not interfere with each other?",
+  "options": [
+   "Atomicity",
+   "Isolation",
+   "Durability",
+   "Consistency"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Isolation makes concurrent transactions behave as if they ran one after another."
+ },
+ {
+  "id": "q29aecea17b9",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "A LEFT OUTER JOIN returns:",
+  "options": [
+   "All left rows plus matching right rows",
+   "Only rows matching in both",
+   "Every combination of rows",
+   "All right rows plus matching left"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Left rows with no match get NULLs in the right table's columns."
+ },
+ {
+  "id": "q30fdf2e19d7",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which SQL join returns only the rows that have matching values in both tables?",
+  "options": [
+   "LEFT JOIN",
+   "INNER JOIN",
+   "FULL JOIN",
+   "CROSS JOIN"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "INNER JOIN keeps only rows where the join condition matches."
+ },
+ {
   "id": "q3320aceedbd",
   "subject": "computer",
   "topic": "database",
@@ -398,6 +750,86 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "A super key may contain unnecessary attributes; a minimal super key is a candidate key."
+ },
+ {
+  "id": "q4ca501d4c15",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In an E-R diagram, a weak entity set is shown by a:",
+  "options": [
+   "Double rectangle",
+   "Single diamond",
+   "Double ellipse",
+   "Dashed ellipse"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A weak entity depends on a strong entity for its identification."
+ },
+ {
+  "id": "q509d1072af6",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In the three-level ANSI/SPARC database architecture, the level closest to the users is the:",
+  "options": [
+   "Conceptual level",
+   "Physical level",
+   "External level",
+   "Internal level"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The external level gives each user group its own view of the data."
+ },
+ {
+  "id": "q6009c6eff22",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In an E-R diagram, a multivalued attribute such as phone numbers is shown by a:",
+  "options": [
+   "Double ellipse",
+   "Double rectangle",
+   "Dashed ellipse",
+   "Double diamond"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Double ellipses mark attributes that can hold several values."
+ },
+ {
+  "id": "q6385b7e6c1b",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In an E-R diagram, an attribute is represented by a/an:",
+  "options": [
+   "Rectangle",
+   "Diamond",
+   "Ellipse",
+   "Triangle"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Attributes are drawn as ellipses (ovals), entity sets as rectangles and relationships as diamonds."
+ },
+ {
+  "id": "q771dad3aa60",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In relational algebra, which operation selects particular columns of a relation?",
+  "options": [
+   "Projection",
+   "Selection",
+   "Union",
+   "Division"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Projection (pi) picks columns; Selection (sigma) picks rows."
  },
  {
   "id": "q79394148b09",
@@ -464,6 +896,22 @@
   "explanation": "TCL commands manage transactions: COMMIT saves changes and ROLLBACK undoes them."
  },
  {
+  "id": "q9a0c2ca5377",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which of these is a NoSQL (document-oriented) database?",
+  "options": [
+   "MS Access",
+   "PostgreSQL",
+   "MongoDB",
+   "MySQL"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "MongoDB stores data as JSON-like documents instead of relational tables."
+ },
+ {
   "id": "q9c113915f27",
   "subject": "computer",
   "topic": "database",
@@ -512,6 +960,86 @@
   "explanation": "In 2NF every non-key attribute must depend on the whole primary key, not just part of it."
  },
  {
+  "id": "qd779fbdeb22",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Fourth Normal Form (4NF) removes which type of dependency?",
+  "options": [
+   "Multi-valued dependency",
+   "Partial dependency",
+   "Functional dependency",
+   "Transitive dependency"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "4NF requires a relation in BCNF to have no non-trivial multi-valued dependencies."
+ },
+ {
+  "id": "qd98131e3f18",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "In a DBMS, a deadlock occurs when:",
+  "options": [
+   "The disk runs out of space",
+   "A query returns no rows",
+   "Transactions wait for each other's locks",
+   "A table has no primary key"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Each transaction holds a lock that another needs, so none can proceed."
+ },
+ {
+  "id": "qe21d2641cb4",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which SQL set operator combines the results of two queries and removes duplicate rows?",
+  "options": [
+   "INTERSECT",
+   "UNION",
+   "MINUS",
+   "UNION ALL"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "UNION removes duplicates; UNION ALL keeps them."
+ },
+ {
+  "id": "qe9da44cee36",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "A relation is in Boyce-Codd Normal Form (BCNF) if:",
+  "options": [
+   "It has no NULL values",
+   "Every column is a foreign key",
+   "It has only one column",
+   "Every determinant is a candidate key"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "BCNF is a stricter version of 3NF."
+ },
+ {
+  "id": "qeb1e6a9cc00",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "Which SQL clause filters groups produced by GROUP BY using conditions on aggregate functions?",
+  "options": [
+   "WHERE",
+   "ORDER BY",
+   "HAVING",
+   "DISTINCT"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "WHERE filters individual rows before grouping, while HAVING filters groups after aggregation, e.g. HAVING COUNT(*) > 5."
+ },
+ {
   "id": "qf07ad98fc21",
   "subject": "computer",
   "topic": "database",
@@ -526,5 +1054,21 @@
   "needsReview": true,
   "answer": 2,
   "explanation": "A composite key is used when no single column is unique on its own."
+ },
+ {
+  "id": "qf77e67d6403",
+  "subject": "computer",
+  "topic": "database",
+  "level": "hard",
+  "question": "SQL was first developed at IBM in the 1970s under which name?",
+  "options": [
+   "QUEL",
+   "ALGOL",
+   "SEQUEL",
+   "DBASE"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "SEQUEL (Structured English Query Language) was later renamed SQL."
  }
 ]

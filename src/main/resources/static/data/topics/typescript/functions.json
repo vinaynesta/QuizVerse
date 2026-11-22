@@ -60,6 +60,36 @@
   "explanation": "Rest parameters use ... before the name and are typed as an array."
  },
  {
+  "id": "q88a52e583a6",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Given `function f(a: number, b: number) {}`, what happens with `f(1);`?",
+  "options": [
+   "It compiles and b is undefined",
+   "A compile error, because 2 arguments are expected",
+   "It compiles and b defaults to 0",
+   "A runtime error only"
+  ],
+  "answer": 1,
+  "explanation": "TypeScript checks the number of arguments, and b is neither optional nor defaulted."
+ },
+ {
+  "id": "qd1fe60e0b14",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What are function overloads in TypeScript?",
+  "options": [
+   "Multiple functions with the same name in different files",
+   "Functions that accept more arguments than declared",
+   "Functions that call themselves recursively",
+   "Several call signatures declared for one function implementation"
+  ],
+  "answer": 3,
+  "explanation": "Overload signatures describe the valid ways to call a function, followed by a single compatible implementation."
+ },
+ {
   "id": "qd5e2b6839b2",
   "subject": "typescript",
   "topic": "functions",

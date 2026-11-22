@@ -275,8 +275,44 @@ class ServerScoringTests {
 		}
 		// RRB Clerk Prelims is all Reasoning and Quant, so it gets full mocks 6 to 10 as well.
 		assertNotNull(catalog.find("rrb-clerk/prelims/mock/easy/9"));
-		// PO exams are unchanged.
-		assertEquals(null, catalog.find("ibps-po/prelims/reasoning/easy/5"));
+		// English has quizzes 6-10 in every bank exam from the second English bank, so IBPS and SBI Clerk Prelims
+		// (English, Quant, Reasoning) now have full mocks 6-10 too.
+		assertNotNull(catalog.find("ibps-po/mains/english/hard/9"));
+		assertNotNull(catalog.find("ibps-clerk/prelims/mock/medium/9"));
+		assertNotNull(catalog.find("sbi-clerk/prelims/mock/hard/9"));
+		// IBPS PO Quant and Reasoning have quizzes 6-10 from the third generated bank, so its Prelims has mocks 6-10;
+		// SBI PO's stay at 5.
+		assertNotNull(catalog.find("ibps-po/prelims/reasoning/easy/9"));
+		assertNotNull(catalog.find("ibps-po/prelims/mock/easy/9"));
+		assertEquals(null, catalog.find("sbi-po/prelims/reasoning/easy/5"));
+	}
+
+	@Test
+	void rrbPoHasBothStagesWithTheirOwnQuestions() throws Exception {
+		QuizCatalog.Quiz prelims = catalog.find("rrb-po/prelims/mock/medium/0");
+		assertNotNull(prelims, "RRB PO Prelims mock");
+		assertEquals(80, prelims.questionCount());
+		assertEquals(45, prelims.minutes());
+		QuizCatalog.Quiz mains = catalog.find("rrb-po/mains/mock/hard/0");
+		assertNotNull(mains, "RRB PO Mains mock");
+		assertEquals(200, mains.questionCount());
+		assertEquals(200.0, mains.maxMarks());
+		assertEquals(120, mains.minutes());
+		assertNotNull(catalog.find("rrb-po/prelims/reasoning/easy/9"));
+		assertNotNull(catalog.find("rrb-po/mains/mock/easy/9"), "RRB PO Mains mock 10");
+		// GA and Computer have quizzes 6-10 from their second banks, so IBPS/RRB Mains have mocks 6-10 too.
+		assertNotNull(catalog.find("ibps-clerk/mains/mock/hard/9"));
+		assertNotNull(catalog.find("rrb-clerk/mains/mock/medium/9"));
+		assertNotNull(catalog.find("ibps-po/mains/mock/easy/9"));
+		// SBI's 50-question GA section needs 250 per level, more than the second bank holds, so it stays at 5.
+		assertEquals(null, catalog.find("sbi-clerk/mains/general-financial-awareness/easy/5"));
+		// Its Quant comes from the third bank, so it shares nothing with RRB Clerk's.
+		java.util.Set<String> clerk = new java.util.HashSet<>();
+		for (int n = 0; n < 10; n++) clerk.addAll(catalog.ids(catalog.find("rrb-clerk/prelims/numerical-ability/easy/" + n)));
+		for (int n = 0; n < 10; n++) {
+			assertTrue(java.util.Collections.disjoint(clerk,
+					catalog.ids(catalog.find("rrb-po/prelims/quantitative-aptitude/easy/" + n))));
+		}
 	}
 
 	@Test
@@ -296,9 +332,15 @@ class ServerScoringTests {
 		chosen.set(1, (key.get(1) + 1) % 4);
 		assertEquals(0.67, catalog.score(section, chosen).score(), 0.001);
 
-		// Mental Ability has two more quizzes per level from the second Reasoning bank.
+		// Every section has quizzes 4-5 from second banks (hand-written ones in ga_bank/<subject>/more/, Mental Ability
+		// from the second Reasoning bank), so both papers have five full mocks per level.
 		assertNotNull(catalog.find("appsc-group-1/paper-2/mental-ability/easy/4"));
 		assertEquals(null, catalog.find("appsc-group-1/paper-2/mental-ability/easy/5"));
+		assertNotNull(catalog.find("appsc-group-1/paper-1/history-culture/hard/4"));
+		assertNotNull(catalog.find("appsc-group-1/paper-1/mock/hard/4"));
+		assertNotNull(catalog.find("appsc-group-1/paper-2/mock/easy/4"));
+		assertTrue(catalog.questions(catalog.find("appsc-group-1/paper-1/economy/medium/4")).stream()
+				.allMatch(QuizCatalog.Question::needsReview), "second-bank questions keep their Draft badge");
 
 		// Bank exams keep their 1/4.
 		QuizCatalog.Quiz bank = catalog.find("ibps-clerk/prelims/english/easy/0");

@@ -15,6 +15,36 @@
   "explanation": "Template literals use backticks and ${expression} for interpolation."
  },
  {
+  "id": "q20fc835d0b1",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"abc\".includes(\"b\") return?",
+  "options": [
+   "true",
+   "false",
+   "1",
+   "\"b\""
+  ],
+  "answer": 0,
+  "explanation": "includes() returns a boolean telling whether the substring occurs in the string."
+ },
+ {
+  "id": "q264ca2c0e41",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"hello\".length return?",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "undefined"
+  ],
+  "answer": 0,
+  "explanation": "length gives the number of UTF-16 code units, which is 5 for \"hello\"."
+ },
+ {
   "id": "q747e275bf3b",
   "subject": "javascript",
   "topic": "strings",
@@ -58,5 +88,20 @@
   ],
   "answer": 0,
   "explanation": "toUpperCase returns a new string with all characters converted to upper case."
+ },
+ {
+  "id": "qef2670097fb",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"JavaScript\".slice(0, 4) return?",
+  "options": [
+   "\"Java\"",
+   "\"Scri\"",
+   "\"avaS\"",
+   "\"JavaS\""
+  ],
+  "answer": 0,
+  "explanation": "slice(start, end) returns characters from start up to but not including end."
  }
 ]

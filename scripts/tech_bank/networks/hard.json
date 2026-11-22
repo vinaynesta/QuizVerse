@@ -478,5 +478,145 @@
     ],
     "answer": 0,
     "explanation": "Routers that can't forward a DF packet return ICMP type 3 code 4 with the next-hop MTU; filtering that ICMP causes PMTUD black holes."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What TCP window size is needed to keep a 1 Gbps path with a 40 ms RTT fully utilized?",
+    "options": ["500 KB (4 Mbit)", "40 MB (320 Mbit)", "64 KB", "5 MB (40 Mbit)"],
+    "answer": 3,
+    "explanation": "The window must cover the bandwidth-delay product: 1e9 bit/s x 0.04 s = 40 Mbit = 5 MB."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "A TCP sender starts slow start with cwnd = 1 MSS and ssthresh = 32 MSS. With no losses and every segment acknowledged, how many RTTs until cwnd reaches 32 MSS?",
+    "options": ["4", "6", "5", "32"],
+    "answer": 2,
+    "explanation": "cwnd doubles each RTT: 1, 2, 4, 8, 16, 32, so it takes log2(32) = 5 RTTs."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "Using the Mathis approximation throughput = (MSS/RTT) x 1.22/sqrt(p), what is the throughput of a Reno flow with a 1460-byte MSS, 100 ms RTT and 0.01% loss rate?",
+    "options": ["About 1.4 Mbps", "About 117 Mbps", "About 14 Mbps", "About 5.2 Mbps"],
+    "answer": 2,
+    "explanation": "MSS/RTT = 11680 bit / 0.1 s = 116.8 kbit/s, and 1.22/sqrt(0.0001) = 122, giving about 14.2 Mbps."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "Per RFC 6298, if SRTT = 100 ms and RTTVAR = 20 ms (with negligible clock granularity), what is the retransmission timeout, ignoring the recommended 1-second minimum?",
+    "options": ["120 ms", "180 ms", "140 ms", "200 ms"],
+    "answer": 1,
+    "explanation": "RTO = SRTT + max(G, 4 x RTTVAR) = 100 + 4 x 20 = 180 ms."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What does Random Early Detection (RED) do in a router queue?",
+    "options": ["Drops or marks packets probabilistically as the average queue length grows, before the queue is full", "Drops packets only when the buffer is completely full", "Gives strict priority to TCP over UDP", "Reorders packets to put small ones first"],
+    "answer": 0,
+    "explanation": "Early random signals make different flows back off at different times, avoiding global synchronization and long standing queues."
+  },
+  {
+    "topic": "congestion-control",
+    "question": "What is bufferbloat?",
+    "options": ["Packets growing in size as headers are added", "Excessively large network buffers that fill up and cause high latency and jitter under load", "A router running out of memory for its routing table", "TCP windows growing beyond 65,535 bytes"],
+    "answer": 1,
+    "explanation": "Loss-based congestion control keeps oversized buffers full, so queuing delay grows; AQM schemes such as CoDel address it."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "Both ends of a TCP connection send a FIN at the same time (simultaneous close). Which state does each side pass through after FIN_WAIT_1?",
+    "options": ["CLOSE_WAIT", "LAST_ACK", "CLOSING", "SYN_RECEIVED"],
+    "answer": 2,
+    "explanation": "Receiving the peer's FIN while in FIN_WAIT_1 moves a side to CLOSING, and the ACK of its own FIN then moves it to TIME_WAIT."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "What does setting the SO_REUSEADDR socket option typically allow a server to do?",
+    "options": ["Skip the three-way handshake for returning clients", "Bind its listening port even while old connections on that port are still in TIME_WAIT", "Share one TCP connection among multiple processes without fork()", "Disable TIME_WAIT for every connection on the host"],
+    "answer": 1,
+    "explanation": "Without it, restarting a server can fail with 'address already in use' until the old TIME_WAIT connections expire."
+  },
+  {
+    "topic": "tcp-states",
+    "question": "An active closer is in FIN_WAIT_1 and receives an ACK for its FIN, but no FIN from the peer yet. Which state does it enter?",
+    "options": ["TIME_WAIT", "CLOSING", "CLOSE_WAIT", "FIN_WAIT_2"],
+    "answer": 3,
+    "explanation": "In FIN_WAIT_2 it has finished sending and waits for the peer's FIN, after which it ACKs and enters TIME_WAIT."
+  },
+  {
+    "topic": "tls",
+    "question": "What does forward secrecy provide in TLS?",
+    "options": ["Encrypted data can be forwarded through proxies without decryption", "Session keys are reused securely across many connections", "Compromise of the server's long-term private key does not reveal the keys of past sessions", "The client can verify the server's certificate chain offline"],
+    "answer": 2,
+    "explanation": "Ephemeral (EC)DHE key exchange derives per-session keys that are discarded, so recorded traffic stays safe if the long-term key leaks later."
+  },
+  {
+    "topic": "tls",
+    "question": "What is OCSP stapling?",
+    "options": ["The server attaches a recent, CA-signed OCSP response about its own certificate to the TLS handshake", "The client caches the server certificate for future sessions", "The CA embeds the full revocation list into every certificate", "The browser contacts the CA for every page load"],
+    "answer": 0,
+    "explanation": "Stapling avoids a separate client lookup to the CA, improving privacy and latency while still proving the certificate is not revoked."
+  },
+  {
+    "topic": "tls",
+    "question": "What does an HTTP Strict-Transport-Security (HSTS) header instruct a browser to do?",
+    "options": ["Pin the server's public key permanently", "Use only HTTPS for that host for the specified max-age, refusing plain HTTP", "Disable TLS session resumption", "Send client certificates on every request"],
+    "answer": 1,
+    "explanation": "HSTS prevents SSL-stripping downgrade attacks by making the browser upgrade every future request to HTTPS."
+  },
+  {
+    "topic": "tls",
+    "question": "What does mutual TLS (mTLS) add to a standard TLS handshake?",
+    "options": ["The handshake is performed twice for extra security", "Both sides share a single static symmetric key", "The server encrypts the certificate with the client's password", "The client also presents a certificate so the server can authenticate it"],
+    "answer": 3,
+    "explanation": "In mTLS the server sends a CertificateRequest and verifies the client certificate, which is common for service-to-service authentication."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "In HTTP/2, what is the smallest unit of communication carried on a connection?",
+    "options": ["A binary frame belonging to a stream", "A plain-text request line", "A complete TCP segment", "A QUIC packet"],
+    "answer": 0,
+    "explanation": "HTTP/2 splits messages into binary frames such as HEADERS and DATA, and frames from different streams can be interleaved."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "Why does QUIC encrypt most of its transport header, including packet numbers?",
+    "options": ["To stop middleboxes from depending on header fields, which would hinder protocol evolution, and to limit tracking", "Because UDP checksums are too weak", "To make packets smaller than TCP segments", "Because TLS 1.3 forbids plaintext headers"],
+    "answer": 0,
+    "explanation": "TCP's visible headers led middleboxes to ossify its behavior; QUIC exposes only minimal fields so it can evolve freely."
+  },
+  {
+    "topic": "http2-http3",
+    "question": "At which levels does HTTP/2 apply flow control?",
+    "options": ["Only for the connection as a whole", "Both per stream and for the connection as a whole", "Only per stream", "HTTP/2 has no flow control and relies on TCP alone"],
+    "answer": 1,
+    "explanation": "WINDOW_UPDATE frames adjust credit for individual streams and for the entire connection, so one stream cannot hog the receiver's buffers."
+  },
+  {
+    "topic": "routing",
+    "question": "On routers that learn the same prefix from several routing sources (e.g. static, OSPF, RIP), what does administrative distance decide?",
+    "options": ["Which source's route is trusted and installed; the lower distance wins", "Which of several equal routes has the shortest hop count", "How many hops a packet may travel before being dropped", "The physical cable length between routers"],
+    "answer": 0,
+    "explanation": "Administrative distance ranks route sources by trustworthiness before metrics are compared, e.g. static routes beat OSPF which beats RIP by default."
+  },
+  {
+    "topic": "routing",
+    "question": "Which technique helps prevent the count-to-infinity problem in distance-vector routing?",
+    "options": ["Longest prefix match", "Equal-cost multipath", "Flooding link-state advertisements", "Split horizon with poison reverse"],
+    "answer": 3,
+    "explanation": "Advertising a route back to the neighbor it was learned from with an infinite metric stops two routers from bouncing a dead route between them."
+  },
+  {
+    "topic": "routing",
+    "question": "What does the BGP LOCAL_PREF attribute influence?",
+    "options": ["How other ASes route traffic into this AS", "The TTL of BGP keepalive messages", "The order in which prefixes are advertised", "Which exit point an AS uses for outbound traffic; a higher value is preferred"],
+    "answer": 3,
+    "explanation": "LOCAL_PREF is shared among iBGP peers inside one AS and is evaluated early in best-path selection."
+  },
+  {
+    "topic": "mtu-fragmentation",
+    "question": "A 2400-byte IPv4 datagram (20-byte header, 2380 bytes of data) crosses a link with a 1000-byte MTU. How many fragments result, and what is the last one?",
+    "options": ["3 fragments; the last carries 420 data bytes at Fragment Offset 245", "2 fragments; the last carries 1400 data bytes at Fragment Offset 122", "3 fragments; the last carries 428 data bytes at Fragment Offset 244", "3 fragments; the last carries 428 data bytes at Fragment Offset 1952"],
+    "answer": 2,
+    "explanation": "Each fragment carries at most 976 data bytes (980 rounded down to a multiple of 8), so 976 + 976 + 428 = 2380, and the offset is 1952/8 = 244."
   }
 ]

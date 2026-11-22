@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1f48e0ff131",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "medium",
+  "question": "What does Nagle's algorithm do?",
+  "options": [
+   "Holds back small segments while earlier data is still unacknowledged, combining them into fewer packets",
+   "Doubles the congestion window every round trip",
+   "Retransmits a segment after three duplicate ACKs",
+   "Closes idle connections after two hours"
+  ],
+  "answer": 0,
+  "explanation": "Nagle reduces tinygram overhead but can add latency for interactive traffic, so TCP_NODELAY disables it."
+ },
+ {
+  "id": "qb0174f77369",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "How does 307 Temporary Redirect differ from 302 Found?",
+  "options": [
+   "307 is permanent while 302 is temporary",
+   "307 can only be used for GET requests",
+   "307 requires the client to repeat the request with the same method and body, while clients often change a 302 POST into a GET",
+   "307 tells the client to use a cached copy"
+  ],
+  "answer": 2,
+  "explanation": "307 was introduced to remove the method-change ambiguity of 302; 308 is its permanent counterpart."
+ },
+ {
+  "id": "qf09f5ccf636",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "What does the HTTP TRACE method do?",
+  "options": [
+   "Lists the methods a resource supports",
+   "Opens a tunnel through a proxy",
+   "Returns only the headers of a resource",
+   "Asks the server to echo back the received request, for diagnostic loop-back testing"
+  ],
+  "answer": 3,
+  "explanation": "TRACE reflects the request as received, which is why it is usually disabled for security reasons such as cross-site tracing."
+ },
+ {
+  "id": "q907616e8183",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "Are hosts 10.1.1.10/27 and 10.1.1.40/27 on the same subnet?",
+  "options": [
+   "Yes; both are in 10.1.1.0/27",
+   "No; they are in 10.1.1.0/28 and 10.1.1.32/28",
+   "Yes; both are in 10.1.1.0/24",
+   "No; they are in 10.1.1.0/27 and 10.1.1.32/27"
+  ],
+  "answer": 3,
+  "explanation": "A /27 has 32-address blocks, so .10 falls in .0-.31 and .40 falls in .32-.63."
+ },
+ {
+  "id": "q9e0c71fcd3c",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code means the server is temporarily unable to handle the request, for example due to overload or maintenance?",
+  "options": [
+   "500 Internal Server Error",
+   "503 Service Unavailable",
+   "501 Not Implemented",
+   "504 Gateway Timeout"
+  ],
+  "answer": 1,
+  "explanation": "503 signals a temporary condition and may include a Retry-After header telling clients when to try again."
+ },
+ {
+  "id": "qce38298b157",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "Why do entries in a host's ARP cache expire after a while?",
+  "options": [
+   "So the switch can relearn its MAC table",
+   "To free the IP address for DHCP reuse",
+   "Because ARP replies are encrypted with a short-lived key",
+   "So that stale IP-to-MAC mappings are refreshed when hosts change addresses or network cards"
+  ],
+  "answer": 3,
+  "explanation": "Timing out entries forces a fresh ARP request, which keeps the cache correct after hardware or address changes."
+ },
+ {
+  "id": "q3764f53795a",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "How many usable host addresses does a /22 IPv4 subnet provide?",
+  "options": [
+   "510",
+   "1024",
+   "1022",
+   "2046"
+  ],
+  "answer": 2,
+  "explanation": "A /22 leaves 32 - 22 = 10 host bits: 2^10 - 2 = 1022 usable addresses."
+ },
+ {
+  "id": "qe08e4af9c26",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "Which DNS record type lists the authoritative name servers for a zone?",
+  "options": [
+   "NS",
+   "SOA",
+   "MX",
+   "PTR"
+  ],
+  "answer": 0,
+  "explanation": "NS records delegate a zone to its authoritative servers, and the parent zone holds matching NS records to point resolvers there."
+ },
+ {
+  "id": "q78e9570a876",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "Which TCP option, sent only in SYN segments, advertises the largest segment payload a host is willing to receive?",
+  "options": [
+   "Window Scale",
+   "Maximum Segment Size (MSS)",
+   "Timestamps",
+   "Selective Acknowledgment (SACK)"
+  ],
+  "answer": 1,
+  "explanation": "Each side announces its MSS during the handshake so the peer avoids sending segments that are too large."
+ },
+ {
+  "id": "q8690866d0a0",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "medium",
+  "question": "A TCP receiver sends a segment with acknowledgment number 5001. What does it mean?",
+  "options": [
+   "Exactly 5001 segments have been received",
+   "All bytes up to 5000 have been received and the next expected byte is 5001",
+   "Byte 5001 was received but earlier bytes are missing",
+   "The receiver's window is 5001 bytes"
+  ],
+  "answer": 1,
+  "explanation": "TCP acknowledgments are cumulative and name the next sequence number the receiver expects."
+ }
+]

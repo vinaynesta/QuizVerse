@@ -30,6 +30,21 @@
   "explanation": "Without strictNullChecks, null and undefined are in the domain of every type."
  },
  {
+  "id": "q9308e29565c",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With strictBindCallApply enabled, what happens with `function f(a: number) {}` and `f.call(undefined, \"x\");`?",
+  "options": [
+   "It compiles, because call takes any arguments",
+   "A compile error, because \"x\" is not assignable to number",
+   "A compile error, because this cannot be undefined",
+   "It compiles but f receives NaN"
+  ],
+  "answer": 1,
+  "explanation": "strictBindCallApply makes call, apply and bind check their arguments against the function's parameters."
+ },
+ {
   "id": "qac5c2938fb5",
   "subject": "typescript",
   "topic": "strict-flags",

@@ -15,6 +15,21 @@
   "explanation": "keyof produces a union of the property names of an object type."
  },
  {
+  "id": "q4a90a69d72a",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "How does `typeof` in `type T = typeof x;` differ from `typeof x` in an expression?",
+  "options": [
+   "The expression form gives the static type",
+   "They are identical and both return a string",
+   "The type form only works with classes",
+   "In a type position it gives x's static type; in an expression it is the runtime operator returning a string"
+  ],
+  "answer": 3,
+  "explanation": "TypeScript reuses the keyword: in types it is a type query, while in values it is JavaScript's typeof operator."
+ },
+ {
   "id": "q8d940018ee0",
   "subject": "typescript",
   "topic": "keyof-typeof",
@@ -43,5 +58,35 @@
   ],
   "answer": 3,
   "explanation": "typeof in a type position captures the inferred type of a value, with widened literals for mutable properties."
+ },
+ {
+  "id": "qe7dd0636d6b",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "What is `keyof { [key: string]: boolean }`?",
+  "options": [
+   "string | number",
+   "boolean",
+   "string",
+   "never"
+  ],
+  "answer": 0,
+  "explanation": "With a string index signature, keyof includes number too, because numeric keys are converted to strings in JavaScript."
+ },
+ {
+  "id": "qf89326cfec1",
+  "subject": "typescript",
+  "topic": "keyof-typeof",
+  "level": "medium",
+  "question": "Given `const arr = [\"a\", \"b\"] as const;`, what is `typeof arr[number]`?",
+  "options": [
+   "\"a\" | \"b\"",
+   "string[]",
+   "readonly [\"a\", \"b\"]",
+   "string"
+  ],
+  "answer": 0,
+  "explanation": "Indexing the readonly tuple type with number gives the union of its element literal types."
  }
 ]

@@ -64,6 +64,22 @@
   "explanation": "A cold boot begins from a power-off state by pressing the power button."
  },
  {
+  "id": "q5783c90ea01",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "easy",
+  "question": "A named container used to group related files together on a disk is called a:",
+  "options": [
+   "Sector",
+   "Window",
+   "Folder",
+   "Shortcut"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A folder (directory) holds files and other folders to keep data organised."
+ },
+ {
   "id": "q5e96bb5a109",
   "subject": "computer",
   "topic": "operating-systems",
@@ -80,6 +96,70 @@
   "explanation": "Windows is Microsoft's operating system; macOS is from Apple, Android from Google, and Linux is community developed."
  },
  {
+  "id": "q6496af7174e",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "easy",
+  "question": "In Windows, the bar usually at the bottom of the screen showing the Start button and open programs is the:",
+  "options": [
+   "Title bar",
+   "Menu bar",
+   "Taskbar",
+   "Scroll bar"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The taskbar holds the Start button, pinned apps, open windows and the notification area."
+ },
+ {
+  "id": "q6b5a150cba2",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "easy",
+  "question": "Which desktop operating system is developed by Apple for its Mac computers?",
+  "options": [
+   "Android",
+   "Windows",
+   "Ubuntu",
+   "macOS"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "macOS is Apple's operating system for Mac desktops and laptops."
+ },
+ {
+  "id": "q72a4a576d32",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "easy",
+  "question": "Ubuntu is a popular distribution of which operating system?",
+  "options": [
+   "Windows",
+   "macOS",
+   "MS-DOS",
+   "Linux"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Ubuntu is a free, open-source Linux distribution."
+ },
+ {
+  "id": "q97746e5dead",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "easy",
+  "question": "In which type of interface does the user type text commands to operate the computer?",
+  "options": [
+   "Graphical User Interface",
+   "Command Line Interface",
+   "Touch interface",
+   "Menu-driven interface"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A CLI, such as MS-DOS or the Linux terminal, works through typed commands."
+ },
+ {
   "id": "q9a68431a347",
   "subject": "computer",
   "topic": "operating-systems",
@@ -87,13 +167,13 @@
   "question": "Restarting a computer that is already switched on is called:",
   "options": [
    "Cold booting",
-   "Warm booting",
+   "Partitioning",
    "Formatting",
-   "Partitioning"
+   "Warm booting"
   ],
-  "answer": 1,
-  "explanation": "A warm boot restarts a running computer without switching off the power, e.g. using the Restart option.",
-  "needsReview": true
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A warm boot restarts a running computer without switching off the power, e.g. using the Restart option."
  },
  {
   "id": "q9cb1869adb6",
@@ -150,13 +230,13 @@
   "level": "easy",
   "question": "A folder that is stored inside another folder is called a:",
   "options": [
-   "Root folder",
    "Subfolder",
+   "Root folder",
    "Shortcut",
    "Drive"
   ],
   "needsReview": true,
-  "answer": 1,
+  "answer": 0,
   "explanation": "A subfolder (sub-directory) is a folder contained within another folder."
  },
  {
@@ -174,6 +254,22 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "A GUI lets users interact through windows, icons, menus and a pointer instead of typed commands."
+ },
+ {
+  "id": "qc9d51b63f99",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "easy",
+  "question": "Which of these is a mobile operating system developed by Apple?",
+  "options": [
+   "Ubuntu",
+   "Android",
+   "Windows",
+   "iOS"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "iOS is Apple's operating system for the iPhone; Android is developed by Google."
  },
  {
   "id": "qf8394bd2300",
@@ -336,6 +432,38 @@
   "explanation": "ext4 (fourth extended file system) is a common default file system for Linux."
  },
  {
+  "id": "q475acf4b8f4",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "medium",
+  "question": "In an operating system, a process is:",
+  "options": [
+   "A file stored on disk",
+   "A program in execution",
+   "A type of hardware device",
+   "A folder of programs"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A program becomes a process when it is loaded into memory and being executed."
+ },
+ {
+  "id": "q4c0faca1e1b",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "medium",
+  "question": "Which operating system runs on almost all of the world's top supercomputers?",
+  "options": [
+   "Linux",
+   "Windows",
+   "macOS",
+   "MS-DOS"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "Linux is used on nearly every system in the TOP500 supercomputer list because it is open and scalable."
+ },
+ {
   "id": "q55bc04c59da",
   "subject": "computer",
   "topic": "operating-systems",
@@ -432,6 +560,22 @@
   "explanation": "Shift + Delete bypasses the Recycle Bin, so the file cannot be restored from there."
  },
  {
+  "id": "q96081d1af8a",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "medium",
+  "question": "Which Linux command copies files?",
+  "options": [
+   "mv",
+   "cp",
+   "cd",
+   "ls"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "cp copies files; mv moves or renames them."
+ },
+ {
   "id": "q9c872bd221e",
   "subject": "computer",
   "topic": "operating-systems",
@@ -446,6 +590,38 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "The bootstrap loader, started by the firmware, locates and loads the operating system."
+ },
+ {
+  "id": "qd7c0adf9080",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "medium",
+  "question": "When a Windows computer hibernates, the contents of RAM are saved to:",
+  "options": [
+   "The cache, and power stays on",
+   "The CPU registers",
+   "A cloud server",
+   "The hard disk, and power is switched off"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Hibernate writes the session to disk so the PC uses no power and resumes where it left off."
+ },
+ {
+  "id": "qd97c7eab2c2",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "medium",
+  "question": "In Windows, the Clipboard is:",
+  "options": [
+   "A folder for deleted files",
+   "A temporary storage area for cut or copied data",
+   "A list of recently opened files",
+   "A tool for scheduling tasks"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Cut or copied items stay on the clipboard until something else replaces them or the PC is restarted."
  },
  {
   "id": "qda23c7f76ee",
@@ -528,6 +704,22 @@
   "explanation": "Safe Mode starts Windows with a minimal set of drivers so problems can be diagnosed."
  },
  {
+  "id": "q226598b098a",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "hard",
+  "question": "Saving the state of a running process and loading the state of another so the CPU can switch between them is called:",
+  "options": [
+   "Spooling",
+   "Thrashing",
+   "Context switching",
+   "Booting"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "During a context switch the OS stores registers and other details in the process's PCB."
+ },
+ {
   "id": "q43aa08a97bc",
   "subject": "computer",
   "topic": "operating-systems",
@@ -608,6 +800,22 @@
   "explanation": "Paging uses fixed-size pages, whereas segmentation uses variable-sized logical segments."
  },
  {
+  "id": "q75ad8900f02",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "hard",
+  "question": "In operating systems, the Banker's algorithm is used for:",
+  "options": [
+   "CPU scheduling",
+   "Page replacement",
+   "Disk formatting",
+   "Deadlock avoidance"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "The Banker's algorithm grants resources only if the system stays in a safe state, avoiding deadlock."
+ },
+ {
   "id": "q8afbccd5ed9",
   "subject": "computer",
   "topic": "operating-systems",
@@ -686,6 +894,38 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Swapping frees main memory for other processes by moving an inactive process to disk."
+ },
+ {
+  "id": "qb363d28acd2",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "hard",
+  "question": "Which CPU scheduling algorithm picks the waiting process with the smallest CPU burst time next?",
+  "options": [
+   "Shortest Job First (SJF)",
+   "First Come First Served (FCFS)",
+   "Round Robin",
+   "Multilevel Queue"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "SJF runs the shortest job next, which gives the minimum average waiting time for a given set of processes."
+ },
+ {
+  "id": "qc86d37df69e",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "hard",
+  "question": "When a program needs a page that is not currently in main memory, the event is called a:",
+  "options": [
+   "Segmentation",
+   "Page hit",
+   "Page fault",
+   "Deadlock"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "On a page fault the OS loads the missing page from disk into a memory frame."
  },
  {
   "id": "qc9c4ac49282",
@@ -782,5 +1022,37 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "The MBR is the first sector of a disk that holds the partition table and boot loader code."
+ },
+ {
+  "id": "qec3878daae9",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "hard",
+  "question": "In operating systems, PCB stands for:",
+  "options": [
+   "Process Control Block",
+   "Primary Control Board",
+   "Program Counter Buffer",
+   "Process Cache Block"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The PCB holds a process's state, program counter, registers and scheduling information."
+ },
+ {
+  "id": "qf226aedfc04",
+  "subject": "computer",
+  "topic": "operating-systems",
+  "level": "hard",
+  "question": "In Linux, after running chmod 755 on a file, what permissions do 'others' have?",
+  "options": [
+   "Read, write and execute",
+   "Read only",
+   "Read and execute",
+   "Write and execute"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "755 gives the owner rwx (7) and both group and others r-x (5)."
  }
 ]
