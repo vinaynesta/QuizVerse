@@ -1,5 +1,21 @@
 [
  {
+  "id": "q0a6a7b9c5a4",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "A MAC address is permanently assigned by the manufacturer to which component?",
+  "options": [
+   "Random Access Memory",
+   "Graphics card",
+   "Network Interface Card",
+   "Hard disk drive"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Each NIC has a unique 48-bit MAC (physical) address burned in by its manufacturer."
+ },
+ {
   "id": "q11229c49435",
   "subject": "computer",
   "topic": "network-devices",
@@ -39,13 +55,61 @@
   "question": "What does 'NIC' stand for in networking?",
   "options": [
    "Network Internal Cable",
-   "Network Interface Card",
    "New Internet Connection",
-   "Network Information Centre"
+   "Network Information Centre",
+   "Network Interface Card"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A Network Interface Card lets a computer connect to a network."
+ },
+ {
+  "id": "q3beb75102e5",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "Which device is used to extend Wi-Fi coverage into rooms where the signal from the main router is weak?",
+  "options": [
+   "Wi-Fi range extender",
+   "Barcode reader",
+   "Network switch",
+   "Sound card"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A range extender receives the router's signal and rebroadcasts it to cover dead zones."
+ },
+ {
+  "id": "q5523f6aac5a",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "Which device is commonly installed at home to share one broadband connection among several devices over Wi-Fi?",
+  "options": [
+   "Scanner",
+   "Projector",
+   "Wireless router",
+   "Plotter"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A wireless router connects the home network to the Internet and shares the connection with phones and laptops."
+ },
+ {
+  "id": "qd331446e770",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "easy",
+  "question": "Which device lets laptops and phones connect wirelessly to a wired office LAN?",
+  "options": [
+   "Plotter",
+   "Wireless access point",
+   "Scanner",
+   "Sound card"
   ],
   "needsReview": true,
   "answer": 1,
-  "explanation": "A Network Interface Card lets a computer connect to a network."
+  "explanation": "A wireless access point connects to the wired network and provides Wi-Fi access to wireless devices."
  },
  {
   "id": "qd41777dc489",
@@ -62,6 +126,70 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "A router chooses paths and forwards packets from one network to another."
+ },
+ {
+  "id": "q039af8f8073",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "A Layer 3 switch combines the functions of a switch and a:",
+  "options": [
+   "Modem",
+   "Hub",
+   "Repeater",
+   "Router"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A Layer 3 switch can also route packets using IP addresses."
+ },
+ {
+  "id": "q03c17441b2c",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "Which device consults a routing table to decide where to forward each packet?",
+  "options": [
+   "Repeater",
+   "Modem",
+   "Router",
+   "Hub"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Routers keep routing tables of network paths and choose the best route for packets."
+ },
+ {
+  "id": "q20f3939304f",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "A repeater works at which layer of the OSI model?",
+  "options": [
+   "Physical layer",
+   "Data Link layer",
+   "Network layer",
+   "Transport layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A repeater simply regenerates electrical or optical signals without reading addresses, so it works at the Physical layer."
+ },
+ {
+  "id": "q217839e175c",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "A bridge operates at which layer of the OSI model?",
+  "options": [
+   "Transport layer",
+   "Physical layer",
+   "Network layer",
+   "Data Link layer"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A bridge filters frames using MAC addresses, which belong to the Data Link layer."
  },
  {
   "id": "q3013f388506",
@@ -128,19 +256,35 @@
   "explanation": "Routers use IP addresses to forward packets, which is a Network layer (layer 3) function."
  },
  {
+  "id": "qb03524c7d3c",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "medium",
+  "question": "Unlike a hub, which device gives each port its own collision domain and so reduces collisions?",
+  "options": [
+   "Switch",
+   "Terminator",
+   "Coaxial cable",
+   "Repeater"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A switch forwards frames only to the destination port, so each port is a separate collision domain."
+ },
+ {
   "id": "qb71b1750ad1",
   "subject": "computer",
   "topic": "network-devices",
   "level": "medium",
   "question": "Which device connects two networks that use different protocols by translating between them?",
   "options": [
-   "Hub",
+   "Gateway",
    "Repeater",
-   "Modem",
-   "Gateway"
+   "Hub",
+   "Modem"
   ],
   "needsReview": true,
-  "answer": 3,
+  "answer": 0,
   "explanation": "A gateway acts as a protocol converter between dissimilar networks."
  },
  {
@@ -206,5 +350,37 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "A standard switch forwards frames using MAC addresses, a layer 2 (Data Link) function."
+ },
+ {
+  "id": "qd4d57014714",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "hard",
+  "question": "A switch is often described as a multiport:",
+  "options": [
+   "Repeater",
+   "Router",
+   "Bridge",
+   "Modem"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Like a bridge, a switch works at the Data Link layer and forwards frames using MAC addresses, but with many ports."
+ },
+ {
+  "id": "qe5d9443683b",
+  "subject": "computer",
+  "topic": "network-devices",
+  "level": "hard",
+  "question": "A hub is often described as a multiport:",
+  "options": [
+   "Gateway",
+   "Bridge",
+   "Router",
+   "Repeater"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Like a repeater, a hub works at the Physical layer and simply repeats incoming signals out of all its ports."
  }
 ]

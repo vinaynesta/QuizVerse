@@ -75,6 +75,51 @@
   "explanation": "401 means authenticate and retry, with a WWW-Authenticate header; 407 is the proxy equivalent."
  },
  {
+  "id": "q8454e224bd1",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "What does HTTP status 201 Created indicate?",
+  "options": [
+   "The request was accepted but not yet processed",
+   "The resource has moved temporarily",
+   "The request succeeded and a new resource was created, often identified by a Location header",
+   "The request succeeded but there is no content to return"
+  ],
+  "answer": 2,
+  "explanation": "201 is typically returned by POST or PUT when a new resource is created; 202 means accepted and 204 means no content."
+ },
+ {
+  "id": "q9e0c71fcd3c",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "Which status code means the server is temporarily unable to handle the request, for example due to overload or maintenance?",
+  "options": [
+   "500 Internal Server Error",
+   "503 Service Unavailable",
+   "501 Not Implemented",
+   "504 Gateway Timeout"
+  ],
+  "answer": 1,
+  "explanation": "503 signals a temporary condition and may include a Retry-After header telling clients when to try again."
+ },
+ {
+  "id": "qb0174f77369",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "How does 307 Temporary Redirect differ from 302 Found?",
+  "options": [
+   "307 is permanent while 302 is temporary",
+   "307 can only be used for GET requests",
+   "307 requires the client to repeat the request with the same method and body, while clients often change a 302 POST into a GET",
+   "307 tells the client to use a cached copy"
+  ],
+  "answer": 2,
+  "explanation": "307 was introduced to remove the method-change ambiguity of 302; 308 is its permanent counterpart."
+ },
+ {
   "id": "qdf0dce72848",
   "subject": "networks",
   "topic": "http-status",

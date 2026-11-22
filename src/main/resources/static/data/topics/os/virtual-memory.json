@@ -1,5 +1,20 @@
 [
  {
+  "id": "q1b730bdc21b",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "Which page-replacement algorithm evicts the page that has been in memory the longest?",
+  "options": [
+   "FIFO",
+   "LRU",
+   "Optimal",
+   "LFU"
+  ],
+  "answer": 0,
+  "explanation": "FIFO replaces the oldest loaded page regardless of how recently or often it has been used."
+ },
+ {
   "id": "q482f17e004f",
   "subject": "os",
   "topic": "virtual-memory",
@@ -13,6 +28,21 @@
   ],
   "answer": 1,
   "explanation": "Virtual memory separates logical from physical memory, so programs can be larger than RAM and only needed pages are kept resident."
+ },
+ {
+  "id": "q6d7fe6f4b76",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "What does the valid-invalid bit in a page-table entry indicate?",
+  "options": [
+   "Whether the page has been modified",
+   "Whether the page is a legal part of the process's address space and currently in memory",
+   "Whether the page is shared with another process",
+   "Whether the page belongs to the kernel"
+  ],
+  "answer": 1,
+  "explanation": "Accessing a page marked invalid traps to the OS, which either loads the page (page fault) or terminates the process for an illegal access."
  },
  {
   "id": "q71011d0fdb4",
@@ -60,6 +90,21 @@
   "explanation": "Simulating LRU, which evicts the least recently used page, gives 12 faults, between optimal (9) and FIFO (15) on this string."
  },
  {
+  "id": "q73c7a4cc62f",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 3 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does FIFO replacement cause?",
+  "options": [
+   "16",
+   "14",
+   "12",
+   "15"
+  ],
+  "answer": 0,
+  "explanation": "Simulating FIFO with 3 frames gives hits only on the 5th, 11th, 15th and 18th references, so 20 - 4 = 16 faults."
+ },
+ {
   "id": "q81e83396c24",
   "subject": "os",
   "topic": "virtual-memory",
@@ -103,6 +148,36 @@
   ],
   "answer": 2,
   "explanation": "OPT gives the lowest possible fault rate but needs future knowledge, so it serves mainly as a benchmark."
+ },
+ {
+  "id": "q966c31afeb6",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "Why do page-replacement schemes that approximate LRU rely on a hardware reference bit?",
+  "options": [
+   "It records the exact time of every memory access",
+   "It marks pages that belong to the kernel",
+   "It marks pages that have been written and must be saved",
+   "The bit is set when a page is accessed, letting the OS cheaply tell recently used pages from unused ones"
+  ],
+  "answer": 3,
+  "explanation": "True LRU needs a timestamp or stack update on every access, which is too expensive; reference bits give a cheap approximation."
+ },
+ {
+  "id": "q9cf82329ca1",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "medium",
+  "question": "With 4 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does LRU replacement cause?",
+  "options": [
+   "8",
+   "12",
+   "14",
+   "10"
+  ],
+  "answer": 3,
+  "explanation": "Simulating LRU with 4 frames gives 10 faults: 4 compulsory faults to fill memory plus 6 replacements (5, 6, 3, 7, 6, 1)."
  },
  {
   "id": "qffe435c5564",
@@ -195,6 +270,21 @@
   "explanation": "In stack algorithms, the pages held with n frames are always a subset of those held with n + 1 frames, so adding frames can never add faults."
  },
  {
+  "id": "q25cffb060a8",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "What is a key drawback of global page replacement compared with local replacement?",
+  "options": [
+   "A process's page-fault rate depends on the paging behavior of other processes",
+   "It cannot be combined with LRU approximations",
+   "It always causes Belady's anomaly",
+   "A process can never get more frames than its initial allocation"
+  ],
+  "answer": 0,
+  "explanation": "Global replacement lets a process take frames from others, improving throughput but making each process's performance less predictable."
+ },
+ {
   "id": "q3a00b9f9b2c",
   "subject": "os",
   "topic": "virtual-memory",
@@ -240,6 +330,21 @@
   "explanation": "PFF gives frames to processes faulting too often and takes them from processes faulting rarely, controlling thrashing directly."
  },
  {
+  "id": "q8357cf87584",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "With a working-set window of 10 references, the last 10 references of a process are 2, 6, 1, 5, 7, 7, 7, 7, 5, 1. What is the working-set size?",
+  "options": [
+   "4",
+   "6",
+   "10",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "The working set is the set of distinct pages in the window, {1, 2, 5, 6, 7}, which has 5 pages."
+ },
+ {
   "id": "qafd5b816c3b",
   "subject": "os",
   "topic": "virtual-memory",
@@ -270,6 +375,21 @@
   "explanation": "FIFO gives 9 faults with 3 frames but 10 with 4 frames; this is the classic example of Belady's anomaly."
  },
  {
+  "id": "qca721ac475f",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "With 3 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does the Optimal algorithm cause?",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "Simulating OPT, which evicts the page whose next use is farthest away, gives 3 compulsory faults plus 8 replacements = 11 faults."
+ },
+ {
   "id": "qd94b02ffec0",
   "subject": "os",
   "topic": "virtual-memory",
@@ -298,6 +418,21 @@
   ],
   "answer": 1,
   "explanation": "OPT evicts the page whose next use is furthest away and gets 9 faults on this string, compared with 12 for LRU and 15 for FIFO."
+ },
+ {
+  "id": "qe110427a992",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "In the enhanced second-chance algorithm, pages are classified by (reference bit, modify bit). Which class is the best candidate for eviction?",
+  "options": [
+   "(1, 0): recently used but clean",
+   "(0, 1): not recently used but modified",
+   "(0, 0): not recently used and not modified",
+   "(1, 1): recently used and modified"
+  ],
+  "answer": 2,
+  "explanation": "A (0, 0) page is unlikely to be needed soon and need not be written back to disk, so evicting it is cheapest."
  },
  {
   "id": "qfa55f89dcd0",

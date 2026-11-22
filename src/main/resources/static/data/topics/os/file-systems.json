@@ -30,6 +30,36 @@
   "explanation": "A symbolic link stores a path name, so it dangles if the target is removed; a hard link is another directory entry for the same inode."
  },
  {
+  "id": "q7ca34a9da1b",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "Which file-allocation method stores each file as a chain of disk blocks, with each block pointing to the next?",
+  "options": [
+   "Contiguous allocation",
+   "Indexed allocation",
+   "Linked allocation",
+   "Hashed allocation"
+  ],
+  "answer": 2,
+  "explanation": "Linked allocation avoids external fragmentation but makes random access slow because the chain must be followed from the start."
+ },
+ {
+  "id": "qe251fa16c9f",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "What is a directory in a file system?",
+  "options": [
+   "A hardware device that stores files",
+   "A list of running processes",
+   "A special file that maps file names to the files (e.g. inodes) they refer to",
+   "A region of RAM reserved for file caching"
+  ],
+  "answer": 2,
+  "explanation": "Directories organize files by holding name-to-file entries, which allows hierarchical path names."
+ },
+ {
   "id": "qff2a135c553",
   "subject": "os",
   "topic": "file-systems",
@@ -58,6 +88,21 @@
   ],
   "answer": 1,
   "explanation": "Metadata updates are first written to a log as transactions, so after a crash only committed but unapplied transactions need replaying."
+ },
+ {
+  "id": "q5a5a97377c3",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "hard",
+  "question": "An inode has 12 direct pointers, one single-indirect and one double-indirect pointer, with 4 KB blocks and 4-byte pointers. With the inode already in memory, how many disk reads are needed to read the byte at offset 5 MB?",
+  "options": [
+   "1",
+   "2",
+   "4",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Direct blocks cover the first 48 KB and the single-indirect block reaches 48 + 1024x4 = 4144 KB, so 5120 KB needs the double-indirect block, a single-indirect block and the data block."
  },
  {
   "id": "qd991f274552",

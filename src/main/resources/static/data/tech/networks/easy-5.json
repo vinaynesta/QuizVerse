@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q33f0c64f16e",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port does POP3 use by default for unencrypted mail retrieval?",
+  "options": [
+   "143",
+   "110",
+   "25",
+   "995"
+  ],
+  "answer": 1,
+  "explanation": "POP3 uses TCP 110 (995 with TLS), while IMAP uses 143."
+ },
+ {
+  "id": "q713b6d453c2",
+  "subject": "networks",
+  "topic": "tcp-udp",
+  "level": "easy",
+  "question": "Which of these applications typically uses UDP for its normal traffic?",
+  "options": [
+   "Web browsing over HTTP/1.1",
+   "SSH remote login",
+   "DNS lookups",
+   "Sending email with SMTP"
+  ],
+  "answer": 2,
+  "explanation": "Most DNS queries are small single request-response exchanges, so they use UDP to avoid connection setup overhead."
+ },
+ {
+  "id": "q6e673ee1903",
+  "subject": "networks",
+  "topic": "http-https",
+  "level": "easy",
+  "question": "Which class of HTTP status codes indicates a server-side error?",
+  "options": [
+   "3xx",
+   "2xx",
+   "5xx",
+   "4xx"
+  ],
+  "answer": 2,
+  "explanation": "5xx codes such as 500 or 503 mean the server failed to fulfil a valid request, while 4xx codes are client errors."
+ },
+ {
+  "id": "qb0e4f50d01f",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "What is the protocol data unit called at the Data Link layer?",
+  "options": [
+   "Packet",
+   "Segment",
+   "Frame",
+   "Message"
+  ],
+  "answer": 2,
+  "explanation": "Layer 2 encapsulates network-layer packets into frames with headers and trailers such as MAC addresses and an FCS."
+ },
+ {
+  "id": "qf246bd23053",
+  "subject": "networks",
+  "topic": "dhcp",
+  "level": "easy",
+  "question": "What is a DHCP lease?",
+  "options": [
+   "The period of time a client is allowed to use an assigned IP address",
+   "The list of all addresses in a DHCP pool",
+   "The MAC address reserved for the DHCP server",
+   "A paid contract with an ISP for a static IP"
+  ],
+  "answer": 0,
+  "explanation": "Clients must renew a lease before it expires or the address returns to the pool for reuse."
+ },
+ {
+  "id": "q3b454e94cf2",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "Which OSI layer is responsible for data formatting, translation and encryption?",
+  "options": [
+   "Session layer",
+   "Transport layer",
+   "Data Link layer",
+   "Presentation layer"
+  ],
+  "answer": 3,
+  "explanation": "The presentation layer (Layer 6) handles data representation such as encoding, compression and encryption."
+ },
+ {
+  "id": "q4eed0f92e7a",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "Which OSI layer transmits raw bits over the physical medium?",
+  "options": [
+   "Physical layer",
+   "Data Link layer",
+   "Network layer",
+   "Session layer"
+  ],
+  "answer": 0,
+  "explanation": "Layer 1 defines electrical, optical and radio signaling, connectors and bit timing."
+ },
+ {
+  "id": "q3636faa51a9",
+  "subject": "networks",
+  "topic": "ip-addressing",
+  "level": "easy",
+  "question": "What is the notation 192.168.1.0/24, which writes an address with its prefix length, called?",
+  "options": [
+   "Dotted-hex notation",
+   "Classful notation",
+   "EUI-64 notation",
+   "CIDR notation"
+  ],
+  "answer": 3,
+  "explanation": "Classless Inter-Domain Routing notation appends the number of network bits after a slash."
+ },
+ {
+  "id": "q45a28d1063b",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "Which media-access method did classic half-duplex Ethernet use to share the wire?",
+  "options": [
+   "CSMA/CD",
+   "Token passing",
+   "CSMA/CA",
+   "TDMA"
+  ],
+  "answer": 0,
+  "explanation": "Carrier Sense Multiple Access with Collision Detection listens before sending and backs off after detecting a collision."
+ },
+ {
+  "id": "q71e1e577faa",
+  "subject": "networks",
+  "topic": "ports",
+  "level": "easy",
+  "question": "Which port does FTP use for its control connection by default?",
+  "options": [
+   "20",
+   "69",
+   "22",
+   "21"
+  ],
+  "answer": 3,
+  "explanation": "FTP sends commands over TCP port 21, while active-mode data transfers traditionally use port 20."
+ }
+]

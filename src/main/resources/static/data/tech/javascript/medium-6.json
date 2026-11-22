@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qca95fd11a74",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "Inside a listener added with element.addEventListener(\"click\", function () { ... }), what is this?",
+  "options": [
+   "The window object",
+   "undefined",
+   "The event object",
+   "The element the listener is attached to"
+  ],
+  "answer": 3,
+  "explanation": "For regular function listeners, this is the event's currentTarget; arrow function listeners would capture this lexically instead."
+ },
+ {
+  "id": "q4b3cedb7f55",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [\"a b\", \"c\"].flatMap(s => s.split(\" \")) return?",
+  "options": [
+   "[[\"a\", \"b\"], [\"c\"]]",
+   "[\"a\", \"b\", \"c\"]",
+   "[\"a b\", \"c\"]",
+   "[\"a\", \"b c\"]"
+  ],
+  "answer": 1,
+  "explanation": "flatMap maps each element and then flattens the result by one level."
+ },
+ {
+  "id": "q39c23759f45",
+  "subject": "javascript",
+  "topic": "classes",
+  "level": "medium",
+  "question": "What does a static initialization block, static { ... }, inside a class do?",
+  "options": [
+   "Runs every time a new instance is created",
+   "Runs once when the class is evaluated, to set up static state",
+   "Prevents the class from being subclassed",
+   "Runs whenever a static method is called"
+  ],
+  "answer": 1,
+  "explanation": "Static blocks execute once during class definition and can initialize static fields with arbitrary logic."
+ },
+ {
+  "id": "qcc16fa6e55b",
+  "subject": "javascript",
+  "topic": "this-binding",
+  "level": "medium",
+  "question": "What does this log?\nfunction show() { return this.v; }\nconsole.log(show.call({ v: 7 }));",
+  "options": [
+   "undefined",
+   "A TypeError is thrown",
+   "7",
+   "null"
+  ],
+  "answer": 2,
+  "explanation": "call invokes the function with this set to its first argument, the object { v: 7 }."
+ },
+ {
+  "id": "qc99edb29f68",
+  "subject": "javascript",
+  "topic": "array-methods",
+  "level": "medium",
+  "question": "What does [1, 2, 3].findLast(n => n < 3) return?",
+  "options": [
+   "1",
+   "3",
+   "[1, 2]",
+   "2"
+  ],
+  "answer": 3,
+  "explanation": "findLast searches from the end and returns the first element that satisfies the predicate, which is 2."
+ },
+ {
+  "id": "q9767ff0b39f",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "What does event.stopPropagation() do?",
+  "options": [
+   "Cancels the browser's default action for the event",
+   "Stops the event from propagating further to other elements",
+   "Removes the event listener",
+   "Stops other listeners on the same element from running"
+  ],
+  "answer": 1,
+  "explanation": "stopPropagation halts bubbling or capturing; preventDefault cancels the default action and stopImmediatePropagation also blocks same-element listeners."
+ },
+ {
+  "id": "q155a463ff6b",
+  "subject": "javascript",
+  "topic": "error-handling",
+  "level": "medium",
+  "question": "What is the standard way to define a custom error type?",
+  "options": [
+   "class ValidationError extends Error {}",
+   "Error.register(\"ValidationError\");",
+   "const ValidationError = new Error.Type(\"Validation\");",
+   "class ValidationError implements Throwable {}"
+  ],
+  "answer": 0,
+  "explanation": "Extending Error gives the custom type a message, a stack trace and correct instanceof checks."
+ },
+ {
+  "id": "qd60a1f17d3a",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What is an IIFE?",
+  "options": [
+   "A function that can only be called once",
+   "A function that is hoisted to the top of its scope",
+   "A function expression that is invoked immediately after it is defined",
+   "A function imported from another module"
+  ],
+  "answer": 2,
+  "explanation": "An Immediately Invoked Function Expression, like (function () {})(), runs at once and keeps its variables private."
+ },
+ {
+  "id": "q3cfcf9d0169",
+  "subject": "javascript",
+  "topic": "modules",
+  "level": "medium",
+  "question": "What is true about top-level await?",
+  "options": [
+   "It is allowed in ES modules and delays the module's evaluation until the awaited promise settles",
+   "It is allowed in any script, including classic non-module scripts",
+   "It runs the awaited promise synchronously",
+   "It is only allowed inside async functions"
+  ],
+  "answer": 0,
+  "explanation": "Top-level await works in modules, and modules that import it wait for it to finish."
+ },
+ {
+  "id": "q2bc6f4cefe6",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What does Symbol(\"id\") === Symbol(\"id\") evaluate to?",
+  "options": [
+   "true",
+   "undefined",
+   "false",
+   "A TypeError is thrown"
+  ],
+  "answer": 2,
+  "explanation": "Every Symbol() call creates a new unique symbol; the description is only a label."
+ }
+]

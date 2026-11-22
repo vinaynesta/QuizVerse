@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q1b730bdc21b",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "easy",
+  "question": "Which page-replacement algorithm evicts the page that has been in memory the longest?",
+  "options": [
+   "FIFO",
+   "LRU",
+   "Optimal",
+   "LFU"
+  ],
+  "answer": 0,
+  "explanation": "FIFO replaces the oldest loaded page regardless of how recently or often it has been used."
+ },
+ {
+  "id": "q1e1d36d2b10",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is polling in I/O?",
+  "options": [
+   "A controller copies data to memory without the CPU",
+   "The device signals the CPU with an interrupt when it is ready",
+   "The CPU repeatedly reads a device's status register to see whether it is ready",
+   "Output is queued on disk for a slow device"
+  ],
+  "answer": 2,
+  "explanation": "Polling is simple but wastes CPU cycles when the device is slow, which is why interrupts are often used instead."
+ },
+ {
+  "id": "q13d693db5f6",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Which term describes the basic unit of CPU utilization that has its own program counter, registers and stack within a process?",
+  "options": [
+   "Page",
+   "Segment",
+   "Inode",
+   "Thread"
+  ],
+  "answer": 3,
+  "explanation": "A thread is the unit the CPU schedules; several threads can exist inside one process and share its address space."
+ },
+ {
+  "id": "q7ca34a9da1b",
+  "subject": "os",
+  "topic": "file-systems",
+  "level": "easy",
+  "question": "Which file-allocation method stores each file as a chain of disk blocks, with each block pointing to the next?",
+  "options": [
+   "Contiguous allocation",
+   "Indexed allocation",
+   "Linked allocation",
+   "Hashed allocation"
+  ],
+  "answer": 2,
+  "explanation": "Linked allocation avoids external fragmentation but makes random access slow because the chain must be followed from the start."
+ },
+ {
+  "id": "qc22eb9f2e3f",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "Which deadlock condition says that a resource can be held by only one process at a time?",
+  "options": [
+   "Hold and wait",
+   "No preemption",
+   "Circular wait",
+   "Mutual exclusion"
+  ],
+  "answer": 3,
+  "explanation": "Mutual exclusion means a resource is non-sharable, so other requesters must wait until it is released."
+ },
+ {
+  "id": "q648a8c2868d",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "In the five-state process model, which state is a process in while it waits for an I/O operation to complete?",
+  "options": [
+   "Waiting (blocked)",
+   "Ready",
+   "Running",
+   "Terminated"
+  ],
+  "answer": 0,
+  "explanation": "A process waiting for an event such as I/O completion is blocked and moves back to Ready once the event occurs."
+ },
+ {
+  "id": "q0745a48d02b",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "How do most general-purpose operating systems such as Linux and Windows handle deadlocks?",
+  "options": [
+   "They largely ignore the problem and leave it to applications (the ostrich approach)",
+   "They run the banker's algorithm on every request",
+   "They prevent all four Coffman conditions",
+   "They reboot automatically when a deadlock occurs"
+  ],
+  "answer": 0,
+  "explanation": "Deadlocks are rare and prevention or avoidance is expensive, so general-purpose kernels usually ignore them and rely on developers."
+ },
+ {
+  "id": "qa8cfe729952",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "What is response time in CPU scheduling?",
+  "options": [
+   "The total time a process spends in the ready queue",
+   "The time from submission until the process completes",
+   "The time the dispatcher takes to switch processes",
+   "The time from submission of a request until the first response is produced"
+  ],
+  "answer": 3,
+  "explanation": "Response time matters for interactive systems because it measures how quickly a process starts responding, not when it finishes."
+ },
+ {
+  "id": "q9a680eb373e",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "easy",
+  "question": "What is a binary semaphore?",
+  "options": [
+   "A semaphore whose value can only be 0 or 1",
+   "A semaphore that can count any number of resources",
+   "A semaphore that stores binary data",
+   "A semaphore shared only between two processes"
+  ],
+  "answer": 0,
+  "explanation": "A binary semaphore behaves much like a mutex lock, allowing at most one holder at a time."
+ },
+ {
+  "id": "q3954f9b2fce",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Pipes, message queues and shared memory are all mechanisms for:",
+  "options": [
+   "Inter-process communication (IPC)",
+   "Page replacement",
+   "Disk scheduling",
+   "Interrupt masking"
+  ],
+  "answer": 0,
+  "explanation": "IPC mechanisms let separate processes exchange data and coordinate with each other."
+ }
+]

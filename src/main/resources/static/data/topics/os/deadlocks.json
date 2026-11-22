@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0745a48d02b",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "How do most general-purpose operating systems such as Linux and Windows handle deadlocks?",
+  "options": [
+   "They largely ignore the problem and leave it to applications (the ostrich approach)",
+   "They run the banker's algorithm on every request",
+   "They prevent all four Coffman conditions",
+   "They reboot automatically when a deadlock occurs"
+  ],
+  "answer": 0,
+  "explanation": "Deadlocks are rare and prevention or avoidance is expensive, so general-purpose kernels usually ignore them and rely on developers."
+ },
+ {
   "id": "q883cfe91607",
   "subject": "os",
   "topic": "deadlocks",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "A resource-allocation graph has request and assignment edges between processes and resources; cycles indicate possible deadlock."
+ },
+ {
+  "id": "qc22eb9f2e3f",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "easy",
+  "question": "Which deadlock condition says that a resource can be held by only one process at a time?",
+  "options": [
+   "Hold and wait",
+   "No preemption",
+   "Circular wait",
+   "Mutual exclusion"
+  ],
+  "answer": 3,
+  "explanation": "Mutual exclusion means a resource is non-sharable, so other requesters must wait until it is released."
  },
  {
   "id": "qeb91dec47bb",
@@ -90,6 +120,21 @@
   "explanation": "Deadlocked states are a subset of unsafe states; in an unsafe state the OS can no longer guarantee that deadlock will be avoided."
  },
  {
+  "id": "q90543664907",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "If the OS may take away resources held by a process that is waiting for another resource, which deadlock condition is negated?",
+  "options": [
+   "Hold and wait",
+   "Mutual exclusion",
+   "No preemption",
+   "Circular wait"
+  ],
+  "answer": 2,
+  "explanation": "Allowing resources to be preempted removes the no-preemption condition, though it only works for resources whose state can be saved and restored."
+ },
+ {
   "id": "qb0475c463b1",
   "subject": "os",
   "topic": "deadlocks",
@@ -120,6 +165,21 @@
   "explanation": "With multiple instances, a process outside the cycle may release an instance and break it, so a cycle is necessary but not sufficient."
  },
  {
+  "id": "qd013ace8fd4",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Why is denying the mutual-exclusion condition usually not a practical way to prevent deadlock?",
+  "options": [
+   "Some resources, such as mutex locks or printers, are intrinsically non-sharable",
+   "Mutual exclusion is not one of the deadlock conditions",
+   "It would require ordering all resource types",
+   "It makes every process request all resources up front"
+  ],
+  "answer": 0,
+  "explanation": "Sharable resources such as read-only files never cause deadlock, but many resources simply cannot be shared."
+ },
+ {
   "id": "qef15825a3e1",
   "subject": "os",
   "topic": "deadlocks",
@@ -135,6 +195,21 @@
   "explanation": "The four conditions are mutual exclusion, hold and wait, no preemption and circular wait; starvation is a separate problem."
  },
  {
+  "id": "qefa8862b398",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "medium",
+  "question": "Once a deadlock has been detected, what are the two general approaches to recovering from it?",
+  "options": [
+   "Running the banker's algorithm or using aging",
+   "Adding more CPUs or increasing RAM",
+   "Terminating one or more processes, or preempting resources from them",
+   "Disabling interrupts or flushing the TLB"
+  ],
+  "answer": 2,
+  "explanation": "Recovery either aborts processes to break the cycle or takes resources away (with rollback) from chosen victims."
+ },
+ {
   "id": "qf103e2c89af",
   "subject": "os",
   "topic": "deadlocks",
@@ -148,6 +223,21 @@
   ],
   "answer": 0,
   "explanation": "A safe state has at least one safe sequence where each process's remaining needs can be met by available resources plus those released by earlier processes."
+ },
+ {
+  "id": "q300571d80cb",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Banker's algorithm with two resource types: Available = (3,2). Allocation: P0 (1,0), P1 (2,1), P2 (1,1). Max: P0 (4,2), P1 (3,3), P2 (6,2). P2 requests (2,1). What should the system do?",
+  "options": [
+   "Deny it for now, because granting it leaves an unsafe state",
+   "Grant it, because the request does not exceed Available",
+   "Grant it, because the request does not exceed P2's Need",
+   "Terminate P2, because its request exceeds its Max"
+  ],
+  "answer": 0,
+  "explanation": "After granting, Available would be (1,1) while the Needs are P0 (3,2), P1 (1,2) and P2 (3,0), so no process can finish and the state is unsafe."
  },
  {
   "id": "q315a2ceafe7",
@@ -223,6 +313,21 @@
   ],
   "answer": 2,
   "explanation": "Need = Max - Allocation; P1 (need 1,2,2) can run, raising Available to (5,3,2), then P3 to (7,4,3), P4 to (7,4,5), P0 to (7,5,5) and P2 to (10,5,7); P0, P2 and P4 cannot run first."
+ },
+ {
+  "id": "q9ce9d598371",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Why is the banker's algorithm rarely used in general-purpose operating systems?",
+  "options": [
+   "Processes must declare their maximum resource needs in advance, and the number of processes and resources keeps changing",
+   "It only works for single-instance resources",
+   "It requires disabling all interrupts while running",
+   "It cannot detect circular wait"
+  ],
+  "answer": 0,
+  "explanation": "Real workloads rarely know their maximum needs and processes come and go, so avoidance algorithms are mostly of theoretical or niche use."
  },
  {
   "id": "qbcd16a311e8",

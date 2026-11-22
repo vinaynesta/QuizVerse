@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "typeof gets the object's type and keyof then extracts its property names."
+  },
+  {
+    "topic": "unions-narrowing",
+    "question": "In `function f(x: string[] | string) { if (Array.isArray(x)) { /* here */ } }`, what is x's type at `here`?",
+    "options": [
+      "string",
+      "string[]",
+      "string[] | string",
+      "any[]"
+    ],
+    "answer": 1,
+    "explanation": "Array.isArray acts as a type guard that narrows the union to its array member."
+  },
+  {
+    "topic": "unions-narrowing",
+    "question": "Given `x: string | number | boolean`, what is x's type in the else branch of `if (typeof x === \"number\")`?",
+    "options": [
+      "number",
+      "string",
+      "string | boolean",
+      "never"
+    ],
+    "answer": 2,
+    "explanation": "The else branch removes the member that the typeof check matched."
+  },
+  {
+    "topic": "unions-narrowing",
+    "question": "In `function f(x: number | null) { if (x === null) return; /* here */ }`, what is x's type at `here`?",
+    "options": [
+      "number | null",
+      "null",
+      "unknown",
+      "number"
+    ],
+    "answer": 3,
+    "explanation": "Control-flow analysis knows the null case returned early, so only number remains."
+  },
+  {
+    "topic": "unions-narrowing",
+    "question": "In `function f(a: string | number, b: string | boolean) { if (a === b) { /* here */ } }`, what is a's type at `here`?",
+    "options": [
+      "string",
+      "string | number",
+      "string | number | boolean",
+      "never"
+    ],
+    "answer": 0,
+    "explanation": "Strict equality narrows both operands to their common type, which is string."
+  },
+  {
+    "topic": "generics",
+    "question": "Given `interface Pair<K, V> { key: K; value: V }`, which value is a valid `Pair<string, number>`?",
+    "options": [
+      "{ key: \"a\", value: 1 }",
+      "{ key: 1, value: \"a\" }",
+      "[\"a\", 1]",
+      "{ K: \"a\", V: 1 }"
+    ],
+    "answer": 0,
+    "explanation": "The type arguments fill K with string and V with number, so key must be a string and value a number."
+  },
+  {
+    "topic": "generics",
+    "question": "Given `type Box<T> = { value: T }`, what is the type of `b.value` for `const b: Box<string[]> = { value: [] };`?",
+    "options": [
+      "string",
+      "string[]",
+      "never[]",
+      "unknown"
+    ],
+    "answer": 1,
+    "explanation": "Box<string[]> substitutes string[] for T, so value is typed as string[]."
+  },
+  {
+    "topic": "generics",
+    "question": "Given `function wrap<T>(x: T) { return [x]; }`, what is the type of `wrap(\"a\" as string)`?",
+    "options": [
+      "string",
+      "string[]",
+      "[string]",
+      "unknown[]"
+    ],
+    "answer": 1,
+    "explanation": "T is inferred as string and the array literal [x] is inferred as T[]."
+  },
+  {
+    "topic": "utility-types",
+    "question": "What is `Extract<\"a\" | \"b\" | 1, string>`?",
+    "options": [
+      "1",
+      "\"a\" | \"b\"",
+      "string",
+      "never"
+    ],
+    "answer": 1,
+    "explanation": "Extract keeps only the union members assignable to the second type argument."
+  },
+  {
+    "topic": "utility-types",
+    "question": "What is `InstanceType<typeof Date>`?",
+    "options": [
+      "typeof Date",
+      "DateConstructor",
+      "object",
+      "Date"
+    ],
+    "answer": 3,
+    "explanation": "InstanceType returns the type produced by calling a constructor type with new."
+  },
+  {
+    "topic": "utility-types",
+    "question": "What does `Record<\"a\" | \"b\", boolean>` produce?",
+    "options": [
+      "{ [key: string]: boolean }",
+      "{ a: boolean; b: boolean }",
+      "{ a?: boolean; b?: boolean }",
+      "boolean[]"
+    ],
+    "answer": 1,
+    "explanation": "With a union of literal keys, Record creates one required property per key."
+  },
+  {
+    "topic": "utility-types",
+    "question": "What is `ReturnType<() => Promise<number>>`?",
+    "options": [
+      "Promise<number>",
+      "number",
+      "Awaited<number>",
+      "void"
+    ],
+    "answer": 0,
+    "explanation": "ReturnType gives the declared return type as is; it does not unwrap promises like Awaited does."
+  },
+  {
+    "topic": "readonly",
+    "question": "Given `const xs: ReadonlyArray<number> = [1];`, which operation is allowed?",
+    "options": [
+      "xs.push(2)",
+      "xs[0] = 5",
+      "xs.map(n => n * 2)",
+      "xs.sort()"
+    ],
+    "answer": 2,
+    "explanation": "ReadonlyArray removes mutating methods and index assignment but keeps non-mutating ones like map."
+  },
+  {
+    "topic": "readonly",
+    "question": "Given `class P { readonly x: number; }`, where can `x` be assigned?",
+    "options": [
+      "Anywhere inside the class",
+      "Only from outside the class",
+      "Only in its declaration or in the constructor",
+      "Nowhere, it must stay undefined"
+    ],
+    "answer": 2,
+    "explanation": "readonly properties can be initialized at declaration or in the constructor, but not reassigned afterwards."
+  },
+  {
+    "topic": "readonly",
+    "question": "Given `const ro: readonly string[] = [];`, what happens with `const mu: string[] = ro;`?",
+    "options": [
+      "It compiles, because both hold strings",
+      "It compiles and makes ro mutable",
+      "It compiles but mu becomes readonly",
+      "A compile error, because a readonly array is not assignable to a mutable one"
+    ],
+    "answer": 3,
+    "explanation": "A mutable array can be assigned to a readonly type, but not the other way around, since that would allow mutation."
+  },
+  {
+    "topic": "classes",
+    "question": "What does the `override` modifier on a subclass method do?",
+    "options": [
+      "Prevents subclasses from overriding it further",
+      "Makes the method static",
+      "Calls the base method automatically",
+      "Marks it as overriding a base member, giving an error if the base class has no such member"
+    ],
+    "answer": 3,
+    "explanation": "override catches typos and removed base methods; noImplicitOverride makes it required."
+  },
+  {
+    "topic": "classes",
+    "question": "What is the accessibility of a class member declared with no modifier?",
+    "options": [
+      "private",
+      "protected",
+      "public",
+      "internal"
+    ],
+    "answer": 2,
+    "explanation": "Class members are public by default in TypeScript."
+  },
+  {
+    "topic": "classes",
+    "question": "What does declaring `abstract area(): number;` in an abstract class require?",
+    "options": [
+      "Every concrete subclass must implement area",
+      "The method body is inherited from Object",
+      "The method can only be called statically",
+      "Subclasses cannot override area"
+    ],
+    "answer": 0,
+    "explanation": "Abstract methods have no implementation, so non-abstract subclasses must provide one."
+  },
+  {
+    "topic": "keyof-typeof",
+    "question": "Given `const arr = [\"a\", \"b\"] as const;`, what is `typeof arr[number]`?",
+    "options": [
+      "string",
+      "string[]",
+      "readonly [\"a\", \"b\"]",
+      "\"a\" | \"b\""
+    ],
+    "answer": 3,
+    "explanation": "Indexing the readonly tuple type with number gives the union of its element literal types."
+  },
+  {
+    "topic": "keyof-typeof",
+    "question": "What is `keyof { [key: string]: boolean }`?",
+    "options": [
+      "string",
+      "boolean",
+      "string | number",
+      "never"
+    ],
+    "answer": 2,
+    "explanation": "With a string index signature, keyof includes number too, because numeric keys are converted to strings in JavaScript."
+  },
+  {
+    "topic": "keyof-typeof",
+    "question": "How does `typeof` in `type T = typeof x;` differ from `typeof x` in an expression?",
+    "options": [
+      "In a type position it gives x's static type; in an expression it is the runtime operator returning a string",
+      "They are identical and both return a string",
+      "The type form only works with classes",
+      "The expression form gives the static type"
+    ],
+    "answer": 0,
+    "explanation": "TypeScript reuses the keyword: in types it is a type query, while in values it is JavaScript's typeof operator."
   }
 ]

@@ -1,5 +1,35 @@
 [
  {
+  "id": "q3857ecb2da9",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "Which protocol prevents loops in a switched Ethernet network with redundant links?",
+  "options": [
+   "Address Resolution Protocol (ARP)",
+   "Open Shortest Path First (OSPF)",
+   "Internet Control Message Protocol (ICMP)",
+   "Spanning Tree Protocol (STP)"
+  ],
+  "answer": 3,
+  "explanation": "STP blocks redundant switch ports to form a loop-free tree, preventing broadcast storms."
+ },
+ {
+  "id": "q45a28d1063b",
+  "subject": "networks",
+  "topic": "link-layer",
+  "level": "easy",
+  "question": "Which media-access method did classic half-duplex Ethernet use to share the wire?",
+  "options": [
+   "CSMA/CD",
+   "Token passing",
+   "CSMA/CA",
+   "TDMA"
+  ],
+  "answer": 0,
+  "explanation": "Carrier Sense Multiple Access with Collision Detection listens before sending and backs off after detecting a collision."
+ },
+ {
   "id": "q9cff5b329ec",
   "subject": "networks",
   "topic": "link-layer",

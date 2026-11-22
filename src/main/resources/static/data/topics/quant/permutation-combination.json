@@ -75,6 +75,21 @@
   "explanation": "All committees: C(12,4) = 495.\nCommittees with no man (all women): C(6,4) = 15.\nAt least one man = 495 − 15 = 480."
  },
  {
+  "id": "q21492530261",
+  "subject": "quant",
+  "topic": "permutation-combination",
+  "level": "hard",
+  "question": "A committee of 4 is chosen from 8 men and 4 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "494",
+   "496",
+   "370",
+   "395"
+  ],
+  "answer": 0,
+  "explanation": "All committees: C(12,4) = 495.\nCommittees with no man (all women): C(4,4) = 1.\nAt least one man = 495 − 1 = 494."
+ },
+ {
   "id": "q214a9e5eeeb",
   "subject": "quant",
   "topic": "permutation-combination",
@@ -598,6 +613,21 @@
   ],
   "answer": 2,
   "explanation": "All committees: C(11,5) = 462.\nCommittees with no man (all women): C(5,5) = 1.\nAt least one man = 462 − 1 = 461."
+ },
+ {
+  "id": "qa6d02d9a283",
+  "subject": "quant",
+  "topic": "permutation-combination",
+  "level": "hard",
+  "question": "A committee of 3 is chosen from 4 men and 3 women. In how many ways can it be formed with at least one man?",
+  "options": [
+   "33",
+   "35",
+   "34",
+   "32"
+  ],
+  "answer": 2,
+  "explanation": "All committees: C(7,3) = 35.\nCommittees with no man (all women): C(3,3) = 1.\nAt least one man = 35 − 1 = 34."
  },
  {
   "id": "qa87aaa2bf98",

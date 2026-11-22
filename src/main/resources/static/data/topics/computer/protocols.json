@@ -1,5 +1,37 @@
 [
  {
+  "id": "q06f617841f7",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "easy",
+  "question": "HTTPS differs from HTTP mainly because HTTPS:",
+  "options": [
+   "Works only on intranets",
+   "Supports only text pages",
+   "Uses no port number",
+   "Encrypts the data exchanged"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "HTTPS uses SSL/TLS encryption so data between browser and server cannot be read in transit."
+ },
+ {
+  "id": "q79609170474",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "easy",
+  "question": "Which protocol is used to upload website files from a computer to a remote web server?",
+  "options": [
+   "POP3",
+   "ARP",
+   "SMTP",
+   "FTP"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "File Transfer Protocol is used to transfer files between a client and a remote server."
+ },
+ {
   "id": "q817688037f6",
   "subject": "computer",
   "topic": "protocols",
@@ -32,6 +64,54 @@
   "explanation": "FTP (File Transfer Protocol) is used to transfer files between computers over a network."
  },
  {
+  "id": "qd8d7a448ae6",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "easy",
+  "question": "Which protocol is used to transfer web pages between a web server and a browser?",
+  "options": [
+   "FTP",
+   "HTTP",
+   "SMTP",
+   "ARP"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "HTTP (HyperText Transfer Protocol) is the protocol of the World Wide Web for requesting and delivering web pages."
+ },
+ {
+  "id": "qf448ffcc03b",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "easy",
+  "question": "Telnet is a protocol mainly used for:",
+  "options": [
+   "Sharing printers",
+   "Remote login to another computer",
+   "Sending emails",
+   "Assigning IP addresses"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Telnet provides text-based remote login but sends data unencrypted, so SSH has largely replaced it."
+ },
+ {
+  "id": "q12ea831cd99",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "Which protocol is used to synchronise the clocks of computers over a network?",
+  "options": [
+   "SNMP",
+   "ARP",
+   "NTP",
+   "SMTP"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "NTP (Network Time Protocol) keeps the system clocks of networked computers in sync."
+ },
+ {
   "id": "q4597bbe9c1f",
   "subject": "computer",
   "topic": "protocols",
@@ -48,6 +128,38 @@
   "explanation": "TCP/IP is the basic suite of communication protocols used on the Internet."
  },
  {
+  "id": "q4786aaf6bc0",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "The Internet Protocol (IP) works at which layer of the OSI model?",
+  "options": [
+   "Transport layer",
+   "Application layer",
+   "Network layer",
+   "Data Link layer"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "IP handles logical addressing and routing, which are Network layer functions."
+ },
+ {
+  "id": "q4f7aa833fca",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "HTTP, FTP and SMTP belong to which layer of the OSI model?",
+  "options": [
+   "Application layer",
+   "Transport layer",
+   "Network layer",
+   "Session layer"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "These protocols provide services directly to user applications."
+ },
+ {
   "id": "q5e4dfdaef97",
   "subject": "computer",
   "topic": "protocols",
@@ -62,6 +174,54 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "VoIP carries voice calls over IP networks such as the Internet."
+ },
+ {
+  "id": "q68c19a1a49e",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "Which secure file transfer protocol works over an SSH connection?",
+  "options": [
+   "SFTP",
+   "SMTP",
+   "TFTP",
+   "SNMP"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "SFTP (SSH File Transfer Protocol) encrypts both commands and data."
+ },
+ {
+  "id": "q6d865afaa51",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "TFTP, a simple file transfer protocol with no authentication, stands for:",
+  "options": [
+   "Trusted File Transfer Protocol",
+   "Transmission File Transfer Protocol",
+   "Trivial File Transfer Protocol",
+   "Total File Transfer Protocol"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "TFTP is a lightweight protocol often used to load device configurations."
+ },
+ {
+  "id": "q92014b40312",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "What is the default port number for SSH?",
+  "options": [
+   "21",
+   "22",
+   "23",
+   "25"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "SSH listens on port 22; 21 is FTP control, 23 is Telnet and 25 is SMTP."
  },
  {
   "id": "q9f482d3b67e",
@@ -112,6 +272,38 @@
   "explanation": "HTTPS uses port 443 by default."
  },
  {
+  "id": "qd256616b7ea",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "What is the default port number for Telnet?",
+  "options": [
+   "22",
+   "23",
+   "21",
+   "110"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Telnet uses port 23; it sends data unencrypted, which is why SSH (port 22) replaced it."
+ },
+ {
+  "id": "qdee28147348",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "medium",
+  "question": "TCP is called a connection-oriented protocol because it:",
+  "options": [
+   "Sets up a connection before sending data",
+   "Works only inside a LAN",
+   "Uses no port numbers",
+   "Sends data without any checks"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "TCP establishes a connection and guarantees ordered, reliable delivery."
+ },
+ {
   "id": "qf0c95a05f70",
   "subject": "computer",
   "topic": "protocols",
@@ -144,6 +336,86 @@
   "explanation": "SSH (Secure Shell) encrypts remote login sessions, unlike Telnet which sends data in plain text."
  },
  {
+  "id": "q144c086e026",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "A DHCP server listens for client requests on which UDP port?",
+  "options": [
+   "67",
+   "69",
+   "161",
+   "53"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "DHCP servers use UDP 67 and clients use UDP 68."
+ },
+ {
+  "id": "q18d430f8f6d",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "In active-mode FTP, which port is used for the data connection?",
+  "options": [
+   "20",
+   "22",
+   "25",
+   "21"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "FTP uses port 21 for control and port 20 for data in active mode."
+ },
+ {
+  "id": "q3363dc935d8",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "What is the default port number for SMTP over implicit SSL/TLS (SMTPS)?",
+  "options": [
+   "993",
+   "110",
+   "995",
+   "465"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "SMTPS uses port 465; plain SMTP uses 25."
+ },
+ {
+  "id": "q44f30280adb",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "Which command-line tool is used to query DNS servers for the IP address of a domain?",
+  "options": [
+   "nslookup",
+   "netstat",
+   "tracert",
+   "arp"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "nslookup sends DNS queries and displays the records returned."
+ },
+ {
+  "id": "q46260f0f32e",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "What is the default port number for Remote Desktop Protocol (RDP)?",
+  "options": [
+   "1433",
+   "8080",
+   "5900",
+   "3389"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Windows Remote Desktop listens on TCP port 3389."
+ },
+ {
   "id": "q47e4f0cd234",
   "subject": "computer",
   "topic": "protocols",
@@ -158,6 +430,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "DHCP stands for Dynamic Host Configuration Protocol."
+ },
+ {
+  "id": "q4da0b05c5fb",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "Which protocol finds a device's IP address when only its MAC address is known?",
+  "options": [
+   "ARP",
+   "ICMP",
+   "SMTP",
+   "RARP"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "RARP (Reverse ARP) maps a MAC address to an IP address, the opposite of ARP."
  },
  {
   "id": "q50d60c17d34",
@@ -208,6 +496,22 @@
   "explanation": "IMAP uses port 143 by default."
  },
  {
+  "id": "q6f3b2b9037a",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "HTTP is described as a stateless protocol because:",
+  "options": [
+   "Each request is treated independently",
+   "It cannot carry images",
+   "It never uses port numbers",
+   "It keeps a permanent connection"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "The server keeps no memory of earlier requests, which is why cookies and sessions are used."
+ },
+ {
   "id": "q6f704356a8c",
   "subject": "computer",
   "topic": "protocols",
@@ -240,6 +544,86 @@
   "explanation": "SMTP uses port 25 by default for transferring mail between servers."
  },
  {
+  "id": "q8a4aab9f4d1",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "The three messages exchanged when TCP sets up a connection are:",
+  "options": [
+   "ACK, SYN, FIN",
+   "SYN, SYN-ACK, ACK",
+   "SYN, FIN, RST",
+   "REQ, ACK, END"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "This exchange is called the TCP three-way handshake."
+ },
+ {
+  "id": "q8e5a2c29810",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "The HTTP status code 404 means that:",
+  "options": [
+   "The requested page was not found",
+   "Access is forbidden",
+   "The server crashed",
+   "The request succeeded"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "404 Not Found means the server could not find the requested resource."
+ },
+ {
+  "id": "q946df6e69f3",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "Which command shows the route packets take, router by router, to reach a destination?",
+  "options": [
+   "netstat",
+   "tracert",
+   "ipconfig",
+   "chkdsk"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "tracert (traceroute on Linux) lists each hop on the path using ICMP."
+ },
+ {
+  "id": "q9a64999305f",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "Which transport-layer protocol does DHCP use?",
+  "options": [
+   "UDP",
+   "TCP",
+   "ICMP",
+   "ARP"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "DHCP runs over UDP, using port 67 on the server and port 68 on the client."
+ },
+ {
+  "id": "qac1792dac73",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "S/MIME and PGP are used to:",
+  "options": [
+   "Speed up mail delivery",
+   "Compress large attachments",
+   "Encrypt and digitally sign email",
+   "Block spam automatically"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Both use public key cryptography to secure email content."
+ },
+ {
   "id": "qcf5882dabd2",
   "subject": "computer",
   "topic": "protocols",
@@ -254,6 +638,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "Ping sends ICMP (Internet Control Message Protocol) echo request messages."
+ },
+ {
+  "id": "qd103a0a5ae5",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "The DNS record that maps a domain name to an IPv4 address is the:",
+  "options": [
+   "MX record",
+   "A record",
+   "AAAA record",
+   "CNAME record"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A records hold IPv4 addresses; AAAA records hold IPv6 addresses."
  },
  {
   "id": "qd5087e9d4c0",
@@ -288,6 +688,22 @@
   "explanation": "DHCP gives each device an IP address and other settings automatically."
  },
  {
+  "id": "qe6e46c58770",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "SNMP, used to monitor and manage network devices, stands for:",
+  "options": [
+   "Simple Network Management Protocol",
+   "Standard Network Monitoring Process",
+   "Secure Network Mail Protocol",
+   "Simple Node Messaging Protocol"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "SNMP (Simple Network Management Protocol) collects information from and configures routers, switches and other devices."
+ },
+ {
   "id": "qed3adf62ab7",
   "subject": "computer",
   "topic": "protocols",
@@ -318,5 +734,21 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "SSL (Secure Sockets Layer), now succeeded by TLS, encrypts data between browser and server in HTTPS."
+ },
+ {
+  "id": "qfa46dac23ba",
+  "subject": "computer",
+  "topic": "protocols",
+  "level": "hard",
+  "question": "The DNS record that names the mail server responsible for a domain's email is the:",
+  "options": [
+   "A record",
+   "PTR record",
+   "NS record",
+   "MX record"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Mail Exchanger records tell sending servers where to deliver mail."
  }
 ]

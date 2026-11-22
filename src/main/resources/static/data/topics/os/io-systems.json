@@ -1,5 +1,20 @@
 [
  {
+  "id": "q1e1d36d2b10",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "easy",
+  "question": "What is polling in I/O?",
+  "options": [
+   "A controller copies data to memory without the CPU",
+   "The device signals the CPU with an interrupt when it is ready",
+   "The CPU repeatedly reads a device's status register to see whether it is ready",
+   "Output is queued on disk for a slow device"
+  ],
+  "answer": 2,
+  "explanation": "Polling is simple but wastes CPU cycles when the device is slow, which is why interrupts are often used instead."
+ },
+ {
   "id": "qa5fd56f4913",
   "subject": "os",
   "topic": "io-systems",
@@ -60,6 +75,21 @@
   "explanation": "With DMA the CPU sets up a transfer and the controller moves the whole block, interrupting the CPU only when it is done."
  },
  {
+  "id": "qb4124c9ee70",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "medium",
+  "question": "The disk head is at cylinder 50, moving toward higher cylinders, and the queue holds 82, 170, 43, 140, 24, 16, 190. What is the total head movement under LOOK scheduling?",
+  "options": [
+   "240 cylinders",
+   "314 cylinders",
+   "332 cylinders",
+   "341 cylinders"
+  ],
+  "answer": 1,
+  "explanation": "LOOK goes up only as far as the last request and then reverses: (190 - 50) + (190 - 16) = 140 + 174 = 314 cylinders."
+ },
+ {
   "id": "qbd24dc7dc58",
   "subject": "os",
   "topic": "io-systems",
@@ -73,6 +103,36 @@
   ],
   "answer": 0,
   "explanation": "Summing |differences| in order: 45 + 85 + 146 + 85 + 108 + 110 + 59 + 2 = 640 cylinders."
+ },
+ {
+  "id": "qe962b8f57b8",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "medium",
+  "question": "How does a nonblocking I/O call differ from a blocking one?",
+  "options": [
+   "It suspends the caller until all requested data arrives",
+   "It can only be used for disk devices",
+   "It always transfers data using polling",
+   "It returns immediately with whatever data is available instead of suspending the caller"
+  ],
+  "answer": 3,
+  "explanation": "Nonblocking calls let a program continue working, for example a UI thread reading input, while blocking calls put the caller to sleep."
+ },
+ {
+  "id": "q192a56d1620",
+  "subject": "os",
+  "topic": "io-systems",
+  "level": "hard",
+  "question": "A RAID 5 array is built from five 2 TB disks. What is its usable capacity?",
+  "options": [
+   "6 TB",
+   "10 TB",
+   "8 TB",
+   "5 TB"
+  ],
+  "answer": 2,
+  "explanation": "RAID 5 spends one disk's worth of space on distributed parity, so usable capacity is (5 - 1) x 2 TB = 8 TB."
  },
  {
   "id": "q2e9d21000a3",

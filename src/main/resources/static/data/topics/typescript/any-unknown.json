@@ -60,6 +60,21 @@
   "explanation": "Both accept any value, but unknown is the type-safe counterpart that forces a check before use."
  },
  {
+  "id": "qacf40ef1d13",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Given `let u: unknown = \"x\";`, what happens with `let s: string = u;`?",
+  "options": [
+   "It compiles, because the value is a string",
+   "It compiles with a warning only",
+   "It compiles, but s has type unknown",
+   "A compile error, because unknown is not assignable to string"
+  ],
+  "answer": 3,
+  "explanation": "unknown can only be assigned to unknown or any until it is narrowed."
+ },
+ {
   "id": "qb8d933faa61",
   "subject": "typescript",
   "topic": "any-unknown",
@@ -73,5 +88,20 @@
   ],
   "answer": 1,
   "explanation": "unknown is only assignable to unknown and any; using it in other ways requires narrowing first."
+ },
+ {
+  "id": "qcabe4c4a147",
+  "subject": "typescript",
+  "topic": "any-unknown",
+  "level": "easy",
+  "question": "Given `let a: any = 1;`, what happens at compile time with `a.foo.bar();`?",
+  "options": [
+   "A compile error, because foo does not exist on number",
+   "A compile error, because any cannot be called",
+   "It compiles without error, though it may fail at runtime",
+   "The compiler converts a to an object"
+  ],
+  "answer": 2,
+  "explanation": "any disables type checking, so any property access or call is allowed by the compiler."
  }
 ]

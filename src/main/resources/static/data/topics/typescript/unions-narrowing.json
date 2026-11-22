@@ -45,6 +45,21 @@
   "explanation": "A common property with distinct literal types acts as a discriminant that narrows the union per case."
  },
  {
+  "id": "q240746f0861",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(x: string[] | string) { if (Array.isArray(x)) { /* here */ } }`, what is x's type at `here`?",
+  "options": [
+   "string[]",
+   "string",
+   "string[] | string",
+   "any[]"
+  ],
+  "answer": 0,
+  "explanation": "Array.isArray acts as a type guard that narrows the union to its array member."
+ },
+ {
   "id": "q26fea0666cc",
   "subject": "typescript",
   "topic": "unions-narrowing",
@@ -88,6 +103,51 @@
   ],
   "answer": 2,
   "explanation": "The in operator narrows to union members that declare the property."
+ },
+ {
+  "id": "q3716fd5eec0",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(x: number | null) { if (x === null) return; /* here */ }`, what is x's type at `here`?",
+  "options": [
+   "number",
+   "null",
+   "unknown",
+   "number | null"
+  ],
+  "answer": 0,
+  "explanation": "Control-flow analysis knows the null case returned early, so only number remains."
+ },
+ {
+  "id": "q50ecd7348f5",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "In `function f(a: string | number, b: string | boolean) { if (a === b) { /* here */ } }`, what is a's type at `here`?",
+  "options": [
+   "string | number | boolean",
+   "string | number",
+   "string",
+   "never"
+  ],
+  "answer": 2,
+  "explanation": "Strict equality narrows both operands to their common type, which is string."
+ },
+ {
+  "id": "qae1a5ed243e",
+  "subject": "typescript",
+  "topic": "unions-narrowing",
+  "level": "medium",
+  "question": "Given `x: string | number | boolean`, what is x's type in the else branch of `if (typeof x === \"number\")`?",
+  "options": [
+   "number",
+   "string | boolean",
+   "string",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "The else branch removes the member that the typeof check matched."
  },
  {
   "id": "qb93d159c9cc",

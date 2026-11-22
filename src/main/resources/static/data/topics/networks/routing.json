@@ -1,5 +1,20 @@
 [
  {
+  "id": "q23690409c00",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "easy",
+  "question": "What is a host's default gateway?",
+  "options": [
+   "The DNS server that resolves its names",
+   "The router to which the host sends traffic destined for other networks",
+   "The switch port it is plugged into",
+   "The DHCP server that gave it an address"
+  ],
+  "answer": 1,
+  "explanation": "When a destination is not on the local subnet, the host forwards the packet to its default gateway router."
+ },
+ {
   "id": "q482e27d6075",
   "subject": "networks",
   "topic": "routing",
@@ -30,6 +45,36 @@
   "explanation": "ping sends ICMP Echo Request messages and waits for Echo Replies."
  },
  {
+  "id": "qb208528f025",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "easy",
+  "question": "What does the TTL field in the IPv4 header prevent?",
+  "options": [
+   "Packets circulating forever in a routing loop",
+   "Packets being read by unauthorized hosts",
+   "Packets being delivered out of order",
+   "Packets exceeding the link MTU"
+  ],
+  "answer": 0,
+  "explanation": "Each router decrements TTL and discards the packet when it reaches 0, sending an ICMP Time Exceeded message."
+ },
+ {
+  "id": "q0791735df06",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "What does the BGP LOCAL_PREF attribute influence?",
+  "options": [
+   "Which exit point an AS uses for outbound traffic; a higher value is preferred",
+   "The TTL of BGP keepalive messages",
+   "The order in which prefixes are advertised",
+   "How other ASes route traffic into this AS"
+  ],
+  "answer": 0,
+  "explanation": "LOCAL_PREF is shared among iBGP peers inside one AS and is evaluated early in best-path selection."
+ },
+ {
   "id": "q638b012241e",
   "subject": "networks",
   "topic": "routing",
@@ -43,6 +88,21 @@
   ],
   "answer": 3,
   "explanation": "The AS_PATH records every AS a route traversed, so seeing your own ASN means the route has looped back."
+ },
+ {
+  "id": "q6bc694f72e0",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "Which technique helps prevent the count-to-infinity problem in distance-vector routing?",
+  "options": [
+   "Longest prefix match",
+   "Equal-cost multipath",
+   "Flooding link-state advertisements",
+   "Split horizon with poison reverse"
+  ],
+  "answer": 3,
+  "explanation": "Advertising a route back to the neighbor it was learned from with an infinite metric stops two routers from bouncing a dead route between them."
  },
  {
   "id": "qa85f23b7737",
@@ -103,5 +163,20 @@
   ],
   "answer": 0,
   "explanation": "BGP exchanges reachability with the full AS path attached and is the Internet's inter-domain (EGP) protocol."
+ },
+ {
+  "id": "qd9ed794f391",
+  "subject": "networks",
+  "topic": "routing",
+  "level": "hard",
+  "question": "On routers that learn the same prefix from several routing sources (e.g. static, OSPF, RIP), what does administrative distance decide?",
+  "options": [
+   "How many hops a packet may travel before being dropped",
+   "Which of several equal routes has the shortest hop count",
+   "Which source's route is trusted and installed; the lower distance wins",
+   "The physical cable length between routers"
+  ],
+  "answer": 2,
+  "explanation": "Administrative distance ranks route sources by trustworthiness before metrics are compared, e.g. static routes beat OSPF which beats RIP by default."
  }
 ]

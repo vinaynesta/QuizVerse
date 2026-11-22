@@ -6,13 +6,13 @@
   "level": "easy",
   "question": "Which storage medium is read using a laser beam?",
   "options": [
-   "CD-ROM",
    "Floppy disk",
+   "CD-ROM",
    "Magnetic tape",
    "Hard disk"
   ],
   "needsReview": true,
-  "answer": 0,
+  "answer": 1,
   "explanation": "A CD-ROM is an optical disc read by a laser; the others store data magnetically."
  },
  {
@@ -32,6 +32,54 @@
   "explanation": "ROM stands for Read Only Memory, which stores permanent instructions."
  },
  {
+  "id": "q3387190a64f",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "easy",
+  "question": "Which of these types of memory is non-volatile?",
+  "options": [
+   "DRAM",
+   "SRAM",
+   "ROM",
+   "Cache memory"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "ROM keeps its contents even when the power is switched off, so it is non-volatile."
+ },
+ {
+  "id": "q33e4e915564",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "easy",
+  "question": "Which of these is an optical storage device?",
+  "options": [
+   "Magnetic tape",
+   "Hard disk",
+   "Pen drive",
+   "DVD"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A DVD is read and written using a laser, so it is optical storage; hard disks and tapes are magnetic, pen drives are flash."
+ },
+ {
+  "id": "q424a3e382f1",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "easy",
+  "question": "Which of these is a magnetic storage device?",
+  "options": [
+   "Compact disc",
+   "Pen drive",
+   "Blu-ray disc",
+   "Hard disk drive"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "A hard disk stores data magnetically on spinning platters, while CDs and Blu-ray discs are optical."
+ },
+ {
   "id": "q43114abfabd",
   "subject": "computer",
   "topic": "memory",
@@ -46,6 +94,22 @@
   "needsReview": true,
   "answer": 3,
   "explanation": "A hard disk stores data permanently and is secondary storage; RAM, cache and registers are primary or CPU memory."
+ },
+ {
+  "id": "q51661fadfde",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "easy",
+  "question": "Memory cards such as microSD cards used in mobile phones are based on which type of memory?",
+  "options": [
+   "Magnetic memory",
+   "Flash memory",
+   "Cache memory",
+   "Optical memory"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "Memory cards use flash memory, which is electrically erasable and keeps data without power."
  },
  {
   "id": "q7435da22eb3",
@@ -80,6 +144,22 @@
   "explanation": "A pen drive is a portable USB flash drive that uses flash memory."
  },
  {
+  "id": "q88e3bcefd09",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "easy",
+  "question": "A CD-R disc can be written:",
+  "options": [
+   "Only once",
+   "Any number of times",
+   "Only by its manufacturer",
+   "Only after formatting it daily"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "CD-R stands for CD-Recordable; data can be written once and then only read."
+ },
+ {
   "id": "q99cad22356e",
   "subject": "computer",
   "topic": "memory",
@@ -110,6 +190,22 @@
   "needsReview": true,
   "answer": 2,
   "explanation": "A standard CD holds roughly 650-700 MB of data."
+ },
+ {
+  "id": "q2d32ac58335",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "medium",
+  "question": "Among L1, L2 and L3 cache, which level is closest to the CPU core and fastest?",
+  "options": [
+   "L3 cache",
+   "L2 cache",
+   "L1 cache",
+   "All are equally fast"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "L1 cache is the smallest and fastest; L2 and L3 are larger but slower."
  },
  {
   "id": "q430a1d8b3c0",
@@ -144,6 +240,38 @@
   "explanation": "EEPROM is Electrically Erasable Programmable ROM, so it is erased electrically."
  },
  {
+  "id": "q65c2f4651cc",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "medium",
+  "question": "A PROM chip can be programmed by the user:",
+  "options": [
+   "Any number of times",
+   "Only with ultraviolet light",
+   "Only once",
+   "Only while the computer runs"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Once a PROM is programmed its contents are permanent and cannot be erased."
+ },
+ {
+  "id": "q6840bc41742",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "medium",
+  "question": "Which type of ROM has its data written during chip manufacture and cannot be changed afterwards?",
+  "options": [
+   "Flash memory",
+   "EPROM",
+   "EEPROM",
+   "Mask ROM"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Mask ROM is programmed at the factory using a photomask, so its contents are permanent."
+ },
+ {
   "id": "q7986593183a",
   "subject": "computer",
   "topic": "memory",
@@ -160,6 +288,22 @@
   "explanation": "EPROM (Erasable Programmable ROM) is erased with strong ultraviolet light through a window on the chip."
  },
  {
+  "id": "q87f9e46e23c",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "medium",
+  "question": "A single-sided dual-layer DVD can store about:",
+  "options": [
+   "8.5 GB",
+   "4.7 GB",
+   "17 GB",
+   "25 GB"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "A dual-layer DVD holds about 8.5 GB, nearly twice a single-layer DVD's 4.7 GB."
+ },
+ {
   "id": "q959a9114092",
   "subject": "computer",
   "topic": "memory",
@@ -174,6 +318,22 @@
   "needsReview": true,
   "answer": 2,
   "explanation": "Registers are tiny storage locations inside the CPU and are the fastest memory."
+ },
+ {
+  "id": "q97e2b539c47",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "medium",
+  "question": "In DDR4 RAM, what does DDR stand for?",
+  "options": [
+   "Double Data Rate",
+   "Direct Data Retrieval",
+   "Double Density Register",
+   "Dual Dynamic RAM"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "DDR memory transfers data on both the rising and falling edges of the clock signal."
  },
  {
   "id": "qa0851daaef8",
@@ -272,6 +432,38 @@
   "explanation": "A standard 3.5-inch high-density floppy disk stores 1.44 MB."
  },
  {
+  "id": "q223e2e04276",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "hard",
+  "question": "The interface protocol that lets SSDs communicate directly over PCIe lanes for very high speeds is:",
+  "options": [
+   "IDE",
+   "SCSI",
+   "PATA",
+   "NVMe"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "NVMe (Non-Volatile Memory Express) is designed for flash storage and is much faster than SATA-based SSDs."
+ },
+ {
+  "id": "q38f085ace00",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "hard",
+  "question": "RAID level 1 protects data by:",
+  "options": [
+   "Striping data without redundancy",
+   "Compressing data on one disk",
+   "Mirroring identical data on two disks",
+   "Encrypting data on each disk"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "RAID 1 keeps an exact copy on a second disk, so data survives if one disk fails."
+ },
+ {
   "id": "q3ca3a3aac1b",
   "subject": "computer",
   "topic": "memory",
@@ -320,6 +512,22 @@
   "explanation": "Virtual memory uses disk space (page/swap file) to make the system appear to have more RAM."
  },
  {
+  "id": "q6ce30308578",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "hard",
+  "question": "Each bit in a DRAM cell is stored as charge in a:",
+  "options": [
+   "Capacitor",
+   "Flip-flop",
+   "Magnetic domain",
+   "Laser pit"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "DRAM uses a capacitor and transistor per bit; the leaking charge is why it needs refreshing."
+ },
+ {
   "id": "q7a8e59f2cb7",
   "subject": "computer",
   "topic": "memory",
@@ -334,6 +542,22 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "Seek time is the head movement time; rotational latency is the wait for the sector to rotate under the head."
+ },
+ {
+  "id": "q9411559faae",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "hard",
+  "question": "A hard disk is called a DASD. What does DASD stand for?",
+  "options": [
+   "Dynamic Array Storage Disk",
+   "Digital Audio Storage Device",
+   "Direct Access Storage Device",
+   "Data Access Serial Drive"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "A hard disk can reach any location directly, unlike sequential-access magnetic tape."
  },
  {
   "id": "q9ccb1451f59",
@@ -352,6 +576,22 @@
   "explanation": "In the memory hierarchy, registers are fastest, followed by cache, main memory (RAM), then secondary storage."
  },
  {
+  "id": "qd62bfa7536f",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "hard",
+  "question": "On a multi-platter hard disk, the set of tracks at the same position on every platter surface is called a:",
+  "options": [
+   "Spindle",
+   "Cluster",
+   "Sector",
+   "Cylinder"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "All tracks that line up vertically across the platters form a cylinder, readable without moving the heads."
+ },
+ {
   "id": "qe788e5e5136",
   "subject": "computer",
   "topic": "memory",
@@ -366,6 +606,22 @@
   "needsReview": true,
   "answer": 0,
   "explanation": "Blu-ray uses a 405 nm blue-violet laser, whose shorter wavelength allows denser storage than DVD's red laser."
+ },
+ {
+  "id": "qf0253a1885d",
+  "subject": "computer",
+  "topic": "memory",
+  "level": "hard",
+  "question": "On a hard disk, the time taken for the required sector to rotate under the read/write head is called:",
+  "options": [
+   "Transfer time",
+   "Seek time",
+   "Rotational latency",
+   "Refresh time"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "Rotational latency is the wait for the sector to spin under the head; seek time is moving the head to the track."
  },
  {
   "id": "qfe35e622fcf",

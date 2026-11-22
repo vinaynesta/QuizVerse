@@ -26,6 +26,11 @@ BANK_SIZE = QUANT_PER_LEVEL * EXAM_POOLS
 # give about 775 new medium questions from MORE_GENERATED, so Quant has room for 3 slices, not more.
 MORE_POOLS = {"quant": 3, "reasoning": 4}
 MORE_GENERATED = 1400
+# Third banks (<name>_<level>_3.json), from a fourth seed, for IBPS PO's extra quizzes and IBPS RRB PO ("pool" and
+# "extraPool" as ("_3", slice) in build_exams.py). Reasoning can't generate much past 1,800 at once (some topics run
+# out of templates), Quant needs a bigger run to find enough new questions.
+THIRD_POOLS = {"quant": 3, "reasoning": 3}
+THIRD_GENERATED = {"quant": 3000, "reasoning": 1800}
 NAMES = ["Amit", "Bhavna", "Chetan", "Deepa", "Eshan", "Farah", "Gautam", "Hema",
          "Imran", "Jaya", "Kiran", "Lata", "Manoj", "Neha", "Omkar", "Priya",
          "Rahul", "Sneha", "Tarun", "Usha", "Varun", "Wasim", "Yash", "Zoya"]
@@ -1218,12 +1223,12 @@ def build_bank(fn, level, i):
     return bank
 
 
-def build_more(fn, level, i, base, pools):
-    """A second bank, <name>_<level>_2.json: `pools` more slices of QUANT_PER_LEVEL from a third seed, none repeating
-    the main bank. build_exams.py turns them into quizzes after the existing ones, so those never change."""
+def build_more(fn, level, i, base, pools, seed=3000, generated=MORE_GENERATED):
+    """A second (or third) bank: `pools` more slices of QUANT_PER_LEVEL from another seed, repeating nothing in
+    `base` (the earlier banks). build_exams.py turns them into quizzes after the existing ones, so those never change."""
     seen = {near_key(q) for q in base}
     more = []
-    for q in fn(level, 3000 + i, MORE_GENERATED):
+    for q in fn(level, seed + i, generated):
         if len(more) == pools * QUANT_PER_LEVEL:
             break
         if near_key(q) not in seen:
@@ -1259,3 +1264,7 @@ if __name__ == "__main__":
             validate(more, f"{name}/{level} second bank", MORE_POOLS[name] * QUANT_PER_LEVEL)
             (out / f"{name}_{level}_2.json").write_text(json.dumps(more, indent=1, ensure_ascii=False) + "\n")
             print(f"{name}_{level}_2: {len(more)} questions")
+            third = build_more(fn, level, i, bank + more, THIRD_POOLS[name], 4000, THIRD_GENERATED[name])
+            validate(third, f"{name}/{level} third bank", THIRD_POOLS[name] * QUANT_PER_LEVEL)
+            (out / f"{name}_{level}_3.json").write_text(json.dumps(third, indent=1, ensure_ascii=False) + "\n")
+            print(f"{name}_{level}_3: {len(third)} questions")

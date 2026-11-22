@@ -15,6 +15,21 @@
   "explanation": "The mode bit lets hardware tell whether code runs in user or kernel mode, so privileged instructions can only execute in kernel mode."
  },
  {
+  "id": "q5b516dd059f",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "What characterizes a monolithic kernel?",
+  "options": [
+   "Each OS service runs as a separate user-space server",
+   "Most OS services such as drivers, file systems and scheduling run together in kernel space",
+   "There is no distinction between kernel and applications",
+   "The kernel runs entirely in user mode"
+  ],
+  "answer": 1,
+  "explanation": "A monolithic kernel places most services in one large privileged address space, which is fast but less isolated than a microkernel."
+ },
+ {
   "id": "qdb3aecfa0bd",
   "subject": "os",
   "topic": "kernel",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "A microkernel provides only essentials like IPC, scheduling and basic memory management, moving other services to user-space processes."
+ },
+ {
+  "id": "qecca6d2af99",
+  "subject": "os",
+  "topic": "kernel",
+  "level": "easy",
+  "question": "What is the main job of a bootloader?",
+  "options": [
+   "To schedule user processes on the CPU",
+   "To load the OS kernel into memory and start it when the machine powers on",
+   "To format the disk before each boot",
+   "To translate virtual addresses to physical addresses"
+  ],
+  "answer": 1,
+  "explanation": "Firmware runs the bootloader, which locates the kernel image, loads it into memory and transfers control to it."
  },
  {
   "id": "qff9b437af98",

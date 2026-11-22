@@ -32,6 +32,22 @@
   "explanation": "A bit (binary digit, 0 or 1) is the smallest unit of data."
  },
  {
+  "id": "q13e2149b166",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "64 bits are equal to how many bytes?",
+  "options": [
+   "8",
+   "16",
+   "4",
+   "64"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "One byte is 8 bits, so 64 bits / 8 = 8 bytes."
+ },
+ {
   "id": "q18d00dff874",
   "subject": "computer",
   "topic": "memory-units",
@@ -96,6 +112,22 @@
   "explanation": "1 byte = 8 bits."
  },
  {
+  "id": "q57f6e1fa955",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "How many nibbles make one byte?",
+  "options": [
+   "4",
+   "2",
+   "8",
+   "16"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "A nibble is 4 bits and a byte is 8 bits, so a byte contains 2 nibbles."
+ },
+ {
   "id": "q58c1a16cb18",
   "subject": "computer",
   "topic": "memory-units",
@@ -112,6 +144,70 @@
   "explanation": "1 GB = 2^10 MB = 1024 MB."
  },
  {
+  "id": "q73e817e60dc",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "Which unit comes immediately after gigabyte in increasing order of size?",
+  "options": [
+   "Petabyte",
+   "Terabyte",
+   "Megabyte",
+   "Exabyte"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "The order is KB, MB, GB, TB, PB, EB, so terabyte follows gigabyte."
+ },
+ {
+  "id": "q8432f34a409",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "512 KB is equal to:",
+  "options": [
+   "5 MB",
+   "0.5 MB",
+   "0.5 GB",
+   "512 MB"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "512 KB / 1024 = 0.5 MB."
+ },
+ {
+  "id": "qc37185e5c9a",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "4096 KB is equal to:",
+  "options": [
+   "4 GB",
+   "2 MB",
+   "8 MB",
+   "4 MB"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "Since 1 MB = 1024 KB, 4096 KB / 1024 = 4 MB."
+ },
+ {
+  "id": "qdb76f25f764",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "How many bytes are there in 2 KB?",
+  "options": [
+   "2000",
+   "1024",
+   "2048",
+   "4096"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "1 KB = 1024 bytes, so 2 KB = 2 x 1024 = 2048 bytes."
+ },
+ {
   "id": "qfa494c346dc",
   "subject": "computer",
   "topic": "memory-units",
@@ -126,6 +222,22 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "1 TB = 2^10 GB = 1024 GB."
+ },
+ {
+  "id": "qfffb047610c",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "easy",
+  "question": "1 exabyte (EB) is equal to 1024:",
+  "options": [
+   "Zettabytes",
+   "Terabytes",
+   "Petabytes",
+   "Gigabytes"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The order is TB, PB, EB, ZB, so 1 EB = 1024 PB."
  },
  {
   "id": "q09bf519e42a",
@@ -192,6 +304,70 @@
   "explanation": "1 PB = 1024 TB; the next unit, 1 EB, is 1024 PB."
  },
  {
+  "id": "q10db9566eea",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "How many bytes are there in 1 MB?",
+  "options": [
+   "1,000,000",
+   "1,024,000",
+   "1,048,576",
+   "1,048,000"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "1 MB = 1024 x 1024 bytes = 1,048,576 bytes."
+ },
+ {
+  "id": "q31d6d4aa956",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "A file of 3072 KB is equal to:",
+  "options": [
+   "3 GB",
+   "3.72 MB",
+   "30 MB",
+   "3 MB"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "3072 / 1024 = 3 MB."
+ },
+ {
+  "id": "q4c3c4359b84",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "How many bits are there in 4 bytes?",
+  "options": [
+   "16",
+   "32",
+   "64",
+   "24"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "1 byte = 8 bits, so 4 bytes = 4 x 8 = 32 bits."
+ },
+ {
+  "id": "q4d4a3f851b3",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "How many MB are there in 2.5 GB?",
+  "options": [
+   "2500",
+   "2048",
+   "2560",
+   "2250"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "2.5 x 1024 = 2560 MB."
+ },
+ {
   "id": "q6fdb03e23ac",
   "subject": "computer",
   "topic": "memory-units",
@@ -206,6 +382,38 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "A bit is 1 binary digit, a nibble is 4 bits, a byte is 8 bits and a KB is 1024 bytes."
+ },
+ {
+  "id": "qe042d7ef99b",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "At most how many 4 MB photos can be stored in 1 GB of space?",
+  "options": [
+   "250",
+   "512",
+   "128",
+   "256"
+  ],
+  "needsReview": true,
+  "answer": 3,
+  "explanation": "1 GB = 1024 MB, and 1024 / 4 = 256 photos."
+ },
+ {
+  "id": "qee2bb166626",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "medium",
+  "question": "1 zettabyte (ZB) is equal to 1024:",
+  "options": [
+   "Yottabytes",
+   "Petabytes",
+   "Exabytes",
+   "Terabytes"
+  ],
+  "needsReview": true,
+  "answer": 2,
+  "explanation": "The order is PB, EB, ZB, YB, so a zettabyte is 1024 exabytes."
  },
  {
   "id": "qfc64c65d73c",
@@ -256,6 +464,54 @@
   "explanation": "3 MB = 3 x 1024 x 1024 bytes = 3,145,728 bytes; x 8 = 25,165,824 bits."
  },
  {
+  "id": "q7ade3979f63",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "A 6 MB file is copied 256 times. How much total storage do the copies need?",
+  "options": [
+   "1.5 GB",
+   "1.5 TB",
+   "1536 KB",
+   "15 GB"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "6 MB x 256 = 1536 MB, and 1536 / 1024 = 1.5 GB."
+ },
+ {
+  "id": "q8d06adfdde0",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "A hard disk sold as 500 GB (500 x 10^9 bytes) is shown by Windows, which counts in units of 2^30 bytes, as approximately:",
+  "options": [
+   "465 GB",
+   "488 GB",
+   "500 GB",
+   "512 GB"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "500,000,000,000 / 1,073,741,824 is about 465.7, so the OS reports roughly 465 GB."
+ },
+ {
+  "id": "q9d2ce36abbf",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "How many bits are there in 1 MB?",
+  "options": [
+   "8,000,000",
+   "8,388,608",
+   "1,048,576",
+   "8,192,000"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "1 MB = 1,048,576 bytes, and 1,048,576 x 8 = 8,388,608 bits."
+ },
+ {
   "id": "qa49efa65d60",
   "subject": "computer",
   "topic": "memory-units",
@@ -272,6 +528,22 @@
   "explanation": "1 KB = 1024 bytes and 1 byte = 2 nibbles, so 1024 x 2 = 2048 nibbles."
  },
  {
+  "id": "qd24a870a3c0",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "What is the minimum number of 700 MB CDs needed to store 7 GB of data?",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "7"
+  ],
+  "needsReview": true,
+  "answer": 0,
+  "explanation": "7 GB = 7168 MB, and 7168 / 700 = 10.24, so 11 CDs are needed."
+ },
+ {
   "id": "qf3ef344a65a",
   "subject": "computer",
   "topic": "memory-units",
@@ -286,5 +558,21 @@
   "needsReview": true,
   "answer": 1,
   "explanation": "The order is PB < EB < ZB < YB, each 1024 times the previous one."
+ },
+ {
+  "id": "qfcd8ba28ddb",
+  "subject": "computer",
+  "topic": "memory-units",
+  "level": "hard",
+  "question": "Which of these is the largest amount of storage?",
+  "options": [
+   "2048 MB",
+   "3,000,000 KB",
+   "0.002 TB",
+   "1.5 GB"
+  ],
+  "needsReview": true,
+  "answer": 1,
+  "explanation": "3,000,000 KB is about 2.86 GB, larger than 2048 MB (2 GB), 1.5 GB and 0.002 TB (about 2.05 GB)."
  }
 ]

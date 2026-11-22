@@ -15,6 +15,21 @@
   "explanation": "Array destructuring assigns elements by position, so b gets the second element."
  },
  {
+  "id": "q48284e3fb94",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "Given const a = { b: 1, c: 3 }; what does { ...a, b: 2 } produce?",
+  "options": [
+   "{ b: 1, c: 3 }",
+   "{ b: 1, c: 3, b: 2 }",
+   "{ b: 2 }",
+   "{ b: 2, c: 3 }"
+  ],
+  "answer": 3,
+  "explanation": "Properties written after the spread override the copied ones with the same key."
+ },
+ {
   "id": "q4c1e158b593",
   "subject": "javascript",
   "topic": "es6-features",
@@ -28,6 +43,21 @@
   ],
   "answer": 3,
   "explanation": "The spread syntax expands the inner array's elements into the new array literal."
+ },
+ {
+  "id": "q92b941cb5a9",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "What does the template literal `${1 + 1}` evaluate to?",
+  "options": [
+   "\"2\"",
+   "\"1 + 1\"",
+   "\"11\"",
+   "2 as a number"
+  ],
+  "answer": 0,
+  "explanation": "Expressions inside ${} are evaluated and the result is converted to a string."
  },
  {
   "id": "qb17dde0f37f",
@@ -58,6 +88,36 @@
   ],
   "answer": 2,
   "explanation": "Optional chaining short-circuits and returns undefined instead of throwing when a reference is nullish."
+ },
+ {
+  "id": "q2bc6f4cefe6",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What does Symbol(\"id\") === Symbol(\"id\") evaluate to?",
+  "options": [
+   "true",
+   "undefined",
+   "false",
+   "A TypeError is thrown"
+  ],
+  "answer": 2,
+  "explanation": "Every Symbol() call creates a new unique symbol; the description is only a label."
+ },
+ {
+  "id": "q2d7d88077eb",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "medium",
+  "question": "What is the defining characteristic of a WeakMap?",
+  "options": [
+   "It can be iterated in insertion order with for...of",
+   "It stores at most a fixed number of entries",
+   "Its values are automatically frozen",
+   "Its keys must be objects and are held weakly, so they can be garbage-collected"
+  ],
+  "answer": 3,
+  "explanation": "Because WeakMap keys are weakly referenced, entries disappear when the key object is no longer reachable, and the map is not iterable."
  },
  {
   "id": "q3c43b65eaac",

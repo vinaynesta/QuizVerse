@@ -1,5 +1,20 @@
 [
  {
+  "id": "q0049d1bc8c2",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type G<T> = T extends { a: infer U; b: infer U } ? U : never;`, what is `G<{ a: string; b: number }>`?",
+  "options": [
+   "string",
+   "never",
+   "string | number",
+   "string & number"
+  ],
+  "answer": 2,
+  "explanation": "Multiple candidates for the same infer variable in covariant positions are combined into a union."
+ },
+ {
   "id": "q05ca7612541",
   "subject": "typescript",
   "topic": "infer",
@@ -13,6 +28,21 @@
   ],
   "answer": 1,
   "explanation": "The tuple pattern binds F to the first element type."
+ },
+ {
+  "id": "q3cc1a08535e",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Args<T> = T extends (...a: infer A) => any ? A : never;`, what is `Args<(x: string, y?: number) => void>`?",
+  "options": [
+   "[x: string, y?: number]",
+   "[string, number]",
+   "string | number",
+   "(string | undefined)[]"
+  ],
+  "answer": 0,
+  "explanation": "Inferring from a rest parameter produces the labeled parameter tuple, keeping optional elements."
  },
  {
   "id": "q546b877da23",
@@ -58,6 +88,21 @@
   ],
   "answer": 0,
   "explanation": "infer R in the return position captures the function's return type; inferring from args gives the parameters instead."
+ },
+ {
+  "id": "qc1b339a71eb",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Last<T> = T extends [...unknown[], infer L] ? L : never;`, what is `Last<[1, 2, 3]>`?",
+  "options": [
+   "1",
+   "3",
+   "[3]",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "A rest element may come first in a tuple pattern, so L captures the final element."
  },
  {
   "id": "qec921bfe1c6",

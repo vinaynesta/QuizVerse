@@ -60,6 +60,21 @@
   "explanation": "In Round Robin each process runs for at most one quantum, then is preempted and placed at the back of the ready queue."
  },
  {
+  "id": "qa8cfe729952",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "What is response time in CPU scheduling?",
+  "options": [
+   "The total time a process spends in the ready queue",
+   "The time from submission until the process completes",
+   "The time the dispatcher takes to switch processes",
+   "The time from submission of a request until the first response is produced"
+  ],
+  "answer": 3,
+  "explanation": "Response time matters for interactive systems because it measures how quickly a process starts responding, not when it finishes."
+ },
+ {
   "id": "qb177d4d44aa",
   "subject": "os",
   "topic": "cpu-scheduling",
@@ -73,6 +88,21 @@
   ],
   "answer": 0,
   "explanation": "The short-term (CPU) scheduler picks the next ready process, and the dispatcher then gives it control of the CPU."
+ },
+ {
+  "id": "qcc42dc32bc4",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "easy",
+  "question": "In CPU scheduling, what is waiting time?",
+  "options": [
+   "The time spent executing on the CPU",
+   "The total time a process spends in the ready queue",
+   "The time from submission to completion",
+   "The time spent performing I/O"
+  ],
+  "answer": 1,
+  "explanation": "Waiting time counts only the time a process is ready but not running; turnaround time also includes execution and I/O."
  },
  {
   "id": "q1f06b91e35d",
@@ -195,6 +225,21 @@
   "explanation": "Dispatch latency is the dispatcher's overhead: switching context, switching to user mode and jumping to the right place in the new program."
  },
  {
+  "id": "qa8d44eef5d2",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "P1, P2 and P3 arrive at time 0 in that order with bursts 5, 3 and 1 ms. With Round Robin and a 2 ms quantum, what is the average turnaround time?",
+  "options": [
+   "7.33 ms",
+   "8.67 ms",
+   "9 ms",
+   "6 ms"
+  ],
+  "answer": 0,
+  "explanation": "The schedule P1 0-2, P2 2-4, P3 4-5, P1 5-7, P2 7-8, P1 8-9 gives completions 9, 8 and 5; (9+8+5)/3 = 7.33 ms."
+ },
+ {
   "id": "qbc091c0218d",
   "subject": "os",
   "topic": "cpu-scheduling",
@@ -210,6 +255,36 @@
   "explanation": "The schedule is P1 0-1, P2 1-5, P4 5-10, P1 10-17, P3 17-26, giving waits 9, 0, 15 and 2; (9 + 0 + 15 + 2) / 4 = 6.5 ms."
  },
  {
+  "id": "qbd18ca65dcf",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Under FCFS, processes arrive as P1 (t=0, burst 5), P2 (t=1, burst 3), P3 (t=2, burst 8), P4 (t=3, burst 6). What is the average waiting time?",
+  "options": [
+   "4.5 ms",
+   "6.25 ms",
+   "7 ms",
+   "5.75 ms"
+  ],
+  "answer": 3,
+  "explanation": "Start times are 0, 5, 8 and 16, so waits are 0, 4, 6 and 13; 23/4 = 5.75 ms."
+ },
+ {
+  "id": "qc51a12ce91a",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Under non-preemptive SJF, processes arrive as P1 (t=0, burst 7), P2 (t=2, burst 4), P3 (t=4, burst 1), P4 (t=5, burst 4). What is the average waiting time?",
+  "options": [
+   "4 ms",
+   "3 ms",
+   "5.25 ms",
+   "6 ms"
+  ],
+  "answer": 0,
+  "explanation": "P1 runs 0-7, then P3 7-8, P2 8-12 and P4 12-16, giving waits 0, 3, 6 and 7; 16/4 = 4 ms."
+ },
+ {
   "id": "qcc74cba5b39",
   "subject": "os",
   "topic": "cpu-scheduling",
@@ -223,6 +298,66 @@
   ],
   "answer": 3,
   "explanation": "SJF runs the 3 ms jobs first, so waiting times are 0, 3 and 6; the average is (0 + 3 + 6) / 3 = 3 ms."
+ },
+ {
+  "id": "qd65cbde8e50",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Five processes arrive at time 0 with (burst, priority): P1 (10, 3), P2 (1, 1), P3 (2, 4), P4 (1, 5), P5 (5, 2). Using non-preemptive priority scheduling where a lower number means higher priority, what is the average waiting time?",
+  "options": [
+   "9.6 ms",
+   "6.2 ms",
+   "8.2 ms",
+   "12 ms"
+  ],
+  "answer": 2,
+  "explanation": "The order is P2, P5, P1, P3, P4, giving waits 0, 1, 6, 16 and 18; (0+1+6+16+18)/5 = 8.2 ms."
+ },
+ {
+  "id": "qfbb8f4bb458",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "medium",
+  "question": "Why do many schedulers give higher priority to I/O-bound processes than to CPU-bound ones?",
+  "options": [
+   "I/O-bound processes use the CPU briefly and then block, so favoring them keeps devices busy and improves responsiveness",
+   "CPU-bound processes cannot be preempted",
+   "I/O-bound processes always have the longest CPU bursts",
+   "I/O-bound processes never need the CPU"
+  ],
+  "answer": 0,
+  "explanation": "Short CPU bursts from I/O-bound jobs finish quickly and overlap their I/O with CPU-bound work, raising overall utilization."
+ },
+ {
+  "id": "q212de958e40",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "As the number of periodic tasks n grows very large, what value does the rate-monotonic utilization bound n(2^(1/n) - 1) approach?",
+  "options": [
+   "100%",
+   "About 82.8%",
+   "About 69.3% (ln 2)",
+   "50%"
+  ],
+  "answer": 2,
+  "explanation": "The limit of n(2^(1/n) - 1) as n goes to infinity is ln 2 = 0.693, so any task set below about 69% utilization is RM-schedulable."
+ },
+ {
+  "id": "q5b3ac8a5920",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "Why does an SMP scheduler try to keep a thread on the same processor (processor affinity)?",
+  "options": [
+   "Threads cannot be migrated between processors",
+   "It guarantees that the thread will never be preempted",
+   "Its data is likely still in that processor's cache, avoiding costly cache invalidation and refilling",
+   "It reduces the number of system calls the thread makes"
+  ],
+  "answer": 2,
+  "explanation": "Migrating a thread forces the new core to reload its working set and invalidates the old cache, so soft or hard affinity is preferred."
  },
  {
   "id": "q9453ce10f4d",
@@ -253,6 +388,21 @@
   ],
   "answer": 2,
   "explanation": "Utilization 25/50 + 35/80 = 0.9375 is at most 1, so EDF works; under RM, P1 preempts P2 at t = 50, so P2 has run only 30 of its 35 ms by its deadline at t = 80."
+ },
+ {
+  "id": "qccc757519cd",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "How does the Linux Completely Fair Scheduler (CFS) pick the next task to run?",
+  "options": [
+   "It picks the task with the highest static priority from a FIFO queue",
+   "It picks the runnable task with the smallest virtual runtime, kept in a red-black tree",
+   "It picks tasks in strict round-robin order with a fixed 100 ms quantum",
+   "It picks the task with the shortest predicted next CPU burst"
+  ],
+  "answer": 1,
+  "explanation": "CFS tracks weighted CPU time as vruntime and always runs the leftmost (smallest vruntime) node, approximating ideal fair sharing."
  },
  {
   "id": "qee2f413ccde",

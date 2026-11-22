@@ -1,5 +1,20 @@
 [
  {
+  "id": "q2b7c3c60c3e",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "In the name www.example.com, what is 'com'?",
+  "options": [
+   "The hostname",
+   "The top-level domain (TLD)",
+   "The root zone",
+   "The subdomain"
+  ],
+  "answer": 1,
+  "explanation": "DNS names are read right to left from the root: com is the TLD, example is the second-level domain and www is a host or subdomain."
+ },
+ {
   "id": "q457b42f4a6e",
   "subject": "networks",
   "topic": "dns",
@@ -13,6 +28,21 @@
   ],
   "answer": 0,
   "explanation": "DNS is a distributed directory that resolves human-readable names to addresses and other records."
+ },
+ {
+  "id": "q933755dcbdb",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "easy",
+  "question": "Which DNS record type is used for reverse lookups that map an IP address to a hostname?",
+  "options": [
+   "A",
+   "SRV",
+   "TXT",
+   "PTR"
+  ],
+  "answer": 3,
+  "explanation": "Reverse lookups query PTR records under special zones such as in-addr.arpa for IPv4."
  },
  {
   "id": "qa52436f882c",
@@ -118,5 +148,20 @@
   ],
   "answer": 0,
   "explanation": "Stub resolvers ask a recursive resolver, which walks the hierarchy and caches answers per their TTL."
+ },
+ {
+  "id": "qe08e4af9c26",
+  "subject": "networks",
+  "topic": "dns",
+  "level": "medium",
+  "question": "Which DNS record type lists the authoritative name servers for a zone?",
+  "options": [
+   "NS",
+   "SOA",
+   "MX",
+   "PTR"
+  ],
+  "answer": 0,
+  "explanation": "NS records delegate a zone to its authoritative servers, and the parent zone holds matching NS records to point resolvers there."
  }
 ]

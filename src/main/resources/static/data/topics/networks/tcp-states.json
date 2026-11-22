@@ -1,5 +1,20 @@
 [
  {
+  "id": "q047708cc3d4",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "Both ends of a TCP connection send a FIN at the same time (simultaneous close). Which state does each side pass through after FIN_WAIT_1?",
+  "options": [
+   "CLOSE_WAIT",
+   "LAST_ACK",
+   "SYN_RECEIVED",
+   "CLOSING"
+  ],
+  "answer": 3,
+  "explanation": "Receiving the peer's FIN while in FIN_WAIT_1 moves a side to CLOSING, and the ACK of its own FIN then moves it to TIME_WAIT."
+ },
+ {
   "id": "q3e446776de7",
   "subject": "networks",
   "topic": "tcp-states",
@@ -45,6 +60,21 @@
   "explanation": "If the last ACK is lost the peer resends its FIN; the wait also stops delayed segments from corrupting a new incarnation."
  },
  {
+  "id": "q800c483acd9",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "What does setting the SO_REUSEADDR socket option typically allow a server to do?",
+  "options": [
+   "Skip the three-way handshake for returning clients",
+   "Bind its listening port even while old connections on that port are still in TIME_WAIT",
+   "Share one TCP connection among multiple processes without fork()",
+   "Disable TIME_WAIT for every connection on the host"
+  ],
+  "answer": 1,
+  "explanation": "Without it, restarting a server can fail with 'address already in use' until the old TIME_WAIT connections expire."
+ },
+ {
   "id": "qa681da54d03",
   "subject": "networks",
   "topic": "tcp-states",
@@ -88,5 +118,20 @@
   ],
   "answer": 0,
   "explanation": "SYN cookies encode connection state in the server's ISN so no backlog entry is needed until the final ACK arrives."
+ },
+ {
+  "id": "qdf82c06406b",
+  "subject": "networks",
+  "topic": "tcp-states",
+  "level": "hard",
+  "question": "An active closer is in FIN_WAIT_1 and receives an ACK for its FIN, but no FIN from the peer yet. Which state does it enter?",
+  "options": [
+   "TIME_WAIT",
+   "CLOSING",
+   "FIN_WAIT_2",
+   "CLOSE_WAIT"
+  ],
+  "answer": 2,
+  "explanation": "In FIN_WAIT_2 it has finished sending and waits for the peer's FIN, after which it ACKs and enters TIME_WAIT."
  }
 ]

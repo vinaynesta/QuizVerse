@@ -45,6 +45,36 @@
   "explanation": "The client sends SYN, the server replies SYN-ACK, and the client confirms with ACK."
  },
  {
+  "id": "q75fd44bb7da",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "In the sockets API, which client call causes TCP to send the initial SYN?",
+  "options": [
+   "connect()",
+   "listen()",
+   "accept()",
+   "bind()"
+  ],
+  "answer": 0,
+  "explanation": "connect() starts the active open; the server side must already have called listen(), and accept() returns completed connections."
+ },
+ {
+  "id": "q78e9570a876",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "Which TCP option, sent only in SYN segments, advertises the largest segment payload a host is willing to receive?",
+  "options": [
+   "Window Scale",
+   "Maximum Segment Size (MSS)",
+   "Timestamps",
+   "Selective Acknowledgment (SACK)"
+  ],
+  "answer": 1,
+  "explanation": "Each side announces its MSS during the handshake so the peer avoids sending segments that are too large."
+ },
+ {
   "id": "qab7d35ec1d1",
   "subject": "networks",
   "topic": "tcp-handshake",
@@ -73,5 +103,20 @@
   ],
   "answer": 1,
   "explanation": "Each direction is closed with a FIN and its ACK: FIN, ACK, FIN, ACK; it can drop to 3 if an ACK and FIN are combined."
+ },
+ {
+  "id": "qc945790535c",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "What does a host normally do when it receives a TCP SYN for a port with no listening socket?",
+  "options": [
+   "It replies with a RST segment",
+   "It replies with a SYN-ACK and waits",
+   "It silently queues the SYN until a socket opens",
+   "It replies with an ICMP Echo Reply"
+  ],
+  "answer": 0,
+  "explanation": "With no listener, the TCP stack resets the attempt, which the client sees as connection refused."
  }
 ]

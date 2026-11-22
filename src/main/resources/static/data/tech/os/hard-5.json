@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qf4d2409db80",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What is the purpose of a memory barrier (fence) instruction?",
+  "options": [
+   "It prevents other processes from reading a page",
+   "It locks a memory bus for the rest of the program",
+   "It flushes the TLB on a context switch",
+   "It forces memory operations before it to become visible before those after it, preventing harmful reordering"
+  ],
+  "answer": 3,
+  "explanation": "Modern CPUs and compilers reorder loads and stores, so barriers are needed to make lock-free code and lock implementations correct."
+ },
+ {
+  "id": "qe110427a992",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "In the enhanced second-chance algorithm, pages are classified by (reference bit, modify bit). Which class is the best candidate for eviction?",
+  "options": [
+   "(1, 0): recently used but clean",
+   "(0, 1): not recently used but modified",
+   "(0, 0): not recently used and not modified",
+   "(1, 1): recently used and modified"
+  ],
+  "answer": 2,
+  "explanation": "A (0, 0) page is unlikely to be needed soon and need not be written back to disk, so evicting it is cheapest."
+ },
+ {
+  "id": "qca721ac475f",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "With 3 frames (initially empty) and the reference string 1,2,3,4,2,1,5,6,2,1,2,3,7,6,3,2,1,2,3,6, how many page faults does the Optimal algorithm cause?",
+  "options": [
+   "11",
+   "10",
+   "12",
+   "9"
+  ],
+  "answer": 0,
+  "explanation": "Simulating OPT, which evicts the page whose next use is farthest away, gives 3 compulsory faults plus 8 replacements = 11 faults."
+ },
+ {
+  "id": "qbb362be5eee",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "A TLB lookup takes 10 ns, a memory access takes 100 ns, the TLB hit ratio is 90%, and the system uses a two-level page table. What is the effective memory access time?",
+  "options": [
+   "120 ns",
+   "130 ns",
+   "140 ns",
+   "210 ns"
+  ],
+  "answer": 1,
+  "explanation": "A hit costs 10 + 100 = 110 ns and a miss costs 10 + 2x100 + 100 = 310 ns, so EAT = 0.9x110 + 0.1x310 = 130 ns."
+ },
+ {
+  "id": "q8357cf87584",
+  "subject": "os",
+  "topic": "virtual-memory",
+  "level": "hard",
+  "question": "With a working-set window of 10 references, the last 10 references of a process are 2, 6, 1, 5, 7, 7, 7, 7, 5, 1. What is the working-set size?",
+  "options": [
+   "4",
+   "6",
+   "10",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "The working set is the set of distinct pages in the window, {1, 2, 5, 6, 7}, which has 5 pages."
+ },
+ {
+  "id": "q9ce9d598371",
+  "subject": "os",
+  "topic": "deadlocks",
+  "level": "hard",
+  "question": "Why is the banker's algorithm rarely used in general-purpose operating systems?",
+  "options": [
+   "Processes must declare their maximum resource needs in advance, and the number of processes and resources keeps changing",
+   "It only works for single-instance resources",
+   "It requires disabling all interrupts while running",
+   "It cannot detect circular wait"
+  ],
+  "answer": 0,
+  "explanation": "Real workloads rarely know their maximum needs and processes come and go, so avoidance algorithms are mostly of theoretical or niche use."
+ },
+ {
+  "id": "q4952747f36f",
+  "subject": "os",
+  "topic": "synchronization",
+  "level": "hard",
+  "question": "What is the ABA problem in lock-free algorithms that use compare-and-swap?",
+  "options": [
+   "A thread reads stale data A from its cache instead of B from memory",
+   "Two threads acquire locks A and B in opposite orders and deadlock",
+   "A location changes from A to B and back to A, so a CAS wrongly succeeds as if nothing changed",
+   "A spinlock holder is preempted while others spin on it"
+  ],
+  "answer": 2,
+  "explanation": "CAS compares only the value, so it cannot see intermediate changes; tagged pointers or version counters are common fixes."
+ },
+ {
+  "id": "q212de958e40",
+  "subject": "os",
+  "topic": "cpu-scheduling",
+  "level": "hard",
+  "question": "As the number of periodic tasks n grows very large, what value does the rate-monotonic utilization bound n(2^(1/n) - 1) approach?",
+  "options": [
+   "100%",
+   "About 82.8%",
+   "About 69.3% (ln 2)",
+   "50%"
+  ],
+  "answer": 2,
+  "explanation": "The limit of n(2^(1/n) - 1) as n goes to infinity is ln 2 = 0.693, so any task set below about 69% utilization is RM-schedulable."
+ },
+ {
+  "id": "qc027be0b1c1",
+  "subject": "os",
+  "topic": "memory-management",
+  "level": "hard",
+  "question": "A 32-bit virtual address with 4 KB pages uses a two-level page table whose outer and inner tables each fit in one page with 4-byte entries. How is the address split?",
+  "options": [
+   "10-bit outer index, 10-bit inner index, 12-bit offset",
+   "8-bit outer index, 12-bit inner index, 12-bit offset",
+   "12-bit outer index, 8-bit inner index, 12-bit offset",
+   "16-bit outer index, 4-bit inner index, 12-bit offset"
+  ],
+  "answer": 0,
+  "explanation": "A 4 KB page holds 4096/4 = 1024 = 2^10 entries, so the remaining 32 - 12 = 20 bits split into 10 + 10."
+ },
+ {
+  "id": "q2039f56d0ca",
+  "subject": "os",
+  "topic": "concurrency",
+  "level": "hard",
+  "question": "What is false sharing on a multicore system?",
+  "options": [
+   "Two threads share a variable without a lock and corrupt it",
+   "Threads on different cores modify different variables that sit on the same cache line, causing needless coherence traffic",
+   "A process shares pages with its child after fork()",
+   "The OS reports a lock as free when it is held"
+  ],
+  "answer": 1,
+  "explanation": "The cache line bounces between cores even though no data is logically shared; padding or aligning hot variables avoids it."
+ }
+]

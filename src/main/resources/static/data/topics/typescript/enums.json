@@ -43,5 +43,35 @@
   ],
   "answer": 1,
   "explanation": "Numeric enum members are auto-numbered starting at 0, so Green is 1."
+ },
+ {
+  "id": "qd6186433148",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Level { Low = 1, Mid, High }`, what is the value of `Level.High`?",
+  "options": [
+   "undefined",
+   "2",
+   "1",
+   "3"
+  ],
+  "answer": 3,
+  "explanation": "Numeric enum members auto-increment from the previous member's value."
+ },
+ {
+  "id": "qd652ebfc1c2",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Color { Red, Green }`, what does `Color[0]` return?",
+  "options": [
+   "0",
+   "\"Green\"",
+   "undefined",
+   "\"Red\""
+  ],
+  "answer": 3,
+  "explanation": "Numeric enums get a reverse mapping from values back to member names."
  }
 ]

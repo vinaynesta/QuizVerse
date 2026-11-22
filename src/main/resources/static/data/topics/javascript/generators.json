@@ -1,5 +1,35 @@
 [
  {
+  "id": "q28a502b5685",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does this log?\nfunction* g() { try { yield 1; } finally { console.log(\"cleanup\"); } }\nfor (const v of g()) { break; }",
+  "options": [
+   "Nothing",
+   "1 cleanup",
+   "1",
+   "cleanup"
+  ],
+  "answer": 3,
+  "explanation": "Breaking out of for...of calls the iterator's return method, which runs the generator's finally block."
+ },
+ {
+  "id": "q4c5e7eda318",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does this log?\nfunction* g() { let i = 0; while (true) yield i++; }\nconst [a, , b] = g();\nconsole.log(a, b);",
+  "options": [
+   "0 2",
+   "1 3",
+   "It never finishes",
+   "0 1"
+  ],
+  "answer": 0,
+  "explanation": "Array destructuring pulls only as many values as needed (three here) and then closes the infinite iterator."
+ },
+ {
   "id": "q68a289b18ac",
   "subject": "javascript",
   "topic": "generators",
@@ -73,6 +103,21 @@
   ],
   "answer": 2,
   "explanation": "The value passed to next becomes the result of the paused yield expression, so x is 5 and the next yield produces 10."
+ },
+ {
+  "id": "qb02040e422f",
+  "subject": "javascript",
+  "topic": "generators",
+  "level": "hard",
+  "question": "What does the last line log?\nfunction* g() { try { yield 1; } catch { yield \"caught\"; } }\nconst it = g();\nit.next();\nconsole.log(it.throw(new Error()).value);",
+  "options": [
+   "undefined",
+   "1",
+   "caught",
+   "The Error is thrown out of it.throw"
+  ],
+  "answer": 2,
+  "explanation": "throw() raises the error at the paused yield, the generator's catch handles it and yields \"caught\"."
  },
  {
   "id": "qf0d7cdfec26",

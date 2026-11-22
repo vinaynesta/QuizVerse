@@ -1,0 +1,152 @@
+[
+ {
+  "id": "qdda6c95bd08",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the smallest single route that summarizes the networks 192.168.16.0/24 through 192.168.23.0/24?",
+  "options": [
+   "192.168.16.0/20",
+   "192.168.16.0/21",
+   "192.168.16.0/22",
+   "192.168.0.0/19"
+  ],
+  "answer": 1,
+  "explanation": "The eight /24s from 16 to 23 share the first 21 bits (16 = 00010000), so they aggregate exactly into 192.168.16.0/21."
+ },
+ {
+  "id": "qabaae189851",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the network address of host 172.16.45.200/21?",
+  "options": [
+   "172.16.40.0",
+   "172.16.32.0",
+   "172.16.44.0",
+   "172.16.45.0"
+  ],
+  "answer": 0,
+  "explanation": "A /21 has a block size of 8 in the third octet, and 45 falls in the 40-47 block, so the network is 172.16.40.0."
+ },
+ {
+  "id": "qb98986402ea",
+  "subject": "networks",
+  "topic": "arp",
+  "level": "medium",
+  "question": "What is proxy ARP?",
+  "options": [
+   "A host caching ARP replies for its neighbors",
+   "A router answering ARP requests on behalf of hosts on another network so traffic is sent to it",
+   "Encrypting ARP messages between switches",
+   "An ARP request sent through an HTTP proxy"
+  ],
+  "answer": 1,
+  "explanation": "With proxy ARP, a host can reach an off-subnet address without a gateway configured because the router replies with its own MAC."
+ },
+ {
+  "id": "qbbd5580ac1c",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the dotted-decimal subnet mask for a /19 prefix?",
+  "options": [
+   "255.255.248.0",
+   "255.255.192.0",
+   "255.255.240.0",
+   "255.255.224.0"
+  ],
+  "answer": 3,
+  "explanation": "A /19 uses 8 + 8 + 3 network bits, and three 1-bits in the third octet give 128 + 64 + 32 = 224."
+ },
+ {
+  "id": "q0aa21260dc3",
+  "subject": "networks",
+  "topic": "http-methods",
+  "level": "medium",
+  "question": "Which of these HTTP methods is NOT idempotent according to RFC 9110?",
+  "options": [
+   "PUT",
+   "DELETE",
+   "POST",
+   "GET"
+  ],
+  "answer": 2,
+  "explanation": "Repeating a POST may create additional resources or side effects, whereas repeating PUT, DELETE or GET leaves the same intended state."
+ },
+ {
+  "id": "q4c52d99be2b",
+  "subject": "networks",
+  "topic": "subnetting",
+  "level": "medium",
+  "question": "What is the broadcast address of host 192.168.5.100/28?",
+  "options": [
+   "192.168.5.103",
+   "192.168.5.127",
+   "192.168.5.111",
+   "192.168.5.255"
+  ],
+  "answer": 2,
+  "explanation": "A /28 has 16-address blocks; 100 is in 96-111, so the broadcast address is 192.168.5.111."
+ },
+ {
+  "id": "q75fd44bb7da",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "In the sockets API, which client call causes TCP to send the initial SYN?",
+  "options": [
+   "connect()",
+   "listen()",
+   "accept()",
+   "bind()"
+  ],
+  "answer": 0,
+  "explanation": "connect() starts the active open; the server side must already have called listen(), and accept() returns completed connections."
+ },
+ {
+  "id": "q8454e224bd1",
+  "subject": "networks",
+  "topic": "http-status",
+  "level": "medium",
+  "question": "What does HTTP status 201 Created indicate?",
+  "options": [
+   "The request was accepted but not yet processed",
+   "The resource has moved temporarily",
+   "The request succeeded and a new resource was created, often identified by a Location header",
+   "The request succeeded but there is no content to return"
+  ],
+  "answer": 2,
+  "explanation": "201 is typically returned by POST or PUT when a new resource is created; 202 means accepted and 204 means no content."
+ },
+ {
+  "id": "q7bda46ad72f",
+  "subject": "networks",
+  "topic": "nat",
+  "level": "medium",
+  "question": "How does static NAT differ from dynamic NAT?",
+  "options": [
+   "Static NAT is a fixed one-to-one mapping between a private and a public address, while dynamic NAT assigns public addresses from a pool as needed",
+   "Static NAT only works for IPv6",
+   "Static NAT maps many hosts to one address using ports",
+   "Dynamic NAT never changes the source address"
+  ],
+  "answer": 0,
+  "explanation": "Static mappings are used for servers that must be reachable at a known public address; dynamic mappings are temporary."
+ },
+ {
+  "id": "qc945790535c",
+  "subject": "networks",
+  "topic": "tcp-handshake",
+  "level": "medium",
+  "question": "What does a host normally do when it receives a TCP SYN for a port with no listening socket?",
+  "options": [
+   "It replies with a RST segment",
+   "It replies with a SYN-ACK and waits",
+   "It silently queues the SYN until a socket opens",
+   "It replies with an ICMP Echo Reply"
+  ],
+  "answer": 0,
+  "explanation": "With no listener, the TCP stack resets the attempt, which the client sees as connection refused."
+ }
+]

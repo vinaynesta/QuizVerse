@@ -15,6 +15,36 @@
   "explanation": "HTTP/3 (RFC 9114) maps HTTP onto QUIC (RFC 9000), which runs over UDP."
  },
  {
+  "id": "q3843470c669",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "Why does QUIC encrypt most of its transport header, including packet numbers?",
+  "options": [
+   "Because TLS 1.3 forbids plaintext headers",
+   "Because UDP checksums are too weak",
+   "To make packets smaller than TCP segments",
+   "To stop middleboxes from depending on header fields, which would hinder protocol evolution, and to limit tracking"
+  ],
+  "answer": 3,
+  "explanation": "TCP's visible headers led middleboxes to ossify its behavior; QUIC exposes only minimal fields so it can evolve freely."
+ },
+ {
+  "id": "q5231f77a43a",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "At which levels does HTTP/2 apply flow control?",
+  "options": [
+   "Only for the connection as a whole",
+   "Both per stream and for the connection as a whole",
+   "Only per stream",
+   "HTTP/2 has no flow control and relies on TCP alone"
+  ],
+  "answer": 1,
+  "explanation": "WINDOW_UPDATE frames adjust credit for individual streams and for the entire connection, so one stream cannot hog the receiver's buffers."
+ },
+ {
   "id": "q576d01abeec",
   "subject": "networks",
   "topic": "http2-http3",
@@ -58,6 +88,21 @@
   ],
   "answer": 1,
   "explanation": "Since HTTP/3 uses a different transport, clients discover it via Alt-Svc or SVCB/HTTPS records rather than an in-band Upgrade."
+ },
+ {
+  "id": "q8f09e364eaa",
+  "subject": "networks",
+  "topic": "http2-http3",
+  "level": "hard",
+  "question": "In HTTP/2, what is the smallest unit of communication carried on a connection?",
+  "options": [
+   "A complete TCP segment",
+   "A plain-text request line",
+   "A binary frame belonging to a stream",
+   "A QUIC packet"
+  ],
+  "answer": 2,
+  "explanation": "HTTP/2 splits messages into binary frames such as HEADERS and DATA, and frames from different streams can be interleaved."
  },
  {
   "id": "q994be2d2a84",

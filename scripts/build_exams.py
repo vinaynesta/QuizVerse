@@ -100,10 +100,31 @@ EXAMS = [
                 sec("general-awareness", "General Awareness", "banking", 40, 40, 15)],
              "unavailable": []},
         ],
-    },    # Added Oct 2026 (#17) from the last notified patterns; check each new notification, these change often.
+    },
+    # Added Nov 2026. Officer Scale I, from the CRP RRBs pattern: Prelims 80 questions in 45 minutes (split here like
+    # RRB Clerk), Mains 200 questions in 120 minutes. Its Quant and Reasoning come from the third generated bank.
+    {
+        "id": "rrb-po", "name": "IBPS RRB PO", "pool": ("_3", 1), "extraPool": ("_3", 2), "moreQuizzes": 5,
+        "description": "Officer Scale I (Probationary Officer) in Regional Rural Banks. Prelims 80 questions in 45 "
+                       "minutes; Mains 200 questions in 120 minutes, then an interview.",
+        "stages": [
+            {"id": "prelims", "name": "Prelims", "sections": [
+                sec("reasoning", "Reasoning", "reasoning", 40, 40, 25),
+                sec("quantitative-aptitude", "Quantitative Aptitude", "quant", 40, 40, 20)],
+             "unavailable": []},
+            {"id": "mains", "name": "Mains", "sections": [
+                sec("reasoning", "Reasoning", "reasoning", 40, 50, 30),
+                sec("english", "English Language", "english", 40, 40, 30),
+                sec("quantitative-aptitude", "Quantitative Aptitude", "quant", 40, 50, 30),
+                sec("computer-knowledge", "Computer Knowledge", "computer", 40, 20, 15),
+                sec("general-awareness", "General Awareness", "banking", 40, 40, 15)],
+             "unavailable": []},
+        ],
+    },
+    # Added Oct 2026 (#17) from the last notified patterns; check each new notification, these change often.
     # PO Mains also has a descriptive paper (letter and essay) that a quiz can't mark, so it's left out.
     {
-        "id": "ibps-po", "name": "IBPS PO", "moreQuizzes": 5,
+        "id": "ibps-po", "name": "IBPS PO", "pool": 3, "moreQuizzes": 5, "extraPool": ("_3", 0),
         "description": "Probationary Officer. Prelims 100 questions in 60 minutes; Mains 155 questions in 180 minutes, "
                        "plus a descriptive paper.",
         "stages": [
@@ -122,7 +143,7 @@ EXAMS = [
         ],
     },
     {
-        "id": "sbi-po", "name": "SBI PO", "moreQuizzes": 5,
+        "id": "sbi-po", "name": "SBI PO", "pool": 4, "moreQuizzes": 5,
         "description": "Probationary Officer. Prelims 100 questions in 60 minutes; Mains 155 questions in 180 minutes, "
                        "plus a descriptive paper.",
         "stages": [
@@ -141,7 +162,7 @@ EXAMS = [
         ],
     },
     {
-        "id": "rbi-assistant", "name": "RBI Assistant", "moreQuizzes": 5,
+        "id": "rbi-assistant", "name": "RBI Assistant", "pool": 5, "moreQuizzes": 5,
         "description": "Assistant, Reserve Bank of India. Prelims 100 questions in 60 minutes; Mains 200 questions in "
                        "135 minutes.",
         "stages": [
@@ -293,10 +314,16 @@ def load_groups(subject, level, banks_dir, english_dir):
 GA_KEYS = {"topic", "level", "question", "options", "answer", "explanation"}
 
 
-def load_ga_bank(subject, ga_dir=None):
-    """Every hand-written question of a Computer or Banking bank, all levels, in a fixed order (files by name)."""
+def load_ga_bank(subject, ga_dir=None, more=False):
+    """Every hand-written question of a subject bank, all levels, in a fixed order (files by name). more=True gives
+    the second bank in <subject>/more/ instead: it forms quizzes after the existing ones (or joins practice only when
+    there aren't enough for a full set), so adding to it never changes a published quiz. Each question may appear in
+    only one of the two."""
+    root = Path(ga_dir or GA_DIR) / subject
     out, seen = [], set()
-    for path in sorted((Path(ga_dir or GA_DIR) / subject).glob("*.json")):
+    if more:  # questions already in the first bank count as seen, so a repeat stops the build
+        seen = {question_id(subject, q) for q in load_ga_bank(subject, ga_dir)}
+    for path in sorted((root / "more" if more else root).glob("*.json")):
         for n, q in enumerate(json.loads(path.read_text())):
             where = f"{path} #{n + 1}"
             if not GA_KEYS <= set(q) <= GA_KEYS | {"needsReview"}:
@@ -316,16 +343,26 @@ def load_ga_bank(subject, ga_dir=None):
     return out
 
 
-def load_more(name, level, banks_dir, extra_pool, english_dir=None):
-    """The second English bank, the exam's slice of a second Quant/Reasoning bank, or [] when there is none."""
+def load_more(name, level, banks_dir, extra_pool, english_dir=None, ga_dir=None):
+    """The second English or hand-written bank, the exam's slice of a second Quant/Reasoning bank, or []."""
+    if name in GA_SUBJECTS:
+        return [q for q in load_ga_bank(name, ga_dir, more=True) if q["level"] == level]
     if name == "english":
         path = Path(english_dir) / "more" / f"{level}.json" if english_dir else None
         return json.loads(path.read_text()) if path and path.exists() else []
-    path = Path(banks_dir) / f"{name}_{level}_2.json"
-    if name not in MORE_BANKS or extra_pool is None or not path.exists():
+    if name not in MORE_BANKS or extra_pool is None:
         return []
-    bank = json.loads(path.read_text())
-    return bank[extra_pool * POOL_SIZE:(extra_pool + 1) * POOL_SIZE]
+    return generated_slice(name, level, banks_dir, extra_pool, "_2")
+
+
+def generated_slice(name, level, banks_dir, ref, default_suffix=""):
+    """One POOL_SIZE slice of a generated bank. `ref` is a slice number in the bank named by default_suffix ("" for
+    the main bank, "_2" for the second), or (suffix, number) to name the bank, e.g. ("_3", 1)."""
+    suffix, k = ref if isinstance(ref, tuple) else (default_suffix, ref)
+    bank = json.loads((Path(banks_dir) / f"{name}_{level}{suffix}.json").read_text())
+    if len(bank) < (k + 1) * POOL_SIZE:
+        sys.exit(f"{name}_{level}{suffix}: no slice {k} (bank has {len(bank)}); add pools in gen_banks.py")
+    return bank[k * POOL_SIZE:(k + 1) * POOL_SIZE]
 
 
 def load_bank(name, level, banks_dir, english_dir, pool=0, ga_dir=None):
@@ -334,10 +371,7 @@ def load_bank(name, level, banks_dir, english_dir, pool=0, ga_dir=None):
         return json.loads((Path(english_dir) / f"{level}.json").read_text())
     if name in GA_SUBJECTS:
         return [q for q in load_ga_bank(name, ga_dir) if q["level"] == level]
-    bank = json.loads((Path(banks_dir) / f"{name}_{level}.json").read_text())
-    if len(bank) < (pool + 1) * POOL_SIZE:
-        sys.exit(f"{name}_{level}: no slice {pool} (bank has {len(bank)}); raise EXAM_POOLS in gen_banks.py")
-    return bank[pool * POOL_SIZE:(pool + 1) * POOL_SIZE]
+    return generated_slice(name, level, banks_dir, pool)
 
 
 FIXED_MARKERS = ("No error", "No improvement", "Part (", "conclusion", "None of", "All of", "Both ")
@@ -461,7 +495,7 @@ def main(banks_dir, english_dir, data_dir, keys_path, ga_dir=None):
                     # it with its own seed, so earlier quizzes, mocks and saved scores never change.
                     quizzes, taken = make_quizzes(s, level, level_name, key, key, bank, all_sets, per_level, 1,
                                                   out, keys, used, required=True)
-                    more = load_more(s["bank"], level, banks_dir, exam.get("extraPool"), english_dir)
+                    more = load_more(s["bank"], level, banks_dir, exam.get("extraPool"), english_dir, ga_dir)
                     if more and exam.get("moreQuizzes"):
                         spare = [g for g in all_sets if g["id"] not in taken]
                         extra, _ = make_quizzes(s, level, level_name, key, f"{key}#2", more, spare,

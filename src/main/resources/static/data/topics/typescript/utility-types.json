@@ -15,6 +15,36 @@
   "explanation": "Pick<T, K> constructs a type from just the listed keys."
  },
  {
+  "id": "q0f1051ae02e",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `Extract<\"a\" | \"b\" | 1, string>`?",
+  "options": [
+   "1",
+   "\"a\" | \"b\"",
+   "string",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "Extract keeps only the union members assignable to the second type argument."
+ },
+ {
+  "id": "q151f1ba9829",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What does `Record<\"a\" | \"b\", boolean>` produce?",
+  "options": [
+   "{ [key: string]: boolean }",
+   "{ a: boolean; b: boolean }",
+   "{ a?: boolean; b?: boolean }",
+   "boolean[]"
+  ],
+  "answer": 1,
+  "explanation": "With a union of literal keys, Record creates one required property per key."
+ },
+ {
   "id": "q17d99830f9a",
   "subject": "typescript",
   "topic": "utility-types",
@@ -105,6 +135,21 @@
   "explanation": "Partial<T> maps every property of T to an optional property."
  },
  {
+  "id": "q80b2931f1b0",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `ReturnType<() => Promise<number>>`?",
+  "options": [
+   "number",
+   "Promise<number>",
+   "Awaited<number>",
+   "void"
+  ],
+  "answer": 1,
+  "explanation": "ReturnType gives the declared return type as is; it does not unwrap promises like Awaited does."
+ },
+ {
   "id": "qaf060a65529",
   "subject": "typescript",
   "topic": "utility-types",
@@ -133,6 +178,21 @@
   ],
   "answer": 1,
   "explanation": "Awaited models what await produces, unwrapping (nested) promises."
+ },
+ {
+  "id": "qc54c3e1122a",
+  "subject": "typescript",
+  "topic": "utility-types",
+  "level": "medium",
+  "question": "What is `InstanceType<typeof Date>`?",
+  "options": [
+   "typeof Date",
+   "Date",
+   "object",
+   "DateConstructor"
+  ],
+  "answer": 1,
+  "explanation": "InstanceType returns the type produced by calling a constructor type with new."
  },
  {
   "id": "qe7985ffd9da",

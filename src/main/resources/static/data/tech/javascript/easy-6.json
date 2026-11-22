@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q264ca2c0e41",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"hello\".length return?",
+  "options": [
+   "5",
+   "4",
+   "6",
+   "undefined"
+  ],
+  "answer": 0,
+  "explanation": "length gives the number of UTF-16 code units, which is 5 for \"hello\"."
+ },
+ {
+  "id": "qdaf6b003700",
+  "subject": "javascript",
+  "topic": "types-coercion",
+  "level": "easy",
+  "question": "What does typeof 42 return?",
+  "options": [
+   "\"integer\"",
+   "\"numeric\"",
+   "\"float\"",
+   "\"number\""
+  ],
+  "answer": 3,
+  "explanation": "All JavaScript numbers, integers and decimals alike, report \"number\" from typeof."
+ },
+ {
+  "id": "q8387a8813b3",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [3, 1, 2].reverse() return?",
+  "options": [
+   "[1, 2, 3]",
+   "[3, 2, 1]",
+   "[2, 1, 3]",
+   "[3, 1, 2]"
+  ],
+  "answer": 2,
+  "explanation": "reverse() reverses the existing order of elements in place; it does not sort."
+ },
+ {
+  "id": "q48284e3fb94",
+  "subject": "javascript",
+  "topic": "es6-features",
+  "level": "easy",
+  "question": "Given const a = { b: 1, c: 3 }; what does { ...a, b: 2 } produce?",
+  "options": [
+   "{ b: 1, c: 3 }",
+   "{ b: 1, c: 3, b: 2 }",
+   "{ b: 2 }",
+   "{ b: 2, c: 3 }"
+  ],
+  "answer": 3,
+  "explanation": "Properties written after the spread override the copied ones with the same key."
+ },
+ {
+  "id": "q7efd3eca43f",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [1, 2, 3].join(\"-\") return?",
+  "options": [
+   "[\"1-2-3\"]",
+   "\"1-2-3\"",
+   "\"123\"",
+   "\"1,2,3\""
+  ],
+  "answer": 1,
+  "explanation": "join() concatenates the elements into a string using the given separator."
+ },
+ {
+  "id": "q20fc835d0b1",
+  "subject": "javascript",
+  "topic": "strings",
+  "level": "easy",
+  "question": "What does \"abc\".includes(\"b\") return?",
+  "options": [
+   "true",
+   "false",
+   "1",
+   "\"b\""
+  ],
+  "answer": 0,
+  "explanation": "includes() returns a boolean telling whether the substring occurs in the string."
+ },
+ {
+  "id": "qcd1511c2ec9",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does !true evaluate to?",
+  "options": [
+   "true",
+   "0",
+   "false",
+   "undefined"
+  ],
+  "answer": 2,
+  "explanation": "The logical NOT operator flips a boolean, so !true is false."
+ },
+ {
+  "id": "q09afab1e8f9",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "What does the continue statement do inside a loop?",
+  "options": [
+   "Exits the loop completely",
+   "Restarts the loop from the first iteration",
+   "Skips the rest of the current iteration and moves to the next one",
+   "Pauses the loop until called again"
+  ],
+  "answer": 2,
+  "explanation": "continue jumps to the next iteration, while break exits the loop entirely."
+ },
+ {
+  "id": "qe717b18cc87",
+  "subject": "javascript",
+  "topic": "variables",
+  "level": "easy",
+  "question": "What happens if you write let a = 1; let a = 2; in the same scope?",
+  "options": [
+   "a becomes 2",
+   "a stays 1",
+   "Two separate variables named a exist",
+   "A SyntaxError is reported"
+  ],
+  "answer": 3,
+  "explanation": "let does not allow redeclaring the same name in the same scope, unlike var."
+ },
+ {
+  "id": "qfdf0fc9492b",
+  "subject": "javascript",
+  "topic": "operators",
+  "level": "easy",
+  "question": "What does true && \"yes\" evaluate to?",
+  "options": [
+   "true",
+   "false",
+   "\"yes\"",
+   "1"
+  ],
+  "answer": 2,
+  "explanation": "&& returns its right operand when the left one is truthy."
+ }
+]

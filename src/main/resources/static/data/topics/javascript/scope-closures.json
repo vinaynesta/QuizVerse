@@ -15,6 +15,21 @@
   "explanation": "let creates a fresh binding of i for each loop iteration, so each callback captures its own value."
  },
  {
+  "id": "q20f1857a6c0",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What does this log?\nconst add = a => b => a + b;\nconst add5 = add(5);\nconsole.log(add5(3));",
+  "options": [
+   "5",
+   "NaN",
+   "A function",
+   "8"
+  ],
+  "answer": 3,
+  "explanation": "add(5) returns a closure that remembers a = 5, so calling it with 3 returns 8."
+ },
+ {
   "id": "q2ee77251336",
   "subject": "javascript",
   "topic": "scope-closures",
@@ -73,5 +88,20 @@
   ],
   "answer": 2,
   "explanation": "A closure lets an inner function keep accessing variables of its outer scope even after that outer function has returned."
+ },
+ {
+  "id": "qd60a1f17d3a",
+  "subject": "javascript",
+  "topic": "scope-closures",
+  "level": "medium",
+  "question": "What is an IIFE?",
+  "options": [
+   "A function that can only be called once",
+   "A function that is hoisted to the top of its scope",
+   "A function expression that is invoked immediately after it is defined",
+   "A function imported from another module"
+  ],
+  "answer": 2,
+  "explanation": "An Immediately Invoked Function Expression, like (function () {})(), runs at once and keeps its variables private."
  }
 ]

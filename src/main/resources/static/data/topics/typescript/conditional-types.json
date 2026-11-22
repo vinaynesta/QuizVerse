@@ -15,6 +15,36 @@
   "explanation": "There is no type parameter, so nothing distributes; boolean (true | false) is not assignable to true."
  },
  {
+  "id": "q5b89611ca6c",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Given `type IsAny<T> = 0 extends 1 & T ? true : false;`, what are `IsAny<any>` and `IsAny<unknown>`?",
+  "options": [
+   "false and false",
+   "true and true",
+   "true and false",
+   "false and true"
+  ],
+  "answer": 2,
+  "explanation": "1 & any collapses to any, which 0 extends, while 1 & unknown is just 1."
+ },
+ {
+  "id": "q6650d847d96",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "Which definition matches the built-in `Exclude<T, U>`?",
+  "options": [
+   "T extends U ? never : T",
+   "[T] extends [U] ? never : T",
+   "T extends U ? T : never",
+   "U extends T ? never : U"
+  ],
+  "answer": 0,
+  "explanation": "Exclude distributes over the union T and drops each member assignable to U."
+ },
+ {
   "id": "q6851bcf341d",
   "subject": "typescript",
   "topic": "conditional-types",
@@ -103,5 +133,20 @@
   ],
   "answer": 2,
   "explanation": "never is the empty union, and distributing over zero members yields never."
+ },
+ {
+  "id": "qe11a0fd6180",
+  "subject": "typescript",
+  "topic": "conditional-types",
+  "level": "hard",
+  "question": "What is `type T = never extends string ? 1 : 0;`?",
+  "options": [
+   "1",
+   "never",
+   "1 | 0",
+   "0"
+  ],
+  "answer": 0,
+  "explanation": "Outside a generic type parameter there is no distribution, and never is assignable to every type."
  }
 ]

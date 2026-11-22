@@ -15,6 +15,36 @@
   "explanation": "HTTP is an application-layer protocol that runs on top of a transport protocol such as TCP."
  },
  {
+  "id": "q3b454e94cf2",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "Which OSI layer is responsible for data formatting, translation and encryption?",
+  "options": [
+   "Session layer",
+   "Transport layer",
+   "Data Link layer",
+   "Presentation layer"
+  ],
+  "answer": 3,
+  "explanation": "The presentation layer (Layer 6) handles data representation such as encoding, compression and encryption."
+ },
+ {
+  "id": "q4eed0f92e7a",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "Which OSI layer transmits raw bits over the physical medium?",
+  "options": [
+   "Physical layer",
+   "Data Link layer",
+   "Network layer",
+   "Session layer"
+  ],
+  "answer": 0,
+  "explanation": "Layer 1 defines electrical, optical and radio signaling, connectors and bit timing."
+ },
+ {
   "id": "q920b23be9f2",
   "subject": "networks",
   "topic": "osi-tcp-ip",
@@ -28,6 +58,21 @@
   ],
   "answer": 1,
   "explanation": "TCP data units are segments; packets are Layer 3 and frames are Layer 2."
+ },
+ {
+  "id": "qb0e4f50d01f",
+  "subject": "networks",
+  "topic": "osi-tcp-ip",
+  "level": "easy",
+  "question": "What is the protocol data unit called at the Data Link layer?",
+  "options": [
+   "Packet",
+   "Segment",
+   "Frame",
+   "Message"
+  ],
+  "answer": 2,
+  "explanation": "Layer 2 encapsulates network-layer packets into frames with headers and trailers such as MAC addresses and an FCS."
  },
  {
   "id": "qce9fecabe56",

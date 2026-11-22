@@ -1,5 +1,35 @@
 [
  {
+  "id": "q09afab1e8f9",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "What does the continue statement do inside a loop?",
+  "options": [
+   "Exits the loop completely",
+   "Restarts the loop from the first iteration",
+   "Skips the rest of the current iteration and moves to the next one",
+   "Pauses the loop until called again"
+  ],
+  "answer": 2,
+  "explanation": "continue jumps to the next iteration, while break exits the loop entirely."
+ },
+ {
+  "id": "q293a5b17584",
+  "subject": "javascript",
+  "topic": "control-flow",
+  "level": "easy",
+  "question": "Which loop always executes its body at least once?",
+  "options": [
+   "while",
+   "do...while",
+   "for",
+   "for...in"
+  ],
+  "answer": 1,
+  "explanation": "do...while checks its condition after each iteration, so the body runs at least once."
+ },
+ {
   "id": "q31213c2ba43",
   "subject": "javascript",
   "topic": "control-flow",

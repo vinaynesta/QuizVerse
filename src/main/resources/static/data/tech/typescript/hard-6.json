@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q490dbc2e399",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "What does `in out` declare in `interface State<in out T> { get(): T; set(v: T): void }`?",
+  "options": [
+   "T is covariant",
+   "T is contravariant",
+   "T is invariant",
+   "T is bivariant"
+  ],
+  "answer": 2,
+  "explanation": "Marking a type parameter both in and out means only identical type arguments are mutually assignable."
+ },
+ {
+  "id": "q25956d5dbcf",
+  "subject": "typescript",
+  "topic": "never",
+  "level": "hard",
+  "question": "What is the type `string | never`?",
+  "options": [
+   "unknown",
+   "never",
+   "string | never",
+   "string"
+  ],
+  "answer": 3,
+  "explanation": "never is the empty union, so it vanishes when unioned with any other type."
+ },
+ {
+  "id": "q93118e02d85",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "What does `type DeepReadonly<T> = { readonly [K in keyof T]: DeepReadonly<T[K]> };` do?",
+  "options": [
+   "Recursively marks properties readonly at every nesting level",
+   "Freezes the object at runtime",
+   "Marks only top-level properties readonly",
+   "Causes an infinite type error"
+  ],
+  "answer": 0,
+  "explanation": "The type references itself for each property, so readonly is applied to nested objects too."
+ },
+ {
+  "id": "q9308e29565c",
+  "subject": "typescript",
+  "topic": "strict-flags",
+  "level": "hard",
+  "question": "With strictBindCallApply enabled, what happens with `function f(a: number) {}` and `f.call(undefined, \"x\");`?",
+  "options": [
+   "It compiles, because call takes any arguments",
+   "A compile error, because \"x\" is not assignable to number",
+   "A compile error, because this cannot be undefined",
+   "It compiles but f receives NaN"
+  ],
+  "answer": 1,
+  "explanation": "strictBindCallApply makes call, apply and bind check their arguments against the function's parameters."
+ },
+ {
+  "id": "q69d6fab5d1a",
+  "subject": "typescript",
+  "topic": "variance",
+  "level": "hard",
+  "question": "With `Dog` extending `Animal`, is `() => Dog` assignable to `() => Animal`?",
+  "options": [
+   "Only if Dog has no extra members",
+   "No, because return types are compared contravariantly",
+   "Only with strictFunctionTypes disabled",
+   "Yes, because return types are compared covariantly"
+  ],
+  "answer": 3,
+  "explanation": "A function returning a Dog can safely be used wherever a function returning an Animal is expected."
+ },
+ {
+  "id": "q0049d1bc8c2",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type G<T> = T extends { a: infer U; b: infer U } ? U : never;`, what is `G<{ a: string; b: number }>`?",
+  "options": [
+   "string",
+   "never",
+   "string | number",
+   "string & number"
+  ],
+  "answer": 2,
+  "explanation": "Multiple candidates for the same infer variable in covariant positions are combined into a union."
+ },
+ {
+  "id": "qa7498184c23",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "Given `type Col = \"red\" | \"green\";` and `const c = { primary: \"red\" } satisfies Record<string, Col>;`, what is the type of `c.primary`?",
+  "options": [
+   "Col",
+   "string",
+   "\"red\"",
+   "\"red\" | \"green\""
+  ],
+  "answer": 2,
+  "explanation": "The literal-union contextual type keeps \"red\" from widening, and satisfies preserves that inferred type."
+ },
+ {
+  "id": "q22cb1f89e4b",
+  "subject": "typescript",
+  "topic": "mapped-types",
+  "level": "hard",
+  "question": "Given `type Box<T> = { [K in keyof T]: { v: T[K] } };`, what is `Box<[string, number]>`?",
+  "options": [
+   "{ 0: { v: string }; 1: { v: number } }",
+   "{ v: [string, number] }",
+   "{ v: string | number }[]",
+   "[{ v: string }, { v: number }]"
+  ],
+  "answer": 3,
+  "explanation": "Homomorphic mapped types applied to a tuple produce a tuple, mapping only the element types."
+ },
+ {
+  "id": "q285d781556c",
+  "subject": "typescript",
+  "topic": "advanced-generics",
+  "level": "hard",
+  "question": "Given `function pick<T, K extends keyof T>(o: T, ...keys: K[]): Pick<T, K>`, what is the type of `pick({ a: 1, b: \"x\", c: true }, \"a\", \"c\")`?",
+  "options": [
+   "{ a: number; b: string; c: boolean }",
+   "{ a: number; c: boolean }",
+   "Pick<object, string>",
+   "{ a: 1; c: true }"
+  ],
+  "answer": 1,
+  "explanation": "K is inferred as the union \"a\" | \"c\" from the rest arguments, and object property types are widened."
+ },
+ {
+  "id": "qc1b339a71eb",
+  "subject": "typescript",
+  "topic": "infer",
+  "level": "hard",
+  "question": "Given `type Last<T> = T extends [...unknown[], infer L] ? L : never;`, what is `Last<[1, 2, 3]>`?",
+  "options": [
+   "1",
+   "3",
+   "[3]",
+   "never"
+  ],
+  "answer": 1,
+  "explanation": "A rest element may come first in a tuple pattern, so L captures the final element."
+ }
+]

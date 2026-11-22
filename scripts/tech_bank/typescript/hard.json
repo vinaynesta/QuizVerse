@@ -478,5 +478,245 @@
     ],
     "answer": 3,
     "explanation": "NoInfer blocks inference from that site, so T is inferred from other arguments and then checked there."
+  },
+  {
+    "topic": "conditional-types",
+    "question": "What is `type T = never extends string ? 1 : 0;`?",
+    "options": [
+      "0",
+      "never",
+      "1 | 0",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "Outside a generic type parameter there is no distribution, and never is assignable to every type."
+  },
+  {
+    "topic": "conditional-types",
+    "question": "Given `type IsAny<T> = 0 extends 1 & T ? true : false;`, what are `IsAny<any>` and `IsAny<unknown>`?",
+    "options": [
+      "false and false",
+      "true and true",
+      "true and false",
+      "false and true"
+    ],
+    "answer": 2,
+    "explanation": "1 & any collapses to any, which 0 extends, while 1 & unknown is just 1."
+  },
+  {
+    "topic": "conditional-types",
+    "question": "Which definition matches the built-in `Exclude<T, U>`?",
+    "options": [
+      "T extends U ? T : never",
+      "[T] extends [U] ? never : T",
+      "T extends U ? never : T",
+      "U extends T ? never : U"
+    ],
+    "answer": 2,
+    "explanation": "Exclude distributes over the union T and drops each member assignable to U."
+  },
+  {
+    "topic": "infer",
+    "question": "Given `type Last<T> = T extends [...unknown[], infer L] ? L : never;`, what is `Last<[1, 2, 3]>`?",
+    "options": [
+      "1",
+      "3",
+      "[3]",
+      "never"
+    ],
+    "answer": 1,
+    "explanation": "A rest element may come first in a tuple pattern, so L captures the final element."
+  },
+  {
+    "topic": "infer",
+    "question": "Given `type Args<T> = T extends (...a: infer A) => any ? A : never;`, what is `Args<(x: string, y?: number) => void>`?",
+    "options": [
+      "[x: string, y?: number]",
+      "[string, number]",
+      "string | number",
+      "(string | undefined)[]"
+    ],
+    "answer": 0,
+    "explanation": "Inferring from a rest parameter produces the labeled parameter tuple, keeping optional elements."
+  },
+  {
+    "topic": "infer",
+    "question": "Given `type G<T> = T extends { a: infer U; b: infer U } ? U : never;`, what is `G<{ a: string; b: number }>`?",
+    "options": [
+      "string",
+      "string | number",
+      "never",
+      "string & number"
+    ],
+    "answer": 1,
+    "explanation": "Multiple candidates for the same infer variable in covariant positions are combined into a union."
+  },
+  {
+    "topic": "template-literal-types",
+    "question": "Given ``type S<T> = T extends `${infer H}-${infer R}` ? [H, R] : never;``, what is `S<\"a-b-c\">`?",
+    "options": [
+      "[\"a-b\", \"c\"]",
+      "[\"a\", \"b\", \"c\"]",
+      "[\"a\", \"b-c\"]",
+      "never"
+    ],
+    "answer": 2,
+    "explanation": "The first infer placeholder matches as little as possible, stopping at the first hyphen."
+  },
+  {
+    "topic": "template-literal-types",
+    "question": "Given ``type Px = `${number}px`;``, which assignment compiles?",
+    "options": [
+      "const a: Px = \"tenpx\";",
+      "const a: Px = \"10px\";",
+      "const a: Px = 10;",
+      "const a: Px = \"px10\";"
+    ],
+    "answer": 1,
+    "explanation": "The ${number} placeholder accepts any string that parses as a number, followed by px."
+  },
+  {
+    "topic": "template-literal-types",
+    "question": "What is `Capitalize<\"hello world\">`?",
+    "options": [
+      "\"Hello World\"",
+      "\"HELLO WORLD\"",
+      "\"helloWorld\"",
+      "\"Hello world\""
+    ],
+    "answer": 3,
+    "explanation": "Capitalize uppercases only the first character of the string literal."
+  },
+  {
+    "topic": "mapped-types",
+    "question": "What is `{ [K in \"a\" | \"b\"]: K }`?",
+    "options": [
+      "{ a: string; b: string }",
+      "{ K: \"a\" | \"b\" }",
+      "{ a: \"a\"; b: \"b\" }",
+      "\"a\" | \"b\""
+    ],
+    "answer": 2,
+    "explanation": "The mapped type creates one property per key, and each value is that key's literal type."
+  },
+  {
+    "topic": "mapped-types",
+    "question": "Given `type Keys<T> = { [K in keyof T]: K }[keyof T];`, what is `Keys<{ x: 1; y: 2 }>`?",
+    "options": [
+      "\"x\" | \"y\"",
+      "1 | 2",
+      "{ x: \"x\"; y: \"y\" }",
+      "never"
+    ],
+    "answer": 0,
+    "explanation": "Indexing the mapped type by all its keys produces the union of its property value types, which are the key names."
+  },
+  {
+    "topic": "mapped-types",
+    "question": "Given `type Box<T> = { [K in keyof T]: { v: T[K] } };`, what is `Box<[string, number]>`?",
+    "options": [
+      "{ 0: { v: string }; 1: { v: number } }",
+      "[{ v: string }, { v: number }]",
+      "{ v: string | number }[]",
+      "{ v: [string, number] }"
+    ],
+    "answer": 1,
+    "explanation": "Homomorphic mapped types applied to a tuple produce a tuple, mapping only the element types."
+  },
+  {
+    "topic": "never",
+    "question": "What is `keyof never`?",
+    "options": [
+      "never",
+      "unknown",
+      "string",
+      "string | number | symbol"
+    ],
+    "answer": 3,
+    "explanation": "never is the empty set, which is assignable to every type, so it is treated as having every possible key."
+  },
+  {
+    "topic": "never",
+    "question": "What is the type `string | never`?",
+    "options": [
+      "string",
+      "never",
+      "string | never",
+      "unknown"
+    ],
+    "answer": 0,
+    "explanation": "never is the empty union, so it vanishes when unioned with any other type."
+  },
+  {
+    "topic": "variance",
+    "question": "With `Dog` extending `Animal`, is `() => Dog` assignable to `() => Animal`?",
+    "options": [
+      "Yes, because return types are compared covariantly",
+      "No, because return types are compared contravariantly",
+      "Only with strictFunctionTypes disabled",
+      "Only if Dog has no extra members"
+    ],
+    "answer": 0,
+    "explanation": "A function returning a Dog can safely be used wherever a function returning an Animal is expected."
+  },
+  {
+    "topic": "variance",
+    "question": "What does `in out` declare in `interface State<in out T> { get(): T; set(v: T): void }`?",
+    "options": [
+      "T is covariant",
+      "T is invariant",
+      "T is contravariant",
+      "T is bivariant"
+    ],
+    "answer": 1,
+    "explanation": "Marking a type parameter both in and out means only identical type arguments are mutually assignable."
+  },
+  {
+    "topic": "satisfies",
+    "question": "Given `type Col = \"red\" | \"green\";` and `const c = { primary: \"red\" } satisfies Record<string, Col>;`, what is the type of `c.primary`?",
+    "options": [
+      "\"red\"",
+      "string",
+      "Col",
+      "\"red\" | \"green\""
+    ],
+    "answer": 0,
+    "explanation": "The literal-union contextual type keeps \"red\" from widening, and satisfies preserves that inferred type."
+  },
+  {
+    "topic": "strict-flags",
+    "question": "With strictBindCallApply enabled, what happens with `function f(a: number) {}` and `f.call(undefined, \"x\");`?",
+    "options": [
+      "It compiles, because call takes any arguments",
+      "It compiles but f receives NaN",
+      "A compile error, because this cannot be undefined",
+      "A compile error, because \"x\" is not assignable to number"
+    ],
+    "answer": 3,
+    "explanation": "strictBindCallApply makes call, apply and bind check their arguments against the function's parameters."
+  },
+  {
+    "topic": "advanced-generics",
+    "question": "Given `function pick<T, K extends keyof T>(o: T, ...keys: K[]): Pick<T, K>`, what is the type of `pick({ a: 1, b: \"x\", c: true }, \"a\", \"c\")`?",
+    "options": [
+      "{ a: number; b: string; c: boolean }",
+      "{ a: 1; c: true }",
+      "Pick<object, string>",
+      "{ a: number; c: boolean }"
+    ],
+    "answer": 3,
+    "explanation": "K is inferred as the union \"a\" | \"c\" from the rest arguments, and object property types are widened."
+  },
+  {
+    "topic": "advanced-generics",
+    "question": "What does `type DeepReadonly<T> = { readonly [K in keyof T]: DeepReadonly<T[K]> };` do?",
+    "options": [
+      "Marks only top-level properties readonly",
+      "Freezes the object at runtime",
+      "Recursively marks properties readonly at every nesting level",
+      "Causes an infinite type error"
+    ],
+    "answer": 2,
+    "explanation": "The type references itself for each property, so readonly is applied to nested objects too."
   }
 ]

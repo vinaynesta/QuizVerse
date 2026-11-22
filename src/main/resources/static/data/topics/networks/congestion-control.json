@@ -45,6 +45,21 @@
   "explanation": "Throughput <= window/RTT = 65,535 * 8 bits / 0.1 s = 5,242,800 b/s, about 5.2 Mbps."
  },
  {
+  "id": "q7317a4e81f5",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Using the Mathis approximation throughput = (MSS/RTT) x 1.22/sqrt(p), what is the throughput of a Reno flow with a 1460-byte MSS, 100 ms RTT and 0.01% loss rate?",
+  "options": [
+   "About 1.4 Mbps",
+   "About 117 Mbps",
+   "About 14 Mbps",
+   "About 5.2 Mbps"
+  ],
+  "answer": 2,
+  "explanation": "MSS/RTT = 11680 bit / 0.1 s = 116.8 kbit/s, and 1.22/sqrt(0.0001) = 122, giving about 14.2 Mbps."
+ },
+ {
   "id": "q7ed25fa4272",
   "subject": "networks",
   "topic": "congestion-control",
@@ -58,6 +73,51 @@
   ],
   "answer": 0,
   "explanation": "ECN-capable routers set the CE codepoint, the receiver echoes it, and the sender reduces cwnd without a loss."
+ },
+ {
+  "id": "q83df871bb4f",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "Per RFC 6298, if SRTT = 100 ms and RTTVAR = 20 ms (with negligible clock granularity), what is the retransmission timeout, ignoring the recommended 1-second minimum?",
+  "options": [
+   "120 ms",
+   "180 ms",
+   "140 ms",
+   "200 ms"
+  ],
+  "answer": 1,
+  "explanation": "RTO = SRTT + max(G, 4 x RTTVAR) = 100 + 4 x 20 = 180 ms."
+ },
+ {
+  "id": "q9e0b4164824",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What does Random Early Detection (RED) do in a router queue?",
+  "options": [
+   "Drops or marks packets probabilistically as the average queue length grows, before the queue is full",
+   "Drops packets only when the buffer is completely full",
+   "Gives strict priority to TCP over UDP",
+   "Reorders packets to put small ones first"
+  ],
+  "answer": 0,
+  "explanation": "Early random signals make different flows back off at different times, avoiding global synchronization and long standing queues."
+ },
+ {
+  "id": "qaab835d4660",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What TCP window size is needed to keep a 1 Gbps path with a 40 ms RTT fully utilized?",
+  "options": [
+   "5 MB (40 Mbit)",
+   "40 MB (320 Mbit)",
+   "64 KB",
+   "500 KB (4 Mbit)"
+  ],
+  "answer": 0,
+  "explanation": "The window must cover the bandwidth-delay product: 1e9 bit/s x 0.04 s = 40 Mbit = 5 MB."
  },
  {
   "id": "qb8503b9bd70",
@@ -105,6 +165,21 @@
   "explanation": "BBR models the path's delivery rate and propagation delay instead of treating loss as the main congestion signal."
  },
  {
+  "id": "qe49369400b5",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "What is bufferbloat?",
+  "options": [
+   "Packets growing in size as headers are added",
+   "Excessively large network buffers that fill up and cause high latency and jitter under load",
+   "A router running out of memory for its routing table",
+   "TCP windows growing beyond 65,535 bytes"
+  ],
+  "answer": 1,
+  "explanation": "Loss-based congestion control keeps oversized buffers full, so queuing delay grows; AQM schemes such as CoDel address it."
+ },
+ {
   "id": "qe71bb1a50a0",
   "subject": "networks",
   "topic": "congestion-control",
@@ -148,5 +223,20 @@
   ],
   "answer": 3,
   "explanation": "100,000,000 b/s * 0.08 s = 8,000,000 bits = 1,000,000 bytes that must be in flight to fill the pipe."
+ },
+ {
+  "id": "qf73a90e3039",
+  "subject": "networks",
+  "topic": "congestion-control",
+  "level": "hard",
+  "question": "A TCP sender starts slow start with cwnd = 1 MSS and ssthresh = 32 MSS. With no losses and every segment acknowledged, how many RTTs until cwnd reaches 32 MSS?",
+  "options": [
+   "4",
+   "5",
+   "6",
+   "32"
+  ],
+  "answer": 1,
+  "explanation": "cwnd doubles each RTT: 1, 2, 4, 8, 16, 32, so it takes log2(32) = 5 RTTs."
  }
 ]

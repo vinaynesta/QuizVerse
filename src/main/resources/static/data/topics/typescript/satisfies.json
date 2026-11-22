@@ -45,6 +45,21 @@
   "explanation": "as const produces a readonly literal tuple and satisfies checks it without widening."
  },
  {
+  "id": "qa7498184c23",
+  "subject": "typescript",
+  "topic": "satisfies",
+  "level": "hard",
+  "question": "Given `type Col = \"red\" | \"green\";` and `const c = { primary: \"red\" } satisfies Record<string, Col>;`, what is the type of `c.primary`?",
+  "options": [
+   "Col",
+   "string",
+   "\"red\"",
+   "\"red\" | \"green\""
+  ],
+  "answer": 2,
+  "explanation": "The literal-union contextual type keeps \"red\" from widening, and satisfies preserves that inferred type."
+ },
+ {
   "id": "qad6663d8524",
   "subject": "typescript",
   "topic": "satisfies",

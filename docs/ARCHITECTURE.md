@@ -741,24 +741,26 @@ flowchart LR
 <!-- BEGIN GENERATED: content -->
 | Exam / track | Stage | Sections | Quizzes | Questions |
 |---|---|---|---|---|
-| IBPS Clerk | Prelims | English Language, Numerical Ability, Reasoning Ability | 75 | 2550 |
-| IBPS Clerk | Mains | Reasoning Ability, English Language, Quantitative Aptitude, General/Financial Awareness | 90 | 3600 |
-| SBI Clerk | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 75 | 2550 |
-| SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability, General/Financial Awareness | 90 | 4350 |
+| IBPS Clerk | Prelims | English Language, Numerical Ability, Reasoning Ability | 90 | 3000 |
+| IBPS Clerk | Mains | Reasoning Ability, English Language, Quantitative Aptitude, General/Financial Awareness | 120 | 4800 |
+| SBI Clerk | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 90 | 3000 |
+| SBI Clerk | Mains | General English, Quantitative Aptitude, Reasoning Ability, General/Financial Awareness | 105 | 4950 |
 | IBPS RRB Clerk | Prelims | Reasoning Ability, Numerical Ability | 60 | 2400 |
-| IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability, Computer Knowledge, General Awareness | 105 | 4200 |
-| IBPS PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
-| IBPS PO | Mains | Reasoning & Computer Aptitude, English Language, Data Analysis & Interpretation, General/Economy/Banking Awareness | 60 | 2325 |
-| SBI PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 45 | 1500 |
-| SBI PO | Mains | Reasoning & Computer Aptitude, Data Analysis & Interpretation, English Language, General/Economy/Banking Awareness | 60 | 2325 |
-| RBI Assistant | Prelims | English Language, Numerical Ability, Reasoning Ability | 45 | 1500 |
-| RBI Assistant | Mains | Reasoning, English Language, Numerical Ability, General Awareness, Computer Knowledge | 75 | 3000 |
-| APPSC Group 1 | Prelims Paper I | History and Culture, Constitution, Polity, Social Justice & International Relations, Indian and Andhra Pradesh Economy and Planning, Geography | 36 | 1080 |
-| APPSC Group 1 | Prelims Paper II | General Mental Ability, Administrative and Psychological Abilities, Science and Technology | 33 | 990 |
+| IBPS RRB Clerk | Mains | Reasoning Ability, English Language, Numerical Ability, Computer Knowledge, General Awareness | 150 | 6000 |
+| IBPS RRB PO | Prelims | Reasoning, Quantitative Aptitude | 60 | 2400 |
+| IBPS RRB PO | Mains | Reasoning, English Language, Quantitative Aptitude, Computer Knowledge, General Awareness | 150 | 6000 |
+| IBPS PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 90 | 3000 |
+| IBPS PO | Mains | Reasoning & Computer Aptitude, English Language, Data Analysis & Interpretation, General/Economy/Banking Awareness | 120 | 4650 |
+| SBI PO | Prelims | English Language, Quantitative Aptitude, Reasoning Ability | 60 | 2100 |
+| SBI PO | Mains | Reasoning & Computer Aptitude, Data Analysis & Interpretation, English Language, General/Economy/Banking Awareness | 75 | 2850 |
+| RBI Assistant | Prelims | English Language, Numerical Ability, Reasoning Ability | 60 | 1950 |
+| RBI Assistant | Mains | Reasoning, English Language, Numerical Ability, General Awareness, Computer Knowledge | 120 | 4800 |
+| APPSC Group 1 | Prelims Paper I | History and Culture, Constitution, Polity, Social Justice & International Relations, Indian and Andhra Pradesh Economy and Planning, Geography | 60 | 1800 |
+| APPSC Group 1 | Prelims Paper II | General Mental Ability, Administrative and Psychological Abilities, Science and Technology | 45 | 1350 |
 | Java Practice | Practice | Java | 9 | 142 |
-| Tech Interview Prep | Practice | Data Structures & Algorithms, Java, Python, Spring Boot, React, Vue.js, Artificial Intelligence, SQL & Databases, Node.js, Git & DevOps, System Design, JavaScript, TypeScript, Operating Systems, Computer Networks | 246 | 2460 |
+| Tech Interview Prep | Practice | Data Structures & Algorithms, Java, Python, Spring Boot, React, Vue.js, Artificial Intelligence, SQL & Databases, Node.js, Git & DevOps, System Design, JavaScript, TypeScript, Operating Systems, Computer Networks | 270 | 2700 |
 
-Quiz slots can reuse a question (the same bank feeds several exams): 19332 unique questions in 26 subjects.
+Quiz slots can reuse a question (the same bank feeds several exams): 26581 unique questions in 26 subjects.
 <!-- END GENERATED: content -->
 
 ### Daily features

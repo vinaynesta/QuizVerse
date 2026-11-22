@@ -45,6 +45,36 @@
   "explanation": "length gives the number of elements, which is 3."
  },
  {
+  "id": "q7efd3eca43f",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [1, 2, 3].join(\"-\") return?",
+  "options": [
+   "[\"1-2-3\"]",
+   "\"1-2-3\"",
+   "\"123\"",
+   "\"1,2,3\""
+  ],
+  "answer": 1,
+  "explanation": "join() concatenates the elements into a string using the given separator."
+ },
+ {
+  "id": "q8387a8813b3",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "What does [3, 1, 2].reverse() return?",
+  "options": [
+   "[1, 2, 3]",
+   "[3, 2, 1]",
+   "[2, 1, 3]",
+   "[3, 1, 2]"
+  ],
+  "answer": 2,
+  "explanation": "reverse() reverses the existing order of elements in place; it does not sort."
+ },
+ {
   "id": "qa68592aef78",
   "subject": "javascript",
   "topic": "arrays-objects",
@@ -103,5 +133,20 @@
   ],
   "answer": 0,
   "explanation": "shift removes the first element and returns it; pop removes the last."
+ },
+ {
+  "id": "qf9dbcf48a46",
+  "subject": "javascript",
+  "topic": "arrays-objects",
+  "level": "easy",
+  "question": "Given const user = { name: \"Ana\" }; how do you add an age property with value 30?",
+  "options": [
+   "user.age = 30;",
+   "user.push({ age: 30 });",
+   "user.add(\"age\", 30);",
+   "user[age] = 30;"
+  ],
+  "answer": 0,
+  "explanation": "Assigning to a new property name with dot notation creates that property; user[age] would use a variable named age."
  }
 ]

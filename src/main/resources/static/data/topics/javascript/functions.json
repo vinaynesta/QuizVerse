@@ -15,6 +15,36 @@
   "explanation": "Functions without an explicit return value return undefined."
  },
  {
+  "id": "q651d95b8847",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What does (() => 5)() return?",
+  "options": [
+   "undefined",
+   "NaN",
+   "A function",
+   "5"
+  ],
+  "answer": 3,
+  "explanation": "The arrow function is invoked immediately and its concise body returns 5."
+ },
+ {
+  "id": "q9b54ffa74bc",
+  "subject": "javascript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "What is a callback function?",
+  "options": [
+   "A function that calls itself",
+   "A function passed as an argument to another function to be called later",
+   "A function that returns another function",
+   "A function with no parameters"
+  ],
+  "answer": 1,
+  "explanation": "Callbacks are functions handed to other code, which invokes them at the appropriate time."
+ },
+ {
   "id": "qec65f122259",
   "subject": "javascript",
   "topic": "functions",

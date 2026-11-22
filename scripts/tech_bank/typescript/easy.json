@@ -478,5 +478,245 @@
     ],
     "answer": 0,
     "explanation": "outDir controls where compiled output is written; rootDir describes where the source lives."
+  },
+  {
+    "topic": "basic-types",
+    "question": "Which type annotation is used for large integer values written like `10n`?",
+    "options": [
+      "number",
+      "long",
+      "BigNumber",
+      "bigint"
+    ],
+    "answer": 3,
+    "explanation": "Literals with the n suffix are BigInt values, typed as bigint in TypeScript."
+  },
+  {
+    "topic": "basic-types",
+    "question": "Which syntax tells the compiler to treat `el` as an `HTMLInputElement`?",
+    "options": [
+      "el as HTMLInputElement",
+      "el is HTMLInputElement",
+      "el: HTMLInputElement",
+      "cast<HTMLInputElement>(el)"
+    ],
+    "answer": 0,
+    "explanation": "The as keyword is a type assertion that changes the compile-time type without any runtime conversion."
+  },
+  {
+    "topic": "basic-types",
+    "question": "What does the lowercase `object` type represent?",
+    "options": [
+      "Any value at all, including primitives",
+      "Only plain object literals",
+      "Any non-primitive value",
+      "Only values created with new Object()"
+    ],
+    "answer": 2,
+    "explanation": "object excludes primitives such as string, number and boolean, but allows arrays, functions and other objects."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "Given `let a: any = 1;`, what happens at compile time with `a.foo.bar();`?",
+    "options": [
+      "A compile error, because foo does not exist on number",
+      "It compiles without error, though it may fail at runtime",
+      "A compile error, because any cannot be called",
+      "The compiler converts a to an object"
+    ],
+    "answer": 1,
+    "explanation": "any disables type checking, so any property access or call is allowed by the compiler."
+  },
+  {
+    "topic": "any-unknown",
+    "question": "Given `let u: unknown = \"x\";`, what happens with `let s: string = u;`?",
+    "options": [
+      "It compiles, because the value is a string",
+      "A compile error, because unknown is not assignable to string",
+      "It compiles, but s has type unknown",
+      "It compiles with a warning only"
+    ],
+    "answer": 1,
+    "explanation": "unknown can only be assigned to unknown or any until it is narrowed."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "How do you declare an object type that allows any string key with number values?",
+    "options": [
+      "{ [key: string]: number }",
+      "{ string: number }",
+      "{ key: string; value: number }",
+      "Map<string, number>[]"
+    ],
+    "answer": 0,
+    "explanation": "An index signature describes objects with arbitrary keys of a given type and values of another."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "Which keyword creates a type alias?",
+    "options": [
+      "type",
+      "alias",
+      "typedef",
+      "declare"
+    ],
+    "answer": 0,
+    "explanation": "type Name = ... gives a name to any type, including unions and object shapes."
+  },
+  {
+    "topic": "interfaces-types",
+    "question": "How do you declare a method `greet` that returns a string in an interface?",
+    "options": [
+      "greet(): string;",
+      "function greet(): string;",
+      "greet: string;",
+      "method greet => string;"
+    ],
+    "answer": 0,
+    "explanation": "Method signatures in interfaces list the name, parameters and return type without a body."
+  },
+  {
+    "topic": "functions",
+    "question": "Given `function f(a: number, b: number) {}`, what happens with `f(1);`?",
+    "options": [
+      "It compiles and b is undefined",
+      "A compile error, because 2 arguments are expected",
+      "It compiles and b defaults to 0",
+      "A runtime error only"
+    ],
+    "answer": 1,
+    "explanation": "TypeScript checks the number of arguments, and b is neither optional nor defaulted."
+  },
+  {
+    "topic": "functions",
+    "question": "What are function overloads in TypeScript?",
+    "options": [
+      "Multiple functions with the same name in different files",
+      "Functions that accept more arguments than declared",
+      "Functions that call themselves recursively",
+      "Several call signatures declared for one function implementation"
+    ],
+    "answer": 3,
+    "explanation": "Overload signatures describe the valid ways to call a function, followed by a single compatible implementation."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "How do you declare a tuple whose third element is optional?",
+    "options": [
+      "[string, number, ?boolean]",
+      "[string, number, boolean | optional]",
+      "[string, number, ...boolean]",
+      "[string, number, boolean?]"
+    ],
+    "answer": 3,
+    "explanation": "A question mark after an element type marks that tuple element as optional."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "Given `let t: [string, number];`, what is the type of `t.length`?",
+    "options": [
+      "number",
+      "2",
+      "string",
+      "2 | 0"
+    ],
+    "answer": 1,
+    "explanation": "Fixed-length tuples have a literal length type equal to their number of elements."
+  },
+  {
+    "topic": "arrays-tuples",
+    "question": "What do the labels in a tuple type like `[name: string, age: number]` change?",
+    "options": [
+      "They let you access elements as t.name and t.age",
+      "They make the tuple readonly",
+      "Only readability and tooling hints; the type is the same as [string, number]",
+      "They turn the tuple into an object type"
+    ],
+    "answer": 2,
+    "explanation": "Tuple labels document element meaning but do not affect type compatibility or runtime access."
+  },
+  {
+    "topic": "type-inference",
+    "question": "What return type is inferred for `function double(n: number) { return n * 2; }`?",
+    "options": [
+      "any",
+      "number",
+      "void",
+      "unknown"
+    ],
+    "answer": 1,
+    "explanation": "TypeScript infers the return type from the returned expression, which is a number."
+  },
+  {
+    "topic": "type-inference",
+    "question": "In `[1, 2, 3].map(n => n.toFixed())`, what type is inferred for `n`?",
+    "options": [
+      "any",
+      "unknown",
+      "number[]",
+      "number"
+    ],
+    "answer": 3,
+    "explanation": "Contextual typing gives the callback parameter the array's element type."
+  },
+  {
+    "topic": "enums",
+    "question": "Given `enum Level { Low = 1, Mid, High }`, what is the value of `Level.High`?",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "undefined"
+    ],
+    "answer": 0,
+    "explanation": "Numeric enum members auto-increment from the previous member's value."
+  },
+  {
+    "topic": "enums",
+    "question": "Given `enum Color { Red, Green }`, what does `Color[0]` return?",
+    "options": [
+      "0",
+      "\"Green\"",
+      "undefined",
+      "\"Red\""
+    ],
+    "answer": 3,
+    "explanation": "Numeric enums get a reverse mapping from values back to member names."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "Which tsconfig option sets the ECMAScript version of the emitted JavaScript?",
+    "options": [
+      "module",
+      "lib",
+      "target",
+      "version"
+    ],
+    "answer": 2,
+    "explanation": "target controls which syntax is downleveled, such as converting classes for older runtimes."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "What does the `noEmit` compiler option do?",
+    "options": [
+      "Suppresses all compile errors",
+      "Removes comments from the output",
+      "Type-checks the code without writing any output files",
+      "Skips type checking and only emits JavaScript"
+    ],
+    "answer": 2,
+    "explanation": "noEmit is common when another tool, such as a bundler, handles the JavaScript output."
+  },
+  {
+    "topic": "compiler-config",
+    "question": "Which tsconfig option lists the files or glob patterns to include in compilation?",
+    "options": [
+      "files",
+      "rootDir",
+      "include",
+      "paths"
+    ],
+    "answer": 2,
+    "explanation": "include takes glob patterns, while files takes an explicit list of individual file names."
   }
 ]

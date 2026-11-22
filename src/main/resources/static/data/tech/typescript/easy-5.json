@@ -1,0 +1,152 @@
+[
+ {
+  "id": "q652011f5431",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How do you declare a method `greet` that returns a string in an interface?",
+  "options": [
+   "greet(): string;",
+   "function greet(): string;",
+   "greet: string;",
+   "method greet => string;"
+  ],
+  "answer": 0,
+  "explanation": "Method signatures in interfaces list the name, parameters and return type without a body."
+ },
+ {
+  "id": "qc981de61902",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "Which tsconfig option lists the files or glob patterns to include in compilation?",
+  "options": [
+   "files",
+   "include",
+   "rootDir",
+   "paths"
+  ],
+  "answer": 1,
+  "explanation": "include takes glob patterns, while files takes an explicit list of individual file names."
+ },
+ {
+  "id": "q7b50ea46c88",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "What do the labels in a tuple type like `[name: string, age: number]` change?",
+  "options": [
+   "They let you access elements as t.name and t.age",
+   "They make the tuple readonly",
+   "They turn the tuple into an object type",
+   "Only readability and tooling hints; the type is the same as [string, number]"
+  ],
+  "answer": 3,
+  "explanation": "Tuple labels document element meaning but do not affect type compatibility or runtime access."
+ },
+ {
+  "id": "qac1419971bd",
+  "subject": "typescript",
+  "topic": "compiler-config",
+  "level": "easy",
+  "question": "What does the `noEmit` compiler option do?",
+  "options": [
+   "Type-checks the code without writing any output files",
+   "Removes comments from the output",
+   "Suppresses all compile errors",
+   "Skips type checking and only emits JavaScript"
+  ],
+  "answer": 0,
+  "explanation": "noEmit is common when another tool, such as a bundler, handles the JavaScript output."
+ },
+ {
+  "id": "q183325d7a9f",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "How do you declare a tuple whose third element is optional?",
+  "options": [
+   "[string, number, ?boolean]",
+   "[string, number, boolean | optional]",
+   "[string, number, boolean?]",
+   "[string, number, ...boolean]"
+  ],
+  "answer": 2,
+  "explanation": "A question mark after an element type marks that tuple element as optional."
+ },
+ {
+  "id": "qd652ebfc1c2",
+  "subject": "typescript",
+  "topic": "enums",
+  "level": "easy",
+  "question": "Given `enum Color { Red, Green }`, what does `Color[0]` return?",
+  "options": [
+   "0",
+   "\"Green\"",
+   "undefined",
+   "\"Red\""
+  ],
+  "answer": 3,
+  "explanation": "Numeric enums get a reverse mapping from values back to member names."
+ },
+ {
+  "id": "q441541db426",
+  "subject": "typescript",
+  "topic": "arrays-tuples",
+  "level": "easy",
+  "question": "Given `let t: [string, number];`, what is the type of `t.length`?",
+  "options": [
+   "number",
+   "string",
+   "2",
+   "2 | 0"
+  ],
+  "answer": 2,
+  "explanation": "Fixed-length tuples have a literal length type equal to their number of elements."
+ },
+ {
+  "id": "q2e45c8d3811",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which keyword creates a type alias?",
+  "options": [
+   "type",
+   "alias",
+   "typedef",
+   "declare"
+  ],
+  "answer": 0,
+  "explanation": "type Name = ... gives a name to any type, including unions and object shapes."
+ },
+ {
+  "id": "q88a52e583a6",
+  "subject": "typescript",
+  "topic": "functions",
+  "level": "easy",
+  "question": "Given `function f(a: number, b: number) {}`, what happens with `f(1);`?",
+  "options": [
+   "It compiles and b is undefined",
+   "A compile error, because 2 arguments are expected",
+   "It compiles and b defaults to 0",
+   "A runtime error only"
+  ],
+  "answer": 1,
+  "explanation": "TypeScript checks the number of arguments, and b is neither optional nor defaulted."
+ },
+ {
+  "id": "qb3a23869be5",
+  "subject": "typescript",
+  "topic": "basic-types",
+  "level": "easy",
+  "question": "What does the lowercase `object` type represent?",
+  "options": [
+   "Any value at all, including primitives",
+   "Only plain object literals",
+   "Any non-primitive value",
+   "Only values created with new Object()"
+  ],
+  "answer": 2,
+  "explanation": "object excludes primitives such as string, number and boolean, but allows arrays, functions and other objects."
+ }
+]

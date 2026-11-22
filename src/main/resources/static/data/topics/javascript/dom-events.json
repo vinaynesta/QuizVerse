@@ -15,6 +15,21 @@
   "explanation": "Because events bubble, a single parent listener can handle events from many current and future child elements."
  },
  {
+  "id": "q9767ff0b39f",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "What does event.stopPropagation() do?",
+  "options": [
+   "Cancels the browser's default action for the event",
+   "Stops the event from propagating further to other elements",
+   "Removes the event listener",
+   "Stops other listeners on the same element from running"
+  ],
+  "answer": 1,
+  "explanation": "stopPropagation halts bubbling or capturing; preventDefault cancels the default action and stopImmediatePropagation also blocks same-element listeners."
+ },
+ {
   "id": "qc4e35145617",
   "subject": "javascript",
   "topic": "dom-events",
@@ -28,5 +43,20 @@
   ],
   "answer": 2,
   "explanation": "preventDefault stops default behaviour like form submission; stopPropagation is what stops bubbling."
+ },
+ {
+  "id": "qca95fd11a74",
+  "subject": "javascript",
+  "topic": "dom-events",
+  "level": "medium",
+  "question": "Inside a listener added with element.addEventListener(\"click\", function () { ... }), what is this?",
+  "options": [
+   "The window object",
+   "undefined",
+   "The event object",
+   "The element the listener is attached to"
+  ],
+  "answer": 3,
+  "explanation": "For regular function listeners, this is the event's currentTarget; arrow function listeners would capture this lexically instead."
  }
 ]

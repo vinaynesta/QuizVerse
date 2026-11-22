@@ -15,6 +15,21 @@
   "explanation": "Ready processes can run and are waiting only for the CPU; Waiting processes are blocked on an event such as I/O."
  },
  {
+  "id": "q13d693db5f6",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Which term describes the basic unit of CPU utilization that has its own program counter, registers and stack within a process?",
+  "options": [
+   "Page",
+   "Segment",
+   "Inode",
+   "Thread"
+  ],
+  "answer": 3,
+  "explanation": "A thread is the unit the CPU schedules; several threads can exist inside one process and share its address space."
+ },
+ {
   "id": "q19cd2f78ba0",
   "subject": "os",
   "topic": "processes-threads",
@@ -43,6 +58,36 @@
   ],
   "answer": 2,
   "explanation": "A process is an active program in execution with its own state, while a program on disk is a passive entity."
+ },
+ {
+  "id": "q3954f9b2fce",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "Pipes, message queues and shared memory are all mechanisms for:",
+  "options": [
+   "Inter-process communication (IPC)",
+   "Page replacement",
+   "Disk scheduling",
+   "Interrupt masking"
+  ],
+  "answer": 0,
+  "explanation": "IPC mechanisms let separate processes exchange data and coordinate with each other."
+ },
+ {
+  "id": "q648a8c2868d",
+  "subject": "os",
+  "topic": "processes-threads",
+  "level": "easy",
+  "question": "In the five-state process model, which state is a process in while it waits for an I/O operation to complete?",
+  "options": [
+   "Waiting (blocked)",
+   "Ready",
+   "Running",
+   "Terminated"
+  ],
+  "answer": 0,
+  "explanation": "A process waiting for an event such as I/O completion is blocked and moves back to Ready once the event occurs."
  },
  {
   "id": "q79aeb77df7f",

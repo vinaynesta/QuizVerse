@@ -75,6 +75,36 @@
   "explanation": "Type parameter defaults use = and apply when the argument is not supplied or inferred."
  },
  {
+  "id": "q8974a5aaffc",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `function wrap<T>(x: T) { return [x]; }`, what is the type of `wrap(\"a\" as string)`?",
+  "options": [
+   "string",
+   "[string]",
+   "string[]",
+   "unknown[]"
+  ],
+  "answer": 2,
+  "explanation": "T is inferred as string and the array literal [x] is inferred as T[]."
+ },
+ {
+  "id": "qb7ab21b8444",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `type Box<T> = { value: T }`, what is the type of `b.value` for `const b: Box<string[]> = { value: [] };`?",
+  "options": [
+   "string",
+   "unknown",
+   "never[]",
+   "string[]"
+  ],
+  "answer": 3,
+  "explanation": "Box<string[]> substitutes string[] for T, so value is typed as string[]."
+ },
+ {
   "id": "qbfdb3b7903d",
   "subject": "typescript",
   "topic": "generics",
@@ -103,6 +133,21 @@
   ],
   "answer": 0,
   "explanation": "Generics carry the caller's type through, so first([1, 2]) returns number instead of any."
+ },
+ {
+  "id": "qc9e8429153e",
+  "subject": "typescript",
+  "topic": "generics",
+  "level": "medium",
+  "question": "Given `interface Pair<K, V> { key: K; value: V }`, which value is a valid `Pair<string, number>`?",
+  "options": [
+   "[\"a\", 1]",
+   "{ key: 1, value: \"a\" }",
+   "{ key: \"a\", value: 1 }",
+   "{ K: \"a\", V: 1 }"
+  ],
+  "answer": 2,
+  "explanation": "The type arguments fill K with string and V with number, so key must be a string and value a number."
  },
  {
   "id": "qfdd8a3dd1b3",

@@ -15,6 +15,21 @@
   "explanation": "Object shapes are declared with the interface keyword (or with a type alias)."
  },
  {
+  "id": "q2e45c8d3811",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "Which keyword creates a type alias?",
+  "options": [
+   "type",
+   "alias",
+   "typedef",
+   "declare"
+  ],
+  "answer": 0,
+  "explanation": "type Name = ... gives a name to any type, including unions and object shapes."
+ },
+ {
   "id": "q3b491fb7e06",
   "subject": "typescript",
   "topic": "interfaces-types",
@@ -28,6 +43,36 @@
   ],
   "answer": 2,
   "explanation": "& creates an intersection, combining the requirements of both types."
+ },
+ {
+  "id": "q3e8d88b8e1d",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How do you declare an object type that allows any string key with number values?",
+  "options": [
+   "{ string: number }",
+   "{ [key: string]: number }",
+   "{ key: string; value: number }",
+   "Map<string, number>[]"
+  ],
+  "answer": 1,
+  "explanation": "An index signature describes objects with arbitrary keys of a given type and values of another."
+ },
+ {
+  "id": "q652011f5431",
+  "subject": "typescript",
+  "topic": "interfaces-types",
+  "level": "easy",
+  "question": "How do you declare a method `greet` that returns a string in an interface?",
+  "options": [
+   "greet(): string;",
+   "function greet(): string;",
+   "greet: string;",
+   "method greet => string;"
+  ],
+  "answer": 0,
+  "explanation": "Method signatures in interfaces list the name, parameters and return type without a body."
  },
  {
   "id": "q7c9b01dbb00",
